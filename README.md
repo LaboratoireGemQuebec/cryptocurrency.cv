@@ -1,6 +1,6 @@
 # 🆓 Free Crypto News API
 
-**100% FREE. No API keys. No rate limits. No BS.**
+🚨 January 19, 2026 UPDATE: All free resources from Vercel have been used. I will need to consider rate limiting, a freemium API, or find sponsorship to pay for the upkeep. I do not mind paying here and there but unfortunately it will cut off the ability for me to develop. I apologize if you were using the API and it went down, you may host your own on Vercel, Railway, locally, and numerous other ways as well. If you need assistance deploying this repo, please let me know and I will be glad to assist you. Will update the README when I get the API going again 🚨
 
 Get real-time crypto news from 7 major sources with one API call.
 
@@ -14,11 +14,7 @@ That's it. It just works.
 
 ---
 
-## Why?
 
-Every crypto news API charges $30-300/month and requires API keys.
-
-We said no.
 
 | | Free Crypto News | CryptoPanic | Others |
 |---|---|---|---|
