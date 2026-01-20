@@ -4,6 +4,5 @@
   "title": "Crypto News Aggregator",
   "description": "Free crypto news aggregator MCP - Bitcoin Ethereum DeFi Solana altcoins feeds",
   "keywords": ["crypto", "news", "bitcoin", "ethereum", "defi", "aggregator"],
-  "repository": {"url": "https://github.com/nirholas/free-crypto-news", "source": "github"},
-  "packages": [{"registryType": "source", "identifier": "https://github.com/nirholas/free-crypto-news", "transport": {"type": "stdio"}}]
+  "repository": {"url": "https://github.com/nirholas/free-crypto-news", "source": "github"}
 }
