@@ -22,9 +22,6 @@ Get real-time crypto news from 7 major sources with one API call.
 ```bash
 curl https://free-crypto-news.vercel.app/api/news
 ```
-
-That's it. It just works.
-
 ---
 
 
