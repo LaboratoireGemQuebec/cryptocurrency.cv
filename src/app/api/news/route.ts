@@ -1,11 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
 
 export async function GET(request: NextRequest) {
+  const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const limit = parseInt(searchParams.get('limit') || '10');
   const source = searchParams.get('source') || undefined;
@@ -17,13 +19,10 @@ export async function GET(request: NextRequest) {
   
   // Validate language parameter
   if (lang !== 'en' && !isLanguageSupported(lang)) {
-    return NextResponse.json(
-      { 
-        error: 'Unsupported language', 
-        message: `Language '${lang}' is not supported`,
-        supported: Object.keys(SUPPORTED_LANGUAGES),
-      },
-      { status: 400 }
+    return errorResponse(
+      'Unsupported language',
+      `Language '${lang}' is not supported. Supported: ${Object.keys(SUPPORTED_LANGUAGES).join(', ')}`,
+      400
     );
   }
   
@@ -44,24 +43,19 @@ export async function GET(request: NextRequest) {
       }
     }
     
-    return NextResponse.json(
-      {
-        ...data,
-        articles,
-        lang: translatedLang,
-        availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
-      },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-          'Access-Control-Allow-Origin': '*',
-        },
-      }
-    );
+    const responseData = withTiming({
+      ...data,
+      articles,
+      lang: translatedLang,
+      availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+    }, startTime);
+    
+    return jsonResponse(responseData, {
+      cacheControl: 'standard',
+      etag: true,
+      request,
+    });
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to fetch news', message: String(error) },
-      { status: 500 }
-    );
+    return errorResponse('Failed to fetch news', String(error));
   }
 }
