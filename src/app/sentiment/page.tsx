@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: 'AI-powered crypto market sentiment analysis. Understand the mood of the market.',
 };
 
-export const revalidate = 300;
+// Force dynamic rendering to avoid self-referential API call during build
+export const dynamic = 'force-dynamic';
 
 interface SentimentArticle {
   title: string;

@@ -157,7 +157,11 @@ export default function RootLayout({
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-dark.png" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-light.png" media="(prefers-color-scheme: light)" />
       </head>
-      <body className="bg-white dark:bg-gray-950 antialiased">
+      <body className="bg-gray-50 dark:bg-gray-950 antialiased min-h-screen">
+        {/* Skip Link for Accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <BookmarksProvider>
           <PWAProvider>
             {children}

@@ -230,7 +230,7 @@ export interface NewsQueryOptions {
 }
 
 function filterByDateRange(articles: NewsArticle[], from?: Date | string, to?: Date | string): NewsArticle[] {
-  let filtered = articles;
+  let filtered = articles.filter(a => a && a.pubDate);
   
   if (from) {
     const fromDate = typeof from === 'string' ? new Date(from) : from;
@@ -293,11 +293,22 @@ export async function searchNews(
   limit: number = 10
 ): Promise<NewsResponse> {
   const normalizedLimit = Math.min(Math.max(1, limit), 30);
-  const searchTerms = keywords.toLowerCase().split(',').map(k => k.trim());
+  const searchTerms = (keywords || '').toLowerCase().split(',').map(k => k.trim()).filter(Boolean);
+  
+  // If no valid search terms, return empty result
+  if (searchTerms.length === 0) {
+    return {
+      articles: [],
+      totalCount: 0,
+      sources: [],
+      fetchedAt: new Date().toISOString(),
+    };
+  }
   
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
   
   const matchingArticles = allArticles.filter(article => {
+    if (!article || !article.title) return false;
     const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
     return searchTerms.some(term => searchText.includes(term));
   });
@@ -317,7 +328,7 @@ export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> 
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
   
   const recentArticles = allArticles.filter(article => 
-    new Date(article.pubDate) > twoHoursAgo
+    article && article.pubDate && new Date(article.pubDate) > twoHoursAgo
   );
   
   return {
@@ -335,6 +346,15 @@ export async function getNewsByCategory(
   category: string,
   limit: number = 30
 ): Promise<NewsResponse> {
+  if (!category) {
+    return {
+      articles: [],
+      totalCount: 0,
+      sources: [],
+      fetchedAt: new Date().toISOString(),
+    };
+  }
+  
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
   
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
@@ -356,6 +376,8 @@ export async function getNewsByCategory(
   const keywords = categoryKeywords[category.toLowerCase()] || [category.toLowerCase()];
   
   const filteredArticles = allArticles.filter(article => {
+    if (!article || !article.title) return false;
+    
     // Check source category first
     if (article.category === category.toLowerCase()) return true;
     if (category === 'bitcoin' && article.sourceKey === 'bitcoinmagazine') return true;

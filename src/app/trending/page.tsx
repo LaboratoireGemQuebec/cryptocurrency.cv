@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: 'See what\'s trending in crypto news right now. Real-time analysis of the hottest topics.',
 };
 
-export const revalidate = 300; // 5 minutes
+// Force dynamic rendering to avoid self-referential API call during build
+export const dynamic = 'force-dynamic';
 
 interface TrendingTopic {
   topic: string;

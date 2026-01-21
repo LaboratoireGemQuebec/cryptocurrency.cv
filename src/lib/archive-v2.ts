@@ -439,6 +439,133 @@ export function toNewsArticle(enriched: EnrichedArticle): NewsArticle {
 }
 
 /**
+ * Generate article ID from URL (consistent hash)
+ */
+export function generateArticleId(url: string): string {
+  let hash = 0;
+  for (let i = 0; i < url.length; i++) {
+    const char = url.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return Math.abs(hash).toString(16).padStart(16, '0').slice(0, 16);
+}
+
+/**
+ * Get a single article by ID
+ */
+export async function getArticleById(id: string): Promise<EnrichedArticle | null> {
+  try {
+    // Get current month's articles
+    const now = new Date();
+    const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    const articles = await getArchiveV2Month(yearMonth);
+    
+    const article = articles.find(a => a.id === id);
+    if (article) return article;
+    
+    // Try previous month if not found
+    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
+    const prevArticles = await getArchiveV2Month(prevYearMonth);
+    
+    return prevArticles.find(a => a.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Get a single article by URL
+ */
+export async function getArticleByUrl(url: string): Promise<EnrichedArticle | null> {
+  try {
+    const now = new Date();
+    const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    const articles = await getArchiveV2Month(yearMonth);
+    
+    const article = articles.find(a => a.link === url || a.canonical_link === url);
+    if (article) return article;
+    
+    // Try previous month
+    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+    const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
+    const prevArticles = await getArchiveV2Month(prevYearMonth);
+    
+    return prevArticles.find(a => a.link === url || a.canonical_link === url) || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Get related articles based on tickers, entities, and tags
+ */
+export async function getRelatedArticles(
+  article: EnrichedArticle,
+  limit: number = 5
+): Promise<EnrichedArticle[]> {
+  try {
+    const now = new Date();
+    const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    const allArticles = await getArchiveV2Month(yearMonth);
+    
+    // Score articles by relevance
+    const scored = allArticles
+      .filter(a => a.id !== article.id)
+      .map(a => {
+        let score = 0;
+        
+        // Ticker overlap (highest weight)
+        const tickerOverlap = a.tickers.filter(t => article.tickers.includes(t)).length;
+        score += tickerOverlap * 5;
+        
+        // Company overlap
+        const companyOverlap = a.entities.companies.filter(c => 
+          article.entities.companies.includes(c)
+        ).length;
+        score += companyOverlap * 3;
+        
+        // Protocol overlap
+        const protocolOverlap = a.entities.protocols.filter(p => 
+          article.entities.protocols.includes(p)
+        ).length;
+        score += protocolOverlap * 3;
+        
+        // People overlap
+        const peopleOverlap = a.entities.people.filter(p => 
+          article.entities.people.includes(p)
+        ).length;
+        score += peopleOverlap * 4;
+        
+        // Tag overlap
+        const tagOverlap = a.tags.filter(t => article.tags.includes(t)).length;
+        score += tagOverlap * 2;
+        
+        // Same source small bonus
+        if (a.source === article.source) score += 1;
+        
+        // Recency bonus (within 48h)
+        const hoursDiff = Math.abs(
+          new Date(article.pub_date || article.first_seen).getTime() - 
+          new Date(a.pub_date || a.first_seen).getTime()
+        ) / (1000 * 60 * 60);
+        if (hoursDiff < 48) score += 2;
+        
+        return { article: a, score };
+      })
+      .filter(s => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(s => s.article);
+    
+    return scored;
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Helper to generate timeAgo string
  */
 function getTimeAgo(dateString: string): string {

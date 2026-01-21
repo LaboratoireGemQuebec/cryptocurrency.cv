@@ -23,9 +23,12 @@ const categories = [
 
 export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {
   return (
-    <nav className="border-b bg-white sticky top-0 z-40">
+    <nav 
+      className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-40"
+      aria-label="News categories"
+    >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center gap-1 overflow-x-auto py-2 scrollbar-hide">
+        <div className="flex items-center gap-1.5 overflow-x-auto py-3 scrollbar-hide scroll-fade-x">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.slug;
             const href = cat.slug ? `/category/${cat.slug}` : '/';
@@ -35,14 +38,16 @@ export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {
                 key={cat.slug}
                 href={href}
                 className={`
-                  flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition
+                  flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap 
+                  transition-all duration-200 focus-ring
                   ${isActive 
-                    ? 'bg-black text-white' 
-                    : 'text-gray-600 hover:bg-gray-100'
+                    ? 'bg-brand-600 text-white shadow-md' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 active:scale-95'
                   }
                 `}
+                aria-current={isActive ? 'page' : undefined}
               >
-                <span>{cat.icon}</span>
+                <span aria-hidden="true">{cat.icon}</span>
                 <span>{cat.label}</span>
               </Link>
             );

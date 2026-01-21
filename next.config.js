@@ -89,12 +89,28 @@ const nextConfig = {
         ],
       },
       {
-        // API routes - enable compression
+        // API routes - CORS and caching
         source: '/api/:path*',
         headers: [
           {
-            key: 'Content-Encoding',
-            value: 'gzip',
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, POST, OPTIONS',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'Content-Type, Authorization',
+          },
+          {
+            key: 'Access-Control-Max-Age',
+            value: '86400',
+          },
+          {
+            key: 'X-RateLimit-Policy',
+            value: 'fair-use',
           },
         ],
       },

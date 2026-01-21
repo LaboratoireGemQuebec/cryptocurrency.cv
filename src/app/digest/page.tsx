@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: 'AI-powered daily crypto news digest. Get caught up on everything that matters.',
 };
 
-export const revalidate = 300;
+// Force dynamic rendering to avoid self-referential API call during build
+export const dynamic = 'force-dynamic';
 
 interface DigestData {
   headline: string;
@@ -36,13 +37,28 @@ interface DigestData {
 }
 
 async function getDigest(): Promise<DigestData | null> {
+  // During Vercel build, skip external API calls to self
+  if (process.env.VERCEL_ENV === 'production' && process.env.CI) {
+    console.log('Skipping digest fetch during build');
+    return null;
+  }
+  
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://free-crypto-news.vercel.app'}/api/digest`, {
+    // Use internal API route during development
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://free-crypto-news.vercel.app';
+    const res = await fetch(`${baseUrl}/api/digest`, {
       next: { revalidate: 300 },
+      headers: {
+        'Accept': 'application/json',
+      },
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.warn('Digest API returned non-ok status:', res.status);
+      return null;
+    }
     return res.json();
-  } catch {
+  } catch (error) {
+    console.warn('Failed to fetch digest:', error);
     return null;
   }
 }

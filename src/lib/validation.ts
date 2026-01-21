@@ -200,3 +200,100 @@ export function validateHeaders(headers: Headers): boolean {
   
   return true;
 }
+
+// ============================================
+// Request Validation (for API routes)
+// ============================================
+
+// Size limits for requests
+const MAX_URL_LENGTH = 2048;
+const MAX_QUERY_STRING_LENGTH = 1024;
+const MAX_BODY_SIZE = 102400; // 100KB
+
+export interface RequestValidationResult {
+  ok: boolean;
+  error?: string;
+  code?: string;
+}
+
+/**
+ * Validate request size limits
+ */
+export function validateRequestSize(url: string, search: string, contentLength?: string | null): RequestValidationResult {
+  // Check URL length
+  if (url.length > MAX_URL_LENGTH) {
+    return { ok: false, error: 'URL too long', code: 'URL_TOO_LONG' };
+  }
+
+  // Check query string length
+  if (search.length > MAX_QUERY_STRING_LENGTH) {
+    return { ok: false, error: 'Query string too long', code: 'QUERY_TOO_LONG' };
+  }
+
+  // Check Content-Length header for body size
+  if (contentLength) {
+    const size = parseInt(contentLength, 10);
+    if (!isNaN(size) && size > MAX_BODY_SIZE) {
+      return { ok: false, error: 'Request body too large', code: 'BODY_TOO_LARGE' };
+    }
+  }
+
+  return { ok: true };
+}
+
+/**
+ * Check for suspicious patterns in request URL
+ */
+export function validateRequestPatterns(pathname: string, search: string): RequestValidationResult {
+  const url = pathname + search;
+  
+  // Block null bytes
+  if (url.includes('\0') || url.includes('%00')) {
+    return { ok: false, error: 'Invalid characters in URL', code: 'INVALID_CHARS' };
+  }
+
+  // Block path traversal attempts
+  if (url.includes('..') || url.includes('%2e%2e')) {
+    return { ok: false, error: 'Path traversal not allowed', code: 'PATH_TRAVERSAL' };
+  }
+
+  // Block SQL injection patterns (basic)
+  const sqlPatterns = /(\b(union|select|insert|update|delete|drop|create|alter|exec|execute)\b.*\b(from|into|table|database)\b)/i;
+  try {
+    if (sqlPatterns.test(decodeURIComponent(url))) {
+      return { ok: false, error: 'Suspicious pattern detected', code: 'SQL_INJECTION' };
+    }
+  } catch {
+    // Malformed URL encoding
+    return { ok: false, error: 'Invalid URL encoding', code: 'INVALID_ENCODING' };
+  }
+
+  // Block script injection in URL
+  if (/<script|javascript:|data:/i.test(url)) {
+    return { ok: false, error: 'Script injection not allowed', code: 'XSS_ATTEMPT' };
+  }
+
+  return { ok: true };
+}
+
+/**
+ * Full API request validation - use this in API routes that need extra security
+ * @example
+ * const validation = validateApiRequest(request.url, request.nextUrl);
+ * if (!validation.ok) {
+ *   return NextResponse.json({ error: validation.error }, { status: 400 });
+ * }
+ */
+export function validateApiRequest(
+  url: string, 
+  nextUrl: { pathname: string; search: string },
+  contentLength?: string | null
+): RequestValidationResult {
+  const sizeCheck = validateRequestSize(url, nextUrl.search, contentLength);
+  if (!sizeCheck.ok) return sizeCheck;
+
+  const patternCheck = validateRequestPatterns(nextUrl.pathname, nextUrl.search);
+  if (!patternCheck.ok) return patternCheck;
+
+  return { ok: true };
+}
