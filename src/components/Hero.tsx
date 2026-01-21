@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Hero() {
   return (
     <div className="flex justify-between items-center bg-yellow-400 py-10 lg:py-0 border-y border-black">
@@ -9,19 +11,25 @@ export default function Hero() {
         <h2 className="text-xl">
           Real-time news from 7 sources. No API keys. No rate limits. 100% free.
         </h2>
-        <div className="flex space-x-4">
+        <div className="flex flex-wrap gap-3">
           <a
             href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnirholas%2Ffree-crypto-news"
             className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition"
           >
             ▲ Deploy Your Own
           </a>
-          <a
-            href="#news"
+          <Link
+            href="/read"
+            className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition border border-black"
+          >
+            📖 Full Reader
+          </Link>
+          <Link
+            href="/examples"
             className="border border-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition"
           >
-            Read News ↓
-          </a>
+            💻 Code Examples
+          </Link>
         </div>
       </div>
       <div className="hidden lg:inline-flex h-full p-10">
