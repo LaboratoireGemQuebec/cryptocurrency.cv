@@ -46,8 +46,7 @@ const MAX_CACHE_ITEMS = {
   images: 200,
 };
 
-// Type declarations
-declare const self: ServiceWorkerGlobalScope;
+// Service Worker global scope
 
 // ============================================
 // Installation
@@ -138,11 +137,7 @@ self.addEventListener('fetch', (event) => {
  * Network First Strategy
  * Try network, fall back to cache, update cache on success
  */
-async function networkFirstStrategy(
-  request: Request,
-  cacheName: string,
-  maxAge: number
-): Promise<Response> {
+async function networkFirstStrategy(request, cacheName, maxAge) {
   try {
     const networkResponse = await fetchWithTimeout(request, 10000);
     
@@ -193,11 +188,7 @@ async function networkFirstStrategy(
  * Cache First Strategy
  * Try cache first, fall back to network
  */
-async function cacheFirstStrategy(
-  request: Request,
-  cacheName: string,
-  maxAge: number
-): Promise<Response> {
+async function cacheFirstStrategy(request, cacheName, maxAge) {
   const cachedResponse = await caches.match(request);
   
   if (cachedResponse && !isCacheExpired(cachedResponse, maxAge)) {
@@ -246,10 +237,7 @@ async function cacheFirstStrategy(
  * Stale While Revalidate Strategy
  * Return cached immediately, update cache in background
  */
-async function staleWhileRevalidate(
-  request: Request,
-  cacheName: string
-): Promise<Response> {
+async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
   
@@ -280,7 +268,7 @@ async function staleWhileRevalidate(
  * Network First with Offline Fallback
  * For navigation requests
  */
-async function networkFirstWithOfflineFallback(request: Request): Promise<Response> {
+async function networkFirstWithOfflineFallback(request) {
   try {
     const networkResponse = await fetchWithTimeout(request, 10000);
     
@@ -341,7 +329,7 @@ async function networkFirstWithOfflineFallback(request: Request): Promise<Respon
 // Helper Functions
 // ============================================
 
-function isImageRequest(request: Request): boolean {
+function isImageRequest(request) {
   const url = new URL(request.url);
   return (
     request.destination === 'image' ||
@@ -349,7 +337,7 @@ function isImageRequest(request: Request): boolean {
   );
 }
 
-function isStaticAsset(pathname: string): boolean {
+function isStaticAsset(pathname) {
   return (
     pathname.startsWith('/icons/') ||
     pathname.startsWith('/splash/') ||
@@ -360,11 +348,11 @@ function isStaticAsset(pathname: string): boolean {
   );
 }
 
-function isNavigationRequest(request: Request): boolean {
+function isNavigationRequest(request) {
   return request.mode === 'navigate';
 }
 
-function isCacheExpired(response: Response, maxAge: number): boolean {
+function isCacheExpired(response, maxAge) {
   const timestamp = response.headers.get('sw-cache-timestamp');
   if (!timestamp) return false;
   
@@ -372,7 +360,7 @@ function isCacheExpired(response: Response, maxAge: number): boolean {
   return age > maxAge;
 }
 
-async function fetchWithTimeout(request: Request, timeout: number): Promise<Response> {
+async function fetchWithTimeout(request, timeout) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
   
@@ -386,7 +374,7 @@ async function fetchWithTimeout(request: Request, timeout: number): Promise<Resp
   }
 }
 
-async function trimCache(cacheName: string, maxItems: number): Promise<void> {
+async function trimCache(cacheName, maxItems) {
   const cache = await caches.open(cacheName);
   const keys = await cache.keys();
   
@@ -398,7 +386,7 @@ async function trimCache(cacheName: string, maxItems: number): Promise<void> {
   }
 }
 
-function createPlaceholderImage(): Response {
+function createPlaceholderImage() {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
     <rect width="200" height="200" fill="#1a1a1a"/>
     <text x="100" y="100" fill="#666" text-anchor="middle" font-family="system-ui" font-size="14">Image unavailable</text>
@@ -421,7 +409,7 @@ self.addEventListener('push', (event) => {
   try {
     const data = event.data.json();
     
-    const options: NotificationOptions = {
+    const options = {
       body: data.body || 'New crypto news available!',
       icon: '/icons/icon-192x192.png',
       badge: '/icons/badge-72x72.png',
@@ -476,7 +464,7 @@ self.addEventListener('notificationclick', (event) => {
         if (client.url.includes(self.location.origin) && 'focus' in client) {
           await client.focus();
           if ('navigate' in client) {
-            await (client as WindowClient).navigate(url);
+            await client.navigate(url);
           }
           return;
         }
@@ -499,7 +487,7 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-async function syncNews(): Promise<void> {
+async function syncNews() {
   try {
     console.log('[SW] Syncing news in background...');
     
@@ -566,7 +554,7 @@ self.addEventListener('message', (event) => {
   }
 });
 
-async function cacheUrls(urls: string[], cacheName: string): Promise<void> {
+async function cacheUrls(urls, cacheName) {
   const cache = await caches.open(cacheName);
   await Promise.all(
     urls.map(async (url) => {
@@ -582,7 +570,7 @@ async function cacheUrls(urls: string[], cacheName: string): Promise<void> {
   );
 }
 
-async function clearCache(cacheName?: string): Promise<void> {
+async function clearCache(cacheName) {
   if (cacheName) {
     await caches.delete(cacheName);
     console.log(`[SW] Cleared cache: ${cacheName}`);
@@ -593,9 +581,9 @@ async function clearCache(cacheName?: string): Promise<void> {
   }
 }
 
-async function getCacheStatus(): Promise<object> {
+async function getCacheStatus() {
   const keys = await caches.keys();
-  const status: Record<string, number> = {};
+  const status = {};
   
   for (const key of keys) {
     const cache = await caches.open(key);

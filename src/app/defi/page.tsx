@@ -13,6 +13,7 @@ import {
 } from '@/lib/market-data';
 import { getDefiNews } from '@/lib/crypto-news';
 import Posts from '@/components/Posts';
+import ProtocolImage from '@/components/ProtocolImage';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -98,11 +99,10 @@ export default async function DefiPage() {
                           <td className="p-4">
                             <div className="flex items-center gap-3">
                               {protocol.logo && (
-                                <img 
+                                <ProtocolImage 
                                   src={protocol.logo} 
                                   alt={protocol.name}
                                   className="w-8 h-8 rounded-full"
-                                  onError={(e) => { e.currentTarget.style.display = 'none' }}
                                 />
                               )}
                               <div>
