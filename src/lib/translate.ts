@@ -1,11 +1,14 @@
 /**
  * News Translation Service
  * 
- * Translates news articles to different languages using OpenAI.
+ * Translates news articles to different languages using Groq (free, fast inference).
  * Includes caching to avoid re-translating the same articles.
  * 
  * FEATURE FLAG: Set FEATURE_TRANSLATION=true to enable real-time translation.
  * Default is disabled - translations are done at archive time instead.
+ * 
+ * SETUP: Set GROQ_API_KEY environment variable with your free Groq API key.
+ * Get one at: https://console.groq.com/keys
  */
 
 interface TranslatedArticle {
@@ -72,19 +75,19 @@ function getCacheKey(articleLink: string, lang: string): string {
 }
 
 /**
- * Translate text using OpenAI API
+ * Translate text using Groq API (free, fast inference with Llama models)
+ * https://console.groq.com/docs/quickstart
  */
-async function translateWithOpenAI(
+async function translateWithGroq(
   texts: { title: string; description: string }[],
   targetLang: string
 ): Promise<{ title: string; description: string }[]> {
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   
   if (!apiKey) {
-    throw new Error('OPENAI_API_KEY not configured');
+    throw new Error('GROQ_API_KEY not configured. Get a free key at https://console.groq.com/keys');
   }
 
-  const proxyUrl = process.env.OPENAI_PROXY_URL || 'https://api.openai.com';
   const langName = SUPPORTED_LANGUAGES[targetLang] || targetLang;
 
   // Batch translate for efficiency
@@ -95,18 +98,18 @@ Return a JSON array with objects containing "title" and "description" fields.
 Input:
 ${JSON.stringify(texts, null, 2)}`;
 
-  const response = await fetch(`${proxyUrl}/v1/chat/completions`, {
+  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: 'gpt-4o-mini',
+      model: 'llama-3.3-70b-versatile',
       messages: [
         {
           role: 'system',
-          content: 'You are a professional translator specializing in cryptocurrency and finance news. Always respond with valid JSON only.',
+          content: 'You are a professional translator specializing in cryptocurrency and finance news. Always respond with valid JSON only, no markdown code blocks.',
         },
         {
           role: 'user',
@@ -120,14 +123,14 @@ ${JSON.stringify(texts, null, 2)}`;
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`OpenAI API error: ${response.status} - ${error}`);
+    throw new Error(`Groq API error: ${response.status} - ${error}`);
   }
 
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content;
 
   if (!content) {
-    throw new Error('Empty response from OpenAI');
+    throw new Error('Empty response from Groq');
   }
 
   try {
@@ -165,10 +168,10 @@ export async function translateArticles<T extends TranslatableArticle>(
     throw new Error(`Unsupported language: ${targetLang}. Supported: ${Object.keys(SUPPORTED_LANGUAGES).join(', ')}`);
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     // Return original articles if no API key configured
-    console.warn('OPENAI_API_KEY not set, returning original articles');
+    console.warn('GROQ_API_KEY not set, returning original articles');
     return articles;
   }
 
@@ -200,7 +203,7 @@ export async function translateArticles<T extends TranslatableArticle>(
     }));
 
     try {
-      const translations = await translateWithOpenAI(textsToTranslate, targetLang);
+      const translations = await translateWithGroq(textsToTranslate, targetLang);
 
       for (let j = 0; j < batch.length; j++) {
         const { index, article } = batch[j];
