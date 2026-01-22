@@ -179,72 +179,38 @@ const navItems = [
   },
 ];
 
-// Mega Menu Component
+// Mega Menu Component - Compact dropdown
 function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean }) {
   if (!item.megaMenu || !isOpen) return null;
 
   return (
     <div 
-      className="absolute top-full left-0 w-screen bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 shadow-xl z-50 mega-menu-enter"
+      className="absolute top-full left-0 min-w-[280px] bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 shadow-xl rounded-lg z-50 mega-menu-enter mt-1"
       role="menu"
       aria-label={`${item.label} submenu`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="grid grid-cols-12 gap-6">
-          {/* Menu Sections */}
-          <div className="col-span-8 grid grid-cols-3 gap-6">
-            {item.megaMenu.sections.map((section, idx) => (
-              <div key={idx} className="mega-menu-item">
-                <h3 className="text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-2">
-                  {section.title}
-                </h3>
-                <ul className="space-y-0.5">
-                  {section.links.map((link, linkIdx) => (
-                    <li key={linkIdx} className="mega-menu-item" style={{ animationDelay: `${(idx * 3 + linkIdx) * 40 + 80}ms` }}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center gap-2 px-2 py-1.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg transition-all duration-200 group text-sm"
-                        role="menuitem"
-                      >
-                        <span className="text-base group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
-                          {link.icon}
-                        </span>
-                        <span className="font-medium">{link.label}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+      <div className="p-2">
+        {item.megaMenu.sections.map((section, idx) => (
+          <div key={idx} className={idx > 0 ? 'mt-2 pt-2 border-t border-gray-100 dark:border-slate-800' : ''}>
+            <h3 className="text-[10px] font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider px-2 py-1">
+              {section.title}
+            </h3>
+            <ul>
+              {section.links.map((link, linkIdx) => (
+                <li key={linkIdx}>
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-2 px-2 py-1.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-md transition-colors text-sm"
+                    role="menuitem"
+                  >
+                    <span className="text-sm" aria-hidden="true">{link.icon}</span>
+                    <span>{link.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          
-          {/* Featured Section */}
-          <div className="col-span-4 mega-menu-item" style={{ animationDelay: '150ms' }}>
-            <div className="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/20 dark:to-brand-800/20 rounded-xl p-4 border border-brand-200/50 dark:border-brand-700/50 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-brand-500/10 dark:bg-brand-400/10 flex items-center justify-center">
-                  <span className="text-lg" aria-hidden="true">{item.icon}</span>
-                </div>
-                <h3 className="font-semibold text-brand-900 dark:text-brand-100">
-                  {item.megaMenu.featured.title}
-                </h3>
-              </div>
-              <p className="text-sm text-brand-700 dark:text-brand-300 mb-3">
-                {item.megaMenu.featured.description}
-              </p>
-              <Link
-                href={item.megaMenu.featured.href}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors group"
-                role="menuitem"
-              >
-                View All
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

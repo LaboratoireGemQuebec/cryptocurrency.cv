@@ -17,6 +17,11 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -30,8 +35,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
@@ -47,6 +52,10 @@
     "e2e",
     "stories",
     "playwright.config.ts",
-    ".storybook"
+    ".storybook",
+    "**/*.stories.tsx",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }
