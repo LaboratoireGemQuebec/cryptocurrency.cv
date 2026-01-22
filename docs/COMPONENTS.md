@@ -794,6 +794,330 @@ npm run test:a11y
 
 ---
 
+## Animation Components
+
+Located in `src/components/animations.tsx`. Uses Framer Motion for smooth animations.
+
+### FadeIn
+
+Simple fade in animation.
+
+```tsx
+import { FadeIn } from '@/components/animations';
+
+<FadeIn duration={0.5} delay={0.1}>
+  <p>This content fades in</p>
+</FadeIn>
+```
+
+**Props:**
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `duration` | number | 0.5 | Animation duration in seconds |
+| `delay` | number | 0 | Delay before animation starts |
+| `children` | ReactNode | - | Content to animate |
+
+### FadeInUp
+
+Fade in with upward slide.
+
+```tsx
+import { FadeInUp } from '@/components/animations';
+
+<FadeInUp distance={20}>
+  <ArticleCard article={article} />
+</FadeInUp>
+```
+
+**Props:**
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `distance` | number | 20 | Pixels to slide up |
+| `duration` | number | 0.5 | Animation duration |
+| `delay` | number | 0 | Animation delay |
+
+### ScaleIn
+
+Scale from smaller to full size.
+
+```tsx
+import { ScaleIn } from '@/components/animations';
+
+<ScaleIn scale={0.95}>
+  <Modal>...</Modal>
+</ScaleIn>
+```
+
+### StaggerContainer
+
+Stagger children animations.
+
+```tsx
+import { StaggerContainer, FadeInUp } from '@/components/animations';
+
+<StaggerContainer staggerDelay={0.1}>
+  {articles.map(article => (
+    <FadeInUp key={article.id}>
+      <ArticleCard article={article} />
+    </FadeInUp>
+  ))}
+</StaggerContainer>
+```
+
+### HoverCard
+
+Card with hover lift effect.
+
+```tsx
+import { HoverCard } from '@/components/animations';
+
+<HoverCard scale={1.02} shadow>
+  <div className="p-4 bg-white rounded-lg">
+    Hover me!
+  </div>
+</HoverCard>
+```
+
+### PressButton
+
+Button with press-down effect.
+
+```tsx
+import { PressButton } from '@/components/animations';
+
+<PressButton onClick={handleClick}>
+  Click Me
+</PressButton>
+```
+
+### SlideInPanel
+
+Slide in from edge of screen.
+
+```tsx
+import { SlideInPanel } from '@/components/animations';
+
+<SlideInPanel direction="right" isOpen={isOpen}>
+  <Sidebar />
+</SlideInPanel>
+```
+
+**Directions:** `left` | `right` | `top` | `bottom`
+
+### AnimatedTooltip
+
+Tooltip with fade animation.
+
+```tsx
+import { AnimatedTooltip } from '@/components/animations';
+
+<AnimatedTooltip content="Helpful tip here">
+  <button>Hover for info</button>
+</AnimatedTooltip>
+```
+
+### Respecting Reduced Motion
+
+All animations automatically respect `prefers-reduced-motion`:
+
+```tsx
+// Animations are disabled when user prefers reduced motion
+const prefersReducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
+```
+
+---
+
+## Chart Components
+
+Located in `src/components/charts.tsx`. Uses Recharts for data visualization.
+
+### PriceLineChart
+
+Line chart for price history.
+
+```tsx
+import { PriceLineChart } from '@/components/charts';
+
+const data = [
+  { time: '9:00', price: 97500 },
+  { time: '10:00', price: 98200 },
+  { time: '11:00', price: 99100 },
+  { time: '12:00', price: 98800 },
+];
+
+<PriceLineChart
+  data={data}
+  dataKey="price"
+  height={300}
+  color="#10B981"
+  showGrid
+  showTooltip
+/>
+```
+
+**Props:**
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `data` | array | - | Chart data points |
+| `dataKey` | string | - | Key for Y-axis values |
+| `xAxisKey` | string | 'time' | Key for X-axis |
+| `height` | number | 200 | Chart height in px |
+| `color` | string | '#3B82F6' | Line color |
+| `showGrid` | boolean | false | Show grid lines |
+| `showTooltip` | boolean | true | Show hover tooltip |
+
+### PriceAreaChart
+
+Area chart with gradient fill.
+
+```tsx
+import { PriceAreaChart } from '@/components/charts';
+
+<PriceAreaChart
+  data={priceHistory}
+  dataKey="price"
+  height={250}
+  color="#10B981"
+  gradientOpacity={0.3}
+/>
+```
+
+### VolumeChart
+
+Bar chart for trading volume.
+
+```tsx
+import { VolumeChart } from '@/components/charts';
+
+const volumeData = [
+  { time: '9:00', volume: 1250000 },
+  { time: '10:00', volume: 1890000 },
+  { time: '11:00', volume: 2340000 },
+];
+
+<VolumeChart
+  data={volumeData}
+  dataKey="volume"
+  height={150}
+  color="#6366F1"
+/>
+```
+
+### ComparisonChart
+
+Compare multiple assets.
+
+```tsx
+import { ComparisonChart } from '@/components/charts';
+
+const data = [
+  { time: '00:00', BTC: 100, ETH: 100, SOL: 100 },
+  { time: '06:00', BTC: 102, ETH: 105, SOL: 98 },
+  { time: '12:00', BTC: 104, ETH: 103, SOL: 110 },
+];
+
+<ComparisonChart
+  data={data}
+  lines={[
+    { dataKey: 'BTC', color: '#F7931A', name: 'Bitcoin' },
+    { dataKey: 'ETH', color: '#627EEA', name: 'Ethereum' },
+    { dataKey: 'SOL', color: '#00FFA3', name: 'Solana' },
+  ]}
+  height={300}
+/>
+```
+
+### AllocationPieChart
+
+Pie/donut chart for portfolio allocation.
+
+```tsx
+import { AllocationPieChart } from '@/components/charts';
+
+const holdings = [
+  { name: 'Bitcoin', value: 45000, color: '#F7931A' },
+  { name: 'Ethereum', value: 25000, color: '#627EEA' },
+  { name: 'Solana', value: 15000, color: '#00FFA3' },
+  { name: 'Others', value: 15000, color: '#6B7280' },
+];
+
+<AllocationPieChart
+  data={holdings}
+  innerRadius={60}
+  outerRadius={100}
+  showLabels
+  showLegend
+/>
+```
+
+### Sparkline
+
+Compact inline chart.
+
+```tsx
+import { Sparkline } from '@/components/charts';
+
+// In a table cell or compact space
+<td>
+  <Sparkline
+    data={[45, 52, 48, 61, 55, 67, 72]}
+    width={100}
+    height={30}
+    color={isUp ? '#10B981' : '#EF4444'}
+  />
+</td>
+```
+
+**Props:**
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `data` | number[] | - | Array of values |
+| `width` | number | 100 | Sparkline width |
+| `height` | number | 30 | Sparkline height |
+| `color` | string | '#3B82F6' | Line color |
+| `showDot` | boolean | true | Show dot at last point |
+
+### Chart Theming
+
+Charts automatically adapt to dark mode:
+
+```tsx
+// Dark mode colors applied via CSS variables
+const chartTheme = {
+  background: 'var(--chart-bg)',
+  text: 'var(--chart-text)',
+  grid: 'var(--chart-grid)',
+};
+```
+
+### Responsive Charts
+
+All charts are responsive by default:
+
+```tsx
+<ResponsiveContainer width="100%" height={300}>
+  <PriceLineChart data={data} dataKey="price" />
+</ResponsiveContainer>
+```
+
+### Loading States
+
+Show skeleton while loading:
+
+```tsx
+import { ChartSkeleton } from '@/components/charts';
+
+{loading ? (
+  <ChartSkeleton height={300} />
+) : (
+  <PriceLineChart data={data} dataKey="price" />
+)}
+```
+
+---
+
 ## Related Documentation
 
 - [Architecture Overview](../ARCHITECTURE.md)

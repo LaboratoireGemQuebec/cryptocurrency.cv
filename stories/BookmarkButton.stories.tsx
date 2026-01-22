@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BookmarkButton } from '../src/components/BookmarkButton';
+import BookmarkButton from '../src/components/BookmarkButton';
 import { BookmarksProvider } from '../src/components/BookmarksProvider';
 
 const mockArticle = {

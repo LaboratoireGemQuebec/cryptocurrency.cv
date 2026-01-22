@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PriceWidget } from '../src/components/PriceWidget';
+import PriceWidget from '../src/components/PriceWidget';
 
 const meta: Meta<typeof PriceWidget> = {
   title: 'Components/PriceWidget',

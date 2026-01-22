@@ -76,6 +76,45 @@ pip install langchain openai
 python langchain-tool.py
 ```
 
+### ai-analysis.py
+Demonstrates AI-powered article analysis.
+
+**Setup:**
+```bash
+pip install requests
+python ai-analysis.py
+```
+
+**Features:**
+- Article summarization (short/medium/long)
+- Sentiment analysis with confidence scores
+- Fact extraction (entities, numbers, dates)
+- Fact checking with verdicts
+- Follow-up question generation
+- Auto-categorization
+- Translation to any language
+
+### realtime-stream.js
+Real-time news streaming using Server-Sent Events (SSE).
+
+**Browser:**
+```html
+<script src="realtime-stream.js"></script>
+```
+
+**Node.js:**
+```bash
+npm install eventsource
+node realtime-stream.js
+```
+
+**Features:**
+- Live news updates every 30 seconds
+- Breaking news alerts
+- Price updates
+- Auto-reconnect with exponential backoff
+- Graceful shutdown handling
+
 ## No API Keys Required!
 
 All examples connect to the free API at `https://free-crypto-news.vercel.app` - no authentication needed.
@@ -91,3 +130,11 @@ const API_URL = 'https://your-instance.vercel.app';
 ```python
 API_URL = 'https://your-instance.vercel.app'
 ```
+
+## More Resources
+
+- [API Documentation](../docs/API.md)
+- [AI Features Guide](../docs/AI-FEATURES.md)
+- [Real-Time Guide](../docs/REALTIME.md)
+- [SDK Documentation](../sdk/)
+

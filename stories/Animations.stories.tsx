@@ -70,9 +70,10 @@ export const ShimmerExample: Story = {
 
 export const PulseExample: Story = {
   render: () => (
-    <Pulse>
-      <Box>Pulsing</Box>
-    </Pulse>
+    <div className="flex items-center gap-2">
+      <Pulse />
+      <span>Live indicator</span>
+    </div>
   ),
 };
 
@@ -94,7 +95,7 @@ export const HoverLiftExample: Story = {
 
 export const HoverGlowExample: Story = {
   render: () => (
-    <HoverGlow color="amber">
+    <HoverGlow>
       <Box>Hover for Glow</Box>
     </HoverGlow>
   ),
@@ -106,7 +107,7 @@ export const AllAnimations: Story = {
       <FadeIn><Box>Fade</Box></FadeIn>
       <SlideUp><Box>Slide</Box></SlideUp>
       <ScaleIn><Box>Scale</Box></ScaleIn>
-      <Pulse><Box>Pulse</Box></Pulse>
+      <div className="flex items-center gap-2"><Pulse /><span>Pulse</span></div>
       <Bounce><Box>Bounce</Box></Bounce>
       <HoverLift><Box>Lift</Box></HoverLift>
     </div>

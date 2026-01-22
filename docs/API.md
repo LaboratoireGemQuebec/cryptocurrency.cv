@@ -20,6 +20,17 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/sentiment](#get-apisentiment)
   - [GET /api/summarize](#get-apisummarize)
   - [GET /api/ask](#get-apiask)
+  - [POST /api/ai](#post-apiai)
+- [Real-Time Endpoints](#real-time-endpoints)
+  - [GET /api/sse](#get-apisse)
+  - [GET /api/ws](#get-apiws)
+- [User Features](#user-features)
+  - [POST /api/alerts](#post-apialerts)
+  - [POST /api/newsletter](#post-apinewsletter)
+  - [POST /api/portfolio](#post-apiportfolio)
+  - [POST /api/webhooks](#post-apiwebhooks)
+- [Admin Endpoints](#admin-endpoints)
+  - [GET /api/admin](#get-apiadmin)
 - [Market Data](#market-data)
   - [GET /api/sources](#get-apisources)
   - [GET /api/stats](#get-apistats)
@@ -353,6 +364,307 @@ Ask questions about recent crypto news.
 ```bash
 curl "https://free-crypto-news.vercel.app/api/ask?q=What%20happened%20with%20Bitcoin%20today"
 ```
+
+---
+
+### POST /api/ai
+
+Unified AI endpoint for advanced analysis.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `action` | string | Yes | One of: summarize, sentiment, facts, factcheck, questions, categorize, translate |
+| `title` | string | No | Article title (improves accuracy) |
+| `content` | string | Yes | Article content to analyze |
+| `options.length` | string | No | For summarize: short, medium, long |
+| `options.targetLanguage` | string | No | For translate: target language |
+
+**Example:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "action": "sentiment",
+    "title": "Bitcoin Crashes 20%",
+    "content": "Bitcoin experienced its largest drop since..."
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "action": "sentiment",
+  "provider": { "provider": "openai", "model": "gpt-4o-mini" },
+  "result": {
+    "sentiment": "bearish",
+    "confidence": 0.92,
+    "reasoning": "Large price drop indicates selling pressure",
+    "marketImpact": "high",
+    "affectedAssets": ["BTC", "ETH"]
+  }
+}
+```
+
+> 📖 See [AI Features Guide](./AI-FEATURES.md) for detailed documentation.
+
+---
+
+## Real-Time Endpoints
+
+### GET /api/sse
+
+Server-Sent Events stream for real-time news updates.
+
+**Example (JavaScript):**
+
+```javascript
+const eventSource = new EventSource('/api/sse');
+
+eventSource.addEventListener('news', (event) => {
+  const data = JSON.parse(event.data);
+  console.log('New articles:', data.articles);
+});
+
+eventSource.addEventListener('breaking', (event) => {
+  const article = JSON.parse(event.data);
+  alert(`Breaking: ${article.title}`);
+});
+```
+
+**Events:**
+
+| Event | Description |
+|-------|-------------|
+| `connected` | Connection established |
+| `news` | New articles available |
+| `breaking` | Breaking news alert |
+| `price` | Price updates |
+| `heartbeat` | Keep-alive ping |
+
+---
+
+### GET /api/ws
+
+WebSocket connection info (for standalone WS server).
+
+**Response:**
+
+```json
+{
+  "message": "WebSocket connections require a dedicated server",
+  "documentation": "https://github.com/nirholas/free-crypto-news/blob/main/docs/REALTIME.md",
+  "sse_endpoint": "/api/sse"
+}
+```
+
+> 📖 See [Real-Time Guide](./REALTIME.md) for WebSocket server setup.
+
+---
+
+## User Features
+
+### POST /api/alerts
+
+Create price or keyword alerts.
+
+**Request Body:**
+
+```json
+{
+  "action": "create",
+  "type": "price",
+  "userId": "user-123",
+  "coinId": "bitcoin",
+  "condition": "above",
+  "targetPrice": 100000
+}
+```
+
+**Or for keyword alerts:**
+
+```json
+{
+  "action": "create",
+  "type": "keyword",
+  "userId": "user-123",
+  "keywords": ["SEC", "ETF", "regulation"]
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "alert": {
+    "id": "alert-abc123",
+    "type": "price",
+    "coinId": "bitcoin",
+    "condition": "above",
+    "targetPrice": 100000,
+    "triggered": false
+  }
+}
+```
+
+---
+
+### POST /api/newsletter
+
+Subscribe to email digests.
+
+**Request Body:**
+
+```json
+{
+  "action": "subscribe",
+  "email": "user@example.com",
+  "frequency": "daily",
+  "categories": ["bitcoin", "defi"]
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Verification email sent",
+  "subscriptionId": "sub-xyz789"
+}
+```
+
+---
+
+### POST /api/portfolio
+
+Track portfolio holdings and get relevant news.
+
+**Request Body:**
+
+```json
+{
+  "action": "add",
+  "portfolioId": "portfolio-123",
+  "holding": {
+    "coinId": "bitcoin",
+    "symbol": "BTC",
+    "amount": 0.5,
+    "purchasePrice": 95000
+  }
+}
+```
+
+**Get portfolio value:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/portfolio?id=portfolio-123"
+```
+
+**Response:**
+
+```json
+{
+  "portfolio": {
+    "holdings": [...],
+    "totalValue": 52500,
+    "totalCost": 47500,
+    "profitLoss": 5000,
+    "profitLossPercent": 10.53
+  },
+  "relatedNews": [...]
+}
+```
+
+---
+
+### POST /api/webhooks
+
+Register webhooks for server-to-server notifications.
+
+**Request Body:**
+
+```json
+{
+  "url": "https://your-server.com/webhook",
+  "events": ["news.breaking", "news.new"],
+  "secret": "your-webhook-secret",
+  "filters": {
+    "sources": ["coindesk"],
+    "keywords": ["SEC", "ETF"]
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "webhook": {
+    "id": "wh-abc123",
+    "url": "https://your-server.com/webhook",
+    "events": ["news.breaking", "news.new"],
+    "active": true
+  }
+}
+```
+
+**Webhook Payload:**
+
+```json
+{
+  "event": "news.breaking",
+  "timestamp": "2026-01-22T10:00:00Z",
+  "signature": "sha256=...",
+  "data": {
+    "article": {
+      "title": "SEC Approves Bitcoin ETF",
+      "link": "https://..."
+    }
+  }
+}
+```
+
+---
+
+## Admin Endpoints
+
+### GET /api/admin
+
+Dashboard analytics (requires auth token).
+
+**Headers:**
+
+```
+Authorization: Bearer <ADMIN_TOKEN>
+```
+
+**Response:**
+
+```json
+{
+  "stats": {
+    "totalRequests": 145231,
+    "uniqueUsers": 3456,
+    "avgResponseTime": 156,
+    "cacheHitRate": 0.72,
+    "errorRate": 0.02
+  },
+  "topEndpoints": [...],
+  "health": {
+    "memory": { "used": 245, "total": 512 },
+    "services": { "redis": "connected", "sources": "ok" }
+  }
+}
+```
+
+> 📖 See [Admin Guide](./ADMIN.md) for dashboard usage.
 
 ---
 
