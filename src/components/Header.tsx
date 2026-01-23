@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { MobileNav } from './MobileNav';
 import { ThemeToggle } from './ThemeProvider';
 import { SearchModal } from './SearchModal';
 import { CommandPalette } from './CommandPalette';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 // Lazy load PriceWidget
 const PriceWidget = lazy(() => import('./PriceWidget'));
@@ -264,6 +266,9 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
 }
 
 export default function Header() {
+  const t = useTranslations('nav');
+  const tCommon = useTranslations('common');
+  const tA11y = useTranslations('a11y');
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -335,7 +340,7 @@ export default function Header() {
         href="#main-content" 
         className="skip-link focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
       >
-        Skip to main content
+        {tA11y('skipToContent')}
       </a>
 
       <header 
@@ -427,7 +432,7 @@ export default function Header() {
             <button
               onClick={() => setIsSearchOpen(true)}
               className="flex items-center gap-2 px-3 py-2 text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-all duration-200 focus-ring"
-              aria-label="Search (⌘K)"
+              aria-label={`${tCommon('search')} (⌘K)`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -439,6 +444,11 @@ export default function Header() {
 
             {/* Theme Toggle */}
             <ThemeToggle />
+
+            {/* Language Switcher */}
+            <div className="hidden sm:block">
+              <LanguageSwitcher variant="compact" />
+            </div>
 
             {/* GitHub Link */}
             <a

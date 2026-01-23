@@ -101,6 +101,7 @@ export interface ProtocolTVL {
   id: string;
   name: string;
   symbol: string;
+  slug: string;
   chain: string;
   chains: string[];
   tvl: number;
@@ -110,6 +111,11 @@ export interface ProtocolTVL {
   category: string;
   logo: string;
   url: string;
+  description?: string;
+  twitter?: string;
+  audit_links?: string[];
+  mcap?: number;
+  fdv?: number;
 }
 
 export interface ChainTVL {
@@ -1011,13 +1017,89 @@ export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
     const top = data
       .filter((p: ProtocolTVL) => p.tvl > 0)
       .sort((a: ProtocolTVL, b: ProtocolTVL) => b.tvl - a.tvl)
-      .slice(0, limit);
+      .slice(0, limit)
+      .map((p: ProtocolTVL) => ({ ...p, slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-') }));
     
     setCache(cacheKey, top, CACHE_TTL.global);
     return top;
   } catch (error) {
     console.error('Error fetching protocols:', error);
     return [];
+  }
+}
+
+/**
+ * Get a single protocol by slug/id
+ * @param slug - Protocol slug or name
+ * @returns Protocol details or null
+ */
+export async function getProtocolBySlug(slug: string): Promise<ProtocolTVL | null> {
+  const cacheKey = `protocol-${slug}`;
+  const cached = getCached<ProtocolTVL>(cacheKey);
+  if (cached) return cached.data;
+
+  try {
+    // DeFiLlama uses protocol name as the endpoint
+    const response = await fetchWithTimeout(`${DEFILLAMA_BASE}/protocol/${slug}`);
+    
+    if (!response.ok) {
+      // Try to find in protocols list
+      const protocols = await getTopProtocols(100);
+      const found = protocols.find(
+        p => p.slug === slug || 
+             p.id === slug || 
+             p.name.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+      );
+      return found || null;
+    }
+    
+    const data = await response.json();
+    const protocol: ProtocolTVL = {
+      id: data.id || slug,
+      name: data.name,
+      symbol: data.symbol || '',
+      slug: data.slug || data.name?.toLowerCase().replace(/\s+/g, '-') || slug,
+      chain: data.chain || (data.chains?.[0] || 'Multi-Chain'),
+      chains: data.chains || [],
+      tvl: data.tvl || 0,
+      change_1h: data.change_1h || 0,
+      change_1d: data.change_1d || 0,
+      change_7d: data.change_7d || 0,
+      category: data.category || 'Unknown',
+      logo: data.logo || '',
+      url: data.url || '',
+      description: data.description,
+      twitter: data.twitter,
+      audit_links: data.audit_links,
+      mcap: data.mcap,
+      fdv: data.fdv,
+    };
+    
+    setCache(cacheKey, protocol, CACHE_TTL.global);
+    return protocol;
+  } catch (error) {
+    console.error('Error fetching protocol:', error);
+    return null;
+  }
+}
+
+/**
+ * Get a single chain by ID
+ * @param chainId - Chain ID or gecko_id
+ * @returns Chain details or null
+ */
+export async function getChainBySlug(slug: string): Promise<ChainTVL | null> {
+  try {
+    const chains = await getTopChains(50);
+    const found = chains.find(
+      c => c.gecko_id === slug || 
+           c.name.toLowerCase() === slug.toLowerCase() ||
+           c.name.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+    );
+    return found || null;
+  } catch (error) {
+    console.error('Error fetching chain:', error);
+    return null;
   }
 }
 

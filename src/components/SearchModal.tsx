@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, useRouter } from '@/i18n/navigation';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -85,6 +85,8 @@ async function fetchSearchResults(query: string): Promise<SearchResult[]> {
 }
 
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {
+  const t = useTranslations('search');
+  const tCommon = useTranslations('common');
   const [searchQuery, setSearchQuery] = useState('');
   const [recentSearches, setRecentSearches] = useState<RecentSearch[]>([]);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -286,7 +288,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
       className="fixed inset-0 z-50 flex items-start justify-center pt-[8vh] md:pt-[12vh]"
       role="dialog"
       aria-modal="true"
-      aria-label="Search"
+      aria-label={tCommon('search')}
     >
       {/* Backdrop with animated gradient */}
       <div 

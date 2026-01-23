@@ -1,10 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useBookmarks } from '@/components/BookmarksProvider';
 import ShareButtons from '@/components/ShareButtons';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 export default function BookmarksPageContent() {
+  const t = useTranslations('bookmarks');
+  const tCommon = useTranslations('common');
   const { bookmarks, removeBookmark, clearAll } = useBookmarks();
 
   const formatDate = (dateString: string) => {
@@ -21,21 +24,21 @@ export default function BookmarksPageContent() {
     <div className="max-w-4xl mx-auto">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-bold mb-2">🔖 Saved Articles</h1>
+          <h1 className="text-4xl font-bold mb-2">🔖 {t('title')}</h1>
           <p className="text-gray-600">
-            {bookmarks.length} article{bookmarks.length !== 1 ? 's' : ''} saved locally
+            {bookmarks.length} {bookmarks.length !== 1 ? t('saved') : t('saved')}
           </p>
         </div>
         {bookmarks.length > 0 && (
           <button
             onClick={() => {
-              if (confirm('Are you sure you want to clear all bookmarks?')) {
+              if (confirm(t('confirmRemoveAll'))) {
                 clearAll();
               }
             }}
             className="px-4 py-2 text-red-600 border border-red-200 rounded-lg hover:bg-red-50 transition"
           >
-            Clear All
+            {t('removeAll')}
           </button>
         )}
       </div>
@@ -88,15 +91,15 @@ export default function BookmarksPageContent() {
       ) : (
         <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
           <div className="text-6xl mb-4">🔖</div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">No saved articles yet</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">{t('empty')}</h3>
           <p className="text-gray-500 mb-6">
-            Click the ☆ button on any article to save it for later
+            {t('emptyDescription')}
           </p>
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
-            Browse News
+            {tCommon('viewAll')}
           </Link>
         </div>
       )}

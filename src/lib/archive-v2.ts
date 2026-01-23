@@ -5,7 +5,7 @@
  * Provides query capabilities for the new JSONL-based archive format.
  */
 
-import { NewsArticle } from './crypto-news';
+import { NewsArticle, getLatestNews } from './crypto-news';
 
 // Next.js fetch extension type
 type NextFetchRequestConfig = RequestInit & {
@@ -453,10 +453,11 @@ export function generateArticleId(url: string): string {
 
 /**
  * Get a single article by ID
+ * First checks the archive, then falls back to live RSS feeds
  */
 export async function getArticleById(id: string): Promise<EnrichedArticle | null> {
   try {
-    // Get current month's articles
+    // Get current month's articles from archive
     const now = new Date();
     const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
     const articles = await getArchiveV2Month(yearMonth);
@@ -469,10 +470,103 @@ export async function getArticleById(id: string): Promise<EnrichedArticle | null
     const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
     const prevArticles = await getArchiveV2Month(prevYearMonth);
     
-    return prevArticles.find(a => a.id === id) || null;
+    const archivedArticle = prevArticles.find(a => a.id === id);
+    if (archivedArticle) return archivedArticle;
+    
+    // Fallback: fetch from live RSS feeds and find by matching ID
+    const liveNews = await getLatestNews(100);
+    const liveArticle = liveNews.articles.find(a => generateArticleId(a.link) === id);
+    
+    if (liveArticle) {
+      // Convert NewsArticle to EnrichedArticle format
+      return newsArticleToEnriched(liveArticle);
+    }
+    
+    return null;
   } catch {
     return null;
   }
+}
+
+/**
+ * Convert a NewsArticle from live RSS to EnrichedArticle format
+ */
+function newsArticleToEnriched(article: NewsArticle): EnrichedArticle {
+  return {
+    id: generateArticleId(article.link),
+    schema_version: '2.0',
+    title: article.title,
+    link: article.link,
+    canonical_link: article.link,
+    description: article.description || '',
+    source: article.source,
+    source_key: article.sourceKey,
+    category: article.category,
+    pub_date: article.pubDate,
+    first_seen: article.pubDate,
+    last_seen: article.pubDate,
+    fetch_count: 1,
+    tickers: extractTickers(article.title + ' ' + (article.description || '')),
+    entities: {
+      people: [],
+      companies: [],
+      protocols: [],
+    },
+    tags: [],
+    sentiment: {
+      score: 0,
+      label: 'neutral',
+      confidence: 0.5,
+    },
+    market_context: null,
+    content_hash: generateArticleId(article.link),
+    meta: {
+      word_count: (article.title + ' ' + (article.description || '')).split(/\s+/).length,
+      has_numbers: /\d/.test(article.title),
+      is_breaking: article.title.toLowerCase().includes('breaking'),
+      is_opinion: false,
+    },
+  };
+}
+
+/**
+ * Extract cryptocurrency tickers from text
+ */
+function extractTickers(text: string): string[] {
+  const commonTickers = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOGE', 'DOT', 'AVAX', 'MATIC', 'LINK', 'UNI', 'ATOM', 'LTC', 'BCH', 'NEAR', 'APT', 'ARB', 'OP', 'SUI', 'SEI'];
+  const found: string[] = [];
+  const upperText = text.toUpperCase();
+  
+  for (const ticker of commonTickers) {
+    // Match ticker as a word boundary
+    const regex = new RegExp(`\\b${ticker}\\b`);
+    if (regex.test(upperText)) {
+      found.push(ticker);
+    }
+  }
+  
+  // Also check for full names
+  const nameMap: Record<string, string> = {
+    'BITCOIN': 'BTC',
+    'ETHEREUM': 'ETH',
+    'SOLANA': 'SOL',
+    'RIPPLE': 'XRP',
+    'CARDANO': 'ADA',
+    'DOGECOIN': 'DOGE',
+    'POLKADOT': 'DOT',
+    'AVALANCHE': 'AVAX',
+    'POLYGON': 'MATIC',
+    'CHAINLINK': 'LINK',
+    'UNISWAP': 'UNI',
+  };
+  
+  for (const [name, ticker] of Object.entries(nameMap)) {
+    if (upperText.includes(name) && !found.includes(ticker)) {
+      found.push(ticker);
+    }
+  }
+  
+  return found;
 }
 
 /**

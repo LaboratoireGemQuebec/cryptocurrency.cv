@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { Share2, Twitter, Facebook, Linkedin, Link2, Check, MessageCircle, Mail } from 'lucide-react';
 
 interface SocialShareProps {
@@ -10,6 +11,8 @@ interface SocialShareProps {
 }
 
 export function SocialShare({ title, url, description }: SocialShareProps) {
+  const t = useTranslations('share');
+  const tCommon = useTranslations('common');
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [canShare, setCanShare] = useState(false);
@@ -86,10 +89,10 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
       <button
         onClick={() => canShare ? handleNativeShare() : setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-        aria-label="Share article"
+        aria-label={tCommon('share')}
       >
         <Share2 className="w-4 h-4" />
-        <span>Share</span>
+        <span>{tCommon('share')}</span>
       </button>
 
       {/* Dropdown Menu (non-native share) */}
@@ -123,12 +126,12 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               {copied ? (
                 <>
                   <Check className="w-4 h-4 text-green-500" />
-                  Copied!
+                  {tCommon('copied')}
                 </>
               ) : (
                 <>
                   <Link2 className="w-4 h-4" />
-                  Copy Link
+                  {t('copyLink')}
                 </>
               )}
             </button>

@@ -3,10 +3,17 @@
  * Premium footer with gradient mesh background
  */
 
-import Link from 'next/link';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { categories } from '@/lib/categories';
 
 export default function Footer() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
+  const tCommon = useTranslations('common');
+
   return (
     <footer className="relative bg-gray-900 text-white mt-16 overflow-hidden" role="contentinfo">
       {/* Animated gradient mesh background */}
@@ -47,11 +54,11 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 text-2xl font-black mb-6 focus-ring rounded group">
               <span aria-hidden="true" className="text-3xl">📰</span>
               <span className="bg-gradient-to-r from-brand-400 via-amber-400 to-orange-400 bg-clip-text text-transparent group-hover:from-brand-300 group-hover:to-orange-300 transition-all duration-300">
-                Crypto News
+                {tCommon('appName')}
               </span>
             </Link>
             <p className="text-gray-400 text-base mb-8 leading-relaxed max-w-sm">
-              100% free crypto news aggregator. No API keys required. Built for developers, traders & AI agents.
+              {tCommon('tagline')}. {t('disclaimer')}
             </p>
             
             {/* Social Links */}

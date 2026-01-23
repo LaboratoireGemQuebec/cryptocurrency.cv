@@ -27,6 +27,7 @@
  */
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useTheme } from './ThemeProvider';
 
 interface ThemeToggleProps {
@@ -34,6 +35,7 @@ interface ThemeToggleProps {
 }
 
 export default function ThemeToggle({ className = '' }: ThemeToggleProps) {
+  const t = useTranslations('a11y');
   const { resolvedTheme, toggleTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
 
@@ -41,8 +43,8 @@ export default function ThemeToggle({ className = '' }: ThemeToggleProps) {
     <button
       onClick={toggleTheme}
       className={`relative p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 ${className}`}
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      aria-label={t('toggleTheme')}
+      title={t('toggleTheme')}
     >
       <div className="relative w-5 h-5">
         {/* Sun icon */}

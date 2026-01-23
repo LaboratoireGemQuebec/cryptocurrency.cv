@@ -183,14 +183,14 @@ export default function LoadingSpinner({
 }
 
 // Full page loading state
-export function PageLoader({ text = 'Loading...' }: { text?: string }) {
+export function PageLoader({ text, subtitle }: { text?: string; subtitle?: string }) {
   return (
     <div className="fixed inset-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white dark:bg-gray-900 shadow-2xl border border-gray-200 dark:border-gray-800">
         <LoadingSpinner size="xl" variant="brand" />
         <div className="text-center">
           <p className="text-lg font-semibold text-gray-900 dark:text-white">{text}</p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Please wait a moment</p>
+          {subtitle && <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{subtitle}</p>}
         </div>
       </div>
     </div>

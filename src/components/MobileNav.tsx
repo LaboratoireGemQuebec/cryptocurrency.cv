@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { categories } from '@/lib/categories';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 // Navigation sections for mobile
 const mainNavItems = [
@@ -22,6 +24,9 @@ const resourceLinks = [
 ];
 
 export function MobileNav() {
+  const t = useTranslations('nav');
+  const tA11y = useTranslations('a11y');
+  const tCommon = useTranslations('common');
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -110,11 +115,11 @@ export function MobileNav() {
         ref={openButtonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="relative p-2.5 text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-label={isOpen ? tA11y('closeMenu') : tA11y('openMenu')}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
       >
-        <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
+        <span className="sr-only">{isOpen ? tA11y('closeMenu') : tA11y('openMenu')}</span>
         <svg 
           className={`w-6 h-6 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`} 
           fill="none" 
@@ -162,7 +167,7 @@ export function MobileNav() {
             ref={closeButtonRef}
             onClick={closeMenu}
             className="p-2 text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors focus-ring"
-            aria-label="Close menu"
+            aria-label={tA11y('closeMenu')}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -278,9 +283,12 @@ export function MobileNav() {
 
         {/* Footer CTA */}
         <div className="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 p-4">
+          <div className="flex items-center justify-between mb-4">
+            <LanguageSwitcher />
+          </div>
           <div className="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/30 dark:to-brand-800/30 rounded-2xl p-4 border border-brand-200/50 dark:border-brand-700/50">
-            <h3 className="font-semibold text-brand-900 dark:text-brand-100 mb-1">Free Crypto API</h3>
-            <p className="text-sm text-brand-700/80 dark:text-brand-300/80 mb-3">No keys required. Start building today.</p>
+            <h3 className="font-semibold text-brand-900 dark:text-brand-100 mb-1">{tCommon('appName')}</h3>
+            <p className="text-sm text-brand-700/80 dark:text-brand-300/80 mb-3">{tCommon('tagline')}</p>
             <Link
               href="/about"
               onClick={closeMenu}

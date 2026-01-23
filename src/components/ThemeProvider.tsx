@@ -27,7 +27,7 @@ function getSystemTheme(): ResolvedTheme {
 }
 
 function getStoredTheme(): Theme {
-  if (typeof window === 'undefined') return 'system';
+  if (typeof window === 'undefined') return 'dark';
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'light' || stored === 'dark' || stored === 'system') {
@@ -36,7 +36,7 @@ function getStoredTheme(): Theme {
   } catch {
     // localStorage not available
   }
-  return 'system';
+  return 'dark';
 }
 
 interface ThemeProviderProps {
@@ -47,7 +47,7 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ 
   children, 
-  defaultTheme = 'system',
+  defaultTheme = 'dark',
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme);
   const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('light');

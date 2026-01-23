@@ -37,7 +37,8 @@
  */
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { generateArticleId } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
 
@@ -70,6 +71,7 @@ const sourceColors: Record<string, { bg: string; light: string; text: string; bo
 const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', darkLight: 'dark:bg-gray-800', darkText: 'dark:text-gray-300' };
 
 export default function NewsCard({ article, variant = 'default', showDescription = true, priority }: NewsCardProps) {
+  const t = useTranslations('news');
   const articleId = generateArticleId(article.link);
   const style = sourceColors[article.source] || defaultStyle;
 
@@ -184,7 +186,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
               {article.timeAgo}
             </time>
             <span className="text-brand-600 dark:text-amber-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-              Read
+              {t('readMore')}
               <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

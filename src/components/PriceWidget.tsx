@@ -19,6 +19,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations, useFormatter } from 'next-intl';
 
 interface PriceData {
   bitcoin: {
@@ -37,6 +38,7 @@ interface PriceWidgetProps {
 }
 
 export default function PriceWidget({ variant = 'compact', className = '' }: PriceWidgetProps) {
+  const format = useFormatter();
   const [prices, setPrices] = useState<PriceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);

@@ -1,3 +1,7 @@
+🌐 **Languages:** [English](README.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [العربية](README.ar.md) | [Русский](README.ru.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Türkçe](README.tr.md) | [Tiếng Việt](README.vi.md) | [ไทย](README.th.md) | [Bahasa Indonesia](README.id.md)
+
+---
+
 # 🆓 Free Crypto News API
 
 <p align="center">
@@ -16,8 +20,6 @@
 
 ---
 Get real-time crypto news from 7 major sources with one API call.
-
-> 🌍 **Available in 18 languages:** [中文](locales/README/index.zh-CN.md) | [日本語](locales/README/index.ja-JP.md) | [한국어](locales/README/index.ko-KR.md) | [Español](locales/README/index.es-ES.md) | [Français](locales/README/index.fr-FR.md) | [Deutsch](locales/README/index.de-DE.md) | [Português](locales/README/index.pt-BR.md) | [Русский](locales/README/index.ru-RU.md) | [العربية](locales/README/index.ar.md) | [More...](locales/)
 
 ```bash
 curl https://free-crypto-news.vercel.app/api/news
@@ -189,6 +191,40 @@ We aggregate from **7 trusted outlets**:
 | `/api/defi` | DeFi-specific news |
 | `/api/bitcoin` | Bitcoin-specific news |
 | `/api/breaking` | Last 2 hours only |
+
+### 🌍 API Translation (18 Languages)
+
+All news endpoints support real-time translation via the `?lang=` parameter:
+
+```bash
+# Get news in Spanish
+curl "https://free-crypto-news.vercel.app/api/news?lang=es"
+
+# Get breaking news in Japanese
+curl "https://free-crypto-news.vercel.app/api/breaking?lang=ja"
+
+# Get DeFi news in Arabic
+curl "https://free-crypto-news.vercel.app/api/defi?lang=ar"
+
+# Get Bitcoin news in Chinese (Simplified)
+curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
+```
+
+**Supported Languages:** `en`, `es`, `fr`, `de`, `pt`, `ja`, `zh-CN`, `zh-TW`, `ko`, `ar`, `ru`, `it`, `nl`, `pl`, `tr`, `vi`, `th`, `id`
+
+**Requirements:**
+- Set `GROQ_API_KEY` environment variable (FREE at [console.groq.com/keys](https://console.groq.com/keys))
+- Set `FEATURE_TRANSLATION=true` to enable
+
+**Endpoints with Translation Support:**
+| Endpoint | `?lang=` Support |
+|----------|------------------|
+| `/api/news` | ✅ |
+| `/api/breaking` | ✅ |
+| `/api/defi` | ✅ |
+| `/api/bitcoin` | ✅ |
+| `/api/archive` | ✅ |
+| `/api/archive/v2` | ✅ |
 | `/api/trending` | Trending topics with sentiment |
 | `/api/analyze` | News with topic classification |
 | `/api/stats` | Analytics & statistics |

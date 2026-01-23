@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useBookmarks } from './BookmarksProvider';
 
 interface BookmarkButtonProps {
@@ -13,6 +14,7 @@ interface BookmarkButtonProps {
 }
 
 export default function BookmarkButton({ article, size = 'md' }: BookmarkButtonProps) {
+  const t = useTranslations('article');
   const { isBookmarked, addBookmark, removeBookmark } = useBookmarks();
   const bookmarked = isBookmarked(article.link);
 
@@ -31,6 +33,8 @@ export default function BookmarkButton({ article, size = 'md' }: BookmarkButtonP
     ? 'w-7 h-7 text-sm' 
     : 'w-9 h-9 text-lg';
 
+  const label = bookmarked ? t('removeBookmark') : t('bookmark');
+
   return (
     <button
       onClick={handleClick}
@@ -39,8 +43,8 @@ export default function BookmarkButton({ article, size = 'md' }: BookmarkButtonP
           ? 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200' 
           : 'bg-gray-100 text-gray-400 hover:bg-gray-200 hover:text-gray-600'
       }`}
-      title={bookmarked ? 'Remove bookmark' : 'Save for later'}
-      aria-label={bookmarked ? 'Remove bookmark' : 'Save for later'}
+      title={label}
+      aria-label={label}
     >
       {bookmarked ? '★' : '☆'}
     </button>

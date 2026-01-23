@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface Article {
   title: string;
@@ -33,6 +34,8 @@ const popularSearches = [
 ];
 
 export function SearchPageContent() {
+  const t = useTranslations('search');
+  const tCommon = useTranslations('common');
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Article[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -77,7 +80,7 @@ export function SearchPageContent() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search for crypto news..."
+            placeholder={t('placeholder')}
             className="w-full px-6 py-4 pr-14 text-lg border-2 border-gray-200 rounded-full focus:outline-none focus:border-black transition"
           />
           <button

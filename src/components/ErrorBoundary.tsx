@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -125,19 +125,24 @@ function DefaultErrorFallback({ error, onReset }: DefaultErrorFallbackProps) {
 /**
  * Standalone ErrorFallback component for use outside ErrorBoundary
  * Used by Next.js error.tsx and global-error.tsx
+ * Translations should be passed via props from the parent component
  */
 export interface ErrorFallbackProps {
   error: Error | null;
   onRetry?: () => void;
   title?: string;
   description?: string;
+  goHomeLabel?: string;
+  tryAgainLabel?: string;
 }
 
 export function ErrorFallback({ 
   error, 
   onRetry, 
   title = 'Something went wrong',
-  description = 'We encountered an unexpected error. Please try again or return to the homepage.'
+  description = 'We encountered an unexpected error. Please try again or return to the homepage.',
+  goHomeLabel = 'Go home',
+  tryAgainLabel = 'Try again'
 }: ErrorFallbackProps) {
   return (
     <div className="max-w-md w-full text-center">
@@ -176,14 +181,14 @@ export function ErrorFallback({
             onClick={onRetry}
             className="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
           >
-            Try again
+            {tryAgainLabel}
           </button>
         )}
         <Link
           href="/"
           className="px-4 py-2 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-slate-300 font-medium rounded-lg transition-colors"
         >
-          Go home
+          {goHomeLabel}
         </Link>
       </div>
     </div>
