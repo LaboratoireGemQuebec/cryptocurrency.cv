@@ -854,6 +854,55 @@ export async function getSimplePrices(): Promise<SimplePrices> {
 }
 
 /**
+ * Get prices for specific coins
+ * @param coinIds - Array of coin IDs to fetch
+ * @param vsCurrency - Target currency (default: 'usd')
+ * @returns Price data for requested coins
+ */
+export async function getPricesForCoins(
+  coinIds: string[],
+  vsCurrency = 'usd'
+): Promise<Record<string, { price: number; change_24h: number; last_updated: string }>> {
+  const ids = coinIds.join(',');
+  const cacheKey = `prices-${ids}-${vsCurrency}`;
+  const cached = getCached<Record<string, { price: number; change_24h: number; last_updated: string }>>(cacheKey);
+  if (cached) return cached.data;
+
+  try {
+    const response = await fetchWithTimeout(
+      `${COINGECKO_BASE}/simple/price?ids=${ids}&vs_currencies=${vsCurrency}&include_24hr_change=true&include_last_updated_at=true`
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch prices');
+    }
+
+    const data = await response.json();
+
+    // Transform to consistent format
+    const result: Record<string, { price: number; change_24h: number; last_updated: string }> = {};
+    for (const coinId of coinIds) {
+      if (data[coinId]) {
+        result[coinId] = {
+          price: data[coinId][vsCurrency] || 0,
+          change_24h: data[coinId][`${vsCurrency}_24h_change`] || 0,
+          last_updated: data[coinId].last_updated_at
+            ? new Date(data[coinId].last_updated_at * 1000).toISOString()
+            : new Date().toISOString(),
+        };
+      }
+    }
+
+    setCache(cacheKey, result, CACHE_TTL.prices);
+    return result;
+  } catch (error) {
+    console.error('Error fetching prices for coins:', error);
+    // Return empty object on error
+    return {};
+  }
+}
+
+/**
  * Get top coins by market cap
  * @param limit - Number of coins to fetch (max 250)
  * @returns Array of top coins sorted by market cap
