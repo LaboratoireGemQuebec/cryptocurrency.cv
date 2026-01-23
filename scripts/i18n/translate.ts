@@ -68,6 +68,34 @@ const LOCALE_NAMES: Record<string, string> = {
 };
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+
+// Determine which API to use based on environment variables
+function getApiConfig(): { apiUrl: string; apiKey: string; model: string; provider: string } {
+  if (process.env.OPENAI_API_KEY) {
+    return {
+      apiUrl: OPENAI_API_URL,
+      apiKey: process.env.OPENAI_API_KEY,
+      model: 'gpt-4o-mini',
+      provider: 'OpenAI',
+    };
+  }
+  if (process.env.GROQ_API_KEY) {
+    return {
+      apiUrl: GROQ_API_URL,
+      apiKey: process.env.GROQ_API_KEY,
+      model: CONFIG.model,
+      provider: 'Groq',
+    };
+  }
+  throw new Error(
+    '\n\n🔑 No API key set!\n\n' +
+    'Set either OPENAI_API_KEY or GROQ_API_KEY:\n' +
+    '  OPENAI_API_KEY=sk-... npx tsx scripts/i18n/translate.ts\n' +
+    '  GROQ_API_KEY=gsk_... npx tsx scripts/i18n/translate.ts\n\n' +
+    'Get your FREE Groq API key at: https://console.groq.com/keys\n'
+  );
+}
 
 // Colors for console output
 const colors = {
@@ -104,26 +132,18 @@ function logProgress(current: number, total: number, message: string) {
 }
 
 /**
- * Call Groq API with retry logic
+ * Call API (Groq or OpenAI) with retry logic
  */
-async function callGroqWithRetry(
+async function callApiWithRetry(
   messages: Array<{ role: string; content: string }>,
   options: { temperature?: number; jsonMode?: boolean } = {}
 ): Promise<string> {
-  const apiKey = process.env.GROQ_API_KEY;
-  
-  if (!apiKey) {
-    throw new Error(
-      '\n\n🔑 GROQ_API_KEY not set!\n\n' +
-      'Get your FREE API key at: https://console.groq.com/keys\n' +
-      'Then run: GROQ_API_KEY=your-key npx tsx scripts/i18n/translate.ts\n'
-    );
-  }
+  const { apiUrl, apiKey, model, provider } = getApiConfig();
 
   for (let attempt = 1; attempt <= CONFIG.maxRetries; attempt++) {
     try {
       const body: Record<string, unknown> = {
-        model: CONFIG.model,
+        model,
         messages,
         temperature: options.temperature ?? CONFIG.temperature,
         max_tokens: 4096,
@@ -133,7 +153,7 @@ async function callGroqWithRetry(
         body.response_format = { type: 'json_object' };
       }
 
-      const response = await fetch(GROQ_API_URL, {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -152,7 +172,7 @@ async function callGroqWithRetry(
 
       if (!response.ok) {
         const error = await response.text();
-        throw new Error(`Groq API error: ${response.status} - ${error}`);
+        throw new Error(`${provider} API error: ${response.status} - ${error}`);
       }
 
       const data = await response.json();
@@ -273,7 +293,7 @@ Example output: {"greeting": "Hola {name}", "items": "{count} elementos"}`;
 
   const userPrompt = JSON.stringify(strings, null, 2);
   
-  const response = await callGroqWithRetry(
+  const response = await callApiWithRetry(
     [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: userPrompt },
