@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FearGreedIndex } from '@/components/FearGreedIndex';
+import type { ReactElement } from 'react';
+import { FearGreedIndex as _FearGreedIndex } from '@/components/FearGreedIndex';
+const FearGreedIndex = _FearGreedIndex as unknown as (props: any) => ReactElement;
 
 interface FearGreedData {
   current: {

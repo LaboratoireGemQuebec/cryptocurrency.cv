@@ -3,7 +3,7 @@
   "crons": [
     {
       "path": "/api/cron/x-sentiment",
-      "schedule": "0,30 * * * *"
+      "schedule": "0 0 * * *"
     }
   ],
   "functions": {

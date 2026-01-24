@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ClickbaitDashboard from './ClickbaitDashboard';
+import ClickbaitDashboard from '@/app/[locale]/clickbait/ClickbaitDashboard';
 
 export const metadata: Metadata = {
   title: 'Clickbait Detector | Crypto News Quality',

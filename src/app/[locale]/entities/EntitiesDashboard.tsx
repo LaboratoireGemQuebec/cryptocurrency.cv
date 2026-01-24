@@ -1,3 +1,6 @@
+/**
+ * Entities Dashboard Component
+ */
 'use client';
 
 import { useState, useEffect } from 'react';

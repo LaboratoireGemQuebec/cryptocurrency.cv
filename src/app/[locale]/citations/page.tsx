@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CitationsDashboard from './CitationsDashboard';
+import CitationsDashboard from '@/app/[locale]/citations/CitationsDashboard';
 
 export const metadata: Metadata = {
   title: 'Citations | Crypto News Source Network',

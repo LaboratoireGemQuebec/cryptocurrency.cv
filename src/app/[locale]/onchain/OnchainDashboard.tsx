@@ -1,3 +1,6 @@
+/**
+ * On-Chain Events Dashboard Component
+ */
 'use client';
 
 import { useState, useEffect } from 'react';

@@ -33,6 +33,8 @@ interface FearGreedIndexProps {
   showBreakdown?: boolean;
   showHistory?: boolean;
   historyDays?: number;
+  size?: 'sm' | 'md' | 'lg' | string;
+  showLabel?: boolean;
 }
 
 const CLASSIFICATIONS = {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import OnchainDashboard from './OnchainDashboard';
+import OnchainDashboard from '@/app/[locale]/onchain/OnchainDashboard';
 
 export const metadata: Metadata = {
   title: 'On-Chain Events | Crypto News Correlation',

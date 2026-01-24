@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ClaimsDashboard from './ClaimsDashboard';
+import ClaimsDashboard from '@/app/[locale]/claims/ClaimsDashboard';
 
 export const metadata: Metadata = {
   title: 'Claims | Extracted Crypto News Claims',

@@ -80,7 +80,7 @@ export default function BlogPage() {
         {allPosts.length > 9 && (
           <div className="text-center mt-8">
             <Link
-              href="/blog/all"
+              href="/blog"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
             >
               View All Articles

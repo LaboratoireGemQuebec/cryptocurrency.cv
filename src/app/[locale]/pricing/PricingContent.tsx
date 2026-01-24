@@ -475,7 +475,7 @@ export default function PricingContent() {
             Get Your API Key
           </a>
           <a
-            href="/docs/API"
+            href="/developers"
             className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-3 rounded-xl font-semibold transition-all"
           >
             Read the Docs

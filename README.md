@@ -157,6 +157,81 @@ Power through news with keyboard navigation:
 
 📖 **Full user guide:** [docs/USER-GUIDE.md](docs/USER-GUIDE.md)
 
+---
+
+## 🌐 Interactive Pages
+
+The web interface provides rich, interactive pages for exploring crypto data:
+
+### 📰 News & Content
+
+| Page | Description |
+|------|-------------|
+| `/` | Home page with latest news feed |
+| `/breaking` | Breaking news in last 2 hours |
+| `/trending` | Trending topics & sentiment |
+| `/search` | Full-text search with filters |
+| `/sources` | Browse news by source |
+| `/categories` | Browse by category |
+| `/tags/[slug]` | Tag-based news filtering |
+| `/article/[slug]` | Article detail page |
+
+### 📊 Market Data
+
+| Page | Description |
+|------|-------------|
+| `/markets` | Market overview with prices |
+| `/coin/[coinId]` | Detailed coin page (CoinGecko-quality) |
+| `/fear-greed` | Fear & Greed Index with breakdown |
+| `/funding` | Funding rates across exchanges |
+| `/signals` | AI trading signals (educational) |
+| `/whales` | Whale alert tracking |
+
+### 🧠 AI Analysis
+
+| Page | Description |
+|------|-------------|
+| `/factcheck` | Claim verification dashboard |
+| `/entities` | Entity extraction viewer |
+| `/claims` | Extracted claims browser |
+| `/clickbait` | Clickbait detection & scoring |
+| `/narratives` | Market narrative tracking |
+| `/onchain` | On-chain event correlation |
+| `/origins` | Original source finder |
+| `/citations` | Citation network explorer |
+
+### 🔬 Research Tools
+
+| Page | Description |
+|------|-------------|
+| `/backtest` | News-based strategy backtesting |
+| `/influencers` | Influencer prediction tracking |
+| `/predictions` | Prediction market integration |
+| `/calendar` | Crypto events calendar |
+| `/portfolio` | Portfolio-based news feed |
+
+### ⚙️ User Features
+
+| Page | Description |
+|------|-------------|
+| `/settings` | User preferences & themes |
+| `/notifications` | Notification settings |
+| `/watchlist` | Personalized watchlist |
+| `/bookmarks` | Saved articles |
+| `/alerts` | Custom alert configuration |
+| `/api-keys` | API key management |
+| `/stats` | Site statistics |
+
+### 📖 Documentation
+
+| Page | Description |
+|------|-------------|
+| `/docs` | Interactive API documentation |
+| `/examples` | Code examples & demos |
+| `/status` | API & service health |
+
+---
+
 ### Generate PNG Icons
 
 SVG icons work in modern browsers. For legacy support:
@@ -391,7 +466,7 @@ curl -X POST "https://fcn.dev/api/social/monitor" \
 | `/api/exports` | Bulk export job management |
 | `/api/exports/[id]` | Download export file |
 
-### 📡 Real-Time & Infrastructure
+### �🔔 Real-Time & Infrastructure
 
 | Endpoint | Description |
 |----------|-------------|
@@ -1812,7 +1887,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Japanese sources ✅
 - [x] Spanish sources ✅
 
-### 📡 Real-Time Features
+### Real-Time Features
 - [x] WebSocket streaming
 - [x] Configurable alert system (8 condition types)
 - [x] Alert WebSocket subscriptions

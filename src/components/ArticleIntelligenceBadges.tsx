@@ -7,7 +7,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Tooltip } from './Tooltip';
+import { Tooltip } from '@/components/Tooltip';
 
 interface ArticleIntelligenceProps {
   articleId: string;

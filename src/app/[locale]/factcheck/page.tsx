@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FactcheckDashboard from './FactcheckDashboard';
+import FactcheckDashboard from '@/app/[locale]/factcheck/FactcheckDashboard';
 
 export const metadata: Metadata = {
   title: 'Fact Check | Crypto Claim Verification',

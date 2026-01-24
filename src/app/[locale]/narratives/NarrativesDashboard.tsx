@@ -1,3 +1,6 @@
+/**
+ * Market Narratives Dashboard Component
+ */
 'use client';
 
 import { useState, useEffect } from 'react';

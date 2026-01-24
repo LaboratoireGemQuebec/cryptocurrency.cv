@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import EntitiesDashboard from './EntitiesDashboard';
+import EntitiesDashboard from '@/app/[locale]/entities/EntitiesDashboard';
 
 export const metadata: Metadata = {
   title: 'Entities | Crypto News Entity Extraction',
