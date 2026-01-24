@@ -779,8 +779,8 @@ export async function evaluateCondition(
 
       case 'whale_movement': {
         // Fetch real whale transaction data
-        const coin = condition.asset?.toLowerCase() || 'bitcoin';
-        const minThreshold = condition.threshold || 1000000; // Default $1M
+        const coin = 'bitcoin'; // Default to bitcoin
+        const minThreshold = condition.minUSD || 1000000; // Default $1M
         
         try {
           // Fetch from our whale alerts API

@@ -44,22 +44,26 @@ const analyticsItems = [
 ];
 
 const aiItems = [
+  { href: '/ai', label: 'AI Hub', icon: '✨' },
   { href: '/ai/oracle', label: 'The Oracle', icon: '🔮' },
   { href: '/ai/brief', label: 'The Brief', icon: '📋' },
   { href: '/ai/debate', label: 'The Debate', icon: '⚖️' },
+  { href: '/ai/counter', label: 'The Counter', icon: '🔍' },
   { href: '/ai-agent', label: 'AI Market Agent', icon: '🤖' },
   { href: '/digest', label: 'AI Digest', icon: '📰' },
   { href: '/sentiment', label: 'Sentiment', icon: '🎯' },
 ];
 
 const resourceLinks = [
-  { href: '/developers', label: 'Developer Portal', icon: '👨‍💻' },
-  { href: '/examples', label: 'Code Examples', icon: '💻' },
-  { href: '/pricing', label: 'API Pricing', icon: '💰' },
-  { href: '/pricing/upgrade', label: 'Pay with Crypto', icon: '💳' },
+  { href: '/developers', label: 'API', icon: '🔌' },
+  { href: '/examples', label: 'API Docs', icon: '📚' },
+  { href: '/pricing', label: 'Pricing', icon: '💎' },
+  { href: '/pricing/upgrade', label: 'x402 Crypto Pay', icon: '💳' },
   { href: '/billing', label: 'Billing', icon: '📊' },
   { href: '/install', label: 'Install App', icon: '📲' },
   { href: '/settings', label: 'Settings', icon: '⚙️' },
+  { href: '/about', label: 'About Us', icon: 'ℹ️' },
+  { href: '/read', label: 'Reading List', icon: '📖' },
 ];
 
 export function MobileNav() {

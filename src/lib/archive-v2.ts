@@ -7,6 +7,52 @@
 
 import { NewsArticle, getLatestNews } from './crypto-news';
 
+// ============================================================================
+// SLUG UTILITIES
+// ============================================================================
+
+/**
+ * Generate a URL-friendly slug from article title and date
+ * Format: "bitcoin-hits-new-all-time-high-2026-01-24"
+ * 
+ * This creates human-readable, SEO-friendly URLs for archived articles.
+ */
+export function generateArticleSlug(title: string, date?: string): string {
+  // Clean and slugify the title
+  let slug = title
+    .toLowerCase()
+    .replace(/['']/g, '')                    // Remove apostrophes
+    .replace(/[^a-z0-9\s-]/g, '')           // Remove special chars
+    .replace(/\s+/g, '-')                    // Spaces to dashes
+    .replace(/-+/g, '-')                     // Collapse multiple dashes
+    .replace(/^-|-$/g, '')                   // Trim leading/trailing dashes
+    .slice(0, 60);                           // Limit length
+  
+  // Remove trailing dash if we cut mid-word
+  slug = slug.replace(/-$/, '');
+  
+  // Add date suffix for uniqueness (YYYY-MM-DD)
+  if (date) {
+    const dateStr = new Date(date).toISOString().split('T')[0];
+    slug = `${slug}-${dateStr}`;
+  }
+  
+  return slug || 'untitled';
+}
+
+/**
+ * Parse a slug to extract possible date suffix
+ * Returns { baseSlug, date } if date found, otherwise just { baseSlug }
+ */
+export function parseArticleSlug(slug: string): { baseSlug: string; date?: string } {
+  // Match date pattern at end: -YYYY-MM-DD
+  const dateMatch = slug.match(/^(.+)-(\d{4}-\d{2}-\d{2})$/);
+  if (dateMatch) {
+    return { baseSlug: dateMatch[1], date: dateMatch[2] };
+  }
+  return { baseSlug: slug };
+}
+
 // Next.js fetch extension type
 type NextFetchRequestConfig = RequestInit & {
   next?: { revalidate?: number | false; tags?: string[] };
@@ -18,6 +64,7 @@ type NextFetchRequestConfig = RequestInit & {
 
 export interface EnrichedArticle {
   id: string;
+  slug?: string;              // SEO-friendly URL slug (e.g., "bitcoin-hits-ath-2026-01-24")
   schema_version: string;
   title: string;
   link: string;
@@ -440,6 +487,7 @@ export function toNewsArticle(enriched: EnrichedArticle): NewsArticle {
 
 /**
  * Generate article ID from URL (consistent hash)
+ * @deprecated Use generateArticleSlug for new articles
  */
 export function generateArticleId(url: string): string {
   let hash = 0;
@@ -449,6 +497,14 @@ export function generateArticleId(url: string): string {
     hash = hash & hash;
   }
   return Math.abs(hash).toString(16).padStart(16, '0').slice(0, 16);
+}
+
+/**
+ * Check if an identifier is a legacy hash ID (hex string) or a slug
+ */
+export function isLegacyId(identifier: string): boolean {
+  // Legacy IDs are 16-char hex strings
+  return /^[0-9a-f]{16}$/i.test(identifier);
 }
 
 /**

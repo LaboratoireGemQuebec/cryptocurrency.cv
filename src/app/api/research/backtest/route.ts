@@ -24,31 +24,26 @@ export async function POST(request: NextRequest) {
 
     // Use real backtesting library with historical data
     const result = await runBacktest({
-      strategy: {
-        id: `strategy_${strategy}`,
-        name: strategy,
-        description: `${strategy} strategy on ${asset}`,
-        type: strategy.toLowerCase().includes('momentum') ? 'momentum' : 
-              strategy.toLowerCase().includes('mean') ? 'mean-reversion' : 'trend-following',
-        rules: {
-          entryConditions: [
-            { indicator: 'price', operator: 'crosses_above', value: 0, period: 20 }
-          ],
-          exitConditions: [
-            { indicator: 'price', operator: 'crosses_below', value: 0, period: 20 }
-          ],
-          positionSize: 'fixed',
-          riskPerTrade: 0.02,
-        },
-        parameters: parameters || {},
-        isActive: true,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
+      strategyId: `strategy_${strategy}`,
+      strategyName: strategy,
+      assets: [asset],
       startDate: start_date,
       endDate: end_date,
-      asset,
       initialCapital: initial_capital,
+      positionSizing: {
+        type: 'percentage',
+        value: 10,
+        maxPositionSize: 25,
+      },
+      riskManagement: {
+        stopLoss: 5,
+        takeProfit: 15,
+        maxDrawdown: 20,
+      },
+      parameters: {
+        sentimentThreshold: parameters?.sentimentThreshold || 0.3,
+        minConfidence: parameters?.minConfidence || 0.6,
+      },
     });
 
     return NextResponse.json({

@@ -34,6 +34,7 @@ const navItems = [
             { label: 'Trending', href: '/trending', icon: '🔥' },
             { label: 'New Listings', href: '/markets/new', icon: '🆕' },
             { label: 'Exchanges', href: '/markets/exchanges', icon: '🏛️' },
+            { label: 'Categories', href: '/markets/categories', icon: '🗂️' },
           ],
         },
         {
@@ -77,6 +78,7 @@ const navItems = [
             { label: 'Lending', href: '/category/defi?sector=lending', icon: '💰' },
             { label: 'DEXs', href: '/category/defi?sector=dex', icon: '🔄' },
             { label: 'Yield', href: '/category/defi?sector=yield', icon: '🌾' },
+            { label: 'By Chain', href: '/defi/chain/ethereum', icon: '⛓️' },
           ],
         },
         {
@@ -215,6 +217,7 @@ const navItems = [
         {
           title: 'AI Products',
           links: [
+            { label: 'AI Hub', href: '/ai', icon: '✨' },
             { label: 'The Oracle', href: '/ai/oracle', icon: '🔮' },
             { label: 'The Brief', href: '/ai/brief', icon: '📋' },
             { label: 'The Debate', href: '/ai/debate', icon: '⚖️' },
@@ -334,25 +337,17 @@ const navItems = [
     },
   },
   {
-    label: 'Developers',
+    label: 'API',
     href: '/developers',
-    icon: '🛠️',
+    icon: '🔌',
     megaMenu: {
       sections: [
         {
           title: 'API & Tools',
           links: [
             { label: 'Developer Portal', href: '/developers', icon: '👨‍💻' },
-            { label: 'API Docs', href: '/examples', icon: '📚' },
+            { label: 'API Documentation', href: '/examples', icon: '📚' },
             { label: 'News Sources', href: '/sources', icon: '📰' },
-          ],
-        },
-        {
-          title: 'API Pricing',
-          links: [
-            { label: 'Pricing Plans', href: '/pricing', icon: '💰' },
-            { label: 'Premium Features', href: '/pricing/premium', icon: '⭐' },
-            { label: 'Pay with Crypto', href: '/pricing/upgrade', icon: '💳' },
           ],
         },
         {
@@ -361,7 +356,35 @@ const navItems = [
             { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
             { label: 'Settings', href: '/settings', icon: '⚙️' },
             { label: 'Install App', href: '/install', icon: '📲' },
-            { label: 'Reading List', href: '/read', icon: '📖' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Free Crypto News API',
+        description: 'Access real-time crypto news, market data, and AI analysis via REST API',
+        href: '/developers',
+      },
+    },
+  },
+  {
+    label: 'Pricing',
+    href: '/pricing',
+    icon: '💎',
+    megaMenu: {
+      sections: [
+        {
+          title: 'Plans',
+          links: [
+            { label: 'Free Tier', href: '/pricing', icon: '🆓' },
+            { label: 'Pro Plan', href: '/pricing#pro', icon: '⭐' },
+            { label: 'Enterprise', href: '/pricing#enterprise', icon: '🏢' },
+          ],
+        },
+        {
+          title: 'Payment',
+          links: [
+            { label: 'x402 Crypto Pay', href: '/pricing/upgrade', icon: '💳' },
+            { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
           ],
         },
       ],
