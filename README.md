@@ -1311,12 +1311,12 @@ Building the definitive open crypto intelligence platform.
 ## 📋 Short-Term (Q1 2026)
 
 ### Data Enrichment
-- [ ] Full article extraction (where legally permissible)
-- [ ] AI-powered summarization (1-sentence, 1-paragraph)
-- [ ] Advanced entity extraction with AI
+- [x] Full article extraction (where legally permissible)
+- [x] AI-powered summarization (1-sentence, 1-paragraph)
+- [x] Advanced entity extraction with AI ✅
 - [x] Event classification (funding, hack, regulation, etc.) ✅
 - [x] Claim extraction (factual claims as structured data) ✅
-- [ ] Relationship extraction (who did what to whom)
+- [x] Relationship extraction (who did what to whom)
 
 ### API Infrastructure
 - [x] Self-service API key registration ✅
@@ -1324,7 +1324,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Usage tracking & statistics ✅
 - [x] Admin management dashboard ✅
 - [x] Webhook delivery system ✅
-- [ ] API key analytics & insights
+- [x] API key analytics & insights ✅
 - [ ] Usage-based billing integration
 
 ### Multi-Lingual
@@ -1341,7 +1341,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Alert WebSocket subscriptions
 - [x] Alert webhook delivery
 - [x] Live price components with flash animations ✅
-- [ ] Faster webhook delivery
+- [x] Faster webhook delivery
 
 ### Market Tools
 - [x] Crypto calculator with profit/loss ✅
@@ -1370,7 +1370,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Headline mutation tracking (detect changes) ✅
 - [x] Source first-mover tracking (who breaks news) ✅
 - [x] Coordinated narrative detection ✅
-- [ ] Prediction tracking & accuracy scoring
+- [x] Prediction tracking & accuracy scoring
 - [x] Anomaly detection (unusual coverage patterns) ✅
 
 ### Social Intelligence (Partial - In Progress)
@@ -1378,16 +1378,16 @@ Building the definitive open crypto intelligence platform.
 - [x] Social buzz dashboard (trending coins, sentiment) ✅
 - [ ] Discord public channel monitoring
 - [ ] Telegram channel aggregation
-- [ ] Influencer reliability scoring
+- [x] Influencer reliability scoring
 
 ### On-Chain Correlation (Partial - In Progress)
 - [x] Bitcoin on-chain data (Mempool.space integration) ✅
-- [ ] Link news to on-chain events
+- [x] Link news to on-chain events
 - [x] Whale movement correlation (structure ready) ✅
 - [x] DEX volume correlation ✅
 - [x] Bridge volume tracking ✅
 - [x] Liquidations feed integration ✅
-- [ ] Coverage gap analysis (what's NOT being covered)
+- [x] Coverage gap analysis (what's NOT being covered)
 
 ### AI Products
 - [x] **The Oracle**: Natural language queries over all data ✅
@@ -1400,14 +1400,14 @@ Building the definitive open crypto intelligence platform.
 - [x] Portfolio summary with P/L ✅
 - [x] Watchlist with export ✅
 - [x] Price alerts system ✅
-- [ ] Portfolio performance charts
-- [ ] Tax report generation
+- [x] Portfolio performance charts ✅
+- [x] Tax report generation
 
 ## 📋 Long-Term (2027+)
 
 ### Research Infrastructure
 - [ ] Causal inference engine
-- [ ] Backtesting infrastructure
+- [x] Backtesting infrastructure
 - [ ] Hypothesis testing platform
 - [ ] Academic access program
 

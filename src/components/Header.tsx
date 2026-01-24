@@ -49,6 +49,7 @@ const navItems = [
           links: [
             { label: 'Calculator', href: '/calculator', icon: '🧮' },
             { label: 'Social Buzz', href: '/buzz', icon: '📣' },
+            { label: 'Charts', href: '/charts', icon: '📈' },
           ],
         },
       ],

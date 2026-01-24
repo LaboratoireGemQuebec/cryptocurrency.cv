@@ -305,8 +305,10 @@ export default function PortfolioPage() {
 
         {/* Performance Chart */}
         <div className="mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Performance</h2>
-          <PerformanceChart />
+          <PerformanceChart 
+            totalValue={totalValue} 
+            prices={Object.fromEntries(holdingsWithPrices.map(h => [h.coinId, h.currentPrice]))}
+          />
         </div>
 
         {/* Holdings Table */}
