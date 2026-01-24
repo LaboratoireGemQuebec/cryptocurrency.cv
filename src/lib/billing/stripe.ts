@@ -15,10 +15,27 @@ import {
   CustomerBilling 
 } from './config';
 
-// Initialize Stripe client
-const stripe = new Stripe(STRIPE_CONFIG.secretKey, {
-  apiVersion: '2024-12-18.acacia' as Stripe.LatestApiVersion,
-  typescript: true,
+// Lazy-initialize Stripe client to avoid build-time errors
+let _stripe: Stripe | null = null;
+
+function getStripe(): Stripe {
+  if (!_stripe) {
+    if (!STRIPE_CONFIG.secretKey) {
+      throw new Error('Stripe API key not configured. Set STRIPE_SECRET_KEY environment variable.');
+    }
+    _stripe = new Stripe(STRIPE_CONFIG.secretKey, {
+      apiVersion: '2024-12-18.acacia' as Stripe.LatestApiVersion,
+      typescript: true,
+    });
+  }
+  return _stripe;
+}
+
+// Export a getter for the stripe instance
+export const stripe = new Proxy({} as Stripe, {
+  get(_target, prop) {
+    return getStripe()[prop as keyof Stripe];
+  },
 });
 
 /**
@@ -326,5 +343,3 @@ export function constructWebhookEvent(
     STRIPE_CONFIG.webhookSecret
   );
 }
-
-export { stripe };

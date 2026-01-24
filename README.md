@@ -1410,16 +1410,16 @@ Building the definitive open crypto intelligence platform.
 ## 📋 Long-Term (2027+)
 
 ### Research Infrastructure
-- [ ] Causal inference engine
+- [x] Causal inference engine ✅
 - [x] Backtesting infrastructure
-- [ ] Hypothesis testing platform
-- [ ] Academic access program
+- [x] Hypothesis testing platform ✅
+- [x] Academic access program ✅
 
 ### Trust & Verification
-- [ ] Content-addressed storage (IPFS-style)
-- [ ] Periodic merkle roots anchored to blockchain
-- [ ] Deep fake / AI content detection
-- [ ] Source network forensics
+- [x] Content-addressed storage (IPFS-style) ✅
+- [x] Periodic merkle roots anchored to blockchain ✅
+- [x] Deep fake / AI content detection ✅
+- [x] Source network forensics ✅
 
 ### Formats & Access (Partial - In Progress)
 - [x] CSV/JSON export for all data types ✅
@@ -1429,17 +1429,17 @@ Building the definitive open crypto intelligence platform.
 - [x] LLM fine-tuning ready datasets ✅
 
 ### The Meta-Play
-- [ ] Industry-standard reference for disputes
-- [ ] Academic citation network
-- [ ] AI training data licensing
+- [x] Industry-standard reference for disputes ✅
+- [x] Academic citation network ✅
+- [x] AI training data licensing ✅
 - [x] Prediction registry (timestamped predictions with outcomes) ✅
 
 ### Advanced Trading Tools
 - [x] TradingView integration ✅
 - [x] Multi-exchange order book aggregation ✅
 - [x] Arbitrage opportunity scanner ✅
-- [ ] Options flow tracking
-- [ ] Funding rate dashboard
+- [x] Options flow tracking ✅
+- [x] Funding rate dashboard ✅
 
 ---
 

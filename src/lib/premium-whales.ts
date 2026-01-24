@@ -71,64 +71,194 @@ const KNOWN_EXCHANGES: Record<string, string> = {
   // Add more in production
 };
 
-// Simulated whale data for demo (replace with real blockchain APIs)
-function generateMockWhaleTransactions(count: number): WhaleTransaction[] {
-  const chains = ['ethereum', 'bitcoin', 'solana', 'arbitrum', 'base'];
-  const tokens = [
-    { symbol: 'BTC', name: 'Bitcoin' },
-    { symbol: 'ETH', name: 'Ethereum' },
-    { symbol: 'USDT', name: 'Tether' },
-    { symbol: 'USDC', name: 'USD Coin' },
-    { symbol: 'SOL', name: 'Solana' },
-  ];
-  const types: WhaleTransaction['type'][] = ['transfer', 'exchange_inflow', 'exchange_outflow'];
+// API configuration
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || '';
 
+/**
+ * Fetch real whale transactions from blockchain APIs
+ */
+async function fetchRealWhaleTransactions(
+  limit: number,
+  minAmount: number,
+  tokenFilter?: string,
+  chainFilter?: string
+): Promise<WhaleTransaction[]> {
   const transactions: WhaleTransaction[] = [];
-  const now = Date.now();
 
-  for (let i = 0; i < count; i++) {
-    const chain = chains[Math.floor(Math.random() * chains.length)];
-    const token = tokens[Math.floor(Math.random() * tokens.length)];
-    const type = types[Math.floor(Math.random() * types.length)];
-    const amount = Math.floor(Math.random() * 50_000_000) + WHALE_THRESHOLD;
+  try {
+    // Get current prices
+    const priceResponse = await fetch(
+      'https://api.coingecko.com/api/v3/simple/price?ids=ethereum,bitcoin&vs_currencies=usd',
+      { next: { revalidate: 60 } }
+    );
+    const priceData = await priceResponse.json();
+    const ethPrice = priceData.ethereum?.usd || 3000;
+    const btcPrice = priceData.bitcoin?.usd || 100000;
 
-    // Generate realistic addresses
-    const fromAddr = `0x${Math.random().toString(16).slice(2, 42)}`;
-    const toAddr = `0x${Math.random().toString(16).slice(2, 42)}`;
+    // Fetch Ethereum whale transactions from Blockchair
+    if (!chainFilter || chainFilter === 'ethereum') {
+      try {
+        const ethResponse = await fetch(
+          'https://api.blockchair.com/ethereum/transactions?limit=25&s=value(desc)',
+          { next: { revalidate: 30 } }
+        );
 
-    const isExchangeFrom = type === 'exchange_outflow' || Math.random() > 0.7;
-    const isExchangeTo = type === 'exchange_inflow' || Math.random() > 0.7;
+        if (ethResponse.ok) {
+          const ethData = await ethResponse.json();
 
-    transactions.push({
-      id: `whale_${Date.now()}_${i}`,
-      hash: `0x${Math.random().toString(16).slice(2)}${Math.random().toString(16).slice(2)}`,
-      blockchain: chain,
-      timestamp: new Date(now - Math.random() * 24 * 60 * 60 * 1000).toISOString(),
-      from: {
-        address: fromAddr,
-        label: isExchangeFrom
-          ? ['Binance', 'Coinbase', 'Kraken'][Math.floor(Math.random() * 3)]
-          : undefined,
-        isExchange: isExchangeFrom,
-      },
-      to: {
-        address: toAddr,
-        label: isExchangeTo
-          ? ['Binance', 'Coinbase', 'Kraken'][Math.floor(Math.random() * 3)]
-          : undefined,
-        isExchange: isExchangeTo,
-      },
-      amount: amount / (token.symbol === 'BTC' ? 100000 : token.symbol === 'ETH' ? 4000 : 1),
-      amountUsd: amount,
-      token,
-      type,
-      significance: amount > 10_000_000 ? 'high' : amount > 5_000_000 ? 'medium' : 'low',
-    });
+          if (ethData.data && Array.isArray(ethData.data)) {
+            for (const tx of ethData.data) {
+              const valueEth = parseFloat(tx.value) / 1e18;
+              const valueUsd = valueEth * ethPrice;
+
+              if (valueUsd >= minAmount && (!tokenFilter || tokenFilter === 'ETH')) {
+                const fromIsExchange = !!KNOWN_EXCHANGES[tx.sender?.toLowerCase?.() || ''];
+                const toIsExchange = !!KNOWN_EXCHANGES[tx.recipient?.toLowerCase?.() || ''];
+
+                let type: WhaleTransaction['type'] = 'transfer';
+                if (fromIsExchange && !toIsExchange) type = 'exchange_outflow';
+                else if (!fromIsExchange && toIsExchange) type = 'exchange_inflow';
+
+                transactions.push({
+                  id: `eth-${tx.hash}`,
+                  hash: tx.hash,
+                  blockchain: 'ethereum',
+                  timestamp: tx.time || new Date().toISOString(),
+                  from: {
+                    address: tx.sender || 'unknown',
+                    label: KNOWN_EXCHANGES[tx.sender?.toLowerCase?.() || ''],
+                    isExchange: fromIsExchange,
+                  },
+                  to: {
+                    address: tx.recipient || 'unknown',
+                    label: KNOWN_EXCHANGES[tx.recipient?.toLowerCase?.() || ''],
+                    isExchange: toIsExchange,
+                  },
+                  amount: valueEth,
+                  amountUsd: valueUsd,
+                  token: { symbol: 'ETH', name: 'Ethereum' },
+                  type,
+                  significance: valueUsd > 10_000_000 ? 'high' : valueUsd > 5_000_000 ? 'medium' : 'low',
+                });
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Blockchair ETH fetch error:', error);
+      }
+    }
+
+    // Fetch Bitcoin whale transactions from Blockchair
+    if (!chainFilter || chainFilter === 'bitcoin') {
+      try {
+        const btcResponse = await fetch(
+          'https://api.blockchair.com/bitcoin/transactions?limit=25&s=output_total(desc)',
+          { next: { revalidate: 30 } }
+        );
+
+        if (btcResponse.ok) {
+          const btcData = await btcResponse.json();
+
+          if (btcData.data && Array.isArray(btcData.data)) {
+            for (const tx of btcData.data) {
+              const valueBtc = tx.output_total / 1e8;
+              const valueUsd = valueBtc * btcPrice;
+
+              if (valueUsd >= minAmount && (!tokenFilter || tokenFilter === 'BTC')) {
+                transactions.push({
+                  id: `btc-${tx.hash}`,
+                  hash: tx.hash,
+                  blockchain: 'bitcoin',
+                  timestamp: tx.time || new Date().toISOString(),
+                  from: {
+                    address: 'multiple_inputs',
+                    isExchange: false,
+                  },
+                  to: {
+                    address: 'multiple_outputs',
+                    isExchange: false,
+                  },
+                  amount: valueBtc,
+                  amountUsd: valueUsd,
+                  token: { symbol: 'BTC', name: 'Bitcoin' },
+                  type: 'transfer',
+                  significance: valueUsd > 10_000_000 ? 'high' : valueUsd > 5_000_000 ? 'medium' : 'low',
+                });
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Blockchair BTC fetch error:', error);
+      }
+    }
+
+    // If we have Etherscan API key, also fetch from major exchange wallets
+    if (ETHERSCAN_API_KEY && (!chainFilter || chainFilter === 'ethereum')) {
+      try {
+        // Binance hot wallet
+        const binanceResponse = await fetch(
+          `https://api.etherscan.io/api?module=account&action=txlist&address=0x28c6c06298d514db089934071355e5743bf21d60&startblock=0&endblock=99999999&page=1&offset=50&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
+          { next: { revalidate: 30 } }
+        );
+
+        if (binanceResponse.ok) {
+          const binanceData = await binanceResponse.json();
+
+          if (binanceData.status === '1' && Array.isArray(binanceData.result)) {
+            for (const tx of binanceData.result.slice(0, 20)) {
+              const valueEth = parseFloat(tx.value) / 1e18;
+              const valueUsd = valueEth * ethPrice;
+
+              if (valueUsd >= minAmount && (!tokenFilter || tokenFilter === 'ETH')) {
+                const fromIsExchange = !!KNOWN_EXCHANGES[tx.from?.toLowerCase?.() || ''];
+                const toIsExchange = !!KNOWN_EXCHANGES[tx.to?.toLowerCase?.() || ''];
+
+                let type: WhaleTransaction['type'] = 'transfer';
+                if (fromIsExchange && !toIsExchange) type = 'exchange_outflow';
+                else if (!fromIsExchange && toIsExchange) type = 'exchange_inflow';
+
+                // Avoid duplicates
+                if (!transactions.find(t => t.hash === tx.hash)) {
+                  transactions.push({
+                    id: `eth-${tx.hash}`,
+                    hash: tx.hash,
+                    blockchain: 'ethereum',
+                    timestamp: new Date(parseInt(tx.timeStamp) * 1000).toISOString(),
+                    from: {
+                      address: tx.from,
+                      label: KNOWN_EXCHANGES[tx.from?.toLowerCase?.() || ''],
+                      isExchange: fromIsExchange,
+                    },
+                    to: {
+                      address: tx.to,
+                      label: KNOWN_EXCHANGES[tx.to?.toLowerCase?.() || ''],
+                      isExchange: toIsExchange,
+                    },
+                    amount: valueEth,
+                    amountUsd: valueUsd,
+                    token: { symbol: 'ETH', name: 'Ethereum' },
+                    type,
+                    significance: valueUsd > 10_000_000 ? 'high' : valueUsd > 5_000_000 ? 'medium' : 'low',
+                  });
+                }
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Etherscan fetch error:', error);
+      }
+    }
+  } catch (error) {
+    console.error('Failed to fetch whale transactions:', error);
   }
 
-  return transactions.sort(
-    (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
-  );
+  // Sort by USD value and limit
+  return transactions
+    .sort((a, b) => b.amountUsd - a.amountUsd)
+    .slice(0, limit);
 }
 
 /**
@@ -143,24 +273,16 @@ export async function getWhaleTransactions(request: NextRequest): Promise<NextRe
   const type = searchParams.get('type') as WhaleTransaction['type'] | null;
 
   try {
-    // In production, query blockchain APIs:
-    // - Whale Alert API
-    // - Etherscan/Basescan APIs
-    // - The Graph subgraphs
-    // - Alchemy/Quicknode webhooks
+    // Fetch real whale transactions from blockchain APIs
+    let transactions = await fetchRealWhaleTransactions(limit * 2, minAmount, token, chain);
 
-    let transactions = generateMockWhaleTransactions(limit * 2);
+    // Apply type filter if specified
+    if (type) {
+      transactions = transactions.filter((tx) => tx.type === type);
+    }
 
-    // Apply filters
-    transactions = transactions
-      .filter((tx) => {
-        if (tx.amountUsd < minAmount) return false;
-        if (token && tx.token.symbol !== token) return false;
-        if (chain && tx.blockchain !== chain) return false;
-        if (type && tx.type !== type) return false;
-        return true;
-      })
-      .slice(0, limit);
+    // Limit results
+    transactions = transactions.slice(0, limit);
 
     // Calculate aggregates
     const aggregates = {

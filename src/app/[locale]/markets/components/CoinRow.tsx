@@ -5,11 +5,13 @@
  * Individual row in the coins table
  */
 
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { TokenPrice } from '@/lib/market-data';
 import { formatPrice, formatNumber, formatPercent } from '@/lib/market-data';
 import SparklineCell from './SparklineCell';
+import { addToWatchlist, removeFromWatchlist, isInWatchlist } from '@/lib/watchlist';
 
 interface CoinRowProps {
   coin: TokenPrice;
@@ -17,6 +19,29 @@ interface CoinRowProps {
 }
 
 export default function CoinRow({ coin, showWatchlist = false }: CoinRowProps) {
+  const [isWatchlisted, setIsWatchlisted] = useState(false);
+  
+  useEffect(() => {
+    if (showWatchlist) {
+      setIsWatchlisted(isInWatchlist(coin.id));
+    }
+  }, [coin.id, showWatchlist]);
+
+  const handleWatchlistToggle = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (isWatchlisted) {
+      removeFromWatchlist(coin.id);
+      setIsWatchlisted(false);
+    } else {
+      const result = addToWatchlist(coin.id);
+      if (result.success) {
+        setIsWatchlisted(true);
+      }
+    }
+  }, [isWatchlisted, coin.id]);
+
   const supplyPercentage = coin.max_supply
     ? (coin.circulating_supply / coin.max_supply) * 100
     : null;
@@ -128,15 +153,17 @@ export default function CoinRow({ coin, showWatchlist = false }: CoinRowProps) {
       {showWatchlist && (
         <td className="p-4 text-center">
           <button
-            onClick={(e) => {
-              e.preventDefault();
-              // TODO: Implement watchlist functionality
-            }}
-            className="text-gray-300 dark:text-gray-600 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors"
+            onClick={handleWatchlistToggle}
+            className={`transition-colors ${
+              isWatchlisted
+                ? 'text-yellow-500 dark:text-yellow-400 hover:text-yellow-600'
+                : 'text-gray-300 dark:text-gray-600 hover:text-yellow-500 dark:hover:text-yellow-400'
+            }`}
+            title={isWatchlisted ? 'Remove from watchlist' : 'Add to watchlist'}
           >
             <svg
               className="w-5 h-5"
-              fill="none"
+              fill={isWatchlisted ? 'currentColor' : 'none'}
               stroke="currentColor"
               viewBox="0 0 24 24"
             >

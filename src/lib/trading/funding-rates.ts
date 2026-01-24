@@ -204,57 +204,6 @@ async function fetchOKXFunding(): Promise<FundingRate[]> {
 }
 
 /**
- * Generate mock data for development
- */
-function generateMockFundingRates(): FundingRate[] {
-  const symbols = ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'ADA', 'AVAX', 'DOT', 'LINK', 'MATIC'];
-  const exchanges = ['binance', 'bybit', 'okx', 'dydx', 'hyperliquid'];
-  const rates: FundingRate[] = [];
-  
-  const basePrices: Record<string, number> = {
-    BTC: 98500,
-    ETH: 3850,
-    SOL: 185,
-    XRP: 2.45,
-    DOGE: 0.38,
-    ADA: 0.92,
-    AVAX: 42,
-    DOT: 8.5,
-    LINK: 24,
-    MATIC: 0.55,
-  };
-  
-  for (const symbol of symbols) {
-    for (const exchange of exchanges) {
-      // Generate realistic funding rate (-0.1% to +0.1% typical)
-      const baseRate = (Math.random() - 0.5) * 0.2;
-      const exchangeVariance = (Math.random() - 0.5) * 0.02;
-      const rate = baseRate + exchangeVariance;
-      
-      const basePrice = basePrices[symbol] || 100;
-      const priceVariance = basePrice * (Math.random() - 0.5) * 0.001;
-      
-      const nextFundingHours = Math.floor(Math.random() * 8);
-      
-      rates.push({
-        exchange,
-        symbol,
-        rate: Math.round(rate * 10000) / 10000,
-        nextFundingTime: new Date(Date.now() + nextFundingHours * 60 * 60 * 1000),
-        predictedRate: rate + (Math.random() - 0.5) * 0.01,
-        markPrice: basePrice + priceVariance,
-        indexPrice: basePrice,
-        openInterest: Math.random() * 1000000000,
-        volume24h: Math.random() * 500000000,
-        timestamp: new Date(),
-      });
-    }
-  }
-  
-  return rates;
-}
-
-/**
  * Normalize symbol across exchanges
  */
 function normalizeSymbol(symbol: string): string {
@@ -277,28 +226,36 @@ export async function getAllFundingRates(): Promise<FundingRate[]> {
     return cached.data;
   }
   
-  // In production, fetch from real APIs
-  // For development, use mock data
-  const useRealData = process.env.NODE_ENV === 'production';
+  // Always try real APIs first
+  const [binance, bybit, okx] = await Promise.allSettled([
+    fetchBinanceFunding(),
+    fetchBybitFunding(),
+    fetchOKXFunding(),
+  ]);
   
-  let rates: FundingRate[];
+  const rates: FundingRate[] = [];
   
-  if (useRealData) {
-    const [binance, bybit, okx] = await Promise.all([
-      fetchBinanceFunding(),
-      fetchBybitFunding(),
-      fetchOKXFunding(),
-    ]);
-    
-    rates = [...binance, ...bybit, ...okx];
-    
-    // If no data from real APIs, fall back to mock
-    if (rates.length === 0) {
-      rates = generateMockFundingRates();
-    }
+  // Collect successful results
+  if (binance.status === 'fulfilled') {
+    rates.push(...binance.value);
   } else {
-    rates = generateMockFundingRates();
+    console.warn('Binance funding rates failed:', binance.reason);
   }
+  
+  if (bybit.status === 'fulfilled') {
+    rates.push(...bybit.value);
+  } else {
+    console.warn('Bybit funding rates failed:', bybit.reason);
+  }
+  
+  if (okx.status === 'fulfilled') {
+    rates.push(...okx.value);
+  } else {
+    console.warn('OKX funding rates failed:', okx.reason);
+  }
+  
+  // Return real data even if partial, only return empty array if all fail
+  // No mock data fallback - return actual exchange data or empty
   
   ratesCache.set(cacheKey, {
     data: rates,
@@ -433,36 +390,97 @@ export async function getFundingStats(): Promise<{
 }
 
 /**
- * Get historical funding rates (mock data)
+ * Get historical funding rates from Binance
+ */
+async function fetchBinanceHistoricalFunding(
+  symbol: string,
+  startTime: number,
+  endTime: number
+): Promise<Array<{ timestamp: Date; rate: number; markPrice: number }>> {
+  try {
+    const binanceSymbol = `${symbol.toUpperCase()}USDT`;
+    const url = `https://fapi.binance.com/fapi/v1/fundingRate?symbol=${binanceSymbol}&startTime=${startTime}&endTime=${endTime}&limit=1000`;
+    
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Binance historical funding API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    return data.map((item: Record<string, unknown>) => ({
+      timestamp: new Date(item.fundingTime as number),
+      rate: parseFloat(item.fundingRate as string) * 100,
+      markPrice: parseFloat(item.markPrice as string) || 0,
+    }));
+  } catch (error) {
+    console.error('Binance historical funding fetch error:', error);
+    return [];
+  }
+}
+
+/**
+ * Get historical funding rates from Bybit
+ */
+async function fetchBybitHistoricalFunding(
+  symbol: string,
+  startTime: number,
+  endTime: number
+): Promise<Array<{ timestamp: Date; rate: number; markPrice: number }>> {
+  try {
+    const bybitSymbol = `${symbol.toUpperCase()}USDT`;
+    const url = `https://api.bybit.com/v5/market/funding/history?category=linear&symbol=${bybitSymbol}&startTime=${startTime}&endTime=${endTime}&limit=200`;
+    
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Bybit historical funding API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (data.retCode !== 0) {
+      throw new Error(data.retMsg);
+    }
+    
+    return (data.result?.list || []).map((item: Record<string, unknown>) => ({
+      timestamp: new Date(parseInt(item.fundingRateTimestamp as string)),
+      rate: parseFloat(item.fundingRate as string) * 100,
+      markPrice: 0, // Bybit doesn't provide mark price in this endpoint
+    }));
+  } catch (error) {
+    console.error('Bybit historical funding fetch error:', error);
+    return [];
+  }
+}
+
+/**
+ * Get historical funding rates from real exchange APIs
  */
 export async function getFundingHistory(
   symbol: string,
   exchange: string,
   days = 7
 ): Promise<FundingHistory> {
-  const history: Array<{ timestamp: Date; rate: number; markPrice: number }> = [];
-  const now = Date.now();
-  const hoursBack = days * 24;
-  const intervalsPerDay = 3; // 8-hour funding
+  const endTime = Date.now();
+  const startTime = endTime - days * 24 * 60 * 60 * 1000;
   
-  // Generate mock historical data
-  let baseRate = (Math.random() - 0.5) * 0.1;
-  const basePrice = 50000 + Math.random() * 50000;
+  let history: Array<{ timestamp: Date; rate: number; markPrice: number }> = [];
   
-  for (let i = hoursBack; i >= 0; i -= 8) {
-    // Random walk for rate
-    baseRate += (Math.random() - 0.5) * 0.02;
-    baseRate = Math.max(-0.5, Math.min(0.5, baseRate));
-    
-    const priceVariance = (Math.random() - 0.5) * basePrice * 0.02;
-    
-    history.push({
-      timestamp: new Date(now - i * 60 * 60 * 1000),
-      rate: Math.round(baseRate * 10000) / 10000,
-      markPrice: basePrice + priceVariance,
-    });
+  // Try to fetch from the specified exchange
+  switch (exchange.toLowerCase()) {
+    case 'binance':
+      history = await fetchBinanceHistoricalFunding(symbol, startTime, endTime);
+      break;
+    case 'bybit':
+      history = await fetchBybitHistoricalFunding(symbol, startTime, endTime);
+      break;
+    default:
+      // For unsupported exchanges, try Binance as fallback
+      history = await fetchBinanceHistoricalFunding(symbol, startTime, endTime);
   }
   
+  // Sort by timestamp ascending
+  history.sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
   return {
     symbol,
     exchange,

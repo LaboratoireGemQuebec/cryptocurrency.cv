@@ -4,7 +4,7 @@
 
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   CoinHeader,
@@ -22,6 +22,11 @@ import {
 } from './components';
 import { PriceChart } from '@/components/coin-charts';
 import type { Ticker, OHLCData, DeveloperData, CommunityData } from '@/lib/market-data';
+import {
+  addToWatchlist,
+  removeFromWatchlist,
+  isInWatchlist,
+} from '@/lib/watchlist';
 
 interface Article {
   id: string;
@@ -122,6 +127,15 @@ export default function CoinPageClient({
   const [activeTab, setActiveTab] = useState<CoinTab>(initialTab);
   const [isWatchlisted, setIsWatchlisted] = useState(false);
   const [showAlertModal, setShowAlertModal] = useState(false);
+  const [alertDirection, setAlertDirection] = useState<'above' | 'below'>('above');
+  const [alertPrice, setAlertPrice] = useState<string>('');
+  const [alertMessage, setAlertMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [isCreatingAlert, setIsCreatingAlert] = useState(false);
+
+  // Check watchlist status on mount
+  useEffect(() => {
+    setIsWatchlisted(isInWatchlist(coinData.id));
+  }, [coinData.id]);
 
   // Convert OHLC to chart format
   const chartData = ohlcData.map((d) => ({
@@ -134,14 +148,66 @@ export default function CoinPageClient({
   }));
 
   const handleWatchlistToggle = useCallback(() => {
-    setIsWatchlisted((prev) => !prev);
-    // TODO: Integrate with watchlist feature
-  }, []);
+    if (isWatchlisted) {
+      removeFromWatchlist(coinData.id);
+      setIsWatchlisted(false);
+    } else {
+      const result = addToWatchlist(coinData.id);
+      if (result.success) {
+        setIsWatchlisted(true);
+      } else {
+        console.error('Failed to add to watchlist:', result.error);
+      }
+    }
+  }, [isWatchlisted, coinData.id]);
 
   const handleAlertClick = useCallback(() => {
+    setAlertPrice(priceData.price.toFixed(2));
+    setAlertDirection('above');
+    setAlertMessage(null);
     setShowAlertModal(true);
-    // TODO: Integrate with price alerts feature
-  }, []);
+  }, [priceData.price]);
+
+  const handleCreateAlert = useCallback(async () => {
+    const targetPrice = parseFloat(alertPrice);
+    if (isNaN(targetPrice) || targetPrice <= 0) {
+      setAlertMessage({ type: 'error', text: 'Please enter a valid price' });
+      return;
+    }
+
+    setIsCreatingAlert(true);
+    try {
+      const response = await fetch('/api/alerts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'price',
+          coinId: coinData.id,
+          symbol: coinData.symbol.toUpperCase(),
+          coinName: coinData.name,
+          targetPrice,
+          direction: alertDirection,
+          currentPrice: priceData.price,
+        }),
+      });
+
+      if (response.ok) {
+        setAlertMessage({ type: 'success', text: 'Alert created successfully!' });
+        setTimeout(() => {
+          setShowAlertModal(false);
+          setAlertMessage(null);
+        }, 1500);
+      } else {
+        const data = await response.json();
+        setAlertMessage({ type: 'error', text: data.error || 'Failed to create alert' });
+      }
+    } catch (error) {
+      setAlertMessage({ type: 'error', text: 'Failed to create alert. Please try again.' });
+      console.error('Alert creation error:', error);
+    } finally {
+      setIsCreatingAlert(false);
+    }
+  }, [alertPrice, alertDirection, coinData, priceData.price]);
 
   return (
     <main className="px-4 py-6 sm:py-8">
@@ -309,7 +375,7 @@ export default function CoinPageClient({
         </motion.div>
       </AnimatePresence>
 
-      {/* Price Alert Modal (placeholder) */}
+      {/* Price Alert Modal */}
       <AnimatePresence>
         {showAlertModal && (
           <motion.div
@@ -331,50 +397,101 @@ export default function CoinPageClient({
               </h3>
               <p className="text-gray-400 mb-4">
                 Get notified when {coinData.name} reaches your target price.
+                <span className="block mt-1 text-sm">
+                  Current price: <span className="text-amber-400 font-medium">${priceData.price.toLocaleString()}</span>
+                </span>
               </p>
+              
+              {alertMessage && (
+                <div className={`mb-4 p-3 rounded-lg text-sm ${
+                  alertMessage.type === 'success' 
+                    ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                    : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                }`}>
+                  {alertMessage.text}
+                </div>
+              )}
               
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1">
+                  <label className="block text-sm text-gray-400 mb-2">
                     Alert when price goes
                   </label>
                   <div className="flex gap-2">
-                    <button className="flex-1 px-4 py-2 bg-green-500/20 text-green-400 rounded-lg border border-green-500/30 font-medium">
-                      Above
+                    <button
+                      onClick={() => setAlertDirection('above')}
+                      className={`flex-1 px-4 py-2 rounded-lg border font-medium transition-colors ${
+                        alertDirection === 'above'
+                          ? 'bg-green-500/20 text-green-400 border-green-500/30'
+                          : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
+                      }`}
+                    >
+                      ↑ Above
                     </button>
-                    <button className="flex-1 px-4 py-2 bg-gray-700 text-gray-300 rounded-lg border border-gray-600 font-medium">
-                      Below
+                    <button
+                      onClick={() => setAlertDirection('below')}
+                      className={`flex-1 px-4 py-2 rounded-lg border font-medium transition-colors ${
+                        alertDirection === 'below'
+                          ? 'bg-red-500/20 text-red-400 border-red-500/30'
+                          : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
+                      }`}
+                    >
+                      ↓ Below
                     </button>
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1">
+                  <label className="block text-sm text-gray-400 mb-2">
                     Target Price (USD)
                   </label>
-                  <input
-                    type="number"
-                    placeholder={priceData.price.toString()}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
-                  />
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+                    <input
+                      type="number"
+                      step="any"
+                      min="0"
+                      value={alertPrice}
+                      onChange={(e) => setAlertPrice(e.target.value)}
+                      placeholder={priceData.price.toFixed(2)}
+                      className="w-full pl-8 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                    />
+                  </div>
+                  {alertPrice && !isNaN(parseFloat(alertPrice)) && (
+                    <p className="mt-2 text-sm text-gray-400">
+                      {alertDirection === 'above' 
+                        ? `Alert when price rises ${((parseFloat(alertPrice) - priceData.price) / priceData.price * 100).toFixed(2)}% above current`
+                        : `Alert when price drops ${((priceData.price - parseFloat(alertPrice)) / priceData.price * 100).toFixed(2)}% below current`
+                      }
+                    </p>
+                  )}
                 </div>
               </div>
 
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={() => setShowAlertModal(false)}
-                  className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors"
+                  disabled={isCreatingAlert}
+                  className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() => {
-                    // TODO: Implement alert creation
-                    setShowAlertModal(false);
-                  }}
-                  className="flex-1 px-4 py-2 bg-amber-500 text-gray-900 rounded-lg font-medium hover:bg-amber-400 transition-colors"
+                  onClick={handleCreateAlert}
+                  disabled={isCreatingAlert || !alertPrice}
+                  className="flex-1 px-4 py-2 bg-amber-500 text-gray-900 rounded-lg font-medium hover:bg-amber-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Create Alert
+                  {isCreatingAlert ? (
+                    <>
+                      <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      Creating...
+                    </>
+                  ) : (
+                    <>🔔 Create Alert</>
+                  )}
                 </button>
               </div>
             </motion.div>

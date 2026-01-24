@@ -3,6 +3,8 @@
  * 
  * Scans for price discrepancies across exchanges to identify
  * arbitrage opportunities for spot and futures markets.
+ * 
+ * Uses real exchange APIs - no mock data.
  */
 
 // Types
@@ -94,10 +96,30 @@ const WITHDRAWAL_FEES: Record<string, Record<string, number>> = {
   bybit: { BTC: 20, ETH: 8, USDT: 1 },
 };
 
+// Symbol mapping for exchange API compatibility
+const SYMBOL_MAP: Record<string, string> = {
+  BTC: 'bitcoin',
+  ETH: 'ethereum',
+  SOL: 'solana',
+  XRP: 'ripple',
+  DOGE: 'dogecoin',
+  ADA: 'cardano',
+  AVAX: 'avalanche-2',
+  DOT: 'polkadot',
+  LINK: 'chainlink',
+  MATIC: 'matic-network',
+  ATOM: 'cosmos',
+  UNI: 'uniswap',
+  LTC: 'litecoin',
+  NEAR: 'near',
+  APT: 'aptos',
+  ARB: 'arbitrum',
+};
+
 // Supported trading pairs
 const TRADING_PAIRS = [
   'BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'ADA', 'AVAX', 'DOT', 'LINK', 'MATIC',
-  'ATOM', 'UNI', 'LTC', 'NEAR', 'APT', 'ARB', 'OP', 'INJ', 'SUI', 'SEI',
+  'ATOM', 'UNI', 'LTC', 'NEAR', 'APT', 'ARB',
 ];
 
 // Cache
@@ -105,125 +127,253 @@ const priceCache = new Map<string, { data: SpotPrice[]; expires: number }>();
 const CACHE_TTL = 10 * 1000; // 10 seconds for price data
 
 /**
- * Fetch spot prices from CoinGecko
+ * Fetch spot prices from Binance
  */
-async function fetchCoinGeckoPrices(): Promise<SpotPrice[]> {
+async function fetchBinancePrices(): Promise<SpotPrice[]> {
   try {
-    const ids = 'bitcoin,ethereum,solana,ripple,dogecoin,cardano,avalanche-2,polkadot,chainlink,matic-network';
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_vol=true`
-    );
-    
+    const response = await fetch('https://api.binance.com/api/v3/ticker/bookTicker');
     if (!response.ok) {
-      throw new Error(`CoinGecko API error: ${response.status}`);
+      throw new Error(`Binance API error: ${response.status}`);
     }
     
     const data = await response.json();
     const prices: SpotPrice[] = [];
     
-    const symbolMap: Record<string, string> = {
-      bitcoin: 'BTC',
-      ethereum: 'ETH',
-      solana: 'SOL',
-      ripple: 'XRP',
-      dogecoin: 'DOGE',
-      cardano: 'ADA',
-      'avalanche-2': 'AVAX',
-      polkadot: 'DOT',
-      chainlink: 'LINK',
-      'matic-network': 'MATIC',
-    };
-    
-    for (const [id, priceData] of Object.entries(data)) {
-      const symbol = symbolMap[id];
-      if (!symbol) continue;
+    for (const item of data) {
+      const symbol = (item.symbol as string);
+      // Only process USDT pairs for supported symbols
+      if (!symbol.endsWith('USDT')) continue;
+      const baseSymbol = symbol.replace('USDT', '');
+      if (!TRADING_PAIRS.includes(baseSymbol)) continue;
       
-      const price = (priceData as { usd: number }).usd;
-      const volume = (priceData as { usd_24h_vol?: number }).usd_24h_vol || 0;
+      const bid = parseFloat(item.bidPrice);
+      const ask = parseFloat(item.askPrice);
+      const price = (bid + ask) / 2;
+      const spread = ask - bid;
       
-      // Generate realistic exchange prices with variance
-      for (const exchange of Object.keys(EXCHANGE_FEES)) {
-        const variance = (Math.random() - 0.5) * 0.002 * price; // 0.2% variance
-        const exchangePrice = price + variance;
-        const spread = exchangePrice * 0.0005; // 0.05% spread
-        
-        prices.push({
-          exchange,
-          symbol,
-          price: exchangePrice,
-          bid: exchangePrice - spread / 2,
-          ask: exchangePrice + spread / 2,
-          spread: (spread / exchangePrice) * 100,
-          volume24h: volume * (0.05 + Math.random() * 0.2), // Random exchange share
-          timestamp: new Date(),
-        });
-      }
+      prices.push({
+        exchange: 'binance',
+        symbol: baseSymbol,
+        price,
+        bid,
+        ask,
+        spread: (spread / price) * 100,
+        volume24h: 0, // Would need separate API call
+        timestamp: new Date(),
+      });
     }
     
     return prices;
   } catch (error) {
-    console.error('CoinGecko price fetch error:', error);
-    return generateMockPrices();
+    console.error('Binance price fetch error:', error);
+    return [];
   }
 }
 
 /**
- * Generate mock prices for development
+ * Fetch spot prices from Bybit
  */
-function generateMockPrices(): SpotPrice[] {
-  const prices: SpotPrice[] = [];
-  
-  const basePrices: Record<string, number> = {
-    BTC: 98500,
-    ETH: 3850,
-    SOL: 185,
-    XRP: 2.45,
-    DOGE: 0.38,
-    ADA: 0.92,
-    AVAX: 42,
-    DOT: 8.5,
-    LINK: 24,
-    MATIC: 0.55,
-    ATOM: 9.2,
-    UNI: 12.5,
-    LTC: 105,
-    NEAR: 5.8,
-    APT: 12,
-    ARB: 1.2,
-    OP: 2.1,
-    INJ: 28,
-    SUI: 4.2,
-    SEI: 0.52,
-  };
-  
-  for (const symbol of TRADING_PAIRS) {
-    const basePrice = basePrices[symbol] || 10;
+async function fetchBybitPrices(): Promise<SpotPrice[]> {
+  try {
+    const response = await fetch('https://api.bybit.com/v5/market/tickers?category=spot');
+    if (!response.ok) {
+      throw new Error(`Bybit API error: ${response.status}`);
+    }
     
-    for (const exchange of Object.keys(EXCHANGE_FEES)) {
-      // Create price variance between exchanges
-      const variance = (Math.random() - 0.5) * 0.004 * basePrice; // Up to 0.4% variance
-      const exchangePrice = basePrice + variance;
-      const spreadPct = 0.0003 + Math.random() * 0.001; // 0.03% - 0.13% spread
-      const spread = exchangePrice * spreadPct;
+    const data = await response.json();
+    if (data.retCode !== 0) {
+      throw new Error(data.retMsg);
+    }
+    
+    const prices: SpotPrice[] = [];
+    
+    for (const item of data.result.list) {
+      const symbol = (item.symbol as string);
+      if (!symbol.endsWith('USDT')) continue;
+      const baseSymbol = symbol.replace('USDT', '');
+      if (!TRADING_PAIRS.includes(baseSymbol)) continue;
+      
+      const bid = parseFloat(item.bid1Price);
+      const ask = parseFloat(item.ask1Price);
+      const price = parseFloat(item.lastPrice);
+      const spread = ask - bid;
       
       prices.push({
-        exchange,
-        symbol,
-        price: exchangePrice,
-        bid: exchangePrice - spread / 2,
-        ask: exchangePrice + spread / 2,
-        spread: spreadPct * 100,
-        volume24h: basePrice * (100000 + Math.random() * 1000000),
+        exchange: 'bybit',
+        symbol: baseSymbol,
+        price,
+        bid,
+        ask,
+        spread: spread > 0 && price > 0 ? (spread / price) * 100 : 0,
+        volume24h: parseFloat(item.turnover24h) || 0,
         timestamp: new Date(),
       });
     }
+    
+    return prices;
+  } catch (error) {
+    console.error('Bybit price fetch error:', error);
+    return [];
   }
-  
-  return prices;
+}
+
+/**
+ * Fetch spot prices from OKX
+ */
+async function fetchOKXPrices(): Promise<SpotPrice[]> {
+  try {
+    const response = await fetch('https://www.okx.com/api/v5/market/tickers?instType=SPOT');
+    if (!response.ok) {
+      throw new Error(`OKX API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    if (data.code !== '0') {
+      throw new Error(data.msg);
+    }
+    
+    const prices: SpotPrice[] = [];
+    
+    for (const item of data.data) {
+      const symbol = (item.instId as string);
+      if (!symbol.endsWith('-USDT')) continue;
+      const baseSymbol = symbol.replace('-USDT', '');
+      if (!TRADING_PAIRS.includes(baseSymbol)) continue;
+      
+      const bid = parseFloat(item.bidPx);
+      const ask = parseFloat(item.askPx);
+      const price = parseFloat(item.last);
+      const spread = ask - bid;
+      
+      prices.push({
+        exchange: 'okx',
+        symbol: baseSymbol,
+        price,
+        bid,
+        ask,
+        spread: spread > 0 && price > 0 ? (spread / price) * 100 : 0,
+        volume24h: parseFloat(item.vol24h) * price || 0,
+        timestamp: new Date(),
+      });
+    }
+    
+    return prices;
+  } catch (error) {
+    console.error('OKX price fetch error:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch spot prices from Kraken
+ */
+async function fetchKrakenPrices(): Promise<SpotPrice[]> {
+  try {
+    // Kraken uses different symbol naming
+    const krakenPairs = {
+      'XXBTZUSD': 'BTC',
+      'XETHZUSD': 'ETH',
+      'SOLUSD': 'SOL',
+      'XXRPZUSD': 'XRP',
+      'XDGUSD': 'DOGE',
+      'ADAUSD': 'ADA',
+      'AVAXUSD': 'AVAX',
+      'DOTUSD': 'DOT',
+      'LINKUSD': 'LINK',
+    };
+    
+    const pairs = Object.keys(krakenPairs).join(',');
+    const response = await fetch(`https://api.kraken.com/0/public/Ticker?pair=${pairs}`);
+    if (!response.ok) {
+      throw new Error(`Kraken API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    if (data.error && data.error.length > 0) {
+      throw new Error(data.error[0]);
+    }
+    
+    const prices: SpotPrice[] = [];
+    
+    for (const [pair, info] of Object.entries(data.result || {})) {
+      const baseSymbol = krakenPairs[pair as keyof typeof krakenPairs];
+      if (!baseSymbol) continue;
+      
+      const tickerData = info as { b: string[]; a: string[]; c: string[]; v: string[] };
+      const bid = parseFloat(tickerData.b[0]);
+      const ask = parseFloat(tickerData.a[0]);
+      const price = parseFloat(tickerData.c[0]);
+      const spread = ask - bid;
+      
+      prices.push({
+        exchange: 'kraken',
+        symbol: baseSymbol,
+        price,
+        bid,
+        ask,
+        spread: spread > 0 && price > 0 ? (spread / price) * 100 : 0,
+        volume24h: parseFloat(tickerData.v[1]) * price || 0,
+        timestamp: new Date(),
+      });
+    }
+    
+    return prices;
+  } catch (error) {
+    console.error('Kraken price fetch error:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch spot prices from KuCoin
+ */
+async function fetchKuCoinPrices(): Promise<SpotPrice[]> {
+  try {
+    const response = await fetch('https://api.kucoin.com/api/v1/market/allTickers');
+    if (!response.ok) {
+      throw new Error(`KuCoin API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    if (data.code !== '200000') {
+      throw new Error(data.msg);
+    }
+    
+    const prices: SpotPrice[] = [];
+    
+    for (const item of data.data.ticker) {
+      const symbol = (item.symbol as string);
+      if (!symbol.endsWith('-USDT')) continue;
+      const baseSymbol = symbol.replace('-USDT', '');
+      if (!TRADING_PAIRS.includes(baseSymbol)) continue;
+      
+      const bid = parseFloat(item.buy);
+      const ask = parseFloat(item.sell);
+      const price = parseFloat(item.last);
+      const spread = ask - bid;
+      
+      prices.push({
+        exchange: 'kucoin',
+        symbol: baseSymbol,
+        price,
+        bid,
+        ask,
+        spread: spread > 0 && price > 0 ? (spread / price) * 100 : 0,
+        volume24h: parseFloat(item.volValue) || 0,
+        timestamp: new Date(),
+      });
+    }
+    
+    return prices;
+  } catch (error) {
+    console.error('KuCoin price fetch error:', error);
+    return [];
+  }
 }
 
 /**
  * Get all spot prices from all exchanges
+ * Fetches real data from multiple exchange APIs in parallel
  */
 export async function getAllSpotPrices(): Promise<SpotPrice[]> {
   const cacheKey = 'all_spot_prices';
@@ -233,14 +383,29 @@ export async function getAllSpotPrices(): Promise<SpotPrice[]> {
     return cached.data;
   }
   
-  const prices = await fetchCoinGeckoPrices();
+  // Fetch from all exchanges in parallel
+  const results = await Promise.allSettled([
+    fetchBinancePrices(),
+    fetchBybitPrices(),
+    fetchOKXPrices(),
+    fetchKrakenPrices(),
+    fetchKuCoinPrices(),
+  ]);
+  
+  const allPrices: SpotPrice[] = [];
+  
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      allPrices.push(...result.value);
+    }
+  }
   
   priceCache.set(cacheKey, {
-    data: prices,
+    data: allPrices,
     expires: Date.now() + CACHE_TTL,
   });
   
-  return prices;
+  return allPrices;
 }
 
 /**

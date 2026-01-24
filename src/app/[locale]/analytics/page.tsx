@@ -73,28 +73,37 @@ const analyticsFeatures = [
     status: 'live',
     api: '/api/digest',
   },
+  {
+    title: 'The Oracle',
+    description: 'Natural language queries over all historical news data. Ask anything about crypto.',
+    href: '/oracle',
+    icon: '🔮',
+    status: 'live',
+    api: '/api/oracle',
+  },
+  {
+    title: 'Prediction Tracking',
+    description: 'Create and track price predictions. Compete on the leaderboard with accuracy scores.',
+    href: '/predictions',
+    icon: '🎱',
+    status: 'live',
+    api: '/api/predictions',
+  },
+  {
+    title: 'Influencer Reliability',
+    description: 'Score crypto influencers based on prediction accuracy and trading calls.',
+    href: '/influencers',
+    icon: '👤',
+    status: 'live',
+    api: '/api/social/influencer-score',
+  },
 ];
 
 const comingSoonFeatures = [
   {
-    title: 'The Oracle',
-    description: 'Natural language queries over all historical news data.',
-    icon: '🔮',
-  },
-  {
-    title: 'Prediction Tracking',
-    description: 'Track predictions made in news articles and score accuracy over time.',
-    icon: '🎱',
-  },
-  {
     title: 'Coverage Gap Analysis',
     description: 'Identify what topics are being under-covered or ignored.',
     icon: '🕳️',
-  },
-  {
-    title: 'Influencer Reliability',
-    description: 'Score crypto influencers based on prediction accuracy.',
-    icon: '👤',
   },
 ];
 

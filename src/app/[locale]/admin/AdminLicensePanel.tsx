@@ -37,110 +37,55 @@ interface RevenueStats {
 interface LicenseData {
   keys: APIKeyStats;
   revenue: RevenueStats;
+  dataSource?: 'live' | 'empty';
 }
 
 export default function AdminLicensePanel() {
   const [data, setData] = useState<LicenseData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'keys' | 'revenue' | 'payments'>('overview');
 
   useEffect(() => {
-    // Simulated data - in production, fetch from API
-    const mockData: LicenseData = {
-      keys: {
-        totalKeys: 156,
-        activeKeys: 142,
-        keysByTier: [
-          { tier: 'free', count: 98 },
-          { tier: 'pro', count: 45 },
-          { tier: 'enterprise', count: 13 },
-        ],
-        recentKeys: [
-          {
-            id: 'key_1',
-            name: 'Trading Bot Alpha',
-            tier: 'pro',
-            createdAt: '2026-01-24T08:30:00Z',
-            lastUsed: '2026-01-24T12:45:00Z',
-            usageToday: 2341,
-          },
-          {
-            id: 'key_2',
-            name: 'Analytics Dashboard',
-            tier: 'enterprise',
-            createdAt: '2026-01-23T15:20:00Z',
-            lastUsed: '2026-01-24T12:50:00Z',
-            usageToday: 8923,
-          },
-          {
-            id: 'key_3',
-            name: 'Mobile App',
-            tier: 'pro',
-            createdAt: '2026-01-22T09:15:00Z',
-            lastUsed: '2026-01-24T11:30:00Z',
-            usageToday: 1567,
-          },
-        ],
-      },
-      revenue: {
-        totalRevenue: 12458.32,
-        revenueToday: 156.45,
-        revenueThisWeek: 892.18,
-        revenueThisMonth: 3241.67,
-        revenueByType: [
-          { type: 'Subscriptions', amount: 2890.0 },
-          { type: 'x402 Payments', amount: 351.67 },
-        ],
-        x402Payments: 12847,
-        subscriptions: [
-          { tier: 'pro', count: 45, revenue: 1305 },
-          { tier: 'enterprise', count: 13, revenue: 1287 },
-        ],
-        recentPayments: [
-          {
-            id: 'pay_1',
-            type: 'x402',
-            amount: 0.005,
-            endpoint: '/api/v1/historical/bitcoin',
-            timestamp: '2026-01-24T12:55:00Z',
-          },
-          {
-            id: 'pay_2',
-            type: 'subscription',
-            amount: 29.0,
-            tier: 'pro',
-            timestamp: '2026-01-24T12:30:00Z',
-          },
-          {
-            id: 'pay_3',
-            type: 'x402',
-            amount: 0.001,
-            endpoint: '/api/v1/coins',
-            timestamp: '2026-01-24T12:28:00Z',
-          },
-          {
-            id: 'pay_4',
-            type: 'x402',
-            amount: 0.002,
-            endpoint: '/api/v1/market-data',
-            timestamp: '2026-01-24T12:25:00Z',
-          },
-          {
-            id: 'pay_5',
-            type: 'subscription',
-            amount: 99.0,
-            tier: 'enterprise',
-            timestamp: '2026-01-24T11:45:00Z',
-          },
-        ],
-      },
-    };
+    async function fetchData() {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const response = await fetch('/api/admin/licenses');
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.status}`);
+        }
+        
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error(result.error || 'Failed to load data');
+        }
+        
+        setData({
+          keys: result.keys,
+          revenue: result.revenue,
+          dataSource: result.dataSource,
+        });
+      } catch (err) {
+        console.error('Failed to fetch license data:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load data');
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    setTimeout(() => {
-      setData(mockData);
-      setLoading(false);
-    }, 500);
+    fetchData();
+    
+    // Refresh every 30 seconds
+    const interval = setInterval(fetchData, 30000);
+    return () => clearInterval(interval);
   }, []);
+
+  // Data is now fetched exclusively from the API above
+  // No mock data fallback - the API handles empty state properly
 
   if (loading) {
     return (

@@ -2,6 +2,7 @@
  * Data Export API
  * 
  * Export data in multiple formats: JSON, CSV, Parquet, SQLite
+ * Uses real data sources from our aggregation services.
  * 
  * @route GET /api/export - Export data synchronously
  * @route POST /api/export - Create async export job
@@ -12,8 +13,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import {
   exportData,
   createExportJob,
-  getExportJob,
-  listExportJobs,
   NEWS_SCHEMA,
   MARKET_DATA_SCHEMA,
   PREDICTIONS_SCHEMA,
@@ -22,6 +21,15 @@ import {
   type ExportOptions,
   type ExportSchema,
 } from '@/lib/data-export';
+
+// Import real data sources
+import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { getTopCoins, type TokenPrice } from '@/lib/market-data';
+import { getSocialTrends, type SocialTrend } from '@/lib/social-intelligence';
+import { 
+  getRecentPredictions, 
+  type Prediction,
+} from '@/lib/predictions/registry';
 
 export const runtime = 'edge';
 
@@ -33,69 +41,135 @@ const SCHEMAS: Record<string, ExportSchema> = {
   social: SOCIAL_METRICS_SCHEMA,
 };
 
-// Mock data generators for demonstration
-// In production, these would fetch from actual data sources
-function generateMockNewsData(limit: number): Record<string, unknown>[] {
-  return Array.from({ length: limit }, (_, i) => ({
-    id: `news_${Date.now()}_${i}`,
-    title: `Sample Crypto News Article ${i + 1}`,
-    description: 'This is a sample article for export demonstration',
-    content: 'Full article content would be here...',
-    url: `https://example.com/news/${i}`,
-    source: ['CoinDesk', 'CoinTelegraph', 'The Block'][i % 3],
-    publishedAt: new Date(Date.now() - i * 3600000).toISOString(),
-    collectedAt: new Date().toISOString(),
-    sentiment: Math.random() * 2 - 1,
-    tickers: ['BTC', 'ETH', 'SOL'].slice(0, (i % 3) + 1),
-    entities: ['Bitcoin', 'Ethereum Foundation'],
-    categories: ['market', 'technology'],
-    aiSummary: 'AI-generated summary of the article.',
-  }));
+/**
+ * Fetch real news data from RSS feeds
+ */
+async function fetchNewsData(
+  limit: number,
+  dateFrom?: string,
+  dateTo?: string
+): Promise<Record<string, unknown>[]> {
+  try {
+    const response = await getLatestNews(limit, undefined, { 
+      from: dateFrom, 
+      to: dateTo 
+    });
+    
+    return response.articles.map((article: NewsArticle) => ({
+      id: `news_${Buffer.from(article.link).toString('base64').slice(0, 16)}`,
+      title: article.title,
+      description: article.description || '',
+      url: article.link,
+      source: article.source,
+      sourceKey: article.sourceKey,
+      category: article.category,
+      publishedAt: article.pubDate,
+      collectedAt: new Date().toISOString(),
+      timeAgo: article.timeAgo,
+    }));
+  } catch (error) {
+    console.error('Failed to fetch news data:', error);
+    return [];
+  }
 }
 
-function generateMockMarketData(limit: number): Record<string, unknown>[] {
-  const symbols = ['BTC', 'ETH', 'SOL', 'BNB', 'XRP', 'ADA', 'DOGE', 'AVAX'];
-  return symbols.slice(0, Math.min(limit, symbols.length)).map((symbol, i) => ({
-    timestamp: new Date().toISOString(),
-    symbol,
-    price: [42000, 2800, 98, 310, 0.52, 0.45, 0.08, 35][i],
-    volume24h: Math.random() * 1e10,
-    marketCap: Math.random() * 1e12,
-    priceChange24h: (Math.random() - 0.5) * 20,
-    high24h: [43000, 2900, 102, 320, 0.55, 0.48, 0.09, 37][i],
-    low24h: [41000, 2700, 95, 300, 0.50, 0.42, 0.07, 33][i],
-    circulatingSupply: Math.random() * 1e9,
-    totalSupply: Math.random() * 1e10,
-  }));
+/**
+ * Fetch real market data from CoinGecko
+ */
+async function fetchMarketData(limit: number): Promise<Record<string, unknown>[]> {
+  try {
+    const coins = await getTopCoins(Math.min(limit, 250));
+    
+    return coins.map((coin: TokenPrice) => ({
+      timestamp: coin.last_updated,
+      symbol: coin.symbol.toUpperCase(),
+      name: coin.name,
+      coinId: coin.id,
+      price: coin.current_price,
+      volume24h: coin.total_volume,
+      marketCap: coin.market_cap,
+      marketCapRank: coin.market_cap_rank,
+      priceChange24h: coin.price_change_percentage_24h,
+      priceChange7d: coin.price_change_percentage_7d_in_currency || null,
+      high24h: coin.ath, // ATH as proxy (CoinGecko doesn't provide 24h high in this endpoint)
+      circulatingSupply: coin.circulating_supply,
+      totalSupply: coin.total_supply,
+      maxSupply: coin.max_supply,
+      athChangePercentage: coin.ath_change_percentage,
+      image: coin.image,
+    }));
+  } catch (error) {
+    console.error('Failed to fetch market data:', error);
+    return [];
+  }
 }
 
-function generateMockPredictions(limit: number): Record<string, unknown>[] {
-  return Array.from({ length: limit }, (_, i) => ({
-    id: `pred_${Date.now()}_${i}`,
-    userId: `user_${Math.floor(Math.random() * 100)}`,
-    type: ['price_above', 'price_below', 'percentage_up'][i % 3],
-    symbol: ['BTC', 'ETH', 'SOL'][i % 3],
-    targetPrice: 50000 + Math.random() * 10000,
-    targetDate: new Date(Date.now() + 86400000 * (i + 1)).toISOString(),
-    createdAt: new Date(Date.now() - 86400000 * i).toISOString(),
-    status: ['pending', 'correct', 'incorrect'][i % 3],
-    outcome: i % 3 === 0 ? null : 'resolved',
-    accuracy: i % 3 === 0 ? null : Math.random() * 100,
-  }));
+/**
+ * Fetch real prediction data from the prediction registry
+ */
+async function fetchPredictionData(limit: number): Promise<Record<string, unknown>[]> {
+  try {
+    const predictions = await getRecentPredictions(limit);
+    
+    return predictions.map((pred: Prediction) => ({
+      id: pred.id,
+      hash: pred.hash,
+      predictorId: pred.predictorId,
+      predictorName: pred.predictorName,
+      predictorType: pred.predictorType,
+      title: pred.title,
+      description: pred.description,
+      category: pred.category,
+      tags: pred.tags,
+      targetAsset: pred.targetAsset || null,
+      targetMetric: pred.targetMetric || null,
+      targetValue: pred.targetValue || null,
+      targetCondition: pred.targetCondition || null,
+      deadline: pred.deadline,
+      createdAt: pred.createdAt,
+      resolvedAt: pred.resolvedAt || null,
+      status: pred.status,
+      confidence: pred.confidence,
+      confidencePercent: pred.confidencePercent,
+      outcomeValue: pred.outcome?.actualValue || null,
+      outcomeAccuracy: pred.outcome?.accuracyPercent || null,
+      isVerified: pred.isVerified,
+      upvotes: pred.upvotes,
+      downvotes: pred.downvotes,
+    }));
+  } catch (error) {
+    console.error('Failed to fetch prediction data:', error);
+    return [];
+  }
 }
 
-function generateMockSocialData(limit: number): Record<string, unknown>[] {
-  const symbols = ['BTC', 'ETH', 'SOL', 'DOGE'];
-  return Array.from({ length: limit }, (_, i) => ({
-    timestamp: new Date(Date.now() - i * 3600000).toISOString(),
-    symbol: symbols[i % symbols.length],
-    source: ['twitter', 'reddit', 'telegram'][i % 3],
-    mentions: Math.floor(Math.random() * 10000),
-    sentiment: Math.random() * 2 - 1,
-    volume: Math.floor(Math.random() * 50000),
-    engagement: Math.random() * 100,
-    influencerMentions: Math.floor(Math.random() * 50),
-  }));
+/**
+ * Fetch real social metrics from our aggregation services
+ */
+async function fetchSocialData(limit: number): Promise<Record<string, unknown>[]> {
+  try {
+    const trends = await getSocialTrends();
+    
+    return trends.slice(0, limit).map((trend: SocialTrend, index: number) => ({
+      timestamp: new Date().toISOString(),
+      ticker: trend.ticker,
+      name: trend.name,
+      source: 'aggregated',
+      mentions: trend.mentions,
+      mentionChange24h: trend.mentionChange24h,
+      uniqueAuthors: trend.uniqueAuthors,
+      sentiment: trend.sentiment,
+      sentimentChange24h: trend.sentimentChange24h,
+      peakHour: trend.peakHour || null,
+      relatedTickers: trend.relatedTickers,
+      topChannels: trend.topChannels,
+      topInfluencers: trend.topInfluencers.map(inf => inf.name),
+      rank: index + 1,
+    }));
+  } catch (error) {
+    console.error('Failed to fetch social data:', error);
+    return [];
+  }
 }
 
 /**
@@ -137,21 +211,35 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // Generate mock data (in production, fetch from database)
+    // Fetch real data from our aggregation services
     let data: Record<string, unknown>[];
     switch (dataType) {
       case 'market':
-        data = generateMockMarketData(limit);
+        data = await fetchMarketData(limit);
         break;
       case 'predictions':
-        data = generateMockPredictions(limit);
+        data = await fetchPredictionData(limit);
         break;
       case 'social':
-        data = generateMockSocialData(limit);
+        data = await fetchSocialData(limit);
         break;
       case 'news':
       default:
-        data = generateMockNewsData(limit);
+        data = await fetchNewsData(limit, dateFrom, dateTo);
+    }
+
+    // Return empty result with message if no data
+    if (data.length === 0) {
+      return NextResponse.json({
+        success: true,
+        warning: 'No data available for the requested parameters',
+        export: {
+          format,
+          rowCount: 0,
+          exportedAt: new Date().toISOString(),
+        },
+        data: [],
+      });
     }
 
     const options: ExportOptions = {

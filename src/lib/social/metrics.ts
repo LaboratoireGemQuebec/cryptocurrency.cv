@@ -82,8 +82,8 @@ const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
  */
 export async function fetchLunarCrushMetrics(symbol: string): Promise<SocialMetrics | null> {
   if (!LUNARCRUSH_API_KEY) {
-    console.warn('LunarCrush API key not configured');
-    return generateMockMetrics(symbol);
+    console.warn('LunarCrush API key not configured - social metrics unavailable');
+    return null;
   }
 
   try {
@@ -184,9 +184,38 @@ export async function getSocialMetrics(symbol: string): Promise<SocialMetrics> {
     fetchSantimentMetrics(symbol),
   ]);
 
-  // Merge data with LunarCrush as primary
+  // If no data from any source, return null
+  if (!lunarCrush && !santiment) {
+    console.warn(`No social metrics available for ${symbol} - API keys may not be configured`);
+    return null as unknown as SocialMetrics;
+  }
+
+  // Merge data from available sources
+  const baseMetrics: SocialMetrics = {
+    symbol: symbol.toUpperCase(),
+    name: symbol,
+    timestamp: new Date(),
+    socialVolume: 0,
+    socialVolumeChange24h: 0,
+    socialDominance: 0,
+    sentiment: 0,
+    sentimentChange24h: 0,
+    bullishPercent: 50,
+    bearishPercent: 50,
+    twitterFollowers: 0,
+    twitterFollowersChange24h: 0,
+    twitterMentions: 0,
+    redditSubscribers: 0,
+    redditActiveUsers: 0,
+    telegramMembers: 0,
+    influencerMentions: 0,
+    topInfluencers: [],
+    socialVolumeToPrice: 0,
+    sentimentToPrice: 0,
+  };
+
   const metrics: SocialMetrics = {
-    ...generateMockMetrics(symbol),
+    ...baseMetrics,
     ...lunarCrush,
     ...santiment,
     timestamp: new Date(),
@@ -227,7 +256,8 @@ export async function getBatchSocialMetrics(symbols: string[]): Promise<Map<stri
  */
 export async function getSocialTrends(limit = 20): Promise<SocialTrend[]> {
   if (!LUNARCRUSH_API_KEY) {
-    return generateMockTrends(limit);
+    console.warn('LunarCrush API key not configured - social trends unavailable');
+    return [];
   }
 
   try {
@@ -248,7 +278,7 @@ export async function getSocialTrends(limit = 20): Promise<SocialTrend[]> {
     return transformTrendData(data);
   } catch (error) {
     console.error('Social trends fetch error:', error);
-    return generateMockTrends(limit);
+    return [];
   }
 }
 
