@@ -1304,8 +1304,8 @@ Building the definitive open crypto intelligence platform.
 - [ ] LunarCrush / Santiment social metrics integration
 - [x] Wire up new market tools to navigation ✅
 - [ ] x402 payment flow testing (Base Sepolia)
-- [ ] TradingView chart embeds
-- [ ] Portfolio performance charts
+- [x] TradingView chart embeds ✅
+- [x] Portfolio performance charts ✅
 - [x] The Oracle: Natural language queries over all data ✅
 
 ## 📋 Short-Term (Q1 2026)

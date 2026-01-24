@@ -17,6 +17,7 @@ import { usePortfolio, Holding } from '@/components/portfolio/PortfolioProvider'
 import { PortfolioSummary } from '@/components/portfolio/PortfolioSummary';
 import { HoldingsTable } from '@/components/portfolio/HoldingsTable';
 import { AddHoldingModal } from '@/components/portfolio/AddHoldingModal';
+import { PerformanceChart } from '@/components/portfolio/PerformanceChart';
 import { useToast } from '@/components/Toast';
 import { getTopCoins, TokenPrice } from '@/lib/market-data';
 
@@ -300,6 +301,12 @@ export default function PortfolioPage() {
             worstPerformer={worstPerformer ? { name: worstPerformer.coinName, change: worstPerformer.change24h } : undefined}
             isLoading={isLoading}
           />
+        </div>
+
+        {/* Performance Chart */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Performance</h2>
+          <PerformanceChart />
         </div>
 
         {/* Holdings Table */}
