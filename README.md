@@ -1423,8 +1423,8 @@ Building the definitive open crypto intelligence platform.
 
 ### Formats & Access (Partial - In Progress)
 - [x] CSV/JSON export for all data types ✅
-- [ ] Parquet exports for analytics
-- [ ] SQLite monthly exports
+- [x] Parquet exports for analytics ✅
+- [x] SQLite monthly exports ✅
 - [x] Embedding vectors for semantic search (export ready) ✅
 - [x] LLM fine-tuning ready datasets ✅
 
@@ -1432,12 +1432,12 @@ Building the definitive open crypto intelligence platform.
 - [ ] Industry-standard reference for disputes
 - [ ] Academic citation network
 - [ ] AI training data licensing
-- [ ] Prediction registry (timestamped predictions with outcomes)
+- [x] Prediction registry (timestamped predictions with outcomes) ✅
 
 ### Advanced Trading Tools
-- [ ] TradingView integration
-- [ ] Multi-exchange order book aggregation
-- [ ] Arbitrage opportunity scanner
+- [x] TradingView integration ✅
+- [x] Multi-exchange order book aggregation ✅
+- [x] Arbitrage opportunity scanner ✅
 - [ ] Options flow tracking
 - [ ] Funding rate dashboard
 

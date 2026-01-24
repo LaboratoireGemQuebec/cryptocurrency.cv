@@ -129,9 +129,8 @@ export async function GET(request: NextRequest) {
       case 'widget_config': {
         const symbol = searchParams.get('symbol') || undefined;
         const theme = (searchParams.get('theme') || 'dark') as 'light' | 'dark';
-        const interval = searchParams.get('interval') || undefined;
         
-        const config = generateWidgetConfig({ symbol, theme, interval });
+        const config = generateWidgetConfig({ symbol, theme });
         return NextResponse.json(config);
       }
         
