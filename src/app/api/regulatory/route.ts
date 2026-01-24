@@ -13,6 +13,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+
+export const runtime = 'nodejs';
 import { headers } from 'next/headers';
 import {
   Jurisdiction,

@@ -60,7 +60,7 @@ export async function GET(
   // Get events for this rule
   if (action === 'events') {
     const limit = parseInt(searchParams.get('limit') || '50', 10);
-    const events = getAlertEventsByRule(id, limit);
+    const events = await getAlertEventsByRule(id, limit);
     return NextResponse.json({
       events,
       total: events.length,

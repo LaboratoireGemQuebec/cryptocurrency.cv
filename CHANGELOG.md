@@ -9,19 +9,132 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### AI Intelligence (Jan 22, 2026)
+#### AI Market Intelligence Agent (Jan 24, 2026)
+- **Revolutionary AI Market Agent** - `/ai-agent` page with comprehensive market analysis dashboard
+- **Multi-Source Signal Aggregation** - Synthesizes news, social sentiment, on-chain data, and derivatives into unified intelligence
+- **Market Regime Detection** - Automatically classifies market phase (accumulation, markup, distribution, markdown, ranging, capitulation, euphoria)
+- **Fear & Greed Index** - Real-time calculation with visual gauge component
+- **Trading Opportunity Identification** - AI-generated trade ideas with entry, target, and stop-loss levels
+- **Risk Alert System** - Proactive warnings for funding extremes, sentiment extremes, correlation breakdowns
+- **Correlation Anomaly Detection** - Identifies unusual correlation patterns between asset pairs
+- **Sector Rotation Analysis** - Tracks capital flow across DeFi, L1, L2, Meme sectors with leading/lagging assets
+- **Natural Language Query Interface** - Ask questions like "Should I buy BTC?" or "What are the current risks?"
+- **Upcoming Catalysts Tracker** - Monitors macro events, upgrades, regulatory dates, governance votes
+- **`/api/ai/agent`** - New REST API endpoint (GET for intelligence, POST for queries)
+- **`AIMarketAgentDashboard`** - Interactive dashboard component with tabs (Overview, Signals, Opportunities, Risks, Chat)
+- **`ai-market-agent.ts`** - 1,300+ line market intelligence engine library
+
+#### Coverage Gap Analysis (Jan 24, 2026)
+- **Coverage Gap Detection** - `/coverage-gap` page to identify under-covered crypto topics
+- **Topic Trend Tracking** - Monitor rising/falling coverage trends by topic
+- **Source Diversity Analysis** - Analyze news source distribution with entropy-based diversity scoring
+- **Gap Severity Ratings** - Critical/high/medium/low severity for coverage gaps
+- **Suggested Story Angles** - AI-recommended angles for under-covered topics
+- **`/api/coverage-gap`** - New API with actions: report, gaps, trends, topic, sources
+- **`CoverageGapDashboard`** - Interactive dashboard with tabs for overview, gaps, trends, sources
+- **`coverage-gap.ts`** - Comprehensive coverage analysis library
+
+#### Protocol Health & DeFi Risk Engine (Jan 23, 2026)
+- **Protocol Health Monitoring** - Real-time health scoring for DeFi protocols
+- **Risk Factor Analysis** - Multi-dimensional risk assessment (smart contract, liquidity, governance, oracle, market)
+- **DeFi Correlation Tracker** - Cross-protocol correlation analysis
+- **Yield Sustainability Scoring** - Identify unsustainable yield opportunities
+- **Liquidation Risk Alerts** - Early warning for cascade liquidation scenarios
+- **Regulatory Intelligence** - `/regulatory` page with jurisdiction tracker
+- **`/api/regulatory`** - API for regulatory news and compliance updates
+- **`regulatory-intelligence.ts`** - Regulatory monitoring library
+
+#### Trading & Premium Features (Jan 22-23, 2026)
+- **Options Flow Dashboard** - `/options` page with unusual options activity
+- **Order Book Dashboard** - `/orderbook` page with real market depth visualization
+- **Whale Alerts Dashboard** - `/whales` page tracking large wallet movements
+- **Predictions Dashboard** - `/predictions` for market predictions and forecasting
+- **Influencers Tracking** - `/influencers` page with reliability scoring for crypto influencers
+- **`OptionsFlowDashboard`** - Component for options flow visualization
+- **`OrderBookDashboard`** - Real-time order book component
+- **`WhaleAlertsDashboard`** - Whale movement tracking component
+- **`PredictionsDashboard`** - Market predictions component
+- **`InfluencersDashboard`** - Influencer tracking with call history
+
+#### Enterprise API Features (Jan 22, 2026)
+- **Stripe Billing Integration** - `/billing` page with subscription management
+- **Multi-Tier API Plans** - Free, Pro, Business, Enterprise tiers with different rate limits
+- **API Key Management** - `/settings/api` for key generation and management
+- **Usage Analytics Dashboard** - Track API calls, rate limits, and quotas
+- **Webhook Delivery System** - Configurable webhooks for real-time notifications
+- **x402 Payment Protocol** - Micropayment support for premium endpoints
+
+#### Social & Community Features (Jan 21, 2026)
+- **Social Monitoring Dashboard** - Track Twitter/X, Reddit, Telegram sentiment
+- **TradingView Chart Integration** - Professional charting with TradingView widgets
+- **Tax Report Generation** - Export transaction history for tax purposes
+- **Oracle Chat** - AI-powered chat interface for market questions
+- **Portfolio Performance Charts** - Visualization of portfolio P&L over time
+
+#### Real-Time Infrastructure (Jan 20, 2026)
+- **WebSocket Server** - Real-time updates for prices, news, and alerts
+- **Webhook Queue System** - Reliable webhook delivery with retry logic
+- **Background Job Processing** - Queue-based job execution for heavy tasks
+
+### Changed
+
+#### Infrastructure Updates (Jan 24, 2026)
+- **Next.js 16 Proxy Migration** - Renamed `middleware.ts` to `proxy.ts` for Next.js 16 compatibility
+- **Market Data Fallback** - Added CoinPaprika as fallback for CoinGecko rate limits
+- **Multi-API Fallbacks** - Binance and CryptoCompare as additional price sources
+- **Coverage Gap Fix** - Fixed `getLatestNews()` to properly extract articles from NewsResponse
+
+#### TypeScript & Build Fixes (Jan 23, 2026)
+- **Regulatory Route Fix** - Fixed TypeScript errors in `/api/regulatory/route.ts`
+- **NewsArticle Type Fixes** - Resolved type mismatches throughout codebase
+- **Build Optimization** - Fixed all compilation errors for production builds
+
+#### Admin & Infrastructure (Jan 18-20, 2026)
+- **Enhanced Admin Dashboard** - `/admin` with API key analytics and usage monitoring
+- **Professional Navigation Redesign** - Search, commands & utilities in header
+- **Design System Overhaul** - Accessibility improvements and brand color fixes
+- **A11y Improvements** - WCAG AA compliance, better contrast, keyboard navigation
+- **SEO Structured Data** - Enhanced meta tags and Open Graph support
+- **Dark Mode Fixes** - Proper dark mode toggle for Tailwind v4
+
+#### Accessibility & Design (Jan 16-17, 2026)
+- **Accessibility Audit Tools** - Scripts for a11y and contrast auditing
+- **Brand Color Contrast Fix** - WCAG AA compliant brand colors
+- **Mega Menu Navigation** - Refined professional design, compact dropdowns
+- **ErrorFallback Component** - Error boundary with fallback UI
+
+### Fixed
+- Coverage gap analysis now correctly extracts `.articles` from `NewsResponse`
+- Regulatory API route TypeScript errors with NewsArticle type
+- Component import errors in options, orderbook, whales, predictions, influencers pages
+- Market data API gracefully falls back when CoinGecko rate limits hit
+- Template literal syntax errors in `ArticleCardLarge.tsx`, `Footer.tsx`, `BreakingNewsBanner.tsx`
+- Build errors on `/defi`, `/offline`, `/topic` pages
+- Dark mode toggle for Tailwind v4
+- TypeScript error: use `.price` instead of `.usd`
+- Edge Runtime compatibility: removed Node.js fs/path modules from alerts.ts
+- Await params in topic page for Next.js 15+ compatibility
+- Extract RefreshButton to client component for `/offline` page
+
+---
+
+## [2.5.0] - 2026-01-22
+
+### Added
+
+#### AI Intelligence
 - **Event Classification** - `/api/classify` with 13 event types (funding, hack, regulation, partnership, product launch, acquisition, legal, market movement, security, network upgrade, governance, research, opinion)
 - **Claim Extraction** - `/api/claims` extracts factual claims with attribution, verifiability analysis, and confidence scores
 - **AI Daily Brief** - `/api/ai/brief` generates comprehensive daily crypto news digest with market overview, top stories, sector analysis, and risk alerts
 - **AI Bull vs Bear Debate** - `/api/ai/debate` creates balanced bull/bear perspectives for any article or topic
 - **AI Counter-Arguments** - `/api/ai/counter` challenges claims with structured counter-arguments including assumption analysis and alternative interpretations
 
-#### Analytics & Intelligence (Jan 22, 2026)
+#### Analytics & Intelligence
 - **Anomaly Detection** - `/api/analytics/anomalies` detects unusual coverage patterns, volume spikes, and sentiment shifts
 - **Source Credibility** - `/api/analytics/credibility` provides credibility scoring for news sources based on accuracy, speed, and bias
 - **Headline Tracking** - `/api/analytics/headlines` tracks headline changes and mutations over time
 
-#### International News (Jan 22, 2026)
+#### International News
 - **12 International Sources** - Korean (Block Media, TokenPost, CoinDesk Korea), Chinese (8BTC, Jinse Finance, Odaily), Japanese (CoinPost, CoinDesk Japan, Cointelegraph Japan), Spanish (Cointelegraph Español, Diario Bitcoin, CriptoNoticias)
 - **Auto-Translation** - Translate international news to English using Groq AI
 - **`GET /api/news/international`** - New endpoint with language/region filtering
@@ -122,6 +235,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2026-01-15
 
 ### Added
+
+#### Core Features
 - **Archive V2 System** - JSONL-based article storage with enhanced metadata
 - **AI-Powered Endpoints** - `/api/sentiment`, `/api/factcheck`, `/api/clickbait` using Groq
 - **MCP Server** - Model Context Protocol integration for Claude Desktop and ChatGPT
@@ -130,10 +245,85 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Trending Topics** - `/api/trending` endpoint with sentiment analysis
 - **Market Context** - `/api/market` endpoint with price data
 
+#### Pages & Navigation
+- **Trending Page** - `/trending` for trending news and topics
+- **DeFi Page** - `/defi` for DeFi-specific news section
+- **Digest Page** - `/digest` for AI-generated news digest
+- **Sentiment Page** - `/sentiment` for market sentiment analysis
+- **Sources Page** - `/sources` listing all news sources
+- **Source Page** - `/source/[id]` for individual source news
+- **Topics Page** - `/topics` listing all topics
+- **Topic Page** - `/topic/[id]` for individual topic news
+- **Category Page** - `/category/[id]` for category-based news view
+- **Coin Page** - `/coin/[id]` for individual cryptocurrency news
+- **Movers Page** - `/movers` for top gainers and losers
+- **Search Page** - `/search` for news search functionality
+- **Read Page** - `/read/[id]` for article reader view
+- **Bookmarks Page** - `/bookmarks` for saved articles
+- **About Page** - `/about` for project information and credits
+- **Examples Page** - `/examples` for API usage examples
+- **Markets Page** - `/markets` for crypto market overview
+
+#### AI Endpoints
+- **Summarize API** - `/api/summarize` for AI article summaries
+- **Ask API** - `/api/ask` for AI Q&A about crypto news
+- **Digest API** - `/api/digest` for AI daily digest generation
+- **Sentiment API** - `/api/sentiment` for deep sentiment analysis
+- **Entities API** - `/api/entities` to extract people, companies, tickers
+- **Narratives API** - `/api/narratives` for market narrative detection
+- **Signals API** - `/api/signals` for news-based trading signals
+- **Factcheck API** - `/api/factcheck` for claim verification
+- **Clickbait API** - `/api/clickbait` for clickbait detection
+- **Article API** - `/api/article` for single article fetching
+- **Cache API** - `/api/cache` for cache management
+
+#### Libraries
+- **Market Data Library** - `market-data.ts` with CoinGecko and DeFiLlama integration
+- **Groq Library** - `groq.ts` for Groq AI integration for summaries
+- **Categories Library** - `categories.ts` for news categorization logic
+- **Cache Library** - `cache.ts` for caching utilities
+- **API Utils Library** - `api-utils.ts` for API helper functions
+- **Dedupe Library** - `dedupe.ts` for article deduplication
+
+#### Components
+- **TrendingTopics** - Trending topics component with sentiment
+- **HeaderNew** - New header design component
+- **NewsletterSignup** - Email subscription form
+- **ReaderContent** - Article reader view component
+- **SearchPageContent** - Search results page component
+- **ShareButtons** - Social sharing buttons
+- **BookmarkButton** - Save article bookmark button
+- **BookmarksProvider** - Bookmarks context and storage
+- **BookmarksPageContent** - Saved articles page content
+
 ### Changed
 - Migrated from JSON to JSONL archive format
 - Enhanced article enrichment pipeline
 - Improved caching strategies
+- Updated hero section design
+- Updated header navigation design
+- Updated footer with more links
+- Updated home page layout with featured articles
+- Enhanced news API with caching and filtering
+- Updated crypto-news library with improved fetching
+- Updated translation library with improved i18n support
+
+---
+
+## [1.6.0] - 2026-01-10
+
+### Added
+- **i18n Infrastructure** - Full internationalization with 18 locales
+- **Alfred Workflow** - macOS Alfred integration for quick crypto news
+- **Raycast Extension** - Raycast integration for crypto news
+- **CLI Tool** - Command-line interface for news fetching
+- **Browser Extension** - Chrome/Firefox extension for news popup
+- **ChatGPT Plugin** - OpenAPI specification for ChatGPT integration
+- **MkDocs Site** - Documentation site with Material theme
+
+### Changed
+- Package renamed from `@nicholasrq` to `@nirholas`
+- Enhanced package descriptions across SDKs
 
 ---
 
@@ -205,13 +395,69 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-01-01
 
 ### Added
-- Initial release
-- **Core API** - `/api/news` endpoint
-- **Five Sources** - CoinDesk, CoinTelegraph, Decrypt, The Block, Bitcoin Magazine
-- **Basic Frontend** - News listing with pagination
-- **Health Check** - `/api/health` endpoint
+
+#### Core Infrastructure
+- **Next.js Application** - Full Next.js application source code
+- **TypeScript Configuration** - Complete TypeScript setup
+- **Tailwind CSS** - Tailwind CSS v4 configuration
+- **Package Dependencies** - All required npm packages
+- **Core API** - `/api/news` endpoint for latest news
+
+#### News Sources (Initial)
+- CoinDesk
+- CoinTelegraph
+- Decrypt
+- The Block
+- Bitcoin Magazine
+
+#### SDKs
+- **Go SDK** - Native Go client library (`sdk/go`)
+- **JavaScript SDK** - Browser and Node.js client (`sdk/javascript`)
+- **PHP SDK** - PHP client library (`sdk/php`)
+- **Python SDK** - Zero-dependency Python client (`sdk/python`)
+- **React SDK** - React component library (`sdk/react`)
+- **TypeScript SDK** - TypeScript client library (`sdk/typescript`)
+
+#### Integrations
+- **MCP Server** - Model Context Protocol server for AI assistants
+- **ChatGPT Plugin** - OpenAPI specification for ChatGPT
+- **CLI Tool** - Command-line interface for news fetching
+- **Browser Extension** - Chrome/Firefox popup extension
+- **Alfred Workflow** - macOS Alfred integration
+- **Raycast Extension** - Raycast integration
+
+#### Example Integrations
+- Discord Bot - Example Discord bot integration
+- Slack Bot - Example Slack bot integration
+- Telegram Bot - Example Telegram bot integration
+- cURL Examples - Shell script examples
+- AI Analysis - Python AI analysis examples
+- Real-time Streaming - WebSocket streaming examples
+- LangChain Tool - LangChain integration example
+
+#### Widgets
+- **Ticker Widget** - Embeddable news ticker
+- **Carousel Widget** - Embeddable news carousel
+
+#### Documentation
+- **Comprehensive README** - Multi-language README files (AR, DE, ES, FR, IT, JA, KO, NL, PL, PT, RU, TR, ZH-CN, ZH-TW)
+- **API Documentation** - Full API documentation
+- **Security Policy** - Security disclosure guidelines
+- **Contributing Guide** - How to contribute
+- **Architecture Documentation** - System architecture overview
+- **Deployment Guide** - Deployment instructions
+
+#### API Endpoints
+- **`GET /api/news`** - Latest news with pagination
+- **`GET /api/health`** - Health check endpoint
 - **CORS Support** - Open API for any domain
-- **Caching** - In-memory caching with 5-minute TTL
+- **In-Memory Caching** - 5-minute TTL cache
+
+#### DevOps
+- **GitHub Workflows** - CI/CD configuration
+- **Issue Templates** - Bug report and feature request templates
+- **PR Templates** - Pull request checklists
+- **Environment Template** - `.env.example` for configuration
 
 ---
 

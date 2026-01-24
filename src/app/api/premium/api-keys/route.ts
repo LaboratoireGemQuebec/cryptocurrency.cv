@@ -17,8 +17,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@x402/next';
 import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { db } from '@/lib/database';
 
 export const runtime = 'nodejs';
+
+// Database collection for API keys
+const API_KEYS_COLLECTION = 'api_keys';
 
 interface APIKey {
   id: string;
@@ -58,8 +62,39 @@ interface APIKeysResponse {
   };
 }
 
-// Simulated key storage (in production, use a database)
-const keyStore = new Map<string, APIKey>();
+// Database-backed key storage helper functions
+async function getAllKeys(): Promise<APIKey[]> {
+  try {
+    const docs = await db.listDocuments<APIKey>(API_KEYS_COLLECTION, { limit: 100 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get API keys from database:', error);
+    return [];
+  }
+}
+
+async function getKeyById(id: string): Promise<APIKey | null> {
+  try {
+    const doc = await db.getDocument<APIKey>(API_KEYS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveKey(key: APIKey): Promise<void> {
+  await db.saveDocument(API_KEYS_COLLECTION, key.id, key, {
+    keyPrefix: key.key.substring(0, 8),
+  });
+}
+
+async function countKeys(): Promise<number> {
+  try {
+    return await db.countDocuments(API_KEYS_COLLECTION);
+  } catch {
+    return 0;
+  }
+}
 
 /**
  * Generate a secure API key
@@ -103,8 +138,9 @@ const AVAILABLE_PERMISSIONS = [
  * Handler for GET requests - list keys
  */
 async function handleGet(): Promise<NextResponse<APIKeysResponse>> {
-  // Get all keys (mask the actual key value)
-  const keys = Array.from(keyStore.values()).map((k) => ({
+  // Get all keys from database (mask the actual key value)
+  const storedKeys = await getAllKeys();
+  const keys = storedKeys.map((k) => ({
     ...k,
     key: k.key.substring(0, 8) + '...' + k.key.substring(k.key.length - 4),
   }));
@@ -169,7 +205,8 @@ async function handlePost(
   }
 
   // Check key limit
-  if (keyStore.size >= 10) {
+  const currentCount = await countKeys();
+  if (currentCount >= 10) {
     return NextResponse.json(
       { error: 'Key limit reached', message: 'Maximum 10 API keys allowed' },
       { status: 400 }
@@ -197,8 +234,8 @@ async function handlePost(
     active: true,
   };
 
-  // Store the key
-  keyStore.set(newKey.id, newKey);
+  // Store the key in database
+  await saveKey(newKey);
 
   return NextResponse.json(
     {

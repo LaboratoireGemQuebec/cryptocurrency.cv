@@ -1,6 +1,23 @@
 import { NextResponse } from 'next/server';
+import { newsCache, marketCache, aiCache, globalCache } from '@/lib/distributed-cache';
+import { sentry } from '@/lib/sentry';
 
 export const runtime = 'edge';
+
+// System metrics for scalability monitoring
+interface SystemMetrics {
+  cache: {
+    news: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
+    market: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
+    ai: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
+    global: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
+  };
+  monitoring: {
+    sentry: boolean;
+    environment: string;
+    release: string;
+  };
+}
 
 // Comprehensive RSS source health check list (all 35+ sources)
 const RSS_SOURCES = {
@@ -115,6 +132,22 @@ export async function GET() {
     overallStatus = 'down';
   }
   
+  // Collect system metrics
+  const sentryConfig = sentry.getConfig();
+  const systemMetrics: SystemMetrics = {
+    cache: {
+      news: newsCache.getStats(),
+      market: marketCache.getStats(),
+      ai: aiCache.getStats(),
+      global: globalCache.getStats(),
+    },
+    monitoring: {
+      sentry: sentryConfig.enabled,
+      environment: sentryConfig.environment,
+      release: sentryConfig.release,
+    },
+  };
+
   const result = {
     status: overallStatus,
     timestamp: new Date().toISOString(),
@@ -125,6 +158,7 @@ export async function GET() {
       down: downCount,
       total: sources.length,
     },
+    system: systemMetrics,
     sources,
   };
   

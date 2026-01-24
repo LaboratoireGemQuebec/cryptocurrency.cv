@@ -221,6 +221,7 @@ const navItems = [
           links: [
             { label: 'Sentiment', href: '/sentiment', icon: '🎯' },
             { label: 'AI Digest', href: '/digest', icon: '📰' },
+            { label: 'AI Market Agent', href: '/ai-agent', icon: '🤖' },
           ],
         },
       ],
@@ -228,6 +229,98 @@ const navItems = [
         title: 'Ask The Oracle',
         description: 'Natural language queries over all crypto data',
         href: '/ai/oracle',
+      },
+    },
+  },
+  {
+    label: 'Trading',
+    href: '/orderbook',
+    icon: '📊',
+    megaMenu: {
+      sections: [
+        {
+          title: 'Live Data',
+          links: [
+            { label: 'Order Book', href: '/orderbook', icon: '📗' },
+            { label: 'Whale Alerts', href: '/whales', icon: '🐋' },
+            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
+            { label: 'Options Flow', href: '/options', icon: '📈' },
+          ],
+        },
+        {
+          title: 'Opportunities',
+          links: [
+            { label: 'Arbitrage Scanner', href: '/arbitrage', icon: '🔄' },
+            { label: 'Predictions', href: '/predictions', icon: '🎯' },
+            { label: 'Screener', href: '/screener', icon: '🔍' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Trading Intelligence',
+        description: 'Real-time order books, whale tracking, and arbitrage opportunities',
+        href: '/orderbook',
+      },
+    },
+  },
+  {
+    label: 'Analytics',
+    href: '/analytics',
+    icon: '📉',
+    megaMenu: {
+      sections: [
+        {
+          title: 'Research',
+          links: [
+            { label: 'Analytics Hub', href: '/analytics', icon: '📊' },
+            { label: 'Protocol Health', href: '/protocol-health', icon: '🏥' },
+            { label: 'Coverage Gaps', href: '/coverage-gap', icon: '🔎' },
+            { label: 'Influencer Tracker', href: '/influencers', icon: '👥' },
+          ],
+        },
+        {
+          title: 'Portfolio',
+          links: [
+            { label: 'Portfolio Tracker', href: '/portfolio', icon: '💼' },
+            { label: 'Watchlist', href: '/watchlist', icon: '👁️' },
+            { label: 'Coin Compare', href: '/compare', icon: '⚖️' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Deep Analytics',
+        description: 'Protocol health, influencer tracking, and portfolio management',
+        href: '/analytics',
+      },
+    },
+  },
+  {
+    label: 'Developers',
+    href: '/developers',
+    icon: '🛠️',
+    megaMenu: {
+      sections: [
+        {
+          title: 'API & Tools',
+          links: [
+            { label: 'Developer Portal', href: '/developers', icon: '👨‍💻' },
+            { label: 'API Docs', href: '/examples', icon: '📚' },
+            { label: 'News Sources', href: '/sources', icon: '📰' },
+          ],
+        },
+        {
+          title: 'Account',
+          links: [
+            { label: 'Pricing', href: '/pricing', icon: '💳' },
+            { label: 'Billing', href: '/billing', icon: '📄' },
+            { label: 'Settings', href: '/settings', icon: '⚙️' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Build with our API',
+        description: 'Free tier with 1000 requests/day, premium plans available',
+        href: '/developers',
       },
     },
   },

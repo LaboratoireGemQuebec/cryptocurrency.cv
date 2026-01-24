@@ -113,7 +113,7 @@ export async function GET(request: NextRequest) {
             isDoxxed: health.team.isDoxxed,
             teamSize: health.team.teamSize,
             backers: health.team.backers,
-            githubActivity: health.team.githubActivity.commits30d,
+            githubActivity: health.team.githubActivity?.commits30d,
           } : null,
           alerts: health.alerts,
         };

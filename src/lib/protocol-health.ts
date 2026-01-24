@@ -218,7 +218,7 @@ export interface TeamInfo {
   backers: string[];
   fundingRounds: FundingRound[];
   linkedInVerified: boolean;
-  githubActivity: {
+  githubActivity?: {
     contributors: number;
     commits30d: number;
     lastCommit: string;
@@ -502,7 +502,7 @@ function calculateTeamRisk(team: TeamInfo | null): RiskFactor {
       details.push('Team not LinkedIn verified');
     }
 
-    if (team.githubActivity.commits30d < 10) {
+    if (team.githubActivity && team.githubActivity.commits30d < 10) {
       score -= 15;
       details.push('Low development activity');
     }
@@ -817,74 +817,143 @@ async function fetchProtocolInfo(protocolId: string): Promise<Protocol | null> {
 }
 
 async function fetchAudits(protocolId: string): Promise<AuditReport[]> {
-  // Mock implementation - real would use audit databases
-  const now = new Date();
-  const sixMonthsAgo = new Date(now.getTime() - 180 * 24 * 60 * 60 * 1000);
-  
-  // Return mock audits for top protocols
-  const topProtocolAudits: Record<string, AuditReport[]> = {
-    'aave-v3': [{
-      id: 'aave-audit-1',
-      protocolId: 'aave-v3',
-      auditor: 'Trail of Bits',
-      auditorReputation: 'tier1',
-      date: sixMonthsAgo.toISOString(),
-      version: '3.0',
-      scope: ['lending-pool', 'governance', 'token'],
-      findings: [
-        { id: 'f1', severity: 'low', title: 'Gas optimization', description: 'Minor gas improvements possible', status: 'resolved' },
-      ],
-      isPublic: true,
-      overallRating: 'pass',
-    }],
-    'uniswap-v3': [{
-      id: 'uni-audit-1',
-      protocolId: 'uniswap-v3',
-      auditor: 'OpenZeppelin',
-      auditorReputation: 'tier1',
-      date: sixMonthsAgo.toISOString(),
-      version: '3.0',
-      scope: ['pool', 'factory', 'router'],
-      findings: [],
-      isPublic: true,
-      overallRating: 'pass',
-    }],
-  };
+  // Fetch from DeFi Safety API for audit information
+  try {
+    const response = await fetch(`https://api.defisafety.com/pqr/protocols`, {
+      next: { revalidate: 3600 },
+    });
+    
+    if (response.ok) {
+      const protocols = await response.json();
+      const protocol = protocols.find((p: { name: string; slug: string }) => 
+        p.slug?.toLowerCase() === protocolId.toLowerCase() ||
+        p.name?.toLowerCase().includes(protocolId.replace(/-/g, ' '))
+      );
+      
+      if (protocol?.audits?.length) {
+        return protocol.audits.map((audit: { auditor: string; date: string; link: string; findings?: Array<{ severity: string; title: string; status: string }> }) => ({
+          id: `${protocolId}-${audit.auditor}-${audit.date}`,
+          protocolId,
+          auditor: audit.auditor || 'Unknown',
+          auditorReputation: getAuditorReputation(audit.auditor),
+          date: audit.date || new Date().toISOString(),
+          version: '1.0',
+          scope: ['smart-contracts'],
+          findings: audit.findings || [],
+          isPublic: !!audit.link,
+          overallRating: 'pass',
+        }));
+      }
+    }
+  } catch (error) {
+    console.error(`Failed to fetch audits from DeFi Safety:`, error);
+  }
 
-  return topProtocolAudits[protocolId] || [];
+  // Fallback: Check rekt.news for audit info via their API
+  try {
+    const rektResponse = await fetch(`https://api.rekt.news/v1/protocols/${protocolId}`, {
+      next: { revalidate: 3600 },
+    });
+    
+    if (rektResponse.ok) {
+      const data = await rektResponse.json();
+      if (data.audits?.length) {
+        return data.audits;
+      }
+    }
+  } catch {
+    // rekt.news API may not exist, that's okay
+  }
+
+  // Return empty array if no audits found
+  return [];
+}
+
+function getAuditorReputation(auditor: string): 'tier1' | 'tier2' | 'tier3' | 'unknown' {
+  const tier1 = ['trail of bits', 'openzeppelin', 'consensys diligence', 'certik', 'quantstamp', 'peckshield', 'slowmist'];
+  const tier2 = ['halborn', 'hacken', 'mixbytes', 'chainsecurity', 'sigmaprime', 'zokyo', 'code4rena'];
+  const tier3 = ['techrate', 'solidity finance', 'fairyproof', 'interfi'];
+  
+  const normalizedAuditor = auditor?.toLowerCase() || '';
+  
+  if (tier1.some(a => normalizedAuditor.includes(a))) return 'tier1';
+  if (tier2.some(a => normalizedAuditor.includes(a))) return 'tier2';
+  if (tier3.some(a => normalizedAuditor.includes(a))) return 'tier3';
+  return 'unknown';
 }
 
 async function fetchIncidents(protocolId: string): Promise<SecurityIncident[]> {
-  // Mock implementation - real would use rekt.news API or similar
-  const mockIncidents: Record<string, SecurityIncident[]> = {
-    'ronin-bridge': [{
-      id: 'ronin-1',
-      protocolId: 'ronin-bridge',
-      date: '2022-03-23',
-      type: 'bridge-hack',
-      severity: 'critical',
-      lossUsd: 624_000_000,
-      recoveredUsd: 0,
-      attackVector: 'Compromised private keys',
-      description: 'Validator keys compromised allowing unauthorized withdrawals',
-      isConfirmed: true,
-      status: 'resolved',
-    }],
-  };
+  // Fetch from rekt.news API for security incidents
+  try {
+    const response = await fetch('https://rekt.news/api/leaderboard', {
+      next: { revalidate: 1800 },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      const incidents = data.filter((item: { project: string }) => 
+        item.project?.toLowerCase().includes(protocolId.replace(/-/g, ' '))
+      );
+      
+      return incidents.map((item: { id?: string; date: string; type?: string; funds_lost: number; funds_returned?: number; technique?: string; description?: string }) => ({
+        id: item.id || `${protocolId}-${item.date}`,
+        protocolId,
+        date: item.date,
+        type: item.type || 'unknown',
+        severity: item.funds_lost > 100_000_000 ? 'critical' : item.funds_lost > 10_000_000 ? 'high' : 'medium',
+        lossUsd: item.funds_lost || 0,
+        recoveredUsd: item.funds_returned || 0,
+        attackVector: item.technique || 'Unknown',
+        description: item.description || '',
+        isConfirmed: true,
+        status: 'resolved',
+      }));
+    }
+  } catch (error) {
+    console.error(`Failed to fetch incidents from rekt.news:`, error);
+  }
 
-  return mockIncidents[protocolId] || [];
+  // Fallback: Check DeFiYield REKT database
+  try {
+    const response = await fetch(`https://api.defiyield.app/rekt/list?q=${protocolId}`, {
+      next: { revalidate: 1800 },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      if (data.data?.length) {
+        return data.data.map((item: { id: string; date: string; category: string; fundsLost: number; fundsReturned?: number; technique?: string; description?: string; status?: string }) => ({
+          id: item.id,
+          protocolId,
+          date: item.date,
+          type: item.category,
+          severity: item.fundsLost > 100_000_000 ? 'critical' : item.fundsLost > 10_000_000 ? 'high' : 'medium',
+          lossUsd: item.fundsLost || 0,
+          recoveredUsd: item.fundsReturned || 0,
+          attackVector: item.technique || 'Unknown',
+          description: item.description || '',
+          isConfirmed: true,
+          status: item.status || 'resolved',
+        }));
+      }
+    }
+  } catch {
+    // DeFiYield API may not respond, that's okay
+  }
+
+  return [];
 }
 
 async function fetchTVL(protocolId: string): Promise<TVLData | null> {
   try {
-    // Use DefiLlama API
+    // Use DefiLlama API - this is the primary source for TVL data
     const response = await fetch(`https://api.llama.fi/protocol/${protocolId}`, {
       next: { revalidate: 300 },
     });
 
     if (!response.ok) {
-      // Return mock data for demo
-      return generateMockTVL(protocolId);
+      console.error(`DefiLlama API error for ${protocolId}: ${response.status}`);
+      return null;
     }
 
     const data = await response.json();
@@ -900,118 +969,260 @@ async function fetchTVL(protocolId: string): Promise<TVLData | null> {
       tokenBreakdown: [],
       rank: 0,
     };
-  } catch {
-    return generateMockTVL(protocolId);
+  } catch (error) {
+    console.error(`Failed to fetch TVL for ${protocolId}:`, error);
+    return null;
   }
 }
 
-function generateMockTVL(protocolId: string): TVLData {
-  const mockTVLs: Record<string, number> = {
-    'lido': 25_000_000_000,
-    'aave-v3': 12_000_000_000,
-    'uniswap-v3': 5_000_000_000,
-    'makerdao': 8_000_000_000,
-    'curve-finance': 3_500_000_000,
-  };
-
-  const tvl = mockTVLs[protocolId] || Math.random() * 1_000_000_000;
-
-  return {
-    protocolId,
-    timestamp: Date.now(),
-    tvlUsd: tvl,
-    change24h: (Math.random() - 0.5) * 10,
-    change7d: (Math.random() - 0.5) * 20,
-    change30d: (Math.random() - 0.5) * 30,
-    chainBreakdown: { ethereum: tvl * 0.7, arbitrum: tvl * 0.2, polygon: tvl * 0.1 },
-    tokenBreakdown: [
-      { token: 'ETH', amount: tvl * 0.4 / 3000, valueUsd: tvl * 0.4, percentage: 40 },
-      { token: 'USDC', amount: tvl * 0.3, valueUsd: tvl * 0.3, percentage: 30 },
-      { token: 'Other', amount: tvl * 0.3, valueUsd: tvl * 0.3, percentage: 30 },
-    ],
-    rank: Math.floor(Math.random() * 100) + 1,
-  };
-}
-
 async function fetchGovernance(protocolId: string): Promise<GovernanceMetrics | null> {
-  // Mock implementation
-  const hasGovernance = ['aave-v3', 'uniswap-v3', 'makerdao', 'compound-v3'].includes(protocolId);
-  
-  if (!hasGovernance) return null;
+  // Fetch governance data from Tally API or Snapshot
+  try {
+    // Try Tally first for on-chain governance
+    const tallyResponse = await fetch(`https://api.tally.xyz/query`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Api-key': process.env.TALLY_API_KEY || '',
+      },
+      body: JSON.stringify({
+        query: `
+          query {
+            governances(chainIds: ["eip155:1"], names: ["${protocolId}"]) {
+              id
+              name
+              tokenSymbol
+              proposalsCount
+              votersCount
+              tokenHoldersCount
+            }
+          }
+        `,
+      }),
+      next: { revalidate: 3600 },
+    });
 
-  return {
-    protocolId,
-    tokenSymbol: protocolId.split('-')[0].toUpperCase(),
-    tokenAddress: '0x...',
-    totalSupply: 100_000_000,
-    circulatingSupply: 80_000_000,
-    holderCount: 50000,
-    topHolderConcentration: 25,
-    treasuryValue: 500_000_000,
-    proposalCount: 150,
-    averageVoterParticipation: 15,
-    timelockDuration: 48,
-    multisigDetails: {
-      signers: 9,
-      threshold: 5,
-      knownSigners: ['Founder 1', 'Founder 2', 'Community Rep'],
-    },
-    recentProposals: [],
-  };
+    if (tallyResponse.ok) {
+      const data = await tallyResponse.json();
+      const gov = data?.data?.governances?.[0];
+      
+      if (gov) {
+        return {
+          protocolId,
+          tokenSymbol: gov.tokenSymbol || protocolId.toUpperCase(),
+          tokenAddress: '',
+          totalSupply: 0,
+          circulatingSupply: 0,
+          holderCount: gov.tokenHoldersCount || 0,
+          topHolderConcentration: 0,
+          treasuryValue: 0,
+          proposalCount: gov.proposalsCount || 0,
+          averageVoterParticipation: 0,
+          timelockDuration: 0,
+          recentProposals: [],
+        };
+      }
+    }
+  } catch (error) {
+    console.error(`Failed to fetch governance from Tally:`, error);
+  }
+
+  // Try Snapshot for off-chain governance
+  try {
+    const snapshotResponse = await fetch('https://hub.snapshot.org/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: `
+          query {
+            space(id: "${protocolId}.eth") {
+              id
+              name
+              symbol
+              proposalsCount
+              followersCount
+            }
+          }
+        `,
+      }),
+      next: { revalidate: 3600 },
+    });
+
+    if (snapshotResponse.ok) {
+      const data = await snapshotResponse.json();
+      const space = data?.data?.space;
+      
+      if (space) {
+        return {
+          protocolId,
+          tokenSymbol: space.symbol || protocolId.toUpperCase(),
+          tokenAddress: '',
+          totalSupply: 0,
+          circulatingSupply: 0,
+          holderCount: space.followersCount || 0,
+          topHolderConcentration: 0,
+          treasuryValue: 0,
+          proposalCount: space.proposalsCount || 0,
+          averageVoterParticipation: 0,
+          timelockDuration: 0,
+          recentProposals: [],
+        };
+      }
+    }
+  } catch (error) {
+    console.error(`Failed to fetch governance from Snapshot:`, error);
+  }
+
+  return null;
 }
 
 async function fetchInsurance(protocolId: string): Promise<InsuranceCoverage | null> {
-  // Mock implementation
-  const insuredProtocols = ['aave-v3', 'uniswap-v3', 'compound-v3'];
-  
-  if (!insuredProtocols.includes(protocolId)) return null;
+  // Fetch from Nexus Mutual API for insurance coverage
+  try {
+    const response = await fetch('https://api.nexusmutual.io/v2/capacities', {
+      next: { revalidate: 3600 },
+    });
 
-  return {
-    protocolId,
-    providers: [
-      {
-        name: 'Nexus Mutual',
-        coverageUsd: 50_000_000,
-        premium: 2.5,
-        deductible: 0,
-        coveredRisks: ['smart-contract', 'oracle-failure'],
-        excludedRisks: ['governance-attack', 'rug-pull'],
-      },
-    ],
-    totalCoverageUsd: 50_000_000,
-    coverageRatio: 0.1,
-    averagePremium: 2.5,
-    lastUpdated: new Date().toISOString(),
-  };
+    if (response.ok) {
+      const capacities = await response.json();
+      const protocolCoverage = capacities.find((c: { productId: string; productName: string }) =>
+        c.productName?.toLowerCase().includes(protocolId.replace(/-/g, ' ')) ||
+        c.productId === protocolId
+      );
+
+      if (protocolCoverage) {
+        return {
+          protocolId,
+          providers: [{
+            name: 'Nexus Mutual',
+            coverageUsd: protocolCoverage.capacityETH * 3500 || 0, // Approximate USD
+            premium: protocolCoverage.minAnnualPrice * 100 || 2.5,
+            deductible: 0,
+            coveredRisks: ['smart-contract', 'oracle-failure'],
+            excludedRisks: ['governance-attack', 'rug-pull'],
+          }],
+          totalCoverageUsd: protocolCoverage.capacityETH * 3500 || 0,
+          coverageRatio: 0,
+          averagePremium: protocolCoverage.minAnnualPrice * 100 || 2.5,
+          lastUpdated: new Date().toISOString(),
+        };
+      }
+    }
+  } catch (error) {
+    console.error(`Failed to fetch insurance from Nexus Mutual:`, error);
+  }
+
+  // Try InsurAce as fallback
+  try {
+    const insurAceResponse = await fetch(`https://api.insurace.io/v1/products?protocol=${protocolId}`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (insurAceResponse.ok) {
+      const data = await insurAceResponse.json();
+      if (data?.products?.length) {
+        return {
+          protocolId,
+          providers: data.products.map((p: { name: string; capacity: number; premium: number }) => ({
+            name: p.name || 'InsurAce',
+            coverageUsd: p.capacity || 0,
+            premium: p.premium || 0,
+            deductible: 0,
+            coveredRisks: ['smart-contract'],
+            excludedRisks: [],
+          })),
+          totalCoverageUsd: data.products.reduce((sum: number, p: { capacity: number }) => sum + (p.capacity || 0), 0),
+          coverageRatio: 0,
+          averagePremium: data.products[0]?.premium || 0,
+          lastUpdated: new Date().toISOString(),
+        };
+      }
+    }
+  } catch {
+    // InsurAce API may not respond
+  }
+
+  return null;
 }
 
 async function fetchTeamInfo(protocolId: string): Promise<TeamInfo | null> {
-  // Mock implementation
-  const doxxedProtocols = ['aave-v3', 'uniswap-v3', 'makerdao', 'compound-v3'];
-  
-  const isDoxxed = doxxedProtocols.includes(protocolId);
+  // Fetch from GitHub API for activity metrics
+  try {
+    // Try to find the protocol's GitHub org
+    const orgMappings: Record<string, string> = {
+      'aave-v3': 'aave',
+      'uniswap-v3': 'Uniswap',
+      'compound-v3': 'compound-finance',
+      'makerdao': 'makerdao',
+      'curve-finance': 'curvefi',
+      'lido': 'lidofinance',
+    };
 
+    const org = orgMappings[protocolId] || protocolId.replace(/-v\d+$/, '');
+    
+    const response = await fetch(`https://api.github.com/orgs/${org}`, {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': process.env.GITHUB_TOKEN ? `token ${process.env.GITHUB_TOKEN}` : '',
+      },
+      next: { revalidate: 3600 },
+    });
+
+    if (response.ok) {
+      const orgData = await response.json();
+      
+      // Get repos to estimate activity
+      const reposResponse = await fetch(`https://api.github.com/orgs/${org}/repos?sort=updated&per_page=10`, {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+          'Authorization': process.env.GITHUB_TOKEN ? `token ${process.env.GITHUB_TOKEN}` : '',
+        },
+        next: { revalidate: 3600 },
+      });
+
+      let githubActivity = undefined;
+      if (reposResponse.ok) {
+        const repos = await reposResponse.json();
+        const totalStars = repos.reduce((sum: number, r: { stargazers_count: number }) => sum + (r.stargazers_count || 0), 0);
+        const totalIssues = repos.reduce((sum: number, r: { open_issues_count: number }) => sum + (r.open_issues_count || 0), 0);
+        
+        githubActivity = {
+          contributors: 0,
+          commits30d: 0,
+          lastCommit: repos[0]?.updated_at || new Date().toISOString(),
+          openIssues: totalIssues,
+          stars: totalStars,
+        };
+      }
+
+      return {
+        protocolId,
+        isDoxxed: true, // Has public GitHub org
+        isAnonymous: false,
+        teamSize: orgData.public_repos || 0,
+        founders: [],
+        advisors: [],
+        backers: [],
+        fundingRounds: [],
+        linkedInVerified: false,
+        githubActivity,
+      };
+    }
+  } catch (error) {
+    console.error(`Failed to fetch team info from GitHub:`, error);
+  }
+
+  // Return minimal info if no data found
   return {
     protocolId,
-    isDoxxed,
-    isAnonymous: !isDoxxed,
-    teamSize: isDoxxed ? 50 : 10,
-    founders: isDoxxed ? [
-      { name: 'Founder', role: 'CEO', isVerified: true },
-    ] : [],
+    isDoxxed: false,
+    isAnonymous: true,
+    teamSize: 0,
+    founders: [],
     advisors: [],
-    backers: isDoxxed ? ['a16z', 'Paradigm', 'Coinbase Ventures'] : [],
-    fundingRounds: isDoxxed ? [
-      { date: '2021-01-01', type: 'series-a', amountUsd: 25_000_000, investors: ['a16z'] },
-    ] : [],
-    linkedInVerified: isDoxxed,
-    githubActivity: {
-      contributors: 100,
-      commits30d: 150,
-      lastCommit: new Date().toISOString(),
-      openIssues: 25,
-      stars: 5000,
-    },
+    backers: [],
+    fundingRounds: [],
+    linkedInVerified: false,
   };
 }
 
@@ -1080,7 +1291,8 @@ export async function getTopProtocols(limit: number = 100): Promise<Protocol[]> 
     });
 
     if (!response.ok) {
-      return getMockProtocols();
+      console.error(`DefiLlama protocols API error: ${response.status}`);
+      return [];
     }
 
     const data = await response.json();
@@ -1098,8 +1310,9 @@ export async function getTopProtocols(limit: number = 100): Promise<Protocol[]> 
       launchDate: '2020-01-01', // DefiLlama doesn't provide this
       isVerified: true,
     }));
-  } catch {
-    return getMockProtocols();
+  } catch (error) {
+    console.error('Failed to fetch protocols from DefiLlama:', error);
+    return [];
   }
 }
 
@@ -1223,23 +1436,61 @@ export async function getProtocolRanking(
 }
 
 export async function getRecentIncidents(limit: number = 20): Promise<SecurityIncident[]> {
-  // In production, this would query a database of incidents
-  // For now, return mock data from known hacks
-  return [
-    {
-      id: 'recent-1',
-      protocolId: 'example-protocol',
-      date: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
-      type: 'flash-loan-attack',
-      severity: 'high',
-      lossUsd: 5_000_000,
-      recoveredUsd: 0,
-      attackVector: 'Flash loan + oracle manipulation',
-      description: 'Attacker manipulated oracle prices using flash loan',
-      isConfirmed: true,
-      status: 'investigating',
-    },
-  ];
+  // Fetch from rekt.news API for recent security incidents
+  try {
+    const response = await fetch('https://rekt.news/api/leaderboard', {
+      next: { revalidate: 1800 },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      return data.slice(0, limit).map((item: { id?: string; project: string; date: string; type?: string; funds_lost: number; funds_returned?: number; technique?: string; description?: string }) => ({
+        id: item.id || `incident-${item.project}-${item.date}`,
+        protocolId: item.project?.toLowerCase().replace(/\s+/g, '-') || 'unknown',
+        date: item.date,
+        type: item.type || 'unknown',
+        severity: item.funds_lost > 100_000_000 ? 'critical' : item.funds_lost > 10_000_000 ? 'high' : 'medium',
+        lossUsd: item.funds_lost || 0,
+        recoveredUsd: item.funds_returned || 0,
+        attackVector: item.technique || 'Unknown',
+        description: item.description || '',
+        isConfirmed: true,
+        status: 'resolved',
+      }));
+    }
+  } catch (error) {
+    console.error('Failed to fetch recent incidents:', error);
+  }
+
+  // Fallback: Try DeFiYield REKT database
+  try {
+    const response = await fetch('https://api.defiyield.app/rekt/list?limit=' + limit, {
+      next: { revalidate: 1800 },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      if (data.data?.length) {
+        return data.data.map((item: { id: string; project: { name: string }; date: string; category: string; fundsLost: number; fundsReturned?: number; technique?: string; description?: string; status?: string }) => ({
+          id: item.id,
+          protocolId: item.project?.name?.toLowerCase().replace(/\s+/g, '-') || 'unknown',
+          date: item.date,
+          type: item.category,
+          severity: item.fundsLost > 100_000_000 ? 'critical' : item.fundsLost > 10_000_000 ? 'high' : 'medium',
+          lossUsd: item.fundsLost || 0,
+          recoveredUsd: item.fundsReturned || 0,
+          attackVector: item.technique || 'Unknown',
+          description: item.description || '',
+          isConfirmed: true,
+          status: item.status || 'resolved',
+        }));
+      }
+    }
+  } catch {
+    // DeFiYield API may not respond
+  }
+
+  return [];
 }
 
 export async function searchProtocols(query: string): Promise<Protocol[]> {

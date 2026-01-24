@@ -806,4 +806,11 @@ export function getDatabase(config?: Partial<DatabaseConfig>): DatabaseClient {
 
 export const db = getDatabase();
 
+/**
+ * Check if KV storage is available (Vercel KV or Upstash)
+ */
+export function isKVAvailable(): boolean {
+  return !!(process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL);
+}
+
 export default db;

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { InfluencersDashboard } from './InfluencersDashboard';
+import InfluencersDashboard from './InfluencersDashboard';
 
 export const metadata: Metadata = {
   title: 'Influencer Reliability | Crypto Influencer Tracking',

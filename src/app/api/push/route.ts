@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/database';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
-// In-memory storage for push subscriptions (use a database in production)
-const pushSubscriptions = new Map<string, PushSubscriptionData>();
+// Database collection for push subscriptions
+const PUSH_SUBSCRIPTIONS_COLLECTION = 'push_subscriptions';
 
 interface PushSubscriptionData {
+  id: string;
   endpoint: string;
   keys: {
     p256dh: string;
@@ -14,6 +16,41 @@ interface PushSubscriptionData {
   topics: string[];
   createdAt: string;
   lastNotified?: string;
+}
+
+// Database-backed push subscription storage helper functions
+async function getAllSubscriptions(): Promise<PushSubscriptionData[]> {
+  try {
+    const docs = await db.listDocuments<PushSubscriptionData>(PUSH_SUBSCRIPTIONS_COLLECTION, { limit: 1000 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get push subscriptions from database:', error);
+    return [];
+  }
+}
+
+async function getSubscriptionById(id: string): Promise<PushSubscriptionData | null> {
+  try {
+    const doc = await db.getDocument<PushSubscriptionData>(PUSH_SUBSCRIPTIONS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveSubscription(subscription: PushSubscriptionData): Promise<void> {
+  await db.saveDocument(PUSH_SUBSCRIPTIONS_COLLECTION, subscription.id, subscription, {
+    topics: subscription.topics,
+  });
+}
+
+async function deleteSubscription(id: string): Promise<boolean> {
+  return db.deleteDocument(PUSH_SUBSCRIPTIONS_COLLECTION, id);
+}
+
+async function subscriptionExists(id: string): Promise<boolean> {
+  const sub = await getSubscriptionById(id);
+  return sub !== null;
 }
 
 interface PushNotificationPayload {
@@ -127,8 +164,9 @@ export async function POST(request: NextRequest) {
     // Create subscription ID from endpoint hash
     const subscriptionId = await hashEndpoint(subscription.endpoint);
     
-    // Store subscription
+    // Store subscription in database
     const subscriptionData: PushSubscriptionData = {
+      id: subscriptionId,
       endpoint: subscription.endpoint,
       keys: {
         p256dh: subscription.keys.p256dh,
@@ -138,7 +176,7 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString()
     };
     
-    pushSubscriptions.set(subscriptionId, subscriptionData);
+    await saveSubscription(subscriptionData);
     
     return NextResponse.json({
       success: true,
@@ -180,8 +218,9 @@ export async function DELETE(request: NextRequest) {
     
     const subscriptionId = await hashEndpoint(endpoint);
     
-    if (pushSubscriptions.has(subscriptionId)) {
-      pushSubscriptions.delete(subscriptionId);
+    const exists = await subscriptionExists(subscriptionId);
+    if (exists) {
+      await deleteSubscription(subscriptionId);
       return NextResponse.json({
         success: true,
         message: 'Unsubscribed from push notifications'
@@ -224,7 +263,7 @@ export async function PATCH(request: NextRequest) {
     }
     
     const subscriptionId = await hashEndpoint(endpoint);
-    const subscription = pushSubscriptions.get(subscriptionId);
+    const subscription = await getSubscriptionById(subscriptionId);
     
     if (!subscription) {
       return NextResponse.json({
@@ -237,7 +276,7 @@ export async function PATCH(request: NextRequest) {
     const filteredTopics = (topics || []).filter((t: string) => validTopics.includes(t.toLowerCase()));
     
     subscription.topics = filteredTopics.length > 0 ? filteredTopics : ['breaking'];
-    pushSubscriptions.set(subscriptionId, subscription);
+    await saveSubscription(subscription);
     
     return NextResponse.json({
       success: true,
@@ -254,6 +293,15 @@ export async function PATCH(request: NextRequest) {
   }
 }
 
+interface PushNotificationPayload {
+  title: string;
+  body: string;
+  icon?: string;
+  badge?: string;
+  url?: string;
+  tag?: string;
+}
+
 // Utility: Hash endpoint for ID
 async function hashEndpoint(endpoint: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -264,17 +312,10 @@ async function hashEndpoint(endpoint: string): Promise<string> {
 }
 
 // Helper for use by notification sender (e.g., cron job)
-// Note: In production, move this to a separate utility file
-function getSubscriptionsForTopic(topic: string): PushSubscriptionData[] {
-  const results: PushSubscriptionData[] = [];
-  
-  pushSubscriptions.forEach(sub => {
-    if (sub.topics.includes(topic) || sub.topics.includes('all')) {
-      results.push(sub);
-    }
-  });
-  
-  return results;
+// Returns subscriptions from database filtered by topic
+async function getSubscriptionsForTopic(topic: string): Promise<PushSubscriptionData[]> {
+  const allSubs = await getAllSubscriptions();
+  return allSubs.filter(sub => sub.topics.includes(topic) || sub.topics.includes('all'));
 }
 
 // Example notification payload helper
@@ -293,6 +334,5 @@ function createNotificationPayload(article: {
   };
 }
 
-// Suppress unused variable warnings - these are utility functions for external use
-void getSubscriptionsForTopic;
-void createNotificationPayload;
+// Export utility functions for external use
+export { getSubscriptionsForTopic, createNotificationPayload };

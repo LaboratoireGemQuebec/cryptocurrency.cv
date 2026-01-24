@@ -234,67 +234,381 @@ const WHALE_THRESHOLD_USD = 100000;
 const WALL_THRESHOLD_PERCENT = 5;
 
 // =============================================================================
-// MOCK DATA GENERATION (for development/demo)
+// EXCHANGE API CONFIGURATIONS
 // =============================================================================
 
-function generateMockOrderBook(symbol: string, exchange: Exchange): OrderBook {
-  const basePrice = symbol.toLowerCase().includes('btc') 
-    ? 65000 + Math.random() * 1000
-    : symbol.toLowerCase().includes('eth')
-    ? 3500 + Math.random() * 100
-    : 100 + Math.random() * 10;
+const EXCHANGE_CONFIGS: Record<Exchange, {
+  baseUrl: string;
+  orderBookEndpoint: (symbol: string, depth: number) => string;
+  transform: (data: unknown, symbol: string, exchange: Exchange) => OrderBook | null;
+}> = {
+  binance: {
+    baseUrl: 'https://api.binance.com',
+    orderBookEndpoint: (symbol, depth) => `/api/v3/depth?symbol=${symbol.toUpperCase().replace('/', '')}USDT&limit=${Math.min(depth, 1000)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformBinanceOrderBook(data as BinanceOrderBook, symbol, exchange),
+  },
+  coinbase: {
+    baseUrl: 'https://api.exchange.coinbase.com',
+    orderBookEndpoint: (symbol) => `/products/${symbol.toUpperCase()}-USD/book?level=2`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformCoinbaseOrderBook(data as CoinbaseOrderBook, symbol, exchange),
+  },
+  kraken: {
+    baseUrl: 'https://api.kraken.com',
+    orderBookEndpoint: (symbol, depth) => `/0/public/Depth?pair=${symbol.toUpperCase()}USD&count=${Math.min(depth, 500)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformKrakenOrderBook(data as KrakenOrderBook, symbol, exchange),
+  },
+  bitfinex: {
+    baseUrl: 'https://api-pub.bitfinex.com',
+    orderBookEndpoint: (symbol, depth) => `/v2/book/t${symbol.toUpperCase()}USD/P0?len=${Math.min(depth, 100)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformBitfinexOrderBook(data as BitfinexOrderBook, symbol, exchange),
+  },
+  bitstamp: {
+    baseUrl: 'https://www.bitstamp.net',
+    orderBookEndpoint: (symbol) => `/api/v2/order_book/${symbol.toLowerCase()}usd/`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformBitstampOrderBook(data as BitstampOrderBook, symbol, exchange),
+  },
+  okx: {
+    baseUrl: 'https://www.okx.com',
+    orderBookEndpoint: (symbol, depth) => `/api/v5/market/books?instId=${symbol.toUpperCase()}-USDT&sz=${Math.min(depth, 400)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformOKXOrderBook(data as OKXOrderBook, symbol, exchange),
+  },
+  bybit: {
+    baseUrl: 'https://api.bybit.com',
+    orderBookEndpoint: (symbol, depth) => `/v5/market/orderbook?category=spot&symbol=${symbol.toUpperCase()}USDT&limit=${Math.min(depth, 200)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformBybitOrderBook(data as BybitOrderBook, symbol, exchange),
+  },
+  kucoin: {
+    baseUrl: 'https://api.kucoin.com',
+    orderBookEndpoint: (symbol) => `/api/v1/market/orderbook/level2_100?symbol=${symbol.toUpperCase()}-USDT`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformKucoinOrderBook(data as KucoinOrderBook, symbol, exchange),
+  },
+  huobi: {
+    baseUrl: 'https://api.huobi.pro',
+    orderBookEndpoint: (symbol, depth) => `/market/depth?symbol=${symbol.toLowerCase()}usdt&type=step0&depth=${Math.min(depth, 150)}`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformHuobiOrderBook(data as HuobiOrderBook, symbol, exchange),
+  },
+  gemini: {
+    baseUrl: 'https://api.gemini.com',
+    orderBookEndpoint: (symbol) => `/v1/book/${symbol.toUpperCase()}USD?limit_bids=50&limit_asks=50`,
+    transform: (data: unknown, symbol: string, exchange: Exchange) => transformGeminiOrderBook(data as GeminiOrderBook, symbol, exchange),
+  },
+};
+
+// =============================================================================
+// EXCHANGE RESPONSE TYPES
+// =============================================================================
+
+interface BinanceOrderBook {
+  lastUpdateId: number;
+  bids: [string, string][];
+  asks: [string, string][];
+}
+
+interface CoinbaseOrderBook {
+  bids: [string, string, number][];
+  asks: [string, string, number][];
+  sequence: number;
+}
+
+interface KrakenOrderBook {
+  result: Record<string, { bids: [string, string, string][]; asks: [string, string, string][] }>;
+}
+
+interface BitfinexOrderBook {
+  // [price, count, amount][] - amount positive = bid, negative = ask
+  length: number;
+}
+
+interface BitstampOrderBook {
+  timestamp: string;
+  bids: [string, string][];
+  asks: [string, string][];
+}
+
+interface OKXOrderBook {
+  data: Array<{ bids: [string, string, string, string][]; asks: [string, string, string, string][] }>;
+}
+
+interface BybitOrderBook {
+  result: { b: [string, string][]; a: [string, string][]; ts: number };
+}
+
+interface KucoinOrderBook {
+  data: { bids: [string, string][]; asks: [string, string][]; time: number };
+}
+
+interface HuobiOrderBook {
+  tick: { bids: [number, number][]; asks: [number, number][]; ts: number };
+}
+
+interface GeminiOrderBook {
+  bids: Array<{ price: string; amount: string }>;
+  asks: Array<{ price: string; amount: string }>;
+}
+
+// =============================================================================
+// TRANSFORM FUNCTIONS FOR EACH EXCHANGE
+// =============================================================================
+
+function transformBinanceOrderBook(data: BinanceOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  if (!data?.bids?.length || !data?.asks?.length) return null;
   
-  const spread = basePrice * (0.0001 + Math.random() * 0.0005);
-  const midPrice = basePrice;
+  const bids: OrderBookEntry[] = data.bids.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const asks: OrderBookEntry[] = data.asks.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), lastUpdateId: data.lastUpdateId, spread, midPrice };
+}
+
+function transformCoinbaseOrderBook(data: CoinbaseOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  if (!data?.bids?.length || !data?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = data.bids.map(([price, qty, numOrders]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+    numOrders,
+  }));
+  
+  const asks: OrderBookEntry[] = data.asks.map(([price, qty, numOrders]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+    numOrders,
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), lastUpdateId: data.sequence, spread, midPrice };
+}
+
+function transformKrakenOrderBook(data: KrakenOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const result = data?.result;
+  if (!result) return null;
+  
+  const pairData = Object.values(result)[0];
+  if (!pairData?.bids?.length || !pairData?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = pairData.bids.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const asks: OrderBookEntry[] = pairData.asks.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformBitfinexOrderBook(rawData: BitfinexOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const data = rawData as unknown as [number, number, number][];
+  if (!Array.isArray(data) || !data.length) return null;
   
   const bids: OrderBookEntry[] = [];
   const asks: OrderBookEntry[] = [];
   
-  // Generate bid levels
-  for (let i = 0; i < 25; i++) {
-    const price = midPrice - spread / 2 - (i * midPrice * 0.0002);
-    const quantity = (Math.random() * 10 + 0.1) * (1 + i * 0.1);
-    
-    bids.push({
-      price,
-      quantity,
+  for (const [price, count, amount] of data) {
+    const entry: OrderBookEntry = {
+      price: Math.abs(price),
+      quantity: Math.abs(amount),
       exchange,
       timestamp: Date.now(),
-      numOrders: Math.floor(Math.random() * 10) + 1,
-    });
-  }
-  
-  // Generate ask levels
-  for (let i = 0; i < 25; i++) {
-    const price = midPrice + spread / 2 + (i * midPrice * 0.0002);
-    const quantity = (Math.random() * 10 + 0.1) * (1 + i * 0.1);
+      numOrders: count,
+    };
     
-    asks.push({
-      price,
-      quantity,
-      exchange,
-      timestamp: Date.now(),
-      numOrders: Math.floor(Math.random() * 10) + 1,
-    });
+    if (amount > 0) {
+      bids.push(entry);
+    } else {
+      asks.push(entry);
+    }
   }
   
-  return {
-    symbol,
+  bids.sort((a, b) => b.price - a.price);
+  asks.sort((a, b) => a.price - b.price);
+  
+  if (!bids.length || !asks.length) return null;
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformBitstampOrderBook(data: BitstampOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  if (!data?.bids?.length || !data?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = data.bids.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
     exchange,
-    bids,
-    asks,
+    timestamp: parseInt(data.timestamp) * 1000,
+  }));
+  
+  const asks: OrderBookEntry[] = data.asks.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: parseInt(data.timestamp) * 1000,
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformOKXOrderBook(data: OKXOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const bookData = data?.data?.[0];
+  if (!bookData?.bids?.length || !bookData?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = bookData.bids.map(([price, qty, , numOrders]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
     timestamp: Date.now(),
-    spread,
-    midPrice,
-  };
+    numOrders: parseInt(numOrders),
+  }));
+  
+  const asks: OrderBookEntry[] = bookData.asks.map(([price, qty, , numOrders]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: Date.now(),
+    numOrders: parseInt(numOrders),
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformBybitOrderBook(data: BybitOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const result = data?.result;
+  if (!result?.b?.length || !result?.a?.length) return null;
+  
+  const bids: OrderBookEntry[] = result.b.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: result.ts,
+  }));
+  
+  const asks: OrderBookEntry[] = result.a.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: result.ts,
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformKucoinOrderBook(data: KucoinOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const bookData = data?.data;
+  if (!bookData?.bids?.length || !bookData?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = bookData.bids.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: bookData.time,
+  }));
+  
+  const asks: OrderBookEntry[] = bookData.asks.map(([price, qty]) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(qty),
+    exchange,
+    timestamp: bookData.time,
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformHuobiOrderBook(data: HuobiOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  const tick = data?.tick;
+  if (!tick?.bids?.length || !tick?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = tick.bids.map(([price, qty]) => ({
+    price,
+    quantity: qty,
+    exchange,
+    timestamp: tick.ts,
+  }));
+  
+  const asks: OrderBookEntry[] = tick.asks.map(([price, qty]) => ({
+    price,
+    quantity: qty,
+    exchange,
+    timestamp: tick.ts,
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
+}
+
+function transformGeminiOrderBook(data: GeminiOrderBook, symbol: string, exchange: Exchange): OrderBook | null {
+  if (!data?.bids?.length || !data?.asks?.length) return null;
+  
+  const bids: OrderBookEntry[] = data.bids.map(({ price, amount }) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(amount),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const asks: OrderBookEntry[] = data.asks.map(({ price, amount }) => ({
+    price: parseFloat(price),
+    quantity: parseFloat(amount),
+    exchange,
+    timestamp: Date.now(),
+  }));
+  
+  const midPrice = (bids[0].price + asks[0].price) / 2;
+  const spread = asks[0].price - bids[0].price;
+  
+  return { symbol, exchange, bids, asks, timestamp: Date.now(), spread, midPrice };
 }
 
 // =============================================================================
-// ORDER BOOK FETCHING
+// ORDER BOOK FETCHING - REAL EXCHANGE APIs
 // =============================================================================
 
 /**
- * Fetch order book from a specific exchange
+ * Fetch order book from a specific exchange using real APIs
  */
 export async function fetchOrderBook(
   symbol: string,
@@ -303,14 +617,40 @@ export async function fetchOrderBook(
 ): Promise<OrderBook | null> {
   const cacheKey = `orderbook:${exchange}:${symbol}`;
   
-  // Check cache first
+  // Check cache first (short TTL for real-time data)
   const cached = await aiCache.get<OrderBook>(cacheKey);
   if (cached) return cached;
   
+  const config = EXCHANGE_CONFIGS[exchange];
+  if (!config) {
+    console.error(`Exchange ${exchange} not configured`);
+    return null;
+  }
+  
   try {
-    // In production, this would make actual API calls
-    // For now, generate mock data to demonstrate the aggregation logic
-    const orderBook = generateMockOrderBook(symbol, exchange);
+    const endpoint = config.orderBookEndpoint(symbol, depth);
+    const url = `${config.baseUrl}${endpoint}`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'FreeCryptoNews/1.0',
+      },
+      next: { revalidate: 5 }, // Cache for 5 seconds
+    });
+    
+    if (!response.ok) {
+      console.error(`${exchange} API error: ${response.status} ${response.statusText}`);
+      return null;
+    }
+    
+    const data = await response.json();
+    const orderBook = config.transform(data, symbol, exchange);
+    
+    if (!orderBook) {
+      console.error(`Failed to transform ${exchange} order book data`);
+      return null;
+    }
     
     // Limit depth
     orderBook.bids = orderBook.bids.slice(0, depth);

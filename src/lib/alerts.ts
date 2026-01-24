@@ -8,11 +8,12 @@
  * - Multiple notification channels
  * - Advanced alert rules with configurable conditions
  * - WebSocket and webhook delivery
- * - JSON file persistence
+ * - Database persistence via unified database layer
  */
 
 import { getTopCoins, getFearGreedIndex } from '@/lib/market-data';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
+import { db } from '@/lib/database';
 import {
   AlertRule,
   AlertCondition,
@@ -24,8 +25,13 @@ import {
   determineSeverity,
   getConditionDescription,
 } from '@/lib/alert-rules';
-// Note: fs/path removed for Edge Runtime compatibility
-// Using in-memory storage only (use external DB for persistence)
+
+// Database collections
+const PRICE_ALERTS_COLLECTION = 'price_alerts';
+const KEYWORD_ALERTS_COLLECTION = 'keyword_alerts';
+const ALERT_HISTORY_COLLECTION = 'alert_history';
+const ALERT_RULES_COLLECTION = 'alert_rules';
+const ALERT_EVENTS_COLLECTION = 'alert_events';
 
 // Types
 export interface PriceAlert {
@@ -62,10 +68,80 @@ export interface AlertNotification {
   timestamp: string;
 }
 
-// In-memory store (replace with DB in production)
-const priceAlerts = new Map<string, PriceAlert>();
-const keywordAlerts = new Map<string, KeywordAlert>();
-const alertHistory = new Map<string, AlertNotification[]>();
+// Database-backed storage helper functions
+async function getAllPriceAlerts(): Promise<PriceAlert[]> {
+  try {
+    const docs = await db.listDocuments<PriceAlert>(PRICE_ALERTS_COLLECTION, { limit: 10000 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get price alerts from database:', error);
+    return [];
+  }
+}
+
+async function getPriceAlertById(id: string): Promise<PriceAlert | null> {
+  try {
+    const doc = await db.getDocument<PriceAlert>(PRICE_ALERTS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function savePriceAlert(alert: PriceAlert): Promise<void> {
+  await db.saveDocument(PRICE_ALERTS_COLLECTION, alert.id, alert, {
+    userId: alert.userId,
+    coinId: alert.coinId,
+    active: alert.active,
+  });
+}
+
+async function deletePriceAlertById(id: string): Promise<boolean> {
+  return db.deleteDocument(PRICE_ALERTS_COLLECTION, id);
+}
+
+async function getAllKeywordAlerts(): Promise<KeywordAlert[]> {
+  try {
+    const docs = await db.listDocuments<KeywordAlert>(KEYWORD_ALERTS_COLLECTION, { limit: 10000 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get keyword alerts from database:', error);
+    return [];
+  }
+}
+
+async function getKeywordAlertById(id: string): Promise<KeywordAlert | null> {
+  try {
+    const doc = await db.getDocument<KeywordAlert>(KEYWORD_ALERTS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveKeywordAlert(alert: KeywordAlert): Promise<void> {
+  await db.saveDocument(KEYWORD_ALERTS_COLLECTION, alert.id, alert, {
+    userId: alert.userId,
+    active: alert.active,
+  });
+}
+
+async function deleteKeywordAlertById(id: string): Promise<boolean> {
+  return db.deleteDocument(KEYWORD_ALERTS_COLLECTION, id);
+}
+
+async function getAlertHistoryForUser(userId: string): Promise<AlertNotification[]> {
+  try {
+    const doc = await db.getDocument<{ notifications: AlertNotification[] }>(ALERT_HISTORY_COLLECTION, userId);
+    return doc?.data?.notifications || [];
+  } catch {
+    return [];
+  }
+}
+
+async function saveAlertHistoryForUser(userId: string, notifications: AlertNotification[]): Promise<void> {
+  await db.saveDocument(ALERT_HISTORY_COLLECTION, userId, { notifications: notifications.slice(0, 100) });
+}
 
 // Generate IDs
 function generateId(prefix: string): string {
@@ -98,7 +174,7 @@ export async function createPriceAlert(
     createdAt: new Date().toISOString(),
   };
 
-  priceAlerts.set(alert.id, alert);
+  await savePriceAlert(alert);
   return alert;
 }
 
@@ -123,7 +199,7 @@ export async function createKeywordAlert(
     createdAt: new Date().toISOString(),
   };
 
-  keywordAlerts.set(alert.id, alert);
+  await saveKeywordAlert(alert);
   return alert;
 }
 
@@ -131,13 +207,13 @@ export async function createKeywordAlert(
  * Delete an alert
  */
 export async function deleteAlert(alertId: string): Promise<boolean> {
-  if (priceAlerts.has(alertId)) {
-    priceAlerts.delete(alertId);
-    return true;
+  const priceAlert = await getPriceAlertById(alertId);
+  if (priceAlert) {
+    return deletePriceAlertById(alertId);
   }
-  if (keywordAlerts.has(alertId)) {
-    keywordAlerts.delete(alertId);
-    return true;
+  const keywordAlert = await getKeywordAlertById(alertId);
+  if (keywordAlert) {
+    return deleteKeywordAlertById(alertId);
   }
   return false;
 }
@@ -146,17 +222,17 @@ export async function deleteAlert(alertId: string): Promise<boolean> {
  * Toggle alert active status
  */
 export async function toggleAlert(alertId: string, active: boolean): Promise<boolean> {
-  const priceAlert = priceAlerts.get(alertId);
+  const priceAlert = await getPriceAlertById(alertId);
   if (priceAlert) {
     priceAlert.active = active;
-    priceAlerts.set(alertId, priceAlert);
+    await savePriceAlert(priceAlert);
     return true;
   }
   
-  const keywordAlert = keywordAlerts.get(alertId);
+  const keywordAlert = await getKeywordAlertById(alertId);
   if (keywordAlert) {
     keywordAlert.active = active;
-    keywordAlerts.set(alertId, keywordAlert);
+    await saveKeywordAlert(keywordAlert);
     return true;
   }
   
@@ -166,13 +242,18 @@ export async function toggleAlert(alertId: string, active: boolean): Promise<boo
 /**
  * Get alerts for a user
  */
-export function getUserAlerts(userId: string): {
+export async function getUserAlerts(userId: string): Promise<{
   priceAlerts: PriceAlert[];
   keywordAlerts: KeywordAlert[];
-} {
+}> {
+  const [allPrice, allKeyword] = await Promise.all([
+    getAllPriceAlerts(),
+    getAllKeywordAlerts(),
+  ]);
+  
   return {
-    priceAlerts: Array.from(priceAlerts.values()).filter(a => a.userId === userId),
-    keywordAlerts: Array.from(keywordAlerts.values()).filter(a => a.userId === userId),
+    priceAlerts: allPrice.filter(a => a.userId === userId),
+    keywordAlerts: allKeyword.filter(a => a.userId === userId),
   };
 }
 
@@ -185,8 +266,9 @@ export async function checkPriceAlerts(): Promise<AlertNotification[]> {
   try {
     const coins = await getTopCoins(100);
     const coinMap = new Map(coins.map(c => [c.id, c]));
+    const allPriceAlerts = await getAllPriceAlerts();
 
-    for (const [, alert] of priceAlerts) {
+    for (const alert of allPriceAlerts) {
       if (!alert.active || alert.triggered) continue;
 
       const coin = coinMap.get(alert.coinId);
@@ -225,7 +307,7 @@ export async function checkPriceAlerts(): Promise<AlertNotification[]> {
       if (triggered) {
         alert.triggered = true;
         alert.triggeredAt = new Date().toISOString();
-        priceAlerts.set(alert.id, alert);
+        await savePriceAlert(alert);
 
         const notification: AlertNotification = {
           type: 'price',
@@ -246,9 +328,9 @@ export async function checkPriceAlerts(): Promise<AlertNotification[]> {
         notifications.push(notification);
         
         // Store in history
-        const history = alertHistory.get(alert.userId) || [];
+        const history = await getAlertHistoryForUser(alert.userId);
         history.unshift(notification);
-        alertHistory.set(alert.userId, history.slice(0, 100)); // Keep last 100
+        await saveAlertHistoryForUser(alert.userId, history.slice(0, 100));
       }
     }
   } catch (error) {
@@ -266,8 +348,9 @@ export async function checkKeywordAlerts(): Promise<AlertNotification[]> {
   
   try {
     const news = await getLatestNews(50);
+    const allKeywordAlerts = await getAllKeywordAlerts();
     
-    for (const [, alert] of keywordAlerts) {
+    for (const alert of allKeywordAlerts) {
       if (!alert.active) continue;
 
       for (const article of news.articles) {
@@ -286,9 +369,9 @@ export async function checkKeywordAlerts(): Promise<AlertNotification[]> {
 
         if (matchedKeywords.length > 0) {
           // Debounce: don't alert for same article twice
-          const history = alertHistory.get(alert.userId) || [];
+          const history = await getAlertHistoryForUser(alert.userId);
           const alreadyNotified = history.some(
-            n => n.type === 'keyword' && (n.data as any).link === article.link
+            n => n.type === 'keyword' && (n.data as Record<string, unknown>).link === article.link
           );
 
           if (!alreadyNotified) {
@@ -313,11 +396,11 @@ export async function checkKeywordAlerts(): Promise<AlertNotification[]> {
             
             // Store in history
             history.unshift(notification);
-            alertHistory.set(alert.userId, history.slice(0, 100));
+            await saveAlertHistoryForUser(alert.userId, history.slice(0, 100));
 
             // Update alert
             alert.lastTriggeredAt = new Date().toISOString();
-            keywordAlerts.set(alert.id, alert);
+            await saveKeywordAlert(alert);
           }
         }
       }
@@ -332,23 +415,25 @@ export async function checkKeywordAlerts(): Promise<AlertNotification[]> {
 /**
  * Get alert history for user
  */
-export function getAlertHistory(userId: string, limit = 50): AlertNotification[] {
-  const history = alertHistory.get(userId) || [];
+export async function getAlertHistory(userId: string, limit = 50): Promise<AlertNotification[]> {
+  const history = await getAlertHistoryForUser(userId);
   return history.slice(0, limit);
 }
 
 /**
  * Get alert stats
  */
-export function getAlertStats(): {
+export async function getAlertStats(): Promise<{
   totalPriceAlerts: number;
   activePriceAlerts: number;
   triggeredPriceAlerts: number;
   totalKeywordAlerts: number;
   activeKeywordAlerts: number;
-} {
-  const allPrice = Array.from(priceAlerts.values());
-  const allKeyword = Array.from(keywordAlerts.values());
+}> {
+  const [allPrice, allKeyword] = await Promise.all([
+    getAllPriceAlerts(),
+    getAllKeywordAlerts(),
+  ]);
 
   return {
     totalPriceAlerts: allPrice.length,
@@ -365,64 +450,86 @@ export function getAlertStats(): {
 // Re-export types from alert-rules
 export type { AlertRule, AlertCondition, AlertEvent, AlertChannel } from '@/lib/alert-rules';
 
-// In-memory storage (Edge Runtime compatible)
-// For persistence, use external database (e.g., Vercel KV, Upstash Redis)
+// Database-backed alert rules storage
+async function getAllAlertRulesFromDb(): Promise<AlertRule[]> {
+  try {
+    const docs = await db.listDocuments<AlertRule>(ALERT_RULES_COLLECTION, { limit: 1000 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get alert rules from database:', error);
+    return [];
+  }
+}
 
-// In-memory cache for alert rules
-let alertRulesCache: Map<string, AlertRule> = new Map();
-let alertEventsCache: AlertEvent[] = [];
+async function getAlertRuleFromDb(id: string): Promise<AlertRule | null> {
+  try {
+    const doc = await db.getDocument<AlertRule>(ALERT_RULES_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveAlertRuleToDb(rule: AlertRule): Promise<void> {
+  await db.saveDocument(ALERT_RULES_COLLECTION, rule.id, rule, {
+    name: rule.name,
+    enabled: rule.enabled,
+    type: rule.condition.type,
+  });
+}
+
+async function deleteAlertRuleFromDb(id: string): Promise<boolean> {
+  return db.deleteDocument(ALERT_RULES_COLLECTION, id);
+}
+
+async function getAllAlertEventsFromDb(): Promise<AlertEvent[]> {
+  try {
+    const docs = await db.listDocuments<AlertEvent>(ALERT_EVENTS_COLLECTION, { limit: 1000, orderBy: 'desc' });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get alert events from database:', error);
+    return [];
+  }
+}
+
+async function saveAlertEventToDb(event: AlertEvent): Promise<void> {
+  await db.saveDocument(ALERT_EVENTS_COLLECTION, event.id, event, {
+    ruleId: event.ruleId,
+    severity: event.severity,
+  });
+}
+
+// Runtime state (not persisted)
 let lastFearGreedValue: number | null = null;
 let volumeBaseline: Map<string, number> = new Map();
 
 /**
- * Load alert rules from storage (in-memory only for Edge Runtime)
- */
-export function loadAlertRules(): AlertRule[] {
-  // In Edge Runtime, we only use in-memory cache
-  // Data will be lost on cold starts - use external DB for persistence
-  return Array.from(alertRulesCache.values());
-}
-
-/**
- * Save alert rules to storage (in-memory only for Edge Runtime)
- */
-export function saveAlertRules(): void {
-  // In Edge Runtime, data is kept in memory only
-  // For persistence, integrate with Vercel KV, Upstash Redis, or similar
-  // The in-memory cache is already updated by create/update/delete operations
-}
-
-/**
  * Get all alert rules
  */
-export function getAllAlertRules(): AlertRule[] {
-  if (alertRulesCache.size === 0) {
-    loadAlertRules();
-  }
-  return Array.from(alertRulesCache.values());
+export async function getAllAlertRules(): Promise<AlertRule[]> {
+  return getAllAlertRulesFromDb();
 }
 
 /**
  * Get enabled alert rules
  */
-export function getEnabledAlertRules(): AlertRule[] {
-  return getAllAlertRules().filter(r => r.enabled);
+export async function getEnabledAlertRules(): Promise<AlertRule[]> {
+  const all = await getAllAlertRulesFromDb();
+  return all.filter(r => r.enabled);
 }
 
 /**
  * Get a single alert rule by ID
  */
-export function getAlertRule(id: string): AlertRule | undefined {
-  if (alertRulesCache.size === 0) {
-    loadAlertRules();
-  }
-  return alertRulesCache.get(id);
+export async function getAlertRule(id: string): Promise<AlertRule | undefined> {
+  const rule = await getAlertRuleFromDb(id);
+  return rule || undefined;
 }
 
 /**
  * Create a new alert rule
  */
-export function createAlertRule(
+export async function createAlertRule(
   name: string,
   condition: AlertCondition,
   channels: AlertChannel[],
@@ -431,7 +538,7 @@ export function createAlertRule(
     cooldown?: number;
     enabled?: boolean;
   }
-): AlertRule {
+): Promise<AlertRule> {
   const validation = validateCondition(condition);
   if (!validation.valid) {
     throw new Error(`Invalid condition: ${validation.error}`);
@@ -448,19 +555,18 @@ export function createAlertRule(
     createdAt: new Date().toISOString(),
   };
 
-  alertRulesCache.set(rule.id, rule);
-  saveAlertRules();
+  await saveAlertRuleToDb(rule);
   return rule;
 }
 
 /**
  * Update an alert rule
  */
-export function updateAlertRule(
+export async function updateAlertRule(
   id: string,
   updates: Partial<Omit<AlertRule, 'id' | 'createdAt'>>
-): AlertRule | null {
-  const rule = alertRulesCache.get(id);
+): Promise<AlertRule | null> {
+  const rule = await getAlertRuleFromDb(id);
   if (!rule) return null;
 
   if (updates.condition) {
@@ -477,20 +583,15 @@ export function updateAlertRule(
     createdAt: rule.createdAt,
   };
 
-  alertRulesCache.set(id, updatedRule);
-  saveAlertRules();
+  await saveAlertRuleToDb(updatedRule);
   return updatedRule;
 }
 
 /**
  * Delete an alert rule
  */
-export function deleteAlertRule(id: string): boolean {
-  const deleted = alertRulesCache.delete(id);
-  if (deleted) {
-    saveAlertRules();
-  }
-  return deleted;
+export async function deleteAlertRule(id: string): Promise<boolean> {
+  return deleteAlertRuleFromDb(id);
 }
 
 /**
@@ -508,12 +609,11 @@ export function shouldEvaluateRule(rule: AlertRule): boolean {
 /**
  * Update last triggered timestamp for a rule
  */
-export function updateLastTriggered(ruleId: string): void {
-  const rule = alertRulesCache.get(ruleId);
+export async function updateLastTriggered(ruleId: string): Promise<void> {
+  const rule = await getAlertRuleFromDb(ruleId);
   if (rule) {
     rule.lastTriggered = new Date().toISOString();
-    alertRulesCache.set(ruleId, rule);
-    saveAlertRules();
+    await saveAlertRuleToDb(rule);
   }
 }
 
@@ -728,10 +828,10 @@ export async function evaluateCondition(
 /**
  * Create an alert event from a triggered rule
  */
-export function createAlertEvent(
+export async function createAlertEvent(
   rule: AlertRule,
   evalResult: { currentValue: number | string; context?: Record<string, unknown> }
-): AlertEvent {
+): Promise<AlertEvent> {
   const threshold = 'threshold' in rule.condition
     ? (rule.condition as { threshold: number }).threshold
     : 'multiplier' in rule.condition
@@ -754,9 +854,8 @@ export function createAlertEvent(
     severity: determineSeverity(rule.condition, evalResult.currentValue, threshold),
   };
 
-  // Store event in cache
-  alertEventsCache.unshift(event);
-  alertEventsCache = alertEventsCache.slice(0, 1000);
+  // Store event in database
+  await saveAlertEventToDb(event);
 
   return event;
 }
@@ -792,7 +891,7 @@ export async function sendWebhook(url: string, event: AlertEvent): Promise<boole
  * Returns events for rules that triggered
  */
 export async function evaluateAllAlerts(): Promise<AlertEvent[]> {
-  const rules = getEnabledAlertRules();
+  const rules = await getEnabledAlertRules();
   const events: AlertEvent[] = [];
 
   for (const rule of rules) {
@@ -802,9 +901,9 @@ export async function evaluateAllAlerts(): Promise<AlertEvent[]> {
       const result = await evaluateCondition(rule.condition);
       
       if (result?.triggered) {
-        const event = createAlertEvent(rule, result);
+        const event = await createAlertEvent(rule, result);
         events.push(event);
-        updateLastTriggered(rule.id);
+        await updateLastTriggered(rule.id);
 
         // Send webhook if configured
         if (rule.channels.includes('webhook') && rule.webhookUrl) {
@@ -823,11 +922,11 @@ export async function evaluateAllAlerts(): Promise<AlertEvent[]> {
  * Test trigger an alert rule (for testing purposes)
  */
 export async function testTriggerAlert(ruleId: string): Promise<AlertEvent | null> {
-  const rule = getAlertRule(ruleId);
+  const rule = await getAlertRule(ruleId);
   if (!rule) return null;
 
   // Create a mock event
-  const event = createAlertEvent(rule, {
+  const event = await createAlertEvent(rule, {
     currentValue: 'test',
     context: { testMode: true },
   });
@@ -843,15 +942,17 @@ export async function testTriggerAlert(ruleId: string): Promise<AlertEvent | nul
 /**
  * Get recent alert events
  */
-export function getAlertEvents(limit = 100): AlertEvent[] {
-  return alertEventsCache.slice(0, limit);
+export async function getAlertEvents(limit = 100): Promise<AlertEvent[]> {
+  const events = await getAllAlertEventsFromDb();
+  return events.slice(0, limit);
 }
 
 /**
  * Get events for a specific rule
  */
-export function getAlertEventsByRule(ruleId: string, limit = 50): AlertEvent[] {
-  return alertEventsCache
+export async function getAlertEventsByRule(ruleId: string, limit = 50): Promise<AlertEvent[]> {
+  const events = await getAllAlertEventsFromDb();
+  return events
     .filter(e => e.ruleId === ruleId)
     .slice(0, limit);
 }
@@ -859,14 +960,17 @@ export function getAlertEventsByRule(ruleId: string, limit = 50): AlertEvent[] {
 /**
  * Get enhanced alert stats including rules
  */
-export function getEnhancedAlertStats(): {
+export async function getEnhancedAlertStats(): Promise<{
   totalRules: number;
   enabledRules: number;
   totalEvents: number;
   rulesByType: Record<string, number>;
   recentEvents: AlertEvent[];
-} {
-  const rules = getAllAlertRules();
+}> {
+  const [rules, events] = await Promise.all([
+    getAllAlertRules(),
+    getAllAlertEventsFromDb(),
+  ]);
   const rulesByType: Record<string, number> = {};
 
   for (const rule of rules) {
@@ -877,8 +981,8 @@ export function getEnhancedAlertStats(): {
   return {
     totalRules: rules.length,
     enabledRules: rules.filter(r => r.enabled).length,
-    totalEvents: alertEventsCache.length,
+    totalEvents: events.length,
     rulesByType,
-    recentEvents: alertEventsCache.slice(0, 10),
+    recentEvents: events.slice(0, 10),
   };
 }

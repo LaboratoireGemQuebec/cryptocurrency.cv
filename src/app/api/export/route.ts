@@ -31,7 +31,7 @@ import {
   type Prediction,
 } from '@/lib/predictions/registry';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 // Schema mapping
 const SCHEMAS: Record<string, ExportSchema> = {

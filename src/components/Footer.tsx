@@ -108,10 +108,10 @@ export default function Footer() {
               {[
                 { href: '/markets', icon: '📈', label: 'Markets' },
                 { href: '/defi', icon: '🏦', label: 'DeFi Dashboard' },
-                { href: '/movers', icon: '🚀', label: 'Top Movers' },
-                { href: '/trending', icon: '🔥', label: 'Trending' },
-                { href: '/sources', icon: '📚', label: 'Sources' },
-                { href: '/topics', icon: '🏷️', label: 'Topics' },
+                { href: '/orderbook', icon: '📗', label: 'Order Book' },
+                { href: '/whales', icon: '🐋', label: 'Whale Alerts' },
+                { href: '/portfolio', icon: '💼', label: 'Portfolio' },
+                { href: '/ai/oracle', icon: '🔮', label: 'AI Oracle' },
               ].map((item) => (
                 <li key={item.href}>
                   <Link 
@@ -126,36 +126,51 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* API Endpoints */}
-          <nav aria-label="API Endpoints">
+          {/* Tools & Features */}
+          <nav aria-label="Tools">
             <h3 className="font-bold text-white text-lg mb-6 flex items-center gap-2">
               <span className="w-8 h-0.5 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
-              API
+              Tools
             </h3>
             <ul className="space-y-3">
               {[
-                '/api/news',
-                '/api/bitcoin', 
-                '/api/defi',
-                '/api/breaking',
-                '/api/sources',
-              ].map((endpoint) => (
-                <li key={endpoint}>
-                  <a 
-                    href={endpoint}
-                    className="group text-gray-400 hover:text-brand-400 transition-colors font-mono text-sm focus-ring rounded inline-flex items-center gap-2"
+                { href: '/arbitrage', icon: '🔄', label: 'Arbitrage' },
+                { href: '/predictions', icon: '🎯', label: 'Predictions' },
+                { href: '/options', icon: '📈', label: 'Options Flow' },
+                { href: '/analytics', icon: '📊', label: 'Analytics' },
+                { href: '/developers', icon: '👨‍💻', label: 'Developers' },
+                { href: '/pricing', icon: '💳', label: 'Pricing' },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link 
+                    href={item.href}
+                    className="group text-gray-400 hover:text-white transition-colors inline-flex items-center gap-3 focus-ring rounded px-1 -mx-1"
                   >
-                    <span className="text-brand-500/50 group-hover:text-brand-400 transition-colors">→</span>
-                    {endpoint}
-                  </a>
+                    <span aria-hidden="true" className="text-lg group-hover:scale-110 transition-transform">{item.icon}</span>
+                    <span className="text-sm font-medium">{item.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
 
+        {/* Additional Links Row */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-400">
+            <Link href="/sources" className="hover:text-white transition-colors">📚 Sources</Link>
+            <Link href="/topics" className="hover:text-white transition-colors">🏷️ Topics</Link>
+            <Link href="/trending" className="hover:text-white transition-colors">🔥 Trending</Link>
+            <Link href="/movers" className="hover:text-white transition-colors">🚀 Movers</Link>
+            <Link href="/protocol-health" className="hover:text-white transition-colors">🏥 Protocol Health</Link>
+            <Link href="/influencers" className="hover:text-white transition-colors">👥 Influencers</Link>
+            <Link href="/watchlist" className="hover:text-white transition-colors">👁️ Watchlist</Link>
+            <Link href="/settings" className="hover:text-white transition-colors">⚙️ Settings</Link>
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="border-t border-gray-800/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-gray-800/50 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm flex items-center gap-2">
             <span className="inline-flex items-center gap-1.5 bg-brand-500/10 text-brand-400 px-3 py-1 rounded-full text-xs font-semibold">
               MIT Licensed

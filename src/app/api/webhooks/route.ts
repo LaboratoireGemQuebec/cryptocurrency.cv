@@ -1,11 +1,53 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBreakingNews } from '@/lib/crypto-news';
+import { db } from '@/lib/database';
 
 export const runtime = 'edge';
 
-// In-memory webhook store (in production, use a database)
-// This is a simple implementation for demo purposes
-const webhooks = new Map<string, { url: string; secret: string; events: string[] }>();
+// Database collection for webhooks
+const WEBHOOKS_COLLECTION = 'webhooks';
+
+interface WebhookData {
+  id: string;
+  url: string;
+  secret: string;
+  events: string[];
+  createdAt: string;
+  lastDeliveredAt?: string;
+  deliveryCount: number;
+  failureCount: number;
+}
+
+// Database-backed webhook storage helper functions
+async function getAllWebhooks(): Promise<WebhookData[]> {
+  try {
+    const docs = await db.listDocuments<WebhookData>(WEBHOOKS_COLLECTION, { limit: 100 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get webhooks from database:', error);
+    return [];
+  }
+}
+
+async function getWebhookById(id: string): Promise<WebhookData | null> {
+  try {
+    const doc = await db.getDocument<WebhookData>(WEBHOOKS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveWebhook(webhook: WebhookData): Promise<void> {
+  await db.saveDocument(WEBHOOKS_COLLECTION, webhook.id, webhook, {
+    url: webhook.url,
+    events: webhook.events,
+  });
+}
+
+async function deleteWebhook(id: string): Promise<boolean> {
+  return db.deleteDocument(WEBHOOKS_COLLECTION, id);
+}
 
 // POST - Register a webhook
 export async function POST(request: NextRequest) {
@@ -33,14 +75,26 @@ export async function POST(request: NextRequest) {
     // Generate webhook ID
     const id = crypto.randomUUID();
     
-    webhooks.set(id, { url, secret, events });
+    // Create webhook data
+    const webhookData: WebhookData = {
+      id,
+      url,
+      secret,
+      events,
+      createdAt: new Date().toISOString(),
+      deliveryCount: 0,
+      failureCount: 0,
+    };
+    
+    // Save webhook to database
+    await saveWebhook(webhookData);
     
     return NextResponse.json({
       id,
       url,
       events,
       message: 'Webhook registered successfully',
-      note: 'This is a demo implementation. Webhooks are not persisted and will be lost on server restart.',
+      persisted: true,
     }, {
       status: 201,
       headers: { 'Access-Control-Allow-Origin': '*' },

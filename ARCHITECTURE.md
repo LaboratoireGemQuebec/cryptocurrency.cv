@@ -93,53 +93,43 @@ This document describes the architecture of Free Crypto News, a Next.js applicat
 
 ### Data Sources
 
-We aggregate news from **75+ sources** across **25 English sources** and **50+ international sources** in **16 languages**.
+We aggregate news from **150+ sources** across **80+ English sources** and **70+ international sources** in **16 languages**.
 
-#### English Sources (25)
+#### English Sources (80+)
 
-| Source | Category | Description |
-|--------|----------|-------------|
-| CoinDesk | General | Leading crypto news |
-| The Block | Research | Institutional focus |
-| Decrypt | Web3/Culture | Web3 & gaming |
-| CoinTelegraph | General | Global coverage |
-| Bitcoin Magazine | Bitcoin | Bitcoin-focused |
-| Blockworks | General | Markets & DeFi |
-| The Defiant | DeFi | DeFi ecosystem |
-| Bitcoinist | Bitcoin | Bitcoin news |
-| CryptoSlate | General | News & research |
-| NewsBTC | General | Trading focus |
-| Crypto.news | General | Breaking news |
-| CryptoPotato | General | Market news |
-| DeFi Rate | DeFi | DeFi analytics |
-| Rekt News | DeFi | Security & exploits |
-| NFT Now | NFT | NFT coverage |
-| NFT Evening | NFT | NFT news |
-| Messari | Research | Data & research |
-| AMBCrypto | Trading | Market analysis |
-| BeInCrypto | Trading | Trading news |
-| U.Today | Trading | Market news |
-| Crypto Briefing | Research | In-depth analysis |
-| Week in Ethereum | Ethereum | ETH ecosystem |
-| Etherscan Blog | Ethereum | On-chain insights |
+| Category | Sources |
+|----------|---------|
+| **General News** | CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, CryptoSlate, NewsBTC, Crypto.news, CryptoPotato, Daily Hodl, CoinJournal, CryptoGlobe, ZyCrypto, Crypto Daily, Blockonomi, UseTheBitcoin, NullTX, Coinspeaker, CryptoNinjas, CoinGape |
+| **Bitcoin** | Bitcoin Magazine, Bitcoinist, BTC Times, Lightning Labs, Stacker News |
+| **DeFi** | The Defiant, DeFi Rate, Rekt News, DeFi Pulse, Bankless, DefiLlama, Yearn, Uniswap, Aave, Compound, MakerDAO |
+| **NFT & Gaming** | NFT Now, NFT Evening, NFT Plazas, PlayToEarn, DappRadar |
+| **Research** | Messari, Crypto Briefing, Glassnode, Delphi Digital, Paradigm, a16z Crypto, The Block Research |
+| **Trading** | AMBCrypto, BeInCrypto, U.Today, FXStreet Crypto, TradingView, CryptoQuant |
+| **Ethereum & L2** | Week in Ethereum, Etherscan, Ethereum Foundation, Optimism, Arbitrum, Polygon, StarkNet, zkSync, Base |
+| **Alt L1s** | Solana, NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot |
+| **Security** | SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi |
+| **Developer** | Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry |
+| **Mining** | Bitcoin Mining News, Hashrate Index, Compass Mining |
+| **Mainstream** | Bloomberg Crypto, Reuters Crypto, Forbes Crypto, CNBC Crypto, Yahoo Finance, WSJ, Financial Times |
+| **Institutional** | Coinbase Blog, Binance Blog, Circle, Tether |
 
-#### International Sources (50+)
+#### International Sources (70+)
 
 | Language | Region | Sources |
 |----------|--------|---------|
-| 🇰🇷 Korean | Asia | Block Media, TokenPost, CoinDesk Korea |
-| 🇨🇳 Chinese | Asia | 8BTC, Jinse Finance, Odaily |
-| 🇯🇵 Japanese | Asia | CoinPost, CoinDesk Japan, Cointelegraph JP |
-| 🇪🇸 Spanish | LATAM | Cointelegraph ES, Diario Bitcoin, CriptoNoticias, BeInCrypto ES |
-| 🇧🇷 Portuguese | LATAM | Cointelegraph BR, Livecoins, Portal do Bitcoin |
+| 🇰🇷 Korean | Asia | Block Media, TokenPost, CoinDesk Korea, Blockchain Today, Decenter, The B.Chain |
+| 🇨🇳 Chinese | Asia | 8BTC, Jinse Finance, Odaily, ChainNews, PANews, TechFlow, Foresight News |
+| 🇯🇵 Japanese | Asia | CoinPost, CoinDesk Japan, Cointelegraph JP, btcnews.jp, Crypto Times JP, CoinJinja |
+| 🇪🇸 Spanish | LATAM | Cointelegraph ES, Diario Bitcoin, CriptoNoticias, BeInCrypto ES, Bitcoiner Today |
+| 🇧🇷 Portuguese | LATAM | Cointelegraph BR, Livecoins, Portal do Bitcoin, BeInCrypto BR, Bitcoin Block |
 | 🇩🇪 German | Europe | BTC-ECHO, Cointelegraph DE, Coincierge, CryptoMonday |
-| 🇫🇷 French | Europe | Journal du Coin, Cryptonaute, Cryptoast |
+| 🇫🇷 French | Europe | Journal du Coin, Cryptonaute, Cointelegraph FR, Cryptoast |
 | 🇷🇺 Russian | Europe | ForkLog, Cointelegraph RU, Bits.Media |
 | 🇹🇷 Turkish | Europe | Cointelegraph TR, Koin Medya, Coinsider |
 | 🇮🇹 Italian | Europe | Cointelegraph IT, Cryptonomist, Criptovalute.it |
 | 🇳🇱 Dutch | Europe | Bitcoin Magazine NL, Crypto Insiders |
 | 🇵🇱 Polish | Europe | Kryptowaluty.pl, Bitcoin.pl |
-| 🇮🇩 Indonesian | SEA | Cointelegraph ID, Blockchain Media |
+| 🇮🇩 Indonesian | SEA | Cointelegraph ID, Blockchain Media, Pintu Academy |
 | 🇻🇳 Vietnamese | SEA | Tạp chí Bitcoin, Coin68 |
 | 🇹🇭 Thai | SEA | Siam Blockchain, Bitcoin Addict Thailand |
 | 🇸🇦 Arabic | MENA | Cointelegraph AR, ArabiCrypto |

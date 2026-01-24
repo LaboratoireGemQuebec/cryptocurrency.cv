@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { PWAProvider } from '@/components/PWAProvider';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { UpdatePrompt } from '@/components/UpdatePrompt';
@@ -221,6 +223,9 @@ export default async function LocaleLayout({ children, params }: Props) {
             </ToastProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
+        {/* Vercel Analytics - privacy-friendly, no-cookie tracking */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

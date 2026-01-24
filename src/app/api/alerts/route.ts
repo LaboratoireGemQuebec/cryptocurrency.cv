@@ -61,8 +61,10 @@ export async function GET(request: NextRequest) {
 
   // Get stats (admin)
   if (action === 'stats') {
-    const legacyStats = getAlertStats();
-    const enhancedStats = getEnhancedAlertStats();
+    const [legacyStats, enhancedStats] = await Promise.all([
+      getAlertStats(),
+      getEnhancedAlertStats(),
+    ]);
     return NextResponse.json({
       legacy: legacyStats,
       enhanced: enhancedStats,
@@ -71,7 +73,7 @@ export async function GET(request: NextRequest) {
 
   // List all enhanced alert rules
   if (action === 'rules' || action === 'list') {
-    const alerts = getAllAlertRules();
+    const alerts = await getAllAlertRules();
     return NextResponse.json({
       alerts,
       total: alerts.length,
@@ -81,7 +83,7 @@ export async function GET(request: NextRequest) {
   // Get recent alert events
   if (action === 'events') {
     const limit = parseInt(searchParams.get('limit') || '100', 10);
-    const events = getAlertEvents(limit);
+    const events = await getAlertEvents(limit);
     return NextResponse.json({
       events,
       total: events.length,
@@ -90,8 +92,10 @@ export async function GET(request: NextRequest) {
 
   // Get user alerts (legacy)
   if (userId) {
-    const alerts = getUserAlerts(userId);
-    const history = getAlertHistory(userId);
+    const [alerts, history] = await Promise.all([
+      getUserAlerts(userId),
+      getAlertHistory(userId),
+    ]);
 
     return NextResponse.json({
       alerts,
@@ -100,7 +104,7 @@ export async function GET(request: NextRequest) {
   }
 
   // Default: return all alert rules
-  const alerts = getAllAlertRules();
+  const alerts = await getAllAlertRules();
   return NextResponse.json({
     alerts,
     total: alerts.length,
@@ -206,7 +210,7 @@ export async function DELETE(request: NextRequest) {
   let success = await deleteAlert(alertId);
   
   if (!success) {
-    success = deleteAlertRule(alertId);
+    success = await deleteAlertRule(alertId);
   }
 
   return NextResponse.json({

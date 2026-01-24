@@ -338,58 +338,137 @@ async function fetchDataForExport(
   dataType: DataType,
   options: ExportOptions
 ): Promise<Record<string, unknown>[]> {
-  // In production, fetch from actual data sources
-  // For now, return mock data
-  
   const limit = options.limit || 1000;
-  const data: Record<string, unknown>[] = [];
   
   switch (dataType) {
     case 'news':
-      for (let i = 0; i < limit; i++) {
-        data.push({
-          id: `article_${i}`,
-          title: `Sample Article ${i + 1}`,
-          description: 'This is a sample article for export testing.',
-          url: `https://example.com/article/${i}`,
-          source: ['CoinDesk', 'CoinTelegraph', 'The Block'][i % 3],
-          publishedAt: new Date(Date.now() - i * 3600000).toISOString(),
-          categories: ['bitcoin', 'market'],
-          tickers: ['BTC', 'ETH'],
-          sentiment: Math.random() * 2 - 1,
-          language: 'en',
+      // Fetch from our actual news API
+      try {
+        const params = new URLSearchParams({
+          limit: Math.min(limit, 200).toString(),
         });
+        if (options.startDate) params.append('from', options.startDate.toISOString());
+        if (options.endDate) params.append('to', options.endDate.toISOString());
+        
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/news?${params}`);
+        if (response.ok) {
+          const data = await response.json();
+          return (data.articles || []).map((article: Record<string, unknown>) => ({
+            id: article.id,
+            title: article.title,
+            description: article.description,
+            url: article.link || article.url,
+            source: article.source,
+            publishedAt: article.pubDate || article.publishedAt,
+            categories: article.categories || [],
+            tickers: article.tickers || [],
+            sentiment: article.sentiment,
+            language: article.language || 'en',
+          }));
+        }
+      } catch (error) {
+        console.error('Failed to fetch news for export:', error);
       }
-      break;
+      return [];
       
     case 'prices':
-      const symbols = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOGE', 'DOT', 'AVAX'];
-      for (const symbol of symbols) {
-        data.push({
-          symbol,
-          name: symbol,
-          price: Math.random() * 50000,
-          marketCap: Math.random() * 1000000000000,
-          volume24h: Math.random() * 50000000000,
-          change24h: (Math.random() - 0.5) * 20,
-          change7d: (Math.random() - 0.5) * 40,
-          timestamp: new Date().toISOString(),
-        });
+      // Fetch from CoinGecko
+      try {
+        const response = await fetch(
+          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&sparkline=false',
+          { next: { revalidate: 300 } }
+        );
+        if (response.ok) {
+          const data = await response.json();
+          return data.slice(0, limit).map((coin: Record<string, unknown>) => ({
+            symbol: (coin.symbol as string).toUpperCase(),
+            name: coin.name,
+            price: coin.current_price,
+            marketCap: coin.market_cap,
+            volume24h: coin.total_volume,
+            change24h: coin.price_change_percentage_24h,
+            change7d: coin.price_change_percentage_7d_in_currency,
+            timestamp: new Date().toISOString(),
+          }));
+        }
+      } catch (error) {
+        console.error('Failed to fetch prices for export:', error);
       }
-      break;
+      return [];
+    
+    case 'sentiment':
+      // Fetch social sentiment if API key available
+      if (process.env.LUNARCRUSH_API_KEY) {
+        try {
+          const response = await fetch(
+            `https://lunarcrush.com/api4/public/coins/list/v2?sort=galaxy_score&limit=${Math.min(limit, 100)}`,
+            { headers: { 'Authorization': `Bearer ${process.env.LUNARCRUSH_API_KEY}` } }
+          );
+          if (response.ok) {
+            const data = await response.json();
+            return (data.data || []).map((coin: Record<string, unknown>) => ({
+              symbol: coin.symbol,
+              name: coin.name,
+              sentiment: coin.sentiment,
+              socialVolume: coin.social_volume,
+              galaxyScore: coin.galaxy_score,
+              timestamp: new Date().toISOString(),
+            }));
+          }
+        } catch (error) {
+          console.error('Failed to fetch sentiment for export:', error);
+        }
+      }
+      return [];
+      
+    case 'defi':
+      // Fetch from DefiLlama
+      try {
+        const response = await fetch('https://api.llama.fi/protocols', { next: { revalidate: 3600 } });
+        if (response.ok) {
+          const data = await response.json();
+          return data.slice(0, limit).map((protocol: Record<string, unknown>) => ({
+            id: protocol.slug,
+            name: protocol.name,
+            category: protocol.category,
+            tvl: protocol.tvl,
+            change1d: protocol.change_1d,
+            change7d: protocol.change_7d,
+            chains: protocol.chains,
+            timestamp: new Date().toISOString(),
+          }));
+        }
+      } catch (error) {
+        console.error('Failed to fetch DeFi data for export:', error);
+      }
+      return [];
+      
+    case 'gas':
+      // Fetch Ethereum gas prices
+      try {
+        const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle', { next: { revalidate: 60 } });
+        if (response.ok) {
+          const data = await response.json();
+          if (data.result) {
+            return [{
+              network: 'ethereum',
+              low: parseFloat(data.result.SafeGasPrice),
+              average: parseFloat(data.result.ProposeGasPrice),
+              high: parseFloat(data.result.FastGasPrice),
+              timestamp: new Date().toISOString(),
+            }];
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch gas data for export:', error);
+      }
+      return [];
       
     default:
-      // Generate generic data
-      for (let i = 0; i < Math.min(limit, 100); i++) {
-        data.push({
-          id: `${dataType}_${i}`,
-          timestamp: new Date().toISOString(),
-          value: Math.random() * 1000,
-        });
-      }
+      // For unsupported types, return empty array
+      console.warn(`Export data type "${dataType}" not supported or no data available`);
+      return [];
   }
-  
-  return data;
 }
 
 // =============================================================================

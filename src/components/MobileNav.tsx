@@ -18,8 +18,40 @@ const mainNavItems = [
   { href: '/search', label: 'Search', icon: '🔍' },
 ];
 
+const tradingItems = [
+  { href: '/orderbook', label: 'Order Book', icon: '📗' },
+  { href: '/whales', label: 'Whale Alerts', icon: '🐋' },
+  { href: '/liquidations', label: 'Liquidations', icon: '💥' },
+  { href: '/options', label: 'Options Flow', icon: '📈' },
+  { href: '/arbitrage', label: 'Arbitrage Scanner', icon: '🔄' },
+  { href: '/predictions', label: 'Predictions', icon: '🎯' },
+  { href: '/screener', label: 'Screener', icon: '🔍' },
+];
+
+const analyticsItems = [
+  { href: '/analytics', label: 'Analytics Hub', icon: '📊' },
+  { href: '/protocol-health', label: 'Protocol Health', icon: '🏥' },
+  { href: '/coverage-gap', label: 'Coverage Gaps', icon: '🔎' },
+  { href: '/influencers', label: 'Influencer Tracker', icon: '👥' },
+  { href: '/portfolio', label: 'Portfolio Tracker', icon: '💼' },
+  { href: '/watchlist', label: 'Watchlist', icon: '👁️' },
+  { href: '/compare', label: 'Coin Compare', icon: '⚖️' },
+];
+
+const aiItems = [
+  { href: '/ai/oracle', label: 'The Oracle', icon: '🔮' },
+  { href: '/ai/brief', label: 'The Brief', icon: '📋' },
+  { href: '/ai/debate', label: 'The Debate', icon: '⚖️' },
+  { href: '/ai-agent', label: 'AI Market Agent', icon: '🤖' },
+  { href: '/digest', label: 'AI Digest', icon: '📰' },
+  { href: '/sentiment', label: 'Sentiment', icon: '🎯' },
+];
+
 const resourceLinks = [
+  { href: '/developers', label: 'Developer Portal', icon: '👨‍💻' },
   { href: '/examples', label: 'Code Examples', icon: '💻' },
+  { href: '/pricing', label: 'Pricing', icon: '💳' },
+  { href: '/settings', label: 'Settings', icon: '⚙️' },
   { href: '/about', label: 'About', icon: 'ℹ️' },
 ];
 
@@ -225,6 +257,117 @@ export function MobileNav() {
                   >
                     <span className="text-base" aria-hidden="true">{cat.icon}</span>
                     <span className="font-medium">{cat.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Trading Section - Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleSection('trading')}
+                className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider hover:text-gray-600 dark:hover:text-slate-400 transition-colors focus-ring rounded-lg"
+                aria-expanded={expandedSection === 'trading'}
+              >
+                <span>Trading</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${expandedSection === 'trading' ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div 
+                className={`space-y-1 mt-2 overflow-hidden transition-all duration-300 ${
+                  expandedSection === 'trading' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {tradingItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  >
+                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Analytics Section - Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleSection('analytics')}
+                className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider hover:text-gray-600 dark:hover:text-slate-400 transition-colors focus-ring rounded-lg"
+                aria-expanded={expandedSection === 'analytics'}
+              >
+                <span>Analytics</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${expandedSection === 'analytics' ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div 
+                className={`space-y-1 mt-2 overflow-hidden transition-all duration-300 ${
+                  expandedSection === 'analytics' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {analyticsItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  >
+                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* AI Section - Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleSection('ai')}
+                className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider hover:text-gray-600 dark:hover:text-slate-400 transition-colors focus-ring rounded-lg"
+                aria-expanded={expandedSection === 'ai'}
+              >
+                <span>AI Features</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${expandedSection === 'ai' ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div 
+                className={`space-y-1 mt-2 overflow-hidden transition-all duration-300 ${
+                  expandedSection === 'ai' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {aiItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  >
+                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
                   </Link>
                 ))}
               </div>

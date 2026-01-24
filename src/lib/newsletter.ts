@@ -2,10 +2,16 @@
  * Newsletter Subscription & Email Digest System
  * 
  * Features:
- * - Email subscription management
+ * - Email subscription management with database persistence
  * - Daily/weekly digest generation
  * - Multiple email providers (Resend, SendGrid, Postmark)
+ * - Email verification flow
  */
+
+import { db } from '@/lib/database';
+
+// Database collection
+const SUBSCRIBERS_COLLECTION = 'newsletter_subscribers';
 
 // Types
 export interface Subscriber {
@@ -18,6 +24,7 @@ export interface Subscriber {
   createdAt: string;
   lastSentAt?: string;
   unsubscribeToken: string;
+  verificationToken?: string;
 }
 
 export interface DigestEmail {
@@ -27,8 +34,47 @@ export interface DigestEmail {
   text: string;
 }
 
-// In-memory store (replace with DB in production)
-const subscribers = new Map<string, Subscriber>();
+// Database-backed subscriber storage helper functions
+async function getAllSubscribers(): Promise<Subscriber[]> {
+  try {
+    const docs = await db.listDocuments<Subscriber>(SUBSCRIBERS_COLLECTION, { limit: 10000 });
+    return docs.map(doc => doc.data);
+  } catch (error) {
+    console.error('Failed to get subscribers from database:', error);
+    return [];
+  }
+}
+
+async function getSubscriberById(id: string): Promise<Subscriber | null> {
+  try {
+    const doc = await db.getDocument<Subscriber>(SUBSCRIBERS_COLLECTION, id);
+    return doc?.data || null;
+  } catch {
+    return null;
+  }
+}
+
+async function saveSubscriber(subscriber: Subscriber): Promise<void> {
+  await db.saveDocument(SUBSCRIBERS_COLLECTION, subscriber.id, subscriber, {
+    email: subscriber.email,
+    frequency: subscriber.frequency,
+    verified: subscriber.verified,
+  });
+}
+
+async function deleteSubscriberById(id: string): Promise<boolean> {
+  return db.deleteDocument(SUBSCRIBERS_COLLECTION, id);
+}
+
+async function findSubscriberByEmail(email: string): Promise<Subscriber | null> {
+  const all = await getAllSubscribers();
+  return all.find(s => s.email.toLowerCase() === email.toLowerCase()) || null;
+}
+
+async function findSubscriberByToken(token: string): Promise<Subscriber | null> {
+  const all = await getAllSubscribers();
+  return all.find(s => s.unsubscribeToken === token || s.verificationToken === token) || null;
+}
 
 // Generate tokens
 function generateToken(): string {
@@ -57,11 +103,12 @@ export async function subscribe(
   }
 
   // Check if already subscribed
-  const existing = Array.from(subscribers.values()).find(s => s.email === email);
+  const existing = await findSubscriberByEmail(email);
   if (existing) {
     return { success: false, message: 'Email already subscribed' };
   }
 
+  const verificationToken = generateToken();
   const subscriber: Subscriber = {
     id: generateId(),
     email,
@@ -71,12 +118,13 @@ export async function subscribe(
     verified: false, // Require email verification
     createdAt: new Date().toISOString(),
     unsubscribeToken: generateToken(),
+    verificationToken,
   };
 
-  subscribers.set(subscriber.id, subscriber);
+  await saveSubscriber(subscriber);
 
-  // TODO: Send verification email
-  // await sendVerificationEmail(subscriber);
+  // Send verification email
+  await sendVerificationEmail(subscriber, verificationToken);
 
   return { 
     success: true, 
@@ -86,17 +134,160 @@ export async function subscribe(
 }
 
 /**
+ * Send verification email using configured provider
+ */
+async function sendVerificationEmail(subscriber: Subscriber, token: string): Promise<void> {
+  const verifyUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://free-crypto-news.vercel.app'}/api/newsletter?action=verify&token=${token}`;
+  
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Verify Your Email</title>
+</head>
+<body style="margin: 0; padding: 20px; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+    <div style="padding: 32px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); text-align: center;">
+      <h1 style="margin: 0; color: #000; font-size: 24px;">📰 Free Crypto News</h1>
+    </div>
+    <div style="padding: 32px;">
+      <h2 style="margin: 0 0 16px; color: #1a1a1a;">Verify Your Email</h2>
+      <p style="color: #666; line-height: 1.6;">
+        Thanks for subscribing to the ${subscriber.frequency} crypto news digest! 
+        Click the button below to verify your email address and start receiving updates.
+      </p>
+      <div style="text-align: center; margin: 32px 0;">
+        <a href="${verifyUrl}" style="display: inline-block; padding: 12px 32px; background-color: #F59E0B; color: #000; text-decoration: none; border-radius: 8px; font-weight: 600;">
+          Verify Email
+        </a>
+      </div>
+      <p style="color: #999; font-size: 12px;">
+        If you didn't subscribe to Free Crypto News, you can safely ignore this email.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+  `.trim();
+
+  const text = `
+Verify Your Email - Free Crypto News
+
+Thanks for subscribing to the ${subscriber.frequency} crypto news digest!
+Click the link below to verify your email address:
+
+${verifyUrl}
+
+If you didn't subscribe, you can safely ignore this email.
+  `.trim();
+
+  // Try different email providers in order
+  const sent = await sendEmail({
+    to: subscriber.email,
+    subject: 'Verify Your Email - Free Crypto News',
+    html,
+    text,
+  });
+
+  if (!sent) {
+    console.warn(`Failed to send verification email to ${subscriber.email}`);
+  }
+}
+
+/**
+ * Send email using configured provider (Resend, SendGrid, or Postmark)
+ */
+async function sendEmail(email: DigestEmail): Promise<boolean> {
+  // Try Resend first
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: process.env.EMAIL_FROM || 'noreply@free-crypto-news.vercel.app',
+          to: email.to,
+          subject: email.subject,
+          html: email.html,
+          text: email.text,
+        }),
+      });
+      if (response.ok) return true;
+    } catch (error) {
+      console.error('Resend error:', error);
+    }
+  }
+
+  // Try SendGrid
+  if (process.env.SENDGRID_API_KEY) {
+    try {
+      const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${process.env.SENDGRID_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          personalizations: [{ to: [{ email: email.to }] }],
+          from: { email: process.env.EMAIL_FROM || 'noreply@free-crypto-news.vercel.app' },
+          subject: email.subject,
+          content: [
+            { type: 'text/plain', value: email.text },
+            { type: 'text/html', value: email.html },
+          ],
+        }),
+      });
+      if (response.ok) return true;
+    } catch (error) {
+      console.error('SendGrid error:', error);
+    }
+  }
+
+  // Try Postmark
+  if (process.env.POSTMARK_API_KEY) {
+    try {
+      const response = await fetch('https://api.postmarkapp.com/email', {
+        method: 'POST',
+        headers: {
+          'X-Postmark-Server-Token': process.env.POSTMARK_API_KEY,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          From: process.env.EMAIL_FROM || 'noreply@free-crypto-news.vercel.app',
+          To: email.to,
+          Subject: email.subject,
+          HtmlBody: email.html,
+          TextBody: email.text,
+        }),
+      });
+      if (response.ok) return true;
+    } catch (error) {
+      console.error('Postmark error:', error);
+    }
+  }
+
+  // No email provider configured - log warning
+  console.warn('No email provider configured. Set RESEND_API_KEY, SENDGRID_API_KEY, or POSTMARK_API_KEY');
+  return false;
+}
+
+/**
  * Verify email subscription
  */
 export async function verifySubscription(token: string): Promise<{ success: boolean; message: string }> {
-  const subscriber = Array.from(subscribers.values()).find(s => s.unsubscribeToken === token);
+  const subscriber = await findSubscriberByToken(token);
   
   if (!subscriber) {
     return { success: false, message: 'Invalid verification token' };
   }
 
   subscriber.verified = true;
-  subscribers.set(subscriber.id, subscriber);
+  subscriber.verificationToken = undefined; // Clear verification token after use
+  await saveSubscriber(subscriber);
 
   return { success: true, message: 'Email verified successfully' };
 }
@@ -105,13 +296,13 @@ export async function verifySubscription(token: string): Promise<{ success: bool
  * Unsubscribe
  */
 export async function unsubscribe(token: string): Promise<{ success: boolean; message: string }> {
-  const subscriber = Array.from(subscribers.values()).find(s => s.unsubscribeToken === token);
+  const subscriber = await findSubscriberByToken(token);
   
   if (!subscriber) {
     return { success: false, message: 'Invalid unsubscribe token' };
   }
 
-  subscribers.delete(subscriber.id);
+  await deleteSubscriberById(subscriber.id);
   return { success: true, message: 'Unsubscribed successfully' };
 }
 
@@ -126,7 +317,7 @@ export async function updatePreferences(
     sources?: string[];
   }
 ): Promise<{ success: boolean; message: string }> {
-  const subscriber = Array.from(subscribers.values()).find(s => s.unsubscribeToken === token);
+  const subscriber = await findSubscriberByToken(token);
   
   if (!subscriber) {
     return { success: false, message: 'Invalid token' };
@@ -136,17 +327,16 @@ export async function updatePreferences(
   if (options.categories) subscriber.categories = options.categories;
   if (options.sources) subscriber.sources = options.sources;
 
-  subscribers.set(subscriber.id, subscriber);
+  await saveSubscriber(subscriber);
   return { success: true, message: 'Preferences updated' };
 }
 
 /**
  * Get subscribers by frequency
  */
-export function getSubscribersByFrequency(frequency: 'daily' | 'weekly' | 'breaking'): Subscriber[] {
-  return Array.from(subscribers.values()).filter(
-    s => s.verified && s.frequency === frequency
-  );
+export async function getSubscribersByFrequency(frequency: 'daily' | 'weekly' | 'breaking'): Promise<Subscriber[]> {
+  const all = await getAllSubscribers();
+  return all.filter(s => s.verified && s.frequency === frequency);
 }
 
 /**
@@ -322,12 +512,12 @@ export async function sendViaSendGrid(email: DigestEmail): Promise<boolean> {
 /**
  * Get subscriber stats
  */
-export function getSubscriberStats(): {
+export async function getSubscriberStats(): Promise<{
   total: number;
   verified: number;
   byFrequency: Record<string, number>;
-} {
-  const all = Array.from(subscribers.values());
+}> {
+  const all = await getAllSubscribers();
   
   return {
     total: all.length,

@@ -32,7 +32,8 @@ export async function GET(request: NextRequest) {
 
   // Stats (admin only - add auth in production)
   if (action === 'stats') {
-    return NextResponse.json(getSubscriberStats());
+    const stats = await getSubscriberStats();
+    return NextResponse.json(stats);
   }
 
   return NextResponse.json({

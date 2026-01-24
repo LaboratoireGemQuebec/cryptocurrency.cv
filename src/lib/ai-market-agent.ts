@@ -407,23 +407,103 @@ export class AIMarketAgent {
       }));
     } catch (error) {
       console.error('Price data fetch error:', error);
-      return this.getMockPriceData();
+      return []; // Return empty array instead of mock data
     }
   }
 
   private async fetchSocialData(): Promise<SocialData[]> {
-    // In production, integrate with LunarCrush or Santiment
-    return this.getMockSocialData();
+    // Integrate with LunarCrush API for social sentiment
+    const lunarCrushKey = process.env.LUNARCRUSH_API_KEY;
+    if (!lunarCrushKey) {
+      console.warn('LunarCrush API key not configured - social data unavailable');
+      return [];
+    }
+
+    try {
+      const response = await fetch(
+        'https://lunarcrush.com/api4/public/coins/list/v2?sort=galaxy_score&limit=20',
+        {
+          headers: { 'Authorization': `Bearer ${lunarCrushKey}` },
+          next: { revalidate: 300 },
+        }
+      );
+      
+      if (!response.ok) throw new Error(`LunarCrush API error: ${response.status}`);
+      
+      const data = await response.json();
+      return (data.data || []).map((coin: Record<string, unknown>) => ({
+        symbol: (coin.symbol as string).toUpperCase(),
+        mentions: coin.social_volume as number || 0,
+        sentiment: ((coin.sentiment as number || 50) - 50) / 50, // Normalize to -1 to 1
+        sentimentChange: (coin.sentiment_24h_change as number) || 0,
+      }));
+    } catch (error) {
+      console.error('Social data fetch error:', error);
+      return [];
+    }
   }
 
   private async fetchOnChainData(): Promise<OnChainData[]> {
-    // In production, integrate with Glassnode or IntoTheBlock
-    return this.getMockOnChainData();
+    // Integrate with Glassnode or CryptoQuant for on-chain metrics
+    const glassnodeKey = process.env.GLASSNODE_API_KEY;
+    if (!glassnodeKey) {
+      // Try free IntoTheBlock data as fallback
+      try {
+        const response = await fetch(
+          'https://api.intotheblock.com/v1/metrics/bitcoin?limit=1',
+          { next: { revalidate: 600 } }
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          return [{
+            symbol: 'BTC',
+            activeAddresses: data.activeAddresses || 0,
+            transactionCount: data.transactionCount || 0,
+            largeTransactions: data.largeTransactions || 0,
+            exchangeNetFlow: data.exchangeNetFlow || 0,
+          }];
+        }
+      } catch {
+        // IntoTheBlock API may not be available
+      }
+      return [];
+    }
+
+    try {
+      const symbols = ['BTC', 'ETH'];
+      const results: OnChainData[] = [];
+      
+      for (const symbol of symbols) {
+        const [addressResponse, txResponse] = await Promise.all([
+          fetch(`https://api.glassnode.com/v1/metrics/addresses/active_count?a=${symbol}&api_key=${glassnodeKey}`, { next: { revalidate: 600 } }),
+          fetch(`https://api.glassnode.com/v1/metrics/transactions/count?a=${symbol}&api_key=${glassnodeKey}`, { next: { revalidate: 600 } }),
+        ]);
+        
+        if (addressResponse.ok && txResponse.ok) {
+          const addressData = await addressResponse.json();
+          const txData = await txResponse.json();
+          
+          results.push({
+            symbol,
+            activeAddresses: addressData[addressData.length - 1]?.v || 0,
+            transactionCount: txData[txData.length - 1]?.v || 0,
+            largeTransactions: 0,
+            exchangeNetFlow: 0,
+          });
+        }
+      }
+      
+      return results;
+    } catch (error) {
+      console.error('On-chain data fetch error:', error);
+      return [];
+    }
   }
 
   private async fetchDerivativesData(): Promise<DerivativesData[]> {
     try {
-      // Fetch from Binance Futures
+      // Fetch from Binance Futures - this is a real public API
       const response = await fetch(
         'https://fapi.binance.com/fapi/v1/premiumIndex',
         { next: { revalidate: 60 } }
@@ -432,19 +512,28 @@ export class AIMarketAgent {
       if (!response.ok) throw new Error('Binance API error');
       
       const data = await response.json();
+      
+      // Also fetch open interest
+      const oiResponse = await fetch(
+        'https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT',
+        { next: { revalidate: 60 } }
+      );
+      
+      const oiData = oiResponse.ok ? await oiResponse.json() : null;
+      
       return data.slice(0, 20).map((item: Record<string, unknown>) => {
         const symbol = (item.symbol as string).replace('USDT', '');
         return {
           symbol,
           fundingRate: parseFloat(item.lastFundingRate as string) * 100,
-          openInterest: 0, // Would need separate API call
+          openInterest: symbol === 'BTC' && oiData ? parseFloat(oiData.openInterest) : 0,
           oiChange24h: 0,
           longShortRatio: 1,
         };
       });
     } catch (error) {
       console.error('Derivatives data fetch error:', error);
-      return this.getMockDerivativesData();
+      return []; // Return empty array instead of mock data
     }
   }
 
@@ -485,8 +574,93 @@ export class AIMarketAgent {
   }
 
   private async detectWhaleMovements(): Promise<MarketSignal[]> {
-    // In production, integrate with whale tracking API
-    return this.getMockWhaleSignals();
+    // Integrate with Whale Alert API or blockchain.com for whale tracking
+    const whaleAlertKey = process.env.WHALE_ALERT_API_KEY;
+    if (!whaleAlertKey) {
+      // Try blockchain.com free API for large transactions
+      try {
+        const response = await fetch(
+          'https://blockchain.info/unconfirmed-transactions?format=json',
+          { next: { revalidate: 300 } }
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          const signals: MarketSignal[] = [];
+          
+          // Filter for large transactions (> 100 BTC)
+          const largeTxs = (data.txs || []).filter((tx: { out: Array<{ value: number }> }) => {
+            const totalValue = tx.out.reduce((sum: number, out: { value: number }) => sum + out.value, 0);
+            return totalValue > 100 * 100000000; // 100 BTC in satoshis
+          });
+          
+          for (const tx of largeTxs.slice(0, 5)) {
+            const btcAmount = tx.out.reduce((sum: number, out: { value: number }) => sum + out.value, 0) / 100000000;
+            signals.push({
+              id: `whale-${tx.hash?.slice(0, 8) || Date.now()}`,
+              source: 'whale',
+              type: 'whale-movement',
+              asset: 'BTC',
+              direction: 'neutral', // Would need more analysis
+              strength: btcAmount > 1000 ? 'strong' : 'moderate',
+              confidence: 85,
+              timeHorizon: '1d',
+              timestamp: new Date(),
+              metadata: { amount: btcAmount, hash: tx.hash },
+              narrative: `Large BTC movement detected: ${btcAmount.toFixed(2)} BTC`,
+            });
+          }
+          
+          return signals;
+        }
+      } catch {
+        // blockchain.com API may not respond
+      }
+      return [];
+    }
+
+    try {
+      const response = await fetch(
+        `https://api.whale-alert.io/v1/transactions?api_key=${whaleAlertKey}&min_value=500000&limit=20`,
+        { next: { revalidate: 300 } }
+      );
+      
+      if (!response.ok) throw new Error('Whale Alert API error');
+      
+      const data = await response.json();
+      return (data.transactions || []).map((tx: { id: string; blockchain: string; symbol: string; amount: number; amount_usd: number; from: { owner_type: string }; to: { owner_type: string }; timestamp: number }) => {
+        const isFromExchange = tx.from?.owner_type === 'exchange';
+        const isToExchange = tx.to?.owner_type === 'exchange';
+        
+        let direction: SignalDirection = 'neutral';
+        let narrative = `${tx.amount.toFixed(2)} ${tx.symbol} moved`;
+        
+        if (isFromExchange && !isToExchange) {
+          direction = 'bullish';
+          narrative = `${tx.amount.toFixed(2)} ${tx.symbol} withdrawn from exchange - potential accumulation`;
+        } else if (!isFromExchange && isToExchange) {
+          direction = 'bearish';
+          narrative = `${tx.amount.toFixed(2)} ${tx.symbol} deposited to exchange - potential selling`;
+        }
+        
+        return {
+          id: `whale-${tx.id}`,
+          source: 'whale' as SignalSource,
+          type: 'whale-movement' as SignalType,
+          asset: tx.symbol?.toUpperCase() || 'UNKNOWN',
+          direction,
+          strength: tx.amount_usd > 10_000_000 ? 'strong' : 'moderate' as SignalStrength,
+          confidence: 80,
+          timeHorizon: '1d' as TimeHorizon,
+          timestamp: new Date(tx.timestamp * 1000),
+          metadata: { amount: tx.amount, amountUsd: tx.amount_usd, fromExchange: isFromExchange, toExchange: isToExchange },
+          narrative,
+        };
+      });
+    } catch (error) {
+      console.error('Whale data fetch error:', error);
+      return [];
+    }
   }
 
   // ===========================================================================
@@ -1232,64 +1406,6 @@ export class AIMarketAgent {
 
   private normalizeTo100(value: number, min: number, max: number): number {
     return Math.max(0, Math.min(100, ((value - min) / (max - min)) * 100));
-  }
-
-  // ===========================================================================
-  // Mock Data (Development)
-  // ===========================================================================
-
-  private getMockPriceData(): PriceData[] {
-    return [
-      { symbol: 'BTC', price: 98500, change24h: 2.5, volume24h: 45000000000, high24h: 99500, low24h: 96000 },
-      { symbol: 'ETH', price: 3850, change24h: 3.2, volume24h: 22000000000, high24h: 3920, low24h: 3750 },
-      { symbol: 'SOL', price: 185, change24h: 5.8, volume24h: 8000000000, high24h: 192, low24h: 175 },
-      { symbol: 'XRP', price: 2.45, change24h: -1.2, volume24h: 5000000000, high24h: 2.55, low24h: 2.38 },
-      { symbol: 'DOGE', price: 0.38, change24h: 8.5, volume24h: 4000000000, high24h: 0.42, low24h: 0.35 },
-    ];
-  }
-
-  private getMockSocialData(): SocialData[] {
-    return [
-      { symbol: 'BTC', mentions: 125000, sentiment: 0.65, sentimentChange: 0.15 },
-      { symbol: 'ETH', mentions: 85000, sentiment: 0.55, sentimentChange: 0.08 },
-      { symbol: 'SOL', mentions: 45000, sentiment: 0.72, sentimentChange: 0.22 },
-      { symbol: 'XRP', mentions: 35000, sentiment: 0.35, sentimentChange: -0.1 },
-      { symbol: 'DOGE', mentions: 95000, sentiment: 0.80, sentimentChange: 0.35 },
-    ];
-  }
-
-  private getMockOnChainData(): OnChainData[] {
-    return [
-      { symbol: 'BTC', activeAddresses: 950000, transactionCount: 450000, largeTransactions: 2500, exchangeNetFlow: -15000000 },
-      { symbol: 'ETH', activeAddresses: 650000, transactionCount: 1200000, largeTransactions: 1800, exchangeNetFlow: -8000000 },
-      { symbol: 'SOL', activeAddresses: 180000, transactionCount: 25000000, largeTransactions: 500, exchangeNetFlow: 2000000 },
-    ];
-  }
-
-  private getMockDerivativesData(): DerivativesData[] {
-    return [
-      { symbol: 'BTC', fundingRate: 0.015, openInterest: 25000000000, oiChange24h: 5, longShortRatio: 1.2 },
-      { symbol: 'ETH', fundingRate: 0.022, openInterest: 12000000000, oiChange24h: 8, longShortRatio: 1.35 },
-      { symbol: 'SOL', fundingRate: 0.045, openInterest: 3000000000, oiChange24h: 15, longShortRatio: 1.5 },
-    ];
-  }
-
-  private getMockWhaleSignals(): MarketSignal[] {
-    return [
-      {
-        id: 'whale-1',
-        source: 'whale',
-        type: 'whale-movement',
-        asset: 'BTC',
-        direction: 'bullish',
-        strength: 'strong',
-        confidence: 78,
-        timeHorizon: '1d',
-        timestamp: new Date(),
-        metadata: { amount: 500, fromExchange: true },
-        narrative: 'Major BTC withdrawal (500 BTC) from Coinbase to unknown wallet - potential accumulation',
-      },
-    ];
   }
 }
 
