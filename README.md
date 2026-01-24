@@ -315,6 +315,10 @@ curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/ai/brief` | AI-generated article briefs |
 | `/api/ai/counter` | Counter-arguments generation |
 | `/api/ai/debate` | AI debate on crypto topics |
+| `/api/ai/oracle` | The Oracle - AI-powered crypto oracle chat |
+| `/api/ai/agent` | AI market agent for autonomous analysis |
+| `/api/ai/relationships` | Extract entity relationships from news |
+| `/api/detect/ai-content` | Detect AI-generated content in articles |
 
 ### 📊 Analytics & Intelligence
 
@@ -325,6 +329,10 @@ curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/analytics/headlines` | Headline tracking & mutations |
 | `/api/analytics/usage` | API key usage analytics & insights |
 | `/api/analytics/influencers` | Influencer credibility scoring |
+| `/api/analytics/causality` | News causality analysis |
+| `/api/analytics/forensics` | News forensics & origin tracking |
+| `/api/analytics/gaps` | Coverage gap detection |
+| `/api/analytics/news-onchain` | News-to-onchain correlation |
 
 ### 🔗 Relationship & Entity Analysis
 
@@ -342,7 +350,73 @@ curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/portfolio/performance` | Performance charts, P&L, risk metrics |
 | `/api/portfolio/tax` | Tax report generation (Form 8949) |
 
-### 🔔 Social Intelligence
+### � Research & Backtesting
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/research/backtest` | Strategy backtesting with historical news data |
+| `/api/academic` | Academic access program registration |
+| `/api/citations` | Academic citation network analysis |
+| `/api/predictions` | Prediction tracking with accuracy scoring |
+
+**Backtest Example:**
+```bash
+# Backtest a sentiment-based strategy
+curl -X POST "https://fcn.dev/api/research/backtest" \
+  -H "Content-Type: application/json" \
+  -d '{"strategy": "sentiment_momentum", "asset": "BTC", "period": "1y"}'
+```
+
+### 📡 Social Monitoring
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/social/monitor` | Discord & Telegram channel monitoring via webhooks |
+| `/api/social/influencer-score` | Influencer reliability scoring |
+
+**Social Monitor Example:**
+```bash
+# Ingest messages via webhook integration
+curl -X POST "https://fcn.dev/api/social/monitor" \
+  -H "Content-Type: application/json" \
+  -d '{"platform": "discord", "channel": "alpha-chat", "content": "BTC bullish"}'
+```
+
+### 🗄️ Data Storage & Export
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/storage/cas` | Content-addressable storage (IPFS-style hashing) |
+| `/api/export` | Export data in CSV/JSON/Parquet formats |
+| `/api/exports` | Bulk export job management |
+| `/api/exports/[id]` | Download export file |
+
+### 📡 Real-Time & Infrastructure
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/sse` | Server-Sent Events for real-time news stream |
+| `/api/ws` | WebSocket connection info & SSE fallback |
+| `/api/webhooks` | Webhook registration & management |
+| `/api/push` | Web Push notification registration |
+| `/api/newsletter/subscribe` | Newsletter subscription |
+| `/api/alerts` | Price & news alerts |
+| `/api/cache` | Cache management |
+| `/api/views` | Article view tracking |
+| `/api/keys` | API key management |
+| `/api/gateway` | Unified API gateway |
+| `/api/billing` | Subscription & billing management |
+| `/api/billing/usage` | Current billing usage |
+| `/api/upgrade` | API key tier upgrades (x402) |
+| `/api/register` | User registration |
+
+**SSE Real-Time Stream:**
+```javascript
+const events = new EventSource('/api/sse?sources=coindesk,theblock');
+events.onmessage = (e) => console.log(JSON.parse(e.data));
+```
+
+### 🐦 Social Intelligence
 
 | Endpoint | Description |
 |----------|-------------|
@@ -395,7 +469,205 @@ curl https://fcn.dev/api/social/x/sentiment?list=list_xxx
 | `/api/market/snapshot/[coinId]` | Real-time coin snapshot |
 | `/api/market/social/[coinId]` | Social metrics for coin |
 | `/api/market/tickers/[coinId]` | Trading pairs for coin |
+| `/api/market/defi` | DeFi market overview |
+| `/api/market/derivatives` | Derivatives market data |
 | `/api/charts` | Chart data for visualizations |
+| `/api/fear-greed` | Crypto Fear & Greed Index with 30-day history |
+
+### 🏗️ DeFi Tools
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/defi` | DeFi news and protocol coverage |
+| `/api/defi/protocol-health` | Protocol health & risk scoring |
+| `/api/defi/protocol-health?action=ranking` | Protocol safety rankings |
+| `/api/defi/protocol-health?action=incidents` | Security incident tracker |
+
+**Protocol Health Example:**
+```bash
+# Get AAVE v3 health score
+curl "https://fcn.dev/api/defi/protocol-health?protocol=aave-v3"
+
+# Get top lending protocols by safety
+curl "https://fcn.dev/api/defi/protocol-health?action=ranking&category=lending"
+
+# Get recent security incidents
+curl "https://fcn.dev/api/defi/protocol-health?action=incidents&limit=20"
+```
+
+### 📺 Integrations
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/integrations/tradingview` | TradingView widgets & Pine Script generation |
+| `/api/tradingview` | TradingView webhook receiver |
+
+**TradingView Example:**
+```bash
+# Get chart widget embed code
+curl "https://fcn.dev/api/integrations/tradingview?action=widget&type=chart&symbol=BTC"
+
+# Generate Pine Script indicator
+curl "https://fcn.dev/api/integrations/tradingview?action=indicator&name=newsAlert"
+```
+
+### 📊 Trading Tools
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/arbitrage` | Cross-exchange arbitrage scanner with triangular arb |
+| `/api/trading/arbitrage` | Real-time arbitrage opportunities (spot + triangular) |
+| `/api/funding` | Funding rate dashboard (Binance, Bybit, OKX, Hyperliquid) |
+| `/api/options` | Options flow, volatility surface, max pain, gamma exposure |
+| `/api/trading/options` | Options dashboard from Deribit, OKX, Bybit |
+| `/api/liquidations` | Real-time liquidations feed (CoinGlass integration) |
+| `/api/orderbook` | Multi-exchange order book aggregation |
+| `/api/trading/orderbook` | Aggregated orderbook with slippage & liquidity analysis |
+
+**Arbitrage Scanner Example:**
+```bash
+# Get cross-exchange arbitrage opportunities
+curl "https://fcn.dev/api/arbitrage?minProfit=0.5&limit=20"
+
+# Get triangular arbitrage opportunities
+curl "https://fcn.dev/api/trading/arbitrage?type=triangular&minSpread=0.3"
+```
+
+**Options Flow Example:**
+```bash
+# Get options dashboard
+curl "https://fcn.dev/api/options?view=dashboard&underlying=BTC"
+
+# Get max pain analysis
+curl "https://fcn.dev/api/trading/options?view=maxpain&underlying=ETH"
+
+# Get volatility surface
+curl "https://fcn.dev/api/trading/options?view=surface"
+```
+
+**Order Book Example:**
+```bash
+# Get aggregated order book
+curl "https://fcn.dev/api/orderbook?symbol=BTC&market=spot"
+
+# Estimate slippage for $100k order
+curl "https://fcn.dev/api/trading/orderbook?symbol=BTCUSDT&view=slippage&size=100000"
+```
+
+### 🐋 Whale Intelligence
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/whale-alerts` | Monitor large transactions across blockchains |
+| `/api/influencers` | Influencer reliability tracking & prediction scoring |
+
+**Whale Alerts Example:**
+```bash
+# Get recent whale transactions
+curl "https://fcn.dev/api/whale-alerts?limit=50"
+
+# Filter by blockchain
+curl "https://fcn.dev/api/whale-alerts?blockchain=ethereum&minUsd=1000000"
+```
+
+### 🏛️ Regulatory Intelligence
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/regulatory` | Regulatory news with jurisdiction & agency tracking |
+| `/api/regulatory?action=jurisdictions` | Jurisdiction profiles |
+| `/api/regulatory?action=agencies` | Agency information |
+| `/api/regulatory?action=deadlines` | Upcoming compliance deadlines |
+| `/api/regulatory?action=summary` | Intelligence summary |
+
+### 📰 Coverage & Research
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/coverage-gap` | Analyze under-covered topics and assets |
+| `/api/extract` | Full article content extraction from URLs |
+| `/api/academic` | Academic access program for researchers |
+| `/api/citations` | Citation network analysis for academic papers |
+
+### 💎 Premium API (x402 Micropayments)
+
+Premium endpoints powered by x402 USDC micropayments. Pay per request or get access passes.
+
+| Endpoint | Description | Price |
+|----------|-------------|-------|
+| `/api/premium` | Premium API documentation & pricing | Free |
+| `/api/premium/ai/sentiment` | Advanced AI sentiment analysis | $0.02 |
+| `/api/premium/ai/analyze` | Deep article analysis | $0.03 |
+| `/api/premium/ai/signals` | Premium trading signals | $0.05 |
+| `/api/premium/ai/summary` | Extended summaries | $0.02 |
+| `/api/premium/ai/compare` | Multi-asset AI comparison | $0.03 |
+| `/api/premium/whales/alerts` | Real-time whale alerts | $0.05 |
+| `/api/premium/whales/transactions` | Whale transaction history | $0.03 |
+| `/api/premium/smart-money` | Smart money flow tracking | $0.05 |
+| `/api/premium/screener/advanced` | Advanced coin screener | $0.03 |
+| `/api/premium/analytics/screener` | Analytics screener | $0.03 |
+| `/api/premium/market/coins` | Premium market data | $0.02 |
+| `/api/premium/market/history` | Extended price history | $0.02 |
+| `/api/premium/defi/protocols` | DeFi protocol analytics | $0.03 |
+| `/api/premium/streams/prices` | Real-time price streams | $0.01 |
+| `/api/premium/portfolio/analytics` | Portfolio analytics | $0.03 |
+| `/api/premium/export/portfolio` | Portfolio data export | $0.05 |
+| `/api/premium/alerts/whales` | Whale alert configuration | $0.02 |
+| `/api/premium/alerts/custom` | Custom alert rules | $0.02 |
+| `/api/premium/api-keys` | API key management | Free |
+
+**Access Passes:**
+| Pass | Price | Duration |
+|------|-------|----------|
+| 1 Hour Pass | $0.25 | 1 hour |
+| 24 Hour Pass | $2.00 | 24 hours |
+| Weekly Pass | $10.00 | 7 days |
+
+**How to Pay:**
+```bash
+# 1. Make request, receive 402 with payment requirements
+curl https://fcn.dev/api/premium/ai/sentiment
+
+# 2. Pay with USDC using x402-compatible wallet
+# 3. Include payment proof in header
+curl -H "X-Payment: <base64-payment>" https://fcn.dev/api/premium/ai/sentiment
+```
+
+### 🔐 Admin API
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/admin` | Admin dashboard & API info |
+| `/api/admin/analytics` | System-wide analytics |
+| `/api/admin/keys` | API key management (CRUD) |
+| `/api/admin/licenses` | License management |
+| `/api/admin/stats` | Usage statistics |
+
+> ⚠️ Admin endpoints require `ADMIN_TOKEN` authentication
+
+### 🔢 Versioned API (v1)
+
+Stable versioned API with x402 micropayment support for production integrations.
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/v1` | API documentation & pricing |
+| `/api/v1/coins` | Coin listings with market data |
+| `/api/v1/coin/[coinId]` | Individual coin details |
+| `/api/v1/market-data` | Global market data |
+| `/api/v1/trending` | Trending coins |
+| `/api/v1/search` | Search coins |
+| `/api/v1/exchanges` | Exchange listings |
+| `/api/v1/defi` | DeFi protocols data |
+| `/api/v1/gas` | Gas price tracker |
+| `/api/v1/global` | Global crypto market stats |
+| `/api/v1/assets` | Asset listings |
+| `/api/v1/assets/[assetId]/history` | Asset price history |
+| `/api/v1/historical/[coinId]` | Historical data |
+| `/api/v1/alerts` | Price alerts |
+| `/api/v1/export` | Data export |
+| `/api/v1/usage` | API usage stats |
+| `/api/v1/x402` | x402 payment info |
 
 > 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
 
@@ -403,20 +675,19 @@ curl https://fcn.dev/api/social/x/sentiment?list=list_xxx
 
 ## 🖥️ Web App Pages
 
-The web app includes comprehensive pages for market data, portfolio management, and more:
+The web app includes **50+ pages** for market data, portfolio management, AI tools, and more:
 
 ### Market Data
 | Page | Description |
 |------|-------------|
 | `/markets` | Market overview with global stats and coin tables |
-| `/markets/trending` | Trending cryptocurrencies |
-| `/markets/gainers` | Top performing coins (24h) |
-| `/markets/losers` | Worst performing coins (24h) |
-| `/markets/new` | Recently listed coins |
-| `/markets/exchanges` | Exchange rankings by volume |
-| `/markets/exchanges/[id]` | Individual exchange details |
-| `/markets/categories` | Market categories (DeFi, Layer 1, etc.) |
-| `/markets/categories/[id]` | Category breakdown |
+| `/markets/gainers` | 🆕 Top gaining coins (24h) |
+| `/markets/losers` | 🆕 Top losing coins (24h) |
+| `/markets/trending` | 🆕 Trending coins by volume & social |
+| `/markets/new` | 🆕 Newly listed cryptocurrencies |
+| `/markets/exchanges` | 🆕 Exchange directory with volumes |
+| `/trending` | Trending cryptocurrencies |
+| `/movers` | Top gainers and losers (24h) |
 
 ### Market Tools
 | Page | Description |
@@ -429,6 +700,14 @@ The web app includes comprehensive pages for market data, portfolio management, 
 | `/dominance` | Market cap dominance chart |
 | `/liquidations` | Real-time liquidations feed |
 | `/buzz` | Social buzz & trending sentiment |
+| `/charts` | TradingView-style charts |
+
+### Trading Tools
+| Page | Description |
+|------|-------------|
+| `/arbitrage` | Cross-exchange arbitrage scanner |
+| `/options` | Options flow & analytics dashboard |
+| `/orderbook` | Multi-exchange order book view |
 
 ### Coin Details
 | Page | Description |
@@ -436,26 +715,110 @@ The web app includes comprehensive pages for market data, portfolio management, 
 | `/coin/[coinId]` | Comprehensive coin page with charts, stats, news |
 | `/compare` | Compare multiple cryptocurrencies side-by-side |
 
+### AI & Analytics
+| Page | Description |
+|------|-------------|
+| `/ai/oracle` | The Oracle - AI crypto assistant |
+| `/ai/brief` | AI-generated market brief |
+| `/ai/debate` | AI Bull vs Bear debate generator |
+| `/ai/counter` | AI counter-argument generator |
+| `/ai-agent` | AI Market Agent dashboard |
+| `/sentiment` | Sentiment analysis dashboard |
+| `/analytics` | News analytics overview |
+| `/analytics/headlines` | 🆕 Headline tracking & mutations |
+| `/predictions` | Prediction tracking & leaderboard |
+| `/digest` | AI-generated daily digest |
+
+### Social & Influencers
+| Page | Description |
+|------|-------------|
+| `/influencers` | Influencer reliability leaderboard |
+| `/whales` | Whale alerts & tracking |
+| `/buzz` | Social buzz & trending sentiment |
+
+### Research & Intelligence
+| Page | Description |
+|------|-------------|
+| `/regulatory` | Regulatory intelligence dashboard |
+| `/coverage-gap` | Coverage gap analysis |
+| `/protocol-health` | DeFi protocol health monitor |
+
 ### User Features
 | Page | Description |
 |------|-------------|
 | `/portfolio` | Portfolio management with holdings tracking |
 | `/watchlist` | Watchlist with price alerts |
+| `/bookmarks` | 🆕 Saved articles & reading list |
 | `/settings` | User preferences and notifications |
+| `/install` | 🆕 PWA installation guide |
+
+### Content
+| Page | Description |
+|------|-------------|
+| `/search` | Search news articles |
+| `/topic/[topic]` | Topic-specific news |
+| `/topics` | Browse all topics |
+| `/source/[source]` | Source-specific news |
+| `/sources` | All news sources |
+| `/category/[category]` | Category-specific news |
+| `/article/[id]` | Individual article view |
+| `/read/[id]` | 🆕 Distraction-free reader mode |
+| `/share/[id]` | 🆕 Share & embed articles |
+| `/defi` | DeFi news section |
+| `/blog` | Blog posts |
+
+### Administration
+| Page | Description |
+|------|-------------|
+| `/admin` | Admin dashboard |
+| `/billing` | Billing & subscription management |
+| `/pricing` | Pricing plans |
+| `/developers` | Developer documentation |
 
 ---
 
 ## SDKs & Components
 
-| Package | Description |
-|---------|-------------|
-| [React](sdk/react/) | `<CryptoNews />` drop-in components |
-| [TypeScript](sdk/typescript/) | Full TypeScript SDK |
-| [Python](sdk/python/) | Zero-dependency Python client |
-| [JavaScript](sdk/javascript/) | Browser & Node.js SDK |
-| [Go](sdk/go/) | Go client library |
-| [PHP](sdk/php/) | PHP SDK |
-| [UI Components](docs/components.md) | Internal navigation & search components |
+| Package | Description | Version |
+|---------|-------------|---------|
+| [React](sdk/react/) | `<CryptoNews />` drop-in components | v0.1.0 |
+| [TypeScript](sdk/typescript/) | Full TypeScript SDK with type safety | v0.1.0 |
+| [Python](sdk/python/) | Zero-dependency Python client | v0.1.0 |
+| [JavaScript](sdk/javascript/) | Browser & Node.js SDK | v0.1.0 |
+| [Go](sdk/go/) | Go client library | v0.1.0 |
+| [PHP](sdk/php/) | PHP SDK | v0.1.0 |
+| [Ruby](sdk/ruby/) | Ruby gem with async support | v0.2.0 |
+| [Rust](sdk/rust/) | Rust crate with async/sync clients | v0.2.0 |
+| [UI Components](docs/components.md) | Internal navigation & search components | - |
+
+### 🔌 Platform Integrations
+
+| Integration | Description | Documentation |
+|-------------|-------------|---------------|
+| [ChatGPT](chatgpt/) | Custom GPT with OpenAPI schema | [Guide](docs/integrations/chatgpt.md) |
+| [MCP Server](mcp/) | Model Context Protocol server | [Guide](docs/integrations/mcp.md) |
+| [Chrome Extension](extension/) | Browser extension | [Guide](docs/integrations/extension.md) |
+| [Alfred Workflow](alfred/) | macOS Alfred integration | [Guide](docs/integrations/alfred.md) |
+| [Raycast](raycast/) | Raycast extension | [Guide](docs/integrations/raycast.md) |
+| [Widgets](widget/) | Embeddable widgets | [Guide](docs/integrations/widgets.md) |
+| [CLI](cli/) | Command-line interface | [README](cli/README.md) |
+| [Postman](postman/) | Postman collection | [README](postman/README.md) |
+
+### 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [API Reference](docs/API.md) | Full API documentation |
+| [AI Features](docs/AI-FEATURES.md) | AI endpoint documentation |
+| [Architecture](docs/CDA-ARCHITECTURE-COMPLETE.md) | System architecture |
+| [Developer Guide](docs/DEVELOPER-GUIDE.md) | Contributing & development |
+| [Quickstart](docs/QUICKSTART.md) | Getting started guide |
+| [User Guide](docs/USER-GUIDE.md) | End-user documentation |
+| [Internationalization](docs/INTERNATIONALIZATION.md) | i18n & localization |
+| [Real-Time](docs/REALTIME.md) | SSE & WebSocket guide |
+| [x402 Payments](docs/X402-IMPLEMENTATION.md) | Micropayments implementation |
+| [Testing](docs/TESTING.md) | Test coverage & strategies |
+| [Deployment](DEPLOYMENT.md) | Deployment guide |
 
 **Base URL:** `https://free-crypto-news.vercel.app`
 
@@ -1449,7 +1812,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Japanese sources ✅
 - [x] Spanish sources ✅
 
-### Real-Time Features
+### 📡 Real-Time Features
 - [x] WebSocket streaming
 - [x] Configurable alert system (8 condition types)
 - [x] Alert WebSocket subscriptions

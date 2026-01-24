@@ -10,6 +10,8 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 const mainNavItems = [
   { href: '/', label: 'Home', icon: '🏠' },
   { href: '/markets', label: 'Markets', icon: '📈' },
+  { href: '/markets/gainers', label: 'Top Gainers', icon: '📈' },
+  { href: '/markets/losers', label: 'Top Losers', icon: '📉' },
   { href: '/defi', label: 'DeFi Dashboard', icon: '🏦' },
   { href: '/trending', label: 'Trending', icon: '🔥' },
   { href: '/movers', label: 'Top Movers', icon: '🚀' },
@@ -26,15 +28,18 @@ const tradingItems = [
   { href: '/arbitrage', label: 'Arbitrage Scanner', icon: '🔄' },
   { href: '/predictions', label: 'Predictions', icon: '🎯' },
   { href: '/screener', label: 'Screener', icon: '🔍' },
+  { href: '/sentiment', label: 'Fear & Greed', icon: '😱' },
 ];
 
 const analyticsItems = [
   { href: '/analytics', label: 'Analytics Hub', icon: '📊' },
+  { href: '/analytics/headlines', label: 'Headline Tracker', icon: '📰' },
   { href: '/protocol-health', label: 'Protocol Health', icon: '🏥' },
   { href: '/coverage-gap', label: 'Coverage Gaps', icon: '🔎' },
   { href: '/influencers', label: 'Influencer Tracker', icon: '👥' },
   { href: '/portfolio', label: 'Portfolio Tracker', icon: '💼' },
   { href: '/watchlist', label: 'Watchlist', icon: '👁️' },
+  { href: '/bookmarks', label: 'Bookmarks', icon: '🔖' },
   { href: '/compare', label: 'Coin Compare', icon: '⚖️' },
 ];
 
@@ -53,6 +58,7 @@ const resourceLinks = [
   { href: '/pricing', label: 'API Pricing', icon: '💰' },
   { href: '/pricing/upgrade', label: 'Pay with Crypto', icon: '💳' },
   { href: '/billing', label: 'Billing', icon: '📊' },
+  { href: '/install', label: 'Install App', icon: '📲' },
   { href: '/settings', label: 'Settings', icon: '⚙️' },
 ];
 

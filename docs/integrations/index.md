@@ -2,6 +2,14 @@
 
 Connect Free Crypto News to your favorite tools and platforms.
 
+## Data APIs
+
+| Integration | Description | Cost |
+|-------------|-------------|------|
+| [Data APIs](data-apis.md) | 10+ professional data sources | Free - $299/mo |
+
+Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from DefiLlama, Glassnode, LunarCrush, The Graph, and others.
+
 ## AI Assistants
 
 | Integration | Description | Setup Time |
@@ -26,6 +34,13 @@ Connect Free Crypto News to your favorite tools and platforms.
 ## Quick Links
 
 <div class="grid" markdown>
+
+<div class="card" markdown>
+### :bar_chart: Data APIs
+Access 10+ professional crypto data sources.
+
+[:material-arrow-right: API Guide](data-apis.md)
+</div>
 
 <div class="card" markdown>
 ### :robot: MCP Server

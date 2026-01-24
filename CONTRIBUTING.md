@@ -121,15 +121,29 @@ npm run dev
    - `test:` - Adding tests
    - `chore:` - Maintenance tasks
 
-5. **Push to your fork** and open a PR
+5. **Verify changelog coverage**:
+   ```bash
+   # Check if your changes are documented
+   node scripts/analyze-commits.js --check --since=HEAD~5
+   ```
+
+6. **Push to your fork** and open a PR
 
 ## 🔄 Pull Request Process
 
 1. **Update documentation** if you're changing functionality
-2. **Add tests** for new features if applicable
-3. **Ensure CI passes** - the build must succeed
-4. **Request review** from maintainers
-5. **Address feedback** promptly and constructively
+2. **Update CHANGELOG.md** for significant changes:
+   ```bash
+   # See what entries might be missing
+   node scripts/analyze-commits.js
+   
+   # Auto-add missing entries (review before committing)
+   node scripts/analyze-commits.js --update
+   ```
+3. **Add tests** for new features if applicable
+4. **Ensure CI passes** - the build must succeed
+5. **Request review** from maintainers
+6. **Address feedback** promptly and constructively
 
 ### PR Title Format
 

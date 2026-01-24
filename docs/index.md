@@ -190,6 +190,37 @@ Works with your favorite AI tools:
 
 ---
 
+## :bar_chart: Data API Integrations
+
+Professional-grade market data from 10+ sources:
+
+| Category | APIs |
+|----------|------|
+| **DeFi** | DefiLlama, The Graph, Aave, Uniswap, Curve |
+| **On-Chain** | Glassnode, CryptoQuant |
+| **Social** | LunarCrush |
+| **Layer 2** | L2Beat |
+| **NFT** | OpenSea, Reservoir |
+| **News** | CryptoPanic, NewsAPI |
+| **Research** | Messari, CoinMarketCap |
+
+[:material-arrow-right: Data API Guide](integrations/data-apis.md)
+
+---
+
+## :floppy_disk: Database Layer
+
+Unified storage abstraction supporting multiple backends:
+
+- **Vercel KV** — Production Redis
+- **Upstash** — Serverless Redis
+- **File** — Local development
+- **Memory** — Testing
+
+[:material-arrow-right: Database Guide](DATABASE.md)
+
+---
+
 ## :heart: Open Source
 
 Free Crypto News is MIT licensed and open source. Contributions welcome!

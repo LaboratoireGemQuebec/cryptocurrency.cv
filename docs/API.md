@@ -51,6 +51,45 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
   - [GET /api/analytics/credibility](#get-apianalyticscredibility)
   - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
+  - [GET /api/fear-greed](#get-apifear-greed)
+- [Content Verification](#content-verification)
+  - [GET /api/factcheck](#get-apifactcheck)
+  - [GET /api/detect/ai-content](#get-apidetectai-content)
+  - [GET /api/clickbait](#get-apiclickbait)
+  - [GET /api/claims](#get-apiclaims)
+- [Social & Influencers](#social--influencers)
+  - [GET /api/social/feed](#get-apisocialfeed)
+  - [GET /api/social/trending](#get-apisocialtrending)
+  - [GET /api/influencers](#get-apiinfluencers)
+- [Market & Trading](#market--trading)
+  - [GET /api/market/prices](#get-apimarketprices)
+  - [GET /api/market/dominance](#get-apimarketdominance)
+  - [GET /api/liquidations](#get-apiliquidations)
+  - [GET /api/whale-alerts](#get-apiwhale-alerts)
+  - [GET /api/options](#get-apioptions)
+  - [GET /api/funding](#get-apifunding)
+  - [GET /api/arbitrage](#get-apiarbitrage)
+  - [GET /api/orderbook](#get-apiorderbook)
+  - [GET /api/signals](#get-apisignals)
+- [Research & Deep Dives](#research--deep-dives)
+  - [GET /api/research](#get-apiresearch)
+  - [GET /api/research/backtest](#get-apiresearchbacktest)
+  - [GET /api/narratives](#get-apinarratives)
+  - [GET /api/regulatory](#get-apiregulatory)
+  - [GET /api/onchain](#get-apionchain)
+  - [GET /api/academic](#get-apiacademic)
+  - [GET /api/citations](#get-apicitations)
+  - [GET /api/predictions](#get-apipredictions)
+- [AI Agents & Oracle](#ai-agents--oracle)
+  - [GET /api/oracle](#get-apioracle)
+  - [GET /api/ai/agent](#get-apiaiagent)
+- [Social Monitoring](#social-monitoring)
+  - [GET /api/social/monitor](#get-apisocialmonitor)
+  - [GET /api/social/influencer-score](#get-apisocialinfluencer-score)
+- [Storage & Export](#storage--export)
+  - [GET /api/storage/cas](#get-apistoragecas)
+  - [GET /api/export](#get-apiexport)
+  - [GET /api/exports](#get-apiexports)
 - [Feed Formats](#feed-formats)
   - [GET /api/rss](#get-apirss)
   - [GET /api/atom](#get-apiatom)
@@ -1454,6 +1493,272 @@ curl "https://free-crypto-news.vercel.app/api/analytics/anomalies?hours=24&sever
 | `ticker_surge` | Ticker mentions spike 5x above baseline |
 | `source_outage` | Source silent for >12 hours |
 | `unusual_timing` | Publishing at unusual hours |
+
+---
+
+## AI Agents & Oracle
+
+### GET /api/oracle
+
+The Oracle - Natural language queries over all crypto intelligence.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `q` | string | required | Natural language query |
+| `context` | string | - | Additional context (market, news, onchain) |
+| `format` | string | text | Response format: `text`, `json`, `markdown` |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/oracle?q=What%20are%20VCs%20investing%20in%20this%20month"
+```
+
+**Response:**
+
+```json
+{
+  "answer": "Based on recent news, VCs are focusing on...",
+  "sources": [
+    { "title": "a]6z Leads $50M Round", "source": "CoinDesk", "relevance": 0.95 }
+  ],
+  "confidence": 0.85,
+  "generatedAt": "2026-01-22T15:00:00Z"
+}
+```
+
+---
+
+### GET /api/ai/agent
+
+AI Market Intelligence Agent for autonomous analysis.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `query` | string | required | Analysis request |
+| `depth` | string | standard | Analysis depth: `quick`, `standard`, `deep` |
+| `include` | string | all | Data sources: `news`, `market`, `onchain`, `social`, `all` |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/ai/agent?query=analyze%20bitcoin%20whale%20activity"
+```
+
+---
+
+## Social Monitoring
+
+### GET /api/social/monitor
+
+Monitor Discord and Telegram channels for crypto sentiment.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `platform` | string | all | Platform: `discord`, `telegram`, `all` |
+| `hours` | integer | 24 | Time range in hours |
+| `sentiment` | string | - | Filter: `bullish`, `bearish`, `neutral` |
+
+**POST Parameters (webhook ingestion):**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `platform` | string | `discord` or `telegram` |
+| `channel` | string | Channel name/ID |
+| `content` | string | Message content |
+| `author` | string | Message author (optional) |
+| `timestamp` | string | ISO timestamp (optional) |
+
+**Example:**
+
+```bash
+# Get monitored sentiment
+curl "https://free-crypto-news.vercel.app/api/social/monitor?platform=discord"
+
+# Ingest message via webhook
+curl -X POST "https://free-crypto-news.vercel.app/api/social/monitor" \
+  -H "Content-Type: application/json" \
+  -d '{"platform": "discord", "channel": "alpha", "content": "BTC looking strong"}'
+```
+
+---
+
+### GET /api/social/influencer-score
+
+Get influencer reliability and prediction accuracy scores.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `username` | string | - | Specific influencer username |
+| `platform` | string | twitter | Platform: `twitter`, `youtube`, `telegram` |
+| `limit` | integer | 50 | Number of influencers to return |
+| `sort` | string | accuracy | Sort by: `accuracy`, `followers`, `influence` |
+
+---
+
+## Storage & Export
+
+### GET /api/storage/cas
+
+Content-addressable storage using IPFS-style hashing.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `hash` | string | - | Content hash to retrieve |
+| `action` | string | get | Action: `get`, `put`, `verify` |
+
+**POST (store content):**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/storage/cas" \
+  -H "Content-Type: application/json" \
+  -d '{"content": "Article content...", "metadata": {"source": "coindesk"}}'
+```
+
+**Response:**
+
+```json
+{
+  "hash": "sha256:abc123def456...",
+  "size": 1024,
+  "storedAt": "2026-01-22T15:00:00Z"
+}
+```
+
+---
+
+### GET /api/export
+
+Export data in various formats.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `type` | string | news | Data type: `news`, `portfolio`, `watchlist`, `alerts` |
+| `format` | string | json | Format: `json`, `csv`, `parquet` |
+| `from` | string | - | Start date (ISO 8601) |
+| `to` | string | - | End date (ISO 8601) |
+
+---
+
+### GET /api/exports
+
+Manage bulk export jobs.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `action` | string | list | Action: `list`, `create`, `status` |
+| `jobId` | string | - | Job ID for status check |
+
+---
+
+## Research Endpoints
+
+### GET /api/research/backtest
+
+Backtest trading strategies using historical news data.
+
+**POST Parameters:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `strategy` | string | Strategy type: `sentiment_momentum`, `narrative_follow`, `whale_tracking` |
+| `asset` | string | Asset to backtest (BTC, ETH, etc.) |
+| `startDate` | string | Start date (ISO 8601) |
+| `endDate` | string | End date (ISO 8601) |
+| `initialCapital` | number | Starting capital (default: 10000) |
+
+**Example:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/research/backtest" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "strategy": "sentiment_momentum",
+    "asset": "BTC",
+    "startDate": "2025-01-01",
+    "endDate": "2025-12-31"
+  }'
+```
+
+---
+
+### GET /api/academic
+
+Academic access program for researchers.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `action` | string | info | Action: `info`, `register`, `projects`, `usage` |
+
+**POST (register):**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/academic" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Dr. Jane Smith",
+    "institution": "MIT",
+    "email": "jane@mit.edu",
+    "researchArea": "crypto market microstructure"
+  }'
+```
+
+---
+
+### GET /api/citations
+
+Academic citation network for papers citing our data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `action` | string | list | Action: `list`, `add`, `graph`, `metrics` |
+| `format` | string | json | Export format: `json`, `bibtex`, `ris` |
+
+---
+
+### GET /api/predictions
+
+Prediction tracking with accuracy scoring.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `action` | string | list | Action: `list`, `submit`, `verify`, `leaderboard` |
+| `asset` | string | - | Filter by asset |
+| `predictor` | string | - | Filter by predictor |
+
+**POST (submit prediction):**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/predictions" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "asset": "BTC",
+    "prediction": "above",
+    "target": 150000,
+    "deadline": "2026-06-30",
+    "reasoning": "ETF inflows + halving cycle"
+  }'
+```
 
 ---
 

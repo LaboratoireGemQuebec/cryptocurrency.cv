@@ -10,6 +10,7 @@ Technical documentation for developers working on or extending Free Crypto News.
 - [Providers & Context](#providers--context)
 - [Utilities](#utilities)
 - [API Routes](#api-routes)
+- [Scripts & Automation](#scripts--automation)
 - [Styling](#styling)
 - [Testing](#testing)
 - [Extending the App](#extending-the-app)
@@ -436,6 +437,64 @@ Use `dark:` prefix for dark mode styles:
 // Focus ring (keyboard nav)
 <a className="focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
 ```
+
+---
+
+## 🔧 Scripts & Automation
+
+The `scripts/` directory contains utilities for development, testing, and maintenance.
+
+### Changelog Automation
+
+Keep CHANGELOG.md in sync with git history:
+
+```bash
+# Generate changelog from commits
+./scripts/generate-changelog.sh --unreleased
+
+# Check if commits are documented
+node scripts/analyze-commits.js --check
+
+# Auto-update CHANGELOG.md with missing entries
+node scripts/analyze-commits.js --update
+
+# View commit statistics
+node scripts/commit-stats.js
+```
+
+📚 **Full documentation:** [scripts/CHANGELOG-AUTOMATION.md](../scripts/CHANGELOG-AUTOMATION.md)
+
+### Accessibility Audits
+
+```bash
+# Run accessibility audit
+node scripts/a11y-audit.js
+
+# Check color contrast
+node scripts/contrast-audit.js
+```
+
+### Internationalization
+
+```bash
+# Translate to new locale
+GROQ_API_KEY=your-key npx tsx scripts/i18n/translate.ts --locale es
+
+# Validate translations
+npx tsx scripts/i18n/validate.ts
+```
+
+### Archive Management
+
+```bash
+# Collect today's news
+node scripts/archive/collect.js
+
+# View archive stats
+node scripts/archive/stats.js
+```
+
+📚 **All scripts:** [scripts/README.md](../scripts/README.md)
 
 ---
 

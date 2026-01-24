@@ -138,8 +138,8 @@ export default function Footer() {
                 { href: '/pricing', icon: '💰', label: 'API Pricing' },
                 { href: '/pricing/upgrade', icon: '💳', label: 'Pay with Crypto' },
                 { href: '/billing', icon: '📊', label: 'Billing' },
-                { href: '/arbitrage', icon: '🔄', label: 'Arbitrage' },
-                { href: '/predictions', icon: '🎯', label: 'Predictions' },
+                { href: '/bookmarks', icon: '🔖', label: 'Bookmarks' },
+                { href: '/install', icon: '📲', label: 'Install App' },
               ].map((item) => (
                 <li key={item.href}>
                   <Link 
@@ -161,9 +161,11 @@ export default function Footer() {
             <Link href="/sources" className="hover:text-white transition-colors">📚 Sources</Link>
             <Link href="/topics" className="hover:text-white transition-colors">🏷️ Topics</Link>
             <Link href="/trending" className="hover:text-white transition-colors">🔥 Trending</Link>
-            <Link href="/movers" className="hover:text-white transition-colors">🚀 Movers</Link>
-            <Link href="/protocol-health" className="hover:text-white transition-colors">🏥 Protocol Health</Link>
-            <Link href="/influencers" className="hover:text-white transition-colors">👥 Influencers</Link>
+            <Link href="/markets/gainers" className="hover:text-white transition-colors">📈 Gainers</Link>
+            <Link href="/markets/losers" className="hover:text-white transition-colors">📉 Losers</Link>
+            <Link href="/sentiment" className="hover:text-white transition-colors">😱 Fear & Greed</Link>
+            <Link href="/arbitrage" className="hover:text-white transition-colors">🔄 Arbitrage</Link>
+            <Link href="/predictions" className="hover:text-white transition-colors">🎯 Predictions</Link>
             <Link href="/watchlist" className="hover:text-white transition-colors">👁️ Watchlist</Link>
             <Link href="/settings" className="hover:text-white transition-colors">⚙️ Settings</Link>
           </div>

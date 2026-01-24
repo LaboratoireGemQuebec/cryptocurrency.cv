@@ -28,20 +28,22 @@ const navItems = [
         {
           title: 'Market Data',
           links: [
-            { label: 'Top Movers', href: '/movers', icon: '🚀' },
             { label: 'Market Overview', href: '/markets', icon: '📊' },
+            { label: 'Top Gainers', href: '/markets/gainers', icon: '📈' },
+            { label: 'Top Losers', href: '/markets/losers', icon: '📉' },
             { label: 'Trending', href: '/trending', icon: '🔥' },
-            { label: 'Heatmap', href: '/heatmap', icon: '🗺️' },
-            { label: 'Dominance', href: '/dominance', icon: '🥧' },
+            { label: 'New Listings', href: '/markets/new', icon: '🆕' },
+            { label: 'Exchanges', href: '/markets/exchanges', icon: '🏛️' },
           ],
         },
         {
           title: 'Analysis',
           links: [
-            { label: 'Sentiment', href: '/sentiment', icon: '🎯' },
+            { label: 'Fear & Greed', href: '/sentiment', icon: '😱' },
             { label: 'Screener', href: '/screener', icon: '🔍' },
             { label: 'Correlation', href: '/correlation', icon: '🔗' },
-            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
+            { label: 'Heatmap', href: '/heatmap', icon: '🗺️' },
+            { label: 'Dominance', href: '/dominance', icon: '🥧' },
           ],
         },
         {
@@ -50,13 +52,14 @@ const navItems = [
             { label: 'Calculator', href: '/calculator', icon: '🧮' },
             { label: 'Social Buzz', href: '/buzz', icon: '📣' },
             { label: 'Charts', href: '/charts', icon: '📈' },
+            { label: 'Top Movers', href: '/movers', icon: '🚀' },
           ],
         },
       ],
       featured: {
-        title: 'Market Insights',
-        description: 'Real-time crypto market data and analysis',
-        href: '/markets',
+        title: 'Fear & Greed Index',
+        description: 'Track market sentiment with real-time Fear & Greed data',
+        href: '/sentiment',
       },
     },
   },
@@ -273,6 +276,7 @@ const navItems = [
           title: 'Research',
           links: [
             { label: 'Analytics Hub', href: '/analytics', icon: '📊' },
+            { label: 'Headline Tracker', href: '/analytics/headlines', icon: '📰' },
             { label: 'Protocol Health', href: '/protocol-health', icon: '🏥' },
             { label: 'Coverage Gaps', href: '/coverage-gap', icon: '🔎' },
             { label: 'Influencer Tracker', href: '/influencers', icon: '👥' },
@@ -283,6 +287,7 @@ const navItems = [
           links: [
             { label: 'Portfolio Tracker', href: '/portfolio', icon: '💼' },
             { label: 'Watchlist', href: '/watchlist', icon: '👁️' },
+            { label: 'Bookmarks', href: '/bookmarks', icon: '🔖' },
             { label: 'Coin Compare', href: '/compare', icon: '⚖️' },
           ],
         },

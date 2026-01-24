@@ -9,6 +9,69 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Changelog Automation & Documentation (Jan 25, 2026)
+- **`generate-changelog.sh`** - Shell script to generate changelog from git history in Keep a Changelog format
+- **`analyze-commits.js`** - Node.js tool to compare commits against CHANGELOG.md, find missing entries
+- **`commit-stats.js`** - Comprehensive git statistics: contributors, commit types, activity patterns, velocity
+- **`CHANGELOG-AUTOMATION.md`** - Full documentation for changelog automation workflows
+- **CI Integration Examples** - GitHub Actions workflow and pre-commit hooks for changelog validation
+
+#### Professional API Integrations (Jan 25, 2026)
+- **CoinMarketCap API** - `src/lib/apis/coinmarketcap.ts` with rankings, global metrics, trending, Fear & Greed
+- **CryptoQuant API** - `src/lib/apis/cryptoquant.ts` with exchange flows, stablecoin flows, miner activity
+- **DefiLlama API** - `src/lib/apis/defillama.ts` with TVL, yields, stablecoins, DEX volumes, bridges
+- **Glassnode API** - `src/lib/apis/glassnode.ts` with on-chain metrics, MVRV, SOPR, LTH/STH behavior
+- **L2Beat API** - `src/lib/apis/l2beat.ts` with Layer 2 TVL, risk assessments, activity metrics
+- **LunarCrush API** - `src/lib/apis/lunarcrush.ts` with social sentiment, influencer tracking, trending topics
+- **Messari API** - `src/lib/apis/messari.ts` with asset profiles, research-grade metrics, market intelligence, ROI data
+- **The Graph API** - `src/lib/apis/thegraph.ts` with Uniswap V3, Aave V3, Curve pools, cross-protocol DeFi analysis
+- **NFT Markets API** - `src/lib/apis/nft-markets.ts` with OpenSea + Reservoir aggregation, collections, sales, trending
+- **News Feeds API** - `src/lib/apis/news-feeds.ts` with CryptoPanic + NewsAPI, regulatory updates, sentiment analysis
+
+#### Database & Infrastructure (Jan 24, 2026)
+- **Unified Database Layer** - `src/lib/database.ts` with multi-backend support (Vercel KV, Upstash, Memory, File)
+- **Secure ID Generation** - `src/lib/utils/id.ts` with `crypto.randomUUID()` for all identifiers
+- **Real Export Formats** - Parquet columnar format and SQLite SQL dump in `src/lib/exports/service.ts`
+- **Deterministic Analytics** - Removed all `Math.random()` from coverage-gap, causal-inference, arbitrage-scanner
+
+#### New API Endpoints (Jan 25, 2026)
+- **`/api/keys`** - API key management (create, list, revoke) with tier-based rate limits
+- **`/api/news/categories`** - List all news categories with source counts
+- **`/api/newsletter/subscribe`** - Newsletter subscription with Buttondown/ConvertKit/Mailchimp integration
+- **`/api/views`** - Article view tracking with 24h/7d trending metrics
+
+#### SDK Documentation (Jan 25, 2026)
+- **Python SDK docs** - `docs/sdks/python.md` with async support, Telegram bot examples
+- **JavaScript SDK docs** - `docs/sdks/javascript.md` with browser/Node.js usage
+- **TypeScript SDK docs** - `docs/sdks/typescript.md` with full type definitions
+- **React SDK docs** - `docs/sdks/react.md` with hooks and pre-built components
+- **Go SDK docs** - `docs/sdks/go.md` with concurrency patterns and context support
+- **PHP SDK docs** - `docs/sdks/php.md` with Laravel integration and WordPress plugin
+- **MCP Integration docs** - `docs/integrations/mcp.md` for Claude/ChatGPT AI assistant usage
+
+#### Hook & Component Improvements (Jan 25, 2026)
+- **`useApiKey.tsx`** - Full API key management hook with context provider, localStorage persistence
+- **`ApiKeyProvider`** - React context for API key state across components
+
+### Changed
+
+#### Market Data Reliability (Jan 25, 2026)
+- **CoinPaprika Fallback** - Added as secondary source when CoinGecko rate limits hit
+- **Rate Limit Increase** - CoinGecko limit raised from 25 to 50 requests/minute
+- **Smart Rate Limiting** - Fallback APIs bypass rate limiter for resilient data fetching
+- **Coin ID Mapping** - Automatic mapping between CoinGecko and CoinPaprika identifiers
+
+#### TypeScript Fixes (Jan 25, 2026)
+- **L2Beat API Types** - Fixed type annotation for L2 project activity data
+- **Watchlist Service** - Improved documentation for `getDefaultUserId()` fallback behavior
+
+### Fixed
+
+#### Coin Page "Not Found" Fix (Jan 25, 2026)
+- **`getCoinDetails()`** - Now uses CoinPaprika as fallback when CoinGecko fails
+- **Multi-API Fallback Chain** - CoinGecko → CoinPaprika → Binance → CryptoCompare
+- **Rate Limit Resilience** - Individual coin pages no longer fail during traffic spikes
+
 #### AI Market Intelligence Agent (Jan 24, 2026)
 - **Revolutionary AI Market Agent** - `/ai-agent` page with comprehensive market analysis dashboard
 - **Multi-Source Signal Aggregation** - Synthesizes news, social sentiment, on-chain data, and derivatives into unified intelligence
