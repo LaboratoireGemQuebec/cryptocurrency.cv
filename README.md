@@ -1301,9 +1301,9 @@ Building the definitive open crypto intelligence platform.
 ## 🔨 In Progress
 
 - [ ] Full test of enhanced collection pipeline
-- [ ] LunarCrush / Santiment social metrics integration
+- [x] LunarCrush / Santiment social metrics integration ✅
 - [x] Wire up new market tools to navigation ✅
-- [ ] x402 payment flow testing (Base Sepolia)
+- [x] x402 payment flow testing (Base Sepolia) ✅
 - [x] TradingView chart embeds ✅
 - [x] Portfolio performance charts ✅
 - [x] The Oracle: Natural language queries over all data ✅
@@ -1325,7 +1325,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Admin management dashboard ✅
 - [x] Webhook delivery system ✅
 - [x] API key analytics & insights ✅
-- [ ] Usage-based billing integration
+- [x] Usage-based billing integration (Stripe) ✅
 
 ### Multi-Lingual
 - [x] i18n workflow with 18 languages (auto-translation via Groq - FREE!)
@@ -1362,7 +1362,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Payment button component ✅
 - [x] Payment lifecycle hooks ✅
 - [x] Premium endpoint definitions ✅
-- [ ] Full payment flow E2E testing
+- [x] Full payment flow E2E testing ✅
 - [ ] Mainnet deployment
 
 ### Intelligence Layer (Partial - In Progress)
@@ -1376,9 +1376,13 @@ Building the definitive open crypto intelligence platform.
 ### Social Intelligence (Partial - In Progress)
 - [x] X/Twitter integration via XActions (browser automation - FREE!) ✅
 - [x] Social buzz dashboard (trending coins, sentiment) ✅
-- [ ] Discord public channel monitoring
-- [ ] Telegram channel aggregation
-- [x] Influencer reliability scoring
+- [x] Discord public channel monitoring ✅
+- [x] Telegram channel aggregation ✅
+- [x] Influencer reliability scoring ✅
+- [x] LunarCrush integration (Galaxy Score, AltRank, social volume) ✅
+- [x] Santiment integration (social metrics, dev activity) ✅
+- [x] Social Intelligence Dashboard component ✅
+- [x] Influencer Leaderboard with accuracy tracking ✅
 
 ### On-Chain Correlation (Partial - In Progress)
 - [x] Bitcoin on-chain data (Mempool.space integration) ✅

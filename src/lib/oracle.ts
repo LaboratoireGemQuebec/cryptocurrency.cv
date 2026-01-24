@@ -15,8 +15,8 @@
  */
 
 import { callGroq, isGroqConfigured, type GroqMessage } from './groq';
-import { fetchNews, type NewsArticle } from './crypto-news';
-import { getTopCoins, getGlobalData, type CoinData, type GlobalData } from './market-data';
+import { getLatestNews, type NewsArticle, type NewsResponse } from './crypto-news';
+import { getTopCoins, getGlobalMarketData, type TokenPrice, type GlobalMarketData } from './market-data';
 import { db } from './database';
 import { aiCache, generateCacheKey } from './cache';
 
@@ -308,7 +308,7 @@ async function getMarketSnapshot(maxCoins: number): Promise<MarketSnapshot | nul
   try {
     const [coins, globalData] = await Promise.all([
       getTopCoins(maxCoins),
-      getGlobalData(),
+      getGlobalMarketData(),
     ]);
 
     if (!coins.length) {
@@ -345,8 +345,8 @@ async function getMarketSnapshot(maxCoins: number): Promise<MarketSnapshot | nul
  */
 async function getRecentNews(maxArticles: number): Promise<NewsArticle[]> {
   try {
-    const news = await fetchNews();
-    return news.slice(0, maxArticles);
+    const newsResponse = await getLatestNews(maxArticles);
+    return newsResponse.articles.slice(0, maxArticles);
   } catch (error) {
     console.error('Failed to fetch news:', error);
     return [];
@@ -435,7 +435,7 @@ export async function queryOracle(input: OracleQuery): Promise<OracleResponse> {
   }
 
   // Check cache for identical recent queries (without session context)
-  const cacheKey = generateCacheKey('oracle', input.query, options.responseFormat);
+  const cacheKey = generateCacheKey('oracle', { query: input.query, format: options.responseFormat });
   const cachedResponse = aiCache.get<OracleResponse>(cacheKey);
   
   if (cachedResponse && !input.sessionId) {

@@ -4,8 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyAdminAuth } from '@/lib/admin-auth';
-import { headers } from 'next/headers';
+import { isAdminAuthorized, requireAdminAuth } from '@/lib/admin-auth';
 
 interface UsageRecord {
   apiKey: string;
@@ -30,10 +29,9 @@ const usageStore: UsageRecord[] = [];
 
 export async function GET(request: NextRequest) {
   // Verify admin authentication
-  const headersList = await headers();
-  const authResult = verifyAdminAuth(headersList);
-  if (!authResult.authorized) {
-    return NextResponse.json({ error: authResult.error }, { status: 401 });
+  const authError = requireAdminAuth(request);
+  if (authError) {
+    return authError;
   }
 
   const { searchParams } = new URL(request.url);

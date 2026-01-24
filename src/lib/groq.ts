@@ -195,4 +195,14 @@ function simpleHash(str: string): string {
   return Math.abs(hash).toString(36);
 }
 
+/**
+ * Alias for promptGroq for backward compatibility
+ */
+export const generateGroqResponse = promptGroq;
+
+/**
+ * Alias for callGroq for backward compatibility
+ */
+export const askGroq = callGroq;
+
 export { CACHE_TTL };

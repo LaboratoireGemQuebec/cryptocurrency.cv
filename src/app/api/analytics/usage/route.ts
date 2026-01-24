@@ -72,8 +72,15 @@ export async function GET(request: NextRequest) {
   }
 
   if (!isKvConfigured()) {
-    // Return mock data for demo
-    return NextResponse.json(generateMockAnalytics(keyPrefix || 'demo', days));
+    // Return error when KV is not configured - no mock data
+    return NextResponse.json(
+      { 
+        error: 'Analytics not available',
+        message: 'KV storage is not configured. Please set KV_REST_API_URL and KV_REST_API_TOKEN environment variables.',
+        code: 'KV_NOT_CONFIGURED'
+      },
+      { status: 503 }
+    );
   }
 
   try {
@@ -295,80 +302,3 @@ function generateInsights(
   return insights;
 }
 
-function generateMockAnalytics(keyPrefix: string, days: number): UsageAnalytics {
-  const now = new Date();
-  const startDate = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
-  
-  // Generate mock daily usage with some variance
-  const dailyUsage: UsageDataPoint[] = [];
-  let totalRequests = 0;
-  
-  for (let d = 0; d < days; d++) {
-    const date = new Date(startDate.getTime() + d * 24 * 60 * 60 * 1000);
-    const baseCount = 50 + Math.floor(Math.random() * 100);
-    // Add weekly pattern (higher on weekdays)
-    const dayOfWeek = date.getDay();
-    const weekdayMultiplier = dayOfWeek === 0 || dayOfWeek === 6 ? 0.6 : 1;
-    const count = Math.floor(baseCount * weekdayMultiplier);
-    
-    dailyUsage.push({
-      timestamp: date.toISOString().split('T')[0],
-      count,
-    });
-    totalRequests += count;
-  }
-  
-  // Generate mock hourly usage
-  const hourlyUsage: UsageDataPoint[] = [];
-  for (let h = 0; h < 24; h++) {
-    const hour = new Date(now.getTime() - (24 - h) * 60 * 60 * 1000);
-    // Peak during business hours
-    const hourOfDay = hour.getHours();
-    const baseCount = 5 + Math.floor(Math.random() * 20);
-    const hourMultiplier = hourOfDay >= 9 && hourOfDay <= 17 ? 2 : 0.5;
-    
-    hourlyUsage.push({
-      timestamp: hour.toISOString().slice(0, 13),
-      count: Math.floor(baseCount * hourMultiplier),
-    });
-  }
-  
-  return {
-    keyId: `key_demo_${keyPrefix}`,
-    keyPrefix,
-    tier: 'free',
-    period: {
-      start: startDate.toISOString(),
-      end: now.toISOString(),
-    },
-    summary: {
-      totalRequests,
-      uniqueDays: days - 2,
-      avgRequestsPerDay: Math.round(totalRequests / days),
-      peakHour: { hour: 14, count: 45 },
-      rateLimitHits: 3,
-      quotaUsage: { used: 67, limit: 100, percentage: 67 },
-    },
-    timeSeries: {
-      daily: dailyUsage,
-      hourly: hourlyUsage,
-    },
-    endpoints: [
-      { endpoint: '/api/news', count: Math.floor(totalRequests * 0.4) },
-      { endpoint: '/api/trending', count: Math.floor(totalRequests * 0.25) },
-      { endpoint: '/api/market', count: Math.floor(totalRequests * 0.15) },
-      { endpoint: '/api/search', count: Math.floor(totalRequests * 0.1) },
-      { endpoint: '/api/sentiment', count: Math.floor(totalRequests * 0.1) },
-    ],
-    errors: {
-      total: 12,
-      byStatus: { 429: 8, 500: 3, 400: 1 },
-    },
-    insights: [
-      '📊 Most used endpoint: /api/news (40% of requests)',
-      '⚠️ You hit rate limits 8 times. Consider implementing request throttling.',
-      '💡 Peak usage is around 2 PM. Consider caching during this time.',
-      '📈 Usage increased 15% compared to last week.',
-    ],
-  };
-}

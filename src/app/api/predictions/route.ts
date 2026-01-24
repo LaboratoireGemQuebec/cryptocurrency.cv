@@ -1,289 +1,369 @@
 /**
- * @fileoverview Prediction Tracking & Accuracy Scoring
- * Track predictions made in crypto news and score their accuracy
+ * Prediction Tracking API
+ * 
+ * Enterprise-grade prediction registry with timestamped predictions,
+ * outcome tracking, accuracy scoring, and leaderboard functionality.
+ * 
+ * @module api/predictions
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  createPrediction,
+  getPrediction,
+  getUserPredictions,
+  getAssetPredictions,
+  resolvePrediction,
+  cancelPrediction,
+  getLeaderboard,
+  getPredictionAnalytics,
+  resolveExpiredPredictions,
+  type PredictionInput,
+  type PredictionType,
+  type PredictionTimeframe,
+  type PredictionStatus,
+} from '@/lib/predictions';
+import { checkRateLimit, rateLimitResponse, type RateLimitResult } from '@/lib/rate-limit';
 
-interface Prediction {
-  id: string;
-  source: string;
-  articleUrl: string;
-  articleTitle: string;
-  predictionText: string;
-  predictionType: 'price' | 'event' | 'timeline' | 'market' | 'technology';
-  target: string; // e.g., "BTC", "ETH", or event name
-  direction?: 'up' | 'down' | 'neutral';
-  targetValue?: number;
-  targetDate?: string;
-  confidence?: number;
-  madeAt: string;
-  evaluatedAt?: string;
-  outcome?: 'correct' | 'incorrect' | 'partial' | 'pending';
-  accuracyScore?: number;
-  notes?: string;
+// =============================================================================
+// VALIDATION
+// =============================================================================
+
+function validatePredictionInput(body: unknown): { valid: true; data: PredictionInput } | { valid: false; error: string } {
+  if (!body || typeof body !== 'object') {
+    return { valid: false, error: 'Request body is required' };
+  }
+
+  const data = body as Record<string, unknown>;
+
+  // Required fields
+  if (!data.userId || typeof data.userId !== 'string') {
+    return { valid: false, error: 'userId is required and must be a string' };
+  }
+
+  if (!data.type || typeof data.type !== 'string') {
+    return { valid: false, error: 'type is required and must be a string' };
+  }
+
+  const validTypes: PredictionType[] = [
+    'price_above', 'price_below', 'price_range', 
+    'percentage_up', 'percentage_down', 'event', 
+    'trend', 'dominance', 'custom'
+  ];
+  if (!validTypes.includes(data.type as PredictionType)) {
+    return { valid: false, error: `type must be one of: ${validTypes.join(', ')}` };
+  }
+
+  if (!data.asset || typeof data.asset !== 'string') {
+    return { valid: false, error: 'asset is required and must be a string' };
+  }
+
+  if (!data.targetDate || typeof data.targetDate !== 'string') {
+    return { valid: false, error: 'targetDate is required and must be an ISO date string' };
+  }
+
+  // Validate target date is in the future
+  const targetDate = new Date(data.targetDate);
+  if (isNaN(targetDate.getTime())) {
+    return { valid: false, error: 'targetDate must be a valid ISO date string' };
+  }
+  if (targetDate <= new Date()) {
+    return { valid: false, error: 'targetDate must be in the future' };
+  }
+
+  if (!data.timeframe || typeof data.timeframe !== 'string') {
+    return { valid: false, error: 'timeframe is required' };
+  }
+
+  const validTimeframes: PredictionTimeframe[] = [
+    '1h', '4h', '1d', '3d', '1w', '2w', '1m', '3m', '6m', '1y'
+  ];
+  if (!validTimeframes.includes(data.timeframe as PredictionTimeframe)) {
+    return { valid: false, error: `timeframe must be one of: ${validTimeframes.join(', ')}` };
+  }
+
+  if (typeof data.confidence !== 'number' || data.confidence < 0 || data.confidence > 100) {
+    return { valid: false, error: 'confidence must be a number between 0 and 100' };
+  }
+
+  // Validate target values based on type
+  const priceTypes: PredictionType[] = ['price_above', 'price_below', 'percentage_up', 'percentage_down'];
+  if (priceTypes.includes(data.type as PredictionType)) {
+    if (typeof data.targetValue !== 'number' || data.targetValue <= 0) {
+      return { valid: false, error: 'targetValue is required for price predictions and must be positive' };
+    }
+  }
+
+  if (data.type === 'price_range') {
+    if (typeof data.targetValueMin !== 'number' || typeof data.targetValueMax !== 'number') {
+      return { valid: false, error: 'targetValueMin and targetValueMax are required for range predictions' };
+    }
+    if (data.targetValueMin >= data.targetValueMax) {
+      return { valid: false, error: 'targetValueMin must be less than targetValueMax' };
+    }
+  }
+
+  return {
+    valid: true,
+    data: {
+      userId: data.userId as string,
+      userDisplayName: data.userDisplayName as string | undefined,
+      type: data.type as PredictionType,
+      asset: data.asset as string,
+      targetValue: data.targetValue as number | undefined,
+      targetValueMin: data.targetValueMin as number | undefined,
+      targetValueMax: data.targetValueMax as number | undefined,
+      targetDate: data.targetDate as string,
+      timeframe: data.timeframe as PredictionTimeframe,
+      reasoning: data.reasoning as string | undefined,
+      confidence: data.confidence as number,
+      isPublic: data.isPublic as boolean | undefined,
+      tags: data.tags as string[] | undefined,
+    },
+  };
 }
 
-interface SourceAccuracy {
-  source: string;
-  totalPredictions: number;
-  evaluated: number;
-  correct: number;
-  incorrect: number;
-  partial: number;
-  pending: number;
-  accuracyRate: number;
-  avgConfidence: number;
-  byType: Record<string, { total: number; correct: number; rate: number }>;
-}
-
-// In-memory store (use database in production)
-const predictions: Prediction[] = [];
+// =============================================================================
+// GET: List predictions
+// =============================================================================
 
 /**
- * GET: Retrieve predictions with filtering
+ * @openapi
+ * /api/predictions:
+ *   get:
+ *     summary: List predictions with filtering
+ *     parameters:
+ *       - name: userId
+ *         in: query
+ *         schema:
+ *           type: string
+ *       - name: asset
+ *         in: query
+ *         schema:
+ *           type: string
+ *       - name: status
+ *         in: query
+ *         schema:
+ *           type: string
+ *           enum: [pending, correct, incorrect, partially_correct, expired, cancelled]
+ *       - name: view
+ *         in: query
+ *         schema:
+ *           type: string
+ *           enum: [list, leaderboard, analytics]
+ *       - name: limit
+ *         in: query
+ *         schema:
+ *           type: integer
+ *           default: 50
  */
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const source = searchParams.get('source');
-  const outcome = searchParams.get('outcome');
-  const type = searchParams.get('type');
-  const target = searchParams.get('target');
-  const limit = parseInt(searchParams.get('limit') || '50');
-  const offset = parseInt(searchParams.get('offset') || '0');
+  try {
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+    const asset = searchParams.get('asset');
+    const status = searchParams.get('status') as PredictionStatus | null;
+    const view = searchParams.get('view') || 'list';
+    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
+    const minPredictions = parseInt(searchParams.get('minPredictions') || '5');
 
-  let filtered = [...predictions];
+    // Rate limiting
+    const rateLimit = checkRateLimit(request);
+    if (!rateLimit.allowed) {
+      return rateLimitResponse(rateLimit);
+    }
 
-  if (source) {
-    filtered = filtered.filter((p) =>
-      p.source.toLowerCase().includes(source.toLowerCase())
+    // Handle different views
+    switch (view) {
+      case 'leaderboard': {
+        const leaderboard = await getLeaderboard({ limit, minPredictions });
+        return NextResponse.json({
+          success: true,
+          data: leaderboard,
+          meta: {
+            view: 'leaderboard',
+            minPredictions,
+            limit,
+          },
+        });
+      }
+
+      case 'analytics': {
+        const analytics = await getPredictionAnalytics();
+        return NextResponse.json({
+          success: true,
+          data: analytics,
+          meta: {
+            view: 'analytics',
+          },
+        });
+      }
+
+      case 'list':
+      default: {
+        let predictions;
+        
+        if (userId) {
+          predictions = await getUserPredictions(userId, { 
+            status: status || undefined, 
+            limit 
+          });
+        } else if (asset) {
+          predictions = await getAssetPredictions(asset, { 
+            status: status || undefined, 
+            limit 
+          });
+        } else {
+          // Return public predictions
+          predictions = await getAssetPredictions('', { 
+            status: status || undefined, 
+            limit 
+          });
+        }
+
+        return NextResponse.json({
+          success: true,
+          data: predictions,
+          meta: {
+            view: 'list',
+            count: predictions.length,
+            limit,
+            filters: {
+              userId: userId || undefined,
+              asset: asset || undefined,
+              status: status || undefined,
+            },
+          },
+        });
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching predictions:', error);
+    return NextResponse.json(
+      { 
+        success: false, 
+        error: error instanceof Error ? error.message : 'Failed to fetch predictions' 
+      },
+      { status: 500 }
     );
   }
-
-  if (outcome) {
-    filtered = filtered.filter((p) => p.outcome === outcome);
-  }
-
-  if (type) {
-    filtered = filtered.filter((p) => p.predictionType === type);
-  }
-
-  if (target) {
-    filtered = filtered.filter((p) =>
-      p.target.toLowerCase().includes(target.toLowerCase())
-    );
-  }
-
-  // Sort by date, newest first
-  filtered.sort(
-    (a, b) => new Date(b.madeAt).getTime() - new Date(a.madeAt).getTime()
-  );
-
-  const total = filtered.length;
-  const paginated = filtered.slice(offset, offset + limit);
-
-  // Calculate overall stats
-  const stats = calculateStats(predictions);
-
-  return NextResponse.json({
-    predictions: paginated,
-    pagination: {
-      total,
-      limit,
-      offset,
-      hasMore: offset + limit < total,
-    },
-    stats,
-  });
 }
 
+// =============================================================================
+// POST: Create or resolve prediction
+// =============================================================================
+
 /**
- * POST: Add a new prediction
+ * @openapi
+ * /api/predictions:
+ *   post:
+ *     summary: Create a new prediction or resolve an existing one
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             oneOf:
+ *               - $ref: '#/components/schemas/PredictionInput'
+ *               - $ref: '#/components/schemas/ResolvePredictionInput'
  */
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const rateLimit = checkRateLimit(request);
+    if (!rateLimit.allowed) {
+      return rateLimitResponse(rateLimit);
+    }
+
     const body = await request.json();
 
-    // Validate required fields
-    if (!body.source || !body.predictionText || !body.target) {
+    // Check if this is a resolution request
+    if (body.action === 'resolve') {
+      if (!body.predictionId) {
+        return NextResponse.json(
+          { success: false, error: 'predictionId is required for resolution' },
+          { status: 400 }
+        );
+      }
+
+      const prediction = await resolvePrediction(body.predictionId, body.manualOutcome);
+      
+      return NextResponse.json({
+        success: true,
+        data: prediction,
+        message: `Prediction resolved as ${prediction.status}`,
+      });
+    }
+
+    // Check if this is a cancel request
+    if (body.action === 'cancel') {
+      if (!body.predictionId || !body.userId) {
+        return NextResponse.json(
+          { success: false, error: 'predictionId and userId are required for cancellation' },
+          { status: 400 }
+        );
+      }
+
+      const prediction = await cancelPrediction(body.predictionId, body.userId);
+      
+      return NextResponse.json({
+        success: true,
+        data: prediction,
+        message: 'Prediction cancelled',
+      });
+    }
+
+    // Check if this is a batch resolution request
+    if (body.action === 'resolve_expired') {
+      const result = await resolveExpiredPredictions();
+      
+      return NextResponse.json({
+        success: true,
+        data: result,
+        message: `Resolved ${result.resolved} predictions, ${result.failed} failed`,
+      });
+    }
+
+    // Otherwise, create a new prediction
+    const validation = validatePredictionInput(body);
+    if (!validation.valid) {
       return NextResponse.json(
-        { error: 'Missing required fields: source, predictionText, target' },
+        { success: false, error: validation.error },
         { status: 400 }
       );
     }
 
-    const prediction: Prediction = {
-      id: `pred_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
-      source: body.source,
-      articleUrl: body.articleUrl || '',
-      articleTitle: body.articleTitle || '',
-      predictionText: body.predictionText,
-      predictionType: body.predictionType || 'market',
-      target: body.target,
-      direction: body.direction,
-      targetValue: body.targetValue,
-      targetDate: body.targetDate,
-      confidence: body.confidence,
-      madeAt: body.madeAt || new Date().toISOString(),
-      outcome: 'pending',
-    };
-
-    predictions.push(prediction);
+    const prediction = await createPrediction(validation.data);
 
     return NextResponse.json({
-      message: 'Prediction recorded',
-      prediction,
-    });
+      success: true,
+      data: prediction,
+      message: 'Prediction created successfully',
+    }, { status: 201 });
+
   } catch (error) {
+    console.error('Error handling prediction request:', error);
     return NextResponse.json(
-      { error: 'Invalid request body' },
-      { status: 400 }
+      { 
+        success: false, 
+        error: error instanceof Error ? error.message : 'Failed to process request' 
+      },
+      { status: 500 }
     );
   }
 }
 
-/**
- * PATCH: Update prediction outcome
- */
-export async function PATCH(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { id, outcome, accuracyScore, notes } = body;
+// =============================================================================
+// OPTIONS: CORS support
+// =============================================================================
 
-    if (!id || !outcome) {
-      return NextResponse.json(
-        { error: 'Missing required fields: id, outcome' },
-        { status: 400 }
-      );
-    }
-
-    const prediction = predictions.find((p) => p.id === id);
-    if (!prediction) {
-      return NextResponse.json(
-        { error: 'Prediction not found' },
-        { status: 404 }
-      );
-    }
-
-    prediction.outcome = outcome;
-    prediction.evaluatedAt = new Date().toISOString();
-    if (accuracyScore !== undefined) prediction.accuracyScore = accuracyScore;
-    if (notes) prediction.notes = notes;
-
-    return NextResponse.json({
-      message: 'Prediction updated',
-      prediction,
-    });
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'Invalid request body' },
-      { status: 400 }
-    );
-  }
-}
-
-/**
- * Calculate accuracy statistics
- */
-function calculateStats(preds: Prediction[]) {
-  const total = preds.length;
-  const evaluated = preds.filter((p) => p.outcome !== 'pending').length;
-  const correct = preds.filter((p) => p.outcome === 'correct').length;
-  const incorrect = preds.filter((p) => p.outcome === 'incorrect').length;
-  const partial = preds.filter((p) => p.outcome === 'partial').length;
-  const pending = preds.filter((p) => p.outcome === 'pending').length;
-
-  // Overall accuracy (correct + 0.5*partial) / evaluated
-  const accuracyRate =
-    evaluated > 0
-      ? ((correct + 0.5 * partial) / evaluated) * 100
-      : 0;
-
-  // By type
-  const byType: Record<
-    string,
-    { total: number; correct: number; rate: number }
-  > = {};
-  const types = ['price', 'event', 'timeline', 'market', 'technology'];
-  for (const type of types) {
-    const typePreds = preds.filter((p) => p.predictionType === type);
-    const typeEvaluated = typePreds.filter(
-      (p) => p.outcome !== 'pending'
-    ).length;
-    const typeCorrect = typePreds.filter((p) => p.outcome === 'correct').length;
-    byType[type] = {
-      total: typePreds.length,
-      correct: typeCorrect,
-      rate: typeEvaluated > 0 ? (typeCorrect / typeEvaluated) * 100 : 0,
-    };
-  }
-
-  // By source
-  const sourceAccuracy: SourceAccuracy[] = [];
-  const sources = [...new Set(preds.map((p) => p.source))];
-
-  for (const source of sources) {
-    const sourcePreds = preds.filter((p) => p.source === source);
-    const sourceEval = sourcePreds.filter((p) => p.outcome !== 'pending');
-    const sourceCorrect = sourcePreds.filter(
-      (p) => p.outcome === 'correct'
-    ).length;
-    const sourcePartial = sourcePreds.filter(
-      (p) => p.outcome === 'partial'
-    ).length;
-
-    const sourceByType: Record<
-      string,
-      { total: number; correct: number; rate: number }
-    > = {};
-    for (const type of types) {
-      const typePreds = sourcePreds.filter((p) => p.predictionType === type);
-      const typeEval = typePreds.filter((p) => p.outcome !== 'pending').length;
-      const typeCorrect = typePreds.filter(
-        (p) => p.outcome === 'correct'
-      ).length;
-      sourceByType[type] = {
-        total: typePreds.length,
-        correct: typeCorrect,
-        rate: typeEval > 0 ? (typeCorrect / typeEval) * 100 : 0,
-      };
-    }
-
-    sourceAccuracy.push({
-      source,
-      totalPredictions: sourcePreds.length,
-      evaluated: sourceEval.length,
-      correct: sourceCorrect,
-      incorrect: sourcePreds.filter((p) => p.outcome === 'incorrect').length,
-      partial: sourcePartial,
-      pending: sourcePreds.filter((p) => p.outcome === 'pending').length,
-      accuracyRate:
-        sourceEval.length > 0
-          ? ((sourceCorrect + 0.5 * sourcePartial) / sourceEval.length) * 100
-          : 0,
-      avgConfidence:
-        sourcePreds.filter((p) => p.confidence).length > 0
-          ? sourcePreds
-              .filter((p) => p.confidence)
-              .reduce((sum, p) => sum + (p.confidence || 0), 0) /
-            sourcePreds.filter((p) => p.confidence).length
-          : 0,
-      byType: sourceByType,
-    });
-  }
-
-  // Sort by accuracy rate
-  sourceAccuracy.sort((a, b) => b.accuracyRate - a.accuracyRate);
-
-  return {
-    total,
-    evaluated,
-    correct,
-    incorrect,
-    partial,
-    pending,
-    accuracyRate: parseFloat(accuracyRate.toFixed(1)),
-    byType,
-    topSources: sourceAccuracy.slice(0, 10),
-  };
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  });
 }

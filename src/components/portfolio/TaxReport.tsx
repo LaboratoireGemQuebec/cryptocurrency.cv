@@ -82,7 +82,7 @@ export function TaxReport() {
         buys[coinKey].push({
           date: tx.date,
           amount: tx.amount,
-          price: tx.price,
+          price: tx.pricePerCoin,
         });
 
         // Sort based on method
@@ -122,7 +122,7 @@ export function TaxReport() {
           buys[coinKey] = coinBuys.filter((b) => b.amount > 0);
         }
 
-        const proceeds = tx.amount * tx.price;
+        const proceeds = tx.amount * tx.pricePerCoin;
         const gainLoss = proceeds - totalCostBasis;
 
         // Determine holding period (short = < 1 year, long = >= 1 year)

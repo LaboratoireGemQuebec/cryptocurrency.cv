@@ -104,6 +104,11 @@ export function isAdminAuthorized(request: NextRequest): boolean {
 }
 
 /**
+ * Alias for isAdminAuthorized for backward compatibility
+ */
+export const verifyAdminAuth = isAdminAuthorized;
+
+/**
  * Check if admin authentication is properly configured
  */
 export function isAdminConfigured(): boolean {

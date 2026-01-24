@@ -15,8 +15,11 @@
  */
 
 import { db } from './database';
-import { getTopCoins, type CoinData } from './market-data';
+import { getTopCoins, type TokenPrice } from './market-data';
 import { aiCache } from './cache';
+
+// Alias for compatibility
+type CoinData = TokenPrice;
 
 // =============================================================================
 // TYPES

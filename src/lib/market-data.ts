@@ -1834,3 +1834,22 @@ export function getFearGreedBgColor(value: number): string {
   if (value <= 75) return 'bg-lime-500';
   return 'bg-green-500';
 }
+
+// =============================================================================
+// BACKWARD COMPATIBILITY ALIASES
+// =============================================================================
+
+/**
+ * Type alias for TokenPrice - provides backward compatibility
+ */
+export type CoinData = TokenPrice;
+
+/**
+ * Type alias for GlobalMarketData - provides backward compatibility
+ */
+export type GlobalData = GlobalMarketData;
+
+/**
+ * Alias for getGlobalMarketData - provides backward compatibility
+ */
+export const getGlobalData = getGlobalMarketData;

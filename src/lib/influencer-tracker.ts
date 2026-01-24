@@ -484,60 +484,189 @@ export function rankInfluencers(
 }
 
 // =============================================================================
-// Storage Interface
+// Storage Interface with Vercel KV
 // =============================================================================
 
-// In-memory storage for demo (use database in production)
+import { kv } from '@vercel/kv';
+
+// Cache keys for influencer data
+const INFLUENCER_PREFIX = 'influencer:';
+const CALL_PREFIX = 'call:';
+const INFLUENCER_INDEX = 'influencers:all';
+const CALL_INDEX = 'calls:all';
+
+// In-memory fallback when KV is not available
 const influencerStore = new Map<string, Influencer>();
 const callStore = new Map<string, TradingCall>();
 
 /**
+ * Check if Vercel KV is configured
+ */
+function isKvConfigured(): boolean {
+  return !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+}
+
+/**
  * Store or update an influencer
  */
-export function upsertInfluencer(influencer: Influencer): void {
-  influencerStore.set(influencer.id, influencer);
+export async function upsertInfluencer(influencer: Influencer): Promise<void> {
+  if (isKvConfigured()) {
+    try {
+      await kv.set(`${INFLUENCER_PREFIX}${influencer.id}`, influencer);
+      // Add to index
+      await kv.sadd(INFLUENCER_INDEX, influencer.id);
+    } catch (error) {
+      console.error('Failed to store influencer in KV:', error);
+      // Fallback to in-memory
+      influencerStore.set(influencer.id, influencer);
+    }
+  } else {
+    influencerStore.set(influencer.id, influencer);
+  }
 }
 
 /**
  * Get an influencer by ID
  */
-export function getInfluencer(id: string): Influencer | undefined {
+export async function getInfluencer(id: string): Promise<Influencer | undefined> {
+  if (isKvConfigured()) {
+    try {
+      const data = await kv.get<Influencer>(`${INFLUENCER_PREFIX}${id}`);
+      return data || undefined;
+    } catch (error) {
+      console.error('Failed to get influencer from KV:', error);
+      return influencerStore.get(id);
+    }
+  }
   return influencerStore.get(id);
 }
 
 /**
  * Get all influencers
  */
-export function getAllInfluencers(): Influencer[] {
+export async function getAllInfluencers(): Promise<Influencer[]> {
+  if (isKvConfigured()) {
+    try {
+      const ids = await kv.smembers(INFLUENCER_INDEX) as string[];
+      if (!ids || ids.length === 0) return [];
+      
+      const influencers = await Promise.all(
+        ids.map(id => kv.get<Influencer>(`${INFLUENCER_PREFIX}${id}`))
+      );
+      return influencers.filter((i): i is Influencer => i !== null);
+    } catch (error) {
+      console.error('Failed to get all influencers from KV:', error);
+      return Array.from(influencerStore.values());
+    }
+  }
   return Array.from(influencerStore.values());
 }
 
 /**
  * Store a trading call
  */
-export function addCall(call: TradingCall): void {
-  callStore.set(call.id, call);
+export async function addCall(call: TradingCall): Promise<void> {
+  if (isKvConfigured()) {
+    try {
+      await kv.set(`${CALL_PREFIX}${call.id}`, call);
+      // Add to index and influencer-specific index
+      await kv.sadd(CALL_INDEX, call.id);
+      await kv.sadd(`calls:influencer:${call.influencerId}`, call.id);
+      if (call.status === 'open') {
+        await kv.sadd('calls:open', call.id);
+      }
+    } catch (error) {
+      console.error('Failed to store call in KV:', error);
+      callStore.set(call.id, call);
+    }
+  } else {
+    callStore.set(call.id, call);
+  }
 }
 
 /**
  * Get calls for an influencer
  */
-export function getInfluencerCalls(influencerId: string): TradingCall[] {
+export async function getInfluencerCalls(influencerId: string): Promise<TradingCall[]> {
+  if (isKvConfigured()) {
+    try {
+      const ids = await kv.smembers(`calls:influencer:${influencerId}`) as string[];
+      if (!ids || ids.length === 0) return [];
+      
+      const calls = await Promise.all(
+        ids.map(id => kv.get<TradingCall>(`${CALL_PREFIX}${id}`))
+      );
+      return calls.filter((c): c is TradingCall => c !== null);
+    } catch (error) {
+      console.error('Failed to get influencer calls from KV:', error);
+      return Array.from(callStore.values()).filter(c => c.influencerId === influencerId);
+    }
+  }
   return Array.from(callStore.values()).filter(c => c.influencerId === influencerId);
 }
 
 /**
  * Get all open calls
  */
-export function getOpenCalls(): TradingCall[] {
+export async function getOpenCalls(): Promise<TradingCall[]> {
+  if (isKvConfigured()) {
+    try {
+      const ids = await kv.smembers('calls:open') as string[];
+      if (!ids || ids.length === 0) return [];
+      
+      const calls = await Promise.all(
+        ids.map(id => kv.get<TradingCall>(`${CALL_PREFIX}${id}`))
+      );
+      return calls.filter((c): c is TradingCall => c !== null && c.status === 'open');
+    } catch (error) {
+      console.error('Failed to get open calls from KV:', error);
+      return Array.from(callStore.values()).filter(c => c.status === 'open');
+    }
+  }
   return Array.from(callStore.values()).filter(c => c.status === 'open');
 }
 
 /**
  * Update a call
  */
-export function updateCall(call: TradingCall): void {
-  callStore.set(call.id, call);
+export async function updateCall(call: TradingCall): Promise<void> {
+  if (isKvConfigured()) {
+    try {
+      await kv.set(`${CALL_PREFIX}${call.id}`, call);
+      // Update open calls index
+      if (call.status === 'open') {
+        await kv.sadd('calls:open', call.id);
+      } else {
+        await kv.srem('calls:open', call.id);
+      }
+    } catch (error) {
+      console.error('Failed to update call in KV:', error);
+      callStore.set(call.id, call);
+    }
+  } else {
+    callStore.set(call.id, call);
+  }
+}
+
+/**
+ * Get all calls (for analytics)
+ */
+async function getAllCalls(): Promise<TradingCall[]> {
+  if (isKvConfigured()) {
+    try {
+      const ids = await kv.smembers(CALL_INDEX) as string[];
+      if (!ids || ids.length === 0) return [];
+      
+      const calls = await Promise.all(
+        ids.map(id => kv.get<TradingCall>(`${CALL_PREFIX}${id}`))
+      );
+      return calls.filter((c): c is TradingCall => c !== null);
+    } catch (error) {
+      console.error('Failed to get all calls from KV:', error);
+      return Array.from(callStore.values());
+    }
+  }
+  return Array.from(callStore.values());
 }
 
 // =============================================================================
@@ -547,9 +676,9 @@ export function updateCall(call: TradingCall): void {
 /**
  * Get overall influencer statistics
  */
-export function getInfluencerStats(): InfluencerStats {
-  const influencers = getAllInfluencers();
-  const calls = Array.from(callStore.values());
+export async function getInfluencerStats(): Promise<InfluencerStats> {
+  const influencers = await getAllInfluencers();
+  const calls = await getAllCalls();
   
   const activeInfluencers = influencers.filter(i => {
     const lastActive = new Date(i.lastActive);
@@ -588,13 +717,14 @@ export function getInfluencerStats(): InfluencerStats {
 /**
  * Get ticker-specific influencer performance
  */
-export function getTickerInfluencerStats(ticker: string): Array<{
+export async function getTickerInfluencerStats(ticker: string): Promise<Array<{
   influencer: Influencer;
   calls: number;
   accuracy: number;
   avgReturn: number;
-}> {
-  const calls = Array.from(callStore.values()).filter(c => c.ticker === ticker);
+}>> {
+  const allCalls = await getAllCalls();
+  const calls = allCalls.filter(c => c.ticker === ticker);
   
   const byInfluencer = new Map<string, TradingCall[]>();
   for (const call of calls) {
@@ -605,7 +735,7 @@ export function getTickerInfluencerStats(ticker: string): Array<{
   
   const stats = [];
   for (const [influencerId, infCalls] of byInfluencer) {
-    const influencer = getInfluencer(influencerId);
+    const influencer = await getInfluencer(influencerId);
     if (!influencer) continue;
     
     const resolved = infCalls.filter(c => c.status !== 'open');

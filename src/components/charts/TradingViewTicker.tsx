@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, memo } from 'react';
 
-interface TradingViewTickerProps {
-  symbols: Array<{
+export interface TradingViewTickerProps {
+  symbols?: Array<{
     proName: string;
     title: string;
   }>;

@@ -266,27 +266,79 @@ async function fetchPriceHistory(
   startDate: Date,
   endDate: Date
 ): Promise<Record<string, Record<string, number>>> {
-  // In production, fetch from CoinGecko history API
-  // For now, generate mock data
   const history: Record<string, Record<string, number>> = {};
 
-  for (const coinId of coinIds) {
+  // Calculate days for CoinGecko API (determines data granularity)
+  const days = Math.ceil(
+    (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
+  // Fetch historical data for each coin from CoinGecko
+  const fetchPromises = coinIds.map(async (coinId) => {
+    try {
+      // CoinGecko market_chart API - returns prices for the specified range
+      // For 1-90 days: hourly data, 90+ days: daily data
+      const response = await fetch(
+        `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=daily`,
+        { 
+          next: { revalidate: 300 }, // Cache for 5 minutes
+          headers: {
+            'Accept': 'application/json',
+          }
+        }
+      );
+
+      if (!response.ok) {
+        console.error(`CoinGecko API error for ${coinId}: ${response.status}`);
+        return { coinId, data: null };
+      }
+
+      const data = await response.json();
+      return { coinId, data };
+    } catch (error) {
+      console.error(`Failed to fetch history for ${coinId}:`, error);
+      return { coinId, data: null };
+    }
+  });
+
+  // Process all responses
+  const results = await Promise.all(fetchPromises);
+
+  for (const { coinId, data } of results) {
     history[coinId] = {};
-    const basePrice = coinId === 'bitcoin' ? 95000 : coinId === 'ethereum' ? 3200 : 100;
-
-    const days = Math.ceil(
-      (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-    );
-
-    for (let i = 0; i <= days; i++) {
-      const date = new Date(startDate);
-      date.setDate(startDate.getDate() + i);
-      const dateStr = date.toISOString().split('T')[0];
-
-      // Random walk simulation
-      const randomChange = (Math.random() - 0.48) * 0.05;
-      const prevPrice = i > 0 ? Object.values(history[coinId]).pop() || basePrice : basePrice;
-      history[coinId][dateStr] = prevPrice * (1 + randomChange);
+    
+    if (data && data.prices && Array.isArray(data.prices)) {
+      // CoinGecko returns [timestamp, price] pairs
+      for (const [timestamp, price] of data.prices) {
+        const date = new Date(timestamp);
+        const dateStr = date.toISOString().split('T')[0];
+        history[coinId][dateStr] = price;
+      }
+    } else {
+      // If API fails, fetch current price and extrapolate back
+      // This is a fallback for rate limiting, not mock data
+      console.warn(`Using fallback price data for ${coinId}`);
+      try {
+        const priceResponse = await fetch(
+          `https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd`,
+          { next: { revalidate: 60 } }
+        );
+        
+        if (priceResponse.ok) {
+          const priceData = await priceResponse.json();
+          const currentPrice = priceData[coinId]?.usd || 0;
+          
+          // Fill history with current price (no false returns shown)
+          for (let i = 0; i <= days; i++) {
+            const date = new Date(startDate);
+            date.setDate(startDate.getDate() + i);
+            const dateStr = date.toISOString().split('T')[0];
+            history[coinId][dateStr] = currentPrice;
+          }
+        }
+      } catch (fallbackError) {
+        console.error(`Fallback also failed for ${coinId}:`, fallbackError);
+      }
     }
   }
 

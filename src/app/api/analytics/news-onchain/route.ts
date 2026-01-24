@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { fetchNews } from '@/lib/crypto-news';
-import { getTopCoins } from '@/lib/market-data';
+import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { getTopCoins, type TokenPrice } from '@/lib/market-data';
 
 interface NewsOnChainCorrelation {
   article: {
@@ -24,19 +24,19 @@ export async function GET(request: NextRequest) {
     const hours = parseInt(searchParams.get('hours') || '24');
     
     // Get recent news
-    const news = await fetchNews();
-    const recentNews = news.slice(0, 50);
+    const newsResponse = await getLatestNews(50);
+    const recentNews = newsResponse.articles;
     
     // Get market data for context
     const coins = await getTopCoins(20);
     
     // Find significant price movements (> 5% in 24h)
-    const significantMoves = coins.filter(c => 
+    const significantMoves = coins.filter((c: TokenPrice) => 
       Math.abs(c.price_change_percentage_24h || 0) > 5
     );
     
     // Correlate news with on-chain events
-    const correlations: NewsOnChainCorrelation[] = recentNews.slice(0, 20).map(article => {
+    const correlations: NewsOnChainCorrelation[] = recentNews.slice(0, 20).map((article: NewsArticle) => {
       const relatedEvents: NewsOnChainCorrelation['related_events'] = [];
       const titleLower = article.title.toLowerCase();
       

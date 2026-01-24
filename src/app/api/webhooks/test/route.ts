@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
     // Verify the webhook exists and belongs to this key
     const webhook = await getWebhookById(webhookId);
 
-    if (!webhook || webhook.userId !== auth.keyId) {
+    if (!webhook || webhook.keyId !== auth.keyId) {
       return NextResponse.json(
         { error: 'Not found', message: 'Webhook not found or access denied' },
         { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } }

@@ -32,6 +32,7 @@ export function FundingRates({
 }: FundingRatesProps) {
   const [rates, setRates] = useState<FundingRate[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'rate' | 'annualized' | 'volume'>('annualized');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
   const [filter, setFilter] = useState<'all' | 'positive' | 'negative'>('all');
@@ -44,10 +45,14 @@ export function FundingRates({
 
   async function fetchFundingRates() {
     try {
+      setError(null);
+      
       // Fetch from Binance Futures API (free, no key needed)
       const response = await fetch('https://fapi.binance.com/fapi/v1/premiumIndex');
       
-      if (!response.ok) throw new Error('Failed to fetch funding rates');
+      if (!response.ok) {
+        throw new Error(`Binance API error: ${response.status}`);
+      }
       
       const data = await response.json();
       
@@ -65,32 +70,12 @@ export function FundingRates({
         .slice(0, 50);
 
       setRates(formattedRates);
-    } catch (error) {
-      console.error('Failed to fetch funding rates:', error);
-      // Use mock data as fallback
-      setRates(generateMockRates());
+    } catch (err) {
+      console.error('Failed to fetch funding rates:', err);
+      setError(err instanceof Error ? err.message : 'Failed to fetch funding rates');
     } finally {
       setLoading(false);
     }
-  }
-
-  function generateMockRates(): FundingRate[] {
-    const coins = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'DOGE', 'ADA', 'AVAX', 'DOT', 'LINK',
-      'MATIC', 'UNI', 'LTC', 'ATOM', 'FIL', 'APT', 'ARB', 'OP', 'INJ', 'TIA'];
-    
-    return coins.map(symbol => {
-      const rate = (Math.random() - 0.3) * 0.15; // Slightly positive bias
-      return {
-        symbol,
-        name: `${symbol}USDT`,
-        rate,
-        annualized: rate * 3 * 365,
-        nextFunding: new Date(Date.now() + Math.random() * 8 * 60 * 60 * 1000).toISOString(),
-        exchange: 'Binance',
-        openInterest: Math.floor(Math.random() * 1000000000) + 10000000,
-        volume24h: Math.floor(Math.random() * 5000000000) + 100000000,
-      };
-    });
   }
 
   // Filter and sort rates
@@ -158,6 +143,48 @@ export function FundingRates({
           {Array.from({ length: 5 }).map((_, i) => (
             <div key={i} className="h-12 bg-neutral-200 dark:bg-neutral-800 rounded" />
           ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+        <div className="flex flex-col items-center justify-center py-8 text-center">
+          <svg className="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+            Failed to Load Funding Rates
+          </h3>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+            {error}
+          </p>
+          <button
+            onClick={fetchFundingRates}
+            className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-medium transition-colors"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (rates.length === 0) {
+    return (
+      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+        <div className="flex flex-col items-center justify-center py-8 text-center">
+          <svg className="w-12 h-12 text-neutral-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+          </svg>
+          <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+            No Funding Rates Available
+          </h3>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+            Data will appear when the exchange API responds
+          </p>
         </div>
       </div>
     );
@@ -280,5 +307,8 @@ export function FundingRates({
     </div>
   );
 }
+
+// Alias for backward compatibility
+export const MultiFundingRates = FundingRates;
 
 export default FundingRates;

@@ -588,3 +588,8 @@ export async function getGlobalNews(
     internationalCount: convertedIntlArticles.length,
   };
 }
+
+/**
+ * Alias for getLatestNews for backward compatibility
+ */
+export const fetchNews = getLatestNews;

@@ -60,7 +60,10 @@ export default function ChartsPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
       {/* Ticker Tape */}
       <div className="border-b border-gray-200 dark:border-gray-800">
-        <TradingViewTicker theme={theme} />
+        <TradingViewTicker 
+          symbols={POPULAR_PAIRS.map(p => ({ proName: p.symbol, title: p.name }))}
+          theme={theme} 
+        />
       </div>
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">

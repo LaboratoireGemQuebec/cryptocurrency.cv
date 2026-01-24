@@ -426,7 +426,8 @@ class VercelKVBackend {
 
   async zadd(key: string, score: number, member: string): Promise<number> {
     await this.init();
-    return this.kv!.zadd(key, { score, member });
+    const result = await this.kv!.zadd(key, { score, member });
+    return result ?? 0;
   }
 
   async zrange(key: string, start: number, stop: number): Promise<string[]> {

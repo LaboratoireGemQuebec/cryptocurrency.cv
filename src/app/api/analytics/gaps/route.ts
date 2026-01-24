@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getTopCoins } from '@/lib/market-data';
-import { fetchNews } from '@/lib/crypto-news';
+import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 
 export async function GET() {
   try {
@@ -9,11 +9,12 @@ export async function GET() {
     const coinSymbols = topCoins.map(c => c.symbol.toUpperCase());
     
     // Get recent news
-    const news = await fetchNews();
+    const newsResponse = await getLatestNews(50);
+    const articles = newsResponse.articles;
     
     // Extract mentioned tickers from news
     const mentionedTickers = new Set<string>();
-    news.forEach(article => {
+    articles.forEach((article: NewsArticle) => {
       const text = `${article.title} ${article.description || ''}`.toUpperCase();
       coinSymbols.forEach(symbol => {
         if (text.includes(symbol) || text.includes(topCoins.find(c => c.symbol.toUpperCase() === symbol)?.name.toUpperCase() || '')) {
@@ -37,7 +38,7 @@ export async function GET() {
     
     // Find over-covered (mentioned multiple times)
     const mentionCounts: Record<string, number> = {};
-    news.forEach(article => {
+    articles.forEach((article: NewsArticle) => {
       const text = `${article.title} ${article.description || ''}`.toUpperCase();
       coinSymbols.forEach(symbol => {
         if (text.includes(symbol)) {
@@ -58,7 +59,7 @@ export async function GET() {
     return NextResponse.json({
       analysis_time: new Date().toISOString(),
       total_coins_analyzed: topCoins.length,
-      total_articles_analyzed: news.length,
+      total_articles_analyzed: articles.length,
       coverage_gaps: gaps,
       high_coverage: overCovered,
       coverage_rate: ((mentionedTickers.size / topCoins.length) * 100).toFixed(1) + '%'

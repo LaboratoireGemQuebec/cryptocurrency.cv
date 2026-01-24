@@ -5,6 +5,17 @@ import { NextRequest, NextResponse } from 'next/server';
  * For production, use Redis or similar
  */
 
+// Custom error class for rate limiting
+export class RateLimitError extends Error {
+  retryAfter: number;
+  
+  constructor(retryAfter: number) {
+    super('Rate limit exceeded');
+    this.name = 'RateLimitError';
+    this.retryAfter = retryAfter;
+  }
+}
+
 interface RateLimitEntry {
   count: number;
   resetTime: number;
@@ -152,3 +163,46 @@ export function withRateLimit(
     return addRateLimitHeaders(response, result);
   };
 }
+
+/**
+ * Key-based rate limiter for use outside of request context
+ * 
+ * Usage:
+ * ```
+ * await rateLimiter.checkLimit('api:user:123');
+ * ```
+ */
+export const rateLimiter = {
+  async checkLimit(key: string, maxRequests = 60, windowMs = 60000): Promise<void> {
+    const now = Date.now();
+    
+    let entry = rateLimitStore.get(key);
+    
+    if (!entry || now > entry.resetTime) {
+      entry = {
+        count: 0,
+        resetTime: now + windowMs,
+      };
+    }
+    
+    entry.count++;
+    rateLimitStore.set(key, entry);
+    
+    if (entry.count > maxRequests) {
+      const retryAfter = Math.ceil((entry.resetTime - now) / 1000);
+      throw new RateLimitError(retryAfter);
+    }
+  },
+  
+  getRemainingRequests(key: string, maxRequests = 60): number {
+    const entry = rateLimitStore.get(key);
+    if (!entry || Date.now() > entry.resetTime) {
+      return maxRequests;
+    }
+    return Math.max(0, maxRequests - entry.count);
+  },
+  
+  reset(key: string): void {
+    rateLimitStore.delete(key);
+  }
+};
