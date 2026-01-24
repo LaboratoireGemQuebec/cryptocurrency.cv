@@ -42,6 +42,11 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [Market Data](#market-data)
   - [GET /api/sources](#get-apisources)
   - [GET /api/stats](#get-apistats)
+- [Archive Endpoints](#archive-endpoints)
+  - [GET /api/archive](#get-apiarchive)
+  - [GET /api/archive/status](#get-apiarchivestatus)
+  - [GET /api/cron/archive](#get-apicronarchive)
+  - [POST /api/archive/webhook](#post-apiarchivewebhook)
 - [Analytics & Intelligence](#analytics--intelligence)
   - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
   - [GET /api/analytics/credibility](#get-apianalyticscredibility)
@@ -1079,6 +1084,166 @@ API usage statistics and metrics.
   "cacheHitRate": "94.2%"
 }
 ```
+
+---
+
+## Archive Endpoints
+
+Historical news archive with **zero-configuration** setup. No API keys required!
+
+### GET /api/archive
+
+Query historical archived news articles.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `date` | string | - | Specific date (YYYY-MM-DD) |
+| `start` | string | - | Start date for range |
+| `end` | string | - | End date for range |
+| `source` | string | - | Filter by source |
+| `ticker` | string | - | Filter by ticker (BTC, ETH, etc.) |
+| `search` | string | - | Full-text search |
+| `limit` | integer | 50 | Max results (1-200) |
+| `offset` | integer | 0 | Pagination offset |
+| `stats` | boolean | false | Return stats only |
+| `index` | boolean | false | Return index only |
+
+**Example:**
+
+```bash
+# Get articles from a specific date
+curl "https://free-crypto-news.vercel.app/api/archive?date=2026-01-15"
+
+# Search Bitcoin news from last week
+curl "https://free-crypto-news.vercel.app/api/archive?ticker=BTC&start=2026-01-17"
+
+# Get archive stats
+curl "https://free-crypto-news.vercel.app/api/archive?stats=true"
+```
+
+---
+
+### GET /api/archive/status
+
+Check archive health and get setup instructions.
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/archive/status"
+```
+
+**Response:**
+
+```json
+{
+  "healthy": true,
+  "storage": "github",
+  "lastArchived": "2026-01-24",
+  "totalDays": 16,
+  "totalArticles": 3500,
+  "dateRange": {
+    "earliest": "2026-01-08",
+    "latest": "2026-01-24"
+  },
+  "zeroConfigMode": true,
+  "setupInstructions": {
+    "zeroConfig": {
+      "description": "No configuration needed!",
+      "testNow": "Visit /api/cron/archive in your browser"
+    },
+    "cronJobOrg": {
+      "url": "https://cron-job.org (FREE)",
+      "steps": ["..."]
+    }
+  }
+}
+```
+
+---
+
+### GET /api/cron/archive
+
+Trigger news archiving. Works with external cron services.
+
+> **Zero-Config Mode:** If `CRON_SECRET` is not set, this endpoint is public and can be called without authentication. Perfect for testing!
+
+**Authentication (optional):**
+
+If `CRON_SECRET` environment variable is set:
+- Query param: `?secret=YOUR_SECRET`
+- Header: `Authorization: Bearer YOUR_SECRET`
+
+**Example:**
+
+```bash
+# Zero-config mode (no auth)
+curl "https://free-crypto-news.vercel.app/api/cron/archive"
+
+# With authentication
+curl "https://free-crypto-news.vercel.app/api/cron/archive?secret=YOUR_SECRET"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "timestamp": "2026-01-24T15:30:00Z",
+  "stats": {
+    "fetched": 87,
+    "archived": 85,
+    "duplicates": 2,
+    "sources": ["CoinDesk", "The Block", "Decrypt", "Cointelegraph"]
+  },
+  "duration": 1250,
+  "articles": [...]
+}
+```
+
+**Setting up automated archiving:**
+
+| Service | Free? | Setup |
+|---------|-------|-------|
+| [cron-job.org](https://cron-job.org) | ✅ Yes | Create job → URL: `/api/cron/archive` → Every hour |
+| [Uptime Robot](https://uptimerobot.com) | ✅ Yes | Add monitor → HTTP(s) → 1 hour interval |
+| [EasyCron](https://easycron.com) | ✅ 200/mo | Similar to cron-job.org |
+
+---
+
+### POST /api/archive/webhook
+
+Archive news with optional GitHub commit. Returns archived articles in response for external storage.
+
+**Authentication:** Same as `/api/cron/archive`
+
+**Example:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/archive/webhook"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "timestamp": "2026-01-24T15:30:00Z",
+  "stats": {
+    "fetched": 87,
+    "processed": 87,
+    "sources": ["CoinDesk", "The Block"]
+  },
+  "github": {
+    "success": true,
+    "message": "Committed 42 new articles to archive/v2/articles/2026-01.jsonl"
+  }
+}
+```
+
+> **Note:** GitHub commits only work if `GITHUB_TOKEN` is set. Without it, articles are returned in the response for you to store elsewhere.
 
 ---
 

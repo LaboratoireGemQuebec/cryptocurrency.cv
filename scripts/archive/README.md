@@ -2,6 +2,55 @@
 
 Scripts for collecting, enriching, and managing the Free Crypto News historical archive.
 
+## 🚀 Zero-Config API Archiving (NEW!)
+
+**No GitHub Actions? No problem!** Use these API endpoints instead:
+
+### Quick Start (No Configuration Needed)
+
+```bash
+# Test archiving right now - just visit in browser or curl:
+curl https://free-crypto-news.vercel.app/api/cron/archive
+
+# Check archive status
+curl https://free-crypto-news.vercel.app/api/archive/status
+```
+
+### Set Up Automated Archiving (FREE)
+
+**Option 1: cron-job.org** (Recommended)
+1. Go to [cron-job.org](https://cron-job.org) → Create free account
+2. Click "CREATE CRONJOB"
+3. URL: `https://free-crypto-news.vercel.app/api/cron/archive`
+4. Schedule: `Every hour` or `0 * * * *`
+5. Save → Done! ✅
+
+**Option 2: Uptime Robot**
+1. Go to [uptimerobot.com](https://uptimerobot.com) → Create free account
+2. Add Monitor → HTTP(s)
+3. URL: `https://free-crypto-news.vercel.app/api/cron/archive`
+4. Interval: 1 hour
+5. Save → Done! ✅
+
+### API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/cron/archive` | GET/POST | Trigger archiving, returns articles |
+| `/api/archive/webhook` | POST | Archive with optional GitHub commit |
+| `/api/archive/status` | GET | Health check & setup instructions |
+| `/api/archive` | GET | Query archived articles |
+
+### Optional: Add Authentication
+
+Set `CRON_SECRET` environment variable in Vercel:
+```bash
+# Then use with secret
+curl "https://your-domain/api/cron/archive?secret=YOUR_SECRET"
+```
+
+---
+
 ## Overview
 
 The v2 archive system:
@@ -13,7 +62,9 @@ The v2 archive system:
 - Maintains **indexes** for fast lookups
 - **Intelligence services** for market data, social signals, predictions, and more
 
-## Quick Start
+## Local Scripts
+
+For running archiving locally (alternative to API):
 
 ```bash
 # Basic collection
