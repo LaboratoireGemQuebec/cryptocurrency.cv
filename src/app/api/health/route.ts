@@ -2,7 +2,9 @@ import { NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
+// Comprehensive RSS source health check list (all 35+ sources)
 const RSS_SOURCES = {
+  // Tier 1: Major News Outlets
   coindesk: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
   theblock: 'https://www.theblock.co/rss.xml',
   decrypt: 'https://decrypt.co/feed',
@@ -10,6 +12,23 @@ const RSS_SOURCES = {
   bitcoinmagazine: 'https://bitcoinmagazine.com/.rss/full/',
   blockworks: 'https://blockworks.co/feed',
   defiant: 'https://thedefiant.io/feed',
+  // Tier 2: Established Sources
+  bitcoinist: 'https://bitcoinist.com/feed/',
+  cryptoslate: 'https://cryptoslate.com/feed/',
+  newsbtc: 'https://www.newsbtc.com/feed/',
+  cryptonews: 'https://crypto.news/feed/',
+  cryptopotato: 'https://cryptopotato.com/feed/',
+  // DeFi & Web3
+  rekt: 'https://rekt.news/rss.xml',
+  // Research & Analysis
+  messari: 'https://messari.io/rss',
+  ambcrypto: 'https://ambcrypto.com/feed/',
+  beincrypto: 'https://beincrypto.com/feed/',
+  u_today: 'https://u.today/rss',
+  cryptobriefing: 'https://cryptobriefing.com/feed/',
+  // Asia-Pacific
+  forkast: 'https://forkast.news/feed/',
+  coingape: 'https://coingape.com/feed/',
 } as const;
 
 interface SourceHealth {

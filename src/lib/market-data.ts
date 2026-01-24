@@ -2,16 +2,24 @@
  * Market Data Service for Free Crypto News
  * Adapted from https://github.com/nirholas/crypto-market-data
  * 
- * Integrates CoinGecko and DeFiLlama APIs for live market data
+ * Integrates multiple free APIs for live market data:
+ * - CoinGecko (primary)
+ * - CryptoCompare (fallback for prices)
+ * - Binance (fallback for real-time prices)
+ * - DeFiLlama (DeFi TVL data)
+ * - Alternative.me (Fear & Greed)
  * 
  * @module market-data
  * @description Comprehensive cryptocurrency market data service with caching,
- * rate limiting, and Edge Runtime compatibility.
+ * rate limiting, fallback sources, and Edge Runtime compatibility.
  */
 
 const COINGECKO_BASE = 'https://api.coingecko.com/api/v3';
 const DEFILLAMA_BASE = 'https://api.llama.fi';
 const ALTERNATIVE_ME = 'https://api.alternative.me';
+const CRYPTOCOMPARE_BASE = 'https://min-api.cryptocompare.com/data';
+const BINANCE_BASE = 'https://api.binance.com/api/v3';
+const COINPAPRIKA_BASE = 'https://api.coinpaprika.com/v1';
 
 // =============================================================================
 // CACHE TTL CONFIGURATION (in seconds)
@@ -897,9 +905,127 @@ export async function getPricesForCoins(
     return result;
   } catch (error) {
     console.error('Error fetching prices for coins:', error);
-    // Return empty object on error
+    // Try Binance fallback for major coins
+    return await getPricesFromBinanceFallback(coinIds);
+  }
+}
+
+/**
+ * Fallback: Get prices from Binance API
+ * Only works for coins with USDT pairs on Binance
+ */
+async function getPricesFromBinanceFallback(
+  coinIds: string[]
+): Promise<Record<string, { price: number; change_24h: number; last_updated: string }>> {
+  // Map CoinGecko IDs to Binance symbols
+  const idToSymbol: Record<string, string> = {
+    bitcoin: 'BTCUSDT',
+    ethereum: 'ETHUSDT',
+    solana: 'SOLUSDT',
+    ripple: 'XRPUSDT',
+    cardano: 'ADAUSDT',
+    dogecoin: 'DOGEUSDT',
+    polkadot: 'DOTUSDT',
+    avalanche: 'AVAXUSDT',
+    chainlink: 'LINKUSDT',
+    polygon: 'MATICUSDT',
+    uniswap: 'UNIUSDT',
+    litecoin: 'LTCUSDT',
+    'binance-coin': 'BNBUSDT',
+    tron: 'TRXUSDT',
+    shiba: 'SHIBUSDT',
+  };
+
+  const result: Record<string, { price: number; change_24h: number; last_updated: string }> = {};
+
+  try {
+    // Fetch 24hr ticker for all symbols at once
+    const response = await fetchWithTimeout(`${BINANCE_BASE}/ticker/24hr`);
+    if (!response.ok) return {};
+
+    const tickers = await response.json();
+    type BinanceTicker = { symbol: string; lastPrice: string; priceChangePercent: string };
+    const tickerMap = new Map<string, BinanceTicker>(
+      tickers.map((t: BinanceTicker) => [t.symbol, t])
+    );
+
+    for (const coinId of coinIds) {
+      const symbol = idToSymbol[coinId];
+      if (symbol && tickerMap.has(symbol)) {
+        const ticker = tickerMap.get(symbol)!;
+        result[coinId] = {
+          price: parseFloat(ticker.lastPrice) || 0,
+          change_24h: parseFloat(ticker.priceChangePercent) || 0,
+          last_updated: new Date().toISOString(),
+        };
+      }
+    }
+
+    return result;
+  } catch (error) {
+    console.error('Binance fallback error:', error);
     return {};
   }
+}
+
+/**
+ * Get real-time price from multiple sources with fallback
+ * Uses Binance for real-time, CoinGecko for accuracy
+ */
+export async function getRealTimePrice(symbol: string): Promise<{ price: number; source: string } | null> {
+  const symbolUpper = symbol.toUpperCase();
+  const binanceSymbol = `${symbolUpper}USDT`;
+  
+  // Try Binance first (fastest, most real-time)
+  try {
+    const response = await fetchWithTimeout(`${BINANCE_BASE}/ticker/price?symbol=${binanceSymbol}`);
+    if (response.ok) {
+      const data = await response.json();
+      return { price: parseFloat(data.price), source: 'binance' };
+    }
+  } catch {
+    // Continue to fallback
+  }
+
+  // Try CryptoCompare as second option
+  try {
+    const response = await fetchWithTimeout(
+      `${CRYPTOCOMPARE_BASE}/price?fsym=${symbolUpper}&tsyms=USD`
+    );
+    if (response.ok) {
+      const data = await response.json();
+      if (data.USD) {
+        return { price: data.USD, source: 'cryptocompare' };
+      }
+    }
+  } catch {
+    // Continue to fallback
+  }
+
+  // Fall back to CoinGecko
+  try {
+    const idMap: Record<string, string> = {
+      BTC: 'bitcoin', ETH: 'ethereum', SOL: 'solana',
+      XRP: 'ripple', ADA: 'cardano', DOGE: 'dogecoin',
+      DOT: 'polkadot', AVAX: 'avalanche', LINK: 'chainlink',
+    };
+    const coinId = idMap[symbolUpper];
+    if (coinId) {
+      const response = await fetchWithTimeout(
+        `${COINGECKO_BASE}/simple/price?ids=${coinId}&vs_currencies=usd`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        if (data[coinId]?.usd) {
+          return { price: data[coinId].usd, source: 'coingecko' };
+        }
+      }
+    }
+  } catch {
+    // All sources failed
+  }
+
+  return null;
 }
 
 /**
@@ -918,14 +1044,60 @@ export async function getTopCoins(limit = 50): Promise<TokenPrice[]> {
     );
     
     if (!response.ok) {
-      throw new Error('Failed to fetch top coins');
+      // Try fallback to CoinPaprika
+      console.warn('CoinGecko failed, trying CoinPaprika fallback...');
+      return await getTopCoinsFallback(limit);
     }
     
     const data = await response.json();
     setCache(cacheKey, data, CACHE_TTL.prices);
     return data;
   } catch (error) {
-    console.error('Error fetching top coins:', error);
+    console.error('Error fetching top coins from CoinGecko:', error);
+    // Try fallback source
+    return await getTopCoinsFallback(limit);
+  }
+}
+
+/**
+ * Fallback: Get top coins from CoinPaprika API
+ * @param limit - Number of coins to fetch
+ * @returns Array of top coins
+ */
+async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
+  try {
+    const response = await fetchWithTimeout(
+      `${COINPAPRIKA_BASE}/tickers?limit=${limit}`
+    );
+    
+    if (!response.ok) {
+      console.error('CoinPaprika fallback also failed');
+      return [];
+    }
+    
+    const data = await response.json();
+    
+    // Transform CoinPaprika format to our TokenPrice format
+    return data.map((coin: any) => ({
+      id: coin.id,
+      symbol: coin.symbol.toLowerCase(),
+      name: coin.name,
+      current_price: coin.quotes?.USD?.price || 0,
+      market_cap: coin.quotes?.USD?.market_cap || 0,
+      market_cap_rank: coin.rank,
+      total_volume: coin.quotes?.USD?.volume_24h || 0,
+      price_change_24h: coin.quotes?.USD?.price || 0 * (coin.quotes?.USD?.percent_change_24h || 0) / 100,
+      price_change_percentage_24h: coin.quotes?.USD?.percent_change_24h || 0,
+      price_change_percentage_7d_in_currency: coin.quotes?.USD?.percent_change_7d || 0,
+      circulating_supply: coin.circulating_supply || 0,
+      total_supply: coin.total_supply,
+      max_supply: coin.max_supply,
+      ath: 0, // Not available from CoinPaprika
+      ath_change_percentage: 0,
+      last_updated: new Date().toISOString(),
+    }));
+  } catch (error) {
+    console.error('CoinPaprika fallback error:', error);
     return [];
   }
 }

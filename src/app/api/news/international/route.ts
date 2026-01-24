@@ -3,8 +3,8 @@
  * 
  * GET /api/news/international
  * 
- * Fetches and optionally translates news from Korean, Chinese, Japanese,
- * and Spanish crypto news sources.
+ * Fetches and optionally translates news from 50+ international crypto news sources
+ * across 16 languages and 5 regions.
  */
 
 import { NextRequest } from 'next/server';
@@ -24,22 +24,29 @@ import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
 
-// Valid language values
-const VALID_LANGUAGES = ['ko', 'zh', 'ja', 'es', 'all'] as const;
+// Valid language values (16 languages)
+const VALID_LANGUAGES = [
+  'ko', 'zh', 'ja',           // East Asia
+  'es', 'pt',                  // Latin America
+  'de', 'fr', 'ru', 'tr', 'it', 'nl', 'pl', // Europe
+  'id', 'vi', 'th',           // Southeast Asia
+  'ar',                        // Middle East
+  'all'
+] as const;
 type ValidLanguage = typeof VALID_LANGUAGES[number];
 
-// Valid region values
-const VALID_REGIONS = ['asia', 'europe', 'latam', 'all'] as const;
+// Valid region values (5 regions + all)
+const VALID_REGIONS = ['asia', 'europe', 'latam', 'mena', 'sea', 'all'] as const;
 type ValidRegion = typeof VALID_REGIONS[number];
 
 /**
  * GET /api/news/international
  * 
  * Query Parameters:
- * - language: ko | zh | ja | es | all (default: all)
+ * - language: ko | zh | ja | es | pt | de | fr | ru | tr | it | nl | pl | id | vi | th | ar | all (default: all)
  * - translate: true | false (default: false)
  * - limit: 1-100 (default: 20)
- * - region: asia | europe | latam | all (default: all)
+ * - region: asia | europe | latam | mena | sea | all (default: all)
  * - sources: true (returns available sources instead of articles)
  */
 export async function GET(request: NextRequest) {

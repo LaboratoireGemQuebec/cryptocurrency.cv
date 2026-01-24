@@ -93,15 +93,56 @@ This document describes the architecture of Free Crypto News, a Next.js applicat
 
 ### Data Sources
 
-| Source | Category | Feed URL |
-|--------|----------|----------|
-| CoinDesk | General | coindesk.com/rss |
-| The Block | Research | theblock.co/rss |
-| Decrypt | Web3/Culture | decrypt.co/feed |
-| CoinTelegraph | General | cointelegraph.com/rss |
-| Bitcoin Magazine | Bitcoin | bitcoinmagazine.com/rss |
-| Blockworks | General | blockworks.co/feed |
-| The Defiant | DeFi | thedefiant.io/feed |
+We aggregate news from **75+ sources** across **25 English sources** and **50+ international sources** in **16 languages**.
+
+#### English Sources (25)
+
+| Source | Category | Description |
+|--------|----------|-------------|
+| CoinDesk | General | Leading crypto news |
+| The Block | Research | Institutional focus |
+| Decrypt | Web3/Culture | Web3 & gaming |
+| CoinTelegraph | General | Global coverage |
+| Bitcoin Magazine | Bitcoin | Bitcoin-focused |
+| Blockworks | General | Markets & DeFi |
+| The Defiant | DeFi | DeFi ecosystem |
+| Bitcoinist | Bitcoin | Bitcoin news |
+| CryptoSlate | General | News & research |
+| NewsBTC | General | Trading focus |
+| Crypto.news | General | Breaking news |
+| CryptoPotato | General | Market news |
+| DeFi Rate | DeFi | DeFi analytics |
+| Rekt News | DeFi | Security & exploits |
+| NFT Now | NFT | NFT coverage |
+| NFT Evening | NFT | NFT news |
+| Messari | Research | Data & research |
+| AMBCrypto | Trading | Market analysis |
+| BeInCrypto | Trading | Trading news |
+| U.Today | Trading | Market news |
+| Crypto Briefing | Research | In-depth analysis |
+| Week in Ethereum | Ethereum | ETH ecosystem |
+| Etherscan Blog | Ethereum | On-chain insights |
+
+#### International Sources (50+)
+
+| Language | Region | Sources |
+|----------|--------|---------|
+| 🇰🇷 Korean | Asia | Block Media, TokenPost, CoinDesk Korea |
+| 🇨🇳 Chinese | Asia | 8BTC, Jinse Finance, Odaily |
+| 🇯🇵 Japanese | Asia | CoinPost, CoinDesk Japan, Cointelegraph JP |
+| 🇪🇸 Spanish | LATAM | Cointelegraph ES, Diario Bitcoin, CriptoNoticias, BeInCrypto ES |
+| 🇧🇷 Portuguese | LATAM | Cointelegraph BR, Livecoins, Portal do Bitcoin |
+| 🇩🇪 German | Europe | BTC-ECHO, Cointelegraph DE, Coincierge, CryptoMonday |
+| 🇫🇷 French | Europe | Journal du Coin, Cryptonaute, Cryptoast |
+| 🇷🇺 Russian | Europe | ForkLog, Cointelegraph RU, Bits.Media |
+| 🇹🇷 Turkish | Europe | Cointelegraph TR, Koin Medya, Coinsider |
+| 🇮🇹 Italian | Europe | Cointelegraph IT, Cryptonomist, Criptovalute.it |
+| 🇳🇱 Dutch | Europe | Bitcoin Magazine NL, Crypto Insiders |
+| 🇵🇱 Polish | Europe | Kryptowaluty.pl, Bitcoin.pl |
+| 🇮🇩 Indonesian | SEA | Cointelegraph ID, Blockchain Media |
+| 🇻🇳 Vietnamese | SEA | Tạp chí Bitcoin, Coin68 |
+| 🇹🇭 Thai | SEA | Siam Blockchain, Bitcoin Addict Thailand |
+| 🇸🇦 Arabic | MENA | Cointelegraph AR, ArabiCrypto |
 
 ---
 

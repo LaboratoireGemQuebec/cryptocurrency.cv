@@ -1,15 +1,33 @@
 /**
- * Internationalization Middleware
+ * Internationalization Proxy
  * 
  * Handles locale detection and routing for next-intl.
  * Automatically detects user's preferred language from Accept-Language header
  * and redirects to the appropriate locale-prefixed route.
+ * 
+ * @note Next.js 16 uses "proxy.ts" instead of "middleware.ts"
+ * @see https://nextjs.org/docs/messages/middleware-to-proxy
  */
 
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/navigation';
+import type { NextRequest } from 'next/server';
 
-export default createMiddleware(routing);
+/**
+ * The next-intl middleware handles:
+ * - Locale detection from Accept-Language header
+ * - Redirect to locale-prefixed routes
+ * - Locale cookie management
+ */
+const intlMiddleware = createMiddleware(routing);
+
+/**
+ * Proxy function for Next.js 16+
+ * Replaces the deprecated middleware convention
+ */
+export function proxy(request: NextRequest) {
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match all pathnames except:

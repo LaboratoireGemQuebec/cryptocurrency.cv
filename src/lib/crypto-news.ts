@@ -2,13 +2,16 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 7 major crypto sources.
+ * Aggregates news from 80+ major crypto sources.
  */
 
 import sanitizeHtml from 'sanitize-html';
 
-// RSS Feed URLs for crypto news sources (12 sources)
+// RSS Feed URLs for crypto news sources (80+ sources)
 const RSS_SOURCES = {
+  // ═══════════════════════════════════════════════════════════════
+  // TIER 1: Major News Outlets
+  // ═══════════════════════════════════════════════════════════════
   coindesk: {
     name: 'CoinDesk',
     url: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
@@ -44,7 +47,10 @@ const RSS_SOURCES = {
     url: 'https://thedefiant.io/feed',
     category: 'defi',
   },
-  // New sources added
+  
+  // ═══════════════════════════════════════════════════════════════
+  // TIER 2: Established News Sources
+  // ═══════════════════════════════════════════════════════════════
   bitcoinist: {
     name: 'Bitcoinist',
     url: 'https://bitcoinist.com/feed/',
@@ -69,6 +75,546 @@ const RSS_SOURCES = {
     name: 'CryptoPotato',
     url: 'https://cryptopotato.com/feed/',
     category: 'general',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: DeFi & Web3 Focused Sources
+  // ═══════════════════════════════════════════════════════════════
+  defirate: {
+    name: 'DeFi Rate',
+    url: 'https://defirate.com/feed/',
+    category: 'defi',
+  },
+  dailydefi: {
+    name: 'Daily DeFi',
+    url: 'https://dailydefi.org/feed/',
+    category: 'defi',
+  },
+  rekt: {
+    name: 'Rekt News',
+    url: 'https://rekt.news/rss.xml',
+    category: 'defi',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: NFT & Metaverse Sources
+  // ═══════════════════════════════════════════════════════════════
+  nftnow: {
+    name: 'NFT Now',
+    url: 'https://nftnow.com/feed/',
+    category: 'nft',
+  },
+  nftevening: {
+    name: 'NFT Evening',
+    url: 'https://nftevening.com/feed/',
+    category: 'nft',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Research & Analysis Sources
+  // ═══════════════════════════════════════════════════════════════
+  messari: {
+    name: 'Messari',
+    url: 'https://messari.io/rss',
+    category: 'research',
+  },
+  thedefireport: {
+    name: 'The DeFi Report',
+    url: 'https://thedefireport.substack.com/feed',
+    category: 'research',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Trading & Market Analysis
+  // ═══════════════════════════════════════════════════════════════
+  ambcrypto: {
+    name: 'AMBCrypto',
+    url: 'https://ambcrypto.com/feed/',
+    category: 'trading',
+  },
+  beincrypto: {
+    name: 'BeInCrypto',
+    url: 'https://beincrypto.com/feed/',
+    category: 'trading',
+  },
+  u_today: {
+    name: 'U.Today',
+    url: 'https://u.today/rss',
+    category: 'trading',
+  },
+  cryptobriefing: {
+    name: 'Crypto Briefing',
+    url: 'https://cryptobriefing.com/feed/',
+    category: 'research',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Mining & Infrastructure
+  // ═══════════════════════════════════════════════════════════════
+  bitcoinmining: {
+    name: 'Bitcoin Mining News',
+    url: 'https://bitcoinmagazine.com/tags/mining/.rss/full/',
+    category: 'mining',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Ethereum-Focused Sources
+  // ═══════════════════════════════════════════════════════════════
+  weekinethereumnews: {
+    name: 'Week in Ethereum',
+    url: 'https://weekinethereumnews.com/feed/',
+    category: 'ethereum',
+  },
+  etherscan: {
+    name: 'Etherscan Blog',
+    url: 'https://etherscan.io/blog?rss',
+    category: 'ethereum',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Layer 2 & Scaling Solutions
+  // ═══════════════════════════════════════════════════════════════
+  l2beat: {
+    name: 'L2BEAT Blog',
+    url: 'https://l2beat.com/blog/rss.xml',
+    category: 'layer2',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Regulatory & Institutional
+  // ═══════════════════════════════════════════════════════════════
+  coinbase_blog: {
+    name: 'Coinbase Blog',
+    url: 'https://www.coinbase.com/blog/rss.xml',
+    category: 'institutional',
+  },
+  binance_blog: {
+    name: 'Binance Blog',
+    url: 'https://www.binance.com/en/blog/rss.xml',
+    category: 'institutional',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Asia-Pacific English Sources
+  // ═══════════════════════════════════════════════════════════════
+  forkast: {
+    name: 'Forkast News',
+    url: 'https://forkast.news/feed/',
+    category: 'asia',
+  },
+  coingape: {
+    name: 'CoinGape',
+    url: 'https://coingape.com/feed/',
+    category: 'general',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Bitcoin-Specific Sources
+  // ═══════════════════════════════════════════════════════════════
+  btctimes: {
+    name: 'BTC Times',
+    url: 'https://www.btctimes.com/feed/',
+    category: 'bitcoin',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Security & Hacks
+  // ═══════════════════════════════════════════════════════════════
+  slowmist: {
+    name: 'SlowMist Blog',
+    url: 'https://slowmist.medium.com/feed',
+    category: 'security',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Solana Ecosystem
+  // ═══════════════════════════════════════════════════════════════
+  solana_news: {
+    name: 'Solana News',
+    url: 'https://solana.com/news/rss.xml',
+    category: 'solana',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Additional General News Sources
+  // ═══════════════════════════════════════════════════════════════
+  dailyhodl: {
+    name: 'The Daily Hodl',
+    url: 'https://dailyhodl.com/feed/',
+    category: 'general',
+  },
+  coinjournal: {
+    name: 'CoinJournal',
+    url: 'https://coinjournal.net/feed/',
+    category: 'general',
+  },
+  cryptoglobe: {
+    name: 'CryptoGlobe',
+    url: 'https://www.cryptoglobe.com/latest/feed/',
+    category: 'general',
+  },
+  zycrypto: {
+    name: 'ZyCrypto',
+    url: 'https://zycrypto.com/feed/',
+    category: 'general',
+  },
+  cryptodaily: {
+    name: 'Crypto Daily',
+    url: 'https://cryptodaily.co.uk/feed',
+    category: 'general',
+  },
+  blockonomi: {
+    name: 'Blockonomi',
+    url: 'https://blockonomi.com/feed/',
+    category: 'general',
+  },
+  usethebitcoin: {
+    name: 'UseTheBitcoin',
+    url: 'https://usethebitcoin.com/feed/',
+    category: 'general',
+  },
+  nulltx: {
+    name: 'NullTX',
+    url: 'https://nulltx.com/feed/',
+    category: 'general',
+  },
+  coinspeaker: {
+    name: 'Coinspeaker',
+    url: 'https://www.coinspeaker.com/feed/',
+    category: 'general',
+  },
+  cryptoninjas: {
+    name: 'CryptoNinjas',
+    url: 'https://www.cryptoninjas.net/feed/',
+    category: 'general',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Additional DeFi Sources
+  // ═══════════════════════════════════════════════════════════════
+  defipulse: {
+    name: 'DeFi Pulse Blog',
+    url: 'https://defipulse.com/blog/feed/',
+    category: 'defi',
+  },
+  bankless: {
+    name: 'Bankless',
+    url: 'https://newsletter.banklesshq.com/feed',
+    category: 'defi',
+  },
+  defillama_news: {
+    name: 'DefiLlama News',
+    url: 'https://defillama.com/feed',
+    category: 'defi',
+  },
+  yearn_blog: {
+    name: 'Yearn Finance Blog',
+    url: 'https://blog.yearn.finance/feed',
+    category: 'defi',
+  },
+  uniswap_blog: {
+    name: 'Uniswap Blog',
+    url: 'https://uniswap.org/blog/feed.xml',
+    category: 'defi',
+  },
+  aave_blog: {
+    name: 'Aave Blog',
+    url: 'https://aave.mirror.xyz/feed/atom',
+    category: 'defi',
+  },
+  compound_blog: {
+    name: 'Compound Blog',
+    url: 'https://medium.com/feed/compound-finance',
+    category: 'defi',
+  },
+  makerdao_blog: {
+    name: 'MakerDAO Blog',
+    url: 'https://blog.makerdao.com/feed/',
+    category: 'defi',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Layer 2 & Scaling
+  // ═══════════════════════════════════════════════════════════════
+  optimism_blog: {
+    name: 'Optimism Blog',
+    url: 'https://optimism.mirror.xyz/feed/atom',
+    category: 'layer2',
+  },
+  arbitrum_blog: {
+    name: 'Arbitrum Blog',
+    url: 'https://arbitrum.io/blog/rss.xml',
+    category: 'layer2',
+  },
+  polygon_blog: {
+    name: 'Polygon Blog',
+    url: 'https://polygon.technology/blog/feed',
+    category: 'layer2',
+  },
+  starknet_blog: {
+    name: 'StarkNet Blog',
+    url: 'https://starkware.medium.com/feed',
+    category: 'layer2',
+  },
+  zksync_blog: {
+    name: 'zkSync Blog',
+    url: 'https://zksync.mirror.xyz/feed/atom',
+    category: 'layer2',
+  },
+  base_blog: {
+    name: 'Base Blog',
+    url: 'https://base.mirror.xyz/feed/atom',
+    category: 'layer2',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Research & Analysis Deep Dive
+  // ═══════════════════════════════════════════════════════════════
+  glassnode: {
+    name: 'Glassnode Insights',
+    url: 'https://insights.glassnode.com/rss/',
+    category: 'research',
+  },
+  delphi_digital: {
+    name: 'Delphi Digital',
+    url: 'https://members.delphidigital.io/feed',
+    category: 'research',
+  },
+  paradigm_research: {
+    name: 'Paradigm Research',
+    url: 'https://www.paradigm.xyz/feed.xml',
+    category: 'research',
+  },
+  a16z_crypto: {
+    name: 'a16z Crypto',
+    url: 'https://a16zcrypto.com/feed/',
+    category: 'research',
+  },
+  theblockresearch: {
+    name: 'The Block Research',
+    url: 'https://www.theblock.co/research/feed',
+    category: 'research',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Developer & Tech Sources
+  // ═══════════════════════════════════════════════════════════════
+  alchemy_blog: {
+    name: 'Alchemy Blog',
+    url: 'https://www.alchemy.com/blog/rss',
+    category: 'developer',
+  },
+  chainlink_blog: {
+    name: 'Chainlink Blog',
+    url: 'https://blog.chain.link/feed/',
+    category: 'developer',
+  },
+  infura_blog: {
+    name: 'Infura Blog',
+    url: 'https://blog.infura.io/feed/',
+    category: 'developer',
+  },
+  thegraph_blog: {
+    name: 'The Graph Blog',
+    url: 'https://thegraph.com/blog/feed',
+    category: 'developer',
+  },
+  hardhat_blog: {
+    name: 'Hardhat Blog',
+    url: 'https://hardhat.org/blog/rss.xml',
+    category: 'developer',
+  },
+  foundry_blog: {
+    name: 'Foundry Blog',
+    url: 'https://book.getfoundry.sh/feed.xml',
+    category: 'developer',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Security & Auditing
+  // ═══════════════════════════════════════════════════════════════
+  certik_blog: {
+    name: 'CertiK Blog',
+    url: 'https://www.certik.com/resources/blog/rss.xml',
+    category: 'security',
+  },
+  openzeppelin_blog: {
+    name: 'OpenZeppelin Blog',
+    url: 'https://blog.openzeppelin.com/feed/',
+    category: 'security',
+  },
+  trailofbits: {
+    name: 'Trail of Bits Blog',
+    url: 'https://blog.trailofbits.com/feed/',
+    category: 'security',
+  },
+  samczsun: {
+    name: 'samczsun Blog',
+    url: 'https://samczsun.com/rss/',
+    category: 'security',
+  },
+  immunefi_blog: {
+    name: 'Immunefi Blog',
+    url: 'https://immunefi.medium.com/feed',
+    category: 'security',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Trading & Market Analysis Extended
+  // ═══════════════════════════════════════════════════════════════
+  fxstreet_crypto: {
+    name: 'FXStreet Crypto',
+    url: 'https://www.fxstreet.com/cryptocurrencies/news/feed',
+    category: 'trading',
+  },
+  tradingview_crypto: {
+    name: 'TradingView Crypto Ideas',
+    url: 'https://www.tradingview.com/feed/?sort=recent&stream=crypto',
+    category: 'trading',
+  },
+  cryptoquant_blog: {
+    name: 'CryptoQuant Blog',
+    url: 'https://cryptoquant.com/blog/feed',
+    category: 'trading',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Mining & Energy
+  // ═══════════════════════════════════════════════════════════════
+  hashrateindex: {
+    name: 'Hashrate Index',
+    url: 'https://hashrateindex.com/blog/feed/',
+    category: 'mining',
+  },
+  compassmining_blog: {
+    name: 'Compass Mining Blog',
+    url: 'https://compassmining.io/education/feed/',
+    category: 'mining',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Mainstream Finance Crypto Coverage
+  // ═══════════════════════════════════════════════════════════════
+  bloomberg_crypto: {
+    name: 'Bloomberg Crypto',
+    url: 'https://www.bloomberg.com/crypto/feed',
+    category: 'mainstream',
+  },
+  reuters_crypto: {
+    name: 'Reuters Crypto',
+    url: 'https://www.reuters.com/technology/cryptocurrency/rss',
+    category: 'mainstream',
+  },
+  forbes_crypto: {
+    name: 'Forbes Crypto',
+    url: 'https://www.forbes.com/crypto-blockchain/feed/',
+    category: 'mainstream',
+  },
+  cnbc_crypto: {
+    name: 'CNBC Crypto',
+    url: 'https://www.cnbc.com/id/100727362/device/rss/rss.html',
+    category: 'mainstream',
+  },
+  yahoo_crypto: {
+    name: 'Yahoo Finance Crypto',
+    url: 'https://finance.yahoo.com/rss/cryptocurrency',
+    category: 'mainstream',
+  },
+  wsj_crypto: {
+    name: 'Wall Street Journal Crypto',
+    url: 'https://feeds.a.dj.com/rss/RSSWSJD.xml',
+    category: 'mainstream',
+  },
+  ft_crypto: {
+    name: 'Financial Times Crypto',
+    url: 'https://www.ft.com/cryptocurrencies?format=rss',
+    category: 'mainstream',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: NFT & Gaming Extended
+  // ═══════════════════════════════════════════════════════════════
+  nftplazas: {
+    name: 'NFT Plazas',
+    url: 'https://nftplazas.com/feed/',
+    category: 'nft',
+  },
+  playtoearn: {
+    name: 'PlayToEarn',
+    url: 'https://playtoearn.net/feed/',
+    category: 'gaming',
+  },
+  dappradar_blog: {
+    name: 'DappRadar Blog',
+    url: 'https://dappradar.com/blog/feed',
+    category: 'nft',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Bitcoin Ecosystem Extended
+  // ═══════════════════════════════════════════════════════════════
+  lightninglabs_blog: {
+    name: 'Lightning Labs Blog',
+    url: 'https://lightning.engineering/feed',
+    category: 'bitcoin',
+  },
+  stackernews: {
+    name: 'Stacker News',
+    url: 'https://stacker.news/rss',
+    category: 'bitcoin',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Alternative L1 Ecosystems
+  // ═══════════════════════════════════════════════════════════════
+  near_blog: {
+    name: 'NEAR Protocol Blog',
+    url: 'https://near.org/blog/feed/',
+    category: 'altl1',
+  },
+  cosmos_blog: {
+    name: 'Cosmos Blog',
+    url: 'https://blog.cosmos.network/feed',
+    category: 'altl1',
+  },
+  avalanche_blog: {
+    name: 'Avalanche Blog',
+    url: 'https://medium.com/feed/avalancheavax',
+    category: 'altl1',
+  },
+  sui_blog: {
+    name: 'Sui Blog',
+    url: 'https://blog.sui.io/feed/',
+    category: 'altl1',
+  },
+  aptos_blog: {
+    name: 'Aptos Blog',
+    url: 'https://medium.com/feed/aptoslabs',
+    category: 'altl1',
+  },
+  cardano_blog: {
+    name: 'Cardano Blog',
+    url: 'https://iohk.io/en/blog/posts/feed.rss',
+    category: 'altl1',
+  },
+  polkadot_blog: {
+    name: 'Polkadot Blog',
+    url: 'https://polkadot.network/blog/feed/',
+    category: 'altl1',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // NEW: Stablecoin & CBDC News
+  // ═══════════════════════════════════════════════════════════════
+  circle_blog: {
+    name: 'Circle Blog',
+    url: 'https://www.circle.com/blog/feed',
+    category: 'stablecoin',
+  },
+  tether_news: {
+    name: 'Tether News',
+    url: 'https://tether.to/en/news/feed/',
+    category: 'stablecoin',
   },
 } as const;
 

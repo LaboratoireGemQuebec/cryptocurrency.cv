@@ -97,15 +97,17 @@ const analyticsFeatures = [
     status: 'live',
     api: '/api/social/influencer-score',
   },
-];
-
-const comingSoonFeatures = [
   {
     title: 'Coverage Gap Analysis',
-    description: 'Identify what topics are being under-covered or ignored.',
+    description: 'Identify under-covered topics and emerging stories. Analyze source diversity and topic trends.',
+    href: '/coverage-gap',
     icon: '🕳️',
+    status: 'live',
+    api: '/api/coverage-gap',
   },
 ];
+
+const comingSoonFeatures: { title: string; description: string; icon: string }[] = [];
 
 export default function AnalyticsPage() {
   return (

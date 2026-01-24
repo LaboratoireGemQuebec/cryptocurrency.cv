@@ -185,11 +185,19 @@ const navItems = [
             { label: 'Global Policy', href: '/topic/crypto-policy', icon: '🌍' },
           ],
         },
+        {
+          title: 'Intelligence',
+          links: [
+            { label: 'Regulatory Dashboard', href: '/regulatory', icon: '📊' },
+            { label: 'Compliance Deadlines', href: '/regulatory?view=deadlines', icon: '⏰' },
+            { label: 'Jurisdictions', href: '/regulatory?view=jurisdictions', icon: '🗺️' },
+          ],
+        },
       ],
       featured: {
-        title: 'Regulatory Updates',
-        description: 'Crypto regulation and policy news',
-        href: '/category/regulation',
+        title: 'Regulatory Intelligence',
+        description: 'Track global crypto regulations, enforcement actions, and compliance deadlines',
+        href: '/regulatory',
       },
     },
   },

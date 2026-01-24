@@ -1,7 +1,13 @@
 /**
  * International Crypto News Sources
  * 
- * Aggregates news from Korean, Chinese, Japanese, and Spanish crypto news sources.
+ * Aggregates news from 70+ international crypto news sources across:
+ * - Korean, Chinese, Japanese (East Asia) - 16 sources
+ * - Indonesian, Vietnamese, Thai (Southeast Asia) - 7 sources  
+ * - Spanish, Portuguese (Latin America) - 10 sources
+ * - German, French, Russian, Turkish, Italian, Dutch, Polish (Europe) - 21 sources
+ * - Arabic (Middle East & North Africa) - 2 sources
+ * 
  * Supports automatic translation to English via the source-translator module.
  */
 
@@ -17,9 +23,9 @@ export interface InternationalSource {
   name: string;
   url: string;
   rss: string;
-  language: 'ko' | 'zh' | 'ja' | 'es';
+  language: 'ko' | 'zh' | 'ja' | 'es' | 'pt' | 'de' | 'fr' | 'ru' | 'tr' | 'it' | 'id' | 'nl' | 'pl' | 'vi' | 'th' | 'ar';
   category: string;
-  region: 'asia' | 'europe' | 'latam';
+  region: 'asia' | 'europe' | 'latam' | 'mena' | 'sea';
   encoding?: string;
 }
 
@@ -35,7 +41,7 @@ export interface InternationalArticle {
   language: string;
   pubDate: string;
   category: string;
-  region: 'asia' | 'europe' | 'latam';
+  region: 'asia' | 'europe' | 'latam' | 'mena' | 'sea';
   timeAgo: string;
 }
 
@@ -79,6 +85,33 @@ const KOREAN_SOURCES: InternationalSource[] = [
     category: 'general',
     region: 'asia',
   },
+  {
+    key: 'blockchaintoday_ko',
+    name: 'Blockchain Today Korea',
+    url: 'https://www.blockchaintoday.co.kr',
+    rss: 'https://www.blockchaintoday.co.kr/rss/',
+    language: 'ko',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'decenter',
+    name: 'Decenter',
+    url: 'https://decenter.kr',
+    rss: 'https://decenter.kr/rss/allArticle.xml',
+    language: 'ko',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'thebchain',
+    name: 'The B.Chain',
+    url: 'https://www.thebchain.co.kr',
+    rss: 'https://www.thebchain.co.kr/rss/',
+    language: 'ko',
+    category: 'general',
+    region: 'asia',
+  },
 ];
 
 const CHINESE_SOURCES: InternationalSource[] = [
@@ -106,6 +139,42 @@ const CHINESE_SOURCES: InternationalSource[] = [
     name: 'Odaily (星球日报)',
     url: 'https://www.odaily.news',
     rss: 'https://www.odaily.news/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'chainnews',
+    name: 'ChainNews (链闻)',
+    url: 'https://www.chainnews.com',
+    rss: 'https://www.chainnews.com/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'panewslab',
+    name: 'PANews (PA财经)',
+    url: 'https://www.panewslab.com',
+    rss: 'https://www.panewslab.com/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'techflow',
+    name: 'TechFlow (深潮)',
+    url: 'https://www.techflowpost.com',
+    rss: 'https://www.techflowpost.com/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'foresightnews',
+    name: 'Foresight News',
+    url: 'https://foresightnews.pro',
+    rss: 'https://foresightnews.pro/rss',
     language: 'zh',
     category: 'general',
     region: 'asia',
@@ -140,6 +209,33 @@ const JAPANESE_SOURCES: InternationalSource[] = [
     category: 'general',
     region: 'asia',
   },
+  {
+    key: 'btcnewsjp',
+    name: 'btcnews.jp',
+    url: 'https://btcnews.jp',
+    rss: 'https://btcnews.jp/feed/',
+    language: 'ja',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'crypto_times_jp',
+    name: 'Crypto Times Japan',
+    url: 'https://crypto-times.jp',
+    rss: 'https://crypto-times.jp/feed/',
+    language: 'ja',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'coinjinja',
+    name: 'CoinJinja',
+    url: 'https://www.coinjinja.com',
+    rss: 'https://www.coinjinja.com/feed/',
+    language: 'ja',
+    category: 'general',
+    region: 'asia',
+  },
 ];
 
 const SPANISH_SOURCES: InternationalSource[] = [
@@ -170,6 +266,411 @@ const SPANISH_SOURCES: InternationalSource[] = [
     category: 'general',
     region: 'latam',
   },
+  {
+    key: 'beincryptoes',
+    name: 'BeInCrypto Español',
+    url: 'https://es.beincrypto.com',
+    rss: 'https://es.beincrypto.com/feed/',
+    language: 'es',
+    category: 'general',
+    region: 'latam',
+  },
+  {
+    key: 'bitcoinertoday',
+    name: 'Bitcoiner Today',
+    url: 'https://bitcoinertoday.com',
+    rss: 'https://bitcoinertoday.com/feed/',
+    language: 'es',
+    category: 'general',
+    region: 'latam',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: PORTUGUESE SOURCES (Brazil & Portugal)
+// ═══════════════════════════════════════════════════════════════
+const PORTUGUESE_SOURCES: InternationalSource[] = [
+  {
+    key: 'cointelegraphbr',
+    name: 'Cointelegraph Brasil',
+    url: 'https://br.cointelegraph.com',
+    rss: 'https://br.cointelegraph.com/rss',
+    language: 'pt',
+    category: 'general',
+    region: 'latam',
+  },
+  {
+    key: 'livecoins',
+    name: 'Livecoins',
+    url: 'https://livecoins.com.br',
+    rss: 'https://livecoins.com.br/feed/',
+    language: 'pt',
+    category: 'general',
+    region: 'latam',
+  },
+  {
+    key: 'portaldobitcoin',
+    name: 'Portal do Bitcoin',
+    url: 'https://portaldobitcoin.uol.com.br',
+    rss: 'https://portaldobitcoin.uol.com.br/feed/',
+    language: 'pt',
+    category: 'general',
+    region: 'latam',
+  },
+  {
+    key: 'beincryptopr',
+    name: 'BeInCrypto Brasil',
+    url: 'https://br.beincrypto.com',
+    rss: 'https://br.beincrypto.com/feed/',
+    language: 'pt',
+    category: 'general',
+    region: 'latam',
+  },
+  {
+    key: 'bitcoinblock',
+    name: 'Bitcoin Block',
+    url: 'https://bitcoinblock.com.br',
+    rss: 'https://bitcoinblock.com.br/feed/',
+    language: 'pt',
+    category: 'bitcoin',
+    region: 'latam',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: GERMAN SOURCES
+// ═══════════════════════════════════════════════════════════════
+const GERMAN_SOURCES: InternationalSource[] = [
+  {
+    key: 'btcecho',
+    name: 'BTC-ECHO',
+    url: 'https://www.btc-echo.de',
+    rss: 'https://www.btc-echo.de/feed/',
+    language: 'de',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cointelegraphde',
+    name: 'Cointelegraph Deutsch',
+    url: 'https://de.cointelegraph.com',
+    rss: 'https://de.cointelegraph.com/rss',
+    language: 'de',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'coincierge',
+    name: 'Coincierge',
+    url: 'https://coincierge.de',
+    rss: 'https://coincierge.de/feed/',
+    language: 'de',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cryptomonday',
+    name: 'CryptoMonday',
+    url: 'https://cryptomonday.de',
+    rss: 'https://cryptomonday.de/feed/',
+    language: 'de',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: FRENCH SOURCES
+// ═══════════════════════════════════════════════════════════════
+const FRENCH_SOURCES: InternationalSource[] = [
+  {
+    key: 'journalducoin',
+    name: 'Journal du Coin',
+    url: 'https://journalducoin.com',
+    rss: 'https://journalducoin.com/feed/',
+    language: 'fr',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cryptonaute',
+    name: 'Cryptonaute',
+    url: 'https://cryptonaute.fr',
+    rss: 'https://cryptonaute.fr/feed/',
+    language: 'fr',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cointelegraphfr',
+    name: 'Cointelegraph France',
+    url: 'https://fr.cointelegraph.com',
+    rss: 'https://fr.cointelegraph.com/rss',
+    language: 'fr',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cryptoast',
+    name: 'Cryptoast',
+    url: 'https://cryptoast.fr',
+    rss: 'https://cryptoast.fr/feed/',
+    language: 'fr',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: RUSSIAN SOURCES
+// ═══════════════════════════════════════════════════════════════
+const RUSSIAN_SOURCES: InternationalSource[] = [
+  {
+    key: 'forklog',
+    name: 'ForkLog',
+    url: 'https://forklog.com',
+    rss: 'https://forklog.com/feed/',
+    language: 'ru',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cointelegraphru',
+    name: 'Cointelegraph Russia',
+    url: 'https://ru.cointelegraph.com',
+    rss: 'https://ru.cointelegraph.com/rss',
+    language: 'ru',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'bits_media',
+    name: 'Bits.Media',
+    url: 'https://bits.media',
+    rss: 'https://bits.media/rss/',
+    language: 'ru',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: TURKISH SOURCES
+// ═══════════════════════════════════════════════════════════════
+const TURKISH_SOURCES: InternationalSource[] = [
+  {
+    key: 'cointelegraphtr',
+    name: 'Cointelegraph Türkçe',
+    url: 'https://tr.cointelegraph.com',
+    rss: 'https://tr.cointelegraph.com/rss',
+    language: 'tr',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'koinmedya',
+    name: 'Koin Medya',
+    url: 'https://koinmedya.com',
+    rss: 'https://koinmedya.com/feed/',
+    language: 'tr',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'coinsider',
+    name: 'Coinsider',
+    url: 'https://coinsider.com.tr',
+    rss: 'https://coinsider.com.tr/feed/',
+    language: 'tr',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: ITALIAN SOURCES
+// ═══════════════════════════════════════════════════════════════
+const ITALIAN_SOURCES: InternationalSource[] = [
+  {
+    key: 'cointelegraphit',
+    name: 'Cointelegraph Italia',
+    url: 'https://it.cointelegraph.com',
+    rss: 'https://it.cointelegraph.com/rss',
+    language: 'it',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'cryptonomist',
+    name: 'The Cryptonomist',
+    url: 'https://it.cryptonomist.ch',
+    rss: 'https://it.cryptonomist.ch/feed/',
+    language: 'it',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'criptovaluteit',
+    name: 'Criptovalute.it',
+    url: 'https://www.criptovalute.it',
+    rss: 'https://www.criptovalute.it/feed/',
+    language: 'it',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: INDONESIAN SOURCES
+// ═══════════════════════════════════════════════════════════════
+const INDONESIAN_SOURCES: InternationalSource[] = [
+  {
+    key: 'cointelegraphid',
+    name: 'Cointelegraph Indonesia',
+    url: 'https://id.cointelegraph.com',
+    rss: 'https://id.cointelegraph.com/rss',
+    language: 'id',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'blockchainmedia',
+    name: 'Blockchain Media',
+    url: 'https://blockchainmedia.id',
+    rss: 'https://blockchainmedia.id/feed/',
+    language: 'id',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'pintu_academy',
+    name: 'Pintu Academy',
+    url: 'https://pintu.co.id/academy',
+    rss: 'https://pintu.co.id/academy/feed/',
+    language: 'id',
+    category: 'education',
+    region: 'asia',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: DUTCH SOURCES
+// ═══════════════════════════════════════════════════════════════
+const DUTCH_SOURCES: InternationalSource[] = [
+  {
+    key: 'bitcoinmagazine_nl',
+    name: 'Bitcoin Magazine NL',
+    url: 'https://bitcoinmagazine.nl',
+    rss: 'https://bitcoinmagazine.nl/feed/',
+    language: 'nl',
+    category: 'bitcoin',
+    region: 'europe',
+  },
+  {
+    key: 'crypto_insiders',
+    name: 'Crypto Insiders',
+    url: 'https://www.crypto-insiders.nl',
+    rss: 'https://www.crypto-insiders.nl/feed/',
+    language: 'nl',
+    category: 'general',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: POLISH SOURCES
+// ═══════════════════════════════════════════════════════════════
+const POLISH_SOURCES: InternationalSource[] = [
+  {
+    key: 'kryptowaluty',
+    name: 'Kryptowaluty.pl',
+    url: 'https://kryptowaluty.pl',
+    rss: 'https://kryptowaluty.pl/feed/',
+    language: 'pl',
+    category: 'general',
+    region: 'europe',
+  },
+  {
+    key: 'bitcoin_pl',
+    name: 'Bitcoin.pl',
+    url: 'https://bitcoin.pl',
+    rss: 'https://bitcoin.pl/feed/',
+    language: 'pl',
+    category: 'bitcoin',
+    region: 'europe',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: VIETNAMESE SOURCES
+// ═══════════════════════════════════════════════════════════════
+const VIETNAMESE_SOURCES: InternationalSource[] = [
+  {
+    key: 'tapchibitcoin',
+    name: 'Tạp chí Bitcoin',
+    url: 'https://tapchibitcoin.io',
+    rss: 'https://tapchibitcoin.io/feed/',
+    language: 'vi',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'coin68',
+    name: 'Coin68',
+    url: 'https://coin68.com',
+    rss: 'https://coin68.com/feed/',
+    language: 'vi',
+    category: 'general',
+    region: 'asia',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: THAI SOURCES
+// ═══════════════════════════════════════════════════════════════
+const THAI_SOURCES: InternationalSource[] = [
+  {
+    key: 'siamblockchain',
+    name: 'Siam Blockchain',
+    url: 'https://siamblockchain.com',
+    rss: 'https://siamblockchain.com/feed/',
+    language: 'th',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'bitcoinaddictth',
+    name: 'Bitcoin Addict Thailand',
+    url: 'https://bitcoinaddict.org',
+    rss: 'https://bitcoinaddict.org/feed/',
+    language: 'th',
+    category: 'general',
+    region: 'asia',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: ARABIC SOURCES
+// ═══════════════════════════════════════════════════════════════
+const ARABIC_SOURCES: InternationalSource[] = [
+  {
+    key: 'cointelegraphar',
+    name: 'Cointelegraph Arabic',
+    url: 'https://ar.cointelegraph.com',
+    rss: 'https://ar.cointelegraph.com/rss',
+    language: 'ar',
+    category: 'general',
+    region: 'mena',
+  },
+  {
+    key: 'arabicrypto',
+    name: 'ArabiCrypto',
+    url: 'https://arabicrypto.io',
+    rss: 'https://arabicrypto.io/feed/',
+    language: 'ar',
+    category: 'general',
+    region: 'mena',
+  },
 ];
 
 // All international sources combined
@@ -178,6 +679,18 @@ export const INTERNATIONAL_SOURCES: InternationalSource[] = [
   ...CHINESE_SOURCES,
   ...JAPANESE_SOURCES,
   ...SPANISH_SOURCES,
+  ...PORTUGUESE_SOURCES,
+  ...GERMAN_SOURCES,
+  ...FRENCH_SOURCES,
+  ...RUSSIAN_SOURCES,
+  ...TURKISH_SOURCES,
+  ...ITALIAN_SOURCES,
+  ...INDONESIAN_SOURCES,
+  ...DUTCH_SOURCES,
+  ...POLISH_SOURCES,
+  ...VIETNAMESE_SOURCES,
+  ...THAI_SOURCES,
+  ...ARABIC_SOURCES,
 ];
 
 // Source lookup by language
@@ -186,13 +699,27 @@ export const SOURCES_BY_LANGUAGE: Record<string, InternationalSource[]> = {
   zh: CHINESE_SOURCES,
   ja: JAPANESE_SOURCES,
   es: SPANISH_SOURCES,
+  pt: PORTUGUESE_SOURCES,
+  de: GERMAN_SOURCES,
+  fr: FRENCH_SOURCES,
+  ru: RUSSIAN_SOURCES,
+  tr: TURKISH_SOURCES,
+  it: ITALIAN_SOURCES,
+  id: INDONESIAN_SOURCES,
+  nl: DUTCH_SOURCES,
+  pl: POLISH_SOURCES,
+  vi: VIETNAMESE_SOURCES,
+  th: THAI_SOURCES,
+  ar: ARABIC_SOURCES,
 };
 
 // Source lookup by region
 export const SOURCES_BY_REGION: Record<string, InternationalSource[]> = {
   asia: [...KOREAN_SOURCES, ...CHINESE_SOURCES, ...JAPANESE_SOURCES],
-  latam: SPANISH_SOURCES,
-  europe: [], // Could add European sources in the future
+  latam: [...SPANISH_SOURCES, ...PORTUGUESE_SOURCES],
+  europe: [...GERMAN_SOURCES, ...FRENCH_SOURCES, ...RUSSIAN_SOURCES, ...TURKISH_SOURCES, ...ITALIAN_SOURCES, ...DUTCH_SOURCES, ...POLISH_SOURCES],
+  mena: ARABIC_SOURCES,
+  sea: [...INDONESIAN_SOURCES, ...VIETNAMESE_SOURCES, ...THAI_SOURCES],
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -475,8 +1002,8 @@ async function fetchMultipleInternationalSources(
 // ═══════════════════════════════════════════════════════════════
 
 export interface InternationalNewsOptions {
-  language?: 'ko' | 'zh' | 'ja' | 'es' | 'all';
-  region?: 'asia' | 'europe' | 'latam' | 'all';
+  language?: 'ko' | 'zh' | 'ja' | 'es' | 'pt' | 'de' | 'fr' | 'ru' | 'tr' | 'it' | 'nl' | 'pl' | 'id' | 'vi' | 'th' | 'ar' | 'all';
+  region?: 'asia' | 'europe' | 'latam' | 'mena' | 'sea' | 'all';
   limit?: number;
 }
 
