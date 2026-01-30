@@ -20,7 +20,7 @@
 하나의 API 호출로 7개 주요 소스에서 실시간 암호화폐 뉴스를 받아보세요.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ curl https://free-crypto-news.vercel.app/api/news
 
 ```bash
 # 모든 국제 뉴스 가져오기
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # 한국어 뉴스를 영어로 번역해서 가져오기
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # 아시아 지역 뉴스 가져오기
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### 기능
@@ -91,7 +91,7 @@ Free Crypto News는 오프라인 지원이 되는 **완전히 설치 가능한 P
 ### 앱 설치
 
 **데스크톱 (Chrome/Edge):**
-1. [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app) 방문
+1. [news-crypto.vercel.app](https://news-crypto.vercel.app) 방문
 2. URL 바의 설치 아이콘 (⊕) 클릭
 3. "설치" 클릭
 
@@ -154,7 +154,7 @@ Free Crypto News는 오프라인 지원이 되는 **완전히 설치 가능한 P
 | [Go](sdk/go/) | Go 클라이언트 라이브러리 |
 | [PHP](sdk/php/) | PHP SDK |
 
-**Base URL:** `https://free-crypto-news.vercel.app`
+**Base URL:** `https://news-crypto.vercel.app`
 
 ---
 

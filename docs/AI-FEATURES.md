@@ -83,7 +83,7 @@ OPENROUTER_MODEL=meta-llama/llama-3-8b-instruct
 ### Check Configuration
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/ai
+curl https://news-crypto.vercel.app/api/ai
 ```
 
 Response:
@@ -151,7 +151,7 @@ Generate concise summaries of articles.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "summarize",
@@ -190,7 +190,7 @@ Analyze market sentiment with confidence scores.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "sentiment",
@@ -232,7 +232,7 @@ Extract structured information from articles.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "facts",
@@ -278,7 +278,7 @@ Evaluate claims made in articles.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "factcheck",
@@ -333,7 +333,7 @@ Generate follow-up questions readers might have.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "questions",
@@ -366,7 +366,7 @@ Auto-categorize articles by topic.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "categorize",
@@ -412,7 +412,7 @@ Translate content to any language.
 **Request:**
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/ai \
+curl -X POST https://news-crypto.vercel.app/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "translate",
@@ -571,7 +571,7 @@ Generate a comprehensive daily digest of crypto news with market overview, top s
 **Request:**
 
 ```bash
-curl "https://free-crypto-news.vercel.app/api/ai/brief?date=2026-01-22&format=full"
+curl "https://news-crypto.vercel.app/api/ai/brief?date=2026-01-22&format=full"
 ```
 
 **Response:**
@@ -645,7 +645,7 @@ Generate balanced bull and bear perspectives on any article or topic.
 **Request:**
 
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/ai/debate" \
+curl -X POST "https://news-crypto.vercel.app/api/ai/debate" \
   -H "Content-Type: application/json" \
   -d '{
     "topic": "Bitcoin reaching $200k in 2026"
@@ -727,7 +727,7 @@ Challenge any claim with structured counter-arguments, assumption analysis, and 
 **Request:**
 
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/ai/counter" \
+curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
   -H "Content-Type: application/json" \
   -d '{
     "claim": "Bitcoin will replace the US dollar by 2030"

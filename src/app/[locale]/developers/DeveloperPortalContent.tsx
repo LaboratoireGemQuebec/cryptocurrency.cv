@@ -218,7 +218,7 @@ function QuickStartTab({ copyToClipboard }: { copyToClipboard: (text: string) =>
             <div
               key={item.endpoint}
               className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
-              onClick={() => copyToClipboard(`curl https://free-crypto-news.vercel.app${item.endpoint}`)}
+              onClick={() => copyToClipboard(`curl https://news-crypto.vercel.app${item.endpoint}`)}
             >
               <code className="text-amber-500 font-mono text-sm">{item.endpoint}</code>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{item.desc}</p>
@@ -230,14 +230,14 @@ function QuickStartTab({ copyToClipboard }: { copyToClipboard: (text: string) =>
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400"># Example request</span>
             <button
-              onClick={() => copyToClipboard('curl https://free-crypto-news.vercel.app/api/news?limit=5')}
+              onClick={() => copyToClipboard('curl https://news-crypto.vercel.app/api/news?limit=5')}
               className="text-xs text-amber-500 hover:text-amber-400"
             >
               Copy
             </button>
           </div>
           <code className="text-green-400">
-            curl https://free-crypto-news.vercel.app/api/news?limit=5
+            curl https://news-crypto.vercel.app/api/news?limit=5
           </code>
         </div>
       </div>
@@ -292,13 +292,13 @@ function QuickStartTab({ copyToClipboard }: { copyToClipboard: (text: string) =>
             <div className="text-gray-400 mb-1"># Using header (recommended)</div>
             <code className="text-green-400">
               curl -H &quot;X-API-Key: YOUR_API_KEY&quot; \<br />
-              &nbsp;&nbsp;https://free-crypto-news.vercel.app/api/v1/coins
+              &nbsp;&nbsp;https://news-crypto.vercel.app/api/v1/coins
             </code>
           </div>
           <div>
             <div className="text-gray-400 mb-1"># Using query parameter</div>
             <code className="text-green-400">
-              curl &quot;https://free-crypto-news.vercel.app/api/v1/coins?api_key=YOUR_API_KEY&quot;
+              curl &quot;https://news-crypto.vercel.app/api/v1/coins?api_key=YOUR_API_KEY&quot;
             </code>
           </div>
         </div>

@@ -19,7 +19,7 @@ class CryptoNews {
     private string $baseUrl;
     private int $timeout;
     
-    const DEFAULT_BASE_URL = 'https://free-crypto-news.vercel.app';
+    const DEFAULT_BASE_URL = 'https://news-crypto.vercel.app';
     
     /**
      * Create a new CryptoNews client

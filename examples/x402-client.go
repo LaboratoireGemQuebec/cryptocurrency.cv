@@ -33,7 +33,7 @@ import (
 // CONFIGURATION
 // =============================================================================
 
-const APIBase = "https://free-crypto-news.vercel.app"
+const APIBase = "https://news-crypto.vercel.app"
 
 var privateKey *ecdsa.PrivateKey
 var walletAddress string

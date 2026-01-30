@@ -1,4 +1,4 @@
-const API_BASE = 'https://free-crypto-news.vercel.app/api';
+const API_BASE = 'https://news-crypto.vercel.app/api';
 
 let currentEndpoint = 'news';
 

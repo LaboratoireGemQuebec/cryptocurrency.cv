@@ -3,7 +3,7 @@ const pa11y = require('pa11y');
 
 async function runAudit() {
   try {
-    const results = await pa11y('https://free-crypto-news.vercel.app', {
+    const results = await pa11y('https://news-crypto.vercel.app', {
       chromeLaunchConfig: {
         args: ['--no-sandbox', '--disable-setuid-sandbox']
       }

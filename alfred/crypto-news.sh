@@ -3,7 +3,7 @@
 # Free Crypto News Alfred Workflow
 # Usage: ./crypto-news.sh [command] [args]
 
-API_BASE="https://free-crypto-news.vercel.app/api"
+API_BASE="https://news-crypto.vercel.app/api"
 COMMAND="${1:-news}"
 LIMIT="${2:-10}"
 

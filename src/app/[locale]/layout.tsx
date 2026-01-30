@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://free-crypto-news.vercel.app'),
+  metadataBase: new URL('https://news-crypto.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Free Crypto News',
     description: '🆓 100% FREE crypto news API. No API keys. No rate limits.',
-    url: 'https://free-crypto-news.vercel.app',
+    url: 'https://news-crypto.vercel.app',
     siteName: 'Free Crypto News',
     type: 'website',
     locale: 'en_US',

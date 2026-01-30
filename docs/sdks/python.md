@@ -45,7 +45,7 @@ breaking = client.get_breaking_news()
 
 ```python
 class CryptoNews:
-    def __init__(self, base_url: str = "https://free-crypto-news.vercel.app")
+    def __init__(self, base_url: str = "https://news-crypto.vercel.app")
 ```
 
 #### Methods

@@ -30,7 +30,7 @@ from web3 import Web3
 # CONFIGURATION
 # =============================================================================
 
-API_BASE = "https://free-crypto-news.vercel.app"
+API_BASE = "https://news-crypto.vercel.app"
 PRIVATE_KEY = os.environ.get("WALLET_PRIVATE_KEY")
 
 if not PRIVATE_KEY:

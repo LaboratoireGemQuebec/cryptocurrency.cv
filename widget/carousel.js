@@ -160,7 +160,7 @@
   document.head.appendChild(style);
 
   window.CryptoCarousel = {
-    API_BASE: 'https://free-crypto-news.vercel.app',
+    API_BASE: 'https://news-crypto.vercel.app',
     instances: new Map(),
     
     async init(selector, options) {

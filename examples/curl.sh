@@ -2,7 +2,7 @@
 # Free Crypto News API - curl examples
 # No API key required!
 
-API="https://free-crypto-news.vercel.app"
+API="https://news-crypto.vercel.app"
 
 echo "📰 Latest News"
 curl -s "$API/api/news?limit=3" | jq '.articles[] | {title, source, timeAgo}'

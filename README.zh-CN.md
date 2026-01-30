@@ -20,7 +20,7 @@
 通过一次 API 调用从 7 个主要来源获取实时加密货币新闻。
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ curl https://free-crypto-news.vercel.app/api/news
 
 ```bash
 # 获取所有国际新闻
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # 获取韩语新闻并翻译成英语
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # 获取亚洲地区新闻
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### 功能特点
@@ -91,7 +91,7 @@ Free Crypto News 是一个**完全可安装的 PWA**，支持离线使用！
 ### 安装应用
 
 **桌面（Chrome/Edge）：**
-1. 访问 [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+1. 访问 [news-crypto.vercel.app](https://news-crypto.vercel.app)
 2. 点击地址栏中的安装图标（⊕）
 3. 点击"安装"
 
@@ -159,7 +159,7 @@ Free Crypto News 是一个**完全可安装的 PWA**，支持离线使用！
 | [Go](sdk/go/) | Go 客户端库 |
 | [PHP](sdk/php/) | PHP SDK |
 
-**基础 URL：** `https://free-crypto-news.vercel.app`
+**基础 URL：** `https://news-crypto.vercel.app`
 
 ---
 

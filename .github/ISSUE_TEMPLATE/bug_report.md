@@ -19,7 +19,7 @@ A clear and concise description of what the bug is.
 ## 🔍 Example Request
 
 ```bash
-curl "https://free-crypto-news.vercel.app/api/..."
+curl "https://news-crypto.vercel.app/api/..."
 ```
 
 ## ✅ Expected Behavior

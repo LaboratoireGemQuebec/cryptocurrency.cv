@@ -61,13 +61,13 @@ The API supports response translation via the `lang` parameter:
 
 ```bash
 # Get news in Spanish
-curl "https://free-crypto-news.vercel.app/api/news?lang=es"
+curl "https://news-crypto.vercel.app/api/news?lang=es"
 
 # Get news in Japanese
-curl "https://free-crypto-news.vercel.app/api/news?lang=ja"
+curl "https://news-crypto.vercel.app/api/news?lang=ja"
 
 # Get news in Arabic
-curl "https://free-crypto-news.vercel.app/api/news?lang=ar"
+curl "https://news-crypto.vercel.app/api/news?lang=ar"
 ```
 
 ### Response Format

@@ -1,6 +1,6 @@
 # Free Crypto News Rust SDK
 
-Production-ready Rust client for the [Free Crypto News API](https://free-crypto-news.vercel.app).
+Production-ready Rust client for the [Free Crypto News API](https://news-crypto.vercel.app).
 
 ## Features
 

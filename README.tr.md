@@ -20,7 +20,7 @@
 Tek bir API çağrısıyla 7 büyük kaynaktan gerçek zamanlı kripto haberleri alın.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ Korece, Çince, Japonca ve İspanyolca **12 uluslararası kaynaktan** kripto hab
 
 ```bash
 # Tüm uluslararası haberleri al
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # Korece haberleri İngilizce'ye çevrilmiş olarak al
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # Asya bölgesi haberlerini al
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### Özellikler
@@ -91,7 +91,7 @@ Free Crypto News, çevrimdışı desteğiyle **tamamen yüklenebilir bir PWA**'d
 ### Uygulamayı Yükle
 
 **Masaüstü (Chrome/Edge):**
-1. [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app) adresini ziyaret edin
+1. [news-crypto.vercel.app](https://news-crypto.vercel.app) adresini ziyaret edin
 2. URL çubuğundaki yükleme simgesine (⊕) tıklayın
 3. "Yükle"ye tıklayın
 
@@ -154,7 +154,7 @@ Free Crypto News, çevrimdışı desteğiyle **tamamen yüklenebilir bir PWA**'d
 | [Go](sdk/go/) | Go istemci kütüphanesi |
 | [PHP](sdk/php/) | PHP SDK |
 
-**Base URL:** `https://free-crypto-news.vercel.app`
+**Base URL:** `https://news-crypto.vercel.app`
 
 ---
 

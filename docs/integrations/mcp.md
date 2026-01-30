@@ -54,7 +54,7 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
       "command": "node",
       "args": ["/path/to/mcp/index.js"],
       "env": {
-        "FCN_BASE_URL": "https://free-crypto-news.vercel.app"
+        "FCN_BASE_URL": "https://news-crypto.vercel.app"
       }
     }
   }
@@ -192,7 +192,7 @@ npm install -g @anthropic-ai/mcp-server-crypto-news
 Check if the Free Crypto News API is accessible:
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/health
+curl https://news-crypto.vercel.app/api/health
 ```
 
 ### Tool Errors

@@ -33,7 +33,7 @@ All premium endpoints require authentication via API key:
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-  "https://free-crypto-news.vercel.app/api/premium/..."
+  "https://news-crypto.vercel.app/api/premium/..."
 ```
 
 ---
@@ -355,7 +355,7 @@ Export portfolio data in various formats.
 ### Generate API Key
 
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/premium/api-keys" \
+curl -X POST "https://news-crypto.vercel.app/api/premium/api-keys" \
   -H "Authorization: Bearer YOUR_MASTER_KEY" \
   -d '{"name": "Trading Bot", "permissions": ["read", "trade"]}'
 ```
@@ -363,14 +363,14 @@ curl -X POST "https://free-crypto-news.vercel.app/api/premium/api-keys" \
 ### List API Keys
 
 ```bash
-curl "https://free-crypto-news.vercel.app/api/keys" \
+curl "https://news-crypto.vercel.app/api/keys" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
 ### Revoke API Key
 
 ```bash
-curl -X DELETE "https://free-crypto-news.vercel.app/api/keys/KEY_ID" \
+curl -X DELETE "https://news-crypto.vercel.app/api/keys/KEY_ID" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
@@ -435,7 +435,7 @@ Premium users can configure webhooks for real-time alerts:
 ### Configure Webhooks
 
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/webhooks" \
+curl -X POST "https://news-crypto.vercel.app/api/webhooks" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -527,7 +527,7 @@ Enterprise tier includes additional features:
 ### 1. Sign Up
 
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/register" \
+curl -X POST "https://news-crypto.vercel.app/api/register" \
   -d '{"email": "you@example.com", "tier": "pro"}'
 ```
 
@@ -539,7 +539,7 @@ After payment confirmation, your API key will be emailed and available in the da
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-  "https://free-crypto-news.vercel.app/api/premium/ai/signals"
+  "https://news-crypto.vercel.app/api/premium/ai/signals"
 ```
 
 ---

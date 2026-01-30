@@ -25,7 +25,7 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -138,12 +138,12 @@ export default async function ArticlePage({ params }: Props) {
   
   // Use SEO-friendly slug for URL, fallback to id if no slug
   const articleSlug = article.slug || generateArticleSlug(article.title, article.pub_date || article.first_seen);
-  const articleUrl = `https://free-crypto-news.vercel.app/article/${articleSlug}`;
+  const articleUrl = `https://news-crypto.vercel.app/article/${articleSlug}`;
   
   // Breadcrumb data for structured data
   const breadcrumbs = [
-    { name: 'Home', url: 'https://free-crypto-news.vercel.app' },
-    { name: article.source, url: `https://free-crypto-news.vercel.app/source/${article.source_key}` },
+    { name: 'Home', url: 'https://news-crypto.vercel.app' },
+    { name: article.source, url: `https://news-crypto.vercel.app/source/${article.source_key}` },
     { name: article.title.slice(0, 50) + (article.title.length > 50 ? '...' : ''), url: articleUrl },
   ];
   

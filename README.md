@@ -22,7 +22,7 @@
 Get real-time crypto news from 7 major sources with one API call.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -73,13 +73,13 @@ Get crypto news from **12 international sources** in Korean, Chinese, Japanese, 
 
 ```bash
 # Get all international news
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # Get Korean news with English translation
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # Get Asian region news
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### Features
@@ -115,7 +115,7 @@ Free Crypto News is a **fully installable PWA** that works offline!
 ### Install the App
 
 **Desktop (Chrome/Edge):**
-1. Visit [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+1. Visit [news-crypto.vercel.app](https://news-crypto.vercel.app)
 2. Click the install icon (⊕) in the address bar
 3. Click "Install"
 
@@ -303,22 +303,22 @@ Filter news by specialized categories:
 
 ```bash
 # Get institutional/VC research
-curl "https://free-crypto-news.vercel.app/api/news?category=institutional"
+curl "https://news-crypto.vercel.app/api/news?category=institutional"
 
 # Get on-chain analytics news
-curl "https://free-crypto-news.vercel.app/api/news?category=onchain"
+curl "https://news-crypto.vercel.app/api/news?category=onchain"
 
 # Get ETF and asset manager news
-curl "https://free-crypto-news.vercel.app/api/news?category=etf"
+curl "https://news-crypto.vercel.app/api/news?category=etf"
 
 # Get macro economic analysis
-curl "https://free-crypto-news.vercel.app/api/news?category=macro"
+curl "https://news-crypto.vercel.app/api/news?category=macro"
 
 # Get quantitative research
-curl "https://free-crypto-news.vercel.app/api/news?category=quant"
+curl "https://news-crypto.vercel.app/api/news?category=quant"
 
 # List all available categories
-curl "https://free-crypto-news.vercel.app/api/news/categories"
+curl "https://news-crypto.vercel.app/api/news/categories"
 ```
 
 Available categories: `general`, `bitcoin`, `defi`, `nft`, `research`, `institutional`, `etf`, `derivatives`, `onchain`, `fintech`, `macro`, `quant`, `journalism`, `ethereum`, `asia`, `tradfi`, `mainstream`, `mining`, `gaming`, `altl1`, `stablecoin`
@@ -329,16 +329,16 @@ All news endpoints support real-time translation via the `?lang=` parameter:
 
 ```bash
 # Get news in Spanish
-curl "https://free-crypto-news.vercel.app/api/news?lang=es"
+curl "https://news-crypto.vercel.app/api/news?lang=es"
 
 # Get breaking news in Japanese
-curl "https://free-crypto-news.vercel.app/api/breaking?lang=ja"
+curl "https://news-crypto.vercel.app/api/breaking?lang=ja"
 
 # Get DeFi news in Arabic
-curl "https://free-crypto-news.vercel.app/api/defi?lang=ar"
+curl "https://news-crypto.vercel.app/api/defi?lang=ar"
 
 # Get Bitcoin news in Chinese (Simplified)
-curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
+curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 ```
 
 **Supported Languages:** `en`, `es`, `fr`, `de`, `pt`, `ja`, `zh-CN`, `zh-TW`, `ko`, `ar`, `ru`, `it`, `nl`, `pl`, `tr`, `vi`, `th`, `id`
@@ -895,7 +895,7 @@ The web app includes **50+ pages** for market data, portfolio management, AI too
 | [Testing](docs/TESTING.md) | Test coverage & strategies |
 | [Deployment](DEPLOYMENT.md) | Deployment guide |
 
-**Base URL:** `https://free-crypto-news.vercel.app`
+**Base URL:** `https://news-crypto.vercel.app`
 
 **Failsafe Mirror:** `https://nirholas.github.io/free-crypto-news/`
 
@@ -956,66 +956,66 @@ The web app includes **50+ pages** for market data, portfolio management, AI too
 
 **Ask questions about crypto news:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/ask?q=What%20is%20happening%20with%20Bitcoin%20today"
+curl "https://news-crypto.vercel.app/api/ask?q=What%20is%20happening%20with%20Bitcoin%20today"
 ```
 
 **Get AI-powered summaries:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/summarize?limit=5&style=brief"
+curl "https://news-crypto.vercel.app/api/summarize?limit=5&style=brief"
 ```
 
 **Daily digest:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/digest?period=24h"
+curl "https://news-crypto.vercel.app/api/digest?period=24h"
 ```
 
 **Deep sentiment analysis:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/sentiment?asset=BTC"
+curl "https://news-crypto.vercel.app/api/sentiment?asset=BTC"
 ```
 
 **Extract entities (people, companies, tickers):**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/entities?type=person"
+curl "https://news-crypto.vercel.app/api/entities?type=person"
 ```
 
 **Identify market narratives:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/narratives?emerging=true"
+curl "https://news-crypto.vercel.app/api/narratives?emerging=true"
 ```
 
 **News-based trading signals:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/signals?min_confidence=70"
+curl "https://news-crypto.vercel.app/api/signals?min_confidence=70"
 ```
 
 **Fact-check claims:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/factcheck?type=prediction"
+curl "https://news-crypto.vercel.app/api/factcheck?type=prediction"
 ```
 
 **Detect clickbait:**
 ```bash
-curl "https://free-crypto-news.vercel.app/api/clickbait?threshold=50"
+curl "https://news-crypto.vercel.app/api/clickbait?threshold=50"
 ```
 
 ### 🆕 AI Products
 
 **Daily Brief** - Comprehensive crypto news digest:
 ```bash
-curl "https://free-crypto-news.vercel.app/api/ai/brief?format=full"
+curl "https://news-crypto.vercel.app/api/ai/brief?format=full"
 ```
 
 **Bull vs Bear Debate** - Generate balanced perspectives:
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/ai/debate" \
+curl -X POST "https://news-crypto.vercel.app/api/ai/debate" \
   -H "Content-Type: application/json" \
   -d '{"topic": "Bitcoin reaching $200k in 2026"}'
 ```
 
 **Counter-Arguments** - Challenge any claim:
 ```bash
-curl -X POST "https://free-crypto-news.vercel.app/api/ai/counter" \
+curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
   -H "Content-Type: application/json" \
   -d '{"claim": "Ethereum will flip Bitcoin by market cap"}'
 ```
@@ -1063,7 +1063,7 @@ breaking = news.get_breaking(5)
 **One-liner:**
 ```python
 import urllib.request, json
-news = json.loads(urllib.request.urlopen("https://free-crypto-news.vercel.app/api/news?limit=5").read())
+news = json.loads(urllib.request.urlopen("https://news-crypto.vercel.app/api/news?limit=5").read())
 print(news["articles"][0]["title"])
 ```
 
@@ -1115,7 +1115,7 @@ const breaking = await news.getBreaking(5);
 
 **One-liner:**
 ```javascript
-const news = await fetch("https://free-crypto-news.vercel.app/api/news?limit=5").then(r => r.json());
+const news = await fetch("https://news-crypto.vercel.app/api/news?limit=5").then(r => r.json());
 console.log(news.articles[0].title);
 ```
 
@@ -1135,7 +1135,7 @@ info:
   title: Free Crypto News
   version: 1.0.0
 servers:
-  - url: https://free-crypto-news.vercel.app
+  - url: https://news-crypto.vercel.app
 paths:
   /api/news:
     get:
@@ -1254,13 +1254,13 @@ import requests
 @tool
 def get_crypto_news(limit: int = 5) -> str:
     """Get latest cryptocurrency news from 7 sources."""
-    r = requests.get(f"https://free-crypto-news.vercel.app/api/news?limit={limit}")
+    r = requests.get(f"https://news-crypto.vercel.app/api/news?limit={limit}")
     return "\n".join([f"• {a['title']} ({a['source']})" for a in r.json()["articles"]])
 
 @tool
 def search_crypto_news(query: str) -> str:
     """Search crypto news by keyword."""
-    r = requests.get(f"https://free-crypto-news.vercel.app/api/search?q={query}")
+    r = requests.get(f"https://news-crypto.vercel.app/api/search?q={query}")
     return "\n".join([f"• {a['title']}" for a in r.json()["articles"]])
 
 # Use in your agent
@@ -1278,7 +1278,7 @@ const { Client, EmbedBuilder } = require('discord.js');
 
 client.on('messageCreate', async (msg) => {
   if (msg.content === '!news') {
-    const { articles } = await fetch('https://free-crypto-news.vercel.app/api/breaking?limit=5').then(r => r.json());
+    const { articles } = await fetch('https://news-crypto.vercel.app/api/breaking?limit=5').then(r => r.json());
     
     const embed = new EmbedBuilder()
       .setTitle('🚨 Breaking Crypto News')
@@ -1307,7 +1307,7 @@ import aiohttp
 
 async def news(update: Update, context):
     async with aiohttp.ClientSession() as session:
-        async with session.get('https://free-crypto-news.vercel.app/api/news?limit=5') as r:
+        async with session.get('https://news-crypto.vercel.app/api/news?limit=5') as r:
             data = await r.json()
     
     msg = "📰 *Latest Crypto News*\n\n"
@@ -1332,7 +1332,7 @@ Embed on any website:
 ```html
 <script>
 async function loadNews() {
-  const { articles } = await fetch('https://free-crypto-news.vercel.app/api/news?limit=5').then(r => r.json());
+  const { articles } = await fetch('https://news-crypto.vercel.app/api/news?limit=5').then(r => r.json());
   document.getElementById('news').innerHTML = articles.map(a => 
     `<div><a href="${a.link}">${a.title}</a> <small>${a.source}</small></div>`
   ).join('');
@@ -1350,16 +1350,16 @@ Full styled widget: [`widget/crypto-news-widget.html`](widget/crypto-news-widget
 
 ```bash
 # Latest news
-curl -s https://free-crypto-news.vercel.app/api/news | jq '.articles[:3]'
+curl -s https://news-crypto.vercel.app/api/news | jq '.articles[:3]'
 
 # Search
-curl -s "https://free-crypto-news.vercel.app/api/search?q=bitcoin,etf" | jq
+curl -s "https://news-crypto.vercel.app/api/search?q=bitcoin,etf" | jq
 
 # DeFi news
-curl -s https://free-crypto-news.vercel.app/api/defi | jq
+curl -s https://news-crypto.vercel.app/api/defi | jq
 
 # Pretty print titles
-curl -s https://free-crypto-news.vercel.app/api/news | jq -r '.articles[] | "📰 \(.title) (\(.source))"'
+curl -s https://news-crypto.vercel.app/api/news | jq -r '.articles[] | "📰 \(.title) (\(.source))"'
 ```
 
 ---
@@ -1450,9 +1450,9 @@ PRs welcome! Ideas:
 Subscribe to the aggregated feed in any RSS reader:
 
 ```
-https://free-crypto-news.vercel.app/api/rss
-https://free-crypto-news.vercel.app/api/rss?feed=defi
-https://free-crypto-news.vercel.app/api/rss?feed=bitcoin
+https://news-crypto.vercel.app/api/rss
+https://news-crypto.vercel.app/api/rss?feed=defi
+https://news-crypto.vercel.app/api/rss?feed=bitcoin
 ```
 
 ## 🏥 Health Check
@@ -1460,7 +1460,7 @@ https://free-crypto-news.vercel.app/api/rss?feed=bitcoin
 Monitor API and source health:
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/health | jq
+curl https://news-crypto.vercel.app/api/health | jq
 ```
 
 Returns status of all 7 RSS sources with response times.
@@ -1470,7 +1470,7 @@ Returns status of all 7 RSS sources with response times.
 Swagger UI documentation:
 
 ```
-https://free-crypto-news.vercel.app/api/docs
+https://news-crypto.vercel.app/api/docs
 ```
 
 ## 🔔 Webhooks
@@ -1478,7 +1478,7 @@ https://free-crypto-news.vercel.app/api/docs
 Register for push notifications:
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/webhooks \
+curl -X POST https://news-crypto.vercel.app/api/webhooks \
   -H "Content-Type: application/json" \
   -d '{"url": "https://your-server.com/webhook", "secret": "your-secret"}'
 ```
@@ -1490,7 +1490,7 @@ curl -X POST https://free-crypto-news.vercel.app/api/webhooks \
 ### Trending Topics
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/trending?hours=24
+curl https://news-crypto.vercel.app/api/trending?hours=24
 ```
 
 Returns topics with sentiment (bullish/bearish/neutral) and mention counts.
@@ -1499,19 +1499,19 @@ Returns topics with sentiment (bullish/bearish/neutral) and mention counts.
 
 ```bash
 # Get all analyzed news
-curl https://free-crypto-news.vercel.app/api/analyze
+curl https://news-crypto.vercel.app/api/analyze
 
 # Filter by topic
-curl "https://free-crypto-news.vercel.app/api/analyze?topic=DeFi"
+curl "https://news-crypto.vercel.app/api/analyze?topic=DeFi"
 
 # Filter by sentiment
-curl "https://free-crypto-news.vercel.app/api/analyze?sentiment=bullish"
+curl "https://news-crypto.vercel.app/api/analyze?sentiment=bullish"
 ```
 
 ### Statistics
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/stats
+curl https://news-crypto.vercel.app/api/stats
 ```
 
 Returns articles per source, hourly distribution, and category breakdown.
@@ -1550,16 +1550,16 @@ Query historical news data stored in GitHub:
 
 ```bash
 # Get archive statistics
-curl "https://free-crypto-news.vercel.app/api/archive?stats=true"
+curl "https://news-crypto.vercel.app/api/archive?stats=true"
 
 # Query by date range
-curl "https://free-crypto-news.vercel.app/api/archive?start_date=2025-01-01&end_date=2025-01-07"
+curl "https://news-crypto.vercel.app/api/archive?start_date=2025-01-01&end_date=2025-01-07"
 
 # Search historical articles
-curl "https://free-crypto-news.vercel.app/api/archive?q=bitcoin&limit=50"
+curl "https://news-crypto.vercel.app/api/archive?q=bitcoin&limit=50"
 
 # Get archive index
-curl "https://free-crypto-news.vercel.app/api/archive?index=true"
+curl "https://news-crypto.vercel.app/api/archive?index=true"
 ```
 
 Archive is automatically updated every 6 hours via GitHub Actions.
@@ -1602,7 +1602,7 @@ Real-time monitoring of all API endpoints with auto-refresh.
 ### Client-Side Failsafe Pattern
 
 ```javascript
-const MAIN_API = 'https://free-crypto-news.vercel.app';
+const MAIN_API = 'https://news-crypto.vercel.app';
 const FAILSAFE = 'https://nirholas.github.io/free-crypto-news';
 
 async function getNews() {
@@ -1630,13 +1630,13 @@ Track where news originated before being picked up by aggregators:
 
 ```bash
 # Find original sources for recent news
-curl "https://free-crypto-news.vercel.app/api/origins?limit=20"
+curl "https://news-crypto.vercel.app/api/origins?limit=20"
 
 # Filter by source type
-curl "https://free-crypto-news.vercel.app/api/origins?source_type=government"
+curl "https://news-crypto.vercel.app/api/origins?source_type=government"
 
 # Search specific topic
-curl "https://free-crypto-news.vercel.app/api/origins?q=SEC"
+curl "https://news-crypto.vercel.app/api/origins?q=SEC"
 ```
 
 Source types: `official`, `press-release`, `social`, `blog`, `government`
@@ -1651,10 +1651,10 @@ Subscribe to real-time push notifications:
 
 ```javascript
 // Get VAPID public key
-const { publicKey } = await fetch('https://free-crypto-news.vercel.app/api/push').then(r => r.json());
+const { publicKey } = await fetch('https://news-crypto.vercel.app/api/push').then(r => r.json());
 
 // Register subscription
-await fetch('https://free-crypto-news.vercel.app/api/push', {
+await fetch('https://news-crypto.vercel.app/api/push', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -1715,22 +1715,22 @@ We're building the most comprehensive open historical archive of crypto news. Ev
 
 ```bash
 # Get enriched articles with all metadata
-curl "https://free-crypto-news.vercel.app/api/archive/v2?limit=20"
+curl "https://news-crypto.vercel.app/api/archive/v2?limit=20"
 
 # Filter by ticker
-curl "https://free-crypto-news.vercel.app/api/archive/v2?ticker=BTC"
+curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC"
 
 # Filter by sentiment
-curl "https://free-crypto-news.vercel.app/api/archive/v2?sentiment=positive"
+curl "https://news-crypto.vercel.app/api/archive/v2?sentiment=positive"
 
 # Get archive statistics
-curl "https://free-crypto-news.vercel.app/api/archive/v2?stats=true"
+curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
 
 # Get trending tickers (last 24h)
-curl "https://free-crypto-news.vercel.app/api/archive/v2?trending=true"
+curl "https://news-crypto.vercel.app/api/archive/v2?trending=true"
 
 # Get market history for a month
-curl "https://free-crypto-news.vercel.app/api/archive/v2?market=2026-01"
+curl "https://news-crypto.vercel.app/api/archive/v2?market=2026-01"
 ```
 
 ## Archive Directory Structure

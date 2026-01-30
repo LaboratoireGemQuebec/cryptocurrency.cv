@@ -21,7 +21,7 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
-const API_BASE = process.env.API_BASE || 'https://free-crypto-news.vercel.app';
+const API_BASE = process.env.API_BASE || 'https://news-crypto.vercel.app';
 const TRANSPORT_MODE = process.argv.includes('--http') ? 'http' : 'stdio';
 
 // Create server

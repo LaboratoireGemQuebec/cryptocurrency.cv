@@ -22,7 +22,7 @@ import (
 	"time"
 )
 
-const DefaultBaseURL = "https://free-crypto-news.vercel.app"
+const DefaultBaseURL = "https://news-crypto.vercel.app"
 
 // Article represents a news article
 type Article struct {

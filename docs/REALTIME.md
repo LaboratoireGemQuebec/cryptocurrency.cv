@@ -144,7 +144,7 @@ import requests
 import json
 
 def stream_news():
-    url = 'https://free-crypto-news.vercel.app/api/sse'
+    url = 'https://news-crypto.vercel.app/api/sse'
     
     with requests.get(url, stream=True) as response:
         client = sseclient.SSEClient(response)
@@ -182,7 +182,7 @@ node ws-server.js
 
 ```env
 WS_PORT=8080
-NEWS_API_URL=https://free-crypto-news.vercel.app
+NEWS_API_URL=https://news-crypto.vercel.app
 POLL_INTERVAL=30000
 ```
 
@@ -305,7 +305,7 @@ Configurable alerts for price movements, breaking news, and custom conditions wi
 ### Create Alert Rule
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/alerts \
+curl -X POST https://news-crypto.vercel.app/api/alerts \
   -H "Content-Type: application/json" \
   -d '{
     "name": "BTC Above 100k",
@@ -734,7 +734,7 @@ Server-to-server notifications with HMAC signatures.
 ### Register Webhook
 
 ```bash
-curl -X POST https://free-crypto-news.vercel.app/api/webhooks \
+curl -X POST https://news-crypto.vercel.app/api/webhooks \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://your-server.com/webhook",
@@ -887,7 +887,7 @@ CMD ["node", "ws-server.js"]
 
 ```bash
 docker build -t crypto-news-ws .
-docker run -p 8080:8080 -e NEWS_API_URL=https://free-crypto-news.vercel.app crypto-news-ws
+docker run -p 8080:8080 -e NEWS_API_URL=https://news-crypto.vercel.app crypto-news-ws
 ```
 
 ---

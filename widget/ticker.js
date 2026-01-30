@@ -112,7 +112,7 @@
 
   // Ticker implementation
   window.CryptoTicker = {
-    API_BASE: 'https://free-crypto-news.vercel.app',
+    API_BASE: 'https://news-crypto.vercel.app',
     
     async init(selector, options = {}) {
       const container = document.querySelector(selector);

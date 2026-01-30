@@ -117,7 +117,7 @@ node realtime-stream.js
 
 ## No API Keys Required!
 
-All examples connect to the free API at `https://free-crypto-news.vercel.app` - no authentication needed.
+All examples connect to the free API at `https://news-crypto.vercel.app` - no authentication needed.
 
 ## Self-Hosted
 
@@ -206,5 +206,5 @@ go run x402-client.go
 | `/api/v1/analysis` | $0.005 |
 | `/api/v1/export` | $0.01 |
 
-Check all endpoints at: `https://free-crypto-news.vercel.app/api/.well-known/x402`
+Check all endpoints at: `https://news-crypto.vercel.app/api/.well-known/x402`
 

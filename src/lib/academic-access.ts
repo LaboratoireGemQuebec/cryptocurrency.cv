@@ -692,7 +692,7 @@ export function listResearcherProjects(researcherId: string): ResearchProject[] 
 
 const CITATION_BASE = {
   dataset: 'Free Crypto News API',
-  url: 'https://free-crypto-news.vercel.app',
+  url: 'https://news-crypto.vercel.app',
   publisher: 'Free Crypto News',
 };
 

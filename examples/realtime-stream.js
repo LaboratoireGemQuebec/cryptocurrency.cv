@@ -8,7 +8,7 @@
 // For Node.js, install: npm install eventsource
 // const EventSource = require('eventsource');
 
-const API_URL = 'https://free-crypto-news.vercel.app';
+const API_URL = 'https://news-crypto.vercel.app';
 
 class CryptoNewsStream {
   constructor(options = {}) {

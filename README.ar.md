@@ -22,7 +22,7 @@
 احصل على أخبار العملات المشفرة في الوقت الفعلي من 7 مصادر رئيسية باستدعاء API واحد.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -56,13 +56,13 @@ curl https://free-crypto-news.vercel.app/api/news
 
 ```bash
 # الحصول على جميع الأخبار الدولية
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # الحصول على أخبار كورية مترجمة للإنجليزية
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # الحصول على أخبار منطقة آسيا
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### الميزات
@@ -93,7 +93,7 @@ Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم
 ### تثبيت التطبيق
 
 **سطح المكتب (Chrome/Edge):**
-1. قم بزيارة [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+1. قم بزيارة [news-crypto.vercel.app](https://news-crypto.vercel.app)
 2. انقر على أيقونة التثبيت (⊕) في شريط URL
 3. انقر "تثبيت"
 
@@ -156,7 +156,7 @@ Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم
 | [Go](sdk/go/) | مكتبة عميل Go |
 | [PHP](sdk/php/) | حزمة PHP SDK |
 
-**عنوان URL الأساسي:** `https://free-crypto-news.vercel.app`
+**عنوان URL الأساسي:** `https://news-crypto.vercel.app`
 
 ---
 

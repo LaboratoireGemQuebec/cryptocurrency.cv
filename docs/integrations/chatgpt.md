@@ -18,14 +18,14 @@ The Free Crypto News ChatGPT Plugin allows ChatGPT to access real-time crypto ne
 2. Go to **Settings** → **Beta features**
 3. Enable **Plugins**
 4. Click **Plugin store** → **Install an unverified plugin**
-5. Enter: `https://free-crypto-news.vercel.app`
+5. Enter: `https://news-crypto.vercel.app`
 6. Click **Install**
 
 ### For ChatGPT Enterprise
 
 Contact your administrator to whitelist:
 ```
-https://free-crypto-news.vercel.app
+https://news-crypto.vercel.app
 ```
 
 ## Available Actions
@@ -64,7 +64,7 @@ ChatGPT will filter news by category.
 
 The plugin uses the OpenAPI specification at:
 ```
-https://free-crypto-news.vercel.app/chatgpt/openapi.yaml
+https://news-crypto.vercel.app/chatgpt/openapi.yaml
 ```
 
 ### Endpoints
@@ -122,7 +122,7 @@ Based on recent coverage:
 
 The plugin manifest is available at:
 ```
-https://free-crypto-news.vercel.app/.well-known/ai-plugin.json
+https://news-crypto.vercel.app/.well-known/ai-plugin.json
 ```
 
 ```json
@@ -135,7 +135,7 @@ https://free-crypto-news.vercel.app/.well-known/ai-plugin.json
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://free-crypto-news.vercel.app/chatgpt/openapi.yaml"
+    "url": "https://news-crypto.vercel.app/chatgpt/openapi.yaml"
   }
 }
 ```
@@ -162,7 +162,7 @@ https://your-domain.vercel.app
 
 Check if the API is accessible:
 ```bash
-curl https://free-crypto-news.vercel.app/api/health
+curl https://news-crypto.vercel.app/api/health
 ```
 
 ### Rate Limiting

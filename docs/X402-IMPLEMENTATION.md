@@ -169,7 +169,7 @@ import { payFetch } from '@x402/fetch';
 import { Wallet } from 'ethers';
 
 const wallet = new Wallet(process.env.PRIVATE_KEY);
-const response = await payFetch('https://free-crypto-news.vercel.app/api/v1/news', {
+const response = await payFetch('https://news-crypto.vercel.app/api/v1/news', {
   wallet,
 });
 const data = await response.json();
@@ -180,14 +180,14 @@ const data = await response.json();
 ```python
 import x402
 wallet = x402.Wallet(os.environ['PRIVATE_KEY'])
-response = x402.get('https://free-crypto-news.vercel.app/api/v1/news', wallet=wallet)
+response = x402.get('https://news-crypto.vercel.app/api/v1/news', wallet=wallet)
 ```
 
 ### cURL (with pre-signed header)
 
 ```bash
 curl -H "X-Payment: <payment_signature>" \
-  https://free-crypto-news.vercel.app/api/v1/news
+  https://news-crypto.vercel.app/api/v1/news
 ```
 
 ## Comparison with Top Facilitators

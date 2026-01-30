@@ -14,7 +14,7 @@ import { Wallet } from 'ethers';
 // CONFIGURATION
 // =============================================================================
 
-const API_BASE = 'https://free-crypto-news.vercel.app';
+const API_BASE = 'https://news-crypto.vercel.app';
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
 
 if (!PRIVATE_KEY) {

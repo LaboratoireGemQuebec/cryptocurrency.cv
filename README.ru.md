@@ -20,7 +20,7 @@
 Получайте крипто новости в реальном времени из 7 основных источников одним API-запросом.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ curl https://free-crypto-news.vercel.app/api/news
 
 ```bash
 # Получить все международные новости
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # Получить корейские новости с переводом на английский
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # Получить новости азиатского региона
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### Возможности
@@ -91,7 +91,7 @@ Free Crypto News — это **полностью устанавливаемое 
 ### Установка Приложения
 
 **Десктоп (Chrome/Edge):**
-1. Посетите [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+1. Посетите [news-crypto.vercel.app](https://news-crypto.vercel.app)
 2. Нажмите иконку установки (⊕) в адресной строке
 3. Нажмите "Установить"
 
@@ -154,7 +154,7 @@ Free Crypto News — это **полностью устанавливаемое 
 | [Go](sdk/go/) | Go клиентская библиотека |
 | [PHP](sdk/php/) | PHP SDK |
 
-**Base URL:** `https://free-crypto-news.vercel.app`
+**Base URL:** `https://news-crypto.vercel.app`
 
 ---
 

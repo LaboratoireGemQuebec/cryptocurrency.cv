@@ -40,7 +40,7 @@ console.log(`BTC: $${market.bitcoin.price.toLocaleString()}`);
 
 ```javascript
 const client = new CryptoNews({
-  baseUrl: 'https://free-crypto-news.vercel.app', // optional
+  baseUrl: 'https://news-crypto.vercel.app', // optional
   timeout: 10000, // optional, in milliseconds
 });
 ```

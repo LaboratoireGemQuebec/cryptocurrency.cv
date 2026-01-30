@@ -44,7 +44,7 @@ client := fcn.NewClient()
 
 // Custom configuration
 client := fcn.NewClient(
-    fcn.WithBaseURL("https://free-crypto-news.vercel.app"),
+    fcn.WithBaseURL("https://news-crypto.vercel.app"),
     fcn.WithTimeout(30 * time.Second),
     fcn.WithHTTPClient(customHTTPClient),
 )

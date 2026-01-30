@@ -45,7 +45,7 @@ Each news item supports:
 ## Privacy
 
 This extension:
-- Only fetches from `free-crypto-news.vercel.app`
+- Only fetches from `news-crypto.vercel.app`
 - Does not track you
 - Does not collect any data
 - Open source

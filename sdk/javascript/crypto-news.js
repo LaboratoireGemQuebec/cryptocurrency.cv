@@ -10,7 +10,7 @@
  *   const articles = await news.getLatest(10);
  */
 
-const DEFAULT_BASE_URL = 'https://free-crypto-news.vercel.app';
+const DEFAULT_BASE_URL = 'https://news-crypto.vercel.app';
 
 export class CryptoNews {
   constructor(baseUrl = DEFAULT_BASE_URL) {

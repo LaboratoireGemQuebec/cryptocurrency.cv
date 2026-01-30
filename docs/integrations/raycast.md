@@ -220,7 +220,7 @@ raycast/
 
 1. Check API status:
    ```bash
-   curl https://free-crypto-news.vercel.app/api/health
+   curl https://news-crypto.vercel.app/api/health
    ```
 2. Clear Raycast cache
 3. Restart extension

@@ -20,7 +20,7 @@
 Ontvang realtime crypto nieuws van 7 grote bronnen met één API-aanroep.
 
 ```bash
-curl https://free-crypto-news.vercel.app/api/news
+curl https://news-crypto.vercel.app/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ Ontvang crypto nieuws van **12 internationale bronnen** in het Koreaans, Chinees
 
 ```bash
 # Alle internationale nieuws ophalen
-curl "https://free-crypto-news.vercel.app/api/news/international"
+curl "https://news-crypto.vercel.app/api/news/international"
 
 # Koreaans nieuws ophalen vertaald naar Engels
-curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
 
 # Nieuws uit Aziatische regio ophalen
-curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
 
 ### Functies
@@ -91,7 +91,7 @@ Free Crypto News is een **volledig installeerbare PWA** met offline ondersteunin
 ### Installeer de App
 
 **Desktop (Chrome/Edge):**
-1. Bezoek [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+1. Bezoek [news-crypto.vercel.app](https://news-crypto.vercel.app)
 2. Klik op het installeer icoon (⊕) in de URL-balk
 3. Klik "Installeren"
 
@@ -154,7 +154,7 @@ We aggregeren van **7 betrouwbare media**:
 | [Go](sdk/go/) | Go client library |
 | [PHP](sdk/php/) | PHP SDK |
 
-**Base URL:** `https://free-crypto-news.vercel.app`
+**Base URL:** `https://news-crypto.vercel.app`
 
 ---
 
