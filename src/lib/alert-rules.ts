@@ -332,19 +332,32 @@ export function validateCondition(condition: AlertCondition): { valid: boolean; 
   return { valid: true };
 }
 
-// Import crypto for secure ID generation
-import { randomUUID } from 'crypto';
+/**
+ * Generate a unique ID using cryptographic randomness (Edge Runtime compatible)
+ */
+function getRandomUUID(): string {
+  // Use globalThis.crypto which works in both Node.js and Edge Runtime
+  if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.randomUUID) {
+    return globalThis.crypto.randomUUID();
+  }
+  // Fallback for older environments
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
 
 /**
  * Generate a unique alert ID using cryptographic randomness
  */
 export function generateAlertId(): string {
-  return `alert_${randomUUID()}`;
+  return `alert_${getRandomUUID()}`;
 }
 
 /**
  * Generate a unique event ID using cryptographic randomness
  */
 export function generateEventId(): string {
-  return `evt_${randomUUID()}`;
+  return `evt_${getRandomUUID()}`;
 }

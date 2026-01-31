@@ -243,11 +243,20 @@ class MemoryBackend {
   }
 
   getStats(): DatabaseStats {
+    // Only access process.memoryUsage in Node.js runtime (not Edge)
+    let memoryUsage: number | undefined;
+    if (typeof process !== 'undefined' && typeof process.memoryUsage === 'function') {
+      try {
+        memoryUsage = process.memoryUsage()?.heapUsed;
+      } catch {
+        // Edge runtime - memoryUsage not available
+      }
+    }
     return {
       backend: 'memory',
       connected: true,
       totalKeys: this.store.size,
-      memoryUsage: process.memoryUsage?.()?.heapUsed,
+      memoryUsage,
       uptime: Date.now() - this.startTime,
     };
   }
@@ -272,7 +281,9 @@ class FileBackend extends MemoryBackend {
   }
 
   private async loadFromFile(): Promise<void> {
-    if (typeof window !== 'undefined') return; // Browser environment
+    // Skip in browser or Edge runtime environments
+    if (typeof window !== 'undefined') return;
+    if (typeof process === 'undefined' || !process.versions?.node) return;
     
     try {
       const fs = await import('fs/promises');
@@ -295,7 +306,9 @@ class FileBackend extends MemoryBackend {
   }
 
   private async saveToFile(): Promise<void> {
+    // Skip in browser or Edge runtime environments
     if (typeof window !== 'undefined') return;
+    if (typeof process === 'undefined' || !process.versions?.node) return;
     
     try {
       const fs = await import('fs/promises');
