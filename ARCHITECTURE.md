@@ -93,9 +93,9 @@ This document describes the architecture of Free Crypto News, a Next.js applicat
 
 ### Data Sources
 
-We aggregate news from **150+ sources** across **80+ English sources** and **70+ international sources** in **16 languages**.
+We aggregate news from **200+ sources** across **130+ English sources** and **75 international sources** in **18 languages**.
 
-#### English Sources (80+)
+#### English Sources (130+)
 
 | Category | Sources |
 |----------|---------|
@@ -113,7 +113,7 @@ We aggregate news from **150+ sources** across **80+ English sources** and **70+
 | **Mainstream** | Bloomberg Crypto, Reuters Crypto, Forbes Crypto, CNBC Crypto, Yahoo Finance, WSJ, Financial Times |
 | **Institutional** | Coinbase Blog, Binance Blog, Circle, Tether |
 
-#### International Sources (70+)
+#### International Sources (75)
 
 | Language | Region | Sources |
 |----------|--------|---------|

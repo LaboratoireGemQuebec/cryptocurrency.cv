@@ -29,7 +29,7 @@ curl https://news-crypto.vercel.app/api/news
 | **Prijs** | 🆓 Altijd gratis | $29-299/maand | Betaald |
 | **API Sleutel** | ❌ Niet nodig | Vereist | Vereist |
 | **Aanvraaglimiet** | Onbeperkt* | 100-1000/dag | Beperkt |
-| **Bronnen** | 12 Engels + 12 internationaal | 1 | Varieert |
+| **Bronnen** | 130+ Engels + 75 internationaal | 1 | Varieert |
 | **Internationalisatie** | 🌏 Koreaans, Chinees, Japans, Spaans + vertaling | Nee | Nee |
 | **Zelf hosten** | ✅ Eén-klik deploy | Nee | Nee |
 | **PWA** | ✅ Installeerbaar | Nee | Nee |
@@ -39,7 +39,7 @@ curl https://news-crypto.vercel.app/api/news
 
 ## 🌍 Internationale Nieuwsbronnen
 
-Ontvang crypto nieuws van **12 internationale bronnen** in het Koreaans, Chinees, Japans en Spaans — automatisch vertaald naar het Engels!
+Ontvang crypto nieuws van **75 internationale bronnen** in 18 talen — automatisch vertaald naar het Engels!
 
 ### Ondersteunde Bronnen
 

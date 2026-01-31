@@ -29,7 +29,7 @@ curl https://news-crypto.vercel.app/api/news
 | **Fiyat** | 🆓 Sonsuza kadar ücretsiz | $29-299/ay | Ücretli |
 | **API Anahtarı** | ❌ Gerekli değil | Gerekli | Gerekli |
 | **İstek Limiti** | Sınırsız* | 100-1000/gün | Sınırlı |
-| **Kaynaklar** | 12 İngilizce + 12 uluslararası | 1 | Değişken |
+| **Kaynaklar** | 130+ İngilizce + 75 uluslararası | 1 | Değişken |
 | **Uluslararasılaştırma** | 🌏 Korece, Çince, Japonca, İspanyolca + çeviri | Hayır | Hayır |
 | **Kendi Sunucusu** | ✅ Tek tıkla dağıtım | Hayır | Hayır |
 | **PWA** | ✅ Yüklenebilir | Hayır | Hayır |
@@ -39,7 +39,7 @@ curl https://news-crypto.vercel.app/api/news
 
 ## 🌍 Uluslararası Haber Kaynakları
 
-Korece, Çince, Japonca ve İspanyolca **12 uluslararası kaynaktan** kripto haberleri alın — otomatik olarak İngilizce'ye çevrilir!
+18 dilde **75 uluslararası kaynaktan** kripto haberleri alın — otomatik olarak İngilizce'ye çevrilir!
 
 ### Desteklenen Kaynaklar
 

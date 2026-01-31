@@ -11,6 +11,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [News Endpoints](#news-endpoints)
   - [GET /api/news](#get-apinews)
   - [GET /api/news/international](#get-apinewsinternational)
+  - [POST /api/news/extract](#post-apinewsextract)
   - [GET /api/news/categories](#get-apinewscategories)
   - [GET /api/bitcoin](#get-apibitcoin)
   - [GET /api/defi](#get-apidefi)
@@ -36,6 +37,9 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/orderbook](#get-apiorderbook)
   - [GET /api/fear-greed](#get-apifear-greed)
 - [AI Analysis APIs](#ai-analysis-apis)
+  - [POST /api/detect/ai-content](#post-apidetectai-content)
+  - [GET /api/ai/agent](#get-apiaiagent)
+  - [POST /api/ai/agent](#post-apiaiagent)
   - [GET /api/narratives](#get-apinarratives)
   - [GET /api/entities](#get-apientities)
   - [GET /api/claims](#get-apiclaims)
@@ -44,13 +48,19 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/relationships](#get-apirelationships)
 - [Research & Analytics APIs](#research--analytics-apis)
   - [GET /api/regulatory](#get-apiregulatory)
+  - [GET /api/predictions](#get-apipredictions)
+  - [GET /api/influencers](#get-apiinfluencers)
   - [GET /api/academic](#get-apiacademic)
   - [GET /api/citations](#get-apicitations)
   - [GET /api/coverage-gap](#get-apicoverage-gap)
+- [Intelligence APIs](#intelligence-apis)
+  - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
+  - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
+  - [GET /api/analytics/causality](#get-apianalyticscausality)
+  - [GET /api/analytics/credibility](#get-apianalyticscredibility)
 - [Social Intelligence APIs](#social-intelligence-apis)
   - [GET /api/social](#get-apisocial)
   - [GET /api/social/x/sentiment](#get-apisocialxsentiment)
-  - [GET /api/influencers](#get-apiinfluencers)
 - [Premium API Endpoints](#premium-api-endpoints)
   - [GET /api/premium](#get-apipremium)
   - [GET /api/premium/ai/signals](#get-apipremiumaisignals)
@@ -79,11 +89,16 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [PUT /api/alerts/[id]](#put-apialertsid)
   - [DELETE /api/alerts/[id]](#delete-apialertsid)
   - [POST /api/newsletter](#post-apinewsletter)
+  - [GET /api/newsletter](#get-apinewsletter)
+  - [POST /api/newsletter/subscribe](#post-apinewslettersubscribe)
   - [POST /api/webhooks](#post-apiwebhooks)
+  - [POST /api/webhooks/test](#post-apiwebhookstest)
+  - [GET /api/webhooks/queue](#get-apiwebhooksqueue)
 - [Admin Endpoints](#admin-endpoints)
   - [GET /api/admin](#get-apiadmin)
 - [Archive Endpoints](#archive-endpoints)
   - [GET /api/archive](#get-apiarchive)
+  - [GET /api/archive/v2](#get-apiarchivev2)
   - [GET /api/archive/status](#get-apiarchivestatus)
   - [GET /api/cron/archive](#get-apicronarchive)
   - [POST /api/archive/webhook](#post-apiarchivewebhook)
@@ -95,7 +110,9 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [Storage & Export](#storage--export)
   - [GET /api/storage/cas](#get-apistoragecas)
   - [GET /api/export](#get-apiexport)
+  - [GET /api/export/jobs](#get-apiexportjobs)
   - [GET /api/exports](#get-apiexports)
+  - [GET /api/exports/[id]](#get-apiexportsid)
 - [Feed Formats](#feed-formats)
   - [GET /api/rss](#get-apirss)
   - [GET /api/atom](#get-apiatom)
@@ -103,6 +120,20 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [Utility Endpoints](#utility-endpoints)
   - [GET /api/health](#get-apihealth)
   - [GET /api/cache](#get-apicache)
+  - [DELETE /api/cache](#delete-apicache)
+- [Tags & Discovery](#tags--discovery)
+  - [GET /api/tags](#get-apitags)
+  - [GET /api/tags/[slug]](#get-apitagsslug)
+- [Gateway & Integration](#gateway--integration)
+  - [POST /api/gateway](#post-apigateway)
+- [API Key Management](#api-key-management)
+  - [GET /api/register](#get-apiregister)
+  - [POST /api/register](#post-apiregister)
+  - [GET /api/keys](#get-apikeys)
+  - [POST /api/keys](#post-apikeys)
+- [Analytics Tracking](#analytics-tracking)
+  - [GET /api/views](#get-apiviews)
+  - [POST /api/views](#post-apiviews)
 - [Common Parameters](#common-parameters)
 - [Response Format](#response-format)
 - [Error Handling](#error-handling)
@@ -171,21 +202,42 @@ curl "https://news-crypto.vercel.app/api/news?limit=5&source=coindesk"
 
 Fetch news from international crypto news sources with optional translation to English.
 
-**Supported Sources (12 total):**
+**Supported Sources (75 total across 18 languages):**
 
-| Region | Language | Sources |
-|--------|----------|--------|
-| 🇰🇷 Korea | Korean (ko) | Block Media, TokenPost, CoinDesk Korea |
-| 🇨🇳 China | Chinese (zh) | 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报) |
-| 🇯🇵 Japan | Japanese (ja) | CoinPost, CoinDesk Japan, Cointelegraph Japan |
-| 🇪🇸 Latin America | Spanish (es) | Cointelegraph Español, Diario Bitcoin, CriptoNoticias |
+| Language | Code | Sources | Examples |
+|----------|------|---------|----------|
+| Chinese | zh | 10 | 8BTC, Jinse Finance, Odaily, ChainNews, PANews, TechFlow, BlockBeats, MarsBit, Wu Blockchain, Foresight News |
+| Korean | ko | 9 | Block Media, TokenPost, CoinDesk Korea, Decenter, Cobak, The B.Chain, Upbit Blog |
+| Japanese | ja | 6 | CoinPost, CoinDesk Japan, Cointelegraph Japan, btcnews.jp, Crypto Times Japan, CoinJinja |
+| Portuguese | pt | 5 | Cointelegraph Brasil, Livecoins, Portal do Bitcoin, BeInCrypto Brasil |
+| Hindi | hi | 5 | CoinSwitch, CoinDCX, WazirX, ZebPay, Crypto News India |
+| Spanish | es | 5 | Cointelegraph Español, Diario Bitcoin, CriptoNoticias, BeInCrypto Español |
+| German | de | 4 | BTC-ECHO, Cointelegraph Deutsch, Coincierge, CryptoMonday |
+| French | fr | 4 | Journal du Coin, Cryptonaute, Cointelegraph France, Cryptoast |
+| Persian | fa | 4 | Arz Digital, Mihan Blockchain, Ramz Arz, Nobitex |
+| Turkish | tr | 3 | Cointelegraph Türkçe, Koin Medya, Coinsider |
+| Russian | ru | 3 | ForkLog, Cointelegraph Russia, Bits.Media |
+| Italian | it | 3 | Cointelegraph Italia, The Cryptonomist, Criptovalute.it |
+| Indonesian | id | 3 | Cointelegraph Indonesia, Blockchain Media, Pintu Academy |
+| Vietnamese | vi | 2 | Tạp chí Bitcoin, Coin68 |
+| Thai | th | 2 | Siam Blockchain, Bitcoin Addict Thailand |
+| Polish | pl | 2 | Kryptowaluty.pl, Bitcoin.pl |
+| Dutch | nl | 2 | Bitcoin Magazine NL, Crypto Insiders |
+| Arabic | ar | 2 | Cointelegraph Arabic, ArabiCrypto |
+
+**Regions:**
+- `asia` - Korean, Chinese, Japanese, Hindi sources (30 sources)
+- `europe` - German, French, Russian, Turkish, Italian, Dutch, Polish sources (23 sources)
+- `latam` - Spanish, Portuguese sources (10 sources)
+- `mena` - Arabic, Persian sources (6 sources)
+- `sea` - Indonesian, Vietnamese, Thai sources (7 sources)
 
 **Parameters:**
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `language` | string | all | Filter by language: `ko`, `zh`, `ja`, `es`, or `all` |
-| `region` | string | all | Filter by region: `asia`, `latam`, or `all` |
+| `language` | string | all | Filter by language: `ko`, `zh`, `ja`, `es`, `pt`, `de`, `fr`, `ru`, `tr`, `it`, `id`, `nl`, `pl`, `vi`, `th`, `ar`, `hi`, `fa`, or `all` |
+| `region` | string | all | Filter by region: `asia`, `europe`, `latam`, `mena`, `sea`, or `all` |
 | `translate` | boolean | false | Translate titles/descriptions to English |
 | `limit` | integer | 20 | Number of articles (1-100) |
 | `sources` | boolean | false | Return source info instead of articles |
@@ -252,6 +304,40 @@ curl "https://news-crypto.vercel.app/api/news/international?sources=true"
 - Translations are cached for 7 days
 - Rate limited to 1 translation request per second
 - Original text is always preserved alongside translations
+
+---
+
+### POST /api/news/extract
+
+Extract full article content from a URL, including metadata.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `url` | string | Yes | Article URL to extract |
+
+**Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/news/extract" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://coindesk.com/article/..."}'
+```
+
+**Response:**
+
+```json
+{
+  "url": "https://coindesk.com/article/...",
+  "title": "Bitcoin Surges Past $100K",
+  "content": "Bitcoin experienced a historic surge...",
+  "author": "Jane Doe",
+  "published_date": "2026-01-22T10:00:00Z",
+  "word_count": 850,
+  "reading_time_minutes": 4
+}
+```
 
 ---
 
@@ -948,6 +1034,51 @@ Subscribe to email digests.
 
 ---
 
+### GET /api/newsletter
+
+Newsletter API information and verification endpoints.
+
+**Query Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `action` | string | `verify`, `unsubscribe`, or `stats` |
+| `token` | string | Verification/unsubscribe token |
+
+**Example - Verify subscription:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/newsletter?action=verify&token=xxx"
+```
+
+---
+
+### POST /api/newsletter/subscribe
+
+Direct subscription endpoint with rate limiting.
+
+**Request Body:**
+
+```json
+{
+  "email": "user@example.com"
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Subscribed successfully",
+  "subscribed": true
+}
+```
+
+**Rate Limits:** 5 attempts per minute per IP
+
+---
+
 ### POST /api/portfolio
 
 Track portfolio holdings and get relevant news.
@@ -1040,6 +1171,64 @@ Register webhooks for server-to-server notifications.
 
 ---
 
+### POST /api/webhooks/test
+
+Send a test payload to a registered webhook (requires authentication).
+
+**Headers:**
+
+```
+X-API-Key: YOUR_API_KEY
+```
+
+**Request Body:**
+
+```json
+{
+  "webhookId": "wh-abc123"
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Test webhook delivered",
+  "webhookId": "wh-abc123",
+  "statusCode": 200,
+  "responseTime": 245
+}
+```
+
+---
+
+### GET /api/webhooks/queue
+
+Check the async webhook delivery queue status.
+
+**Response:**
+
+```json
+{
+  "pending": 3,
+  "processing": 1,
+  "completed": 145,
+  "failed": 2,
+  "jobs": [
+    {
+      "id": "wh_job_abc123",
+      "url": "https://your-server.com/webhook",
+      "status": "pending",
+      "retries": 0,
+      "createdAt": 1706012400000
+    }
+  ]
+}
+```
+
+---
+
 ## Admin Endpoints
 
 ### GET /api/admin
@@ -1115,20 +1304,42 @@ curl "https://news-crypto.vercel.app/api/sources"
 
 ### GET /api/stats
 
-API usage statistics and metrics.
+API usage statistics and detailed metrics.
 
 **Response:**
 
 ```json
 {
-  "totalArticles": 15420,
-  "articlesLast24h": 342,
-  "sources": 7,
-  "oldestArticle": "2024-01-01T00:00:00Z",
-  "newestArticle": "2026-01-22T12:30:00Z",
-  "cacheHitRate": "94.2%"
+  "summary": {
+    "totalArticles": 100,
+    "activeSources": 18,
+    "totalSources": 20,
+    "avgArticlesPerHour": 4.2,
+    "timeRange": "24h"
+  },
+  "bySource": [
+    {
+      "source": "CoinDesk",
+      "articleCount": 25,
+      "percentage": 25,
+      "latestArticle": "Bitcoin Hits $100K Milestone",
+      "latestTime": "2026-01-22T12:00:00Z"
+    }
+  ],
+  "byCategory": [
+    { "category": "general", "count": 45 },
+    { "category": "bitcoin", "count": 25 },
+    { "category": "defi", "count": 15 }
+  ],
+  "hourlyDistribution": [
+    { "hour": "2026-01-22T00:00", "count": 3 },
+    { "hour": "2026-01-22T01:00", "count": 5 }
+  ],
+  "fetchedAt": "2026-01-22T12:30:00Z"
 }
 ```
+
+**Cache:** 5 minutes
 
 ---
 
@@ -1203,6 +1414,78 @@ curl "https://news-crypto.vercel.app/api/archive/status"
       "url": "https://cron-job.org (FREE)",
       "steps": ["..."]
     }
+  }
+}
+```
+
+---
+
+### GET /api/archive/v2
+
+Query the enriched V2 archive with advanced filtering, sentiment analysis, and ticker tracking.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `start_date` | string | - | Start date (YYYY-MM-DD) |
+| `end_date` | string | - | End date (YYYY-MM-DD) |
+| `source` | string | - | Filter by source name |
+| `ticker` | string | - | Filter by ticker (BTC, ETH, etc.) |
+| `q` | string | - | Search query |
+| `sentiment` | string | - | Filter: `positive`, `negative`, `neutral` |
+| `tags` | string | - | Comma-separated tag filters |
+| `limit` | integer | 50 | Max results (1-200) |
+| `offset` | integer | 0 | Pagination offset |
+| `format` | string | full | Response format: `full`, `simple`, `minimal` |
+| `lang` | string | en | Language code for translation |
+| `stats` | boolean | false | Return archive statistics only |
+| `trending` | boolean | false | Return trending tickers |
+| `hours` | integer | 24 | Hours for trending (with `trending=true`) |
+| `market` | string | - | Get market history for month (YYYY-MM) |
+
+**Example - Get enriched articles:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC&sentiment=positive&limit=20"
+```
+
+**Example - Get trending tickers:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/archive/v2?trending=true&hours=24"
+```
+
+**Response (trending):**
+
+```json
+{
+  "success": true,
+  "hours": 24,
+  "tickers": [
+    { "ticker": "BTC", "mentions": 145, "sentiment_avg": 0.65 },
+    { "ticker": "ETH", "mentions": 89, "sentiment_avg": 0.42 }
+  ]
+}
+```
+
+**Example - Get archive stats:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
+```
+
+**Response (stats):**
+
+```json
+{
+  "success": true,
+  "version": "2.0.0",
+  "stats": {
+    "totalArticles": 5420,
+    "dateRange": { "start": "2026-01-01", "end": "2026-01-22" },
+    "sources": 25,
+    "tickers": 150
   }
 }
 ```
@@ -1660,14 +1943,127 @@ Export data in various formats.
 
 ### GET /api/exports
 
-Manage bulk export jobs.
+List export jobs or get schemas.
 
 **Parameters:**
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `action` | string | list | Action: `list`, `create`, `status` |
-| `jobId` | string | - | Job ID for status check |
+| `schema` | boolean | false | Return available export schemas |
+| `archives` | boolean | false | Return monthly archives |
+
+**Example - List jobs:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/exports"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "jobs": [
+    {
+      "id": "export_abc123",
+      "status": "completed",
+      "format": "json",
+      "createdAt": "2026-01-22T10:00:00Z"
+    }
+  ],
+  "count": 1
+}
+```
+
+**Example - Get schemas:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/exports?schema=true"
+```
+
+---
+
+### GET /api/exports/[id]
+
+Get export job status or download result.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `download` | boolean | false | Download the export result |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/exports/export_abc123"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "job": {
+    "id": "export_abc123",
+    "status": "completed",
+    "progress": 100,
+    "format": "json",
+    "createdAt": "2026-01-22T10:00:00Z",
+    "completedAt": "2026-01-22T10:02:00Z",
+    "result": {
+      "filename": "export_abc123.json",
+      "size": 125000,
+      "rowCount": 500
+    }
+  }
+}
+```
+
+---
+
+### GET /api/export/jobs
+
+List and manage export jobs.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `status` | string | - | Filter: `pending`, `processing`, `completed`, `failed` |
+| `cleanup` | boolean | false | Remove old jobs |
+| `maxAge` | integer | 3600000 | Max age in ms for cleanup (default: 1 hour) |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/export/jobs?status=completed"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "count": 3,
+  "jobs": [
+    {
+      "id": "job_abc123",
+      "status": "completed",
+      "progress": 100,
+      "format": "csv",
+      "createdAt": "2026-01-22T10:00:00Z",
+      "completedAt": "2026-01-22T10:01:30Z",
+      "result": {
+        "filename": "export.csv",
+        "size": 45000,
+        "sizeHuman": "43.95 KB",
+        "rowCount": 200
+      }
+    }
+  ]
+}
+```
 
 ---
 
@@ -1822,29 +2218,453 @@ Import this into any RSS reader to subscribe to all sources.
 
 ### GET /api/health
 
-Health check endpoint.
+Comprehensive health check endpoint with source status and system metrics.
 
 **Response:**
 
 ```json
 {
-  "status": "ok",
+  "status": "healthy",
   "timestamp": "2026-01-22T12:30:00Z",
-  "version": "2.0.0"
+  "totalResponseTime": 2450,
+  "summary": {
+    "healthy": 18,
+    "degraded": 2,
+    "down": 0,
+    "total": 20
+  },
+  "system": {
+    "cache": {
+      "news": { "hits": 1250, "misses": 45, "staleHits": 12, "errors": 0, "backend": "memory" },
+      "market": { "hits": 890, "misses": 23, "staleHits": 5, "errors": 0, "backend": "memory" },
+      "ai": { "hits": 320, "misses": 12, "staleHits": 2, "errors": 0, "backend": "memory" },
+      "global": { "hits": 156, "misses": 8, "staleHits": 1, "errors": 0, "backend": "memory" }
+    },
+    "monitoring": {
+      "sentry": true,
+      "environment": "production",
+      "release": "1.0.0"
+    }
+  },
+  "sources": [
+    {
+      "source": "coindesk",
+      "status": "healthy",
+      "responseTime": 245,
+      "lastArticle": "Bitcoin Surges Past $100K"
+    }
+  ]
 }
 ```
+
+**Status Codes:**
+- `200` - Healthy or degraded
+- `503` - Down (fewer than 3 healthy sources)
 
 ---
 
 ### GET /api/cache
 
-Cache status and management.
+Get cache statistics for news, AI, and translation caches.
 
-**Query Parameters:**
+**Response:**
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `action` | string | `status` (default), `clear` |
+```json
+{
+  "caches": {
+    "news": { "hits": 1250, "misses": 45, "size": 128 },
+    "ai": { "hits": 320, "misses": 12, "size": 64 },
+    "translation": { "hits": 890, "misses": 23, "size": 256 }
+  },
+  "timestamp": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+### DELETE /api/cache
+
+Clear all caches (news, AI, and translation).
+
+**Response:**
+
+```json
+{
+  "message": "All caches cleared",
+  "timestamp": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+## Tags & Discovery
+
+### GET /api/tags
+
+Get all tags with categories for filtering news.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `slug` | string | - | Get a single tag by slug |
+| `category` | string | - | Filter by category: `asset`, `topic`, `event`, `technology`, `entity`, `sentiment` |
+
+**Example - Get all tags:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/tags"
+```
+
+**Response:**
+
+```json
+{
+  "totalCount": 85,
+  "categories": [
+    { "name": "asset", "count": 25 },
+    { "name": "topic", "count": 20 },
+    { "name": "event", "count": 15 },
+    { "name": "technology", "count": 12 },
+    { "name": "entity", "count": 8 },
+    { "name": "sentiment", "count": 5 }
+  ],
+  "tags": [
+    {
+      "slug": "bitcoin",
+      "name": "Bitcoin",
+      "icon": "₿",
+      "category": "asset",
+      "priority": 1,
+      "url": "/tags/bitcoin"
+    }
+  ]
+}
+```
+
+**Example - Get single tag:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/tags?slug=bitcoin"
+```
+
+**Response:**
+
+```json
+{
+  "tag": {
+    "slug": "bitcoin",
+    "name": "Bitcoin",
+    "icon": "₿",
+    "category": "asset",
+    "priority": 1
+  },
+  "url": "/tags/bitcoin"
+}
+```
+
+**Cache:** 1 hour
+
+---
+
+### GET /api/tags/[slug]
+
+Get detailed tag information with matching articles.
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/tags/bitcoin"
+```
+
+**Response:**
+
+```json
+{
+  "tag": {
+    "slug": "bitcoin",
+    "name": "Bitcoin",
+    "icon": "₿",
+    "category": "asset",
+    "priority": 1,
+    "url": "/tags/bitcoin"
+  },
+  "articles": [
+    {
+      "title": "Bitcoin Hits $100K Milestone",
+      "link": "https://coindesk.com/...",
+      "description": "Bitcoin reached a historic...",
+      "source": "CoinDesk",
+      "pubDate": "2026-01-22T10:00:00Z",
+      "timeAgo": "2 hours ago"
+    }
+  ],
+  "articleCount": 25,
+  "relatedTags": [
+    { "slug": "ethereum", "name": "Ethereum", "icon": "⟠", "url": "/tags/ethereum" }
+  ],
+  "structuredData": { "@context": "https://schema.org", ... },
+  "meta": {
+    "title": "Bitcoin Crypto News | Latest Bitcoin Updates",
+    "description": "The original cryptocurrency...",
+    "canonical": "/tags/bitcoin"
+  }
+}
+```
+
+**Cache:** 5 minutes
+
+---
+
+## Gateway & Integration
+
+### POST /api/gateway
+
+Unified gateway endpoint for calling multiple API functions. Useful for MCP integrations and ChatGPT plugins.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `apiName` | string | Yes | API function: `getLatestNews`, `searchNews`, `getDefiNews`, `getBitcoinNews`, `getBreakingNews`, `getSources` |
+| `arguments` | string | No | JSON-encoded arguments |
+
+**Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/gateway" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "apiName": "getLatestNews",
+    "arguments": "{\"limit\": 5, \"source\": \"coindesk\"}"
+  }'
+```
+
+**Supported API Names:**
+
+| API Name | Arguments | Description |
+|----------|-----------|-------------|
+| `getLatestNews` | `limit`, `source` | Fetch latest news |
+| `searchNews` | `keywords`, `limit` | Search news |
+| `getDefiNews` | `limit` | DeFi news |
+| `getBitcoinNews` | `limit` | Bitcoin news |
+| `getBreakingNews` | `limit` | Breaking news |
+| `getSources` | - | List sources |
+
+---
+
+## API Key Management
+
+### GET /api/register
+
+Get API key registration information and available tiers.
+
+**Response:**
+
+```json
+{
+  "endpoint": "/api/register",
+  "method": "POST",
+  "description": "Register for a free API key",
+  "request": {
+    "contentType": "application/json",
+    "body": {
+      "email": "string (required)",
+      "name": "string (optional)"
+    }
+  },
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Free",
+      "requestsPerDay": 100,
+      "features": ["Basic endpoints", "Rate limited"]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "requestsPerDay": 10000,
+      "features": ["All endpoints", "Priority support"]
+    }
+  ],
+  "notes": [
+    "Free tier: 100 requests/day",
+    "Maximum 3 keys per email"
+  ]
+}
+```
+
+---
+
+### POST /api/register
+
+Create a new API key or manage existing keys.
+
+**Request Body (Create Key):**
+
+```json
+{
+  "email": "user@example.com",
+  "name": "My App Key"
+}
+```
+
+**Response:**
+
+```json
+{
+  "key": "cda_free_xxxxxxxxxxxx",
+  "tier": "free",
+  "rateLimit": "100 requests/day",
+  "docs": "/docs/api",
+  "message": "Save this key - it will only be shown once!"
+}
+```
+
+**Request Body (List Keys):**
+
+```json
+{
+  "action": "list",
+  "email": "user@example.com"
+}
+```
+
+**Request Body (Revoke Key):**
+
+```json
+{
+  "action": "revoke",
+  "email": "user@example.com",
+  "keyId": "key_123456"
+}
+```
+
+---
+
+### GET /api/keys
+
+List API keys (requires authentication).
+
+**Headers:**
+
+```
+Authorization: Bearer <YOUR_TOKEN>
+```
+
+**Response:**
+
+```json
+{
+  "keys": [
+    {
+      "id": "key_abc123",
+      "name": "Production Key",
+      "tier": "pro",
+      "createdAt": "2026-01-15T00:00:00Z",
+      "lastUsed": "2026-01-22T10:30:00Z",
+      "usage": { "today": 450, "limit": 10000 }
+    }
+  ],
+  "total": 1
+}
+```
+
+---
+
+### POST /api/keys
+
+Create a new API key.
+
+**Request Body:**
+
+```json
+{
+  "name": "My New Key",
+  "tier": "free"
+}
+```
+
+**Response:**
+
+```json
+{
+  "key": {
+    "id": "key_xyz789",
+    "key": "cda_free_xxxxxxxxxxxx",
+    "name": "My New Key",
+    "tier": "free",
+    "rateLimit": {
+      "requestsPerDay": 100,
+      "remaining": 100
+    },
+    "createdAt": "2026-01-22T12:30:00Z"
+  }
+}
+```
+
+---
+
+## Analytics Tracking
+
+### GET /api/views
+
+Get article view counts for popularity metrics.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `ids` | string | - | Comma-separated article IDs (optional, returns all if not provided) |
+| `limit` | integer | 50 | Maximum results (max: 100) |
+| `sort` | string | views | Sort by: `views`, `recent` |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/views?limit=10&sort=views"
+```
+
+**Response:**
+
+```json
+{
+  "views": [
+    {
+      "id": "article_abc123",
+      "views": 1250,
+      "views24h": 340,
+      "views7d": 890
+    }
+  ],
+  "total": 150,
+  "fetchedAt": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+### POST /api/views
+
+Record a view for an article.
+
+**Request Body:**
+
+```json
+{
+  "articleId": "article_abc123"
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "articleId": "article_abc123",
+  "totalViews": 1251
+}
+```
 
 ---
 
@@ -2142,11 +2962,250 @@ Crypto Fear & Greed Index.
 
 ## AI Analysis APIs
 
+### POST /api/detect/ai-content
+
+Detect AI-generated content using statistical and linguistic analysis. Works entirely offline - no external AI API required.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `text` | string | Yes* | Single text to analyze (min 100 chars) |
+| `texts` | array | Yes* | Array of texts for batch analysis (max 50) |
+| `quick` | boolean | No | Use quick mode for faster, less detailed results |
+
+*One of `text` or `texts` is required.
+
+**Single Text Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "In today'\''s fast-paced world of cryptocurrency, it'\''s important to note that markets are constantly evolving..."}'
+```
+
+**Batch Analysis Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+  -H "Content-Type: application/json" \
+  -d '{"texts": ["First article content...", "Second article content..."]}'
+```
+
+**Response (Full Mode):**
+
+```json
+{
+  "mode": "full",
+  "isLikelyAI": true,
+  "confidence": 78,
+  "humanScore": 22,
+  "verdict": "likely_ai",
+  "analysis": {
+    "perplexity": {
+      "score": 0.35,
+      "ngramFrequency": 0.8,
+      "unusualWordRatio": 0.05,
+      "description": "Low perplexity suggests predictable text patterns"
+    },
+    "burstiness": {
+      "score": 0.25,
+      "sentenceLengthVariance": 12,
+      "paragraphLengthVariance": 8,
+      "rhythmScore": 0.3,
+      "description": "Low burstiness indicates uniform sentence structure"
+    },
+    "vocabulary": {
+      "typeTokenRatio": 0.45,
+      "hapaxLegomena": 15,
+      "richness": 0.4,
+      "sophistication": 0.6,
+      "description": "Average vocabulary diversity"
+    },
+    "stylometry": {
+      "avgSentenceLength": 22.5,
+      "avgWordLength": 5.2,
+      "punctuationDensity": 0.08,
+      "functionWordRatio": 0.55,
+      "passiveVoiceRatio": 0.15,
+      "description": "Typical AI writing patterns detected"
+    },
+    "patterns": {
+      "repetitiveStructures": 3,
+      "formulaicOpenings": 2,
+      "listPatterns": 1,
+      "transitionOveruse": 4,
+      "description": "Multiple structural patterns typical of AI"
+    },
+    "phrases": {
+      "aiPhrasesFound": ["in today's fast-paced world", "it's important to note"],
+      "aiPhraseCount": 2,
+      "hedgingLanguage": 0.15,
+      "overlyFormalTone": 0.6,
+      "description": "High-confidence AI phrases detected"
+    }
+  },
+  "signals": [
+    { "type": "phrase", "indicator": "in today's fast-paced world", "weight": 0.9, "confidence": 0.95 }
+  ],
+  "explanation": "Text shows multiple characteristics typical of AI generation including formulaic phrases and uniform structure.",
+  "recommendations": ["Verify source attribution", "Check for original reporting"],
+  "timestamp": "2026-01-22T10:30:00Z"
+}
+```
+
+**Verdict Scale:**
+
+| Verdict | Confidence | Description |
+|---------|------------|-------------|
+| `human` | 0-20% | Very likely human-written |
+| `likely_human` | 20-40% | Probably human-written |
+| `uncertain` | 40-60% | Cannot determine |
+| `likely_ai` | 60-80% | Probably AI-generated |
+| `ai` | 80-100% | Very likely AI-generated |
+
+---
+
+### GET /api/ai/agent
+
+AI Market Intelligence Agent providing real-time market analysis with signal aggregation.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `format` | string | full | Output format: `full`, `summary`, `signals`, `opportunities`, `risks` |
+
+**Example:**
+
+```bash
+# Full market intelligence
+curl "https://news-crypto.vercel.app/api/ai/agent"
+
+# Summary only
+curl "https://news-crypto.vercel.app/api/ai/agent?format=summary"
+
+# Active signals
+curl "https://news-crypto.vercel.app/api/ai/agent?format=signals"
+```
+
+**Response (Full):**
+
+```json
+{
+  "success": true,
+  "data": {
+    "overallRegime": "markup",
+    "regimeConfidence": 75,
+    "fearGreedIndex": 65,
+    "volatilityRegime": "medium",
+    "dominantNarrative": "ETF inflows driving institutional adoption",
+    "activeSignals": [
+      {
+        "id": "sig_abc123",
+        "source": "news",
+        "type": "news-catalyst",
+        "asset": "BTC",
+        "direction": "bullish",
+        "strength": "strong",
+        "confidence": 85,
+        "timeHorizon": "1d",
+        "narrative": "ETF approval driving institutional demand"
+      }
+    ],
+    "topOpportunities": [
+      {
+        "id": "opp_xyz789",
+        "asset": "BTC",
+        "type": "long",
+        "rationale": "Strong momentum with institutional support",
+        "entry": 98000,
+        "targets": [105000, 110000],
+        "stopLoss": 92000,
+        "riskReward": 2.5,
+        "confidence": 70
+      }
+    ],
+    "riskAlerts": [
+      {
+        "id": "risk_def456",
+        "severity": "warning",
+        "type": "volatility-spike",
+        "title": "Elevated volatility expected",
+        "description": "Options expiry may cause price swings",
+        "recommendation": "Consider reducing position sizes"
+      }
+    ],
+    "marketNarrative": "Bitcoin continues its upward trajectory supported by strong ETF inflows...",
+    "sectorRotation": [...],
+    "correlationAnomalies": [...],
+    "keyLevels": [...],
+    "upcomingCatalysts": [...],
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+**Market Regimes:**
+
+| Regime | Description |
+|--------|-------------|
+| `accumulation` | Smart money buying, price consolidating |
+| `markup` | Trending up, momentum positive |
+| `distribution` | Smart money selling, price topping |
+| `markdown` | Trending down, momentum negative |
+| `ranging` | Sideways, no clear direction |
+| `capitulation` | Panic selling, potential bottom |
+| `euphoria` | Extreme greed, potential top |
+
+---
+
+### POST /api/ai/agent
+
+Query the AI Market Agent with natural language.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `question` | string | Yes | Natural language question |
+| `assets` | array | No | Focus on specific assets |
+| `timeHorizon` | string | No | Time frame: 1h, 4h, 1d, 1w, 1m |
+| `focusAreas` | array | No | Signal sources: news, social, on-chain, technical, derivatives |
+
+**Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/ai/agent" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What is driving Bitcoin price action today?",
+    "assets": ["BTC"],
+    "timeHorizon": "1d",
+    "focusAreas": ["news", "technical"]
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "data": {
+    "answer": "Bitcoin is being driven by strong ETF inflows and positive regulatory sentiment...",
+    "confidence": 0.85,
+    "supportingSignals": [...],
+    "suggestedActions": ["Monitor ETF flow data", "Watch $100k resistance level"],
+    "relatedQueries": ["What are the key support levels?", "How is sentiment trending?"]
+  }
+}
+```
+
+---
+
 ### GET /api/narratives
 
 AI-detected narrative clusters in crypto news.
-
-**Parameters:**
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -2462,6 +3521,368 @@ Analyze topics with insufficient news coverage.
       "coverageRatio": 3.5
     }
   ]
+}
+```
+
+---
+
+## Intelligence APIs
+
+### GET /api/analytics/anomalies
+
+Detect unusual patterns in news flow including volume spikes, coordinated publishing, and sentiment shifts.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `hours` | integer | 24 | Time window (1-168) |
+| `severity` | string | - | Filter by: `high`, `medium`, `low` |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/analytics/anomalies?hours=12&severity=high"
+```
+
+**Response:**
+
+```json
+{
+  "anomalies": [
+    {
+      "id": "anomaly_volume_spike_1737507600",
+      "type": "volume_spike",
+      "severity": "high",
+      "detectedAt": "2026-01-22T10:00:00Z",
+      "description": "Article volume 4.2 standard deviations above normal",
+      "data": {
+        "expected": 12,
+        "actual": 45,
+        "deviation": 4.2,
+        "affectedEntities": ["BTC", "ETF"]
+      },
+      "possibleCauses": ["Breaking news event", "Coordinated release"]
+    }
+  ],
+  "systemHealth": {
+    "normalArticleRate": 8.5,
+    "currentRate": 45,
+    "activeSources": 11,
+    "totalSources": 12
+  },
+  "summary": {
+    "totalAnomalies": 3,
+    "bySeverity": { "high": 1, "medium": 2, "low": 0 },
+    "byType": { "volume_spike": 1, "sentiment_shift": 2 }
+  },
+  "generatedAt": "2026-01-22T10:30:00Z"
+}
+```
+
+**Anomaly Types:**
+
+| Type | Description |
+|------|-------------|
+| `volume_spike` | Article volume >3 std dev above normal |
+| `coordinated_publishing` | Multiple sources publish similar content within 5 min |
+| `sentiment_shift` | Market sentiment shifts >40% in 6 hours |
+| `ticker_surge` | Ticker mentions spike 5x above baseline |
+| `source_outage` | Source silent for >12 hours |
+| `unusual_timing` | Publishing at unusual hours |
+
+---
+
+### GET /api/analytics/headlines
+
+Track how article headlines change over time.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `hours` | integer | 24 | Time window (1-168) |
+| `changesOnly` | boolean | false | Only show articles with headline changes |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/analytics/headlines?changesOnly=true"
+```
+
+**Response:**
+
+```json
+{
+  "tracked": [
+    {
+      "articleId": "art_abc123",
+      "originalTitle": "Bitcoin Drops 5%",
+      "currentTitle": "Bitcoin Recovers After 5% Dip",
+      "changes": [
+        {
+          "title": "Bitcoin Recovers After 5% Dip",
+          "detectedAt": "2026-01-22T12:00:00Z",
+          "changeType": "moderate",
+          "sentiment_shift": "more_positive"
+        }
+      ],
+      "totalChanges": 1,
+      "url": "https://coindesk.com/...",
+      "source": "CoinDesk"
+    }
+  ],
+  "recentChanges": [...],
+  "stats": {
+    "totalTracked": 150,
+    "withChanges": 12,
+    "avgChangesPerArticle": 0.08
+  }
+}
+```
+
+---
+
+### GET /api/analytics/causality
+
+Perform causal analysis between news events and market movements.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `eventId` | string | - | Specific event ID to analyze |
+| `type` | string | - | Filter by event type |
+| `asset` | string | - | Filter by asset |
+| `limit` | integer | 50 | Number of events to return |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/analytics/causality?asset=BTC&limit=10"
+```
+
+**POST Request (Perform Analysis):**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/analytics/causality" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "action": "analyze",
+    "eventId": "caus_abc123",
+    "assets": ["BTC"],
+    "windowBefore": 24,
+    "windowAfter": 48,
+    "method": "event_study"
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "eventId": "caus_abc123",
+  "event": {
+    "timestamp": "2026-01-22T09:00:00Z",
+    "eventType": "regulatory",
+    "description": "SEC approves spot Bitcoin ETF",
+    "assets": ["BTC"]
+  },
+  "method": "event_study",
+  "causalEffect": {
+    "direction": "positive",
+    "magnitude": 8.5,
+    "absoluteChange": 8500,
+    "peakEffect": 12.3,
+    "peakTime": "2026-01-22T14:00:00Z",
+    "halfLife": 6,
+    "persistence": 72
+  },
+  "confidence": 0.92,
+  "pValue": 0.003,
+  "isSignificant": true,
+  "metrics": {
+    "preEventMean": 98000,
+    "postEventMean": 106500,
+    "cumulativeAbnormalReturn": 0.085,
+    "tStatistic": 3.45
+  }
+}
+```
+
+**Analysis Methods:**
+
+| Method | Description |
+|--------|-------------|
+| `granger` | Granger causality test |
+| `diff_in_diff` | Difference-in-differences |
+| `event_study` | Event study with abnormal returns |
+| `synthetic_control` | Synthetic control method |
+| `regression_discontinuity` | Regression discontinuity design |
+
+---
+
+### GET /api/analytics/credibility
+
+Get credibility scores for news sources.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `source` | string | - | Specific source to check |
+| `sortBy` | string | score | Sort by: `score`, `accuracy`, `timeliness` |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/analytics/credibility?sortBy=accuracy"
+```
+
+**Response:**
+
+```json
+{
+  "sources": [
+    {
+      "sourceKey": "coindesk",
+      "name": "CoinDesk",
+      "credibilityScore": 92,
+      "metrics": {
+        "accuracy": 0.94,
+        "timeliness": 0.88,
+        "sourceDiversity": 0.85,
+        "correctionRate": 0.02
+      },
+      "tier": "tier1",
+      "totalArticles": 15230,
+      "lastUpdated": "2026-01-22T10:00:00Z"
+    }
+  ],
+  "stats": {
+    "avgScore": 78,
+    "tier1Count": 7,
+    "tier2Count": 5,
+    "tier3Count": 3
+  }
+}
+```
+
+---
+
+### GET /api/predictions
+
+Track and score user predictions with leaderboards.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `action` | string | list | Action: `list`, `leaderboard`, `analytics` |
+| `userId` | string | - | Get predictions for specific user |
+| `asset` | string | - | Filter by asset |
+| `status` | string | - | Filter by: `pending`, `correct`, `incorrect` |
+| `limit` | integer | 50 | Number of predictions |
+
+**Example:**
+
+```bash
+# Get leaderboard
+curl "https://news-crypto.vercel.app/api/predictions?action=leaderboard"
+
+# Get user predictions
+curl "https://news-crypto.vercel.app/api/predictions?userId=user_123"
+```
+
+**POST Request (Create Prediction):**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/predictions" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userId": "user_123",
+    "type": "price_above",
+    "asset": "BTC",
+    "targetValue": 150000,
+    "targetDate": "2026-06-01",
+    "timeframe": "3m",
+    "confidence": 75,
+    "reasoning": "ETF inflows continue strong",
+    "isPublic": true
+  }'
+```
+
+**Prediction Types:**
+
+| Type | Description |
+|------|-------------|
+| `price_above` | Price exceeds target by date |
+| `price_below` | Price drops below target |
+| `price_range` | Price stays within range |
+| `percentage_up` | Asset increases by X% |
+| `percentage_down` | Asset decreases by X% |
+| `event` | Specific event occurs |
+| `trend` | General trend prediction |
+| `dominance` | Market dominance prediction |
+
+---
+
+### GET /api/influencers
+
+Track influencer prediction reliability and accuracy.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `view` | string | - | Use `stats` for overall statistics |
+| `sortBy` | string | reliability | Sort: `reliability`, `accuracy`, `returns`, `sharpe` |
+| `limit` | integer | 50 | Number of influencers (max 100) |
+| `minCalls` | integer | 0 | Minimum trading calls required |
+| `platform` | string | - | Filter: `twitter`, `discord`, `telegram` |
+| `ticker` | string | - | Filter by ticker expertise |
+
+**Example:**
+
+```bash
+# Get top reliable influencers
+curl "https://news-crypto.vercel.app/api/influencers?sortBy=accuracy&minCalls=10"
+
+# Get overall stats
+curl "https://news-crypto.vercel.app/api/influencers?view=stats"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "data": {
+    "influencers": [
+      {
+        "id": "inf_abc123",
+        "platform": "twitter",
+        "username": "@cryptoexpert",
+        "displayName": "Crypto Expert",
+        "followers": 125000,
+        "isVerified": true,
+        "reliabilityScore": 85,
+        "accuracyRate": 0.72,
+        "avgReturn": 0.15,
+        "sharpeRatio": 1.8,
+        "maxDrawdown": -0.12,
+        "totalPosts": 450,
+        "postsWithCalls": 120,
+        "topTickers": [
+          { "ticker": "BTC", "calls": 45, "accuracy": 0.78, "avgReturn": 0.18 }
+        ],
+        "sentimentBias": 0.3,
+        "overallRank": 5
+      }
+    ],
+    "total": 150,
+    "returned": 50
+  }
 }
 ```
 

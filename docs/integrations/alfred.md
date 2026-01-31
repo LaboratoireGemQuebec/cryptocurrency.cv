@@ -9,6 +9,7 @@ The Free Crypto News Alfred Workflow brings instant crypto news search to your M
 - 💰 Quick price checks
 - 🔥 Breaking news
 - 🎯 Category filters
+- 📊 Trending topics
 
 ## Requirements
 
@@ -31,123 +32,49 @@ cd free-crypto-news/alfred
 open crypto-news.alfredworkflow
 ```
 
+## Commands
+
+| Keyword | Action | Example |
+|---------|--------|---------|
+| `news` / `latest` | Get latest news | `./crypto-news.sh news 10` |
+| `breaking` | Breaking news (last 2h) | `./crypto-news.sh breaking 5` |
+| `bitcoin` / `btc` | Bitcoin news | `./crypto-news.sh bitcoin 10` |
+| `defi` | DeFi news | `./crypto-news.sh defi 10` |
+| `search` | Search by keyword | `./crypto-news.sh search "ethereum ETF" 10` |
+| `trending` | Trending topics | `./crypto-news.sh trending 10` |
+
 ## Usage
 
 ### Latest News
 
-Type `cn` to see the latest crypto headlines:
-
+```bash
+./crypto-news.sh news 10
 ```
-cn
-```
-
-Results show:
-- Article title
-- Source name
-- Time ago
-
-Press `Enter` to open article in browser.
 
 ### Search News
 
-Type `cn` followed by keywords:
-
-```
-cn bitcoin etf
-cn ethereum merge
-cn defi hack
-```
-
-### Quick Price
-
-Type `cp` for quick price check:
-
-```
-cp          → Show top coins
-cp btc      → Bitcoin price
-cp eth sol  → Multiple coins
+```bash
+./crypto-news.sh search "bitcoin etf" 10
 ```
 
 ### Breaking News
 
-Type `cbreak` for breaking news (last 2 hours):
-
-```
-cbreak
+```bash
+./crypto-news.sh breaking 5
 ```
 
-### Category Filter
+### Bitcoin/DeFi News
 
-Type `ccat` to filter by category:
-
-```
-ccat defi
-ccat institutional
-ccat bitcoin
+```bash
+./crypto-news.sh bitcoin 10
+./crypto-news.sh defi 10
 ```
 
-## Keyword Reference
+### Trending Topics
 
-| Keyword | Action |
-|---------|--------|
-| `cn` | Latest news / Search |
-| `cp` | Price check |
-| `cbreak` | Breaking news |
-| `ccat` | Category filter |
-| `cfear` | Fear & Greed Index |
-
-## Hotkeys
-
-Configure in Alfred Preferences → Workflows → Crypto News:
-
-| Default | Action |
-|---------|--------|
-| `⌥N` | Open news search |
-| `⌥P` | Quick price check |
-| `⌥B` | Breaking news |
-
-## Configuration
-
-### Workflow Variables
-
-Open Alfred Preferences → Workflows → Crypto News → [x] icon:
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `news_limit` | `10` | Number of articles |
-| `default_category` | `all` | Default category |
-| `price_coins` | `btc,eth,sol` | Default coins for price |
-
-### Cache Settings
-
-Results are cached for 5 minutes. Clear cache:
-
-1. Open Alfred Preferences
-2. Go to Workflows → Crypto News
-3. Click **Clear Cache**
-
-Or use the keyword:
-
+```bash
+./crypto-news.sh trending 10
 ```
-cnclear
-```
-
-## Actions
-
-### Primary Actions (Enter)
-
-- **News items:** Open article in browser
-- **Price items:** Copy price to clipboard
-- **Fear & Greed:** Open detailed view
-
-### Modifier Keys
-
-| Key | Action |
-|-----|--------|
-| `⌘` | Copy article URL |
-| `⌥` | Open source website |
-| `⌃` | Show more details |
-| `⇧` | Preview in Alfred |
 
 ## Snippets
 

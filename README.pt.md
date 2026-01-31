@@ -39,7 +39,7 @@ curl https://news-crypto.vercel.app/api/news
 
 ## 🌍 Fontes de Notícias Internacionais
 
-Obtenha notícias cripto de **12 fontes internacionais** em coreano, chinês, japonês e espanhol — com tradução automática para inglês!
+Obtenha notícias cripto de **75 fontes internacionais** em 18 idiomas — com tradução automática para inglês!
 
 ### Fontes Suportadas
 

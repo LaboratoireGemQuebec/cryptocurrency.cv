@@ -39,7 +39,7 @@ curl https://news-crypto.vercel.app/api/news
 
 ## 🌍 Internationale Nachrichtenquellen
 
-Erhalten Sie Krypto-Nachrichten von **12 internationalen Quellen** auf Koreanisch, Chinesisch, Japanisch und Spanisch — mit automatischer Übersetzung ins Englische!
+Erhalten Sie Krypto-Nachrichten von **75 internationalen Quellen** in 18 Sprachen — mit automatischer Übersetzung ins Englische!
 
 ### Unterstützte Quellen
 

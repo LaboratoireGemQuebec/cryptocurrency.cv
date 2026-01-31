@@ -29,7 +29,7 @@ curl https://news-crypto.vercel.app/api/news
 | **Cena** | 🆓 Zawsze za darmo | $29-299/miesiąc | Płatne |
 | **Klucz API** | ❌ Nie wymagany | Wymagany | Wymagany |
 | **Limit zapytań** | Bez limitu* | 100-1000/dzień | Ograniczony |
-| **Źródła** | 12 angielskich + 12 międzynarodowych | 1 | Różne |
+| **Źródła** | 130+ angielskich + 75 międzynarodowych | 1 | Różne |
 | **Internacjonalizacja** | 🌏 Koreański, Chiński, Japoński, Hiszpański + tłumaczenie | Nie | Nie |
 | **Self-hosting** | ✅ Deploy jednym kliknięciem | Nie | Nie |
 | **PWA** | ✅ Instalowalne | Nie | Nie |
@@ -39,7 +39,7 @@ curl https://news-crypto.vercel.app/api/news
 
 ## 🌍 Międzynarodowe Źródła Wiadomości
 
-Otrzymuj wiadomości crypto z **12 międzynarodowych źródeł** w języku koreańskim, chińskim, japońskim i hiszpańskim — automatycznie tłumaczone na angielski!
+Otrzymuj wiadomości crypto z **75 międzynarodowych źródeł** w 18 językach — automatycznie tłumaczone na angielski!
 
 ### Obsługiwane Źródła
 

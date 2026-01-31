@@ -1312,7 +1312,7 @@ Dashboard auto-refreshes every 30 seconds for live updates.
 | **Narrative Clusters** | Groups related news into emerging market narratives |
 | **Fear & Greed Widget** | Real-time sentiment gauge with historical context |
 | **Breaking Detection** | Priority scoring system for urgent news |
-| **Source Deduplication** | Intelligent article matching across 12 sources |
+| **Source Deduplication** | Intelligent article matching across 200+ sources |
 | **Credibility Scoring** | Weighted news importance by source reputation |
 | **Claim Extraction** | AI extracts verifiable claims from articles |
 | **Event Classification** | Categorizes news by impact type |

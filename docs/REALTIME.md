@@ -41,6 +41,30 @@ SSE is the recommended method for Vercel deployments.
 GET /api/sse
 ```
 
+### Query Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `sources` | string | all | Comma-separated source keys (e.g., `coindesk,theblock`) |
+| `categories` | string | all | Comma-separated categories (e.g., `bitcoin,defi`) |
+| `breaking` | boolean | true | Include breaking news events (`false` to disable) |
+
+**Example with filters:**
+
+```bash
+curl -N "https://news-crypto.vercel.app/api/sse?sources=coindesk,theblock&categories=bitcoin&breaking=true"
+```
+
+### Events
+
+| Event | Payload | Description |
+|-------|---------|-------------|
+| `connected` | `{message, timestamp, config}` | Connection established |
+| `news` | `{type, articles[], timestamp}` | New articles available |
+| `breaking` | `{type, articles[], timestamp}` | Breaking news alerts |
+| `heartbeat` | `{timestamp}` | Keep-alive ping (every 30s) |
+| `error` | `{message, timestamp}` | Error notification |
+
 ### Usage
 
 **JavaScript/Browser:**
@@ -57,14 +81,8 @@ eventSource.addEventListener('breaking', (event) => {
 
 // Regular news updates
 eventSource.addEventListener('news', (event) => {
-  const articles = JSON.parse(event.data);
-  updateNewsFeed(articles);
-});
-
-// Price updates
-eventSource.addEventListener('price', (event) => {
-  const prices = JSON.parse(event.data);
-  updatePriceDisplay(prices);
+  const data = JSON.parse(event.data);
+  updateNewsFeed(data.articles);
 });
 
 // Connection status

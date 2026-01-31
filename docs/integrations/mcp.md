@@ -4,13 +4,18 @@ The Model Context Protocol (MCP) server allows AI assistants like Claude and Cha
 
 ## Overview
 
+**14 Tools** for comprehensive crypto news access. All tools are marked as **read-only** for ChatGPT compatibility (no confirmation prompts).
+
 MCP enables AI models to:
 
-- Fetch the latest crypto news
-- Search for specific topics
-- Get market data and prices
-- Access Fear & Greed Index
-- Monitor breaking news
+- Fetch the latest crypto news from 7 major sources
+- Search for specific topics with keyword filtering
+- Get DeFi and Bitcoin-specific news
+- Access trending topics with sentiment analysis
+- Monitor breaking news (last 2 hours)
+- Query historical news archive
+- Find original news sources
+- Get portfolio news with CoinGecko price data
 
 ## Installation
 
@@ -61,148 +66,198 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
 }
 ```
 
-## Available Tools
+## Available Tools (14 Total)
 
-### get_crypto_news
+All tools are marked as **read-only** for ChatGPT Developer Mode compatibility (no confirmation prompts).
 
-Fetch latest crypto news articles.
+| Tool | Description |
+|------|-------------|
+| `get_crypto_news` | Get latest news from all 7 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant) |
+| `search_crypto_news` | Search news by comma-separated keywords |
+| `get_defi_news` | DeFi-specific news (yield farming, DEXs, lending, protocols) |
+| `get_bitcoin_news` | Bitcoin-specific news (BTC, Lightning Network, miners, ordinals) |
+| `get_breaking_news` | Breaking news from the last 2 hours |
+| `get_news_sources` | List all available news sources with details |
+| `get_api_health` | Check API & feed health status |
+| `get_trending_topics` | Trending topics with sentiment analysis (bullish/bearish/neutral) |
+| `get_crypto_stats` | Analytics: articles per source, hourly distribution, category breakdown |
+| `analyze_news` | News with topic classification and sentiment analysis |
+| `get_archive` | Query historical news archive by date range, source, or keywords |
+| `get_archive_stats` | Statistics about the historical news archive |
+| `find_original_sources` | Find where news originated (official, press-release, social, government) |
+| `get_portfolio_news` | News for specific cryptocurrencies with CoinGecko price data |
+
+### Tool Parameters
+
+#### get_crypto_news
 
 ```
 Parameters:
-- limit (number, optional): Number of articles (default: 10, max: 50)
-- category (string, optional): Filter by category
+- limit (number, optional): Max articles 1-50 (default: 10)
+- source (string, optional): Filter by source (coindesk, theblock, decrypt, cointelegraph, bitcoinmagazine, blockworks, defiant)
+```
+
+#### search_crypto_news
+
+```
+Parameters:
+- keywords (string, required): Comma-separated keywords (e.g., "ethereum,ETF")
+- limit (number, optional): Max results 1-30 (default: 10)
+```
+
+#### get_trending_topics
+
+```
+Parameters:
+- limit (number, optional): Max topics 1-20 (default: 10)
+- hours (number, optional): Time window 1-72 hours (default: 24)
+```
+
+#### analyze_news
+
+```
+Parameters:
+- limit (number, optional): Max articles 1-50 (default: 10)
+- topic (string, optional): Filter by topic (Bitcoin, Ethereum, DeFi, NFTs, Regulation, Exchange)
+- sentiment (string, optional): Filter by sentiment (bullish, bearish, neutral)
+```
+
+#### get_archive
+
+```
+Parameters:
+- start_date (string, optional): Start date YYYY-MM-DD
+- end_date (string, optional): End date YYYY-MM-DD
 - source (string, optional): Filter by source
+- search (string, optional): Search query
+- limit (number, optional): Max results 1-200 (default: 20)
 ```
 
-Example prompt: *"Get the latest 5 DeFi news articles"*
-
-### search_crypto_news
-
-Search news by keywords.
+#### find_original_sources
 
 ```
 Parameters:
-- query (string, required): Search keywords
-- limit (number, optional): Number of results (default: 10)
+- limit (number, optional): Articles to analyze 1-50 (default: 10)
+- search (string, optional): Search query
+- source_type (string, optional): official, press-release, social, blog, government
 ```
 
-Example prompt: *"Search for news about Bitcoin ETF approval"*
-
-### get_market_data
-
-Get current cryptocurrency prices.
+#### get_portfolio_news
 
 ```
 Parameters:
-- coins (array, optional): List of coin IDs (default: top coins)
+- coins (string, required): Comma-separated coins (e.g., "btc,eth,sol")
+- limit (number, optional): Max articles per coin 1-50 (default: 10)
+- prices (boolean, optional): Include CoinGecko price data (default: true)
 ```
 
-Example prompt: *"What's the current price of Bitcoin and Ethereum?"*
+## Example Prompts
 
-### get_fear_greed_index
+### Claude Desktop
 
-Get the current Fear & Greed Index.
+- "Get me the latest crypto news"
+- "Search for news about Ethereum ETF"
+- "What's happening in DeFi?"
+- "Any breaking crypto news?"
+- "What are the trending crypto topics?"
+- "Analyze recent news for bullish signals"
+- "Get news from last week about SEC"
+- "Find the original source of this Binance news"
+- "Get news for my portfolio: BTC, ETH, SOL with prices"
 
-```
-Parameters: none
-```
+### ChatGPT Developer Mode
 
-Example prompt: *"What's the current market sentiment?"*
+Be explicit about using the app and tool names:
 
-### get_breaking_news
+- "Use the Free Crypto News app's `get_crypto_news` tool to show me the latest headlines"
+- "Use `search_crypto_news` to find news about 'SEC regulation'"
+- "Call `get_trending_topics` to show what's trending in crypto right now"
+- "Use `get_portfolio_news` with coins='btc,eth,sol' to get news for my portfolio with prices"
 
-Get breaking news from the last 2 hours.
+## HTTP Server Mode (ChatGPT Developer Mode)
 
-```
-Parameters:
-- limit (number, optional): Number of articles (default: 5)
-```
+**Live Server:** `https://plugins.support/sse`
 
-Example prompt: *"Are there any breaking crypto news?"*
-
-## Example Conversations
-
-### News Summary
-
-**User:** What's happening in crypto today?
-
-**Claude:** I'll check the latest crypto news for you.
-
-*[Uses get_crypto_news tool]*
-
-Based on the latest news:
-1. **Bitcoin ETF sees record inflows** - BlackRock's IBIT recorded $500M...
-2. **Ethereum's Dencun upgrade goes live** - The upgrade reduces L2 fees...
-3. **Solana DeFi TVL reaches new high** - Total value locked exceeds...
-
-### Market Analysis
-
-**User:** How's the market looking? Should I be worried?
-
-**Claude:** Let me check the current market conditions.
-
-*[Uses get_market_data and get_fear_greed_index tools]*
-
-Current market status:
-- **Bitcoin:** $67,450 (+2.3% 24h)
-- **Ethereum:** $3,890 (+1.8% 24h)
-- **Fear & Greed Index:** 72 (Greed)
-
-The market is showing moderate greed, which historically...
-
-## HTTP Server Mode
-
-For web-based AI integrations, run the MCP server in HTTP mode:
+Run locally:
 
 ```bash
 cd mcp
-node http-server.js
+npm install
+npm run start:http  # Starts on port 3001
 ```
 
-This starts a server at `http://localhost:3001` with REST endpoints:
+### API Endpoints (HTTP mode)
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET /tools` | List available tools |
-| `POST /execute` | Execute a tool |
+| `GET /health` | Health check |
+| `GET /sse` | Server-Sent Events endpoint for MCP |
+| `POST /message` | Message endpoint (used with SSE) |
+| `POST /mcp` | Single request/response endpoint |
 
 ### Example Request
 
 ```bash
-curl -X POST http://localhost:3001/execute \
+curl -X POST http://localhost:3001/mcp \
   -H "Content-Type: application/json" \
   -d '{
     "tool": "get_crypto_news",
-    "params": { "limit": 5, "category": "defi" }
+    "params": { "limit": 5 }
   }'
 ```
 
+## ChatGPT Developer Mode Setup
+
+1. Enable Developer Mode in ChatGPT Settings → Apps → Advanced
+2. Click "Create app"
+3. Configure:
+   - **Name:** Free Crypto News
+   - **Protocol:** SSE
+   - **Endpoint:** `https://plugins.support/sse`
+   - **Authentication:** No Authentication
+4. Enable the app in a conversation
+
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `3001` | HTTP server port |
+| `API_BASE` | `https://news-crypto.vercel.app` | Backend API URL |
+
 ## Troubleshooting
 
-### MCP Server Not Found
+### MCP Server Not Loading in Claude
 
-Ensure the MCP package is installed:
-
-```bash
-npm install -g @anthropic-ai/mcp-server-crypto-news
-```
+1. Verify the path in your config is correct
+2. Check that Node.js 18+ is installed
+3. Run `node /path/to/mcp/index.js` manually to test
 
 ### Connection Timeout
 
-Check if the Free Crypto News API is accessible:
+Check if the API is accessible:
 
 ```bash
 curl https://news-crypto.vercel.app/api/health
 ```
 
-### Tool Errors
+### ChatGPT Not Seeing Tools
 
-Enable debug logging:
+Ensure the SSE endpoint is reachable and returns proper MCP responses.
 
-```bash
-DEBUG=mcp:* npx @anthropic-ai/mcp-server-crypto-news
-```
+## Features
+
+- **100% Free** - No API keys required
+- **Dual Transport** - Works with both Claude (stdio) and ChatGPT (HTTP/SSE)
+- **14 Tools** - Comprehensive crypto news coverage
+- **Read-Only** - All tools marked as safe for ChatGPT (no confirmation prompts)
+- **Real-Time** - Breaking news from last 2 hours
+- **Sentiment Analysis** - Bullish/bearish/neutral classification
+- **Historical Archive** - Query past news by date/source
+- **Portfolio Tracking** - Get news for specific coins with prices
+- **Original Sources** - Trace where news actually originated
 
 ## Source Code
 
-View the MCP server source: [mcp/](https://github.com/nirholas/free-crypto-news/tree/main/mcp)
+- [mcp/index.js](https://github.com/nirholas/free-crypto-news/blob/main/mcp/index.js) - MCP server (stdio)
+- [mcp/http-server.js](https://github.com/nirholas/free-crypto-news/blob/main/mcp/http-server.js) - HTTP/SSE server
+- [mcp/README.md](https://github.com/nirholas/free-crypto-news/blob/main/mcp/README.md) - Quick start guide

@@ -1,4 +1,4 @@
-🌐 **Languages:** [English](README.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [العربية](README.ar.md) | [Русский](README.ru.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Türkçe](README.tr.md) | [Tiếng Việt](README.vi.md) | [ไทย](README.th.md) | [Bahasa Indonesia](README.id.md)
+🌐 **Languages:** [English](README.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português](README.pt.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [한국어](README.ko.md) | [العربية](README.ar.md) | [Русский](README.ru.md) | [Italiano](README.it.md) | [Nederlands](README.nl.md) | [Polski](README.pl.md) | [Türkçe](README.tr.md)
 
 ---
  
@@ -19,7 +19,7 @@
 > ⭐ **If you find this useful, please star the repo!** It helps others discover this project and motivates continued development.
 
 ---
-Get real-time crypto news from 7 major sources with one API call.
+Get real-time crypto news from **200+ sources** with one API call.
 
 ```bash
 curl https://news-crypto.vercel.app/api/news
@@ -33,7 +33,7 @@ curl https://news-crypto.vercel.app/api/news
 | **Price** | 🆓 Free forever | $29-299/mo | Paid |
 | **API Key** | ❌ None needed | Required | Required |
 | **Rate Limit** | Unlimited* | 100-1000/day | Limited |
-| **Sources** | 12 English + 12 International | 1 | Varies |
+| **Sources** | 130+ English + 75 International | 1 | Varies |
 | **International** | 🌏 KO, ZH, JA, ES + translation | No | No |
 | **Self-host** | ✅ One click | No | No |
 | **PWA** | ✅ Installable | No | No |
@@ -58,12 +58,34 @@ npm install && npm run dev
 
 ## 🌍 International News Sources
 
-Get crypto news from **12 international sources** in Korean, Chinese, Japanese, and Spanish — with automatic English translation!
+Get crypto news from **75 international sources** across 18 languages — with automatic English translation!
 
-### Supported Sources
+### Supported Sources by Language
+
+| Language | Count | Sample Sources |
+|----------|-------|----------------|
+| 🇨🇳 Chinese (zh) | 10 | 8BTC, Jinse Finance, Odaily, ChainNews, PANews, TechFlow, BlockBeats, MarsBit, Wu Blockchain, Foresight News |
+| 🇰🇷 Korean (ko) | 9 | Block Media, TokenPost, CoinDesk Korea, Decenter, Cobak, The B.Chain, Upbit Blog, Blockchain Today Korea, CryptoQuant Blog |
+| 🇯🇵 Japanese (ja) | 6 | CoinPost, CoinDesk Japan, Cointelegraph Japan, btcnews.jp, Crypto Times Japan, CoinJinja |
+| 🇧🇷 Portuguese (pt) | 5 | Cointelegraph Brasil, Livecoins, Portal do Bitcoin, BeInCrypto Brasil, Bitcoin Block |
+| 🇮🇳 Hindi (hi) | 5 | CoinSwitch, CoinDCX, WazirX, ZebPay, Crypto News India |
+| 🇪🇸 Spanish (es) | 5 | Cointelegraph Español, Diario Bitcoin, CriptoNoticias, BeInCrypto Español, Bitcoiner Today |
+| 🇩🇪 German (de) | 4 | BTC-ECHO, Cointelegraph Deutsch, Coincierge, CryptoMonday |
+| 🇫🇷 French (fr) | 4 | Journal du Coin, Cryptonaute, Cointelegraph France, Cryptoast |
+| 🇮🇷 Persian (fa) | 4 | Arz Digital, Mihan Blockchain, Ramz Arz, Nobitex |
+| 🇹🇷 Turkish (tr) | 3 | Cointelegraph Türkçe, Koin Medya, Coinsider |
+| 🇷🇺 Russian (ru) | 3 | ForkLog, Cointelegraph Russia, Bits.Media |
+| 🇮🇹 Italian (it) | 3 | Cointelegraph Italia, The Cryptonomist, Criptovalute.it |
+| 🇮🇩 Indonesian (id) | 3 | Cointelegraph Indonesia, Blockchain Media, Pintu Academy |
+| 🇻🇳 Vietnamese (vi) | 2 | Tạp chí Bitcoin, Coin68 |
+| 🇹🇭 Thai (th) | 2 | Siam Blockchain, Bitcoin Addict Thailand |
+| 🇵🇱 Polish (pl) | 2 | Kryptowaluty.pl, Bitcoin.pl |
+| 🇳🇱 Dutch (nl) | 2 | Bitcoin Magazine NL, Crypto Insiders |
+| 🇸🇦 Arabic (ar) | 2 | Cointelegraph Arabic, ArabiCrypto |
+
+### Legacy Region View
 
 | Region | Sources |
-|--------|---------|
 | 🇰🇷 **Korea** | Block Media, TokenPost, CoinDesk Korea |
 | 🇨🇳 **China** | 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报) |
 | 🇯🇵 **Japan** | CoinPost, CoinDesk Japan, Cointelegraph Japan |
@@ -168,29 +190,43 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | Page | Description |
 |------|-------------|
 | `/` | Home page with latest news feed |
-| `/breaking` | Breaking news in last 2 hours |
 | `/trending` | Trending topics & sentiment |
 | `/search` | Full-text search with filters |
 | `/sources` | Browse news by source |
-| `/categories` | Browse by category |
+| `/source/[id]` | Individual source page |
 | `/tags/[slug]` | Tag-based news filtering |
 | `/article/[slug]` | Article detail page |
+| `/topic/[slug]` | Topic-based news |
+| `/topics` | All topics overview |
+| `/buzz` | Social buzz & mentions |
 
 ### 📊 Market Data
 
 | Page | Description |
 |------|-------------|
 | `/markets` | Market overview with prices |
+| `/markets/categories` | Market categories browser |
 | `/coin/[coinId]` | Detailed coin page (CoinGecko-quality) |
 | `/fear-greed` | Fear & Greed Index with breakdown |
 | `/funding` | Funding rates across exchanges |
 | `/signals` | AI trading signals (educational) |
 | `/whales` | Whale alert tracking |
+| `/orderbook` | Order book visualization |
+| `/liquidations` | Liquidation tracking |
+| `/dominance` | Market dominance charts |
+| `/movers` | Top gainers/losers |
+| `/heatmap` | Market heatmap visualization |
+| `/gas` | ETH gas tracker |
+| `/arbitrage` | Arbitrage opportunities |
+| `/options` | Options market data |
+| `/oracle` | Oracle price feeds |
 
 ### 🧠 AI Analysis
 
 | Page | Description |
 |------|-------------|
+| `/ai` | AI analysis dashboard |
+| `/ai-agent` | AI agent interface |
 | `/factcheck` | Claim verification dashboard |
 | `/entities` | Entity extraction viewer |
 | `/claims` | Extracted claims browser |
@@ -199,6 +235,8 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | `/onchain` | On-chain event correlation |
 | `/origins` | Original source finder |
 | `/citations` | Citation network explorer |
+| `/sentiment` | Sentiment analysis |
+| `/coverage-gap` | Coverage gap analysis |
 
 ### 🔬 Research Tools
 
@@ -207,28 +245,36 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | `/backtest` | News-based strategy backtesting |
 | `/influencers` | Influencer prediction tracking |
 | `/predictions` | Prediction market integration |
-| `/calendar` | Crypto events calendar |
 | `/portfolio` | Portfolio-based news feed |
+| `/screener` | Custom news screener |
+| `/correlation` | News-price correlation analysis |
 
 ### ⚙️ User Features
 
 | Page | Description |
 |------|-------------|
 | `/settings` | User preferences & themes |
-| `/notifications` | Notification settings |
 | `/watchlist` | Personalized watchlist |
 | `/bookmarks` | Saved articles |
-| `/alerts` | Custom alert configuration |
-| `/api-keys` | API key management |
-| `/stats` | Site statistics |
+| `/saved` | Saved content manager |
+| `/read` | Reading list |
+| `/digest` | Personalized news digest |
 
-### 📖 Documentation
+### 📖 Documentation & Tools
 
 | Page | Description |
 |------|-------------|
-| `/docs` | Interactive API documentation |
+| `/developers` | Developer portal & API docs |
 | `/examples` | Code examples & demos |
-| `/status` | API & service health |
+| `/about` | About the project |
+| `/pricing` | Pricing tiers |
+| `/install` | Installation guide |
+| `/blog` | Project blog |
+| `/calculator` | Crypto calculator |
+| `/compare` | Coin comparison |
+| `/charts` | Advanced charting |
+| `/analytics` | Usage analytics |
+| `/regulatory` | Regulatory tracking |
 
 ---
 
@@ -245,7 +291,7 @@ npm run pwa:icons
 
 ## Sources
 
-We aggregate from **120+ trusted outlets** across multiple categories:
+We aggregate from **130+ trusted English outlets** across 21 categories:
 
 ### 📰 Tier 1 News Outlets
 - 🟠 **CoinDesk** — General crypto news
@@ -292,10 +338,37 @@ We aggregate from **120+ trusted outlets** across multiple categories:
 | `/api/news` | Latest from all sources |
 | `/api/news?category=institutional` | Filter by category |
 | `/api/news/categories` | List all categories |
+| `/api/news/international` | International sources with translation |
 | `/api/search?q=bitcoin` | Search by keywords |
 | `/api/defi` | DeFi-specific news |
 | `/api/bitcoin` | Bitcoin-specific news |
 | `/api/breaking` | Last 2 hours only |
+| `/api/trending` | Trending topics with sentiment |
+| `/api/tags` | Tag discovery and filtering |
+| `/api/archive` | Historical news archive |
+| `/api/archive/status` | Archive health status |
+| `/api/rss` | RSS 2.0 feed |
+| `/api/atom` | Atom feed |
+| `/api/opml` | OPML export for RSS readers |
+| `/api/health` | API health check |
+| `/api/cache` | Cache statistics |
+| `/api/stats` | API usage statistics |
+| `/api/webhooks` | Webhook registration |
+| `/api/push` | Web Push notifications |
+| `/api/newsletter` | Newsletter subscription |
+| `/api/alerts` | Configurable alert rules |
+| `/api/sse` | Server-Sent Events stream |
+| `/api/ws` | WebSocket connection info |
+| `/api/export` | Data export (JSON, CSV, Parquet) |
+| `/api/exports` | Bulk export job management |
+| `/api/storage/cas` | Content-addressable storage |
+| `/api/views` | Article view tracking |
+| `/api/register` | API key registration |
+| `/api/keys` | API key management |
+| `/api/gateway` | Unified API gateway for integrations |
+| `/api/docs` | Interactive Swagger UI documentation |
+| `/api/openapi.json` | OpenAPI 3.1 specification |
+| `/api/v1/` | Legacy v1 API endpoints |
 
 ### 📂 Category Filter
 
@@ -374,47 +447,55 @@ curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 
 ### 🤖 AI-Powered Endpoints (FREE via Groq)
 
-| Endpoint | Description |
-|----------|-------------|
-| `/api/summarize` | AI summaries of articles |
-| `/api/ask?q=...` | Ask questions about crypto news |
-| `/api/digest` | AI-generated daily news digest |
-| `/api/sentiment` | Deep sentiment analysis per article |
-| `/api/entities` | Extract people, companies, tickers |
-| `/api/narratives` | Identify market narratives & themes |
-| `/api/signals` | News-based trading signals (educational) |
-| `/api/factcheck` | Extract & verify claims |
-| `/api/clickbait` | Detect clickbait headlines |
-| `/api/classify` | Event classification (13 types) |
-| `/api/claims` | Claim extraction with attribution |
-| `/api/ai/brief` | AI-generated article briefs |
-| `/api/ai/counter` | Counter-arguments generation |
-| `/api/ai/debate` | AI debate on crypto topics |
-| `/api/ai/oracle` | The Oracle - AI-powered crypto oracle chat |
-| `/api/ai/agent` | AI market agent for autonomous analysis |
-| `/api/ai/relationships` | Extract entity relationships from news |
-| `/api/detect/ai-content` | Detect AI-generated content in articles |
+| Endpoint | Description | Provider |
+|----------|-------------|----------|
+| `/api/ai` | Unified AI endpoint (7 actions) | All |
+| `/api/summarize` | AI summaries with style options (brief/detailed/bullet/eli5/technical) | Groq |
+| `/api/ask?q=...` | Ask questions about crypto news | Groq |
+| `/api/digest` | AI-generated news digest (6h/12h/24h periods) | Groq |
+| `/api/sentiment` | Deep sentiment analysis with confidence scores | Groq |
+| `/api/entities` | Extract entities (7 types: ticker/person/company/protocol/exchange/regulator/event) | Groq |
+| `/api/narratives` | Identify market narratives with strength scoring | Groq |
+| `/api/factcheck` | Extract & verify claims (verified/likely/unverified/disputed) | Groq |
+| `/api/clickbait` | Detect clickbait with scoring (0-100) and rewritten titles | Groq |
+| `/api/classify` | Event classification (13 types: funding/hack/regulation/launch/partnership/listing/airdrop/upgrade/legal/market/executive/acquisition/general) | All |
+| `/api/claims` | Claim extraction with attribution (fact/opinion/prediction/announcement) | All |
+| `/api/ai/brief` | Daily brief with executive summary & market overview | All |
+| `/api/ai/counter` | Counter-arguments with strength scoring | All |
+| `/api/ai/debate` | Bull vs Bear debate generation | All |
+| `/api/ai/oracle` | The Oracle - natural language crypto intelligence chat | Groq |
+| `/api/ai/agent` | AI Market Agent for signal aggregation & regime detection | All |
+| `/api/ai/summarize` | Enterprise summarization with compression ratio | Groq |
+| `/api/ai/entities` | Enterprise entity extraction with graph support | Groq |
+| `/api/ai/relationships` | Relationship extraction (11 types) with clustering | Groq |
+| `/api/detect/ai-content` | AI-generated content detection (offline, no API needed) | None |
+| `/api/i18n/translate` | Article translation (18 languages) | Groq |
+
+**Supported AI Providers (priority order):**
+1. **OpenAI** - `OPENAI_API_KEY` (gpt-4o-mini default)
+2. **Anthropic** - `ANTHROPIC_API_KEY` (claude-3-haiku default)
+3. **Groq** - `GROQ_API_KEY` (llama-3.3-70b-versatile default) ⭐ FREE
+4. **OpenRouter** - `OPENROUTER_API_KEY` (llama-3-8b-instruct default)
 
 ### 📊 Analytics & Intelligence
 
 | Endpoint | Description |
 |----------|-------------|
-| `/api/analytics/anomalies` | Detect unusual coverage patterns |
-| `/api/analytics/credibility` | Source credibility scoring |
-| `/api/analytics/headlines` | Headline tracking & mutations |
-| `/api/analytics/usage` | API key usage analytics & insights |
-| `/api/analytics/influencers` | Influencer credibility scoring |
-| `/api/analytics/causality` | News causality analysis |
-| `/api/analytics/forensics` | News forensics & origin tracking |
-| `/api/analytics/gaps` | Coverage gap detection |
-| `/api/analytics/news-onchain` | News-to-onchain correlation |
+| `/api/analytics/anomalies` | Detect unusual patterns (volume spikes/coordinated publishing/sentiment shifts/ticker surges/source outages) |
+| `/api/analytics/credibility` | Source credibility scoring with accuracy/timeliness metrics |
+| `/api/analytics/headlines` | Headline mutation tracking with sentiment shift detection |
+| `/api/analytics/causality` | Causal inference (Granger/diff-in-diff/event study methods) |
+| `/api/regulatory` | Multi-jurisdictional regulatory tracking (15 jurisdictions, 30+ agencies) |
+| `/api/influencers` | Influencer reliability scoring with accuracy rates |
+| `/api/predictions` | Prediction tracking with outcome resolution & leaderboards |
+| `/api/citations` | Academic citation network with bibliometric metrics |
 
 ### 🔗 Relationship & Entity Analysis
 
 | Endpoint | Description |
 |----------|-------------|
-| `/api/relationships` | Extract "who did what to whom" from news |
-| `/api/predictions` | Track predictions & accuracy scoring |
+| `/api/relationships` | Extract entity relationships (11 types: partnership/competition/investment/acquisition/collaboration/conflict/regulation/development/market_impact/mention/association) |
+| `/api/predictions` | Prediction registry with timestamped predictions & accuracy scoring |
 | `/api/onchain/events` | Link news to on-chain events |
 
 ### 💼 Portfolio Tools
@@ -1180,7 +1261,7 @@ Full schema: [`chatgpt/openapi.yaml`](chatgpt/openapi.yaml)
 
 ## 🔮 MCP Server (Claude Desktop & ChatGPT Developer Mode)
 
-The MCP server provides **11 tools** for AI assistants to access crypto news.
+The MCP server provides **14 tools** for AI assistants to access crypto news.
 
 ### Available Tools
 
@@ -1196,7 +1277,10 @@ The MCP server provides **11 tools** for AI assistants to access crypto news.
 | `get_trending_topics` | Trending topics with sentiment |
 | `get_crypto_stats` | Analytics & statistics |
 | `analyze_news` | News with sentiment analysis |
-| `get_market_context` | Market data context |
+| `get_archive` | Historical news archive |
+| `get_archive_stats` | Archive statistics |
+| `find_original_sources` | Original source tracking |
+| `get_portfolio_news` | Portfolio news with prices |
 
 ### Option 1: Claude Desktop (stdio)
 

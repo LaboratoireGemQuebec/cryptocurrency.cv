@@ -1,15 +1,15 @@
 # Raycast Extension
 
-The Free Crypto News Raycast extension provides quick access to crypto news and market data.
+The Free Crypto News Raycast extension provides quick access to crypto news from your Mac.
 
 ## Features
 
 - 📰 Latest news with rich previews
+- 🔥 Breaking news alerts
+- ₿ Bitcoin-specific news
+- 🔷 DeFi-specific news
 - 🔍 Instant search
-- 💰 Market prices
-- 📊 Fear & Greed Index
-- ⚡ Breaking news alerts
-- 🔖 Favorite articles
+- 📊 Trending topics
 
 ## Installation
 
@@ -33,11 +33,20 @@ npm run dev
 
 ## Commands
 
+| Command | Description | Shortcut |
+|---------|-------------|----------|
+| **Latest News** | Get latest crypto headlines | `⌘⇧N` |
+| **Breaking News** | Breaking news (last 2 hours) | - |
+| **Bitcoin News** | Bitcoin-specific news | - |
+| **DeFi News** | DeFi-specific news | - |
+| **Search News** | Search crypto news | - |
+| **Trending Topics** | See trending topics | - |
+
 ### Latest News
 
 Open Raycast and type:
 ```
-Crypto News
+Latest News
 ```
 
 or use the shortcut (configurable):
@@ -48,45 +57,10 @@ or use the shortcut (configurable):
 ### Search News
 
 ```
-Search Crypto News
+Search News [query]
 ```
 
 Type your query to search across all sources.
-
-### Market Prices
-
-```
-Crypto Prices
-```
-
-View real-time prices for top cryptocurrencies.
-
-### Fear & Greed
-
-```
-Fear Greed Index
-```
-
-See current market sentiment with historical data.
-
-### Breaking News
-
-```
-Breaking Crypto News
-```
-
-View urgent news from the last 2 hours.
-
-## Keyboard Shortcuts
-
-| Command | Default Shortcut |
-|---------|------------------|
-| Latest News | `⌘⇧N` |
-| Search News | `⌘⇧S` |
-| Crypto Prices | `⌘⇧P` |
-| Fear & Greed | `⌘⇧F` |
-
-Configure in Raycast Preferences → Extensions → Crypto News
 
 ## List Actions
 

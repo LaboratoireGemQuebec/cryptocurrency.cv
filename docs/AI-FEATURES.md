@@ -21,6 +21,23 @@ Advanced AI capabilities for news analysis, summarization, and insights.
   - [Daily Brief](#daily-brief)
   - [Bull vs Bear Debate](#bull-vs-bear-debate)
   - [Counter-Arguments](#counter-arguments)
+- [AI Market Intelligence Agent](#ai-market-intelligence-agent)
+- [The Oracle (AI Chat Interface)](#the-oracle-ai-chat-interface)
+- [AI Content Detection](#ai-content-detection)
+- [Enterprise Entity Extraction](#enterprise-entity-extraction)
+- [Relationship Extraction](#relationship-extraction)
+- [Event Classification](#event-classification)
+- [Claim Extraction](#claim-extraction)
+- [Intelligence Features](#intelligence-features)
+  - [Anomaly Detection](#anomaly-detection)
+  - [Headline Tracking](#headline-tracking)
+  - [Causal Inference](#causal-inference)
+  - [Regulatory Intelligence](#regulatory-intelligence)
+  - [Prediction Tracking](#prediction-tracking)
+  - [Influencer Tracking](#influencer-tracking)
+  - [Citation Network](#citation-network)
+- [Translation Service](#translation-service)
+- [Provider Comparison](#provider-comparison)
 - [SDK Usage](#sdk-usage)
 - [Best Practices](#best-practices)
 
@@ -28,20 +45,45 @@ Advanced AI capabilities for news analysis, summarization, and insights.
 
 ## Overview
 
-Free Crypto News provides AI-powered features for deeper news analysis:
+Free Crypto News provides comprehensive AI-powered features for deeper news analysis:
+
+### Core AI Features
 
 | Feature | Description |
 |---------|-------------|
-| **Summarization** | Generate concise article summaries |
-| **Sentiment Analysis** | Analyze market sentiment with confidence scores |
-| **Fact Extraction** | Extract entities, numbers, dates |
-| **Fact Checking** | Verify claims in articles |
-| **Question Generation** | Generate follow-up questions |
-| **Categorization** | Auto-categorize articles |
-| **Translation** | Translate content to any language |
-| **Daily Brief** | Comprehensive daily crypto news digest |
+| **Summarization** | Generate concise article summaries (5 styles: brief/detailed/bullet/eli5/technical) |
+| **Sentiment Analysis** | Analyze market sentiment with confidence scores (-1 to 1 scale) |
+| **Entity Extraction** | Extract entities (12 types: person/org/crypto/token/exchange/protocol/event/regulation/tech/location/financial_metric/other) |
+| **Relationship Mapping** | Extract relationships between entities (11 relationship types) |
+| **Fact Checking** | Verify claims in articles (verified/likely/unverified/disputed) |
+| **Question Generation** | Generate follow-up questions readers might have |
+| **Categorization** | Auto-categorize articles by topic |
+| **Translation** | Translate content to 18 languages |
+
+### AI Products
+
+| Feature | Description |
+|---------|-------------|
+| **Daily Brief** | Comprehensive daily crypto news digest with market overview |
 | **Bull vs Bear Debate** | Generate balanced perspectives on any topic |
-| **Counter-Arguments** | Challenge claims with counter-arguments |
+| **Counter-Arguments** | Challenge claims with structured counter-arguments |
+| **The Oracle** | Natural language crypto intelligence chat interface |
+| **AI Market Agent** | Multi-source signal aggregation with regime detection |
+
+### Intelligence Features
+
+| Feature | Description |
+|---------|-------------|
+| **AI Content Detection** | Detect AI-generated content (offline, no API needed) |
+| **Event Classification** | Classify news events (13 types) |
+| **Claim Extraction** | Extract verifiable claims with attribution |
+| **Anomaly Detection** | Detect unusual news patterns (6 anomaly types) |
+| **Headline Tracking** | Track headline mutations over time |
+| **Causal Inference** | Analyze news-price causality (5 methods) |
+| **Regulatory Intelligence** | Track regulations (15 jurisdictions, 30+ agencies) |
+| **Prediction Tracking** | Track and score predictions with leaderboards |
+| **Influencer Tracking** | Score influencer reliability and accuracy |
+| **Citation Network** | Academic citation tracking with bibliometrics |
 
 ---
 
@@ -890,3 +932,644 @@ The new `/api/ai` endpoint provides a unified interface with more options.
 - 📖 [API Documentation](./API.md)
 - 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
 - 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
+---
+
+## AI Market Intelligence Agent
+
+The AI Market Agent provides revolutionary market analysis through multi-source signal aggregation and natural language insights.
+
+**Endpoint:** `GET /api/ai/agent` or `POST /api/ai/agent`
+
+### Features
+
+| Feature | Description |
+|---------|-------------|
+| **Regime Detection** | Identifies market phases: accumulation, markup, distribution, markdown, ranging, capitulation, euphoria |
+| **Signal Aggregation** | Synthesizes signals from news, social, on-chain, technical, derivatives, whale activity |
+| **Trading Opportunities** | Generates actionable trading ideas with entry/exit levels |
+| **Risk Alerts** | Real-time risk monitoring with severity scoring |
+| **Natural Language Interface** | Ask questions in plain English |
+
+### Signal Sources
+
+| Source | Signal Types |
+|--------|--------------|
+| `news` | News catalysts, regulatory events |
+| `social` | Sentiment shifts, narrative momentum |
+| `on-chain` | Whale movements, smart money flows |
+| `technical` | Breakouts, divergences |
+| `derivatives` | Funding extremes, OI divergence, liquidations |
+| `whale` | Large transfers, accumulation patterns |
+| `smart-money` | Institutional flow tracking |
+
+### Signal Types
+
+| Type | Description |
+|------|-------------|
+| `sentiment-shift` | Major change in market sentiment |
+| `volume-spike` | Unusual trading volume |
+| `whale-movement` | Large wallet transfers |
+| `liquidation-cascade` | Mass liquidation events |
+| `funding-extreme` | Extreme funding rates |
+| `oi-divergence` | Open interest divergence |
+| `news-catalyst` | Market-moving news events |
+| `regulatory-event` | Regulatory announcements |
+| `smart-money-flow` | Institutional movements |
+| `narrative-momentum` | Trending narrative strength |
+| `correlation-break` | Unusual correlation changes |
+| `regime-change` | Market phase transition |
+| `anomaly` | Detected anomalies |
+
+### GET Request (Market Intelligence)
+
+```bash
+# Full market intelligence
+curl "https://news-crypto.vercel.app/api/ai/agent"
+
+# Summary format
+curl "https://news-crypto.vercel.app/api/ai/agent?format=summary"
+
+# Signals only
+curl "https://news-crypto.vercel.app/api/ai/agent?format=signals"
+
+# Trading opportunities
+curl "https://news-crypto.vercel.app/api/ai/agent?format=opportunities"
+
+# Risk alerts
+curl "https://news-crypto.vercel.app/api/ai/agent?format=risks"
+```
+
+### POST Request (Query the Agent)
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/ai/agent" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What is driving Bitcoin price action today?",
+    "assets": ["BTC"],
+    "timeHorizon": "1d",
+    "focusAreas": ["news", "technical", "derivatives"]
+  }'
+```
+
+### Response Structure
+
+```json
+{
+  "success": true,
+  "data": {
+    "overallRegime": "markup",
+    "regimeConfidence": 75,
+    "fearGreedIndex": 65,
+    "volatilityRegime": "medium",
+    "dominantNarrative": "ETF inflows driving institutional adoption",
+    "activeSignals": [...],
+    "topOpportunities": [...],
+    "riskAlerts": [...],
+    "marketNarrative": "Bitcoin continues its upward trajectory...",
+    "sectorRotation": [...],
+    "correlationAnomalies": [...],
+    "keyLevels": [...],
+    "upcomingCatalysts": [...],
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+---
+
+## The Oracle (AI Chat Interface)
+
+The Oracle provides a natural language query interface for cryptocurrency intelligence.
+
+**Endpoint:** `POST /api/oracle` or `GET /api/ai/oracle`
+
+### Features
+
+- Conversation sessions with context memory
+- Structured or natural responses
+- Market data integration
+- News context integration
+- Rate limiting (10/hour anonymous, 100/hour authenticated)
+
+### Request
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/oracle" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "What is happening with Bitcoin today?",
+    "sessionId": "optional-session-id",
+    "options": {
+      "includeMarketData": true,
+      "includeNews": true,
+      "responseFormat": "structured"
+    }
+  }'
+```
+
+### Response
+
+```json
+{
+  "success": true,
+  "response": {
+    "answer": "Bitcoin is showing strength today...",
+    "confidence": 0.85,
+    "sources": [...],
+    "relatedQueries": [
+      "What is driving the rally?",
+      "What are the key resistance levels?"
+    ],
+    "marketContext": {...}
+  }
+}
+```
+
+---
+
+## AI Content Detection
+
+Detect AI-generated content in news articles using statistical and linguistic analysis. Works entirely offline - no external APIs required.
+
+**Endpoint:** `POST /api/detect/ai-content`
+
+### Detection Methods
+
+| Method | Description |
+|--------|-------------|
+| **Perplexity** | N-gram frequency analysis (lower = more likely AI) |
+| **Burstiness** | Sentence length variance (higher = more human) |
+| **Vocabulary** | Type-Token Ratio and hapax legomena |
+| **Stylometry** | Avg sentence/word length, punctuation density |
+| **Patterns** | Repetitive structures, formulaic openings |
+| **Phrases** | Common AI phrases detection (high/medium/low confidence) |
+
+### Request (Single Text)
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "In today'\''s fast-paced world of cryptocurrency..."
+  }'
+```
+
+### Request (Batch)
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "texts": ["Article 1 content...", "Article 2 content..."]
+  }'
+```
+
+### Quick Check (Faster, Less Detailed)
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Content to check...",
+    "quick": true
+  }'
+```
+
+### Response
+
+```json
+{
+  "mode": "full",
+  "isLikelyAI": true,
+  "confidence": 78,
+  "humanScore": 22,
+  "verdict": "likely_ai",
+  "analysis": {
+    "perplexity": {
+      "score": 0.35,
+      "ngramFrequency": 0.8,
+      "unusualWordRatio": 0.05,
+      "description": "Low perplexity suggests predictable text patterns"
+    },
+    "burstiness": {
+      "score": 0.25,
+      "sentenceLengthVariance": 12,
+      "paragraphLengthVariance": 8,
+      "rhythmScore": 0.3,
+      "description": "Low burstiness indicates uniform sentence structure"
+    },
+    "vocabulary": {...},
+    "stylometry": {...},
+    "patterns": {...},
+    "phrases": {
+      "aiPhrasesFound": ["in today's fast-paced world", "it's important to note"],
+      "aiPhraseCount": 2,
+      "hedgingLanguage": 0.15,
+      "overlyFormalTone": 0.6,
+      "description": "Multiple high-confidence AI phrases detected"
+    }
+  },
+  "signals": [...],
+  "explanation": "Text shows characteristics typical of AI generation...",
+  "recommendations": ["Consider verifying source", "Check for attribution"],
+  "timestamp": "2026-01-22T10:30:00Z"
+}
+```
+
+### Verdict Scale
+
+| Verdict | Confidence Range | Description |
+|---------|------------------|-------------|
+| `human` | 0-20% | Very likely human-written |
+| `likely_human` | 20-40% | Probably human-written |
+| `uncertain` | 40-60% | Cannot determine |
+| `likely_ai` | 60-80% | Probably AI-generated |
+| `ai` | 80-100% | Very likely AI-generated |
+
+---
+
+## Enterprise Entity Extraction
+
+Extract comprehensive named entities from crypto news with relationship mapping.
+
+**Endpoint:** `GET /api/entities` or `POST /api/ai/entities`
+
+### Entity Types
+
+| Type | Examples |
+|------|----------|
+| `person` | CEOs, founders, analysts |
+| `organization` | Companies, DAOs, foundations |
+| `cryptocurrency` | Bitcoin, Ethereum |
+| `token` | Specific tokens mentioned |
+| `exchange` | Binance, Coinbase, Kraken |
+| `protocol` | Uniswap, Aave, Lido |
+| `event` | Conferences, launches |
+| `regulation` | Laws, regulatory actions |
+| `technology` | Blockchain tech, features |
+| `location` | Countries, cities |
+| `financial_metric` | Prices, market caps, percentages |
+
+### Request
+
+```bash
+curl "https://news-crypto.vercel.app/api/entities?limit=30&type=person"
+```
+
+### Response
+
+```json
+{
+  "entities": [
+    {
+      "id": "ent_abc123",
+      "name": "Vitalik Buterin",
+      "type": "person",
+      "mentions": 5,
+      "sentiment": 0.6,
+      "confidence": 0.95,
+      "aliases": ["Vitalik", "Buterin"],
+      "context": ["Ethereum founder Vitalik Buterin announced..."]
+    }
+  ],
+  "totalMentions": 127,
+  "dominantEntities": [...],
+  "entityGraph": {...},
+  "byType": {
+    "person": 12,
+    "organization": 8,
+    "cryptocurrency": 15
+  }
+}
+```
+
+---
+
+## Relationship Extraction
+
+Extract entity relationships and build knowledge graphs from news content.
+
+**Endpoint:** `GET /api/relationships` or `POST /api/ai/relationships`
+
+### Relationship Types
+
+| Type | Description | Example |
+|------|-------------|---------|
+| `partnership` | Business partnership | "Coinbase partners with BlackRock" |
+| `competition` | Competitive relationship | "Binance vs FTX market share" |
+| `investment` | Investment activity | "a16z invests in Uniswap" |
+| `acquisition` | M&A activity | "Circle acquires Poloniex" |
+| `collaboration` | Technical collaboration | "Polygon collaborates with Ethereum" |
+| `conflict` | Disputes or legal action | "SEC vs Ripple lawsuit" |
+| `regulation` | Regulatory oversight | "SEC regulates crypto exchanges" |
+| `development` | Development activity | "Ethereum develops rollups" |
+| `market_impact` | Market influence | "Bitcoin impacts altcoin prices" |
+| `mention` | General mention | "Elon Musk mentions Dogecoin" |
+| `association` | General association | "Vitalik associated with Ethereum" |
+
+### Response
+
+```json
+{
+  "relationships": [
+    {
+      "id": "rel_abc123",
+      "source": "BlackRock",
+      "target": "Bitcoin ETF",
+      "type": "investment",
+      "strength": 0.9,
+      "sentiment": 0.8,
+      "evidence": ["BlackRock's Bitcoin ETF sees record inflows"],
+      "confidence": 0.95
+    }
+  ],
+  "entityCount": 45,
+  "relationshipCount": 23,
+  "clusters": [
+    {
+      "id": "cluster_1",
+      "name": "Institutional Adoption",
+      "entities": ["BlackRock", "Fidelity", "Bitcoin ETF"],
+      "centralEntity": "Bitcoin ETF",
+      "theme": "ETF-driven institutional investment"
+    }
+  ],
+  "processingTime": 1250
+}
+```
+
+---
+
+## Event Classification
+
+Automatically classify crypto news events by type with confidence scoring.
+
+**Endpoint:** `POST /api/classify`
+
+### Event Types (13 Categories)
+
+| Type | Description | Examples |
+|------|-------------|----------|
+| `funding_round` | Fundraising events | Series A, seed, Series B |
+| `hack_exploit` | Security breaches | Flash loan attack, bridge hack |
+| `regulation` | Government/legal actions | SEC lawsuit, CFTC guidance |
+| `product_launch` | New products/features | Platform launch, feature release |
+| `partnership` | Business partnerships | Strategic alliance |
+| `listing` | Exchange listings | Binance listing, Coinbase listing |
+| `airdrop` | Token distributions | Governance token airdrop |
+| `network_upgrade` | Protocol upgrades | Hard fork, migration |
+| `legal_action` | Lawsuits, enforcement | SEC enforcement, class action |
+| `market_movement` | Price/market analysis | Bull run, correction |
+| `executive_change` | Leadership changes | CEO hired, founder steps down |
+| `acquisition` | M&A activity | Merger, buyout |
+| `general` | Other news | General crypto news |
+
+### Request
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/classify" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Coinbase Raises $500M in Series E Funding",
+    "content": "Cryptocurrency exchange Coinbase announced today..."
+  }'
+```
+
+### Response
+
+```json
+{
+  "classification": {
+    "eventType": "funding_round",
+    "confidence": 0.95,
+    "subType": "Series E",
+    "entities": {
+      "primary": "Coinbase",
+      "secondary": ["cryptocurrency exchange"]
+    },
+    "magnitude": {
+      "value": 500000000,
+      "unit": "USD"
+    },
+    "urgency": "important",
+    "marketRelevance": "high"
+  },
+  "processingTime": 450
+}
+```
+
+---
+
+## Claim Extraction
+
+Extract verifiable claims with proper attribution from news articles.
+
+**Endpoint:** `POST /api/claims`
+
+### Claim Types
+
+| Type | Description |
+|------|-------------|
+| `fact` | Verifiable facts (amounts, dates, events) |
+| `opinion` | Subjective views or assessments |
+| `prediction` | Forward-looking statements |
+| `announcement` | Official declarations |
+
+### Verifiability Levels
+
+| Level | Description |
+|-------|-------------|
+| `verifiable` | Can be fact-checked with data/sources |
+| `subjective` | Opinion-based, cannot be objectively verified |
+| `future` | Will only be verifiable in the future |
+
+### Response
+
+```json
+{
+  "result": {
+    "claims": [
+      {
+        "claim": "Coinbase raised $300 million in Series E funding",
+        "attribution": {
+          "source": "Coinbase press release",
+          "role": "Official statement",
+          "organization": "Coinbase"
+        },
+        "type": "fact",
+        "verifiability": "verifiable",
+        "relatedEntities": ["Coinbase", "Series E"],
+        "timestamp": "2026-01-22"
+      }
+    ],
+    "primaryNarrative": "Coinbase secures major funding round",
+    "conflictingClaims": false
+  },
+  "quality": {
+    "totalClaims": 5,
+    "verifiableClaims": 3,
+    "hasAttribution": 4,
+    "qualityScore": 85
+  },
+  "processingTime": 890
+}
+```
+
+---
+
+## Intelligence Features
+
+### Anomaly Detection
+
+Detect unusual patterns in news flow.
+
+**Endpoint:** `GET /api/analytics/anomalies`
+
+#### Anomaly Types
+
+| Type | Description | Threshold |
+|------|-------------|-----------|
+| `volume_spike` | Article volume surge | >3 std dev from mean |
+| `coordinated_publishing` | Multiple sources, similar content | 3+ sources in 5 min, >80% similarity |
+| `sentiment_shift` | Dramatic sentiment change | >0.4 shift in 6 hours |
+| `ticker_surge` | Ticker mention spike | 5x baseline |
+| `source_outage` | Source goes silent | 12+ hours silence |
+| `unusual_timing` | Off-hours publishing | Statistical anomaly |
+
+### Headline Tracking
+
+Track how headlines change over time.
+
+**Endpoint:** `GET /api/analytics/headlines`
+
+### Causal Inference
+
+Analyze causal relationships between news and market movements.
+
+**Endpoint:** `GET /api/analytics/causality` or `POST /api/analytics/causality`
+
+#### Analysis Methods
+
+| Method | Description |
+|--------|-------------|
+| `granger` | Granger causality test |
+| `diff_in_diff` | Difference-in-differences |
+| `event_study` | Event study with abnormal returns |
+| `synthetic_control` | Synthetic control method |
+| `regression_discontinuity` | Regression discontinuity design |
+
+### Regulatory Intelligence
+
+Multi-jurisdictional regulatory tracking.
+
+**Endpoint:** `GET /api/regulatory`
+
+#### Covered Jurisdictions (15)
+
+| Region | Jurisdictions |
+|--------|---------------|
+| Americas | US, Canada, Brazil |
+| Europe | EU (MiCA), UK, Switzerland |
+| Asia-Pacific | Japan, Singapore, Hong Kong, South Korea, Australia, China, India |
+| Middle East | UAE |
+| Global | International orgs |
+
+#### Covered Agencies (30+)
+
+- **US:** SEC, CFTC, FinCEN, OCC, FDIC, Fed, DOJ, IRS, NYSDFS
+- **EU:** ESMA, EBA, ECB, MiCA framework
+- **UK:** FCA, BoE, PRA
+- **Asia:** JFSA, MAS, SFC, HKMA, FSC-KR, ASIC, RBI, PBoC
+- **Global:** FINMA, FATF, BIS, IMF, FSB
+
+### Prediction Tracking
+
+Track and score predictions.
+
+**Endpoint:** `GET /api/predictions` or `POST /api/predictions`
+
+#### Prediction Types
+
+| Type | Description |
+|------|-------------|
+| `price_above` | Price exceeds target |
+| `price_below` | Price drops below target |
+| `price_range` | Price stays in range |
+| `percentage_up` | Percentage increase |
+| `percentage_down` | Percentage decrease |
+| `event` | Event occurrence |
+| `trend` | Trend prediction |
+| `dominance` | Market dominance |
+| `custom` | Custom prediction |
+
+### Influencer Tracking
+
+Score influencer reliability.
+
+**Endpoint:** `GET /api/influencers`
+
+#### Metrics
+
+| Metric | Description |
+|--------|-------------|
+| `reliabilityScore` | Overall reliability (0-100) |
+| `accuracyRate` | Percentage of correct calls |
+| `avgReturn` | Average return per call |
+| `sharpeRatio` | Risk-adjusted returns |
+| `maxDrawdown` | Worst peak-to-trough decline |
+| `sentimentBias` | -1 (perma-bear) to 1 (perma-bull) |
+
+### Citation Network
+
+Academic citation tracking and bibliometric analysis.
+
+**Endpoint:** `GET /api/citations`
+
+#### Features
+
+- Citation graph construction
+- H-index computation
+- Co-citation analysis
+- Research front detection
+- Export to BibTeX, RIS, CSL-JSON
+
+---
+
+## Translation Service
+
+Translate news content to 18 languages.
+
+**Endpoint:** `GET /api/i18n/translate` or `/api/news?lang=xx`
+
+### Supported Languages
+
+| Code | Language | Code | Language |
+|------|----------|------|----------|
+| `en` | English | `ko` | 한국어 |
+| `es` | Español | `ar` | العربية |
+| `fr` | Français | `ru` | Русский |
+| `de` | Deutsch | `it` | Italiano |
+| `pt` | Português | `nl` | Nederlands |
+| `ja` | 日本語 | `pl` | Polski |
+| `zh-CN` | 简体中文 | `tr` | Türkçe |
+| `zh-TW` | 繁體中文 | `vi` | Tiếng Việt |
+| | | `th` | ไทย |
+| | | `id` | Bahasa Indonesia |
+
+### Requirements
+
+- `GROQ_API_KEY` environment variable
+- `FEATURE_TRANSLATION=true` to enable real-time translation
+- Translations cached for 7 days
+
+---
+
+## Provider Comparison
+
+| Provider | Model | Speed | Quality | Cost | Best For |
+|----------|-------|-------|---------|------|----------|
+| **Groq** | llama-3.3-70b | ⚡⚡⚡ | ⭐⭐⭐⭐ | FREE | Development, high-volume |
+| **OpenAI** | gpt-4o-mini | ⚡⚡ | ⭐⭐⭐⭐⭐ | $0.15/1M | Production, best quality |
+| **Anthropic** | claude-3-haiku | ⚡⚡ | ⭐⭐⭐⭐ | $0.25/1M | Privacy-focused |
+| **OpenRouter** | Various | ⚡⚡ | ⭐⭐⭐ | Varies | Model flexibility |

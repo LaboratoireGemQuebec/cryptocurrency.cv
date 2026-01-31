@@ -4,11 +4,11 @@ The Free Crypto News ChatGPT Plugin allows ChatGPT to access real-time crypto ne
 
 ## Features
 
-- Real-time crypto news from 120+ sources
-- Market data and prices
-- Fear & Greed Index
-- Search functionality
+- Real-time crypto news from 7 major sources
+- Search functionality across all sources
+- DeFi and Bitcoin-specific news
 - Breaking news alerts
+- No API key required
 
 ## Installation
 
@@ -34,7 +34,7 @@ https://news-crypto.vercel.app
 
 **Prompt:** "Get me the latest crypto news"
 
-ChatGPT will fetch recent articles from top crypto news sources.
+ChatGPT will fetch recent articles from 7 crypto news sources.
 
 ### Search News
 
@@ -42,23 +42,23 @@ ChatGPT will fetch recent articles from top crypto news sources.
 
 ChatGPT will search across all sources for relevant articles.
 
-### Market Data
+### Get DeFi News
 
-**Prompt:** "What's the current Bitcoin price?"
+**Prompt:** "Show me DeFi news"
 
-ChatGPT will fetch real-time price data.
+ChatGPT will return DeFi-specific articles.
 
-### Fear & Greed Index
+### Get Bitcoin News
 
-**Prompt:** "What's the current market sentiment?"
+**Prompt:** "What's happening with Bitcoin?"
 
-ChatGPT will return the Fear & Greed Index with analysis.
+ChatGPT will return Bitcoin-specific articles.
 
-### Category Filter
+### Get Breaking News
 
-**Prompt:** "Show me institutional crypto news"
+**Prompt:** "Any breaking crypto news?"
 
-ChatGPT will filter news by category.
+ChatGPT will return news from the last 2 hours.
 
 ## OpenAPI Specification
 
@@ -69,13 +69,14 @@ https://news-crypto.vercel.app/chatgpt/openapi.yaml
 
 ### Endpoints
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/news` | Get latest news |
-| `GET /api/search` | Search news |
-| `GET /api/market` | Get market data |
-| `GET /api/fear-greed` | Get Fear & Greed Index |
-| `GET /api/breaking` | Get breaking news |
+| Endpoint | Description | Parameters |
+|----------|-------------|------------|
+| `GET /api/news` | Get latest news | `limit` (1-50), `source` |
+| `GET /api/search` | Search news | `q` (required), `limit` |
+| `GET /api/defi` | Get DeFi news | `limit` |
+| `GET /api/bitcoin` | Get Bitcoin news | `limit` |
+| `GET /api/breaking` | Get breaking news | `limit` |
+| `GET /api/sources` | List all sources | - |
 
 ## Example Conversations
 

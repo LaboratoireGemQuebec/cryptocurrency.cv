@@ -1,31 +1,33 @@
 # SDKs Overview
 
-Official SDKs for Free Crypto News API, available in multiple languages.
+Official SDKs for Free Crypto News API, available in **8 languages**. All SDKs are **100% FREE** - no API keys required!
 
 ## Installation
 
 === "Python"
 
     ```bash
-    pip install free-crypto-news
+    # Zero dependencies - just copy the file
+    curl -O https://raw.githubusercontent.com/nirholas/free-crypto-news/main/sdk/python/crypto_news.py
     ```
 
 === "JavaScript"
 
     ```bash
-    npm install free-crypto-news
+    # Zero dependencies - just copy the file
+    curl -O https://raw.githubusercontent.com/nirholas/free-crypto-news/main/sdk/javascript/crypto-news.js
     ```
 
 === "TypeScript"
 
     ```bash
-    npm install @free-crypto-news/typescript
+    npm install @nirholas/crypto-news
     ```
 
 === "React"
 
     ```bash
-    npm install @free-crypto-news/react
+    npm install @nirholas/react-crypto-news
     ```
 
 === "Go"
@@ -34,22 +36,57 @@ Official SDKs for Free Crypto News API, available in multiple languages.
     go get github.com/nirholas/free-crypto-news/sdk/go
     ```
 
+=== "Rust"
+
+    ```bash
+    cargo add fcn-sdk
+    ```
+
+=== "Ruby"
+
+    ```bash
+    gem install fcn-sdk
+    ```
+
 === "PHP"
 
     ```bash
-    composer require free-crypto-news/sdk
+    # Zero dependencies - just copy the file
+    curl -O https://raw.githubusercontent.com/nirholas/free-crypto-news/main/sdk/php/CryptoNews.php
     ```
 
-## Quick Comparison
+## Feature Parity Matrix
 
-| SDK | Async | Types | Real-time | Size |
-|-----|-------|-------|-----------|------|
-| Python | ✅ asyncio | ✅ Pydantic | ✅ SSE | ~15KB |
-| JavaScript | ✅ Promise | ❌ | ✅ WebSocket | ~8KB |
-| TypeScript | ✅ Promise | ✅ Full | ✅ WebSocket | ~12KB |
-| React | ✅ Hooks | ✅ Full | ✅ Hooks | ~20KB |
-| Go | ✅ Goroutines | ✅ Structs | ✅ Channels | ~25KB |
-| PHP | ❌ | ❌ | ❌ | ~10KB |
+| Feature | Python | JS | TS | Go | Rust | Ruby | PHP | React |
+|---------|--------|----|----|-------|------|------|-----|-------|
+| Get Latest News | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Search News | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| DeFi News | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Bitcoin News | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Breaking News | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Trending Topics | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Sentiment Analysis | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Historical Archive | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Original Sources | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ |
+| Portfolio News | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Health Check | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| WebSocket | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Async/Await | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
+| Type Definitions | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
+| Zero Dependencies | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+## SDK Comparison
+
+| SDK | Async | Types | Real-time | Zero Deps |
+|-----|-------|-------|-----------|-----------|
+| Python | ✅ stdlib | ❌ | ❌ | ✅ |
+| JavaScript | ✅ Promise | ❌ | ❌ | ✅ |
+| TypeScript | ✅ Promise | ✅ Full | ❌ | ❌ |
+| React | ✅ Hooks | ✅ Full | ❌ | ❌ |
+| Go | ✅ Goroutines | ✅ Structs | ❌ | ❌ |
+| Rust | ✅ Tokio | ✅ Full | ✅ WebSocket | ❌ |
+| Ruby | ✅ Thread | ❌ | ❌ | ✅ |
+| PHP | ❌ | ❌ | ❌ | ✅ |
 
 ## Choose Your SDK
 
@@ -57,12 +94,12 @@ Official SDKs for Free Crypto News API, available in multiple languages.
 
 <div class="card" markdown>
 ### [:fontawesome-brands-python: Python](python.md)
-Best for data science, scripts, and backend services. Includes async support and Pydantic models.
+Best for data science, scripts, and backend services. Zero dependencies!
 </div>
 
 <div class="card" markdown>
 ### [:fontawesome-brands-js: JavaScript](javascript.md)
-Best for Node.js backends and vanilla JS frontends. Lightweight and dependency-free.
+Best for Node.js backends and vanilla JS frontends. Works in browsers too.
 </div>
 
 <div class="card" markdown>
@@ -72,12 +109,22 @@ Best for type-safe applications. Full type definitions for all API responses.
 
 <div class="card" markdown>
 ### [:fontawesome-brands-react: React](react.md)
-Best for React apps. Includes hooks, components, and context providers.
+Best for React apps. Includes hooks (`useCryptoNews`) and drop-in components.
 </div>
 
 <div class="card" markdown>
 ### [:fontawesome-brands-golang: Go](go.md)
-Best for high-performance services. Includes concurrent fetching and channels for real-time.
+Best for high-performance services. Full struct types and error handling.
+</div>
+
+<div class="card" markdown>
+### [:fontawesome-brands-rust: Rust](https://github.com/nirholas/free-crypto-news/tree/main/sdk/rust)
+Best for performance-critical apps. Async/await with Tokio, WebSocket streaming.
+</div>
+
+<div class="card" markdown>
+### [:fontawesome-solid-gem: Ruby](https://github.com/nirholas/free-crypto-news/tree/main/sdk/ruby)
+Best for Ruby on Rails and Sinatra apps. Thread-safe with retries.
 </div>
 
 <div class="card" markdown>

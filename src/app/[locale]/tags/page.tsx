@@ -223,7 +223,7 @@ export default async function TagsPage() {
               </p>
               <p className="text-gray-600 dark:text-slate-400 mt-4">
                 Each tag page shows the latest news articles matching that topic, complete with real-time updates 
-                from 80+ crypto news sources. Bookmark your favorite tags to create a personalized news feed.
+                from 200+ crypto news sources. Bookmark your favorite tags to create a personalized news feed.
               </p>
             </div>
             

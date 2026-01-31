@@ -29,6 +29,63 @@ Free Crypto News supports **18 languages** with full UI translations, API respon
 
 ---
 
+## International News Sources
+
+In addition to UI translations, we aggregate news from **75 native-language crypto news sources** across all 18 supported languages:
+
+### Source Count by Language
+
+| Language | Sources | Notable Outlets |
+|----------|---------|-----------------|
+| Chinese (zh) | 10 | 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报), ChainNews, PANews, TechFlow, BlockBeats, MarsBit, Wu Blockchain, Foresight News |
+| Korean (ko) | 9 | Block Media, TokenPost, CoinDesk Korea, Decenter, Cobak, The B.Chain, Upbit Blog, Blockchain Today Korea, CryptoQuant Blog |
+| Japanese (ja) | 6 | CoinPost, CoinDesk Japan, Cointelegraph Japan, btcnews.jp, Crypto Times Japan, CoinJinja |
+| Portuguese (pt) | 5 | Cointelegraph Brasil, Livecoins, Portal do Bitcoin, BeInCrypto Brasil, Bitcoin Block |
+| Hindi (hi) | 5 | CoinSwitch, CoinDCX, WazirX, ZebPay, Crypto News India |
+| Spanish (es) | 5 | Cointelegraph Español, Diario Bitcoin, CriptoNoticias, BeInCrypto Español, Bitcoiner Today |
+| German (de) | 4 | BTC-ECHO, Cointelegraph Deutsch, Coincierge, CryptoMonday |
+| French (fr) | 4 | Journal du Coin, Cryptonaute, Cointelegraph France, Cryptoast |
+| Persian (fa) | 4 | Arz Digital (ارز دیجیتال), Mihan Blockchain, Ramz Arz, Nobitex |
+| Turkish (tr) | 3 | Cointelegraph Türkçe, Koin Medya, Coinsider |
+| Russian (ru) | 3 | ForkLog, Cointelegraph Russia, Bits.Media |
+| Italian (it) | 3 | Cointelegraph Italia, The Cryptonomist, Criptovalute.it |
+| Indonesian (id) | 3 | Cointelegraph Indonesia, Blockchain Media, Pintu Academy |
+| Vietnamese (vi) | 2 | Tạp chí Bitcoin, Coin68 |
+| Thai (th) | 2 | Siam Blockchain, Bitcoin Addict Thailand |
+| Polish (pl) | 2 | Kryptowaluty.pl, Bitcoin.pl |
+| Dutch (nl) | 2 | Bitcoin Magazine NL, Crypto Insiders |
+| Arabic (ar) | 2 | Cointelegraph Arabic, ArabiCrypto |
+
+### Regional Coverage
+
+| Region | Languages | Total Sources |
+|--------|-----------|---------------|
+| Asia | Korean, Chinese, Japanese, Hindi | 30 |
+| Europe | German, French, Russian, Turkish, Italian, Dutch, Polish | 23 |
+| Latin America | Spanish, Portuguese | 10 |
+| Southeast Asia | Indonesian, Vietnamese, Thai | 7 |
+| MENA | Arabic, Persian | 6 |
+
+### Using International Sources
+
+```bash
+# Get all international news
+curl "https://news-crypto.vercel.app/api/news/international"
+
+# Get Korean news with English translation
+curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+
+# Get Asian region news
+curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+
+# Get European news without translation
+curl "https://news-crypto.vercel.app/api/news/international?region=europe"
+```
+
+See [API.md](/docs/API.md#get-apinewsinternational) for full endpoint documentation.
+
+---
+
 ## URL Structure
 
 ### Web App Routes

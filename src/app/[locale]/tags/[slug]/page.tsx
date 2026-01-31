@@ -313,7 +313,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
               About {tag.name} News
             </h2>
             <p className="text-gray-600 dark:text-slate-400">
-              Stay updated with the latest {tag.name.toLowerCase()} news from 80+ crypto news sources. 
+              Stay updated with the latest {tag.name.toLowerCase()} news from 200+ crypto news sources. 
               Our aggregator collects real-time updates about {tag.keywords.slice(0, 3).join(', ')} and more. 
               {tag.relatedTags && tag.relatedTags.length > 0 && (
                 <> Related topics include {tag.relatedTags.slice(0, 3).map(slug => {

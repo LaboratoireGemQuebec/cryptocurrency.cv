@@ -26,7 +26,7 @@ export const FREE_ENDPOINTS: EndpointInfo[] = [
   {
     path: '/api/news',
     method: 'GET',
-    description: 'Aggregated crypto news from 7+ sources',
+    description: 'Aggregated crypto news from 130+ sources',
     rateLimit: '100/hour',
     example: '/api/news?limit=10&source=coindesk',
     parameters: ['limit', 'source', 'page', 'per_page', 'from', 'to', 'lang'],
@@ -34,7 +34,7 @@ export const FREE_ENDPOINTS: EndpointInfo[] = [
   {
     path: '/api/news/international',
     method: 'GET',
-    description: 'International news from 12 sources in 4 languages',
+    description: 'International news from 75 sources in 18 languages',
     rateLimit: '50/hour',
     parameters: ['language', 'region', 'translate', 'limit'],
   },

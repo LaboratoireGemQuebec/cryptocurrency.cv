@@ -2,12 +2,35 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 80+ major crypto sources.
+ * Aggregates news from 130+ major English crypto sources across 21 categories:
+ * - General: 20 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, etc.)
+ * - DeFi: 12 sources (The Defiant, Bankless, Uniswap, Aave, Compound, etc.)
+ * - Research: 8 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, etc.)
+ * - Institutional: 8 sources (Galaxy Digital, Pantera Capital, Multicoin, etc.)
+ * - Mainstream: 7 sources (Bloomberg, Reuters, Forbes, CNBC, Yahoo Finance, etc.)
+ * - Layer 2: 7 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, etc.)
+ * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
+ * - Alt L1: 7 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot)
+ * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, CryptoQuant)
+ * - Security: 6 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi)
+ * - Developer: 6 sources (Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry)
+ * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
+ * - On-Chain: 5 sources (Glassnode, Kaiko, IntoTheBlock, Coin Metrics, Willy Woo)
+ * - Bitcoin: 5 sources (Bitcoin Magazine, Bitcoinist, BTC Times, Lightning Labs, Stacker News)
+ * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
+ * - Ethereum: 4 sources (Week in Ethereum, Etherscan, Daily Gwei)
+ * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
+ * - Macro: 3 sources (Lyn Alden, Alhambra Partners, Macro Voices)
+ * - Journalism: 3 sources (Unchained, DL News, Protos)
+ * - Fintech: 3 sources (Finextra, PYMNTS, Fintech Futures)
+ * - Stablecoin: 2 sources (Circle, Tether)
+ * - TradFi: 2 sources (Goldman Sachs, BNY Mellon)
+ * - Other: Solana, Gaming, Derivatives, Asia
  */
 
 import sanitizeHtml from 'sanitize-html';
 
-// RSS Feed URLs for crypto news sources (80+ sources)
+// RSS Feed URLs for crypto news sources (130+ sources)
 const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // TIER 1: Major News Outlets

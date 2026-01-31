@@ -186,7 +186,7 @@ Both projects share identical premium API structure with X402 micropayment integ
 | `api-keys.ts` | ✅ (701 lines) | ✅ (~650 lines) | API key management | **Identical** - Both use Vercel KV, same tier structure, Edge-compatible crypto |
 | `api-utils.ts` | ✅ | ✅ | Response helpers | Identical |
 | `cache.ts` | ✅ (175 lines) | ✅ (~175 lines) | In-memory cache | **Identical** - Same TTL-based MemoryCache class |
-| `crypto-news.ts` | ✅ (591 lines) | ✅ (~600 lines) | RSS aggregation | **Identical** - 12 sources, same parsing |
+| `crypto-news.ts` | ✅ (591 lines) | ✅ (~600 lines) | RSS aggregation | **Identical** - 130+ sources, same parsing |
 | `market-data.ts` | ✅ (1837 lines) | ✅ (~1800 lines) | Market data service | **Identical** - CoinGecko, DeFiLlama, Alternative.me |
 | `rate-limit.ts` | ✅ (155 lines) | ✅ (~155 lines) | Rate limiting | **Identical** - In-memory, 60 req/min, same middleware |
 | `external-apis.ts` | ✅ (316 lines) | ✅ (~316 lines) | External API config | **CDA has more** - WebSocket URLs, additional exchanges |

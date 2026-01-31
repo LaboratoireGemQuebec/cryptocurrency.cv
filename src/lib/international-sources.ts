@@ -1,14 +1,25 @@
 /**
  * International Crypto News Sources
  * 
- * Aggregates news from 85+ international crypto news sources across:
- * - Korean, Chinese, Japanese (East Asia) - 22 sources
- * - Indonesian, Vietnamese, Thai (Southeast Asia) - 7 sources  
- * - Spanish, Portuguese (Latin America) - 10 sources
- * - German, French, Russian, Turkish, Italian, Dutch, Polish (Europe) - 21 sources
- * - Arabic (Middle East & North Africa) - 2 sources
- * - Hindi/Indian - 5 sources
- * - Persian/Farsi (Iran) - 4 sources
+ * Aggregates news from 75 international crypto news sources across 18 languages:
+ * - Korean (ko): 9 sources - Block Media, TokenPost, CoinDesk Korea, Decenter, Cobak, The B.Chain, Upbit Blog, Blockchain Today Korea, CryptoQuant Blog
+ * - Chinese (zh): 10 sources - 8BTC, Jinse Finance, Odaily, ChainNews, PANews, TechFlow, Foresight News, BlockBeats, MarsBit, Wu Blockchain
+ * - Japanese (ja): 6 sources - CoinPost, CoinDesk Japan, Cointelegraph Japan, btcnews.jp, Crypto Times Japan, CoinJinja
+ * - Spanish (es): 5 sources - Cointelegraph Español, Diario Bitcoin, CriptoNoticias, BeInCrypto Español, Bitcoiner Today
+ * - Portuguese (pt): 5 sources - Cointelegraph Brasil, Livecoins, Portal do Bitcoin, BeInCrypto Brasil, Bitcoin Block
+ * - German (de): 4 sources - BTC-ECHO, Cointelegraph Deutsch, Coincierge, CryptoMonday
+ * - French (fr): 4 sources - Journal du Coin, Cryptonaute, Cointelegraph France, Cryptoast
+ * - Russian (ru): 3 sources - ForkLog, Cointelegraph Russia, Bits.Media
+ * - Turkish (tr): 3 sources - Cointelegraph Türkçe, Koin Medya, Coinsider
+ * - Italian (it): 3 sources - Cointelegraph Italia, The Cryptonomist, Criptovalute.it
+ * - Indonesian (id): 3 sources - Cointelegraph Indonesia, Blockchain Media, Pintu Academy
+ * - Dutch (nl): 2 sources - Bitcoin Magazine NL, Crypto Insiders
+ * - Polish (pl): 2 sources - Kryptowaluty.pl, Bitcoin.pl
+ * - Vietnamese (vi): 2 sources - Tạp chí Bitcoin, Coin68
+ * - Thai (th): 2 sources - Siam Blockchain, Bitcoin Addict Thailand
+ * - Arabic (ar): 2 sources - Cointelegraph Arabic, ArabiCrypto
+ * - Hindi (hi): 5 sources - CoinSwitch, CoinDCX, WazirX, ZebPay, Crypto News India
+ * - Persian/Farsi (fa): 4 sources - Arz Digital, Mihan Blockchain, Ramz Arz, Nobitex
  * 
  * Supports automatic translation to English via the source-translator module.
  */
