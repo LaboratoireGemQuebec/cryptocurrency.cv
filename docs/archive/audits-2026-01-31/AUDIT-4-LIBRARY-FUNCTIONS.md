@@ -55,6 +55,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.2 ai-brief.ts (338 lines)
+
 **Purpose:** AI Daily Brief Generator - comprehensive daily digest of crypto news
 
 **Exported Functions:**
@@ -63,6 +64,7 @@ All AI modules share a common multi-provider pattern:
 | `generateDailyBrief(date?, format?)` | Generate comprehensive daily brief | Date string, format | `DailyBrief` object |
 
 **Key Types:**
+
 - `DailyBrief` - Contains executive summary, market overview, top stories, sectors, events, risk alerts
 - `BriefFormat` - `'full'` | `'summary'`
 
@@ -71,9 +73,11 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.3 ai-content-detection.ts (789 lines)
+
 **Purpose:** Enterprise-grade AI-generated content detection - works entirely offline
 
 **Detection Methods:**
+
 - Perplexity estimation via n-gram frequency analysis
 - Burstiness measurement (sentence length variance)
 - Vocabulary diversity (Type-Token Ratio)
@@ -87,6 +91,7 @@ All AI modules share a common multi-provider pattern:
 | `detectAIContent(text)` | Analyze text for AI generation | `DetectionResult` |
 
 **Key Types:**
+
 - `DetectionResult` - isLikelyAI, confidence (0-100), humanScore, verdict, analysis, signals
 - `PerplexityAnalysis`, `BurstinessAnalysis`, `VocabularyAnalysis`, `StylometryAnalysis`
 
@@ -95,6 +100,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.4 ai-counter.ts (332 lines)
+
 **Purpose:** AI Counter-Arguments Generator - challenge claims with counter-arguments
 
 **Exported Functions:**
@@ -103,6 +109,7 @@ All AI modules share a common multi-provider pattern:
 | `generateCounterArguments(input)` | Generate counter-arguments | `CounterInput` | `CounterResult` |
 
 **Key Types:**
+
 - `CounterResult` - counterArguments, assumptions, alternativeInterpretations, missingContext
 - Counter-argument types: `factual`, `logical`, `contextual`, `alternative`
 
@@ -111,6 +118,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.5 ai-debate.ts (349 lines)
+
 **Purpose:** Bull vs Bear Debate Generator for articles/topics
 
 **Exported Functions:**
@@ -119,6 +127,7 @@ All AI modules share a common multi-provider pattern:
 | `generateDebate(input)` | Generate bull vs bear perspectives | `DebateInput` | `DebateResult` |
 
 **Key Types:**
+
 - `DebateResult` - topic, bullCase, bearCase, neutralAnalysis
 - Each case includes: thesis, arguments, supportingEvidence, priceTarget, timeframe, confidence
 
@@ -127,6 +136,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.6 ai-enhanced.ts (442 lines)
+
 **Purpose:** Core AI Enhancement Utilities for news analysis
 
 **Exported Functions:**
@@ -138,6 +148,7 @@ All AI modules share a common multi-provider pattern:
 | `factCheck(title, content)` | Fact-check claims | `FactCheckResult` |
 
 **Key Types:**
+
 - `SentimentAnalysis` - sentiment (bullish/bearish/neutral), confidence, marketImpact, affectedAssets
 - `ExtractedFacts` - keyPoints, entities, numbers, dates
 - `FactCheckResult` - claims array with verdicts, overallCredibility, warnings
@@ -147,6 +158,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.7 ai-market-agent.ts (1434 lines)
+
 **Purpose:** Revolutionary AI Market Intelligence Agent - synthesizes multiple data sources
 
 **Core Class:** `AIMarketAgent`
@@ -166,6 +178,7 @@ All AI modules share a common multi-provider pattern:
 **Signal Sources:** news, social, on-chain, technical, derivatives, whale, regulatory, smart-money, narrative, cross-correlation
 
 **Key Types:**
+
 - `MarketIntelligence` - overallRegime, fearGreedIndex, activeSignals, opportunities, riskAlerts
 - `MarketSignal` - source, type, direction, strength, confidence, narrative
 - `TradingOpportunity` - asset, type, entry, targets, stopLoss, riskReward
@@ -174,6 +187,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.8 ai-services.ts (829 lines)
+
 **Purpose:** Enterprise AI service layer using Groq Llama 3.3 70B
 
 **Exported Functions:**
@@ -193,6 +207,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.9 groq.ts (209 lines)
+
 **Purpose:** Shared Groq AI Client for all AI-powered features
 
 **Exported Functions:**
@@ -204,10 +219,12 @@ All AI modules share a common multi-provider pattern:
 | `promptGroq(systemPrompt, userPrompt, options)` | Simple prompt helper |
 
 **Configuration:**
+
 - API URL: `https://api.groq.com/openai/v1/chat/completions`
 - Default Model: `llama-3.3-70b-versatile`
 
 **Cache TTLs:**
+
 - summarize: 5 min
 - sentiment: 5 min
 - entities: 10 min
@@ -217,6 +234,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.10 claim-extractor.ts (402 lines)
+
 **Purpose:** Extract verifiable claims with attribution from news articles
 
 **Exported Functions:**
@@ -226,6 +244,7 @@ All AI modules share a common multi-provider pattern:
 | `extractClaims(article)` | Extract claims from article | `ClaimExtractionResult` |
 
 **Key Types:**
+
 - `ExtractedClaim` - claim, attribution (source, role, organization), type, verifiability
 - `ClaimType` - fact, opinion, prediction, announcement
 - `Verifiability` - verifiable, subjective, future
@@ -233,6 +252,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.11 premium-ai.ts (374 lines)
+
 **Purpose:** AI-powered analysis endpoints for premium subscribers
 
 **Exported Functions:**
@@ -244,6 +264,7 @@ All AI modules share a common multi-provider pattern:
 | `getMarketSummary(request)` | AI market summary |
 
 **Key Types:**
+
 - `SentimentResult` - overall, score, confidence, factors, articles
 - `TradingSignal` - action (buy/sell/hold), strength, indicators, entry/target/stopLoss
 - `CoinComparison` - rankings, recommendation, summary
@@ -251,6 +272,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 2.12 event-classifier.ts (414 lines)
+
 **Purpose:** Automatic classification of crypto news events
 
 **Exported Functions:**
@@ -262,6 +284,7 @@ All AI modules share a common multi-provider pattern:
 **Event Types:** funding_round, hack_exploit, regulation, product_launch, partnership, listing, airdrop, network_upgrade, legal_action, market_movement, executive_change, acquisition, general
 
 **Key Types:**
+
 - `EventClassification` - eventType, confidence, subType, entities, magnitude, urgency, marketRelevance
 
 ---
@@ -269,6 +292,7 @@ All AI modules share a common multi-provider pattern:
 ## 3. Market Data Functions
 
 ### 3.1 market-data.ts (2136 lines)
+
 **Purpose:** Comprehensive cryptocurrency market data service
 
 **Primary API:** CoinGecko  
@@ -289,6 +313,7 @@ All AI modules share a common multi-provider pattern:
 | `getProtocolTVL()` | DeFi protocol TVL (DeFiLlama) |
 
 **Cache TTLs:**
+
 - prices: 30s
 - historical_1d: 1 min
 - historical_7d: 5 min
@@ -300,6 +325,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 3.2 funding-rates.ts (776 lines)
+
 **Purpose:** Real-time funding rate aggregation across perpetual exchanges
 
 **Supported Exchanges:** Binance Futures, Bybit, OKX, dYdX, Hyperliquid
@@ -313,12 +339,14 @@ All AI modules share a common multi-provider pattern:
 | `getArbitrageOpportunities()` | Funding arbitrage opportunities | `FundingArbitrage[]` |
 
 **Key Types:**
+
 - `FundingRateData` - symbol, exchange, fundingRate, annualized, markPrice, openInterest
 - `FundingArbitrage` - spread, annualizedYield, riskScore, liquidityScore
 
 ---
 
 ### 3.3 derivatives.ts (482 lines)
+
 **Purpose:** Derivatives data integration from multiple exchanges
 
 **Sources:** Binance Futures, Bybit, dYdX, OKX
@@ -337,6 +365,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 3.4 binance.ts (462 lines)
+
 **Purpose:** Binance Public API Integration (no API key required)
 
 **Rate Limit:** 1200 requests/minute
@@ -357,6 +386,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 3.5 order-book.ts (1207 lines)
+
 **Purpose:** Multi-Exchange Order Book Aggregator
 
 **Supported Exchanges:** Binance, Coinbase, Kraken, Bitfinex, Bitstamp, OKX, Bybit, KuCoin, Huobi, Gemini
@@ -371,12 +401,14 @@ All AI modules share a common multi-provider pattern:
 | `detectPriceWalls(symbol)` | Support/resistance walls | `PriceWall[]` |
 
 **Key Types:**
+
 - `AggregatedOrderBook` - nbbo, aggregatedBids/Asks, exchangeData, metrics
 - `OrderBookMetrics` - imbalanceRatio, slippageEstimates, depthScore
 
 ---
 
 ### 3.6 defi-yields.ts (266 lines)
+
 **Purpose:** DeFi Yields Integration via Llama.fi
 
 **Exported Functions:**
@@ -394,6 +426,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 3.7 premium-whales.ts (745 lines)
+
 **Purpose:** Whale Tracking Service - large transaction monitoring
 
 **Whale Threshold:** $1,000,000+ USD
@@ -406,6 +439,7 @@ All AI modules share a common multi-provider pattern:
 | `getWhaleAlerts(userId)` | Get user's alerts |
 
 **Key Types:**
+
 - `WhaleTransaction` - hash, blockchain, from, to, amount, amountUsd, type, significance
 - Transaction types: transfer, exchange_inflow, exchange_outflow
 
@@ -414,6 +448,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 3.8 external-apis.ts (523 lines)
+
 **Purpose:** External API configuration and types
 
 **Configured APIs:**
@@ -435,6 +470,7 @@ All AI modules share a common multi-provider pattern:
 ## 4. Social Intelligence
 
 ### 4.1 social-intelligence.ts (1261 lines)
+
 **Purpose:** Enterprise-grade social data aggregation and analysis
 
 **Integrations:** Discord, Telegram, LunarCrush, Santiment
@@ -450,6 +486,7 @@ All AI modules share a common multi-provider pattern:
 | `getSantimentMetrics(asset)` | Social volume/sentiment | Santiment data |
 
 **Key Types:**
+
 - `SocialMessage` - platform, content, sentiment, tickers, engagement
 - `SocialTrend` - ticker, mentions, sentiment, topChannels, topInfluencers
 - `InfluencerProfile` - reliabilityScore, accuracyRate, sentimentBias
@@ -459,14 +496,17 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 4.2 x-scraper.ts (612 lines)
+
 **Purpose:** X/Twitter Scraper - sentiment analysis without paid API
 
 **Strategies:**
+
 1. Nitter RSS feeds (primary - no auth needed)
 2. Direct scraping with session cookies (fallback)
 3. Cached results from Vercel KV
 
 **Nitter Instances:**
+
 - nitter.privacydev.net
 - nitter.poast.org
 - nitter.woodland.cafe
@@ -487,6 +527,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 4.3 influencer-tracker.ts (758 lines)
+
 **Purpose:** Influencer Reliability Tracker - prediction accuracy scoring
 
 **Exported Functions:**
@@ -499,6 +540,7 @@ All AI modules share a common multi-provider pattern:
 | `getLeaderboard(options)` | Top performers | `Influencer[]` |
 
 **Scoring Metrics:**
+
 - `reliabilityScore` - 0-100 overall reliability
 - `accuracyRate` - % of correct calls
 - `avgReturn` - Average return per call
@@ -512,9 +554,11 @@ All AI modules share a common multi-provider pattern:
 ## 5. Analytics & Research
 
 ### 5.1 backtesting.ts (987 lines)
+
 **Purpose:** Enterprise-grade backtesting infrastructure
 
 **Features:**
+
 - Historical news-price correlation analysis
 - Multiple strategy templates
 - Risk metrics (Sharpe, Sortino, Max Drawdown)
@@ -530,6 +574,7 @@ All AI modules share a common multi-provider pattern:
 | `calculateRiskMetrics(equityCurve)` | Risk analysis | `RiskMetrics` |
 
 **Key Types:**
+
 - `BacktestConfig` - strategyId, assets, startDate, endDate, initialCapital, positionSizing, riskManagement
 - `BacktestResult` - performance, trades, risk, equityCurve, drawdownCurve
 - `RiskMetrics` - sharpeRatio, sortinoRatio, maxDrawdown, VaR, expectedShortfall
@@ -537,6 +582,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.2 predictions.ts (744 lines)
+
 **Purpose:** Prediction Tracking System with leaderboards
 
 **Exported Functions:**
@@ -551,15 +597,18 @@ All AI modules share a common multi-provider pattern:
 **Prediction Types:** price_above, price_below, price_range, percentage_up, percentage_down, event, trend, dominance, custom
 
 **Key Types:**
+
 - `Prediction` - type, asset, targetValue, targetDate, confidence, status, outcome
 - `UserStats` - accuracyRate, streak, totalPoints, rank, badges
 
 ---
 
 ### 5.3 anomaly-detector.ts (728 lines)
+
 **Purpose:** Detect unusual patterns in news flow
 
 **Anomaly Types:**
+
 - `volume_spike` - Unusual article volume
 - `coordinated_publishing` - Multiple sources publish similar content
 - `sentiment_shift` - Dramatic sentiment changes
@@ -575,6 +624,7 @@ All AI modules share a common multi-provider pattern:
 | `getAnomalyHistory(hours)` | Recent anomalies | `AnomalyEvent[]` |
 
 **Detection Thresholds:**
+
 - Volume spike: >3 std deviations
 - Coordinated: 3+ sources within 5 min, 80% similarity
 - Sentiment shift: >0.4 change in 6 hours
@@ -583,6 +633,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.4 headline-tracker.ts (407 lines)
+
 **Purpose:** Track headline evolution - detect modifications over time
 
 **Exported Functions:**
@@ -600,6 +651,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.5 coverage-gap.ts (636 lines)
+
 **Purpose:** News coverage gap analysis
 
 **Exported Functions:**
@@ -610,6 +662,7 @@ All AI modules share a common multi-provider pattern:
 | `getTopicTrends(articles)` | Topic trend analysis | `TopicTrend[]` |
 
 **Key Types:**
+
 - `CoverageGap` - topic, type, severity, suggestedAngle, marketImpact
 - Gap types: asset, category, event, narrative
 
@@ -618,9 +671,11 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.6 causal-inference.ts (886 lines)
+
 **Purpose:** Causal analysis for news-market relationships
 
 **Methods:**
+
 - Granger causality testing
 - Difference-in-differences analysis
 - Event study methodology
@@ -635,6 +690,7 @@ All AI modules share a common multi-provider pattern:
 | `eventStudy(event, asset)` | Event study analysis | Event study metrics |
 
 **Key Types:**
+
 - `CausalEvent` - timestamp, eventType, assets, magnitude
 - `CausalEffect` - direction, magnitude, peakEffect, persistence
 - Event types: news, regulatory, hack, listing, partnership, etc.
@@ -642,9 +698,11 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.7 citation-network.ts (1096 lines)
+
 **Purpose:** Academic citation network tracking and analysis
 
 **Features:**
+
 - Citation graph construction
 - Impact factor calculation
 - H-index computation
@@ -664,6 +722,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.8 alpha-signal-engine.ts (294 lines)
+
 **Purpose:** AI-powered early market-moving signal detection
 
 **Exported Functions:**
@@ -674,10 +733,12 @@ All AI modules share a common multi-provider pattern:
 | `getNarrativeClusters()` | Current narrative themes | `NarrativeCluster[]` |
 
 **Key Types:**
+
 - `AlphaSignal` - signalType, signalStrength, alphaScore, urgency, expectedImpactWindow
 - Urgency levels: critical, high, medium, low
 
 **Alpha Keywords:**
+
 - Critical: exclusive, breaking, leaked, hack, ban, lawsuit
 - High: partnership, acquisition, airdrop, listing, whale
 - Medium: update, announcement, milestone, growth
@@ -685,6 +746,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.9 source-credibility.ts (461 lines)
+
 **Purpose:** Score news sources on accuracy, consistency, and bias
 
 **Exported Functions:**
@@ -695,6 +757,7 @@ All AI modules share a common multi-provider pattern:
 | `calculateClickbaitScore(title)` | Clickbait detection | 0-1 score |
 
 **Metrics:**
+
 - `accuracy` - Factual accuracy (0-100)
 - `timeliness` - Reporting speed (0-100)
 - `consistency` - Reporting consistency (0-100)
@@ -706,6 +769,7 @@ All AI modules share a common multi-provider pattern:
 ---
 
 ### 5.10 regulatory-intelligence.ts (1270 lines)
+
 **Purpose:** Comprehensive regulatory development monitoring
 
 **Jurisdictions:** US, EU, UK, China, Japan, Singapore, UAE, Korea, Australia, Brazil, Switzerland, Hong Kong, Canada, India, Global
@@ -721,6 +785,7 @@ All AI modules share a common multi-provider pattern:
 | `getImpactAssessment(event)` | Compliance impact | Impact analysis |
 
 **Key Types:**
+
 - `RegulatoryEvent` - jurisdiction, agency, actionType, impactLevel, affectedSectors
 - Action types: enforcement, guidance, rule-proposal, rule-final, investigation, settlement
 
@@ -729,6 +794,7 @@ All AI modules share a common multi-provider pattern:
 ## 6. Database & Storage
 
 ### 6.1 database.ts (830 lines)
+
 **Purpose:** Enterprise-grade storage abstraction layer
 
 **Supported Backends:**
@@ -740,38 +806,42 @@ All AI modules share a common multi-provider pattern:
 | `file` | Local persistence |
 
 **Exported Class/Functions:**
+
 ```typescript
 class Database {
-  async get<T>(key: string): Promise<T | null>
-  async set(key: string, value: unknown, ttl?: number): Promise<void>
-  async delete(key: string): Promise<boolean>
-  async exists(key: string): Promise<boolean>
-  async keys(pattern: string): Promise<string[]>
-  async mget(keys: string[]): Promise<(unknown | null)[]>
-  async mset(entries: Array<{key, value, ttl}>): Promise<void>
-  async incr(key: string): Promise<number>
-  async expire(key: string, ttl: number): Promise<boolean>
-  
+  async get<T>(key: string): Promise<T | null>;
+  async set(key: string, value: unknown, ttl?: number): Promise<void>;
+  async delete(key: string): Promise<boolean>;
+  async exists(key: string): Promise<boolean>;
+  async keys(pattern: string): Promise<string[]>;
+  async mget(keys: string[]): Promise<(unknown | null)[]>;
+  async mset(entries: Array<{ key; value; ttl }>): Promise<void>;
+  async incr(key: string): Promise<number>;
+  async expire(key: string, ttl: number): Promise<boolean>;
+
   // Document operations
-  async getDocument<T>(collection, id): Promise<StoredDocument<T>>
-  async saveDocument(collection, id, data, metadata?): Promise<void>
-  async deleteDocument(collection, id): Promise<boolean>
-  async listDocuments<T>(collection, options?): Promise<StoredDocument<T>[]>
+  async getDocument<T>(collection, id): Promise<StoredDocument<T>>;
+  async saveDocument(collection, id, data, metadata?): Promise<void>;
+  async deleteDocument(collection, id): Promise<boolean>;
+  async listDocuments<T>(collection, options?): Promise<StoredDocument<T>[]>;
 }
 
-export const db: Database // Singleton instance
+export const db: Database; // Singleton instance
 ```
 
 **Key Types:**
+
 - `StoredDocument<T>` - id, data, createdAt, updatedAt, version, metadata
 - `DatabaseStats` - backend, connected, totalKeys, memoryUsage
 
 ---
 
 ### 6.2 content-addressable.ts (971 lines)
+
 **Purpose:** IPFS-style content-addressable storage (CAS)
 
 **Features:**
+
 - SHA-256 content hashing
 - Deduplication of identical content
 - Merkle DAG for hierarchical data
@@ -798,9 +868,11 @@ export const db: Database // Singleton instance
 ## 7. Authentication & Security
 
 ### 7.1 admin-auth.ts (169 lines)
+
 **Purpose:** Centralized admin authentication
 
 **Environment Variables:**
+
 - `ADMIN_API_KEY` or `ADMIN_TOKEN`
 
 **Exported Functions:**
@@ -812,6 +884,7 @@ export const db: Database // Singleton instance
 | `requireAdminAuth(request)` | Middleware helper | NextResponse or null |
 
 **Security Features:**
+
 - Constant-time string comparison (prevents timing attacks)
 - No hardcoded fallback in production
 - Supports Bearer token and X-Admin-Key header
@@ -819,6 +892,7 @@ export const db: Database // Singleton instance
 ---
 
 ### 7.2 api-keys.ts (701 lines)
+
 **Purpose:** API Key Management System
 
 **Tiers:**
@@ -844,9 +918,11 @@ export const db: Database // Singleton instance
 ---
 
 ### 7.3 rate-limit.ts (209 lines)
+
 **Purpose:** Simple in-memory rate limiter
 
 **Configuration:**
+
 - Window: 60 seconds
 - Max requests: 60/minute
 
@@ -863,9 +939,11 @@ export const db: Database // Singleton instance
 ---
 
 ### 7.4 alert-rules.ts (364 lines)
+
 **Purpose:** Alert rule type definitions
 
 **Alert Condition Types:**
+
 - `price_above` / `price_below` - Price thresholds
 - `price_change_pct` - Percentage change (1h/24h)
 - `volume_spike` - Volume multiplier
@@ -875,6 +953,7 @@ export const db: Database // Singleton instance
 - `fear_greed_change` - Index change threshold
 
 **Exported Types:**
+
 - `AlertCondition` - Union of all condition types
 - `AlertRule` - id, name, condition, channels, cooldown, enabled
 - `AlertEvent` - type, severity, data, message
@@ -885,15 +964,18 @@ export const db: Database // Singleton instance
 ## 8. x402 Micropayments
 
 ### 8.1 x402.ts (739 lines)
+
 **Purpose:** x402 Payment Protocol main configuration
 
 **Payment Address:** Set via `X402_PAYMENT_ADDRESS`
 
 **Networks:**
+
 - Base Mainnet: `eip155:8453`
 - Base Sepolia: `eip155:84532`
 
 **USDC Addresses:**
+
 - Mainnet: `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`
 - Sepolia: `0x036CbD53842c5426634e7929541eC2318f3dCF7e`
 
@@ -910,15 +992,18 @@ export const db: Database // Singleton instance
 ---
 
 ### 8.2 x402-config.ts (436 lines)
+
 **Purpose:** Premium API pricing configuration
 
 **Categories:**
+
 - **AI-Powered Analysis:** $0.01 - $0.05 per request
 - **Whale Tracking:** $0.05 - $0.10 per request
 - **Advanced Screener:** $0.02 per request
 - **Historical Data:** $0.005 per request
 
 **Exported Constants:**
+
 - `PREMIUM_PRICING` - All endpoint prices
 - `USDC_BASE` / `USDC_BASE_SEPOLIA` - Token addresses
 - `SUPPORTED_NETWORKS` - Network identifiers
@@ -926,6 +1011,7 @@ export const db: Database // Singleton instance
 ---
 
 ### 8.3 x402-middleware.ts (396 lines)
+
 **Purpose:** Payment middleware for Next.js
 
 **Exported Functions:**
@@ -939,6 +1025,7 @@ export const db: Database // Singleton instance
 ---
 
 ### 8.4 x402-client.ts (649 lines)
+
 **Purpose:** Client-side utilities for paid API requests
 
 **Exported Hooks/Functions:**
@@ -949,15 +1036,18 @@ export const db: Database // Singleton instance
 | `signPayment(walletClient, payload)` | EIP-3009 signing |
 
 **Types:**
+
 - `PaymentRequirement` - scheme, network, asset, payTo, amount
 - `PaymentResult` - success, transactionHash, error
 
 ---
 
 ### 8.5 x402-server.ts (460 lines)
+
 **Purpose:** Server-side x402 resource server
 
 **Exported:**
+
 - `x402Server` - Resource server instance
 - `premiumRoutes` - Route configurations
 - `pricing` - Pricing tiers
@@ -965,9 +1055,11 @@ export const db: Database // Singleton instance
 ---
 
 ### 8.6 x402/index.ts (Re-exports)
+
 **Purpose:** Unified x402 module exports
 
 Aggregates all x402 functionality:
+
 - Configuration (networks, addresses)
 - Pricing
 - Routes
@@ -982,6 +1074,7 @@ Aggregates all x402 functionality:
 ## 9. Utilities
 
 ### 9.1 validation.ts (300 lines)
+
 **Purpose:** Input validation and sanitization
 
 **Exported Functions:**
@@ -996,6 +1089,7 @@ Aggregates all x402 functionality:
 | `validateDate(date)` | Date string validation |
 
 **Max Lengths:**
+
 - query: 200
 - source: 50
 - topic: 100
@@ -1005,16 +1099,19 @@ Aggregates all x402 functionality:
 ---
 
 ### 9.2 logger.ts (166 lines)
+
 **Purpose:** Centralized logging utility
 
 **Log Levels:** debug, info, warn, error
 
 **Environment Behavior:**
+
 - Production: info and above
 - Development: all levels
 - Override: `DEBUG=true`
 
 **Exported Functions:**
+
 ```typescript
 createLogger(module: string) => {
   debug(message, data?): void
@@ -1027,6 +1124,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.3 reading-time.ts (~100 lines)
+
 **Purpose:** Article reading time estimation
 
 **Exported Functions:**
@@ -1041,6 +1139,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.4 seo.ts (240 lines)
+
 **Purpose:** SEO metadata generation
 
 **Exported Functions:**
@@ -1055,6 +1154,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.5 translate.ts (282 lines)
+
 **Purpose:** News translation service using Groq
 
 **Supported Languages:** 18 languages (en, es, fr, de, pt, ja, zh-CN, zh-TW, ko, ar, ru, it, nl, pl, tr, vi, th, id)
@@ -1071,6 +1171,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.6 dedupe.ts (~50 lines)
+
 **Purpose:** Request deduplication
 
 **Exported Functions:**
@@ -1083,6 +1184,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.7 utils/id.ts (~90 lines)
+
 **Purpose:** Cryptographically secure ID generation
 
 **Exported Functions:**
@@ -1096,9 +1198,11 @@ createLogger(module: string) => {
 ---
 
 ### 9.8 webhooks.ts (834 lines)
+
 **Purpose:** Webhook notification system
 
 **Event Types:**
+
 - API Key: key.created, key.usage.limit, key.upgraded, payment.received
 - Content: news.new, news.breaking, news.trending, price.alert, market.significant, source.new, system.health
 
@@ -1117,6 +1221,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.9 websocket.ts (290 lines)
+
 **Purpose:** WebSocket server for real-time updates
 
 **Message Types:** news, breaking, price, alert, ping, subscribe, unsubscribe
@@ -1135,9 +1240,11 @@ createLogger(module: string) => {
 ---
 
 ### 9.10 alerts.ts (1034 lines)
+
 **Purpose:** Complete Price & Keyword Alerts System
 
 **Alert Types:**
+
 - Price threshold (above/below)
 - Percent change (24h)
 - Keyword mention
@@ -1158,6 +1265,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.11 watchlist.ts (181 lines)
+
 **Purpose:** Coin watchlist management
 
 **Exported Functions:**
@@ -1177,6 +1285,7 @@ createLogger(module: string) => {
 ---
 
 ### 9.12 portfolio.ts (350 lines)
+
 **Purpose:** Portfolio tracking
 
 **Exported Functions:**
@@ -1194,9 +1303,11 @@ createLogger(module: string) => {
 ## 10. Custom Hooks
 
 ### 10.1 useAlphaSignals.ts (237 lines)
+
 **Purpose:** Alpha signal management hook
 
 **Hooks:**
+
 ```typescript
 useAlphaSignals(options?): {
   signals: AlphaSignal[]
@@ -1224,6 +1335,7 @@ useNarrativeClusters(): {
 ```
 
 **Options:**
+
 - `autoRefresh` - Enable auto-refresh (default: true)
 - `refreshInterval` - Interval in ms (default: 30000)
 - `filter` - Signal filters (signalType, minAlphaScore, assets, urgency)
@@ -1231,9 +1343,11 @@ useNarrativeClusters(): {
 ---
 
 ### 10.2 useApiKey.tsx (279 lines)
+
 **Purpose:** API key state management with localStorage persistence
 
 **Exports:**
+
 ```typescript
 ApiKeyProvider: React.FC<{ children: ReactNode }>
 
@@ -1250,6 +1364,7 @@ useApiKey(): {
 ```
 
 **Storage Keys:**
+
 - `fcn_api_key` - API key
 - `fcn_key_info` - Cached key info
 
@@ -1258,6 +1373,7 @@ useApiKey(): {
 ---
 
 ### 10.3 useBookmarks.ts (~120 lines)
+
 **Purpose:** Article bookmark management
 
 ```typescript
@@ -1279,9 +1395,11 @@ useBookmarks(): {
 ---
 
 ### 10.4 useLivePrice.ts (466 lines)
+
 **Purpose:** Real-time price WebSocket hook
 
 **Features:**
+
 - Automatic reconnection with exponential backoff
 - Batched updates (100ms intervals)
 - Shared WebSocket connection
@@ -1301,6 +1419,7 @@ useLivePrice(options: UseLivePriceOptions): {
 **WebSocket:** Binance stream (`wss://stream.binance.com:9443/ws`)
 
 **Reconnection:**
+
 - Max attempts: 10
 - Base delay: 1000ms
 - Max delay: 30000ms (exponential backoff)
@@ -1308,6 +1427,7 @@ useLivePrice(options: UseLivePriceOptions): {
 ---
 
 ### 10.5 usePriceFlash.ts (~120 lines)
+
 **Purpose:** Price change visual feedback
 
 ```typescript
@@ -1321,6 +1441,7 @@ usePriceFlash(options: UsePriceFlashOptions): {
 ```
 
 **Options:**
+
 - `price` - Current price
 - `debounceMs` - Debounce delay (default: 100ms)
 - `flashDurationMs` - Flash duration (default: 500ms)
@@ -1332,86 +1453,88 @@ usePriceFlash(options: UsePriceFlashOptions): {
 
 ### 11.1 File Counts by Category
 
-| Category | File Count |
-|----------|------------|
-| AI/ML Functions | 12 |
-| Market Data | 10 |
-| Social Intelligence | 3 |
-| Analytics & Research | 10 |
-| Database & Storage | 2 |
-| Authentication & Security | 4 |
-| x402 Micropayments | 9 |
-| Alerts & Webhooks | 5 |
-| Utilities | 12 |
-| Custom Hooks | 5 |
-| **Total** | **72** |
+| Category                  | File Count |
+| ------------------------- | ---------- |
+| AI/ML Functions           | 12         |
+| Market Data               | 10         |
+| Social Intelligence       | 3          |
+| Analytics & Research      | 10         |
+| Database & Storage        | 2          |
+| Authentication & Security | 4          |
+| x402 Micropayments        | 9          |
+| Alerts & Webhooks         | 5          |
+| Utilities                 | 12         |
+| Custom Hooks              | 5          |
+| **Total**                 | **72**     |
 
 ### 11.2 Lines of Code
 
-| Category | Approx. Lines |
-|----------|---------------|
-| AI/ML Functions | ~6,800 |
-| Market Data | ~5,800 |
-| Social Intelligence | ~2,600 |
-| Analytics & Research | ~7,400 |
-| Database & Storage | ~1,800 |
-| Auth & Security | ~1,600 |
-| x402 Micropayments | ~3,200 |
-| Alerts & Webhooks | ~2,500 |
-| Utilities | ~2,400 |
-| Custom Hooks | ~1,200 |
-| **Total** | **~35,300** |
+| Category             | Approx. Lines |
+| -------------------- | ------------- |
+| AI/ML Functions      | ~6,800        |
+| Market Data          | ~5,800        |
+| Social Intelligence  | ~2,600        |
+| Analytics & Research | ~7,400        |
+| Database & Storage   | ~1,800        |
+| Auth & Security      | ~1,600        |
+| x402 Micropayments   | ~3,200        |
+| Alerts & Webhooks    | ~2,500        |
+| Utilities            | ~2,400        |
+| Custom Hooks         | ~1,200        |
+| **Total**            | **~35,300**   |
 
 ### 11.3 Exported Functions Summary
 
-| Module | Exported Functions |
-|--------|-------------------|
-| AI/ML | ~45 |
-| Market Data | ~60 |
-| Social Intelligence | ~20 |
-| Analytics | ~40 |
-| Database | ~25 |
-| Auth/Security | ~15 |
-| x402 | ~35 |
-| Utilities | ~50 |
-| Hooks | ~8 (5 hooks) |
-| **Total** | **~298** |
+| Module              | Exported Functions |
+| ------------------- | ------------------ |
+| AI/ML               | ~45                |
+| Market Data         | ~60                |
+| Social Intelligence | ~20                |
+| Analytics           | ~40                |
+| Database            | ~25                |
+| Auth/Security       | ~15                |
+| x402                | ~35                |
+| Utilities           | ~50                |
+| Hooks               | ~8 (5 hooks)       |
+| **Total**           | **~298**           |
 
 ### 11.4 External API Dependencies
 
-| Provider | APIs Used |
-|----------|-----------|
-| CoinGecko | Primary market data |
-| Binance | Real-time prices, derivatives |
-| Bybit | Derivatives data |
-| OKX | Derivatives data |
-| dYdX | Derivatives data |
-| DeFiLlama | TVL, DeFi yields |
-| Alternative.me | Fear & Greed Index |
-| LunarCrush | Social metrics |
-| Santiment | Social analytics |
-| Discord/Telegram | Social messages |
-| Nitter | X/Twitter scraping |
-| Blockchair | Whale transactions |
-| x402.org | Payment facilitator |
+| Provider         | APIs Used                     |
+| ---------------- | ----------------------------- |
+| CoinGecko        | Primary market data           |
+| Binance          | Real-time prices, derivatives |
+| Bybit            | Derivatives data              |
+| OKX              | Derivatives data              |
+| dYdX             | Derivatives data              |
+| DeFiLlama        | TVL, DeFi yields              |
+| Alternative.me   | Fear & Greed Index            |
+| LunarCrush       | Social metrics                |
+| Santiment        | Social analytics              |
+| Discord/Telegram | Social messages               |
+| Nitter           | X/Twitter scraping            |
+| Blockchair       | Whale transactions            |
+| x402.org         | Payment facilitator           |
 
 ### 11.5 AI Provider Usage
 
-| Provider | Modules Using |
-|----------|---------------|
-| Groq | groq.ts, ai-services.ts, translate.ts, claim-extractor.ts |
-| OpenAI | All ai-*.ts modules |
-| Anthropic | All ai-*.ts modules |
-| OpenRouter | All ai-*.ts modules |
+| Provider   | Modules Using                                             |
+| ---------- | --------------------------------------------------------- |
+| Groq       | groq.ts, ai-services.ts, translate.ts, claim-extractor.ts |
+| OpenAI     | All ai-\*.ts modules                                      |
+| Anthropic  | All ai-\*.ts modules                                      |
+| OpenRouter | All ai-\*.ts modules                                      |
 
 ---
 
 ## Appendix: Key Type Definitions
 
 ### NewsArticle (from crypto-news.ts - excluded)
+
 Used throughout the codebase, referenced in AI and analytics modules.
 
 ### TokenPrice / CoinData
+
 ```typescript
 interface TokenPrice {
   id: string;
@@ -1428,16 +1551,18 @@ interface TokenPrice {
 ```
 
 ### Common Sentiment Types
+
 ```typescript
-type Sentiment = 'bullish' | 'bearish' | 'neutral';
+type Sentiment = "bullish" | "bearish" | "neutral";
 type SentimentScore = number; // -1 to 1
 ```
 
 ### Common Time Horizons
+
 ```typescript
-type TimeHorizon = '1h' | '4h' | '1d' | '1w' | '1m';
+type TimeHorizon = "1h" | "4h" | "1d" | "1w" | "1m";
 ```
 
 ---
 
-*End of Audit Document*
+_End of Audit Document_
