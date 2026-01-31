@@ -113,9 +113,89 @@ export async function getConfig() {
 
 ## Railway
 
-Railway is a great alternative with generous free tier.
+Railway is used for the **WebSocket server** (real-time features) and can also host the main app.
 
-### Deploy Steps
+### WebSocket Server Deployment (Recommended)
+
+The WebSocket server enables real-time news streaming to connected clients.
+
+#### Method 1: Railway CLI
+
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login
+railway login
+
+# Initialize project
+cd free-crypto-news
+railway init
+
+# Deploy
+railway up
+
+# Generate public domain
+railway domain
+```
+
+Your WebSocket server will be available at:
+- **URL:** `https://free-crypto-news-production.up.railway.app`
+- **WebSocket:** `wss://free-crypto-news-production.up.railway.app`
+- **Health:** `https://free-crypto-news-production.up.railway.app/health`
+- **Stats:** `https://free-crypto-news-production.up.railway.app/stats`
+
+#### Method 2: Railway Dashboard
+
+1. Go to [railway.app/new](https://railway.app/new)
+2. Click **Deploy from GitHub repo**
+3. Select `nirholas/free-crypto-news`
+4. Railway auto-detects `railway.json` config
+5. Click Deploy
+6. Go to **Settings → Networking → Generate Domain**
+
+### Connect WebSocket to Vercel
+
+After deploying to Railway, add this env variable to **Vercel**:
+
+```
+WS_ENDPOINT=wss://free-crypto-news-production.up.railway.app
+```
+
+### Test WebSocket Connection
+
+```javascript
+const ws = new WebSocket('wss://free-crypto-news-production.up.railway.app');
+
+ws.onopen = () => console.log('Connected!');
+ws.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  console.log('New article:', data.title);
+};
+```
+
+### Railway Configuration
+
+The project includes `railway.json`:
+
+```json
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "node ws-server.js",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 3
+  }
+}
+```
+
+### Full App Deployment (Alternative)
+
+You can also deploy the entire Next.js app to Railway:
 
 1. **Create Railway Account**
    - Sign up at [railway.app](https://railway.app)
@@ -361,16 +441,58 @@ news.yourdomain.com {
 
 ### Required
 
-None! The API works without any configuration.
+None! The core API works without any configuration.
 
-### Optional
+### Recommended
+
+| Variable | Description | Where to Get |
+|----------|-------------|--------------|
+| `KV_REST_API_URL` | Upstash Redis REST URL | Vercel → Storage → Upstash Redis |
+| `KV_REST_API_TOKEN` | Upstash Redis REST Token | Vercel → Storage → Upstash Redis |
+| `ADMIN_TOKEN` | Admin API protection | Generate with `openssl rand -hex 32` |
+
+### Optional - AI Features
+
+| Variable | Description | Where to Get |
+|----------|-------------|--------------|
+| `GROQ_API_KEY` | AI summaries (recommended, free) | [console.groq.com](https://console.groq.com) |
+| `OPENAI_API_KEY` | OpenAI alternative | [platform.openai.com](https://platform.openai.com) |
+| `ANTHROPIC_API_KEY` | Claude alternative | [console.anthropic.com](https://console.anthropic.com) |
+| `OPENROUTER_API_KEY` | Multi-model router | [openrouter.ai](https://openrouter.ai) |
+
+### Optional - Real-time Features
+
+| Variable | Description | Where to Get |
+|----------|-------------|--------------|
+| `WS_ENDPOINT` | WebSocket server URL | Deploy `ws-server.js` to Railway |
+
+### Optional - Other
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `NODE_ENV` | Environment mode | `development` |
 | `PORT` | Server port | `3000` |
-| `GROQ_API_KEY` | Groq API key for AI features | - |
+| `NEXT_PUBLIC_BASE_URL` | Public app URL | `https://news-crypto.vercel.app` |
 | `GOOGLE_CLOUD_API_KEY` | Translation API | - |
+
+### Setting Up Vercel KV (Upstash Redis)
+
+1. Go to **Vercel Dashboard** → Your Project → **Storage**
+2. Click **Upstash for Redis** in Marketplace
+3. Create a new Redis database (free tier available)
+4. Click **Connect to Project**
+5. Environment variables are added automatically
+
+### Generating ADMIN_TOKEN
+
+```bash
+# Generate a secure random token
+openssl rand -hex 32
+
+# Example output: a3f8b2c1d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1
+```
+
+Add this value as `ADMIN_TOKEN` in Vercel Environment Variables.
 
 ### Example .env.local
 
@@ -378,8 +500,20 @@ None! The API works without any configuration.
 # .env.local (development)
 NODE_ENV=development
 
-# AI Features (optional)
+# KV Store (Upstash Redis)
+KV_REST_API_URL=https://your-redis.upstash.io
+KV_REST_API_TOKEN=your_token_here
+
+# Admin Protection
+ADMIN_TOKEN=your_secure_random_token
+
+# AI Features (pick one - Groq is free!)
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
+# OPENAI_API_KEY=sk-...
+# ANTHROPIC_API_KEY=sk-ant-...
+
+# WebSocket Server (optional)
+WS_ENDPOINT=wss://free-crypto-news-production.up.railway.app
 
 # Translation (optional)
 GOOGLE_CLOUD_API_KEY=AIzaxxxxxxxxxxxxxxxxxx
@@ -393,6 +527,9 @@ GOOGLE_CLOUD_API_KEY=AIzaxxxxxxxxxxxxxxxxxx
 
 # Vercel
 vercel env add GROQ_API_KEY
+vercel env add KV_REST_API_URL
+vercel env add KV_REST_API_TOKEN
+vercel env add ADMIN_TOKEN
 
 # Railway
 railway variables set GROQ_API_KEY=gsk_...

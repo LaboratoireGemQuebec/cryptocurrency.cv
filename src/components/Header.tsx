@@ -32,9 +32,18 @@ const navItems = [
             { label: 'Top Gainers', href: '/markets/gainers', icon: '📈' },
             { label: 'Top Losers', href: '/markets/losers', icon: '📉' },
             { label: 'Trending', href: '/trending', icon: '🔥' },
-            { label: 'New Listings', href: '/markets/new', icon: '🆕' },
             { label: 'Exchanges', href: '/markets/exchanges', icon: '🏛️' },
             { label: 'Categories', href: '/markets/categories', icon: '🗂️' },
+          ],
+        },
+        {
+          title: 'Top Assets',
+          links: [
+            { label: 'Bitcoin', href: '/category/bitcoin', icon: '₿' },
+            { label: 'Ethereum', href: '/category/ethereum', icon: 'Ξ' },
+            { label: 'NFTs', href: '/category/nft', icon: '🎨' },
+            { label: 'BTC Price', href: '/coin/bitcoin', icon: '💹' },
+            { label: 'ETH Price', href: '/coin/ethereum', icon: '💹' },
           ],
         },
         {
@@ -42,21 +51,9 @@ const navItems = [
           links: [
             { label: 'Fear & Greed', href: '/sentiment', icon: '😱' },
             { label: 'Screener', href: '/screener', icon: '🔍' },
-            { label: 'Correlation', href: '/correlation', icon: '🔗' },
             { label: 'Heatmap', href: '/heatmap', icon: '🗺️' },
             { label: 'Dominance', href: '/dominance', icon: '🥧' },
-          ],
-        },
-        {
-          title: 'Tools',
-          links: [
             { label: 'Calculator', href: '/calculator', icon: '🧮' },
-            { label: 'Social Buzz', href: '/buzz', icon: '📣' },
-            { label: 'Charts', href: '/charts', icon: '📈' },
-            { label: 'Top Movers', href: '/movers', icon: '🚀' },
-            { label: 'Search', href: '/search', icon: '🔍' },
-            { label: 'Topics', href: '/topics', icon: '📂' },
-            { label: 'Tags', href: '/tags', icon: '🏷️' },
           ],
         },
       ],
@@ -64,6 +61,54 @@ const navItems = [
         title: 'Fear & Greed Index',
         description: 'Track market sentiment with real-time Fear & Greed data',
         href: '/sentiment',
+      },
+    },
+  },
+  { 
+    label: 'News', 
+    href: '/',
+    icon: '📰',
+    megaMenu: {
+      sections: [
+        {
+          title: 'Categories',
+          links: [
+            { label: 'Bitcoin News', href: '/category/bitcoin', icon: '₿' },
+            { label: 'Ethereum News', href: '/category/ethereum', icon: 'Ξ' },
+            { label: 'DeFi News', href: '/category/defi', icon: '🏦' },
+            { label: 'NFT News', href: '/category/nft', icon: '🎨' },
+            { label: 'Regulation', href: '/category/regulation', icon: '⚖️' },
+          ],
+        },
+        {
+          title: 'Bitcoin',
+          links: [
+            { label: 'Lightning Network', href: '/topic/lightning-network', icon: '⚡' },
+            { label: 'Mining', href: '/topic/mining', icon: '⛏️' },
+            { label: 'Bitcoin ETFs', href: '/topic/bitcoin-etf', icon: '📈' },
+          ],
+        },
+        {
+          title: 'Ethereum',
+          links: [
+            { label: 'Layer 2s', href: '/topic/layer-2', icon: '🔗' },
+            { label: 'Staking', href: '/topic/staking', icon: '🥩' },
+            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
+          ],
+        },
+        {
+          title: 'Regulatory',
+          links: [
+            { label: 'SEC News', href: '/topic/sec', icon: '🏛️' },
+            { label: 'Global Policy', href: '/topic/crypto-policy', icon: '🌍' },
+            { label: 'Regulatory Dashboard', href: '/regulatory', icon: '📊' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Breaking News',
+        description: 'Latest crypto news from 12+ sources',
+        href: '/',
       },
     },
   },
@@ -96,116 +141,6 @@ const navItems = [
         title: 'DeFi Dashboard',
         description: 'Track TVL, yields, and protocol metrics',
         href: '/defi',
-      },
-    },
-  },
-  { 
-    label: 'Bitcoin', 
-    href: '/category/bitcoin',
-    icon: '₿',
-    megaMenu: {
-      sections: [
-        {
-          title: 'Bitcoin News',
-          links: [
-            { label: 'Latest News', href: '/category/bitcoin', icon: '📰' },
-            { label: 'Lightning Network', href: '/topic/lightning-network', icon: '⚡' },
-            { label: 'Mining', href: '/topic/mining', icon: '⛏️' },
-          ],
-        },
-        {
-          title: 'Market',
-          links: [
-            { label: 'BTC Price', href: '/coin/bitcoin', icon: '💹' },
-            { label: 'ETFs', href: '/topic/bitcoin-etf', icon: '📈' },
-          ],
-        },
-      ],
-      featured: {
-        title: 'Bitcoin Coverage',
-        description: 'The latest Bitcoin news and analysis',
-        href: '/category/bitcoin',
-      },
-    },
-  },
-  { 
-    label: 'Ethereum', 
-    href: '/category/ethereum',
-    icon: 'Ξ',
-    megaMenu: {
-      sections: [
-        {
-          title: 'Ethereum News',
-          links: [
-            { label: 'Latest News', href: '/category/ethereum', icon: '📰' },
-            { label: 'Layer 2s', href: '/topic/layer-2', icon: '🔗' },
-            { label: 'Staking', href: '/topic/staking', icon: '🥩' },
-          ],
-        },
-        {
-          title: 'Ecosystem',
-          links: [
-            { label: 'ETH Price', href: '/coin/ethereum', icon: '💹' },
-            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
-          ],
-        },
-      ],
-      featured: {
-        title: 'Ethereum Ecosystem',
-        description: 'News from the Ethereum world',
-        href: '/category/ethereum',
-      },
-    },
-  },
-  { 
-    label: 'NFTs', 
-    href: '/category/nft',
-    icon: '🎨',
-    megaMenu: {
-      sections: [
-        {
-          title: 'NFT News',
-          links: [
-            { label: 'Latest', href: '/category/nft', icon: '📰' },
-            { label: 'Collections', href: '/topic/nft-collections', icon: '🖼️' },
-            { label: 'Marketplaces', href: '/topic/nft-marketplace', icon: '🏪' },
-          ],
-        },
-      ],
-      featured: {
-        title: 'NFT Coverage',
-        description: 'Digital collectibles and NFT market news',
-        href: '/category/nft',
-      },
-    },
-  },
-  { 
-    label: 'Regulation', 
-    href: '/category/regulation',
-    icon: '⚖️',
-    megaMenu: {
-      sections: [
-        {
-          title: 'Regulatory News',
-          links: [
-            { label: 'Latest', href: '/category/regulation', icon: '📰' },
-            { label: 'SEC', href: '/topic/sec', icon: '🏛️' },
-            { label: 'Global Policy', href: '/topic/crypto-policy', icon: '🌍' },
-          ],
-        },
-        {
-          title: 'Intelligence',
-          links: [
-            { label: 'Regulatory Dashboard', href: '/regulatory', icon: '📊' },
-            { label: 'Compliance Deadlines', href: '/regulatory?view=deadlines', icon: '⏰' },
-            { label: 'Jurisdictions', href: '/regulatory?view=jurisdictions', icon: '🗺️' },
-          ],
-        },
-      ],
-      featured: {
-        title: 'Regulatory Intelligence',
-        description: 'Track global crypto regulations, enforcement actions, and compliance deadlines',
-        href: '/regulatory',
       },
     },
   },
@@ -245,46 +180,23 @@ const navItems = [
     },
   },
   {
-    label: 'Trading',
+    label: 'Tools',
     href: '/orderbook',
-    icon: '📊',
+    icon: '🛠️',
     megaMenu: {
       sections: [
         {
-          title: 'Live Data',
+          title: 'Trading',
           links: [
             { label: 'Order Book', href: '/orderbook', icon: '📗' },
             { label: 'Whale Alerts', href: '/whales', icon: '🐋' },
             { label: 'Liquidations', href: '/liquidations', icon: '💥' },
             { label: 'Options Flow', href: '/options', icon: '📈' },
-          ],
-        },
-        {
-          title: 'Opportunities',
-          links: [
             { label: 'Arbitrage Scanner', href: '/arbitrage', icon: '🔄' },
-            { label: 'Predictions', href: '/predictions', icon: '🎯' },
-            { label: 'Screener', href: '/screener', icon: '🔍' },
-            { label: 'Backtest', href: '/backtest', icon: '🧪' },
-            { label: 'On-chain Events', href: '/onchain', icon: '⛓️' },
           ],
         },
-      ],
-      featured: {
-        title: 'Trading Intelligence',
-        description: 'Real-time order books, whale tracking, and arbitrage opportunities',
-        href: '/orderbook',
-      },
-    },
-  },
-  {
-    label: 'Analytics',
-    href: '/analytics',
-    icon: '📉',
-    megaMenu: {
-      sections: [
         {
-          title: 'Research',
+          title: 'Analytics',
           links: [
             { label: 'Analytics Hub', href: '/analytics', icon: '📊' },
             { label: 'Headline Tracker', href: '/analytics/headlines', icon: '📰' },
@@ -292,7 +204,6 @@ const navItems = [
             { label: 'Coverage Gaps', href: '/coverage-gap', icon: '🔎' },
             { label: 'Influencer Tracker', href: '/influencers', icon: '👥' },
             { label: 'Narratives', href: '/narratives', icon: '💬' },
-            { label: 'Funding Rounds', href: '/funding', icon: '💸' },
           ],
         },
         {
@@ -301,14 +212,15 @@ const navItems = [
             { label: 'Portfolio Tracker', href: '/portfolio', icon: '💼' },
             { label: 'Watchlist', href: '/watchlist', icon: '👁️' },
             { label: 'Saved Articles', href: '/saved', icon: '🔖' },
-            { label: 'Coin Compare', href: '/compare', icon: '⚖️' },
+            { label: 'Predictions', href: '/predictions', icon: '🎯' },
+            { label: 'Backtest', href: '/backtest', icon: '🧪' },
           ],
         },
       ],
       featured: {
-        title: 'Deep Analytics',
-        description: 'Protocol health, influencer tracking, and portfolio management',
-        href: '/analytics',
+        title: 'Trading Intelligence',
+        description: 'Real-time order books, whale tracking, and arbitrage opportunities',
+        href: '/orderbook',
       },
     },
   },
@@ -342,6 +254,7 @@ const navItems = [
             { label: 'Citations', href: '/citations', icon: '📖' },
             { label: 'Claims Tracker', href: '/claims', icon: '📋' },
             { label: 'Story Origins', href: '/origins', icon: '🔍' },
+            { label: 'Funding Rounds', href: '/funding', icon: '💸' },
           ],
         },
       ],
