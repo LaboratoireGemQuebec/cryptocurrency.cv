@@ -20,7 +20,7 @@
 
 ---
 
-Get real-time crypto news from **200+ sources** with one API call.
+Get real-time crypto news from **200+ sources** with one API call. 
 
 ```bash
 curl https://news-crypto.vercel.app/api/news
