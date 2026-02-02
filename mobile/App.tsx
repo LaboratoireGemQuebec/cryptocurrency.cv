@@ -65,8 +65,8 @@ function TabNavigator() {
 
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
+      screenOptions={({ route }: { route: { name: keyof TabParamList } }) => ({
+        tabBarIcon: ({ focused, color, size }: { focused: boolean; color: string; size: number }) => {
           let iconName: keyof typeof Ionicons.glyphMap;
 
           switch (route.name) {
@@ -127,7 +127,7 @@ export default function App() {
         <Stack.Screen 
           name="Article" 
           component={ArticleScreen}
-          options={({ route }) => ({ 
+          options={({ route }: { route: { params: RootStackParamList['Article'] } }) => ({ 
             title: route.params.title,
             headerBackTitle: 'Back',
           })}

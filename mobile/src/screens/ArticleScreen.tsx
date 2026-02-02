@@ -81,7 +81,7 @@ export default function ArticleScreen() {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={true}
         decelerationRate="normal"
-        onError={(syntheticEvent) => {
+        onError={(syntheticEvent: { nativeEvent: { description: string } }) => {
           const { nativeEvent } = syntheticEvent;
           console.warn('WebView error:', nativeEvent);
         }}

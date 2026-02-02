@@ -12,6 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CoinCard from '../components/CoinCard';
 import FearGreedGauge from '../components/FearGreedGauge';
 import { useMarketCoins, useFearGreed } from '../hooks/useMarket';
+import type { MarketCoin } from '../api/client';
 
 export default function MarketsScreen() {
   const colorScheme = useColorScheme();
@@ -55,10 +56,10 @@ export default function MarketsScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
-      <FlatList
+      <FlatList<MarketCoin>
         data={coins}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <CoinCard coin={item} />}
+        keyExtractor={(item: MarketCoin) => item.id}
+        renderItem={({ item }: { item: MarketCoin }) => <CoinCard coin={item} />}
         ListHeaderComponent={renderHeader}
         refreshControl={
           <RefreshControl

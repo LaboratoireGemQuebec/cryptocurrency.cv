@@ -490,7 +490,7 @@ export default function Header() {
 
       <header 
         ref={headerRef}
-        className={`sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300 ${
+        className={`sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300 w-full max-w-full overflow-x-hidden ${
           isScrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         style={{
@@ -498,10 +498,10 @@ export default function Header() {
         }}
       >
         <div 
-          className="flex justify-between items-center px-4 lg:px-6 max-w-7xl mx-auto h-full transition-all duration-300"
+          className="flex justify-between items-center px-4 lg:px-6 max-w-7xl mx-auto h-full transition-all duration-300 overflow-hidden"
         >
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <Link 
               href="/" 
               className="text-xl font-bold flex items-center gap-2.5 focus-ring rounded-lg px-2 py-1 -mx-2"
@@ -520,7 +520,7 @@ export default function Header() {
 
           {/* Main Navigation - Desktop */}
           <nav 
-            className="hidden lg:flex items-center gap-1" 
+            className="hidden lg:flex items-center gap-0.5 flex-shrink min-w-0" 
             aria-label="Main navigation"
             role="menubar"
           >
@@ -533,7 +533,7 @@ export default function Header() {
               >
                 <Link 
                   href={item.href}
-                  className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus-ring ${
+                  className={`flex items-center gap-1 px-2 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus-ring whitespace-nowrap ${
                     activeMenu === item.label
                       ? 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30'
                       : 'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800'
@@ -543,7 +543,7 @@ export default function Header() {
                   aria-expanded={item.megaMenu ? activeMenu === item.label : undefined}
                   onKeyDown={(e) => handleNavKeyDown(e, item)}
                 >
-                  <span className="hidden xl:inline" aria-hidden="true">{item.icon}</span>
+                  <span className="hidden 2xl:inline" aria-hidden="true">{item.icon}</span>
                   <span>{item.label}</span>
                   {item.megaMenu && (
                     <svg 
@@ -565,7 +565,7 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 flex-shrink-0">
             {/* Price Widget - Desktop only */}
             <div className="hidden xl:block mr-2">
               <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />}>

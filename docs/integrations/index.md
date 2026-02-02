@@ -51,6 +51,7 @@ Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from Def
 | [Raycast](raycast.md) | macOS Raycast commands | 2 min |
 | [CLI](cli.md) | Terminal interface | 1 min |
 | [Postman](postman.md) | API testing collection | 2 min |
+| [Mobile App](mobile.md) | React Native iOS/Android app | 10 min |
 
 ## Embeddable Widgets
 

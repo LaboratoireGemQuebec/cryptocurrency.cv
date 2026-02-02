@@ -15,6 +15,7 @@ import { useNews, useBreakingNews, useTrending } from '../hooks/useNews';
 import { useFearGreed, useSentiment } from '../hooks/useMarket';
 import FearGreedGauge from '../components/FearGreedGauge';
 import SentimentBadge from '../components/SentimentBadge';
+import type { Article } from '../api/client';
 
 type Tab = 'latest' | 'breaking' | 'trending';
 
@@ -78,10 +79,10 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
-      <FlatList
+      <FlatList<Article>
         data={activeData.articles}
-        keyExtractor={(item, index) => `${item.link}-${index}`}
-        renderItem={({ item }) => <NewsCard article={item} />}
+        keyExtractor={(item: Article, index: number) => `${item.link}-${index}`}
+        renderItem={({ item }: { item: Article }) => <NewsCard article={item} />}
         ListHeaderComponent={renderHeader}
         refreshControl={
           <RefreshControl

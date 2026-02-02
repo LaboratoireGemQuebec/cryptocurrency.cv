@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import NewsCard from '../components/NewsCard';
 import { useSearch } from '../hooks/useNews';
+import type { Article } from '../api/client';
 
 export default function SearchScreen() {
   const colorScheme = useColorScheme();
@@ -85,10 +86,10 @@ export default function SearchScreen() {
           <Text style={styles.emptyText}>No results for "{query}"</Text>
         </View>
       ) : (
-        <FlatList
+        <FlatList<Article>
           data={articles}
-          keyExtractor={(item, index) => `${item.link}-${index}`}
-          renderItem={({ item }) => <NewsCard article={item} compact />}
+          keyExtractor={(item: Article, index: number) => `${item.link}-${index}`}
+          renderItem={({ item }: { item: Article }) => <NewsCard article={item} compact />}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.list}
           keyboardShouldPersistTaps="handled"

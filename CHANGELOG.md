@@ -29,9 +29,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Comprehensive Documentation** - Updated API.md, AI-FEATURES.md, FEATURES.md with new endpoints
 
 #### i18n Translation (Feb 2, 2026)
-- **Automated Translation Script** (`scripts/translate-i18n.js`) - Groq-powered translation for all 17 locales
+- **Automated Translation Script** (`scripts/translate-all.js`) - Universal translation for 100+ locales
 - **Rate-Limit Handling** - Chunked processing with automatic retry logic
-- **Languages Supported**: Arabic, German, Spanish, French, Indonesian, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Russian, Thai, Turkish, Vietnamese, Chinese (Simplified & Traditional)
+- **100 Languages Supported** (including English):
+  - **Western European**: English, German, French, Spanish, Portuguese (EU/BR), Italian, Dutch, Danish, Swedish, Norwegian, Finnish, Icelandic
+  - **Eastern European**: Russian, Polish, Czech, Slovak, Hungarian, Romanian, Bulgarian, Croatian, Slovenian, Serbian, Bosnian, Macedonian, Ukrainian, Belarusian, Lithuanian, Latvian, Estonian
+  - **Middle Eastern**: Arabic, Persian, Hebrew, Turkish, Kurdish, Pashto
+  - **South Asian**: Hindi, Bengali, Punjabi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Odia, Nepali, Sinhala, Urdu
+  - **East Asian**: Japanese, Korean, Chinese (Simplified & Traditional), Mongolian
+  - **Southeast Asian**: Vietnamese, Thai, Indonesian, Malay, Filipino, Burmese, Khmer, Lao, Javanese, Sundanese, Cebuano
+  - **Central Asian**: Kazakh, Uzbek, Tajik, Kyrgyz, Turkmen, Azerbaijani
+  - **African**: Swahili, Amharic, Hausa, Yoruba, Igbo, Zulu, Xhosa, Afrikaans, Malagasy, Kinyarwanda, Somali
+  - **Celtic & Regional**: Irish, Scottish Gaelic, Welsh, Basque, Catalan, Galician, Luxembourgish, Frisian, Maltese
+  - **Other**: Esperanto, Latin, Armenian, Georgian, Albanian, Yiddish
+  - **RTL Support**: Arabic, Persian, Hebrew, Kurdish, Pashto, Urdu, Yiddish
+- **Language Selector Component** - New UI component with search, grouping by region, and 100+ language support
+- **Browser Detection** - Auto-detect user's preferred language
 
 #### AI Agent Templates (Feb 2, 2026)
 - **5 Production-Ready AI Agent Templates** in `examples/agents/`:

@@ -21,7 +21,7 @@ export const revalidate = 30;
  */
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<CompareData | { error: string; message: string }>> {
+): Promise<NextResponse> {
   // Validate query parameters
   const validation = validateQuery(request, marketCompareQuerySchema2);
   if (!validation.success) {

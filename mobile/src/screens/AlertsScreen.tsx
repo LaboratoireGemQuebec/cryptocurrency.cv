@@ -88,9 +88,9 @@ export default function AlertsScreen() {
           </Text>
         </View>
       ) : (
-        <FlatList
+        <FlatList<Alert>
           data={alerts}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item: Alert) => item.id}
           renderItem={renderAlert}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.list}

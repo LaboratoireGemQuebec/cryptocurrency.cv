@@ -70,7 +70,7 @@ class CryptoNewsClient {
       throw new Error(`API Error: ${response.status}`);
     }
 
-    return response.json();
+    return response.json() as Promise<T>;
   }
 
   // News endpoints

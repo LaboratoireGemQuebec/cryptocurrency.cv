@@ -1,6 +1,7 @@
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
+import i18next from "eslint-plugin-i18next";
 
 const eslintConfig = [
   {
@@ -18,6 +19,7 @@ const eslintConfig = [
     plugins: {
       "jsx-a11y": jsxA11y,
       "@typescript-eslint": tsPlugin,
+      "i18next": i18next,
     },
     rules: {
       // Accessibility rules
@@ -44,6 +46,13 @@ const eslintConfig = [
       "jsx-a11y/role-supports-aria-props": "error",
       "jsx-a11y/scope": "error",
       "jsx-a11y/tabindex-no-positive": "warn",
+      
+      // i18n - catch hardcoded strings in JSX
+      "i18next/no-literal-string": ["warn", {
+        mode: "jsx-only",
+        "jsx-attributes": { include: ["alt", "title", "placeholder", "aria-label"] },
+        words: { exclude: ["©", "•", "|", "-", "→", "←", "↑", "↓"] },
+      }],
     },
   },
 ];
