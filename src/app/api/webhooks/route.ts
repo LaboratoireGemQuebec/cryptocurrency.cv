@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getBreakingNews } from '@/lib/crypto-news';
 import { db } from '@/lib/database';
 
-export const runtime = 'edge';
+// Use Node.js runtime since database.ts requires fs/path modules
+export const runtime = 'nodejs';
 
 // Database collection for webhooks
 const WEBHOOKS_COLLECTION = 'webhooks';

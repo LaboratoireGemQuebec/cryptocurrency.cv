@@ -3341,6 +3341,18 @@ Every day we delay proper archiving is data lost forever.
 
 ---
 
+## ⭐ Star History
+
+<a href="https://star-history.com/#nirholas/free-crypto-news&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nirholas/free-crypto-news&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=nirholas/free-crypto-news&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=nirholas/free-crypto-news&type=Date" />
+ </picture>
+</a>
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions! Whether it's:
