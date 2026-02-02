@@ -628,16 +628,6 @@ export const TAGS: Record<string, Tag> = {
   // ═══════════════════════════════════════════════════════════════
   // ADDITIONAL TOPICS
   // ═══════════════════════════════════════════════════════════════
-  'ai-crypto': {
-    slug: 'ai-crypto',
-    name: 'AI & Crypto',
-    description: 'Intersection of AI and cryptocurrency. AI tokens, compute networks, and agents.',
-    icon: '🤖',
-    category: 'topic',
-    keywords: ['ai', 'artificial intelligence', 'machine learning', 'gpu', 'compute', 'ai agent'],
-    relatedTags: ['defi', 'gaming'],
-    priority: 80,
-  },
   'rwa': {
     slug: 'rwa',
     name: 'Real World Assets',
@@ -748,16 +738,6 @@ export const TAGS: Record<string, Tag> = {
     relatedTags: ['defi', 'aave'],
     priority: 68,
   },
-  'privacy': {
-    slug: 'privacy',
-    name: 'Privacy',
-    description: 'Crypto privacy news. Privacy coins, mixers, and regulatory concerns.',
-    icon: '🕵️',
-    category: 'topic',
-    keywords: ['privacy', 'monero', 'zcash', 'tornado', 'mixer'],
-    relatedTags: ['regulation', 'zk'],
-    priority: 65,
-  },
   'dao': {
     slug: 'dao',
     name: 'DAOs',
@@ -798,16 +778,6 @@ export const TAGS: Record<string, Tag> = {
     relatedTags: ['defi', 'security'],
     priority: 60,
   },
-  'oracles': {
-    slug: 'oracles',
-    name: 'Oracles',
-    description: 'Blockchain oracle news. Price feeds, data providers, and oracle networks.',
-    icon: '🔮',
-    category: 'technology',
-    keywords: ['oracle', 'price feed', 'chainlink', 'pyth', 'band'],
-    relatedTags: ['defi', 'chainlink'],
-    priority: 68,
-  },
   'base': {
     slug: 'base',
     name: 'Base',
@@ -837,16 +807,6 @@ export const TAGS: Record<string, Tag> = {
     keywords: ['ethereum etf', 'eth etf', 'ether etf'],
     relatedTags: ['ethereum', 'institutional'],
     priority: 80,
-  },
-  'staking': {
-    slug: 'staking',
-    name: 'Staking',
-    description: 'Crypto staking news. Proof of stake, validators, and staking rewards.',
-    icon: '🥩',
-    category: 'topic',
-    keywords: ['staking', 'stake', 'validator', 'proof of stake', 'pos', 'delegation'],
-    relatedTags: ['ethereum', 'defi'],
-    priority: 75,
   },
   'depin': {
     slug: 'depin',

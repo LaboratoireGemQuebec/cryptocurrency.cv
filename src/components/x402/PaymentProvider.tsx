@@ -40,6 +40,7 @@ interface PaymentRecord {
   txHash: string;
   timestamp: number;
   status: 'pending' | 'confirmed' | 'failed';
+  network?: string;
 }
 
 interface AccessPass {
@@ -454,10 +455,13 @@ export function PaymentProvider({ children, testnet = true }: PaymentProviderPro
 
         // Record the payment
         const paymentRecord: PaymentRecord = {
+          id: `pay_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
           txHash: txHash as string,
           amount: params.amount,
+          currency: 'USDC',
           route: 'x402-payment',
           timestamp: Date.now(),
+          status: 'pending',
           network: params.network,
         };
         setPayments((prev) => [...prev, paymentRecord]);

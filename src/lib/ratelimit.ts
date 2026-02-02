@@ -16,6 +16,7 @@
 
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
+import { NextRequest, NextResponse } from 'next/server';
 
 // ============================================================================
 // Types
@@ -146,7 +147,7 @@ function getMinuteLimiter(tier: string, requestsPerMinute: number): Ratelimit | 
 // Main Rate Limiting Functions
 // ============================================================================
 
-import { NextRequest } from 'next/server';
+// NextRequest imported at top of file
 
 /**
  * Default free tier config
@@ -393,7 +394,7 @@ export async function isBlocked(identifier: string): Promise<boolean> {
 // Request-based Rate Limiting (for simpler usage)
 // ============================================================================
 
-import { NextRequest, NextResponse } from 'next/server';
+// NextRequest and NextResponse imported at top of file
 
 /**
  * Default tier for anonymous/free requests

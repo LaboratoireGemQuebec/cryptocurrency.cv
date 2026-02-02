@@ -51,7 +51,10 @@ function createHttpServer(): x402HTTPResourceServer {
   // - API key holders: { grantAccess: true } bypasses payment
   // - Invalid/rate-limited keys: { abort: true, reason } returns 403
   // - No API key: void continues to x402 payment verification
-  server.onProtectedRequest(handleProtectedRequest);
+  // Note: Hook registration depends on x402 SDK version
+  if ('onProtectedRequest' in server && typeof (server as unknown as { onProtectedRequest: unknown }).onProtectedRequest === 'function') {
+    (server as unknown as { onProtectedRequest: (handler: typeof handleProtectedRequest) => void }).onProtectedRequest(handleProtectedRequest);
+  }
 
   return server;
 }

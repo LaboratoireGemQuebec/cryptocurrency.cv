@@ -267,7 +267,7 @@ export function useAutoTranslate(text: string, context?: string): {
 interface TranslatedTextProps {
   children: string;
   context?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   className?: string;
 }
 
