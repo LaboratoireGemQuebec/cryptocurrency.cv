@@ -100,7 +100,7 @@ ${JSON.stringify(articlesToSummarize, null, 2)}`;
       request,
     });
   } catch (error) {
-    const logger = createRequestLogger('/api/summarize');
+    const logger = createRequestLogger(request);
     logger.error('Summarization error', { error });
     return ApiError.internal('Failed to summarize articles', error);
   }
