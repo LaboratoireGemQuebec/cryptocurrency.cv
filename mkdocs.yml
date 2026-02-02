@@ -188,6 +188,8 @@ nav:
     - React: sdks/react.md
     - Go: sdks/go.md
     - PHP: sdks/php.md
+    - Ruby: sdks/ruby.md
+    - Rust: sdks/rust.md
   
   - Integrations:
     - Overview: integrations/index.md
@@ -196,6 +198,9 @@ nav:
     - Alfred Workflow: integrations/alfred.md
     - Raycast: integrations/raycast.md
     - Widgets: integrations/widgets.md
+    - CLI: integrations/cli.md
+    - Postman: integrations/postman.md
+    - Mobile App: integrations/mobile.md
   
   - Examples:
     - Overview: examples/index.md
@@ -203,6 +208,27 @@ nav:
     - Slack Bot: examples/slack.md
     - Telegram Bot: examples/telegram.md
     - LangChain: examples/langchain.md
+  
+  - Tutorials:
+    - Overview: tutorials/index.md
+    - News Basics: tutorials/news-basics.md
+    - Search & Filter: tutorials/search-filtering.md
+    - Archive & Export: tutorials/archive-export.md
+    - International News: tutorials/international-news.md
+    - AI Sentiment: tutorials/ai-sentiment.md
+    - AI Features: tutorials/ai-features.md
+    - Trading Signals: tutorials/trading-signals.md
+    - Market Data: tutorials/market-data.md
+    - DeFi & NFT: tutorials/defi-nft.md
+    - Analytics: tutorials/analytics-research.md
+    - Social Intel: tutorials/social-intelligence.md
+    - Portfolio: tutorials/portfolio-watchlist.md
+    - Premium: tutorials/premium-features.md
+    - Real-time: tutorials/realtime-sse.md
+    - Alerts: tutorials/user-alerts.md
+    - Webhooks: tutorials/webhooks-integrations.md
+    - Utility: tutorials/utility-endpoints.md
+    - Extraction: tutorials/article-extraction.md
   
   - Deployment:
     - Self-Hosting: DEPLOYMENT.md

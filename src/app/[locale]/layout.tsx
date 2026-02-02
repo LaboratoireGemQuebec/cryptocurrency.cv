@@ -9,6 +9,7 @@ import { PWAProvider } from '@/components/PWAProvider';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { UpdatePrompt } from '@/components/UpdatePrompt';
 import { OfflineIndicator } from '@/components/OfflineIndicator';
+import BottomNav from '@/components/BottomNav';
 import { BookmarksProvider } from '@/components/BookmarksProvider';
 import { ThemeProvider, ThemeScript } from '@/components/ThemeProvider';
 import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
@@ -218,6 +219,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                           <InstallPrompt />
                           <UpdatePrompt />
                           <OfflineIndicator />
+                          <BottomNav />
                         </PWAProvider>
                       </BookmarksProvider>
                     </PortfolioProvider>

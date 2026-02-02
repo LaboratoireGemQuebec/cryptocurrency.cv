@@ -29,9 +29,11 @@ Check out our **[Complete Tutorials](../docs/tutorials/index.md)** — 19 step-b
 | [Python](#python) | 12 files | 150+ | ✅ Complete |
 | [JavaScript](#javascript) | 10 files | 120+ | ✅ Complete |
 | [TypeScript](#typescript) | 1 SDK file | 80+ | ✅ Complete |
+| [React](#react) | 5 files | 50+ | ✅ **NEW** |
+| [Rust](#rust) | 5 files | 40+ | ✅ **NEW** |
 | [Go](#go) | 1 client file | 60+ | ✅ Complete |
 | [cURL](#curl) | 1 script | 100+ | ✅ Complete |
-| [AI Agents](agents/) | 5 agents | LangChain | ✅ **NEW** |
+| [AI Agents](agents/) | 5 agents | LangChain | ✅ Complete |
 
 ---
 
@@ -170,6 +172,107 @@ news.data.forEach(article => {
 const fearGreed = await client.getFearGreed();
 console.log(`😰 ${fearGreed.data.classification}: ${fearGreed.data.value}`);
 ```
+
+---
+
+## ⚛️ React
+
+### Installation
+
+```bash
+npm install @nirholas/react-crypto-news
+```
+
+### Quick Start
+
+```tsx
+import { CryptoNews, useCryptoNews } from '@nirholas/react-crypto-news';
+
+// Drop-in component
+function NewsFeed() {
+  return <CryptoNews limit={10} variant="cards" showSource />;
+}
+
+// Custom hook for full control
+function CustomFeed() {
+  const { articles, loading, error, refresh } = useCryptoNews({ limit: 10 });
+  
+  if (loading) return <div>Loading...</div>;
+  return articles.map(a => <div key={a.id}>{a.title}</div>);
+}
+```
+
+### Example Files
+
+| File | Description | Components |
+|------|-------------|------------|
+| [basic.tsx](react/basic.tsx) | News feeds, trending, themes | 12 |
+| [market-data.tsx](react/market-data.tsx) | Prices, charts, Fear & Greed | 10 |
+| [trading.tsx](react/trading.tsx) | Signals, whale alerts, orderbook | 8 |
+| [streaming.tsx](react/streaming.tsx) | Live WebSocket feeds | 6 |
+| [portfolio.tsx](react/portfolio.tsx) | Portfolio, watchlist, alerts | 8 |
+
+### Available Hooks
+
+| Hook | Description |
+|------|-------------|
+| `useCryptoNews` | Fetch news articles |
+| `useTrendingTopics` | Get trending tickers |
+| `usePrices` | Current prices |
+| `useMarketData` | Market cap, volume |
+| `useFearGreed` | Fear & Greed Index |
+| `useSignals` | Trading signals |
+| `useWhaleAlerts` | Large transactions |
+| `useOrderbook` | Order book depth |
+| `usePortfolio` | Portfolio valuation |
+| `useNewsStream` | Real-time news WebSocket |
+| `usePriceStream` | Real-time price WebSocket |
+
+---
+
+## 🦀 Rust
+
+### Installation
+
+Add to `Cargo.toml`:
+```toml
+[dependencies]
+fcn-sdk = "0.2"
+tokio = { version = "1", features = ["full"] }
+```
+
+### Quick Start
+
+```rust
+use fcn_sdk::FcnClient;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let client = FcnClient::new()?;
+    
+    // Get latest news
+    let news = client.get_news(10).await?;
+    for article in news.data {
+        println!("📰 {}", article.title);
+    }
+    
+    // Get Fear & Greed
+    let fg = client.get_fear_greed().await?;
+    println!("😰 Fear & Greed: {} - {}", fg.value, fg.classification);
+    
+    Ok(())
+}
+```
+
+### Example Files
+
+| File | Description | Functions |
+|------|-------------|-----------|
+| [basic.rs](rust/basic.rs) | News, search, categories | 12 |
+| [trading.rs](rust/trading.rs) | Signals, whale alerts, funding | 10 |
+| [ai_features.rs](rust/ai_features.rs) | Sentiment, digest, AI Q&A | 8 |
+| [streaming.rs](rust/streaming.rs) | WebSocket real-time feeds | 5 |
+| [portfolio.rs](rust/portfolio.rs) | Portfolio, tax reports | 6 |
 
 ---
 
