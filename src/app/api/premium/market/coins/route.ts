@@ -16,7 +16,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getTopCoins, getCoinDetails, TokenPrice } from '@/lib/market-data';
-import { ApiError } from '@/lib/api-error';
+import { ApiError, ApiErrorResponse } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs'; // Required for x402
@@ -57,7 +57,7 @@ interface PremiumCoinsResponse {
  */
 async function handler(
   request: NextRequest
-): Promise<NextResponse<PremiumCoinsResponse | { error: string; message: string }>> {
+): Promise<NextResponse> {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   
@@ -127,7 +127,10 @@ async function handler(
     );
   } catch (error) {
     logger.error('Premium coins request failed', error);
-    return ApiError.internal('Failed to fetch premium coin data', error);
+    return NextResponse.json(
+      { error: 'internal_error', message: 'Failed to fetch premium coin data' },
+      { status: 500 }
+    );
   }
 }
 

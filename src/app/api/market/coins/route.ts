@@ -34,7 +34,7 @@ interface TopCoinsResponse {
  */
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<CoinsListResponse | TopCoinsResponse | ApiErrorResponse>> {
+): Promise<NextResponse<CoinsListResponse | TopCoinsResponse> | NextResponse<ApiErrorResponse>> {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   

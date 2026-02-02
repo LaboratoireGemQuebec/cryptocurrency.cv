@@ -25,7 +25,8 @@ import {
 } from '@/lib/alerts';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 
-export const runtime = 'edge';
+// Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;

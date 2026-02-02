@@ -283,12 +283,13 @@ class FileBackend extends MemoryBackend {
   private async loadFromFile(): Promise<void> {
     // Skip in browser or Edge runtime environments
     if (typeof window !== 'undefined') return;
-    // Check for Node.js environment safely
+    // Check for Node.js environment safely - Edge Runtime doesn't have process.versions
     if (typeof process === 'undefined') return;
-    if (!process.versions || !process.versions.node) return;
+    // @ts-expect-error - EdgeRuntime is a global in Vercel Edge Runtime
+    if (typeof EdgeRuntime !== 'undefined') return;
     
     try {
-      const fs = await import('fs/promises');
+      const fs = await import(/* webpackIgnore: true */ 'fs/promises');
       const data = await fs.readFile(this.filePath, 'utf-8');
       const parsed = JSON.parse(data);
       
@@ -310,13 +311,14 @@ class FileBackend extends MemoryBackend {
   private async saveToFile(): Promise<void> {
     // Skip in browser or Edge runtime environments
     if (typeof window !== 'undefined') return;
-    // Check for Node.js environment safely
+    // Check for Node.js environment safely - Edge Runtime doesn't have process.versions
     if (typeof process === 'undefined') return;
-    if (!process.versions || !process.versions.node) return;
+    // @ts-expect-error - EdgeRuntime is a global in Vercel Edge Runtime
+    if (typeof EdgeRuntime !== 'undefined') return;
     
     try {
-      const fs = await import('fs/promises');
-      const path = await import('path');
+      const fs = await import(/* webpackIgnore: true */ 'fs/promises');
+      const path = await import(/* webpackIgnore: true */ 'path');
       
       const dir = path.dirname(this.filePath);
       await fs.mkdir(dir, { recursive: true });

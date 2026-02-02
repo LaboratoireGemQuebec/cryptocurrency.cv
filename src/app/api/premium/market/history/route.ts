@@ -82,7 +82,7 @@ function getDaysFromRange(range: string): number {
  */
 async function handler(
   request: NextRequest
-): Promise<NextResponse<PremiumHistoryResponse | { error: string; message: string }>> {
+): Promise<NextResponse> {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   

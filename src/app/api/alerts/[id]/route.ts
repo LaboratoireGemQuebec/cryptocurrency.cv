@@ -14,7 +14,8 @@ import {
 } from '@/lib/alerts';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 
-export const runtime = 'edge';
+// Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 
 interface RouteParams {
   params: Promise<{ id: string }>;
