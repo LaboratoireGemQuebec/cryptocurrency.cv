@@ -5,7 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, getRateLimitErrorResponse } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { 
   tradingView,
   type Timeframe,
@@ -23,9 +23,9 @@ export const revalidate = 60;
  * Get widgets, indicators, alerts, or technical analysis
  */
 export async function GET(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {
@@ -208,9 +208,9 @@ export async function GET(request: NextRequest) {
  * Create indicators, alerts, or generate Pine Script
  */
 export async function POST(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {

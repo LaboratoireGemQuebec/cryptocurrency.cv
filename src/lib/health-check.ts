@@ -273,8 +273,8 @@ export async function performHealthCheck(includeExternal = true): Promise<System
     overallStatus = 'healthy';
   }
   
-  // Calculate uptime (process uptime)
-  const uptime = process.uptime();
+  // Calculate uptime - use 0 if process.uptime not available (Edge runtime)
+  const uptime = typeof process !== 'undefined' && typeof process.uptime === 'function' ? process.uptime() : 0;
   
   return {
     status: overallStatus,

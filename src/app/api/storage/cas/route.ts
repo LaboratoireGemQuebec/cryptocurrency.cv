@@ -5,7 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, getRateLimitErrorResponse } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { 
   cas,
   type ContentIdentifier,
@@ -20,9 +20,9 @@ export const revalidate = 0; // No caching for CAS
  * Retrieve content by CID or list pinned content
  */
 export async function GET(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {
@@ -89,9 +89,9 @@ export async function GET(request: NextRequest) {
  * Store content, verify, or perform other CAS operations
  */
 export async function POST(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {

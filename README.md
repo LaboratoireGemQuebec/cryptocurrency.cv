@@ -564,6 +564,15 @@ curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/ai/summarize`      | Enterprise summarization with compression ratio                                                                                                | Groq     |
 | `/api/ai/entities`       | Enterprise entity extraction with graph support                                                                                                | Groq     |
 | `/api/ai/relationships`  | Relationship extraction (11 types) with clustering                                                                                             | Groq     |
+| `/api/ai/synthesize`     | Auto-cluster duplicate articles into comprehensive summaries                                                                                   | Groq     |
+| `/api/ai/explain`        | AI explains why any topic is trending with full context                                                                                        | Groq     |
+| `/api/ai/portfolio-news` | Score news by relevance to your portfolio holdings                                                                                             | Groq     |
+| `/api/ai/correlation`    | Detect correlations between news and price movements                                                                                           | Groq     |
+| `/api/ai/flash-briefing` | Ultra-short AI summaries for voice assistants                                                                                                  | Groq     |
+| `/api/ai/narratives`     | Track crypto narratives through lifecycle phases (emerging/growing/peak/declining)                                                             | Groq     |
+| `/api/ai/cross-lingual`  | Regional sentiment divergence & alpha signal detection                                                                                         | Groq     |
+| `/api/ai/source-quality` | AI-powered source scoring & clickbait detection                                                                                                | Groq     |
+| `/api/ai/research`       | Deep-dive research reports on any crypto topic                                                                                                 | Groq     |
 | `/api/detect/ai-content` | AI-generated content detection (offline, no API needed)                                                                                        | None     |
 | `/api/i18n/translate`    | Article translation (18 languages)                                                                                                             | Groq     |
 

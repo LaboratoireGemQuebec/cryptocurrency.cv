@@ -146,6 +146,42 @@ function getMinuteLimiter(tier: string, requestsPerMinute: number): Ratelimit | 
 // Main Rate Limiting Functions
 // ============================================================================
 
+import { NextRequest } from 'next/server';
+
+/**
+ * Default free tier config
+ */
+const FREE_TIER_CONFIG: TierConfig = {
+  name: 'free',
+  requestsPerDay: 1000,
+  requestsPerMinute: 60,
+};
+
+/**
+ * Check rate limit from a NextRequest (convenience wrapper)
+ * 
+ * Extracts identifier from request headers/IP and uses free tier limits.
+ * For more control, use checkRateLimit(identifier, tierConfig) directly.
+ * 
+ * @param request - NextRequest object
+ * @param tierConfig - Optional tier config (defaults to free tier)
+ * @returns Rate limit result
+ */
+export async function checkRateLimitFromRequest(
+  request: NextRequest,
+  tierConfig: TierConfig = FREE_TIER_CONFIG
+): Promise<RateLimitResult> {
+  // Extract identifier from API key header or IP
+  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
+             request.headers.get('x-real-ip') || 
+             'anonymous';
+  
+  const identifier = apiKey || `ip:${ip}`;
+  
+  return checkRateLimit(identifier, tierConfig);
+}
+
 /**
  * Check rate limit for an API key with a specific tier
  *
@@ -354,10 +390,76 @@ export async function isBlocked(identifier: string): Promise<boolean> {
 }
 
 // ============================================================================
-// Response Helpers
+// Request-based Rate Limiting (for simpler usage)
 // ============================================================================
 
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+
+/**
+ * Default tier for anonymous/free requests
+ */
+const DEFAULT_FREE_TIER: TierConfig = {
+  name: 'free',
+  requestsPerDay: 1000,
+  requestsPerMinute: 30,
+};
+
+/**
+ * Extract identifier from request (IP-based for anonymous)
+ */
+function getIdentifierFromRequest(request: NextRequest): string {
+  // Try API key first
+  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+  if (apiKey) {
+    // Hash the API key for privacy
+    let hash = 0;
+    for (let i = 0; i < apiKey.length; i++) {
+      const char = apiKey.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+    }
+    return `key:${Math.abs(hash).toString(36)}`;
+  }
+
+  // Fall back to IP
+  const forwardedFor = request.headers.get('x-forwarded-for');
+  if (forwardedFor) {
+    return `ip:${forwardedFor.split(',')[0].trim()}`;
+  }
+  
+  const realIP = request.headers.get('x-real-ip');
+  if (realIP) {
+    return `ip:${realIP}`;
+  }
+
+  // Fallback
+  const userAgent = request.headers.get('user-agent') || 'unknown';
+  let hash = 0;
+  for (let i = 0; i < userAgent.length; i++) {
+    const char = userAgent.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return `ua:${Math.abs(hash).toString(36)}`;
+}
+
+/**
+ * Check rate limit for a request (simpler API)
+ * 
+ * Automatically extracts identifier from request and uses free tier limits.
+ * For API key-based requests with custom tiers, use checkRateLimit directly.
+ */
+export async function checkRateLimitByRequest(
+  request: NextRequest,
+  tierConfig: TierConfig = DEFAULT_FREE_TIER
+): Promise<RateLimitResult> {
+  const identifier = getIdentifierFromRequest(request);
+  return checkRateLimit(identifier, tierConfig);
+}
+
+// ============================================================================
+// Response Helpers
+// ============================================================================
 
 /**
  * Generate rate limit error response

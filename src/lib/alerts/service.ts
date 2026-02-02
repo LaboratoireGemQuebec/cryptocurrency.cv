@@ -75,13 +75,12 @@ const inMemoryAlertById = new Map<string, PriceAlert>();
 // =============================================================================
 
 /**
- * Generate unique alert ID
+ * Generate unique alert ID using Edge-compatible utility
  */
-// Import crypto for secure ID generation
-import { randomUUID } from 'crypto';
+import { generateId } from '@/lib/utils/id';
 
 function generateAlertId(): string {
-  return `alert_${randomUUID()}`;
+  return generateId('alert');
 }
 
 /**

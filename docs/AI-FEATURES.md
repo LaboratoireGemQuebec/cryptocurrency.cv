@@ -21,6 +21,16 @@ Advanced AI capabilities for news analysis, summarization, and insights.
   - [Daily Brief](#daily-brief)
   - [Bull vs Bear Debate](#bull-vs-bear-debate)
   - [Counter-Arguments](#counter-arguments)
+- [AI Intelligence Suite](#ai-intelligence-suite)
+  - [News Synthesis](#news-synthesis)
+  - [Trending Explainer](#trending-explainer)
+  - [Portfolio News](#portfolio-news)
+  - [News-Price Correlation](#news-price-correlation)
+  - [Flash Briefing](#flash-briefing)
+  - [Narrative Tracker](#narrative-tracker)
+  - [Cross-Lingual Intelligence](#cross-lingual-intelligence)
+  - [Source Quality Scoring](#source-quality-scoring)
+  - [Research Agent](#research-agent)
 - [AI Market Intelligence Agent](#ai-market-intelligence-agent)
 - [The Oracle (AI Chat Interface)](#the-oracle-ai-chat-interface)
 - [AI Content Detection](#ai-content-detection)
@@ -69,6 +79,20 @@ Free Crypto News provides comprehensive AI-powered features for deeper news anal
 | **Counter-Arguments** | Challenge claims with structured counter-arguments |
 | **The Oracle** | Natural language crypto intelligence chat interface |
 | **AI Market Agent** | Multi-source signal aggregation with regime detection |
+
+### AI Intelligence Suite (NEW)
+
+| Feature | Description |
+|---------|-------------|
+| **News Synthesis** | Auto-cluster duplicate articles and synthesize into comprehensive summaries |
+| **Trending Explainer** | AI explains why any topic is trending with full context |
+| **Portfolio News** | Score news by relevance to your portfolio holdings |
+| **News-Price Correlation** | Detect correlations between news and price movements |
+| **Flash Briefing** | Ultra-short AI summaries for voice assistants |
+| **Narrative Tracker** | Track crypto narratives through lifecycle phases |
+| **Cross-Lingual Intelligence** | Detect regional sentiment divergence and alpha signals |
+| **Source Quality** | AI-powered source scoring and clickbait detection |
+| **Research Agent** | Deep-dive research reports on any crypto topic |
 
 ### Intelligence Features
 
@@ -842,6 +866,547 @@ curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
 | `alternative` | Presents alternative explanations |
 
 **Caching:** Counter-arguments are cached for 24 hours.
+
+---
+
+## AI Intelligence Suite
+
+Advanced AI-powered features for market intelligence, research, and cross-lingual analysis.
+
+---
+
+### News Synthesis
+
+Automatically clusters duplicate/similar news articles and synthesizes them into comprehensive, deduplicated summaries.
+
+**Endpoint:** `GET /api/ai/synthesize`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 5 | Number of stories to synthesize (max 10) |
+| `threshold` | float | 0.4 | Similarity threshold for clustering |
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/synthesize?limit=5"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "synthesizedStories": [
+    {
+      "headline": "SEC Approves Spot Bitcoin ETF Applications",
+      "summary": "The SEC approved multiple spot Bitcoin ETF applications...",
+      "keyFacts": ["11 ETFs approved", "BlackRock leads volume"],
+      "sourceCount": 8,
+      "sources": [{"name": "CoinDesk", "url": "..."}],
+      "sentiment": "bullish",
+      "confidence": 0.92,
+      "marketImpact": "high",
+      "relatedCoins": ["BTC", "ETH"],
+      "disagreements": ["Some sources report 10 ETFs, others 11"]
+    }
+  ],
+  "clustersFound": 12,
+  "articlesAnalyzed": 100
+}
+```
+
+**Use Cases:**
+- Reduce noise from duplicate coverage
+- Get comprehensive view of major stories
+- Identify source disagreements
+
+---
+
+### Trending Explainer
+
+AI-powered explanation for why any topic is trending, with background context and market implications.
+
+**Endpoint:** `GET /api/ai/explain`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `topic` | string | **required** | Topic to explain (e.g., "Bitcoin", "ETF") |
+| `includePrice` | boolean | false | Include price change context |
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/explain?topic=Bitcoin&includePrice=true"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "explanation": {
+    "topic": "Bitcoin",
+    "whyTrending": "ETF approval driving unprecedented institutional interest",
+    "background": "After years of SEC rejections, spot Bitcoin ETFs were finally approved...",
+    "keyEvents": [
+      {"event": "SEC approves 11 spot ETFs", "date": "2024-01-10", "significance": "Historic milestone"}
+    ],
+    "marketImplications": "Opens Bitcoin to traditional portfolios",
+    "sentiment": "bullish",
+    "priceContext": "Up 15% in 24 hours",
+    "whatToWatch": ["ETF volume", "Institutional inflows"],
+    "relatedTopics": ["ETF", "SEC", "Institutions"]
+  },
+  "articleCount": 45
+}
+```
+
+**Use Cases:**
+- Quick context on trending topics
+- Onboard new users to current events
+- Research background for trading decisions
+
+---
+
+### Portfolio News
+
+Scores news articles by relevance to your specific portfolio holdings, categorized by urgency.
+
+**Endpoint:** `POST /api/ai/portfolio-news`
+
+**Request Body:**
+
+```json
+{
+  "holdings": [
+    {"symbol": "BTC", "name": "Bitcoin", "allocation": 0.5},
+    {"symbol": "ETH", "name": "Ethereum", "allocation": 0.3},
+    {"symbol": "SOL", "name": "Solana", "allocation": 0.2}
+  ]
+}
+```
+
+**Request:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/ai/portfolio-news" \
+  -H "Content-Type: application/json" \
+  -d '{"holdings": [{"symbol": "BTC", "name": "Bitcoin", "allocation": 0.5}]}'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "portfolioSize": 3,
+  "articlesAnalyzed": 50,
+  "relevantArticles": 12,
+  "byUrgency": {"immediate": 2, "important": 5, "informational": 5},
+  "articles": {
+    "immediate": [
+      {
+        "articleTitle": "Solana Network Outage Reported",
+        "relevanceScore": 95,
+        "relevantHoldings": [
+          {"symbol": "SOL", "impact": "negative", "reason": "Direct impact"}
+        ],
+        "urgency": "immediate",
+        "actionSuggestion": "Monitor network status"
+      }
+    ]
+  }
+}
+```
+
+**Urgency Levels:**
+
+| Level | Description |
+|-------|-------------|
+| `immediate` | Requires immediate attention (>80 relevance) |
+| `important` | Should review soon (60-80 relevance) |
+| `informational` | Good to know (40-60 relevance) |
+
+---
+
+### News-Price Correlation
+
+Detects potential correlations between news articles and cryptocurrency price movements.
+
+**Endpoint:** `GET /api/ai/correlation`
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/correlation"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "correlations": [
+    {
+      "article": "SEC Chair Hints at Ethereum ETF Approval",
+      "coin": "ETH",
+      "priceMove": 8.5,
+      "confidence": 0.85,
+      "explanation": "Regulatory news directly impacted price",
+      "timing": "News came 15 mins before price surge"
+    }
+  ],
+  "summary": "Strong correlation between regulatory news and large-cap prices today",
+  "significantMovers": [
+    {"symbol": "ETH", "price": 3500, "change1h": 5.2, "change24h": 12.3}
+  ],
+  "articlesAnalyzed": 50,
+  "coinsAnalyzed": 50
+}
+```
+
+**Use Cases:**
+- Understand what's moving markets
+- Validate trading hypotheses
+- Research news impact patterns
+
+---
+
+### Flash Briefing
+
+Ultra-short AI-generated summary of top crypto stories. Perfect for voice assistants, notifications, or quick updates.
+
+**Endpoint:** `GET /api/ai/flash-briefing`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `stories` | integer | 5 | Number of stories to include (max 10) |
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/flash-briefing?stories=3"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "briefing": "Crypto markets are buzzing today with Bitcoin pushing past $100k...",
+  "stories": [
+    {
+      "headline": "Bitcoin Breaks $100k",
+      "oneLineSummary": "BTC hits all-time high on institutional demand",
+      "sentiment": "bullish"
+    }
+  ],
+  "marketMood": "bullish",
+  "articlesAnalyzed": 50
+}
+```
+
+**Integration Ideas:**
+- Alexa/Google Home skills
+- Morning notification digests
+- Slack/Discord bots
+- Apple Watch complications
+
+---
+
+### Narrative Tracker
+
+Tracks crypto narratives through their complete lifecycle: emerging → growing → peak → declining → dormant.
+
+**Endpoint:** `GET /api/ai/narratives`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `predict` | string | - | Get prediction for specific narrative |
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/narratives"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "activeNarratives": [
+    {
+      "id": "bitcoin-etf",
+      "name": "Bitcoin ETF",
+      "lifecycle": "peak",
+      "strength": 95,
+      "velocity": 0.1,
+      "sentiment": 0.8,
+      "relatedCoins": ["BTC"],
+      "prediction": {
+        "nextPhase": "Narrative will stabilize as ETF becomes normalized",
+        "confidence": 0.7,
+        "timeframe": "2-4 weeks"
+      }
+    }
+  ],
+  "emergingNarratives": [...],
+  "decliningNarratives": [...],
+  "marketCycle": {
+    "cyclePhase": "markup",
+    "confidence": 0.7,
+    "dominantNarratives": ["Bitcoin ETF", "Institutional Adoption"],
+    "historicalAnalog": "Similar to Q4 2020 - Early 2021 bull run"
+  }
+}
+```
+
+**Lifecycle Phases:**
+
+| Phase | Description |
+|-------|-------------|
+| `emerging` | New narrative gaining traction (<30 strength) |
+| `growing` | Rapidly expanding coverage (30-60 strength) |
+| `peak` | Maximum attention (>80 strength, slowing velocity) |
+| `declining` | Fading interest (dropping strength) |
+| `dormant` | Minimal coverage (<10 strength) |
+
+---
+
+### Cross-Lingual Intelligence
+
+Detects when Asian/European sources break news before Western sources. Identifies regional sentiment divergence for potential alpha signals.
+
+**Endpoint:** `GET /api/ai/cross-lingual`
+
+**Request:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/cross-lingual"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "alphaSignals": [
+    {
+      "topic": "New Binance regulatory compliance",
+      "firstRegion": "asia",
+      "firstSource": "Block Media (Korea)",
+      "confidence": 0.85,
+      "potentialImpact": "medium",
+      "summary": "First reported 2 hours before English sources",
+      "relatedCoins": ["BNB"]
+    }
+  ],
+  "regionalSentiments": [
+    {
+      "region": "asia",
+      "overallSentiment": "bullish",
+      "confidence": 0.75,
+      "topTopics": ["Bitcoin ETF", "Korean adoption"],
+      "divergenceFromGlobal": 0.15
+    }
+  ],
+  "divergenceAlerts": [
+    {
+      "topic": "Altcoin season",
+      "asianSentiment": "bullish",
+      "westernSentiment": "neutral",
+      "significance": "Asian traders may be front-running altcoin moves"
+    }
+  ],
+  "articleCounts": {"asia": 45, "europe": 30, "anglosphere": 80}
+}
+```
+
+**Regions Analyzed:**
+
+| Region | Languages | Sources |
+|--------|-----------|---------|
+| Asia | Korean, Chinese, Japanese | 25+ sources |
+| Europe | German, French, Italian, Spanish | 15+ sources |
+| Anglosphere | English | 130+ sources |
+
+---
+
+### Source Quality Scoring
+
+AI-powered analysis of news source quality, reliability, and clickbait detection.
+
+**Endpoint:** `GET /api/ai/source-quality`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `source` | string | - | Analyze specific source |
+| `category` | string | - | Rank sources in category |
+| `clickbait` | boolean | false | Detect clickbait articles |
+
+**Analyze Source:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/source-quality?source=CoinDesk"
+```
+
+```json
+{
+  "success": true,
+  "sourceQuality": {
+    "sourceName": "CoinDesk",
+    "overallScore": 85,
+    "accuracyScore": 88,
+    "speedScore": 82,
+    "originalityScore": 90,
+    "clickbaitScore": 15,
+    "strengths": ["Original reporting", "Fast breaking news"],
+    "weaknesses": ["Occasional sponsored content"],
+    "bestFor": ["Breaking news", "Regulatory coverage"],
+    "trustLevel": "high"
+  }
+}
+```
+
+**Detect Clickbait:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/source-quality?clickbait=true"
+```
+
+```json
+{
+  "success": true,
+  "articlesAnalyzed": 50,
+  "clickbaitCount": 8,
+  "clickbaitPercentage": "16.0",
+  "worstOffenders": [
+    {
+      "title": "YOU WON'T BELIEVE What Bitcoin Did!!!",
+      "source": "CryptoHype",
+      "isClickbait": true,
+      "score": 85,
+      "reasons": ["Sensational keywords", "Excessive punctuation"]
+    }
+  ]
+}
+```
+
+**Quality Scores:**
+
+| Score | Meaning |
+|-------|---------|
+| 90-100 | Excellent - Tier 1 source |
+| 70-89 | Good - Reliable for most content |
+| 50-69 | Average - Verify important claims |
+| <50 | Poor - Use with caution |
+
+---
+
+### Research Agent
+
+Deep-dive AI research on any crypto topic. Generates comprehensive reports with investment thesis, risks, and opportunities.
+
+**Endpoint:** `GET /api/ai/research`
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `topic` | string | **required** | Topic to research |
+| `mode` | string | full | `full` for complete report, `quick` for quick take |
+| `compare` | string | - | Compare assets: `BTC,ETH` |
+| `contrarian` | boolean | false | Find contrarian opportunities |
+
+**Full Research Report:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/research?topic=Solana"
+```
+
+```json
+{
+  "success": true,
+  "report": {
+    "topic": "Solana",
+    "executiveSummary": "Solana experiencing renewed institutional interest...",
+    "newsAnalysis": {
+      "totalArticles": 35,
+      "sentimentBreakdown": {"bullish": 60, "bearish": 15, "neutral": 25},
+      "keyThemes": ["Network reliability", "DeFi growth"],
+      "recentDevelopments": [
+        {"date": "2026-02-01", "event": "TVL hits $10B", "significance": "high"}
+      ]
+    },
+    "investmentThesis": {
+      "bullCase": {
+        "summary": "Technical improvements position Solana for gains",
+        "arguments": ["Improved uptime", "Growing TVL"],
+        "priceTarget": "$300-400",
+        "confidence": 0.65
+      },
+      "bearCase": {
+        "summary": "Competition and past issues remain concerns",
+        "arguments": ["Ethereum L2 competition", "Historical outages"],
+        "confidence": 0.55
+      },
+      "verdict": "bullish"
+    },
+    "risks": [
+      {"risk": "Network outage", "severity": "high", "probability": 0.2}
+    ],
+    "opportunities": [
+      {"opportunity": "DeFi TVL growth", "timeframe": "medium term", "potentialReturn": "50-100%"}
+    ]
+  }
+}
+```
+
+**Quick Take:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/research?topic=DeFi&mode=quick"
+```
+
+**Compare Assets:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/research?compare=BTC,ETH"
+```
+
+**Contrarian Opportunities:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/research?contrarian=true"
+```
+
+```json
+{
+  "success": true,
+  "opportunities": [
+    {
+      "asset": "XRP",
+      "currentSentiment": -0.6,
+      "contraryReason": "Oversold on FUD, legal clarity improving",
+      "potentialCatalysts": ["SEC case resolution", "Utility expansion"],
+      "riskLevel": "high",
+      "confidence": 0.6
+    }
+  ]
+}
+```
 
 ---
 

@@ -6,7 +6,7 @@ import {
   EventClassification,
 } from '@/lib/event-classifier';
 import {
-  checkRateLimit,
+  checkRateLimitByRequest,
   rateLimitResponse,
   addRateLimitHeaders,
 } from '@/lib/rate-limit';
@@ -35,7 +35,7 @@ interface ErrorResponse {
  */
 export async function POST(request: NextRequest): Promise<NextResponse> {
   // Rate limiting
-  const rateLimitResult = checkRateLimit(request);
+  const rateLimitResult = checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }

@@ -14,7 +14,7 @@ import {
   getTopicCoverage,
   getSourceDiversity,
 } from '@/lib/coverage-gap';
-import { checkRateLimit } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest } from '@/lib/ratelimit';
 
 // =============================================================================
 // GET /api/coverage-gap
@@ -22,10 +22,10 @@ import { checkRateLimit } from '@/lib/ratelimit';
 
 export async function GET(request: NextRequest) {
   // Rate limiting
-  const rateLimit = await checkRateLimit(request);
+  const rateLimit = await checkRateLimitFromRequest(request);
   if (!rateLimit.allowed) {
     return NextResponse.json(
-      { error: 'Rate limit exceeded', resetTime: rateLimit.resetTime },
+      { error: 'Rate limit exceeded', resetAt: rateLimit.resetAt },
       { status: 429 }
     );
   }

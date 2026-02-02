@@ -174,7 +174,7 @@ export async function GET() {
     status: overallStatus,
     timestamp: new Date().toISOString(),
     version: process.env.NEXT_PUBLIC_APP_VERSION || '1.0.0',
-    uptime: process.uptime ? process.uptime() : 0,
+    uptime: 0, // process.uptime() not available in Edge runtime
     checks,
   };
 

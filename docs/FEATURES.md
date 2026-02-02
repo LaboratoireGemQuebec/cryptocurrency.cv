@@ -394,7 +394,27 @@ AI-generated news digest.
 - Trend analysis
 - Customizable topics
 
-### 🧮 Calculator
+### � AI Intelligence Suite
+
+Advanced AI-powered market intelligence.
+
+**Endpoints:** `/api/ai/*`
+
+**Features:**
+
+| Feature | Endpoint | Description |
+|---------|----------|-------------|
+| **News Synthesis** | `/api/ai/synthesize` | Auto-clusters duplicate articles into comprehensive summaries |
+| **Trending Explainer** | `/api/ai/explain` | AI explains why topics are trending with full context |
+| **Portfolio News** | `/api/ai/portfolio-news` | Scores news relevance to your holdings |
+| **News-Price Correlation** | `/api/ai/correlation` | Detects news-to-price correlations |
+| **Flash Briefing** | `/api/ai/flash-briefing` | Ultra-short summaries for voice assistants |
+| **Narrative Tracker** | `/api/ai/narratives` | Tracks narratives through lifecycle phases |
+| **Cross-Lingual** | `/api/ai/cross-lingual` | Regional sentiment divergence detection |
+| **Source Quality** | `/api/ai/source-quality` | Source scoring and clickbait detection |
+| **Research Agent** | `/api/ai/research` | Deep-dive research reports |
+
+### �🧮 Calculator
 
 Crypto calculators.
 

@@ -283,7 +283,9 @@ class FileBackend extends MemoryBackend {
   private async loadFromFile(): Promise<void> {
     // Skip in browser or Edge runtime environments
     if (typeof window !== 'undefined') return;
-    if (typeof process === 'undefined' || !process.versions?.node) return;
+    // Check for Node.js environment safely
+    if (typeof process === 'undefined') return;
+    if (!process.versions || !process.versions.node) return;
     
     try {
       const fs = await import('fs/promises');
@@ -308,7 +310,9 @@ class FileBackend extends MemoryBackend {
   private async saveToFile(): Promise<void> {
     // Skip in browser or Edge runtime environments
     if (typeof window !== 'undefined') return;
-    if (typeof process === 'undefined' || !process.versions?.node) return;
+    // Check for Node.js environment safely
+    if (typeof process === 'undefined') return;
+    if (!process.versions || !process.versions.node) return;
     
     try {
       const fs = await import('fs/promises');

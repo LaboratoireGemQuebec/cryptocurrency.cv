@@ -23,7 +23,7 @@ import {
   type PredictionTimeframe,
   type PredictionStatus,
 } from '@/lib/predictions';
-import { checkRateLimit, getRateLimitErrorResponse, type RateLimitResult } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest, getRateLimitErrorResponse, type RateLimitResult } from '@/lib/ratelimit';
 
 // =============================================================================
 // VALIDATION
@@ -168,9 +168,9 @@ export async function GET(request: NextRequest) {
     const minPredictions = parseInt(searchParams.get('minPredictions') || '5');
 
     // Rate limiting
-    const rateLimit = checkRateLimit(request);
+    const rateLimit = await checkRateLimitFromRequest(request);
     if (!rateLimit.allowed) {
-      return rateLimitResponse(rateLimit);
+      return getRateLimitErrorResponse(rateLimit);
     }
 
     // Handle different views
@@ -270,9 +270,9 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     // Rate limiting
-    const rateLimit = checkRateLimit(request);
+    const rateLimit = await checkRateLimitFromRequest(request);
     if (!rateLimit.allowed) {
-      return rateLimitResponse(rateLimit);
+      return getRateLimitErrorResponse(rateLimit);
     }
 
     const body = await request.json();

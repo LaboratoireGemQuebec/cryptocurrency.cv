@@ -5,7 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, getRateLimitErrorResponse } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { 
   analyzeCausality, 
   assessNewsImpact, 
@@ -26,9 +26,9 @@ export const revalidate = 60;
  * List causal events or get analysis for a specific event
  */
 export async function GET(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {
@@ -75,9 +75,9 @@ export async function GET(request: NextRequest) {
  * Perform causal analysis on an event
  */
 export async function POST(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const rateLimitResult = await checkRateLimitFromRequest(request);
   if (!rateLimitResult.allowed) {
-    return rateLimitResponse(rateLimitResult);
+    return getRateLimitErrorResponse(rateLimitResult);
   }
 
   try {

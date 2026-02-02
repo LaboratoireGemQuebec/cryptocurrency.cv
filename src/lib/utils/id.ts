@@ -4,10 +4,36 @@
  * Provides cryptographically secure, unique ID generation
  * for all system components.
  * 
+ * Compatible with Edge runtime (uses Web Crypto API).
+ * 
  * @module lib/utils/id
  */
 
-import { randomUUID } from 'crypto';
+/**
+ * Generate a UUID using Web Crypto API (Edge-compatible)
+ */
+function getRandomUUID(): string {
+  // Use Web Crypto API (works in Edge runtime)
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  // Fallback: generate UUID v4 manually
+  const bytes = new Uint8Array(16);
+  if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+    crypto.getRandomValues(bytes);
+  } else {
+    // Last resort fallback (should never happen in modern runtimes)
+    for (let i = 0; i < 16; i++) {
+      bytes[i] = Math.floor(Math.random() * 256);
+    }
+  }
+  // Set version (4) and variant bits
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  
+  const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
 
 /**
  * Generate a cryptographically secure unique ID with optional prefix
@@ -22,7 +48,7 @@ import { randomUUID } from 'crypto';
  * generateId('export') // "export_550e8400-e29b-41d4-a716-446655440000"
  */
 export function generateId(prefix?: string): string {
-  const uuid = randomUUID();
+  const uuid = getRandomUUID();
   return prefix ? `${prefix}_${uuid}` : uuid;
 }
 
@@ -41,14 +67,12 @@ export function generateShortId(prefix: string): string {
   const timestamp = Date.now().toString(36);
   // Use crypto.getRandomValues for secure random component
   const randomBytes = new Uint8Array(6);
-  if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.getRandomValues) {
-    globalThis.crypto.getRandomValues(randomBytes);
+  if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+    crypto.getRandomValues(randomBytes);
   } else {
-    // Fallback for server-side - use Node crypto
-    const nodeCrypto = require('crypto');
-    const bytes = nodeCrypto.randomBytes(6);
+    // Fallback (should not happen in modern runtimes)
     for (let i = 0; i < 6; i++) {
-      randomBytes[i] = bytes[i];
+      randomBytes[i] = Math.floor(Math.random() * 256);
     }
   }
   const random = Array.from(randomBytes)
@@ -66,7 +90,7 @@ export function generateShortId(prefix: string): string {
  * @returns A secure verification token
  */
 export function generateVerificationToken(): string {
-  return randomUUID().replace(/-/g, '') + randomUUID().replace(/-/g, '');
+  return getRandomUUID().replace(/-/g, '') + getRandomUUID().replace(/-/g, '');
 }
 
 /**

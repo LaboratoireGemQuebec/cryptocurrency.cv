@@ -2,11 +2,39 @@
 
 Utility scripts for development, testing, and maintenance of Free Crypto News.
 
+## Quick Reference
+
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| `dev-setup.sh` | New developer setup | `./scripts/dev-setup.sh` |
+| `health-check.sh` | API health checks | `./scripts/health-check.sh --local` |
+| `cleanup.sh` | Remove build artifacts | `./scripts/cleanup.sh --all` |
+| `run-all-tests.sh` | Run all test suites | `./scripts/run-all-tests.sh` |
+| `release.sh` | Version & release | `./scripts/release.sh patch` |
+| `env-check.sh` | Validate env vars | `./scripts/env-check.sh` |
+| `deploy.sh` | Deploy to production | `./scripts/deploy.sh --preview` |
+| `backup.sh` | Backup data & config | `./scripts/backup.sh` |
+| `benchmark.sh` | Performance testing | `./scripts/benchmark.sh --api` |
+| `logs.sh` | View production logs | `./scripts/logs.sh --vercel` |
+| `docker-build.sh` | Docker operations | `./scripts/docker-build.sh` |
+
 ## Directory Structure
 
 ```
 scripts/
+├── dev-setup.sh               # One-command development setup
+├── health-check.sh            # Production health checks
+├── cleanup.sh                 # Clean build artifacts & caches
+├── run-all-tests.sh           # Run TypeScript, lint, unit & E2E tests
+├── release.sh                 # Version bump, changelog, tag & push
+├── env-check.sh               # Validate environment variables
+├── deploy.sh                  # Deploy to Vercel/Railway
+├── backup.sh                  # Backup data & configuration
+├── benchmark.sh               # API & load testing
+├── logs.sh                    # View/search production logs
+├── docker-build.sh            # Docker build & run
 ├── generate-changelog.sh      # Generate changelog from git history
+├── test-api.sh                # Test API endpoints
 ├── analyze-commits.js         # Compare commits against CHANGELOG.md
 ├── commit-stats.js            # Git repository statistics
 ├── CHANGELOG-AUTOMATION.md    # Full documentation for changelog tools
@@ -24,6 +52,30 @@ scripts/
 └── i18n/                      # Internationalization scripts
     ├── translate.ts           # Auto-translate messages
     └── validate.ts            # Validate translations
+```
+
+## Development Setup
+
+### First-Time Setup
+```bash
+# Complete development environment setup
+./scripts/dev-setup.sh
+```
+
+This script:
+- Checks Node.js version (18+ required)
+- Installs all dependencies (main, MCP, CLI)
+- Creates `.env.local` from template
+- Sets up git hooks (husky)
+- Runs initial lint check
+
+### Environment Validation
+```bash
+# Check all environment variables
+./scripts/env-check.sh
+
+# Strict mode (fail on optional missing)
+./scripts/env-check.sh --strict
 ```
 
 ## Changelog Automation
@@ -93,6 +145,27 @@ node scripts/generate-pwa-icons.js
 
 ## Testing
 
+### Run All Tests
+```bash
+# Full test suite (TypeScript, lint, unit, E2E)
+./scripts/run-all-tests.sh
+
+# Quick mode (skip E2E)
+./scripts/run-all-tests.sh --quick
+
+# With coverage
+./scripts/run-all-tests.sh --coverage
+
+# CI mode
+./scripts/run-all-tests.sh --ci
+```
+
+### API Testing
+```bash
+# Test all API endpoints
+./scripts/test-api.sh
+```
+
 ### Load Testing
 ```bash
 # Run API load tests
@@ -101,6 +174,139 @@ node scripts/load-test.js
 # Custom concurrent users
 node scripts/load-test.js --users=100
 ```
+
+### Benchmarking
+```bash
+# Full benchmark (API + load)
+./scripts/benchmark.sh
+
+# API response times only
+./scripts/benchmark.sh --api
+
+# Load testing
+./scripts/benchmark.sh --load --requests=500 --concurrency=20
+
+# Custom URL
+./scripts/benchmark.sh --url=https://news-crypto.vercel.app
+```
+
+## Health Checks
+
+```bash
+# Check production
+./scripts/health-check.sh
+
+# Check localhost
+./scripts/health-check.sh --local
+
+# Custom URL with verbose output
+./scripts/health-check.sh --url=https://staging.example.com --verbose
+```
+
+## Deployment
+
+### Deploy to Production
+```bash
+# Deploy to Vercel (production)
+./scripts/deploy.sh
+
+# Preview deployment
+./scripts/deploy.sh --preview
+
+# Deploy to Railway
+./scripts/deploy.sh --railway
+
+# Dry run (pre-flight checks only)
+./scripts/deploy.sh --dry-run
+
+# Skip tests
+./scripts/deploy.sh --skip-tests
+```
+
+### Release New Version
+```bash
+# Patch release (1.0.0 -> 1.0.1)
+./scripts/release.sh patch
+
+# Minor release (1.0.0 -> 1.1.0)
+./scripts/release.sh minor
+
+# Major release (1.0.0 -> 2.0.0)
+./scripts/release.sh major
+
+# Specific version
+./scripts/release.sh 2.0.0
+
+# Dry run
+./scripts/release.sh patch --dry-run
+```
+
+### Docker
+```bash
+# Build and run
+./scripts/docker-build.sh
+
+# Build only
+./scripts/docker-build.sh --build
+
+# Run existing image
+./scripts/docker-build.sh --run
+
+# Build and push to registry
+./scripts/docker-build.sh --push --registry=ghcr.io/username
+
+# Stop container
+./scripts/docker-build.sh --stop
+```
+
+## Maintenance
+
+### Cleanup
+```bash
+# Standard cleanup (build artifacts, caches)
+./scripts/cleanup.sh
+
+# Deep clean (includes node_modules)
+./scripts/cleanup.sh --all
+
+# Preview what would be deleted
+./scripts/cleanup.sh --dry-run
+```
+
+### Backup
+```bash
+# Full backup (data + config)
+./scripts/backup.sh
+
+# Data only
+./scripts/backup.sh --data
+
+# Config only
+./scripts/backup.sh --config
+
+# Custom output location
+./scripts/backup.sh --output=/path/to/backups
+```
+
+### Logs
+```bash
+# Tail Vercel logs
+./scripts/logs.sh
+
+# Search logs
+./scripts/logs.sh --search="error"
+
+# Railway logs
+./scripts/logs.sh --railway
+
+# Local logs
+./scripts/logs.sh --local
+
+# Last N lines without following
+./scripts/logs.sh --lines=200 --no-follow
+```
+
+## Load Testing
 
 ## Internationalization
 
@@ -139,6 +345,17 @@ node scripts/archive/stats.js 2026-01
 ## Adding New Scripts
 
 1. Create your script in the `scripts/` directory
-2. Add usage documentation at the top of the file
-3. Update this README with script description
-4. If complex, create a dedicated `SCRIPT-NAME.md` documentation file
+2. Add shebang and usage documentation at the top:
+   ```bash
+   #!/bin/bash
+   #
+   # Script Name
+   # Description of what it does
+   #
+   # Usage:
+   #   ./scripts/script-name.sh [options]
+   #
+   ```
+3. Make it executable: `chmod +x scripts/script-name.sh`
+4. Update this README with script description
+5. If complex, create a dedicated `SCRIPT-NAME.md` documentation file

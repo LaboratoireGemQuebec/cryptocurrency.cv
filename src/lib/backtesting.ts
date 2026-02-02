@@ -295,11 +295,11 @@ export const BUILTIN_STRATEGIES: Strategy[] = [
 // HELPER FUNCTIONS
 // =============================================================================
 
-// Import crypto for secure ID generation
-import { randomUUID } from 'crypto';
+// Import Edge-compatible ID utility
+import { generateId as generateUniqueId } from '@/lib/utils/id';
 
 function generateId(): string {
-  return `bt_${randomUUID()}`;
+  return generateUniqueId('bt');
 }
 
 function calculateSharpe(returns: number[], riskFreeRate: number = 0.02): number {

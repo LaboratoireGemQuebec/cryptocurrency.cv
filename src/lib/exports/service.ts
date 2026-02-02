@@ -233,11 +233,11 @@ const SCHEMAS: Record<DataType, SchemaDefinition> = {
 
 const exportJobs = new Map<string, ExportJob>();
 
-// Import crypto for secure ID generation
-import { randomUUID } from 'crypto';
+// Import Edge-compatible ID utility
+import { generateId } from '@/lib/utils/id';
 
 function generateJobId(): string {
-  return `export_${randomUUID()}`;
+  return generateId('export');
 }
 
 // =============================================================================

@@ -9,6 +9,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### AI Intelligence Suite (Feb 2, 2026)
+- **9 New AI-Powered API Endpoints** for advanced market intelligence:
+  - **News Synthesis** (`/api/ai/synthesize`) - Auto-clusters duplicate articles into comprehensive summaries
+  - **Trending Explainer** (`/api/ai/explain`) - AI explains why topics are trending with full context
+  - **Portfolio News** (`/api/ai/portfolio-news`) - Scores news by relevance to portfolio holdings
+  - **News-Price Correlation** (`/api/ai/correlation`) - Detects correlations between news and price movements
+  - **Flash Briefing** (`/api/ai/flash-briefing`) - Ultra-short summaries for voice assistants
+  - **Narrative Tracker** (`/api/ai/narratives`) - Tracks narratives through lifecycle phases (emerging → peak → declining)
+  - **Cross-Lingual Intelligence** (`/api/ai/cross-lingual`) - Regional sentiment divergence & alpha signal detection
+  - **Source Quality Scoring** (`/api/ai/source-quality`) - AI-powered source reliability & clickbait detection
+  - **Research Agent** (`/api/ai/research`) - Deep-dive research reports with investment thesis
+- **5 New AI Library Modules** in `src/lib/`:
+  - `ai-intelligence.ts` - Core intelligence engine for synthesis, trending, portfolio, correlation, flash briefing
+  - `cross-lingual-intelligence.ts` - Regional sentiment analysis and alpha signal detection
+  - `narrative-tracker.ts` - Narrative lifecycle tracking with market cycle detection
+  - `source-quality-scorer.ts` - Source quality scoring with clickbait detection
+  - `ai-research-agent.ts` - Research report generation with contrarian opportunity finding
+- **Comprehensive Documentation** - Updated API.md, AI-FEATURES.md, FEATURES.md with new endpoints
+
+#### i18n Translation (Feb 2, 2026)
+- **Automated Translation Script** (`scripts/translate-i18n.js`) - Groq-powered translation for all 17 locales
+- **Rate-Limit Handling** - Chunked processing with automatic retry logic
+- **Languages Supported**: Arabic, German, Spanish, French, Indonesian, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Russian, Thai, Turkish, Vietnamese, Chinese (Simplified & Traditional)
+
 #### AI Agent Templates (Feb 2, 2026)
 - **5 Production-Ready AI Agent Templates** in `examples/agents/`:
   - **Trading Bot** (`trading-bot.py`) - AI-powered trading signal generator:

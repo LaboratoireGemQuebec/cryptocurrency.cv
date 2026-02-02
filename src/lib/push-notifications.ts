@@ -34,12 +34,11 @@ export interface PushPayload {
 // In-memory store (replace with DB in production)
 const subscriptions = new Map<string, PushSubscription>();
 
-// Generate ID
-// Import crypto for secure ID generation
-import { randomUUID } from 'crypto';
+// Generate ID using Web Crypto API (Edge-compatible)
+import { generateId as generateUniqueId } from '@/lib/utils/id';
 
 function generateId(): string {
-  return `push_${randomUUID()}`;
+  return generateUniqueId('push');
 }
 
 /**
