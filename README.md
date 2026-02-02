@@ -1,3 +1,16 @@
+---
+name: Free Crypto News API
+type: api
+category: cryptocurrency
+auth: none
+pricing: free
+endpoints: 150+
+sources: 200+
+llms_txt: https://news-crypto.vercel.app/llms.txt
+openapi: https://news-crypto.vercel.app/api/openapi.json
+mcp_server: "@anthropic-ai/mcp-server-crypto-news"
+---
+
 🌐 **Languages (42):** [English](README.md) | [العربية](README.ar.md) | [Български](README.bg.md) | [বাংলা](README.bn.md) | [Čeština](README.cs.md) | [Dansk](README.da.md) | [Deutsch](README.de.md) | [Ελληνικά](README.el.md) | [Español](README.es.md) | [فارسی](README.fa.md) | [Suomi](README.fi.md) | [Français](README.fr.md) | [עברית](README.he.md) | [हिन्दी](README.hi.md) | [Hrvatski](README.hr.md) | [Magyar](README.hu.md) | [Indonesia](README.id.md) | [Italiano](README.it.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Melayu](README.ms.md) | [Nederlands](README.nl.md) | [Norsk](README.no.md) | [Polski](README.pl.md) | [Português](README.pt.md) | [Română](README.ro.md) | [Русский](README.ru.md) | [Slovenčina](README.sk.md) | [Slovenščina](README.sl.md) | [Српски](README.sr.md) | [Svenska](README.sv.md) | [Kiswahili](README.sw.md) | [தமிழ்](README.ta.md) | [తెలుగు](README.te.md) | [ไทย](README.th.md) | [Filipino](README.tl.md) | [Türkçe](README.tr.md) | [Українська](README.uk.md) | [اردو](README.ur.md) | [Tiếng Việt](README.vi.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 ---
@@ -8,8 +21,27 @@
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
   <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="License"></a>
   <a href="https://github.com/nirholas/free-crypto-news/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/nirholas/free-crypto-news/ci.yml?style=for-the-badge&logo=github-actions&label=CI" alt="CI Status"></a>
+  <a href="https://codecov.io/gh/nirholas/free-crypto-news"><img src="https://img.shields.io/codecov/c/github/nirholas/free-crypto-news?style=for-the-badge&logo=codecov&label=Coverage" alt="Coverage"></a>
   <a href="https://github.com/nirholas/free-crypto-news/issues"><img src="https://img.shields.io/github/issues/nirholas/free-crypto-news?style=for-the-badge&color=orange" alt="Issues"></a>
-  <a href="https://github.com/nirholas/free-crypto-news/pulls"><img src="https://img.shields.io/github/issues-pr/nirholas/free-crypto-news?style=for-the-badge&color=purple" alt="Pull Requests"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@nirholas/crypto-news"><img src="https://img.shields.io/npm/v/@nirholas/crypto-news?style=flat-square&logo=npm&color=red" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@nirholas/crypto-news"><img src="https://img.shields.io/npm/dm/@nirholas/crypto-news?style=flat-square&logo=npm" alt="npm downloads"></a>
+  <a href="https://pypi.org/project/free-crypto-news/"><img src="https://img.shields.io/pypi/v/free-crypto-news?style=flat-square&logo=python&color=blue" alt="PyPI version"></a>
+  <a href="https://hub.docker.com/r/nirholas/free-crypto-news"><img src="https://img.shields.io/docker/pulls/nirholas/free-crypto-news?style=flat-square&logo=docker" alt="Docker Pulls"></a>
+  <a href="https://discord.gg/cryptonews"><img src="https://img.shields.io/discord/1234567890?style=flat-square&logo=discord&label=Discord" alt="Discord"></a>
+</p>
+
+> **🤖 AI Agents:** Free, no-auth crypto news API with 200+ sources. `curl https://news-crypto.vercel.app/api/news` • [LLM Docs](/llms.txt) • [Full API Docs](/llms-full.txt) • [OpenAPI](/api/openapi.json) • MCP: `npx @anthropic-ai/mcp-server-crypto-news`
+
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-sdks">SDKs</a> •
+  <a href="#-api-endpoints">API</a> •
+  <a href="#-cli">CLI</a> •
+  <a href="#-docker">Docker</a> •
+  <a href="https://news-crypto.vercel.app/developers">Docs</a>
 </p>
 
 <p align="center">

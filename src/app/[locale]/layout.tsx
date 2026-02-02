@@ -9,7 +9,7 @@ import { PWAProvider } from '@/components/PWAProvider';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { UpdatePrompt } from '@/components/UpdatePrompt';
 import { OfflineIndicator } from '@/components/OfflineIndicator';
-import BottomNav from '@/components/BottomNav';
+import { BottomNav } from '@/components/BottomNav';
 import { BookmarksProvider } from '@/components/BookmarksProvider';
 import { ThemeProvider, ThemeScript } from '@/components/ThemeProvider';
 import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
@@ -150,6 +150,15 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-capable': 'yes',
     'application-name': 'CryptoNews',
     'apple-mobile-web-app-title': 'CryptoNews',
+    // AI/LLM Discovery meta tags
+    'ai:llms_txt': 'https://news-crypto.vercel.app/llms.txt',
+    'ai:llms_full_txt': 'https://news-crypto.vercel.app/llms-full.txt',
+    'ai:openapi': 'https://news-crypto.vercel.app/api/openapi.json',
+    'ai:agents': 'https://news-crypto.vercel.app/.well-known/agents.json',
+    'ai:mcp_server': '@anthropic-ai/mcp-server-crypto-news',
+    'ai:capabilities': 'news,market-data,sentiment,trading-signals,whale-alerts',
+    'ai:auth': 'none',
+    'ai:pricing': 'free',
   },
 };
 

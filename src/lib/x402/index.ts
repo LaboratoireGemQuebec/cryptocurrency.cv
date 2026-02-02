@@ -184,7 +184,7 @@ export {
   type ProtectedRequestResult,
   type HybridAuthContext,
   type HybridAuthResult,
-} from './middleware';
+} from './auth';
 
 // =============================================================================
 // RATE LIMITING (from ./rate-limit.ts)

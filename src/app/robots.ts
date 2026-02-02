@@ -83,6 +83,36 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'YouBot',
         allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
       },
+      // Mistral AI
+      {
+        userAgent: 'mistral-crawler',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // Amazon AI
+      {
+        userAgent: 'Amazonbot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // Apple AI
+      {
+        userAgent: 'Applebot-Extended',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // ByteDance/TikTok AI
+      {
+        userAgent: 'Bytespider',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // OpenAI SearchGPT
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // Common Crawl (training data)
+      {
+        userAgent: 'CCBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/llms.txt', '/llms-full.txt'],
+      },
       // Search engines
       {
         userAgent: 'Googlebot',

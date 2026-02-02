@@ -12,6 +12,7 @@ Connect Free Crypto News to your favorite tools and platforms. **100% FREE** - n
 | **Browser** | Chrome Extension | News in your browser toolbar |
 | **Widgets** | 4 widgets | Ticker, Carousel, Feed, Price |
 | **CLI** | Command-line | Terminal access to news |
+| **Web3** | Nostr, IPFS, Chainlink | Decentralized integrations |
 | **Bot Examples** | 3 platforms | Discord, Slack, Telegram |
 
 ## Data APIs
@@ -52,6 +53,13 @@ Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from Def
 | [CLI](cli.md) | Terminal interface | 1 min |
 | [Postman](postman.md) | API testing collection | 2 min |
 | [Mobile App](mobile.md) | React Native iOS/Android app | 10 min |
+
+## Web3 & Blockchain
+
+| Integration | Description | Setup Time |
+|-------------|-------------|------------|
+| [Web3 APIs](web3.md) | Nostr, IPFS, Farcaster Frames | 5 min |
+| [Smart Contracts](smart-contracts.md) | Chainlink Oracle integration | 15 min |
 
 ## Embeddable Widgets
 

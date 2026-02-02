@@ -2,6 +2,15 @@
 
 Ready-to-use examples for common integrations.
 
+## Frontend Frameworks
+
+Build crypto news apps with popular frameworks.
+
+| Example | Framework | Language |
+|---------|-----------|----------|
+| [React Components](react.md) | React | TypeScript |
+| [Rust Examples](rust.md) | Tokio/Reqwest | Rust |
+
 ## Chat Bots
 
 Build bots that deliver crypto news to your community.

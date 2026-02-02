@@ -16,7 +16,7 @@
 import { x402HTTPResourceServer, type RoutesConfig } from '@x402/core/server';
 import { x402Server } from './server';
 import { createRoutesConfig } from './routes';
-import { handleProtectedRequest } from './middleware';
+import { handleProtectedRequest } from './auth';
 import { validateApiKey, checkRateLimit, isKvConfigured, type ApiKeyData } from '@/lib/api-keys';
 import { API_TIERS } from './pricing';
 import { IS_PRODUCTION, PAYMENT_ADDRESS } from './config';
