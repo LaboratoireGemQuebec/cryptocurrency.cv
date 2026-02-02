@@ -199,7 +199,7 @@ export async function POST(request: NextRequest) {
     const { buttonIndex } = body.untrustedData;
     
     // Decode state
-    let state = { frame: 'home', index: 0 };
+    let state: { frame: string; index: number; prevIndex?: number } = { frame: 'home', index: 0 };
     try {
       const stateHeader = request.headers.get('fc-frame-state');
       if (stateHeader) {
