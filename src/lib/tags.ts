@@ -818,16 +818,6 @@ export const TAGS: Record<string, Tag> = {
     relatedTags: ['ai-crypto', 'web3'],
     priority: 70,
   },
-  'bankruptcy': {
-    slug: 'bankruptcy',
-    name: 'Bankruptcy',
-    description: 'Crypto company bankruptcies. FTX, Celsius, and creditor proceedings.',
-    icon: '⚖️',
-    category: 'event',
-    keywords: ['bankruptcy', 'bankrupt', 'creditor', 'claim', 'restructuring'],
-    relatedTags: ['regulation', 'exchanges'],
-    priority: 65,
-  },
   'sanctions': {
     slug: 'sanctions',
     name: 'Sanctions',
