@@ -17,11 +17,15 @@ import {
   NETWORKS,
   IS_TESTNET,
   IS_PRODUCTION,
+  IS_BUILD_TIME,
   PAYMENT_ADDRESS,
   isEvmNetwork,
   getNetworkDisplayName,
   type NetworkId,
 } from './config';
+
+// Track if we've already logged initialization
+let _hasLoggedInit = false;
 
 // =============================================================================
 // FACILITATOR CLIENT
@@ -72,13 +76,14 @@ function createX402Server(): x402ResourceServer {
   }
   
   // In testnet mode, also register mainnet scheme for future-proofing
-  if (IS_TESTNET && CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA) {
+  if (IS_TESTNET && CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA && !IS_BUILD_TIME && !_hasLoggedInit) {
     // Mainnet scheme is already registered by registerExactEvmScheme
     console.log('[x402] Testnet mode: Base Sepolia scheme registered');
   }
   
-  // Log server initialization
-  if (IS_PRODUCTION) {
+  // Log server initialization (only once, not during build)
+  if (IS_PRODUCTION && !IS_BUILD_TIME && !_hasLoggedInit) {
+    _hasLoggedInit = true;
     console.log('[x402] Production server initialized');
     console.log('[x402] Network:', CURRENT_NETWORK);
     console.log('[x402] Facilitator:', FACILITATOR_URL);

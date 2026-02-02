@@ -576,7 +576,13 @@ Object.entries(API_TIERS).forEach(([tierName, config]) => {
   }
 });
 
-console.log('[TIER CONFIG] ✅ All tier configurations validated successfully');
+// Only log validation success once and not during build
+const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' || process.env.npm_lifecycle_event === 'build';
+const globalThisAny = globalThis as unknown as Record<string, boolean>;
+if (!isBuildTime && typeof globalThis !== 'undefined' && !globalThisAny.__tierConfigLogged) {
+  globalThisAny.__tierConfigLogged = true;
+  console.log('[TIER CONFIG] ✅ All tier configurations validated successfully');
+}
 
 // =============================================================================
 // ENDPOINT METADATA

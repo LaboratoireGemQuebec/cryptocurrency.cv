@@ -34,6 +34,14 @@ export const IS_TESTNET =
 export const IS_DEVELOPMENT = 
   process.env.NODE_ENV === 'development';
 
+/**
+ * Build-time detection (Next.js build phase)
+ * Used to suppress verbose logging during static generation
+ */
+export const IS_BUILD_TIME = 
+  process.env.NEXT_PHASE === 'phase-production-build' ||
+  process.env.npm_lifecycle_event === 'build';
+
 // =============================================================================
 // NETWORK CONFIGURATION (CAIP-2 Standard)
 // =============================================================================

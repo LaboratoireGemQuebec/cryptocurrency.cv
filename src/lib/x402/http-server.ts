@@ -19,7 +19,10 @@ import { createRoutesConfig } from './routes';
 import { handleProtectedRequest } from './auth';
 import { validateApiKey, checkRateLimit, isKvConfigured, type ApiKeyData } from '@/lib/api-keys';
 import { API_TIERS } from './pricing';
-import { IS_PRODUCTION, PAYMENT_ADDRESS } from './config';
+import { IS_PRODUCTION, IS_BUILD_TIME, PAYMENT_ADDRESS } from './config';
+
+// Track if we've already logged HTTP server status
+let _httpServerLogged = false;
 
 // =============================================================================
 // ROUTE CONFIGURATION
@@ -221,7 +224,8 @@ export function validateHttpServerConfig(): {
 // STARTUP LOGGING
 // =============================================================================
 
-if (typeof window === 'undefined') {
+if (typeof window === 'undefined' && !IS_BUILD_TIME && !_httpServerLogged) {
+  _httpServerLogged = true;
   const validation = validateHttpServerConfig();
 
   if (validation.errors.length > 0) {

@@ -20,9 +20,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 
-console.warn(
-  '[DEPRECATED] rate-limit.ts is deprecated. Use @/lib/ratelimit for distributed rate limiting.'
-);
+// Only warn once and not during build time
+const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' || process.env.npm_lifecycle_event === 'build';
+const globalThisAny = globalThis as unknown as Record<string, boolean>;
+if (!isBuildTime && typeof globalThis !== 'undefined' && !globalThisAny.__rateLimitDeprecationLogged) {
+  globalThisAny.__rateLimitDeprecationLogged = true;
+  console.warn(
+    '[DEPRECATED] rate-limit.ts is deprecated. Use @/lib/ratelimit for distributed rate limiting.'
+  );
+}
 
 /**
  * Enhanced Rate Limiting Module

@@ -39,6 +39,7 @@ export {
   IS_PRODUCTION,
   IS_TESTNET,
   IS_DEVELOPMENT,
+  IS_BUILD_TIME,
   
   // Networks
   NETWORKS,
