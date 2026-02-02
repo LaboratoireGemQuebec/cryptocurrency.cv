@@ -197,7 +197,9 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
   const [txHash, setTxHash] = useState<string | null>(null);
   
   // Use the PaymentProvider for wallet interactions
-  const { isConnected, address, connect, executePayment } = usePayment();
+  const { wallet, connect, executePayment } = usePayment();
+  const isConnected = wallet.connected;
+  const address = wallet.address;
 
   const networkNames: Record<string, string> = {
     'eip155:8453': 'Base Mainnet',
