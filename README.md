@@ -2,7 +2,7 @@
 
 ---
 
-# 🆓 Free Crypto News API
+# 🆓 Free Crypto News API 
 
 <p align="center">
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
