@@ -108,58 +108,22 @@ function resolveUrl(url) {
     }, (res) => {
       clearTimeout(timeout);
       
+      // Consume the response body to free up the socket
+      res.resume();
+      
       // The click endpoint returns 302 with Location header containing real URL
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         const realUrl = res.headers.location;
         if (realUrl && !realUrl.includes('cryptopanic.com')) {
           resolve({ success: true, url: realUrl });
         } else {
-          resolve({ success: false, error: 'Redirect still on CryptoPanic' });
-          return;
+          resolve({ success: false, error: 'Redirect still points to CryptoPanic' });
         }
-        
-        let redirectUrl = res.headers.location;
-        
-        // Handle relative URLs
-        if (redirectUrl.startsWith('/')) {
-          const urlObj = new URL(url);
-          redirectUrl = `${urlObj.protocol}//${urlObj.host}${redirectUrl}`;
-        }
-        
-        // If we've left CryptoPanic, we found the real URL
-        if (!redirectUrl.includes('cryptopanic.com')) {
-          resolve({ success: true, url: redirectUrl });
-          return;
-        }
-        
-        // Otherwise keep following
-        resolveUrl(redirectUrl, maxRedirects - 1).then(resolve);
         return;
       }
       
-      // If we're still on CryptoPanic, try to extract URL from page
-      if (url.includes('cryptopanic.com')) {
-        let body = '';
-        res.on('data', chunk => body += chunk);
-        res.on('end', () => {
-          // Look for redirect URL in meta refresh or canonical link
-          const metaMatch = body.match(/url=([^"'\s>]+)/i);
-          const canonicalMatch = body.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i);
-          const ogUrlMatch = body.match(/<meta[^>]*property="og:url"[^>]*content="([^"]+)"/i);
-          
-          const foundUrl = metaMatch?.[1] || canonicalMatch?.[1] || ogUrlMatch?.[1];
-          
-          if (foundUrl && !foundUrl.includes('cryptopanic.com')) {
-            resolve({ success: true, url: foundUrl });
-          } else {
-            resolve({ success: false, error: 'Could not extract URL' });
-          }
-        });
-        return;
-      }
-      
-      // We're at the final URL
-      resolve({ success: true, url: url });
+      // Non-redirect response - unexpected
+      resolve({ success: false, error: `Unexpected status ${res.statusCode}` });
     });
     
     req.on('error', (err) => {

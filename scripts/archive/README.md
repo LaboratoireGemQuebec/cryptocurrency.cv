@@ -442,6 +442,159 @@ grep '"BTC"' archive/v2/articles/2026-01.jsonl | jq .title
 jq -c 'select(.sentiment.label == "negative")' archive/v2/articles/2026-01.jsonl
 ```
 
+---
+
+## 📦 Historical Data Import & Enrichment
+
+For importing and enriching large historical datasets (346,000+ articles from the CryptoPanic dataset).
+
+### Master Orchestrator (Recommended)
+
+The orchestrator provides a unified CLI for all archive operations:
+
+```bash
+# Check archive status and health
+node scripts/archive/orchestrate.js status
+
+# Run enrichment pipeline
+node scripts/archive/orchestrate.js enrich --batch-size 100 --verbose
+
+# Build all indexes and metadata
+node scripts/archive/orchestrate.js build --verbose
+
+# Analyze data quality
+node scripts/archive/orchestrate.js analyze --sources --export
+
+# Run complete pipeline (analyze → enrich → build)
+node scripts/archive/orchestrate.js full-pipeline
+
+# Show help
+node scripts/archive/orchestrate.js help
+```
+
+### Individual Scripts
+
+#### `import-cryptopanic-dataset.js`
+Imports historical CryptoPanic CSV data to v2 format.
+
+```bash
+# Import the dataset (requires CSV in .temp-import/)
+node scripts/archive/import-cryptopanic-dataset.js --verbose
+```
+
+#### `enrichment-pipeline.js`
+Production-ready enrichment for URLs and dates via multiple sources.
+
+```bash
+# Enrich all files (URLs + dates)
+node scripts/archive/enrichment-pipeline.js --mode all --verbose
+
+# Enrich only unknown-date.jsonl
+node scripts/archive/enrichment-pipeline.js --target unknown-date --batch-size 100
+
+# Enrich URLs only for dated files
+node scripts/archive/enrichment-pipeline.js --mode urls --priority dated
+
+# Options:
+#   --mode <mode>       'urls', 'dates', or 'all' (default: all)
+#   --target <file>     Process specific file
+#   --batch-size <n>    Articles per batch (default: 50)
+#   --max-batches <n>   Maximum batches (default: 10, 0 = unlimited)
+#   --delay <ms>        Delay between requests (default: 1000)
+#   --dry-run           Preview without saving
+#   --verbose           Detailed output
+```
+
+#### `build-indexes.js`
+Builds metadata and lookup indexes for the API.
+
+```bash
+# Build all indexes
+node scripts/archive/build-indexes.js --verbose
+
+# Build stats only
+node scripts/archive/build-indexes.js --stats-only
+```
+
+#### `build-search-index.js`
+Creates full-text search indexes for fast queries.
+
+```bash
+# Build search index
+node scripts/archive/build-search-index.js --verbose
+
+# Index only last 12 months
+node scripts/archive/build-search-index.js --months 12
+```
+
+#### `analyze-archive.js`
+Comprehensive data quality analysis.
+
+```bash
+# Basic analysis
+node scripts/archive/analyze-archive.js
+
+# With source breakdown
+node scripts/archive/analyze-archive.js --sources
+
+# Export detailed report
+node scripts/archive/analyze-archive.js --export --detailed
+```
+
+### Data Quality
+
+After importing the CryptoPanic dataset:
+- **Total Articles**: ~346,000
+- **With Valid Date**: ~172,000 (50%)
+- **With URL**: ~24,000 (7%)
+- **Date Range**: 2017-09 to 2025-12
+
+Enrichment sources:
+- **Wayback Machine CDX API**: Historical URL snapshots
+- **Common Crawl Index**: Wide web coverage
+- **URL Pattern Reconstruction**: Known site patterns
+- **DuckDuckGo HTML Search**: Date verification
+- **Bing Search**: Fallback date/URL resolution
+
+### Workflow for Large Datasets
+
+1. **Import**: Load raw data to v2 format
+   ```bash
+   node scripts/archive/import-cryptopanic-dataset.js --verbose
+   ```
+
+2. **Build Initial Indexes**: Create metadata
+   ```bash
+   node scripts/archive/orchestrate.js build --verbose
+   ```
+
+3. **Analyze Quality**: Understand data state
+   ```bash
+   node scripts/archive/orchestrate.js analyze --sources
+   ```
+
+4. **Enrich in Batches**: Run enrichment (can be interrupted/resumed)
+   ```bash
+   # Run 10 batches of 100 articles
+   node scripts/archive/orchestrate.js enrich --batch-size 100 --max-batches 10 --verbose
+   
+   # Repeat until satisfied with coverage
+   ```
+
+5. **Final Build**: Update indexes with enriched data
+   ```bash
+   node scripts/archive/orchestrate.js build --verbose
+   ```
+
+6. **Commit & Deploy**:
+   ```bash
+   git add archive/v2/
+   git commit -m "Update v2 archive with enriched data"
+   git push
+   ```
+
+---
+
 ## License
 
 MIT

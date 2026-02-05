@@ -1223,6 +1223,47 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | Ticker      | JavaScript | Scrolling header ticker |
 | Carousel    | JavaScript | Featured news rotator   |
 
+### 🧠 RAG AI System
+
+Production-grade **Retrieval-Augmented Generation** for intelligent crypto news Q&A.
+
+| Feature | Description |
+|---------|-------------|
+| **Hybrid Search** | BM25 + semantic search with reciprocal rank fusion |
+| **Multi-hop Reasoning** | Agentic RAG for complex questions requiring multiple articles |
+| **Conversation Memory** | Multi-turn chat with context tracking |
+| **Advanced Reranking** | LLM scoring, time decay, source credibility, MMR diversity |
+| **Query Understanding** | Intent classification, decomposition, HyDE |
+| **Streaming API** | Real-time SSE responses with step-by-step updates |
+
+**Quick Start:**
+```typescript
+import { ragService } from '@/lib/rag';
+
+// Simple question answering
+const response = await ragService.ask("What happened to Bitcoin last week?");
+console.log(response.answer);
+
+// Multi-hop reasoning for complex questions  
+const reasoning = await ragService.askWithReasoning(
+  "How did the ETF approval affect Bitcoin compared to Ethereum?"
+);
+```
+
+**API Endpoints:**
+```bash
+# Standard RAG query
+curl -X POST /api/rag -d '{"query": "Latest Bitcoin news"}'
+
+# Streaming with progress updates
+curl -N -X POST /api/rag/stream -d '{"query": "Why did crypto crash?"}'
+
+# Search without answer generation
+curl -X POST /api/rag/search -d '{"query": "DeFi hacks", "limit": 10}'
+```
+
+📚 **[Full RAG Documentation](src/lib/rag/README.md)** — Architecture, API reference, configuration, and advanced features.
+
 ### 🚀 Code Examples & SDKs (200+ Examples)
 
 Complete examples for all 184 API endpoints across 5 languages:

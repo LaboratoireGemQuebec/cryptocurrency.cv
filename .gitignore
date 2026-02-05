@@ -42,3 +42,14 @@ __pycache__/
 .github/copilot-instructions.md
 .vercel
 .env*.local
+
+# Archive import temp files (large datasets, caches)
+scripts/archive/.temp-import/
+.temp-import/
+*.rar
+*.csv.gz
+
+# Enrichment caches (resumable, not needed in repo)
+enrichment-*.json
+*-cache.json
+.url-cache.json
