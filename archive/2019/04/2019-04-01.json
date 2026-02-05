@@ -1,17 +1,16 @@
 {
   "date": "2019-04-01",
-  "fetchedAt": "2026-02-05T07:27:06.524Z",
+  "fetchedAt": "2026-02-05T07:45:51.525Z",
   "articleCount": 3,
   "source": "historical-import",
   "articles": [
     {
       "title": "Coinbase Soft Launches International Payments with XRP and USDC",
-      "link": "https://cryptopanic.com/news/5008909/Coinbase-Soft-Launches-International-Payments-with-XRP-and-USDC",
+      "link": "NULL",
       "pubDate": "2019-04-01T20:33:37.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "altcoin",
-      "description": "NULL",
       "currencies": [
         "USDC",
         "XRP"
@@ -24,24 +23,22 @@
     },
     {
       "title": "Tron Introduces Its Newest Feature: Censorship",
-      "link": "https://cryptopanic.com/news/tron/5006992/Tron-Introduces-Its-Newest-Feature-Censorship",
+      "link": "NULL",
       "pubDate": "2019-04-01T16:32:05.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "TRX"
       ]
     },
     {
       "title": "Coinbase CEO Prepares AMA, Calls Massive Requests from DigiByte (DGB) Scam",
-      "link": "https://cryptopanic.com/news/5004382/Coinbase-CEO-Prepares-AMA-Calls-Massive-Requests-from-DigiByte-DGB-Scam",
+      "link": "NULL",
       "pubDate": "2019-04-01T11:49:06.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "exchange",
-      "description": "NULL",
       "currencies": [
         "DGB"
       ],

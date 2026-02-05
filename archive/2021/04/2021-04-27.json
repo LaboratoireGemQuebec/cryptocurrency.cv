@@ -1,65 +1,60 @@
 {
   "date": "2021-04-27",
-  "fetchedAt": "2026-02-05T07:27:06.902Z",
+  "fetchedAt": "2026-02-05T07:45:51.908Z",
   "articleCount": 59,
   "source": "historical-import",
   "articles": [
     {
       "title": "What comes first for @AaveAave on @0xPolygon?",
-      "link": "https://cryptopanic.com/news/11833483/What-comes-first-for-AaveAave-on-0xPolygon",
+      "link": "NULL",
       "pubDate": "2021-04-27T23:20:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "defi",
-      "description": "NULL",
       "currencies": [
         "REP"
       ]
     },
     {
       "title": "Lukso to Binance?",
-      "link": "https://cryptopanic.com/news/11846518/Lukso-to-Binance",
+      "link": "NULL",
       "pubDate": "2021-04-27T22:51:22.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "exchange",
-      "description": "NULL",
       "currencies": [
         "NULL"
       ]
     },
     {
       "title": "RT @safenetworktech: Want to participate in the Fleming Testnets but not comfortable with CLI? This GUI from an awesome Safe #Community mem…",
-      "link": "https://cryptopanic.com/news/11835337/RT-safenetworktech-Want-to-participate-in-the-Fleming-Testnets-but-not-comfortable-with-CLI-This-GUI-from-an-awesome-Safe-Community-mem",
+      "link": "NULL",
       "pubDate": "2021-04-27T22:46:15.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "MAID"
       ]
     },
     {
       "title": "Withdrawal fees",
-      "link": "https://cryptopanic.com/news/11838871/Withdrawal-fees",
+      "link": "NULL",
       "pubDate": "2021-04-27T21:59:17.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "CHSB"
       ]
     },
     {
       "title": "Just want to say: POLYGON HAVING A FUCKING DAY. Please no one respond to this. Only up like it if you agree.",
-      "link": "https://cryptopanic.com/news/11832738/Just-want-to-say-POLYGON-HAVING-A-FUCKING-DAY-Please-no-one-respond-to-this-Only-up-like-it-if-you-agree",
+      "link": "https://www.reddit.com/r/maticnetwork/comments/mzyrln/just_want_to_say_polygon_having_a_fucking_day/",
       "pubDate": "2021-04-27T21:31:18.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "layer2",
-      "description": "-",
       "currencies": [
         "MATIC"
       ],
@@ -71,31 +66,29 @@
     },
     {
       "title": "Is right now a good time to buy?",
-      "link": "https://cryptopanic.com/news/11837421/Is-right-now-a-good-time-to-buy",
+      "link": "NULL",
       "pubDate": "2021-04-27T21:17:44.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "#EURS continues to conquer the #crypto and #DeFi worlds. We are delighted to inform our users about the latest grow…",
-      "link": "https://cryptopanic.com/news/11836236/EURS-continues-to-conquer-the-crypto-and-DeFi-worlds-We-are-delighted-to-inform-our-users-about-the-latest-grow",
+      "link": "NULL",
       "pubDate": "2021-04-27T21:14:30.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "defi",
-      "description": "NULL",
       "currencies": [
         "EURS"
       ]
     },
     {
       "title": "Why this analyst thinks dogecoin is ‘actually gambling, not investing’",
-      "link": "https://cryptopanic.com/news/dogecoin/11832708/Why-this-analyst-thinks-dogecoin-is-actually-gambling-not-investing",
+      "link": "https://ambcrypto.com/why-this-analyst-thinks-dogecoin-is-actually-gambling-not-investing/",
       "pubDate": "2021-04-27T21:00:21.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -108,7 +101,7 @@
     },
     {
       "title": "Polkadot powered reinsurance platform UnoRe integrates with Orion Protocol",
-      "link": "https://cryptopanic.com/news/polkadot/11832627/Polkadot-powered-reinsurance-platform-UnoRe-integrates-with-Orion-Protocol",
+      "link": "https://www.cryptoninjas.net/2021/04/27/polkadot-powered-reinsurance-platform-unore-integrates-with-orion-protocol/",
       "pubDate": "2021-04-27T20:23:41.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -125,12 +118,11 @@
     },
     {
       "title": "Ellen DeGeneres Sells NFT, Talks About Dogecoin",
-      "link": "https://cryptopanic.com/news/dogecoin/11832570/Ellen-DeGeneres-Sells-NFT-Talks-About-Dogecoin",
+      "link": "https://cryptobriefing.com/ellen-degeneres-sells-nft-talks-about-dogecoin/",
       "pubDate": "2021-04-27T19:46:26.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "nft",
-      "description": "-",
       "currencies": [
         "DOGE"
       ],
@@ -142,12 +134,11 @@
     },
     {
       "title": "Registration and pre-funding for @ThetaDrop NFTs are live now! Visit to save your place for…",
-      "link": "https://cryptopanic.com/news/theta-token/11836552/Registration-and-pre-funding-for-ThetaDrop-NFTs-are-live-now-Visit-to-save-your-place-for",
+      "link": "NULL",
       "pubDate": "2021-04-27T19:38:42.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "nft",
-      "description": "NULL",
       "currencies": [
         "THETA",
         "TFUEL"
@@ -155,7 +146,7 @@
     },
     {
       "title": "Analyst On Why Ripple’s XRP Doom Could Turn Out To Be A Boom For Stellar’s XLM",
-      "link": "https://cryptopanic.com/news/ripple/11832553/Analyst-On-Why-Ripples-XRP-Doom-Could-Turn-Out-To-Be-A-Boom-For-Stellars-XLM",
+      "link": "https://zycrypto.com/analyst-on-why-ripples-xrp-doom-could-turn-out-to-be-a-boom-for-stellars-xlm/",
       "pubDate": "2021-04-27T19:35:08.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -173,7 +164,7 @@
     },
     {
       "title": "Institutions are not touching dogecoin, OKCoin’s COO says",
-      "link": "https://cryptopanic.com/news/dogecoin/11832523/Institutions-are-not-touching-dogecoin-OKCoins-COO-says",
+      "link": "https://finbold.com/institutions-are-not-touching-dogecoin-okcoins-coo-says/",
       "pubDate": "2021-04-27T19:12:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -191,7 +182,7 @@
     },
     {
       "title": "Dogecoin Is So Much Better Than Lottery Tickets, Says Billionaire Mark Cuban",
-      "link": "https://cryptopanic.com/news/dogecoin/11832468/Dogecoin-Is-So-Much-Better-Than-Lottery-Tickets-Says-Billionaire-Mark-Cuban",
+      "link": "https://zycrypto.com/dogecoin-is-so-much-better-than-lottery-tickets-says-billionaire-mark-cuban/",
       "pubDate": "2021-04-27T18:48:14.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -208,19 +199,18 @@
     },
     {
       "title": "Retweet to remind your friends that you shilled them crypto a year ago",
-      "link": "https://cryptopanic.com/news/11836716/Retweet-to-remind-your-friends-that-you-shilled-them-crypto-a-year-ago",
+      "link": "NULL",
       "pubDate": "2021-04-27T18:21:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "TWT"
       ]
     },
     {
       "title": "Polygon co-founder raises $2.2M for India COVID-19 relief",
-      "link": "https://cryptopanic.com/news/matic-network/11832421/Polygon-co-founder-raises-22M-for-India-COVID-19-relief",
+      "link": "https://cointelegraph.com/news/polygon-co-founder-raises-2-2m-for-india-covid-19-relief",
       "pubDate": "2021-04-27T18:15:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -237,7 +227,7 @@
     },
     {
       "title": "Mark Cuban: Dogecoin Growth Limited by Robinhood’s Withdrawal Policy",
-      "link": "https://cryptopanic.com/news/dogecoin/11832425/Mark-Cuban-Dogecoin-Growth-Limited-by-Robinhoods-Withdrawal-Policy",
+      "link": "https://decrypt.co/69242/mark-cuban-dogecoin-growth-robinhood",
       "pubDate": "2021-04-27T18:13:43.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -253,7 +243,7 @@
     },
     {
       "title": "Binance Continues Crypto Dominance With New NFT Marketplace",
-      "link": "https://cryptopanic.com/news/11832276/Binance-Continues-Crypto-Dominance-With-New-NFT-Marketplace",
+      "link": "https://bitcoinist.com/binance-continues-crypto-dominance-with-new-nft-marketplace/?utm_source=rss&utm_medium=rss&utm_campaign=binance-continues-crypto-dominance-with-new-nft-marketplace",
       "pubDate": "2021-04-27T16:54:05.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -270,31 +260,29 @@
     },
     {
       "title": "Passive Income has partnered with Degenerate Money to create a new NFT Collection",
-      "link": "https://cryptopanic.com/news/11832236/Passive-Income-has-partnered-with-Degenerate-Money-to-create-a-new-NFT-Collection",
+      "link": "NULL",
       "pubDate": "2021-04-27T16:30:41.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "nft",
-      "description": "NULL",
       "currencies": [
         "ARK"
       ]
     },
     {
       "title": "Ark Spring Time!",
-      "link": "https://cryptopanic.com/news/11843595/Ark-Spring-Time",
+      "link": "NULL",
       "pubDate": "2021-04-27T16:21:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "ARK"
       ]
     },
     {
       "title": "Doge of Wall Street: Jordan Belfort Goes Back to His Old Ways by Pumping Dogecoin and Shiba Inu",
-      "link": "https://cryptopanic.com/news/dogecoin/11832216/Doge-of-Wall-Street-Jordan-Belfort-Goes-Back-to-His-Old-Ways-by-Pumping-Dogecoin-and-Shiba-Inu",
+      "link": "https://u.today/doge-of-wall-street-jordan-belfort-goes-back-to-his-old-ways-by-pumping-dogecoin-and-shiba-inu",
       "pubDate": "2021-04-27T16:07:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -311,7 +299,7 @@
     },
     {
       "title": "After the Mavs, Billionaire Mark Cuban Urges the Ellen DeGeneres Show to Accept DOGE Payments",
-      "link": "https://cryptopanic.com/news/dogecoin/11832214/After-the-Mavs-Billionaire-Mark-Cuban-Urges-the-Ellen-DeGeneres-Show-to-Accept-DOGE-Payments",
+      "link": "https://cryptopotato.com/after-the-mavs-billionaire-mark-cuban-urges-the-ellen-degeneres-show-to-accept-doge-payments/",
       "pubDate": "2021-04-27T16:02:12.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -328,7 +316,7 @@
     },
     {
       "title": "‘Wolf of Wall Street’ Jordan Belford is urging people to pump his Twitter followers and Dogecoin",
-      "link": "https://cryptopanic.com/news/dogecoin/11832210/Wolf-of-Wall-Street-Jordan-Belford-is-urging-people-to-pump-his-Twitter-followers-and-Dogecoin",
+      "link": "https://cryptoslate.com/wolf-of-wall-street-jordan-belford-is-urging-followers-to-pump-dogecoin/",
       "pubDate": "2021-04-27T16:00:56.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -345,12 +333,11 @@
     },
     {
       "title": "Ripple’s Defense “Legally Insufficient,” Says SEC",
-      "link": "https://cryptopanic.com/news/ripple/11832159/Ripples-Defense-Legally-Insufficient-Says-SEC",
+      "link": "https://cryptobriefing.com/ripples-defense-legally-insufficient-says-sec/",
       "pubDate": "2021-04-27T15:36:31.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "regulation",
-      "description": "-",
       "currencies": [
         "XRP"
       ],
@@ -362,7 +349,7 @@
     },
     {
       "title": "Cardano, Uniswap and Other Altcoins Now Supported by Swissquote Bank Europe",
-      "link": "https://cryptopanic.com/news/uniswap/11832006/Cardano-Uniswap-and-Other-Altcoins-Now-Supported-by-Swissquote-Bank-Europe",
+      "link": "https://u.today/cardano-uniswap-and-other-altcoins-now-supported-by-swissquote-bank-europe",
       "pubDate": "2021-04-27T14:03:50.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -379,24 +366,22 @@
     },
     {
       "title": "Keep hodling my friends 🥠 The fortune cookie has spoken",
-      "link": "https://cryptopanic.com/news/11857591/Keep-hodling-my-friends-The-fortune-cookie-has-spoken",
+      "link": "NULL",
       "pubDate": "2021-04-27T13:54:46.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "DENT to the next Level",
-      "link": "https://cryptopanic.com/news/11831883/DENT-to-the-next-Level",
+      "link": "NULL",
       "pubDate": "2021-04-27T13:30:25.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ],
@@ -408,12 +393,11 @@
     },
     {
       "title": "All new token listings available on the #AAX spot market - which will you trade first? $ADA $BNB $THETA $FTT Trade…",
-      "link": "https://cryptopanic.com/news/theta-token/11833277/All-new-token-listings-available-on-the-AAX-spot-market-which-will-you-trade-first-ADA-BNB-THETA-FTT-Trade",
+      "link": "NULL",
       "pubDate": "2021-04-27T13:30:06.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "altcoin",
-      "description": "NULL",
       "currencies": [
         "ADA",
         "THETA",
@@ -427,31 +411,29 @@
     },
     {
       "title": "Dent business model",
-      "link": "https://cryptopanic.com/news/11833105/Dent-business-model",
+      "link": "NULL",
       "pubDate": "2021-04-27T12:54:24.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "Fabian Vogelsteller on Twitter",
-      "link": "https://cryptopanic.com/news/11852011/Fabian-Vogelsteller-on-Twitter",
+      "link": "NULL",
       "pubDate": "2021-04-27T12:47:50.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "NULL"
       ]
     },
     {
       "title": "Solana Price Analysis: Following Near 200% Monthly Surge, SOL Eyes $50",
-      "link": "https://cryptopanic.com/news/near/11831705/Solana-Price-Analysis-Following-Near-200-Monthly-Surge-SOL-Eyes-50",
+      "link": "https://cryptopotato.com/solana-price-analysis-following-near-200-monthly-surge-sol-eyes-50/",
       "pubDate": "2021-04-27T12:09:55.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -469,55 +451,51 @@
     },
     {
       "title": "🤩Cocos-BCX Hero #NFT auction with the highest bid of 106.7BNB,Team Mining will start on April 28！#COCOS",
-      "link": "https://cryptopanic.com/news/11834003/Cocos-BCX-Hero-NFT-auction-with-the-highest-bid-of-1067BNBTeam-Mining-will-start-on-April-28COCOS",
+      "link": "NULL",
       "pubDate": "2021-04-27T11:26:19.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "nft",
-      "description": "NULL",
       "currencies": [
         "COCOS"
       ]
     },
     {
       "title": "Pow Wow 16 2021 TONIGHT 21 CET",
-      "link": "https://cryptopanic.com/news/11832144/Pow-Wow-16-2021-TONIGHT-21-CET",
+      "link": "NULL",
       "pubDate": "2021-04-27T11:26:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "CHSB"
       ]
     },
     {
       "title": "1/  @OneGraviton, a cross-chain liquidity protocol for wrapped assets, has partnered with $BAND for cross-chain ev…",
-      "link": "https://cryptopanic.com/news/11833633/1-OneGraviton-a-cross-chain-liquidity-protocol-for-wrapped-assets-has-partnered-with-BAND-for-cross-chain-ev",
+      "link": "NULL",
       "pubDate": "2021-04-27T10:15:47.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "defi",
-      "description": "NULL",
       "currencies": [
         "BAND"
       ]
     },
     {
       "title": "Coming back home",
-      "link": "https://cryptopanic.com/news/11860203/Coming-back-home",
+      "link": "NULL",
       "pubDate": "2021-04-27T10:03:31.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "Dogecoin Is Better Than Any Lottery Tickets: Billionaire Mark Cuban",
-      "link": "https://cryptopanic.com/news/dogecoin/11831422/Dogecoin-Is-Better-Than-Any-Lottery-Tickets-Billionaire-Mark-Cuban",
+      "link": "https://u.today/dogecoin-is-better-than-any-lottery-tickets-billionaire-mark-cuban",
       "pubDate": "2021-04-27T09:35:30.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -535,43 +513,40 @@
     },
     {
       "title": "Its time to keep Holding",
-      "link": "https://cryptopanic.com/news/11831407/Its-time-to-keep-Holding",
+      "link": "NULL",
       "pubDate": "2021-04-27T09:31:18.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "[Announcement]The ERC20 #COCOS less than 10,000 pieces of mapping reduction tool will be officially closed on May…",
-      "link": "https://cryptopanic.com/news/11834004/AnnouncementThe-ERC20-COCOS-less-than-10000-pieces-of-mapping-reduction-tool-will-be-officially-closed-on-May",
+      "link": "NULL",
       "pubDate": "2021-04-27T09:30:12.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "ethereum",
-      "description": "NULL",
       "currencies": [
         "COCOS"
       ]
     },
     {
       "title": "This May, ABBC collaborates with #Buyaladdin to allow winners to have a new shopping experience with ABBC Coin!  I…",
-      "link": "https://cryptopanic.com/news/11833380/This-May-ABBC-collaborates-with-Buyaladdin-to-allow-winners-to-have-a-new-shopping-experience-with-ABBC-Coin-I",
+      "link": "NULL",
       "pubDate": "2021-04-27T09:29:44.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "ABBC"
       ]
     },
     {
       "title": "Ripple Price Analysis: XRP Skyrockets 20% Daily, What Are The Next Targets?",
-      "link": "https://cryptopanic.com/news/ripple/11831342/Ripple-Price-Analysis-XRP-Skyrockets-20-Daily-What-Are-The-Next-Targets",
+      "link": "https://cryptopotato.com/ripple-price-analysis-xrp-skyrockets-20-daily-what-are-the-next-targets/",
       "pubDate": "2021-04-27T08:39:17.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -588,7 +563,7 @@
     },
     {
       "title": "Dogecoin Is a Mania and a Bubble, Says CoinShares’ CSO",
-      "link": "https://cryptopanic.com/news/dogecoin/11831333/Dogecoin-Is-a-Mania-and-a-Bubble-Says-CoinShares-CSO",
+      "link": "https://cryptopotato.com/dogecoin-is-a-mania-and-a-bubble-says-coinshares-cso/",
       "pubDate": "2021-04-27T08:27:57.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -606,7 +581,7 @@
     },
     {
       "title": "Ripple Keeps Sending XRP to Huobi, Moving 102.5 Million XRP Along With Top-Tier Turkish Exchange",
-      "link": "https://cryptopanic.com/news/ripple/11831309/Ripple-Keeps-Sending-XRP-to-Huobi-Moving-1025-Million-XRP-Along-With-Top-Tier-Turkish-Exchange",
+      "link": "https://u.today/ripple-keeps-sending-xrp-to-huobi-moving-1025-million-xrp-along-with-top-tier-turkish-exchange",
       "pubDate": "2021-04-27T08:09:33.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -623,7 +598,7 @@
     },
     {
       "title": "‘$XRP Is Breaking Out vs. $BTC’, Says Crypto Analyst, XRP Up 242% vs BTC in 2021",
-      "link": "https://cryptopanic.com/news/ripple/11830647/XRP-Is-Breaking-Out-vs-BTC-Says-Crypto-Analyst-XRP-Up-242-vs-BTC-in-2021",
+      "link": "https://www.cryptoglobe.com/latest/2021/04/xrp-is-breaking-out-vs-btc-%e2%80%8bsays-crypto-analyst-xrp-up-242-vs-btc-in-2021/",
       "pubDate": "2021-04-27T07:20:39.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -641,55 +616,51 @@
     },
     {
       "title": "Don't buy, earn! We are looking for experienced front end devs aswell as marketing and communications leads for art…",
-      "link": "https://cryptopanic.com/news/11833359/Dont-buy-earn-We-are-looking-for-experienced-front-end-devs-aswell-as-marketing-and-communications-leads-for-art?mtm_campaign=API-OFA",
+      "link": "NULL",
       "pubDate": "2021-04-27T06:57:24.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "ALCH"
       ]
     },
     {
       "title": "RT @dematerialised: Co-Founder @m_h_d_v comments on the mentality change of the major industry players in @maghanmcd ‘s latest  article in…",
-      "link": "https://cryptopanic.com/news/11835216/RT-dematerialised-Co-Founder-m_h_d_v-comments-on-the-mentality-change-of-the-major-industry-players-in-maghanmcd-s-latest-article-in",
+      "link": "NULL",
       "pubDate": "2021-04-27T06:46:29.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "NULL"
       ]
     },
     {
       "title": "Less than 24 hours left for this proposal. Get your votes in!",
-      "link": "https://cryptopanic.com/news/11830348/Less-than-24-hours-left-for-this-proposal-Get-your-votes-in",
+      "link": "NULL",
       "pubDate": "2021-04-27T06:32:33.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "TWT"
       ]
     },
     {
       "title": "What's with the hate with dent?",
-      "link": "https://cryptopanic.com/news/11832844/Whats-with-the-hate-with-dent",
+      "link": "NULL",
       "pubDate": "2021-04-27T05:47:21.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "DENT"
       ]
     },
     {
       "title": "BitPay CCO Claims Dogecoin Is Eating Away at Bitcoin’s Payments Volume",
-      "link": "https://cryptopanic.com/news/dogecoin/11827650/BitPay-CCO-Claims-Dogecoin-Is-Eating-Away-at-Bitcoins-Payments-Volume",
+      "link": "https://u.today/bitpay-cco-claims-dogecoin-is-eating-away-at-bitcoins-payments-volume",
       "pubDate": "2021-04-27T05:42:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -706,31 +677,29 @@
     },
     {
       "title": "RT @BittrexGlobal: We are excited to announce that we will be supporting TRC20-USDT and also be exploring support for TRC-20 BTC &amp; TRC-20 E…",
-      "link": "https://cryptopanic.com/news/12559067/RT-BittrexGlobal-We-are-excited-to-announce-that-we-will-be-supporting-TRC20-USDT-and-also-be-exploring-support-for-TRC-20-BTC-amp-TRC-20-E",
+      "link": "NULL",
       "pubDate": "2021-04-27T05:06:11.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "bitcoin",
-      "description": "NULL",
       "currencies": [
         "CTC"
       ]
     },
     {
       "title": "RT @BTCTN: The Central Bank of Iran has announced that banks and money exchangers can use #cryptocurrencies mined by licensed crypto miners…",
-      "link": "https://cryptopanic.com/news/12559069/RT-BTCTN-The-Central-Bank-of-Iran-has-announced-that-banks-and-money-exchangers-can-use-cryptocurrencies-mined-by-licensed-crypto-miners",
+      "link": "NULL",
       "pubDate": "2021-04-27T05:05:57.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "bitcoin",
-      "description": "NULL",
       "currencies": [
         "CTC"
       ]
     },
     {
       "title": "Aave v2 launches liquidity mining program targeting stablecoin borrowers",
-      "link": "https://cryptopanic.com/news/11827026/Aave-v2-launches-liquidity-mining-program-targeting-stablecoin-borrowers",
+      "link": "https://cointelegraph.com/news/aave-v2-launches-liquidity-mining-program-targeting-stablecoin-borrowers",
       "pubDate": "2021-04-27T04:37:28.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -747,24 +716,22 @@
     },
     {
       "title": "#ABBC -The Future of Payment Security",
-      "link": "https://cryptopanic.com/news/11827183/ABBC-The-Future-of-Payment-Security",
+      "link": "NULL",
       "pubDate": "2021-04-27T04:28:02.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "regulation",
-      "description": "NULL",
       "currencies": [
         "ABBC"
       ]
     },
     {
       "title": "RT @justinsuntron: #TRC20-#USDT circulation amount has become No.1 in stablecoin field in less than 2 years. #TRON’s triumph over #Ethe…",
-      "link": "https://cryptopanic.com/news/bittorrent/11827489/RT-justinsuntron-TRC20-USDT-circulation-amount-has-become-No1-in-stablecoin-field-in-less-than-2-years-TRONs-triumph-over-Ethe",
+      "link": "NULL",
       "pubDate": "2021-04-27T03:24:47.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "ethereum",
-      "description": "-",
       "currencies": [
         "BTT",
         "BTTOLD"
@@ -776,43 +743,40 @@
     },
     {
       "title": "New terms and conditions",
-      "link": "https://cryptopanic.com/news/11831330/New-terms-and-conditions",
+      "link": "NULL",
       "pubDate": "2021-04-27T02:54:37.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "CHSB"
       ]
     },
     {
       "title": "RT @daniel_taze: African duo, accused of not being 'NATURAL FINISHERS'",
-      "link": "https://cryptopanic.com/news/11829941/RT-daniel_taze-African-duo-accused-of-not-being-NATURAL-FINISHERS?mtm_campaign=API-OFA",
+      "link": "NULL",
       "pubDate": "2021-04-27T01:57:58.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "SCR"
       ]
     },
     {
       "title": "RT @ZMiller_82: 1972 Olympic Men’s Ice Hockey Tournament Recap",
-      "link": "https://cryptopanic.com/news/11829942/RT-ZMiller_82-1972-Olympic-Mens-Ice-Hockey-Tournament-Recap?mtm_campaign=API-OFA",
+      "link": "NULL",
       "pubDate": "2021-04-27T01:55:56.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "SCR"
       ]
     },
     {
       "title": "Harmony blockchain to use Raze Network to increase its privacy protection",
-      "link": "https://cryptopanic.com/news/polkadot/11826829/Harmony-blockchain-to-use-Raze-Network-to-increase-its-privacy-protection",
+      "link": "https://www.cryptoninjas.net/2021/04/27/harmony-blockchain-to-use-raze-network-to-increase-its-privacy-protection/",
       "pubDate": "2021-04-27T01:03:54.000Z",
       "source": "Historical",
       "sourceKey": "historical",
@@ -831,19 +795,18 @@
     },
     {
       "title": "RT @safenetworktech: The next Safe Chat will be on April 30 at 7 PM GMT. We’ll be chatting with @SotRos25 &amp; @jimcollinson about the Fleming…",
-      "link": "https://cryptopanic.com/news/11829050/RT-safenetworktech-The-next-Safe-Chat-will-be-on-April-30-at-7-PM-GMT-Well-be-chatting-with-SotRos25-amp-jimcollinson-about-the-Fleming",
+      "link": "NULL",
       "pubDate": "2021-04-27T00:51:40.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "MAID"
       ]
     },
     {
       "title": "Privacy blockchain Dusk Network to integrate oracle solution from Chainlink",
-      "link": "https://cryptopanic.com/news/chainlink/11826552/Privacy-blockchain-Dusk-Network-to-integrate-oracle-solution-from-Chainlink",
+      "link": "https://www.cryptoninjas.net/2021/04/27/privacy-blockchain-dusk-network-to-integrate-oracle-solution-from-chainlink/",
       "pubDate": "2021-04-27T00:11:28.000Z",
       "source": "Historical",
       "sourceKey": "historical",

@@ -1,17 +1,16 @@
 {
   "date": "2020-01-07",
-  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "fetchedAt": "2026-02-05T07:45:52.017Z",
   "articleCount": 2,
   "source": "historical-import",
   "articles": [
     {
       "title": "Kraken to list USDC stablecoin tomorrow",
-      "link": "https://cryptopanic.com/news/usd-coin/7586372/Kraken-to-list-USDC-stablecoin-tomorrow",
+      "link": "NULL",
       "pubDate": "2020-01-07T14:58:50.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "exchange",
-      "description": "NULL",
       "currencies": [
         "USDT",
         "USDC"
@@ -24,12 +23,11 @@
     },
     {
       "title": "RT @TheCryptoDog: I would consider buying more Bitcoin.",
-      "link": "https://cryptopanic.com/news/7585675/RT-TheCryptoDog-I-would-consider-buying-more-Bitcoin",
+      "link": "NULL",
       "pubDate": "2020-01-07T13:42:17.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "bitcoin",
-      "description": "NULL",
       "currencies": [
         "SNL"
       ]

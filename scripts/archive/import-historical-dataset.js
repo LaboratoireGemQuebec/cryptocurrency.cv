@@ -353,26 +353,136 @@ function getSourceInfo(sourceName) {
 }
 
 /**
+ * Check if description is valid (not empty, null-like, or placeholder)
+ */
+function isValidDescription(desc) {
+  if (!desc) return false;
+  const trimmed = desc.trim();
+  if (!trimmed) return false;
+  // Filter out placeholder values
+  const invalidValues = ['null', 'none', 'n/a', '-', '--', '...', 'undefined'];
+  if (invalidValues.includes(trimmed.toLowerCase())) return false;
+  // Too short to be useful
+  if (trimmed.length < 10) return false;
+  return true;
+}
+
+// Domain to source name mapping
+const DOMAIN_TO_SOURCE = {
+  'cointelegraph.com': 'CoinTelegraph',
+  'coindesk.com': 'CoinDesk',
+  'decrypt.co': 'Decrypt',
+  'theblock.co': 'The Block',
+  'bitcoinmagazine.com': 'Bitcoin Magazine',
+  'blockworks.co': 'Blockworks',
+  'thedefiant.io': 'The Defiant',
+  'bitcoinist.com': 'Bitcoinist',
+  'beincrypto.com': 'BeInCrypto',
+  'newsbtc.com': 'NewsBTC',
+  'cryptoslate.com': 'CryptoSlate',
+  'cryptopotato.com': 'CryptoPotato',
+  'u.today': 'U.Today',
+  'ambcrypto.com': 'AMBCrypto',
+  'dailycoin.com': 'DailyCoin',
+  'cryptobriefing.com': 'Crypto Briefing',
+  'coingape.com': 'CoinGape',
+  'investing.com': 'Investing.com',
+  'finance.yahoo.com': 'Yahoo Finance',
+  'reuters.com': 'Reuters',
+  'bloomberg.com': 'Bloomberg',
+  'cnbc.com': 'CNBC',
+  'forbes.com': 'Forbes',
+  'watcher.guru': 'Watcher Guru',
+  'coinspeaker.com': 'CoinSpeaker',
+  'cryptonews.com': 'CryptoNews',
+  'fxstreet.com': 'FXStreet',
+  'dailyhodl.com': 'The Daily Hodl',
+  'zycrypto.com': 'ZyCrypto',
+  'nulltx.com': 'NullTX',
+  'blockonomi.com': 'Blockonomi',
+  'cryptopanic.com': 'CryptoPanic',
+  'benzinga.com': 'Benzinga',
+  'cnn.com': 'CNN',
+  'theguardian.com': 'The Guardian',
+  'nytimes.com': 'NY Times',
+  'wsj.com': 'WSJ',
+  'coinjournal.net': 'CoinJournal',
+  'cryptonewsz.com': 'CryptoNewsZ',
+  'blockchainnews.com': 'Blockchain News',
+  'coingecko.com': 'CoinGecko',
+  'coinmarketcap.com': 'CoinMarketCap',
+};
+
+/**
+ * Get source name from domain
+ */
+function getSourceNameFromDomain(domain) {
+  if (!domain) return null;
+  
+  // Direct match
+  if (DOMAIN_TO_SOURCE[domain]) {
+    return DOMAIN_TO_SOURCE[domain];
+  }
+  
+  // Try without www
+  const cleanDomain = domain.replace(/^www\./, '');
+  if (DOMAIN_TO_SOURCE[cleanDomain]) {
+    return DOMAIN_TO_SOURCE[cleanDomain];
+  }
+  
+  // Try to find partial match
+  for (const [knownDomain, name] of Object.entries(DOMAIN_TO_SOURCE)) {
+    if (cleanDomain.includes(knownDomain) || knownDomain.includes(cleanDomain.split('.')[0])) {
+      return name;
+    }
+  }
+  
+  // Generate name from domain (capitalize first letter of each part)
+  const parts = cleanDomain.split('.')[0].split('-');
+  return parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+}
+
+/**
+ * Check if a URL is valid (not NULL or placeholder)
+ */
+function isValidUrl(url) {
+  if (!url) return false;
+  const trimmed = url.trim().toLowerCase();
+  if (!trimmed) return false;
+  if (trimmed === 'null' || trimmed === 'none' || trimmed === '-') return false;
+  if (!trimmed.startsWith('http')) return false;
+  return true;
+}
+
+/**
  * Convert CSV row to our article format
  * 
- * Expected columns from the dataset:
- * - id, title, url, newsDatetime, positive, negative, important, liked, disliked, lol, toxic, saved, comments
- * - For joined: also has source_name, source_url, currency_codes
+ * Actual CSV columns (lowercased by parser):
+ * - id, title, description, sourceid, sourcedomain, sourceurl, newsdatetime, url
+ * - negative, positive, important, liked, disliked, lol, toxic, saved, comments
+ * - currencies (comma-separated codes like "BTC,ETH")
  */
 function convertToArticle(row) {
-  // Determine which CSV format we have
-  const title = row.title || row.news_title || '';
-  const url = row.url || row.news_url || row.link || '';
-  const datetime = row.newsdatetime || row.news_datetime || row.datetime || row.published || row.date || '';
-  const sourceName = row.source_name || row.source || row.sourcename || '';
-  const description = row.description || row.summary || row.content || '';
-  const currencies = row.currency_codes || row.currencies || row.coins || '';
-  
-  if (!title || !datetime) {
+  // Get title (required)
+  const title = row.title || '';
+  if (!title || !title.trim()) {
     return null;
   }
   
-  // Parse date
+  // Only use sourceurl (real article URL), skip CryptoPanic redirects
+  const url = row.sourceurl || '';
+  
+  // Skip articles without real source URLs
+  if (!isValidUrl(url)) {
+    return null;
+  }
+  
+  // Parse datetime
+  const datetime = row.newsdatetime || '';
+  if (!datetime) {
+    return null;
+  }
+  
   let pubDate;
   try {
     pubDate = new Date(datetime);
@@ -383,8 +493,18 @@ function convertToArticle(row) {
     return null;
   }
   
-  const sourceInfo = getSourceInfo(sourceName);
-  const category = detectCategory(title, sourceName);
+  // Get source from domain (sourcedomain column)
+  const domain = row.sourcedomain || '';
+  const sourceName = getSourceNameFromDomain(domain);
+  
+  // Get description
+  const rawDescription = row.description || '';
+  
+  // Get currencies
+  const currencies = row.currencies || '';
+  
+  const sourceInfo = getSourceInfo(sourceName || '');
+  const category = detectCategory(title, sourceName || '');
   
   // Build article
   const article = {
@@ -396,8 +516,9 @@ function convertToArticle(row) {
     category: category,
   };
   
-  if (description) {
-    article.description = description.trim().slice(0, 500);
+  // Only add description if it's valid content
+  if (isValidDescription(rawDescription)) {
+    article.description = rawDescription.trim().slice(0, 500);
   }
   
   // Add cryptocurrency tags if available

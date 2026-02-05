@@ -1,17 +1,16 @@
 {
   "date": "2019-03-12",
-  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "fetchedAt": "2026-02-05T07:45:53.115Z",
   "articleCount": 3,
   "source": "historical-import",
   "articles": [
     {
       "title": "Price War: A new type of attack on stablecoins",
-      "link": "https://cryptopanic.com/news/4815632/Price-War-A-new-type-of-attack-on-stablecoins",
+      "link": "NULL",
       "pubDate": "2019-03-12T19:54:56.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "trading",
-      "description": "NULL",
       "currencies": [
         "USDT",
         "USDC",
@@ -23,12 +22,11 @@
     },
     {
       "title": "Ripple provides $100 million in funding for blockchain gaming developers",
-      "link": "https://cryptopanic.com/news/4813608/Ripple-provides-100-million-in-funding-for-blockchain-gaming-developers",
+      "link": "NULL",
       "pubDate": "2019-03-12T17:19:02.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "altcoin",
-      "description": "NULL",
       "currencies": [
         "ETH",
         "TRX"
@@ -41,12 +39,11 @@
     },
     {
       "title": "Why everyone loves the new Stellar logo",
-      "link": "https://cryptopanic.com/news/stellar/4810022/Why-everyone-loves-the-new-Stellar-logo",
+      "link": "NULL",
       "pubDate": "2019-03-12T11:01:03.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "XLM"
       ],

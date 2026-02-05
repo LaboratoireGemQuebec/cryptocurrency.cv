@@ -1,17 +1,16 @@
 {
   "date": "2019-04-06",
-  "fetchedAt": "2026-02-05T07:27:06.790Z",
+  "fetchedAt": "2026-02-05T07:45:51.822Z",
   "articleCount": 4,
   "source": "historical-import",
   "articles": [
     {
       "title": "Forbes: Litecoin (LTC) Price Triples in Q1 2019, Gaining Over 200%",
-      "link": "https://cryptopanic.com/news/litecoin/5060057/Forbes-Litecoin-LTC-Price-Triples-in-Q1-2019-Gaining-Over-200",
+      "link": "NULL",
       "pubDate": "2019-04-06T14:43:33.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "trading",
-      "description": "NULL",
       "currencies": [
         "LTC"
       ],
@@ -23,12 +22,11 @@
     },
     {
       "title": "No Dice: Ethereum Loses dApps Race to EOS and Tron",
-      "link": "https://cryptopanic.com/news/5058917/No-Dice-Ethereum-Loses-dApps-Race-to-EOS-and-Tron",
+      "link": "NULL",
       "pubDate": "2019-04-06T10:57:25.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "ethereum",
-      "description": "NULL",
       "currencies": [
         "ETH",
         "TRX",
@@ -41,12 +39,11 @@
     },
     {
       "title": "Tron (TRX), Binance Coin (BNB), Tezos (XTZ) Are Leaders in Market Sentiment This Year: Report",
-      "link": "https://cryptopanic.com/news/5058716/Tron-TRX-Binance-Coin-BNB-Tezos-XTZ-Are-Leaders-in-Market-Sentiment-This-Year-Report",
+      "link": "NULL",
       "pubDate": "2019-04-06T09:54:25.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "exchange",
-      "description": "NULL",
       "currencies": [
         "BNB",
         "TRX",
@@ -60,12 +57,11 @@
     },
     {
       "title": "Litecoin (LTC), EOS (EOS), IOTA (MIOTA), Stellar (XLM) Price Prediction: Cryptocurrency Weekly Overview",
-      "link": "https://cryptopanic.com/news/5058539/Litecoin-LTC-EOS-EOS-IOTA-MIOTA-Stellar-XLM-Price-Prediction-Cryptocurrency-Weekly-Overview",
+      "link": "NULL",
       "pubDate": "2019-04-06T09:00:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "trading",
-      "description": "NULL",
       "currencies": [
         "BTC",
         "LTC",

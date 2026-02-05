@@ -490,7 +490,7 @@ export default function Header() {
 
       <header 
         ref={headerRef}
-        className={`sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300 w-full max-w-full overflow-x-hidden ${
+        className={`sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300 w-full max-w-full ${
           isScrolled ? 'shadow-md' : 'shadow-sm'
         }`}
         style={{
@@ -498,7 +498,7 @@ export default function Header() {
         }}
       >
         <div 
-          className="flex justify-between items-center px-4 lg:px-6 max-w-7xl mx-auto h-full transition-all duration-300 overflow-hidden"
+          className="flex justify-between items-center px-4 lg:px-6 max-w-7xl mx-auto h-full transition-all duration-300"
         >
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">

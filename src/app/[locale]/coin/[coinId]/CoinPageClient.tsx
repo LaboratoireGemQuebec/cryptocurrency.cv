@@ -238,6 +238,24 @@ export default function CoinPageClient({
         </div>
       </div>
 
+      {/* Price Chart - Prominent display */}
+      {chartData.length > 0 && (
+        <div className="mb-6 bg-gray-800/50 rounded-2xl border border-gray-700/50 p-4 sm:p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-white">
+              {coinData.symbol.toUpperCase()}/USD Chart
+            </h3>
+            <span className="text-sm text-text-muted">30 Day</span>
+          </div>
+          <PriceChart
+            data={chartData}
+            type="area"
+            height={400}
+            showGrid={true}
+          />
+        </div>
+      )}
+
       {/* Tab Navigation */}
       <div className="mb-6">
         <CoinTabs

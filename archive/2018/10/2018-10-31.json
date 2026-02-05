@@ -1,17 +1,16 @@
 {
   "date": "2018-10-31",
-  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "fetchedAt": "2026-02-05T07:45:53.116Z",
   "articleCount": 3,
   "source": "historical-import",
   "articles": [
     {
       "title": "Planting Bitcoin",
-      "link": "https://cryptopanic.com/news/ecash/3526819/Planting-Bitcoin",
+      "link": "NULL",
       "pubDate": "2018-10-31T20:48:33.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "bitcoin",
-      "description": "NULL",
       "currencies": [
         "BTC",
         "ETH",
@@ -20,12 +19,11 @@
     },
     {
       "title": "Time to go Long Ripple’s XRP?",
-      "link": "https://cryptopanic.com/news/3523497/Time-to-go-Long-Ripples-XRP",
+      "link": "NULL",
       "pubDate": "2018-10-31T15:41:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "altcoin",
-      "description": "NULL",
       "currencies": [
         "BTC",
         "XRP",
@@ -39,12 +37,11 @@
     },
     {
       "title": "Is Tron [TRX] Setting up to Outperform With an Ascending Triangle",
-      "link": "https://cryptopanic.com/news/3523240/Is-Tron-TRX-Setting-up-to-Outperform-With-an-Ascending-Triangle",
+      "link": "NULL",
       "pubDate": "2018-10-31T15:23:21.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "BTC",
         "TRX"

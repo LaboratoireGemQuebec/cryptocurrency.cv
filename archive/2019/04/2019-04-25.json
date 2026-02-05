@@ -1,17 +1,16 @@
 {
   "date": "2019-04-25",
-  "fetchedAt": "2026-02-05T07:27:06.790Z",
+  "fetchedAt": "2026-02-05T07:45:51.822Z",
   "articleCount": 5,
   "source": "historical-import",
   "articles": [
     {
       "title": "Bitfinex Covered $850 Million Loss Using Tether Funds, NY Prosecutors Allege",
-      "link": "https://cryptopanic.com/news/5242628/Bitfinex-Covered-850-Million-Loss-Using-Tether-Funds-NY-Prosecutors-Allege",
+      "link": "NULL",
       "pubDate": "2019-04-25T21:45:25.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "ethereum",
-      "description": "NULL",
       "currencies": [
         "USDT"
       ],
@@ -23,12 +22,11 @@
     },
     {
       "title": "IOTA Launches Educational Platform That Will Teach You How to Code",
-      "link": "https://cryptopanic.com/news/5241299/IOTA-Launches-Educational-Platform-That-Will-Teach-You-How-to-Code",
+      "link": "NULL",
       "pubDate": "2019-04-25T18:52:00.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "general",
-      "description": "NULL",
       "currencies": [
         "MIOTA"
       ],
@@ -40,12 +38,11 @@
     },
     {
       "title": "Hot on Tron’s heels, Bitcoin SV strikes lesser (but real) football sponsorship deal",
-      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/5239677/Hot-on-Trons-heels-Bitcoin-SV-strikes-lesser-but-real-football-sponsorship-deal",
+      "link": "NULL",
       "pubDate": "2019-04-25T15:25:45.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "bitcoin",
-      "description": "NULL",
       "currencies": [
         "BTC",
         "BSV"
@@ -57,12 +54,11 @@
     },
     {
       "title": "Forbes: Stellar Partners with Wirex to Launch 26 Fiat-Backed Stablecoins",
-      "link": "https://cryptopanic.com/news/5238395/Forbes-Stellar-Partners-with-Wirex-to-Launch-26-Fiat-Backed-Stablecoins",
+      "link": "NULL",
       "pubDate": "2019-04-25T13:11:54.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "stablecoin",
-      "description": "NULL",
       "currencies": [
         "XLM"
       ],
@@ -74,12 +70,11 @@
     },
     {
       "title": "Payments Firm Wirex Launching 26 Stablecoins on the Stellar Blockchain",
-      "link": "https://cryptopanic.com/news/5237657/Payments-Firm-Wirex-Launching-26-Stablecoins-on-the-Stellar-Blockchain",
+      "link": "NULL",
       "pubDate": "2019-04-25T11:45:18.000Z",
       "source": "Historical",
       "sourceKey": "historical",
       "category": "stablecoin",
-      "description": "NULL",
       "currencies": [
         "XLM"
       ],

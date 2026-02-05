@@ -1,0 +1,21 @@
+{
+  "date": "0331-01-01",
+  "fetchedAt": "2026-02-05T07:45:53.802Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "570",
+      "link": "652 (~$1",
+      "pubDate": "0331-01-01T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "votes": {
+        "positive": 685,
+        "negative": 205
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}
