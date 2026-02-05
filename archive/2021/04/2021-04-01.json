@@ -1,27 +1,15 @@
 {
   "date": "2021-04-01",
-  "fetchedAt": "2026-02-05T07:45:51.794Z",
-  "articleCount": 47,
+  "fetchedAt": "2026-02-05T07:48:35.449Z",
+  "articleCount": 22,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @ionberoiz: Its been few months since our mapping initiative started, slowly making a dent in this massive landscape of SoCal proving th…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T23:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "DENT"
-      ]
-    },
     {
       "title": "Decentraland announces layer-two MANA token transfers, plans for full migration",
       "link": "https://cointelegraph.com/news/decentraland-announces-layer-two-mana-token-transfers-plans-for-full-migration",
       "pubDate": "2021-04-01T22:14:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Polygon claims yet another victory in the scaling wars with Decentraland",
       "currencies": [
@@ -37,8 +25,8 @@
       "title": "Filecoin market cap hits $450B after FIL price rallies above $230",
       "link": "https://cointelegraph.com/news/filecoin-market-cap-hits-450b-after-fil-price-rallies-above-230",
       "pubDate": "2021-04-01T21:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Filecoin reached a $450 billion fully diluted market valuation as three major factors catalyzed a strong technical rally.",
       "currencies": [
@@ -51,33 +39,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @gregoryklumov: The decline can't last forever. The era of #USD domination as a widely advertised \"global reserve currency\" is coming to…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T19:35:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "Burn!! Bought more dip",
-      "link": "NULL",
-      "pubDate": "2021-04-01T19:31:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Coinbase Ventures Backs Acala on Polkadot",
       "link": "https://cryptobriefing.com/coinbase-ventures-backs-acala-on-polkadot/",
       "pubDate": "2021-04-01T19:22:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "exchange",
       "description": "Coinbase Ventures is funding Acala, a DeFi hub for the Polkadot network, according to a blog post from the company. Coinbase Will Support Acala “This week, the investment arm of Coinbase has announced their support for Acala, the all-in-one DeFi hub of Polkadot,” Coinbase wrote in its blog post. “This investment also supports Karura, the DeFi hub of Kusama being built by the Acala...",
       "currencies": [
@@ -92,173 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @iamdiedrich: March was busy. $CHEX @ChintaiEOS",
-      "link": "NULL",
-      "pubDate": "2021-04-01T18:47:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Historical data on yields on Swissborg?",
-      "link": "NULL",
-      "pubDate": "2021-04-01T18:42:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "τBitcoin Launch Guide No. 3 — Mining️Tutorial is out now! This comprehensive guide will show you how to mine #tBTC…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T18:20:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "τBitcoin Launch Guide No. 2 — AirdropTutorial is here! Take a look at how to receive #tBTC airdrops starting April…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T18:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "Added Piano-BUSD and Piano-BNB from Mozart Finance on Supra Vaults!",
-      "link": "NULL",
-      "pubDate": "2021-04-01T17:38:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Aussie crypto exchange CoinJar lists 9 new tokens including AAVE, ALGO, EOS, KNC, SUSHI",
-      "link": "NULL",
-      "pubDate": "2021-04-01T17:13:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "EOS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @safenetworktech: You’re on the edge of your seats &amp; so are we. It’s all hands on deck for the testnet release! Stay tuned for an update…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T17:09:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Little to be excited about recently",
-      "link": "NULL",
-      "pubDate": "2021-04-01T16:22:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "Barstool’s Dave Portnoy Planning a Bitcoin Comeback – Under One Condition",
-      "link": "NULL",
-      "pubDate": "2021-04-01T16:10:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "τBitcoin Launch Guide No. 1 is out now! Prep yourself for the #BTCST dApp V2 upgrade and #tBTC launch tomorrow by…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T15:49:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "Huobi has paused LOOM deposits/withdrawals to prepare for the LOOM token swap. If you are a Huobi user, please rea…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T15:44:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "An Introduction to Trust Wallet by its Founder and CEO, Viktor Radchenko @vikmeup.",
-      "link": "NULL",
-      "pubDate": "2021-04-01T15:15:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "225M sell wall on Kucoin @ 2175",
-      "link": "NULL",
-      "pubDate": "2021-04-01T14:35:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Is Theta worth the hype? Theta price volatile ahead of mainnet launch",
       "link": "https://cointelegraph.com/news/is-theta-worth-the-hype-theta-price-volatile-ahead-of-mainnet-launch",
       "pubDate": "2021-04-01T14:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Following the delay of Theta’s Mainnet 3.0 launch, the token dipped by 25%, but what drives the lively price action of Theta?",
       "currencies": [
@@ -274,8 +78,8 @@
       "title": "Dogecoin Rallies After Elon Musk Commits “Literal Moon” to DOGE Bulls",
       "link": "https://www.newsbtc.com/crypto/dogecoin-rallies-after-elon-musk-commits-literal-moon-to-doge-bulls/",
       "pubDate": "2021-04-01T13:36:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Dogecoin rallied on Thursday after Elon Musk committed that he would send the meme cryptocurrency to the moon — literally. The billionaire entrepreneur tweeted that SpaceX, a space technology company he owns, would take a “literal Dogecoin to the literal moon.” The cryptic message ignored to dwell into the hows and whys, but it was […]",
       "currencies": [
@@ -291,8 +95,8 @@
       "title": "Justin Sun Buys Picasso Painting for $20M to Tokenize on JUST NFT Fund",
       "link": "https://cryptopotato.com/justin-sun-buys-picasso-painting-for-20m-to-tokenize-on-just-nft-fund/",
       "pubDate": "2021-04-01T13:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "nft",
       "description": "Justin Sun has bought a painting by Picasso and another one by Andy Warhol for a whopping $22 million. Now, he intends to tokenize them through the JUST NFT Fund.",
       "currencies": [
@@ -307,9 +111,9 @@
       "title": "Chainlink Hits $30 as Grayscale Adds 115,570 LINK to Its Reserves",
       "link": "https://www.newsbtc.com/news/chainlink/chainlink-hits-30-as-grayscale-adds-115570-link-to-its-reserves/",
       "pubDate": "2021-04-01T12:12:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Chainlink prices climbed higher on Thursday, rising by as much as 5.10 percent on the prospects of higher institutional adoption. The LINK/USD exchange rate reached its previous week’s high of $30 before correcting lower during the early London session. Its uptrend majorly came as a part of a broader bullish trend across the altcoin market. […]",
       "currencies": [
         "LINK"
@@ -324,8 +128,8 @@
       "title": "DOGE Pumps 10% As Elon Musk Promises to Deliver It to The Moon via SpaceX",
       "link": "https://u.today/doge-pumps-10-as-elon-musk-promises-to-deliver-it-to-the-moon-via-spacex",
       "pubDate": "2021-04-01T11:57:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "DOGE has printed one big green candle as Elon Musk tweeted that SpaceX would deliver it to the Moon",
       "currencies": [
@@ -341,8 +145,8 @@
       "title": "To the 'literal moon'? Elon Musk SpaceX tweet gives Dogecoin a 35% liftoff",
       "link": "https://cointelegraph.com/news/to-the-literal-moon-elon-musk-spacex-tweet-gives-dogecoin-a-35-lift-off",
       "pubDate": "2021-04-01T11:51:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Right on cue for April Fool's Day, Musk promises to \"put a literal Dogecoin on the literal moon,\" but for hodlers, the resulting gains were anything but a joke.",
       "currencies": [
@@ -355,22 +159,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "I read the white paper so you don't have to",
-      "link": "NULL",
-      "pubDate": "2021-04-01T11:31:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Ripple Withdraws One Billion XRP from Escrow, While XRP Is Back on CoinMarketCap Top 10 Scale",
       "link": "https://u.today/ripple-withdraws-one-billion-xrp-from-escrow-while-xrp-is-back-on-coinmarketcap-top-10-scale",
       "pubDate": "2021-04-01T11:17:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "DLT decacorn Ripple has traditionally moved 1,000,000,000 of its tokens from escrow on the first day of a new month",
       "currencies": [
@@ -385,8 +178,8 @@
       "title": "Dogecoin surges 10% after Elon Musk says SpaceX would put it on the moon",
       "link": "https://cryptoslate.com/dogecoin-surges-10-after-elon-musk-says-spacex-would-put-it-on-the-moon/",
       "pubDate": "2021-04-01T11:08:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "trading",
       "description": "Dogecoin surged over 10% after Elon Musk tweeted about taking the cryptocurrency to the moon.",
       "currencies": [
@@ -402,8 +195,8 @@
       "title": "Elon Musk Tweets SpaceX Is Going to Put Dogecoin on the Moon",
       "link": "https://u.today/elon-musk-tweets-spacex-is-going-to-put-dogecoin-on-the-moon",
       "pubDate": "2021-04-01T10:48:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Elon Musk says that SpaceX intends to put DOGE on the Moon – what does he mean?",
       "currencies": [
@@ -415,22 +208,11 @@
       }
     },
     {
-      "title": "Learn more about @tauprotocol and #tBTC during our Binance #AMA next week! Join us on April 6, 12PM UTC on the…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T10:47:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
       "title": "Synthetix Launches Staking on Optimistic Ethereum",
       "link": "https://cryptobriefing.com/synthetix-launches-staking-optimistic-ethereum/",
       "pubDate": "2021-04-01T10:37:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Synthetix doubles down on Layer 2. Synthetix Integrates Optimistic Ethereum Synthetix staking is now compatible with Optimistic Ethereum. Synthetix announced the update in a blog post, pointing out the improved user experience and expanded features that the Staking product offers over its Mintr tool (Mintr was previously the only way to stake on Layer 2). The essential...",
       "currencies": [
@@ -446,23 +228,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Say hello, to our first Mogwai #NFT that was born on our test net in the last generation (XVI), still a long way to…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T10:22:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
       "title": "Tezos (XTZ) Based Identity Oracle TezID Goes Live",
       "link": "https://btcmanager.com/tezos-xtz-based-identity-oracle-tezid-goes-live/",
       "pubDate": "2021-04-01T10:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "This week, the crypto industry witnessed the launch of TezID, a new identity oracle based on the Tezos blockchain. Announcing TezID ~ an identity oracle for @tezos 🤖🙌 https://t.co/9bKAVDLIMU Read all about me: https://t.co/1wCejpNcSw#tezos #identity #oracle #tezid — TezID (@TezID_net) March 30, 2021 TezID’s Functionality TezID is a smart contract that will aid blockchain usersRead More",
       "currencies": [
         "XTZ"
@@ -477,8 +248,8 @@
       "title": "European bitcoin exchange BL3P to remove Litecoin (LTC)",
       "link": "https://www.cryptoninjas.net/2021/04/01/european-bitcoin-exchange-bl3p-to-remove-litecoin-ltc/",
       "pubDate": "2021-04-01T09:50:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "bitcoin",
       "description": "CryptoNinjas » European bitcoin exchange BL3P to remove Litecoin (LTC) BL3P, a Netherlands-based bitcoin exchange, announced that it has decided to phase out Litecoin (LTC), which means the corresponding LTC/EUR trading market will be removed from the platform. See below the process the company is taking for removal; and their rationales behind adding LTC a few years ago, and now to...",
       "currencies": [
@@ -492,44 +263,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Protect & Burn",
-      "link": "NULL",
-      "pubDate": "2021-04-01T09:23:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "RT @sora_xor: #SORA partnered with @BTCST2020 and @tauprotocol to build a rebasing EVM bridge to the #Polkadot ecosystem and use $tBitcoin…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T08:46:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "if #Bitcoin hit $100,000 today, would it count or would it be an april fools?",
-      "link": "NULL",
-      "pubDate": "2021-04-01T08:08:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Enjin Funding Round Sources $18.9M to Launch Polkadot-Based NFT Blockchain",
       "link": "https://btcmanager.com/enjin-funding-round-18-9m-launch-polkadot-nft-blockchain/",
       "pubDate": "2021-04-01T08:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "nft",
       "description": "Enjin has managed to raise 18.9 million dollars to launch Efinity, the first dedicated NFT blockchain on the Polkadot network. With the ongoing NFT uptrend, the move will see better commerce for NFT-based games and other applications. Working on NFTs Since 2017 Behind cryptocurrencies like Bitcoin, blockchain is the open and safe digital ledger. EnjinRead More",
       "currencies": [
@@ -545,8 +283,8 @@
       "title": "ETH Reached Inches Away From $2K While BTC Records Another $60K Rejection (Market Watch)",
       "link": "https://cryptopotato.com/eth-reached-inches-away-from-2k-while-btc-records-another-60k-rejection-market-watch/",
       "pubDate": "2021-04-01T07:41:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "BTC's has recovered from its $3,000 price drop and currently stands about $1,000 away from $60,000, while FIlecoin has entered the top ten for the first time.",
       "currencies": [
@@ -564,8 +302,8 @@
       "title": "Charted: Binance Coin (BNB) Pumps Above $300, Why Bulls Could Aim New ATH",
       "link": "https://www.newsbtc.com/analysis/bnb/charted-binance-coin-bnb-pumps-above-300-why-bulls-could-aim-new-ath/",
       "pubDate": "2021-04-01T07:08:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Binance coin price started a fresh rally above the $280 resistance against the USDT. BNB is now trading above $300 and it might continue to rise towards $350 or $400. Binance coin price started a fresh rally above the $260 and $280 resistance levels against the USDT. The price is now trading well above $280 […]",
       "currencies": [
@@ -581,8 +319,8 @@
       "title": "Enjin to Launch Polkadot-Based Blockchain for NFTs",
       "link": "https://cryptopotato.com/enjin-to-launch-polkadot-based-blockchain-for-nfts/",
       "pubDate": "2021-04-01T07:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "nft",
       "description": "The gaming-focused blockchain platform Enjin has raised almost $19 million to develop a next-generation blockchain on Polkadot for non-fungible tokens.",
       "currencies": [
@@ -598,8 +336,8 @@
       "title": "RT @mitchliu: It's been a pleasure working with you Line Japan @linebc_japan @LINEBC_Global. This is only the beginning!",
       "link": "https://twitter.com/Theta_Network/status/1377485153908350981",
       "pubDate": "2021-04-01T04:57:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "THETA",
@@ -612,33 +350,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @mobilejae: @aergo_io is less than $0.06 away from surpassing the all time high of $0.5324. Today's high was $0.4796 according to @Coin…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T04:52:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "RT @SpendCard: Strike Finance ($STRK) Deposits &amp; Withdrawals are now enabled on the Spend App. Spending functionality will be available soo…",
-      "link": "NULL",
-      "pubDate": "2021-04-01T03:50:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
       "title": "Enjin builds NFT-focused blockchain on Polkadot (DOT)",
       "link": "https://cryptoslate.com/enjin-builds-nft-focused-blockchain-on-polkadot-dot/",
       "pubDate": "2021-04-01T02:42:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "nft",
       "description": "As Ethereum’s non-fungible token (NFT) mania is booming, blockchain development startup Enjin decided to take it one step further and launch a whole new decentralized network dedicated specifically to these crypto-collectibles, the firm announced today.",
       "currencies": [
@@ -651,22 +367,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We've just released BalanceSheet of 2021Q1, please check at Telegram Channel",
-      "link": "NULL",
-      "pubDate": "2021-04-01T01:20:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KOGE"
-      ]
-    },
-    {
       "title": "Enjin raises $18.9M to launch the first dedicated NFT blockchain on Polkadot",
       "link": "https://www.cryptoninjas.net/2021/04/01/enjin-raises-18-9m-to-launch-the-first-dedicated-nft-blockchain-on-polkadot/",
       "pubDate": "2021-04-01T00:36:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "nft",
       "description": "CryptoNinjas » Enjin raises $18.9M to launch the first dedicated NFT blockchain on Polkadot Enjin, the creators of the ERC-1155 non-fungible token (NFT) standard, have announced they have sold out their $18.9 million private sale for Efinity, a next-generation NFT blockchain made for games, apps, enterprises, and creators, built on Polkadot. The funding round was led by Crypto.com...",
       "currencies": [

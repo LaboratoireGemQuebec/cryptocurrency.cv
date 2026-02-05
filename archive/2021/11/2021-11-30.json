@@ -1,15 +1,15 @@
 {
   "date": "2021-11-30",
-  "fetchedAt": "2026-02-05T07:45:51.758Z",
-  "articleCount": 102,
+  "fetchedAt": "2026-02-05T07:48:35.495Z",
+  "articleCount": 45,
   "source": "historical-import",
   "articles": [
     {
       "title": "Grayscale Launches Solana Trust Following Investors ‘Appetite’",
       "link": "https://www.newsbtc.com/news/solana/grayscale-launches-solana-trust-following-investors-appetite/",
       "pubDate": "2021-11-30T23:59:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Grayscale Investments, the largest cryptocurrency fund in the world, announced a Solana trust, adding the growing cryptocurrency to its list of product offerings. They have shown great interest in Solana’s performance and see a near and long-term potential in it because of its capability for experimentation. In a public release, Grayscale Investments said they will be “enabling investors to...",
       "currencies": [
@@ -24,44 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "And that’s what we call - a gift that keeps on giving!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T23:20:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "Are we the Swiss army knife of cashback? We honestly might be.",
-      "link": "NULL",
-      "pubDate": "2021-11-30T23:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "WhitePaper is coming soon!! Keep holding!!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T22:56:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NPC"
-      ]
-    },
-    {
       "title": "Ethereum Whales Accumulate Billions in Shiba Inu as $SHIB Adoption Grows",
       "link": "https://www.cryptoglobe.com/latest/2021/11/ethereum-whales-accumulate-billions-in-shiba-inu-as-shib-adoption-grows/",
       "pubDate": "2021-11-30T22:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Cryptocurrency whales have accumulated billions of Shiba Inu ($SHIB) tokens after the meme-inspired cryptocurrency’s adoption grew thanks to a listing on cryptocurrency exchange Kraken, its planned entrance in the world of gaming, and Nasdaq-listed retailer Newegg adding SHIB as a payment method. As first reported by DailyHodl, data from tracking platform WhaleStats shows that the […]",
       "currencies": [
@@ -75,22 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bringing fortune to Indonesians.. make sure you are buying and holding @MetafaceToken",
-      "link": "NULL",
-      "pubDate": "2021-11-30T22:46:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "Borderless Capital Launches $500M Algorand-focused Fund",
       "link": "https://blockworks.co/borderless-capital-launches-500m-algorand-focused-fund/",
       "pubDate": "2021-11-30T22:36:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "Product will participate in DeFi liquidity mining, yield farming, lending, borrowing and trading.",
       "currencies": [
@@ -105,96 +61,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#NEM’s Harlock has arrived.",
-      "link": "NULL",
-      "pubDate": "2021-11-30T22:13:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "We love the Llama, Part 2! @DefiLlama",
-      "link": "NULL",
-      "pubDate": "2021-11-30T21:38:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "We love the Llama! @DefiLlama",
-      "link": "NULL",
-      "pubDate": "2021-11-30T21:35:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "Bitcoin ABC 0.24.7 is now available! This release brings various improvements to the node RPC interface. Check ou…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T20:55:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "New bounties incoming",
-      "link": "NULL",
-      "pubDate": "2021-11-30T20:50:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BADGER"
-      ]
-    },
-    {
-      "title": "RT @UnilayerCapital: We are proud to announce the launch of our $10M VC fund targeting Metaverse, NFT and DeFi startups. Unilayer Capital p…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T20:50:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LAYER",
-        "LAYERX"
-      ]
-    },
-    {
-      "title": "RT @BuddyLMusic: Those that support this Titan event by following the steps of @CryptoSanpo will now receive a free NFT #NFTGiveaways #nftg…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T20:33:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
       "title": "MicroStrategy Follows El Salvador’s Lead As It Buys Bitcoin Dip",
       "link": "https://www.newsbtc.com/news/bitcoin/microstrategy-follows-el-salvadors-lead-as-it-buys-bitcoin-dip/",
       "pubDate": "2021-11-30T20:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "For those who can afford it, the recent dips in Bitcoin price have been nothing more than an opportunity to buy the digital asset at a discounted price. This has certainly been the case for El Salvador and now MicroStrategy, as both these entities have moved swiftly to take advantage of the price dip to increase their holdings. El Salvador had quickly snapped up another 100 BTC when the price...",
       "currencies": [
@@ -211,8 +82,8 @@
       "title": "‘Expressiveness of Ethereum, attack surface of Bitcoin,’ does Cardano have it all",
       "link": "https://ambcrypto.com/expressiveness-of-ethereum-attack-surface-of-bitcoin-does-cardano-have-it-all/",
       "pubDate": "2021-11-30T20:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Ethereum has been at the forefront of the boom in the DeFi sector. However, the Bitcoin community believes that with innovation unlocking on the blockchain, it is turning out to be a competitor to existing players. ShapeShift’s Erik Voorhees recently replied to tweets by these Bitcoin supporters who argued in favor of its dominance in […]",
       "currencies": [
@@ -230,8 +101,8 @@
       "title": "Kraken Lists Shiba Inu (SHIB) But Which Memecoins Are Next in Line?",
       "link": "https://beincrypto.com/kraken-lists-shiba-inu-shib-but-which-memecoins-are-next-in-line/",
       "pubDate": "2021-11-30T19:52:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "US-based exchange Kraken has confirmed that it will list Shiba Ina (SHIB) from November 30. The price of SHIB rose by 23.3% in the 24 hours following the announcement. The post Kraken Lists Shiba Inu (SHIB) But Which Memecoins Are Next in Line? appeared first on BeInCrypto.",
       "currencies": [
@@ -244,61 +115,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @JarredWinn: Representing #CEEK alongside @GoGalaGames on the Next Generation of Gaming at @DCentralCon! A great discussion :)",
-      "link": "NULL",
-      "pubDate": "2021-11-30T19:50:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "now supports the Hong Kong dollar! 🇭🇰🇭🇰🇭🇰 #eCash #cashtab #XEC $XEC #HKD $HKD",
-      "link": "NULL",
-      "pubDate": "2021-11-30T19:18:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "We love to see projects embracing our vision of the Theta ecosystem working together - @ThePassaways using Theta Vi…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T19:16:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Our community is already exploring opportunities in the Titanverse 🤖",
-      "link": "NULL",
-      "pubDate": "2021-11-30T19:07:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
       "title": "Ethereum Supply On Exchanges Reaches New Low Of 14%",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-supply-on-exchanges-reaches-new-low-of-14/",
       "pubDate": "2021-11-30T19:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "On-chain data shows that the percentage of Ethereum supply present on exchanges has set new lows of around 14%. Ethereum Supply On Exchanges Continues To Go Down As pointed out by an analyst in a CryptoQuant post, the ETH supply present on exchanges has been going down since a while now. It has now hit new lows of about 14%. The “percentage supply on exchanges” is an indicator that shows the...",
       "currencies": [
@@ -315,8 +136,8 @@
       "title": "Bitcoin Hash Rate Near Full Recovery From China Ban, Close To New All-Time High",
       "link": "https://bitcoinmagazine.com/markets/bitcoin-hash-rate-full-recovery-china-ban-close-to-new-all-time-high",
       "pubDate": "2021-11-30T18:25:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "Bitcoin's hash rate has risen over 80% since the Chinese ban on mining and might make a new all-time high soon.",
       "currencies": [
@@ -330,22 +151,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$METIS CEO @ElenaCryptoChic always thinking about Social Good. One of many reasons to follow her and engage!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T18:19:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
       "title": "Dogecoin Killer Shiba Inu Starts Trading on Kraken",
       "link": "https://u.today/dogecoin-killer-shiba-inu-starts-trading-on-kraken",
       "pubDate": "2021-11-30T18:07:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu has finally made its debut on Kraken",
       "currencies": [
@@ -359,66 +169,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MetisDAO: 2) @myelnet is building a content delivery network that is resilient , scalable , and peer-to-peer ↔️ to suit the long-term…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T17:55:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "RT @YoderIi: Want crypto cashback for movie tickets? Buy on @Groupon via @stormxio and upgrade your movie experience!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T17:54:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "RT @cryptotipsfr: Fact",
-      "link": "NULL",
-      "pubDate": "2021-11-30T17:44:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRTS"
-      ]
-    },
-    {
-      "title": "Please give a warm welcome to our new marketing lead, @WillrCleaver!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T17:43:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "Heroes, are you ready? Challenger Competition has been opened, good luck",
-      "link": "NULL",
-      "pubDate": "2021-11-30T17:36:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNX"
-      ]
-    },
-    {
       "title": "Shiba Inu Set To Begin Trading On Kraken Crypto Exchange On Tuesday",
       "link": "https://bitcoinist.com/shiba-inu-set-to-begin-trading-on-kraken-crypto-exchange-on-tuesday/?utm_source=rss&utm_medium=rss&utm_campaign=shiba-inu-set-to-begin-trading-on-kraken-crypto-exchange-on-tuesday",
       "pubDate": "2021-11-30T17:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Shiba Inu is making its trading debut on crypto exchange Kraken on Tuesday. The meme coin had finally been listed on the exchange after weeks of expectation The crypto exchange had first teased the listing when it took to Twitter to get the community to show their support for the listing. Kraken’s tweet had read […]",
       "currencies": [
@@ -434,8 +189,8 @@
       "title": "Ethereum founder Vitalik Buterin proposes fix for high gas fees",
       "link": "https://cryptoslate.com/ethereum-founder-vitalik-buterin-proposes-fix-for-high-gas-fees/",
       "pubDate": "2021-11-30T17:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "ethereum",
       "description": "Crypto billionaire Vitalik Buterin has suggested a new short-term solution to curb soaring gas prices on the Ethereum network.",
       "currencies": [
@@ -448,23 +203,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @DeFi_Dad: @BlockchainBard_ @AdrienBe_ I love @renprotocol Bridge. Constantly using it to move BTC between Bitcoin, Ethereum and occasio…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T16:50:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RENBTC",
-        "REN"
-      ]
-    },
-    {
       "title": "Cardano: Active $ADA Addresses Jump as Price Keeps Dropping",
       "link": "https://www.cryptoglobe.com/latest/2021/11/cardano-active-ada-addresses-jump-as-price-keeps-dropping/",
       "pubDate": "2021-11-30T16:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The number of active addresses on the Cardano ($ADA) network has recently jumped from around 150,000 per day to over 480000, before plunging back to 200,000, according to available on-chain data. The data, provided by Messari and first spotted by BeInCrypto, reveals that as the price of the native token of the Cardano network, ADA, […]",
       "currencies": [
@@ -477,33 +220,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @NKN_ORG: QNAP partners with NKN to provide the nConnect remote access solution for @QNAP_nas NAS worldwide!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T16:40:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "The monthly development report from the Core Technical team is available",
-      "link": "NULL",
-      "pubDate": "2021-11-30T16:31:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
       "title": "Solana price eyes $300 as Grayscale launches SOL-backed trust",
       "link": "https://cointelegraph.com/news/solana-price-eyes-300-as-grayscale-launches-sol-backed-trust",
       "pubDate": "2021-11-30T16:26:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "The Grayscale Solana Trust would allow high-net-worth and institutional investors to gain indirect exposures to the yearlong bullish SOL market.",
       "currencies": [
@@ -518,55 +239,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Starting in 1 hr, Join us in a livestream Q&amp;A session with our team as we go over the most commonly asked questions…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T16:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "RT @MetisDAO: Finally the most exciting news: $METIS unique architecture will enable our new storage to actually enhance our ability to sca…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:59:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "There will always be more people, and more fiat, and more shitcoins, but there will only ever be 21 Million #Bitcoin",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:59:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
-      "title": "We are now available to all users of more than 150+ sites including yahoo finance +money+ finance + bezinga see ful…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:43:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "Over $30 Million in WETH and MATIC Stolen From DeFi Project MonoX",
       "link": "https://cryptopotato.com/over-30-million-in-weth-and-matic-stolen-from-defi-project-monox/",
       "pubDate": "2021-11-30T15:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Another DeFi hack has taken place as the liquidity pool provider MonoX was compromised for over $30 million.",
       "currencies": [
@@ -579,61 +256,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "November In Focus; PlanB’s $98K BTC Prediction Fails, Ethereum Supply Drops, Litecoin Demand Heightens",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:24:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Unrelated, but did you know you can earn crypto for buying tyres?",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "#Bandprotocol and @QANplatform embark on a strategic partnership to integrate the first quantum-resistant blockch…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:14:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "RT @MetisDAO: THREAD! 1 of the biggest challenges blockchain cos face is data storage: it's expensive/wildly inefficient, especially for hu…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T15:05:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
       "title": "Grayscale launches Solana trust product",
       "link": "https://www.theblockcrypto.com/linked/125784/grayscale-launches-solana-trust-product?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-11-30T15:03:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "altcoin",
       "description": "Crypto asset management firm Grayscale has launched a Solana trust product for accredited investors via price placement. The post Grayscale launches Solana trust product appeared first on The Block.",
       "currencies": [
@@ -649,8 +276,8 @@
       "title": "Jack Dorsey Steps Down as Twitter CEO, SHIB Listed by Kraken, 40 Million XRP Moved to Binance: Crypto News Digest by U.Today",
       "link": "https://u.today/jack-dorsey-steps-down-as-twitter-ceo-shib-listed-by-kraken-40-million-xrp-moved-to-binance-crypto",
       "pubDate": "2021-11-30T15:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Stay tuned for the latest crypto events with U.Today’s news digest!",
       "currencies": [
@@ -663,34 +290,11 @@
       }
     },
     {
-      "title": "GUYS i have a IG account with 3.6k real followers i decided put it at service of NOLE",
-      "link": "NULL",
-      "pubDate": "2021-11-30T14:35:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NPC"
-      ]
-    },
-    {
-      "title": "That's the idea! Also there are entire companies devoted to just ONE of the things Metis provides. Eg @ArweaveTeam…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T14:28:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE",
-        "METIS"
-      ]
-    },
-    {
       "title": "Here's When and How Newegg Is Going to Accept Shiba Inu",
       "link": "https://u.today/heres-when-and-how-newegg-is-going-to-accept-shiba-inu",
       "pubDate": "2021-11-30T14:23:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Newegg is among the first major companies to add support for Shiba Inu",
       "currencies": [
@@ -706,8 +310,8 @@
       "title": "$31 million stolen from MonoX on Polygon and Ethereum in latest DeFi hack",
       "link": "https://www.theblockcrypto.com/linked/125780/31-million-stolen-from-monox-on-polygon-and-ethereum-in-latest-defi-hack?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-11-30T14:08:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "ethereum",
       "description": "Around $31 million in a variety of cryptocurrencies has been stolen from MonoX in a DeFi hack on two blockchains.",
       "currencies": [
@@ -723,8 +327,8 @@
       "title": "SHIB is now listed on all top 10 major crypto exchanges",
       "link": "https://finbold.com/shib-is-now-listed-on-all-top-10-major-crypto-exchanges/",
       "pubDate": "2021-11-30T14:02:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "exchange",
       "description": "The decentralized meme token Shiba Inu (SHIB) is outperforming the broader crypto market on Tuesday, following the dog coin’s listing... Continue reading",
       "currencies": [
@@ -740,8 +344,8 @@
       "title": "Shiba Inu Price Analysis: SHIB Skyrockets 35% in a Day as Bulls Regain Control",
       "link": "https://cryptopotato.com/shiba-inu-price-analysis-shib-skyrockets-35-in-a-day-as-bulls-regain-control/",
       "pubDate": "2021-11-30T13:55:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "SHIB has awakened after breaking above the wedge with a 35% rally in two days.",
       "currencies": [
@@ -757,8 +361,8 @@
       "title": "“About Time For Cardano To Start Taking Off Again” – Analyst Reveals Key ADA Factors To Watch Out For",
       "link": "https://zycrypto.com/about-time-for-cardano-to-start-taking-off-again-analyst-reveals-key-ada-factors-to-watch-out-for/",
       "pubDate": "2021-11-30T13:12:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Although the price of Cardano has been on a downward trend, activity on the protocol network has increased substantially. Popular crypto influencer Lark Davis claims the price of ADA is about to take off with the upcoming DeFi projects. At the moment, Cardano powers over 4000 smart contracts on its platform. When Cardano ushered in […]",
       "currencies": [
@@ -773,22 +377,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Heroes, the Challenger Competition will be delayed. The planned opening time will be based on the upgrade of BSC (b…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T13:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNX"
-      ]
-    },
-    {
       "title": "Shiba Inu gains over 30% in just 2 days as Kraken announces SHIB listing",
       "link": "https://cointelegraph.com/news/shiba-inu-gains-over-30-in-just-two-days-as-kraken-announces-shib-listing",
       "pubDate": "2021-11-30T12:54:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "The upside move in the Shiba Inu instruments also comes in the wake of broader price rebound across leading crypto assets, including Bitcoin.",
       "currencies": [
@@ -803,56 +396,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @VgxheroKaneda: Xmas shopping so I can get my @stormxio app cash back rewards #STMX",
-      "link": "NULL",
-      "pubDate": "2021-11-30T12:44:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "You can earn crypto on almost anything, supplements included.",
-      "link": "NULL",
-      "pubDate": "2021-11-30T12:44:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "RT @jvhak: NEW token deposits/withdrawals and purchases are heading to @curateproject $SOL $THETA $TFUEL Mint/import/export $SOL NFTs are…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T12:40:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "XCUR"
-      ]
-    },
-    {
-      "title": "RT @CurveFinance: EURT/USD pool has quite a good liquidity utilization (8%). Not too much but healthy",
-      "link": "NULL",
-      "pubDate": "2021-11-30T11:38:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Breaks Out Above Descending Resistance — Multi Coin Analysis",
       "link": "https://beincrypto.com/shiba-inu-shib-breaks-out-descending-resistance-multi-coin-analysis/",
       "pubDate": "2021-11-30T11:34:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "BeInCrypto takes a look at the price movement for seven altcoins, including Shiba Inu (SHIB), which is in the process of breaking out above a large descending resistance line.",
       "currencies": [
@@ -869,8 +417,8 @@
       "title": "Shiba Inu Breaks New Record by Reaching $2.3 Billion Held on Whale Addresses",
       "link": "https://u.today/shiba-inu-breaks-new-record-by-reaching-23-billion-held-on-whale-addresses",
       "pubDate": "2021-11-30T11:31:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu whales are now holding even more coins after accumulating new funds amid the correction",
       "currencies": [
@@ -885,8 +433,8 @@
       "title": "Bitcoin Rebound, Shiba Inu Explodes, Buying 7,000 BTC, Shiba New Egg, Invesco BTC ETN & Uhhh....Ok",
       "link": "https://www.youtube.com/watch?v=htXI2tqtGq0",
       "pubDate": "2021-11-30T11:03:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheModernInvestor",
+      "sourceKey": "themoderninvestor",
       "category": "bitcoin",
       "description": "Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------ Art Instagram: https://www.instagram.com/theartistmodern/ ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledg",
       "currencies": [
@@ -903,8 +451,8 @@
       "title": "Shiba Inu Token Up 31% After Kraken Lists SHIB, Overtakes Avalanche",
       "link": "https://decrypt.co/87236/shiba-inu-token-up-after-kraken-listing-overtakes-avalanche",
       "pubDate": "2021-11-30T11:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Meme token Shiba Inu is outperforming the wider crypto market on Tuesday after crypto exchange Kraken listed the coin.",
       "currencies": [
@@ -921,8 +469,8 @@
       "title": "The Price Of Dogecoin Rival Shiba Inu Is Suddenly Soaring—Here’s Why",
       "link": "https://www.forbes.com/sites/billybambrough/2021/11/30/the-price-of-dogecoin-rival-shiba-inu-is-suddenly-soaring-heres-why/",
       "pubDate": "2021-11-30T11:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "trading",
       "description": "Shiba Inu, the meme-based cryptocurrency that's this year emerged as a challenger to Tesla﻿ billionaire's pet project dogecoin, is suddenly surging...",
       "currencies": [
@@ -936,22 +484,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Learn more about Chromia &amp; NFTs as Ginés Sánchez Navarro presents Chromia at Valencia Digital Summit 2021 this comi…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T10:43:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CHR"
-      ]
-    },
-    {
       "title": "Crypto Price Prediction: Serious Fed Warning Issued Over Bitcoin, Ethereum, BNB, Solana, Cardano And XRP",
       "link": "https://www.forbes.com/sites/billybambrough/2021/11/30/crypto-price-prediction-serious-fed-warning-issued-over-bitcoin-ethereum-bnb-solana-cardano-and-xrp/",
       "pubDate": "2021-11-30T10:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Billionaire crypto investor Mike Novogratz has said Fed chair Jerome Powell could trigger a bitcoin and crypto market meltdown as he acts to curb run-away inflation that's leaped to a 30-year high...",
       "currencies": [
@@ -969,8 +506,8 @@
       "title": "Charles Hoskinson Slams Central Banks and the U.S. Senator, Here's Why",
       "link": "https://u.today/charles-hoskinson-slams-central-banks-and-the-us-senator-heres-why",
       "pubDate": "2021-11-30T10:08:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "CEO and founder of IOHK, software developers behind the Cardano (ADA) blockchain, indicates which economic processes scare him",
       "currencies": [
@@ -986,8 +523,8 @@
       "title": "$ADA: A Look at Changes to Cardano Network Being Applied to Mainnet on December 1",
       "link": "https://www.cryptoglobe.com/latest/2021/11/ada-a-look-at-changes-to-cardano-network-being-applied-to-mainnet-on-december-1/",
       "pubDate": "2021-11-30T10:01:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Input Output (aka “IOHK, aka “IOG”), the blockchain company responsible for Cardano’s research and development, has announced a series of upcoming adjustments to the network in order to support future growth. In a blog post titled “Slow and Steady Wins the Race” that was published on November 22, John Woods, IOHK’s Director of Cardano Architecture, […]",
       "currencies": [
@@ -1000,22 +537,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Hello, Onther of #Tokamak network $TON is launching its 2nd project on #TONStarter, $TOS a blockchain startup fundr…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T09:58:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
       "title": "Bitcoin Rejected at $59K as Shiba Inu Explodes 27% (Market Watch)",
       "link": "https://cryptopotato.com/bitcoin-rejected-at-59k-as-shiba-inu-explodes-27-market-watch/",
       "pubDate": "2021-11-30T09:42:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "While bitcoin is still unable to conquer $59,000, Shiba Inu (SHIB) surged by more than 20% after getting listed on Kraken.",
       "currencies": [
@@ -1028,50 +554,11 @@
       }
     },
     {
-      "title": "Cardano (ADA) Price Analysis: Risk of Fresh Decline Below $1.5",
-      "link": "NULL",
-      "pubDate": "2021-11-30T09:28:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "RT @Andy_ZB_Group: As reported, #Bitcoin led the crypto market to its third straight day of gains, after a steep drop by more than 8% on “B…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T09:08:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ZB"
-      ]
-    },
-    {
-      "title": "\"Commerce and the technology that enables it has evolved. The narrative for why people do business has shifted.…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T09:05:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TST"
-      ]
-    },
-    {
       "title": "Shiba Inu Trading Volume Spikes to $3.6 Billion, Following 25% Rally",
       "link": "https://u.today/shiba-inu-trading-volume-spikes-to-36-billion-following-25-rally",
       "pubDate": "2021-11-30T09:04:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "The trading volume \"confirms\" the price spike of SHIB token",
       "currencies": [
@@ -1084,22 +571,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today is a good day to check that you are keeping your #eCash safe: - Keep your $XEC off exchanges, in wallets whe…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T09:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "$SHIB Flips $AVAX Thanks to New Friendshibs With William Volk, Newegg, and Kraken",
       "link": "https://www.cryptoglobe.com/latest/2021/11/shib-flips-avax-thanks-to-new-friendshibs-with-william-volk-newegg-and-kraken/",
       "pubDate": "2021-11-30T08:50:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "exchange",
       "description": "On Tuesday (November 30), the world’s hottest dog meme cryptocurrency Shiba Inu ($SHIB) managed to jump over $AVAX, the native token of smart contracts platform Avalanche after a 24% price surge in the past 24-hour period. What Is Shiba Inu ($SHIB)? Here is how South Korean crypto exchange Korbit described this meme-based cryptocurrency when it announced on November […]",
       "currencies": [
@@ -1113,33 +589,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Join #PUNDIX, @alibaba_cloud, @AntGroup, #ZuelligPharma, @BlockchainIndo on 2 Dec at 16:00 GMT+8 at webinar \"…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T08:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "RT @agfnzn1: My recent publication in @SCORUM_en is to promote my new podcast in Spanish about the NBA, for those who understand Spanish b…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T08:31:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
       "title": "Shiba Inu: Newegg Finds an Interesting Way to Advertise Upcoming $SHIB Support",
       "link": "https://www.cryptoglobe.com/latest/2021/11/shiba-inu-newegg-finds-an-interesting-way-to-advertise-upcoming-shib-support/",
       "pubDate": "2021-11-30T07:54:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Nasdaq-listed online retail giant Newegg Commerce, Inc. (NASDAQ: NEGG) made a grand gesture yesterday to announce its new “friendshib” with the Shiba Inu ($SHIB) project. What Is Shiba Inu ($SHIB)? Here is how South Korean crypto exchange Korbit described this meme-based cryptocurrency when it announced on November 23 that it was going to list $SHIB: […]",
       "currencies": [
@@ -1152,22 +606,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @labs_xt: #XT Community the vote has started! We are proposing a partnership with SSV Network, a getaway to non-custodial, open source E…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T07:35:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SSV"
-      ]
-    },
-    {
       "title": "Kraken exchange defies competitors’ regulatory concerns with SHIB listing",
       "link": "https://cointelegraph.com/news/kraken-exchange-defies-competitors-regulatory-concerns-with-shib-listing",
       "pubDate": "2021-11-30T07:25:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The move comes in contrast to other digital asset exchanges, such as Robinhood, which have avoided listing altcoins such as SHIB over regulatory concerns.",
       "currencies": [
@@ -1183,8 +626,8 @@
       "title": "Cardano Active Addresses Increased by Over 200% Despite ADA Price Slip",
       "link": "https://beincrypto.com/cardano-active-addresses-increased-despite-ada-price-slip/",
       "pubDate": "2021-11-30T07:21:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The active address count on the Cardano network increased by more than 200% this month. The number currently stands at 191,500, though it peaked at 485,000 towards the tail end of November. The post Cardano Active Addresses Increased by Over 200% Despite ADA Price Slip appeared first on BeInCrypto.",
       "currencies": [
@@ -1197,23 +640,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Let’s show the @gate_io community how strong legion is! $LGCY",
-      "link": "NULL",
-      "pubDate": "2021-11-30T07:04:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDL",
-        "LGCY"
-      ]
-    },
-    {
       "title": "Shiba Inu Surges Over 25% Following Grand Listing On Kraken — What To Expect Next",
       "link": "https://zycrypto.com/shiba-inu-surges-over-25-following-grand-listing-on-kraken-what-to-expect-next/",
       "pubDate": "2021-11-30T06:47:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "San Francisco-based crypto exchange Kraken is finally listing Shiba Inu after a month-long heated tussle with the token’s die-hard community. SHIB Goes Live On Kraken This is according to an announcement by the exchange notifying users that the token would be available for trading beginning Tuesday in a tweet that saw over thirty thousand upvotes […]",
       "currencies": [
@@ -1229,8 +660,8 @@
       "title": "Shiba Inu Price Soars As Whale Buys 25 Billion SHIB Tokens",
       "link": "https://u.today/shiba-inu-price-soars-as-whale-buys-25-billion-shib-tokens",
       "pubDate": "2021-11-30T06:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu is back above Avalanche after a 25% price spike",
       "currencies": [
@@ -1247,8 +678,8 @@
       "title": "Bitcoin, Ether prices hold rebound as SHIB surges; crypto funds see record inflows",
       "link": "https://forkast.news/headlines/bitcoin-ether-hold-rebound-shib-surges/",
       "pubDate": "2021-11-30T05:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) and Ethereum’s Ether (ETH) prices on Tuesday morning Asia time held their rebound from the Black Friday sell-off of global equities and cryptocurrencies following news of the new Covid-19 Omicron variant. Bitcoin was trading at US$57,184 and Ethereum at US$4,445, as of publishing time, according to CoinGecko data. Fast facts Institutional investors appear […]",
       "currencies": [
@@ -1263,44 +694,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "18 hours left for your chance to win one of the 30 Cursed TITAN Punkz NFTs. Do not miss this chance $TITAN…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T05:29:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
-      "title": "Know more about JASMY -  free questions answered by JASMY CFO Harada-san",
-      "link": "NULL",
-      "pubDate": "2021-11-30T05:26:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "We've got you covered, ! ️",
-      "link": "NULL",
-      "pubDate": "2021-11-30T05:19:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
       "title": "Crypto Exchange Kraken Now Supports Shiba Inu — SHIB Trading to Begin Tomorrow  #shibainu #kraken…",
       "link": "https://twitter.com/cmnnewsofficial/status/1465548055260717062",
       "pubDate": "2021-11-30T05:07:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@cmnnewsofficial",
+      "sourceKey": "cmnnewsofficial",
       "category": "altcoin",
       "description": "Cryptocurrency exchange Kraken has announced support for the meme cryptocurrency shiba inu (SHIB). Deposits are now live and SHIB trading is expected to commence on Tuesday. The price of SHIB surged following Kraken’s announcement. SHIB on Kraken: Deposits Now Live, Trading Set to Begin Tomorrow Crypto exchange Kraken announced Monday that shiba inu (SHIB) […]",
       "currencies": [
@@ -1316,8 +714,8 @@
       "title": "Solana claims 1 transaction on its network uses less energy than 2 Google searches",
       "link": "https://forkast.news/headlines/solana-transaction-less-energy-two-google/",
       "pubDate": "2021-11-30T04:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "altcoin",
       "description": "As the pushback over environmental concerns of the blockchain industry continues, a recent report by Solana says that a single transaction on the network uses less energy than just two Google searches. Fast facts Completed under the guidance of an independent energy and climate advisor, Solana’s November Energy Report found that a single Solana transaction […]",
       "currencies": [
@@ -1330,44 +728,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#WINkCommunity, more rewards",
-      "link": "NULL",
-      "pubDate": "2021-11-30T04:33:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIN"
-      ]
-    },
-    {
-      "title": "🥳30 lucky winners will be selected!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T03:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIN"
-      ]
-    },
-    {
-      "title": "QNAP partners with NKN to provide the nConnect remote access solution for @QNAP_nas NAS worldwide!",
-      "link": "NULL",
-      "pubDate": "2021-11-30T03:46:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
       "title": "Kraken Announces Support for Shiba Inu (SHIB)",
       "link": "https://cryptopotato.com/kraken-announces-support-for-shiba-inu-shib/",
       "pubDate": "2021-11-30T03:44:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "The cute Shiba Inu puppy bit the bloodthirsty Kraken and infected it with bullishness. Kraken, the eighth largest cryptocurrency exchange in the world according to Coingecko, announced today that it would start supporting the trading of Shiba Inu (SHIB), a Dogecoin-inspired cryptocurrency that has gained a lot of popularity after the boom of the meme […]",
       "currencies": [
@@ -1383,8 +748,8 @@
       "title": "Hedera and Korea's Shinhan Bank partner on KRW stablecoin pilot",
       "link": "https://cointelegraph.com/news/hedera-and-korea-s-shinhan-bank-partner-on-krw-stablecoin-pilot",
       "pubDate": "2021-11-30T03:38:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "A new proof-of-concept will be tested to send fiat-backed stablecoins between banks to reduce fees and transaction times on international payments.",
       "currencies": [
@@ -1397,34 +762,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This was coded up and deployed by @HungSam12 , a contributor from outside the dev team. Thanks! #eCash…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T02:25:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "The @BellaProtocol policy is now activated on @tidaldefi. Over 1.1 million USDC has been deposited into #bella’s re…",
-      "link": "NULL",
-      "pubDate": "2021-11-30T02:03:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDC",
-        "BEL"
-      ]
-    },
-    {
       "title": "Nasdaq-Listed Online Retailer Confirms It Will Accept Shiba Inu ($SHIB) Payments",
       "link": "https://www.cryptoglobe.com/latest/2021/11/nasdaq-listed-online-retailer-confirms-it-will-accept-shiba-inu-shib-payments/",
       "pubDate": "2021-11-30T01:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Newegg Commerce, a Nasdaq-listed major online retailer, has confirmed it will soon accept payments in the meme-inspired cryptocurrency Shiba Inu ($SHIB). When exactly SHIB will be accepted is not yet clear. In a post on the microblogging platform Twitter, Newegg revealed Shiba Inu as a payment option was “coming soon.” The tweet came shortly after […]",
       "currencies": [
@@ -1440,8 +782,8 @@
       "title": "Crypto Exchange Kraken Now Supports Shiba Inu — SHIB Trading to Begin Tomorrow",
       "link": "https://news.bitcoin.com/crypto-exchange-kraken-supports-shiba-inu-shib-trading/",
       "pubDate": "2021-11-30T01:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "altcoin",
       "description": "Cryptocurrency exchange Kraken has announced support for the meme cryptocurrency shiba inu (SHIB). Deposits are now live and SHIB trading is expected to commence on Tuesday. The price of SHIB surged following Kraken’s announcement. SHIB on Kraken: Deposits Now Live, Trading Set to Begin Tomorrow Crypto exchange Kraken announced Monday that shiba inu (SHIB) […]",
       "currencies": [

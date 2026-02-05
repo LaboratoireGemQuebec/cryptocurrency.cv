@@ -1,16 +1,16 @@
 {
   "date": "2024-03-04",
-  "fetchedAt": "2026-02-05T07:45:53.368Z",
-  "articleCount": 57,
+  "fetchedAt": "2026-02-05T07:48:35.651Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
     {
       "title": "Crypto Expert Says ‘Prepare Yourself’ For Massive Altcoin Run, Here’s Why",
       "link": "https://www.newsbtc.com/news/crypto-expert-altcoin-run/",
       "pubDate": "2024-03-04T23:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Cryptocurrency analyst, Michael van de Poppe has alerted the broader cryptocurrency community about an upcoming altcoin rally. The analyst has cited the recent upward trend experienced by Bitcoin as a positive signal for this prediction. Get Ready For Major Altcoin Run In a recent X (formerly Twitter) post, Poppe suggested that altcoins are poised to become the next in line for the 2024...",
       "currencies": [
         "BTC",
@@ -26,51 +26,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$1.3+ Trillion: Bitcoin Market Cap Sets New Record All-Time High",
-      "link": "NULL",
-      "pubDate": "2024-03-04T22:54:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "A Dual Tech Saga: Disruptive Trends From ETHDenver And MWC",
-      "link": "NULL",
-      "pubDate": "2024-03-04T22:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Jim Cramer Has An Answer For Why Bitcoin Is Rallying, Telling Investors To 'Get Ready' For What's Next",
-      "link": "NULL",
-      "pubDate": "2024-03-04T21:44:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ]
-    },
-    {
       "title": "BREAKING: MicroStrategy Will Sell $ 600 Million of Private Notes and Buy Bitcoin with a Part of it",
       "link": "https://en.bitcoinsistemi.com/breaking-microstrategy-will-sell-600-million-of-private-notes-and-buy-bitcoin-with-a-part-of-it/",
       "pubDate": "2024-03-04T21:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to breaking information, MicroStrategy today announced that, subject to market conditions and other factors, it will offer $600 million of aggregate principal convertible senior notes due 2030 in a private offering to persons reasonably believed to be qualified institutional buyers pursuant to Rule 144A under the Securities Act of 1933, as amended. announced his […] Continue...",
       "currencies": [
@@ -83,23 +43,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Willy Woo Says Bitcoin To Break $125,000 Minimum Before End of 2025 As ‘Full Demand Unleashed’ – Here’s What He Means",
-      "link": "NULL",
-      "pubDate": "2024-03-04T20:55:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
       "title": "Mysterious Shiba Inu Whales Haul Trillions Of SHIB As PEPE, BONK Memecoin Craze Gets Insane Boost",
       "link": "https://zycrypto.com/mysterious-shiba-inu-whales-haul-trillions-of-shib-as-pepe-bonk-memecoin-craze-gets-insane-boost/",
       "pubDate": "2024-03-04T20:16:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "However, the new week is kicking off with a memecoin rally, and Shiba Inu, Dogecoin, and PEPE are leading the pack.",
       "currencies": [
@@ -119,8 +67,8 @@
       "title": "Cardano On-Chain Fundamentals Point To Massive Rally, Is $10 Possible?",
       "link": "https://www.newsbtc.com/news/cardano/cardano-is-10-possible/",
       "pubDate": "2024-03-04T20:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "The Cardano network is showing bullish signs, which suggest that a price surge might be on the horizon for the ADA token. Based on price predictions made by some crypto analysts, the crypto token could rise to as high as $10 when this happens. Cardano Network Is Healthy Crypto analyst Ali Martinez highlighted in an X (formerly Twitter) post that the Cardano network appears healthy. This is...",
       "currencies": [
@@ -135,39 +83,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is a New All-Time High in View for Ether? Analyst Reveals the Odds",
-      "link": "NULL",
-      "pubDate": "2024-03-04T19:58:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BUSD",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Ethena 2 and ACI Unveil Proposal for sUSDe Integration into Aave V3",
-      "link": "NULL",
-      "pubDate": "2024-03-04T19:50:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
       "title": "Cardano Chief Backs XRP Lawyer Deaton With Max Donation",
       "link": "https://bitcoinist.com/cardano-chief-backs-xrp-lawyer-deaton/",
       "pubDate": "2024-03-04T19:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "Charles Hoskinson, the founder of Cardano, has announced a maximum legal donation of $3,300 to John Deaton, a lawyer and crypto advocate, who is running for the United States Senate. Hoskinson’s support is aimed at Deaton’s campaign against incumbent Senator Elizabeth Warren in the US state Massachusetts. This financial backing underscores the growing political engagement […]",
       "currencies": [
@@ -181,244 +101,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Wrapped Bitcoin Up More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-04T19:02:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Bitcoin Hardforks BCH, BSV Outpace BTC Gains",
-      "link": "NULL",
-      "pubDate": "2024-03-04T18:54:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "BSV"
-      ]
-    },
-    {
-      "title": "How Soon Can We Expect Bitcoin Price to Hit $100,000? — Here’s What’s Possible",
-      "link": "NULL",
-      "pubDate": "2024-03-04T18:32:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "BONK surges by 55%: Are more gains ahead?",
-      "link": "NULL",
-      "pubDate": "2024-03-04T18:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO",
-        "BSV",
-        "PEPE",
-        "BONK"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Price analysis 3/4: SPX, DXY, BTC, ETH, BNB, SOL, XRP, ADA, DOGE, AVAX",
-      "link": "NULL",
-      "pubDate": "2024-03-04T17:58:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "AMP"
-      ]
-    },
-    {
-      "title": "$SMOG Smashes New ATH, Makes Jupiter’s Strict List And Flies Past 40k Holders",
-      "link": "NULL",
-      "pubDate": "2024-03-04T17:20:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "COPA v. Craig Wright nears final ruling on Bitcoin’s whitepaper",
-      "link": "NULL",
-      "pubDate": "2024-03-04T17:07:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HT",
-        "GAL"
-      ]
-    },
-    {
-      "title": "Theta Network (THETA) price surges 40% Galaxy Fox nears presale target",
-      "link": "NULL",
-      "pubDate": "2024-03-04T16:15:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "THETA"
-      ]
-    },
-    {
-      "title": "Shiba Inu Lead Developer Declares Its Time To Showcase Project’s Power",
-      "link": "NULL",
-      "pubDate": "2024-03-04T16:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "KSM"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Orange Domains aims to expand Bitcoin Name System functionality",
-      "link": "NULL",
-      "pubDate": "2024-03-04T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Unlock the Secrets of Successful Trading: The Ultimate Onchain Simulation Tool",
-      "link": "NULL",
-      "pubDate": "2024-03-04T15:58:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNT"
-      ]
-    },
-    {
-      "title": "Bitcoin Surpasses $65,000; Pepe Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2024-03-04T14:46:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "BCH",
-        "BSV",
-        "BTT",
-        "FTM",
-        "AGIX",
-        "PEPE",
-        "SUI",
-        "BONK"
-      ]
-    },
-    {
-      "title": "LUNC And USTC On The Verge Of Rally? Community Debuts Game-Changing Revival Proposal",
-      "link": "NULL",
-      "pubDate": "2024-03-04T14:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Hitting Unprecedented Heights Globally, BTC Over $65K",
-      "link": "NULL",
-      "pubDate": "2024-03-04T14:07:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Coinspeaker Bitcoin Price Hitting Unprecedented Heights Globally, BTC Over $65K The recent price surge has led to a spike in liquidations of leveraged Bitcoin positions, particularly short positions. Bitcoin Price Hitting Unprecedented Heights Globally, BTC Over $65K",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Neo News: Week in Review – February 26 – March 3",
-      "link": "NULL",
-      "pubDate": "2024-03-04T14:01:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "The Graph and Dogecoin price surge as NuggetRush hit $2.6 million in presale",
-      "link": "NULL",
-      "pubDate": "2024-03-04T14:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "GRT"
-      ]
-    },
-    {
       "title": "Ripple’s XRP Yet To ‘Successfully’ Solve This Multi-Trillion-Dollar Problem, But That Could be Fast-Changing",
       "link": "https://zycrypto.com/ripples-xrp-yet-to-successfully-solve-this-multi-trillion-dollar-problem-but-that-could-be-fast-changing/",
       "pubDate": "2024-03-04T13:24:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Spotlighting the significance of XRP in the broader multi-trillion-dollar payment market as a token that facilitates global transfers, Garlinghouse is quoted saying...",
       "currencies": [
@@ -432,44 +119,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Fantom (FTM) Skyrockets 31% in Astonishing Comeback, Here's Why",
-      "link": "NULL",
-      "pubDate": "2024-03-04T13:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 04 March: Bitcoin Breaks $65K Barrier",
-      "link": "NULL",
-      "pubDate": "2024-03-04T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "DOGE",
-        "SHIB",
-        "BTT",
-        "USDP",
-        "SAFE",
-        "PEPE",
-        "FDUSD",
-        "BONK"
-      ]
-    },
-    {
       "title": "Ethereum Bulls Are Unstoppable as ETH Price Breaks Above $3,500 in Anticipation of Dencun Upgrade",
       "link": "https://www.coinspeaker.com/ethereum-bulls-eth-price-3500-dencun/",
       "pubDate": "2024-03-04T12:43:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "ethereum",
       "description": "Coinspeaker Ethereum Bulls Are Unstoppable as ETH Price Breaks Above $3,500 in Anticipation of Dencun Upgrade The anticipation surrounding the Dencun upgrade has undoubtedly contributed to the recent bullish sentiment in the Ethereum market. Ethereum Bulls Are Unstoppable as ETH Price Breaks Above $3,500 in Anticipation of Dencun Upgrade",
       "currencies": [
@@ -482,68 +136,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Hits $65,000 As BTC Price Model Creator Forecasts 10 Months Of ‘Face-Melting FOMO’",
-      "link": "NULL",
-      "pubDate": "2024-03-04T12:05:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin's Bull Market Is Here, Bringing 'Face-Melting' Rallies And 'FOMO' Madness: PlanB's Latest Analysis",
-      "link": "NULL",
-      "pubDate": "2024-03-04T11:37:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Crossroads: Analyst Identifies Level Set To Determine Next Move",
-      "link": "NULL",
-      "pubDate": "2024-03-04T11:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Tron (TRX) Founder Justin Sun Made a New Announcement, This Altcoin Is on the Rise!",
-      "link": "NULL",
-      "pubDate": "2024-03-04T10:57:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "BTT",
-        "NFT"
-      ]
-    },
-    {
       "title": "Ethereum Co-founder Signals Major Scandal: Shockwaves Through Crypto World",
       "link": "https://coinpaprika.com/news/ethereum-co-founder-signals-major-scandal-shockwaves-through-crypto-world/",
       "pubDate": "2024-03-04T10:50:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Ethereum insider teases major revelation, hinting at a scandal that could redefine the crypto landscape",
       "currencies": [
@@ -556,35 +153,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Staking protocol EigenLayer TVL hits $10 billion as ETH surges",
-      "link": "NULL",
-      "pubDate": "2024-03-04T10:34:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Of Lido’s new highs, Ethereum’s input, and the impact on LDO",
-      "link": "NULL",
-      "pubDate": "2024-03-04T10:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LDO"
-      ]
-    },
-    {
       "title": "PEPE, Floki, Bonk, and other memecoins record 3,000% surge in weekly volume",
       "link": "https://cointelegraph.com/news/pepe-floki-bonk-memecoins-3000-surge",
       "pubDate": "2024-03-04T09:04:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Pepe token price has risen nearly 400% in the past week and its market cap has doubled in the past two days.",
       "currencies": [
@@ -600,23 +173,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Announces Support for This Token Airdrop: Are You Eligible?",
-      "link": "NULL",
-      "pubDate": "2024-03-04T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "STRK",
-        "RON"
-      ]
-    },
-    {
       "title": "4 Meme Coin Altcoins To Buy Ahead Of 2024 Bull Run: SHIB, PEPE, DOGE, BONK",
       "link": "https://www.cryptopolitan.com/4-meme-coin-altcoins-to-buy-in-2024/",
       "pubDate": "2024-03-04T08:42:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "trading",
       "description": "4 Meme Coin altcoins to buy: The meme coins Shiba Inu Coin (SHIB), Pepe (PEPE), Dogecoin (DOGE), and Bonk (BONK) are making headlines as Bitcoin’s impressive rally past $63,000 sparks a bullish trend across the crypto sphere. With the market’s renewed passion for meme coins, these four are potential investments for those looking to capitalize […]",
       "currencies": [
@@ -636,8 +197,8 @@
       "title": "Meme Coin Mania: Why Shiba Inu, PEPE, Dogecoin Are Far From Finished",
       "link": "https://www.newsbtc.com/news/why-shiba-inu-pepe-dogecoin-are-far-from-done/",
       "pubDate": "2024-03-04T08:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "As the crypto market experiences another wave of fervent enthusiasm, meme coins like Shiba Inu, PEPE, and Dogecoin have surged to the forefront of investors’ minds. With PEPE leading the rally at a staggering 371% increase, Dogwifhat (WIF) at 351%, FLOKI at 331%, BONK at 182%, and Shiba Inu (SHIB) at 177% over just the last seven days, the phenomenon has caught the eye of both enthusiasts and...",
       "currencies": [
@@ -660,200 +221,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The First Mpr@memeinator.comeme Platform on IOST Is Officially Launching & The First Donation Program “idragon” Goes Live Now!",
-      "link": "NULL",
-      "pubDate": "2024-03-04T08:20:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOST"
-      ]
-    },
-    {
-      "title": "Phase of ‘Face-Melting FOMO’ Now Underway for Bitcoin, According to Quant Analyst PlanB",
-      "link": "NULL",
-      "pubDate": "2024-03-04T08:04:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "How This DeFi Project Achieved 500% TVL Growth In a Month",
-      "link": "NULL",
-      "pubDate": "2024-03-04T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Algorithmic Impression: Kelexo (KLXO) Algorithms Impress Shiba Inu (SHIB) & Filecoin (FIL) Investors, Presale Likely to 20X",
-      "link": "NULL",
-      "pubDate": "2024-03-04T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Market Tops $2.5 Trillion as Dogecoin (DOGE), Polkadot (DOT) and Filecoin (FIL) Surge",
-      "link": "NULL",
-      "pubDate": "2024-03-04T07:58:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "DOT",
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Insider Teases ‘The Revelation Of A Lifetime’ – What’s Coming?",
-      "link": "NULL",
-      "pubDate": "2024-03-04T07:15:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "GT"
-      ]
-    },
-    {
-      "title": "'BONK Killer' MILLI Skyrockets 400% In A Day, Outshining Dogecoin And Shiba Inu Within 2 Days Of Launch",
-      "link": "NULL",
-      "pubDate": "2024-03-04T06:34:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "BONK",
-        "SEI"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 03 March: Memecoin Rally Breaks Records",
-      "link": "NULL",
-      "pubDate": "2024-03-04T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "BSV",
-        "NFT",
-        "ARK",
-        "PEPE",
-        "WIF"
-      ]
-    },
-    {
-      "title": "First gold ETF took 2 years to hit $10B, this Bitcoin ETF did it in 2 months",
-      "link": "NULL",
-      "pubDate": "2024-03-04T05:58:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "BlackRock’s iShares Bitcoin Trust (IBIT) has amassed $10 billion in assets under management in just seven weeks.",
-      "currencies": [
-        "BTC",
-        "IBIT"
-      ],
-      "votes": {
-        "positive": 10,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "DOT Price (Polkadot) Looks Set To Crush $10 And Rally Further",
-      "link": "NULL",
-      "pubDate": "2024-03-04T05:28:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Rally Amid FOMO: Analyst Predicts $100K On Table For King Crypto, Says 'Watch It Like A Hawk'",
-      "link": "NULL",
-      "pubDate": "2024-03-04T04:48:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "LEO",
-        "BTT",
-        "FTM",
-        "FET",
-        "PEPE",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Restarts Rally, Why BTC Could Soon Hit $65K",
-      "link": "NULL",
-      "pubDate": "2024-03-04T03:13:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Will Polygon’s surging DEX volumes help MATIC cross $1?",
       "link": "https://ambcrypto.com/will-polygons-surging-dex-volumes-help-matic-cross-1/",
       "pubDate": "2024-03-04T02:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "exchange",
       "description": "What could the recent increase in Polygon's DEX volumes mean for the network?",
       "currencies": [
@@ -864,30 +236,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Top Trader Says Dogecoin (DOGE) Flashing Bullish Signal, Updates Outlook on AI-Related Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-03-04T01:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "FIL"
-      ]
-    },
-    {
-      "title": "LUNC falls 24% after 80% rally, but don’t sell just yet",
-      "link": "NULL",
-      "pubDate": "2024-03-04T00:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
     }
   ]
 }

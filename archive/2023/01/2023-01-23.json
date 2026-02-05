@@ -1,48 +1,15 @@
 {
   "date": "2023-01-23",
-  "fetchedAt": "2026-02-05T07:45:52.705Z",
-  "articleCount": 102,
+  "fetchedAt": "2026-02-05T07:48:35.584Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RIF is an all-in-one easy to use framework that provides builders access to a variety of services across multiple c…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T23:22:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
-      "title": "Energy Web is building #Web3 technologies for the largest enterprises around the world, powering dozens of countrie…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T22:53:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "RT @GrassRootsio: A new video on how to develop with THORChain for interface and wallet devs! Check it out!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T22:40:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
     {
       "title": "Terra Luna Classic Price Prediction as LUNC Pumps Up 48% From Recent Lows – $1 Incoming in 2023?",
       "link": "https://cryptonews.com/news/terra-luna-classic-price-prediction-as-lunc-pumps-up-48-from-recent-lows-1-incoming-2023.htm",
       "pubDate": "2023-01-23T21:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "LUNC, the ticker for the Luna Classic cryptocurrency that powers the original, but now largely defunct Terra blockchain, is up an impressive more than 40% from the lows it printed back in December under $0.00013. LUNC/USD was last changing hands in the $0.00017s, a little under recent highs in the $0.00019s, with the bulls still struggling to push the cryptocurrency back to the north of its...",
       "currencies": [
@@ -55,202 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @TraversaJulian: On in 5 mins with the @fraxfinance, @eulerfinance, @SwivelFinance &amp; @IlluminateFi teams!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T21:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EUL"
-      ]
-    },
-    {
-      "title": "Bitcoin Puell Multiple Starts To Leave Bear Market Zone, Bull Rally Here?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T21:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Is Axie Infinity ecosystem on a downtrend? Analysis of new data reveals…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T20:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "RT @hakyzz1: @ZillazNFT Simply amazing",
-      "link": "NULL",
-      "pubDate": "2023-01-23T20:08:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
-      "title": "RT @MrSnow_615: @ZillazNFT Wow can tell the work that went into this!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T20:07:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
-      "title": "RT @ninerealms_cap: In this season of development, security, and scaling, our job is to make @THORChain boring in all the right ways. Reli…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T19:16:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "RT @okx: 5️⃣ new staking deals are in the making #OKXEarn: Stake $ELF @aelfblockchain, $EGLD @ElrondNetwork, $ICX @helloiconworld, $QTUM…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T19:01:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD",
-        "QTUM"
-      ]
-    },
-    {
-      "title": "Another week and the whales are still trading! At the top of the unrealized profits table is ubris, with over $4 mi…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T19:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "An update requiring 100% adoption from nodes has been released. Swaps will resume only after the update has been fu…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:52:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Looking into buying a node",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:50:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Cant lock in anymore? What happen? Seems like the App is not working and I also could not use my hi-Card through Curve today?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:47:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HI"
-      ]
-    },
-    {
-      "title": "We are happy to see how real estate agents are using the Propy platform to provide security and transparency to th…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:38:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PRO"
-      ]
-    },
-    {
-      "title": "RT @Bull_Sander: Take a look at decentralization. @THORChain represents to you, savers vaults. Almost 1000 individuals deposited their nati…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:38:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "A new milestone has been achieved by @Wavelength_DAO",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:15:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VLX",
-        "WVLX"
-      ]
-    },
-    {
-      "title": "RT @0xak_: Friendly reminder than the $AXS unlock contains no 'Investor' portion (they are fully vested), only 'staking rewards'. Even the…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:13:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "FORCER"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: This doesn't even take into consideration the fact that ALL of these exchanges are nigh guaranteed to be infringing on…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:06:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: In the 3rd round of layoffs since June, @Gemini Cutting Another 10% of Staff. This heavy attrition is also prevalent a…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T18:04:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Appears In Top Trending Crypto List, Surpassing BTC",
       "link": "https://newsbtc.com/news/cardano/cardano-top-trending-crypto-list/",
       "pubDate": "2023-01-23T18:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Weeks have gone by, and the crypto market is still seeing a bullish trend, and the dubbed ‘mini bull run’ for the ongoing market movement is beginning to look more prominent. Altcoins such as Cardano (ADA) have moved significantly in price breaking multiple resistance and climbing higher highs while ignoring a retrace. In today’s news, ADA has once again proven its potential to be small but...",
       "currencies": [
@@ -267,34 +43,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @eridanus_9r: Join us!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T17:43:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "𝐀𝐦𝐢𝐝 𝐀𝐗𝐒 𝐓𝐨𝐤𝐞𝐧 𝐔𝐧𝐥𝐨𝐜𝐤, 𝐀𝐱𝐢𝐞 𝐈𝐧𝐟𝐢𝐧𝐢𝐭𝐲 𝐒𝐨𝐚𝐫𝐬 𝟐𝟐% According to data from CoinGecko, the price of Axie Infinity (AXS)…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T17:16:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS",
-        "PLUT"
-      ]
-    },
-    {
       "title": "FTX’s FTT token back from the dead up over 120% in 2023",
       "link": "https://finbold.com/ftxs-ftt-token-back-from-the-dead-up-over-120-in-2023/",
       "pubDate": "2023-01-23T17:13:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "exchange",
       "description": "FTX Token (FTT), the native cryptocurrency of the collapsed FTX crypto exchange, is recording significant gains in 2023 despite the … Continued",
       "currencies": [
@@ -306,99 +59,11 @@
       }
     },
     {
-      "title": "1/Are you looking to attract new clients, and get a competitive edge in your real estate market with expert knowle…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T17:09:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PRO"
-      ]
-    },
-    {
-      "title": "If you've run out of mobile airtime and data, you can head to the #ETNApp and instantly top up your phone with #ETN…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T17:01:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @WXNetwork: ⭐️Provide liquidity in one token to each of the pools, smart contract will do the rest for you. The deposit fee is 0.075% of…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:42:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "Axie Infinity AXS Token Soars 45% Despite Drop In Player Numbers",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:35:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Helium #IoT allows connected sensors to be deployed almost anywhere. Long-range connectivity, and long battery li…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:19:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "The latest BITFINEX ALPHA is out! Crypto markets are rallying, but questions still remain about economy 🤔 - The cur…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:15:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "3 signs Axie Infinity price risks giving up its 135% gains in January",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:09:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "gm &amp; happy week #IOST!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:09:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOST"
-      ]
-    },
-    {
       "title": "Developers finalize first ‘shadow fork’ for Ethereum’s Shanghai upgrade",
       "link": "https://www.theblock.co/post/204639/developers-finalize-first-shadow-fork-for-ethereums-shanghai-upgrade?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-01-23T16:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Ethereum developers have successfully launched a \"shadow fork\" of the Shanghai upgrade, to test it on a version of the main Ethereum network.",
       "currencies": [
@@ -411,68 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Quant (QNT) Price Slides Despite Bullish Crypto Market: What You Should Know",
-      "link": "NULL",
-      "pubDate": "2023-01-23T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "RT @NOWNodes: Let's expand #Zilliqa Ecosystem and get some inspiration for 2023 Discover our game with @zilliqa, get your personal dev r…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:55:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "#Venom will revolutionize finance by providing cross-border payments and increasing accessibility, especially in ar…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:48:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VENOM"
-      ]
-    },
-    {
-      "title": "RT @holochain: Learn how to develop Holochain apps! Our Dev Education partners are world-class instructors experienced in founding and faci…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:46:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "Dookey Dash NFT price speculation is built around the idea of a hypothetical reward to those who obtain the highest…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:38:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DASH",
-        "NMV"
-      ]
-    },
-    {
       "title": "XRP Primed For Bullish Eruption As Ripple’s Garlinghouse Believes ‘Truth Will Come To Light’ In SEC Case",
       "link": "https://zycrypto.com/xrp-primed-for-bullish-eruption-as-ripples-garlinghouse-believes-truth-will-come-to-light-in-sec-case/",
       "pubDate": "2023-01-23T15:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Ripple CEO Brad Garlinghouse expresses optimism about the case closing in its favour.",
       "currencies": [
@@ -486,265 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Have you already participated in our Lunar New Year giveaway? 🧐 We are rewarding 𝟓𝟎 𝐥𝐮𝐜𝐤𝐲 𝐂𝐡𝐢𝐥𝐢𝐳𝐞𝐧𝐬 with a share i…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:05:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "#Fasttoken (FTN) public sale ends with a bang and #FastexChain testing begins in February - read more at…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:04:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTN"
-      ]
-    },
-    {
-      "title": "Ethereum Could Benefit From Stealth Addresses Implementation, Says Vitalik Buterin",
-      "link": "NULL",
-      "pubDate": "2023-01-23T15:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XMR",
-        "ZEC"
-      ]
-    },
-    {
-      "title": "@sinoTrinity, the CEO of sCrypt, provides Bitcoin Smart Contract. He discussed the benefits of Zero-Knowledge Proo…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T14:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Coming up in a couple hours, set your reminder below",
-      "link": "NULL",
-      "pubDate": "2023-01-23T14:22:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EUL"
-      ]
-    },
-    {
-      "title": "RT @LootRealms: If the Lords decide to alter our reality - then so be it.",
-      "link": "NULL",
-      "pubDate": "2023-01-23T14:10:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGLD"
-      ]
-    },
-    {
-      "title": "RT @HelmsProject: The Sacred Fox is now available as a free mint for the top 50 @HelmsProject owners as well as the top 50 @CouncilOfMages…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T14:10:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGLD"
-      ]
-    },
-    {
-      "title": "(1/10) The #crypto world is full of potential, with many having amassed fortunes in the market 🤑 But will the mark…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:59:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIG"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: Vast majority of crytpo market's misled. Crypto never crashed! It's the strongest its ever been. Dabblers are bedazzle…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "Axie Infinity Price Prediction as AXS Blasts Up 29% in 24 Hours – How High Can AXS Go?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:54:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "This weekend, the Omm protocol was attacked through a smart contract exploit. Investigations are ongoing and an exp…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:51:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICX"
-      ]
-    },
-    {
-      "title": "Axie Infinity Soars 22% Amid AXS Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:48:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "First Mover Americas: Axie Infinity's Token Is Soaring",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:18:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Zilliqa made a big impact at the Web3 investor gathering event in Davos! @MattDDyer spoke on the gaming panel, sha…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:08:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "Your content deserves to be rewarded! But how? You can now accept tips directly to your Bitfinex account! Enable…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Are Bulls Preparing to Cash in Before Axie Infinity (AXS) Token Unlock?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "CryptoSlate Daily wMarket Update: Axie Infinity records surprise 40% gains",
-      "link": "NULL",
-      "pubDate": "2023-01-23T12:45:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "If Bitcoin is the answer, then what's the question? 🧑‍",
-      "link": "NULL",
-      "pubDate": "2023-01-23T12:27:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BEST"
-      ]
-    },
-    {
-      "title": "RT @gislik: @romainbourgois @seikatsu @claberus @gnosischain @Jarvis_Network @Mutative_ @monerium 5. Builders like @RequestNetwork can now…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T12:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "⭐HAPPY MONDAY D2T CREW⭐ $D2T token is the token for Dash 2 Trade Web3 platform. The $D2T token will be used f…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T12:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "D2T"
-      ]
-    },
-    {
-      "title": "We're proud to be teaming up with #TheMunchlab to elevate the customer experience in the restaurant industry with t…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "Just FYI we have successfully distributed all rewards for the activities of the #Waves Advent Calendar! 🤩 Feel fre…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T11:37:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
       "title": "'If SHIB Gets to $0.01,' David Gokhshtein Might Take This Action: Details",
       "link": "https://u.today/if-shib-gets-to-001-david-gokhshtein-might-take-this-action-details",
       "pubDate": "2023-01-23T11:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "SHIB was trading at $0.000012, marginally up in last 24 hours",
       "currencies": [
@@ -760,8 +114,8 @@
       "title": "Here’s how Jump Crypto’s Firedancer project aims to optimize Solana for HFT",
       "link": "https://www.theblock.co/post/204495/jump-crypto-firedancer-project-optimize-solana-hft?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-01-23T11:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "Jump Crypto is using its high-frequency trading expertise to build a new open-source validator client for Solana known as Firedancer.",
       "currencies": [
@@ -774,175 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "While Apple and Meta forge ahead, Microsoft sunsets some VR products",
-      "link": "NULL",
-      "pubDate": "2023-01-23T11:03:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "𝐔𝐧𝐥𝐞𝐚𝐬𝐡 𝐭𝐡𝐞 𝐬𝐩𝐢𝐜𝐢𝐧𝐞𝐬𝐬 ️ 𝐶𝑜𝑚𝑖𝑛𝑔 𝑠𝑜𝑜𝑛.. #ScovilleNFT ️ $CHZ",
-      "link": "NULL",
-      "pubDate": "2023-01-23T11:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "It's almost there!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:54:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "🧧🧧 Celebrate the Spring Festival with me and grab your share of the ABT prize pool! Win up to 2023 ABT! 🧧🧧…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:54:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "RT @nicksvyaznoy: @priv_alliance &amp; @LeadingPrivacy alliances creation is a signal of unification &gt; when collaboration makes a greater impac…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:37:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
-      "title": "Those who regularly play on our #iGaming platforms use #FUN and #XFUN constantly, but if you haven’t started yet, y…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FUN"
-      ]
-    },
-    {
-      "title": "Axie Infinity (AXS) up 42%, What's Happening?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Axie Infinity AXS rises 42% despite imminent token unlock",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:25:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "RT @MultiversX: Last week in $EGLD 1/ @xSpotlightWeb3 is LIVE MultiversX NFTs are now available on @FrontierDotXYZ Beniamin joined…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:09:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "EGLD",
-        "PLATA"
-      ]
-    },
-    {
-      "title": "New Registration campaign ／ $15 BTC+$15 EGLD for new registration‼ ＼ ⏰You can register in 3 minutes For more inf…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T10:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "EGLD",
-        "CASTLE"
-      ]
-    },
-    {
-      "title": "RT @mave99a: Thanks @TysonMitchem9 for creating this amazing image for @ArcBlock_io !",
-      "link": "NULL",
-      "pubDate": "2023-01-23T09:57:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "Market Watch: AXS Soars 40% Overnight, Bitcoin Sits Close to $23K",
-      "link": "NULL",
-      "pubDate": "2023-01-23T09:53:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AXS"
-      ]
-    },
-    {
-      "title": "2 DAYS TO GO: Reserve your spot here @nChainGlobal Bitcoin Masterclass with @Dr_CSWright…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T09:50:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @nicksvyaznoy: @owocki @lunar_mining @gitcoin @AssangeDAO @brave @PumaBrowser @ethstatus @trycarbonio @opera @waku_org @get_zion @sessio…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T09:45:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
       "title": "XRP Suddenly Jumps 6% in Hour as This Positive Catalyst Appears: Details",
       "link": "https://u.today/xrp-suddenly-jumps-6-in-hour-as-this-positive-catalyst-appears-details",
       "pubDate": "2023-01-23T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "XRP printed six green hourly candles at a stretch",
       "currencies": [
@@ -958,8 +148,8 @@
       "title": "Vitalik Buterin proposes ‘stealth addresses’ to enhance Ethereum privacy",
       "link": "https://www.theblock.co/post/204524/vitalik-buterin-proposes-stealth-addresses-to-enhance-ethereum-privacy?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-01-23T09:32:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Ethereum co-founder Vitalik Buterin has proposed a new system called \"stealth addresses\" to enhance privacy on the Ethereum blockchain.",
       "currencies": [
@@ -972,34 +162,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Buy or sell, what’s your call today? 🤔",
-      "link": "NULL",
-      "pubDate": "2023-01-23T09:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Last week in $EGLD 1/ @xSpotlightWeb3 is LIVE MultiversX NFTs are now available on @FrontierDotXYZ Beniami…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T08:28:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "EGLD",
-        "WEGLD"
-      ]
-    },
-    {
       "title": "Cardano Developer IOG Explains Why 60% Of All Nodes Went Offline",
       "link": "https://bitcoinist.com/cardano-nodes-went-offline-iog-explains-why/",
       "pubDate": "2023-01-23T08:26:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The Cardano blockchain experienced an anomaly on Saturday evening (07:00 pm EST, between block 8300569 and 8300570) that caused close to 60% of all active nodes to go offline for a short period of time. While the blockchain did not come to a standstill, there were delays in transactions. But what happened and what was […]",
       "currencies": [
@@ -1011,67 +178,11 @@
       }
     },
     {
-      "title": "While the hype around NFT gaming has cooled down a bit, play-to-earn game @Axieinfinity has been glowing red hot!…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T08:09:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BEST"
-      ]
-    },
-    {
-      "title": "Happy Lunar New Year from @paoloardoino CTO of Bitfinex!",
-      "link": "NULL",
-      "pubDate": "2023-01-23T08:04:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Crypto Gaming Token AXS Surges 40% Ahead of $64 Million Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-01-23T07:51:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "RT @thedealart: Didn't collect all 4 NFTs to split the $2700 prize pool from @realMaskNetwork? Here is the tutorial on reaching a DEAL wi…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T07:47:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MASK"
-      ]
-    },
-    {
-      "title": "What's your best Dookey Dash score so far anon?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T07:36:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "X"
-      ]
-    },
-    {
       "title": "Cardano Network Quickly Recovers After Brief Node Outage",
       "link": "https://www.coindesk.com/tech/2023/01/23/cardano-network-quickly-recovers-after-brief-node-outrage/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-01-23T07:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "A short-lived outrage that affected over 50% of the network was automatically solved within minutes on Sunday.",
       "currencies": [
@@ -1086,8 +197,8 @@
       "title": "Cardano recovers from an outage on 50% relay and block-producing nodes",
       "link": "https://cointelegraph.com/news/cardano-recovers-from-an-outage-on-50-relay-and-block-producing-nodes",
       "pubDate": "2023-01-23T07:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "An anomaly apparently caused around half of Cardano’s nodes to disconnect and restart over the weekend, with the root cause still under investigation.",
       "currencies": [
@@ -1099,117 +210,11 @@
       }
     },
     {
-      "title": "Aptos Climbs 75% – What Keeps APT In The Green In Last 7 Days",
-      "link": "NULL",
-      "pubDate": "2023-01-23T06:26:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "FLOW",
-        "THETA"
-      ]
-    },
-    {
-      "title": "#USDD is on fire! Make sure to stake & earn with your favorite #decentralized & over-collateralized #StableCoin!…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T05:58:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @DeFi_JUST: Overview of the Current Market on #JustLendDAO Supply Market 🥇#BTC $2.53 Billion 🥈#USDC $257.66 Million 🥉#USDD $221.41…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T05:46:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "The festivities are still going! Don’t forget to join in the #giveaway and get a chance to share 300 $USDD! Hea…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T05:41:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Exciting things are on the horizon for Unilayer! We've been tirelessly working on building both centralized and dec…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T05:01:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LAYER",
-        "LAYERX"
-      ]
-    },
-    {
-      "title": "Join the ETC community and be a part of the top 5 Proof-of-Work networks in the world. Experience the complete…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T04:01:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETC",
-        "WETC",
-        "HEBE"
-      ]
-    },
-    {
-      "title": "Tezos: Is Mumbai upgrade the only reason behind XTZ’s price rise?",
-      "link": "NULL",
-      "pubDate": "2023-01-23T02:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "The voting is not over! All vlCVX holders can vote and support their favorite #USDD pool and share a 20,000…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T02:24:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @EthClassicDAO: Unique Positioning for #EthereumClassic: ℹ️ The Largest #PoW Network with Smart Contract Capability. Proof of Work = #D…",
-      "link": "NULL",
-      "pubDate": "2023-01-23T01:24:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETC"
-      ]
-    },
-    {
       "title": "Stellar Becomes Newest Member of CFTC’s Committee",
       "link": "https://cryptopotato.com/stellar-becomes-newest-member-of-cftcs-committee/",
       "pubDate": "2023-01-23T01:10:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "SDF is the only organization representing a blockchain on the committee.",
       "currencies": [
@@ -1220,28 +225,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @lordOfAFew: Let the Eternal games begin",
-      "link": "NULL",
-      "pubDate": "2023-01-23T00:51:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGLD"
-      ]
-    },
-    {
-      "title": "RT @JoyRaptor: @nicksvyaznoy @AltcoinDailyio $DERO is also fully live",
-      "link": "NULL",
-      "pubDate": "2023-01-23T00:40:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DERO"
-      ]
     }
   ]
 }

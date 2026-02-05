@@ -1,149 +1,15 @@
 {
   "date": "2022-12-25",
-  "fetchedAt": "2026-02-05T07:45:52.368Z",
-  "articleCount": 30,
+  "fetchedAt": "2026-02-05T07:48:35.551Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "As the team is taking a much deserved break for the holidays we'd love to give a big thank you to all the new and o…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T22:06:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "RT @QiDaoProtocol: ️A Christmas poem for #qimps",
-      "link": "NULL",
-      "pubDate": "2022-12-25T21:43:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QI",
-        "MIMATIC"
-      ]
-    },
-    {
-      "title": "Time in the market: Ways to approach crypto investing in 2023",
-      "link": "NULL",
-      "pubDate": "2022-12-25T21:40:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "After a challenging year, should investors still consider investing in crypto in 2023?",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Thank you to our wonderful community and to @presearchnews! What a great Christmas gift!",
-      "link": "NULL",
-      "pubDate": "2022-12-25T20:48:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
-      "title": "RT @OfficialXYO: From the #XYO family to yours, we wish you a safe and joyful Christmas. We're going to be celebrating with our loved ones,…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T20:38:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Wishing all who celebrate a Merry Christmas and to all a happy and safe holiday season.",
-      "link": "NULL",
-      "pubDate": "2022-12-25T20:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "RT @inBetweenersNFT: The redemption webapp stores assets on a decentralized cloud platform called @Storj DCS. This platform splits objects…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T20:19:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "Happy Holidays #SAFEMOONFAMILY.",
-      "link": "NULL",
-      "pubDate": "2022-12-25T20:03:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFEMOON"
-      ]
-    },
-    {
-      "title": "RT @elonmusk: Merry Christmas &amp; Good Cheer to All!",
-      "link": "NULL",
-      "pubDate": "2022-12-25T19:33:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MCT"
-      ]
-    },
-    {
-      "title": "Historical Bitcoin ‘Merry Christmas Cycle’ could send BTC to $1,800,000 in 4 years",
-      "link": "NULL",
-      "pubDate": "2022-12-25T17:44:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "As 2022 comes to an end, Bitcoin (BTC) is extending its sideway trading pattern after a turbulent year mostly dominated … Continued",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 11,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Happy holidays to all #Rootstockers! Thanks to all for being a part of a great year this 2022, thank you to all th…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T17:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
     {
       "title": "Nansen CEO Mocks Cardano Bros as ADA Underperforms SHIB",
       "link": "https://u.today/nansen-ceo-mocks-cardano-bros-as-ada-underperforms-shib",
       "pubDate": "2022-12-25T16:41:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The Nansen CEO was rereferring to a prediction about Cardano’s ADA token that he made back in March",
       "currencies": [
@@ -156,22 +22,11 @@
       }
     },
     {
-      "title": "Sign up and be the first to get Bitfinex Alpha delivered directly to your email in 2023! Deepest market insights…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T15:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
       "title": "Bitcoin Hashrate Drops 35% as Texas Miners Power Off",
       "link": "https://beincrypto.com/bitcoin-hashrate-drops-35-as-texas-miners-power-off/",
       "pubDate": "2022-12-25T13:58:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Bitcoin hashrate fell by 35% in the last 24 hours as several miners in the US powered off their machines due to the harsh winter storms.",
       "currencies": [
@@ -187,8 +42,8 @@
       "title": "Cryptocurrencies to watch for the week of December 26",
       "link": "https://finbold.com/cryptocurrencies-to-watch-for-the-week-of-december-26/",
       "pubDate": "2022-12-25T13:51:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "The cryptocurrency market is still consolidating, with most digital assets unable to make any significant move. At the moment, investors … Continued",
       "currencies": [
@@ -203,55 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @cybernerdbaby: The power of geolocated AR with occlusion attached to real world 3D map is incredible. The reality is gonna be full of m…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T13:39:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "RT @KeeperWallet: Keeper Wallet supports @WavesDomains!🤝 Your names are now visible in the NFTs section. This integration lets you send an…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T12:08:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "From the #XYO family to yours, we wish you a safe and joyful Christmas. We're going to be celebrating with our love…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T12:01:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @waves__labs: Waves Labs wishes you a very Merry Christmas and Happy New Year! 2022 has been full of ups and downs, trials and tribula…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T11:45:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
       "title": "Bitcoin mining hash rate plunges more than 30% amid America’s big winter storm",
       "link": "https://www.theblock.co/post/197861/bitcoin-mining-hashrate-declines-more-than-30-amid-americas-big-winter-storm?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-25T11:35:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "The continuing blizzard in the US has had a drastic impact on Bitcoin miners, causing many of them to shut down.",
       "currencies": [
@@ -262,128 +73,6 @@
         "negative": 14
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Most of Staked Ethereum (ETH) Handled By Only 4 Providers",
-      "link": "NULL",
-      "pubDate": "2022-12-25T11:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Dear community! It's been a busy year full of challenges, but we can only move forward! Having a common goal, in 2…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T10:03:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "️ Season’s Greetings from the team at Bitfinex ️ 2022 has been a tumultuous year for crypto - Bitfinex wishes al…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T10:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Happy Holidays from #Tether",
-      "link": "NULL",
-      "pubDate": "2022-12-25T09:12:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "XAUT",
-        "EURt",
-        "USDTE",
-        "CEUSDT",
-        "MXNT",
-        "GBPT"
-      ]
-    },
-    {
-      "title": "“Jingle bells, jingle bells Jingle all the way Oh, what fun it is to fight In @CryptoFights tonight.” 🤶🧑‍…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @dalciosauro: Can you spot the 3 AR elements in the video? This is my first AR geolocalized experience using @OVRtheReality using precis…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T07:26:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "We’ve highlighted some interesting thoughts from a recent interview by @ForbesMonaco with Alex Alexandrov (…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T07:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VLX",
-        "WVLX"
-      ]
-    },
-    {
-      "title": "Happy holidays from the NKN team. We wish you a healthy and happy time with your friends and family. Let's all keep…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T05:44:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @CoinMarketCap: What did you ask #SantaClaus for?",
-      "link": "NULL",
-      "pubDate": "2022-12-25T02:01:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FRTS"
-      ]
-    },
-    {
-      "title": "Happy holidays from co-founder @felixmxu and the entire #BellaProtocol team! We wish you and your loved ones a hap…",
-      "link": "NULL",
-      "pubDate": "2022-12-25T00:03:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
     }
   ]
 }

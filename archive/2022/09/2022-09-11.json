@@ -1,38 +1,16 @@
 {
   "date": "2022-09-11",
-  "fetchedAt": "2026-02-05T07:45:52.856Z",
-  "articleCount": 24,
+  "fetchedAt": "2026-02-05T07:48:35.600Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @BorkowskiClem: This team is doing something special. Check them out @WhiteETHtoken $White #50X #privacymatters",
-      "link": "NULL",
-      "pubDate": "2022-09-11T22:24:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "RT @Cultmander76: @BitMartExchange Some will come and go. But those with real utility will stay. $WHITE, a fork of tornado cash, just rel…",
-      "link": "NULL",
-      "pubDate": "2022-09-11T22:23:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "WHITE"
-      ]
-    },
     {
       "title": "Polkadot [DOT] investors should be aware of these updates before pulling out",
       "link": "https://ambcrypto.com/polkadot-dot-investors-should-be-aware-of-these-updates-before-pulling-out/",
       "pubDate": "2022-09-11T21:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Polkadot is experiencing what we call a shake-up after mixed emotions surfaced on the network. Despite recent growth on the network, its development activity has slowed down of late. In fact, according to data analytics platform Santiment, Polkadot has been seeing a reverse trend in development activity over the last few days. Polkadot had a […]",
       "currencies": [
         "DOT"
@@ -43,22 +21,11 @@
       }
     },
     {
-      "title": "New @priv8podcast clip! Host @dereksilva joins Bojan Simic, Co-founder and CEO of @HyprCorp to talk about the dec…",
-      "link": "NULL",
-      "pubDate": "2022-09-11T20:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
       "title": "Crypto traders eye ATOM, APE, CHZ and QNT as Bitcoin flashes bottom signs",
       "link": "https://cointelegraph.com/news/crypto-traders-eye-atom-ape-chz-and-qnt-as-bitcoin-flashes-bottom-signs",
       "pubDate": "2022-09-11T19:52:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin, ATOM, APE, CHZ and QNT are facing resistance at higher levels, but the chart patterns suggest that the current recovery may extend for a few more days.",
       "currencies": [
@@ -74,28 +41,11 @@
       }
     },
     {
-      "title": "$BTC: Canada’s New Conservative Party Leader Pierre Poilievre Is a Bitcoiner",
-      "link": "NULL",
-      "pubDate": "2022-09-11T19:09:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "On Saturday (September 10), Pierre Poilievre — who said back in March that he would make Canada “the Blockchain capital of the world” if he becomes the next Prime Minister — won the leadership vote of the Conservative Party of Canada. According to a report by CBC, Poilievre, who has been a huge critic of […]",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 19,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Scaling Solution Polygon Plans To Aggressively Expand by Hiring 200 People in Coming Months: Report",
       "link": "https://dailyhodl.com/2022/09/11/scaling-solution-polygon-plans-to-aggressively-expand-by-hiring-200-people-in-coming-months-report/",
       "pubDate": "2022-09-11T18:45:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Ethereum (ETH) scaling solution Polygon (MATIC) is reportedly planning to aggressively hire more workers to take advantage of the crypto downturn this year. According to a new report by Bloomberg, Polygon is going to broaden its workforce by 40% in the coming months to capitalize on the availability of talent after a number of crypto […]",
       "currencies": [
@@ -109,40 +59,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MicroStrategy To Purchase More Bitcoin From Proceeds Of A $500 Million Stock Sale",
-      "link": "NULL",
-      "pubDate": "2022-09-11T18:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "MicroStrategy, the largest publicly listed Bitcoin holding company in the world, plans to double down on its BTC purchases using proceeds from a $500 million sale of its stock.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 44,
-        "negative": 3
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Our friends at @Vertalo_ are enabling our launch on @tZERO. They are an amazing team with an amazing service and we…",
-      "link": "NULL",
-      "pubDate": "2022-09-11T17:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Algorand Foundation Discloses $35M Exposure in Hodlnaut",
       "link": "https://beincrypto.com/algorand-foundation-discloses-35m-exposure-in-hodlnaut/",
       "pubDate": "2022-09-11T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Algorand Foundation has announced that it has a $35 million USDC exposure in troubled Singapore-based lender Holdnaut.",
       "currencies": [
         "USDC",
@@ -158,8 +80,8 @@
       "title": "Banking Giant DBS Announces Metaverse Partnership With The Sandbox (SAND)",
       "link": "https://dailyhodl.com/2022/09/11/banking-giant-dbs-announces-metaverse-partnership-with-the-sandbox-sand/",
       "pubDate": "2022-09-11T16:55:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "One of the leading banking firms in Asia is venturing into the metaverse with a new partnership with virtual world platform The Sandbox (SAND). According to a new press release, multinational financial services giant DBS is collaborating with The Sandbox to create an interactive metaverse experience. The duo will create DBS BetterWorld, which aims to […] The post Banking Giant DBS Announces Metaverse Partnership With The Sandbox (SAND) appeared first on The Daily Hodl.",
       "currencies": [
@@ -172,28 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Algorand Foundation Discloses $37 Million USDC Exposure To Hodlnaut",
-      "link": "NULL",
-      "pubDate": "2022-09-11T16:22:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "ALGO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Bitcoin Would Be Ready For $24,000 If This Happens; What Is That?",
       "link": "https://www.newsbtc.com/analysis/bitcoin-would-be-ready-for-24000-if-this-happens-what-is-that/",
       "pubDate": "2022-09-11T14:54:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) despite showing bearish signs against tether (USDT) as the price plunged to $18,500 recently, with many traders and investors sweating on their long open position. The price of Bitcoin (BTC) quickly bounced off from that region after forming a bullish divergence on the four-hour chart and has shown no intention of stopping. (Data from Binance) Related Reading: Cosmos Touches...",
       "currencies": [
@@ -210,8 +115,8 @@
       "title": "SHIB, ADA Users Can Now Enjoy 8% Cashback on Binance Card Purchases: Details",
       "link": "https://u.today/shib-ada-users-can-now-enjoy-8-cashback-on-binance-card-purchases-details",
       "pubDate": "2022-09-11T14:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cryptocurrency users to enjoy 8% rewards while spending on Binance Card",
       "currencies": [
@@ -224,44 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "U.S. congressman says Bitcoin has ‘no societal value’, only suitable for tax evasion",
-      "link": "NULL",
-      "pubDate": "2022-09-11T14:09:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "United States congressman from Califonia Brad Sherman has once again slammed Bitcoin (BTC), stating that the flagship cryptocurrency has ‘no... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 44,
-        "negative": 5
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "What is PAX Gold (PAXG) and how does it work?",
-      "link": "NULL",
-      "pubDate": "2022-09-11T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PAXG"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Terra back from the dead? LUNA price rises 300% in September",
       "link": "https://cointelegraph.com/news/terra-back-from-the-dead-luna-price-rises-300-in-september",
       "pubDate": "2022-09-11T13:35:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "The incredible LUNA rally took place amid a flurry of positive and negative events while technicals suggest a correction is coming.",
       "currencies": [
@@ -274,61 +146,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Shiba Inu’s whales have this to say to SHIB’s traders",
-      "link": "NULL",
-      "pubDate": "2022-09-11T13:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "The euphoria around meme-based cryptocurrency Shiba Inu has translated into a rapid surge in accumulation recently. The number of SHIB holders has now hit an all-time high after peaking at 1.22 million. This historic peak comes after a period of strong accumulation of late. There has also been a hike in whale holdings as strong […]",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Which Blockchain Feature Do You Consider the Most Valuable?",
-      "link": "NULL",
-      "pubDate": "2022-09-11T12:09:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "GM fam. Touch some grass and have a nice Sunday. 🫡",
-      "link": "NULL",
-      "pubDate": "2022-09-11T10:56:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "Today we will start sharing/answering some of the most frequently asked questions by our investors and community. W…",
-      "link": "NULL",
-      "pubDate": "2022-09-11T10:51:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
       "title": "There Is Big \"If\" in LUNC Burning Mechanism That Caused Most Recent Market Pump",
       "link": "https://u.today/there-is-big-if-in-lunc-burning-mechanism-that-caused-most-recent-market-pump",
       "pubDate": "2022-09-11T10:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Things are not so obvious with LUNC burning mechanism and pump it caused",
       "currencies": [
@@ -344,8 +166,8 @@
       "title": "Algorand Foundation has $35 million exposure to troubled crypto lender Hodlnaut",
       "link": "https://www.theblock.co/post/169093/algorand-foundation-hodlnaut-exposure-35-million?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-09-11T10:46:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "The Algorand Foundation has $35 million exposure in USDC to Hodlnaut.",
       "currencies": [
@@ -362,8 +184,8 @@
       "title": "Terra Luna Classic Crypto Price Prediction 2022 - Can LUNC Rocket to $0.00088?",
       "link": "https://cryptonews.com/news/terra-luna-classic-crypto-price-prediction-2022-can-lunc-rocket-to-5.htm",
       "pubDate": "2022-09-11T09:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Terra Luna Classic (LUNC) is now trading in a healthy consolidative retreat at $0.000442, currently down 25% from the $0.00059 swing high achieved on the 7th of September. The battle for control between the bulls and bears is still finding equilibrium but there is still scope for LUNC to push towards $0.00088. Can Terra Luna Classic maintain positive price momentum? ... Read...",
       "currencies": [

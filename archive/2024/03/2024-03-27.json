@@ -1,133 +1,15 @@
 {
   "date": "2024-03-27",
-  "fetchedAt": "2026-02-05T07:45:53.314Z",
-  "articleCount": 115,
+  "fetchedAt": "2026-02-05T07:48:35.640Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "KuCoin Launches $10M Airdrop Following US Legal Charges",
-      "link": "NULL",
-      "pubDate": "2024-03-27T23:24:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Ondo Finance adds $95 million to BlackRock’s BUIDL, bringing total AUM to $240 million",
-      "link": "NULL",
-      "pubDate": "2024-03-27T23:23:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "XCAD Announces Multiple Governments’ Backing for New Initiative to Expand Web3 Education",
-      "link": "NULL",
-      "pubDate": "2024-03-27T23:11:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCAD"
-      ]
-    },
-    {
-      "title": "KuCoin Witnesses $1B In Withdrawals As Exchange Is Accused Of Money Laundering: 'SEC Trying To Protect Us From Making Money?' Questions Trader",
-      "link": "NULL",
-      "pubDate": "2024-03-27T21:47:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "4 Cryptos That Could Hit New All-Time Highs in April",
-      "link": "NULL",
-      "pubDate": "2024-03-27T21:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BNB",
-        "APT",
-        "ARB",
-        "SUI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Terra Luna Classic's $1 Dream: Is Chain Upgrade the Catalyst?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T21:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Fidelity Files for Spot Ethereum ETF, Includes Staking",
-      "link": "NULL",
-      "pubDate": "2024-03-27T20:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "KuCoin plans $10M airdrop of BTC, KCS as Justice Dept., CFTC circle",
-      "link": "NULL",
-      "pubDate": "2024-03-27T20:35:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "OKX API Failure Causes Account Balance Confusion, Thousands of Users Affected",
-      "link": "NULL",
-      "pubDate": "2024-03-27T20:34:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
     {
       "title": "Litecoin ETF Rumors Swirl After Multiple CFTC Nods",
       "link": "https://dailycoin.com/litecoin-etf-rumors-swirl-after-multiple-cftc-nods/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-27T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "regulation",
       "description": "Speculation swirls around a potential Litecoin ETF as recent CFTC moves suggest commodity status, fueling hopes for ETF approval.",
       "currencies": [
@@ -143,8 +25,8 @@
       "title": "Here’s How High Solana (SOL) Could Surge, According to Coin Bureau’s Guy Turner",
       "link": "https://dailyhodl.com/2024/03/27/heres-how-high-solana-sol-could-surge-according-to-coin-bureaus-guy-turner/",
       "pubDate": "2024-03-27T19:55:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "A widely followed crypto analyst says that smart contract platform Solana (SOL) looks bullish on multiple timeframes. In a new video update, Guy Turner, the host of Coin Bureau, tells his 2.45 million YouTube subscribers that Solana’s weekly and monthly charts foreshadow a 35-45% breakout for the Ethereum (ETH) rival above the $300 price tag. […]",
       "currencies": [
@@ -158,60 +40,11 @@
       }
     },
     {
-      "title": "Will Tokenized Deeds Push Propy Higher?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T19:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PRO"
-      ]
-    },
-    {
-      "title": "Kelexo (KLXO) Potential 25X Growth Entices Cronos (CRO) and Pepe (PEPE) Investors to Double Down",
-      "link": "NULL",
-      "pubDate": "2024-03-27T19:36:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Leading crypto-ai tokens $FET, $AGIX, and $OCEAN to merge into new $ASI token",
-      "link": "NULL",
-      "pubDate": "2024-03-27T19:27:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "The Protocol: Meme Coins (and Pepe's Best Friend) Swarm Coinbase Layer 2 Chain",
-      "link": "NULL",
-      "pubDate": "2024-03-27T19:22:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SOL",
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
       "title": "SEC vs. Ripple Resolution Nears: Is $2B Fine the Final Stroke?",
       "link": "https://dailycoin.com/sec-vs-ripple-resolution-nears-is-2b-fine-the-final-stroke/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-27T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "regulation",
       "description": "The SEC is seeking nearly $2 billion from Ripple Labs in a lawsuit alleging unregistered sales of XRP.",
       "currencies": [
@@ -227,8 +60,8 @@
       "title": "New AI Alliance Proposes $7.6B Merger of $FET, $OCEAN, and $AGIX Tokens to Form $ASI Token",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-03-27T18:44:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "In a move that could potentially reshape the landscape of artificial intelligence (AI) development, three prominent decentralized AI projects – Fetch.ai, Ocean Protocol, and SingularityNET – have announced their decision to merge and form the Artificial Superintelligence Alliance. According to a press release dated March 27, 2024, this alliance aims to create an open-source, decentralized...",
       "currencies": [
@@ -243,201 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Mantle Launches Rewards Portal With Ethena Shards Up For Grabs",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:42:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "KuCoin Moves 2T SHIB in Strange Move as the Law Closes in",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SHIB",
-        "KCS"
-      ]
-    },
-    {
-      "title": "As The Market Regains Momentum In the Bull Market, Which Exceptional Projects Has Foresight X Identified?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:33:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "TIA",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Bitcoin “Liquid Inventory Ratio” Hits All-Time Low, What It Means",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Bitcoin price falters as macroeconomic and regulatory headwinds mount",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:25:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AMP"
-      ]
-    },
-    {
-      "title": "‘MEW’ Cat Coin Goes Viral on Solana and This Dog-Coin Could Be Next to Explode",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:05:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "MEW"
-      ]
-    },
-    {
-      "title": "XCAD Announces Multiple Governments’ Backing for New Initiative To Expand Web 3.0 Education",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:03:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCAD"
-      ]
-    },
-    {
-      "title": "COTI And Civic Partner to Give Users Full Self-sovereignty Over Their Digital Identity",
-      "link": "NULL",
-      "pubDate": "2024-03-27T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "COTI",
-        "CVC"
-      ]
-    },
-    {
-      "title": "Ondo Finance to Move $95M to BlackRock's Tokenized Fund for Instant Settlements for Its T-Bill Token",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:54:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "T",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Fantom price up ahead of Sonic launch; NuggetRush investors anticipate similar price pattern at launch",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:52:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Samsung is beating Apple in the race to bring AI to smartphones",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Roger Ver would support Bitcoin again if this happens",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:50:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XMR",
-        "BCH"
-      ]
-    },
-    {
-      "title": "KuCoin announces $10 million airdrop in Bitcoin and its native token amid legal woes",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:47:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Layer-2 Blockchain Mantle’s Token Hits All-Time High as Reward System Goes Live",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:26:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MNT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Illuvium raises $12 million ahead of its ecosystem launch",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:24:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ILV"
-      ]
-    },
-    {
       "title": "VeChain (VET) Joins Tokenization Scene with MaaS Launch",
       "link": "https://www.coinspeaker.com/vechain-vet-tokenization-maas/",
       "pubDate": "2024-03-27T17:16:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "general",
       "description": "Coinspeaker VeChain (VET) Joins Tokenization Scene with MaaS Launch The debut of VeChain's MaaS platform has aroused debate regarding the potential influence on the price of VET, in addition to its technological improvements. VeChain (VET) Joins Tokenization Scene with MaaS Launch",
       "currencies": [
@@ -450,33 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Altcoin Announces It Will Deposit Assets Into BlackRock’s Cryptocurrency Fund – The Price Soars",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:02:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Is KuCoin The Next FTX? CryptoQuant’s CEO Has The Answer",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "Here’s Why The Cardano Price Is Struggling Below $0.7",
       "link": "https://www.newsbtc.com/news/cardano/cardano-price-below-0-7/",
       "pubDate": "2024-03-27T17:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "A plausible explanation has emerged for why the Cardano (ADA) price has dropped below the psychological price level of $0.7. The crypto token saw a sharp correction from its monthly peak of $0.8, recorded on March 14, and has since failed to recover such a height. Cardano Whales Responsible For Price Decline Data from the crypto analytics platform Santiment shows that the whale transaction...",
       "currencies": [
@@ -489,78 +110,11 @@
       }
     },
     {
-      "title": "Revolutionize Crypto Spending with BlockDAG Ft. LINK & RON",
-      "link": "NULL",
-      "pubDate": "2024-03-27T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "RON"
-      ]
-    },
-    {
-      "title": "Fetch, Ocean, SingularityNET tokens merge into single ASI token with $7.6 billion market cap",
-      "link": "NULL",
-      "pubDate": "2024-03-27T16:55:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Solana's Jupiter DEX kickstarts native DAO with $137M in initial capital",
-      "link": "NULL",
-      "pubDate": "2024-03-27T16:37:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DAO",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ether.Fi's ETHFI Jumps 50% to Record, May Boost Valuations for Liquid Restaking Token Airdrops: Analyst",
-      "link": "NULL",
-      "pubDate": "2024-03-27T16:31:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETHFI",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "Expected decline in prenultimate Bitcoin difficulty adjustment before the halving",
-      "link": "NULL",
-      "pubDate": "2024-03-27T16:11:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GMT"
-      ]
-    },
-    {
       "title": "SingularityNet Confirms Groundbreaking AI Merger to ASI Token",
       "link": "https://dailycoin.com/singularitynet-confirms-groundbreaking-ai-merger-to-asi-token/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-27T16:06:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "general",
       "description": "SingularityNet, Ocean Protocol, and Fetch.AI merge to take on Big Tech’s monopolistic control over AI.",
       "currencies": [
@@ -573,107 +127,11 @@
       }
     },
     {
-      "title": "Will Bitcoin Break $74,000 Driven By TradFi FOMO?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T16:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "LTC",
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Pay Attention To Nvidia Chart For Near Term Market Direction, Tech Insiders Sell, Baltimore Impact",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:45:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "META"
-      ]
-    },
-    {
-      "title": "This Meme Coin Could Dethrone PEPE Soon",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "XLM",
-        "PEPE",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Crypto price predictions: BitBot, Mantle, Bitcoin Cash",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:43:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "AGIX",
-        "MNT",
-        "SUI"
-      ]
-    },
-    {
-      "title": "ARK Invest Sells Off $31.5 Million in Robinhood Shares Amid Crypto-Friendly Broker’s Stock Surge",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:36:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Cheap Cryptocurrencies Under $10 To Buy Right Now",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:21:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "WIF",
-        "SEI"
-      ]
-    },
-    {
-      "title": "COTI and Civic Enter Strategic Partnership to Give Users Full Self-sovereignty over Their Digital Identity",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:17:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "COTI",
-        "CVC"
-      ]
-    },
-    {
       "title": "AI Revolution Goes Decentralized: $7.5B Token Merger Aims To Challenge Big Tech",
       "link": "https://www.benzinga.com/markets/cryptocurrency/24/03/37961977/ai-revolution-goes-decentralized-7-5b-token-merger-aims-to-challenge-big-tech?utm_campaign=partner_feed&utm_source=cryptopanic.com&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2024-03-27T15:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "Three blockchain-based artificial intelligence (AI) firms — SingularityNET (CRYPTO: AGIX), Fetch.ai (CRYPTO: FET), and Ocean Protocol (CRYPTO: OCEAN read more",
       "currencies": [
@@ -688,154 +146,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "21Shares Debuts Toncoin Staking Exchange-Traded Product (TONN)",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:15:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TON",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Illuvium Secures $12M Investment to Advance NFT Interoperability in Ethereum",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:09:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "NFT",
-        "ILV"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Mantle Up More Than 46% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:02:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "Is NuggetRush A Safe Haven For Crypto Investors Amid Wider Market Dip On Cronos And Uniswap?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRO",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Shiba Inu Climbs To Second Spot In Crypto Searches As SHIB Rallies",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "SHIB",
-        "MEME",
-        "BONE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Pyth Network and Caldera announce the integration of rollups and Oracle data",
-      "link": "NULL",
-      "pubDate": "2024-03-27T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Introducing ckSOL Through The Galactic Bridge – Presented by ICP.Hub Balkan",
-      "link": "NULL",
-      "pubDate": "2024-03-27T14:52:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Tether integrates native USDT on Celo mainnet",
-      "link": "NULL",
-      "pubDate": "2024-03-27T14:31:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "CELO"
-      ]
-    },
-    {
-      "title": "Arts DAO Fest Returns to Dubai with a Celebration of Web3 Culture",
-      "link": "NULL",
-      "pubDate": "2024-03-27T14:12:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "1INCH",
-        "NFT",
-        "DAO"
-      ]
-    },
-    {
-      "title": "How ICP Could Replicate Chainlink’s Success and InQubeta’s AI Fusion Approach",
-      "link": "NULL",
-      "pubDate": "2024-03-27T14:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "ICP"
-      ]
-    },
-    {
-      "title": "COTI Taps Civic to Give Users Self-Sovereign Digital Identities",
-      "link": "NULL",
-      "pubDate": "2024-03-27T14:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
       "title": "JUST IN!  Decision Made in Coinbase SEC Case, Bitcoin Reacted!",
       "link": "https://en.bitcoinsistemi.com/just-in-decision-made-in-coinbase-sec-case-bitcoin-reacted/",
       "pubDate": "2024-03-27T13:57:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "The judge rejected the SEC's claim that the Coinbase wallet was an unregistered broker. Bitcoin reacted. Continue Reading: JUST IN! Decision Made in Coinbase SEC Case, Bitcoin Reacted!",
       "currencies": [
@@ -846,41 +161,13 @@
         "negative": 7
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "JUST IN! Decision Made in Coinbase SEC Case, Bitcoin Reacted!",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:57:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The judge rejected the SEC's claim that the Coinbase wallet was an unregistered broker. Bitcoin reacted. Continue Reading: JUST IN! Decision Made in Coinbase SEC Case, Bitcoin Reacted!",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 7
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "KuCoin Withdrawals Spike to $1B in Crypto Amid U.S. Regulatory Clampdown",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:54:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
     },
     {
       "title": "Fetch.ai (FET), OCEAN, and AGIX Surge on Token Merger News",
       "link": "https://dailycoin.com/fetch-ai-fet-ocean-and-agix-surge-on-token-merger-news/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-27T13:49:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "FET, OCEAN, and AGIX surge as the three projects explore the possibility of a token merger.",
       "currencies": [
@@ -894,60 +181,11 @@
       }
     },
     {
-      "title": "Mantle (MNT) Price Hits All-Time High: A 40% Surge Fueled by These Investors",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Ethereum Falls Below $3,600; KuCoin Token, Conflux Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:39:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "KCS",
-        "CFX",
-        "FET",
-        "AGIX",
-        "SUI",
-        "TAO",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "How KuCoin's DoJ Fight Affects User Funds and What to Do",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:33:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Fetch.ai, Ocean Protocol, and SingularityNET merge tokens in a bid to build an ethical, decentralized AI ecosystem",
       "link": "https://cryptobriefing.com/fetch-ai-ocean-singularitynet-merge-tokens/",
       "pubDate": "2024-03-27T13:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Three major players in the decentralized finance (DeFi) and artificial intelligence (AI) spaceFetch.ai, SingularityNET, and Ocean Protocolhave reached an agreement to merge tokens. This move aims to build an ethical and transparent decentralized AI ecosystem and foster AI research and development.A Wednesday press release stated that the new alliance seeks to challenge Big Tech's control over...",
       "currencies": [
@@ -960,347 +198,11 @@
       }
     },
     {
-      "title": "Fetch, SingularityNET, and Ocean To Merge Assets and Forge Shared ‘Tokenomic Network’",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Crypto News:Mantle Steals the Show as BTC Holds Firm at $70K",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "XEC",
-        "NFT",
-        "FET",
-        "MNT",
-        "SUI"
-      ]
-    },
-    {
-      "title": "FetchAI, SingularityNet and Ocean Protocol Propose Merger to Build Largest Decentralized AI Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:15:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "ONDO bulls work to drive prices past $1 – Will they succeed?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Internet Computer users pledge $80M to decentralize its project ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Milei Moneda Shatters Expectations as Investors Target 100x Price Gains While Stacks and Jupiter Retain Gains",
-      "link": "NULL",
-      "pubDate": "2024-03-27T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "STX",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Cintas Corp. (CTAS) Beats Expectations in Fiscal Q3 with $3.84 EPS, $2.41 Bln. in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:51:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "AI Tokens Fetch.AI, AGIX, OCEAN Talk Merger, Surge Double Digits",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:34:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Kucoin’s Legal Woes Spark Massive $1.7 Billion Withdrawal, Onchain Data Reveals",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KCS"
-      ]
-    },
-    {
-      "title": "UniFirst (UNF) Reports Operating Income in Q2 Was Up 34%, Misses EPS Expectations",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:26:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "AI predicts Terra Classic price for end of 2024",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:24:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "AI Tokens AGIX, FET, OCEAN Record Dramatic 30% Surge Amid Rumor of Merger",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:22:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Reflecting on a Decade | Stellar's Evolution in 2024",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "OKX Resolves Regulatory Failings with Malta Financial Services Authority",
-      "link": "NULL",
-      "pubDate": "2024-03-27T12:07:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "KCS",
-        "HT"
-      ]
-    },
-    {
-      "title": "SpaceCatch Announces $CATCH Token Launch for Its Groundbreaking AR Game",
-      "link": "NULL",
-      "pubDate": "2024-03-27T11:45:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "SpaceCatch Announces CATCH Token Launch for Its Groundbreaking AR Game",
-      "link": "NULL",
-      "pubDate": "2024-03-27T11:40:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "AR",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Three Decentralized Platforms to Merge AI Tokens, Create AI Alliance",
-      "link": "NULL",
-      "pubDate": "2024-03-27T11:17:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Gensler has ‘sown confusion’ over Ether as security debate — GOP lawmakers",
-      "link": "NULL",
-      "pubDate": "2024-03-27T11:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "GT"
-      ]
-    },
-    {
-      "title": "Breaking: Fetch.ai, SingularityNET and Ocean Protocol Discussing Possible Merger to Form ASI Token",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:55:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Three top AI projects surge over 30% following rumors of token merge – report",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:48:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "SingularityNET, Fetch.ai, and Ocean Protocol Could Merge Into One: ASI Token",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:39:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "SingularityNet, Fetch.AI, Ocean Protocol reportedly discuss token merger",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:31:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Ethereum tokens lead KuCoin’s $500 million withdrawal spike post US charges",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:17:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Injective, Litecoin price prediction as KangaMoon thrives",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:14:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Analysts Say KuCoin Remains Fine amidst Criminal Allegations",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:09:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Surprise Three Altcoins Decided to Merger, Prices Jumped!",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:07:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "FTX Lawyers Want SBF Coins to Be Liquidated at Discounted Value",
-      "link": "NULL",
-      "pubDate": "2024-03-27T10:01:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SRM"
-      ]
-    },
-    {
       "title": "Congress Seeks SEC Clarity on Ethereum and Digital Asset Rules",
       "link": "https://coinpaprika.com/news/congress-seeks-sec-clarity-on-ethereum-and-digital-asset-rules/",
       "pubDate": "2024-03-27T09:18:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Lawmakers demand SEC clarity on ETH, pressing for definitive digital asset regulations",
       "currencies": [
@@ -1313,57 +215,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Vitalik Buterin Questions the Metaverse’s Future",
-      "link": "NULL",
-      "pubDate": "2024-03-27T08:47:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AR"
-      ]
-    },
-    {
-      "title": "KuCoin Appears Not to Commingle User Funds and has “Sufficient” Reserves: CryptoQuant CEO",
-      "link": "NULL",
-      "pubDate": "2024-03-27T08:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Crypto Exchange KuCoin and Its Two Founders Are Charged With Violating U.S. Anti-Money Laundering Laws",
-      "link": "NULL",
-      "pubDate": "2024-03-27T08:02:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Shiba Inu Price Jumps 11% as SHIB, BONE Secure New Listings",
-      "link": "NULL",
-      "pubDate": "2024-03-27T07:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "BONE"
-      ]
-    },
-    {
       "title": "Solana Embraces Circle's Innovative Protocol for Easier Crypto Transfers",
       "link": "https://coinpaprika.com/news/solana-embraces-circle-s-innovative-protocol-for-easier-crypto-transfers/",
       "pubDate": "2024-03-27T07:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "Solana boosts interoperability with Circle's CCTP for seamless USDC swaps",
       "currencies": [
@@ -1375,184 +231,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "US Prosecutors Charge KuCoin for AML Violations: Outflows Skyrocket and KCS Plummets 13%",
-      "link": "NULL",
-      "pubDate": "2024-03-27T06:47:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "CashFusion Unveils eCash Wallets for Blockchain Privacy",
-      "link": "NULL",
-      "pubDate": "2024-03-27T06:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Crypto News March 26: Crypto Investors Await Economic Impact",
-      "link": "NULL",
-      "pubDate": "2024-03-27T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "KCS",
-        "NFT",
-        "WIF"
-      ]
-    },
-    {
-      "title": "KuCoin Sees Over $1 Billion Outflows After Money Laundering Charges in US",
-      "link": "NULL",
-      "pubDate": "2024-03-27T05:41:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Pink Drainer Addresses Stake 12M DAI in Spark, Becoming Top sDAI Holder: PeckShield",
-      "link": "NULL",
-      "pubDate": "2024-03-27T05:05:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "FTX wants to zero out claims on ‘Sam Coins’ but investors resist",
-      "link": "NULL",
-      "pubDate": "2024-03-27T04:42:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SRM",
-        "BOBA"
-      ]
-    },
-    {
-      "title": "KuCoin Witnesses Significant Withdrawals After Founders’ Indictment",
-      "link": "NULL",
-      "pubDate": "2024-03-27T04:38:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Gary Black Rejects Idea That Tesla Repurchase Bitcoin, Tells Proposer: 'Please No. You Can Buy BTC As An Investor'",
-      "link": "NULL",
-      "pubDate": "2024-03-27T01:56:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Consolidates Above $70K As Bulls Prepare For More Gains",
-      "link": "NULL",
-      "pubDate": "2024-03-27T01:42:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Solana’s DeFi landscape matures with significant growth in liquidity and lending sectors",
-      "link": "NULL",
-      "pubDate": "2024-03-27T01:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "RAY",
-        "ALPHA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Aptos (APT) Surges 94% And Approaches All-Time Highs: Will It Break The $20 Barrier?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T01:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK",
-        "APT"
-      ]
-    },
-    {
-      "title": "ATOM price prediction – Is this the right time to buy some more?",
-      "link": "NULL",
-      "pubDate": "2024-03-27T00:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Analyst Says Next Leg up Incoming for Altcoins, Updates Outlook on Solana and Two Other Crypto Assets",
-      "link": "NULL",
-      "pubDate": "2024-03-27T00:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "RNDR",
-        "VANRY",
-        "RSS3"
-      ]
     }
   ]
 }

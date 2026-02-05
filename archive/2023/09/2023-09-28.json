@@ -1,37 +1,15 @@
 {
   "date": "2023-09-28",
-  "fetchedAt": "2026-02-05T07:45:52.442Z",
-  "articleCount": 78,
+  "fetchedAt": "2026-02-05T07:48:35.560Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "As MKR prices cross $1500, here’s a look at what caused the surge",
-      "link": "NULL",
-      "pubDate": "2023-09-28T23:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "MakerDAO ($MKR) Price Reaches 16-Month high After Surging Nearly 200% Year-to-Date",
-      "link": "NULL",
-      "pubDate": "2023-09-28T22:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
     {
       "title": "BTC to Crash $20k Before Halving, Expect Parabolic Rally After: Analyst",
       "link": "https://coinedition.com/btc-to-crash-20k-before-halving-expect-parabolic-rally-after-analyst/",
       "pubDate": "2023-09-28T22:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "Bitcoin markets have been passive over the past weeks, hovering around $26,000 with no significant negative or positive leap. Amid the Bitcoin dull moments, prominent Bitcoin analyst Rekt Capital argued with a roadmap for positioning Bitcoin investors in the current market to potentially reap profits well into 2024 and beyond. Rekt Capital began by examining […]",
       "currencies": [
@@ -44,89 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "LUNC Bulls Record a 4-Week High: Will the Rally Continue?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T21:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "EOS Foundation Taps Upland and Aerial to Foster Climate Positive Blockchain Initiative",
-      "link": "NULL",
-      "pubDate": "2023-09-28T21:34:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Tron may be a hero as per Sun’s latest remark but TRX’s state revealed this",
-      "link": "NULL",
-      "pubDate": "2023-09-28T21:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Radix Babylon Upgrade Marks New Era for Web3 User and Developer Experience",
-      "link": "NULL",
-      "pubDate": "2023-09-28T21:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRD"
-      ]
-    },
-    {
-      "title": "U.S. House Bill Seeks Centralized Record of Off-Chain Crypto Transactions",
-      "link": "NULL",
-      "pubDate": "2023-09-28T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Back To BlockShine ️",
-      "link": "NULL",
-      "pubDate": "2023-09-28T19:27:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Radix Babylon Upgrade Marks New Era for Web 3.0 User and Developer Experience",
-      "link": "NULL",
-      "pubDate": "2023-09-28T19:20:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRD"
-      ]
-    },
-    {
       "title": "BREAKING: Valkyrie’s Ethereum Futures ETF Approved and Will Start Trading Tomorrow, According to FOX",
       "link": "https://en.bitcoinsistemi.com/breaking-valkyries-ethereum-futures-etf-approved-and-will-start-trading-tomorrow-according-to-fox/",
       "pubDate": "2023-09-28T19:09:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "According to information obtained by FOX Business, Valkyrie Investments has won the race to offer the first exchange-traded fund that includes Ethereum futures, a significant development in the proliferation of digital assets in the United States. Valkyrie is the first of nine issuers to receive approval from the Securities and Exchange Commission, offering investors the […] Continue...",
       "currencies": [
@@ -139,47 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Lido Staked Ether's Price Increased More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-28T19:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Maker (MKR), THORChain (RUNE) skyrocket; Bitcoin takes $27k again",
-      "link": "NULL",
-      "pubDate": "2023-09-28T18:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash [BCH] bulls drive rally higher aided by this crucial factor",
-      "link": "NULL",
-      "pubDate": "2023-09-28T18:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
       "title": "BREAKING: Important Statements from Ripple CEO – They Backed Out of Acquiring Fortress Trust",
       "link": "https://en.bitcoinsistemi.com/breaking-important-statements-from-ripple-ceo-they-backed-out-of-acquiring-fortress-trust/",
       "pubDate": "2023-09-28T18:09:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "In his statement, Ripple CEO shared with investors that the company gave up purchasing Fortress Trust. Continue Reading: BREAKING: Important Statements from Ripple CEO – They Backed Out of Acquiring Fortress Trust",
       "currencies": [
@@ -192,193 +56,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Research Firm Reveals Its “Altcoin Trading Playbook”",
-      "link": "NULL",
-      "pubDate": "2023-09-28T18:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "TRX",
-        "AVAX",
-        "EOS",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Major Update and New Token Announcement from IOTA",
-      "link": "NULL",
-      "pubDate": "2023-09-28T17:48:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MIOTA"
-      ]
-    },
-    {
-      "title": "Fortnite Maker Epic Games Cuts 830 Staff as CEO Calls Layoffs 'Only Way'",
-      "link": "NULL",
-      "pubDate": "2023-09-28T17:19:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Maker (MKR) Rockets To $1,500 With 15% Surge, Will This Run Continue?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T16:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "MKR"
-      ]
-    },
-    {
-      "title": "What Next For Chainlink (LINK) Price after 30% Profits in September?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Examining dYdX’s Path to Profitable DeFi",
-      "link": "NULL",
-      "pubDate": "2023-09-28T15:28:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "ATOM",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "GMX granted $1 million bug bounty to Collider’s research arm",
-      "link": "NULL",
-      "pubDate": "2023-09-28T15:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GMX"
-      ]
-    },
-    {
-      "title": "Amid Bearish Decline in Dogecoin (DOGE) and Stacks (STX), Investors Find Haven in Kangamoon (KANG)",
-      "link": "NULL",
-      "pubDate": "2023-09-28T15:04:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "STX"
-      ]
-    },
-    {
-      "title": "Under-The-Radar Altcoin Soars Over 260% – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-09-28T15:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "SHIB",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Three Reasons Traders Are Adding Stacks (STX), Kangamoon (KANG) Filecoin (FIL) and to Their Crypto Portfolio",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:58:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL",
-        "STX"
-      ]
-    },
-    {
-      "title": "Horizen EON Welcomes NTT DATA, Joining the Network as A Certificate Signer Node to Support the Growth and Security of the EON Network",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:29:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Ethereum-Focused Crypto Startup Scores $13M In Funding For Polygon, Solana Growth",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:29:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SOL",
-        "DOT",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "The Sandbox (SAND) Active Users Reach Monthly Peak: Facebook’s AI Glasses Influence?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Tottenham Hotspur to issue a Web3 fan token using Chiliz Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:12:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "JUST IN: VanEck Prepares to Launch Ethereum Futures ETF",
       "link": "https://en.bitcoinsistemi.com/just-in-vaneck-prepares-to-launch-ethereum-futures-etf/",
       "pubDate": "2023-09-28T14:12:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "Giant investment firm VanEck is preparing to launch an Ethereum Futures ETF, according to a press release. Continue Reading: JUST IN: VanEck Prepares to Launch Ethereum Futures ETF",
       "currencies": [
@@ -391,75 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Everlodge (ELDG) Stunds With a Stellar Presale Performance, Lazarus Group Now a Tron (TRX) Whale, BIT Launches Filecoin (FIL) Options Trading",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:09:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "XLM",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Ethereum Moves Higher Following Economic Reports; Bitcoin Cash Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:06:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "What are Horizen EON Forger Nodes  and Why We Need Them",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:05:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Radix Unveils Babylon Mainnet Upgrade to Bolster Developer Experience",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRD"
-      ]
-    },
-    {
-      "title": "Decentralised ledger platform Radix completes its Babylon upgrade",
-      "link": "NULL",
-      "pubDate": "2023-09-28T14:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRD"
-      ]
-    },
-    {
       "title": "Radix Babylon upgrade enters new age for Web3 user and developer experience",
       "link": "https://finbold.com/radix-babylon-upgrade-enters-new-age-for-web3-user-and-developer-experience/",
       "pubDate": "2023-09-28T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Radix Publishing, the creator of the decentralized ledger platform, has announced the successful conclusion of its much-awaited Babylon mainnet update. … Continued",
       "currencies": [
@@ -472,69 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terraform Labs Founder Do Kwon Seeks Dismissal of SEC’s Interrogation Request",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:55:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "EOS becomes first “climate-positive” blockchain network",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:49:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Supra Completes Over $24M in Early Stage Funding to Date",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "EOS Network Foundation and Upland Create ‘Climate Positive’ Blockchain Network",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:32:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Pepe Looks to Reverse Fortunes With 12% Spike, While $ROE Is up 50%",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW"
-      ]
-    },
-    {
       "title": "XRP price breakout in the cards as key pattern forms",
       "link": "https://finbold.com/xrp-price-breakout-in-the-cards-as-key-pattern-forms/",
       "pubDate": "2023-09-28T13:28:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As most assets in the cryptocurrency market are back in the sideways trading mode, XRP has been no exception, but … Continued",
       "currencies": [
@@ -547,116 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tottenham Hotspur taps Chiliz blockchain for Web3 fan token",
-      "link": "NULL",
-      "pubDate": "2023-09-28T13:11:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Tottenham Hotspur to issue SPURS fan token on Chiliz",
-      "link": "NULL",
-      "pubDate": "2023-09-28T12:59:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "IOTA Network to Debut ShimmerEVM’s Smart Contracts and Tokens",
-      "link": "NULL",
-      "pubDate": "2023-09-28T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MIOTA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "New Crypto Coin Bitcoin Minetrix Introduces First Stake-to-Mine Platform – Presale Raises $100K in a Flash",
-      "link": "NULL",
-      "pubDate": "2023-09-28T11:16:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "EOS Network Foundation and Upland Create First ‘Climate Positive’ Blockchain Network",
-      "link": "NULL",
-      "pubDate": "2023-09-28T10:56:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "An Inside Look into Luxury Web3 Phone Maker VERTU",
-      "link": "NULL",
-      "pubDate": "2023-09-28T10:47:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Polkadot (DOT) Price Has Fallen by 50% Since February – When Will the Decrease Stop?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Hedera (HBAR/USD) technical analysis as it struggles at support",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:45:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "HBAR"
-      ]
-    },
-    {
       "title": "SHIB price prediction for Halloween 2023",
       "link": "https://finbold.com/shib-price-prediction-for-halloween-2023/",
       "pubDate": "2023-09-28T09:36:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "With the month of September almost over, Halloween enthusiasts have already started picking out decorations for the scariest holiday of … Continued",
       "currencies": [
@@ -668,298 +123,11 @@
       }
     },
     {
-      "title": "Maker (MKR) Addresses Hit 10-Week High, Here's How Price Reacts",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "International Cricket Council (ICC) and NEAR Foundation Announces Strategic Partnership to Forster Fan Engagement via Web3 Platform",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:16:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Celsius valuation advisor approves value of debtors’ assets and liabilities",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Analyst Presents 4 Charts That Prove Crypto Is Not Dead",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "GT"
-      ]
-    },
-    {
-      "title": "Do Kwon Kicks Against SEC’s Extradition Request – Details",
-      "link": "NULL",
-      "pubDate": "2023-09-28T09:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin Stopped Ahead of $27K, These Alts Are Today’s Top Performers (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-28T08:53:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "BCH",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Michael Egorov Settles Aave Loan, Slashes Debt To $42.7 Million",
-      "link": "NULL",
-      "pubDate": "2023-09-28T08:47:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "DOT may embark on a recovery journey as these findings come to light",
-      "link": "NULL",
-      "pubDate": "2023-09-28T08:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 28 Sep: The Latest News in the World of Crypto",
-      "link": "NULL",
-      "pubDate": "2023-09-28T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "AVAX",
-        "UNI",
-        "ALGO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Stellar (XLM/USD) fails at $0.2; attention turns to previous support",
-      "link": "NULL",
-      "pubDate": "2023-09-28T07:49:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "MakerDAO (MKR) Defies Market Surging to 16-Month High, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-09-28T07:25:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto news from Elrond: MultiversX leading the way for a ‘greener’ web3",
-      "link": "NULL",
-      "pubDate": "2023-09-28T07:03:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ]
-    },
-    {
-      "title": "Crypto Platform Fireblocks Expands Institutional Access to Tezos",
-      "link": "NULL",
-      "pubDate": "2023-09-28T07:01:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Shiba Inu At $0.0000072: Sellers Push For Breakout From Compact Zone",
-      "link": "NULL",
-      "pubDate": "2023-09-28T06:41:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "SHIB",
-        "LINK",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "TRON Rises To $0.86 As Further Price Increases Are Doubtful",
-      "link": "NULL",
-      "pubDate": "2023-09-28T06:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "EOS Price Analysis: Key Support Intact At $0.55",
-      "link": "NULL",
-      "pubDate": "2023-09-28T06:08:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Maker Price Rally Rages On As Active Addresses Hit 10-Week High",
-      "link": "NULL",
-      "pubDate": "2023-09-28T06:01:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "MKR bulls continue to dominate the market but should traders expect a dip?",
-      "link": "NULL",
-      "pubDate": "2023-09-28T03:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "BCH Price Shoots 8% Amid Heavy Bitcoin Cash Whale Accumulation",
-      "link": "NULL",
-      "pubDate": "2023-09-28T02:41:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Curve Founder Pays Down Debts On Aave v2",
-      "link": "NULL",
-      "pubDate": "2023-09-28T02:21:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Why ApeCoin’s fortunes could soon change",
-      "link": "NULL",
-      "pubDate": "2023-09-28T01:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 27 Sep: Crypto market experiences a surge in buying",
-      "link": "NULL",
-      "pubDate": "2023-09-28T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Hashkey Enables AVAX Trading For Hong Kong Users – But There’s A Catch",
-      "link": "NULL",
-      "pubDate": "2023-09-28T01:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "AVAX",
-        "GT"
-      ]
-    },
-    {
       "title": "$XRP, Cardano ($ADA), and Binance ($BNB) Coin Could Face Massive Sell-Off, Says Popular Crypto Analyst",
       "link": "https://www.cryptoglobe.com/latest/2023/09/xrp-cardano-ada-and-binance-bnb-coin-could-face-massive-sell-off-says-popular-crypto-analyst/",
       "pubDate": "2023-09-28T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Prominent cryptocurrency strategist Nicholas Merten, known for his influential voice on his DataDash YouTube channel, has raised concerns over the possible price trajectory for certain altcoins, namely $XRP, Cardano ($ADA) and Binance Coin ($BNB), over liquidity issues. In a video shared on the Google-owned video-sharing platform to his over 500,000 subscribers, the analyst noted that […]",
       "currencies": [
@@ -972,39 +140,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "What MakerDAO’s new proposals mean for MKR",
-      "link": "NULL",
-      "pubDate": "2023-09-28T00:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Flamingo celebrates third anniversary with rewards campaign, adds new pages and features",
-      "link": "NULL",
-      "pubDate": "2023-09-28T00:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Rich Rines – Core DAO – The Smart Economy Podcast: Episode 47",
-      "link": "NULL",
-      "pubDate": "2023-09-28T00:10:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
     }
   ]
 }

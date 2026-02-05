@@ -1,119 +1,15 @@
 {
   "date": "2025-02-05",
-  "fetchedAt": "2026-02-05T07:45:53.729Z",
-  "articleCount": 99,
+  "fetchedAt": "2026-02-05T07:48:35.707Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "US Treasury Faces Legal Action Over D.O.G.E’s Access to Financial Data",
-      "link": "NULL",
-      "pubDate": "2025-02-05T23:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G",
-        "$ELON"
-      ]
-    },
-    {
-      "title": "MEMECOIN GIANTS: From BONK To DogWifHat We Analyze What Is Going To Be The Next 20,000% Meme Rocket Ship",
-      "link": "NULL",
-      "pubDate": "2025-02-05T23:15:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "BONK Price Forecast: After 45% losses in 14-days, Here’s what to expect",
-      "link": "NULL",
-      "pubDate": "2025-02-05T22:32:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Unions drag US Treasury to court for giving Elon Musk’s D.O.G.E read-only access to data",
-      "link": "NULL",
-      "pubDate": "2025-02-05T22:25:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G"
-      ]
-    },
-    {
-      "title": "What Is Berachain? The 'Proof-of-Liquidity' Blockchain and BERA Airdrop",
-      "link": "NULL",
-      "pubDate": "2025-02-05T22:03:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BERA"
-      ]
-    },
-    {
-      "title": "PENGU Price Falls as Pudgy Penguins Burn Over $150 Million in Solana Tokens",
-      "link": "NULL",
-      "pubDate": "2025-02-05T21:34:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "PENGU"
-      ]
-    },
-    {
-      "title": "ENA bears tighten grip – Why recovery is possible only IF…",
-      "link": "NULL",
-      "pubDate": "2025-02-05T21:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ENA",
-        "$1"
-      ]
-    },
-    {
-      "title": "XLM at Risk of 40% Price Drop, Bearish Pattern Sparks Sell-Off Warnings",
-      "link": "NULL",
-      "pubDate": "2025-02-05T20:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Dogecoin (DOGE) & Cronos (CRO) Prices Rally This Cycle – Can Lightchain AI Join In on the Action?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T19:56:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "CRO"
-      ]
-    },
     {
       "title": "XRP Price Falls Following Ledger Downtime as Open Interest Hits Monthly Low",
       "link": "https://decrypt.co/304596/xrp-falls-ledger-issues-open-interest",
       "pubDate": "2025-02-05T19:54:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "The Ripple-linked XRP is the biggest loser in the top 10 coins by market cap Wednesday following XRP Ledger technical issues.",
       "currencies": [
@@ -126,427 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Algorand seeks role in US government D.O.G.E blockchain initiative",
-      "link": "NULL",
-      "pubDate": "2025-02-05T19:50:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO",
-        "G",
-        "X"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RLUSD Stablecoin Now Available on Zero Hash and Revolut, Enabling XRP and Ethereum Transactions",
-      "link": "NULL",
-      "pubDate": "2025-02-05T19:12:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "RLUSD"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ripple Partners with Revolut, Zero Hash to Expand RLUSD Stablecoin Access",
-      "link": "NULL",
-      "pubDate": "2025-02-05T19:04:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "XRP",
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Why These Altcoins Are Trending Today — February 5",
-      "link": "NULL",
-      "pubDate": "2025-02-05T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "TRUMP",
-        "MOVE",
-        "MELANIA",
-        "VVV",
-        "X"
-      ]
-    },
-    {
-      "title": "Ripple’s RLUSD Token Secures Major Listings",
-      "link": "NULL",
-      "pubDate": "2025-02-05T18:24:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Justin Sun keeps fighting with Huobi founder Li Lin",
-      "link": "NULL",
-      "pubDate": "2025-02-05T18:03:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "X"
-      ]
-    },
-    {
-      "title": "Top Web3 Jobs Open This Week – Work from Anywhere – Feb 05th",
-      "link": "NULL",
-      "pubDate": "2025-02-05T17:42:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Ripple’s RLUSD Stablecoin Goes Live On Two Trading Platforms",
-      "link": "NULL",
-      "pubDate": "2025-02-05T17:26:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Even If Solana (SOL) Hits $500 This Cycle, It Won’t Come Close to Matching These Altcoins for Gains",
-      "link": "NULL",
-      "pubDate": "2025-02-05T17:21:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "FLR"
-      ]
-    },
-    {
-      "title": "FDIC Releases Several Documents on Crypto Debanking and Choke Point 2.0",
-      "link": "NULL",
-      "pubDate": "2025-02-05T17:15:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G"
-      ]
-    },
-    {
-      "title": "Melania Trump’s Meme Coin Stages a Comeback, Becomes Top Gainer",
-      "link": "NULL",
-      "pubDate": "2025-02-05T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MOVE",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "Could This Blockchain Solution Be the Next Polkadot? Meet Lightchain AI",
-      "link": "NULL",
-      "pubDate": "2025-02-05T16:49:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Union Square Ventures Leads $14M Series A for Token Trading Infrastructure Reservoir",
-      "link": "NULL",
-      "pubDate": "2025-02-05T16:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "BitcoinOS Brings Trustless BTC Transactions to Ethereum via Arbitrum",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:58:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WBTC",
-        "ARB"
-      ]
-    },
-    {
-      "title": "NEAR Protocol’s Intent Sees Strong Adoption with $9.8M In Volume",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "5 Best Altcoins to Watch Now for the Next Big Gains",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOT",
-        "OM",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Solana Holds $200, Monero Climbs - Top High ROI Crypto BlockDAG Now Pays Cashback in USDT",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:15:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Binance to Add Updates on XRP, APE, NEAR Futures Trading: Details",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "NEAR",
-        "APE"
-      ]
-    },
-    {
-      "title": "These 4 Altcoins Will Bounce Back Strong",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:03:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LUNA"
-      ]
-    },
-    {
-      "title": "TRUMP Coin Whale Loses $21 Million Amid Correction, Will Bear Phase Continue?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T15:02:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRUMP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Crypto.com reveals stablecoin launch and Cronos ETF filing in its 2025 roadmap",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Standard Chartered says bitcoin price could reach $500,000 by 2028",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:24:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DFI"
-      ]
-    },
-    {
-      "title": "Is Stellar (XLM) Reversal Incoming? New Pattern Painted",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Injective Hub V2 Goes Live, but INJ Price Shows Minimal Reaction",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:18:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "Coinbase's head of research explains why ‘dinosaur altcoins’ are staging a comeback",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "5 Best Upcoming Meme Coins to Buy as US Could Introduce ‘GENIUS’ Stablecoin Bill",
-      "link": "NULL",
-      "pubDate": "2025-02-05T14:08:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "BNB",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "FLOKI",
-        "FARTCOIN",
-        "PENGU",
-        "POPCAT",
-        "PNUT",
-        "TURBO",
-        "BOME",
-        "X",
-        "ZEREBRO",
-        "888"
-      ]
-    },
-    {
-      "title": "OnyxCoin (XCN), the Core Token of the Onyx Protocol, Listed on Bitunix Spot Market",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:40:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XCN"
-      ]
-    },
-    {
-      "title": "Swisstronik Tokenizes Diamonds for Swiss Luxury Brands – The Future of RWA Tokenization is Here",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WLD"
-      ]
-    },
-    {
-      "title": "Major Ripple (XRP) Milestone Achieved: Key Details",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:29:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Monero Price Forecast: XMR bulls target double-digit gains amid market volatility",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:16:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 2-5: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, ALGORAND: ALGO, OPTIMISM: OP, RIPPLE: XRP, CELESTIA: TIA",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:15:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "ALGO",
-        "OP",
-        "TIA"
-      ]
-    },
-    {
       "title": "Trump’s Crypto Czar Explores Strategic Bitcoin Reserve",
       "link": "https://www.altcoinbuzz.io/cryptocurrency-news/trumps-crypto-czar-explores-strategic-bitcoin-reserve/",
       "pubDate": "2025-02-05T13:12:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "bitcoin",
       "description": "This proposal comes as part of an internal working group. The group is focused on exploring ways to integrate Bitcoin into the country’s economic framework. David Sacks, a seasoned entrepreneur and investor, made it clear that the idea of a Bitcoin Reserve is high on the list of priorities. “One of the things that The […] The post Trump’s Crypto Czar Explores Strategic Bitcoin Reserve appeared...",
       "currencies": [
@@ -559,37 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "2025’s Top Altcoins: Rollblock, TON, and VET – Which Will Deliver 100x Returns?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:04:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "TON"
-      ]
-    },
-    {
-      "title": "MELANIA: Mapping the memecoin’s short term price targets",
-      "link": "NULL",
-      "pubDate": "2025-02-05T13:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "MELANIA",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
       "title": "BlackRock and Fidelity Fuel $307 Million Ethereum ETF Inflow",
       "link": "https://u.today/blackrock-and-fidelity-fuel-307-million-ethereum-etf-inflow",
       "pubDate": "2025-02-05T12:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Ethereum ETF recorded over $307 million as investor sentiment returns",
       "currencies": [
@@ -601,86 +55,11 @@
       }
     },
     {
-      "title": "Moonwell Opens Market for VIRTUAL, Fueling On-Chain AI Growth",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:45:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VIRTUAL"
-      ]
-    },
-    {
-      "title": "Can Dogwifhat Price Revisit $5 ATHs?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:31:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WIF",
-        "ATH"
-      ]
-    },
-    {
-      "title": "Algorand Foundation wants DOGE to adopt its blockchain for government overhaul",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "ALGO",
-        "X"
-      ]
-    },
-    {
-      "title": "Fiserv, Inc. (NYSE: FI) Beats Expectations with 15% Rise in Adjusted EPS to $2.51 in Q4",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:26:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Binance Launches Berachain (BERA) on HODLer Airdrops – Earn Tokens Retroactively",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:23:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "BNB",
-        "FDUSD",
-        "00"
-      ]
-    },
-    {
-      "title": "Analyst Highlights Key Support Level For POL",
-      "link": "NULL",
-      "pubDate": "2025-02-05T12:03:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POL",
-        "X"
-      ]
-    },
-    {
       "title": "Earn $ADA Cashback with Yoroi Desktop Extension",
       "link": "https://www.altcoinbuzz.io/bitcoin-and-crypto-guide/earn-ada-cashback-with-yoroi-desktop-extension/",
       "pubDate": "2025-02-05T11:32:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "altcoin",
       "description": "With Yoroi Wallet’s latest update, you’ll soon earn $ADA cashback when shopping at Walmart, thanks to an exciting partnership with Bring. Every Walmart purchase, regardless of the product, will give you a percentage of your spending back, and you’ll earn $ADA. How It Works You can begin the process by tapping once to enable cashback […] The post Earn $ADA Cashback with Yoroi Desktop Extension...",
       "currencies": [
@@ -693,36 +72,11 @@
       }
     },
     {
-      "title": "US Treasury eases anxiety over Elon Musk’s D.O.G.E as USAID staff get fired",
-      "link": "NULL",
-      "pubDate": "2025-02-05T11:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G"
-      ]
-    },
-    {
-      "title": "DeFi whales cash out! AAVE, LINK, UNI dumped for millions",
-      "link": "NULL",
-      "pubDate": "2025-02-05T11:26:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "UNI",
-        "AAVE"
-      ]
-    },
-    {
       "title": "Ethereum Increases Gas Limit to Boost Scalability",
       "link": "https://www.altcoinbuzz.io/cryptocurrency-news/ethereum-increases-gas-limit-to-boost-scalability/?__cf_chl_rt_tk=3K35pANiZ97NHW__egtUTZULrnGrtkTp3KkjilFY0A4-1746875401-1.0.1.1-koZgMqbXmL_cAOWPn0Qcvmp0sPbLlZMUeFgGPzP4Qe8",
       "pubDate": "2025-02-05T11:24:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "ethereum",
       "description": "The gas limit sets the maximum capacity for transactions in each block. It has been increased to over 31 million gas units. This adjustment aims to boost Ethereum’s transaction capacity and network performance. Ethereum Increases Gas Limit Above 31 Million Without Hard Fork The increase was made possible without requiring a hard fork, a major […] The post Ethereum Increases Gas Limit to Boost...",
       "currencies": [
@@ -735,27 +89,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Reveal Major Updates On XRP, LTC, & Others, What’s Next?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T11:18:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "LTC",
-        "NEAR",
-        "TRUMP",
-        "S",
-        "MEW"
-      ]
-    },
-    {
       "title": "Ripple Investigates XRP Ledger Halt as Consensus Issues Arise",
       "link": "https://crypto-economy.com/ripple-investigates-xrp-ledger-halt-as-consensus-issues-arise/",
       "pubDate": "2025-02-05T11:04:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Economy",
+      "sourceKey": "cryptoeconomy",
       "category": "altcoin",
       "description": "TL;DR Ripple’s XRP Ledger experienced a 64-minute network halt on February 4, due to consensus issues, affecting approximately 88,000 transactions. Validator operators manually intervened to resume operations, but it remains unclear if the network self-healed or if the intervention directly resolved the issue. Ripple reassured users that their funds remained secure during the incident and ......",
       "currencies": [
@@ -768,79 +106,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Short Sellers Dominate HBAR Futures as Price Eyes Sub-$0.20 Level",
-      "link": "NULL",
-      "pubDate": "2025-02-05T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "Onyx (XCN) & Flexa (AMP) Face Market Uncertainty While BitLemons ($BLEM) Revenue Generation Drives Growth",
-      "link": "NULL",
-      "pubDate": "2025-02-05T10:54:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMP",
-        "XCN"
-      ]
-    },
-    {
-      "title": "DeFi Resilience Amid Tariff Crisis: Protocols Like Aave Outperform Traditional Finance",
-      "link": "NULL",
-      "pubDate": "2025-02-05T10:53:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "LINK",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "UAE Taps Shiba Inu for Blockchain Integration Across Government Services",
-      "link": "NULL",
-      "pubDate": "2025-02-05T10:19:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "APT",
-        "BONE",
-        "LEASH",
-        "TREAT"
-      ]
-    },
-    {
-      "title": "Tron and Movement Labs Reject Token Swap with WLFI Project",
-      "link": "NULL",
-      "pubDate": "2025-02-05T10:12:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "AAVE",
-        "MOVE"
-      ]
-    },
-    {
       "title": "XRP Ledger resumes activity after second outage in three months",
       "link": "https://cryptoslate.com/xrp-ledger-resumes-activity-after-second-outage-in-three-months/",
       "pubDate": "2025-02-05T10:11:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "regulation",
       "description": "The XRP Ledger (XRPL) is back to full functionality after an unexpected halt in transaction validation that lasted about an hour. On Feb. 5, RippleX confirmed that “XRP Ledger has resumed forward progress” and that its team was investigating the cause. The incident raised concerns about the network’s stability and marked the second disruption in […] The post XRP Ledger resumes activity after...",
       "currencies": [
@@ -853,63 +123,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "The Next 100x Meme Coin? Why Doge Uprising Could Be the Biggest Breakout of 2025 Over BRETT & Dogwifhat",
-      "link": "NULL",
-      "pubDate": "2025-02-05T10:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Moonwell Launches VIRTUAL Token Market",
-      "link": "NULL",
-      "pubDate": "2025-02-05T09:50:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VIRTUAL"
-      ]
-    },
-    {
-      "title": "PAWS Airdrop: Closer To Approaching The Listing Date",
-      "link": "NULL",
-      "pubDate": "2025-02-05T09:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "HMSTR",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Market Expert Claims XRP Drop To $1.76 Was ‘Manipulated’ – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2025-02-05T09:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "HBAR",
-        "MOVE",
-        "X"
-      ]
-    },
-    {
       "title": "SEC scales back anti-crypto unit and strengthens new task force",
       "link": "https://atlas21.com/sec-scales-back-anti-crypto-unit-and-strengthens-new-task-force/?utm_source=rss&utm_medium=rss&utm_campaign=sec-scales-back-anti-crypto-unit-and-strengthens-new-task-force",
       "pubDate": "2025-02-05T09:15:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Atlas21",
+      "sourceKey": "atlas21",
       "category": "regulation",
       "description": "Under the new Trump administration, the U.S. regulatory authority is undergoing a major reorganization in the digital asset sector. The post SEC scales back anti-crypto unit and strengthens new task force appeared first on Atlas21.",
       "currencies": [
@@ -922,24 +140,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is BONK poised for a recovery? Key levels to monitor are…",
-      "link": "NULL",
-      "pubDate": "2025-02-05T09:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
       "title": "David Sacks Pushes Bitcoin Reserve, Stablecoin Bill in Crypto Plan",
       "link": "https://coinpaprika.com/news/david-sacks-pushes-bitcoin-reserve-stablecoin-bill-in-crypto-plan/",
       "pubDate": "2025-02-05T08:53:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "David Sacks outlines a crypto plan with a Bitcoin Reserve, stablecoin legislation, and clearer regulations to boost US crypto policy and economic stability.",
       "currencies": [
@@ -952,22 +157,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Stablecoins Show Remarkable Growth Despite Market Challenges",
-      "link": "NULL",
-      "pubDate": "2025-02-05T08:34:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Ripple restores XRP Ledger after 64-minute outage – What went wrong?",
       "link": "https://ambcrypto.com/ripple-restores-xrp-ledger-after-64-minute-outage-what-went-wrong/",
       "pubDate": "2025-02-05T08:15:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "XRP Ledger network outage slightly weighed on XRP's price and market sentiment.",
       "currencies": [
@@ -980,128 +174,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Memecoins Crowned As ‘Defining Narrative Of 2024’, What’s The Next Key Sector To Watch?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T08:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "DOGE",
-        "TRUMP",
-        "AI16Z",
-        "G",
-        "MEME",
-        "GOAT"
-      ]
-    },
-    {
-      "title": "Dogen Crypto Listed: More Than $5 Million Raised",
-      "link": "NULL",
-      "pubDate": "2025-02-05T07:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "RAY",
-        "BONK",
-        "WIF",
-        "S",
-        "X",
-        "FIRE"
-      ]
-    },
-    {
-      "title": "Crypto.com Eyes 2025 Cronos ETF Amid Growing Institutional Demand",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:51:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "CRO",
-        "X"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Market Experiences Broad Pullback: DeFAI and AI Agents Sectors Suffer Significant Losses",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:44:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "XLM",
-        "PEPE",
-        "TRUMP",
-        "FARTCOIN",
-        "VIRTUAL",
-        "PENGU",
-        "AI16Z",
-        "ACT",
-        "AIXBT"
-      ]
-    },
-    {
-      "title": "Gavin Wood Highlights Key Criteria for Evaluating Blockchain Potential",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:33:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Ethereum Leverage Elevated Despite Long Squeeze, Glassnode Says",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "GRT",
-        "X"
-      ]
-    },
-    {
-      "title": "Surge in Bitcoin Spot ETFs with $341 Million Net Inflows",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:15:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
       "title": "Cardano and Ripple Partnership in the Works? Hoskinson Teases Major Developments",
       "link": "https://cryptodnes.bg/en/cardano-and-ripple-partnership-in-the-works-hoskinson-teases-major-developments/",
       "pubDate": "2025-02-05T06:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "altcoin",
       "description": "Charles Hoskinson, co-founder of Cardano, has hinted at a potential collaboration with Ripple’s RLUSD stablecoin, revealing that discussions with Ripple Labs’ leadership have taken place. The post Cardano and Ripple Partnership in the Works? Hoskinson Teases Major Developments appeared first on Cryptodnes.",
       "currencies": [
@@ -1114,23 +191,11 @@
       }
     },
     {
-      "title": "Identifying why Polygon’s $0.50-level could be key to POL’s next move",
-      "link": "NULL",
-      "pubDate": "2025-02-05T06:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "POL"
-      ]
-    },
-    {
       "title": "Healthcare tech firm Semler buys 871 Bitcoin, yield tops 150%",
       "link": "https://cointelegraph.com/news/semler-scientific-871-bitcoin-buy-yield-tops-150?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-02-05T05:45:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Semler now has 3,192 Bitcoin following a recent buying spree, placing it as the 10th-largest corporate holder of the cryptocurrency.",
       "currencies": [
@@ -1143,211 +208,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Missed $TRUMP & $MELANIA? These Top Crypto Presales Could 1000x By The End Of The Year",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:33:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRUMP",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 05 February 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Crypto.com Plans CRO Spot ETF and Major Financial Expansions in 2025",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:17:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "TapSwap Listing: 9 Days Left—Will Staking Rewards End Tomorrow?",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "KuCoin Announces $100 Million Giveaway to Mark Its Next Evolution",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Is Raydium poised for a rebound? Watch out for THIS key level",
-      "link": "NULL",
-      "pubDate": "2025-02-05T05:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RAY",
-        "$1"
-      ]
-    },
-    {
-      "title": "Crypto.com Plans CRO Spot ETF Launch and New Financial Products in 2025",
-      "link": "NULL",
-      "pubDate": "2025-02-05T04:37:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Crypto Market Today Feb 5: BTC Slips To $98K, Altcoins Volatile, MELANIA Up 12%",
-      "link": "NULL",
-      "pubDate": "2025-02-05T04:34:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "MOVE",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Pulls Back Again: Key Support Levels to Watch",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:43:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "BlackRock Records Highest Single-Day ETH Inflow",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:33:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "T"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Reports Portfolio Losses And Gains Amid Market Fluctuations",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:23:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "DOGE",
-        "TON",
-        "WIF",
-        "X"
-      ]
-    },
-    {
-      "title": "Celestia Community Proposes 33% Inflation Rate Reduction",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:23:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Q4 report hints at 120% gains as XRP price tops $2.50",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Solana's On-Chain GDP Surges in Q4 2024",
-      "link": "NULL",
-      "pubDate": "2025-02-05T02:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "RAY",
-        "GDP"
-      ]
-    },
-    {
-      "title": "Onyxcoin: Up by 68% in 30 hours, altcoin’s next step will be…",
-      "link": "NULL",
-      "pubDate": "2025-02-05T01:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCN",
-        "$1"
-      ]
-    },
-    {
-      "title": "Huobi sale marred by $30 million-dollar “hole,” Justin Sun claims",
-      "link": "NULL",
-      "pubDate": "2025-02-05T00:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "X"
-      ]
-    },
-    {
       "title": "XRP Ledger Temporarily Halts Block Production, Ripple CTO Cites Possible Network 'Drift'",
       "link": "https://decrypt.co/304451/xrp-ledger-temporarily-halts-block-production-ripple-cto",
       "pubDate": "2025-02-05T00:28:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "The cause of Monday's halt is under investigation, but early analysis points to a consensus issue where validations weren’t published.",
       "currencies": [

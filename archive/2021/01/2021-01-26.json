@@ -1,27 +1,16 @@
 {
   "date": "2021-01-26",
-  "fetchedAt": "2026-02-05T07:45:51.523Z",
-  "articleCount": 16,
+  "fetchedAt": "2026-02-05T07:48:35.327Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @CryptoFinally: 3 days ago I locked up .75 $ETH in the protocol &amp; I want to thank them for preventing me from sp…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T20:01:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HUNT"
-      ]
-    },
     {
       "title": "Stellar (XLM) Invests Big in Wyre With $5 Million Ecosystem Upgrade",
       "link": "https://beincrypto.com/stellar-xlm-invests-big-in-wyre-with-5-million-ecosystem-upgrade/",
       "pubDate": "2021-01-26T18:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "The move comes on the heels of Stellar’s xlm cryptocurrency outperforming many of its peers to start 2021. It reached a price of $0.44 on Jan 6, more than doubling its starting point for the year. However, after reaching the peak in the first week of January, xlm has retreated down to the mid $0.20’s … Continued",
       "currencies": [
         "XLM"
@@ -33,22 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today we are happy to announce Hive Pay as a new partner. We look forward to showcasing them on MarketSquare’s Hive Hub.",
-      "link": "NULL",
-      "pubDate": "2021-01-26T18:19:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Major Crypto Exchange Adds XRP Pair Despite SEC Complaint",
       "link": "https://u.today/major-crypto-exchange-adds-xrp-pair-despite-sec-complaint",
       "pubDate": "2021-01-26T14:27:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "XRP can now be traded against USD Coin on the KuCoin cryptocurrency exchange",
       "currencies": [
@@ -62,33 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What exactly is a #hard_fork? A hard fork is a change in the #protocol of a #Blockchain #network in order to creat…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T13:06:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
-      "title": "What exactly is a #hard_fork? A hard fork is a change in the #protocol of a #Blockchain #network in order to crea…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T13:04:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "IOTA's Identity Solution Can Protect Your Data From Tech Giants: IOTA Foundation's Jelle Millenaar",
       "link": "https://u.today/iotas-identity-solution-can-protect-your-data-from-tech-giants-iota-foundations-jelle-millenaar",
       "pubDate": "2021-01-26T12:28:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Jelle Millenaar dismissed popular misconceptions around IOTA's approach to data integrity",
       "currencies": [
@@ -104,8 +60,8 @@
       "title": "Almost 100 Million XRP Sent to Coinbase by Anonymous User",
       "link": "https://u.today/almost-100-million-xrp-sent-to-coinbase-by-anonymous-user",
       "pubDate": "2021-01-26T10:19:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Whale Alert spreads the word that an anonymous whale has wired a whopping 99.9 million XRP to one of the largest exchanges, Coinbase, which recently delisted XRP",
       "currencies": [
@@ -117,33 +73,11 @@
       }
     },
     {
-      "title": "RT @VitalikButerin: I make another attempt to explain how zk-SNARKs work, for those who are at least somewhat mathematically inclined but d…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T10:15:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
-      "title": "Fast Access to Blockchain Nodes of $BTC, $BSV, $BCH, $BTG",
-      "link": "NULL",
-      "pubDate": "2021-01-26T07:53:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTG"
-      ]
-    },
-    {
       "title": "Why Polkadot is the Future of DeFi",
       "link": "https://bitcoinist.com/why-polkadot-is-the-future-of-defi/?utm_source=rss&utm_medium=rss&utm_campaign=why-polkadot-is-the-future-of-defi",
       "pubDate": "2021-01-26T06:29:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "defi",
       "description": "In the last year, decentralized finance (DeFi) has gone from being a relatively unexplored crypto niche to a bustling industry filled with a diverse array of protocols and tools that offer new services and opportunities to users. As it stands, the vast majority of DeFi applications are built on the Ethereum blockchain, due to its popularity among decentralized application (dApp) developers...",
       "currencies": [
@@ -155,62 +89,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @mrjberlin: ‼️Learn more by actually asking questions in the Nirvana group, viewing the vault address &amp; checking the current $wBTC balan…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T04:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "VANA",
-        "BLISS"
-      ]
-    },
-    {
-      "title": "The 4th $HYN burning plan completed! Currently total supply after burning is 8,221,921,054. More details are shwon…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T02:47:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "The 4th $HYN burning complete and $25709718.65 worth of $HYN has been burned.",
-      "link": "NULL",
-      "pubDate": "2021-01-26T02:39:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Connect your #wallet to the #pNetwork Aragon-based DAO or use a custom @Eidoo_io wallet interface to vote in the pN…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T01:43:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "20 tokens are now available for Gemini customers in Singapore 🇸🇬  #DeFi tokens such as $BAL, $CRV, $REN, $SNX,…",
-      "link": "NULL",
-      "pubDate": "2021-01-26T01:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "GUSD"
-      ]
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "date": "2023-08-03",
-  "fetchedAt": "2026-02-05T07:45:52.150Z",
-  "articleCount": 58,
+  "fetchedAt": "2026-02-05T07:48:35.540Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "Best Crypto to Buy Now 3 August – Flex Coin, XDC Network, Hedera",
       "link": "https://cryptonews.com/news/best-crypto-buy-now-3-august-flex-coin-xdc-network-hedera.htm",
       "pubDate": "2023-08-03T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "general",
       "description": "Hong Kong has taken a major step today in embracing cryptocurrency by granting a retail trading license to HashKey, making it the first platform in the country to receive such authorization. This development signals Hong Kong's intent to become a crypto hub in Asia, providing easy access to digital assets for retail investors. In light of this macroeconomic development, what are the...",
       "currencies": [
@@ -23,104 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether (USDT) Loses 1:1 to US Dollar Amid Heightened Sell Pressure in Curve’s 3pool",
-      "link": "NULL",
-      "pubDate": "2023-08-03T22:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "ApeCoin loses $2 support, is $1 impending?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T21:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "XDC price prediction as coin rallies by 31% in a week",
-      "link": "NULL",
-      "pubDate": "2023-08-03T21:12:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Aave Chan Initiative Proposes To Buy $2 Million CRV From Curve Founder",
-      "link": "NULL",
-      "pubDate": "2023-08-03T21:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "CRV Price Recovers From 6-Month Lows, What’s Driving The Price?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T21:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "TRX",
-        "AAVE",
-        "HT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Curve Finance Founder Sells 72 Million CRV, Brings Down CRV-Backed Debt By 21%",
-      "link": "NULL",
-      "pubDate": "2023-08-03T20:41:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Optimism transactions surpass Arbitrum, but what’s behind the uptick in users?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "GNO"
-      ]
-    },
-    {
       "title": "Shiba Inu Announces Its New Feature! Will Meme Exit Coin Status?",
       "link": "https://en.bitcoinsistemi.com/shiba-inu-announces-its-new-feature-will-meme-exit-coin-status/",
       "pubDate": "2023-08-03T20:02:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "Speaking to Coindesk, a Shiba Inu developer said that digital identity will be added to all future SHIB projects. Continue Reading: Shiba Inu Announces Its New Feature! Will Meme Exit Coin Status?",
       "currencies": [
@@ -136,8 +43,8 @@
       "title": "Shiba Inu’s DeFi Aspirations May Rattle DOGE’s Market As SHIB Turns To Digital IDs",
       "link": "https://www.newsbtc.com/shiba-inu/shiba-inu-defi-aspirations-may-rattle-doges-market-as-shib-turns-to-digital-ids/",
       "pubDate": "2023-08-03T20:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "defi",
       "description": "Initially tagged as a meme coin, Shiba Inu has been reinventing itself, aiming to break away from its meme coin status and step into the league of serious Decentralized Finance (DeFi) contenders, according to a new report. A key step towards this transformation involves an innovation that is about to reshape the Shiba Inu ecosystem: Digital Identity Verification. Embracing Digital Identity In...",
       "currencies": [
@@ -154,8 +61,8 @@
       "title": "Crypto Trader Predicts Double Digit Rally for Shiba Inu Rival Dogecoin, Updates Outlook on Bitcoin",
       "link": "https://dailyhodl.com/2023/08/03/crypto-trader-predicts-double-digit-rally-for-shiba-inu-rival-dogecoin-updates-outlook-on-bitcoin/",
       "pubDate": "2023-08-03T19:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A widely followed crypto analyst is predicting a double-digit rally for popular meme asset Dogecoin (DOGE) while updating his outlook on the top crypto asset by market cap. The pseudonymous trader Kaleo tells his 593,000 Twitter followers that DOGE is “finally in the ape zone” and that accumulating the memecoin under $0.08 is a good […]",
       "currencies": [
@@ -170,69 +77,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DeFi Lenders Spooked By Curve Exploit",
-      "link": "NULL",
-      "pubDate": "2023-08-03T19:39:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Cryptocurrency LEO Token Up More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-03T19:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Binance CEO Shares Details Of $20 Million Scam Attempt",
-      "link": "NULL",
-      "pubDate": "2023-08-03T19:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Hacker Behind 2016 Bitfinex Attack Pleads Guilty at Court",
-      "link": "NULL",
-      "pubDate": "2023-08-03T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "The Sandbox implements KYC measures for protocol staking",
-      "link": "NULL",
-      "pubDate": "2023-08-03T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
       "title": "Quant Explains How These Indicators Affect Ethereum Price",
       "link": "https://www.newsbtc.com/news/ethereum/quant-explains-how-these-indicators-affect-ethereum-price/",
       "pubDate": "2023-08-03T18:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "A quant has explained how the indicators like taker buy/sell ratio and Coinbase premium index can influence the price of Ethereum. Ethereum’s Relationship With Taker Buy/Sell Ratio & Coinbase Premium Index In a new CryptoQuant quicktake post, an analyst has discussed some metrics that could hold relevance for the ETH price. The first indicator of interest here is the “taker buy/sell...",
       "currencies": [
@@ -247,22 +96,11 @@
       }
     },
     {
-      "title": "Abracadabra's Bold Move: 200% Interest Proposed on $18 Million Loan to Curve Founder Amidst Bad Debt Concerns",
-      "link": "NULL",
-      "pubDate": "2023-08-03T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
       "title": "Ripple To Expand Presence In U.S. Market After XRP Court Win? Top Executive Reveals Big Plans",
       "link": "https://zycrypto.com/ripple-to-expand-presence-in-u-s-market-after-xrp-court-win-top-executive-reveals-big-plans/",
       "pubDate": "2023-08-03T17:48:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Ripple President Monica Long has announced the company’s plans to seek market opportunities in the United States.",
       "currencies": [
@@ -275,317 +113,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Michael Egorov has so far sold 72 million CRV tokens in OTC deals",
-      "link": "NULL",
-      "pubDate": "2023-08-03T17:17:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Kia, Hyundai Tune Up with Hedera for AI Carbon Emission Tracking",
-      "link": "NULL",
-      "pubDate": "2023-08-03T16:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Huobi and AICoin Join Forces To Create an Efficient and Swift Digital Asset Trading Experience",
-      "link": "NULL",
-      "pubDate": "2023-08-03T16:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Curve DAO (CRV) up 7%, Is Curve Out of the Woods?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T16:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Gala Games Titles Arrive on Elixir Games Launcher",
-      "link": "NULL",
-      "pubDate": "2023-08-03T16:06:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Hedera's Price Increased More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-03T15:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Horizen Partners with Wanchain to Expand Cross-Chain Interoperability for EON, Horizen’s EVM-Compatible Smart Contracting Platform",
-      "link": "NULL",
-      "pubDate": "2023-08-03T14:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Analysts Predict a Viral Surge for Tradecurve: Huobi Token and Binance (BNB) Face New Riva",
-      "link": "NULL",
-      "pubDate": "2023-08-03T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Social media bots suspected in possible FTX crypto price manipulation, reveals report",
-      "link": "NULL",
-      "pubDate": "2023-08-03T14:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GALA",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Is It Too Late to Buy XDC Network? XDC Price Jumps 100% in 2 Weeks But Crypto Whales are Buying This Other Coin – Here's Why",
-      "link": "NULL",
-      "pubDate": "2023-08-03T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Huobi co-founder buys 10 million Curve DAO tokens from Curve founder",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:31:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Whale Activity for AAVE, APE, COMP, IMX, LDO, MDT Spikes",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:22:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APE",
-        "AAVE",
-        "COMP",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Aave Chan founder proposes buying $2M in CRV from Curve founder",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:12:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Aave is Going to Zero as Curve DeFi Risk Grows and IOTA20 Could Be the Next Crypto to Explode – $100,000 Raised in 24 Hours",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Aave is Going to Zero as Curve DeFi Risk Grows and Green Crypto Chimpanzee Could Be the Next Crypto to Explode – $1.1m Raised",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "3.0 Verse Launches Unified Marketplace for CeFi and DeFi Trading",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:07:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "GT"
-      ]
-    },
-    {
-      "title": "Filecoin accelerator program explores frontier of ‘compute on data’",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "KuCoin Crypto Exchange Ceases Bitcoin and Litecoin Mining Pool Services – What's Going On?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Huobi’s Jun Du acquires 10 million CRV tokens to support Curve",
-      "link": "NULL",
-      "pubDate": "2023-08-03T12:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Why APE, LDO, AAVE are seeing whale interest at the same time",
-      "link": "NULL",
-      "pubDate": "2023-08-03T12:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APE",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Binance Introduces Zero-Fee Trading for BTC/FDUSD and ETH/FDUSD Pairs",
-      "link": "NULL",
-      "pubDate": "2023-08-03T12:19:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Fundstrat: Bitcoin SV Focuses On Business Applications",
-      "link": "NULL",
-      "pubDate": "2023-08-03T12:16:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "“I hope both CBDCs and independent stablecoins can cohabitate”, interview with Maker DAO",
-      "link": "NULL",
-      "pubDate": "2023-08-03T12:13:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "10M CRV Bought by Huobi Co-Founder Lends Hand to Michael Egorov",
-      "link": "NULL",
-      "pubDate": "2023-08-03T11:56:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Aave Chan proposes Aave treasury buys $2 million CRV from Michael Egorov",
-      "link": "NULL",
-      "pubDate": "2023-08-03T11:33:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
       "title": "Ripple v. SEC case update as of August 3, 2023",
       "link": "https://finbold.com/ripple-v-sec-case-update-as-of-august-3-2023/",
       "pubDate": "2023-08-03T11:06:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "Although blockchain company Ripple has scored a massive, albeit partial, win in the protracted case against the United States Securities … Continued",
       "currencies": [
@@ -598,123 +130,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance starts BTC/FDUSD and ETH/FDUSD trading pairs with zero-fees",
-      "link": "NULL",
-      "pubDate": "2023-08-03T11:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Huobi co-founder Jun Du buys 10 million CRV from Michael Egorov",
-      "link": "NULL",
-      "pubDate": "2023-08-03T11:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "HT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Panic or Strategy? CurveFi's Creator Unleashes Torrential Sell-Off",
-      "link": "NULL",
-      "pubDate": "2023-08-03T10:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Altcoins continue to bleed as market waits for next big move",
-      "link": "NULL",
-      "pubDate": "2023-08-03T10:03:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "INJ"
-      ]
-    },
-    {
-      "title": "What’s Next for Litecoin, Maker (MKR), Tradecurve?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Seoul Web3 Festival and Hackathon Concludes Successfully, with Cronos Labs as Blockchain Partner and Jury Member",
-      "link": "NULL",
-      "pubDate": "2023-08-03T09:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) Takes Off With 23% Burst – What’s Fueling The Thrust?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T07:25:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Binance Announces Zero-Fee Bitcoin And Ethereum Trading, Bullish For Crypto Market?",
-      "link": "NULL",
-      "pubDate": "2023-08-03T07:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Curve Finance’s CRV Token Holders Worried Over Potential Massive Dump",
-      "link": "NULL",
-      "pubDate": "2023-08-03T04:59:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
       "title": "48% Of All Bitcoin Lightning Network Nodes Run On Amazon And Google Cloud",
       "link": "https://bitcoinist.com/bitcoin-lightning-network-nodes-amazon-google-cloud/",
       "pubDate": "2023-08-03T03:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "MemPool Space data on August 2 shows that roughly 48% of all Bitcoin Lightning Network (LN) Nodes are hosted by major centralized cloud service providers, namely Amazon Web Service (AWS) and Google Cloud. Specifically, approximately 29% of Bitcoin Lightning Network nodes are deployed on AWS, while 19% are hosted on Google Cloud. This trend points to […]",
       "currencies": [
@@ -727,37 +147,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Meme2Earn v3 integrates new OG NFT rewards, supports cross-chain USDT, user-created meme campaigns",
-      "link": "NULL",
-      "pubDate": "2023-08-03T01:33:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "24 Hrs Crypto, 02 Aug: Crypto Market Witnesses Roller Coaster Ride",
-      "link": "NULL",
-      "pubDate": "2023-08-03T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "UNI",
-        "STX",
-        "XDC"
-      ]
-    },
-    {
       "title": "$XRP Could See Massive Price Rallies Based on Technical Indicators, Analyst Says",
       "link": "https://www.cryptoglobe.com/latest/2023/08/xrp-could-see-massive-price-rallies-based-on-technical-indicators-analyst-says/",
       "pubDate": "2023-08-03T00:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "In a recently published analysis of the native token of the XRP Ledger, $XRP, a popular cryptocurrency analyst has identified a potentially bullish pattern in the cryptocurrency’s chart, pointing to technical indicators including the Moving Average Convergence Divergence (MACD). In his analysis, the popular analyst, who goes by JD on the microblogging platform X, noted […]",
       "currencies": [

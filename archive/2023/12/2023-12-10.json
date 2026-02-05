@@ -1,26 +1,15 @@
 {
   "date": "2023-12-10",
-  "fetchedAt": "2026-02-05T07:45:53.353Z",
-  "articleCount": 14,
+  "fetchedAt": "2026-02-05T07:48:35.648Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Can the rising interest in Pudgy Penguins save the NFT sector?",
-      "link": "NULL",
-      "pubDate": "2023-12-10T23:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "APE"
-      ]
-    },
     {
       "title": "Shiba Inu Sees Trillions In Accumulation Spree By Mega Whales — $0.001 SHIB Price Now Highly In View",
       "link": "https://zycrypto.com/shiba-inu-sees-trillions-in-accumulation-spree-by-mega-whales-0-001-shib-price-now-highly-in-view/",
       "pubDate": "2023-12-10T20:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The Shiba Inu (SHIB) community received quite a positive transmission following a huge transaction involving over...",
       "currencies": [
@@ -36,8 +25,8 @@
       "title": "Crypto Market Ultra Bullish as Top Coins Print Massive Gains",
       "link": "https://dailycoin.com/crypto-market-ultra-bullish-top-coins-print-massive-gains/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-12-10T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "Amidst a surge in cryptocurrency values, diverse coins showcase remarkable gains, hinting at a bullish market sentiment and growth potential.",
       "currencies": [
@@ -55,59 +44,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why Are NFTs Bad? The Problem And Legal Issues",
-      "link": "NULL",
-      "pubDate": "2023-12-10T20:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "IMX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Whats With All The Mysterious Cryptocurrency Deaths",
-      "link": "NULL",
-      "pubDate": "2023-12-10T17:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Our Most Read Stories This Week: HNT Launches Crypto Mobile Plan, ORDI Tops $1B, JTO Airdrop, $650M LINK Staked",
-      "link": "NULL",
-      "pubDate": "2023-12-10T16:27:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "HNT",
-        "ORDI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana flips Ethereum on NFT sales – SOL to $90?",
       "link": "https://www.cryptopolitan.com/solana-flips-ethereum-on-nft-sales-sol-to-90/",
       "pubDate": "2023-12-10T16:16:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "Solana has emerged as a formidable contender in the crypto industry, challenging the supremacy of established platforms like Ethereum. The most recent arena where Solana has made waves is the booming market of Non-Fungible Tokens (NFTs), whose efficiency and scalability have propelled it ahead of Ethereum. Solana keeps up with the bull run Solana has ... Read more",
       "currencies": [
@@ -120,29 +61,11 @@
       }
     },
     {
-      "title": "Are ApeCoin (APE) and Pepe Coin (PEPE) the Hidden Gems in Bitcoin's Shadow?",
-      "link": "NULL",
-      "pubDate": "2023-12-10T15:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "APE",
-        "PEPE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Solana Surpasses Ethereum in NFT Sales",
       "link": "https://u.today/solana-surpasses-ethereum-in-nft-sales",
       "pubDate": "2023-12-10T13:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Solana's NFT sales have eclipsed those of Ethereum",
       "currencies": [
@@ -158,8 +81,8 @@
       "title": "Cardano Price Experiences Sharp Pullback After Hitting 18-Month High – Is The Top In?",
       "link": "https://bitcoinist.com/cardano-price-sharp-pullback-after-h-18-month-high/",
       "pubDate": "2023-12-10T12:40:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "The Cardano price has shown a solid performance over the past week, soaring by an impressive 48% in the last seven days. This bullish momentum has pushed the cryptocurrency to reclaim the $0.6 level for the first time in more than a year. However, the price has been experiencing a correction since reaching the multi-month […]",
       "currencies": [
@@ -171,41 +94,11 @@
       }
     },
     {
-      "title": "Cardano founder says crypto industry ‘doesn’t need Bitcoin to survive’",
-      "link": "NULL",
-      "pubDate": "2023-12-10T11:26:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Charles Hoskinson, the founder of the decentralized finance (DeFI) platform Cardano (ADA), has challenged the prevailing narrative by asserting that … Continued",
-      "currencies": [
-        "BTC",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 15,
-        "negative": 10
-      }
-    },
-    {
-      "title": "APT, 1NCH, APE, FLOW, CYBER Set to Undergo New Token Unlocks",
-      "link": "NULL",
-      "pubDate": "2023-12-10T08:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW",
-        "APE",
-        "APT"
-      ]
-    },
-    {
       "title": "Bitcoin Rally Continues But Concerns About Pullback Loom",
       "link": "https://www.cryptointelligence.co.uk/bitcoin-rally-continues-but-concerns-about-pullback-loom/",
       "pubDate": "2023-12-10T07:19:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "bitcoin",
       "description": "Bitcoin made a remarkable move, surging to $44,000 following the Wall Street opening on December...",
       "currencies": [
@@ -215,17 +108,6 @@
         "positive": 3,
         "negative": 6
       }
-    },
-    {
-      "title": "How Lido, Maker helped boost DeFi TVL to August highs",
-      "link": "NULL",
-      "pubDate": "2023-12-10T00:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
     }
   ]
 }

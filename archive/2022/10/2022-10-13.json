@@ -1,83 +1,15 @@
 {
   "date": "2022-10-13",
-  "fetchedAt": "2026-02-05T07:45:52.604Z",
-  "articleCount": 48,
+  "fetchedAt": "2026-02-05T07:48:35.577Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "The Community deserves more...",
-      "link": "NULL",
-      "pubDate": "2022-10-13T22:04:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "As announced the previous week, we will be holding an incentivized testnet in preparation for the official launch o…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T21:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "DAO Proposal - Boosting rewards for league appropriate level cards",
-      "link": "NULL",
-      "pubDate": "2022-10-13T19:44:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Pirate was featured in this notable article. Thank you for the mention @lisabert.",
-      "link": "NULL",
-      "pubDate": "2022-10-13T19:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
-      "title": "RT @rich_teo: Leadership is willing to ruffle some feathers for the greater good of the organization. Not everything mentioned here jives w…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T19:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "The #Helium 5G Network just crossed: 6,000+ #5G Radios! 1332 cities 49 states.. That’s over 1,000 radios in…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T19:14:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
     {
       "title": "Binance Burns as Many BNB Tokens as Hacker Minted From Thin Air",
       "link": "https://decrypt.co/111905/binance-burns-bnb-tokens-hacker-minted",
       "pubDate": "2022-10-13T19:05:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "exchange",
       "description": "The burn removed over 2 million BNB from the circulating supply.",
       "currencies": [
@@ -92,8 +24,8 @@
       "title": "Elon Musk Launches Foul Fragrance, Accepts Payment in Bitcoin, Ethereum, Dogecoin and Additional Altcoins",
       "link": "https://dailyhodl.com/2022/10/13/elon-musk-launches-foul-fragrance-accepts-payment-in-bitcoin-ethereum-dogecoin-and-additional-altcoins/",
       "pubDate": "2022-10-13T18:41:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Elon Musk is adding a new quirky product to his company’s lineup of goods and services that can be paid for with crypto. The billionaire’s tunneling startup Boring Company just launched a perfume called Burnt Hair, which Musk describes as “the finest fragrance on Earth.” “With a name like mine, getting into the fragrance business […]",
       "currencies": [
@@ -110,8 +42,8 @@
       "title": "Developers disclose major vulnerability in all IBC-enabled chains on Cosmos",
       "link": "https://www.theblock.co/post/177094/developers-disclose-major-vulnerability-in-all-ibc-enabled-chains-on-cosmos?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-13T18:33:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Developers have disclosed a critical software vulnerability within all Cosmos blockchains that run the inter-blockchain communication protocol (IBC).",
       "currencies": [
@@ -125,34 +57,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @ThetaDrop: A Moveable Feast: Works by India’s foremost artists to celebrate @SrBachchan 80th birthday. In collaboration with @Sony Ent…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T17:52:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "RT @helium_mobile: What’s a cryptocarrier? Glad you asked: 🧵 A thread..",
-      "link": "NULL",
-      "pubDate": "2022-10-13T17:44:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "Tether eliminates commercial paper from reserves",
       "link": "https://www.theblock.co/post/177080/tether-to-replace-commercial-paper-with-u-s-treasuries-reserves?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-13T17:31:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Stablecoin issuer Tether has said for months it planned to improve the quality of its reserves.",
       "currencies": [
@@ -165,33 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Stratis becomes an Open Banking Technical Service Provider signalling the next major step for GBPT…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T17:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
-      "title": "#CEEK #Metaverse #NFT gems will unlock powers, $Ceek, access to VIP events and much more in #CEEKLAND Look out for…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T16:15:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
       "title": "Ethereum Becoming Highly Centralized After Transition To Proof-of-Stake, Pundits Warn",
       "link": "https://zycrypto.com/ethereum-becoming-highly-centralized-after-transition-to-proof-of-stake-pundits-warn/",
       "pubDate": "2022-10-13T15:50:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "The Ethereum Merge took the blockchain to a Proof-of-Stake (POS) consensus mechanism, ridding it of miners and replacing them with validators. While switching to PoS has several benefits, the downside is now trickling home.",
       "currencies": [
@@ -204,23 +91,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @MoonbeamNetwork: 1/  New integration  @renprotocol now supports direct token transfers to &amp; from Moonbeam for Ren assets, such as $BT…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T15:28:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RENBTC",
-        "REN"
-      ]
-    },
-    {
       "title": "Someone abused FTX’s withdrawal fee subsidy to mint $70,000 of XEN",
       "link": "https://www.theblock.co/post/176923/someone-abused-ftxs-withdrawal-fee-subsidy-to-mint-70000-of-xen?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-13T15:28:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "The exchange may have failed to recognize that it was minting XEN tokens on behalf of the attacker, per analysts.",
       "currencies": [
@@ -233,22 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Blending in with the crowd at #BitcoinAmsterdam - Freeway's very own renaissance men",
-      "link": "NULL",
-      "pubDate": "2022-10-13T14:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "FWT"
-      ]
-    },
-    {
       "title": "Terra Coin Price Balloons 30% – But Can LUNA Reach Higher Terrain?",
       "link": "https://www.newsbtc.com/news/terra-coin-price-balloons-30/",
       "pubDate": "2022-10-13T14:25:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Terra (LUNA) woke up to a good day on Wednesday as the token made an impressive 30% jump in its price on the way to tallying a high of $3.08. Terra accounted for 25.06% of the entire token holdings among the top 100 ETH whales LUNA price surged by 30% today and hit $3.08 Bullish momentum is possible and trading price might reach $3.25 The crypto, though, immediately experienced price...",
       "currencies": [
@@ -266,72 +130,11 @@
       }
     },
     {
-      "title": "Over $8 billion outflows Bitcoin within hours after U.S. inflation hits 8.2%",
-      "link": "NULL",
-      "pubDate": "2022-10-13T14:24:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin (BTC) is experiencing a spike in selling pressure moments after the United States inflation figures for September came in... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Upgrade complete",
-      "link": "NULL",
-      "pubDate": "2022-10-13T14:16:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "Why Does Blockchain Matter?",
-      "link": "NULL",
-      "pubDate": "2022-10-13T13:57:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Conferences are always a chance to meet and greet! One thing we  at Freeway is meeting members of the #FreewayFam…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T13:39:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FWT"
-      ]
-    },
-    {
-      "title": "RT @qubix_eth: Nailed it",
-      "link": "NULL",
-      "pubDate": "2022-10-13T13:23:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
       "title": "India police launches blockchain-based complaint portal on Polygon",
       "link": "https://forkast.news/headlines/india-blockchain-based-complaint-portal/",
       "pubDate": "2022-10-13T13:22:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "layer2",
       "description": "The Indian police unit in Firozabad city in the northern state of Uttar Pradesh has launched an online complaint portal powered by Ethereum scaler Polygon. See related article: Blockchain in India got off on wrong foot, says former finance chief Fast facts The pilot portal, policecomplaintonblockchain.in, leverages blockchain technology’s immutability, which means complaints cannot be […]",
       "currencies": [
@@ -345,132 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Analysts warn Bitcoin’s price could tank further as volatility cools down",
-      "link": "NULL",
-      "pubDate": "2022-10-13T12:53:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "For years, Bitcoin (BTC) has long been associated with high price volatility, a factor that has kept most investors away.... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 6
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "$UCOIL Game is on! Good luck to all participants! $VET $BEPRO $HNT $BTC $ETH",
-      "link": "NULL",
-      "pubDate": "2022-10-13T12:49:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HNT",
-        "UCOIL"
-      ]
-    },
-    {
-      "title": "RT @amirhaleem: tremendous work from the @helium community on improving the security of IoT proof of coverage via secure hardware. i am alw…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T12:33:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "U.S. Inflation Is Sticky at 8.2%. What’s Next for Bitcoin?",
-      "link": "NULL",
-      "pubDate": "2022-10-13T12:31:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Inflation has now cooled for three consecutive months. U.S. inflation keeps fallingbut its still running hotter than the Federal Reserve would like.The Bureau of Labor Statistics dropped the latest Consumer Price Index report Thursday, showing that inflation cooled by 10 basis points in September.The price of goods rose by 8.2% on a yearly basis last month, falling higher than economists broad...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 10
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Stalk Monsters are one of the new monsters that Miners should look out for in the upcoming Mines of Dalarnia 1.1: D…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T12:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "DAR"
-      ]
-    },
-    {
-      "title": "JUST IN: $AXS @axieinfinity one of the MOST USED smart contracts among top 500 #ETH whales in the last 24hrs Peep…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T11:39:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AXS",
-        "BBW"
-      ]
-    },
-    {
-      "title": "5 Cryptos Whose Price Could Be Spooked by the Halloween Effect",
-      "link": "NULL",
-      "pubDate": "2022-10-13T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "AXS",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Axie Infinity NFT Game Loses 62% of Players in One Year",
-      "link": "NULL",
-      "pubDate": "2022-10-13T10:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Klaytn's integration with @vtvlco will help builders automate token vesting and distribution 🦾 You can now: 🪙 Mint…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T09:40:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Solana wipes out almost $1.5 billion in a week as network-related hacks mount",
       "link": "https://finbold.com/solana-wipes-out-almost-1-5-billion-in-a-week-as-network-related-hacks-mount/",
       "pubDate": "2022-10-13T09:39:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Decentralized finance (DeFi) asset Solana (SOL) is recording significant capital outflow, with the network facing various challenges, including hacks and... Continue reading",
       "currencies": [
@@ -483,101 +165,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Let's have some  for breakfast to greet it!",
-      "link": "NULL",
-      "pubDate": "2022-10-13T09:10:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
-      "title": "RT @taxninja: Yo @LooksRare nice to see you on the @Brave browser. Nice ad and thanks for the $BAT!",
-      "link": "NULL",
-      "pubDate": "2022-10-13T08:26:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "Our talented developers are a global community. At #Golem, you’ll be working on innovative projects alongside inte…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T08:12:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "#Cryptocurrency is an ideal solution for #FinancialExclusion, which affects more than one-fifth of the world’s popu…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T07:40:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Thanks for including #BakerySwap in the ranking!",
-      "link": "NULL",
-      "pubDate": "2022-10-13T07:33:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
-      "title": "Our Total Supply is over 800 Million! Why choose #USDD? 🤔 - a decentralized and over-collateralized #StableCoin…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T07:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "PSA: It's been a while since #TheMerge, did you know that you were airdropped the same amount of $ETHW (ETHPoW) tok…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T06:09:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETHW",
-        "LON",
-        "imBTC"
-      ]
-    },
-    {
-      "title": "We're very excited to have early access to a brand new \"Live Discussion Board\" function launching on @CoinMarketCap…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T02:42:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
       "title": "Shiba Inu: $SHIB Army Seems to Be Loving Collectible Card Game Shiba Eternity",
       "link": "https://www.cryptoglobe.com/latest/2022/10/shiba-inu-shib-army-seems-to-be-loving-collectible-card-game-shiba-eternity/",
       "pubDate": "2022-10-13T02:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The community behind the meme-inspired cryptocurrency Shiba Inu ($SHIB) appears to be enjoying its collectible card game Shiba Eternity, which was released earlier this month and allows players to “fight without violence” with Shiboshis. The game has so far amassed a 4.6 rating out of 5 on the Google Play store, with over 11,000 users […]",
       "currencies": [
@@ -592,8 +184,8 @@
       "title": "MATIC investors can expect the next bull rally after…",
       "link": "https://ambcrypto.com/matic-investors-can-expect-next-bull-rally-after/",
       "pubDate": "2022-10-13T02:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Sandeep Nailwal, the co-founder of Polygon [MATIC] recently tweeted about the growing gaming ecosystem in the Polygon network. As per the tweet shared by the co-founder, Polygon was the biggest blockchain in the gaming space. Just look at the growth of gaming users on @0xPolygon Growth is \"ORDERS OF MAGNITUTE\" bigger than any other chain […]",
       "currencies": [
@@ -607,33 +199,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BIFROSTio: Easily execute all kinds of blockchain transactions without having to know complex technology and build an optimal multichai…",
-      "link": "NULL",
-      "pubDate": "2022-10-13T02:19:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "MFT listing Binance,Is that what all players want?",
-      "link": "NULL",
-      "pubDate": "2022-10-13T02:12:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "Polygon powers India police complaint portal, battling corruption",
       "link": "https://cointelegraph.com/news/polygon-powers-india-police-complaint-portal-battling-corruption",
       "pubDate": "2022-10-13T00:22:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "The First Information Report (FIR) launched on Polygon allows the citizens of Firozabad to register complaints against the police without worry of it being dismissed or manipulated.",
       "currencies": [

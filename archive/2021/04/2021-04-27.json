@@ -1,59 +1,15 @@
 {
   "date": "2021-04-27",
-  "fetchedAt": "2026-02-05T07:45:51.908Z",
-  "articleCount": 59,
+  "fetchedAt": "2026-02-05T07:48:35.501Z",
+  "articleCount": 25,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "What comes first for @AaveAave on @0xPolygon?",
-      "link": "NULL",
-      "pubDate": "2021-04-27T23:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "Lukso to Binance?",
-      "link": "NULL",
-      "pubDate": "2021-04-27T22:51:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: Want to participate in the Fleming Testnets but not comfortable with CLI? This GUI from an awesome Safe #Community mem…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T22:46:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Withdrawal fees",
-      "link": "NULL",
-      "pubDate": "2021-04-27T21:59:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
     {
       "title": "Just want to say: POLYGON HAVING A FUCKING DAY. Please no one respond to this. Only up like it if you agree.",
       "link": "https://www.reddit.com/r/maticnetwork/comments/mzyrln/just_want_to_say_polygon_having_a_fucking_day/",
       "pubDate": "2021-04-27T21:31:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "layer2",
       "currencies": [
         "MATIC"
@@ -65,33 +21,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is right now a good time to buy?",
-      "link": "NULL",
-      "pubDate": "2021-04-27T21:17:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "#EURS continues to conquer the #crypto and #DeFi worlds. We are delighted to inform our users about the latest grow…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T21:14:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Why this analyst thinks dogecoin is ‘actually gambling, not investing’",
       "link": "https://ambcrypto.com/why-this-analyst-thinks-dogecoin-is-actually-gambling-not-investing/",
       "pubDate": "2021-04-27T21:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Several analysts and traders on CryptoTwitter are of the opinion that Dogecoin’s price trend in 2021 is similar to that of Bitcoin. However, others still view it as a bubble that is about to burst. While the major altcoins march to the tunes of Bitcoin and Ethereum, the meme-coin, DOGE was not far behind. The […]",
       "currencies": [
@@ -103,8 +37,8 @@
       "title": "Polkadot powered reinsurance platform UnoRe integrates with Orion Protocol",
       "link": "https://www.cryptoninjas.net/2021/04/27/polkadot-powered-reinsurance-platform-unore-integrates-with-orion-protocol/",
       "pubDate": "2021-04-27T20:23:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » Polkadot powered reinsurance platform UnoRe integrates with Orion Protocol Orion Protocol, a layer-2 solution that enables users to access deep, cross-chain liquidity across DEXs, CEXs, and swap pools, today announced UnoRe as the latest partner to use the Orion Liquidity Boost Plugin (LBP). This integration will provide additional liquidity to UnoRe’s reinsurance risk...",
       "currencies": [
@@ -120,8 +54,8 @@
       "title": "Ellen DeGeneres Sells NFT, Talks About Dogecoin",
       "link": "https://cryptobriefing.com/ellen-degeneres-sells-nft-talks-about-dogecoin/",
       "pubDate": "2021-04-27T19:46:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "nft",
       "currencies": [
         "DOGE"
@@ -133,23 +67,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Registration and pre-funding for @ThetaDrop NFTs are live now! Visit to save your place for…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T19:38:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Analyst On Why Ripple’s XRP Doom Could Turn Out To Be A Boom For Stellar’s XLM",
       "link": "https://zycrypto.com/analyst-on-why-ripples-xrp-doom-could-turn-out-to-be-a-boom-for-stellars-xlm/",
       "pubDate": "2021-04-27T19:35:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "It is sometimes easy to forget how competitive the cryptocurrency market is, especially when a lot of assets are seemingly thriving all at once. However, time and time again, we are reminded of how increasingly possible it is for even the largest cryptocurrencies to be kicked off the market and replaced with another. The market […]",
       "currencies": [
@@ -166,8 +88,8 @@
       "title": "Institutions are not touching dogecoin, OKCoin’s COO says",
       "link": "https://finbold.com/institutions-are-not-touching-dogecoin-okcoins-coo-says/",
       "pubDate": "2021-04-27T19:12:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Chief Operating Officer of cryptocurrency exchange OKCoin Jason Lau has said dogecoin’s inability to sustain the all-time high of $0.45... Continue reading",
       "currencies": [
@@ -184,8 +106,8 @@
       "title": "Dogecoin Is So Much Better Than Lottery Tickets, Says Billionaire Mark Cuban",
       "link": "https://zycrypto.com/dogecoin-is-so-much-better-than-lottery-tickets-says-billionaire-mark-cuban/",
       "pubDate": "2021-04-27T18:48:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "Dogecoin (DOGE) has been the talk of the crypto town in the past couple of months. The cryptocurrency which was created as a joke back in 2013, has appreciated in value and subsequently made its way to the seventh spot on crypto rankings. The price of the Shiba Inu-themed cryptocurrency was driven higher by countless […]",
       "currencies": [
@@ -198,22 +120,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Retweet to remind your friends that you shilled them crypto a year ago",
-      "link": "NULL",
-      "pubDate": "2021-04-27T18:21:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Polygon co-founder raises $2.2M for India COVID-19 relief",
       "link": "https://cointelegraph.com/news/polygon-co-founder-raises-2-2m-for-india-covid-19-relief",
       "pubDate": "2021-04-27T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "COVID-19 has infected more than 17.6 million people in India. A crypto-based relief fund is raising millions to help the country cope with the disaster.",
       "currencies": [
@@ -229,8 +140,8 @@
       "title": "Mark Cuban: Dogecoin Growth Limited by Robinhood’s Withdrawal Policy",
       "link": "https://decrypt.co/69242/mark-cuban-dogecoin-growth-robinhood",
       "pubDate": "2021-04-27T18:13:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "regulation",
       "description": "The billionaire investor and DOGE enthusiast called out the mobile trading app, but Robinhood says it’s working on a solution.",
       "currencies": [
@@ -245,8 +156,8 @@
       "title": "Binance Continues Crypto Dominance With New NFT Marketplace",
       "link": "https://bitcoinist.com/binance-continues-crypto-dominance-with-new-nft-marketplace/?utm_source=rss&utm_medium=rss&utm_campaign=binance-continues-crypto-dominance-with-new-nft-marketplace",
       "pubDate": "2021-04-27T16:54:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "nft",
       "description": "NFT mania has just gone bigger, with Binance, one of the world’s largest cryptocurrency companies, announcing its intention to launch a marketplace for the new species of digital assets. Dubbed as Binance NFT, the platform will see its first light of the day in June. The Malta-based company stated that the new marketplace would bring […]",
       "currencies": [
@@ -259,33 +170,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Passive Income has partnered with Degenerate Money to create a new NFT Collection",
-      "link": "NULL",
-      "pubDate": "2021-04-27T16:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Ark Spring Time!",
-      "link": "NULL",
-      "pubDate": "2021-04-27T16:21:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Doge of Wall Street: Jordan Belfort Goes Back to His Old Ways by Pumping Dogecoin and Shiba Inu",
       "link": "https://u.today/doge-of-wall-street-jordan-belfort-goes-back-to-his-old-ways-by-pumping-dogecoin-and-shiba-inu",
       "pubDate": "2021-04-27T16:07:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "The disgraced stockbroker is now pumping Dogecoin and SafeMoon",
       "currencies": [
@@ -301,8 +190,8 @@
       "title": "After the Mavs, Billionaire Mark Cuban Urges the Ellen DeGeneres Show to Accept DOGE Payments",
       "link": "https://cryptopotato.com/after-the-mavs-billionaire-mark-cuban-urges-the-ellen-degeneres-show-to-accept-doge-payments/",
       "pubDate": "2021-04-27T16:02:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "Barely two months after Mark Cuban’s Dallas Mavs started accepting DOGE payments, the billionaire has suggested that the Ellen DeGeneres Show should follow suit.",
       "currencies": [
@@ -318,8 +207,8 @@
       "title": "‘Wolf of Wall Street’ Jordan Belford is urging people to pump his Twitter followers and Dogecoin",
       "link": "https://cryptoslate.com/wolf-of-wall-street-jordan-belford-is-urging-followers-to-pump-dogecoin/",
       "pubDate": "2021-04-27T16:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "trading",
       "description": "Jordan Belford, the infamous penny stock guru, is urging his 422,000 Twitter followers to pump his Twitter followers, and presumably the prices of Dogecoin and a few other altcoins, a recent tweet showed.",
       "currencies": [
@@ -335,8 +224,8 @@
       "title": "Ripple’s Defense “Legally Insufficient,” Says SEC",
       "link": "https://cryptobriefing.com/ripples-defense-legally-insufficient-says-sec/",
       "pubDate": "2021-04-27T15:36:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "currencies": [
         "XRP"
@@ -351,8 +240,8 @@
       "title": "Cardano, Uniswap and Other Altcoins Now Supported by Swissquote Bank Europe",
       "link": "https://u.today/cardano-uniswap-and-other-altcoins-now-supported-by-swissquote-bank-europe",
       "pubDate": "2021-04-27T14:03:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "defi",
       "description": "Swissquote Bank Europe now allows trading of Cardano, Uniswap and other altcoins",
       "currencies": [
@@ -365,78 +254,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Keep hodling my friends 🥠 The fortune cookie has spoken",
-      "link": "NULL",
-      "pubDate": "2021-04-27T13:54:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "DENT to the next Level",
-      "link": "NULL",
-      "pubDate": "2021-04-27T13:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "All new token listings available on the #AAX spot market - which will you trade first? $ADA $BNB $THETA $FTT Trade…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T13:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "THETA",
-        "AAB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Dent business model",
-      "link": "NULL",
-      "pubDate": "2021-04-27T12:54:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "Fabian Vogelsteller on Twitter",
-      "link": "NULL",
-      "pubDate": "2021-04-27T12:47:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "Solana Price Analysis: Following Near 200% Monthly Surge, SOL Eyes $50",
       "link": "https://cryptopotato.com/solana-price-analysis-following-near-200-monthly-surge-sol-eyes-50/",
       "pubDate": "2021-04-27T12:09:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "SOL is up by 180% over the past month as the cryptocurrency looks primed to challenge the coveted $50 mark.",
       "currencies": [
@@ -450,55 +272,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🤩Cocos-BCX Hero #NFT auction with the highest bid of 106.7BNB,Team Mining will start on April 28！#COCOS",
-      "link": "NULL",
-      "pubDate": "2021-04-27T11:26:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "Pow Wow 16 2021 TONIGHT 21 CET",
-      "link": "NULL",
-      "pubDate": "2021-04-27T11:26:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "1/  @OneGraviton, a cross-chain liquidity protocol for wrapped assets, has partnered with $BAND for cross-chain ev…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T10:15:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "Coming back home",
-      "link": "NULL",
-      "pubDate": "2021-04-27T10:03:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Dogecoin Is Better Than Any Lottery Tickets: Billionaire Mark Cuban",
       "link": "https://u.today/dogecoin-is-better-than-any-lottery-tickets-billionaire-mark-cuban",
       "pubDate": "2021-04-27T09:35:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Billionaire Mark Cuban now prefers Bitcoin, Ethereum and Dogecoin to bananas, he claims that DOGE is better than a lottery ticket",
       "currencies": [
@@ -512,44 +290,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Its time to keep Holding",
-      "link": "NULL",
-      "pubDate": "2021-04-27T09:31:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "[Announcement]The ERC20 #COCOS less than 10,000 pieces of mapping reduction tool will be officially closed on May…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T09:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "This May, ABBC collaborates with #Buyaladdin to allow winners to have a new shopping experience with ABBC Coin!  I…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T09:29:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Ripple Price Analysis: XRP Skyrockets 20% Daily, What Are The Next Targets?",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-skyrockets-20-daily-what-are-the-next-targets/",
       "pubDate": "2021-04-27T08:39:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP saw a 21% price hike today as the coin surges to $1.40. Against bitcoin, it is also in the middle of a recovery as it climbs to the 2600 SAT level.",
       "currencies": [
@@ -565,8 +310,8 @@
       "title": "Dogecoin Is a Mania and a Bubble, Says CoinShares’ CSO",
       "link": "https://cryptopotato.com/dogecoin-is-a-mania-and-a-bubble-says-coinshares-cso/",
       "pubDate": "2021-04-27T08:27:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "Despite Dogecoin's global acceptance and celebrity endorsement, Meltem Demirors called it \"mania\" and a classic example of a bubble.",
       "currencies": [
@@ -583,8 +328,8 @@
       "title": "Ripple Keeps Sending XRP to Huobi, Moving 102.5 Million XRP Along With Top-Tier Turkish Exchange",
       "link": "https://u.today/ripple-keeps-sending-xrp-to-huobi-moving-1025-million-xrp-along-with-top-tier-turkish-exchange",
       "pubDate": "2021-04-27T08:09:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Ripple fintech giant continues sending XRP to Huobi, while a big old Turking crypto exchange moves a big number of XRP tokens",
       "currencies": [
@@ -600,8 +345,8 @@
       "title": "‘$XRP Is Breaking Out vs. $BTC’, Says Crypto Analyst, XRP Up 242% vs BTC in 2021",
       "link": "https://www.cryptoglobe.com/latest/2021/04/xrp-is-breaking-out-vs-btc-%e2%80%8bsays-crypto-analyst-xrp-up-242-vs-btc-in-2021/",
       "pubDate": "2021-04-27T07:20:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "On Monday (April 26), popular pseudo-anonymous crypto analyst and trader “Kaleo” talked about $XRP’s latest breakout against Bitcoin. He said: He went on to add: Earlier today, highly respected macro-economist and crypto trader Alex Krüger also commented on $XRP’s recent price action since Bitcoin started rallying in the closing hours of last weekend after dropping […]",
       "currencies": [
@@ -615,55 +360,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Don't buy, earn! We are looking for experienced front end devs aswell as marketing and communications leads for art…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T06:57:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "RT @dematerialised: Co-Founder @m_h_d_v comments on the mentality change of the major industry players in @maghanmcd ‘s latest  article in…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T06:46:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Less than 24 hours left for this proposal. Get your votes in!",
-      "link": "NULL",
-      "pubDate": "2021-04-27T06:32:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "What's with the hate with dent?",
-      "link": "NULL",
-      "pubDate": "2021-04-27T05:47:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "BitPay CCO Claims Dogecoin Is Eating Away at Bitcoin’s Payments Volume",
       "link": "https://u.today/bitpay-cco-claims-dogecoin-is-eating-away-at-bitcoins-payments-volume",
       "pubDate": "2021-04-27T05:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "BitPay CCO Sonny Singh claims Dogecoin now accounts for 10 percent of all transactions",
       "currencies": [
@@ -676,33 +377,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BittrexGlobal: We are excited to announce that we will be supporting TRC20-USDT and also be exploring support for TRC-20 BTC &amp; TRC-20 E…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T05:06:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CTC"
-      ]
-    },
-    {
-      "title": "RT @BTCTN: The Central Bank of Iran has announced that banks and money exchangers can use #cryptocurrencies mined by licensed crypto miners…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T05:05:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CTC"
-      ]
-    },
-    {
       "title": "Aave v2 launches liquidity mining program targeting stablecoin borrowers",
       "link": "https://cointelegraph.com/news/aave-v2-launches-liquidity-mining-program-targeting-stablecoin-borrowers",
       "pubDate": "2021-04-27T04:37:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Aave has launched its v2 liquidity mining program, offering roughly $880,000 worth of governance token rewards to users daily until July 15.",
       "currencies": [
@@ -715,71 +394,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#ABBC -The Future of Payment Security",
-      "link": "NULL",
-      "pubDate": "2021-04-27T04:28:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "RT @justinsuntron: #TRC20-#USDT circulation amount has become No.1 in stablecoin field in less than 2 years. #TRON’s triumph over #Ethe…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T03:24:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "New terms and conditions",
-      "link": "NULL",
-      "pubDate": "2021-04-27T02:54:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "RT @daniel_taze: African duo, accused of not being 'NATURAL FINISHERS'",
-      "link": "NULL",
-      "pubDate": "2021-04-27T01:57:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @ZMiller_82: 1972 Olympic Men’s Ice Hockey Tournament Recap",
-      "link": "NULL",
-      "pubDate": "2021-04-27T01:55:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
       "title": "Harmony blockchain to use Raze Network to increase its privacy protection",
       "link": "https://www.cryptoninjas.net/2021/04/27/harmony-blockchain-to-use-raze-network-to-increase-its-privacy-protection/",
       "pubDate": "2021-04-27T01:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » Harmony blockchain to use Raze Network to increase its privacy protection Harmony, a sharding protocol with a trustless Ethereum bridge, today announced a partnership with Raze Network to increase the privacy protection layer of the Harmony ecosystem. Raze Network is a layer-2 protocol that will provide cross-chain payment privacy for the entire DeFi stack of the Polkadot...",
       "currencies": [
@@ -794,22 +413,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @safenetworktech: The next Safe Chat will be on April 30 at 7 PM GMT. We’ll be chatting with @SotRos25 &amp; @jimcollinson about the Fleming…",
-      "link": "NULL",
-      "pubDate": "2021-04-27T00:51:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Privacy blockchain Dusk Network to integrate oracle solution from Chainlink",
       "link": "https://www.cryptoninjas.net/2021/04/27/privacy-blockchain-dusk-network-to-integrate-oracle-solution-from-chainlink/",
       "pubDate": "2021-04-27T00:11:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "altcoin",
       "description": "CryptoNinjas » Privacy blockchain Dusk Network to integrate oracle solution from Chainlink Dusk Network, a privacy blockchain for regulated decentralized finance, today announced it will integrate with Chainlink, a decentralized oracle network that provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain. Initially, the integration will focus on...",
       "currencies": [

@@ -1,45 +1,15 @@
 {
   "date": "2023-09-15",
-  "fetchedAt": "2026-02-05T07:45:52.395Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Enterprise Blockchain Altcoin VeChain (VET) Jumps After New Coinbase Listing",
-      "link": "NULL",
-      "pubDate": "2023-09-15T22:01:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "VET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bye Bye Birdie: Binance Begins Process Of Axing BUSD Stablecoin",
-      "link": "NULL",
-      "pubDate": "2023-09-15T22:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XRP",
-        "BUSD",
-        "TRX",
-        "MATIC"
-      ]
-    },
     {
       "title": "BREAKING: Rumors of Fidelity’s Spot Ethereum Application Spread",
       "link": "https://en.bitcoinsistemi.com/breaking-fidelity-files-spot-ethereum-etf-application/",
       "pubDate": "2023-09-15T21:17:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "According to breaking information, the claim that Fidelity has applied for a spot Ethereum ETF under the name of Wise Origin Ethereum Index Fund is keeping the agenda busy. CORRECTION: Although the information received from the sources initially interpreted this development as Fidelity applying for a spot ETF, it is actually thought to be an […] Continue Reading: BREAKING: Rumors of...",
       "currencies": [
@@ -52,49 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "WILL THIS PUMP CONTINUE? BTC, RUNE, MKR Price Predictions",
-      "link": "NULL",
-      "pubDate": "2023-09-15T20:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "London Design Museum Lets Visitors Test Iconic Runway Looks via AR",
-      "link": "NULL",
-      "pubDate": "2023-09-15T19:41:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Sam Bankman-Fried says, ‘I did what I thought was right,' in leaked docs: Report",
-      "link": "NULL",
-      "pubDate": "2023-09-15T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
       "title": "Second-Largest Stablecoin USDC Launches on Ethereum (ETH) Competitor NEAR Protocol (NEAR)",
       "link": "https://dailyhodl.com/2023/09/15/second-largest-stablecoin-usdc-launches-on-ethereum-eth-competitor-near-protocol-near/",
       "pubDate": "2023-09-15T18:45:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The second-largest stablecoin by market cap, USD Coin (USDC), is now available natively on the Ethereum (ETH) competitor NEAR Protocol (NEAR). In addition to NEAR, USDC is also available natively on Algorand (ALGO), Arbitrum ( ARB), Avalanche (AVAX), Base, Ethereum, Flow, Hedera (HBAR), Noble, Optimism (OP), Solana (SOL), Stellar (XLM), and Tron (TRX). Explains USDC’s issuer […]",
       "currencies": [
@@ -115,22 +47,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terra Luna Classic Forms Six Samurai Team to Fix Terra Chain",
-      "link": "NULL",
-      "pubDate": "2023-09-15T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Jordan Peterson suggests it’s time to ‘scrap banks’ and use Bitcoin",
       "link": "https://finbold.com/jordan-peterson-suggests-its-time-to-scrap-banks-and-use-bitcoin/",
       "pubDate": "2023-09-15T17:59:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Dr. Jordan Peterson — a best-selling author and well-known Canadian psychologist, with over 4.6 million followers on X — sparked … Continued",
       "currencies": [
@@ -143,74 +64,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Lawyers Labeled Chainalysis Data Unreliable “Junk Science”",
-      "link": "NULL",
-      "pubDate": "2023-09-15T17:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Circle's USDC Expands Reach with NEAR Protocol Integration",
-      "link": "NULL",
-      "pubDate": "2023-09-15T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Price analysis 9/15: BTC, ETH, BNB, XRP, ADA, DOGE, SOL, TON, DOT, MATIC",
-      "link": "NULL",
-      "pubDate": "2023-09-15T17:33:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "DOT",
-        "MATIC",
-        "TON"
-      ]
-    },
-    {
-      "title": "This Week in Crypto: FTX Dump Fears, Property Token Goes Live, SHIB Prospects, and ETF Bull Case",
-      "link": "NULL",
-      "pubDate": "2023-09-15T16:45:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "SHIB",
-        "FLOW"
-      ]
-    },
-    {
       "title": "$13 billion drained out of Ethereum in under a week",
       "link": "https://finbold.com/13-billion-drained-out-of-ethereum-in-under-a-week/",
       "pubDate": "2023-09-15T16:25:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "The dominant sentiment over the crypto market continues to be fear, and Ethereum (ETH) has been highly affected by it, … Continued",
       "currencies": [
@@ -223,24 +81,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto price prediction: tomiNet, VeChain, XDC Network",
-      "link": "NULL",
-      "pubDate": "2023-09-15T16:22:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "VET",
-        "XDC"
-      ]
-    },
-    {
       "title": "Shiba Inu Sees Trillions In Accumulation Spree By Exchanges — $0.001 SHIB Price No Longer In Doubt",
       "link": "https://zycrypto.com/shiba-inu-sees-trillions-in-accumulation-spree-by-exchanges-0-001-shib-price-no-longer-in-doubt/",
       "pubDate": "2023-09-15T16:14:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Popular crypto exchange Robinhood has continued to bolster its Shiba Inu holdings, amassing a staggering 35 trillion SHIB tokens in a relentless buying spree.",
       "currencies": [
@@ -253,58 +98,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celsius and Core Scientific propose $45M settlement for litigation",
-      "link": "NULL",
-      "pubDate": "2023-09-15T16:06:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Elon Musk Pumping Dogecoin Again, Stacks Enters Green Zone, Everlodge To Enter Stage 3 Next Week",
-      "link": "NULL",
-      "pubDate": "2023-09-15T15:53:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "STX"
-      ]
-    },
-    {
-      "title": "Whale Increases Maker (MKR) Holdings, What Could Happen Next?",
-      "link": "NULL",
-      "pubDate": "2023-09-15T15:43:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "IOTA (MIOTA) Prepares for New Era 2.0 With Four Key Decisions",
-      "link": "NULL",
-      "pubDate": "2023-09-15T15:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MIOTA"
-      ]
-    },
-    {
       "title": "Cardano Presents Roadmap Milestones With 50 Million ADA Tokens at Stake",
       "link": "https://u.today/cardano-presents-roadmap-milestones-with-50-million-ada-tokens-at-stake",
       "pubDate": "2023-09-15T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Millions of ADA tokens await resolution amid Cardano roadmap success",
       "currencies": [
@@ -316,58 +114,11 @@
       }
     },
     {
-      "title": "What Is Toncoin, the Cryptocurrency Conceived by Telegram?",
-      "link": "NULL",
-      "pubDate": "2023-09-15T14:42:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum Move Higher; Axie Infinity, THORChain Among Top Gainers",
-      "link": "NULL",
-      "pubDate": "2023-09-15T14:40:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Records 2023’s Top Crypto Performer With a Surge of 450%",
-      "link": "NULL",
-      "pubDate": "2023-09-15T14:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Binance To Help Terra Luna Classic (LUNC) Community Repeg USTC To $1?",
-      "link": "NULL",
-      "pubDate": "2023-09-15T14:15:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
       "title": "Cardano ($ADA) Holds Third Spot in Crypto Development Activity, Behind Polkadot ($DOT) and Kusama ($KSM)",
       "link": "https://www.cryptoglobe.com/latest/2023/09/cardano-ada-holds-third-spot-in-crypto-development-activity-behind-polkadot-dot-and-kusama-ksm/",
       "pubDate": "2023-09-15T14:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The smart contract platform Cardano ($ADA) has maintained its third place when it comes to cryptocurrency networks in terms of development activity, behind the “blockchain of blockchains” Polkadot ($DOT) and its public pre-production environment Kusama ($KSM). That’s according to data from on-chain analytics firm Santiment, which details Polkadot has managed to maintain its position as […]",
       "currencies": [
@@ -381,320 +132,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Mantle EcoFund's $200M Fund To Propel Web3 Innovation",
-      "link": "NULL",
-      "pubDate": "2023-09-15T14:05:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "While THORChain (RUNE) and TRON (TRX) Make Moves, VC Spectra (SPCT) is Set to Disrupt the Crypto Scene!",
-      "link": "NULL",
-      "pubDate": "2023-09-15T13:05:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Algorand Community Cheers Taurus-Deutsche Bank Partnership, Eyes Moon",
-      "link": "NULL",
-      "pubDate": "2023-09-15T12:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "New Reports Shows How Much Capital Was Pulled Out Of Crypto In August",
-      "link": "NULL",
-      "pubDate": "2023-09-15T12:45:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Tether Comes to Rescue as Remitano Exchange Suffers a $2.7 Million Hack",
-      "link": "NULL",
-      "pubDate": "2023-09-15T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "TRX",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "IOTA Eyes Big Crypto Leagues Again With Series of Network Boosting Plans",
-      "link": "NULL",
-      "pubDate": "2023-09-15T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MIOTA"
-      ]
-    },
-    {
-      "title": "Data Signals Start Of Bitcoin And Crypto Market Rally",
-      "link": "NULL",
-      "pubDate": "2023-09-15T12:08:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Ripple Big Partner's Wallet Linked to SHIB Announces Important Update",
-      "link": "NULL",
-      "pubDate": "2023-09-15T11:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cardano Analysis: How Much Energy Do ADA Bulls Have To Hit $0.3 Milestone?",
-      "link": "NULL",
-      "pubDate": "2023-09-15T11:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "DOGE",
-        "ALGO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Most top 10 cryptos rise; Tron, Toncoin biggest gainers",
-      "link": "NULL",
-      "pubDate": "2023-09-15T10:42:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "TON"
-      ]
-    },
-    {
-      "title": "Introducing MDAO Maker Launchpad: Your Solution to Profit in a Bear Market",
-      "link": "NULL",
-      "pubDate": "2023-09-15T09:46:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Celsius, Core Scientific Resolve Acrimonious Mining Dispute With $45M Deal",
-      "link": "NULL",
-      "pubDate": "2023-09-15T09:45:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Top Trader Says He’s Reaccumulating One Solana-Based Altcoin That’s Up Over 500% in Three Months – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-09-15T09:15:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Dogecoin (DOGE) Price on the Rise After FTX Liquidation Relief – More Gains Ahead?",
-      "link": "NULL",
-      "pubDate": "2023-09-15T09:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "LTC",
-        "APE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Binance.US not cooperating with investigation, US SEC says in filing",
-      "link": "NULL",
-      "pubDate": "2023-09-15T08:17:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNB",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "As Tradecurve Markets (TCRV) Triumphs with 150% Gains, Chiliz (CHZ) and TonCoin (TON) Navigate Through Storms",
-      "link": "NULL",
-      "pubDate": "2023-09-15T07:19:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CHZ",
-        "TON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Kekkai, Chainrewardz, and FUO win awards at Tokyo GAS Station",
-      "link": "NULL",
-      "pubDate": "2023-09-15T07:09:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Algorand (ALGO) May Have A Chance At A Bullish Streak – Here’s How",
-      "link": "NULL",
-      "pubDate": "2023-09-15T06:29:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "DOGE",
-        "TRX",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "AxLabs introduces the 1ClickNode deployment service, opens pre-registration",
-      "link": "NULL",
-      "pubDate": "2023-09-15T04:21:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Decentralized stablecoins could dominate crypto: MakerDAO founder",
-      "link": "NULL",
-      "pubDate": "2023-09-15T04:20:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Analysis: Rally Gains Pace Above $210",
-      "link": "NULL",
-      "pubDate": "2023-09-15T03:28:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 14 Sep: Crypto market steadily climbs",
-      "link": "NULL",
-      "pubDate": "2023-09-15T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "ADA",
-        "XRP",
-        "BUSD",
-        "SOL",
-        "DOGE",
-        "DOT",
-        "LTC",
-        "NEAR",
-        "APE",
-        "TUSD",
-        "AXS"
-      ]
-    },
-    {
-      "title": "ZRX-backed Loan On Aave V2 Gets Closer To Liquidation",
-      "link": "NULL",
-      "pubDate": "2023-09-15T01:16:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
       "title": "Hedera’s stablecoin launch: Why this can accelerate the network’s growth",
       "link": "https://ambcrypto.com/hederas-stablecoin-launch-why-this-can-accelerate-the-networks-growth/",
       "pubDate": "2023-09-15T00:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "stablecoin",
       "description": "The Hedera network made a huge announcement considering the growth trajectory of the network. How this will impact HBAR remains to be seen.",
       "currencies": [
@@ -705,36 +147,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Top Trader Says 2019-Style Market Expansion Coming to Crypto Markets – Here’s His Timeline",
-      "link": "NULL",
-      "pubDate": "2023-09-15T00:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "75% Of All Binance Fiat Trading Volume Is In Turkish Lira",
-      "link": "NULL",
-      "pubDate": "2023-09-15T00:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "BUSD",
-        "SOL",
-        "TRX",
-        "TUSD"
-      ]
     }
   ]
 }

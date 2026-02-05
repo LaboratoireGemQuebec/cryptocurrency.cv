@@ -1,43 +1,15 @@
 {
   "date": "2023-09-05",
-  "fetchedAt": "2026-02-05T07:45:52.501Z",
-  "articleCount": 60,
+  "fetchedAt": "2026-02-05T07:48:35.563Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "MrBeast-Promoted 'Creator League' Postponed After Gamers Bail Amid NFT Backlash",
-      "link": "NULL",
-      "pubDate": "2023-09-05T23:05:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Lido Could End Support For Solana If Lido DAO Votes Against This Proposal",
-      "link": "NULL",
-      "pubDate": "2023-09-05T23:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "LDO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "SEC Shocker: Ripple’s XRP Deemed ‘Valueless’ – Has the Agency Lost Its Path?",
       "link": "https://zycrypto.com/sec-shocker-ripples-xrp-deemed-valueless-has-the-agency-lost-its-path/",
       "pubDate": "2023-09-05T20:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "The twists and turns continue to unfold in the ongoing legal saga between the United States Securities and Exchange Commission (SEC) and Ripple Labs.",
       "currencies": [
@@ -53,8 +25,8 @@
       "title": "Solana users fall to lowest level in more than 2 years",
       "link": "https://www.theblock.co/post/249304/solana-daily-active-addresses?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-05T20:33:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "Solana is continuing to lose momentum, with the number of daily active addresses hitting the lowest point since The Block started tracking the data in late 2020.",
       "currencies": [
@@ -67,37 +39,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin range trades as volatility subsides. Will TON, LINK, MKR and XTZ follow?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T20:13:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "XTZ",
-        "MKR",
-        "TON"
-      ]
-    },
-    {
-      "title": "ChatGPT Maker Sam Altman Receives Indonesia’s First-Ever Golden Visa",
-      "link": "NULL",
-      "pubDate": "2023-09-05T19:34:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Visa Expands Stablecoin Capabilities to the Solana Blockchain",
       "link": "https://cryptodaily.co.uk/2023/09/visa-expands-stablecoin-capabilities-to-the-solana-blockchain",
       "pubDate": "2023-09-05T19:24:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodaily",
+      "sourceKey": "cryptodaily",
       "category": "altcoin",
       "description": "Payments giant Visa announced Tuesday that it expanded its stablecoin settlement capabilities with Circle’s USDC to the Solana blockchain to offer high-speed performance.",
       "currencies": [
@@ -111,55 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cronos Launches the Recruitment Phase of its Accelerator Program",
-      "link": "NULL",
-      "pubDate": "2023-09-05T19:23:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency XDC Network Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-05T19:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "Hedera (HBAR) hits major milestone with 20 Billion transactions",
-      "link": "NULL",
-      "pubDate": "2023-09-05T18:22:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "HBAR cracks $0.05 support – what’s next?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T17:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
       "title": "Ripple re-locks 800 million XRP of this month’s tokens unlock",
       "link": "https://finbold.com/ripple-re-locks-800-million-xrp-of-this-months-tokens-unlock/",
       "pubDate": "2023-09-05T17:23:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "One billion XRP was unlocked on September 1 from Ripple’s escrow system, which has been used by the controlling company … Continued",
       "currencies": [
@@ -171,43 +73,11 @@
       }
     },
     {
-      "title": "99% of all Axie Infinity (AXS) addresses are in the red",
-      "link": "NULL",
-      "pubDate": "2023-09-05T16:26:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Will Shiba Inu (SHIB) Overtake Ripple (XRP)?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T16:07:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Visa expands its stablecoin capability to include USDC issued on Solana",
       "link": "https://coinjournal.net/news/visa-expands-its-stablecoin-capability-to-include-usdc-issued-on-solana/",
       "pubDate": "2023-09-05T15:31:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "altcoin",
       "description": "Visa started venturing into USDC settlements back in 2021 through a partnership with Crypto.com. Crypto.com’s Australian card program’s cross-border volume was paid for using Ethereum-based USDC. Visa is now expanding its USDC settlements to include Solana issues USDC coins. Visa has expanded its stablecoin settlement capabilities to merchant acquirers launching pilots with Worldpay and Nuvei […] The post Visa expands its stablecoin capability to include USDC issued on Solana appeared first on C",
       "currencies": [
@@ -224,8 +94,8 @@
       "title": "Visa Expands its USD Coin ($USDC) Settlement Capabilities to Solana",
       "link": "https://www.cryptoglobe.com/latest/2023/09/visa-expands-its-usd-coin-usdc-settlement-capabilities-to-solana/",
       "pubDate": "2023-09-05T15:23:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Global payments giant Visa has announced its latest move to modernize cross-border financial transactions. What Is USD Coin (USDC)? USDC, or USD Coin, is a type of stablecoin that is pegged to the U.S. dollar. Each USDC token is meant to be equivalent to one U.S. dollar, held in reserve by regulated financial institutions. The […]",
       "currencies": [
@@ -242,8 +112,8 @@
       "title": "Visa expands USDC settlements to Solana blockchain in partnership with WorldPay, Nuvei",
       "link": "https://cryptoslate.com/visa-expands-usdc-settlements-to-solana-blockchain-in-partnership-with-worldpay-nuvei/",
       "pubDate": "2023-09-05T15:10:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "Payment giant Visa has broadened its USD Coin (USDC) settlement capacities to the Solana (SOL) blockchain while collaborating with merchant acquirers Worldpay and Nuvei, according to a Sept. 5 statement. The move implies that certain merchants affiliated with WorldPay and Nuvei can now receive payments in USDC directly, instead of traditional fiat currency, when customers […]",
       "currencies": [
@@ -257,48 +127,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency Mantle Down More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-05T15:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "Litecoin Price Momentum: Will It Sustain Above The $63 Mark?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T15:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "LTC",
-        "XLM",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "TUSD Trumps BUSD in Supply Showdown Amid Binance Regulatory Fallout",
-      "link": "NULL",
-      "pubDate": "2023-09-05T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Visa Taps Solana and USDC Stablecoin to Boost Cross-Border Payments",
       "link": "https://www.coindesk.com/business/2023/09/05/visa-taps-solana-and-usdc-stablecoin-to-boost-cross-border-payments/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-09-05T14:55:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "The company said it is one of the first major payment institutions to use directly the Solana network for settlements.",
       "currencies": [
@@ -315,8 +148,8 @@
       "title": "Solana and USDC Transaction Speeds Open the Door to Wider Adoption",
       "link": "https://beincrypto.com/visa-chooses-solana-usdc-experiment-faster-payments/",
       "pubDate": "2023-09-05T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Visa is expanding its capabilities for digital currency settlement, according to a September 5 announcement. The payments giant will now utilize the dollar-pegged stablecoin USDC and blockchain networks like Solana for faster cross-border payments. In the past, Visa tested receiving Circle’s USDC payments on the Ethereum blockchain from select partners. However, the payments giant has...",
       "currencies": [
@@ -331,65 +164,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Despite the Bitcoin Dip, Toncoin, Fetch.ai, and Borroe.Finance Thrive",
-      "link": "NULL",
-      "pubDate": "2023-09-05T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin Moves Lower; Toncoin, Mantle Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2023-09-05T13:33:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Cronos Labs Opens Its Third Accelerator Cohort With $100M Backing",
-      "link": "NULL",
-      "pubDate": "2023-09-05T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Will Lido Stay on Solana? Dev Team Asks for Funding from Lido DAO",
-      "link": "NULL",
-      "pubDate": "2023-09-05T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "LDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Making real-world blockchain solutions possible — Solana co-founder Raj Gokal",
       "link": "https://cointelegraph.com/news/making-real-world-blockchain-solutions-possible-solana-co-founder-raj-gokal",
       "pubDate": "2023-09-05T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Web3 has had its ups and downs over the last few years, but does it have any real-world use cases?",
       "currencies": [
@@ -405,8 +184,8 @@
       "title": "BREAKING: VISA Launches Stablecoin Payments On Solana",
       "link": "https://bitcoinist.com/breaking-visa-launches-stablecoin-payments-solana/",
       "pubDate": "2023-09-05T12:54:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Per an official announcement, payment giant VISA expanded its stablecoin settlement services to the Solana blockchain. The program is currently in a pilot and testing phase but looks to improve upon the capabilities of the legacy payment rails. Related Reading: Solana Co-Founder Pushes For SOL Token Redistribution From FTX To Bankrupt Exchange’s Users VISA Doubles […]",
       "currencies": [
@@ -422,8 +201,8 @@
       "title": "Visa Announced It Is Collaborating With This Altcoin!",
       "link": "https://en.bitcoinsistemi.com/visa-announced-it-is-collaborating-with-this-altcoin/",
       "pubDate": "2023-09-05T12:45:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "Global payments giant Visa announced the expansion of its stablecoin service to include Solana (SOL). Continue Reading: Visa Announced It Is Collaborating With This Altcoin!",
       "currencies": [
@@ -439,8 +218,8 @@
       "title": "Visa expands stablecoin settlement options to Solana",
       "link": "https://www.theblock.co/post/249153/visa-stablecoin-settlement-solana-ethereum?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-05T12:26:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "Visa expanded its USDC stablecoin settlement capabilities to Solana, forming partnerships with Worldpay and Nuvei.",
       "currencies": [
@@ -455,118 +234,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum Bears Gain Upper Hand With Escalating Sell-Off: Impact On ETH Price",
-      "link": "NULL",
-      "pubDate": "2023-09-05T12:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Is Gala Games (GALA) Founders’ Fight an Opportunity to Buy Lower?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Tether Opts for US Treasury Bills to Back Stablecoin USDT",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Massive Jump In LUNC And LUNA Trading Volumes Ahead Terra Classic Core Upgrade",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:09:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Lido contributor requests $1.5 million funding to grow Solana liquid staking",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:04:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Crypto collapses generate hundreds of millions of dollars for lawyers",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:03:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT",
-        "CEL"
-      ]
-    },
-    {
-      "title": "Bitcoin Unscathed As Crypto Funds Bleed With $342 Million Outflow Streak",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Can Ripple Control The XRP Price? Crypto Analysts Weigh In",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Tezos Foundation, Champ Medici announce first cohort of $1 million arts fund grantees",
-      "link": "NULL",
-      "pubDate": "2023-09-05T11:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Solana Emerges as Top Choice for Altcoins with Record Inflows",
       "link": "https://dailycoin.com/solana-emerges-as-top-choice-for-altcoins-with-record-inflows/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-05T10:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Solana has attracted rejuvenated investor attention as the project records a positive weekly fund inflow.",
       "currencies": [
@@ -576,255 +248,6 @@
         "positive": 4,
         "negative": 3
       }
-    },
-    {
-      "title": "Why Liquid Staking is Defying Crypto Slump",
-      "link": "NULL",
-      "pubDate": "2023-09-05T10:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
-      "title": "Cronos Labs begins recruitment phase for $100M accelerator program",
-      "link": "NULL",
-      "pubDate": "2023-09-05T09:57:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Cronos Labs Launches $100M Accelerator Program to Foster AI and Blockchain Innovation",
-      "link": "NULL",
-      "pubDate": "2023-09-05T09:12:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Shiba Inu (SHIB) Presents Compelling Reversal Indicators – Could This Be It?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T08:58:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SHIB",
-        "XLM"
-      ]
-    },
-    {
-      "title": "$ETH: Crypto Influencer Heidi Chakos on ‘New Threat to Ethereum That No One is Talking About’",
-      "link": "NULL",
-      "pubDate": "2023-09-05T08:55:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Bitcoin Flatlines Below $26K But These Altcoins Have it Worse (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-05T08:54:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GALA"
-      ]
-    },
-    {
-      "title": "The Relationship Between Bitcoin and Interest Rates Is Breaking Down: Arthur Hayes",
-      "link": "NULL",
-      "pubDate": "2023-09-05T08:19:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cronos Labs Opens Third Cohort For $100m Accelerator Program",
-      "link": "NULL",
-      "pubDate": "2023-09-05T07:08:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Altcoin Watchlist: Analyst Shares What’s Hot In Crypto This Week",
-      "link": "NULL",
-      "pubDate": "2023-09-05T07:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "MKR",
-        "KAVA"
-      ]
-    },
-    {
-      "title": "Crypto news: Heart research institute Victor Chang chooses Filecoin to store its data",
-      "link": "NULL",
-      "pubDate": "2023-09-05T06:56:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Ethereum (ETH) Sell-Off Fears Spike As Tokens Flow Onto Exchanges",
-      "link": "NULL",
-      "pubDate": "2023-09-05T06:50:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Multibillion Dollar Oracle Tool Chronicle to Expand Outside of MakerDAO Ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-09-05T05:43:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Maker Co-Founder Proposes Future Protocol Implementation on Solana Fork",
-      "link": "NULL",
-      "pubDate": "2023-09-05T05:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DAI",
-        "FTT",
-        "ATOM",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Harvard Scholar Urges Immediate Taxation of Metaverse",
-      "link": "NULL",
-      "pubDate": "2023-09-05T04:56:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Terra Classic Price Prediction: What Is a Good LUNC Buy Zone?",
-      "link": "NULL",
-      "pubDate": "2023-09-05T04:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Vitalik Offloads MKR After MakerDAO Founder Pitches Solana Fork",
-      "link": "NULL",
-      "pubDate": "2023-09-05T03:09:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Assessing if XLM can have a ‘Stellar’ week than the rest",
-      "link": "NULL",
-      "pubDate": "2023-09-05T03:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Blockchain Developer Cronos Labs Kicks Off Search for Participants in $100M Accelerator Program",
-      "link": "NULL",
-      "pubDate": "2023-09-05T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – August 28 – September 3",
-      "link": "NULL",
-      "pubDate": "2023-09-05T00:27:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Ex-Goldman Banker Says $1 Quadrillion Crypto Use-Case That ‘Dwarfs Everything’ Could Come to Industry",
-      "link": "NULL",
-      "pubDate": "2023-09-05T00:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
     }
   ]
 }

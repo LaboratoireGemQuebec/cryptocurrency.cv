@@ -1,15 +1,15 @@
 {
   "date": "2021-06-22",
-  "fetchedAt": "2026-02-05T07:45:51.844Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.470Z",
+  "articleCount": 18,
   "source": "historical-import",
   "articles": [
     {
       "title": "Cardano Founder: Ethereum Will Overtake Bitcoin",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-will-overtake-bitcoin/",
       "pubDate": "2021-06-22T23:50:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Cardano founder Charles Hoskinson has predicted a quick victory of Ethereum over Bitcoin. Charles Hoskinson talked about cryptocurrencies and why he believes ethereum is poised to overtake bitcoin in the near future. He started by talking about the speed of bitcoin transactions. Pointing to the sluggishness of the network and how slow it is in […]",
       "currencies": [
@@ -27,8 +27,8 @@
       "title": "Mysterious Dogecoin Whale Sees $8 Billion Fortune Crumble as $DOGE Price Plunges",
       "link": "https://www.cryptoglobe.com/latest/2021/06/mysterious-dogecoin-whale-sees-8-billion-fortune-crumble-as-doge-price-plunges/",
       "pubDate": "2021-06-22T21:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The mysterious Dogecoin whale that holds around 28% of the cryptocurrency’s supply has seen the value of its DOGE fortuned crumble over the last few weeks, from an $8.2 billion high before the cryptocurrency’s price started dropping. The whale’s address, as Markets Insider reports, owns nearly 37 billion DOGE, which in early May were worth […]",
       "currencies": [
@@ -41,34 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @AlgoFamily: $EURS was the first stablecoin to introduce delegated payments on the #Ethereum network. Now coming to #Algorand as a verif…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T21:10:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "The Theta Mainnet v3.0.0 code has been released! () A hard-fork to the new Mainnet 3.0 will…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T18:27:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Uniswap Labs has hired its first chief operating officer",
       "link": "https://www.theblockcrypto.com/linked/109143/decentralized-exchange-uniswap-has-hired-its-first-chief-operating-officer?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-06-22T18:12:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "defi",
       "description": "In her new position, Lader will play a key role in working with the Uniswap's community to expand its growth.",
       "currencies": [
@@ -84,9 +61,9 @@
       "title": "Crypto Bloodbath, $350 Billion In Market Cap Gone In 48 Hours",
       "link": "https://www.newsbtc.com/news/crypto-bloodbath-billion-market-cap-gone/",
       "pubDate": "2021-06-22T17:42:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Bitcoin and altcoins alike, the entire crypto space takes a beating, losing $350 billion in market cap in just 48 hours. As a result, the market cap is just around 1.2 trillion today, the lowest it has been since the start of the year. Bitcoin price dropped below $30k due to the fud caused by […]",
       "currencies": [
         "BTC",
@@ -100,48 +77,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Coinbase stock is trading at around $220, near an all-time low",
-      "link": "NULL",
-      "pubDate": "2021-06-22T17:11:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "BIC’s Video News Show: Theta Network (THETA)",
-      "link": "NULL",
-      "pubDate": "2021-06-22T17:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "There's a new simple run down explanation of the ETN-Network over on the Electroneum newsroom! Check it out!…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T17:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "The Dogecoin Bubble May Have Finally Popped",
       "link": "https://cryptobriefing.com/the-dogecoin-bubble-may-have-finally-popped/",
       "pubDate": "2021-06-22T16:14:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "BTC",
@@ -157,8 +97,8 @@
       "title": "Cardano Price Analysis: ADA Bears Take Control, Will $1 Hold?",
       "link": "https://cryptopotato.com/cardano-price-analysis-ada-bears-take-control-will-1-hold/",
       "pubDate": "2021-06-22T14:55:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "ADA is down a precipitous 12% today as the cryptocurrency crashes as low as $1.07. Against bitcoin, ADA fell beneath the 50-day MA and fell as low as 3440 SAT.",
       "currencies": [
@@ -170,23 +110,11 @@
       }
     },
     {
-      "title": "It's the right approach. Public permissionless networks will always be the priority for our CTO @ohgodagirl 🦾…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T14:40:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
       "title": "Polkadot DeFi hub Acala’s Karura network wins first Kusama auction",
       "link": "https://forkast.news/polkadot-defi-hub-acala-karura-network-wins-first-kusama-auction/?utm_source=rss&utm_medium=rss&utm_campaign=polkadot-defi-hub-acala-karura-network-wins-first-kusama-auction",
       "pubDate": "2021-06-22T14:14:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "defi",
       "description": "Decentralized finance hub Acala Network’s sister network, Karura, has won the first parachain lease auction on Kusama, Polkadot’s pre-production network, and is now successfully producing blocks, according to an announcement…",
       "currencies": [
@@ -200,34 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @polkadotdefi: In a wildly timely manner, Polkadot DeFi Alliance presents: 'Bootstrapping your Blockchain project on Polkadot and should…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T12:36:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DOT",
-        "REEF"
-      ]
-    },
-    {
-      "title": "This day marks the 3rd anniversary of the #STASIS project launch and the first emission of our euro-backed…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T12:15:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Jed McCaleb Sells 214.6 Million In Last Three Weeks: Report by XRPScan",
       "link": "https://u.today/jed-mccaleb-sells-2146-million-in-last-three-weeks-report-by-xrpscan",
       "pubDate": "2021-06-22T11:55:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Recent data says that co-founder of Ripple has dumped almost 215 million XRP within slightly less than past three weeks",
       "currencies": [
@@ -243,8 +148,8 @@
       "title": "DCG plans to buy $50 million in Grayscale’s ETC Trust shares as discount persists",
       "link": "https://www.theblockcrypto.com/post/109198/dcg-grayscale-ethereum-classic-trust-shares-plan-discount?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-06-22T11:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "Digital Currency Group plans to buy up to $50 million in shares of Grayscale's Ethereum Classic Trust as the product continues to trade a discount.",
       "currencies": [
@@ -261,8 +166,8 @@
       "title": "Swiss bank Dukascopy launches Bitcoin, Ethereum, and Litecoin CFD trading",
       "link": "https://finbold.com/swiss-bank-dukascopy-launches-crypto-cfd-trading/",
       "pubDate": "2021-06-22T10:56:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Recognized Swiss bank Dukascopy has announced on Tuesday the addition of Bitcoin, Ether, and Litecoin CFDs contracts becoming the latest... Continue reading",
       "currencies": [
@@ -280,8 +185,8 @@
       "title": "DOGE has plunged 70% since ‘Dogecoin CEO’ Elon Musk appeared on SNL in May",
       "link": "https://cryptoslate.com/doge-has-plunged-70-since-dogecoin-ceo-elon-musk-appeared-on-snl-in-may/",
       "pubDate": "2021-06-22T10:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "trading",
       "description": "Dogecoin didn’t quite see the bump its believers expected after ‘dogecoin CEO’ Elon Musk spoke about the memecoin on national television back in May.",
       "currencies": [
@@ -293,22 +198,11 @@
       }
     },
     {
-      "title": "#xwc didn't come through today‘s baptism, with a 6.49% continuous dip as the press issues.  However, as a prospero…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T08:58:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XWC"
-      ]
-    },
-    {
       "title": "‘Say something, Elon Musk!’ Dogecoin sheds $70B in market cap since SNL",
       "link": "https://cointelegraph.com/news/say-something-elon-musk-dogecoin-sheds-70b-in-market-cap-since-snl",
       "pubDate": "2021-06-22T08:24:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "DOGE is down 70% from its all-time highs as a trader reiterates that altcoins have \"no bottom.\"",
       "currencies": [
@@ -324,8 +218,8 @@
       "title": "Elon Musk Approves of Potential Dogecoin Fee Reduction, Calls It Important Improvement",
       "link": "https://u.today/elon-musk-approves-of-potential-dogecoin-fee-reduction-calls-it-important-improvement",
       "pubDate": "2021-06-22T07:41:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Biggest DOGE supporter Elon Musk has contributed to the discussion about attempts to reduce Dogecoin transaction fees, approving this idea",
       "currencies": [
@@ -340,8 +234,8 @@
       "title": "McLaren Racing Announces Partnership With Tezos ($XTZ) to Build NFT Platform",
       "link": "https://www.cryptoglobe.com/latest/2021/06/mclaren-racing-announces-partnership-with-tezos-xtz-to-build-nft-platform/",
       "pubDate": "2021-06-22T06:54:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "nft",
       "description": "McLaren Racing has announced a multi-year technical partnership with Tezos (XTZ) in order to build an “NFT fan experience platform” on an “energy-efficient blockchain network.” According to the official press release, McLaren Racing has selected Tezos, which it called “the world’s most advanced blockchain” to become the team’s Official Technical Partner across Formula 1, INDYCAR, […]",
       "currencies": [
@@ -357,8 +251,8 @@
       "title": "RT @ape_swap: 🥳 We are officially Cross-Chain @0xPolygon farms are now OPEN $MATIC - $BNB $MATIC - $USDT $MATIC - $DAI $MATIC - $WET…",
       "link": "https://twitter.com/0xPolygon/status/1407230335025254404",
       "pubDate": "2021-06-22T06:53:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@0xpolygon",
+      "sourceKey": "0xpolygon",
       "category": "stablecoin",
       "currencies": [
         "MATIC"
@@ -373,8 +267,8 @@
       "title": "Grayscale Parent Company to Purchase Ethereum Classic Trust Shares Worth $50 Million",
       "link": "https://cryptopotato.com/grayscale-parent-company-to-purchase-ethereum-classic-trust-shares-worth-50-million/",
       "pubDate": "2021-06-22T06:43:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "The $50 million purchase comes amid questions about the viability of DCG's flagship Bitcoin Trust investment product.",
       "currencies": [
@@ -391,8 +285,8 @@
       "title": "Bearish crypto sentiment focused on Bitcoin, CoinShares says",
       "link": "https://forkast.news/coinshares-bitcoin-ethereum-june-21/?utm_source=rss&utm_medium=rss&utm_campaign=coinshares-bitcoin-ethereum-june-21",
       "pubDate": "2021-06-22T06:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "bitcoin",
       "description": "Bitcoin is in its sixth consecutive week of institutional outflows, with US$89 million exiting the coin, according to a weekly fund flows report.",
       "currencies": [
@@ -406,94 +300,16 @@
       }
     },
     {
-      "title": "Every body feels the dip even this people... Be patient guys the wow will start soon",
-      "link": "NULL",
-      "pubDate": "2021-06-22T05:28:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
-      "title": "RT @MintClubPro: The number of #MINT airdrop applicants has surpassed over 16,000 . A total of 1.84M #HUNT has been burnt and swapped to #…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T05:26:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
-      "title": "RT @Blocktane: Get started today at !",
-      "link": "NULL",
-      "pubDate": "2021-06-22T04:39:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "CNBC host boldly reveals he sold his BTC amid depths of bear market",
-      "link": "NULL",
-      "pubDate": "2021-06-22T02:24:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "RT @MoonPayHQ: Did someone say BUSD and BNB? We’re excited to announce that these Binance Smart Chain assets are now supported globally by…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T02:08:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD",
-        "TWT"
-      ]
-    },
-    {
       "title": "Jay-Z sues Damon Dash over NFT of first album ‘Reasonable Doubt’",
       "link": "https://cryptoslate.com/jay-z-sues-damon-dash-over-nft-of-first-album-reasonable-doubt/",
       "pubDate": "2021-06-22T01:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "nft",
       "description": "Damon Dash, known as the co-founder of the Roc-A-Fella record label along with Jay-Z and Kareem Burke is being sued for selling the copyright to JAY-Z’s 1996 LP, Reasonable Doubt.",
       "currencies": [
         "DASH"
       ]
-    },
-    {
-      "title": "Theta Mainnet 3.0 is just 9 days away! To learn all about this protocol upgrade, join the Theta team this Wednesday…",
-      "link": "NULL",
-      "pubDate": "2021-06-22T00:45:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

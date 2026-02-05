@@ -1,44 +1,15 @@
 {
   "date": "2024-07-14",
-  "fetchedAt": "2026-02-05T07:45:53.480Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.677Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "XRP Price Prediction as $3 Billion Floods into Ripple Markets – $10 XRP Incoming?",
-      "link": "NULL",
-      "pubDate": "2024-07-14T22:37:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "The cryptocurrency market has experienced a notable resurgence, with Ripple’s XRP being a significant highlight. Over the past 48 hours, XRP has exhibited an unexpected and substantial price surge, reflecting increased investor interest and market activity. XRP Daily Chart Source: CoinGecko This rally has seen XRP rise to $0.52, surpassing several critical resistance levels, including […]",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Did AT&T Pay $400,000 In Bitcoin To Data Hackers?",
-      "link": "NULL",
-      "pubDate": "2024-07-14T21:51:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "T"
-      ]
-    },
     {
       "title": "$ADA: Crypto Analyst Dan Gambardello Predicts That Cardano Is Set to Take Off",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-07-14T21:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "In his video update on July 13, 2024, crypto analyst Dan Gambardello provided an in-depth analysis of Cardano’s (ADA) potential for a macro reversal, signaling the onset of a bull market for the cryptocurrency. Promising Signs on Cardano’s Chart Gambardello began by highlighting the optimistic signs on Cardano’s daily and monthly charts. He emphasized that […]",
       "currencies": [
@@ -54,8 +25,8 @@
       "title": "Tether Freezes $29.62M in USDT",
       "link": "https://coinedition.com/tether-freezes-29-62m-usdt-addresses-linked-to-cambodian-huione-group/",
       "pubDate": "2024-07-14T21:05:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Prominent stablecoin issuer Tether has frozen a TRON wallet, TNVaKW, containing $29.62 million in USDT tokens, suspected to be linked to criminal activities and crypto money laundering. This action took place yesterday, July 13, as highlighted by a dedicated handle on X announcing banned addresses. Meanwhile, Bitrace, a leading provider of compliance and investigative tools […]",
       "currencies": [
@@ -68,28 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Charles Hoskinson Issues Important Safety Warning On Elon Musk",
-      "link": "NULL",
-      "pubDate": "2024-07-14T20:42:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "ELON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Donald Trump is Determined! Full Support Statement for Bitcoin!",
       "link": "https://en.bitcoinsistemi.com/donald-trump-is-determined-full-support-statement-for-bitcoin/",
       "pubDate": "2024-07-14T19:39:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "David Bailey, CEO of Bitcoin Magazine, said Donald Trump is determined to speak at the Bitcoin 2024 conference. Continue Reading: Donald Trump is Determined! Full Support Statement for Bitcoin!",
       "currencies": [
@@ -102,122 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Privacy Coin Monero Tops Payments at European Online Retailer Shopinbit in June",
-      "link": "NULL",
-      "pubDate": "2024-07-14T19:10:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – AAVE, MOG, RNDR, WIF",
-      "link": "NULL",
-      "pubDate": "2024-07-14T19:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "RNDR",
-        "WIF",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash (BCH) Inches Closer to $700 Whilst Clandeno (CLD)ICO Secures Major Funding from Cardano (ADA) Investor",
-      "link": "NULL",
-      "pubDate": "2024-07-14T18:43:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Worldcoin and 1Kosmos face more competition as Animoca Brands launches Moca ID",
-      "link": "NULL",
-      "pubDate": "2024-07-14T17:40:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MOCA"
-      ]
-    },
-    {
-      "title": "Trump’s Crypto Pivot Wins Over 13% of Formerly Skeptical Republican Voters: Paradigm Poll",
-      "link": "NULL",
-      "pubDate": "2024-07-14T17:35:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "SEC Ceases Securities Violation Investigation into Stacks and Hiro",
-      "link": "NULL",
-      "pubDate": "2024-07-14T16:48:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Skild AI announces $300M funding from Jeff Bezos, Softbank to build ‘robot brains’",
-      "link": "NULL",
-      "pubDate": "2024-07-14T16:43:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "The Trump assassination attempt sent Bitcoin surging",
-      "link": "NULL",
-      "pubDate": "2024-07-14T16:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOGE",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Elon Musk and Justin Sun Endorses Donald Trump Post-Attack",
-      "link": "NULL",
-      "pubDate": "2024-07-14T15:11:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "ELON"
-      ]
-    },
-    {
       "title": "Ethereum or Cardano? We asked ChatGPT-4o which crypto is a better buy for 2024",
       "link": "https://finbold.com/ethereum-or-cardano-we-asked-chatgpt-4o-which-crypto-is-a-better-buy-for-2024/",
       "pubDate": "2024-07-14T14:33:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Ethereum’s (ETH) position as a leading decentralized finance (DeFi) crypto project faces significant competition from other established entities. Notably, Cardano … Continue reading",
       "currencies": [
@@ -230,58 +73,11 @@
       }
     },
     {
-      "title": "Pro-Crypto TRUMP Assassination Attempts Rallies Clandeno (CLD) ICO amid Polkadot (DOT) & Litecoin (LTC) Surges",
-      "link": "NULL",
-      "pubDate": "2024-07-14T14:26:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "LTC"
-      ]
-    },
-    {
-      "title": "How Will Crypto Markets React to US Policy Changes? Clandeno ICO Expected to 25X Amid Bitcoin Cash (BCH) Rally",
-      "link": "NULL",
-      "pubDate": "2024-07-14T14:21:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH"
-      ]
-    },
-    {
-      "title": "5 Best Altcoins to Lock in Before Crypto Market Rebounds",
-      "link": "NULL",
-      "pubDate": "2024-07-14T14:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Institutional Liquidity Providers and OTC Desks Absorbed 88% of Germany’s Bitcoin Sales",
-      "link": "NULL",
-      "pubDate": "2024-07-14T13:35:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
       "title": "XRP climbs to $0.53 in market’s best weekly performance – What’s next?",
       "link": "https://ambcrypto.com/xrp-climbs-to-0-53-in-markets-best-weekly-performance-whats-next/",
       "pubDate": "2024-07-14T13:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Ripple saw a double-digit increase recently, but its sustainability will be determined by traders that dominate the volume.",
       "currencies": [
@@ -294,40 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "‘Nvidia of crypto’ signals bullish trend reversal in network activity",
-      "link": "NULL",
-      "pubDate": "2024-07-14T12:09:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Whales Became Active in the Altcoin Supported by BlackRock! They Purchased Large Quantities!",
-      "link": "NULL",
-      "pubDate": "2024-07-14T11:47:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MKR",
-        "DAO"
-      ]
-    },
-    {
       "title": "Cardano Alert: Crucial Warning Issued, No ADA Giveaways",
       "link": "https://u.today/cardano-alert-crucial-warning-issued-no-ada-giveaways",
       "pubDate": "2024-07-14T11:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano community issued crucial warning as Chang hard fork approaches",
       "currencies": [
@@ -339,39 +106,11 @@
       }
     },
     {
-      "title": "Scammer Returns $9.27 Million DAI to the Victim 10 Months After Theft",
-      "link": "NULL",
-      "pubDate": "2024-07-14T10:50:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "MOON"
-      ]
-    },
-    {
-      "title": "Nigerian university promotes blockchain engagement for future growth",
-      "link": "NULL",
-      "pubDate": "2024-07-14T10:21:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Cardano founder says Trump assassination attempt is proof we need decentralization",
       "link": "https://www.cryptopolitan.com/cardano-founder-trump-assassination/",
       "pubDate": "2024-07-14T10:20:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Cardano and Ethereum co-founder Charles Hoskinson has shared his thoughts on the assassination attempt on Donald Trump. He believes that the long-term solution is with the principles of crypto, such as disintermediation, decentralization, resilience, and integrity. Yesterday, Trump was targeted in an assassination attempt. The bullets narrowly missed him, grazing his right ear. If he […]",
       "currencies": [
@@ -382,199 +121,6 @@
         "positive": 5,
         "negative": 6
       }
-    },
-    {
-      "title": "Bitcoin traders eye bear trap as BTC price hits 10-day high of $60.4K",
-      "link": "NULL",
-      "pubDate": "2024-07-14T10:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Elon Musk, Justin Sun fully endorse Trump in presidential race after rally shooting",
-      "link": "NULL",
-      "pubDate": "2024-07-14T09:45:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "ELON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "5 cryptocurrency villains who tainted the crypto world's image",
-      "link": "NULL",
-      "pubDate": "2024-07-14T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "BTC Price Taps $60K for the First Time in 9 Days, DOGE and SHIB Jump by 4% (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2024-07-14T08:31:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "SHIB",
-        "ICP",
-        "MKR",
-        "FET",
-        "APT"
-      ]
-    },
-    {
-      "title": "Bitcoin Price To Return Above $63,000? Here’s What Needs To Happen",
-      "link": "NULL",
-      "pubDate": "2024-07-14T07:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ADA",
-        "FET",
-        "ALI"
-      ]
-    },
-    {
-      "title": "$SPIKE: The Original Matt Furie Memecoin Poised to Outshine $PEPE and $BRETT",
-      "link": "NULL",
-      "pubDate": "2024-07-14T05:48:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Altcoins To Offload As Price Faces Risk",
-      "link": "NULL",
-      "pubDate": "2024-07-14T05:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE",
-        "AXS",
-        "STRK",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Top 10 Metaverse Tokens to Buy in July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-14T03:38:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Bullish Bitcoin Indicator Which Led To A Reversal Has Returned, Is $70,000 Possible?",
-      "link": "NULL",
-      "pubDate": "2024-07-14T01:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TIA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "TRUMP Meme Coin Soars After Attack on Former US President",
-      "link": "NULL",
-      "pubDate": "2024-07-14T00:54:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Trump's Crypto Portfolio Takes A Hit, Robert Kiyosaki Bats For Bitcoin And More: Top Crypto Updates This Week",
-      "link": "NULL",
-      "pubDate": "2024-07-14T00:47:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "KSM"
-      ]
-    },
-    {
-      "title": "XRP Price Rallies by 20% as Ripple Marks First Anniversary of Its Win Over SEC",
-      "link": "NULL",
-      "pubDate": "2024-07-14T00:44:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "DOT",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Trump’s Odds of Winning Presidential Election Soar in Prediction Markets After Assassination Attempt",
-      "link": "NULL",
-      "pubDate": "2024-07-14T00:13:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Analyst Says ‘Another Leg’ up Possible for Altcoin That’s Exploded 13,000%+ in Five Months – but There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2024-07-14T00:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BRETT"
-      ]
     }
   ]
 }

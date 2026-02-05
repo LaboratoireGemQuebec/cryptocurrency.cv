@@ -1,26 +1,15 @@
 {
   "date": "2021-01-29",
-  "fetchedAt": "2026-02-05T07:45:51.723Z",
-  "articleCount": 20,
+  "fetchedAt": "2026-02-05T07:48:35.399Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @JoshClsn: #SAFENetwork Fundamentals #2",
-      "link": "NULL",
-      "pubDate": "2021-01-29T23:43:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
     {
       "title": "Top Crypto Exchanges Report Technical Issues Following SEC’s “Fair Market” Warning",
       "link": "https://cryptobriefing.com/crypto-exchanges-report-technical-issues-following-secs-warning/",
       "pubDate": "2021-01-29T20:16:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "description": "Several crypto exchanges halted trading activities, which seems part of a move to maintain “fair, orderly, and efficient markets.” Protecting Investors From Extreme Volatility The U.S. Securities and Exchange Commission (SEC) announced that it would monitor and evaluate closely the high volatility that certain stocks have gone through. The financial watchdog stated that: ...",
       "currencies": [
@@ -37,8 +26,8 @@
       "title": "After GME, Dogecoin and Bitcoin, Chinese Traders Are Betting What Will Pump Next",
       "link": "https://www.coindesk.com/gme-dogecoin-bitcoin-china-fomo",
       "pubDate": "2021-01-29T19:53:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "bitcoin",
       "description": "For Chinese investors, including Justin Sun, FOMO has surpassed fear of losing money.",
       "currencies": [
@@ -58,8 +47,8 @@
       "title": "One of the most exciting, challenging and potentially lucrative areas of the #IoT is the #automotive sector.…",
       "link": "https://twitter.com/iotatoken/status/1355224539387613190",
       "pubDate": "2021-01-29T18:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "regulation",
       "currencies": [
         "MIOTA"
@@ -71,22 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today we are happy to announce our partnership with DLUX - A zero-code VR/AR solution built on the Hive Blockchain with a DEX.",
-      "link": "NULL",
-      "pubDate": "2021-01-29T18:19:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Flare Finance Redefining DeFi Ecosystem with Smart Contracts for XRP and LTC",
       "link": "https://btcmanager.com/flare-finance-defi-ecosystem-smart-contracts-xrp-ltc/",
       "pubDate": "2021-01-29T17:04:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "Flare Network is creating a new benchmark in the cryptocurrency industry with its state-of-the-art solutions. Upon its launch around the second quarter of 2021, Flare network would provide integration for Litecoin, XRP, and Dogecoin which would allow the tokens to operate trustlessly on the network with smart contracts. Harnessing the revolutionary Flare Networks is FlareRead More",
       "currencies": [
@@ -101,33 +79,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#ETH is going to break an all-time high again!  Any parabolic uprise will have a drastic correction! …",
-      "link": "NULL",
-      "pubDate": "2021-01-29T16:47:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "RT @CryptoFinally: i locked up some $eth so i can't spend it &amp; i'll thank myself later. for now i'll thank the sponsors at",
-      "link": "NULL",
-      "pubDate": "2021-01-29T14:57:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
       "title": "XLM Soars 24 Percent, While 264.8 Million XLM Gets Moved by Stellar and Whales",
       "link": "https://u.today/xlm-soars-24-percent-while-2648-million-xlm-gets-moved-by-stellar-and-whales",
       "pubDate": "2021-01-29T10:53:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Over the past 20 hours, over 260 million XLM have been transferred by SDF and crypto whales; meanwhile, XLM has surged by over 24 percent",
       "currencies": [
@@ -143,8 +99,8 @@
       "title": "Elon Musk adds Bitcoin to Twitter bio with 43.7M followers",
       "link": "https://cointelegraph.com/news/elon-musk-adds-bitcoin-to-twitter-bio-with-43-7m-followers",
       "pubDate": "2021-01-29T09:47:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Some of Musk's 43 million followers might have noticed, after Bitcoin rallied nearly 14% in the 30 minutes following his bio update.",
       "currencies": [
@@ -158,33 +114,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "\"A new survey by Gemini challenges the existing notions of an average crypto investor.\" @decryptmedia",
-      "link": "NULL",
-      "pubDate": "2021-01-29T09:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #Bitcoin IS the way",
-      "link": "NULL",
-      "pubDate": "2021-01-29T09:04:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
       "title": "Elon Musk Twitter Bio Section Now Shows One Word: Bitcoin",
       "link": "https://u.today/elon-musk-twitter-bio-section-now-shows-one-word-bitcoin",
       "pubDate": "2021-01-29T08:51:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Tesla CEO Elon Musk seems to go all in on Bitcoin, without even tweeting it, is this to do with DOGE and GME rise?",
       "currencies": [
@@ -198,44 +132,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We're excited to share Gemini's 2021 State of UK Crypto Report, which outlines the profile of current, previous, an…",
-      "link": "NULL",
-      "pubDate": "2021-01-29T08:38:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "The Shinhan-KDAC-BitGo deal will see the trio “jointly promote the development of” crypto custody solutions and “…",
-      "link": "NULL",
-      "pubDate": "2021-01-29T08:31:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "RT @btsfav: TheStockGuy about today's trading restrictions #hive $GME #gamestop",
-      "link": "NULL",
-      "pubDate": "2021-01-29T08:23:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
       "title": "Dogecoin (DOGE) Comes Close to Flipping XRP After Soaring 1,000 Percent in 24 Hours",
       "link": "https://u.today/dogecoin-doge-comes-close-to-flipping-xrp-after-soaring-1000-percent-in-24-hours",
       "pubDate": "2021-01-29T05:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The richest person on the planet has helped Doge come close to surpassing XRP",
       "currencies": [
@@ -246,39 +147,6 @@
         "positive": 4,
         "negative": 2
       }
-    },
-    {
-      "title": "If democratizing finance for all means remove $GME $AMC, as a decentralized map ecosystem, then we have something t…",
-      "link": "NULL",
-      "pubDate": "2021-01-29T02:21:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "#Proof_of_Work (#PoW) and #Proof_of_Stake (#PoS), both long-established #algorithms for #cryptocurrencies and digi…",
-      "link": "NULL",
-      "pubDate": "2021-01-29T00:57:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
-      "title": "RT @SotRos25: To protect data privacy is to protect your fundamental right to expression. @maidsafe is building @safenetworktech to put pow…",
-      "link": "NULL",
-      "pubDate": "2021-01-29T00:46:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
     }
   ]
 }

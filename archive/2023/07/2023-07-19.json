@@ -1,26 +1,15 @@
 {
   "date": "2023-07-19",
-  "fetchedAt": "2026-02-05T07:45:52.153Z",
-  "articleCount": 48,
+  "fetchedAt": "2026-02-05T07:48:35.541Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Polychain Monsters joining Neo Live Telegram AMA to discuss the NFT collect and battle game",
-      "link": "NULL",
-      "pubDate": "2023-07-19T23:51:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO"
-      ]
-    },
     {
       "title": "XRP Momentum Smashes Above Six Year Long RSI Resistance Line",
       "link": "https://bitcoinist.com/xrp-momentum-smashes-above-six-year-long-rsi/",
       "pubDate": "2023-07-19T23:09:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "XRP rocketed higher by nearly 100% last week, and is up 8% on the day today following last week’s ruling, revealing the asset is not a security. The recent surge to the upside has pushed momentum through a six-year long resistance line, according to the quarterly Relative Strength Index. Will such a high timeframe breakout […]",
       "currencies": [
@@ -36,8 +25,8 @@
       "title": "Bitcoin, XRP, & Ethereum: Three Top Coins On Brink Of Golden Cross",
       "link": "https://www.newsbtc.com/bitcoin-news/bitcoin-xrp-ethereum-three-top-coins-golden-cross/",
       "pubDate": "2023-07-19T23:02:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin, XRP, and Ethereum — three of the cryptocurrency market’s most dominant coins — are about to simultaneously form a 3-day golden cross. This signal is rare, happening only a handful of times in the past in each individual asset. However, never have all three of these major cryptocurrencies triggered this signal all at the same time. What exactly does this mean, and what are the results...",
       "currencies": [
@@ -55,8 +44,8 @@
       "title": "Back In The Game: Ripple Joins $54 Million Funding Round For Metaverse Startup",
       "link": "https://www.newsbtc.com/ripple-2/back-in-the-game-ripple-joins-54-million-funding-round-for-metaverse-startup/",
       "pubDate": "2023-07-19T23:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Ripple has been mostly preoccupied with its lawsuit with the United States Securities and Exchange Commission (SEC). However, with a partially favorable ruling from Judge Analisa Torres last week stating that XRP tokens sold on the secondary market are not securities, the crypto firm has turned its attention to other things. This time around, Ripple has dipped its toes into the metaverse sector, joining a massive funding round for Futureverse. Ripple Joins $54 Million Funding Round For Futurever",
       "currencies": [
@@ -72,25 +61,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dogecoin Barks Upwards: Elon Musk’s Twitter Feed Sends DOGE Up 3%",
-      "link": "NULL",
-      "pubDate": "2023-07-19T21:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "QNT"
-      ]
-    },
-    {
       "title": "Stellar Price Prediction as XLM Rallies 24%, $700 Million Trading Volume Comes In - Where Next?",
       "link": "https://cryptonews.com/news/stellar-price-prediction-as-xlm-rallies-24-700-million-trading-volume-comes-in-where-next.htm",
       "pubDate": "2023-07-19T20:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Stellar Lumens (XLM), the cryptocurrency that powers the cross-border payments-focused Stellar Network, has regained its spot as the best-performing cryptocurrency in the top 100 by market capitalization over the last 24 hours, having rallied around 24% over this time period.... Read More: Stellar Price Prediction as XLM Rallies 24%, $700 Million Trading Volume Comes In - Where Next?",
       "currencies": [
@@ -103,23 +78,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "USDD’s growth in Q2 2023 highlights this about the state of the stabelcoin",
-      "link": "NULL",
-      "pubDate": "2023-07-19T20:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
       "title": "Crypto Trader Says $55,000 Bitcoin (BTC) on the Horizon – Here’s His Timeline",
       "link": "https://dailyhodl.com/2023/07/19/crypto-trader-says-55000-bitcoin-btc-on-the-horizon-heres-his-timeline/",
       "pubDate": "2023-07-19T20:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A popular crypto analyst is predicting that Bitcoin (BTC) will cross the $55,000 level following one upcoming event as he warns of a near-term market correction. In a new video update, pseudonymous crypto trader Rekt Capital tells his 45,600 YouTube subscribers that Bitcoin will likely repeat a historic pattern after halving events, which occur every four […]",
       "currencies": [
@@ -132,28 +95,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto Market Analysis for H1 According to CoinMarketCap",
-      "link": "NULL",
-      "pubDate": "2023-07-19T20:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RNDR",
-        "CFX",
-        "INJ",
-        "LUNC",
-        "RPL"
-      ]
-    },
-    {
       "title": "Live: SEC Chairman Gary Gensler Testifies in Senate: Here's the Highlights",
       "link": "https://en.bitcoinsistemi.com/live-sec-chairman-gary-gensler-testifies-in-senate-heres-the-highlights/",
       "pubDate": "2023-07-19T19:16:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "SEC chairman Gary Gensler testifies in the Senate at a subcommittee session on the SEC fiscal year 2024 budget. Continue Reading: Live: SEC Chairman Gary Gensler Testifies in Senate: Here's the Highlights",
       "currencies": [
@@ -166,55 +112,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance's Masterstroke: Zero-Fee Trading On TrueUSD After Record $1B Minting",
-      "link": "NULL",
-      "pubDate": "2023-07-19T19:03:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin Exchange Inflow Spikes, Is This Bearish?",
-      "link": "NULL",
-      "pubDate": "2023-07-19T19:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Cryptocurrency Hedera Up More Than 8% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-19T19:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "XLM outperforms XRP as top altcoins eye fresh bounce",
       "link": "https://coinjournal.net/news/xlm-outperforms-xrp-as-top-altcoins-eye-fresh-bounce/",
       "pubDate": "2023-07-19T18:39:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "altcoin",
       "description": "XLM price rose by 26% to lead the top 100 cryptocurrencies and outshine XRP’s 9% gains in the past 24 hours. Stellar has had a series of positive developments, including its partnership with Bitso announced on Wednesday. XLM could bounce to $0.20 if today’s momentum continues. Stellar (XLM) is currently the top performing altcoin among […]",
       "currencies": [
@@ -231,8 +133,8 @@
       "title": "Elon Musk’s tweet causes Dogecoin to pop",
       "link": "https://coinjournal.net/news/elon-musks-tweet-causes-dogecoin-to-pop/",
       "pubDate": "2023-07-19T18:27:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "altcoin",
       "description": "At press time, Dogecoin (DOGE) was trading at $0.07018 up 3.13% in the last 24 hours. Elon Musk today mentioned “doges” in a tweet. Besides Dogecoin, Musk’s tweet also caused Shiba Inu to a daily high of $0.00000784. Well-known dog-themed meme coin Dogecoin (DOGE) today surged to a daily high of $0.07121 after Elon Musk […]",
       "currencies": [
@@ -246,48 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Peter Schiff’s Son Is No Longer A Bitcoin Believer",
-      "link": "NULL",
-      "pubDate": "2023-07-19T18:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "OKX Wallet Introduces Staking Function For Bitcoin And BRC-20 Tokens",
-      "link": "NULL",
-      "pubDate": "2023-07-19T18:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "OKB",
-        "KAVA"
-      ]
-    },
-    {
-      "title": "Stop trying to build the whole stack, stick to your core competency: LayerZero founder",
-      "link": "NULL",
-      "pubDate": "2023-07-19T17:38:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
       "title": "Bitcoin Promise from US Presidential Candidate Robert F. Kennedy: \"BTC Will Become a Reserve Currency\"",
       "link": "https://en.bitcoinsistemi.com/bitcoin-promise-from-us-presidential-candidate-robert-f-kennedy-btc-will-become-a-reserve-currency/",
       "pubDate": "2023-07-19T17:37:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Robert F Kennedy Jr. He stated that he will support the US dollar with Bitcoin and that BTC will be the reserve currency. Continue Reading: Bitcoin Promise from US Presidential Candidate Robert F. Kennedy: \"BTC Will Become a Reserve Currency\"",
       "currencies": [
@@ -300,70 +165,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "FOX Journalist Blasts XRP Army to Severe Backlash",
-      "link": "NULL",
-      "pubDate": "2023-07-19T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Monthly Burn Surpasses 146,000 ETH As Total Clears $6.5 Billion",
-      "link": "NULL",
-      "pubDate": "2023-07-19T17:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "UNI",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Poloniex proof-of-reserves and WBTC backing missing",
-      "link": "NULL",
-      "pubDate": "2023-07-19T16:51:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Recently Launched Chain Hits Significant Milestone: Details",
-      "link": "NULL",
-      "pubDate": "2023-07-19T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "JUST IN: Dogecoin Tweet From Elon Musk! Volatility in Price Started",
       "link": "https://en.bitcoinsistemi.com/just-in-dogecoin-tweet-from-elon-musk-volality-in-price-started/",
       "pubDate": "2023-07-19T15:56:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "trading",
       "description": "Expressing that Dogecoin is his favorite crypto money at every opportunity, Elon Musk once again tweeted about DOGE after a long break. Doges ftw pic.twitter.com/bl0trQ7BdU — Elon Musk (@elonmusk) July 19, 2023 Musk shared a humorous image of the Scooby-Doo cartoon character and wrote, “DOGE ffw (DOGE to win). *Not investment advice. Continue Reading: JUST IN: Dogecoin Tweet From Elon...",
       "currencies": [
@@ -378,8 +184,8 @@
       "title": "New Partnership Announcement from Ripple's Brother Stellar (XLM)!",
       "link": "https://en.bitcoinsistemi.com/new-partnership-announcement-from-ripples-brother-stellar-xlm/",
       "pubDate": "2023-07-19T15:19:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "The Latin American cryptocurrency company announced that it has partnered with Stellar to integrate Stellar's Anchor network. Continue Reading: New Partnership Announcement from Ripple's Brother Stellar (XLM)!",
       "currencies": [
@@ -392,35 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency Synthetix Network Rises More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-19T15:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX"
-      ]
-    },
-    {
-      "title": "Bitcoin Has Broken This Open Interest Pattern, Quant Explains",
-      "link": "NULL",
-      "pubDate": "2023-07-19T15:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "QNT"
-      ]
-    },
-    {
       "title": "The Bill Bringing Strict Rules to Cryptocurrencies Has Been Submitted to the US Senate!",
       "link": "https://en.bitcoinsistemi.com/the-bill-bringing-strict-rules-to-cryptocurrencies-has-been-submitted-to-the-us-senate/",
       "pubDate": "2023-07-19T14:39:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "Senator Jack Reed, Member of the Senate Banking Committee, presented the bill imposing tough rules on cryptocurrencies to the Senate. Continue Reading: The Bill Bringing Strict Rules to Cryptocurrencies Has Been Submitted to the US Senate!",
       "currencies": [
@@ -433,53 +215,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Do Kwon’s Terraform Labs Taps Former CFO To Serve As Chief Executive",
-      "link": "NULL",
-      "pubDate": "2023-07-19T14:28:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USTC"
-      ]
-    },
-    {
-      "title": "MKR’s Buying Momentum Accompanies Decreasing Volume, Will it Hit $1000?",
-      "link": "NULL",
-      "pubDate": "2023-07-19T14:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "SEC’s Classification of So-Called Crypto Securities Amounts to $98 Billion in Combined Value",
-      "link": "NULL",
-      "pubDate": "2023-07-19T14:07:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNB",
-        "ADA",
-        "XRP",
-        "BUSD",
-        "MATIC",
-        "NEAR",
-        "ALGO",
-        "ATOM",
-        "FIL",
-        "DASH"
-      ]
-    },
-    {
       "title": "Solana Labs rolls out Solang compiler to enhance Ethereum compatibility",
       "link": "https://www.theblock.co/post/240527/solana-labs-rolls-out-solang-compiler-to-enhance-ethereum-compatibility?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-19T13:53:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "The launch of Solang provides a tool for developers familiar with Solidity, Ethereum's primary smart contract programming language.",
       "currencies": [
@@ -493,73 +233,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The Metaverse flop and its continued impact on AXS, SAND, and MANA",
-      "link": "NULL",
-      "pubDate": "2023-07-19T12:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MANA",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Cronos Labs urges Crypto-AI integration in 3 key areas",
-      "link": "NULL",
-      "pubDate": "2023-07-19T12:10:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "CRO"
-      ]
-    },
-    {
-      "title": "Traders Can Now Deposit, Withdraw, Trade DexCheck (DCK) on KuCoin",
-      "link": "NULL",
-      "pubDate": "2023-07-19T11:58:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "PEPE Coin in Trouble? Financial Regulator Clamps Down On Crypto Memes",
-      "link": "NULL",
-      "pubDate": "2023-07-19T11:50:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Assassin's Creed Developer Becomes Cronos Blockchain Validator",
-      "link": "NULL",
-      "pubDate": "2023-07-19T11:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
       "title": "Starknet unveils ‘appchains’ framework, eyeing multi-chain ecosystem",
       "link": "https://www.theblock.co/post/240480/starknet-appchains-framework?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-19T11:18:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Ethereum Layer 2 Starknet introduced “appchains,” a framework facilitating the creation of multiple application-specific blockchains.",
       "currencies": [
@@ -572,35 +250,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celsius could repay all claims if Bitcoin, Ether prices rose 2X — Simon Dixon",
-      "link": "NULL",
-      "pubDate": "2023-07-19T10:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CEL"
-      ]
-    },
-    {
-      "title": "Chancer underscores future of online betting with epic presale",
-      "link": "NULL",
-      "pubDate": "2023-07-19T10:50:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
       "title": "Hedera Network Powers Shinhan Bank's Successful Test of Stablecoin Payments",
       "link": "https://cryptonews.com/news/hedera-network-powers-shinhan-banks-successful-test-of-stablecoin-payments.htm",
       "pubDate": "2023-07-19T10:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "regulation",
       "description": "Shinhan Bank just completed pilot testing of its stablecoin that was hosted on Hedera blockchain",
       "currencies": [
@@ -616,8 +270,8 @@
       "title": "Cosmos price prediction experts say ATOM ‘ready to pop’ past $10",
       "link": "https://finbold.com/cosmos-price-prediction-experts-says-atom-ready-to-pop-past-10/",
       "pubDate": "2023-07-19T08:41:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Cosmos (ATOM) has solidified its position among the top 25 digital assets, currently being traded at a value of $9.31. … Continued",
       "currencies": [
@@ -630,66 +284,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ubisoft Joins Cronos Blockchain Ecosystem as Node Validator $CRO",
-      "link": "NULL",
-      "pubDate": "2023-07-19T06:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Stride Blockchain Will Move to ATOM-Powered Security Model",
-      "link": "NULL",
-      "pubDate": "2023-07-19T05:55:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Upcoming Meme2Earn contest to feature Flamingo Finance, equivalent of US $1,500 in rewards",
-      "link": "NULL",
-      "pubDate": "2023-07-19T04:38:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "'Assassin's Creed' Creator Ubisoft Throws Weight Behind Cronos Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-07-19T01:06:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Hardware Wallet Maker Ledger Targets Latin America Growth",
-      "link": "NULL",
-      "pubDate": "2023-07-19T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Popular Crypto Analyst Predicts Bitcoin Price Range of $40,000-$50,000 Ahead of Halving",
       "link": "https://www.cryptoglobe.com/latest/2023/07/popular-crypto-analyst-predicts-bitcoin-price-range-of-40000-50000-ahead-of-halving/",
       "pubDate": "2023-07-19T00:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "As Bitcoin ($BTC) enthusiasts away the flagship cryptocurrency’s fourth block reward halving, expected around April 24, 2024, speculation is mounting about the potential impact on the cryptocurrency’s price. A popular anonymous analyst has now suggested Bitcoin could surge to $40,000 or even $50,000 ahead of it. Bitcoin’s price recently surged after the world’s largest asset […]",
       "currencies": [

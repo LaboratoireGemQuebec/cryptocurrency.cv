@@ -1,37 +1,15 @@
 {
   "date": "2021-02-03",
-  "fetchedAt": "2026-02-05T07:45:51.929Z",
-  "articleCount": 19,
+  "fetchedAt": "2026-02-05T07:48:35.509Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "There’s nothing more interesting than the future of the internet right now, &amp; that’s @safenetworktech",
-      "link": "NULL",
-      "pubDate": "2021-02-03T20:18:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Blog: Velký reset - existuje způsob, jak toho využít?",
-      "link": "NULL",
-      "pubDate": "2021-02-03T19:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLTC"
-      ]
-    },
     {
       "title": "RT @iota_dev: The #Chrysalis testnet was successfully updated! The update includes changes to messages to dynamically allow referencing up…",
       "link": "https://twitter.com/iotatoken/status/1357037507741908994",
       "pubDate": "2021-02-03T18:45:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "MIOTA"
@@ -43,66 +21,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "PSF Developer Meeting",
-      "link": "NULL",
-      "pubDate": "2021-02-03T18:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Today we are happy to announce our partnership with Dapplr. A decentralized social media app being built on Hive.",
-      "link": "NULL",
-      "pubDate": "2021-02-03T17:51:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "The Chinese #mining equipment company, #MicroBT, has announced that it will enter the #Nasdaq stock exchange in a…",
-      "link": "NULL",
-      "pubDate": "2021-02-03T16:02:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #TIL: you can create anti-facial recognition photos #hive -",
-      "link": "NULL",
-      "pubDate": "2021-02-03T16:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @CryptoFinally: Wouldn't it be nice to ?",
-      "link": "NULL",
-      "pubDate": "2021-02-03T15:46:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
       "title": "Neo (NEO) Announces Major Testnet Upgrade with Oracles and Neo Name System",
       "link": "https://u.today/neo-neo-announces-major-testnet-upgrade-with-oracles-and-neo-name-system",
       "pubDate": "2021-02-03T14:35:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Neo Global Development team (NGD) shared the details of Neo3 Preview5 testnet upgrade. Main novelties will be introduced in terms of performance and developer experience",
       "currencies": [
@@ -115,22 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SotRos25: Who would like to see $MAID listed on @krakenfx? @safenetworktech",
-      "link": "NULL",
-      "pubDate": "2021-02-03T13:33:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "2 Billion USDT to Migrate from Tron to Ethereum Later Today: Tether CTO",
       "link": "https://u.today/2-billion-usdt-to-migrate-from-tron-to-ethereum-later-today-tether-cto",
       "pubDate": "2021-02-03T11:04:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Tether CTO has made an announcement that later today a gargantuan amount of 2,000,000,000 USDT will be moved from Tron chain to Ethereum",
       "currencies": [
@@ -145,22 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin putting up a good show - some altcoins doing the same, what is the scope for the majority of alts (5k+). Gl…",
-      "link": "NULL",
-      "pubDate": "2021-02-03T10:18:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
       "title": "Cross-chain DeFi interoperability on the agenda as Ren joins Alameda",
       "link": "https://cointelegraph.com/news/cross-chain-defi-interoperability-on-the-agenda-as-ren-joins-alameda",
       "pubDate": "2021-02-03T08:17:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Ren is teaming up with Alameda to boost cross-chain decentralization.",
       "currencies": [
@@ -173,22 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Please join us at the #BinanceBlockchainWeek, and our founder @MHCGBIC will have a speech about \"Tokenizing the fut…",
-      "link": "NULL",
-      "pubDate": "2021-02-03T05:51:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "STPT"
-      ]
-    },
-    {
       "title": "Ethereum Price Explosion Today! $20,000 Possible? Here'S My Prediction Explained",
       "link": "https://www.youtube.com/watch?v=W7Dm7tdZawo",
       "pubDate": "2021-02-03T05:08:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheCryptoLark",
+      "sourceKey": "thecryptolark",
       "category": "ethereum",
       "description": "Ethereum price explodes! Is $20,000 possible? Here's my price prediction 👀 BLOCKFI LENDING $250 FREE CRYPTO! ►► http://blockfi.com/lark 🔥 WEALTH MASTERY ►► https://cryptolark.co/WEALTHMASTERY 👨‍🎓 COURSES FOR BEGINNERS 👨‍🎓 👉 CRYPTO EXPLAINED COURSE ►► https://cryptolark.co/beginner-course 👉 TRADING COURSE ►► https://cryptolark.co/trading-course 💲 BEST EXCHANGES FOR BUYING & TRADING 💲 💰 BINANCE BEST EXCHANGE FOR BUYING & TRADING CRYPTO 👉 10% OFF TRADING FEES ►► https://cryptolark.co/BI",
       "currencies": [
@@ -201,45 +91,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "#ETH is rallying up again!  Any parabolic uprise will have a drastic correction!  Protect yourself from…",
-      "link": "NULL",
-      "pubDate": "2021-02-03T04:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "Tracking $TOMO-related information just got more convenient with @waterfallbot",
-      "link": "NULL",
-      "pubDate": "2021-02-03T03:12:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "RT @warrickfraser: $TRDL is killing it now, volume gaining, dips reversing &amp; now the climb  $VANA &amp; $BLISS pairs for farming $vBTC . htt…",
-      "link": "NULL",
-      "pubDate": "2021-02-03T00:42:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "VANA",
-        "BLISS"
-      ]
-    },
-    {
       "title": "Bitcoin and Ethereum held on exchanges drops to a multi-year low, here’s why",
       "link": "https://cointelegraph.com/news/bitcoin-and-ethereum-held-on-exchanges-drops-to-a-multi-year-low-here-s-why",
       "pubDate": "2021-02-03T00:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Lucrative DeFi investing opportunities and increasing participation from institutional investors are driving the amount of Bitcoin and Ethereum held on exchanges to new lows.",
       "currencies": [

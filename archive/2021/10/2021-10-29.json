@@ -1,27 +1,15 @@
 {
   "date": "2021-10-29",
-  "fetchedAt": "2026-02-05T07:45:51.897Z",
-  "articleCount": 88,
+  "fetchedAt": "2026-02-05T07:48:35.494Z",
+  "articleCount": 27,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @MaxRoszko: I spot a new RenVM tracker in the wild!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T23:31:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RENBTC",
-        "REN"
-      ]
-    },
     {
       "title": "Discussing XRP price action, Belfort says he’ll ‘settle for $10,’ reveals holdings",
       "link": "https://ambcrypto.com/xrp-to-hit-10-former-wolf-of-wall-street-will-settle-for-it/",
       "pubDate": "2021-10-29T23:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "It is no surprise that the now infamous ‘Wolf of Wall Street,’ Jordan Belfort was trotting through the cryptocurrency landscape. However, his next prediction for XRP left many puzzled, and many others, excited about what this could mean for the market. Belfort’s bag of XRP Belfort took to Twitter to offer updates to his followers […]",
       "currencies": [
@@ -34,34 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Check out the revamped #cashtab styling, courtesy of @Alitayin #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-10-29T23:06:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Ahead of the long waited Doge Dash playable Demo, here is a sneak peak at the Level 1 Gameplay. Tune into the Liv…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T23:01:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DASH",
-        "DOGEDASH"
-      ]
-    },
-    {
       "title": "Coinbase Pulls A Robinhood As Users Are Unable To Trade Shiba Inu During Rally",
       "link": "https://bitcoinist.com/coinbase-pulls-a-robinhood-as-users-are-unable-to-trade-shiba-inu-during-rally/?utm_source=rss&utm_medium=rss&utm_campaign=coinbase-pulls-a-robinhood-as-users-are-unable-to-trade-shiba-inu-during-rally",
       "pubDate": "2021-10-29T23:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Shiba Inu recently rallied to a new high this week. Investors saw massive gains when the meme coin hit a new all-time high of almost $0.00009, resulting from a surge in trading activity in the altcoin. Similar to its predecessor Dogecoin, when the meme coin hit its new high, investors scrambled to sell and take […]",
       "currencies": [
@@ -73,22 +38,11 @@
       }
     },
     {
-      "title": "Dear  Community, staking of $AMA is still available with high APY rates ;…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T22:51:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
       "title": "The Shiba inu Tokens Vitalik Buterin Burned in May Would Now Be Worth $28 Billion",
       "link": "https://cryptopotato.com/the-shib-vitalik-buterin-burned-in-may-would-now-be-worth-almost-28-billion/",
       "pubDate": "2021-10-29T22:47:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "The 410,24 trillion Shiba Inu tokens which Vitalik Buterin burned in May are now worth close to $28 billion.",
       "currencies": [
@@ -102,33 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Crypto_Petrov: 743% more #TRX are burned than produced. 1,307 #TRX in one single block 🤯🤯🤯",
-      "link": "NULL",
-      "pubDate": "2021-10-29T22:36:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @TronixTrx: #TRON is the first deflationary crypto in the world.",
-      "link": "NULL",
-      "pubDate": "2021-10-29T22:36:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
       "title": "Crypto All Time Highs Indicate A Top Is Near – Bitcoin Bear View",
       "link": "https://sanfranciscotribe.com/Home/crypto-all-time-highs-indicate-a-top-is-near-bitcoin-bear-view/",
       "pubDate": "2021-10-29T22:27:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Sanfranciscotribe",
+      "sourceKey": "sanfranciscotribe",
       "category": "bitcoin",
       "description": "Welcome back to the Tribe! In this post we decide to look to the bear market side of the crypto industry! Nothing should be considered investment or financial advice. Enjoy the ride! Crypto All Time Highs It should be quite obvious with digital assets hitting new all times highs every week that we are currently […]",
       "currencies": [
@@ -142,23 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @StarLaunchSOL: 31,000 recruits have lined up to board the SS StarLaunch, with only 700 Commanders left to be selected. There is one fin…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T22:06:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
       "title": "Altcoin Roundup: Dogecoin, Shiba Inu and memes are hauling the dogsled to mass adoption",
       "link": "https://cointelegraph.com/news/altcoin-roundup-dogecoin-shiba-inu-and-memes-are-hauling-the-dogsled-to-mass-adoption",
       "pubDate": "2021-10-29T22:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Who doesn’t love a good meme? Here’s how DOGE, SHIB and other meme tokens are tugging crypto’s leash toward mass adoption.",
       "currencies": [
@@ -172,22 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Holy fuck volt bridge makes exiting and entering $BSV so swift and fast. All da exchanges take trc20 usdt",
-      "link": "NULL",
-      "pubDate": "2021-10-29T22:02:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "MANA, SAND, AXS Explode on Facebook’s Meta News; ETH Beats ATH: Markets Wrap",
       "link": "https://blockworks.co/mana-sand-axs-explode-on-facebooks-meta-news-eth-beats-ath-markets-wrap/",
       "pubDate": "2021-10-29T21:23:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "ethereum",
       "description": "MANA, SAND, and AXS rally on Facebook's rebranding endorsing the metaverse, the market is torn on how to value the Ethereum network.",
       "currencies": [
@@ -202,51 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @KIFSCrypto: ***World Exclusive*** Leaked Doge Dash gameplay footage... Just WOW!!! Game Changer!!! #DogeDash #Play2Earn #BSC #crypto h…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T21:18:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DASH",
-        "DOGEDASH"
-      ]
-    },
-    {
-      "title": "Got your Halloween costume sorted?",
-      "link": "NULL",
-      "pubDate": "2021-10-29T21:02:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "RT @THETAtv: Watch live coverage of the @NASA @SpaceX Crew-3 mission to the International @Space_Station all weekend long! Coverage begins…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T20:52:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "AMC Theatres CEO considers adding Shiba Inu as payment for ticket purchases",
       "link": "https://cointelegraph.com/news/amc-theatres-ceo-considers-adding-shiba-inu-as-payment-for-ticket-purchases",
       "pubDate": "2021-10-29T20:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "If the will of the people prevails, the ability to buy AMC movie tickets with Shiba Inu tokens may soon become a reality.",
       "currencies": [
@@ -263,8 +132,8 @@
       "title": "SHIB Flips Dogecoin Again as Meme Coins Jostle for Supremacy",
       "link": "https://decrypt.co/84841/shiba-inu-shib-flips-dogecoin-again-meme-coins",
       "pubDate": "2021-10-29T20:34:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "The top dogs in the meme coin and token stack have swapped places again as SHIB rises and DOGE sinks.",
       "currencies": [
@@ -278,23 +147,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "There's ONLY 2 days to go! for the biggest airdrop to all $LAYER holders that hold 1000 LAYER or more on their pers…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T20:26:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LAYER",
-        "LAYERX"
-      ]
-    },
-    {
       "title": "Top Trader Capo Says He’s Still All In on Altcoins, Updates Outlook on Three Crypto Assets",
       "link": "https://dailyhodl.com/2021/10/29/top-trader-capo-says-hes-still-all-in-on-altcoins-updates-outlook-on-three-crypto-assets/",
       "pubDate": "2021-10-29T20:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "A popular crypto strategist and trader is updating his analysis on three altcoins he says are primed to hit all-time highs. The pseudonymous crypto analyst known as Capo tells his 183,700 followers that he’s still “all in” on altcoins. The trader expects DOT, the native asset of smart contract platform Polkadot, to “outperform all the […]",
       "currencies": [
@@ -310,8 +167,8 @@
       "title": "DeFi Platform Loses $130,000,000 in Attack That Cost Over $37,000 in Ethereum Fees",
       "link": "https://dailyhodl.com/2021/10/29/defi-platform-loses-130000000-in-attack-that-cost-over-37000-in-ethereum-fees/",
       "pubDate": "2021-10-29T19:55:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Decentralized Finance (DeFi) platform Cream Finance (CREAM) says that its lending market suffered a hack resulting in the loss of crypto assets worth approximately $130 million. Cream Finance says in a tweet that the attacker exploited a vulnerability in the first version of the C.R.E.A.M. lending market platform. “Our Ethereum C.R.E.A.M. v1 lending markets were […] The post DeFi Platform Loses $130,000,000 in Attack That Cost Over $37,000 in Ethereum Fees appeared first on The Daily Hodl.",
       "currencies": [
@@ -327,8 +184,8 @@
       "title": "War of the Dogs: $SHIB Flips $DOGE Again After 12% Surge To Reclaim 9th Place",
       "link": "https://www.cryptoglobe.com/latest/2021/10/war-of-the-dogs-shib-flips-doge-again-after-10-surge-to-reclaim-9th-place/",
       "pubDate": "2021-10-29T19:08:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "On Friday (October 29), the two most popular dog meme coins, i.e. Shiba Inu ($SHIB) and Dogecoin ($DOGE), continued their flight for the title of ninth most valuable cryptoasset by market cap. On Wednesday (October 27), Joe Weisenthal, the executive editor of news for Bloomberg Digital, looked at $DOGE and $SHIB, and explained why the former […]",
       "currencies": [
@@ -341,30 +198,11 @@
       }
     },
     {
-      "title": "Ethereum Supply Shock Deepens: Exchange Reserves Decline 18% In 5 Months",
-      "link": "NULL",
-      "pubDate": "2021-10-29T19:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "As Ethereum’s price approaches new all-time highs, the coin’s supply shock seems to be deepening with exchange reserves declining 18% in the last five months. Ethereum Exchange Reserves Are Down 18% In The Last 5 Months As pointed out by a CryptoQuant post, ETH’s exchange reserves seem to have declined a lot in the last few months, signaling that a supply shock might be brewing in the crypto....",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "After Dogecoin, will Shiba Inu rush past Polkadot too",
       "link": "https://ambcrypto.com/after-dogecoin-will-shiba-inu-rush-past-polkadot-too/",
       "pubDate": "2021-10-29T19:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Despite being the spinoff of another meme coin, Shiba Inu managed to race ahead of Dogecoin for a while. The rally we have seen in the last couple of days led to SHIB achieving something so extraordinary, it got investors worried about who would end up being SHIB’s next target. Shiba Inu on a roll […]",
       "currencies": [
@@ -378,79 +216,11 @@
       }
     },
     {
-      "title": "The new Supra LOVE UBE vaults compound your rewards while holding all the precious $UBE ️",
-      "link": "NULL",
-      "pubDate": "2021-10-29T18:53:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "COMP",
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Is there anything better than ending this week with #Ethereum reaching an all-time high? 🥲 We think not.",
-      "link": "NULL",
-      "pubDate": "2021-10-29T18:45:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @FUNCTIONX_IO: Do you know #DeFi deposit service in f(x)Wallet’s Cryptobnk is powered by @AaveAave? Today’s APY for #Tether saving is 32…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T17:26:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "It's not too late to join the #DAO Global #Hackathon for a chance to win one of the $60k worth of bounties or $100k…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T17:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "RT @nunet_global: NuNet token launch has officially kicked off, with KYC underway! Submit your questions for a special live AMA with NuNet…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T16:54:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "It's not too late to join the DAO Global Hackathon for a chance to win one of the $60k worth of bounties or $100k i…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T16:02:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
       "title": "WOO Network will use Chainlink to launch customized institutional oracles",
       "link": "https://cryptoslate.com/woo-network-will-use-chainlink-to-launch-customized-institutional-oracles/",
       "pubDate": "2021-10-29T16:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "general",
       "description": "WOO Network today announced WOOFi, a new capital-efficient DEX powered by institutional hedging and market-making techniques, would be used alongside Chainlink to create institutional-ready market data oracles.",
       "currencies": [
@@ -466,8 +236,8 @@
       "title": "Anthony Pompliano Calls Shiba Inu ‘Dog Poo Poo’ After Mammoth Surge in Price",
       "link": "https://beincrypto.com/anthony-pompliano-calls-shiba-inu-dog-poo-poo-after-phenomenal-price-rise/",
       "pubDate": "2021-10-29T15:58:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Anthony Pompliano has labeled Shiba Inu (SHIB) ‘dog poo poo’ in a blistering attack on the memecoin.",
       "currencies": [
@@ -480,126 +250,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We'd like to thank the @AragonProject #Community for bringing us this far and inspiring every day to go beyond!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:45:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "RT @digitalpoundfdn: Join the first Digital Pound Foundation webinar on 10 Nov, featuring representatives from Ripple, Quant, Electroneum,…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:43:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "BUIDL!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
-      "title": "#Binance Concludes 4 Promos: $EGLD Trading Competition, $QTUM and $AVAX Learn &amp; Trade, and $ARPA Race to the Top",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "AVAX",
-        "EGLD",
-        "QTUM"
-      ]
-    },
-    {
-      "title": "#Binance Concludes 4 Promos: $EGLD Trading Competition, $QTUM and $AVAX Learn & Trade, and $ARPA Race to the Top",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "ETHDOWN",
-        "ETHUP"
-      ]
-    },
-    {
-      "title": "When you have a Town Hall meeting before the #Halloween weekend  @Pundix_br @PundiXLabs_jp @PundiXLabs_kr",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:19:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "RT @InfoQ: Forensic Monitoring of Blockchains Is Key for Broader Industry Adoption by Fisher Yu, reviewed by Sergio…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:10:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "1/ Being the first to bring a decentralized oracle to life on IBC was an endeavor that wouldn’t be possible withou…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T15:01:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "It’s our pleasure to host Nikolaus Widmann, CEO of which is to date one of Italy’s biggest…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T14:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "RT @RequestNetwork: @cryptocom users can now obtain the latest news and updates from Request directly on $REQ Tok…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T14:21:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "Shiba Inu ($SHIB) Rival Floki Inu ($FLOKI) Surges as London Ad Campaign Goes Viral",
       "link": "https://www.cryptoglobe.com/latest/2021/10/shiba-inu-shib-rival-floki-inu-floki-surges-as-london-ad-campaign-goes-viral/",
       "pubDate": "2021-10-29T14:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Floki Inu ($FLOKI), a meme cryptocurrency whose name was inspired by Elon Musk’s dog and that is rivaling Shiba Inu ($SHIB) in terms of popularity, has seen its price surge over the last few weeks after an ad campaign it launched went viral. As CryptoGlobe reported, Floki Inu launched a campaign on London’s public transport […]",
       "currencies": [
@@ -611,88 +266,11 @@
       }
     },
     {
-      "title": "@cryptocom users can now obtain the latest news and updates from Request directly on $REQ…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T14:10:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "RT @TheBigSur007:  $TEL - $DFX  Hit 1m votes Looks like this will pass!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T14:06:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "What is the most exciting project in the DAO space at the moment?",
-      "link": "NULL",
-      "pubDate": "2021-10-29T14:02:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "“Fiscal 2021 was a breakout year for Voyager, positioning our platform to be a leading player in the digital asset…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T13:43:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "\"Centralization of a #blockchain is simply not required in order to achieve a high throughput. Projects can retain…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T13:41:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QTUM"
-      ]
-    },
-    {
-      "title": "RT @Prime_Time_88: Had to show love to @investvoyager!!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T13:21:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "RT @RSKsmart: RSK #CommunityCall - October 2021 with @SDLerner @diegomasini @aeidelman @bguiz and you!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T13:17:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
       "title": "Crypto fork uses dog meme to raise $60 million — then the money goes missing",
       "link": "https://www.theblockcrypto.com/post/122529/crypto-fork-uses-dog-meme-to-raise-60-million-then-the-money-goes-missing?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-10-29T13:10:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "A newly launched crypto project called AnubisDAO raised $60 million in a token sale. But the funds raised have all been suddenly withdrawn.",
       "currencies": [
@@ -708,8 +286,8 @@
       "title": "Movie Giant AMC Considering Accepting Shiba Inu",
       "link": "https://u.today/movie-giant-amc-considering-accepting-shiba-inu",
       "pubDate": "2021-10-29T12:48:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The meme stock is meeting the meme coin as AMC floats the idea of accepting the Shiba Inu cryptocurrency",
       "currencies": [
@@ -725,8 +303,8 @@
       "title": "Robinhood Might Not Add SHIB Soon, Here's Why",
       "link": "https://u.today/robinhood-might-not-add-shib-soon-heres-why",
       "pubDate": "2021-10-29T11:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Robinhood might wait for better times to add SHIB and other altcoins, according to a recent report",
       "currencies": [
@@ -738,33 +316,11 @@
       }
     },
     {
-      "title": ".@ShopeePH is back! Now, you can browse hundreds of categories and thousands of products, shop and sell on the go w…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T11:18:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "Vote /, schedule and execute DAO proposals directly from Discord with @witnet_io: PART 1",
-      "link": "NULL",
-      "pubDate": "2021-10-29T11:01:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
       "title": "Shiba Inu seems to be the cryptocurrency star in India this festival season",
       "link": "https://qz.com/india/2081382/indians-are-obsessing-over-shiba-inu-coins-this-diwali-not-gold/",
       "pubDate": "2021-10-29T10:37:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Qz",
+      "sourceKey": "qz",
       "category": "altcoin",
       "description": "The SHIB token price has surged nearly 850% to $0.00006847 per unit this month.",
       "currencies": [
@@ -782,8 +338,8 @@
       "title": "Growth DeFi Ecosystem Going Cross-Chain, Starting With Avalanche",
       "link": "https://bitcoinist.com/growth-defi-ecosystem-going-cross-chain-starting-with-avalanche/?utm_source=rss&utm_medium=rss&utm_campaign=growth-defi-ecosystem-going-cross-chain-starting-with-avalanche",
       "pubDate": "2021-10-29T10:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "defi",
       "description": "Over the past months, we have seen tremendous growth in DeFi, and millions if not billions of dollars are being invested in it daily. DeFi can affect the way traditional banks operate and might even change the structure of the whole financial system in the future. One of the projects that have recently caught people’s […]",
       "currencies": [
@@ -799,8 +355,8 @@
       "title": "Metaverse Tokens Are Soaring on Facebook’s Rebrand News",
       "link": "https://cryptobriefing.com/metaverse-tokens-soaring-on-facebooks-rebrand/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-10-29T10:12:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Metaverse tokens experienced a significant increase in value following Facebook's announcement of its rebranding to Meta, signaling a strong emphasis on virtual reality and the metaverse. Investors are reacting positively to the potential growth and future of digital environments, driving up the prices of various metaverse-related cryptocurrencies. This surge highlights the growing interest...",
       "currencies": [
@@ -815,8 +371,8 @@
       "title": "Decentraland's MANA Up 44% as Metaverse Tokens Surge in Wake of Facebook's Meta Rebrand",
       "link": "https://decrypt.co/84769/decentraland-metaverse-tokens-surge-wake-facebooks-meta-rebrand",
       "pubDate": "2021-10-29T10:02:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Tokens for metaverse-related crypto projects have seen their prices rise by double digits after Facebook's announcement that it would rebrand as Meta.",
       "currencies": [
@@ -829,55 +385,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @zibin: . @cigarsetc2 is setting the standards for local businesses in Charlotte and U.S. by allowing #btc #crypto payments for cigars a…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T09:48:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "Our video AMA for October is up on YouTube. Check it out!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T08:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "DOOROPEN $DOC #IDO's Public Round 2 has begun. Anyone can participate in Public Round 2, including users who partic…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T08:28:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Reminder: Stay vigilant regarding the fake Ellipsis Finance website, DO NOT USE THEM &amp; We will NEVER ask for your…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T08:16:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
       "title": "\"Wolf of Wall Street\" Jordan Belfort Thinks XRP Price Could Hit $10",
       "link": "https://u.today/wolf-of-wall-street-jordan-belfort-thinks-xrp-price-could-hit-10",
       "pubDate": "2021-10-29T08:01:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "The real \"Wolf of Wall Street\" is bullish on XRP",
       "currencies": [
@@ -890,33 +402,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @D4Aconf: #D4ASpeaker: Alejandro Hevia (@ahevia), producer &amp; Director @theYellowBlocks , will be join us in #D4A2021, with the panel “B…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T07:51:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "Tokamak Network's internal system update has been completed, and all TON staking functions are working properly. T…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T07:20:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
       "title": "RT @Tronfoundation: Welcome the outstanding institutions and project teams participate and apply to be BitTorrent Chain (#BTTC) nodes! …",
       "link": "https://twitter.com/justinsuntron/status/1453977841025134595",
       "pubDate": "2021-10-29T06:51:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@justinsuntron",
+      "sourceKey": "justinsuntron",
       "category": "general",
       "currencies": [
         "TRX",
@@ -932,8 +422,8 @@
       "title": "Shiba Inu Is Back Above Dogecoin as Coinbase Changes SHIB's Maximum Price Precision",
       "link": "https://u.today/shiba-inu-is-back-above-dogecoin-as-coinbase-changes-shibs-maximum-price-precision",
       "pubDate": "2021-10-29T06:49:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu and Dogecoin keep swapping places, vying for meme coin supremacy",
       "currencies": [
@@ -947,134 +437,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BiportWallet: Are you ready?",
-      "link": "NULL",
-      "pubDate": "2021-10-29T06:26:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "RT @gregoryklumov: nice reflection on #DeFi future here, keep it coming Kain ;)",
-      "link": "NULL",
-      "pubDate": "2021-10-29T06:06:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "RT @gregoryklumov: Almost 40 $BTC ETFs are waiting to be approved. I talked about liquid alternatives asset class and how #BTC fits perfect…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T06:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "RT @MintClubPro: Staking-based community is coming to the #MintClub ecosystem, partnering with @NutboxDao 🤝 $MINT #BinanceSmartChain #DeFi…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T05:38:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: This week’s dev update takes you behind the scenes on the @maidsafe team’s bug hunting. Checkout the full update here:…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T05:18:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "RT @NeofiOfficial: Who's ready for NeoFi's IDO?",
-      "link": "NULL",
-      "pubDate": "2021-10-29T05:14:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
-      "title": "RT @zhuglrv: @BlastoiseInu @elonmusk @ugliestduck @InuKishu @Shibtoken @SHIB_Game @dogecoin @CryptoDoll21 @Dobromi80224681 @1goonrich @Gog…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T05:01:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BLAST"
-      ]
-    },
-    {
-      "title": "RT @asvalabofficial: We're super thrilled to announce that we have applied on @hackenclub for our @AsvaVentures  launchpad security audit…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T04:50:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
-      "title": "Binance Completes the Fifth Round of BEL Airdrop Distribution",
-      "link": "NULL",
-      "pubDate": "2021-10-29T03:12:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "Another angle of the 100k shot  Let's go!",
-      "link": "NULL",
-      "pubDate": "2021-10-29T02:46:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "RT @UTSnakeyes: What a shot at the @dallasmavs basketball game! Sponsored by @investvoyager guy scored $100k!! $vgx",
-      "link": "NULL",
-      "pubDate": "2021-10-29T02:33:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
       "title": "Shiba Inu ($SHIB) Investor Turn $8,000 Into $5.7 Billion in Little Over a Year",
       "link": "https://www.cryptoglobe.com/latest/2021/10/shiba-inu-shib-investor-turn-8000-into-5-7-billion-in-little-over-a-year/",
       "pubDate": "2021-10-29T02:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "An investor who bet $8,000 in the meme-inspired cryptocurrency Shiba Inu ($SHIB) may have pulled off what is being called one of the greatest trades of all time, as the coins they purchased are now worth over $5.7 billion. As reported by Business Insider, the trader first invested in the meme-inspired cryptocurrency back in August […]",
       "currencies": [
@@ -1087,67 +454,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#XPOS merchant is featured in @WCCBCharlotte news! @cigarsetc2 is one of the pioneers to adopt #BTC #Ethereum…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T02:26:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "RT @MavsFansForLife: Someone hit a half court shot on the first try to win $100K in Crypto, sponsored by @investvoyager.",
-      "link": "NULL",
-      "pubDate": "2021-10-29T02:24:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "[Emergency Notice] Deposits &amp; withdrawals for TON staking have been temporarily suspended due to an internal syste…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T01:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "There's ONLY 3 days to go! for the biggest airdrop to all $LAYER holders that hold 1000 LAYER or more on their pers…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T01:53:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LAYER",
-        "LAYERX"
-      ]
-    },
-    {
-      "title": "#Ethereum new all-time high 🥳",
-      "link": "NULL",
-      "pubDate": "2021-10-29T01:19:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
       "title": "Sophisticated Crypto Traders Helped Fuel Shiba Inu’s ($SHIB) Rally, Data Suggests",
       "link": "https://www.cryptoglobe.com/latest/2021/10/sophisticated-crypto-traders-helped-fuel-shiba-inus-shib-rally-data-suggests/",
       "pubDate": "2021-10-29T00:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Sophisticated cryptocurrency traders have reportedly backed Shiba Inu’s ($SHIB) price rally over the last few weeks with over $160 million invested from them, according to a report from CoinDesk citing on-chain data sources. According to the report, blockchain data shows that even though the Shiba Inu rally is driven by retail investors throughout the world, […]",
       "currencies": [
@@ -1158,17 +469,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @BlockchainZA: Don't miss the #Crypto Fest 2021 #CF2021 Crypto Battle, 'Mirror Mirror on the Wall, Who is the Fairest of Them All? Batt…",
-      "link": "NULL",
-      "pubDate": "2021-10-29T00:01:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SSV"
-      ]
     }
   ]
 }

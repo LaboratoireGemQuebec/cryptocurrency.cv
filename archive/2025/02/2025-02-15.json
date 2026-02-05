@@ -1,83 +1,15 @@
 {
   "date": "2025-02-15",
-  "fetchedAt": "2026-02-05T07:45:53.718Z",
-  "articleCount": 61,
+  "fetchedAt": "2026-02-05T07:48:35.705Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "US regulators approve of Elon Musk’s D.O.G.E but disagree with its aggressive ways",
-      "link": "NULL",
-      "pubDate": "2025-02-15T23:07:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "S",
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "LDO bounces from its range lows – Is this a buying opportunity?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T23:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Uniswap Price Surges Past $10 — Bullish Pattern Suggests Further 30% Gain",
-      "link": "NULL",
-      "pubDate": "2025-02-15T23:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "UNI",
-        "ALI",
-        "X"
-      ]
-    },
-    {
-      "title": "Strategy defies market trends as STRK and Bitcoin holdings surge",
-      "link": "NULL",
-      "pubDate": "2025-02-15T22:47:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STRK",
-        "X"
-      ]
-    },
-    {
-      "title": "How did Argentina’s president Javier Milei pull off the largest crypto rug pull in history?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T22:37:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "X"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "Solana Price Holds Above $190, Eyes $225 and $260",
       "link": "https://www.thecoinrepublic.com/2025/02/15/solana-price-holds-above-190-eyes-225-and-260/",
       "pubDate": "2025-02-15T22:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "Solana (SOL) is maintaining strong support at $190, positioning itself for a possible breakout toward $225 or $260. Analysts point to key resistance and support levels, suggesting that SOL is at a decisive technical point. The asset is currently trading near the lower boundary of an ascending channel, indicating the potential for a bullish move […] The post Solana Price Holds Above $190, Eyes...",
       "currencies": [
@@ -92,8 +24,8 @@
       "title": "Ethereum fees drop by 70% – Will it spark a surge in activity?",
       "link": "https://ambcrypto.com/ethereum-fees-drop-by-70-will-it-spark-a-surge-in-activity/",
       "pubDate": "2025-02-15T22:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "On-chain data hinted at a potential resurgence, with lower fees and declining reserves.",
       "currencies": [
@@ -106,23 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Neo joins Consensus Hong Kong as sponsor; plans booth showcasing Neo X projects",
-      "link": "NULL",
-      "pubDate": "2025-02-15T21:43:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO",
-        "X"
-      ]
-    },
-    {
       "title": "XRP Breaks Key Barrier, Surges Past 100-Day SMA And $2.7 Resistance",
       "link": "https://www.newsbtc.com/analysis/xrp/xrp-breaks-key-barrier/",
       "pubDate": "2025-02-15T21:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "XRP has finally shattered a critical resistance level, surging past $2.7 and breaking above the 100-day Simple Moving Average (SMA). This bullish move signals renewed strength in the market, with buyers stepping in to drive momentum higher. After weeks of sideways trading, XRP’s breakout could be the catalyst for further gains, but can the bulls sustain this rally? With technical indicators...",
       "currencies": [
@@ -138,8 +58,8 @@
       "title": "XRP Price To New All-Time High? Analyst Says $5.8 Is Possible Following ‘Golden Cross’",
       "link": "https://www.newsbtc.com/news/xrp-price-to-new-all-time-high-analyst-says-5-8-is-possible-following-golden-cross/",
       "pubDate": "2025-02-15T20:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "The XRP price action has been one of the brighter spots in the cryptocurrency space in 2025, weathering virtually every storm the market has faced. However, the altcoin could not avoid the market downturn triggered by the new trade tariffs imposed by United States President Donald Trump. The price of XRP dropped to around $2.1 due to the bearish sentiment that engulfed the entire crypto...",
       "currencies": [
@@ -159,8 +79,8 @@
       "title": "Crypto.com XRP Contracts To Launch in 24 Hours, Will It Send Price to $3?",
       "link": "https://www.thecoinrepublic.com/2025/02/15/crypto-com-xrp-contracts-to-launch-in-24-hours-will-it-send-price-to-3/",
       "pubDate": "2025-02-15T19:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "Crypto.com exchange plans to launch the XRP Crypto Event Contract for trading on February 14. Apart from this move’s benefits for the cryptocurrency exchange, it can bring some new use cases to XRP. In the long run, this may trigger an upside for the asset’s price amid a growing push for a new All-time-high (ATH). […] The post Crypto.com XRP Contracts To Launch in 24 Hours, Will It Send Price...",
       "currencies": [
@@ -174,140 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "All about ENA’s latest buy signal and whether you should jump in now",
-      "link": "NULL",
-      "pubDate": "2025-02-15T19:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA",
-        "$1"
-      ]
-    },
-    {
-      "title": "Looking For The Next Kaspa? Analyst Predicts This RWA Crypto to 10X Before Q3 2025, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) Whales Swim Towards Web3 Mobile Provider Releasing Cryptocurrency Priced at $0.0045",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:35:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Argentinian President Javier Milei retracts $LIBRA endorsement after insiders cash out $107 million",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:34:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "X",
-        "KIP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Kaspa Price Rebounds 13.4%, Yet Falls Short to New Scalable Layer 1 Releasing Larna 2400 Web3 Mobile",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:31:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Solana Slips, Dogwifhat Drops 20%; What’s Driving the Lightchain AI Surge?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:20:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "WIF"
-      ]
-    },
-    {
-      "title": "What Will be Pi Network (PI) Launch Price: An Analytical Overview",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:04:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "HYPE",
-        "BERA",
-        "PENGU",
-        "BLAST",
-        "X"
-      ]
-    },
-    {
-      "title": "SEC meet triggers JTO’s latest price hike – What’s next?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JTO",
-        "$1"
-      ]
-    },
-    {
-      "title": "Ondo Finance Expand To Sui Blockchain For RWA, Coldware Blockchain Set To Disrupt RWA Industry",
-      "link": "NULL",
-      "pubDate": "2025-02-15T18:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "XRP Shows Recovery Potential, VET Faces Tough Times—Traders Find BlockDAG's 350% Bonus The Ultimate Crypto Rescue!",
-      "link": "NULL",
-      "pubDate": "2025-02-15T17:49:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "VET"
-      ]
-    },
-    {
       "title": "Cardano Founder Reveals How Meta, Google, & Apple Can Replace L1 Networks",
       "link": "https://coingape.com/cardano-founder-reveals-how-meta-google-apple-can-replace-l1-networks/",
       "pubDate": "2025-02-15T17:42:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "altcoin",
       "description": "Cardano founder Charles Hoskinson has explained how the top tech companies Meta, Google, Apple, Microsoft, and Amazon could replace Layer-1 networks. According to him, these companies could easily establish their blockchain infrastructure once they achieve regulatory clarity. Cardano Founder Reveals How Tech Companies Can Replace L1s While speaking on an X space, Cardano founder Charles The...",
       "currencies": [
@@ -324,8 +115,8 @@
       "title": "Senator Lummis Leads Push for Bitcoin in U.S. Economy",
       "link": "https://coinpaprika.com/news/senator-lummis-leads-push-for-bitcoin-in-u-s-economy/",
       "pubDate": "2025-02-15T17:06:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Senator Cynthia Lummis pushes for the Bitcoin Strategic Reserve, shaping U.S. crypto policy as President Trump backs Bitcoin’s role in the economy.",
       "currencies": [
@@ -339,270 +130,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Standard Chartered sees bitcoin rebounding this weekend, bucking recent trend",
-      "link": "NULL",
-      "pubDate": "2025-02-15T16:51:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DFI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Polkadot [DOT] could hike by 27% – How, when, and why?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T16:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Michael Saylor: STRK Emerges as Top Performer in Initial Trading Weeks",
-      "link": "NULL",
-      "pubDate": "2025-02-15T15:37:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK",
-        "X"
-      ]
-    },
-    {
-      "title": "Ripple Rebrands With a Focus on Cross-Border Payments and Stablecoins",
-      "link": "NULL",
-      "pubDate": "2025-02-15T15:32:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "RLUSD",
-        "X"
-      ]
-    },
-    {
-      "title": "Top 5 Altcoins To Watch For The 3rd Week Of February",
-      "link": "NULL",
-      "pubDate": "2025-02-15T15:21:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LTC",
-        "TEL",
-        "ONDO",
-        "DEXE",
-        "S"
-      ]
-    },
-    {
-      "title": "Real-World Assets (RWA) Coins Market Cap Surges 144% In Three Months",
-      "link": "NULL",
-      "pubDate": "2025-02-15T15:12:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ",
-        "XVS",
-        "ONDO",
-        "OM"
-      ]
-    },
-    {
-      "title": "Trader Says Real-World Asset (RWA) Tokens Looking Better Than Most of the Crypto Market – Here Are His Top Picks",
-      "link": "NULL",
-      "pubDate": "2025-02-15T14:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONDO",
-        "CHEX",
-        "CPOOL",
-        "X",
-        "RWA"
-      ]
-    },
-    {
-      "title": "Investors Wonder Where To Turn $100 Into $10,000 Faster: Is It TRON, Stellar, or FXGuys ($FXG)?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:56:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "XLM"
-      ]
-    },
-    {
-      "title": "4 Best Meme Coins Poised for Explosive Gains After Solana Bridges Reach Record $10.1B Volume",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:53:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "SOL",
-        "PEPE",
-        "TRUMP",
-        "MELANIA",
-        "X"
-      ]
-    },
-    {
-      "title": "XRP Price Target For March: Community Excited for RLUSD While DTX Exchange Enters Listing Mania",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:41:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "RLUSD"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "XRP, MNT & Sonic (prev. FTM) Rebound Steam, But This Solana Gem’s 10,000% Potential Is the Real Play!",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Mantra (OM) Price Surges 35% to a New All-Time High as Volume Rises 455%",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:27:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONDO",
-        "OM",
-        "MOVE",
-        "ADX"
-      ]
-    },
-    {
-      "title": "Which Memecoins Should You Trust Ahead of the Bull Run? Dogecoin, OFFICIAL TRUMP, or dogwifhat?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:20:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "WIF",
-        "TRUMP"
-      ]
-    },
-    {
-      "title": "LTC, HNT & KAS Flash Green Signals — But This Solana Sleeper Coin Might Leave Them in the Dust!",
-      "link": "NULL",
-      "pubDate": "2025-02-15T13:07:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "LTC",
-        "HNT",
-        "KAS"
-      ]
-    },
-    {
-      "title": "SafeMoon to Launch Solana Meme Coin as Part of Community-Driven Transition",
-      "link": "NULL",
-      "pubDate": "2025-02-15T12:52:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "VGX",
-        "NOT",
-        "SFM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Best Altcoins To Buy In February: Stellar (XLM), THETA, Or Remittix? Which One Is Currently Tipped For 50x Gains Among Crypto Investors",
-      "link": "NULL",
-      "pubDate": "2025-02-15T12:49:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "THETA"
-      ]
-    },
-    {
-      "title": "Abu Dhabi: Sovereign Wealth Fund Reveals Its Exposure To Bitcoin",
-      "link": "NULL",
-      "pubDate": "2025-02-15T12:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "LINK",
-        "MOVE",
-        "G",
-        "SB",
-        "NC"
-      ]
-    },
-    {
-      "title": "Bullish Flag Spotted on XLM Chart — Price Targets $1.80",
-      "link": "NULL",
-      "pubDate": "2025-02-15T11:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "XRP Price Today: Analysts Predict Breakout to $5.85 & Beyond",
       "link": "https://coinpedia.org/news/xrp-price-today-analysts-predict-breakout-to-5-85-beyond/",
       "pubDate": "2025-02-15T11:54:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "trading",
       "description": "The post XRP Price Today: Analysts Predict Breakout to $5.85 & Beyond appeared first on Coinpedia Fintech News XRP is yet again on the rise with rumors of XRP ETF to IPO hitting to US crypto reserve, 2025 seems to be the XRP year. With positive vibes all the way, XRP has seen an impressive 8% rally, coming very close to the $3 mark as investor enthusiasm rises. With a surge in trading …",
       "currencies": [
@@ -614,59 +146,11 @@
       }
     },
     {
-      "title": "Jupiter’s [JUP] price action is ‘stuck’ – When will the market trend change?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T11:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JUP",
-        "$1"
-      ]
-    },
-    {
-      "title": "Ripple Printer Hardly Mints RLUSD This Week While Trading Volume Up 35.66%",
-      "link": "NULL",
-      "pubDate": "2025-02-15T10:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "This just makes me sick lol",
-      "link": "NULL",
-      "pubDate": "2025-02-15T10:15:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "OM"
-      ]
-    },
-    {
-      "title": "Top Cryptos to Join for 2025: Qubetics Presale’s 10% Weekly Growth Creates Hype as SUI Processes 21M Transactions and Celestia Expands Its Market Cap",
-      "link": "NULL",
-      "pubDate": "2025-02-15T10:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SUI",
-        "TIA"
-      ]
-    },
-    {
       "title": "Abu Dhabi’s Sovereign Wealth Fund Boosts Bitcoin Exposure with BlackRock ETF",
       "link": "https://cryptodnes.bg/en/abu-dhabis-sovereign-wealth-fund-boosts-bitcoin-exposure-with-blackrock-etf/",
       "pubDate": "2025-02-15T10:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "bitcoin",
       "description": "Abu Dhabi’s sovereign wealth fund, Mubadala Investment Company, has revealed its growing exposure to Bitcoin through BlackRock’s iShares Bitcoin Trust (IBIT) exchange-traded fund (ETF), as indicated in recent 13F form filings. The post Abu Dhabi’s Sovereign Wealth Fund Boosts Bitcoin Exposure with BlackRock ETF appeared first on Cryptodnes.",
       "currencies": [
@@ -679,157 +163,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Market Update (2025-02-15)",
-      "link": "NULL",
-      "pubDate": "2025-02-15T09:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "WBTC",
-        "TRX",
-        "LINK",
-        "OM",
-        "TRUMP"
-      ]
-    },
-    {
-      "title": "Investors turn to Mantra (OM) and Bitcoin Pepe (BPEP) as PancakeSwap (CAKE) falters",
-      "link": "NULL",
-      "pubDate": "2025-02-15T09:05:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CAKE",
-        "PEPE",
-        "OM"
-      ]
-    },
-    {
-      "title": "Floki Price Gearing Up For Massive Rally; Analysts Hint At Looming Breakout",
-      "link": "NULL",
-      "pubDate": "2025-02-15T08:41:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Can NFTs Be Useful in Travel?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Litecoin Converging Within a Pivotal Zone: Will the LTC Price Breakout Reach $140 or Remain Consolidated in a Range?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T05:47:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "XPR"
-      ]
-    },
-    {
-      "title": "Best Crypto Coins To Invest In Now: Top 10 Expert Picks For Massive Growth Potential",
-      "link": "NULL",
-      "pubDate": "2025-02-15T05:44:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOT",
-        "HBAR",
-        "KAS",
-        "SUI",
-        "TAO",
-        "B3"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 15 February 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-02-15T05:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "BONK price prediction – How THESE underlying forces could affect memecoin",
-      "link": "NULL",
-      "pubDate": "2025-02-15T05:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONK",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
-      "title": "Crypto Pundit Reignites $100 XRP Price Target, What You Should Know",
-      "link": "NULL",
-      "pubDate": "2025-02-15T02:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "RLUSD"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "TD Sequential Signals Buy — Can dogwifhat Reclaim $1.50?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T01:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF"
-      ]
-    },
-    {
       "title": "NYSE proposes rule change to allow ETH staking on Grayscale’s spot Ether ETFs",
       "link": "https://cointelegraph.com/news/grayscale-spot-ether-etf-staking-proposal-united-states-nyse?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-02-15T01:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Asset manager Grayscale plans to introduce staking to its spot Ether ETFs but says it will not guarantee or promote any specific level of returns to investors.",
       "currencies": [
@@ -840,42 +178,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto task force eyes ETF staking; what could it mean for crypto ETFs?",
-      "link": "NULL",
-      "pubDate": "2025-02-15T01:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JTO"
-      ]
-    },
-    {
-      "title": "Optimism [OP]: Analyst warns drop below $0.30 could be next IF…",
-      "link": "NULL",
-      "pubDate": "2025-02-15T00:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "OP",
-        "$1"
-      ]
-    },
-    {
-      "title": "Bitcoin network activity hits 12-month lows as transactions drop 55% from peak",
-      "link": "NULL",
-      "pubDate": "2025-02-15T00:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI",
-        "DEFI"
-      ]
     }
   ]
 }

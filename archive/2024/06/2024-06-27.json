@@ -1,215 +1,15 @@
 {
   "date": "2024-06-27",
-  "fetchedAt": "2026-02-05T07:45:53.197Z",
-  "articleCount": 206,
+  "fetchedAt": "2026-02-05T07:48:35.627Z",
+  "articleCount": 24,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Chainlink Data Streams Launch on Avalanche Mainnet, Enhancing DeFi with GMX V2",
-      "link": "NULL",
-      "pubDate": "2024-06-27T23:27:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AVAX",
-        "LINK"
-      ]
-    },
-    {
-      "title": "The TON Foundation launches a new ad monetization tool for developers to earn",
-      "link": "NULL",
-      "pubDate": "2024-06-27T23:12:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Andromeda and Injective collaborate to boost DeFi adoption",
-      "link": "NULL",
-      "pubDate": "2024-06-27T22:49:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Coinbase and payment processor Stripe form partnership for onboarding",
-      "link": "NULL",
-      "pubDate": "2024-06-27T22:15:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
-      "title": "BOME Leads Solana Memecoin’s Recovery Amid ETF Speculation",
-      "link": "NULL",
-      "pubDate": "2024-06-27T22:10:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "SOL Price Soars As First-Ever Solana ETF Filing Surfaces In The US",
-      "link": "NULL",
-      "pubDate": "2024-06-27T22:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now June 27 – Kaspa, Injective, Toncoin",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:53:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "INJ",
-        "TON",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Coinbase Partners Stripe to Onboard USDC on Base",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:52:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
-      "title": "S&P Global joins Singapore's Project Guardian tokenization trials",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:49:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMP"
-      ]
-    },
-    {
-      "title": "Coinbase Partners with Stripe to Enable USDC Transfers on Base Platform",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:13:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
-      "title": "Crypto market faces $860M token unlocks in July",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT",
-        "ARB"
-      ]
-    },
-    {
-      "title": "PEPE bides its time near key support: Can it reverse the losses since May?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T21:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Telegram-Based Notcoin Burns 210 Million Tokens Amid Positive Recovery",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Rally, VanEck Files Solana ETF Application, But... 'Don't Get Too Excited Yet,' Warns Trader",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:21:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "UNI",
-        "CFX",
-        "JASMY",
-        "AKT",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Chainlink Data Streams Activate on Avalanche Blockchain With GMX Integration",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:20:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "LINK"
-      ]
-    },
-    {
-      "title": "New Layer 2 Solutions: Comparing Tokenomics of Blast, Starknet, zkSync, and Manta",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "STRK"
-      ]
-    },
     {
       "title": "Solana ETFs Could Beat Bitcoin Gains, Be Fast-Tracked in Trump Admin: GSR",
       "link": "https://decrypt.co/237349/solana-etfs-beat-bitcoin-gains-fast-tracked-trump-admin",
       "pubDate": "2024-06-27T20:03:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "Crypto market-maker GSR is bullish on Solana's ETF prospects in the U.S.—particularly if Donald Trump is elected as president in November.",
       "currencies": [
@@ -222,59 +22,11 @@
       }
     },
     {
-      "title": "Coinbase global adviser to join President Biden’s reelection campaign",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:03:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Litecoin beats Bitcoin, Ethereum in usage, so why is LTC still bearish?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Arbitrum (ARB) Price Poised to Chart a New All-Time Low",
-      "link": "NULL",
-      "pubDate": "2024-06-27T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARB",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Trader Says Memecoin That’s Exploded Over 3,000% in Five Months Primed To Go Higher, Updates Outlook on Solana",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:55:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "WIF"
-      ]
-    },
-    {
       "title": "Solana ETFs in the Spotlight: Is It Possible? When Are They Coming? Top Experts Answer",
       "link": "https://en.bitcoinsistemi.com/solana-etfs-in-the-spotlight-is-it-possible-when-are-they-coming-top-experts-answer/",
       "pubDate": "2024-06-27T19:52:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "Today, after a company applied for Solana ETF, the agenda of the cryptocurrency world turned in this direction. Continue Reading: Solana ETFs in the Spotlight: Is It Possible? When Are They Coming? Top Experts Answer",
       "currencies": [
@@ -286,117 +38,11 @@
       }
     },
     {
-      "title": "CryptoQuant CEO Ki Young Ju on Recent Bitcoin Price Drop",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Presidential Debate Goes Interactive: Drinking Game, Bingo, Prediction Contest For 2024 Election Viewers At Home",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:21:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "MATIC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Fetch.AI Price Soars as New AI Coin Gears Up to Hit Exchanges",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:20:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "PlayDoge Crypto Game Hits $5 Million Mark In ICO - Next Hamster Kombat?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:17:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "FOMO HOUR 147 - THE BLAST FALLOUT",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:15:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Top Trader Is Long Bitcoin, Ethereum, Short Litecoin, Cardano...And Thinks Shiba Inu's Time Has Passed",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SHIB",
-        "LTC",
-        "PEPE"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Mantle Up More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:01:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) To Hit New Highs? Analysts Predict $25 Target",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "LINK"
-      ]
-    },
-    {
       "title": "Solana Will Get Support for Worldcoin’s World ID",
       "link": "https://decrypt.co/237340/solana-will-get-support-for-worldcoins-world-id",
       "pubDate": "2024-06-27T19:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Wormhole will tap Solana-based protocols to verify user’s Worldcoin World IDs that were originally verified on Ethereum.",
       "currencies": [
@@ -409,59 +55,11 @@
       }
     },
     {
-      "title": "Cryptocurrency Render's Price Increased More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T19:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Does Ethena portend a Symbiotic edge over Eigen?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:52:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
-      "title": "Tron network deposits drop to 6-month low as TRX price rallies — Trouble in paradise?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:49:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "SOL",
-        "TRX",
-        "RAY"
-      ]
-    },
-    {
-      "title": "Have $1,000? 2 Unstoppable Altcoins To Buy Without Hesitation",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:45:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NOT",
-        "ENA"
-      ]
-    },
-    {
       "title": "Vitalik Buterin invests in new Ethereum-compatible chain MegaETH",
       "link": "https://cryptobriefing.com/megaeth-funding-announcement/",
       "pubDate": "2024-06-27T18:43:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Ethereum co-founder Vitalik Buterin has joined as an angel investor in MegaETH, a new Ethereum-compatible blockchain project. MegaETH has secured $20 million in seed funding from several crypto investors, including Buterin.https://twitter.com/hotpot_dao/status/1806357093294735648MegaETH, developed as a Layer 2 solution on Ethereum, reports transaction processing speeds of up to 100,000 transactions per second (TPS) with millisecond latency. Da Bing, founder of MegaETH, announced the funding r...",
       "currencies": [
@@ -474,146 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Justin Sun celebrates meaningless court victory",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:43:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "VeChain’s Green Gambit: Can B3TR and VOT3 Drive Sustainability?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Litecoin (LTC) Jumps 5% As Record 25M Ordinals Inscribed On-Chain",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:37:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Telegram Game Notcoin Teases 'Fresh Start' as It Gives Out Millions in NOT",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:35:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Shiba Inu Caught In The Crosshairs Of Binance’s Crypto Delisting Spree",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "5 Best Risk/Reward Meme Coins For 5X Profit In July",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:20:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Marathon Digital Expands Mining Operations to Include Kaspa",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:06:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Top Gainer Crypto Solana and Avalanche See Major Gains Amid Market Recovery",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:04:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Introducing Adsgram - Earn Toncoin from Telegram Mini-Apps",
-      "link": "NULL",
-      "pubDate": "2024-06-27T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Is Pepe Headed To All-Time Highs? 'Pretty Good Odds,' Says Trader",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:28:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Alchemy Integrates ZetaChain, Empowers Developers To Build Universal Apps",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:24:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZETA"
-      ]
-    },
-    {
       "title": "Solana's 9% Gain Means It Will Be 'The Fastest Horse If Risk-On Sentiment Returns,' Says Trader",
       "link": "https://www.benzinga.com/markets/cryptocurrency/24/06/39532527/solanas-9-gain-means-it-will-be-the-fastest-horse-if-risk-on-sentiment-returns-says-trader?utm_source=cryptopanic.com&utm_campaign=partner_feed&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2024-06-27T17:21:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "The Solana (CRYPTO: SOL) ETF application by VanEck has sparked a 9% rally on Thursday, with traders debating whether more upside is to come. read more",
       "currencies": [
@@ -626,207 +89,11 @@
       }
     },
     {
-      "title": "The Future of Blockchain is Beyond Bitcoin: Enter Kaspa and Convex",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Solana Meme Coin Ecosystem Rocked by BONK and WIF Dump, Investors Turn to this Ethereum Token",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:13:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "BONK",
-        "WIF"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "BlockDAG Review: A smart choice for investors eyeing 1120% growth",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:05:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
-      "title": "Hot Cryptos to Buy in Dip",
-      "link": "NULL",
-      "pubDate": "2024-06-27T17:02:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Bybit Sees Heavy Executive Restructuring Post Notcoin Saga: Report",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:58:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Telegram Mini-Apps Devs to Earn TON Through Newly Launched Adsgram",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:52:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Chainlink launches Data Streams product on Avalanche Network",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:39:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Chainlink data streams debuts on Avalanche with GMX V2",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "LINK"
-      ]
-    },
-    {
-      "title": "4 Cryptos That Could Hit New All-Time Highs in July 2024",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "KAS",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Tezos Blockchain Unveils Tezos X Upgrade to Promote Performance and Scalability",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:27:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Redacted Raises $10M Led by Spartan Group with Animoca and P2 Ventures (Polygon)",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:15:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Top Altcoins To Bounce Back: Analysed",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "How ASI’s merger affects Fetch.ai, SingularityNET, and Ocean Protocol",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Chainlink data streams go live on Avalanche Network",
-      "link": "NULL",
-      "pubDate": "2024-06-27T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Vitalik Buterin backs new blockchain MegaETH as it raises $20 million at ‘9-figure’ token valuation",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:59:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "Major Victory for Popular Altcoin: Won Huge Compensation in Critical Case!",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:52:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
       "title": "SOL price soars after VanEck files for Solana ETF",
       "link": "https://coinjournal.net/news/sol-price-soars-after-vaneck-files-for-solana-etf/",
       "pubDate": "2024-06-27T15:47:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "trading",
       "description": "Solana (SOL) price rose more than 8% after news that asset manager VanEck had filed for a Solana ETF. The VanEck Solana Trust is the first SOL exchange-traded fund application in the US. SOL, the native token of the Solana blockchain, rose sharply on Thursday as the market reacted to news of VanEck filing for […]",
       "currencies": [
@@ -841,8 +108,8 @@
       "title": "Solana jumps almost 10% as VanEck files for first US Solana ETF",
       "link": "https://cryptobriefing.com/van-eck-solana-etf-boost/",
       "pubDate": "2024-06-27T15:37:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Solana's (SOL) price surged almost 10%, from around $139 to $151, shortly after VanEck's application for a spot Solana exchange-traded fund (ETF). According to TradingView, SOL is currently trading at around $148, up 8% in the past 24 hours.Source: TradingViewOn Thursday, VanEck, the prominent player in the ETF market, submitted an S-1 form to the US Securities and Exchange Commission (SEC) to...",
       "currencies": [
@@ -857,8 +124,8 @@
       "title": "Cardano Foundation Gears Up For Chang Hard Fork, Governance Transition",
       "link": "https://bitcoinist.com/cardano-foundation-gears-up-chang-hard-fork/",
       "pubDate": "2024-06-27T15:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The Cardano Foundation has outlined a detailed framework for governance reform coinciding with the forthcoming Chang hard fork. This strategic move signifies a major shift towards a decentralized governance structure within the blockchain ecosystem, intended to distribute decision-making power more equitably among its stakeholders. The Cardano blockchain, known for its scientific approach to...",
       "currencies": [
@@ -870,97 +137,11 @@
       }
     },
     {
-      "title": "Wanchain Debuts New Bridge to Connect Polkadot and Cardano Blockchains",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:21:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Ethereum Traders Fear Missing Out On $KAI Cat Presale",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:21:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KAI"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Injective's Price Increased More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "VanEck submits application to the SEC for the Solana ETF in the United States (USA)",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:02:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "description": "A new milestone for crypto investments: ETF Solana",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 5
-      }
-    },
-    {
-      "title": "Cryptocurrency dogwifhat Rises More Than 7% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:01:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Maker Up More Than 11% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Pepe-Inspired Smidge Token Pumps Over 150% in 24 Hours – Could Pepe Unchained Explode Next?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T15:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "PEPE"
-      ]
-    },
-    {
       "title": "VanEck files for spot Solana ETF but will it gain approval?",
       "link": "https://cryptoslate.com/vaneck-files-for-spot-solana-etf-but-will-it-gain-approval/",
       "pubDate": "2024-06-27T14:59:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "VanEck has filed plans with the US Securities and Exchange Commission to create a spot Solana exchange-traded fund (ETF). If approved, the VanEck Solana Trust will reflect the performance of the price of the blockchain network’s native SOL token. However, the filing stated that the Trust has no plans to stake the SOL tokens for […]",
       "currencies": [
@@ -972,22 +153,11 @@
       }
     },
     {
-      "title": "Voters weigh in on US Presidential debate — will Trump or Biden mention crypto?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:55:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
       "title": "Cardano’s Ambitious Growth Strategy vs. Bitcoin’s Established Dominance",
       "link": "https://coinedition.com/cardanos-ambitious-growth-strategy-vs-bitcoins-established-dominance/",
       "pubDate": "2024-06-27T14:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "Crypto analyst Dan Gambardello recently offered his insights on the current state of the Bitcoin and Cardano markets, highlighting key technical indicators and strategic partnerships that could shape their trajectories. Bitcoin is currently navigating a potentially bullish scenario, marked by the emergence of an inverse head-and-shoulders pattern. Gambardello emphasizes the importance of...",
       "currencies": [
@@ -1000,40 +170,11 @@
       }
     },
     {
-      "title": "Pepe Coin: Smart Money Offloads 118B PEPE With 11-Fold Returns, Has Price Maxed Out?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:36:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Kaching! Kaspa (KAS) Climbs 18% As Bitcoin Mining Heavyweight Goes All In",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "KAS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Polygon (MATIC) Price Recovery: These Investors Hold the Key",
       "link": "https://beincrypto.com/polygon-matic-price-recovery-investors-hold-key/",
       "pubDate": "2024-06-27T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Polygon (MATIC) price is closing in on initiating a recovery after the altcoin fell to the lowest point since November 2023. The leash of recovery is held with the investors who could make or break the potential rally for MATIC. Polygon Sees Bullish Cues The MATIC price could benefit from the positive signals visible on the network, such as the Moving Average Convergence...",
       "currencies": [
@@ -1050,8 +191,8 @@
       "title": "Cardano Skyrockets 62% in Volume as ADA Price Reaches Crucial Zone",
       "link": "https://u.today/cardano-skyrockets-62-in-volume-as-ada-price-reaches-crucial-zone",
       "pubDate": "2024-06-27T14:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano skyrockets 62% in volume as ADA price presents what may be golden opportunity",
       "currencies": [
@@ -1063,24 +204,11 @@
       }
     },
     {
-      "title": "Tron Founder Justin Sun Dumps 173M TRX, Price Crash Ahead?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:26:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "BTT",
-        "WIN"
-      ]
-    },
-    {
       "title": "Fetch.ai rallies ahead of rebranding, merger with Ocean Protocol and SingularityNET",
       "link": "https://www.cryptopolitan.com/fetch-ai-rallies-ahead-of-rebranding-merger/",
       "pubDate": "2024-06-27T14:19:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "general",
       "description": "Fetch.ai is preparing for stage 1 of its merger with Ocean Protocol and SingularityNET. From July 1, OCEAN and AGIX will be swapped into FET tokens",
       "currencies": [
@@ -1095,35 +223,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Altcoin Received the Support of BlackRock, There was a Jump in Price!",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:12:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MANTA"
-      ]
-    },
-    {
-      "title": "Altcoins Losing Momentum! ALEX And STX Price Poised For 10% Plunge?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:08:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "STX"
-      ]
-    },
-    {
       "title": "VanEck files first Solana spot ETF application in the U.S.",
       "link": "https://www.cryptopolitan.com/vaneck-solana-spot-etf-application-in-the-us/",
       "pubDate": "2024-06-27T14:06:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Investment management company VanEck has announced its application for the first Solana spot ETF in the United States. VanEck claims that Solana offers a better user experience compared to Ethereum.The VanEck Solana Trust will be listed on the Cboe BZX Exchange. The primary objective of the VanEck Solana Trust is to mirror the price performance […]",
       "currencies": [
@@ -1140,8 +244,8 @@
       "title": "Cardano Founder Details Vision for Privacy-Centric Blockchain ‘Midnight’",
       "link": "https://coinedition.com/cardano-founder-details-vision-for-privacy-centric-blockchain-midnight/",
       "pubDate": "2024-06-27T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "Cardano founder Charles Hoskinson recently revealed the origins and guiding principles behind Midnight, a new privacy-focused blockchain platform, during a podcast interview. The host inquired about Midnight’s core principles, seeking to understand the challenges and motivations behind its creation. Hoskinson explained that the blockchain industry has always sought to integrate real-world...",
       "currencies": [
@@ -1153,47 +257,11 @@
       }
     },
     {
-      "title": "Synternet Mainnet launches on Cosmos",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Investors Flock to Crypto AI Tokens RCOF and FET to Shield Against Bitcoin’s Slow Bleed",
-      "link": "NULL",
-      "pubDate": "2024-06-27T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FET"
-      ]
-    },
-    {
-      "title": "Memecoins Unmasked: An In-Depth Analysis Of BRETT, PEPE, and WW3Shiba in Crypto's Battle of Wit and Wealth",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:56:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
       "title": "BREAKING: First Spot Solana ETF Filing Officially Submitted In The US",
       "link": "https://bitcoinist.com/first-spot-solana-etf-filing-officially-submitted/",
       "pubDate": "2024-06-27T13:54:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "In a significant move that marks a new milestone for the entire cryptocurrency industry, leading asset manager and Bitcoin Exchange-Traded Fund (ETF) issuer VanEck has officially filed the first-ever Spot Solana ETF with the US Securities and Exchange Commission (SEC). VanEck Files For Spot Solana ETF The Solana ETF filing announcement was made by Matthew […]",
       "currencies": [
@@ -1208,148 +276,11 @@
       }
     },
     {
-      "title": "Shiba Inu Grinds To A Halt, As Rocketing Raboo Surpasses PEPE Causing Market Buzz",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:51:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Notcoin boosts value with $3 Million token burn, eyes sustainable growth",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:47:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Marathon Digital expands into altcoin mining to diversify revenue streams post-Bitcoin halving",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:46:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "SEGA's Character Alex Reforms As Crypto Hero After Shooting Past Polygon (MATIC) and Rallying 200%, Currently Priced at $0.0084",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:46:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Solana or Celestia: Which Blockchain Will Prevail as  WW3 Shiba Sets The Crypto Market Ablaze",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:38:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "TIA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Coinbase decides not to support ASI token migration amid AI protocol merger",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:34:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "Spot Bitcoin ETFs End 7-Day Negative Streak: New Meme Coin Steals The Limelight As Floki Stalls",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:33:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Machi Big Brother Buy 198.37 Million BLAST; What Cooking?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "APE"
-      ]
-    },
-    {
-      "title": "As Bitcoin miners move to Kaspa [KAS], will BTC fall even more?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "As Ethereum phishing gets harder, drainers move to TON and Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TON"
-      ]
-    },
-    {
-      "title": "Top 3 Artificial Intelligence (AI) Coins of the Fourth Week of June 2024",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PAAL",
-        "LMWR",
-        "MAN"
-      ]
-    },
-    {
       "title": "BREAKING: VanEck files for the first Solana trust in the US, calls SOL a commodity",
       "link": "https://cryptobriefing.com/vaneck-solana-etf-filing/",
       "pubDate": "2024-06-27T13:29:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Asset manager VanEck filled for the first Solana (SOL) trust in the US, according to an S-1 Form submitted to the SEC. Matthew Sigel, Head of Digital Assets at VanEck, praised the network and called SOL a commodity.Labeled VanEck Solana Trust, the filing comes after the spot Bitcoin exchange-traded fund (ETF) from the asset manager went live in Australia. VanEck is also among the asset...",
       "currencies": [
@@ -1363,34 +294,11 @@
       }
     },
     {
-      "title": "Andromeda integrates with Injective to drive DeFi adoption",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:28:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "VanEck files for Solana ETF in the US, claiming SOL is a commodity",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:28:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "GAL"
-      ]
-    },
-    {
       "title": "VanEck Files for Solana ETF, SOL Rises 6%",
       "link": "https://www.coindesk.com/business/2024/06/27/vaneck-files-for-solana-etf-sol-rises-6?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-06-27T13:26:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "Asset manager VanEck has filed an S-1 registration form for a Solana exchange-traded fund (ETF), prompting SOL to jump by more than 5%.",
       "currencies": [
@@ -1405,8 +313,8 @@
       "title": "Bitcoin ETF issuer VanEck files for Solana ETF in the US",
       "link": "https://cointelegraph.com/news/vaneck-solana-etf-filing-united-states",
       "pubDate": "2024-06-27T13:23:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "According to VanEck’s head of digital assets research, VanEck is the first company in the United States to file for a Solana ETF.",
       "currencies": [
@@ -1423,8 +331,8 @@
       "title": "VanEck kicks off solana ETF bid in the US",
       "link": "https://blockworks.co/news/vaneck-files-for-solana-etf",
       "pubDate": "2024-06-27T13:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "The investment firm is the first American company to file for a US-based solana ETF",
       "currencies": [
@@ -1437,122 +345,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "After a 45% Drop in June, Here’s What Awaited for Ethena (ENA) Price Rally in Q3 2024",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:20:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Stock Markets at Record High! Nifty above 24,000, Sensex Gain 568 Pts- Top 10 Gainers in Today’s Market Rally",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:19:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Full decentralization will happen in a few years — Layer-2 rollup teams",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "METIS",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Will Bonk Recover? BONK Price Prediction After Recent 4.9% Decline",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:02:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Justin Sun’s Team Dumps 173M TRX To Binance",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:02:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "BTT",
-        "WIN"
-      ]
-    },
-    {
-      "title": "Marathon Digital Mines Millions In KAS As Kaspa Surges",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Can XRP hold against Toncoin’s surge? Breaking down what’s going on",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "TON"
-      ]
-    },
-    {
-      "title": "Crypto losses due to hacks and scams rise to $573 million in Q2: Immunefi",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Crypto losses from hacks and scams soared by 113% in Q2 2024 to reach $572M",
-      "link": "NULL",
-      "pubDate": "2024-06-27T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB"
-      ]
-    },
-    {
       "title": "Solana ETFs and Huge SOL Gains a Real Possibility Under Trump, Major Crypto Trader Says",
       "link": "https://www.coindesk.com/business/2024/06/27/solana-etfs-and-huge-sol-gains-a-real-possibility-under-trump-major-crypto-trader-says?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-06-27T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "Donald Trump has recently taken a pro-crypto stance. (Danny Nelson/CoinDesk)",
       "currencies": [
@@ -1564,710 +361,11 @@
       }
     },
     {
-      "title": "PEPE Retraces at $0.00001226 Amid Market Volatility",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:46:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Ethena Price Forecast: What Will It Take To Bolster ENA Towards $2?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Surging PEPE Demand Comes With a Catch: Price Impact",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "3 top altcoins in the green for last seven days - $TON, $KAS, and $INJ",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:29:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ",
-        "TON",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Dfinity announces new ICP-powered platform to tackle cybersecurity",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:26:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Dogwifhat Investors Join Mpeppe (MPEPE) Pre-sale As They Fall Out Of Love With WIF",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:24:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF"
-      ]
-    },
-    {
-      "title": "Ethereum-Based Tokens Show Strength: ENS Price Surge While Lido DAO Trying to Maintain Bullish Streak",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:23:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LDO",
-        "ENS",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Fetch AI (FET) and SingularityNET (AGIX) Merger Finally Coming Together",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Bitstamp delists Euro Tether (EURT) as MiCA rules are rolled out",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:21:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "EURt"
-      ]
-    },
-    {
-      "title": "Near Protocol Vs Option2Trade - O2T Takes A.I Crypto Lead After Algo 'Black Account' Launch",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:16:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "PEPE Whale Introduces New Pepecoin (PEPE) Cryptocurrency Set To Rally Over 1000% This Cycle",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:11:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Maker price surges 7% amid $1.35 million audit contest",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:01:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR",
-        "INJ",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Coinbase sues SEC, FDIC over FOIA requests, says federal regulators trying to cut out crypto",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Is Kaspa crypto set for a breakout above $0.2 next, or can bears take control?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Pancake Swap launches prediction market on Arbitrum",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ARB"
-      ]
-    },
-    {
-      "title": "ASI Token Merger: What You Need to Know Before July 1st",
-      "link": "NULL",
-      "pubDate": "2024-06-27T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Option2Trade and Near Protocol Price Rallies, A.I Craze Enhances O2T Algo Platform Launch",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "EOS is still relevant — at least for US criminal extradition",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:56:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Was Barron Trump Really Involved In 'TrumpCoin'? Even Prediction Markets Can't Decide",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:43:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UMA"
-      ]
-    },
-    {
-      "title": "Acuity Brands’ Mixed Fiscal Q3: $4.15 EPS, $968 M in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:43:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "TRON Founder Justin Sun Dumps 173M TRX To Binance, Price Dip Ahead?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:41:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "This AI Platform Has More Holders Than INJ, SUI, and FTM; Here’s Why Experts Call It Crypto Nvidia",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:38:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM",
-        "INJ",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Just-In: Fantom Wins Lawsuit As Court Overturns Lower Court Ruling",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:33:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "BLUR Token Holders Cry Foul as Price Tanks Despite Ecosystem Growth",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Dogwifhat (WIF) Price Rallies After Hitting Yearly Low",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WIF"
-      ]
-    },
-    {
-      "title": "Why reports of the death of NFTs are greatly exaggerated",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:24:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Tron Founder Justin Sun Wins Landmark Defamation Case Against Chinese Media Group",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:20:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "NOT Price Plummets 3% After Recent Token Burn, Is a Breakout Looming?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:14:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Binance India Fine Casts Doubt on BNB Future, Investors Opt for DTX Exchange and Near Protocol Instead",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:14:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Republican Coin ($REP Coin) – A Revolutionary Meme Token with Unprecedented Potential",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:13:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "REP"
-      ]
-    },
-    {
-      "title": "TRON (TRX) Founder Justin Sun Is Making Large Altcoin Transfers to Binance Again! Which Altcoins Are There?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:11:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TRX",
-        "BTT",
-        "WIN"
-      ]
-    },
-    {
-      "title": "Marathon Digital diversifies revenue by mining Kaspa, aims for 16% global hash rate",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:09:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "DeltaPrime Unveils $PRIME Token: Pioneering a New Standard in DeFi Governance and Utility",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Bitcoin miner Marathon moves to Kaspa: KAS surges 10% in 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Tezos, Smart-Contract Blockchain of ICO Fame, Reveals Roadmap to Rejuvenate",
-      "link": "NULL",
-      "pubDate": "2024-06-27T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Australia’s 7News YouTube Channel Hacked to Promote AI Elon Musk Crypto Scam",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "McCormick & Company Reports Better than Expected Q2 Earnings",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:53:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "DePin Mapping Startup Hivemapper Scales 5X Faster Than Google Maps",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:37:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "HONEY"
-      ]
-    },
-    {
-      "title": "Political Meme Coins Face Volatility Ahead of Biden-Trump Debate",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:32:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "These AI-Related Cryptos Have Outperformed Bitcoin, Ethereum Over A Week: Nvidia Effect Or Something Else?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:32:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Unraveling the Mystery of Litecoin High Activity and Falling Prices",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:27:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Maker Price Prediction: Here’s What Driving MKR’s Surge As $3,000 Looms?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:13:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "5 Undervalued Crypto AI Projects To Buy Before They Go 2000% Ballistic",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:03:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Solana Trading Plunges 93% In 24 Hours: Where Did The $100 Billion Go?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T10:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "SOL",
-        "INJ"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Coinbase opts out of ASI token migration as $7.5B merger proceeds",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:58:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "OCEAN",
-        "FET"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin Mining Giant Announced It Is Mining A Surprise Altcoin: The Price Rises!",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "AI Coins Reverse Bullish Market Trends to Record Double-Digit Losses",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:54:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "RNDR",
-        "INJ",
-        "NMR"
-      ]
-    },
-    {
-      "title": "Zeta Markets Launches ZEX Token, Distributes 10% of Supply Through Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Blast Token Generates Buzz Despite Mixed Reception and Airdrop Challenges",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:44:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BLAST"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Japanese Village Uses NFTs To Support Its Aging Population",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:40:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO",
-        "NFT",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 6/27 - BTC, ETH, SOL, BNB, DOT, DOGE, SHIB, UNI",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:05:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "SOL",
-        "DOGE",
-        "DOT",
-        "SHIB",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Pepe Price Losing Momentum: Will It Trigger a Rebound to $0.000014 or Plunge to $0.00001?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:04:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE",
-        "WIF"
-      ]
-    },
-    {
-      "title": "What Crypto Whales Are Buying for Potential Gains in July 2024",
-      "link": "NULL",
-      "pubDate": "2024-06-27T09:04:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "AAVE",
-        "LDO",
-        "DAO",
-        "TON"
-      ]
-    },
-    {
-      "title": "BTC Price Slips Toward $60K Again, DOT Falls Further Away From $6 (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2024-06-27T08:52:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "BLAST Off to Good Start as New Token Soars over 46% amid Airdrop Controversy",
-      "link": "NULL",
-      "pubDate": "2024-06-27T08:42:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ZRO",
-        "ZK",
-        "BLAST"
-      ]
-    },
-    {
-      "title": "Axie Infinity vs. My Pet Hooligan: The Battle for Web3 Gaming Supremacy",
-      "link": "NULL",
-      "pubDate": "2024-06-27T08:40:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
       "title": "Industry Leaders Debate Who’s Better for Bitcoin: Joe Biden or Donald Trump",
       "link": "https://beincrypto.com/who-is-better-for-bitcoin-joe-biden-donald-trump/",
       "pubDate": "2024-06-27T08:39:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "As the presidential election nears, industry leaders are closely observing how the candidates, Joe Biden and Donald Trump, may impact Bitcoin and the broader crypto market. The stakes are heightened by their upcoming historic debate on CNN, which could significantly set the stage for what comes next. SEC’s Regulatory Agenda Ripple CEO Brad Garlinghouse has criticized SEC...",
       "currencies": [
@@ -2280,101 +378,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NEAR turns bearish, trading volume drops 30% – Is a pullback still possible?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T08:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "KuCoin Lists Solana DEX Token Zeta (ZEX) on Spot Market",
-      "link": "NULL",
-      "pubDate": "2024-06-27T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "KCS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ASI Token Merger: Fetch AI Reveals Key Details On Merger With AGIX And OCEAN",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:53:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Bitcoin Miner Marathon Digital Diversifies Revenue Stream with Kaspa Mining",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:47:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Blast Token Launch Sees 40% Increase in Value Overnight",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDB"
-      ]
-    },
-    {
-      "title": "Bitstamp Prepares for MiCA by Dropping Tether’s Euro-Pegged Stablecoin",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "EURt"
-      ]
-    },
-    {
-      "title": "Analysts Review Meme Coins Under $1: DOGE, Raboo and BOME",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:28:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "BOME"
-      ]
-    },
-    {
       "title": "Notcoin Burns $3 Million in Tokens",
       "link": "https://coinpaprika.com/news/notcoin-burns-3-million-in-tokens/",
       "pubDate": "2024-06-27T07:26:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "general",
       "description": "Telegram's Notcoin burns $3M in tokens to boost value and rewards loyal users with $5M in bonuses, aiming to increase scarcity and foster community engagement.",
       "currencies": [
@@ -2387,296 +395,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Litecoin Whale Withdraws $20 Million from Binance",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:22:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Top Newly Launched Altcoins Poised for a 100X Surge in July",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:20:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Why BRETT and BONK Investors Are Flocking to WW3Shiba’s ICO Like Never Before",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:14:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BONK",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Ripple Price Predictions: Can XRP Price Survive Legal Challenges and Hit $2?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:03:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Litecoin Whale Withdraws $20 Million In LTC From Binance: Bullish Sign?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Marathon Digital Diversifies from Bitcoin, Mines $16M Worth of Kaspa",
-      "link": "NULL",
-      "pubDate": "2024-06-27T07:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) And Maker (MKR) Tokens Hint A 15% Surge Next Week?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:55:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Brett Price Surging as Base Dawgz Shows Potential for Similar Gains",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:45:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Altcoin Season Nears: 3 Best Cryptos To Invest In July – Ethereum, Notcoin, and Angry Pepe Fork",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:39:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "PEPE",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Marathon Digital Expands with $16 Million Kaspa Mining Initiative",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Crypto Price Tumbles Amid US and German Government Moves BTC",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AR",
-        "KAS",
-        "FLOKI",
-        "ONDO",
-        "BRETT",
-        "BEAM",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Best DeFi Tokens To Buy In July Before The Bull Market Begins",
-      "link": "NULL",
-      "pubDate": "2024-06-27T06:08:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AAVE",
-        "CVX"
-      ]
-    },
-    {
-      "title": "Kaspa Price Jumps 13% As Bitcoin Mining Giant Marathon Digital Mines the Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-06-27T05:29:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Bitcoin Near ‘Euphoria’ Boundary: What Happens After A Breach?",
-      "link": "NULL",
-      "pubDate": "2024-06-27T05:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today June 27: BTC & Altcoins Backtrack, KAS & MKR Flout Market Trend",
-      "link": "NULL",
-      "pubDate": "2024-06-27T04:21:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "MKR",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Cathie Wood's Ark Invest Acquires $7.3M Worth Of Shares In This Promising Netflix Competitor, Sells Off Coinbase Stock Amid Bitcoin Slump",
-      "link": "NULL",
-      "pubDate": "2024-06-27T03:33:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Faces Potential Dive: Key Support Levels to Monitor",
-      "link": "NULL",
-      "pubDate": "2024-06-27T03:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Blast token rallies 40% after $2B airdrop debut",
-      "link": "NULL",
-      "pubDate": "2024-06-27T02:42:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BLAST"
-      ]
-    },
-    {
-      "title": "Scammers hijack major Australian broadcaster’s YouTube to shill crypto scam",
-      "link": "NULL",
-      "pubDate": "2024-06-27T02:38:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Polymarket Contradicts Its Oracle Service in Rarity for Prediction Market",
-      "link": "NULL",
-      "pubDate": "2024-06-27T02:21:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UMA"
-      ]
-    },
-    {
-      "title": "Marathon Digital mines $16M in Kaspa to diversify from Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-06-27T00:39:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Coinbase opts out of ASI token merger migration",
-      "link": "NULL",
-      "pubDate": "2024-06-27T00:27:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "OCEAN",
-        "FET"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Coinbase says it will not facilitate Ocean-Fetch AI merger",
       "link": "https://cryptoslate.com/coinbase-announces-it-will-not-facilitate-ocean-fetch-ai-merger/",
       "pubDate": "2024-06-27T00:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "exchange",
       "description": "Coinbase said it would not facilitate the migration of two assets related to the Artificial Superintelligence Alliance (ASI) token merger in a June 26 statement. Instead of executing migrations for Ocean Protocol (OCEAN) and Fetch.ai (FET) on behalf of users, the exchange plans to continue supporting trading for each asset until further notice. Coinbase said […] The post Coinbase says it will not facilitate Ocean-Fetch AI merger appeared first on CryptoSlate.",
       "currencies": [

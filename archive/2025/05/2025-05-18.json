@@ -1,42 +1,15 @@
 {
   "date": "2025-05-18",
-  "fetchedAt": "2026-02-05T07:45:53.821Z",
-  "articleCount": 30,
+  "fetchedAt": "2026-02-05T07:48:35.725Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Bitcoin impulse move toward new highs sets a fire under HYPE, ETH, XMR and AAVE",
-      "link": "NULL",
-      "pubDate": "2025-05-18T23:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XMR",
-        "AAVE",
-        "HYPE"
-      ]
-    },
-    {
-      "title": "The Funding: Why big crypto VCs are joining Cobie’s Echo",
-      "link": "NULL",
-      "pubDate": "2025-05-18T22:28:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE",
-        "VC"
-      ]
-    },
     {
       "title": "XRP Futures Launch on CME: Can It Fuel XRP Crypto Price Breakout?",
       "link": "https://99bitcoins.com/news/presales/xrp-futures-launch-on-cme-can-it-fuel-xrp-crypto-price-breakout/",
       "pubDate": "2025-05-18T22:01:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "99bitcoins",
+      "sourceKey": "99bitcoins",
       "category": "trading",
       "description": "The Chicago Mercantile Exchange (CME) will launch XRP futures contracts on Monday, marking a significant milestone for Ripple’s native token – and a potential bullish catalyst for the downtrodden XRP crypto price on Monday’s open. This move introduces XRP into the realm of regulated crypto derivatives, providing institutional investors with new avenues for exposure and.",
       "currencies": [
@@ -48,24 +21,11 @@
       }
     },
     {
-      "title": "Market Experts Say These Are the 4 Most Promising Cryptos in 2025: Here’s Why!",
-      "link": "NULL",
-      "pubDate": "2025-05-18T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "TRX",
-        "NEAR"
-      ]
-    },
-    {
       "title": "XRP Primed for Epic $9 Price Explosion As Institutional Money Floods Back Heavily",
       "link": "https://zycrypto.com/xrp-primed-for-epic-9-price-explosion-as-institutional-money-floods-back-heavily/",
       "pubDate": "2025-05-18T20:47:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Expert trader Ali Martinez highlighted the chances of XRP moving past $2. 70 as the wider market flips green.",
       "currencies": [
@@ -77,152 +37,11 @@
       }
     },
     {
-      "title": "Chainlink and Cardano Show Signs of Strength",
-      "link": "NULL",
-      "pubDate": "2025-05-18T20:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "LINK"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Litecoin Price: What Holder Data Says About Long Term Prospects",
-      "link": "NULL",
-      "pubDate": "2025-05-18T19:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Solana Price Holds $166 Support After Rejection From $183 – What Comes Next?",
-      "link": "NULL",
-      "pubDate": "2025-05-18T19:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "LUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – XCN, WIF, PI, OP",
-      "link": "NULL",
-      "pubDate": "2025-05-18T19:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCN",
-        "OP",
-        "WIF",
-        "PI"
-      ]
-    },
-    {
-      "title": "Web3 ai Hits $4.1M, Polkadot Leads, Litecoin Eyes $100",
-      "link": "NULL",
-      "pubDate": "2025-05-18T19:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Best Cryptos Right Now: Unstaked, Sui, Cosmos, & Polkadot",
-      "link": "NULL",
-      "pubDate": "2025-05-18T18:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Use LAUNCH200 Now or Lose 3x BTFD Rewards—One of the 6 Best Meme Coins to Invest in Now with WIF, POPCAT in Tow!",
-      "link": "NULL",
-      "pubDate": "2025-05-18T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF",
-        "POPCAT"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Price Eyes Breakout: Key Support Holds, $19.77 in Sight?",
-      "link": "NULL",
-      "pubDate": "2025-05-18T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "4 Meme Coins That Could Be Ready for a Move, According to Crypto Expert",
-      "link": "NULL",
-      "pubDate": "2025-05-18T17:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POPCAT"
-      ]
-    },
-    {
-      "title": "Best Crypto To Buy Before Summer 2025 for 100x Gains – Stellar, Punisher Coin and Floki Inu",
-      "link": "NULL",
-      "pubDate": "2025-05-18T16:29:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Can TON Coin Make A Strong Comeback In 2025?",
-      "link": "NULL",
-      "pubDate": "2025-05-18T16:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
       "title": "Don’t believe the noise: There can never be too many L2s",
       "link": "https://cointelegraph.com/news/there-can-never-be-too-many-l2s?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-05-18T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "Opinion by: Igor Mandrigin, co-founder and CTPO of Gateway. fmEvery couple of weeks, it seems another layer 2 rolls out, much to the chagrin of some Web3 industry commentators who are concerned about fragmentation. A recent Gemini Institutional Insights report actually noted how a new Ethereum L2 solution is launched approximately every 19 days. In response to the seemingly endless conveyor belt of new zkEVMs and optimistic rollups coming to market, the chorus of criticism continues to grow loud",
       "currencies": [
@@ -234,152 +53,11 @@
       }
     },
     {
-      "title": "Experts Believe BTFD’s Potential to Turn $3K Into $270K Makes It the Best Crypto to Buy Now Besides Ponke and Floki",
-      "link": "NULL",
-      "pubDate": "2025-05-18T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Ripple’s XRP & Ether Lead Altcoin Traders’ Drive Following De-escalating US Macro Tensions",
-      "link": "NULL",
-      "pubDate": "2025-05-18T14:09:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Arthur Breitman is betting on tokenized uranium, and it could be Tezos’ big comeback",
-      "link": "NULL",
-      "pubDate": "2025-05-18T13:06:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Don’t Miss the News: TAO and XRP Traders Are Watching This Early-Investment Platform",
-      "link": "NULL",
-      "pubDate": "2025-05-18T12:53:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "TAO"
-      ]
-    },
-    {
-      "title": "‘Epidemic of Scams’ Flooding Instagram and Facebook Affecting Many Different Industries, Says Meta: Report",
-      "link": "NULL",
-      "pubDate": "2025-05-18T11:45:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Unstaked’s Presale Achieves $6M Milestone in Record Time! NEAR Targets $3.50 & TAO Builds Momentum",
-      "link": "NULL",
-      "pubDate": "2025-05-18T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "EOS Price Coils Tightly — Breakout or Breakdown Next?",
-      "link": "NULL",
-      "pubDate": "2025-05-18T09:21:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Movement Network Review: Merging Ethereum Security with MoveVM for Scalable Web3 Infrastructure",
-      "link": "NULL",
-      "pubDate": "2025-05-18T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "JupiterDAO Proposes Exclusive Presale for JUP Stakers",
-      "link": "NULL",
-      "pubDate": "2025-05-18T05:27:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO",
-        "JUP"
-      ]
-    },
-    {
-      "title": "PENGU slips 9%, turns high-risk: Can buyers defend Pudgy Penguins once again?",
-      "link": "NULL",
-      "pubDate": "2025-05-18T03:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PENGU",
-        "MEME"
-      ]
-    },
-    {
-      "title": "AI16Z dives 35% in 4 days – What traders fear will happen next",
-      "link": "NULL",
-      "pubDate": "2025-05-18T02:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AI16Z"
-      ]
-    },
-    {
-      "title": "XLM Eyes 126% Gains, ETH Struggles While Unstaked’s $0.008997 Entry and $1M Giveaway Draw Crypto Whales’ Attention!",
-      "link": "NULL",
-      "pubDate": "2025-05-18T02:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
       "title": "Can XRP Still Surprise the Market?",
       "link": "https://coindoo.com/market/can-xrp-still-surprise-the-market/",
       "pubDate": "2025-05-18T00:01:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coindoo",
+      "sourceKey": "coindoo",
       "category": "altcoin",
       "description": "Crypto trader and analyst Scott Melker believes the token isn’t done yet, though its next move depends on more than […] The post Can XRP Still Surprise the Market? appeared first on Coindoo.",
       "currencies": [

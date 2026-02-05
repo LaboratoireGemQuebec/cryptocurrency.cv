@@ -1,15 +1,15 @@
 {
   "date": "2024-01-19",
-  "fetchedAt": "2026-02-05T07:45:53.342Z",
-  "articleCount": 36,
+  "fetchedAt": "2026-02-05T07:48:35.644Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "Is It True That Cardano Needs A “USD-Backed Stablecoin” Like USDT To Rally?",
       "link": "https://bitcoinist.com/cardano-usd-backed-stablecoin-like-usdt-to-rally/",
       "pubDate": "2024-01-19T22:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "In a post on X, analyst Cardano Yoda believes that a USD-pegged stablecoin is crucial for ADA’s future success, suggesting that its integration could trigger a bull run sometime in 2025. A stablecoin, a token that’s “stable” since its price is pegged to a fiat currency like the USD or Euro, will ignite activity, driving decentralized finance […]",
       "currencies": [
@@ -24,67 +24,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Manta Pacific Airdrop Disappoints, Dev Dump Claims Swirl",
-      "link": "NULL",
-      "pubDate": "2024-01-19T22:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "MANTA"
-      ]
-    },
-    {
-      "title": "Grayscale Is Sending Bitcoin to Coinbase in $500 Million Clips—Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-01-19T21:57:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "VeChain’s X Social Media Account Promotes False Giveaway Scam After Hack, Project Promises To Reimburse Victims",
-      "link": "NULL",
-      "pubDate": "2024-01-19T19:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "FTX must be investigated by independent examiner, court rules",
-      "link": "NULL",
-      "pubDate": "2024-01-19T19:44:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Is A Spot XRP ETF By BlackRock In The Cards Following Ripple’s Big Win Over SEC? — Here’s What We Know",
       "link": "https://zycrypto.com/is-a-spot-xrp-etf-by-blackrock-in-the-cards-following-ripples-big-win-over-sec-heres-what-we-know/",
       "pubDate": "2024-01-19T19:43:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "BlackRock recently successfully launched one of the most hotly anticipated products in recent Wall Street memory, spot...",
       "currencies": [
@@ -96,79 +40,11 @@
       }
     },
     {
-      "title": "Jim Cramer Blunders Bitcoin ETF, Calls BTC Selloff \"Nasty\"",
-      "link": "NULL",
-      "pubDate": "2024-01-19T18:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Here Are 3 Important Developments Coming to DeFi",
-      "link": "NULL",
-      "pubDate": "2024-01-19T18:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "CFX"
-      ]
-    },
-    {
-      "title": "Ethereum (ETH) Competitor, Now at $0.006, Is an Ideal Investment Choice Before the Real Bull Run Commences",
-      "link": "NULL",
-      "pubDate": "2024-01-19T18:04:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "JST"
-      ]
-    },
-    {
-      "title": "Appellate court orders appointment of FTX independent examiner",
-      "link": "NULL",
-      "pubDate": "2024-01-19T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "EON 1.2.0 is Available to Download – Latest Node Software Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-01-19T16:32:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "MKR takes the top spot on this front as prices touch $2K",
-      "link": "NULL",
-      "pubDate": "2024-01-19T16:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Franklin Templeton bullish on Ethereum, Solana and other layer 1 networks",
       "link": "https://cryptobriefing.com/franklin-templeton-bullish-ethereum-solana-layer-1/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-01-19T16:12:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Spot Bitcoin ETFs have entered their fifth trading day, and it appears that the institutional hype is just beginning. Franklin Templeton, one of the worlds largest asset managers, expressed optimism about the future of Ethereum, Solana, and other layer 1 chains in a series of tweets posted yesterday.Franklin Templeton acknowledged Ethereums challenges but remains bullish about its future. The...",
       "currencies": [
@@ -184,113 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RUNE, $BSV, $ETC, $LDO Plunge 20% in 7 Days; What is Next?",
-      "link": "NULL",
-      "pubDate": "2024-01-19T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC",
-        "RUNE",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Don't Break Userspace!",
-      "link": "NULL",
-      "pubDate": "2024-01-19T15:46:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "CORE"
-      ]
-    },
-    {
-      "title": "Best Altcoins to Buy Now, As Bitcoin ETF Approval Ignites the Altseason",
-      "link": "NULL",
-      "pubDate": "2024-01-19T15:41:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "VET"
-      ]
-    },
-    {
-      "title": "$USDP Stablecoin Arrives on Solana: Paxos' Strategic Move Highlights Growing Confidence in the Network",
-      "link": "NULL",
-      "pubDate": "2024-01-19T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "USDP"
-      ]
-    },
-    {
-      "title": "Starting Your Crypto Journey? Consider These Top 3 Coins",
-      "link": "NULL",
-      "pubDate": "2024-01-19T14:46:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC",
-        "OP"
-      ]
-    },
-    {
-      "title": "Bitcoin Falls Below $42,000; Sui, Helium Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2024-01-19T14:34:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Solana's Airdrop Season Continues: Saros Launches $SAROS Token Airdrop to DeFi Users.",
-      "link": "NULL",
-      "pubDate": "2024-01-19T13:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "SAROS"
-      ]
-    },
-    {
-      "title": "Borroe Finance gains momentum as THORChain and Stacks dip; anticipating a 300% rise soon?",
-      "link": "NULL",
-      "pubDate": "2024-01-19T13:14:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE",
-        "STX"
-      ]
-    },
-    {
       "title": "Cardano To $7? Analyst Predicts When ADA Will Resume Uptrend",
       "link": "https://www.newsbtc.com/news/cardano/cardano-7-analyst-predicts-ada-resume-uptrend/",
       "pubDate": "2024-01-19T13:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "An analyst has explained that if history repeats for Cardano, its price could resume its uptrend and rally to $7. Here’s when this could happen. Cardano Could Follow Same Price Trajectory As Back In 2020 In a new post on X, analyst Ali has discussed how ADA’s latest consolidation phase has been mirroring its trend from late 2020. Below is the chart that the analyst has shared for the...",
       "currencies": [
@@ -304,95 +78,11 @@
       }
     },
     {
-      "title": "Where in the world is Sam Trabucco? FTX victims launch manhunt",
-      "link": "NULL",
-      "pubDate": "2024-01-19T12:31:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Nuvo Unveils Nuscription: New Blockchain Trading",
-      "link": "NULL",
-      "pubDate": "2024-01-19T11:53:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Vitruveo rolls out the World’s First Auto-rebasing Protocol",
-      "link": "NULL",
-      "pubDate": "2024-01-19T11:36:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JST"
-      ]
-    },
-    {
-      "title": "Relax! Bitcoin ETF Launch is Not a Flop: Expert Advises Investors",
-      "link": "NULL",
-      "pubDate": "2024-01-19T11:31:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin ETFs surpass silver in the market, yet face mixed reactions and investor caution; experts urge patience for ETF growth.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Nuvo Unveils Nuscription: Revolutionizing Blockchain Trading",
-      "link": "NULL",
-      "pubDate": "2024-01-19T10:04:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "Conflux Unveils EVM-Compatible Bitcoin L2 Solution, CFX Price Surges 8%",
-      "link": "NULL",
-      "pubDate": "2024-01-19T09:56:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CFX"
-      ]
-    },
-    {
-      "title": "The crypto market maker Flowdesk concludes a $50 million financing with Ripple",
-      "link": "NULL",
-      "pubDate": "2024-01-19T09:37:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Solana Mobile's Latest Edition Sees 30,000 Pre-Orders in 48 Hours",
       "link": "https://coinpaprika.com/news/solana-mobile-s-sees-30-000-pre-orders/",
       "pubDate": "2024-01-19T08:28:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "Solana Mobile's new phone gets 30,000 pre-orders in 2 days, and offers upgraded features and affordability, following Solana Saga's success.",
       "currencies": [
@@ -408,8 +98,8 @@
       "title": "Top Analyst Benjamin Cowen Issues Bitcoin Alert, Says BTC Mirroring Pattern That Could Trigger ‘Substantial’ Drop",
       "link": "https://dailyhodl.com/2024/01/19/top-analyst-benjamin-cowen-issues-bitcoin-alert-says-btc-mirroring-pattern-that-could-trigger-substantial-drop/",
       "pubDate": "2024-01-19T08:04:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Cryptocurrency analyst Benjamin Cowen is warning that a pattern that has preceded the previous three Bitcoin (BTC) halvings has re-emerged. Cowen tells his 789,000 YouTube subscribers that Bitcoin has always fallen to the bull market support band during the first quarter of the halving year. The bull market support band, an indicator made up of […]",
       "currencies": [
@@ -425,8 +115,8 @@
       "title": "SEC Delays Decision on Fidelity's Ethereum ETF",
       "link": "https://en.bitcoinsistemi.com/breaking-sec-delays-fidelitys-spot-ethereum-etf-application/",
       "pubDate": "2024-01-19T07:42:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "According to breaking information, the SEC postponed Fidelity's spot Ethereum ETF application. According to a published statement, the SEC has set March 5, 2024 as the date on which it will re-defer, approve or disapprove the application submitted by Cboe BZX Exchange. The SEC said it needed more time to evaluate the issues raised by […] Continue Reading: BREAKING: SEC Delays...",
       "currencies": [
@@ -439,36 +129,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto Daily Roundup, 19 Jan: BTC ETF Euphoria Wanes, Market Bleeds",
-      "link": "NULL",
-      "pubDate": "2024-01-19T07:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "VET"
-      ]
-    },
-    {
-      "title": "How Maker DAO Has Positioned Itself to Lead the Real World Assets (RWA) Sector",
-      "link": "NULL",
-      "pubDate": "2024-01-19T06:03:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LINK",
-        "MKR"
-      ]
-    },
-    {
       "title": "Jim Cramer: “Legendary Investor Larry Williams Warns Cryptocurrency Market That We’re Very Far From The Bottom”",
       "link": "https://en.bitcoinsistemi.com/jim-cramer-legendary-investor-larry-williams-warns-cryptocurrency-market-that-were-very-far-from-the-bottom/",
       "pubDate": "2024-01-19T05:33:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "CNBC's experienced presenter Jim Cramer quoted another analyst in his statement and warned about the cryptocurrency market. Continue Reading: Jim Cramer: “Legendary Investor Larry Williams Warns Cryptocurrency Market That We’re Very Far From The Bottom”",
       "currencies": [
@@ -484,8 +149,8 @@
       "title": "Why OG crypto enthusiasts hate the spot Bitcoin ETF",
       "link": "https://www.cryptopolitan.com/og-crypto-enthusiasts-hate-spot-bitcoin-etf/",
       "pubDate": "2024-01-19T02:34:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "bitcoin",
       "description": "The crypto world is buzzing with chatter, and not all of it is the sound of digital coins clinking. OG crypto enthusiasts are scowling at the new kid on the block: the spot Bitcoin ETF. Approved a week ago by US securities regulators, these ETFs have seen around $3 billion flow into their coffers. Meanwhile, […]",
       "currencies": [

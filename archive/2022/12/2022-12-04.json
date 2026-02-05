@@ -1,55 +1,15 @@
 {
   "date": "2022-12-04",
-  "fetchedAt": "2026-02-05T07:45:52.722Z",
-  "articleCount": 22,
+  "fetchedAt": "2026-02-05T07:48:35.587Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @chainlink: Just 48 hours until the launch of Chainlink Staking v0.1! Staking marks an inflection point for #Chainlink, enabling the co…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T20:35:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @arringtonXRPcap: Happy Dec 4! Our #CountDownto2023, where we highlight one of our startups innovating in #web3 each day, continues toda…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T20:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "RT @alex_dreyfus: It's a wrap. 3 days of work with all our colleagues. I think it's time to do a LIVE AMA tomorrow Monday 5th Dec 2.30pm CE…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T19:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
     {
       "title": "$0.50 for XRP next? Analyst’s short-term take on Ripple’s token",
       "link": "https://finbold.com/0-50-for-xrp-next-analysts-short-term-take-on-ripples-token/",
       "pubDate": "2022-12-04T19:19:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "After weeks of rallying, XRP’s price is now consolidating in line with the general cryptocurrency market price trajectory. Amid the … Continued",
       "currencies": [
@@ -62,22 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @CryptoCoinShow: We speak with @dleonard00, CEO of @HifiFinance on their lending protocol capabilities, the launch of @crownribbonhq tok…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T19:09:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "AVAX Receives Major Boost As Alibaba Cloud Expands Support For Avalanche",
       "link": "https://zycrypto.com/avax-receives-major-boost-as-alibaba-cloud-expands-support-for-avalanche/",
       "pubDate": "2022-12-04T17:55:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "general",
       "description": "Alibaba Cloud, a subset of Chinese e-commerce giant Alibaba has expanded its line of cloud infrastructure technology and developer tools to the Avalanche blockchain.",
       "currencies": [
@@ -90,22 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Earning #ETN has never been easier. With @anytaskofficial you can sell a digital service and get paid directly into…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T16:26:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Cardano’s Hoskinson Praises Algorithmic Stablecoins, Touts Them As The Gold Standard Of The Digital Age",
       "link": "https://zycrypto.com/cardanos-hoskinson-praises-algorithmic-stablecoins-touts-them-as-the-gold-standard-of-the-digital-age/",
       "pubDate": "2022-12-04T15:08:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Charles Hoskinson believes that algorithmic stablecoins are the way to go and that they have the ability to...",
       "currencies": [
@@ -117,45 +55,11 @@
       }
     },
     {
-      "title": "Normally, when we bring you a development update, the code comes from a public repository. But today, we're giving…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T15:01:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Looking for trusted research from professional quant traders? BITFINEX ALPHA is for you! In depth analysis of the c…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T15:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Collaterized LDOT",
-      "link": "NULL",
-      "pubDate": "2022-12-04T14:24:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
       "title": "VP of $1,530,000,000,000 Asset Manager Says Ethereum Staking Presents Big Opportunities to Institutional Investors",
       "link": "https://dailyhodl.com/2022/12/04/vp-of-1530000000000-asset-manager-says-ethereum-staking-presents-big-opportunities-to-institutional-investors/",
       "pubDate": "2022-12-04T12:45:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A senior executive at the $1.5 trillion asset management giant Franklin Templeton says that Ethereum (ETH) staking yield is presenting big opportunities for institutions looking at the crypto markets. In a new interview on Real Vision with Raoul Pal, Pal asks senior vice president of Franklin Templeton Sandy Kaul if Ethereum staking could help spark […]",
       "currencies": [
@@ -170,8 +74,8 @@
       "title": "These Investors Buying Up Cardano (ADA) En Masse, What Is Their Plan?",
       "link": "https://u.today/these-investors-buying-up-cardano-ada-en-masse-what-is-their-plan",
       "pubDate": "2022-12-04T11:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano unexpectedly gains momentum among these investors",
       "currencies": [
@@ -187,8 +91,8 @@
       "title": "What’s In Store For Cardano This December – Will ADA Be Merry Before Christmas?",
       "link": "https://newsbtc.com/news/will-ada-be-merry-before-christmas/",
       "pubDate": "2022-12-04T11:08:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Cardano (ADA) exited the month of November with its total market capitalization and its blockchain’s total value locked (TVL) taking a heavy hit from the FTX collapse that dragged down the entire crypto market. According to data from CoinMarketCap, when last month ended, ADA’s overall valuation was at $10.7 billion, 23% lower than the $13.9 billion market cap it had towards the end of October....",
       "currencies": [
@@ -205,22 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "'As we get ready for the New Year, let's sing Auld Lang Syne and get ready as it's timetoparty!' 🤶🧑‍ In our…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Ripple vs. SEC: Two-Year Legal Battle for XRP Nears the End",
       "link": "https://beincrypto.com/ripple-vs-sec-two-year-legal-battle-for-xrp-nears-the-end/",
       "pubDate": "2022-12-04T09:22:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "Ripple's two years legal battle with the U.S. SEC is drawing to a close as the firm has made its final submission to the court.",
       "currencies": [
@@ -231,80 +124,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "There are fake pages appearing on social medias under the name of Fasttoken, which have nothing to do with Fasttoke…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T09:13:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTN"
-      ]
-    },
-    {
-      "title": "Notifi Launches on Acala, Bringing Push Notifications to Polkadot DeFi Users and Developers",
-      "link": "NULL",
-      "pubDate": "2022-12-04T08:06:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DOT",
-        "ACA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @carblabs: High level overview of #graphite - our governance platform built using ⁦@sveltejs⁩ , ⁦@zilliqa⁩ , #gundb #zilliqa $carb $grph…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T07:39:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "All the missions (from Q4 2021-Q3 2022) in ACT roadmap have been achieved. The last quarter (Q4) of 2022 is endin…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T05:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACT"
-      ]
-    },
-    {
-      "title": "SBF says he ‘can only speculate’ about where wired Alameda funds ended up: WSJ",
-      "link": "NULL",
-      "pubDate": "2022-12-04T03:18:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "RT @ThetaCon22: Now starting a very special panel hosted by @w3Andrea and Andrew discussing the utilization of @Theta_Network Featuring P…",
-      "link": "NULL",
-      "pubDate": "2022-12-04T00:37:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
     }
   ]
 }

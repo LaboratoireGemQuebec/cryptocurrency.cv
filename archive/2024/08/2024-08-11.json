@@ -1,72 +1,15 @@
 {
   "date": "2024-08-11",
-  "fetchedAt": "2026-02-05T07:45:53.463Z",
-  "articleCount": 43,
+  "fetchedAt": "2026-02-05T07:48:35.671Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "XRP Breakout: Could It Skyrocket To $100? Analysts Share Their Predictions",
-      "link": "NULL",
-      "pubDate": "2024-08-11T23:58:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Akash Network (AKT) Price Moves Up 20%, Boosting Investor Confidence",
-      "link": "NULL",
-      "pubDate": "2024-08-11T22:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "AKT"
-      ]
-    },
-    {
-      "title": "BitGo CEO Mike Belshe on Justin Sun’s WBTC involvement: ‘A big nothingburger’",
-      "link": "NULL",
-      "pubDate": "2024-08-11T20:51:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "TRX",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Vega Protocol Launches Decentralized Prediction Market With Colosseo II Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-08-11T20:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ATOM"
-      ]
-    },
     {
       "title": "BitGo's WBTC Custody Plan Sparks Concerns",
       "link": "https://coinpaprika.com/news/bitgo-s-wbtc-custody-plan-sparks-concerns/",
       "pubDate": "2024-08-11T20:25:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "BitGo's shift to a multi-jurisdictional WBTC custody model sparks concern over Justin Sun's involvement and potential influence on the crypto community.",
       "currencies": [
@@ -79,65 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BEAM Inks 15% Gains As Exciting Developments Hit The Market – Details",
-      "link": "NULL",
-      "pubDate": "2024-08-11T20:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "3 Hidden Gem Altcoins Poised for 300% Growth by the End of the Year",
-      "link": "NULL",
-      "pubDate": "2024-08-11T19:32:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT",
-        "JUP",
-        "OM"
-      ]
-    },
-    {
-      "title": "Traders hope $60K Bitcoin price boosts momentum in ETH, SUI, TAO and NOT",
-      "link": "NULL",
-      "pubDate": "2024-08-11T19:28:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SUI",
-        "TAO",
-        "NOT"
-      ]
-    },
-    {
-      "title": "I built a Bitcoin Power Law investment calculator to see what happens to the value of our stacks if the power law holds (as it has so far). Any feedback is appreciated :)",
-      "link": "NULL",
-      "pubDate": "2024-08-11T19:21:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX",
-        "SOBTC"
-      ]
-    },
-    {
       "title": "27,340,000 #XRP (15,562,146 USD) transferred from unknown wallet to #Bitstamp",
       "link": "https://x.com/whale_alert/status/1822711316773011611",
       "pubDate": "2024-08-11T19:06:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Whale_alert",
+      "sourceKey": "whalealert",
       "category": "altcoin",
       "currencies": [
         "XRP"
@@ -148,73 +37,11 @@
       }
     },
     {
-      "title": "Crypto market’s weekly winners and losers – SUI, HNT, LIDO, AAVE",
-      "link": "NULL",
-      "pubDate": "2024-08-11T19:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HNT",
-        "AAVE",
-        "SUI"
-      ]
-    },
-    {
-      "title": "MakerDAO may adjust wrapped Bitcoin (WBTC) policy due to Justin Sun risk concerns",
-      "link": "NULL",
-      "pubDate": "2024-08-11T18:08:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Polkadot Price Analysis: $DOT Recovers After Dropping to $3.6",
-      "link": "NULL",
-      "pubDate": "2024-08-11T17:59:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "2 cryptocurrencies to reach $1 billion market cap by the end of 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-11T17:41:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Justin Sun’s BIG BTC Moves: New Trends in WBTC Custody Emerge",
-      "link": "NULL",
-      "pubDate": "2024-08-11T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "TRX"
-      ]
-    },
-    {
       "title": "Solana (SOL) ETF Issuance Approved by Brazil’s Securities and Exchange Commission",
       "link": "https://www.livebitcoinnews.com/solana-sol-etf-issuance-approved-by-brazils-securities-and-exchange-commission/",
       "pubDate": "2024-08-11T17:11:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Livebitcoinnews",
+      "sourceKey": "livebitcoinnews",
       "category": "regulation",
       "description": "Brazil’s Securities and Exchange Commission, or the Comissão de Valores Mobiliários (CVM), has approved SOL Exchange Traded Funds (ETFs). The issuance will occur after Brazil’s stock market, B3, approves it, […]",
       "currencies": [
@@ -228,198 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "4 Token Unlocks to Watch Next Week",
-      "link": "NULL",
-      "pubDate": "2024-08-11T16:42:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "APE",
-        "SAND",
-        "ROSE",
-        "STRK",
-        "APT",
-        "ARB",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Report: Ark Invest Says Bitcoin Appears Oversold After Germany’s Massive Selloff",
-      "link": "NULL",
-      "pubDate": "2024-08-11T16:14:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Toncoin (TON), Rollblock (RBLK), and Kaspa (KAS); 3 Newer Cryptocurrencies Set To Mint Millionaires This Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-08-11T15:32:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TON",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Rio Innovation Week 2024: Binance VP for Latin America to Speak on BeInCrypto Stage",
-      "link": "NULL",
-      "pubDate": "2024-08-11T15:31:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XLM",
-        "BTG"
-      ]
-    },
-    {
-      "title": "X Payments For DOGE Could Spark 5000% Rally But Analysts Feel Better Bet Is Revenue Sharing Rollblock and KAS",
-      "link": "NULL",
-      "pubDate": "2024-08-11T15:24:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Smart Portfolio Diversification: Top Coins to Buy Before the Bull Market Begins",
-      "link": "NULL",
-      "pubDate": "2024-08-11T15:17:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "MATIC",
-        "KAS",
-        "PEPE",
-        "NOT"
-      ]
-    },
-    {
-      "title": "2024 Crypto Rollercoaster: BOME Soars 11,931% as W Slides 84%",
-      "link": "NULL",
-      "pubDate": "2024-08-11T15:05:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Bitcoin sell-off alert as investors consider removing wBTC as collateral",
-      "link": "NULL",
-      "pubDate": "2024-08-11T14:33:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "DAI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "150,000 Ether Floods Liquid Staking Platforms in 27 Days",
-      "link": "NULL",
-      "pubDate": "2024-08-11T14:05:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RPL",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Arbitrum and Optimism Stay Strong Amid ETH Decline; Analysts Pick This Presale Token For 100x Gains",
-      "link": "NULL",
-      "pubDate": "2024-08-11T13:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARB",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Gurus Predict Rollblock (RLBK) Positioned to Outpace Established Projects Litecoin and Filecoin in Q4 Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-08-11T12:37:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Starknet (STRK) Holders Not Throwing in the Towel Ahead of Major Mainnet Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-08-11T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "STRK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "‘My WBTC involvement is strategic,’ Justin Sun defends WBTC custody move",
-      "link": "NULL",
-      "pubDate": "2024-08-11T12:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
       "title": "5th richest crypto investor revaluates his multi-millionaire ETH bet against BTC",
       "link": "https://finbold.com/5th-richest-crypto-investor-revaluates-his-multi-millionaire-eth-bet-against-wbtc/",
       "pubDate": "2024-08-11T11:21:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "James Fickel is the founder of the Amaranth Foundation, funding longevity research, and the world’s fifth richest known crypto investor. … Continue reading",
       "currencies": [
@@ -432,91 +72,11 @@
       }
     },
     {
-      "title": "Pyth Network Review, the Leading Blockchain Oracles Solution in the Market",
-      "link": "NULL",
-      "pubDate": "2024-08-11T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "PYTH"
-      ]
-    },
-    {
-      "title": "BitGo’s New WBTC Custody Plan Draws Scrutiny Over Justin Sun’s Role",
-      "link": "NULL",
-      "pubDate": "2024-08-11T10:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "WBTC",
-        "TRX",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Justin Sun: I Don't Control Bitcoin (WBTC)",
-      "link": "NULL",
-      "pubDate": "2024-08-11T10:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "MakerDAO Protests Justin Sun’s Role in WBTC Custody Changes",
-      "link": "NULL",
-      "pubDate": "2024-08-11T08:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Dogecoin (DOGE) Jumps 5% Daily, Bitcoin (BTC) Rises Above $61K (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2024-08-11T08:16:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "DOGE",
-        "FET",
-        "APT"
-      ]
-    },
-    {
-      "title": "BitGo to transition Wrapped Bitcoin business to multi-jurisdictional custody",
-      "link": "NULL",
-      "pubDate": "2024-08-11T06:40:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
       "title": "Cardano Founder Warns Against Voting for Kamala Harris Due to Crypto Policies",
       "link": "https://cryptodnes.bg/en/cardano-founder-warns-against-voting-for-kamala-harris-due-to-crypto-policies/",
       "pubDate": "2024-08-11T06:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "altcoin",
       "description": "Charles Hoskinson, founder of Cardano, recently warned that supporting Kamala Harris in the upcoming presidential election would be detrimental to the US crypto industry.",
       "currencies": [
@@ -526,76 +86,6 @@
         "positive": 2,
         "negative": 2
       }
-    },
-    {
-      "title": "Today’s Musk X Empire Rebus of the Day 11 August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-11T05:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "480 #WBTC (29,691,477 USD) transferred from #CryptoCom to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-11T04:18:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "480 #WBTC (29,691,477 USD) transferred from #CryptoCom to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-11T04:18:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Bitgo BiT Global Venture Established To Enhance The Custody Of $95 Billion WBTC",
-      "link": "NULL",
-      "pubDate": "2024-08-11T03:03:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "HNT hits 4-month high after Helium’s latest adoption spree – What next?",
-      "link": "NULL",
-      "pubDate": "2024-08-11T00:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Top-100 Altcoins Sui and Helium Defy Crypto Market Downtick and Surge in Price Amid New Fundamental Developments",
-      "link": "NULL",
-      "pubDate": "2024-08-11T00:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "HNT",
-        "SUI"
-      ]
     }
   ]
 }

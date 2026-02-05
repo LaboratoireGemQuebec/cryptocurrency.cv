@@ -1,15 +1,15 @@
 {
   "date": "2021-03-11",
-  "fetchedAt": "2026-02-05T07:45:51.522Z",
-  "articleCount": 49,
+  "fetchedAt": "2026-02-05T07:48:35.327Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
     {
       "title": "Zilliqa blockchain establishes investment and business entity to grow ecosystem",
       "link": "https://www.cryptoninjas.net/2021/03/12/zilliqa-zil-blockchain-establishes-investment-fund-to-grow-ecosystem/",
       "pubDate": "2021-03-11T23:49:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » Zilliqa blockchain establishes investment and business entity to grow ecosystem Zilliqa, a high-performance blockchain platform, has announced the launch of Zilliqa Capital, a Singapore-based technology company whose objective is to become the central business and investment hub for the Zilliqa blockchain ecosystem. Zilliqa Capital will invest in Zilliqa’s native utility...",
       "currencies": [
@@ -22,46 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "\"Keanu\" Explained, nucypher merger",
-      "link": "NULL",
-      "pubDate": "2021-03-11T23:35:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "1: weekly update: USDf and Gaia client interface was launched this week, with fully ability to mint and redeem asse…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T23:33:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDX",
-        "USDF",
-        "SHARE"
-      ]
-    },
-    {
-      "title": ".65 and I will buy more",
-      "link": "NULL",
-      "pubDate": "2021-03-11T22:31:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Holy f*** here we go",
       "link": "https://www.reddit.com/r/maticnetwork/comments/m31ab3/holy_f_here_we_go/",
       "pubDate": "2021-03-11T21:50:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "R/maticnetwork",
+      "sourceKey": "rmaticnetwork",
       "category": "general",
       "currencies": [
         "MATIC"
@@ -76,8 +41,8 @@
       "title": "Polygon (MATIC) has been listed on Coinbase (not just Coinbase Pro)",
       "link": "https://www.reddit.com/r/maticnetwork/comments/m30u2d/polygon_matic_has_been_listed_on_coinbase_not/",
       "pubDate": "2021-03-11T21:31:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "R/maticnetwork",
+      "sourceKey": "rmaticnetwork",
       "category": "exchange",
       "currencies": [
         "MATIC"
@@ -89,57 +54,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What will this do to the price of $nu",
-      "link": "NULL",
-      "pubDate": "2021-03-11T21:25:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "RT @datre_c: If you missed out on @Bscpad and @BSCstarter, I get a gem for you. @deeplockio is a rug proff launch pad on binance chain, the…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T21:13:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DEEP"
-      ]
-    },
-    {
-      "title": "RT @cryptolytsaber: Deeplock $DEEP Token $BSCPAD &amp; $START Competitor + Litecoin ¢LTC PUMP SOON? via @YouTube @deepl…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T21:12:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC",
-        "DEEP"
-      ]
-    },
-    {
-      "title": "RT @BlueD3mise: If you missed out on @Bscpad and @BSCstarter, I get a gem for you. @deeplockio is a rug proff launch pad on binance chain,…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T21:12:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DEEP"
-      ]
-    },
-    {
       "title": "First-Ever Public Oracle on Tron Blockchain Set to Launch in Q1 2021!",
       "link": "https://bitcoinist.com/first-ever-public-oracle-on-tron-blockchain-set-to-launch-in-q1-2021/?utm_source=rss&utm_medium=rss&utm_campaign=first-ever-public-oracle-on-tron-blockchain-set-to-launch-in-q1-2021",
       "pubDate": "2021-03-11T21:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "Public oracle project, Bridge Oracle successfully completed the launch of its mainnet on Tron blockchain on Thursday. The mainnet launch aims to give Tron blockchain users access to implementing real-world decentralized applications, or DApps, by connecting them to off-chain data. Bridge Oracle, a Tron-based public oracle aiming to play a similar role to Chainlink on Ethereum, announced the...",
       "currencies": [
         "TRX",
@@ -155,8 +75,8 @@
       "title": "Chainlink’s Movement Will Be Defined by Narrow Pocket",
       "link": "https://cryptobriefing.com/chainlink-price-movement-defined-by-narrow-pocket/",
       "pubDate": "2021-03-11T20:59:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "description": "Chainlink is primed for a significant price movement after enduring an 11% correction in the last three days. Chainlink Primed for Volatility 4-hour charts suggest that LINK’s price action has been contained within an ascending parallel channel over the past two weeks. Each time the price of LINK has risen towards this technical formation’s upper boundary since February 25, it...",
       "currencies": [
@@ -170,143 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bought some NU",
-      "link": "NULL",
-      "pubDate": "2021-03-11T19:02:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Blog: What is the future of cash, will we still be able to use it?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T19:01:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "Bep2 or erc20",
-      "link": "NULL",
-      "pubDate": "2021-03-11T18:50:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Here we go",
-      "link": "NULL",
-      "pubDate": "2021-03-11T18:35:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "What’s the best virus and malware protection for my pc with my wallets on it?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T17:48:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Got my NU staked. Looks like you’ll be able to stake again March 31, 2021 if anyone missed out this round.",
-      "link": "NULL",
-      "pubDate": "2021-03-11T17:39:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: Checkout this week’s update to learn about the latest developments—like updating all #Rust crates in prep for the upco…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T17:16:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Best long term hold on Coinbase (under $2)?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T17:15:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Within a span of just 2 to 3 years, we have seen governments move from, considering a total ban on cryptocurrency .…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T16:03:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "Sure is quit in the world of $NU",
-      "link": "NULL",
-      "pubDate": "2021-03-11T15:56:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Do you want to #trade like a #professional? All top notch traders implement effective #strategies to tackle the m…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T15:09:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
-      "title": "Today ARK is happy to Announce our partnership with Electroneum and AnyTask as we bring them to MarketSquare and look forward to future collaboration.",
-      "link": "NULL",
-      "pubDate": "2021-03-11T14:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Tether USDT Stablecoin Now Live on Solana",
       "link": "https://cryptobriefing.com/tether-usdt-stablecoin-now-live-solana/",
       "pubDate": "2021-03-11T14:29:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Tether has launched its stablecoin USDT on the Solana blockchain. USDT Taps Solana’s Performance Six months after it was first announced, the leading stablecoin USDT is now live on the Solana blockchain with an initial mint of 1.5 USDT. Tether is currently the number four cryptocurrency by market cap, with a total market capitalization of ~38 billion. Solana becomes the...",
       "currencies": [
@@ -325,8 +113,8 @@
       "title": "IOTA Smart Contract Fees Advantages Explained: \"No Bidding Wars\"",
       "link": "https://u.today/iota-smart-contract-fees-advantages-explained-no-bidding-wars",
       "pubDate": "2021-03-11T14:17:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Release of smart contracts on IOTA is among the most anticipated events in crypto segment in 2021. Today, IF explained its crucial advantage: predetermined fees",
       "currencies": [
@@ -342,8 +130,8 @@
       "title": "Pollen Testnet v0.5.0 - Starting our Journey with Mana",
       "link": "http://blog.iota.org/pollen-testnet-v0-5-0-starting-our-journey-with-mana/",
       "pubDate": "2021-03-11T14:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "We are releasing a new version of our Pollen testnet v0.5.0. With this release we officially start our journey with Mana. The first objective is to test the first iteration of the Mana implementation to study its distribution in the Pollen testnet, look for any bugs and, more",
       "currencies": [
@@ -359,8 +147,8 @@
       "title": "Cardano Price Analysis: ADA Slumps To 2-Week Low Against BTC, Is Bullish Momentum Over?",
       "link": "https://cryptopotato.com/cardano-price-analysis-ada-slumps-to-2-week-low-against-btc-is-bullish-momentum-over/",
       "pubDate": "2021-03-11T13:45:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "ADA saw another 3% decline over the past 24 hours as the battle to defend $1.10 continues. Against Bitcoin, ADA is trading at levels not seen since February 24th.",
       "currencies": [
@@ -372,22 +160,11 @@
       }
     },
     {
-      "title": "$STPT is selected as TOP 15 coins by @LunarCRUSH Galaxy Score!",
-      "link": "NULL",
-      "pubDate": "2021-03-11T12:54:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STPT"
-      ]
-    },
-    {
       "title": "Litecoin (LTC) Stuck Consolidating Below Long-Term Resistance",
       "link": "https://beincrypto.com/litecoin-ltc-stuck-consolidating-below-long-term-resistance/",
       "pubDate": "2021-03-11T12:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Litecoin is currently trading between resistance and support. While technical indicators are leaning bullish, a breakout is required for the bullish trend to be confirmed. Rejection from Long-Term Resistance Litecoin has been decreasing since Feb. 20, when it reached a local high of $248. The rejection holds more importance since it occurred right at the … Continued",
       "currencies": [
@@ -403,8 +180,8 @@
       "title": "Tether tokens go live on Ethereum competitor Solana blockchain",
       "link": "https://cointelegraph.com/news/tether-tokens-go-live-on-ethereum-competitor-solana-blockchain",
       "pubDate": "2021-03-11T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Tether's integration with the Solana blockchain is intended to help support a range of projects in DeFi, blockchain gaming and Web 3.0.",
       "currencies": [
@@ -422,8 +199,8 @@
       "title": "Ethereum Miners Revolt Over EIP 1559, How Will ETH Price React?",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-miners-revolt-over-eip-1559-how-will-eth-price-react/",
       "pubDate": "2021-03-11T11:09:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "In a show of force against the implementation of Ethereum Improvement Proposal (EIP) 1559, on April 1, Ethereum miners plan to direct their hashing power to the Ethermine mining pool, which opposes the proposal. The coordinated action will last 51 hours, signifying their intent to harness more than 51% of the network’s hash rate. During […]",
       "currencies": [
@@ -436,23 +213,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Coinlist NU staked!",
-      "link": "NULL",
-      "pubDate": "2021-03-11T10:39:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Zilliqa (ZIL) Reaches Resistance, Aims for New Highs",
       "link": "https://beincrypto.com/zilliqa-zil-reaches-resistance-aims-for-new-highs/",
       "pubDate": "2021-03-11T10:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Zilliqa is expected to eventually break out from both its horizontal and diagonal resistance levels. After that, it would have the potential to reach a new all-time high. ZIL Breaks Out During the week of Feb. 8-15, ZIL managed to break out above the long-term $0.092 resistance area. It proceeded to reach a high … Continued",
       "currencies": [
         "ZIL"
@@ -464,33 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @mobilejae: Calling all developers to our DApp contest! Do you want to put your DApp in the hands of millions of Samsung users? Enter…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T08:48:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "We will sponsoring the long awaited DApp Contest with Samsung Blockchain and Blocko. The contest will focus on DeF…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T08:24:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
       "title": "Crypto Whale Says Three Altcoins Ready To Surge After Bitcoin’s Big Breakout",
       "link": "https://dailyhodl.com/2021/03/11/crypto-whale-says-three-altcoins-ready-to-surge-after-bitcoins-big-breakout/",
       "pubDate": "2021-03-11T08:04:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "An influential crypto trader and analyst is spotlighting three altcoins that he believes are on the verge of a breakout while Bitcoin coils up near its all-time high. As Bitcoin retests the $57,000 level for the first time in nearly three weeks, pseudonymous crypto whale Flood, tells his 110,000 Twitter followers that he is keeping […]",
       "currencies": [
@@ -504,45 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How is Steemit going?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T07:41:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "Do something",
-      "link": "NULL",
-      "pubDate": "2021-03-11T07:40:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "How to buy btc/eth or other cryptocurrency using my xrp",
-      "link": "NULL",
-      "pubDate": "2021-03-11T07:32:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XRP",
-        "TWT"
-      ]
-    },
-    {
       "title": "Charted: Ripple (XRP) Consolidates, Why It Is Approaching Major Breakout",
       "link": "https://www.newsbtc.com/analysis/xrp/ripple-xrp-consolidates-045/",
       "pubDate": "2021-03-11T07:08:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Ripple found is facing a major resistance near $0.5000 against the US Dollar. XRP price must stay above $0.4450 to avoid another downside break in the near term. Ripple is facing an uphill task near the $0.4950 and $0.500 resistance levels against the US dollar. The price is now consolidating above $0.4500 and testing the […]",
       "currencies": [
@@ -555,33 +265,11 @@
       }
     },
     {
-      "title": "Blog: Which form of money could be the right one?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T07:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "Where is info on BNB validators?",
-      "link": "NULL",
-      "pubDate": "2021-03-11T05:40:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "With the launch of #Symbol, the next-generation proof-of-stake (PoS) public blockchain, #NEM is beginning to create…",
       "link": "https://twitter.com/NEMofficial/status/1369878536962465792",
       "pubDate": "2021-03-11T05:11:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "XEM"
@@ -591,62 +279,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Thrilled to announce that its accumulative transaction on Klaytn has supassed 6M as of today, which is in 8 months…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T02:56:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SSX"
-      ]
-    },
-    {
-      "title": "Ms. Le Ho, #TomoChain's Co-Founder &amp; CFO, was featured in BeInCrypto’s interview, along w many other gorgeous women…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T02:48:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Congratulations to AROMA Lounges being featured in LA Style Magazine as one of the 1st Cigar Lounges to accept and sell Crypto via @PundiXLabs PAX A920 #XPOS",
-      "link": "NULL",
-      "pubDate": "2021-03-11T02:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PAX",
-        "NPXS"
-      ]
-    },
-    {
-      "title": "RT @climbingK: #onionT1 is at Cambodia for road-testing. People at Camvodia kept asking what this is. Our answer was 'Cambodia's future tra…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T02:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MVL"
-      ]
-    },
-    {
-      "title": "RT @mobilejae: Good morning, good afternoon, good evening, wherever you are. Congrats @aergo_io ! You are trending hot in @CoinMarketCap…",
-      "link": "NULL",
-      "pubDate": "2021-03-11T00:26:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
     }
   ]
 }

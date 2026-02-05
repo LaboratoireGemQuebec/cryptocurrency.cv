@@ -1,15 +1,15 @@
 {
   "date": "2021-05-05",
-  "fetchedAt": "2026-02-05T07:45:51.792Z",
-  "articleCount": 77,
+  "fetchedAt": "2026-02-05T07:48:35.446Z",
+  "articleCount": 48,
   "source": "historical-import",
   "articles": [
     {
       "title": "Cross-chain exchange ChainSwap connects to Solana-based AMM and liquidity provider Raydium",
       "link": "https://www.cryptoninjas.net/2021/05/06/cross-chain-exchange-chainswap-connects-to-solana-based-amm-and-liquidity-provider-raydium/",
       "pubDate": "2021-05-05T23:24:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "defi",
       "description": "CryptoNinjas » Cross-chain exchange ChainSwap connects to Solana-based AMM and liquidity provider Raydium ChainSwap, a cross-chain asset bridge & application hub for smart chains, today announced a new partnership with Raydium, the leading Solana blockchain-based automated market maker (AMM) and liquidity provider. The collaboration will connect applications for Raydium with EVM...",
       "currencies": [
@@ -26,8 +26,8 @@
       "title": "Telcoin (TEL) gains 300% after layer-2 migration to the Polygon network",
       "link": "https://cointelegraph.com/news/telcoin-tel-gains-300-after-layer-2-migration-to-the-polygon-network",
       "pubDate": "2021-05-05T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "TEL price broke out into a vertical rally after a protocol upgrade and a layer-2 migration that enabled trading on QuickSwap.",
       "currencies": [
@@ -44,8 +44,8 @@
       "title": "How DOGE Could Bring Doom To Crypto Rally",
       "link": "https://www.newsbtc.com/news/how-doge-could-bring-doom-to-crypto-rally/",
       "pubDate": "2021-05-05T22:58:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "After an impressive overnight rally, Dogecoin (DOGE) crossed the $0.50 and smashed every resistance towards new all-time highs. The so-called meme cryptocurrency has surpassed the market cap of giant corporations in traditional finance, some have begun to question the existence of “the people’s coin”. Trader MeanHash, a Dogecoin holder, believes the cryptocurrency has the potential […]",
       "currencies": [
@@ -58,33 +58,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Join our meetup in Auckland on 24 May to hear from the latest #blockchain projects in New Zealand and discuss all t…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T22:24:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "More than simple 4 digit code?",
-      "link": "NULL",
-      "pubDate": "2021-05-05T21:47:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Grifter season in DeFi-land, and Uniswap v3 is here! Finance Redefined 4/28-5/05",
       "link": "https://cointelegraph.com/news/grifter-season-in-defi-land-and-uniswap-v3-is-here-finance-redefined-4-28-5-05",
       "pubDate": "2021-05-05T21:32:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Uniswap v3 starts off with a whimper, not a bang, and grifters galore in this week's Finance Redefined.",
       "currencies": [
@@ -100,8 +78,8 @@
       "title": "Ethereum-based AMM Uniswap has launched v3 on mainnet",
       "link": "https://www.cryptoninjas.net/2021/05/05/ethereum-based-amm-uniswap-has-launched-v3-on-mainnet/",
       "pubDate": "2021-05-05T21:07:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "ethereum",
       "description": "CryptoNinjas » Ethereum-based AMM Uniswap has launched v3 on mainnet Today, the team of Uniswap, a non-custodial automated market maker (AMM) implemented for the Ethereum Virtual Machine (EVM), officially announced that Uniswap v3 has been deployed to the Ethereum mainnet. All of the applicable contract addresses can be found here. Naturally, Uniswap v3 is the most powerful version of...",
       "currencies": [
@@ -119,8 +97,8 @@
       "title": "Is KFC Canada Really Accepting Dogecoin Payments?",
       "link": "https://cryptobriefing.com/is-kfc-canada-really-accepting-dogecoin-payments/",
       "pubDate": "2021-05-05T20:37:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "DOGE"
@@ -134,8 +112,8 @@
       "title": "Ripple Says XRP Investors Should Be Allowed to Participate in Landmark Crypto Lawsuit",
       "link": "https://dailyhodl.com/2021/05/05/ripple-says-xrp-investors-should-be-allowed-to-participate-in-landmark-crypto-lawsuit/",
       "pubDate": "2021-05-05T20:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Ripple’s latest motion accuses the U.S. Securities and Exchange Commission (SEC) of acting against investor interest – the opposite of its mission to protect investors. The SEC filed a lawsuit against Ripple in December of 2020, alleging the San Francisco startup sold XRP as an unregistered security for years. Ripple’s lawyers are now filing a […]",
       "currencies": [
@@ -148,22 +126,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Price talk",
-      "link": "NULL",
-      "pubDate": "2021-05-05T19:50:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "Price analysis 5/5: BTC, ETH, BNB, DOGE, XRP, ADA, DOT, LTC, BCH, UNI",
       "link": "https://cointelegraph.com/news/price-analysis-5-5-btc-eth-bnb-doge-xrp-ada-dot-ltc-bch-uni",
       "pubDate": "2021-05-05T19:03:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin is trying to stage a comeback in order to catch up with the spectacular price action seen in Ethereum and other altcoins.",
       "currencies": [
@@ -178,23 +145,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @THETAtv: Come take a look at our newest content partner @TokuSHOUTsu! Watch classic shows from Japan including Ultraman, Super Sentai,…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T18:22:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Dodge viper ebay listing accepting Siacoin as payment!!",
       "link": "https://www.reddit.com/r/siacoin/comments/n5jrrz/dodge_viper_ebay_listing_accepting_siacoin_as/",
       "pubDate": "2021-05-05T18:02:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "SC"
@@ -209,8 +164,8 @@
       "title": "Decentralized exchange protocol Uniswap v3 goes live on Ethereum",
       "link": "https://www.theblockcrypto.com/linked/103877/decentralized-exchange-protocol-uniswap-v3-goes-live-on-ethereum?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-05-05T18:01:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "ethereum",
       "description": "The long-awaited third iteration of the decentralized exchange protocol Uniswap went live on Wednesday.",
       "currencies": [
@@ -224,22 +179,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is Lukso Going to break it’s ATH ($27.5) in this bull cycle?",
-      "link": "NULL",
-      "pubDate": "2021-05-05T17:52:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "For sports fans, DOGE is starting to look like crypto's real MVP",
       "link": "https://cointelegraph.com/news/for-sports-fans-doge-is-starting-to-look-like-crypto-s-real-mvp",
       "pubDate": "2021-05-05T17:49:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Mark Cuban said the Dallas Mavericks are selling more merchandise in a day with DOGE than in a year with Bitcoin or Ether.",
       "currencies": [
@@ -255,8 +199,8 @@
       "title": "UPDATE: KFC Canada Denies It Accepts Dogecoin",
       "link": "https://u.today/kfc-canada-says-it-now-accepts-dogecoin",
       "pubDate": "2021-05-05T17:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "KFC Canada says that Dogecoin is still on its \"bucket list\"",
       "currencies": [
@@ -272,8 +216,8 @@
       "title": "ZIL Bounces and Aims for New All-Time High Price",
       "link": "https://beincrypto.com/zil-bounces-and-aims-for-new-ath/",
       "pubDate": "2021-05-05T17:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "ZIL is expected to continue moving upwards, at least until it reaches a new all-time high price and potentially move higher. Current ZIL increase ZIL has been moving upwards since April 22, when it bounced and reclaimed the $0.15 support area. So far, it has managed to reach a high of $0.229. The high was … Continued",
       "currencies": [
@@ -286,22 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Just sharing my thoughts about SB",
-      "link": "NULL",
-      "pubDate": "2021-05-05T17:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Dogecoin Breaks Into Major League Baseball As Oakland Athletics Now Accepts It For Payments",
       "link": "https://bitcoinist.com/dogecoin-breaks-into-major-league-baseball-as-oakland-athletics-now-accepts-it-for-payments/?utm_source=rss&utm_medium=rss&utm_campaign=dogecoin-breaks-into-major-league-baseball-as-oakland-athletics-now-accepts-it-for-payments",
       "pubDate": "2021-05-05T17:20:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Dogecoin’s steady advance into the mainstream continued on Monday, with the Oakland Athletics baseball team announcing it would sell tickets for 100 units of the meme cryptocurrency. DOGE To The Moon The Oakland Athletics have joined the NBA’s Dallas Mavericks by announcing today that they will recognize Dogecoin as a form of payment for ticket […]",
       "currencies": [
@@ -318,8 +251,8 @@
       "title": "Bitcoin Coming to Bank Near You Thanks to NYDIG and FIS",
       "link": "https://beincrypto.com/bitcoin-coming-to-bank-near-you/",
       "pubDate": "2021-05-05T16:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Cryptocurrency custody firm NYDIG has teamed up with fintech behemoth Fidelity National Information Service to allow U.S. banks to offer BTC in 2021.",
       "currencies": [
@@ -336,8 +269,8 @@
       "title": "Elon Musk Asks Fans About Dogecoin While Signing Autographs",
       "link": "https://u.today/elon-musk-asks-fans-about-dogecoin-while-signing-autographs",
       "pubDate": "2021-05-05T16:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Elon Musk has asked starstruck fans if Dogecoin is their number one choice for \"SNL\"",
       "currencies": [
@@ -349,33 +282,11 @@
       }
     },
     {
-      "title": "RT @BridgeOracleMan: @as40341 @sinaEstavi @binance #BRG has been consolidating for almost 3 months now. The bigger the consolidation, the b…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T16:24:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
-      "title": "RT @truTheOnion: Having fun with helped get that \"solid\" language through my thick skull, without me even knowing.…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T16:05:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
       "title": "Chainlink’s Network is Growing at a Rate of 12% Per Month – Analyst",
       "link": "https://en.ethereumworldnews.com/chainlinks-network-is-growing-at-a-rate-of-12-per-month-analyst/",
       "pubDate": "2021-05-05T16:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Chainlink’s network is growing at a rate of 12% per month When compounded, Chainlink’s network is growing at a rate of roughly 300% per year The price of LINK is related to function calls on the network as demonstrated through Metcalfe’s Law Therefore, LINK’s recent all-time high was organic and a sign of additional growth to come Bitcoin and Crypto analyst, Timothy Peterson, of Cane Island...",
       "currencies": [
@@ -389,22 +300,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @dleonard00: A new era of #SocialTokens has arrived. I expect @garyvee will this platform he built for himself and turn it into a servic…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T15:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "Peter Brandt Says He Was Wrong About XRP, Warns ‘Come to Jesus’ Moment Coming to Crypto",
       "link": "https://dailyhodl.com/2021/05/05/peter-brandt-says-he-was-wrong-about-xrp-warns-come-to-jesus-moment-coming-to-crypto/",
       "pubDate": "2021-05-05T15:10:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "A veteran trader who accurately predicted Bitcoin’s collapse in January of 2018 says he was too critical of those who support XRP. Peter Brandt once called the crypto asset a scam, but he now tells his 484,000 followers on Twitter that XRP traders have proven him wrong. “Ran into the available character limit. I’ve been […]",
       "currencies": [
@@ -420,8 +320,8 @@
       "title": "IOTA Newsletter #32 - The new IOTA network is live, Firefly Token Migration, Digital Green Certificates and more",
       "link": "http://blog.iota.org/iota-newsletter-32-the-new-iota-network-is-live-firefly-token-migration-digital-green-certificates-and-more/",
       "pubDate": "2021-05-05T15:02:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "The new Chrysalis Network is Live We are over the moon to announce that the Chrysalis network upgrade is officially live. We have entered a new dawn for IOTA, with a brand new protocol, wallet and suite of libraries now fully operational. With Chrysalis, IOTA is becoming production ready, and",
       "currencies": [
@@ -434,34 +334,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Eagerly awaiting the @Uniswap v3 launch, good luck today team! 🦄",
-      "link": "NULL",
-      "pubDate": "2021-05-05T14:43:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "Trust issues",
-      "link": "NULL",
-      "pubDate": "2021-05-05T14:21:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "LINK Breaks Out and Attains New All-Time High",
       "link": "https://beincrypto.com/link-attains-new-all-time-high/",
       "pubDate": "2021-05-05T14:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "LINK has nearly reached an important Fib resistance level which could cause a short-term rejection. Despite this, the trend is considered bullish as long as the token is trading above the $42.70 support area. New LINK all-time high LINK has been moving upwards since April 18. On April 27, it managed to break out above … Continued",
       "currencies": [
         "LINK"
@@ -476,8 +354,8 @@
       "title": "XRP, SEC, Ripple lawsuit: What does this latest bone of contention mean for the parties involved?",
       "link": "https://ambcrypto.com/xrp-sec-ripple-lawsuit-what-does-this-latest-bone-of-contention-mean-for-the-parties-involved/",
       "pubDate": "2021-05-05T14:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "When the SEC charged Ripple Labs and its executives of illegal securities offerings back in December, there were many who expected the lawsuit to be wrapped up within a few months. “It’ll be settled out of court,” some said, arguing that a legal battle of such a magnitude is unlikely to go on for long […]",
       "currencies": [
@@ -493,8 +371,8 @@
       "title": "Polkadot parachains full of promise, but lack of launch date raises concern",
       "link": "https://cointelegraph.com/news/polkadot-parachains-full-of-promise-but-lack-of-launch-date-raises-concern",
       "pubDate": "2021-05-05T13:51:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The parachain slot auctions are the next big milestone due on the Polkadot roadmap. So, what can we expect?",
       "currencies": [
@@ -507,33 +385,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Holding Coins since ICO",
-      "link": "NULL",
-      "pubDate": "2021-05-05T13:25:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "I did the math two months ago and i was banned when i flagged this info. the team knew it from beggining that it was just a marketing strategy who can't be delivered",
-      "link": "NULL",
-      "pubDate": "2021-05-05T13:01:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Stellar and Visa Join Forces with Fintech Startup to Bank the Unbanked",
       "link": "https://u.today/stellar-and-visa-join-forces-with-fintech-startup-to-bank-the-unbanked",
       "pubDate": "2021-05-05T12:57:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Emerging markets fintech Tala has secured a high-profile partnership with Visa, the Stellar Foundation and Circle",
       "currencies": [
@@ -546,27 +402,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dogecoin keeps on barking; Mining for Chia heats up | The Daily Forkast",
-      "link": "NULL",
-      "pubDate": "2021-05-05T12:47:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Oracle Tokens Chainlink, Band Protocol Surge to New Highs",
       "link": "https://cryptobriefing.com/oracle-tokens-chainlink-band-protocol-surge-new-highs/",
       "pubDate": "2021-05-05T12:35:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "trading",
       "currencies": [
         "LINK"
@@ -578,22 +418,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @gregoryklumov: Looks like i created a twitter account quite a while ago #MyTwitterAnniversary",
-      "link": "NULL",
-      "pubDate": "2021-05-05T12:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Here's How Much Money Is Stored by Average DOGE Wallet",
       "link": "https://u.today/heres-how-much-money-is-stored-by-average-doge-wallet",
       "pubDate": "2021-05-05T12:29:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "IntoTheBlock analysts calculated medium value of Docecoins (DOGE) stored by single holders",
       "currencies": [
@@ -605,22 +434,11 @@
       }
     },
     {
-      "title": "1/  BandChain Phase 2 (Laozi) is arriving - in preparation for the public upgrade from GuanYu to Laozi on the Main…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T12:24:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "Dogecoin Rockets Towards ‘The Moon’ — Meme Cryptocurrency Nears 70 Cents As Rally Continues",
       "link": "https://www.forbes.com/sites/roberthart/2021/05/05/dogecoin-rockets-towards-the-moon---meme-cryptocurrency-nears-70-cents-as-rally-continues/",
       "pubDate": "2021-05-05T12:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "trading",
       "description": "Online traders are on a mission to get dogecoin to “the moon,” or $1 a coin.",
       "currencies": [
@@ -635,8 +453,8 @@
       "title": "UFC to launch MMA fan token on Chiliz blockchain",
       "link": "https://cointelegraph.com/news/ufc-to-launch-mma-fan-token-on-chiliz-blockchain",
       "pubDate": "2021-05-05T11:42:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Debuting in June, the new UFC fan token will have a maximum supply of 20 million.",
       "currencies": [
@@ -652,8 +470,8 @@
       "title": "Ripple Price Analysis: XRP Now Retests Critical Support Line",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-now-retests-critical-support-line/",
       "pubDate": "2021-05-05T11:34:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Despite trading relatively flat over the past 24 hours, XRP has found solid support at the 20-days MA. Against bitcoin, XRP is battling to hold 2600 SAT.",
       "currencies": [
@@ -666,23 +484,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @sinaEstavi: @cz_binance If the goal is to get money, when someone gets rich, relaxes, but if the goal is something more important than…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T11:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
       "title": "Visa Partners With Fintech Startup Tala To Drive Crypto Adoption In Emerging Markets",
       "link": "https://www.forbes.com/sites/ninabambysheva/2021/05/05/visa-partners-with-fintech-startup-tala-to-drive-crypto-adoption-in-emerging-markets/",
       "pubDate": "2021-05-05T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Forbes",
+      "sourceKey": "forbes",
+      "category": "mainstream",
       "description": "The initiative, with additional partners Circle and the Stellar Development Foundation, will provide better access to crypto for the underbanked population in emerging market economies.",
       "currencies": [
         "XLM"
@@ -697,8 +504,8 @@
       "title": "Ethereum Classic (ETC) Prints All-Time High Over $80",
       "link": "https://u.today/ethereum-classic-etc-prints-all-time-high-over-80",
       "pubDate": "2021-05-05T10:52:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "More and more large-cap altcoins are affected by the developing mania. Ethereum Classic (ETC) added 100% to its 2017 high",
       "currencies": [
@@ -712,22 +519,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "CHSB ~ BNB",
-      "link": "NULL",
-      "pubDate": "2021-05-05T10:39:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Only whales move DOGE: Data suggests major Dogecoin wealth gap",
       "link": "https://cointelegraph.com/news/only-whales-move-doge-data-suggests-major-dogecoin-wealth-gap",
       "pubDate": "2021-05-05T10:10:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Relatively few hands are moving a large amount of DOGE.",
       "currencies": [
@@ -743,8 +539,8 @@
       "title": "How Uniswap V3 and smartBCH seek to streamline DeFi, save on gas",
       "link": "https://forkast.news/uniswap-smartbch-defi-gas/?utm_source=rss&utm_medium=rss&utm_campaign=uniswap-smartbch-defi-gas",
       "pubDate": "2021-05-05T10:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "defi",
       "description": "The days of 'DeFi' being an insider buzzword are over. But gas fees remain high and the road bumpy. Will Uniswap V3 and smartBCH change anything?",
       "currencies": [
@@ -762,8 +558,8 @@
       "title": "Dogecoin price jumps to new ATH with Gemini support for DOGE",
       "link": "https://forkast.news/dogecoin-price-new-ath-gemini-doge/?utm_source=rss&utm_medium=rss&utm_campaign=dogecoin-price-new-ath-gemini-doge",
       "pubDate": "2021-05-05T09:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "trading",
       "description": "Dogecoin’s price is now at an all-time high of 69 cents, and the joke crypto is now bigger than Ford and Nintendo. Are DOGE investors high on Gemini?",
       "currencies": [
@@ -778,8 +574,8 @@
       "title": "LINK Prints New All-Time High Above $50 As Its Market Cap Surpasses $20 Billion",
       "link": "https://u.today/link-prints-new-all-time-high-above-50-as-its-market-cap-surpasses-20-billion",
       "pubDate": "2021-05-05T09:26:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Chainlink has posted a new historic peak, breaking above the $50 level, while its market capitalization rose above the $20 billion mark",
       "currencies": [
@@ -795,8 +591,8 @@
       "title": "May 8 'day to watch' for Dogecoin amid warning DOGE can suffer XRP-style crash",
       "link": "https://cointelegraph.com/news/may-8-day-to-watch-for-dogecoin-amid-warning-doge-can-suffer-xrp-style-crash",
       "pubDate": "2021-05-05T09:18:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Elon Musk’s upcoming TV appearance could ultimately spell a Dogecoin Doomsday, one analyst says as price action mimics XRP in 2018.",
       "currencies": [
@@ -812,8 +608,8 @@
       "title": "‘Joke’ Bitcoin Rival Dogecoin Found To Have ‘Remarkably Strong Fundamentals’ As The Price Hurtles Toward $1 And A $100 Billion Market Cap",
       "link": "https://www.forbes.com/sites/billybambrough/2021/05/05/joke-bitcoin-rival-dogecoin-found-to-have-remarkably-strong-fundamentals-as-the-price-hurtles-toward-1-and-a-100-billion-market-cap/",
       "pubDate": "2021-05-05T09:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Bitcoin and crypto researchers have released a report that's found the memecoin has \"remarkably strong fundamentals\"—and warned dogecoin \"should not be ignored\"...",
       "currencies": [
@@ -829,8 +625,8 @@
       "title": "Ripple Board Lands Ex-U.S. Treasurer Rosie Rios Amid SEC Battle",
       "link": "https://zycrypto.com/ripple-board-lands-ex-u-s-treasurer-rosie-rios-amid-sec-battle/",
       "pubDate": "2021-05-05T09:06:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "San Francisco-based fintech firm Ripple announced on Tuesday that former U.S. treasurer, Rosa “Rosie” Gumataotao Rios, is joining its board of advisers. Rios will provide “invaluable perspective to Ripple, especially during this time as the industry works to define crypto’s future,” the company’s CEO Brad Garlinghouse stated. She appears to have filled the seat on […]",
       "currencies": [
@@ -843,22 +639,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Xfers concluded a successful pilot with @zilliqa and Cerchia to demonstrate how risk transfer applications can be d…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T09:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
       "title": "Dogecoin is now 3.5% of the crypto market—and the world’s 170th largest “stonk”",
       "link": "https://cryptoslate.com/dogecoin-is-now-3-5-of-the-crypto-market-and-the-worlds-170th-largest-stonk/",
       "pubDate": "2021-05-05T08:12:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "Dogecoin (DOGE) has now outperformed nearly every asset, real estate, stock, or even most cryptos that mankind has ever known.",
       "currencies": [
@@ -873,8 +658,8 @@
       "title": "First $1,200 US Stimulus Check Put in Dogecoin Worth Over $400,000 Now",
       "link": "https://cryptopotato.com/first-1200-us-stimulus-check-put-in-dogecoin-worth-over-400000-now/",
       "pubDate": "2021-05-05T08:07:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "In the highly unlikely case that someone allocated their first $1,200 US stimulus check in Dogecoin, they would be sitting on close to half a million USD.",
       "currencies": [
@@ -886,22 +671,11 @@
       }
     },
     {
-      "title": "SwissBorg is NOT a scam - please stop using the change in rules for the community app as a reason to post aggressively negative comments. For some, the new rules are actually positive. And in the bigger picture, they will support all the CHSB holders.",
-      "link": "NULL",
-      "pubDate": "2021-05-05T08:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Ethereum and XRP To Follow Bitcoin’s Meteoric 500% Rise, Says Trader Credible Crypto",
       "link": "https://dailyhodl.com/2021/05/05/ethereum-and-xrp-to-follow-bitcoins-meteoric-500-rise-says-trader-credible-crypto/",
       "pubDate": "2021-05-05T07:24:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Popular trader and analyst Credible Crypto says the second-largest and the fifth-largest crypto assets are set to rally in a similar fashion to Bitcoin. In a series of tweets, Credible Crypto first says that Ethereum is following the script laid out by Bitcoin when it tripled in price after breaking through the 2017 high. “Remember […]",
       "currencies": [
@@ -919,8 +693,8 @@
       "title": "Chainlink surges past $50 to hit yet another ATH",
       "link": "https://ambcrypto.com/chainlink-surges-past-50-to-hit-yet-another-ath/",
       "pubDate": "2021-05-05T07:20:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "With Ethereum, the world’s largest altcoin, hitting an ATH of over $3,519 less than 24 hours ago, there remains a lot of bullish momentum in the market. This, despite the fact that many alts were seeing corrections over the past few trading sessions. Chainlink, however, was an exception to the norm, with the cryptocurrency choosing […]",
       "currencies": [
@@ -933,22 +707,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @buyaladdinapp: To celebrate the integration of #ABBCCoin as a payment method in #Buyaladdin app, along with #BTC and #ETH, our team pre…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T07:13:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Market Watch: Dogecoin (DOGE) Paving its Way to $1, Bitcoin Slides",
       "link": "https://cryptopotato.com/market-watch-dogecoin-doge-paving-its-way-to-1-bitcoin-slides/",
       "pubDate": "2021-05-05T07:01:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "While bitcoin has failed to produce any significant gains, some alternative coins have skyrocketed to new ATHs. DOGE is closing down on its $1 target.",
       "currencies": [
@@ -965,8 +728,8 @@
       "title": "Charted: Dogecoin (DOGE) Surges 50%, Here’s Why The Bulls Are Not Done Yet",
       "link": "https://www.newsbtc.com/analysis/dogecoin-doge-surges-50-pc/",
       "pubDate": "2021-05-05T06:38:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Dogecoin remained strong and it rallied further above $0.5000 against the US Dollar. DOGE surged over 50% and it traded to a new all-time high above $0.6500. DOGE extended its rally and it cleared the $0.5000 and $0.5500 resistance levels against the US dollar. The price is trading well above the $0.5000 zone and the […]",
       "currencies": [
@@ -978,22 +741,11 @@
       }
     },
     {
-      "title": "RT @HuobiGlobal: Next #crypto listing on ?",
-      "link": "NULL",
-      "pubDate": "2021-05-05T06:03:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
       "title": "Dogecoin’s Market Cap Grows to $90 Billion, But Spencer Bogart Warns It Has No Real Users",
       "link": "https://u.today/dogecoins-market-cap-grows-to-90-billion-but-spencer-bogart-warns-it-has-no-real-users",
       "pubDate": "2021-05-05T05:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Blockchain Capital’s Spencer Bogart claims Dogecoin has no real users",
       "currencies": [
@@ -1008,8 +760,8 @@
       "title": "Move over DOGE as Tiger King star launches CAT",
       "link": "https://cointelegraph.com/news/move-over-doge-as-tiger-king-star-launches-cat",
       "pubDate": "2021-05-05T05:44:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Carole Baskin has launched CAT via Ethereum-based open network Rally and has offered exclusive rewards for holders of the coin.",
       "currencies": [
@@ -1025,8 +777,8 @@
       "title": "DeFi TVL Taps $78B ATH as Uniswap v3 Launch Nears",
       "link": "https://cryptopotato.com/defi-tvl-taps-78b-ath-as-uniswap-v3-launch-nears/",
       "pubDate": "2021-05-05T05:08:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "The highly anticipated launch of Uniswap’s third iteration is upon us and it could spark off another DeFi boom.",
       "currencies": [
@@ -1042,8 +794,8 @@
       "title": "Amid XRP lawsuit, Ripple appoints former US Treasurer to its board, and names new CFO",
       "link": "https://ambcrypto.com/amid-xrp-lawsuit-ripple-appoints-former-us-treasurer-to-its-board-and-names-new-cfo/",
       "pubDate": "2021-05-05T03:55:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "With developments occurring on a daily basis in the XRP lawsuit that the SEC has filed against Ripple, the company has appointed a new CFO and included a former US Treasurer to its Board of Directors. In an official statement, on the Ripple website, the announcement stated that Rosa “Rosie” Gumataotao Rios, 43rd Treasurer of the […]",
       "currencies": [
@@ -1056,44 +808,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is there any hope for this coin to recover from its current state?",
-      "link": "NULL",
-      "pubDate": "2021-05-05T03:54:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "RT @tyler: Greetings Singapore 🇸🇬. @Gemini now supports direct $SGD deposits via Virtual Accounts on @xfers. Onward!",
-      "link": "NULL",
-      "pubDate": "2021-05-05T03:26:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
-      "title": "Your staked QKC to receive Smoothy token will be returned and SMTY rewards will be distributed after 05:00 PDT on M…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T01:41:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
       "title": "Is Dogecoin at $0.58 a Triumph or an FU to the Crypto Industry?",
       "link": "https://nlwcrypto.libsyn.com/is-dogecoin-at-058-a-triumph-or-an-fu-to-the-crypto-industry",
       "pubDate": "2021-05-05T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheBreakdown",
+      "sourceKey": "thebreakdown",
       "category": "altcoin",
       "description": "NLW asked his Twitter followers about what the success of dogecoin meant to the crypto industry. He got an extremely diverse set of takes. Some see it as a triumph of crypto’s uncontrollability. Some see it as a triumph of the underlying bitcoin tech working on a forked chain that hasn’t had much maintenance in years. Others see it as a damning indictment of the market as a whole; something that shows what a joke the whole industry is. Which is it? Can it be both? -- Earn up to 12% APY on Bitcoi",
       "currencies": [
@@ -1104,52 +823,6 @@
         "negative": 3
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @CENNZnet: Join our Blockchain 101 workshop in Auckland to get to the bottom of what #blockchain is and learn about its most popular use…",
-      "link": "NULL",
-      "pubDate": "2021-05-05T00:50:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "It's a secret 🤫",
-      "link": "NULL",
-      "pubDate": "2021-05-05T00:11:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Now you can stake your SBO!",
-      "link": "NULL",
-      "pubDate": "2021-05-05T00:11:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Price drop",
-      "link": "NULL",
-      "pubDate": "2021-05-05T00:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CHSB"
-      ]
     }
   ]
 }

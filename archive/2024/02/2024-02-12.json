@@ -1,243 +1,15 @@
 {
   "date": "2024-02-12",
-  "fetchedAt": "2026-02-05T07:45:53.373Z",
-  "articleCount": 49,
+  "fetchedAt": "2026-02-05T07:48:35.652Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Pixels Founder: Why PIXEL Token Launch Feels Like 'Day One' for Ronin Game",
-      "link": "NULL",
-      "pubDate": "2024-02-12T23:50:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
-      "title": "Trader Says Altcoin That’s Doubled in Less Than a Week Could Go Higher, Outlines Path Forward for Sui",
-      "link": "NULL",
-      "pubDate": "2024-02-12T23:01:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SUI",
-        "DYM"
-      ]
-    },
-    {
-      "title": "Analog Secures $16 Million for Web3 Interoperability Boost, Launches Cross-Chain Partnership Program",
-      "link": "NULL",
-      "pubDate": "2024-02-12T23:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "TRIBE"
-      ]
-    },
-    {
-      "title": "Franklin Templeton takes initial step for spot Ethereum ETF with new SEC filing",
-      "link": "NULL",
-      "pubDate": "2024-02-12T21:40:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "GAL"
-      ]
-    },
-    {
-      "title": "Grayscale and DCG Object to Genesis’ $1.6B Trust Shares Liquidation Plan",
-      "link": "NULL",
-      "pubDate": "2024-02-12T21:38:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Jack Dorsey Evokes Bitcoin At Super Bowl Wearing “Satoshi” T-Shirt",
-      "link": "NULL",
-      "pubDate": "2024-02-12T20:56:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "T"
-      ]
-    },
-    {
-      "title": "Gensler assures Congress of SEC’s dedication to cybersecurity following breach",
-      "link": "NULL",
-      "pubDate": "2024-02-12T20:39:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "XMR price finds support at $115: What do predictions say?",
-      "link": "NULL",
-      "pubDate": "2024-02-12T20:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Curve DAO Token Dips Below $0.50 Following 7-Day Price Rally",
-      "link": "NULL",
-      "pubDate": "2024-02-12T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Bitcoin soaring past $50K without retail FOMO and high leverage is good for BTC",
-      "link": "NULL",
-      "pubDate": "2024-02-12T19:05:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDC",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Best Crypto to Buy Today February 12 – BEAM, IMX, ORDI",
-      "link": "NULL",
-      "pubDate": "2024-02-12T18:26:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "IMX",
-        "BEAM",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Price analysis 2/12: SPX, DXY, BTC, ETH, BNB, SOL, XRP, ADA, AVAX, DOGE",
-      "link": "NULL",
-      "pubDate": "2024-02-12T18:20:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "AMP"
-      ]
-    },
-    {
-      "title": "Why did Bitcoin’s market cap surge by over $102 billion while realized cap only grew by $4 billion?",
-      "link": "NULL",
-      "pubDate": "2024-02-12T16:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Flare Network Introduces FXRP Assets to Enhance XRP Adoption via Web3 Industry",
-      "link": "NULL",
-      "pubDate": "2024-02-12T16:32:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "FLR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BEAM and KAS Rise This Week Snagging Double-Digit Gains; XMR, FXS, and RON Face Sharp Declines",
-      "link": "NULL",
-      "pubDate": "2024-02-12T16:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XMR",
-        "IMX",
-        "FXS",
-        "KAS",
-        "BEAM",
-        "RON"
-      ]
-    },
-    {
-      "title": "SEC is taking cybersecurity obligations seriously, Gensler tells Congress",
-      "link": "NULL",
-      "pubDate": "2024-02-12T16:25:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Game On! Why These GameFi Coins Are Pumping: $IMX, $AXS, $GFOX",
-      "link": "NULL",
-      "pubDate": "2024-02-12T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS",
-        "IMX"
-      ]
-    },
     {
       "title": "Ethereum Gas Fees Surge to 8-Month High As ERC-404 Tokens Take Off",
       "link": "https://cryptonews.com/news/ethereum-gas-fees-surge-to-8-month-high-due-to-high-demand-for-erc-404-tokens.htm?__cf_chl_rt_tk=DkTlX5Aigtd1BkWZU7JzT_T1IPylIGCEYynWFc.85f8-1747124848-1.0.1.1-Bn0pFZXQXTtrkFYf0PADzuUi0x5Me2GiGBC9JLe0FTc",
       "pubDate": "2024-02-12T15:49:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "ethereum",
       "description": "Gas fees on the Ethereum network have soared to levels not seen since March 2023, driven by the growing interest in a new experimental token standard known as ERC-404. Ethereum Gas Fees Reach Peak Levels On February 9, Ethereum gas prices soared to an average peak of 70 gwei, equivalent to $60 for a standard […]",
       "currencies": [
@@ -254,8 +26,8 @@
       "title": "Ethiopia's Low-Cost Power Draws Chinese Mining Firms for Bitcoin Work",
       "link": "https://coinpaprika.com/news/ethiopia-s-low-cost-power-draws-chinese-mining-firms-for-bitcoin-work/",
       "pubDate": "2024-02-12T15:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Chinese firms head to Ethiopia for crypto mining, lured by cheap electricity and legal mining",
       "currencies": [
@@ -268,74 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency Stacks Up More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-02-12T15:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "3 altcoins to watch this week: Polygon, Frax and Memeinator",
-      "link": "NULL",
-      "pubDate": "2024-02-12T14:43:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "FXS"
-      ]
-    },
-    {
-      "title": "Financial Freedom in 2024 with Bonk (BONK), Pyth Network (PYTH) and O2T",
-      "link": "NULL",
-      "pubDate": "2024-02-12T14:15:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – February 5 – February 11",
-      "link": "NULL",
-      "pubDate": "2024-02-12T14:09:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "ZenIP 42400 – Modernizing Horizen Technology via a Modular Proof Verification Layer",
-      "link": "NULL",
-      "pubDate": "2024-02-12T14:07:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
       "title": "Top-Trader Picks Cardano As Bull Market Leader: Here’s Why",
       "link": "https://www.newsbtc.com/news/cardano/top-trader-picks-cardano-bull-market-leader/",
       "pubDate": "2024-02-12T14:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "In a post on X (formerly Twitter), acclaimed crypto trader Gert van Lagen has pinpointed Cardano (ADA) as the potential frontrunner of the ongoing bull market. His analysis leans heavily on Cardano’s foundational strengths compared to its rivals, Ethereum (ETH) and Solana (SOL). Why Cardano Is Van Lagen’s Top Pick Central to van Lagen’s argument is the concept of decentralization, where he...",
       "currencies": [
@@ -350,158 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is this the time to buy high-potential GameFi cryptos?",
-      "link": "NULL",
-      "pubDate": "2024-02-12T13:55:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "4 cryptocurrencies under 20 cents to buy this week",
-      "link": "NULL",
-      "pubDate": "2024-02-12T13:47:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "XLM",
-        "ALGO",
-        "KAS"
-      ]
-    },
-    {
-      "title": "How Craig Wright believes he will win his biggest lawsuit yet",
-      "link": "NULL",
-      "pubDate": "2024-02-12T13:40:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "HT",
-        "GAL"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 12 Feb: Crypto Rally Hits Pause Mode",
-      "link": "NULL",
-      "pubDate": "2024-02-12T13:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "DOGE",
-        "T",
-        "RON"
-      ]
-    },
-    {
-      "title": "Whales accumulate STX and ADA; NUGX, a new P2E memecoin, next on their Radar",
-      "link": "NULL",
-      "pubDate": "2024-02-12T13:01:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "STX",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Gamers pick DeeStream (DST) as gold mine as presale excites Internet Computer (ICP) & Tron (TRX) holders in stage 1",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:55:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Why GAL, ZETA, PYTH, and BEAM May Not Follow the Same Direction",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:42:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL",
-        "PYTH",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Bitcoin Bears Brewing: Analyst Predicts A Pullback Before Halving",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Grayscale, DCG stand against Genesis plan to liquidate $1.6 billion in trust shares",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Beasley Broadcast Group (BBGI) Surpasses EPS Expectations with a Strong Q4",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:26:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "monday.com (MNDY) Surges with 35% Year-Over-Year Revenue Growth in Q4",
-      "link": "NULL",
-      "pubDate": "2024-02-12T12:19:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM",
-        "EPS"
-      ]
-    },
-    {
       "title": "Bitcoin Soars To 10th Largest Asset Globally, Leaving Berkshire Hathaway And JPMorgan Behind",
       "link": "https://bitcoinist.com/bitcoin-soars-to-10th-largest-asset-globally/",
       "pubDate": "2024-02-12T11:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Bitcoin’s recent accomplishments and ongoing rally have stirred palpable excitement among cryptocurrency enthusiasts and investors alike. In a groundbreaking move, Bitcoin has secured its position as the 10th largest asset in the world, surpassing stalwarts such as Berkshire Hathaway, Tesla, and JPMorgan. The cryptocurrency’s market capitalization, nearing the $1 trillion mark, reflects an...",
       "currencies": [
@@ -514,23 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ImmutableX (IMX) Price Reaches 2-Year High, Climbs Into Top 25",
-      "link": "NULL",
-      "pubDate": "2024-02-12T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "IMX"
-      ]
-    },
-    {
       "title": "Algorithmic Stablecoins Are More Suitable For The Crypto Industry: Charles Hoskinson",
       "link": "https://coinedition.com/algorithmic-stablecoins-are-more-suitable-for-the-crypto-industry-charles-hoskinson/",
       "pubDate": "2024-02-12T11:23:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "stablecoin",
       "description": "According to Cardano founder Charles Hoskinson, algorithmic stablecoins are more suitable for the crypto industry. Hoskinson made the statement during an interview with the Discover Crypto crew while responding to questions about some stakeholders in the crypto ecosystem refusing to associate with the project. Hoskinson noted that Cardano’s uprightness may be why some projects and […]",
       "currencies": [
@@ -540,154 +90,6 @@
         "positive": 9,
         "negative": 9
       }
-    },
-    {
-      "title": "Sora Ventures launches $2 million Liquid Fund for Bitcoin Ordinals ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-02-12T09:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TRAC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Flare (FLR) Rebounds 7% on XRP Integration News",
-      "link": "NULL",
-      "pubDate": "2024-02-12T09:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "FLR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "PlayDapp Suffers Security Breach with $32 Million PLA Token Exploited",
-      "link": "NULL",
-      "pubDate": "2024-02-12T09:10:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PLA"
-      ]
-    },
-    {
-      "title": "President Biden’s Laser Eyes Post Sparks Crypto Community Buzz",
-      "link": "NULL",
-      "pubDate": "2024-02-12T09:07:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "T"
-      ]
-    },
-    {
-      "title": "OpenAI Trillion Dollar Move May Send AI Crypto Coins ‘Parabolic’",
-      "link": "NULL",
-      "pubDate": "2024-02-12T07:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Tops $20 in 2-Year High, But What is Driving Momentum?",
-      "link": "NULL",
-      "pubDate": "2024-02-12T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "ADA",
-        "SOL",
-        "AVAX",
-        "MATIC",
-        "LINK",
-        "NEAR",
-        "BCH",
-        "ATOM",
-        "STX",
-        "IMX",
-        "DAO",
-        "ARB"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 11 Feb: Crypto Market Pauses Its Rally",
-      "link": "NULL",
-      "pubDate": "2024-02-12T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "BONK",
-        "FLR"
-      ]
-    },
-    {
-      "title": "Why This Analyst Is Bullish on Crypto Testnet Airdrops in 2024",
-      "link": "NULL",
-      "pubDate": "2024-02-12T05:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Trade Mixed As Year Of The Dragon Dawns: Analyst Predicts 6-Figure Price Target For King Crypto",
-      "link": "NULL",
-      "pubDate": "2024-02-12T02:43:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "BCH",
-        "IMX",
-        "FLR"
-      ]
-    },
-    {
-      "title": "Analyst Who Nailed Bitcoin 2018 Bottom Predicts Rallies for Solana and One SOL Competitor – Here’s His Outlook",
-      "link": "NULL",
-      "pubDate": "2024-02-12T01:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "SEI"
-      ]
     }
   ]
 }

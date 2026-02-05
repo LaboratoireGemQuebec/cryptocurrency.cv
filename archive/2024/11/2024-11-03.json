@@ -1,181 +1,15 @@
 {
   "date": "2024-11-03",
-  "fetchedAt": "2026-02-05T07:45:53.667Z",
-  "articleCount": 23,
+  "fetchedAt": "2026-02-05T07:48:35.697Z",
+  "articleCount": 2,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Similar All Time High prices for top competitor exchanges",
-      "link": "NULL",
-      "pubDate": "2024-11-03T23:47:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO",
-        "ATH",
-        "MCO"
-      ]
-    },
-    {
-      "title": "Bitcoin looks ripe for a rebound, and so do ETH, DOGE, LTC, and XMR",
-      "link": "NULL",
-      "pubDate": "2024-11-03T22:27:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "LTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Solana DeFi Momentum Soars With $5.7 Billion Locked In Q3",
-      "link": "NULL",
-      "pubDate": "2024-11-03T22:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "USDC",
-        "SOL",
-        "TRX",
-        "RAY",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – RAY, DOGE, IMX, MEW",
-      "link": "NULL",
-      "pubDate": "2024-11-03T19:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "IMX",
-        "RAY"
-      ]
-    },
-    {
-      "title": "Analyst Says This Crypto Could Explode By Up To 3.765%, And It Is Not Bitcoin Or Solana",
-      "link": "NULL",
-      "pubDate": "2024-11-03T18:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Is CDC ever gonna do anything, that benefits the CRO price?",
-      "link": "NULL",
-      "pubDate": "2024-11-03T17:21:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO",
-        "MCO"
-      ]
-    },
-    {
-      "title": "How do you think this portfolio will do at the peak of the bull market?",
-      "link": "NULL",
-      "pubDate": "2024-11-03T17:02:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Truth Terminal Creator Faces Devastating Hack — Solana Meme Coin GOAT Plunges",
-      "link": "NULL",
-      "pubDate": "2024-11-03T16:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "GOAT",
-        "FWOG"
-      ]
-    },
-    {
-      "title": "Cardano Community Divided on Charles Hoskinson’s Role as Blockchain Embraces Decentralization",
-      "link": "NULL",
-      "pubDate": "2024-11-03T15:36:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "FET price prediction: Top reasons why a bullish reversal is imminent",
-      "link": "NULL",
-      "pubDate": "2024-11-03T15:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Coins to Watch Closely in November & December: These Could Turn Ordinary Joes into Millionaires by Q1 2025",
-      "link": "NULL",
-      "pubDate": "2024-11-03T13:42:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "DOGE",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "GRASS 24% Price Decline Could Open Doors to Extended Downtrend: Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-11-03T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "GRASS"
-      ]
-    },
     {
       "title": "Prediction markets don’t trust election survey polls; Favor Trump over Harris",
       "link": "https://finbold.com/prediction-markets-dont-trust-election-survey-polls-favor-trump-over-harris/",
       "pubDate": "2024-11-03T11:53:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Prediction markets have become popular during this presidential election year in 2024, especially after implementing cryptocurrency payments via Circle’s USDC. … Continue reading The post Prediction markets don’t trust election survey polls; Favor Trump over Harris appeared first on Finbold.",
       "currencies": [
@@ -188,56 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Become Your Own Neobank With Gnosis Pay",
-      "link": "NULL",
-      "pubDate": "2024-11-03T10:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GNO"
-      ]
-    },
-    {
-      "title": "Cats Youtube Code Today November 04, 2024: Boost Your Earnings",
-      "link": "NULL",
-      "pubDate": "2024-11-03T09:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS",
-        "TON"
-      ]
-    },
-    {
-      "title": "Paxos to Release First Attestation Report for Singapore Compliant Stablecoin USDG",
-      "link": "NULL",
-      "pubDate": "2024-11-03T09:23:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDG"
-      ]
-    },
-    {
-      "title": "FET Price Aims For 45% Rally, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-11-03T06:37:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
       "title": "A Top Platform Is Projecting A Strong 2025 For Shiba Inu (SHIB)",
       "link": "https://franknez.com/a-top-platform-is-projecting-a-strong-2025-for-shiba-inu-shib/?utm_source=rss&utm_medium=rss&utm_campaign=a-top-platform-is-projecting-a-strong-2025-for-shiba-inu-shib",
       "pubDate": "2024-11-03T06:20:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "currencies": [
         "SHIB"
@@ -247,83 +36,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Solana Rises 1,400% Despite Jim Cramer’s ‘Idiot’ Criticism",
-      "link": "NULL",
-      "pubDate": "2024-11-03T06:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Solana Q3 Digest: Total Value Locked Hits $5.7 Billion, Ranks Third Among Networks",
-      "link": "NULL",
-      "pubDate": "2024-11-03T04:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "TRX",
-        "WIF",
-        "WLD",
-        "PYUSD",
-        "POPCAT",
-        "DEFI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "dYdX price prediction 2025- 2031: Will dYdX hit $10?",
-      "link": "NULL",
-      "pubDate": "2024-11-03T03:55:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "dYdX price prediction 2025- 2031: Will dYdX recover its ATH soon?",
-      "link": "NULL",
-      "pubDate": "2024-11-03T03:55:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "DYDX",
-        "ATH"
-      ]
-    },
-    {
-      "title": "GRASS price prediction – Rejection at $2, but is the dip good enough for buying?",
-      "link": "NULL",
-      "pubDate": "2024-11-03T00:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRASS"
-      ]
     }
   ]
 }

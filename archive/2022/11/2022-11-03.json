@@ -1,26 +1,15 @@
 {
   "date": "2022-11-03",
-  "fetchedAt": "2026-02-05T07:45:52.593Z",
-  "articleCount": 90,
+  "fetchedAt": "2026-02-05T07:48:35.574Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Congratulations @glorious_digi !",
-      "link": "NULL",
-      "pubDate": "2022-11-03T23:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
     {
       "title": "Why Cardano (ADA) Could Be Gearing Up For A Rally",
       "link": "https://www.newsbtc.com/news/cardano/why-cardano-ada-could-be-gearing-up-for-a-rally/",
       "pubDate": "2022-11-03T23:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano (ADA) price has struggled tremendously since it hit its all-time high price of $3.10 back in 2021. Even now, with the crypto market recovery, ADA has not made as many gains as others in the market as indicators point largely toward bearishness for the digital asset. However, a new development could see a recovery in the price ofCa Cardano. FTX Plans To List ADA FTX remains the only one...",
       "currencies": [
@@ -35,89 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Starting spaces in a few minutes to talk about Ethos Launch! Let us know what questions you have below",
-      "link": "NULL",
-      "pubDate": "2022-11-03T22:51:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "RT @Mike94800444: Slumper 🧟‍️ takes over the tunnels under the city but where is zombie dash He must be around somewhere #dotdfilter…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T22:39:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "HELLO"
-      ]
-    },
-    {
-      "title": "In the gaming industry, there are a lot of barriers to entry with revenue streams limiting the gaming experience &…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T22:29:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Work in silence..🤫 #buildersbuild",
-      "link": "NULL",
-      "pubDate": "2022-11-03T22:24:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "We recently added SPF, DKIM, and DMARC for our email to prevent domain spoofing. Huge thanks to @BellaProtocol's co…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T22:07:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "Are you a software developer looking for an intro to #blockchain technology? This eBook streamlines the concept of…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T21:29:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Let's talk more on tokenomics, this topic we can keep it on and on for weeks.  But always keep in mind, this is N…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T21:08:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
       "title": "Terra’s Do Kwon Is in Europe After Fleeing Singapore: Report",
       "link": "https://cryptobriefing.com/terras-do-kwon-is-in-europe-after-fleeing-singapore-report/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-03T21:07:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Do Kwon, CEO of the failed stablecoin company Terraform Labs, is reportedly residing in Europe. According to Korean state media, Do Kwon's location has been partially discovered.On November 3, the Korean Broadcasting System (KBS) said that it is \"understood that [Kwon] is currently in Europe.\" It added that Kwon previously moved to a third countrywhich was also located in Europevia Dubai.Kwon...",
       "currencies": [
@@ -129,95 +40,11 @@
       }
     },
     {
-      "title": "Sam Bankman-Fried Comments on Why FTX Passed on Twitter Investment",
-      "link": "NULL",
-      "pubDate": "2022-11-03T21:06:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Our blog post by our CEO and Founder @shingolavine is live! Shingo talks about why we're taking on the Ethos 2.0 pr…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T21:04:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "NEW: We’re excited to announce that $XRP, $ATOM, $XLM, $HBAR, $XTZ, $ALGO and $DASH are now listed and available to…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T20:48:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ALGO",
-        "DASH",
-        "QUAD"
-      ]
-    },
-    {
-      "title": "A great opportunity to witness the power of #Helium-based applications first hand! @Trackpacio developed a custo…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T20:42:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Stratis SDA update from projects @dawnofships @OpdexProtocol @TriviaLegends @corgi_dash @Hash_battle @coinvault_io…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T20:36:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
-      "title": "The future is multi-chain. IOVLabs Tech Director @diegomasini will be at the #RootstockSummit leading this panel…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T20:24:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "AVINOC is part of it  #dubai #airshow #mebaa #meetus #networking",
-      "link": "NULL",
-      "pubDate": "2022-11-03T20:10:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVINOC"
-      ]
-    },
-    {
       "title": "Payments Giant MoneyGram Enables Bitcoin (BTC), Ethereum (ETH) and Litecoin (LTC) Trading on App",
       "link": "https://dailyhodl.com/2022/11/03/payments-giant-moneygram-enables-bitcoin-btc-ethereum-eth-and-litecoin-ltc-trading-on-app/",
       "pubDate": "2022-11-03T19:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Payments company MoneyGram is rolling out a new service that allows consumers to buy, sell and hold crypto assets using the company’s mobile app. In a statement, the money transfer giant says the MoneyGram app’s crypto trading feature will support Bitcoin (BTC), Ethereum (ETH) and Litecoin (LTC) and is now available to customers in nearly […]",
       "currencies": [
@@ -235,8 +62,8 @@
       "title": "Do Kwon Reportedly Instructed An Employee To Manipulate Terra’s Market Price",
       "link": "https://en.ethereumworldnews.com/do-kwon-employee-manipulate-terra-price/",
       "pubDate": "2022-11-03T19:32:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "trading",
       "description": "According to a report by South Korean local media, Do Kwon instructed a Terra employee to manipulate the price of Terra in order to match it to a specific price target.",
       "currencies": [
@@ -249,22 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Are you running a Bitcoin SV node? These tools and resources will help you implement, optimise and maintain an op…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Meta Announces New Product Allowing Creators To Build Instagram NFTs on Polygon (MATIC)",
       "link": "https://dailyhodl.com/2022/11/03/meta-announces-new-product-allowing-creators-to-build-instagram-nfts-on-polygon-matic/",
       "pubDate": "2022-11-03T18:41:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "nft",
       "description": "Social media giant Meta is announcing a new feature to allow creators to make their own non-fungible tokens (NFTs) and sell them directly on Instagram. The NFTs will be minted on Polygon (MATIC), which surged by 12.8% over the last 24 hours following the announcement. “Creators will soon be able to make their own digital […]",
       "currencies": [
@@ -277,55 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "@dieguito, Guillermo Villanueva from @Extrimian, and Diego Fernandez will make up the panel discussing how the w…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T18:16:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "RT @DocumentingBTC: Paying for groceries  with #bitcoin",
-      "link": "NULL",
-      "pubDate": "2022-11-03T18:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BERA"
-      ]
-    },
-    {
-      "title": "RT @alesander97: We are back in our home country, Zimbabwe 🇿🇼, city of Kings 🤴of Queen’s 🫅Bulawayo. Helping those knee to understand #Bit…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T18:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "A BIG thanks!",
-      "link": "NULL",
-      "pubDate": "2022-11-03T18:04:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
       "title": "Dogecoin (DOGE) and Shiba Inu (SHIB) Price Prediction: Building Strength for a Rally",
       "link": "https://beincrypto.com/doge-shib-price-prediction-building-strength-rally/",
       "pubDate": "2022-11-03T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The Dogecoin (DOGE) price has broken out from a 539-day resistance line, indicating that its long-term correction is complete. The Shiba Inu (SHIB) price has broken out from its own corrective pattern and could be in the initial stages of a long-term upward movement.",
       "currencies": [
@@ -339,67 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @HeliumFndn: Coming to #SolanaBreakpoint? Don't miss us. Nov 6, 14:15 - State of the Helium Network Nov 7, 10:30 - Bringing Helium to S…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @EthereumDenver: #bufficorns be doing Bufficorn things",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:40:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "RT @WillertTravisS: I’ve listened to @PallerJohn talk about @opolis probably 1000 times. Yet last night on my free time I chose to listen t…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:40:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "In this week article, we dive into future of Web-3 wallets and introduce @BiportWallet , a natively cross-chain wal…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:36:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "We had the chance to attend @NFT_NYC Tom Fleetham was on a panel focused on NFTs and how they can be leveraged by…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:34:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Polygon NFTs Finally Coming To Over 1.4 Billion Instagram Users — MATIC Primed For Huge Boost",
       "link": "https://zycrypto.com/polygon-nfts-finally-coming-to-over-1-4-billion-instagram-users-matic-primed-for-huge-boost/",
       "pubDate": "2022-11-03T17:20:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "nft",
       "description": "Polygon’s token MATIC has enjoyed a significant spike in buying pressure that coincides with Meta’s announcement.",
       "currencies": [
@@ -412,136 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @hummingbot_org:  We are happy to announce that @fengtality will be presenting Hummingbot Serum Demo on 7th Nov 2022 in Lisbon, Portug…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:10:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SRM"
-      ]
-    },
-    {
-      "title": "RT @IotOffGrid: We are wrapping up the pilot testing for the open source tracking platform. Here's a pilot test run of the hike our team di…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:05:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "#Crypto101 - TRON (TRX) #TRON is one of the leading decentralized public blockchains. $USDD is the algorithmic s…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T17:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "Paxos has become the first U.S.-based blockchain infrastructure platform licensed to offer digital-payment token se…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T16:54:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "RT @nachortti: The next runtime upgrade vote on @kusamanetwork will include Gov2: a new phase in on-chain governance will start!  (1/) htt…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T16:33:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KSM"
-      ]
-    },
-    {
-      "title": "SPS Governance Proposal - Price Blood & Power Stones in DEC",
-      "link": "NULL",
-      "pubDate": "2022-11-03T16:19:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @BluejayFinance: 🤝 We love our friends over at @RequestFinance who are building b2b payments for crypto companies. So we've decided to c…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T16:18:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "Massive scale in #BitcoinSV means that solutions for horizontal scaling are necessary. @jadwahab, Director of Eng…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @Hivemapper: We’re excited to launch the Hivemapper Network and be a part of the Helium ecosystem Check out @aseidman discussing Hivem…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T15:59:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Bill Tai @KiteVC explains how Powerledger's solutions empower communities by democratising energy and allowing them…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T15:45:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "Adshares enables digital marketing agencies to reach places giants can't reach. Pitch your clients the…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T15:44:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADS"
-      ]
-    },
-    {
       "title": "Revolut launches crypto card allowing users to receive cashback in Dogecoin",
       "link": "https://finbold.com/revolut-launches-crypto-card-allowing-users-to-receive-cashback-in-dogecoin/",
       "pubDate": "2022-11-03T15:44:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "As the challenger bank Revolut, prepares to introduce a crypto card in the United Kingdom, residents of that country will... Continue reading",
       "currencies": [
@@ -554,33 +145,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#RSK Co-Founder @dieguito has been busy this week representing RSK and #IOVLabs at Argentina’s biggest fintech me…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T15:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "The Bitcoin SV community suffers from a high rate of infighting. Todd Price discusses potential reasons for this di…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Elon Musk Is the Largest Dogecoin (DOGE) Holder, Claims On-Chain Analyst",
       "link": "https://beincrypto.com/elon-musk-largest-doge-holder-on-chain-analyst/",
       "pubDate": "2022-11-03T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "On-chain analyst Lookonchain claims that Elon Musk could be the largest holder of Dogecoin, controlling it through the address \"Robinhood.\"",
       "currencies": [
@@ -593,45 +162,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "USDD Stablecoin Users Increased by 500% in Q3",
-      "link": "NULL",
-      "pubDate": "2022-11-03T14:21:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "Wow! The @Helium IoT Network has officially crossed: 970,000+ hotspots 75,384 cities in the world 184 count…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T14:19:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "The icing on the cake for us! @GunnisonCap. We are the proud winner of the Global Fintech Awards 2022, Knowledge En…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T13:53:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
       "title": "ApeCoin DAO approves $4.4 million bug bounty program on Immunefi",
       "link": "https://www.theblock.co/post/182632/apecoin-dao-approves-4-4-million-bug-bounty-program-on-immunefi?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-03T13:27:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "The ApeCoin DAO has voted to approve a $4.4 million bug bounty program with ethical hacking platform Immunefi.",
       "currencies": [
@@ -647,8 +182,8 @@
       "title": "MATIC price eyes 200% gains on Polygon adoption by Instagram, JPMorgan",
       "link": "https://cointelegraph.com/news/matic-price-eyes-200-gains-on-polygon-adoption-by-instagram-jpmorgan",
       "pubDate": "2022-11-03T13:18:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Polygon’s list of high-profile partners is getting longer, with Disney, Starbucks and Robinhood already boarding its blockchain.",
       "currencies": [
@@ -661,78 +196,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @elonmusk: Being attacked by both right &amp; left simultaneously is a good sign",
-      "link": "NULL",
-      "pubDate": "2022-11-03T13:08:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BERA"
-      ]
-    },
-    {
-      "title": "RT @ZIL_ALL: 0% FEE – Limit Order 0.10% FEE – Swap 🤑 Now trading with #ZILALL #DEX is even more profitable Swap and place Limit Orde…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T13:08:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "A few more candid snaps from Behind the Scenes at yesterdays latest Q&amp;A video shoot with @MariuszKrolWolf…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T12:40:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
-    {
-      "title": "RT @farringtonmafia: 24 HOURS! Mining Zano Results! ProgPowZ @zano_project @lucky_pool #zano #gpumining #cryptocurr…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T12:05:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "ZANO"
-      ]
-    },
-    {
-      "title": "RT @zano_project: Exciting news from @_cryptozoidberg on Telegram, the first $ZANO Confidential Asset transaction has been successfully per…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T12:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZANO"
-      ]
-    },
-    {
-      "title": "We are celebrating the 1st anniversary at the Singapore Fintech Awards 2022 @GunnisonCap. A year on, two licenses,…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T11:52:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
       "title": "Data shows 340,000 addresses bought 64 billion DOGE at this price forming ‘stable support floor’",
       "link": "https://finbold.com/data-shows-340000-addresses-bought-64-billion-doge-at-this-price-forming-stable-support-floor/",
       "pubDate": "2022-11-03T11:38:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "After the widely publicized acquisition of Twitter (NYSE: TWTR) by the Tesla (NASDAQ: TSLA) CEO Elon Musk sent one of... Continue reading",
       "currencies": [
@@ -747,8 +215,8 @@
       "title": "Meta to use decentralized data storage protocol Arweave to store NFTs from Instagram",
       "link": "https://www.theblock.co/post/182569/meta-arweave-instagram-nfts?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-03T11:29:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "nft",
       "description": "Meta has integrated decentralized data storage protocol Arweave to permanently store digital collectibles from Instagram.",
       "currencies": [
@@ -761,44 +229,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @trondao: ️After UST's collapse and stablecoin depegging in June, $USDD maintained a tight peg and launched Peg Stability Module(PSM) u…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:55:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @trondao: According to @MessariCrypto, there is a 5x growth of the number of wallets holding $USDD over Q3. It leveled out at around 1…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Our Q3 quarterly report is out! Grab a coffee and enjoy this quick read to be up to date on our balances, peg, s…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:55:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
       "title": "Deep learning algorithm predicts Cardano to trade above $0.50 by November 30, 2022",
       "link": "https://finbold.com/deep-learning-algorithm-predicts-cardano-to-trade-above-0-50-by-november-30-2022/",
       "pubDate": "2022-11-03T10:31:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The cryptocurrency industry has been going through a prolonged period of bearishness, and although it appears to be catching its... Continue reading",
       "currencies": [
@@ -811,22 +246,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @UgurMersin61: Exiting times ahead @API3DAO.",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:30:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
       "title": "20% of Solana Nodes Are Now Gone, 16.9% of Ethereum Now at Risk",
       "link": "https://u.today/20-of-solana-nodes-are-now-gone-169-of-ethereum-now-at-risk",
       "pubDate": "2022-11-03T10:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Network is facing some serious issues after one of biggest hostings drops support for network",
       "currencies": [
@@ -840,85 +264,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Acala and Karura Are Now Supported on Ledger | Polkadot News | Kusama News | Crypto News",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:12:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "ACA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Check out one of the AVINOC's running #tokenization projects  #VOO is the world’s first #digital B2B #marketplace…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVINOC"
-      ]
-    },
-    {
-      "title": "Are you a digital #graphicdesigner looking for #work? Why not sell your services through AnyTask.com@anytaskofficia…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T10:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Big changes are coming! We have an announcement coming soon that will be the first step in a new beginning for our…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T09:59:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @binance: Paxos, #BUSD issuing partner, received a license from the Monetary Authority of Singapore (MAS) to offer digital payment token…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T09:52:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Warren Buffet’s investment philosophy: (a) pick undervalued stock with sound management, (b) buy with a margin of s…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T09:14:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
       "title": "Skyward Finance suffers $3 million exploit on Near Protocol",
       "link": "https://www.theblock.co/post/182495/skyward-finance-exploit-near-protocol?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-03T09:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "An unknown hacker siphoned $3 million from Skyward Finance, a launchpad project on Near Protocol.",
       "currencies": [
@@ -934,8 +284,8 @@
       "title": "Bitcoin Will Not Touch $100k Anytime Soon Says Economist",
       "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-will-not-touch-100k-anytime-soon-says-economist/",
       "pubDate": "2022-11-03T08:39:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "As the first and primary cryptocurrency to exist, Bitcoin has witnessed different reactions and predictions in the industry. Its advancement over the past years has been above the growth of conventional assets. However, the recent bearish trend in the crypto market this year created doubts about the future of the token. Recently, the Chief Economic Adviser at Allianz, Mohamed El-Erian,...",
       "currencies": [
@@ -945,201 +295,6 @@
       "votes": {
         "positive": 7,
         "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Splinterlands - SPS.DAO Proposals voting full sail ahead",
-      "link": "NULL",
-      "pubDate": "2022-11-03T08:16:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "\"The number of wallets holding $USDD which saw 5x growth over Q3\" You can now read the first-ever official quart…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T08:08:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "⏰ Looking forward to our latest tech development $band",
-      "link": "NULL",
-      "pubDate": "2022-11-03T07:53:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "It is time to earn! Stake NOW with our $USDD Mining Pools on @CurveFinance and enjoy high APR! USDD/3CRV …",
-      "link": "NULL",
-      "pubDate": "2022-11-03T07:39:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Why Polkadot [DOT] is slated to dash for some more upside",
-      "link": "NULL",
-      "pubDate": "2022-11-03T07:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "DASH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "On November 8th, Co-Founder @m_h_d_v will be taking part in the Vogue Greece Change Makers event to discuss The Met…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T06:24:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Our HPO token sale has started! We have integrated HPO (Hippo Wallet Token) in the Hippo Wallet app already. This m…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T06:12:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HPO"
-      ]
-    },
-    {
-      "title": "RT @trondao: The first ever official quarterly report about #USDD has been created by @MessariCrypto We are excited to continue seeing th…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T06:04:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @gitcoin: Tomorrow @gkimbwala will chat with @lukso_io and their 1st place hackathon winner @lookso_io 🥇 on a retro of the joys and chal…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T04:39:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "RT @rich_teo: . @PaxosGlobal is proud to call #Singapore home! We’re the only US company with a full MPI license by MAS. We will expand our…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T03:24:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Hurry and join Pool Party #12 to win 200 USDD before it’s over! #crypto #cryptocurrency…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T03:16:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "FBX"
-      ]
-    },
-    {
-      "title": "We’re proud to announce that @MessariCrypto has made the first official quarterly report about #USDD. It covers a…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T02:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Introducing the 2 new members in our Governance Council (GC)! @Swapscanner @Quantstamp Find out more about the…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T01:48:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Shiba Inu (SHIB) Ranks No. 1 In Top 5,000 ETH Whales’ Crypto Holdings",
-      "link": "NULL",
-      "pubDate": "2022-11-03T01:39:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "With Ethos 2.0 we hope to help people affected by centralized collapses Defy Loss and embrace recovery through the…",
-      "link": "NULL",
-      "pubDate": "2022-11-03T01:33:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Elon Musk Integrating DOGECOIN with Twitter? Dogecoin Millionaire Gives His Prediction",
-      "link": "NULL",
-      "pubDate": "2022-11-03T01:13:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "STACKS is the podcast for crypto investors. Hear about the biggest opportunities, trades, and trends. ProTheDoge joins Luke Martin to discuss Dogecoin's pumping again, making $100k overnight, becoming a millionaire last cycle, why he never sold, his new take profit strategy, Elon's plans for Doge and Twitter, Elon tweeting hints about what's coming, selling TSLA to invest in crypto, Dogechain, meme coins, and his prediction for how high Doge price goes. GUESTS: ProTheDoge: https://twitter.com/Pr",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 8,
-        "negative": 2
       },
       "sentiment": "bullish"
     }

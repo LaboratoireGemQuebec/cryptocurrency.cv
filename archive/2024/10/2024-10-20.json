@@ -1,54 +1,15 @@
 {
   "date": "2024-10-20",
-  "fetchedAt": "2026-02-05T07:45:53.631Z",
-  "articleCount": 36,
+  "fetchedAt": "2026-02-05T07:48:35.691Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "JUST IN: #Bitcoin smashes $69,000! SUNDAY NIGHT PUMPS ARE BACK!!",
-      "link": "NULL",
-      "pubDate": "2024-10-20T22:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BOME market sentiment shifts to bearish: Is a pullback ahead?",
-      "link": "NULL",
-      "pubDate": "2024-10-20T22:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BOME",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Prolific Game Studio Announces 2025 Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-10-20T21:42:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PRO"
-      ]
-    },
     {
       "title": "Charles Hoskinson Outlines Cardano’s Future Roadmap Post-Voltaire And It’s Crazy Bullish",
       "link": "https://zycrypto.com/charles-hoskinson-outlines-cardanos-future-roadmap-post-voltaire-and-its-crazy-bullish/",
       "pubDate": "2024-10-20T21:41:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Charles Hoskinson has unveiled an ambitious vision for the blockchain platform's future beyond the Voltaire era, or what has been called Cardano 2.0.",
       "currencies": [
@@ -64,8 +25,8 @@
       "title": "Vitalik Buterin Proposes New Upgrades to Protect Ethereum's Decentralization",
       "link": "https://coinpaprika.com/news/vitalik-buterin-proposes-new-upgrades-to-protect-ethereum-s-decentralization/",
       "pubDate": "2024-10-20T21:14:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Vitalik Buterin proposes key upgrades to Ethereum's Proof-of-Stake system to prevent centralization and ensure long-term network security.",
       "currencies": [
@@ -78,71 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DYDX Price Jumps 30%, Ranks Among Top-Performing Altcoins Today",
-      "link": "NULL",
-      "pubDate": "2024-10-20T21:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – APE, DOGE, TAO, MKR",
-      "link": "NULL",
-      "pubDate": "2024-10-20T19:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "APE",
-        "MKR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Celestia (TIA) Price Enters Critical Phase Ahead of $1 Billion Token Unlock",
-      "link": "NULL",
-      "pubDate": "2024-10-20T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "After Surging by 110% Daily, Can ApeCoin (APE) Break its All-Time High?",
-      "link": "NULL",
-      "pubDate": "2024-10-20T17:06:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "From Giga Chad to Turbo: The 10 Meme Coins Dominating 2024’s Crypto Charts",
-      "link": "NULL",
-      "pubDate": "2024-10-20T16:45:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GIGA"
-      ]
-    },
-    {
       "title": "Solana (SOL) Price Prediction for October 20",
       "link": "https://u.today/solana-sol-price-prediction-for-october-20",
       "pubDate": "2024-10-20T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "When can traders expect correction from Solana (SOL)?",
       "currencies": [
@@ -154,33 +55,11 @@
       }
     },
     {
-      "title": "Kaspa Garners Grayscale’s Attention, Analysts Expect Future Gains",
-      "link": "NULL",
-      "pubDate": "2024-10-20T16:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Why Is The ApeCoin Price Up 100% Today?",
-      "link": "NULL",
-      "pubDate": "2024-10-20T15:58:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
       "title": "Ethereum (ETH) Price Prediction for October 20",
       "link": "https://u.today/ethereum-eth-price-prediction-for-october-20",
       "pubDate": "2024-10-20T15:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Can traders expect blast from Ethereum (ETH) shortly?",
       "currencies": [
@@ -193,23 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Algorand Price Falters as Investors Switch ALGO For LNEX & TRX To Maximise Profit Potential",
-      "link": "NULL",
-      "pubDate": "2024-10-20T13:52:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "ALGO"
-      ]
-    },
-    {
       "title": "Vitalik Buterin Highlights Ethereum’s Proof-of-Stake Mechanism Risks",
       "link": "https://dailycoin.com/vitalik-buterin-ethereum-proof-of-stake-risks/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-10-20T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "ethereum",
       "description": "Vitalik Buterin proposes various ways to resolve Ethereum’s proof-of-stake mechanism risks.",
       "currencies": [
@@ -222,73 +89,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why Zig Network (ZIG) is Set to Become a Market Leader in 2024, Overtaking Solana (SOL) and Cardano (ADA)",
-      "link": "NULL",
-      "pubDate": "2024-10-20T12:48:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "ZIG"
-      ]
-    },
-    {
-      "title": "Tether’s USDT hits record $120B market cap, flashing ‘Uptober’ signal",
-      "link": "NULL",
-      "pubDate": "2024-10-20T12:46:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Memes Lab Daily Cipher Code Today 21 October 2024",
-      "link": "NULL",
-      "pubDate": "2024-10-20T12:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "This Token, Currently Priced Under $0.10, is Mirroring the Early Success of Shiba Inu (SHIB) and Polygon (POL)",
-      "link": "NULL",
-      "pubDate": "2024-10-20T12:31:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "MATIC",
-        "POL"
-      ]
-    },
-    {
-      "title": "Treasure Tapper Daily Code 21 October 2024, Tap to Earn $TREZ",
-      "link": "NULL",
-      "pubDate": "2024-10-20T12:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Cardano Will Surpass Bitcoin and Ethereum in the Coming Decades – Charles Hoskinson",
       "link": "https://cryptodnes.bg/en/cardano-will-surpass-bitcoin-and-ethereum-in-the-coming-decades-charles-hoskinson/",
       "pubDate": "2024-10-20T12:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "bitcoin",
       "description": "Charles Hoskinson recently expressed his belief that Cardano will eventually surpass both Bitcoin and Ethereum, sharing his vision for this transformation.",
       "currencies": [
@@ -305,8 +110,8 @@
       "title": "What’s next for BTC amid European Central Bank’s ‘declaration of war’ on Bitcoin",
       "link": "https://finbold.com/whats-next-for-btc-amid-european-central-banks-declaration-of-war-on-bitcoin/",
       "pubDate": "2024-10-20T11:51:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "The European Central Bank (ECB) strikes again, publishing an economic paper about Bitcoin (BTC) called “The distributional consequences of Bitcoin.” … Continue reading",
       "currencies": [
@@ -319,136 +124,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Cats Youtube Code Today October 21, 2024: Boost Your Earnings",
-      "link": "NULL",
-      "pubDate": "2024-10-20T10:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS",
-        "TON"
-      ]
-    },
-    {
-      "title": "ApeCoin (APE) Price Rallies 66%, Makes Top 100 Comeback",
-      "link": "NULL",
-      "pubDate": "2024-10-20T10:01:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "APE",
-        "DAO",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Holds Above $68,000, But TD Sequential Sounds Sell Alarm",
-      "link": "NULL",
-      "pubDate": "2024-10-20T10:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOGE",
-        "ALI"
-      ]
-    },
-    {
-      "title": "BRETT struggles after breakout, but key factors point to a rally",
-      "link": "NULL",
-      "pubDate": "2024-10-20T10:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BRETT",
-        "MEME"
-      ]
-    },
-    {
-      "title": "How High Can ApeCoin’s (APE) Price Go After the Bridge Launch?",
-      "link": "NULL",
-      "pubDate": "2024-10-20T09:52:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "SUI beats Litecoin, targets NEAR: Why the $2.40 level is key",
-      "link": "NULL",
-      "pubDate": "2024-10-20T09:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "NEAR",
-        "SUI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Limited-Edition $DOG Plushies to Launch on October 19, 2024, Bridging Digital and Physical Collectibles",
-      "link": "NULL",
-      "pubDate": "2024-10-20T08:08:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOG"
-      ]
-    },
-    {
-      "title": "TRON Market Cap Hits Nearly $14 Billion On Strong Revenue Growth",
-      "link": "NULL",
-      "pubDate": "2024-10-20T08:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "DOGE",
-        "TRX",
-        "SHIB",
-        "IQ"
-      ]
-    },
-    {
-      "title": "ApeCoin (APE) Returns to Top 100 Alts, Bitcoin (BTC) Maintains $68K (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2024-10-20T06:58:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "APE"
-      ]
-    },
-    {
       "title": "ETH held in accumulation wallets jumps 65% since the start of 2024",
       "link": "https://cointelegraph.com/news/ethereum-accumulation-addresses-wallets-spike-crypto-2024-cryptoquant-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-10-20T06:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "A crypto analyst highlighted a 65% increase in Ethereum held in accumulation wallets since the start of 2024, arguing that it's no longer just for \"tech enthusiasts.\"",
       "currencies": [
@@ -459,44 +139,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "The Reason Behind ApeCoin’s (APE) 66% Daily Surge: Details",
-      "link": "NULL",
-      "pubDate": "2024-10-20T05:42:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "LayerZero Under Intensified Bearish Pressure, Halting Recovery Efforts",
-      "link": "NULL",
-      "pubDate": "2024-10-20T05:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ZRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "SAND’s reversal odds – Identifying if an upside is likely for its price",
-      "link": "NULL",
-      "pubDate": "2024-10-20T04:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SAND"
-      ]
     }
   ]
 }

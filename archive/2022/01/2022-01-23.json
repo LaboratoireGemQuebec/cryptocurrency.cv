@@ -1,26 +1,15 @@
 {
   "date": "2022-01-23",
-  "fetchedAt": "2026-02-05T07:45:51.447Z",
-  "articleCount": 45,
+  "fetchedAt": "2026-02-05T07:48:35.282Z",
+  "articleCount": 25,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "As our first audit with @ObeliskOrg nears completion and we unveil $WFTM bonds opening soon™️, we are celebrating…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T23:35:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
     {
       "title": "After The Huge Bitcoin, Ethereum And Crypto Price Crash, These Coins Are Suddenly Soaring",
       "link": "https://www.forbes.com/sites/billybambrough/2022/01/23/after-huge-bitcoin-ethereum-and-crypto-price-crash-these-coins-are-suddenly-soaring/",
       "pubDate": "2022-01-23T23:15:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "As bitcoin, ethereum and some other top ten cryptocurrenices continue to struggle, ethereum rivals BNB and solana, Ripple's XRP, stablecoin network Terra's luna and the meme-based dogecoin and shiba inu have rallied...",
       "currencies": [
@@ -38,8 +27,8 @@
       "title": "Most Cardano (ADA), Shiba Inu (SHIB) and Polygon (MATIC) Holders Now Underwater Amid Deep Pullback: IntotheBlock",
       "link": "https://dailyhodl.com/2022/01/23/most-cardano-ada-shiba-inu-shib-and-polygon-matic-holders-now-underwater-amid-deep-pullback-intotheblock/",
       "pubDate": "2022-01-23T23:05:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "New data shows that the majority of Cardano (ADA), Shiba Inu (SHIB) and Polygon (MATIC) holders are now nursing losses as the crypto markets continue to sell-off. Crypto insights firm IntoTheBlock looks at wallets with a Cardano balance, identifies the average purchase amount of the coins and compares the figure to the current price of […]",
       "currencies": [
@@ -56,8 +45,8 @@
       "title": "Why January Is A Historic Month For Bitcoin",
       "link": "https://bitcoinmagazine.com/culture/why-january-is-historic-for-bitcoin",
       "pubDate": "2022-01-23T22:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "What makes the first month of the year such an important part of Bitcoin’s history?",
       "currencies": [
@@ -70,23 +59,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @joey__santoro: The playbook for how to gracefully ride a bear as an algostable protocol, even with majority $ETH backing",
-      "link": "NULL",
-      "pubDate": "2022-01-23T22:29:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FEI",
-        "TRIBE"
-      ]
-    },
-    {
       "title": "Bitcoin Has Revamped Access To Financial Services In El Salvador For Millions – Ark’s Cathie Wood",
       "link": "https://zycrypto.com/bitcoin-has-revamped-access-to-financial-services-in-el-salvador-arks-cathie-wood-asserts/",
       "pubDate": "2022-01-23T21:43:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "In a recent interview with Time Magazine, Ark Invest’s C.E.O Cathie Wood expressed her support for Bukele’s Bitcoin ideals, hitting out at his opponents for their claims, which according to her, is a clear case of missing the forest for the trees. While most opponents are focused on the asset’s price, Cathie indicated that Bitcoin […]",
       "currencies": [
@@ -102,8 +79,8 @@
       "title": "Solana Network Suffers Yet Another Network Outage: DeFi Users Pay the Price",
       "link": "https://cryptopotato.com/solana-network-suffers-yet-another-network-outage-defi-users-pay-the-price/",
       "pubDate": "2022-01-23T21:10:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "The Solana network was down again for 48 hours, but this time users who took loans were forced to pay the price as they faced heavy liquidations.",
       "currencies": [
@@ -120,8 +97,8 @@
       "title": "Ethereum Competitors Like Solana (SOL) and NEAR Set for ‘Immense Growth’ This Year: Pantera Capital",
       "link": "https://dailyhodl.com/2022/01/23/ethereum-competitors-like-solana-sol-and-near-set-for-immense-growth-this-year-pantera-capital/",
       "pubDate": "2022-01-23T21:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Digital asset investment giant Pantera Capital is giving a bullish outlook for Ethereum (ETH) rivals like Solana (SOL) and Near in 2022. In its latest letter to investors, Pantera partner Paul Veradittakit says that rival smart contract platforms are eating away the market share of Ethereum, which now accounts for just 63% of the total […]",
       "currencies": [
@@ -136,33 +113,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Upon which we built Tuner - the first and most user-friendly @Uniswap V3 simulator @haydenzadams @VitalikButerin…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T20:36:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "Guys, we present to your attention a secret website where Zamio TrillioHeirs NFT lives. Hurry up and see for yours…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T20:18:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SCRT"
-      ]
-    },
-    {
       "title": "Turkey’s President Expected To Swallow Bitcoin’s Red Pill After Meeting With El Salvador’s Bukele",
       "link": "https://zycrypto.com/turkeys-president-expected-to-swallow-bitcoins-red-pill-after-meeting-with-el-salvadors-bukele/",
       "pubDate": "2022-01-23T19:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "El Salvador’s leader recently met with the Turkish President. Amid talks of cooperation and investment, it is likely that the issue of Bitcoin might later be broached by Turkey’s government. A landmark Turkish crypto legislation is on the horizon for the European nation. El Salvador’s government revealed president Nayib Bukele paid a visit to Turkey’s […]",
       "currencies": [
@@ -176,22 +131,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @petey_ling: Top 10 3Mo. returns on Signals is wild... 3xMMC",
-      "link": "NULL",
-      "pubDate": "2022-01-23T19:35:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
       "title": "Solana’s Incessant Network Outages Could Prove Disastrous For SOL’s Mainstream Adoption",
       "link": "https://zycrypto.com/why-solanas-incessant-network-outages-could-prove-disastrous-for-sols-mainstream-adoption/",
       "pubDate": "2022-01-23T18:42:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Once again, on Saturday, the Solana Status page confirmed rumors that there was a high number of transaction failures for the past 2 to 3 days after some of the network’s users voiced concerns. “Solana mainnet beta is experiencing high levels of network congestion…..The current issue experienced by validators is due to excessive duplicate transactions.’ […]",
       "currencies": [
@@ -208,8 +152,8 @@
       "title": "Top 5 cryptocurrencies to watch this week: BTC, LUNA, ATOM, ACH*, FTM",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-luna-atom-ach-ftm",
       "pubDate": "2022-01-23T18:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "BTC is oversold and possibly ready for a relief bounce, but this could be a trap for altcoins and Bitcoin if bull volume fails to sustain.",
       "currencies": [
@@ -226,8 +170,8 @@
       "title": "Dogecoin Returns to Top 10 Amid Subdued Market Recovery",
       "link": "https://u.today/dogecoin-returns-to-top-10-amid-subdued-market-recovery",
       "pubDate": "2022-01-23T18:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Did you miss it? The original canine coin has graced the top ten cryptocurrencies by market cap once again",
       "currencies": [
@@ -239,22 +183,11 @@
       }
     },
     {
-      "title": "️Battle-tested. $BAND oracle is working robustly in recent times of higher volatility, supporting DeFi DApps to wo…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T16:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "Post-regulatory crackdowns, power grid outages, here’s where Bitcoin mining is heading",
       "link": "https://ambcrypto.com/post-regulatory-crackdowns-power-grid-outages-heres-where-bitcoin-mining-is-heading/",
       "pubDate": "2022-01-23T16:30:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Erik Thedéen, the Vice-chair of the European Securities and Markets Authority, recently recommended a ban on proof-of-work mining in the EU. Citing its impact on Sweden, he stated, “It would be an irony if the wind power generated on Sweden’s long coastline would be devoted to Bitcoin mining.” Regulators analyze mining impact Previously, Norwegian authorities […]",
       "currencies": [
@@ -270,8 +203,8 @@
       "title": "How to pick or analyze altcoins?",
       "link": "https://cointelegraph.com/news/how-to-pick-or-analyze-altcoins",
       "pubDate": "2022-01-23T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Before investing in altcoins, you should look into the project's whitepaper, demand-supply elements, team and stakeholders behind the project.",
       "currencies": [
@@ -281,45 +214,11 @@
       ]
     },
     {
-      "title": "I just published TitanSwap Monthly Report December",
-      "link": "NULL",
-      "pubDate": "2022-01-23T15:37:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
-      "title": "RT @manasilvora: In the need to reduce costs &amp; scale, we have not only created a dependency but also centralization of power &amp; erosion of p…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T15:34:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
-      "title": "Did you know Tokens are coming to the Lightning Network ? But what exactly are LN Tokens ? And why should you care…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T15:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDT",
-        "XAUT"
-      ]
-    },
-    {
       "title": "Solana Updates to Version 1.8.14 Following Three Days of \"Degraded Performance\"",
       "link": "https://u.today/solana-updates-to-version-1814-following-three-days-of-degraded-performance",
       "pubDate": "2022-01-23T14:59:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Solana, here we go again",
       "currencies": [
@@ -335,8 +234,8 @@
       "title": "Shiba Inu Comes Closer to Becoming Biggest Holding on Whale Addresses After 16% Price Increase",
       "link": "https://u.today/shiba-inu-comes-closer-to-becoming-biggest-holding-on-whale-addresses-after-16-price-increase",
       "pubDate": "2022-01-23T14:41:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu is trying to regain its lawful place",
       "currencies": [
@@ -351,8 +250,8 @@
       "title": "Latest Solana Clog Causes Liquidation Bloodbath",
       "link": "https://cryptobriefing.com/latest-solana-clog-causes-liquidation-bloodbath/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2022-01-23T14:22:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "SOL",
@@ -365,47 +264,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "1/ Another week passed. Coin98 released a new update with 4 AMMs integrated including @Saros_Finance,…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T14:06:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "C98"
-      ]
-    },
-    {
-      "title": "RT @DigitalCDaily: Yo $BSV #bitcoin ! I got a friend who makes raps and is thinking about minting his stiff into audio #NFT on @relayxio to…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T13:55:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV",
-        "DCD"
-      ]
-    },
-    {
-      "title": "VeChain, Tezos, EOS Price Analysis: 23 January",
-      "link": "NULL",
-      "pubDate": "2022-01-23T13:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VET",
-        "XTZ",
-        "EOS"
-      ]
-    },
-    {
       "title": "Cardano’s First DEX SundaeSwap Fails to Impress on Launch",
       "link": "https://beincrypto.com/cardanos-first-dex-sundaeswap-fails-to-impress-on-launch/",
       "pubDate": "2022-01-23T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "SundaeSwap holds the distinction of being the first decentralized application to launch on the Cardano blockchain. Its launch, however, has been met with much criticism as the dApp has suffered some issues due to network congestion.",
       "currencies": [
@@ -421,8 +284,8 @@
       "title": "Ethereum Rival Fantom (FTM) Overtakes Solana (SOL) and Avalanche (AVAX) To Become Fourth-Largest Blockchain by Total Value Locked",
       "link": "https://dailyhodl.com/2022/01/23/ethereum-rival-fantom-ftm-overtakes-solana-sol-and-avalanche-avax-to-become-fourth-largest-blockchain-by-total-value-locked/",
       "pubDate": "2022-01-23T12:45:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Ethereum challenger Fantom (FTM) is setting new fundamental records amid the sustained price decline across the crypto markets. New data from DeFi Llama, an analytics platform focused on decentralized finance (DeFi) and non-fungible tokens (NFTs), shows that Fantom printed a new all-time high in terms of total value locked (TVL). Fantom is a highly scalable […]",
       "currencies": [
@@ -440,8 +303,8 @@
       "title": "Buterin Reveals How he Burned Almost $7B Worth of Shiba Inu (SHIB)",
       "link": "https://beincrypto.com/buterin-reveals-how-he-burned-almost-7b-worth-of-shiba-inu-shib/",
       "pubDate": "2022-01-23T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Vitalik Buterin reveals some intriguing details on the process he underwent to burn almost $7B worth of SHIB sent to him by SHIB’s founders.",
       "currencies": [
@@ -458,8 +321,8 @@
       "title": "Dogecoin Co-Founder Welcomes El Salvador President to McDonald’s Family",
       "link": "https://u.today/dogecoin-co-founder-welcomes-el-salvador-president-to-mcdonalds-family",
       "pubDate": "2022-01-23T10:46:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "El Salvador President Nayib Bukele has posted a picture of himself in a McDonald’s uniform",
       "currencies": [
@@ -474,8 +337,8 @@
       "title": "Traders are complaining about Solana’s performance, raising questions about its status as a Wall Street darling",
       "link": "https://www.theblockcrypto.com/post/131278/traders-are-complaining-about-solanas-performance-raising-questions-about-its-status-as-a-wall-street-darling?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-01-23T10:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "altcoin",
       "description": "Solana has been touted as a blockchain built to handle high-speed, large transactions. But recent network performance issues have put into question its position as a blockchain built for Wall Street.",
       "currencies": [
@@ -491,8 +354,8 @@
       "title": "Crypto Markets Rebound $130B: Bitcoin Recovers 5%, Shiba Inu Up 37% Since Yesterday’s Low",
       "link": "https://cryptopotato.com/crypto-markets-rebound-130b-bitcoin-recovers-5-shiba-inu-up-37-since-yesterdays-low/",
       "pubDate": "2022-01-23T09:53:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The crypto market has recovered more than $100 billion in a day with BTC standing at $36,000 and the alts with more impressive gains.",
       "currencies": [
@@ -505,23 +368,11 @@
       }
     },
     {
-      "title": "Hm. I keep hearing rumors that the community wants a $XYM listing on @GokuMarket next - is that true? 🤔",
-      "link": "NULL",
-      "pubDate": "2022-01-23T08:43:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Recovers 40% from Recent Low, Surpasses Polygon (MATIC)",
       "link": "https://u.today/shiba-inu-shib-recovers-40-from-recent-low-surpasses-polygon-matic",
       "pubDate": "2022-01-23T08:18:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu has pared recent losses, climbing to 14th spot on CoinMarketCap",
       "currencies": [
@@ -535,22 +386,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @UnslashedF: We are excited to announce that we will be hodling an AMA with @RyanChow_DeFi cofounder of @SolvProtocol on Monday 24th @…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T07:42:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
       "title": "Ethereum Foundation Cashed Out A Large Sum Of ETH At The Peak Yet Again",
       "link": "https://zycrypto.com/ethereum-foundation-cashed-out-a-large-sum-of-eth-at-the-peak-yet-again/",
       "pubDate": "2022-01-23T07:01:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "The Ethereum Foundation, the non-profit dedicated to supporting the Ethereum blockchain and its ecosystem, allegedly cashed out a huge sum of ETH at the November top. The findings came to light by Edward Morra, a widely-followed cryptocurrency trader, and technical analyst, who dug into the Foundation’s historical account data. Ethereum Foundation Dumped At The Top […]",
       "currencies": [
@@ -563,46 +403,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @0x6861746366574: We commissioned the amazing @mahorobart for a background for the #NEM faucet, in preparation for the new testnet. Here…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T06:37:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "Jeff Watney on Twitter: My favourite metaverse token is $RACA",
-      "link": "NULL",
-      "pubDate": "2022-01-23T04:13:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
-      "title": "The Tribe sticks together",
-      "link": "NULL",
-      "pubDate": "2022-01-23T04:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FEI",
-        "TRIBE"
-      ]
-    },
-    {
       "title": "Thank you, #ECOMIFam! ⭕️",
       "link": "https://twitter.com/ecomi_/status/1485085363500564482",
       "pubDate": "2022-01-23T03:01:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "OMI",
@@ -615,46 +420,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Yo $BSV #bitcoin ! I got a friend who makes raps and is thinking about minting his stiff into audio #NFT on…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T02:42:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV",
-        "DCD"
-      ]
-    },
-    {
-      "title": "Got a trading pair you’d like to see supported on your favorite exchange? Tell us about it!",
-      "link": "NULL",
-      "pubDate": "2022-01-23T02:05:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "Are you an ambitious long-term thinker, who loves a good challenge and cannot wait to play an active role in Dusk N…",
-      "link": "NULL",
-      "pubDate": "2022-01-23T01:44:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
       "title": "Has hedera always been mentioned on the IBM website?",
       "link": "https://www.reddit.com/r/Hedera/comments/sag060/has_hedera_always_been_mentioned_on_the_ibm/",
       "pubDate": "2022-01-23T01:20:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "HBAR"

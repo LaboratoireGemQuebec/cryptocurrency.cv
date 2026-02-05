@@ -1,26 +1,15 @@
 {
   "date": "2023-11-13",
-  "fetchedAt": "2026-02-05T07:45:52.075Z",
-  "articleCount": 102,
+  "fetchedAt": "2026-02-05T07:48:35.525Z",
+  "articleCount": 31,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Will Polkadot remain relevant in the social sector?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T23:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DOT"
-      ]
-    },
     {
       "title": "Analyst Predicts 8800% Ascent to $35 Cardano (ADA), Here’s When",
       "link": "https://www.newsbtc.com/news/cardano/8800-35-cardano-ada/",
       "pubDate": "2023-11-13T23:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Crypto analyst Fiery Trading has revealed a very bullish outlook for the Cardano (ADA) price. The digital asset which has been having a reasonably good run over the last few weeks is expected to shatter expectations as the analyst puts the price at $35. Crypto Analyst Predicts 8800% Climb To $35 For ADA Fiery Trading’s latest Cardano (ADA) prediction right be one of the most bullish for the...",
       "currencies": [
@@ -35,53 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Aave V3 Markets Resume Operations Following Security Vulnerabilities",
-      "link": "NULL",
-      "pubDate": "2023-11-13T22:54:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Solana, Avalanche, Chainlink Tumble 8%-12% as Crypto Rally Cools Amid Fake BlackRock XRP Trust Filing",
-      "link": "NULL",
-      "pubDate": "2023-11-13T22:40:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Aave V2 Operational, Will Bulls Break The 15-Month Resistance At $110?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T22:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "AVAX",
-        "MATIC",
-        "AAVE"
-      ]
-    },
-    {
       "title": "Fake filing for BlackRock XRP Trust caused brief price spike",
       "link": "https://www.theblock.co/post/262912/fake-filing-for-blackrock-xrp-trust-caused-brief-price-spike?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-11-13T21:49:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "trading",
       "description": "BlackRock denied it had registered a new iShares trust for XRP but the market had already pumped on the news of the fake filing.",
       "currencies": [
@@ -97,8 +44,8 @@
       "title": "Bitcoin Sharks and Whales Sell Off $2.2 Billion Worth of Bitcoin",
       "link": "https://coinpaprika.com/news/bitcoin-sharks-and-whales-sell-off",
       "pubDate": "2023-11-13T21:34:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Big Bitcoin players sell $2.2B as price holds at $37k - market watches.",
       "currencies": [
@@ -111,25 +58,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin calls, THORChain answers: What does RUNE do?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T21:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "RUNE"
-      ]
-    },
-    {
       "title": "Why is Solana (SOL) price down today?",
       "link": "https://cointelegraph.com/news/why-is-solana-sol-price-down-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2023-11-13T21:14:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Solana’s native token, SOL, has dropped by nearly 12. 75% in the last 24 hours to a three-week low of $112. 50 on April 3. SOL/USD daily price chart",
       "currencies": [
@@ -146,57 +79,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Horizen DAO is Open for Voting and Announces Inaugural Special Council Members",
-      "link": "NULL",
-      "pubDate": "2023-11-13T21:06:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Former FTX Executives Are Teaming Up to Build a New Crypto Exchange: Report",
-      "link": "NULL",
-      "pubDate": "2023-11-13T21:03:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Uniswap’s Financial Win: New Fee Model Rakes In Over $1 Million In A Month Amid DeFi Frenzy",
-      "link": "NULL",
-      "pubDate": "2023-11-13T21:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AVAX",
-        "LINK",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Here’s a Potential Bitcoin Price Target for Late 2025, According to Crypto Analyst Benjamin Cowen",
-      "link": "NULL",
-      "pubDate": "2023-11-13T21:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
       "title": "LINK To Be ‘Universal Gas Token’? Sergey Nazarov Explains Potential for Rapid Chainlink Adoption",
       "link": "https://dailyhodl.com/2023/11/13/link-to-be-universal-gas-token-sergey-nazarov-explains-potential-for-rapid-chainlink-adoption/",
       "pubDate": "2023-11-13T20:55:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Chainlink creator Sergey Nazarov says LINK could be the future universal gas token for the digital asset ecosystem. In a new interview, Nazarov explores the payment abstraction layer (PAL) of Chainlink’s tech stack, which aims to minimize the complexity of paying for its services while allowing oracle networks to get paid in LINK. According to […]",
       "currencies": [
@@ -212,8 +99,8 @@
       "title": "BREAKING: BlackRock Allegedly Registers Ishares XRP Trust Product for XRP Spot ETF",
       "link": "https://en.bitcoinsistemi.com/breaking-blackrock-allegedly-registers-ishares-xrp-trust-product-for-xrp-spot-etf/",
       "pubDate": "2023-11-13T20:54:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "Update The news that BlackRock applied for an XRP Spot ETF turned out to be fake. As Bitcoinsistemi.com, we stated that the news may not be true and that anyone can add an application to the Delaware website. Bloomberg analyst said the following after the news that BlackRock applied for an XRP Spot ETF turned […] Continue Reading: BREAKING: BlackRock Allegedly Registers Ishares XRP...",
       "currencies": [
@@ -226,33 +113,11 @@
       }
     },
     {
-      "title": "Aave Assets Are Still Stuck Over a Year After $100M Harmony Bridge Hack",
-      "link": "NULL",
-      "pubDate": "2023-11-13T20:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Phishing Attacks Steal Crypto Funds Through Fake Skype App Download",
-      "link": "NULL",
-      "pubDate": "2023-11-13T20:33:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
       "title": "Super Bullish Solana (SOL) Price Prediction: Details",
       "link": "https://cryptopotato.com/super-bullish-solana-sol-price-prediction-details/",
       "pubDate": "2023-11-13T20:15:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "\"Solana could easily see a $1,000 per coin and the the second spot behind Bitcoin,\" Canfield argued.",
       "currencies": [
@@ -265,28 +130,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Sharks & Whales Do $2.2 Billion Selloff, But BTC Hangs On At $37,000",
-      "link": "NULL",
-      "pubDate": "2023-11-13T20:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "XRP, Ether, Solana, Cardano, Shiba Inu Brace For $1 Trillion ‘Bull Shock’ As Spot Bitcoin ETF Comes Nigh",
       "link": "https://zycrypto.com/xrp-ether-solana-cardano-shiba-inu-brace-for-1-trillion-bull-shock-as-spot-bitcoin-etf-comes-nigh/",
       "pubDate": "2023-11-13T19:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Amidst this anticipation, recent reports from esteemed data analytics platforms have set the crypto community abuzz, predicting a staggering $1 trillion market cap for crypto majors like Bitcoin, XRP, Ether, Solana, Cardano, and Shiba Inu if spot ETFs receive the green light.",
       "currencies": [
@@ -302,182 +150,11 @@
       }
     },
     {
-      "title": "Crypto Expert Reveals One Major Reason The XRP Price Will Do Well In The Bull Run",
-      "link": "NULL",
-      "pubDate": "2023-11-13T19:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Filecoin Up More Than 9% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-13T19:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Polkadot Falls More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-13T19:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Avalanche Decreases More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-13T19:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Genesis XBT: Best Place for Networking and Deal Flow",
-      "link": "NULL",
-      "pubDate": "2023-11-13T18:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Solana (SOL) Shines 40% Toward $60 As Whales Make Big Moves",
-      "link": "NULL",
-      "pubDate": "2023-11-13T18:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "CRO"
-      ]
-    },
-    {
-      "title": "Defi Back to Beating Bond Yields",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:43:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Price analysis 11/13: SPX, DXY, BTC, ETH, BNB, XRP, SOL, ADA, DOGE, LINK",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:19:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Chinese Hackers Target Crypto Investors With Fraudulent Apps",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Internet Computer (ICP): The Crypto Gem Poised for 1,000% Growth?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:03:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "dYdX Token Soars 69%, But Clouds Gather Ahead of 2.16M Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETHDYDX"
-      ]
-    },
-    {
-      "title": "Polygon (MATIC) Price Fueled By Increase In Whale Activity",
-      "link": "NULL",
-      "pubDate": "2023-11-13T17:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Coinbase Expands Future Trading with the Introduction of SOL and AVAX Perpetual",
-      "link": "NULL",
-      "pubDate": "2023-11-13T16:59:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "AVAX"
-      ]
-    },
-    {
       "title": "Expert predicts Ethereum’s last hurdle before surge to $3,600",
       "link": "https://finbold.com/expert-predicts-ethereums-last-hurdle-before-surge-to-3600/",
       "pubDate": "2023-11-13T16:34:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Following a solid performance period that has brought lucrative gains for most crypto assets carrying on from the gains made … Continued",
       "currencies": [
@@ -493,8 +170,8 @@
       "title": "Crypto Analyst Says One Day Left Until XRP Price Blast-Off, What To Expect",
       "link": "https://www.newsbtc.com/analysis/xrp/one-day-xrp-price-blast-off/",
       "pubDate": "2023-11-13T16:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "The XRP price has had a mixed flow this month in terms of price action. The crypto surged by 25% in the first week of November to cross over $0.73, marking the first cross over this price point since June. However, XRP has since lost some of these gains. The crypto is now trading at $0.6574 at the time of writing and is down by 5.04% in a 7-day timeframe. According to crypto analyst and...",
       "currencies": [
@@ -511,47 +188,11 @@
       }
     },
     {
-      "title": "Bitcoin’s realized profits surge as market braces for 2024 halving",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Should Chainlink holders prepare for a drawback?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Litecoin Whale Transactions Hit H2 2023 Peak – Could This Propel LTC Price to $80",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "LTC"
-      ]
-    },
-    {
       "title": "Ethereum Fund Inflows Hit 2022 High on ETF Listing Request",
       "link": "https://cryptobriefing.com/ethereum-fund-inflows-hit-2022-high-etf-listing-request/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-11-13T15:28:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Fund inflows into Ethereum investment products hit their highest level since August 2022 last week, according to digital asset manager CoinShares. The spike comes as investors anticipate the potential approval of a physically-backed Ethereum exchange-traded fund (ETF) in the US.\"Ethereum, saw its largest inflows since August 2022 of US$49m, with the last 2 weeks signifying a real turnaround in...",
       "currencies": [
@@ -564,75 +205,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Aave resumes standard functions after security vulnerability",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:15:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "RUNE Soars 40% Weekly as THORChain Claims 2nd Place in DEX Daily Trading Volumes",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:15:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Chainlink Down More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-13T15:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Chinese Gang Dupes Users With Fake Skype and Binance Apps, Millions in Crypto Stolen",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Bitcoin Falls Below $37,000; Cronos Becomes Top Loser",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano founder interested in teaming up with Kraken",
       "link": "https://finbold.com/cardano-founder-interested-in-teaming-up-with-kraken/",
       "pubDate": "2023-11-13T14:12:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Following news reports that one of the largest cryptocurrency trading platforms in the world, Kraken, was seeking a partner to … Continued",
       "currencies": [
@@ -645,125 +222,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Neo News: Week in Review – November 6 – November 12",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:01:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Chainlink Forms Sell Signal, Analyst Predicts Pullback To This Level",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Polygon and  Filecoin Among Monday’s Top Crypto Gainers as Bitcoin ETF Token Also Surges",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Polygon and Filecoin Among Monday’s Top Crypto Gainers as Bitcoin ETF Token Also Surges",
-      "link": "NULL",
-      "pubDate": "2023-11-13T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Tether Mints 4 Billion USDT in a Month Amidst Crypto Market Observations",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:56:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "TRX"
-      ]
-    },
-    {
-      "title": "A Pioneering Step in DeFi: Introducing Vertex Protocol’s Token Launch",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "XLM",
-        "AAVE",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Aave Companies launches decentralized social graph Lens V2 on Polygon",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:43:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MATIC",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Coinbase Expands Futures Trading with SOL and AVAX Perpetuals",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:43:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "THORChain Flips PancakeSwap as #2 DEX with 50% Gains",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "RUNE",
-        "CAKE"
-      ]
-    },
-    {
       "title": "Number of Dogecoin millionaires plunges by 40% in a year",
       "link": "https://finbold.com/number-of-dogecoin-millionaires-plunges-by-40-in-a-year/",
       "pubDate": "2023-11-13T13:32:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Dogecoin (DOGE) has witnessed a notable decline in value over the past year, leading to a significant reduction in the … Continued",
       "currencies": [
@@ -775,83 +238,11 @@
       }
     },
     {
-      "title": "Avalanche (AVAX) Skyrockets Towards $20 Amid Bullish Surge",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "THORChain Now 3rd Largest DEX as Trading Volume Hits $1.32B",
-      "link": "NULL",
-      "pubDate": "2023-11-13T13:07:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Coinbase to Start Offering Solana and Avalanche Futures Contracts from November 14",
-      "link": "NULL",
-      "pubDate": "2023-11-13T12:56:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "AVAX",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Aave unpauses V2 and V3 markets after addressing critical security bug",
-      "link": "NULL",
-      "pubDate": "2023-11-13T12:48:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Avalanche (AVAX) Price Revisits $20 First time in 6-Months – Analyst Says GameFi Trend Could Drive Further Gains",
-      "link": "NULL",
-      "pubDate": "2023-11-13T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana Overtakes Ethereum By Active Users After 70% Spike",
       "link": "https://thedefiant.io/solana-overtakes-ethereum-by-active-users-after-70-spike",
       "pubDate": "2023-11-13T12:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "ethereum",
       "description": "Solana surges past Ethereum but Layer 2s are still king",
       "currencies": [
@@ -867,8 +258,8 @@
       "title": "Caution: XRP scam ad uses deepfake of Ripple CEO",
       "link": "https://finbold.com/caution-xrp-scam-ad-uses-deepfake-of-ripple-ceo/",
       "pubDate": "2023-11-13T12:11:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "As the cryptocurrency industry grows exponentially, it has become the target of many criminal elements, and the development of artificial … Continued",
       "currencies": [
@@ -881,22 +272,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "THORChain’s RUNE Token Soars with Impressive Gains",
-      "link": "NULL",
-      "pubDate": "2023-11-13T12:05:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
       "title": "Crypto eyeing ‘historic move’ as ‘tons of new liquidity’ return to market",
       "link": "https://finbold.com/crypto-eyeing-historic-move-as-tons-of-new-liquidity-return-to-market/",
       "pubDate": "2023-11-13T11:40:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "defi",
       "description": "For months, the crypto markets, spearheaded by Bitcoin (BTC), languished in a constrained and subdued trading range, lacking significant catalysts. … Continued",
       "currencies": [
@@ -909,23 +289,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Gas Fees Guzzlers Of The Crypto Market",
-      "link": "NULL",
-      "pubDate": "2023-11-13T11:23:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ]
-    },
-    {
       "title": "Tether Mints New $4 Billion Worth of USDT",
       "link": "https://coinpaprika.com/news/tether-mints-new-4-billion",
       "pubDate": "2023-11-13T11:21:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Tether prints 4 billion USDT, hitting 22.75 billion in 2023 amid plans for new 2024 projects.",
       "currencies": [
@@ -941,8 +309,8 @@
       "title": "Kraken and Cardano forge alliance amidst Memeinator presale surge",
       "link": "https://coinjournal.net/news/kraken-and-cardano-forge-alliance-amidst-memeinator-presale-surge/",
       "pubDate": "2023-11-13T11:20:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "trading",
       "description": "Hoskinson is eyeing a collaboration with Kraken for a Layer-2 network Kraken wants to follow Coinbase’s move to launch a Layer-2 blockchain. Memeinator presale continues to gather steam with $1,303,398 raised so far. In a strategic move within the dynamic landscape of the cryptocurrency sector, Charles Hoskinson, the visionary founder of Cardano Blockchain, has hinted […]",
       "currencies": [
@@ -955,54 +323,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Avalanche (AVAX) Rumbles With 45% Rally, Rules Top 20 Coin Listing Today",
-      "link": "NULL",
-      "pubDate": "2023-11-13T11:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "AVAX",
-        "MATIC",
-        "CRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Aave lending markets resume normal operations after security scare",
-      "link": "NULL",
-      "pubDate": "2023-11-13T10:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "LINK Overdue for a Correction as Sell Signals Emerge: Analyst",
-      "link": "NULL",
-      "pubDate": "2023-11-13T10:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
       "title": "Ripple v. SEC: Lawyer rejects claims XRP is not commodity",
       "link": "https://finbold.com/ripple-v-sec-lawyer-rejects-claims-xrp-is-not-commodity/",
       "pubDate": "2023-11-13T10:46:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "After the cryptocurrency community has finally received a conclusion to the long-running battle between Ripple and the United States Securities … Continued",
       "currencies": [
@@ -1018,8 +343,8 @@
       "title": "As Binance Launches Web3 Wallet, Is a $300 BNB Token Price Within Reach?",
       "link": "https://beincrypto.com/binance-wallet-catalyze-bnb-price-increase/",
       "pubDate": "2023-11-13T10:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Binance announced the launch of a new wallet on Nov. 11, but the BNB token price has fallen slightly since. The first attempt at breaking out from the $260 area was unsuccessful. Will the second one be different? BNB Breaks out From Resistance The technical analysis from the daily time frame shows that the BNB token price has fallen under a descending resistance trend line since...",
       "currencies": [
@@ -1035,8 +360,8 @@
       "title": "Coinbase to launch Solana perpetual futures; Will the SOL rally continue?",
       "link": "https://finbold.com/coinbase-to-launch-solana-perpetual-futures-will-the-sol-rally-continue/",
       "pubDate": "2023-11-13T10:43:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "While Bitcoin (BTC) and Ethereum (ETH) are guaranteed to take the spotlight in any crypto market rally, Solana (SOL) has … Continued",
       "currencies": [
@@ -1050,34 +375,11 @@
       }
     },
     {
-      "title": "THORChain Flips Curve Finance on Weekly Trade Volume on DEXs",
-      "link": "NULL",
-      "pubDate": "2023-11-13T10:25:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Stablecoin firm Tether minted 4B USDT in 4 weeks: Data",
-      "link": "NULL",
-      "pubDate": "2023-11-13T10:23:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "TRX"
-      ]
-    },
-    {
       "title": "‘Rich Dad’ R. Kiyosaki: Protect yourself from Central Bankers by saving Bitcoin",
       "link": "https://finbold.com/rich-dad-r-kiyosaki-protect-yourself-from-central-bankers-by-saving-bitcoin/",
       "pubDate": "2023-11-13T09:44:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "In his latest jab at traditional financial institutions, renowned investor and author of the best-selling finance book ‘Rich Dad Poor … Continued",
       "currencies": [
@@ -1090,66 +392,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "November’s crypto picks: Tezos, Rebel Satoshi, and ApeCoin",
-      "link": "NULL",
-      "pubDate": "2023-11-13T09:40:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Uniswap’s cumulative front-end fees exceed $1 million within a month",
-      "link": "NULL",
-      "pubDate": "2023-11-13T09:29:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK): Top Analyst Predicts What's Coming",
-      "link": "NULL",
-      "pubDate": "2023-11-13T09:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Kava Rise Program: How it Works and How to Earn Passive Income With It",
-      "link": "NULL",
-      "pubDate": "2023-11-13T08:59:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAVA"
-      ]
-    },
-    {
-      "title": "Yield-Bearing Stablecoin Midas Backed by US Treasuries to Introduce stUSD Token",
-      "link": "NULL",
-      "pubDate": "2023-11-13T08:58:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
       "title": "Wallet Linked with Binance Gets Hacked: $27 Million USDT Lost",
       "link": "https://coinpaprika.com/news/wallet-linked-with-binance-gets-hacked",
       "pubDate": "2023-11-13T08:56:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "exchange",
       "description": "$27M in crypto stolen from Binance-linked wallet, with Q3 seeing record $699M losses.",
       "currencies": [
@@ -1165,8 +412,8 @@
       "title": "Cardano’s Hoskinson ready to support Kraken’s venture into layer-2 scaling solutions",
       "link": "https://cryptoslate.com/cardanos-hoskinson-ready-to-support-krakens-venture-into-layer-2-scaling-solutions/",
       "pubDate": "2023-11-13T08:35:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "Charles Hoskinson, Cardano (ADA) founder, said he is “game” to help Kraken crypto exchange build its layer-2 network, according to a Nov. 12 post on social media platform X. Layer-2 networks are scaling solutions that provide scalability and speed to a layer-1 blockchain. These projects have become popular recently due to their cheap transaction fees […]",
       "currencies": [
@@ -1181,8 +428,8 @@
       "title": "Cardano Founder Wants to Partner with Kraken, Here’s Why",
       "link": "https://www.coinspeaker.com/cardano-founder-partner-kraken/",
       "pubDate": "2023-11-13T08:32:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "altcoin",
       "description": "Coinspeaker Cardano Founder Wants to Partner with Kraken, Here’s Why For many crypto firms that are currently exploring layer-2, they have found that it opens up potential new revenue streams. Cardano Founder Wants to Partner with Kraken, Here’s Why",
       "currencies": [
@@ -1198,8 +445,8 @@
       "title": "Binance-linked wallet drained of $27 Million in Tether— How the hackers outsmarted the blockchain",
       "link": "https://www.cryptopolitan.com/binance-linked-wallet-drained-of-27-million-in-tether-how-the-hackers-outsmarted-the-blockchain/",
       "pubDate": "2023-11-13T08:08:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "A crypto wallet associated with Binance has fallen prey to a sophisticated heist. The theft, totaling $27 million, was primarily in Tether stablecoins (USDT). Notably, the breach was unearthed by renowned blockchain detective ZachXBT. The path of the stolen funds The stolen funds were initially converted into Ethereum (ETH) through multiple protocols, including Fixed Float. ... Read more",
       "currencies": [
@@ -1211,8 +458,8 @@
       "title": "Coinbase Announces Support For SOL & AVAX Perpetual Futures",
       "link": "https://coinedition.com/coinbase-announces-support-for-sol-avax-perpetual-futures/",
       "pubDate": "2023-11-13T08:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "On November 13, Coinbase International Exchange announced that it will be launching support for Solana and Avalanche perpetual futures contracts on the exchange and Coinbase Advanced. Moreover, if liquidity conditions are met, Coinbase’s SOL-PERP and AVAX-PERP markets will be live at 4 PM UTC on November 14. Back in August, Coinbase stated its successful approval […]",
       "currencies": [
@@ -1226,65 +473,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Filecoin (FIL) Soars 17% as New Breakthrough Looms",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Mysterious Wallet Transfers 18 Million MATIC To Coinbase – What’s Going On?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:34:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "MATIC",
-        "CRO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin Whale Goes on Massive Selling Spree",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:31:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "XLM Breaking Above $0.135 Could Lead to a Rally, Says Analyst",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:28:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Spot Bitcoin ETF Approval Could Come This Week: Expert",
       "link": "https://bitcoinist.com/spot-bitcoin-etf-approval-this-week/",
       "pubDate": "2023-11-13T07:10:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Nate Geraci, President of the ETF Store and host of the ETF Prime podcast, has brought to light a critical juncture in the potential approval of spot Bitcoin Exchange-Traded Funds (ETFs) by the US Securities and Exchange Commission (SEC). Citing Bloomberg analyst James Seyffart, Geraci’s post on X today underscored the narrow window currently open […]",
       "currencies": [
@@ -1297,113 +490,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celestia (TIA) Traders Could Be Presented With An Entry Soon: Analyst",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:10:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Losses Can Be Recovered in ‘Matter of Weeks’ – Crypto Analyst",
-      "link": "NULL",
-      "pubDate": "2023-11-13T07:03:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Filecoin (FIL) Price Jumps 16% Amid Sushi DEX Integration, What’s Next?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T06:59:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Is this behind AVAX’s massive price surge?",
-      "link": "NULL",
-      "pubDate": "2023-11-13T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Animoca Partners With Chiliz To Boost SportFi",
-      "link": "NULL",
-      "pubDate": "2023-11-13T06:24:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Stellar Lumen (XLM) Price Remains Supported For Fresh Increase Above $0.12",
-      "link": "NULL",
-      "pubDate": "2023-11-13T05:58:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "THORChain becomes third-largest DEX as RUNE surges 50% in a week",
-      "link": "NULL",
-      "pubDate": "2023-11-13T05:37:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "UNI",
-        "RUNE",
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Analysis: FTT, LUNA, KAS, IMX And RPL Take Bullish Momentum",
-      "link": "NULL",
-      "pubDate": "2023-11-13T05:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IMX",
-        "RPL"
-      ]
-    },
-    {
       "title": "Cardano Introduces New Developer-Friendly Transparent Tool",
       "link": "https://beincrypto.com/cardano-developer-tool-ledger-sync/",
       "pubDate": "2023-11-13T05:22:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "The Cardano Foundation has recently announced a new Java-based data provisioning tool to enhance developers’ experience building applications on the Cardano blockchain. “The framework will be released under an open source license to equip developers and partners with an additional tool for chain indexing, increasing the diversity of the Cardano developer ecosystem,” the statement...",
       "currencies": [
@@ -1420,8 +511,8 @@
       "title": "55 mln MATIC tokens head to Coinbase: What now?",
       "link": "https://ambcrypto.com/55-mln-matic-tokens-head-to-coinbase-what-now/",
       "pubDate": "2023-11-13T03:30:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "exchange",
       "description": "The transfer of MATIC tokens worth over $55 million cause concern for these reasons.",
       "currencies": [
@@ -1436,8 +527,8 @@
       "title": "Solana Surges 40% in a Week to Reach New 2023 High of $58",
       "link": "https://www.cryptointelligence.co.uk/solana-surges-40-in-a-week-to-reach-new-2023-high-of-58/",
       "pubDate": "2023-11-13T00:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "trading",
       "description": "Solana’s price has experienced a remarkable surge, rising by an impressive 40% within the past...",
       "currencies": [

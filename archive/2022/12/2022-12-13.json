@@ -1,15 +1,15 @@
 {
   "date": "2022-12-13",
-  "fetchedAt": "2026-02-05T07:45:52.581Z",
-  "articleCount": 113,
+  "fetchedAt": "2026-02-05T07:48:35.571Z",
+  "articleCount": 34,
   "source": "historical-import",
   "articles": [
     {
       "title": "Dogecoin gets December’s first large buys but does this mean DOGE will rally",
       "link": "https://ambcrypto.com/dogecoin-gets-decembers-first-large-buys-but-does-this-mean-doge-will-rally/",
       "pubDate": "2022-12-13T23:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Dogecoin $1 million whale transaction hit the highest since November ended Demand for the memecoin lingered in an almost deadpan situation Dogecoin [DOGE] transactions within the $1 million and above region unexpectedly hit a notable number for the first time in December 2022. According to Santiment, DOGE’s whale transactions around the aforementioned amount stood at […]",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Algorand to support bank and insurance guarantees platform in Italy",
       "link": "https://cointelegraph.com/news/algorand-to-support-bank-and-insurance-guarantees-platform-in-italy",
       "pubDate": "2022-12-13T23:13:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "This is the first time an EU member state will use blockchain technology for bank and insurance guarantees, according to Algorand.",
       "currencies": [
@@ -42,8 +42,8 @@
       "title": "Charles Hoskinson Says Solana (SOL) Could Become Sidechain of Cardano (ADA) – Here’s Why",
       "link": "https://dailyhodl.com/2022/12/13/charles-hoskinson-says-solana-sol-could-become-sidechain-of-cardano-ada-heres-why/",
       "pubDate": "2022-12-13T23:05:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Charles Hoskinson thinks smart contract protocol Solana (SOL) could theoretically become a sidechain of the Cardano (ADA) network. During a new YouTube AMA session, Hoskinson lays out what sidechain partnerships look like on Cardano. “For six years now, we’ve been talking about this, thinking about this, pushing this forward, this concept that you have one […]",
       "currencies": [
@@ -57,55 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "12 days till Christmas",
-      "link": "NULL",
-      "pubDate": "2022-12-13T23:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAWN"
-      ]
-    },
-    {
-      "title": "Performance in Code: Deciphering Value in Generative Art, Powered by @Tezos at @ArtBasel Miami Beach, was a hit! …",
-      "link": "NULL",
-      "pubDate": "2022-12-13T22:58:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Is it possible to play this game for free?",
-      "link": "NULL",
-      "pubDate": "2022-12-13T22:45:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "@Dogami, the #NFT mobile game powered by @Tezos, has secured $14M in total funding! Following the completion of…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T22:01:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Apple Plans to Allow External iOS Apps in Potential Boon for Crypto, NFTs",
       "link": "https://decrypt.co/117172/apple-external-ios-apps-crypto-nfts",
       "pubDate": "2022-12-13T21:58:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "nft",
       "description": "The tech giant plans to let iPhone and iPad users install apps from outside the App Store, a new report claims, due to EU regulations.",
       "currencies": [
@@ -118,33 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ElectisSolution: State-of-the-art e-governance tools based on Tezos blockchain technology can increase integrity and accountability in…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T21:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @ATielnova: Have you guys ever heard about Music NFTs? Well, they exist. #Tezos also has its Music NFTs collections and special platform…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T20:10:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "SBF Perpetrated ‘One of the Biggest Financial Frauds in American History,’ Says US Attorney",
       "link": "https://blockworks.co/news/us-attorney-sbf-perpetrated-largest-financial-fraud-in-american-history",
       "pubDate": "2022-12-13T20:01:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "“We are not done” with charges, US Attorney Damian Williams said",
       "currencies": [
@@ -157,24 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "𝐈𝐭'𝐬 𝐌𝐚𝐭𝐜𝐡𝐝𝐚𝐲 | France 🇫🇷 vs Morocco 🇲🇦 Who will win the match and why? 🤔 Go to @ZenGo and drop your best answer i…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Staking Now Supported by Trust Wallet",
       "link": "https://u.today/cardano-ada-staking-now-supported-by-trust-wallet",
       "pubDate": "2022-12-13T19:57:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Trust Wallet has integrated Cardano (ADA) staking, following the suit of major cryptocurrency exchanges",
       "currencies": [
@@ -188,22 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @TrueNAS: Join us on Thursday, the 15th at 10AM PST/1PM EST for an iX-Storj Livestream Demo and Q&amp;A with TrueNAS and Storj! #TrueNAS #S…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T19:49:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
       "title": "FTX stored private keys without encryption, the exchange’s new chief said",
       "link": "https://www.theblock.co/post/194706/ftx-stored-private-keys-without-encryption-the-exchanges-new-chief-said?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T19:40:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "FTX previously stored private keys without encryption, the new FTX chief John Ray III said.",
       "currencies": [
@@ -216,57 +126,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Lido’s TVL falters, thanks to the decline in the price of these ruling altcoins",
-      "link": "NULL",
-      "pubDate": "2022-12-13T19:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "KSM"
-      ]
-    },
-    {
-      "title": "RT @helium_mobile: ️ Every day this week, we’re picking a lucky winner + their friends to gift @Helium_Mobile crewnecks and beanies! Step…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T19:26:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @IndiaTezos: Average developer cost $40 per hour which is roughly $320 a day For an early stage start up, this is often a huge barrie…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T19:22:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @CryptoworthApp: We are excited to share @RequestFinance’s web3 CFO guide in collaboration with Cryptoworth and other industry leaders.…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T19:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "Litecoin “Mega Whales” Now Hold 15.4% Of Supply, Highest Since June 2017",
       "link": "https://bitcoinist.com/litecoin-mega-whales-15-4-supply-highest-june-2017/",
       "pubDate": "2022-12-13T19:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "On-chain data shows the Litecoin “mega whales” now hold around 15.4% of the total supply, the highest value in more than five years. Litecoin Addresses With 1 Million Or More LTC Now Hold Highest Supply Share Since June 2017 According to data from analytics firm Santiment, LTC’s mega whales have been busy accumulating during the […]",
       "currencies": [
         "LTC"
@@ -278,35 +143,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @TezosCommons: Going LIVE in 2 hours! #Tezos",
-      "link": "NULL",
-      "pubDate": "2022-12-13T18:58:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @BOBCATiot: #bobberacademy ep9 @zer0tweets from @Open5G @novalabs_ breaks down HIP74 on @helium $mobile POC mo…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T18:39:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "MOBILE",
-        "IOT"
-      ]
-    },
-    {
       "title": "Binance resumes USDC withdrawals amid record stablecoin outflows",
       "link": "https://forkast.news/headlines/binance-resumes-usdc-withdrawals-amid-record-stablecoin-outflows/",
       "pubDate": "2022-12-13T18:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "exchange",
       "description": "Binance, the world’s largest cryptocurrency exchange, announced at 12:54 a.m. on Wednesday in Hong Kong that USDC stablecoin withdrawals have resumed.",
       "currencies": [
@@ -319,56 +160,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ReggieMiddleton: Can a lowly, humble, know-nothing layperson such as myself ask questions of this most knowledgeable man?",
-      "link": "NULL",
-      "pubDate": "2022-12-13T18:27:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "RT @VitalityHive: We are almost at the end of the beta version! And following this first experience we would like to hear what your bigges…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T18:04:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "JUST IN: $PAXG @paxosglobal now on top 10 purchased tokens among 100 biggest #ETH whales in the last 24hrs Check…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T18:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PAXG",
-        "BBW"
-      ]
-    },
-    {
-      "title": "RT @xy_company: This is an important part of the XY Labs strategy. Our CEO, @arietrouw, has often spoken on evolution and diversification b…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:59:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "FTX hearing: US lawmakers criticize use of Quickbooks, creepy dough, and 'conscientious stupidity'",
       "link": "https://cointelegraph.com/news/ftx-hearing-us-lawmakers-criticize-use-of-quickbooks-creepy-dough-and-conscientious-stupidity",
       "pubDate": "2022-12-13T17:48:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Some members of the U.S. House of Representatives questioned whether Sam Bankman-Fried’s actions at FTX and Alameda may have been willful or due to gross incompetence.",
       "currencies": [
@@ -381,47 +177,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "1/ Paxos is the sole issuer of #BUSD, the US dollar-backed stablecoin regulated by the New York State Department of…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:48:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "RT @upsorber: uNFT - Enabling deeper DeFi integration of $UP through a new NFT standard. Learn how uNFTs might be used on Tezos DeFi platfo…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XTZ",
-        "UP"
-      ]
-    },
-    {
-      "title": "RT @Dogami: $𝟭𝟰𝗠 𝗧𝗢𝗧𝗔𝗟 𝗙𝗨𝗡𝗗𝗜𝗡𝗚 We're proud to announce the completion of a new financing round to expand our range of Web3 games and ap…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:40:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Osmosis To Add Stablecoin Liquidity to Cosmos",
       "link": "https://blockworks.co/news/osmosis-adding-stablecoin-liquidity-to-cosmos",
       "pubDate": "2022-12-13T17:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "defi",
       "description": "Osmosis is set to launch a “version of the Curve 3pool, which includes USDC, Tether, and BUSD,” founder Sunny Aggarwal told Blockworks",
       "currencies": [
@@ -437,8 +197,8 @@
       "title": "Binance resumes USDC stablecoin withdrawals after temporary pause",
       "link": "https://www.theblock.co/post/194511/binance-resumes-usdc-stablecoin-withdrawals-after-temporary-pause?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T17:15:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "Binance has resumed processing withdrawals requests of the USD Coin (USDC) stablecoin after pausing them for several hours.",
       "currencies": [
@@ -451,88 +211,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ManUtd: This one's for you 🫵 Keep your first United digital collectible safe in a free wallet! Powered by @Tezos and brought to y…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:13:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Innocus Global Group, the company behind Fellaz, announces investment in @fingerlabs_io, the blockchain company own…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T17:09:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
-      "title": "RT @LigoLang: ️ Always looking for improvement, we would be happy to collect your #feedback on your experience with @LigoLang ️ Tel…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:57:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Thanksgiving has come and gone, and all of a sudden, you’re staring down the holidays — now less than two weeks awa…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Businesses serious about making changes in their respective sectors don’t have the luxury of building on a block…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Join us for \"Best security practices for your crypto\" panel hosted by @kucoincom - @NKN_ORG - @CertiK . December…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:35:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @strack_ben: The vast majority of surveyed Web3 CFOs say they lack internal support when it comes to crypto education.",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:19:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "SBF Indictment Unsealed: Sam Bankman-Fried Accused Of Conspiracy, Fraud, And Campaign Finance Violations",
       "link": "https://en.ethereumworldnews.com/sam-bankman-fried-conspiracy-fraud/",
       "pubDate": "2022-12-13T16:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "regulation",
       "description": "Summary: Prosecutors from the Southern District of New York filed criminal charges against Sam Bankman-Fried on Tuesday. The unseal indictment order detailed eight counts including fraud, conspiracy, and violation of U.S. Campaign Finance Laws. Other authorities like the CFTC and SEC filed charges against Bankman-Fried following his arrest by Bahamian law enforcement. The United States of...",
       "currencies": [
@@ -548,8 +231,8 @@
       "title": "Binance daily withdrawals surge over $2 billion in 24 hours amid reserves uncertainty",
       "link": "https://finbold.com/binance-daily-withdrawals-surge-over-2-billion-in-24-hours-amid-reserves-uncertainty/",
       "pubDate": "2022-12-13T16:14:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Cryptocurrency exchange Binance has recorded a sustained wave of withdrawals after concerns emerged regarding the state of the trading platform’s … Continued",
       "currencies": [
@@ -561,22 +244,11 @@
       }
     },
     {
-      "title": "RT @kucoincom: Join the upcoming #KuCoin Twitter space with our host @timmtsai &amp; guests from @NKN_ORG &amp; @CertiK to the discuss the best sec…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T16:07:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
       "title": "Business as Usual Says CZ, Confirming Over $1 Billion Daily Withdrawals",
       "link": "https://cryptopotato.com/business-as-usual-says-cz-confirming-over-1-billion-daily-withdrawals/",
       "pubDate": "2022-12-13T16:03:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "stablecoin",
       "description": "Binance users have withdrawn around $1.14 worth of crypto from the platform today (December 13), CEO Zhao confirmed.",
       "currencies": [
@@ -589,75 +261,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @alex_dreyfus: Quick catch-up about by @chiliz $CHZ",
-      "link": "NULL",
-      "pubDate": "2022-12-13T15:54:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "One of the most important things on DeFi is accessibility. Learn more about it on our discord:…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T15:51:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "RT @TheWranglerPNW: @thepropgallery Skull of My Enemy 6.66 #tezos / $XTZ on @kalamint_io: or on @objktcom: http…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T15:42:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ",
-        "KALAM"
-      ]
-    },
-    {
-      "title": "#Tether Addresses FUD Around Secured Loans, Reveals Plans to Reduce These to Zero in 2023",
-      "link": "NULL",
-      "pubDate": "2022-12-13T15:37:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "XAUT",
-        "EURt",
-        "USDTE",
-        "CEUSDT",
-        "MXNT",
-        "GBPT"
-      ]
-    },
-    {
-      "title": "RT @Credix_finance: @RequestFinance brought together some great insights in their 'ultimate web3 CFO guide'. Go check it out—downloads are…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T15:34:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "Tether helps Binance swap 3 billion USDT to Ethereum from Tron",
       "link": "https://www.theblock.co/post/194576/tether-helps-binance-swap-3-billion-usdt-to-ethereum-from-tron?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T15:09:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Tether CTO Paolo Ardoino said the transaction is part of Binance efforts to rebalance USDT reserves from its cold wallets on Tron to Ethereum.",
       "currencies": [
@@ -672,82 +280,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Polkadot: 17/ @AcalaNetwork announced \"Chopsticks\" – an open-source client to improve testing in the Polkadot ecosystem. The client all…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:58:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "ACA"
-      ]
-    },
-    {
-      "title": "2 more days to get your #SAVAX4ALL application in",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:48:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QI",
-        "SAVAX"
-      ]
-    },
-    {
-      "title": "#EVs offer more than a means to get from one place to another. EVs, when paired with the right software solutions,…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "We’re excited to announce that Theta Video API has added Studio DRM for NFT-gated video, a key step toward adoption…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:33:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "#USDD the decentralized and over-collateraized #StableCoin is going strong! Our peg is back on @HuobiGlobal! W…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:25:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "𝐆𝐚𝐦𝐞𝐔𝐬𝐞𝐝 𝐛𝐲 𝐂𝐡𝐢𝐥𝐢𝐳 | Memorabilia Authentication by Chiliz will provide a full turnkey B2…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T14:12:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
       "title": "U.S. inflation shows signs of cooling at 7.1% in November, below estimates",
       "link": "https://www.theblock.co/post/194405/u-s-inflation-shows-signs-of-cooling-at-7-1-in-november-below-estimates?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T13:39:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "U.S. inflation came in below estimates of 7.3% in November.",
       "currencies": [
@@ -762,22 +299,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "According to the latest JPMorgan Chase research, almost 43 million Americans, or 13% of the country’s population, h…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T13:23:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Binance ‘temporarily’ freezes USDC stablecoin withdrawals, cites need for NY banks to reopen",
       "link": "https://forkast.news/headlines/binance-temporarily-halts-usdc-withdrawals-due-to-bank-schedule/",
       "pubDate": "2022-12-13T13:18:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "The Binance cryptocurrency exchange “temporarily paused” USDC stablecoin withdrawals while it carried out a “token swap,” the company announced Tuesday.",
       "currencies": [
@@ -790,22 +316,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Check out @fernandezdiego discussing how the #CityofBuenosAires is empowering people with control over their own…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T13:10:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
       "title": "FTX’s Sam Bankman-Fried arrest update; What you need to know",
       "link": "https://finbold.com/ftxs-sam-bankman-fried-arrest-update-what-you-need-to-know/",
       "pubDate": "2022-12-13T13:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "The details of the indictment that has been brought against Sam Bankman-Fried have been made public after the news of … Continued",
       "currencies": [
@@ -817,57 +332,11 @@
       }
     },
     {
-      "title": "And we are live! ️ Our Social Media & Content Manager will be part of the panel to speak about the World Champio…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T13:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "Great news! Helium Explorer now displays MOBILE earnings per radio. Check out how much your radio has earned in the…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T12:50:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Have a question about the Holochain Beta-RC release? Next week we’re hosting a special #AMA where @marycamacho,…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T12:18:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "RT @holochain:  We’re updating our #devs documentation to give a better UX experience to our developers. Check out the updated project pag…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T12:14:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "Bahamas reportedly asked SBF to mint new coin after FTX collapse",
       "link": "https://cointelegraph.com/news/bahamas-reportedly-asked-sbf-to-mint-new-coin-after-ftx-collapse",
       "pubDate": "2022-12-13T12:10:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "The FTX collapse has reportedly fueled a major international legal dispute between the United States and the Commonwealth of the Bahamas.",
       "currencies": [
@@ -883,8 +352,8 @@
       "title": "Binance Coin Price Prediction as Investors Fear Binance Exchange is Next to Collapse – Here’s Where BNB is Headed Next",
       "link": "https://cryptonews.com/news/binance-coin-price-prediction-as-investors-fear-binance-exchange-next-collapse-heres-where-bnb-headed-next.htm",
       "pubDate": "2022-12-13T12:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Binance Coin (BNB), the Binance crypto exchange’s utility token was last trading with losses of around 3% on Tuesday and was down closer to 6% over the last 24 hours. BNB/USD was last changing hands around $268, down from $280 as recently as the weekend, but has recovered over 5% from intra-day lows of around $253.... Read More: Binance Coin Price Prediction as Investors Fear Binance...",
       "currencies": [
@@ -897,35 +366,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Thank you for the mention @DYORCryptoBot",
-      "link": "NULL",
-      "pubDate": "2022-12-13T12:01:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BDX"
-      ]
-    },
-    {
-      "title": "RT @ChilizX: Have you registered yourself yet on ? ChilizX is the #1 exchange for Fan Tokens To celebrate the…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T12:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
       "title": "Justin Sun Deposits $100M into Binance, Moves to Allay Market Fears Over Exchange’s Financial Health",
       "link": "https://www.coinspeaker.com/justin-sun-deposits-100m-binance/",
       "pubDate": "2022-12-13T11:59:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "exchange",
       "description": "Coinspeaker Justin Sun Deposits $100M into Binance, Moves to Allay Market Fears Over Exchange’s Financial Health Justin Sun has deposited a substantial amount of money back into Binance after the exchange’s outflow rapidly hit $1.8 billion. Justin Sun Deposits $100M into Binance, Moves to Allay Market Fears Over Exchange’s Financial Health",
       "currencies": [
@@ -938,23 +383,11 @@
       }
     },
     {
-      "title": "RT @DrDeathCultClub: “Mark Tan and the Blue Apple” My most recent commission for @_MarkTan_ - A unique entry NFT for the private collecto…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T11:35:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "SBF planned to blame everyone but himself, shows leaked Congress testimony",
       "link": "https://cointelegraph.com/news/sbf-planned-to-blame-everyone-but-himself-shows-leaked-congress-testimony",
       "pubDate": "2022-12-13T11:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "SBF blamed the current CEO, his legal counsel, the law firm he appointed for bankruptcy and Binance CEO CZ, without admitting any wrong on his part.",
       "currencies": [
@@ -970,8 +403,8 @@
       "title": "Sam Bankman-Fried charged with fraud over FTX collapse",
       "link": "https://www.theblock.co/post/194509/sam-bankman-fried-charged-with-fraud-over-ftx-collapse?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T11:24:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "regulation",
       "description": "The U.S. Securities and Exchange Commission charged the former FTX CEO with defrauding investors in the crypto exchange.",
       "currencies": [
@@ -984,33 +417,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What about the #BlockchainGaming topic for a community meeting with one of our partners?🤔",
-      "link": "NULL",
-      "pubDate": "2022-12-13T11:12:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADS"
-      ]
-    },
-    {
-      "title": "'I'll have a mintBlue Christmas without you I'll be so blue just thinking about you…' 🤶🧑‍ No one likes to be…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T11:06:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "FTX Token slumps into abyss as Sam Bankman-Fried gets arrested",
       "link": "https://finbold.com/ftx-token-slumps-into-abyss-as-sam-bankman-fried-gets-arrested/",
       "pubDate": "2022-12-13T10:24:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "Upon the news that the founder of the collapsed crypto trading platform FTX has been arrested, many cryptocurrencies, Bitcoin (BTC) … Continued",
       "currencies": [
@@ -1026,8 +437,8 @@
       "title": "Canada Bans Crypto Leverage, Exchanges Must Segregate User Funds",
       "link": "https://blockworks.co/news/canada-bans-crypto-leverage-exchanges-must-segregate-user-funds",
       "pubDate": "2022-12-13T09:50:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "regulation",
       "description": "Securities regulators in Canada are moving to clamp down on crypto exchanges operating locally, and stablecoins could be under threat",
       "currencies": [
@@ -1039,107 +450,11 @@
       }
     },
     {
-      "title": "Bitcoin SV emerged following a hard fork of Bitcoin Cash. $BSV aims to offer scalability and stability in line and…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:41:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV",
-        "HIT"
-      ]
-    },
-    {
-      "title": "RT @HouseofChimera: Did you know you can generate plug-in access codes? every day, a batch of access codes is available at",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:35:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @LunrToken: The number of $Lunr token holders and Level 5 sign-ups are not the only things on the rise. $Lunr token social activity expe…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:29:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @XcademyOfficial: The Lulu99 CLO has just closed A new record for total participants TGE taking place THIS month! Please note: You h…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:29:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @LunrToken: A @LunarCrush community update There are now 60,846 $Lunr holders, which is accelerating as #Lunr becomes available on…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:28:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @BeanterraGame: Check out our #ama recording where we talked about our #game launch, future directions and #sustainability #zilfam #NFT…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:27:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @inna_everstake: Everyone is curious about the EVM on Zilliqa, and one of the biggest immediate benefits that EVM compatibility brings i…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:27:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @zilkroad_dex: 🪂 Deploying contracts...",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:26:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Binance Rumors And FUD Ramp Up – Here Are The Facts",
       "link": "https://bitcoinist.com/binance-rumors-and-fud-ramp-up-here-are-the-facts/",
       "pubDate": "2022-12-13T09:25:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "exchange",
       "description": "On CT (Crypto Twitter), rumors are making the rounds about alleged problems at the world’s largest crypto exchange Binance. Rumors are currently rampant about payout problems, dwindling reserves, investigations by the US Attorney’s Office for money laundering and sanctions violations, and a proof of reserves that is meaningless. But what is true and what are […]",
       "currencies": [
@@ -1151,24 +466,11 @@
       }
     },
     {
-      "title": "RT @bitgetglobal: Join us TODAY at 1PM UTC for an exciting Twitter Space! ️ ️@GracyBitget ️Pedro, Head of Research @DappRadar ️Stan,…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T09:17:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
       "title": "Binance CEO addresses USDC outflows: ‘feel free to withdraw any other stablecoin’",
       "link": "https://www.theblock.co/post/194398/binance-ceo-usdc-outflow?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-13T09:03:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "Some $1.6 billion on Ethereum has been withdrawn from the world's biggest crypto exchange over the past 24 hours.",
       "currencies": [
@@ -1185,8 +487,8 @@
       "title": "Polygon Transaction Volume Spikes, Will MATIC Price Soon Follow?",
       "link": "https://beincrypto.com/polygon-transaction-volume-spikes-will-matic-price-soon-follow/",
       "pubDate": "2022-12-13T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The number of transactions on the Polygon network has been climbing recently. Furthermore, MATIC prices have been outperforming markets.",
       "currencies": [
@@ -1199,58 +501,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We look forward welcoming everyone this Friday at the Stratis blockchain meet up in London at Tower Hill Suites.…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T08:47:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
-      "title": "uNFT - Enabling deeper DeFi integration of $UP through a new NFT standard. Learn how uNFTs might be used on Tezos D…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T08:42:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XTZ",
-        "UP"
-      ]
-    },
-    {
-      "title": "Take a glance at the #JustLendDAO weekly top APY ranking 🥇 $BTT supply APY over 18% 🥈 $JST supply APY over 17% 🥉…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T08:27:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "JST"
-      ]
-    },
-    {
-      "title": "INO 2.0 is now live! Check out @officialPlayOne, a launchpad for games built on #Klaytn",
-      "link": "NULL",
-      "pubDate": "2022-12-13T08:08:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "XRP Bullish Signal: Whale Withdraws $33 Million From Binance",
       "link": "https://bitcoinist.com/xrp-bullish-signal-whale-withdraws-33-million-from-binance/",
       "pubDate": "2022-12-13T07:42:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Data shows a whale has withdrawn $33 million worth of XRP from Binance, a sign that could be bullish for the coin’s price. XRP Whale Takes Out $33 Million From Crypto Exchange Binance As per data from the crypto transaction tracker service Whale Alert, two sizable XRP transactions have been spotted on the chain during […]",
       "currencies": [
@@ -1264,47 +519,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @CML_Crypto: TOP10 Most Voted #Storage Projects - Week 49 🥇 $BTT @BitTorrent 🥈 $SIN @sinovatechain 🥉 $XCH @chia_project 4️⃣ $PAC @PAC…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T06:55:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "LAST WEEK IN #BitTorrent #BTT received the most votes for Storage League Project on @CML_Crypto #BTFS V2.3.0 is…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T06:54:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "Hello our Vietnamese 🇻🇳 friends! Have you checked out this Tokenlon feature on @coin68? If you have not heard of us…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T06:15:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LON",
-        "imBTC"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Addresses Top 3M in Record High While Burn Rate Spikes",
       "link": "https://beincrypto.com/shiba-inu-shib-addresses-top-3m-record-high-burn-rate-spikes/",
       "pubDate": "2022-12-13T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "The number of addresses on the Shiba Inu network has reached a new peak. However, SHIB prices remain depressed as market consolidation continues. The post Shiba Inu (SHIB) Addresses Top 3M in Record High While Burn Rate Spikes appeared first on BeInCrypto.",
       "currencies": [
@@ -1317,69 +536,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🤩 BKEK, a global exchange, has a trading volume per day worth of over $400M. It sits on #19th of the highest tradin…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T05:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ACT"
-      ]
-    },
-    {
-      "title": "it seems to me like Soulbound rewards cards are being pushed without the perspective of lower tier players",
-      "link": "NULL",
-      "pubDate": "2022-12-13T04:04:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "a busy ️ road ahead #troopers ️ ⬆️ perf,stab,bugs veFOREX ️BAL LP ⬆️ dash reporting + txs ⬆️ perps collat (USD…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T04:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "FOREX",
-        "FXUSD"
-      ]
-    },
-    {
-      "title": "TRON stablecoin USDD loses dollar peg amid Sun’s capital deploy, but TRX floats",
-      "link": "NULL",
-      "pubDate": "2022-12-13T03:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "ACALA to KARURA Bridging Problem",
-      "link": "NULL",
-      "pubDate": "2022-12-13T03:24:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
       "title": "Shiba Inu ($SHIB) Has Been Adding Over 600 HODLers per Day, Despite Ongoing Bear Market",
       "link": "https://www.cryptoglobe.com/latest/2022/12/shiba-inu-shib-has-been-adding-over-600-hodlers-per-day-despite-ongoing-bear-market/",
       "pubDate": "2022-12-13T03:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The meme-inspired cryptocurrency Shiba Inu ($SHIB) has been adding over 600 new holders per day so far this month, even amid an ongoing bear market in the cryptocurrency space that has now lasted for over a year. According to data from Ethereum blockchain explorer Etherscan, as first spotted by Finbold, the number of unique addresses […]",
       "currencies": [
@@ -1393,76 +554,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why local currency stablecoins are needed in non-US countries",
-      "link": "NULL",
-      "pubDate": "2022-12-13T03:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "description": "Stablecoins in USD are becoming the digital world’s default currency — which burdens ordinary crypto users and monetary policies in smaller nations, writes Wei Zhou of Coins.ph.",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin NVT Golden Cross Still In “Overbought” Region, Volatility To Follow?",
-      "link": "NULL",
-      "pubDate": "2022-12-13T03:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT",
-        "XCN"
-      ]
-    },
-    {
-      "title": "RT @cz_binance: Ignore FUD. Keep building!",
-      "link": "NULL",
-      "pubDate": "2022-12-13T02:03:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "We’re ADAmant about listing more tokens… …which is why we listed $ADA (@CardanoFeed) - on top of $DOT and $XTZ - l…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T01:18:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "ETHW",
-        "BMEX"
-      ]
-    },
-    {
-      "title": "Update: The Blockchain Service provider has told us they identified the problem and \"will provide you with another…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T01:02:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAR"
-      ]
-    },
-    {
       "title": "Sam Bankman-Fried arrested in the Bahamas, expected to be extradited to U.S.",
       "link": "https://forkast.news/headlines/sam-bankman-fried-arrested-in-the-bahamas/",
       "pubDate": "2022-12-13T00:43:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "Sam Bankman Fried, founder and former CEO of FTX exchange, was arrested and taken into custody by the Royal Bahamas Police on Monday.",
       "currencies": [
@@ -1475,22 +571,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Are you worried about losing your Crypto or scared about self-custody? Ethos is planning on making the easiest app…",
-      "link": "NULL",
-      "pubDate": "2022-12-13T00:40:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
       "title": "Sam Bankman-Fried Arrested in The Bahamas",
       "link": "https://blockworks.co/news/sam-bankman-fried-arrested-in-bahamas",
       "pubDate": "2022-12-13T00:10:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "regulation",
       "description": "US Attorney for the Southern District of New York confirms a sealed indictment against the former FTX CEO",
       "currencies": [
@@ -1501,18 +586,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "This Bitcoin Metric Suggests Selling Pressure May Be Reaching Exhaustion",
-      "link": "NULL",
-      "pubDate": "2022-12-13T00:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
     }
   ]
 }

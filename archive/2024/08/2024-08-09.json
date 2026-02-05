@@ -1,15 +1,15 @@
 {
   "date": "2024-08-09",
-  "fetchedAt": "2026-02-05T07:45:53.464Z",
-  "articleCount": 116,
+  "fetchedAt": "2026-02-05T07:48:35.671Z",
+  "articleCount": 15,
   "source": "historical-import",
   "articles": [
     {
       "title": "Can Solana’s Urgent Patch Improve Network Stability?",
       "link": "https://www.thecoinrepublic.com/2024/08/09/can-solanas-urgent-patch-improve-network-stability/",
       "pubDate": "2024-08-09T23:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "The Solana (SOL) blockchain ecosystem is relatively new but has recently faced a significant threat. On August 9th, one of the Solana validators shared that the developers, validators, and clients’ teams fixed the system vulnerability. This swift action was taken to safeguard the network and maintain its smooth functioning. Solana Developers Swiftly Patch Major Security Flaw The Solana […]",
       "currencies": [
@@ -21,26 +21,11 @@
       }
     },
     {
-      "title": "Ethereum Vs. Solana: Legendary Trader Peter Brandt Reveals The ‘Clear Winner’",
-      "link": "NULL",
-      "pubDate": "2024-08-09T23:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
       "title": "PYUSD market cap rises 150% following Solana launch",
       "link": "https://cryptoslate.com/pyusd-market-cap-rises-150-following-solana-launch/",
       "pubDate": "2024-08-09T22:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "PayPal USD (PYUSD) market cap leaped by 150% since its expansion to Solana on May 29, with the stablecoin’s total value now sitting at $684 million, based on DefiLlama data. Notably, the usage of PYUSD is practically evenly distributed between Solana and Ethereum, as both blockchains show 48.32% and 51.68% dominance, respectively. This significant movement […]",
       "currencies": [
@@ -54,61 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ZetaChain Listing on Coinbase Drives 20% Rally",
-      "link": "NULL",
-      "pubDate": "2024-08-09T22:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ZETA"
-      ]
-    },
-    {
-      "title": "Two Low-Cap Altcoins Leap After Being Added to Coinbase’s Listing Roadmap",
-      "link": "NULL",
-      "pubDate": "2024-08-09T22:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Crypto Whales Bought These Altcoins in the First Week of August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Chain Signatures Go Live on NEAR Protocol, Expand Cross-Chain Possibilities",
-      "link": "NULL",
-      "pubDate": "2024-08-09T21:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEAR"
-      ]
-    },
-    {
       "title": "Solana Developers Quietly Patched a Critical Vulnerability",
       "link": "https://thedefiant.io/news/blockchains/solana-developers-quietly-patched-a-critical-vulnerability",
       "pubDate": "2024-08-09T21:35:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "altcoin",
       "description": "A Discord alert triggered core contributors to quickly push out a fix this week.",
       "currencies": [
@@ -121,29 +56,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "FOMO HOUR 176 - ETH LEADS THE CHARGE",
-      "link": "NULL",
-      "pubDate": "2024-08-09T21:17:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "STX",
-        "ARB",
-        "SUI",
-        "TIA"
-      ]
-    },
-    {
       "title": "XRP rallies post-SEC victory: Is this the start of its bull run?",
       "link": "https://ambcrypto.com/xrp-rallies-post-sec-victory-is-this-the-start-of-its-bull-run/",
       "pubDate": "2024-08-09T21:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Could XRP be poised to reach new heights following its recent legal victory against the U.S. Securities and Exchange Commission (SEC)?",
       "currencies": [
@@ -156,173 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Will Celestia Price Defend $5 Support Amid Lemongrass Upgrade?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T20:37:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Holding On To Green Ahead Of Weekend: '$100,000 By End Of 2024 Does Not Look So Impossible'",
-      "link": "NULL",
-      "pubDate": "2024-08-09T20:17:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "CRO",
-        "ZEC",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Aptos Price Eyes $10 as Market Recovery Fuels Investor Optimism",
-      "link": "NULL",
-      "pubDate": "2024-08-09T20:07:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Moves to Enhance LUNC Burns Via Tax2Gas",
-      "link": "NULL",
-      "pubDate": "2024-08-09T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Will the Harris-Walz presidential campaign prioritize crypto policy?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:43:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Must-Have Altcoins With Bullish Potential in August-September",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:41:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "LINK",
-        "UNI",
-        "KAS",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Scientists illuminate a path to quantum AGI with new light-based chips",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:26:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGI",
-        "GPT"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Aptos Up More Than 4% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:02:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Cronos Up More Than 15% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "This Week in Meme Coins: BONK, MEW, and BOME Shed Gains as Solana-Based Meme Coins Retreat",
-      "link": "NULL",
-      "pubDate": "2024-08-09T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Top Crypto Performers Today August 9 – Celestia, Sui, Zcash",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:56:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SUI",
-        "TIA"
-      ]
-    },
-    {
-      "title": "2019 Pattern Repeats: Analysts Forecast Bitcoin’s All-Time High – Best Memecoins to Buy Now for Maximize Profits on Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:56:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "BRETT"
-      ]
-    },
-    {
       "title": "Cardano Upgrades Hydra Head with Key Transaction Improvements",
       "link": "https://cryptodnes.bg/en/cardano-upgrades-hydra-head-with-key-transaction-improvements/",
       "pubDate": "2024-08-09T18:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "altcoin",
       "description": "Cardano has made notable improvements to its Hydra Head scaling solution with the release of version 0.18.0.",
       "currencies": [
@@ -334,91 +89,11 @@
       }
     },
     {
-      "title": "XRP Has Surpassed Bitcoin, Ethereum, And Solana Combined In This Metric",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "LUSD"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cronos (CRO) Price Breakout Rally Hints At A 40% Upside?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:09:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "CRO",
-        "ROSE",
-        "OM"
-      ]
-    },
-    {
-      "title": "SEC postpones decision on Hashdex’s proposed ETF to hold bitcoin and ether",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:07:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ]
-    },
-    {
-      "title": "AI-Based Crypto Bittensor Becomes Best Performer in the Market – Are AI Coins Making a Comeback?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:03:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "IO Surges 32% After Recent Low as DePin Platform io.net Snags New Partnership",
-      "link": "NULL",
-      "pubDate": "2024-08-09T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IO"
-      ]
-    },
-    {
-      "title": "Stellar Holders Bet Big on This New ICO, Eyeing Massive 3,450% Gains",
-      "link": "NULL",
-      "pubDate": "2024-08-09T17:54:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Solana’s $1,000 Dream: 10 Reasons Why This Analyst Believes SOL Could Soar Much Higher",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-08-09T17:33:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On August 9, in a comprehensive thread on social media platform X (formerly known as Twitter), prominent cryptocurrency analyst Miles Deutscher shared his thoughts on why Solana (SOL) might continue its impressive market performance. Despite already seeing significant gains, Deutscher believes SOL’s upward trajectory could persist, potentially reaching the $1,000 mark. Let’s examine the ten...",
       "currencies": [
@@ -430,72 +105,11 @@
       }
     },
     {
-      "title": "Biggest Altcoin Gainers of the First Week of August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T17:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "HNT",
-        "ZEC",
-        "SUI",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Crypto Leaders Call Out White House For Claiming ‘Chokepoint 2.0’ Isn’t Real",
-      "link": "NULL",
-      "pubDate": "2024-08-09T17:12:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLR"
-      ]
-    },
-    {
-      "title": "DTX Exchange (DTX) Stuns With $1M Giveaway While Toncoin and Ondo See Major Listings",
-      "link": "NULL",
-      "pubDate": "2024-08-09T16:53:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TON",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "SEC subpoenaed three venture capital firms this year: DL News",
-      "link": "NULL",
-      "pubDate": "2024-08-09T16:37:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Brett Price Rises Above $0.1 as Base Dawgz ICO Nears $3M",
-      "link": "NULL",
-      "pubDate": "2024-08-09T16:15:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BRETT"
-      ]
-    },
-    {
       "title": "Chang Hard Fork Nears for Cardano: 70% Node Update Reached—What’s Next for ADA?",
       "link": "https://crypto-economy.com/chang-hard-fork-nears-for-cardano-70-node-update-reached-whats-next-for-ada/",
       "pubDate": "2024-08-09T15:47:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Economy",
+      "sourceKey": "cryptoeconomy",
       "category": "altcoin",
       "description": "TL;DR 70% of Staking Pool Operators (SPOs) have upgraded to node version 9.1.0, bringing the activation of the Chang Hard Fork on Cardano closer. The Chang hard fork seeks to remove IOHK’s direct responsibility for managing Cardano, promoting decentralized governance. ADA price has increased by 2.9% over the past 24 hours, with trading volumes increasing ... Read more",
       "currencies": [
@@ -507,80 +121,11 @@
       }
     },
     {
-      "title": "Near Protocol brings Chain Signature tech for cross-chain transactions",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Breaking: Elizabeth Warren Targets Elon Musk Over xAI Investments",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:40:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XAI",
-        "$ELON"
-      ]
-    },
-    {
-      "title": "Celestia Unveils ‘Lemongrass’: First Major Upgrade Promises Big Changes to the Modular Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:39:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "47 Crypto Companies Flock Turkey Amid New Regulations",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Bonk Price Approaches Key Support, Another Bounce or 40% Correction?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:20:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Investor Faces Heavy Loss After Selling This Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-08-09T15:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Inflation Lowest Amid All Majors, Community Says",
       "link": "https://u.today/cardano-ada-inflation-lowest-amid-all-majors-community-says",
       "pubDate": "2024-08-09T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano (ADA) managed to achieve 2.5% inflation, long-term community enthusiast says",
       "currencies": [
@@ -592,159 +137,11 @@
       }
     },
     {
-      "title": "Wemade Slapped With $12M Lawsuit Over WEMIX Token Dispute",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:31:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WEMIX"
-      ]
-    },
-    {
-      "title": "Top 5 Blockchain-Powered Apps That Reward Users in 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GMT",
-        "AR"
-      ]
-    },
-    {
-      "title": "Ethereum Classic Price Rebounds; Is a Bullish Breakout Imminent?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:27:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "3 Reasons Why Bittensor (TAO) Price Breakout May Continue",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "Big Surprise: Binance Announces Listing of Toncoin, Price Soars! Are Notcoin and CYBRO Next?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:12:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Animoca Brands Valuation Is Now Just $1.5 billion on Secondary Market",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:04:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Monero Price Forecast: XMR poised for a 13% crash",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "‘Crypto president!’ – MOG TRUMP crypto soars 50% in 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-09T14:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
-      "title": "Tether set to double workforce, expanding development, investment and compliance teams",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:53:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Poised for Tax2Gas Upgrade: Can LUNC Reach $1 Again?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:52:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Instagram, $META, now has AI girlfriends and boyfriends, per BI.",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "IOTA Brings Digital Product Passport for Electronics, Combating E-Waste",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:44:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTA"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Reaches Local Bottom as Dormant Tokens Change Hands",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
       "title": "Solana Dodges Disaster: Major Vulnerability Patched Before Public Knowledge—What You Need to Know",
       "link": "https://crypto-economy.com/solana-dodges-disaster-major-vulnerability-patched-before-public-knowledge-what-you-need-to-know/",
       "pubDate": "2024-08-09T13:22:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Economy",
+      "sourceKey": "cryptoeconomy",
       "category": "altcoin",
       "description": "TL;DR Critical Vulnerability Patched: Solana developers and contributors patched a major security vulnerability, securing 70% of the network’s stake before disclosing the issue to the public. Coordinated Response: The patch process began on August 7 with a hashed message from Solana Foundation members, leading to a coordinated upgrade across the network. Past Network Issues: Solana ......",
       "currencies": [
@@ -756,38 +153,11 @@
       }
     },
     {
-      "title": "CHART: Every Do Kwon extradition twist and turn",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:20:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Turkey Sees Record 47 Crypto Firms Apply for Licenses amid New Regulations",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:12:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano Chang Hard Fork in View as Node Operator Integration Soars",
       "link": "https://www.coinspeaker.com/cardano-chang-hard-fork-node-operator/",
       "pubDate": "2024-08-09T13:02:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "altcoin",
       "description": "Coinspeaker Cardano Chang Hard Fork in View as Node Operator Integration Soars The central goal of the Chang fork upgrade is to remove IOHK, Cardano's development firm, from the direct responsibility of managing the seven-year-old blockchain. Cardano Chang Hard Fork in View as Node Operator Integration Soars",
       "currencies": [
@@ -800,57 +170,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "DMarket leads daily NFT sales and beats Ethereum on its own",
-      "link": "NULL",
-      "pubDate": "2024-08-09T13:01:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "NFT"
-      ]
-    },
-    {
-      "title": "SUI Price Targets $1 Comeback Following Grayscale Sui Trust Launch",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SUI",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Transforming Plastic Waste with DPPs",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTA"
-      ]
-    },
-    {
-      "title": "Stock Market Update 9th Aug: Sensex Soars 819 Pts, Nifty Close at 24,368 as Eicher Motors and M&M Lead the Market Surge – Technical Analysis $ Next Targets In Focus",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:44:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
       "title": "AI predicts Cardano price for August 31, 2024",
       "link": "https://finbold.com/ai-predicts-cardano-price-for-august-31-2024/",
       "pubDate": "2024-08-09T12:36:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Cardano (ADA) remains one of the cryptocurrency market’s notable players despite the token being on the brink of falling out of the … Continue reading",
       "currencies": [
@@ -863,49 +187,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Coinbase Adds Zetachain (ZETA) and Across Protocol (ACX) to Listing Roadmap, Tokens Soar",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:35:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZETA",
-        "ACX",
-        "ZEX"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Bounces Back: Investor Momentum Sparks 12% Rally",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "DOT",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Montenegro’s Supreme Court Halts Do Kwon’s Homecoming To South Korea Again – Details",
-      "link": "NULL",
-      "pubDate": "2024-08-09T12:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Crypto trader turns nearly $1M in $18,000 in 4 hours",
       "link": "https://finbold.com/crypto-trader-turns-nearly-1m-into-18000-in-4-hours/",
       "pubDate": "2024-08-09T11:51:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "With renewed optimism in the cryptocurrency market, traders have jumped again into meme coin speculation driven by the fear of … Continue reading",
       "currencies": [
@@ -918,317 +204,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Which FTX and Alameda executives are going to prison and when?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:50:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Unlock Time Farm Daily Combo Code 10 August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Sylvamo (SLVM) Reports Strong Q2 with $1.98 EPS, $933 Million in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:28:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Web3 Foundation’s ‘Web3 Summit’ Returns After 5 Years Hiatus, August 19th -21st",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Okeanis Eco Tankers Corp (ECO) Posts Better than Expected Q2 2024 Results",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Crypto Exchange WazirX To Restore User Balances Following $230 Million Hack",
-      "link": "NULL",
-      "pubDate": "2024-08-09T11:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "WRX",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Kanpai pandas NFTs plunge 45% amid Trump token controversy",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:49:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Educational Byte: Fundamental & Technical Analysis in Crypto",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:31:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
-      "title": "Today’s Musk X Empire Rebus of the Day 9 August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "TON, RBLK and JASMY: Which of These 3 Altcoins Is More Likely To See Double Digit Gains In August?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:28:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "In the past two weeks, Uber Technologies, $UBER,, DoorDash, $DASH,, Instacart, $CART, and Grubhub parent Just Eat NV have all topped expectations, per Bloomberg.",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
-      "title": "Kujira Partners with THORChain for DeFi Boost",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:13:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Exploring the Future Potential of CET: A Comprehensive Introduction to CoinEx-Associated Products",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:11:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CET"
-      ]
-    },
-    {
-      "title": "SUI Explodes 30% After Crypto Market Shows Signs Of Life",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "DOT",
-        "SUI",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Celestia (TIA) Short Traders Dominate Futures Market as Altcoin Lingers in Bear Territory",
-      "link": "NULL",
-      "pubDate": "2024-08-09T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "Stellar Price Fluctuates Amid Bearish Trends: Is There a Path to Recovery for XLM?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:47:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 8-9 BTC, ETH, SOL, XRP, DOGE, AVAX, SEI",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:46:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Polkadot Debuts New Website with Focus on Accessibility and Innovation",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:39:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Cardano (ADA) Chang hard fork to launch after reaching 70% of nodes",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:38:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Cardano’s nodes are 70% ready to run version 9.1.0, and will automatically introduce Stage 1 of the Chang hard fork. Cardano still awaits Stage 2 to become a governance network with delegates and voting.",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 13,
-        "negative": 5
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Terra Luna Classic Set For Tax2Gas Upgrade, LUNC Price Revival To $1?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:28:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "\"People who understand #Bitcoin, buy Bitcoin. People who don't understand Bitcoin, criticise it.\" - Michael Saylor",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:16:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "\"People who understand #Bitcoin, buy Bitcoin. People who don't understand Bitcoin, criticise it.\" - Michael Saylor oooh the VoLAtiLiTaaay!",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:02:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Nears $60,000 As Putin Signs Law Legalizing Crypto Mining In Russia",
-      "link": "NULL",
-      "pubDate": "2024-08-09T09:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "DOT"
-      ]
-    },
-    {
-      "title": "MetaMask Adds 2FA With MultiversX Snap Integration",
-      "link": "NULL",
-      "pubDate": "2024-08-09T08:34:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Crypto Faces $2.5 Billion Options Expiry Amid Volatility",
       "link": "https://coinpaprika.com/news/crypto-faces-2-5-billion-options-expiry-amid-volatility/",
       "pubDate": "2024-08-09T08:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "general",
       "description": "Today, Bitcoin and Ethereum options worth $2.5 billion expire, potentially affecting market trends following a week of significant volatility.",
       "currencies": [
@@ -1245,8 +225,8 @@
       "title": "SEC to Appeal Court Ruling in Ripple XRP Case",
       "link": "https://coinpaprika.com/news/sec-to-appeal-court-ruling-in-ripple-xrp-case/",
       "pubDate": "2024-08-09T08:21:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "regulation",
       "description": "The SEC plans to appeal a court ruling on Ripple's XRP sales, aiming to redefine its classification and impact the broader crypto regulation landscape.",
       "currencies": [
@@ -1262,8 +242,8 @@
       "title": "ADA Price Poised for 9% Surge Amid Rising Network Activity",
       "link": "https://coingape.com/markets/ada-price-poised-for-9-surge-amid-rising-network-activity/",
       "pubDate": "2024-08-09T08:05:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "trading",
       "description": "ADA price increased on the last day together with the entire market. The ADA chart shows some upward movement, but weak volume signals the rise may be short-lived. While improving network activity is positive for price, a major overhead resistance may prove hard to break if ADA bulls have nothing else more tangible to ride",
       "currencies": [
@@ -1274,263 +254,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Here’s what SAND traders can expect after this pattern break",
-      "link": "NULL",
-      "pubDate": "2024-08-09T08:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Celestia's Lemongrass Upgrade with 5 CIPs Live on Arabica Devnet, Mainnet Beta in September",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:39:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "Bitcoin Soars to $62,000 as Pension Funds Continue to Invest in ETFs",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:32:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Zetachain Soars 17% As Coinbase Confirms Roadmap Listing",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:29:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZETA"
-      ]
-    },
-    {
-      "title": "Hamster Kombat News: Updates On Airdrop, Listing and Rewards",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "KCS",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin NVT Golden Cross Gives Bottom Signal: What Happened Last 2 Times",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "GRT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Telegram Coin Notcoin’s Price Recovery Warrants Breach of 2-Month-Old Downtrend",
-      "link": "NULL",
-      "pubDate": "2024-08-09T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Unlock PixelTap Daily Combo Code 9 August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-09T06:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "SOL",
-        "TON",
-        "MEW"
-      ]
-    },
-    {
-      "title": "Toncoin Soars 14.8% After Binance Listing, Is TON Poised For A Breakout?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T06:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "DOGE",
-        "TON",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "Ethereum ETF Displays Increased Inflow As Market Experiences A Bullish Action!",
-      "link": "NULL",
-      "pubDate": "2024-08-09T05:55:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "Binance See’s $1.2B Net Inflow as Investors Buy the Dip; Here Are 2 Altcoins Set for Face Melting Rallies",
-      "link": "NULL",
-      "pubDate": "2024-08-09T05:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Bitcoin Price: September 2024 Presents a Critical Test for Bitcoin Bulls; $100K Possible if Historical Patterns Hold True",
-      "link": "NULL",
-      "pubDate": "2024-08-09T05:20:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "BSV"
-      ]
-    },
-    {
-      "title": "Pepe Leads Rally, Dogecoin, Shiba Inu Advance As Memecoins Flash Green Amid Market Rebound",
-      "link": "NULL",
-      "pubDate": "2024-08-09T04:42:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "387 #WBTC (24,306,071 USD) transferred from unknown wallet to #Cumberland",
-      "link": "NULL",
-      "pubDate": "2024-08-09T04:20:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "What are Litecoin HODLers up to as LTC remains bearish?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T04:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Arbitrum Orbit Chain Users To Pay Gas Fees Using USDC: Why Is ARB Down 80%?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T04:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "BNB",
-        "SOL",
-        "AVAX",
-        "STX",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Reclaims $60K: Is The Rally Resuming?",
-      "link": "NULL",
-      "pubDate": "2024-08-09T02:44:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Cathie Wood's Ark Invest Continues Loads Up On $6.05M Worth Of Robinhood Shares Amid Bitcoin Rebound, Dumps Zoom Stock",
-      "link": "NULL",
-      "pubDate": "2024-08-09T02:39:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Donald Trump Jr. says he loves memecoins but new project is something ‘much bigger’",
-      "link": "NULL",
-      "pubDate": "2024-08-09T02:33:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Bitcoin volume in loss hit highest level since FTX collapse",
-      "link": "NULL",
-      "pubDate": "2024-08-09T01:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
     }
   ]
 }

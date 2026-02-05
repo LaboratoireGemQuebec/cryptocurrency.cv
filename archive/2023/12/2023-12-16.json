@@ -1,15 +1,15 @@
 {
   "date": "2023-12-16",
-  "fetchedAt": "2026-02-05T07:45:53.397Z",
-  "articleCount": 26,
+  "fetchedAt": "2026-02-05T07:48:35.661Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
     {
       "title": "Tether Welcomes FBI, Secret Service in Fight Against Crime",
       "link": "https://dailycoin.com/tether-fbi-secret-service-fight-against-crime/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-12-16T22:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "ethereum",
       "description": "Tether proves its commitment to combating USDT-enabled crypto crime by onboarding the FBI and the Secret Service.",
       "currencies": [
@@ -21,77 +21,11 @@
       }
     },
     {
-      "title": "FTX’s revised reorganization plan values crypto claims at time of bankruptcy",
-      "link": "NULL",
-      "pubDate": "2023-12-16T21:56:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Hacker Who Stole Millions Worth of NFTs Demands a Ransom",
-      "link": "NULL",
-      "pubDate": "2023-12-16T20:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW",
-        "APE"
-      ]
-    },
-    {
-      "title": "Mysterious Ethereum Whale emerges from shadows, triggers massive sell-off",
-      "link": "NULL",
-      "pubDate": "2023-12-16T19:15:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Bitcoin whales continue to accumulate despite price declines – Why?",
-      "link": "NULL",
-      "pubDate": "2023-12-16T18:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Ethereum Whale Resurfaces, Initiates Major Sell-Off",
-      "link": "NULL",
-      "pubDate": "2023-12-16T16:16:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Cardano Community Member Cautions ADA Holders Against This Serious Scam",
       "link": "https://bitcoinist.com/cardano-community-member-cautions-ada-holders-against-this-serious-scam/",
       "pubDate": "2023-12-16T16:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The Cardano community has remained vigilant after a member issued a crucial warning, cautioning members about a crypto scam attack targeting ADA holders. Related Reading: Security Engineer Pleads Guilty To $12 Million Crypto Exchange Hack Cardano Issues Scam Warning Alerts In its official X (formerly Twitter) account, the Cardano Community recently released a high-risk warning, […]",
       "currencies": [
@@ -107,8 +41,8 @@
       "title": "Flippening? Solana's Main DEX Outshines Uniswap",
       "link": "https://u.today/flippening-solanas-main-dex-outshines-uniswap",
       "pubDate": "2023-12-16T15:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "defi",
       "description": "As retroactive airdrop farmers rushing toward JUP distribution, Solana's Jupiter eyes $1 billion in daily volume",
       "currencies": [
@@ -120,100 +54,11 @@
       }
     },
     {
-      "title": "What’s The Metaverse? Meaning, Best Projects And Crypto",
-      "link": "NULL",
-      "pubDate": "2023-12-16T15:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MANA",
-        "SAND",
-        "AXS",
-        "AR"
-      ]
-    },
-    {
-      "title": "Solana Meme BONK Faces Volatility After Almost 30% Price Drop",
-      "link": "NULL",
-      "pubDate": "2023-12-16T14:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "MANA",
-        "BONK"
-      ]
-    },
-    {
-      "title": "5 Free and Open-Source Privacy Tools You Can Support via Kivach, Episode IV",
-      "link": "NULL",
-      "pubDate": "2023-12-16T14:14:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Bitwise Reveals Two Major Triggers That Will Send Bitcoin Price To $80,000",
-      "link": "NULL",
-      "pubDate": "2023-12-16T14:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OSMO",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Crypto Price Prediction For December 16: XRP, OSMO, ICP",
-      "link": "NULL",
-      "pubDate": "2023-12-16T12:35:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Analyst Predicts XRP Price Will Rise 800% To $5.5 – The Timeframe Will Shock You",
-      "link": "NULL",
-      "pubDate": "2023-12-16T12:08:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "XRP",
-        "OSMO",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Frax Finance’s Strategic Expansion Across DeFi Platforms via Axelar Network",
-      "link": "NULL",
-      "pubDate": "2023-12-16T11:50:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "FRAX"
-      ]
-    },
-    {
       "title": "Trader Says Path Looks Clear for Cardano To Move Higher, Predicts ‘Big Price Move’ for ADA",
       "link": "https://dailyhodl.com/2023/12/16/trader-says-path-looks-clear-for-cardano-to-move-higher-predicts-big-price-move-for-ada/",
       "pubDate": "2023-12-16T10:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Crypto analyst and trader Ali Martinez is expressing bullish sentiment on Cardano (ADA) and one low-cap altcoin. Starting with the eighth-largest crypto asset by market cap, Martinez tells his 35,700 followers on the X social media platform that “with no significant resistance barriers in sight, the path looks clear for ADA to move higher”. According […]",
       "currencies": [
@@ -226,109 +71,11 @@
       }
     },
     {
-      "title": "Osmosis Rally Intensifies With 77% Increase – Will OSMO Hit $2 This Month?",
-      "link": "NULL",
-      "pubDate": "2023-12-16T10:03:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE",
-        "LUNC",
-        "OSMO",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Bitcoin (BTC) Price Slips to $42K, ICP Skyrockets 40% Daily (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2023-12-16T09:55:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FIL",
-        "ICP"
-      ]
-    },
-    {
-      "title": "ETC Group Explains Why ‘2024 Is Poised To Be a Transformative Year for Cryptoassets’",
-      "link": "NULL",
-      "pubDate": "2023-12-16T07:54:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "MANA Could Breakout Towards the Downside as Sell Signal Emerges",
-      "link": "NULL",
-      "pubDate": "2023-12-16T07:37:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MANA"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup 16 Dec: Crypto Weekend Roller Coaster Journey",
-      "link": "NULL",
-      "pubDate": "2023-12-16T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "USDC",
-        "IOTA"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) Eyes $0.65 But Only If It Meets One Condition",
-      "link": "NULL",
-      "pubDate": "2023-12-16T06:23:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: Bitcoin, Pepe Coin Slip As ICP Rises",
-      "link": "NULL",
-      "pubDate": "2023-12-16T05:12:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Filecoin value drops 5% in last 7 days: Can the descent continue?",
-      "link": "NULL",
-      "pubDate": "2023-12-16T01:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
       "title": "XRP Analyst Points to Rare Bullish Pattern to Suggest ‘Parabolic Move is Imminent’",
       "link": "https://www.cryptoglobe.com/latest/2023/12/xrp-analyst-points-to-rare-bullish-pattern-to-suggest-parabolic-move-is-imminent/",
       "pubDate": "2023-12-16T01:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "A popular cryptocurrency analyst has recently suggested that a “parabolic move is imminent” for the native token of the XRP Ledger, XRP, over a rare bullish pattern that was formed on the cryptocurrency’s price charts. In a post on the microblogging platform X (formerly known as Twitter), popular analyst JD told his over 30,000 followers […]",
       "currencies": [
@@ -339,17 +86,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Under-the-Radar Altcoin Surges by 58% This Week Amid New Perpetual Contract Listing",
-      "link": "NULL",
-      "pubDate": "2023-12-16T01:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WOO"
-      ]
     }
   ]
 }

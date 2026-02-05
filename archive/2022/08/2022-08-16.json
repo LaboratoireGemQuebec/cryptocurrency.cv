@@ -1,26 +1,15 @@
 {
   "date": "2022-08-16",
-  "fetchedAt": "2026-02-05T07:45:52.811Z",
-  "articleCount": 47,
+  "fetchedAt": "2026-02-05T07:48:35.593Z",
+  "articleCount": 19,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Overview: RLY Protocol powers the Token Economies for RLY Network.",
-      "link": "NULL",
-      "pubDate": "2022-08-16T23:22:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
     {
       "title": "What Is Dogechain? The So-Called Dogecoin 'Layer-2' for DeFi, NFTs and Games",
       "link": "https://decrypt.co/107590/what-is-dogechain-dogecoin-layer-2-defi-nfts-games",
       "pubDate": "2022-08-16T22:14:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "defi",
       "description": "Dogechain lets users bridge over Dogecoin (DOGE) to tap into DeFi services, along with potential future NFT marketplaces and apps.",
       "currencies": [
@@ -32,37 +21,11 @@
       }
     },
     {
-      "title": "Advanced users can choose their risk level or their expected return, or the weights they want to assign to each of…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "Brazillian Brokerage Firm Introduces Trading For Crypto Assets Amid Bear Market",
-      "link": "NULL",
-      "pubDate": "2022-08-16T20:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SHIB",
-        "USDP"
-      ]
-    },
-    {
       "title": "FTX CEO Sam Bankman-Fried Names Use Cases That Give Crypto the ‘Bulk of Its Power’",
       "link": "https://dailyhodl.com/2022/08/16/ftx-ceo-sam-bankman-fried-names-use-cases-that-give-crypto-the-bulk-of-its-power/",
       "pubDate": "2022-08-16T20:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Crypto billionaire Sam Bankman-Fried is unveiling the most impactful use cases of crypto and blockchain technology. In a new interview on the Point Forward podcast with NBA star Andre Iguodala, the FTX chief executive outlines the use cases he believes give crypto “the bulk of its power.” “At its core, one of the things that […]",
       "currencies": [
@@ -75,22 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @manasilvora: With a heavy heart, I am sharing this unfortunate news",
-      "link": "NULL",
-      "pubDate": "2022-08-16T19:27:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
       "title": "LunarCrush Ranks Dogecoin #1 ‘Based on Relative Combined Social + Market Activity’",
       "link": "https://www.cryptoglobe.com/latest/2022/08/lunarcrush-ranks-dogecoin-1-based-on-relative-combined-social-market-activity/",
       "pubDate": "2022-08-16T19:20:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On Tuesday (August 16), Dogecoin ($DOGE), which happens to be Elon Musk’s favorite cryptocurrency, has most members of the crypto community shaking their heads in disbelief as it is up over 9% on the day, beating every other top 100 cryptoasset. Popular meme-based cryptocurrency Dogecoin was initially released on 6 December 2013, as a “fun and friendly internet […]",
       "currencies": [
@@ -103,56 +55,11 @@
       }
     },
     {
-      "title": "RT @lioryaffe: 1/ Now that the #bridgechamp project is on beta and users can register freely at , play, and experime…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T19:12:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
-      "title": "RT @BitswiftC: #Ardor 3.0 now with pruning. Snip snip. ️",
-      "link": "NULL",
-      "pubDate": "2022-08-16T19:10:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
-      "title": "RT @lioryaffe: 1/ I want to congratulate the #Ethereum community for finally transitioning to #PoS, the big merge is finally coming. We the…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T19:10:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
-      "title": "BTG Pactual confirms official launch of Brazil crypto platform",
-      "link": "NULL",
-      "pubDate": "2022-08-16T18:58:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BTG"
-      ]
-    },
-    {
       "title": "Solana (SOL) price is poised for a potential 95% crash — Here’s why",
       "link": "https://cointelegraph.com/news/solana-sol-price-is-poised-for-a-potential-95-crash-here-s-why",
       "pubDate": "2022-08-16T17:50:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "SOL price gained 75% in the past two months, but technical analysis suggests it could be an elaborate bull trap.",
       "currencies": [
@@ -165,28 +72,11 @@
       }
     },
     {
-      "title": "Key Market Pundit Believes Shiba Inu Price Party Only Getting Started After Whooping Weekly Gains",
-      "link": "NULL",
-      "pubDate": "2022-08-16T17:02:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "The price of SHIB is up an incredible 32.4% over the past seven days as the broader cryptocurrency market struggles for momentum.",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Dogecoin Continues Weekend Rally, Up 22% in the Last Week",
       "link": "https://decrypt.co/107552/dogecoin-price-rally-up-22-percent-last-week",
       "pubDate": "2022-08-16T16:22:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Is it memecoin szn again already?",
       "currencies": [
@@ -198,41 +88,11 @@
       }
     },
     {
-      "title": "We're proud to be working with the biggest TV network in the Philippines @ABSCBN in partnership with…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T16:13:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "Bitcoin price hits multiday low as data warns of ‘overbought’ stocks",
-      "link": "NULL",
-      "pubDate": "2022-08-16T15:26:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Major resistance levels enter for U.S. equities, bringing with them fresh headwinds for crypto as Bitcoin and Ether lose $24,000 and $2,000, respectively.",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Shiba Inu Trends Upwards Through Strong Whale Accumulations",
       "link": "https://www.newsbtc.com/shib/shiba-inu-trends-upwards-through-strong-whale-accumulations/",
       "pubDate": "2022-08-16T15:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "This year’s crypto winter has created one of the most devastating effects in the crypto space in history. But there appears to be a resettling phase for the industry with the recent outplay of events. Moreover, following the special report of the CPI for July and other factors, the crypto space is seeing an encouraging relief and hope. The crypto space is making a positive impact as the...",
       "currencies": [
@@ -249,8 +109,8 @@
       "title": "Dogecoin Surges as Ethereum-Compatible Dogechain Gains Pace",
       "link": "https://cryptobriefing.com/dogecoin-surges-ethereum-compatible-dogechain-gains-pace/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-16T14:58:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Dogechain is an Ethereum-compatible smart contract network built using Polygon Edge. Cryptos original dog coin is back in vogue.According to CoinGecko data, Dogecoins DOGE token is up 11.6% today, trading around $0.085 at press time. It briefly hit $0.088 before cooling off. The surge comes despite a downturn in Bitcoin, Ethereum, and the broader cryptocurrency market.The biggest factor behind...",
       "currencies": [
@@ -266,8 +126,8 @@
       "title": "Dogecoin Foundation Director hails new Libdogecoin test on Android and iOS devices",
       "link": "https://finbold.com/dogecoin-foundation-director-hails-new-libdogecoin-test-on-android-and-ios-devices/",
       "pubDate": "2022-08-16T13:47:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Meme cryptocurrency Dogecoin (DOGE) continues to record increased network development as the coin seeks to become a mainstream digital asset.... Continue reading",
       "currencies": [
@@ -283,8 +143,8 @@
       "title": "“An Insult”: Do Kwon’s First Interview Since Terra Failure Flops",
       "link": "https://cryptobriefing.com/an-insult-do-kwons-first-interview-since-terra-failure-flops/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-16T13:32:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Viewers complained that the interview failed to address difficult questions related to Terras failure. Do Kwon has given his first interview since Terra collapsed in May, but the feature has been a resounding flop in the crypto community.Coinage aired the first episode of an interview with the Terraform Labs CEO Monday, promising to answer the communitys questions over Terras implosion....",
       "currencies": [
@@ -299,8 +159,8 @@
       "title": "Research: Bitcoin now has over 1B unique addresses, leaving Ethereum and Litecoin in the dust",
       "link": "https://cryptoslate.com/research-bitcoin-has-over-1-billion-unique-addresses-leaving-eth-ltc-in-the-dust/",
       "pubDate": "2022-08-16T13:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "The latest market crash has left Bitcoin in shambles.",
       "currencies": [
@@ -318,8 +178,8 @@
       "title": "DOGE up 15% May Be Just Beginning as Price Breaks Important Level",
       "link": "https://u.today/doge-up-15-may-be-just-beginning-as-price-breaks-important-level",
       "pubDate": "2022-08-16T12:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "DOGE is up and flying, but don't be confused with reasons for growth",
       "currencies": [
@@ -331,28 +191,11 @@
       }
     },
     {
-      "title": "Celsius Lost Over $100 Million In Grayscale Bitcoin Trust Trade: Financial Times Report",
-      "link": "NULL",
-      "pubDate": "2022-08-16T12:26:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Summary: Celsius CEO Alex Mashinsky took over the company’s trading strategy in January 2022. Mashinsky assumed a more active role in trade decisions ahead of the FOMC meeting at the start of the year. The report explained that Mashinsky was ” slugging around huge chunks of bitcoin”. Financial Times also reported that the crypto lender faced insolvency since March 2022. Ripple has hinted at an...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 9
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Luxury resort chain now accepts Bitcoin and Ethereum as payment in Maldives and Thailand",
       "link": "https://finbold.com/luxury-resort-chain-now-accepts-bitcoin-and-ethereum-as-payment-in-maldives-and-thailand/",
       "pubDate": "2022-08-16T12:25:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "With the growing acceptance of cryptocurrencies worldwide, more businesses are starting to accept digital assets as payment, including the hospitality... Continue reading The post Luxury resort chain now accepts Bitcoin and Ethereum as payment in Maldives and Thailand appeared first on Finbold.",
       "currencies": [
@@ -367,22 +210,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Genesis NFT is coming to Genesis Pool contributors wallets.",
-      "link": "NULL",
-      "pubDate": "2022-08-16T11:48:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Bitcoin and Ethereum Stuck In Range, DOGE Resumes Rally",
       "link": "https://cryptonews.com/news/bitcoin-ethereum-stuck-range-doge-resumes-rally.htm",
       "pubDate": "2022-08-16T11:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "Bitcoin price is trading in a range near the USD 24,000 pivot level. BTC seems to be struggling to gain pace for a move above USD 24,500. It is currently (11:20 UTC) showing a few positive signs and might attempt a fresh increase if there is no downside break below USD 23,500.... Read More: Bitcoin and Ethereum Stuck In Range, DOGE Resumes Rally",
       "currencies": [
@@ -398,34 +230,11 @@
       }
     },
     {
-      "title": "Iran🇮🇷 made a $10 million import order using cryptocurrency, enabling it to bypass the dollar-dominated global fina…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T11:35:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Last days to enter the Kanga x @Dashpay contest! ⏳ And the prize? $100 in KNG and $100 in $DASH Find the reg…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "KNG"
-      ]
-    },
-    {
       "title": "DOGE sprints 30% in a month adding $3 billion to its market cap",
       "link": "https://finbold.com/doge-sprints-30-in-a-month-adding-3-billion-to-its-market-cap/",
       "pubDate": "2022-08-16T10:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The original meme coin, Dogecoin (DOGE), has seen solid gains in the last month as the broader cryptocurrency market has... Continue reading",
       "currencies": [
@@ -438,66 +247,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin miners sold 60% less BTC in July as crypto market volatility subsides",
-      "link": "NULL",
-      "pubDate": "2022-08-16T09:53:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "After a difficult period that slashed the prices of many of its digital assets, the cryptocurrency market seems to be... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 3
-      }
-    },
-    {
-      "title": "The future of finance is in #crypto",
-      "link": "NULL",
-      "pubDate": "2022-08-16T08:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "We have already produced x2 adult film series but we aren't stopping there. We have some of the sexiest adult stars…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T08:54:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "$SHIB: Legendary Game Creator Says Test Version of ‘Shiba Eternity’ 50X More Popular Than Expected",
-      "link": "NULL",
-      "pubDate": "2022-08-16T08:52:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "On Monday (August 15), legendary video game designer and developer William David Volk talked about Shiba Inu’s upcoming card game “Shiba Eternity”. Here is what Binance Academy says about Shiba Inu: “Shiba Inu (SHIB) is a dog-themed meme cryptocurrency named after a Japanese dog breed. It was created in 2020 by an anonymous developer named Ryoshi, who […]",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bitcoin Calms at $24K, Dogecoin Soars 8% (Market Watch)",
       "link": "https://cryptopotato.com/bitcoin-calms-at-24k-dogecoin-soars-8-market-watch/",
       "pubDate": "2022-08-16T08:44:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Dogecoin and Monero are among the few exceptions with substantial price gains. Bitcoin stands still at $24K.",
       "currencies": [
@@ -514,8 +268,8 @@
       "title": "Biggest Ethereum Whale Makes Nearly $1,000,000,000 in Less Than a Month As ETH Cracks $2,000",
       "link": "https://dailyhodl.com/2022/08/16/biggest-ethereum-whale-makes-nearly-1000000000-in-less-than-a-month-as-eth-cracks-2000/",
       "pubDate": "2022-08-16T07:04:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The richest wallet on the Ethereum (ETH) network increased in value by almost a billion dollars over the past 30 days on the back of strong ETH rallies. According to blockchain tracking service Whalestats, the whale known as Naruto went from a balance of just over $1.98 billion on July 15th to more than $2.96 […]",
       "currencies": [
@@ -530,71 +284,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Finally, @sygnumofficial, the world's first Digital Asset Bank, has been onboarded as our latest GC member! Our…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T06:26:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "#PROVERS (@proversofficial), the closest Web3 service to daily life that's built on #Klaytn, gave a speech at…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T06:17:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "RT @mitchliu: Mass market promotion to millions of consumers with @Samsung. Pre-orders of Z Flip4 and Z Fold4 until Sept 30, 2022.",
-      "link": "NULL",
-      "pubDate": "2022-08-16T05:46:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "$TRX $KLAY $NPT are now available for #NEOPIN #Stake! Make your tokens work and earn #rewards on NEOPIN! ️ Want t…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T05:26:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "KLAY",
-        "NPT"
-      ]
-    },
-    {
-      "title": "Sharing some photos of the World Basketball Series 2022 (WUBS) sponsored by @FellazXYZ @RakutenSports and more.",
-      "link": "NULL",
-      "pubDate": "2022-08-16T04:10:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
       "title": "Bitcoin Price Trades A Little Over $24,000, Can It Target $27,000?",
       "link": "https://www.newsbtc.com/news/bitcoin-price-trades-a-little-over-24000-can-it-target-27000/",
       "pubDate": "2022-08-16T04:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin price peeped above the $24,000 price level after falling from the $25,000 mark few trading sessions ago. Over the past week Bitcoin secured a 6% gain and on the daily chart the coin fell by 1%. This had pointed towards a sign of consolidation. Bitcoin price had formed higher highs and high lows which are an indication of bullishness on the chart. Incase the king coin manages to remain...",
       "currencies": [
@@ -610,63 +304,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🧑‍ Latest KSM farms across Moonriver & Taiga on YieldBay List",
-      "link": "NULL",
-      "pubDate": "2022-08-16T03:56:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "KSM",
-        "GLMR",
-        "MOVR"
-      ]
-    },
-    {
-      "title": "RT @openbusinesshq: New Podcast: Felix Xu @felixmxu and The Future Of Blockchain And DeFi At citiesabc &amp; openbusinesscouncil podcast series…",
-      "link": "NULL",
-      "pubDate": "2022-08-16T02:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "RT @WatcherGuru: JUST IN: 🇧🇷 Brazil's largest investment bank BTG Pactual launches its own #crypto exchange, Mynt.",
-      "link": "NULL",
-      "pubDate": "2022-08-16T02:12:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTG"
-      ]
-    },
-    {
-      "title": "Shiba Inu Price Forms Cup And Handle Pattern, What Does This Mean?",
-      "link": "NULL",
-      "pubDate": "2022-08-16T01:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Shiba Inu Price had registered substantial gain over the last week. In the last 24 hours however, the coin moved down on its chart. The meme-coin had broken past its cup and handle pattern that was being formed for the past several months. This had pointed towards signs of bullishness. Despite a fall in Shiba Inu price, the technical outlook of the coin continued to remain positive at the time...",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Celsius report shows $2.8 billion in crypto liabilities, dwindling cash flow",
       "link": "https://www.theblock.co/post/163687/celsius-report-shows-2-8-billion-in-crypto-liabilities-dwindling-cash-flow?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-16T00:58:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Projections from law firm Kirkland & Ellis filed yesterday shows the lender could run out of funds by October.",
       "currencies": [
@@ -682,8 +324,8 @@
       "title": "Is Solana Really Decentralized? A Validator Health Report",
       "link": "https://cryptopotato.com/is-solana-really-decentralized-a-validator-health-report/",
       "pubDate": "2022-08-16T00:41:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "The report notes that a minimum of 31 validators could collude to compromise the network’s consensus.",
       "currencies": [

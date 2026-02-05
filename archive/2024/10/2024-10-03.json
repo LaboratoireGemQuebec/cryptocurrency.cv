@@ -1,120 +1,15 @@
 {
   "date": "2024-10-03",
-  "fetchedAt": "2026-02-05T07:45:53.634Z",
-  "articleCount": 91,
+  "fetchedAt": "2026-02-05T07:48:35.692Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "HBO exposes the identity of Bitcoin creator Satoshi Nakamoto",
-      "link": "NULL",
-      "pubDate": "2024-10-03T21:25:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CET"
-      ]
-    },
-    {
-      "title": "Altcoins bleed, ByBit launches stock index trading, POCHITA soars",
-      "link": "NULL",
-      "pubDate": "2024-10-03T21:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "TRX",
-        "APT",
-        "WLD",
-        "EIGEN",
-        "FUD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Telegram Game 'Rocky Rabbit' Returns With New Rewards After Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-10-03T20:50:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "RBTC"
-      ]
-    },
-    {
-      "title": "‘Prediction markets work better’ for forecasting elections, Kalshi CEO Tarek Mansour says",
-      "link": "NULL",
-      "pubDate": "2024-10-03T20:31:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "PayPal settles invoice with EY in PYUSD first business payment",
-      "link": "NULL",
-      "pubDate": "2024-10-03T20:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Maintains $7.50 XRP Target Despite SEC Appeal Against Ripple",
-      "link": "NULL",
-      "pubDate": "2024-10-03T20:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Pepe Price Plunges 10% As Arthur Hayes Faces Steep Memecoin Losses – What’s Next?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T19:56:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "PEPE",
-        "PEPECOIN"
-      ]
-    },
-    {
-      "title": "PayPal, Ernst & Young settle first corporate payment via PYUSD stablecoin",
-      "link": "NULL",
-      "pubDate": "2024-10-03T19:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "AMP"
-      ]
-    },
     {
       "title": "Ethereum price falls 12% in 2 days — Are investors running out of reasons to hold ETH?",
       "link": "https://cointelegraph.com/news/ethereum-price-falls-12-in-2-days-are-investors-running-out-of-reasons-to-hold-eth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-10-03T19:39:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Selling from ETH ICO participants and a lack of demand for the spot Ether ETF could be contributing to Ethereum’s price downside.",
       "currencies": [
@@ -129,39 +24,11 @@
       }
     },
     {
-      "title": "DENVERWALLS 2024 kicks off, COZ installing non-fungible item-embedded plaques a part of activation",
-      "link": "NULL",
-      "pubDate": "2024-10-03T19:13:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Drop Again, Continue Defying 'Uptober' Sentiments: Watch This Key Level For A Rebound To $63K, Says Analyst",
-      "link": "NULL",
-      "pubDate": "2024-10-03T19:08:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "FTM",
-        "BEAM"
-      ]
-    },
-    {
       "title": "New HBO documentary aims to reveal Bitcoin creator Satoshi Nakamoto’s true identity",
       "link": "https://www.theblock.co/post/319430/new-hbo-documentary-aims-to-reveal-bitcoin-creator-satoshi-nakamotos-true-identity?utm_source=rss&utm_medium=rss",
       "pubDate": "2024-10-03T19:08:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "Will Bitcoin creator's true identity be revealed with the upcoming release of HBO documentary \"Money Electric\"?",
       "currencies": [
@@ -178,8 +45,8 @@
       "title": "JPMorgan Pours Cold Water on Ethereum",
       "link": "https://u.today/jpmorgan-pours-cold-water-on-ethereum",
       "pubDate": "2024-10-03T18:40:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "JPMorgan claims that institutional investors are not enthusiastic about Ethereum since it is not part of the \"debasement trade\"",
       "currencies": [
@@ -192,372 +59,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Analyst Says One Altcoin Primed To Crash by Over 75%, Updates Outlook on Bitcoin, Stacks and Eigenlayer",
-      "link": "NULL",
-      "pubDate": "2024-10-03T18:05:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Price Eyes 100% Rebound Amid Market Correction: Is New Peak Near?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:47:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Yikes! Arthur Hayes Realizes $47K Loss In Just 6 Days After Predicting Meme Coins PEPE, MOG Are Ready For A 'Breakout'",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:46:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE",
-        "MOG",
-        "MOTHER"
-      ]
-    },
-    {
-      "title": "The Daily: SEC appeals Ripple case ruling, Swift plans live bank trials of digital asset transactions and more",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:28:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP",
-        "AAVE",
-        "PEOPLE",
-        "DFI",
-        "GAL"
-      ]
-    },
-    {
-      "title": "PayPal executes first business transaction using its PYUSD stablecoin: Bloomberg",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:23:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "PayPal Uses PYUSD Stablecoin for Its First-Ever Business Payment",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:13:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Cathie Wood’s Ark Invest Tops OpenAI Bet Amid $4 Bln Credit Facility Launch",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Solana Hits Critical $137 Support: Can Bulls Prevent A Breakdown?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Sell the News: OpenAI’s $6.6 Billion Raise Hits AI Coins TAO and FET Badly",
-      "link": "NULL",
-      "pubDate": "2024-10-03T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET",
-        "TAO"
-      ]
-    },
-    {
-      "title": "OKX lists PayPal’s PYUSD stablecoin for trading amid supply fluctuations",
-      "link": "NULL",
-      "pubDate": "2024-10-03T16:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "SOL",
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Meta shows off Web3-to-reality bridge with ‘Hyperscape’ metaverse demo",
-      "link": "NULL",
-      "pubDate": "2024-10-03T16:40:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "OKX announces the launch of PYUSD for spot trading",
-      "link": "NULL",
-      "pubDate": "2024-10-03T16:22:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "SHIB Insider Defends BONE and LEASH From Critics",
-      "link": "NULL",
-      "pubDate": "2024-10-03T16:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "BONE",
-        "LEASH"
-      ]
-    },
-    {
-      "title": "Kraken Delists Monero in Privacy Coin Crackdown, XMR Dumps 15%",
-      "link": "NULL",
-      "pubDate": "2024-10-03T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Axelar Launches Mobius with Babylon and EigenLayer Integration",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:54:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "XLM",
-        "SUI",
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "PayPal executes first business transaction with its stablecoin",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:40:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Kaspa Losing Momentum? Here’s How Dogen Investors Are Making 5x More",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:28:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "What's Going On With Bitcoin Mining Stocks CleanSpark, Riot Platforms?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:18:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "T"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Immutable Decreases More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Will This New Gaming Token Explode Like Notcoin and Hamster Kombat? Memebet Presale Hits New Milestone",
-      "link": "NULL",
-      "pubDate": "2024-10-03T15:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NOT"
-      ]
-    },
-    {
-      "title": "OKX Adds ETH/BTC Pair And Lists MOODENG, NEIRO, PYUSD, EIGEN",
-      "link": "NULL",
-      "pubDate": "2024-10-03T14:18:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "PYUSD",
-        "EIGEN",
-        "NEIRO",
-        "MOODENG"
-      ]
-    },
-    {
-      "title": "Arthur Hayes Shifts Stance on Meme Coins, Dumps PEPE and MOG With Losses",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:56:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "SOL",
-        "PEPE",
-        "MOG",
-        "PENDLE",
-        "ATH",
-        "RWA"
-      ]
-    },
-    {
-      "title": "EigenLayer Under Fire for Ambiguous Token Allocation",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "LayerZero and Eigen Labs Boost Cross-Chain Security",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:27:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ZRO"
-      ]
-    },
-    {
-      "title": "X Empire Airdrop Listing Date: The Chill Phase Officially Started",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "RBTC"
-      ]
-    },
-    {
-      "title": "Crypto.com achieves PCI DSS v4.0 certification",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:06:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
-    },
-    {
-      "title": "OKX Welcomes PayPal’s Stablecoin PYUSD to Its Spot Market",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:05:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Transak secures Alabama license, expands US crypto services",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MTL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "EigenLayer (EIGEN) Crashes 20% After Listing – Transparency Criticism Grows",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:02:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "EIGEN"
-      ]
-    },
-    {
       "title": "SEC’s XRP Appeal: Ripple’s Legal Fight Heats Up Again",
       "link": "https://coinpaprika.com/news/sec-s-xrp-appeal-ripple-s-legal-fight-heats-up-again/",
       "pubDate": "2024-10-03T13:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "regulation",
       "description": "The SEC’s appeal against Ripple’s XRP ruling could reshape US crypto regulations, sparking a renewed legal fight with major implications for the industry.",
       "currencies": [
@@ -570,123 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$STX Relatively one of the strongest coins out there this week. I still want to see this break above this red resistance area and also the Daily 200MA. If it can do that, I think this is due for its next high timeframe move. Big protocol upgrade (Nakamoto) soon as well.",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "STX"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Viral Telegram Game Dogizen Set to Launch First Telegram ICO This Friday",
-      "link": "NULL",
-      "pubDate": "2024-10-03T13:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "HMSTR",
-        "DOGS",
-        "CATI"
-      ]
-    },
-    {
-      "title": "Rocky Rabbit Airdrop: Deposit $HMSTR, $DOGS, $RBTC, $TON to Play",
-      "link": "NULL",
-      "pubDate": "2024-10-03T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "KCS",
-        "TON",
-        "RBTC",
-        "IQ",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Binance Issues Stark Warning For These 5 Crypto, What’s Next?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T12:40:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SEI",
-        "PENDLE",
-        "KEY",
-        "PROS",
-        "CLV",
-        "VITE",
-        "BLZ"
-      ]
-    },
-    {
-      "title": "AI Coins See $4.7 Billion Rout since Start of October, More Pain Ahead?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T12:38:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Cats Airdrop Listing Date: $CATS Launchpool Live on Bybit",
-      "link": "NULL",
-      "pubDate": "2024-10-03T12:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "MNT",
-        "W"
-      ]
-    },
-    {
-      "title": "Convex Finance (CVX) Reaches All-Time Low as Losses Galore",
-      "link": "NULL",
-      "pubDate": "2024-10-03T12:05:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "CVX"
-      ]
-    },
-    {
-      "title": "W Coin Airdrop and Listing Date: Snapshot Set for October 27",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "W"
-      ]
-    },
-    {
       "title": "US Lawmakers Push for Bitcoin Reserve Plan",
       "link": "https://coinpaprika.com/news/us-lawmakers-push-for-bitcoin-reserve-plan/",
       "pubDate": "2024-10-03T11:53:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "US lawmakers from both parties are backing a new bill to establish a national Bitcoin reserve, aiming to make the US a global crypto leader.",
       "currencies": [
@@ -699,24 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "OKX Lists PayPal USD (PYUSD) For Spot Trading Starting Oct 2024",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "PYUSD"
-      ]
-    },
-    {
       "title": "Crypto Analyst Benjamin Cowen Issues Ethereum Warning, Says ETH Could See Bearish Q4 If History Repeats",
       "link": "https://dailyhodl.com/2024/10/03/crypto-analyst-benjamin-cowen-issues-ethereum-warning-says-eth-could-see-bearish-q4-if-history-repeats/",
       "pubDate": "2024-10-03T11:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Popular crypto analyst Benjamin Cowen is warning that Ethereum (ETH) could suddenly turn bearish in the last three months of the year. Cowen tells his 861,500 followers on the social media platform X that ETH may be repeating a similar 2016 pattern on the monthly timeframe that could have it seeing red in the fourth […]",
       "currencies": [
@@ -730,52 +111,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "OKX Launches PayPal USD (PYUSD) for Spot Trading Today",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "SOL",
-        "PYUSD",
-        "00",
-        "GMEE"
-      ]
-    },
-    {
-      "title": "OKX Lists PayPal’s PYUSD: Spot Trading Begins, Withdrawals Start Tomorrow!",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:35:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "PYUSD",
-        "00"
-      ]
-    },
-    {
-      "title": "Justin Sun’s Team Liquidates EIGEN Tokens Following Airdrop Transfer",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "EIGEN"
-      ]
-    },
-    {
       "title": "Cardano’s Midnight Testnet Fails to Move Holders, ADA Eyes 21% Decline",
       "link": "https://beincrypto.com/cardano-price-eyes-decline/",
       "pubDate": "2024-10-03T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "The long-awaited testnet for Cardano’s privacy protocol, Midnight Network, has finally gone live. However, it has failed to reignite interest in the blockchain’s native coin, which continues its downward trend. This analysis examines the coin’s technical setup, with signals suggesting that if selling pressure intensifies, Cardano’s price could plummet by an additional 21%. Cardano...",
       "currencies": [
@@ -788,66 +128,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Latest data reveals global economic downturn, building stronger case for Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "AT&T back in court over $24M SIM swap crypto heist",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:05:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "What’s Holding Bitcoin Back? Analyst Says $71,000 Is The Magic Number",
-      "link": "NULL",
-      "pubDate": "2024-10-03T11:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "NOT",
-        "ATH"
-      ]
-    },
-    {
-      "title": "BTC and ETH ETFs surfer outflows amid crypto market uncertainty",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Solayer Launches sUSD: Earn Interest on Solana",
       "link": "https://www.altcoinbuzz.io/cryptocurrency-news/solayer-launches-susd-earn-interest-on-solana/",
       "pubDate": "2024-10-03T10:43:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "altcoin",
       "description": "This is the first real-world asset (RWA) that earns interest, just like a US Treasury Bill. What does that mean? Well, it means that you can now earn interest on your money while using Solana, a fast and popular blockchain. What Is sUSD? Think of it as digital dollars you can earn interest on. When […]",
       "currencies": [
@@ -859,145 +144,11 @@
       }
     },
     {
-      "title": "Animoca and Lamborghini Unite to Bring Supercars to Web3",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:40:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NFT",
-        "MOCA"
-      ]
-    },
-    {
-      "title": "From Crypto King to Victim: Michael Terpin’s Ongoing Legal Fight with AT&T",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:08:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "Kraken to End Support for Monero in European Economic Area",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:05:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Swift set to begin live bank trials of digital asset transactions in 2025",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:03:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "EigenLayer Drops 36%, But RSI Signals Breakout Rally Ahead!",
-      "link": "NULL",
-      "pubDate": "2024-10-03T10:02:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "Franklin Templeton Submits Bitcoin and Ethereum Index ETF Proposal",
-      "link": "NULL",
-      "pubDate": "2024-10-03T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "AVAX",
-        "MATIC",
-        "XLM",
-        "ETN",
-        "APT",
-        "ARB",
-        "BENJI"
-      ]
-    },
-    {
-      "title": "AI tokens lose $4.69B market cap in 3 days — When UPtober?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T09:21:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Two Harvard Students Show How Ray-Ban Meta Smart Glasses Could Be Used to Instantly Dox People",
-      "link": "NULL",
-      "pubDate": "2024-10-03T09:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Binance Expands Monitoring Tag To BLZ, CLV, KEY, PROS, And VITE",
-      "link": "NULL",
-      "pubDate": "2024-10-03T09:03:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SEI",
-        "PENDLE",
-        "KEY",
-        "PROS",
-        "CLV",
-        "VITE",
-        "BLZ"
-      ]
-    },
-    {
-      "title": "Court Revives AT&T SIM Swap Lawsuit Over $24M Crypto Theft",
-      "link": "NULL",
-      "pubDate": "2024-10-03T08:40:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AMP",
-        "T"
-      ]
-    },
-    {
       "title": "Melania Trump Launches Necklace with Solana NFT",
       "link": "https://www.altcoinbuzz.io/cryptocurrency-news/melania-trump-launches-necklace-with-solana-nft/",
       "pubDate": "2024-10-03T08:35:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "nft",
       "description": "Along with the necklace, buyers will receive a Solana NFT. If you’re not sure what that means, don’t worry—it’s pretty exciting. Let’s discover more about this important news for the Solana NFT sector. What’s the Deal with the Necklace and NFT? Melania’s new necklace is part of a collection that blends fashion with technology. NFTs […]",
       "currencies": [
@@ -1009,136 +160,11 @@
       }
     },
     {
-      "title": "Ethereum Whale Offloads $47 Million in Ether, Sparking Fears",
-      "link": "NULL",
-      "pubDate": "2024-10-03T08:31:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Coinspeaker Ethereum Whale Offloads $47 Million in Ether, Sparking Fears A whale has recently sold a combined total of 31,000 ETH, valued at $79.1 million, contributing to a significant 4% decline in Ether price. Ethereum Whale Offloads $47 Million in Ether, Sparking Fears",
-      "currencies": [
-        "ETH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 5
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Binance-listed NEIRO locked its X account",
-      "link": "NULL",
-      "pubDate": "2024-10-03T08:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NEIRO"
-      ]
-    },
-    {
-      "title": "EigenLayer and LayerZero Revolutionize Cross-Chain Transactions",
-      "link": "NULL",
-      "pubDate": "2024-10-03T08:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ZRO",
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "Monero’s latest woes – Are holders in trouble after XMR’s dip below $140?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T08:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Binance May Soon Delist These 5 Altcoins: Everything You Need to Know",
-      "link": "NULL",
-      "pubDate": "2024-10-03T07:58:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SEI",
-        "PENDLE",
-        "KEY",
-        "PROS",
-        "CLV",
-        "VITE",
-        "BLZ"
-      ]
-    },
-    {
-      "title": "Helium Price Prediction 2024 – 2030: Will HNT Price Reclaim $10 Mark?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T07:41:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Helium Price Prediction 2025, 2026 – 2030: Will HNT Price Cross $50?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T07:41:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) in strong growth: the price of the crypto rises by 5% in a week and by 71% in 30 days",
-      "link": "NULL",
-      "pubDate": "2024-10-03T07:38:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "CATS Airdrop: Stake on Bybit Launchpool and Earn Free Tokens",
-      "link": "NULL",
-      "pubDate": "2024-10-03T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Kraken will end support for the crypto Monero (XMR) in the European Economic Area (SEE)",
-      "link": "NULL",
-      "pubDate": "2024-10-03T06:28:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
       "title": "Ethereum FUD returns as ICO whale offloads another $47M",
       "link": "https://cointelegraph.com/news/ethereum-fud-ico-whale-offloads-another-47-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-10-03T06:13:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "An early Ethereum investor has continued a two-week Ether selling spree as Ether’s price has slumped 10% since the start of October.",
       "currencies": [
@@ -1154,8 +180,8 @@
       "title": "Cardano (ADA) Struggles: Can Bulls Prevent Further Losses?",
       "link": "https://www.newsbtc.com/analysis/ada/cardano-ada-struggles-0-420/",
       "pubDate": "2024-10-03T05:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano price started a fresh decline from the $0.3850 resistance. ADA is consolidating above $0.3350 and might attempt a recovery wave. ADA price started a downward move below the $0.3550 support level. The price is trading below $0.350 and the 100-hourly simple moving average. There is a short-term bearish trend line forming with resistance at $0.3480 on the hourly chart of the ADA/USD pair...",
       "currencies": [
@@ -1168,74 +194,6 @@
         "negative": 6
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Internet Computer price poised for a rally if the key support level holds",
-      "link": "NULL",
-      "pubDate": "2024-10-03T04:29:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "LayerZero Labs, Eigen Labs raise the stakes on cross-chain transactions",
-      "link": "NULL",
-      "pubDate": "2024-10-03T03:56:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZRO",
-        "EIGEN"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Poised for a Fresh Rally, Unless This Level Breaks",
-      "link": "NULL",
-      "pubDate": "2024-10-03T02:26:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Wormhole crypto breaks weekly resistance, rallies 40.8% – What now?",
-      "link": "NULL",
-      "pubDate": "2024-10-03T02:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "W"
-      ]
-    },
-    {
-      "title": "Ripple may file a cross-appeal to challenge SEC’s legal move",
-      "link": "NULL",
-      "pubDate": "2024-10-03T00:51:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "description": "Ripple is considering filing a cross-appeal in response to the SEC's appeal against the courts judgment on August 7, which ordered Ripple to pay $125 million to resolve charges over the institutional sales of XRP tokens, said Ripple Chief Legal Officer Stuart Alderoty.The penalty, although more than Ripple's suggested $10 million, is significantly lower than the nearly $2 billion initially...",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 4
-      }
     }
   ]
 }

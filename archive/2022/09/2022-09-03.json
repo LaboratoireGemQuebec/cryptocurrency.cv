@@ -1,124 +1,15 @@
 {
   "date": "2022-09-03",
-  "fetchedAt": "2026-02-05T07:45:52.975Z",
-  "articleCount": 24,
+  "fetchedAt": "2026-02-05T07:48:35.612Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "TA- Filecoin (FIL) Price Bounces Back On Track As Price Eyes $10",
-      "link": "NULL",
-      "pubDate": "2022-09-03T22:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Looking good! ️️",
-      "link": "NULL",
-      "pubDate": "2022-09-03T22:41:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @Jclineshow: @seanbonner @NFTX_ Hosting a spaces with coke nftx team members next week. Would be good one to tune in to!",
-      "link": "NULL",
-      "pubDate": "2022-09-03T20:04:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SOLO",
-        "META",
-        "MASK",
-        "BEAM",
-        "ANIME",
-        "WHALE",
-        "ALPACA",
-        "DUCK",
-        "PUNK",
-        "UWU",
-        "NFTX",
-        "PUNK-BASIC",
-        "PUNK-FEMALE",
-        "PUNK-ATTR-4",
-        "PUNK-ATTR-5",
-        "PUNK-ZOMBIE",
-        "AVASTR",
-        "COOL",
-        "BAYC",
-        "KITTY",
-        "BERRY",
-        "FACE",
-        "HYPER",
-        "MINUTE",
-        "PATH",
-        "WAIFU",
-        "BGAN",
-        "BUNNY",
-        "BONSAI",
-        "CARD",
-        "MOONCAT",
-        "GLYPH",
-        "MEEB",
-        "SQGL",
-        "BAKC",
-        "ENERGY",
-        "RINGER",
-        "MANEKI",
-        "SPUNK",
-        "PASTA",
-        "PUPS",
-        "TOSHIMON",
-        "SODIUM",
-        "CNHPD",
-        "PHUNK",
-        "HDPUNK",
-        "KONGZ",
-        "MORPH",
-        "WIZARD",
-        "COLLECTIVE",
-        "KAMAX",
-        "TOPDOG",
-        "DFNORM",
-        "CLOCK",
-        "CITIES",
-        "LONDON",
-        "MILADY"
-      ]
-    },
-    {
-      "title": "Why Axie Infinity (AXS) Could Rally After Hide And Seek, Eyes $20",
-      "link": "NULL",
-      "pubDate": "2022-09-03T19:25:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Cardano’s Highly Anticipated Vasil Boost Finally Has A Launch Timeline — Here’s What To Expect",
       "link": "https://zycrypto.com/cardanos-highly-anticipated-vasil-boost-finally-has-a-launch-timeline-heres-what-to-expect/",
       "pubDate": "2022-09-03T19:09:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "On Friday, Hoskinson stated that the date had been arrived at after in-depth consultations with “all the teams” and upon expressing their satisfaction with the rate of progress.",
       "currencies": [
@@ -131,44 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Catch #XYO Co-Founder and CEO of XY Labs, @arietrouw, on the latest episode of Exploring the Metaverse on Audible!…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T18:01:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Thank you all for this cool community event!! We appreciate and thank everyone for the enormous team spirit. We are…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T17:15:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "#NFT artist Neto Robatto earns #ETN #cryptocurrency via # with his incredible work. This has the potenti…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T16:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Terra’s Luna Classic Outperforms Bitcoin,  Ethereum Over the Last 30 Days",
       "link": "https://beincrypto.com/terras-luna-classic-outperforms-btc-eth-over-the-last-30-days/",
       "pubDate": "2022-09-03T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Terra's Luna Classic has enjoyed a bit of renaissance in the past week as its value saw a significant rise after the introduction of a 1.2% burn tax on all swaps.",
       "currencies": [
@@ -182,65 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Available on #Poloniex: ETH to ETHW & ETHS swap 30% APY for USDD staking…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T13:50:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "AXS shows some short-term strength but a resolute resistance zone looms ahead",
-      "link": "NULL",
-      "pubDate": "2022-09-03T13:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "AXS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "The primary goal of a decentralized exchange is to provide traders with anonymity and security. With #DOMINODEX, yo…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T13:28:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Helium devs propose ditching own blockchain for Solana",
-      "link": "NULL",
-      "pubDate": "2022-09-03T11:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "HNT",
-        "PDRY"
-      ]
-    },
-    {
       "title": "Ripple: Will the new ‘witness’ turn the fortunes of XRP around",
       "link": "https://ambcrypto.com/ripple-will-the-new-witness-turn-the-fortunes-of-xrp-around/",
       "pubDate": "2022-09-03T11:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "The troubles of Ripple [XRP] with the Securities and Exchange Commission (SEC) have still not ended. Despite third-party interference and CEO Brad Garlinghouse proposing new strategies, the case still stands long-pending. Interestingly, there has been a twist to the Ripple chain involving a “witness.” However, this witness has nothing to do with the SEC case. […]",
       "currencies": [
@@ -254,129 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Through our multichain mainnet, BFC can be used everywhere on BIFROST, even when utilizing functions from other blo…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T11:01:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "The future has already happened. How prepared are you to get a part of this future which is all about #Cryptos?",
-      "link": "NULL",
-      "pubDate": "2022-09-03T10:53:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "Bitcoin technical analysis shows more pain ahead as analyst hints at BTC’s bottom",
-      "link": "NULL",
-      "pubDate": "2022-09-03T10:38:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin’s (BTC) attempts to rally above the crucial $20,000 psychological level have faltered as bears appear too strong in the... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 4
-      }
-    },
-    {
-      "title": "CNBC Analyst Brian Kelly Warns Upcoming Ethereum Merge Is Riskier Than Traders Realize – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2022-09-03T09:15:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "The CEO of digital currency investment firm BKCM is weighing in on the prospects for Ethereum (ETH) just weeks before the project initiates a major network upgrade. In a new episode of Fast Money, CNBC contributor Brian Kelly first mentions how Ethereum investors might not be earning as big of a payday for profitable trades […]",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 5
-      }
-    },
-    {
-      "title": "RT @EricCryptoman: Imo $WHITE @WhiteETHtoken is going a lot higher. Price was hella suppressed by one of the top holders exiting / low liqu…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T08:04:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "Utilisation of renewable energy solutions not only benefits the environment, it also maximises energy security. Inv…",
-      "link": "NULL",
-      "pubDate": "2022-09-03T07:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "Dogecoin Slowly Retests $0.06 As DOGE Is Seen Moving Higher Over The Next Days",
-      "link": "NULL",
-      "pubDate": "2022-09-03T06:48:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Dogecoin (DOGE) price looks bullish with the $0.06 support maintaining its stance and could potentially reverse the market overnight. DOGE price analysis shows bullish momentum DOGE price up by 2.55% Dogecoin unable to hover lower as observed in the past few hours DOGE/USD pair might revert and offshoot the $0.0625 key resistance and go higher in the coming days. The...",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 124 – The News in #DeFi -",
-      "link": "NULL",
-      "pubDate": "2022-09-03T05:54:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @dc_analytics: We are very happy to have won our first gold medal in the @numerai tournament",
-      "link": "NULL",
-      "pubDate": "2022-09-03T01:44:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
       "title": "FIFA To Launch New NFT Platform In Partnership With Algorand",
       "link": "https://bitcoinist.com/fifa-new-nft-platform-in-partnership-with-algorand/",
       "pubDate": "2022-09-03T00:21:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "nft",
       "description": "FIFA, the global governing body of soccer, is launching a new NFT collectibles platform with the highly anticipated World Cup just around the corner. The new platform will be launched on Algorand, continuing an existing partnership between the two parties. Let’s take a look at what we know from initial announcements that have been released […]",
       "currencies": [

@@ -1,15 +1,15 @@
 {
   "date": "2021-02-20",
-  "fetchedAt": "2026-02-05T07:45:51.956Z",
-  "articleCount": 28,
+  "fetchedAt": "2026-02-05T07:48:35.512Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
     {
       "title": "Polkadot (DOT) gains 42% ahead of its long-awaited parachain auctions",
       "link": "https://cointelegraph.com/news/polkadot-dot-gains-42-ahead-of-its-long-awaited-parachain-auctions",
       "pubDate": "2021-02-20T23:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Polkadot price pushes to new highs over growing excitement for the upcoming parachain auctions and increased interoperability they will support.",
       "currencies": [
@@ -23,44 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ark to 100!!!!",
-      "link": "NULL",
-      "pubDate": "2021-02-20T22:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "What skills pair with mainframe experience?",
-      "link": "NULL",
-      "pubDate": "2021-02-20T21:55:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "RT @JAMSplayer: You might think I’m cute but I want to light fires.   Any #cryptocurrency #developers that have #Dex knowledge looking…",
-      "link": "NULL",
-      "pubDate": "2021-02-20T19:40:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Ravencoin (RVN) gains 865% as interest in tokenized securities grows",
       "link": "https://cointelegraph.com/news/ravencoin-rvn-gains-865-as-interest-in-tokenized-securities-grows",
       "pubDate": "2021-02-20T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "The recent controversy over traditional brokerages restricting stock purchases cast a positive light on tokenized securities and boosted interest in projects like Ravencoin.",
       "currencies": [
@@ -73,44 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @btsfav: if you want broader exposure to #BTC and #ETH and Ethereum #DeFi checkout @PieDAO_DeFi 's $BCP which is combining all of it in…",
-      "link": "NULL",
-      "pubDate": "2021-02-20T18:34:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @MrBeastYT: In 24 hours I’m going to give one random person that retweets this tweet $10,000 in Bitcoin! (Yup, gonna experiment with thi…",
-      "link": "NULL",
-      "pubDate": "2021-02-20T18:34:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "In case you missed our second community gathering, here’s the link to the full session #EFFORCE #WOZX",
-      "link": "NULL",
-      "pubDate": "2021-02-20T18:18:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Polkadot Price Analysis: DOT Turns Parabolic and Sets ATH Above $40",
       "link": "https://cryptopotato.com/polkadot-price-analysis-dot-turns-parabolic-and-sets-ath-above-40/",
       "pubDate": "2021-02-20T16:55:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Polkadot is up by a strong 18% over the past 24 hours as it sets a new ATH price at $40.92. It is also performing well against Bitcoin.",
       "currencies": [
@@ -123,33 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Looking to earn some ARK coins? Here's 5 ways!",
-      "link": "NULL",
-      "pubDate": "2021-02-20T16:20:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Hi Everyone",
-      "link": "NULL",
-      "pubDate": "2021-02-20T16:03:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "BNB price surges as Binance Smart Chain grows in popularity with DeFi",
       "link": "https://cointelegraph.com/news/bnb-price-surges-as-binance-smart-chain-grows-in-popularity-with-defi",
       "pubDate": "2021-02-20T14:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Binance Coin passes Tether to become the third-largest crypto by market cap as daily transactions on Binance Smart Chain surpass Ethereum.",
       "currencies": [
@@ -166,8 +78,8 @@
       "title": "SEC’s Case Against Ripple and XRP Is Dead Wrong Legally and Factually, Says Former Chair Mary Jo White",
       "link": "https://dailyhodl.com/2021/02/20/secs-case-against-ripple-and-xrp-is-dead-wrong-legally-and-factually-says-former-chair-mary-jo-white/",
       "pubDate": "2021-02-20T12:45:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "As Ripple squares up for battle against the U.S. Securities and Exchange Commission (SEC), former SEC Chair Mary Jo White is coming to Ripple’s defense. In an interview with Fortune Magazine, White, who served as the 31st SEC chair from 2013-2017, reveals that she is not convinced that the SEC’s lawsuit against Ripple, which accuses […]",
       "currencies": [
@@ -180,22 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "In exactly 5 hours from now we will be live on Efforce Official YouTube channel for our second Community Gathering!…",
-      "link": "NULL",
-      "pubDate": "2021-02-20T12:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Chainlink integrates with Danal Fintech to support retail Bitcoin payments",
       "link": "https://ambcrypto.com/chainlink-integrates-with-danal-fintech-to-support-retail-bitcoin-payments/",
       "pubDate": "2021-02-20T12:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Despite the selling pressure visible at the time of writing, Chainlink has proven to be one of the largest decentralized finance [DeFi] projects in terms of its market capitalization of $14.10 billion. Given its standing in the market and strong fundamentals, overall adoption has also been on a rise. Recently, Danal Fintech, a virtual asset […]",
       "currencies": [
@@ -209,30 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Rocketing, Ethereum Pumps, Cardano $1, BCash BSV Delistings & Selling Gold For Bitcoin",
-      "link": "NULL",
-      "pubDate": "2021-02-20T10:53:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ------------------------------------------ Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- DOGE Address: DJmfX6vZi6BE1iELwHf2icEMBGz8xKprRM ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "XRP Not a Top-5 Crypto by Market Cap; Falls to ADA and DOT",
       "link": "https://beincrypto.com/xrp-not-a-top-5-crypto-by-market-cap-falls-to-ada-and-dot/",
       "pubDate": "2021-02-20T10:21:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Ripple’s XRP digital token has fallen out of the list of top five cryptocurrencies, when ranked by market capitalization. Dwindling investor confidence and an uncertain future has caused XRP to slide to number seven, behind Binance Coin, Polkadot, and Cardano. Ripple’s token repeatedly challenged Tether for the #3 spot over the past several years. However, … Continued",
       "currencies": [
@@ -250,8 +132,8 @@
       "title": "Crypto Market Cap Breaks $1.7 Trillion: Polkadot (DOT) Now Top 4 After 20% Gains",
       "link": "https://cryptopotato.com/crypto-market-cap-breaks-1-7-trillion-polkadot-dot-now-top-4-after-20-gains/",
       "pubDate": "2021-02-20T09:11:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Bitcoin shows no signs of slowing down after another record above $56,500. Ethereum has followed by conquering $2,000, and DOT touched $40.",
       "currencies": [
@@ -266,51 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @safepress: Privacy and security are hard, and you can't bolt them onto a broken internet. That's why @MaidSafe started from scratch and…",
-      "link": "NULL",
-      "pubDate": "2021-02-20T08:25:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 44 - The News in #DeFi: Another week, another airdrop! Enjoy your day at the $POOL",
-      "link": "NULL",
-      "pubDate": "2021-02-20T06:41:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "Fast transactions Low fees Growing #DeFi ecosystem Start your #BinanceSmartChain journey ⬇️",
-      "link": "NULL",
-      "pubDate": "2021-02-20T05:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BNB",
-        "ETHDOWN",
-        "ETHUP"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 9
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Dash Isn’t a Privacy Coin, According to Andreas Antonopoulos",
       "link": "https://dailyhodl.com/2021/02/19/dash-isnt-a-privacy-coin-says-andreas-antonopoulos/",
       "pubDate": "2021-02-20T04:40:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "In a recent exchange on Twitter regarding enhancing privacy on Bitcoin transactions, renowned cryptocurrency educator Andreas Antonopoulos opined that Dash should not be considered a privacy coin, saying, “Dash isn’t a privacy coin. It’s about as private as Bitcoin, only has far less liquidity and use, so its anonymity set is worse. It just has […]",
       "currencies": [
@@ -324,44 +166,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BrendanBlumer: I’m prepared to go forward with it. #BTC #EOS #Bullish",
-      "link": "NULL",
-      "pubDate": "2021-02-20T04:27:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Tomo chain transfers",
-      "link": "NULL",
-      "pubDate": "2021-02-20T03:05:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "#Bitcoin's market cap now is half of @Apple's.",
-      "link": "NULL",
-      "pubDate": "2021-02-20T02:47:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
       "title": "REN price rallies 60%, hitting a new high after recent DeFi integration",
       "link": "https://cointelegraph.com/news/ren-price-rallies-60-hitting-a-new-high-after-recent-defi-integration",
       "pubDate": "2021-02-20T01:49:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "REN price spiked to a new all-time high shortly after its recent integration with Binance Smart Chain.",
       "currencies": [
@@ -374,22 +183,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Question: I recently updated my wallet and it says I haven't voted.",
-      "link": "NULL",
-      "pubDate": "2021-02-20T00:52:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Run Away From Celsius Network!",
       "link": "https://www.reddit.com/r/CelsiusNetwork/comments/lnurpt/run_away_from_celsius_network/",
       "pubDate": "2021-02-20T00:50:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "CEL"

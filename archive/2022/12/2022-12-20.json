@@ -1,16 +1,16 @@
 {
   "date": "2022-12-20",
-  "fetchedAt": "2026-02-05T07:45:53.001Z",
-  "articleCount": 82,
+  "fetchedAt": "2026-02-05T07:48:35.615Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "Litecoin adds 10 million transactions in 10 days, what does it mean for LTH?",
       "link": "https://ambcrypto.com/litecoin-adds-10-million-transactions-in-10-days-what-does-it-mean-for-lth/",
       "pubDate": "2022-12-20T23:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Litecoin maintained healthy transaction growth despite bearish performance. However, its low weighted sentiment was evidence of the fact that LTC may not have a strong recovery. On 19 December, the Litecoin Foundation announced that it processed over one million transactions within the last 10 days. This meant that the blockchain had processed a total of […]",
       "currencies": [
         "LTC"
@@ -22,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Lucolly888: $BUILD on eth and $PBUILD on #pomchain have a dash that you get access by holding a certain amount of tokens that gives you…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T22:59:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DASH",
-        "BUILD"
-      ]
-    },
-    {
       "title": "Coinbase hit an all-time low yesterday but says it’s not all bad news. Mostly.",
       "link": "https://www.theblock.co/post/196779/coinbase-hit-an-all-time-low-yesterday-but-says-its-not-all-bad-news-mostly?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-12-20T22:19:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "The 2023 Crypto Market Outlook report from Coinbase says market players still have a persistent appetite for digital assets.",
       "currencies": [
@@ -50,45 +38,11 @@
       }
     },
     {
-      "title": "Did you miss the AMAs at @ThetaCon22? We've got you covered. Saturday ft. @mitchliu @jieyilong…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T22:05:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "Check out the clip from the latest @priv8podcast featuring @EFF Executive Director Cindy Cohn. She joins host…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T21:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "RT @CoreumOfficial: Learn more about #Coreum's Mainnet Launch Date, Upcoming Partnerships and Plans for Q1 2023 and New Airdrop for $CORE,…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T21:07:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOLO"
-      ]
-    },
-    {
       "title": "Uniswap to allow users to buy cryptocurrency using debit and credit cards",
       "link": "https://cointelegraph.com/news/uniswap-to-allow-users-to-buy-cryptocurrency-using-debit-and-credit-cards",
       "pubDate": "2022-12-20T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Users of the decentralized exchange will also be able to use bank transfers to purchase crypto.",
       "currencies": [
@@ -101,23 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Blockworks_: The head of gaming at Polkastarter said he wants people to “see beyond” games like Axie Infinity when they think about Web…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T20:45:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "POLS"
-      ]
-    },
-    {
       "title": "Dogecoin: >$280M exchange wallets as trader points to “the same pattern”",
       "link": "https://ambcrypto.com/dogecoin-280m-exchange-wallets-as-trader-points-to-the-same-pattern/",
       "pubDate": "2022-12-20T20:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "The biggest Dogecoin whale moved over $280 million worth of DOGE. DOGE was unable to breakout from decline as famous trader predicted more reds. The address with the largest Dogecoin [DOGE] holdings transferred 3.84 billion of the meme coin, valued at $280.6 million, in the early hours of 20 December. The bagholder, who owned about […]",
       "currencies": [
@@ -130,66 +72,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Check out this blog post for more details about the upcoming HIFI token support on top exchanges Upbit and Binance!…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T20:04:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "RT @TezosCommons",
-      "link": "NULL",
-      "pubDate": "2022-12-20T20:02:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "New: Using the diagnostics tool to improve your Numerai Signals models",
-      "link": "NULL",
-      "pubDate": "2022-12-20T20:01:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
-      "title": "US Senate Banking Chairman Says Banning Cryptocurrencies Is Very Difficult: Report",
-      "link": "NULL",
-      "pubDate": "2022-12-20T19:45:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "RT @Utoday_en: Tezos $XTZ blockchain rolls out Lima upgrade, enhances scalability and bandwidth",
-      "link": "NULL",
-      "pubDate": "2022-12-20T19:43:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Ripple CEO Brad Garlinghouse Calls Gary Gensler’s Meetings With Sam Bankman-Fried ‘Shameful’",
       "link": "https://dailyhodl.com/2022/12/20/ripple-ceo-brad-garlinghouse-calls-gary-genslers-meetings-with-sam-bankman-fried-shameful/",
       "pubDate": "2022-12-20T19:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "The chief executive of Ripple Labs says that former FTX CEO Sam Bankman-Fried’s meetings with U.S. Securities and Exchange Commission (SEC) Chair Gary Gensler were “shameful.” Responding to an opinion piece by the Wall Street Journal questioning Gensler’s failure to foresee the FTX collapse, Brad Garlinghouse says it was shameful that the SEC chair was […]",
       "currencies": [
@@ -203,74 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Decentraland, The Sandbox and Two Ethereum-Based Altcoins in ‘Opportunity Zone’, According to Crypto Analytics Firm",
-      "link": "NULL",
-      "pubDate": "2022-12-20T19:05:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MANA",
-        "SAND",
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @breitwoman: Decrypt just published my (very fun) sit-down from early November (pre-FTX revelations). How Tezos Was Ahead of the Proof-…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T18:56:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "We all have smartphones, but think about the many ways you've introduced new devices to observe heuristic (eyewitne…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T18:31:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "We are working on a solution to the application recovery issue we identified and expect all systems to be back onli…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T18:15:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "JUST IN: $QNT @quant_network now on top 10 purchased tokens among 1000 biggest #ETH whales in the last 24hrs We'…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T18:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QNT",
-        "BBW"
-      ]
-    },
-    {
       "title": "Bitcoin Ransoms Aren’t Dead: EV Maker NIO Refuses To Pay Up",
       "link": "https://blockworks.co/news/nio-refuses-to-pay-ransom",
       "pubDate": "2022-12-20T18:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "bitcoin",
       "description": "Hackers are selling sensitive NIO customer data online after the EV maker staunchly denied paying a bitcoin ransom worth millions",
       "currencies": [
@@ -284,92 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @LabosNomades: Wrapping up the week with an exciting project on #Tezos blockchain! Get your 2023 @TETUmag #NFT calendar, created in c…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T18:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @blockborn: Holiday surprise gift from @blockborn and @eleetgames! DOUBLE Experience for Might’n Mow’em Battle Pass 🤑 More XTZ…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:50:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @KSmaktus: Xmas tree dressing time. The #ADSHARES accent cannot be missing. @adsharesNet is number 1!!! Have you already decorated your…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:31:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADS"
-      ]
-    },
-    {
-      "title": "RT @EmergentsTCG: Join us LIVE tomorrow on #Twitch to celebrate the past year of the #EmergentsTCG, watch @Corey_Burkhart and @PVDDR show o…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:15:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @BOBCATiot: Did you know that a first version of the @helium mobile explorer is expected to be live by the end of this month? 5G covera…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:10:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @ChilizX: 𝐃𝐚𝐲 𝟓 | Santa Tell Me Santa Claus is searching for Fan Tokens, but he is only able to remember some clues which refer to th…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "#OKX Trading Data: Swap Funding Rates Edition $BICO @biconomy $DOME @Everdome_io $THETA @Theta_Network …",
-      "link": "NULL",
-      "pubDate": "2022-12-20T17:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB",
-        "OKDOT1",
-        "OKDOT2"
-      ]
-    },
-    {
       "title": "Debit, Credit Cards, Bank Accounts Coming to Uniswap",
       "link": "https://blockworks.co/news/uniswap-moonpay-fiat-defi",
       "pubDate": "2022-12-20T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "defi",
       "description": "The fiat integration is powered by a new partnership with MoonPay",
       "currencies": [
@@ -382,136 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @LunarCrush: @AltcoinDailyio The Tezos $XTZ community has been incredibly active on social this year. They keep on pushing forward in on…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:56:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @HouseofChimera: We are working on Year in Review for projects; $SYS got posted yesterday, and $XCAD is in the making! Which project s…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:53:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "“We weren’t out trying to get rich quick, to be quite candid. We’re trying to build a real technology. So that reso…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:53:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "RT @DrDeathCultClub: “The art revolution, NFTs and ” Find me featured in the culture section of @DiarioSigloXXI - a Spanish digita…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:52:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @ManUtd: Get ready for our next drop Powered by @Tezos and brought to you by Tezos ecosystem companies. #MUFC || #CollectUnited",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:37:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "The Reason Chiliz (CHZ) Price Failed to Rally During FIFA World Cup",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "We are glad to announce that our QRNG service is now live on @bobanetwork - read more below",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:28:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
-      "title": "2022 was a year for building and with LUKSO’s finish line in sight, we are excited to share the final milestones le…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:24:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "It's a quantum world we're living in: come over to 🧋 &amp; experience the new Quantum Random Number Generator by…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:18:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BOBA"
-      ]
-    },
-    {
-      "title": "RT @FunFairVentures: We wanted to end the year with an update on FunFair Ventures' first 12 months of trading. 2022 what a year to start a…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:07:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FUN"
-      ]
-    },
-    {
-      "title": "𝟒 𝐃𝐚𝐲𝐬 '𝐭𝐢𝐥 𝐂𝐡𝐫𝐢𝐬𝐭𝐦𝐚𝐬 | Chiliz Christmas Countdown Solve the rebus puzzles - win 100 $CHZ ️ You have 24 hours…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T16:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
       "title": "Polygon (MATIC) Could Surge to $0.83 If These Signals Are Validated: Analyst",
       "link": "https://u.today/polygon-matic-could-surge-to-083-if-these-signals-are-validated-analyst",
       "pubDate": "2022-12-20T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "This analyst believes that MATIC may go up to new high, here's what needs to happen first",
       "currencies": [
@@ -524,35 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are entering maintenance mode while we investigate an application recovery issue. Our team is working diligently…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T15:49:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin Still “Overvalued” According To NVT Ratio",
-      "link": "NULL",
-      "pubDate": "2022-12-20T15:31:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SHIB",
-        "LTC"
-      ]
-    },
-    {
       "title": "Dozens of Millions of XRP Moved by Ripple – Is Crypto Giant Dumping?",
       "link": "https://u.today/dozens-of-millions-of-xrp-moved-by-ripple-is-crypto-giant-dumping",
       "pubDate": "2022-12-20T15:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Ripple behemoth has moved large chunk of XRP, whales subsequently shifted more than twice as much",
       "currencies": [
@@ -562,455 +156,6 @@
         "positive": 6,
         "negative": 6
       }
-    },
-    {
-      "title": "RT @VitalityHive: Good morning",
-      "link": "NULL",
-      "pubDate": "2022-12-20T15:18:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "#Binance announces support for MFT -&gt; HIFI token swap! Read more here",
-      "link": "NULL",
-      "pubDate": "2022-12-20T15:11:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "RT @LabosNomades: Bravo to @Dogami for reaching 14M total seed funding! The new 7M investment extension led by European tech investor @…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T15:02:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @TheDesertLynx: Peter's right here. If we care about crypto, the last thing we should be doing is looking to government for help. Anyone…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T14:53:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DERO"
-      ]
-    },
-    {
-      "title": "RT @TzApac: The @TezosPHL community gathered to celebrate #christmas in style, by doing what they do best: Creating great art. Here are yo…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T14:49:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "From all of us at Powerledger, happy holidays and a happy new year! Thank you for being a part of the Powerledger c…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T13:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "Your invitee can gain 200% BUSD when you invite them to subscribe to an #ABBCTrade plan, plus you can instantly ear…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T13:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "ABBC"
-      ]
-    },
-    {
-      "title": "RT @exodus_io: What is your favorite food-based crypto?",
-      "link": "NULL",
-      "pubDate": "2022-12-20T13:24:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAN"
-      ]
-    },
-    {
-      "title": "RT @RakutenTV:  Learn about cryptocurrency, NFTs and the blockchain in a fresh new way in our miniseries #FastForwardSeries",
-      "link": "NULL",
-      "pubDate": "2022-12-20T13:18:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XDB"
-      ]
-    },
-    {
-      "title": "RT @topbscnews: TOP TRENDING PROJECTS ON TWITTER 🥇 $LEOS @swapleonicorn 🥈 $TTC @TechTreesCoin 🥉 $XTZ @tezos @pancakeswap @bitindicha…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T13:12:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ",
-        "BNI"
-      ]
-    },
-    {
-      "title": "Is it still hip to be square? Asking for a friend.",
-      "link": "NULL",
-      "pubDate": "2022-12-20T12:52:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEST"
-      ]
-    },
-    {
-      "title": "RT @LunrToken: Onwards and Upwards The @LunarCrush community is expanding with a new total of 60,984 $Lunr holders. #Zilliqa 58,440 #B…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T12:50:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @Changehero_io: We listed Zilliqa last month, now it’s time to learn about it in the infographic below @zilliqa was the first blockch…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T12:48:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "Ho ho ho, hurry up! You only have 4 hours left to participate in the Christmas Quiz! Answer all questions corr…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T12:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "To celebrate the latest 16 Fan Token listings on @MEXC_Global, we are giving away $2,000 worth of $CHZ! 🥳 1⃣ Follo…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T11:15:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "ARG",
-        "PFL"
-      ]
-    },
-    {
-      "title": "RT @_Pickleninja: Sometimes a picture is worth a thousand words. $SWTH $BNB $BTC $ETH $USDC $USC $ZIL $ATOM $AVA $WBTC",
-      "link": "NULL",
-      "pubDate": "2022-12-20T11:05:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC",
-        "USC",
-        "SWTH"
-      ]
-    },
-    {
-      "title": "'What is Santa's most reliable reindeer in icy conditions? Relysia! 🦌' 🤶🧑‍ @Relysia_SV is widely used among B…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T11:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "#Chiliz Fan Tokens listing celebration, $2,000 worth of $CHZ to Giveaway! 1⃣Follow @MEXC_Global @Chiliz 2⃣Complete…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MX",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "From the start, #Zilliqa CEO @MattDDyer saw the potential for the powerful blockchain protocol to deliver utility a…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T10:07:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "Ho! Ho! Ho! BitTorrent Wishes You A Merry Christmas! To celebrate Christmas with our fans, we have prepared a 10…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T10:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "Insightful list of resources by @ObadiaAlex. Wonder if aggregating stats across chains becomes lot easier if extrac…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T10:05:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POND"
-      ]
-    },
-    {
-      "title": "Discover more about #aviation. ️ Its sectors, size and outreach.  Data on its enormous potential, vibrant #trends…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T10:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AVINOC"
-      ]
-    },
-    {
-      "title": "Celebrate #Christmas 2022 with #TRON Don’t miss the opportunity to share 800 $USDD in #TRON DAO Discord! …",
-      "link": "NULL",
-      "pubDate": "2022-12-20T09:44:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "WTRX"
-      ]
-    },
-    {
-      "title": "RT @arietrouw: It is amazing what 6 days in a #Bahamas prison can do for your state of mind. Don't let old school fraud define #blockchain…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T09:44:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Top 4 purchased tokens by 100 biggest #ETH whales today 🥇 $USDC 🥈 $USDT 🥉 $QNT @quant_network 4️⃣ $WBX Whale le…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T09:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QNT",
-        "BBW"
-      ]
-    },
-    {
-      "title": "RT @XcademyOfficial: Major Plug-In update approved by Google. It's almost time. #Watch2Earn",
-      "link": "NULL",
-      "pubDate": "2022-12-20T08:48:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @RequestFinance: We recently spoke with @Forkast_News on how the rise of remote work is driving the growth of stablecoin adoption for pa…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T07:57:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "Our #2pool is looking sweet! #StableCoin #crypto #decentralized",
-      "link": "NULL",
-      "pubDate": "2022-12-20T07:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "@apenftorg Foundation website has now been deployed on the #BTFS network. You can visit the website:…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T07:14:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "LAST WEEK IN #BitTorrent #BitTorrent has a new and improved Help Center #BTFS V2.3.0 has been released",
-      "link": "NULL",
-      "pubDate": "2022-12-20T07:06:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "Are you ready to spend the holidays earning with some high APRs on stables farming 🤩!",
-      "link": "NULL",
-      "pubDate": "2022-12-20T06:04:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "RT @Lucolly888: This is one of the best investments I've made on pomchain . A dash that gives you info to avoid all the rugs. Also availabl…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T04:56:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "BUILD"
-      ]
-    },
-    {
-      "title": "How can people get involved in GameFi, and what are some available resources?",
-      "link": "NULL",
-      "pubDate": "2022-12-20T04:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "AXS"
-      ]
-    },
-    {
-      "title": "RT @realSidhuJag: We are already seeing an exodus from Alt-L1 EVM's back to $ETH on L2, but it will be like a nuclear bomb went off once da…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T04:07:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SYS"
-      ]
-    },
-    {
-      "title": "Take a glance at the #JustLendDAO weekly top APY ranking 🥇 $BTT supply APY over 19% 🥈 $JST supply APY over 17% 🥉…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T03:56:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "JST"
-      ]
-    },
-    {
-      "title": "Fellaz will enter the Japanese market by supporting a breakdance and street culture brand and event aimed at empowe…",
-      "link": "NULL",
-      "pubDate": "2022-12-20T02:43:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
-      "title": "Markets: Bitcoin, Ether fall; Dogecoin drops after poll says Musk should quit as Twitter boss",
-      "link": "NULL",
-      "pubDate": "2022-12-20T01:46:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin and Ether prices fell in Tuesday morning trading in Asia as concern about the stability of crypto exchanges and a possible global recession continued to weigh on markets.",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Looks like aUSD has lost its peg again huh? ..Well Bette...put that in yer upcoming roadmap and smoke it.",
-      "link": "NULL",
-      "pubDate": "2022-12-20T00:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
     }
   ]
 }

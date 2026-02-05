@@ -1,15 +1,15 @@
 {
   "date": "2022-08-23",
-  "fetchedAt": "2026-02-05T07:45:52.978Z",
-  "articleCount": 36,
+  "fetchedAt": "2026-02-05T07:48:35.612Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
     {
       "title": "Institutional Investor Sentiment Remains Negative As Bitcoin Outflows Continue",
       "link": "https://www.newsbtc.com/news/bitcoin/institutional-investor-sentiment-remains-negative-as-bitcoin-outflows-continue/",
       "pubDate": "2022-08-23T23:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Institutional investor sentiment has been on the rocks for some time now. This follows the market trend with bitcoin falling below $22,000 and the total crypto market cap finally making its way below $1 trillion once more. With this, institutional investors continue to show a more bearish attitude toward the market. The numbers for last week are in, and the outflows from various digital assets show that big money is not betting on bitcoin. Institutional Investors Exit Bitcoin The exit from bitco",
       "currencies": [
@@ -28,8 +28,8 @@
       "title": "Ontario securities regulator warns against Kucoin in latest alert",
       "link": "https://www.theblock.co/post/165377/ontario-securities-regulator-warns-against-kucoin-in-latest-alert?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-23T21:59:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "regulation",
       "description": "The OSC has issued another consumer alert warning residents of unregistered crypto platforms, including Kucoin.",
       "currencies": [
@@ -45,8 +45,8 @@
       "title": "Shibaswap Volume Crashes More Than $1.6B in Yearly Low",
       "link": "https://beincrypto.com/shibaswap-volume-crashes-more-than-1-6b-in-yearly-low/",
       "pubDate": "2022-08-23T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Shibaswap saw a steep fall in trading volume in July due to a decline in the liquidity poured into alternate coins (altcoins) listed on the platform.",
       "currencies": [
@@ -59,78 +59,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @flow_blockchain: If you haven't checked out @onjoyride yet, they just launched Trickshot Blitz - your classic pool game - and players h…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T19:10:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Great coverage of RLY Protocol by @thenewstack",
-      "link": "NULL",
-      "pubDate": "2022-08-23T18:41:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Bitcoin Basher Peter Schiff Pounces Again, Warns BTC Doomed For Another Terrifying Crash",
-      "link": "NULL",
-      "pubDate": "2022-08-23T18:23:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Peter Schiff, one of bitcoin’s most notorious bears, is sticking by his prediction that the benchmark cryptocurrency is on the verge of more bloodletting.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 9
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin (BTC) Will Not Reach New ATH Until 2025 – 7991 People Poll",
-      "link": "NULL",
-      "pubDate": "2022-08-23T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "According to the results of a survey released today, 47% of respondents believe that Bitcoin (BTC) will not reach a new ATH until 2025. This result reflects the extremely pessimistic sentiment of cryptocurrency market participants, which is further confirmed by data from Google Trends.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Time for another #XYO heuristic spotlight! XYO is designed to witness heuristic data so it can be analyzed and turn…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T17:33:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "How a Hacker Lost His ETH While Attacking Rainbow Bridge",
       "link": "https://cryptopotato.com/how-a-hacker-lost-his-eth-while-attacking-rainbow-bridge/",
       "pubDate": "2022-08-23T17:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Aurora Labs’ security system warded off yet another bridge attack, slashing the attacker of $8,000 worth of ETH in the process.",
       "currencies": [
@@ -144,150 +77,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "These #BitcoinSV tools and resources will help you develop, implement, and maintain an optimal node infrastructure:…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Find out how to get your hands on the #RIF ecosystem stablecoin #RDOC and start your #EverydayDeFi journey!",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:12:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
-      "title": "Very excited to announce @NexusMutual has deposited 15,348 ETH ($25M) into @enzymefinance to access attractive yiel…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:10:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "DOGE and SHIB Have Never Been So Close to Losing Their Places at Market Cap Top",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @NexusMutual: We’re excited to announce that 15,348 ETH has been deployed into our @enzymefinance vault and deposited in @Maven11Capital…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "Suggestions for improving Status? Please drop by our Github and make an issue!",
-      "link": "NULL",
-      "pubDate": "2022-08-23T15:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "El Salvador’s Bitcoin policy could lead the change in global monetary system – Simon Dixon",
-      "link": "NULL",
-      "pubDate": "2022-08-23T14:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Prominent investor Simon Dixon recently described El Salvador’s Bitcoin policy as “very responsible” and said it could be the first domino to fall in bringing down the International Monetary Fund’s (IMF) “fiat-based Ponzi scheme” debt mechanism if it succeeds.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BitGo Acquisition Terminated- How Safe is WBTC Now?",
-      "link": "NULL",
-      "pubDate": "2022-08-23T13:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "✴︎Sign Up Here for the CT Club! https://patreon.com/cryptotips ✴︎Ledger hardware wallets 👉 https://shop.ledger.com/pages/ledger-nano-x/?r=67ef ✴︎Trezor hardware wallet 👉 https://shop.trezor.io/?offer_id=10&aff_id=10937 ✴︎Buy Gift Cards with Your Crypto! 👉 https://www.bitrefill.com/signup?code=47y2uwl4 ✴︎10% Binance Discount 👉https://www.binance.com/en/register?ref=OTL6ACPP ✴︎Begin Trading with Tradingview 👉 https://www.tradingview.com/gopro/?share_your_love=RealCryptoTips ✴︎Heidi Twitter: h",
-      "currencies": [
-        "WBTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Cryptonewsz highlighted that #Buyaladdin will enable entrepreneurs to maximize their profits and crypto enthusiasts…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T12:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "As part of the ABBC ecosystem, the #Buyaladdin crypto online shopping mall will allow users from across the globe t…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T11:29:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Using #Buyaladdin, shoppers can easily pay with cryptocurrency on their mobile devices. Initially, the app will be…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T10:57:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Ethereum overtakes reigning champion Cardano in terms of…",
       "link": "https://ambcrypto.com/ethereum-overtakes-reigning-champion-cardano-in-terms-of/",
       "pubDate": "2022-08-23T10:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "The developers of a blockchain network play a critical role in the growth and expansion of the network. From designing and maintaining the architecture to building smart contracts — developers do it all. And, in light of recent developments, Ethereum [ETH] has come out on top to have the maximum developer activity. All hail ETH […]",
       "currencies": [
@@ -301,34 +95,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @HashKeyDID: OST #Klaymakers22 will be available in an hour at 19:00 SGT. People who already joined our campaign before 11 a.m. 23. Aug…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T10:10:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Watch this Q&A session at @EBlockchainCon where @VMarinchuk welcomes @_rafa_js, @JayGujral & @mikesoundoshi to answ…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T10:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Ethereum is currently the most actively developed crypto, Polkadot ranks 2nd",
       "link": "https://finbold.com/ethereum-is-currently-the-most-actively-developed-crypto-polkadot-ranks-2nd/",
       "pubDate": "2022-08-23T09:17:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "As the cryptocurrency sector navigates through a bear market, different projects appear unfazed by the conditions accelerating development activities on... Continue reading",
       "currencies": [
@@ -342,71 +113,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1 Day Left for #LUNA & #LUNC Listing Giveaway: 10,000 USDD Airdrop! @terra_money Deposit to win from 2,00…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T08:37:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "RT @sayantanxyz: coming soon @ProjectSerum",
-      "link": "NULL",
-      "pubDate": "2022-08-23T08:03:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SRM"
-      ]
-    },
-    {
-      "title": "Over 100k users watched Primebox X #ETH 2.0 Carnival on Huobi Live @Huobi_Research",
-      "link": "NULL",
-      "pubDate": "2022-08-23T07:52:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HT",
-        "FLZ"
-      ]
-    },
-    {
-      "title": "$NPT $KLAY $TRX #Staking are now available! Download the #NEOPIN App now and stake your tokens to boost your earnin…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T05:52:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "KLAY",
-        "NPT"
-      ]
-    },
-    {
-      "title": "A major milestone for us in securing a Capital Markets Services licence granted by the Monetary Authority of Singap…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T05:52:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
       "title": "Hacker Loses 5 ETH (~$8,000) In Failed Attack on NEAR Rainbow Bridge",
       "link": "https://beincrypto.com/hacker-loses-5-eth-failed-attack-near-rainbow-bridge/",
       "pubDate": "2022-08-23T04:37:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Aurora Labs CEO Alex Shevchenko said that on Aug. 22 a hacker lost 5 Ethereum (ETH) in a failed attack on the NEAR/ETH Rainbow Bridge over the weekend. No user funds were lost.",
       "currencies": [
@@ -420,63 +131,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum Price Lost 20% Weekly, What’s The Key Support Now?",
-      "link": "NULL",
-      "pubDate": "2022-08-23T04:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Ethereum price has witnessed a tough time lately, the altcoin logged heavy losses over the past one week. Broader market weakness could be blamed for the coin’s current price momentum. Bitcoin slid on its chart and was trading at $21,000 at the time of writing. Other altcoin also depreciated following BTC’s price action. Over the last 24 hours, Ethereum price fell by 4%. It has been a...",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 6
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "I just published Axie Infinity Removes Prizes From Classic Games And Invites P2E Players To Move To New Mode Read…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T03:02:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "LEGO"
-      ]
-    },
-    {
-      "title": "RT @weiweigeng: Built on @RLYNetworkAssoc v2, the new Unite is also coming together with more exciting projects!",
-      "link": "NULL",
-      "pubDate": "2022-08-23T02:56:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "From recording LP positions to managing community resources, the growing adoption of #NFT in #DeFi may have become…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T02:01:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
       "title": "EOS Price Rallied By 10%, Coin To Retest $2?",
       "link": "https://www.newsbtc.com/news/eos-price-rallied-by-10-coin-to-retest-2/",
       "pubDate": "2022-08-23T01:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "EOS price has propelled by 10% and now is one of the top gainers over the 24 hours. This has pushed the coin quite close to its next price resistance. The bulls were back on the 24 hour chart and that depicted positive price action for the coin. Despite Bitcoin falling on the chart and other major altcoins moving south EOS noted a considerable surge in price. EOS price also depicts a broad wedge pattern, this pattern is often tied to exhaustion of a trend. In this case, EOS price was reversing i",
       "currencies": [
@@ -488,17 +147,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @coin_with_us: If you want 10 free entries for the 100K XYO. You have 24 hours to claim your free entries. Alternatively, you can claim…",
-      "link": "NULL",
-      "pubDate": "2022-08-23T00:08:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
     }
   ]
 }

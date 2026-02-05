@@ -1,31 +1,15 @@
 {
   "date": "2023-07-13",
-  "fetchedAt": "2026-02-05T07:45:52.505Z",
-  "articleCount": 62,
+  "fetchedAt": "2026-02-05T07:48:35.564Z",
+  "articleCount": 20,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Celsius Reorganization Not Affected by $4.7B Settlement With U.S., Bankrupt Crypto Lender Says",
-      "link": "NULL",
-      "pubDate": "2023-07-13T21:40:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Charles Hoskinson Extends Opportunity to Algorand, Proposes Sidechain Collaboration",
       "link": "https://dailycoin.com/charles-hoskinson-opportunity-algorand-collaboration/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-13T21:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "general",
       "description": "Charles Hoskinson has an offer Algorand can’t refuse.",
       "currencies": [
@@ -39,27 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Best Crypto to Buy Now 13 July – Litecoin, Chainlink, Compound",
-      "link": "NULL",
-      "pubDate": "2023-07-13T21:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LTC",
-        "LINK",
-        "COMP"
-      ]
-    },
-    {
       "title": "XLM price soars as Stellar rides Ripple’s XRP wave",
       "link": "https://coinjournal.net/news/xlm-price-soars-as-stellar-rides-ripples-xrp-wave/",
       "pubDate": "2023-07-13T21:09:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "trading",
       "description": "Stellar (XLM) price rose to its highest level since April 2022, hitting highs near $0.20. XLM’s stellar performance followed a staggering 87% jump in less than 3 hours for XRP. XRP is Ripple’s token, and a judge just declared it was not a security. Stellar (XLM) price jumped nearly 70% on Thursday as bulls pushed […]",
       "currencies": [
@@ -73,36 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celsius Moves $64M in LINK, MATIC, AAVE and Altcoins Following Court Permission to Sell Tokens",
-      "link": "NULL",
-      "pubDate": "2023-07-13T20:57:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "CEL"
-      ]
-    },
-    {
-      "title": "Bitcoin loses lead in daily transactions: Here’s why",
-      "link": "NULL",
-      "pubDate": "2023-07-13T20:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALGO"
-      ]
-    },
-    {
       "title": "Polygon Unveils Game-Changing Transformation of MATIC into Versatile POL Token",
       "link": "https://zycrypto.com/polygon-unveils-game-changing-transformation-of-matic-into-versatile-pol-token/",
       "pubDate": "2023-07-13T20:24:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "layer2",
       "description": "Polygon Labs, the development team behind Ethereum scaling solution Polygon, has announced its new native token, POL.",
       "currencies": [
@@ -116,40 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ripple’s Legal Victory Boosts XRP Price, Could Reach $1 Soon?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T20:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "MATIC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Why are MakerDAO traders watching Bitcoin’s price action?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T19:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
       "title": "BREAKING: SEC Makes Its First Statement After Ripple's Victory!",
       "link": "https://en.bitcoinsistemi.com/breaking-sec-makes-its-first-statement-after-ripples-victory/",
       "pubDate": "2023-07-13T18:52:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "The first statement by the SEC came after the judge decided in favor of Ripple in the ongoing lawsuit between Ripple and the SEC. Continue Reading: BREAKING: SEC Makes Its First Statement After Ripple's Victory!",
       "currencies": [
@@ -162,22 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A proposal for shared ownership and resilience of Zcash-focused digital properties",
-      "link": "NULL",
-      "pubDate": "2023-07-13T18:51:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEC"
-      ]
-    },
-    {
       "title": "New era for XRP begins as Ripple wins case against SEC; CEO reacts",
       "link": "https://finbold.com/new-era-for-xrp-begins-as-ripple-wins-case-against-sec-ceo-reacts/",
       "pubDate": "2023-07-13T18:48:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "In a significant legal triumph, blockchain company Ripple secured a favorable ruling in the firm’s high stake case with the … Continued",
       "currencies": [
@@ -193,8 +96,8 @@
       "title": "XRP Makes a Comeback as Holders Bet on Huge Upsurge Amid Ripple’s Groundbreaking Win in SEC Lawsuit",
       "link": "https://zycrypto.com/xrp-makes-a-comeback-as-holders-bet-on-huge-upsurge-amid-ripples-groundbreaking-win-in-sec-lawsuit/",
       "pubDate": "2023-07-13T18:46:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Against the odds of the broader crypto market, the value of XRP, the cryptocurrency linked to Ripple, has significantly skyrocketed, providing comfort to holders.",
       "currencies": [
@@ -207,23 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum Classic price rejection: Watch these levels for buying opportunities",
-      "link": "NULL",
-      "pubDate": "2023-07-13T18:30:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
       "title": "Alex Mashinsky Built Celsius Into a House of Cards",
       "link": "https://www.coindesk.com/consensus-magazine/2023/07/13/celsius-sold-lies-to-sell-cel-tokens/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-07-13T18:29:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "general",
       "description": "Consensus 2019 Alex Mashinsky Founder and CEO Celsius Network (CoinDesk)",
       "currencies": [
@@ -236,22 +127,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Huobi Says It’s Dedicated to User Asset Security, Releases Response on ‘Unsubstantiated’ Claims of Asset Decline",
-      "link": "NULL",
-      "pubDate": "2023-07-13T18:17:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
       "title": "Did XRP Restart Alt Season? Solana, Cardano, Polygon Up Double Digits",
       "link": "https://decrypt.co/148503/did-xrp-restart-alt-season-solana-cardano-polygon-up-double-digits",
       "pubDate": "2023-07-13T18:11:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Most of the tokens previously deemed securities by the SEC are seeing large gains upon a federal court’s ruling in the XRP case.",
       "currencies": [
@@ -265,54 +145,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Whales Aggressively Accumulating One Crypto Asset Class As Bitcoin Ranges, Says Santiment – Here’s What It Means",
-      "link": "NULL",
-      "pubDate": "2023-07-13T18:05:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "DAI",
-        "MATIC",
-        "USDP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "This is how much Celsius Network agreed to pay FTC to settle the case",
-      "link": "NULL",
-      "pubDate": "2023-07-13T18:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "last minute pickup",
-      "link": "NULL",
-      "pubDate": "2023-07-13T17:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CFX"
-      ]
-    },
-    {
       "title": "XRP up 35%, altcoins make explosive gains after judge’s Ripple case ruling",
       "link": "https://blockworks.co/news/xrp-altcoins-pump-post-ruling",
       "pubDate": "2023-07-13T17:08:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "Ripple’s XRP stood at about $0.60 on Thursday at 1 pm ET, up 35% since the news, with ETH, SOL and ADA among others seeing gains",
       "currencies": [
@@ -327,50 +164,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Markets ‘Highly Dependent’ on Stablecoins Lacking Transparency, TUSD Poses Risk: Kaiko",
-      "link": "NULL",
-      "pubDate": "2023-07-13T16:57:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Huobi Is dedicated to User Asset Security and Releases a Firm Response Towards Baseless Claims of “Asset Decline”",
-      "link": "NULL",
-      "pubDate": "2023-07-13T16:39:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Did Bank of America Close a Customer Account for Using Crypto?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T16:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
       "title": "XRP Sold on Exchange Declared Not an Investment Contract",
       "link": "https://cryptobriefing.com/xrp-declared-not-a-security-ripple-vs-sec-coming-to-an-end/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-13T16:37:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Ripple Labs Inc., the blockchain-based payment protocol company, has won a significant legal battle against the U.S. Securities and Exchange Commission (SEC). In a case that has been closely monitored by the financial world since 2020, Judge Analisa Torres of the United States District Court, Southern District of New York, ruled on July 13 that the XRP token is not a security when put on...",
       "currencies": [
@@ -386,8 +184,8 @@
       "title": "BREAKING: Victory For Ripple, Judge Deems XRP Sales As Non-Investment Contracts",
       "link": "https://bitcoinist.com/ripple-judge-deems-xrp-sale-non-investment-contract/",
       "pubDate": "2023-07-13T16:17:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "In a significant legal victory for Ripple, US District Judge Analisa Torres ruled in favor of Ripple in the lawsuit filed against it by the US Securities and Exchange Commission (SEC) in December 2020. The SEC had alleged that Ripple had raised over $1.3 billion through the sale of XRP to investors, which should be […]",
       "currencies": [
@@ -400,22 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is it Too Late to Buy Conflux? CFX Pumps Up 11% in 24 Hours and Mr. Hankey Coin Presale is Launching in Less Than 24 Hours – 100x Potential?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T16:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CFX"
-      ]
-    },
-    {
       "title": "Judge rules Ripple’s XRP programmatic sales ‘not securities’; XRP up 28%",
       "link": "https://cryptoslate.com/judge-rules-ripples-programmatic-sales-distributions-of-xrp-do-not-constitute-securities-sales/",
       "pubDate": "2023-07-13T16:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "regulation",
       "description": "Judge Analisa Torres ruled that Ripple’s sale of XRP to the general public and its distributions of the token do not constitute an offer and sale of an investment contract. These include “Programmatic sales,” where XRP was offered to public buyers, and “Other Distributions,” where people were given XRP for free. The court concluded that […]",
       "currencies": [
@@ -428,49 +215,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Christensen-backed Bluechip launches stablecoin ratings, USDD gets an ‘F’",
-      "link": "NULL",
-      "pubDate": "2023-07-13T16:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "DAI",
-        "USDD",
-        "PAXG",
-        "GUSD"
-      ]
-    },
-    {
-      "title": "Charles Hoskinson Says Algorand Should Become A Sidechain of Cardano",
-      "link": "NULL",
-      "pubDate": "2023-07-13T15:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "US Attorney’s Office announces criminal fraud charges against Alex Mashinsky",
-      "link": "NULL",
-      "pubDate": "2023-07-13T15:52:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
       "title": "Breaking: Ripple wins case against SEC as judge rules XRP is not a security",
       "link": "https://cointelegraph.com/news/ripple-wins-case-against-sec-as-judge-rules-xrp-is-not-a-security",
       "pubDate": "2023-07-13T15:46:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "CEO Brad Garlinghouse recently opined that the case would end soon, but the fight for crypto wasn’t over yet.",
       "currencies": [
@@ -486,8 +235,8 @@
       "title": "XRP Price Explodes Over 70% as Judge Rules In Favor of Ripple in SEC Case",
       "link": "https://cryptopotato.com/xrp-price-explodes-16-as-judge-rules-in-favor-of-ripple-in-sec-case/",
       "pubDate": "2023-07-13T15:40:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP's price exploded immediately after the news broke out.",
       "currencies": [
@@ -503,8 +252,8 @@
       "title": "BREAKING: Judge Declares XRP Not A Securities!",
       "link": "https://en.bitcoinsistemi.com/breaking-judge-declares-xrp-not-a-securities/",
       "pubDate": "2023-07-13T15:34:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "A US judge has ruled that the XRP altcoin is not a security. Here are the details of the highly anticipated decision. Continue Reading: BREAKING: Judge Declares XRP Not A Securities!",
       "currencies": [
@@ -517,114 +266,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today in Crypto: BNB Beacon Chain Upgrade Will Allow It to Halt New Block Production, Europe's First BTC ETF Set to Launch Next Month, Digital Yuan to be Used Offline, BitMEX Traders Can Form Guilds",
-      "link": "NULL",
-      "pubDate": "2023-07-13T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "MATIC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Stablecoin Sharks & Whales Show Strong Accumulation, Good Sign For Bitcoin?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T14:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DAI",
-        "USDP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin, Ethereum Move Lower; Kava Becomes Top Loser",
-      "link": "NULL",
-      "pubDate": "2023-07-13T14:10:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KAVA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Breaking: Celsius Network fined $4.7B by FTC",
-      "link": "NULL",
-      "pubDate": "2023-07-13T14:06:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Santiment: \"Whales Preparing For Bitcoin Bulls! Chasing These Levels!\"",
-      "link": "NULL",
-      "pubDate": "2023-07-13T13:31:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DAI",
-        "USDP"
-      ]
-    },
-    {
-      "title": "Uniswap Launches On Avalanche",
-      "link": "NULL",
-      "pubDate": "2023-07-13T13:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AVAX",
-        "UNI"
-      ]
-    },
-    {
-      "title": "US SEC files lawsuit against Celsius and Alex Mashinsky",
-      "link": "NULL",
-      "pubDate": "2023-07-13T13:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
       "title": "Former Celsius CEO Alex Mashinsky reportedly arrested",
       "link": "https://cointelegraph.com/news/celsius-ceo-alex-mashinsky-arrested",
       "pubDate": "2023-07-13T13:03:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The U.S. SEC filed a lawsuit against the bankrupt crypto lender on July 13 followed by news reports about the arrest of the former CEO Alex Mashinsky.",
       "currencies": [
@@ -636,80 +282,11 @@
       }
     },
     {
-      "title": "In this article we will look at what news is most relevant for the crypto assets Dogecoin (DOGE), Cardano (ADA) and The Sandbox (SAND).",
-      "link": "NULL",
-      "pubDate": "2023-07-13T12:50:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "DOGE",
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ordinals and STX Among Projected Beneficiaries of BlackRock ETF",
-      "link": "NULL",
-      "pubDate": "2023-07-13T12:49:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Celsius Network’s Alex Mashinsky Is Arrested as SEC, CFTC, FTC Sue Bankrupt Crypto Lender",
-      "link": "NULL",
-      "pubDate": "2023-07-13T12:48:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "KAVA Succumbs To Bearish Market Trend, Loses 11% In The Last Day",
-      "link": "NULL",
-      "pubDate": "2023-07-13T12:19:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "KAVA"
-      ]
-    },
-    {
-      "title": "BTC Hits Ardently-awaited $30K, Will the Whales Start the Buying Frenzy?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T12:08:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DAI"
-      ]
-    },
-    {
       "title": "Polygon To Transition MATIC Tokens To POL Coins If Community Approves Roadmap 2.0 Update",
       "link": "https://en.ethereumworldnews.com/polygon-transition-matic-tokens-pol/",
       "pubDate": "2023-07-13T12:02:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "layer2",
       "description": "The major technical upgrade is part of Polygon’s roadmap 2.0 and is subject to community approval. The new POL token would replace MATIC as Polygon’s native token and introduce Multichain validation across the L2’s ecosystem. Users will have at least four years to swap their MATIC for POL tokens by sending their old coins to a specific contract address. If the community approves, the project...",
       "currencies": [
@@ -723,46 +300,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NEAR in Q2: Consecutive collapses, increasing adoption, and more",
-      "link": "NULL",
-      "pubDate": "2023-07-13T11:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NEAR",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "US Authorities Accuse Former Security Engineer of Siphoning $9 Million From Defi Platform",
-      "link": "NULL",
-      "pubDate": "2023-07-13T11:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Cardano Creator Offers Algorand Sidechain Role, Community Reaction Epic",
-      "link": "NULL",
-      "pubDate": "2023-07-13T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "ALGO"
-      ]
-    },
-    {
       "title": "Polygon proposes upgrading MATIC tokens to become POL",
       "link": "https://www.theblock.co/post/239350/polygon-upgrade-matic-tokens-to-pol?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-13T09:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "layer2",
       "description": "MATIC would be converted into Polygon (POL), a token with the capability to validate multiple chains within the Polygon ecosystem.",
       "currencies": [
@@ -775,63 +317,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Conflux 🤝 BR Group partnership",
-      "link": "NULL",
-      "pubDate": "2023-07-13T09:17:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CFX"
-      ]
-    },
-    {
-      "title": "4 Trillion SHIB Tokens Transferred by Giant Whale",
-      "link": "NULL",
-      "pubDate": "2023-07-13T09:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Largest holder of Shiba Inu (SHIB) tokens made significant transfer today",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Do personal savings levels correlate with Bitcoin price increases?",
-      "link": "NULL",
-      "pubDate": "2023-07-13T09:01:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Bitcoin Tumbles Toward $30K, KAVA Crashes 12% Daily (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-07-13T08:58:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAVA"
-      ]
-    },
-    {
       "title": "Cardano Drama: This Grifter Company Targets $5.8+ Million From Catalyst Fund 10",
       "link": "https://u.today/cardano-drama-this-grifter-company-targets-58-million-from-catalyst-fund-10",
       "pubDate": "2023-07-13T08:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano community outraged and ready to take action",
       "currencies": [
@@ -844,46 +334,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "LBank Labs joins Draper and INCE Capital in investing in LunarCrush",
-      "link": "NULL",
-      "pubDate": "2023-07-13T08:25:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Upstart market maker Swaap goes live with new version on Ethereum, Polygon",
-      "link": "NULL",
-      "pubDate": "2023-07-13T07:20:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MATIC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "EOS Price Analysis: Key Uptrend Support Intact at $0.70",
-      "link": "NULL",
-      "pubDate": "2023-07-13T05:08:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
       "title": "$XRP Price Could Skyrocket to $30 in Short Term, Says Fund Manager",
       "link": "https://www.cryptoglobe.com/latest/2023/07/xrp-price-could-skyrocket-to-30-in-short-term-says-fund-manager/",
       "pubDate": "2023-07-13T04:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The native token of the XRP Ledger, $XRP, could see a significant price increase to potentially reach a bullish target of $30 in the short term, according to the founder and manager of Kralow Capital, Thomas Kralow, who recently revealed his bullish prediction. Kralow’s words come at a time in which a major player in […]",
       "currencies": [
@@ -894,18 +349,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Kava 14 Accelerates Cosmos Ecosystem Expansion",
-      "link": "NULL",
-      "pubDate": "2023-07-13T00:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "KAVA"
-      ]
     }
   ]
 }

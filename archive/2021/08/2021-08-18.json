@@ -1,37 +1,15 @@
 {
   "date": "2021-08-18",
-  "fetchedAt": "2026-02-05T07:45:51.502Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.319Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @telcoin_team: Seven new incentivized @BalancerLabs markets are live on #TELx across SMS Network &amp; TELxchange! The incentives duration i…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T23:44:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "Seven new incentivized @BalancerLabs markets are live on #TELx across SMS Network &amp; TELxchange! The incentives dura…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T23:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
     {
       "title": "Solana and Terra Tokens Rise Amid NFT Craze: Markets Wrap",
       "link": "https://blockworks.co/solana-and-terra-tokens-rise-amid-nft-craze-markets-wrap/",
       "pubDate": "2021-08-18T20:51:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "nft",
       "description": "\"It’s great to see some divergence among different assets as we saw Solana (SOL) and Terra (LUNA) continue to hit all-time highs, which I believe shows that this asset class [will] continue to mature,\" said Founding Principal of BKCoin Capital Kevin Kang.",
       "currencies": [
@@ -48,8 +26,8 @@
       "title": "Avalanche to Add DeFi Protocols Aave and Curve",
       "link": "https://blockworks.co/avalanche-to-add-defi-protocols-aave-and-curve/",
       "pubDate": "2021-08-18T20:17:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "defi",
       "description": "Avalanche will add more diverse offerings to its public blockchain as part of $180M liquidity mining incentive program",
       "currencies": [
@@ -66,8 +44,8 @@
       "title": "Quant, Arweave and Avalanche soar while Bitcoin searches for support",
       "link": "https://cointelegraph.com/news/quant-arweave-and-avalanche-soar-while-bitcoin-searches-for-support",
       "pubDate": "2021-08-18T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin's price is losing its bullish momentum, but this did little to stop QNT, AR and AVAX from notching double-digit gains today.",
       "currencies": [
@@ -81,23 +59,12 @@
       }
     },
     {
-      "title": "ACH, ANT, FET, IOTX, ORN & PAX are now available to residents in Germany. Residents can log in to buy, convert, se…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T19:06:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COIN"
-      ]
-    },
-    {
       "title": "Crypto Asset Management Market Will Near $10B by 2030, Says Study",
       "link": "https://beincrypto.com/crypto-asset-management-market-will-near-10b-by-2030-says-study/",
       "pubDate": "2021-08-18T19:01:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "According to estimates from Allied Market Research, the global crypto asset management market could grow tenfold by 2030.",
       "currencies": [
         "NEAR"
@@ -111,8 +78,8 @@
       "title": "Bitcoin Trading Volume Sinks Without Decisive Retest Of $50,000",
       "link": "https://bitcoinist.com/bitcoin-trading-volume-sinks-without-decisive-retest-of-50000/?utm_source=rss&utm_medium=rss&utm_campaign=bitcoin-trading-volume-sinks-without-decisive-retest-of-50000",
       "pubDate": "2021-08-18T19:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Data shows Bitcoin trading volume is once again on its way downwards as the cryptocurrency fails to retest the $50,000 mark. Bitcoin Trading Volume Goes Down As per a report from Arcane Research, while BTC hasn’t been able to test the $50k range yet, the trading volume is already moving downwards. The real Bitcoin trading […]",
       "currencies": [
@@ -128,8 +95,8 @@
       "title": "Will Ethereum Reach Its All-Time-High Before Bitcoin?",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-reach-all-time-high-bitcoin/",
       "pubDate": "2021-08-18T19:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "As Bitcoin shows bearish signs, on-chain activity suggests Ethereum could be on the way to reach its all-time-high before BTC. Ethereum To Reach Its All-Time-High Price Earlier Than Bitcoin? As pointed out by CryptoQuant CEO Ki Young Ju in a post, indicators could suggest ETH will reach its ATH quicker than BTC in the long term. The exchange netflow is an indicator that depends on two metrics:...",
       "currencies": [
@@ -144,22 +111,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "What topic would you like to see us do a deep-dive into?",
-      "link": "NULL",
-      "pubDate": "2021-08-18T18:58:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
       "title": "Twitter’s Jack Dorsey Is Now Mining Bitcoin. Here’s How",
       "link": "https://decrypt.co/78881/twitter-jack-dorsey-mining-bitcoin-here-is-how",
       "pubDate": "2021-08-18T18:56:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The Bitcoin maxi is now maxing his Bitcoin—mining BTC through a remote hosting service for rigs. Here’s how it works.",
       "currencies": [
@@ -174,8 +130,8 @@
       "title": "These 2 indicators gave traders a buy signal hours before Filecoin and Near rallied",
       "link": "https://cointelegraph.com/news/these-2-indicators-gave-traders-a-buy-signal-hours-before-filecoin-and-near-rallied",
       "pubDate": "2021-08-18T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "In the crypto market, it’s often the early bird that gets the worm. Here’s how two quant-style indicators flashed a bullish signal for FIL and NEAR.",
       "currencies": [
@@ -191,8 +147,8 @@
       "title": "Where I am BUYING Bitcoin",
       "link": "https://www.youtube.com/watch?v=24CWmaWC9AI",
       "pubDate": "2021-08-18T18:27:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheChartGuys",
+      "sourceKey": "thechartguys",
       "category": "bitcoin",
       "description": "🚀 Learn Technical Analysis with The Chart Guys! 🚀https://www.chartguys.com/trading-community-membership Our goal is to review and discuss the most recent price action in the market in a manner that makes it useful to you. Using Technical Analysis, we perform an indepth review of the action in the stock market today and try provide you with our analysis on current patterns, developing trends, and our take on where the market is headed. Our Focus includes - Technical Analysis - Trade Education -",
       "currencies": [
@@ -205,44 +161,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "XRC20 token creation made simple. Launch a token to XDC network with no coding for just a few minutes at…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T18:25:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "Complete this sentence: The most undervalued crypto right now is...",
-      "link": "NULL",
-      "pubDate": "2021-08-18T17:34:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Built on #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-08-18T17:09:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Solana Will Suck Liquidity From Altcoin Market Over Next Few Days/Weeks, Says Analyst",
       "link": "https://www.cryptoglobe.com/latest/2021/08/solana-will-suck-liquidity-from-altcoin-market-over-next-few-days-weeks-says-analyst/",
       "pubDate": "2021-08-18T17:05:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "defi",
       "description": "Earlier today, as nearly 80% of the top 50 cryptoassets by market cap were in the red, Solana ($SOL) was putting in another dazzling performance, surging to new all-time highs with a double digit percentage gain vs USD. $SOL is the native token of the Solana blockchain. Solana is “an open source project implementing a new, […]",
       "currencies": [
@@ -255,78 +178,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#WARZONEWEDNESDAY 1v1 Battle Royale EU ⏰ 7PM 3 Space 1v1 Elimination Dash NA ⏰ 5PM *PT 1 Spa…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T16:49:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "IGG"
-      ]
-    },
-    {
-      "title": "Congrats to out partners at @XinFin_Official! Proud to be working with you! $XDC $LGCY",
-      "link": "NULL",
-      "pubDate": "2021-08-18T16:45:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "NEM Trust Update",
-      "link": "NULL",
-      "pubDate": "2021-08-18T16:34:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM"
-      ]
-    },
-    {
-      "title": "Yesterday we hit 149,602 transactions! Pikkle is really gaining a lot of adoption and speed. eVoting on $AERGO!",
-      "link": "NULL",
-      "pubDate": "2021-08-18T16:14:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "We’re proud to announce today's launch of the Chia Cultivation Grant program, as we continue to support innovation…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T15:26:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "Transparency is still an issue in the #cryptocurrency space. The STASIS team has been focusing on that since day on…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T14:33:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Solana NFT Developers Are Killing Digital Llamas",
       "link": "https://cryptobriefing.com/solana-nft-developers-are-killing-digital-llamas/",
       "pubDate": "2021-08-18T14:27:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "nft",
       "currencies": [
         "SOL"
@@ -340,8 +196,8 @@
       "title": "Avalanche launches $180 million DeFi incentive scheme with Aave and Curve",
       "link": "https://www.theblockcrypto.com/post/114782/avalanche-launches-180-million-defi-incentive-scheme-aave-curve?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-08-18T14:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "defi",
       "description": "The Avalanche Foundation, the organization behind the Avalanche blockchain, has kicked off a new incentive program under the title Avalanche Rush.",
       "currencies": [
@@ -359,8 +215,8 @@
       "title": "Crypto.com uses Circle API to launch USD bank transfers in over 60 countries",
       "link": "https://cointelegraph.com/news/crypto-com-uses-circle-api-to-launch-usd-bank-transfers-in-over-60-countries",
       "pubDate": "2021-08-18T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Institutional Crypto.com customers in more than 60 countries can now make U.S. dollar bank transfers to and from their USDC wallets.",
       "currencies": [
@@ -376,8 +232,8 @@
       "title": "Anticipated Retracement? Cardano Dips Below $2 Following Market Downturn (ADA Price Analysis)",
       "link": "https://cryptopotato.com/anticipated-retracement-cardano-dips-below-2-following-market-downturn-ada-price-analysis/",
       "pubDate": "2021-08-18T12:54:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "ADA might have dropped 6.5% today, but the coin is still up by a substantial 17% on the week. Against bitcoin, it fell from Sunday’s high around 4765 SAT to reach the current 4370 SAT level.",
       "currencies": [
@@ -392,8 +248,8 @@
       "title": "Bitcoin Will Remind Investors ‘Who the King Is’, Says Popular Crypto Trader",
       "link": "https://www.cryptoglobe.com/latest/2021/08/bitcoin-will-remind-investors-who-the-king-is-says-popular-crypto-trader/",
       "pubDate": "2021-08-18T12:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "Popular cryptocurrency trader Pentoshi has revealed on social media he believes that if bitcoin rebounds from the $40,000 to $42,000 level in the near future it may move to a new all-time high and will “remind everyone who the kind is.” In a tweet published to his over 200,000 followers at a time in which […]",
       "currencies": [
@@ -409,8 +265,8 @@
       "title": "Cardano’s ADA Sees $1.3 Million Inflows from Financial Institutions, Exceeding XRP, XLM, DOT",
       "link": "https://u.today/cardanos-ada-sees-13-million-inflows-from-financial-institutions-exceeding-xrp-xlm-dot",
       "pubDate": "2021-08-18T11:54:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Figures published in the recent CoinShares report show that Cardano inflows recently have been exceeding those of other top altcoins",
       "currencies": [
@@ -424,22 +280,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MintClubPro: Exciting partnership with @OfficialCojam to build a prediction market platform using the Mint Club protocol 🤝 #MintClub #M…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T11:49:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
       "title": "Binance Coin, Dogecoin and Two More Altcoins Jostling for Breakouts, According to Analyst Justin Bennett",
       "link": "https://dailyhodl.com/2021/08/18/binance-coin-dogecoin-and-two-more-altcoins-jostling-for-breakouts-according-to-analyst-justin-bennett/",
       "pubDate": "2021-08-18T11:45:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Top crypto analyst Justin Bennett is keeping an eye on Binance Coin (BNB), Dogecoin (DOGE) and two other altcoins that he says could be setting up for breakouts. The closely followed analyst tells his 63,000 followers that BNB is sitting right on the brink of a price spike, naming a key level to watch for […]",
       "currencies": [
@@ -454,23 +299,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Not sure which Guardian Node or Elite Edge Node to delegate your stake to? Theta Explorer now shows the delegation…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T11:12:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Ethereum co-founder’s new role might have this effect on Dogecoin",
       "link": "https://ambcrypto.com/ethereum-co-founders-new-role-might-have-this-effect-on-dogecoin/",
       "pubDate": "2021-08-18T11:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "The reasons behind Dogecoin‘s exponential growth were many, but DOGE’s utility and development activity were hardly ever a part of that. The network is now all set to be revamped after being more or less dead in terms of development in the past. According to a statement issued by the Dogecoin Foundation on Tuesday, the […]",
       "currencies": [
@@ -486,8 +319,8 @@
       "title": "Crypto Analyst Lark Davis on Bitcoin: ‘Still Going to 100K by the End of Year’",
       "link": "https://www.cryptoglobe.com/latest/2021/08/crypto-analyst-lark-davis-on-bitcoin-still-going-to-100k-by-the-end-of-year/",
       "pubDate": "2021-08-18T10:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "With the Bitcoin price currently down 5-6% from its intraday high on August 14, which was just above the $48,000 level, some newcomers to Bitcoin are feeling a little nervous despite the fact that price of BTC has surged over 53% to roughly $45,350 since its intraday low of around $29,600 on July 20. When […]",
       "currencies": [
@@ -502,9 +335,9 @@
       "title": "Blockchain Games Going One Step Further with Unreal Engine Graphics",
       "link": "https://bitcoinist.com/blockchain-games-going-one-step-further-with-unreal-engine-graphics/?utm_source=rss&utm_medium=rss&utm_campaign=blockchain-games-going-one-step-further-with-unreal-engine-graphics",
       "pubDate": "2021-08-18T09:54:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "Thanks to this year’s bull market and the craze for non-fungible tokens (NFTs), the blockchain gaming industry has expanded considerably. Its audience has registered steady growth figures, increasing roughly 148% just in Q1 of this year. A testament to that growth is the fact that the price of Axie Infinity Shards (AXS), the governance token […]",
       "currencies": [
         "AXS"
@@ -519,8 +352,8 @@
       "title": "Bitcoin (BTC) Loses 200-Day MA, Tries to Hold $45,000",
       "link": "https://beincrypto.com/bitcoin-btc-loses-200-day-ma-tries-to-hold-45000/",
       "pubDate": "2021-08-18T09:50:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "On Aug 17, the price closed below the 200-day moving average (MA). An ongoing breakdown from the short-term support line could take BTC to support in the $42,600 area.",
       "currencies": [
@@ -533,22 +366,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Imagine how great it would be if we hosted 2 giveaways in the same week",
-      "link": "NULL",
-      "pubDate": "2021-08-18T09:21:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Can Dogecoin make it to $1",
       "link": "https://ambcrypto.com/can-dogeoin-make-it-to-1/",
       "pubDate": "2021-08-18T07:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Dogecoin became one of the biggest success stories of the year, as it went from being a “joke” coin to one of the most popular coins in the cryptocurrency sector. Mainly, on-chain activity, rising trading volumes on top exchanges, and an increase in attention from major influencers played a critical role in the crypto’s journey. […]",
       "currencies": [
@@ -560,33 +382,11 @@
       }
     },
     {
-      "title": "POW#52: “eCash for Beginners: Part 1”",
-      "link": "NULL",
-      "pubDate": "2021-08-18T06:10:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "GameDAO (BSC) at 20:00 on August 23 (GMT+08:00), pledge $Lowb to earn NFT.@loser_coin",
-      "link": "NULL",
-      "pubDate": "2021-08-18T05:03:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
       "title": "Dogecoin Foundation re-established, Vitalik Buterin now on board",
       "link": "https://forkast.news/headlines/dogecoin-foundation-vitalik-buterin-board/",
       "pubDate": "2021-08-18T04:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "Following a few years of inactivity, the Dogecoin Foundation is being reestablished with Ethereum co-founder Vitalik Buterin serving as the organization’s “blockchain and crypto adviser,” according to an announcement posted Tuesday on the foundation’s website. Fast facts Originally founded in 2014, the non-profit organization aims to support the Dogecoin ecosystem and community with a particular...",
       "currencies": [
@@ -597,74 +397,6 @@
         "positive": 3,
         "negative": 4
       }
-    },
-    {
-      "title": "Had been advising investors to include a Bitcoin exit strategy, within their Bitcoin investment plan. Evaluate risk…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T03:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "TA: Bitcoin Breaks Key Support, Why BTC Could Revisit $40K",
-      "link": "NULL",
-      "pubDate": "2021-08-18T03:08:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin price failed to stay above the key $45,000 support zone against the US Dollar. BTC is showing a few bearish signs and it could correct lower to $40k. Bitcoin extended its decline below the $45,500 and $45,000 support levels. The price is now trading below $46,000 and the 100 hourly simple moving average. There is a key bearish trend line forming with resistance near $45,800 on the...",
-      "currencies": [
-        "BTC",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Happy First Anniversary to DEGO Finance @dego_finance ! COCOS will Provide 60,000 COCOS for NFT Mining",
-      "link": "NULL",
-      "pubDate": "2021-08-18T02:43:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "Beta Finance will be supporting Verified Market for $BAND on Thursday August 19! This means users will be able to…",
-      "link": "NULL",
-      "pubDate": "2021-08-18T02:42:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "These are the odds of Bitcoin touching $30k once again",
-      "link": "NULL",
-      "pubDate": "2021-08-18T01:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "While Bitcoin is undergoing a correction in the short term at the moment, not many from the BTC community will be complaining or losing sleep over it. A period of uncertainty was looming large when BTC consolidated under $40,000 for an extended period of time, before holding fort near the $30,000 range. In fact, after […]",
-      "currencies": [
-        "BTC",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
     }
   ]
 }

@@ -1,112 +1,15 @@
 {
   "date": "2022-10-03",
-  "fetchedAt": "2026-02-05T07:45:52.613Z",
-  "articleCount": 55,
+  "fetchedAt": "2026-02-05T07:48:35.578Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Stay tuned. We have an exciting announcement soon from RLY Network.",
-      "link": "NULL",
-      "pubDate": "2022-10-03T23:25:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "RT @PawnBots: We understand our #NFT project can be complex, so for that reason, we have published an extensive guide for both newcomers an…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T22:04:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "Congrats to our own Alan Jenson, Paxos Engineering Manager, on his valuable presentation at @FintechDevcon 2022! He…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T21:59:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "$PAXG is now listed and fully available on Fringe Finance Primary Lending Platform! 🥳 Holders of @PaxosGlobal ‘s…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T21:38:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "PAXG",
-        "FRIN"
-      ]
-    },
-    {
-      "title": "RT @itsnewtom: Pro tip of the day: get at floor @CyborgApesNFT while they are so cheap, and stake them with @ElixirNFT who's the next big p…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T21:07:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "🤝 We talked to Chris, @Orkneylora’s founder to know more about their Orkney LORA Cloud App and how they use the…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T20:39:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "The first Badger Creator Contest has wrapped. 4 winners were selected by @Badger_Support to receive 25 $BADGER each…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T20:37:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BADGER"
-      ]
-    },
-    {
-      "title": "Despite Outages, Solana (SOL) Still Has Power To Bring 1,000,000,000 More People to Crypto: InvestAnswers",
-      "link": "NULL",
-      "pubDate": "2022-10-03T20:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "Banks Around the World Have Over $9,200,000,000 in Crypto Asset Exposure: New Study",
       "link": "https://dailyhodl.com/2022/10/03/banks-around-the-world-have-over-9200000000-in-crypto-asset-exposure-new-study/",
       "pubDate": "2022-10-03T18:41:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "New research published by an international committee formed to develop banking regulation standards is offering some insights on the exposure of banks to crypto assets. The Basel Committee on Banking Supervision sought to analyze the exposure of banks to crypto as part of its analytical, supervisory and policy initiatives related to the nascent asset class. […]",
       "currencies": [
@@ -124,22 +27,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "is our own video-on-demand (VOD) platform. Descenland was created as a content distribution…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T18:39:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
       "title": "Terra’s Collapse Destroyed Faith in Stablecoins. Can Maker Restore It?",
       "link": "https://decrypt.co/111118/terras-collapse-destroyed-stablecoin-reputation-can-makerdao-restore-the-faith",
       "pubDate": "2022-10-03T18:18:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "stablecoin",
       "description": "What’s backing MakerDAO’s decentralized stablecoin DAI? Mostly other coins—and about five years of uninterrupted existence.",
       "currencies": [
@@ -154,8 +46,8 @@
       "title": "Crypto Researcher Reveals The Dangers of Solana as Network Outages Persist",
       "link": "https://zycrypto.com/crypto-researcher-reveals-the-dangers-of-solana-as-network-outages-persist/",
       "pubDate": "2022-10-03T18:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Bons stated that Solana's reoccurring crashes result from bad design. He opined that the proof-of-history (PoH) blockchain isn't...",
       "currencies": [
@@ -168,67 +60,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Checkout this thread by @Balance_Capital explaining in detail how the $USDB Vaults will work and more",
-      "link": "NULL",
-      "pubDate": "2022-10-03T18:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDB"
-      ]
-    },
-    {
-      "title": "RT @gavofyork: @polkadot's Governance v2 is merged into @kusamanetwork: The Polkadot Fellowship will be going live in the near future... ht…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T16:58:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "KSM"
-      ]
-    },
-    {
-      "title": "Gm! Where did @Helium mapping take you this weekend? ️",
-      "link": "NULL",
-      "pubDate": "2022-10-03T15:53:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Restore the virtue of r/bsv! We are asking the #BitcoinSV community to help free the r/bsv subreddit from…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T15:49:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @RunOnFlux: $Flux- $ERG Swapping will begin within the next 48 hours. Keep in mind there will be a significant impact if everyone starts…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T15:47:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
       "title": "Record 150 Billion SHIB Sent by This Anon Wallet, But There's Catch",
       "link": "https://u.today/record-150-billion-shib-sent-by-this-anon-wallet-but-theres-catch",
       "pubDate": "2022-10-03T15:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Nearly $1.7 million worth of Shiba Inu has been sent anonymously, here's where",
       "currencies": [
@@ -244,8 +80,8 @@
       "title": "MKR Moves",
       "link": "https://www.trustnodes.com/2022/10/03/mkr-moves",
       "pubDate": "2022-10-03T15:11:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Trustnodes",
+      "sourceKey": "trustnodes",
       "category": "general",
       "description": "MKR moves, with its price rising. The beginning of the end of the defi bear, or problems still unsolved?",
       "currencies": [
@@ -257,120 +93,11 @@
       }
     },
     {
-      "title": "Check out the new @priv8podcast clip! Host @dereksilva talks with Goncalo Sa, co-founder, @ConsenSysAudits to discu…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T15:07:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "Who could it be? 🤔",
-      "link": "NULL",
-      "pubDate": "2022-10-03T14:49:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "RT @DaniyalAjdadi: Interesting read: Crypto Energy Study Shrugged Off by Agencies, Irking Lawmaker. @EnergyWebx's Proof of Green Solution b…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T14:04:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "Excited to share completion of major updates and optimizations to $Ceek #NFT Marketplace to enhance discovery and…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:42:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "RT @DjedAlliance: The Djed Alliance is partnering with Ergo on the next Ergo Hackathon! We are looking forward to supporting teams working…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:37:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "Good news! Customers can now get $PAXG on @realMatrixport. PAX Gold is real, invesment-grade gold on the #blockchain.",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Bitcoin performed poorly in October amid previous bear markets; More trouble for BTC ahead?",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "While the cryptocurrency market struggles to reclaim the $1 trillion mark it reached in early September, crypto traders and investors... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 3
-      }
-    },
-    {
-      "title": "Bella Protocol Shows Strength, Can Bulls Break A Key Resistance?",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:12:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "HNT"
-      ]
-    },
-    {
-      "title": "HELIUM UPDATE \"We have turned our attention to the nitrogen module, which produces liquid nitrogen to help sepa…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T13:09:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "ARG"
-      ]
-    },
-    {
       "title": "Polkadot, XRP, Cardano among the top 10 crypto assets chosen by banks – BIS study",
       "link": "https://finbold.com/polkadot-xrp-cardano-among-the-top-10-crypto-assets-chosen-by-banks-bis-study/",
       "pubDate": "2022-10-03T12:26:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "Although the exposure to the cryptocurrency market by global banks is still relatively small, these financial institutions are slowly opening... Continue reading",
       "currencies": [
@@ -386,8 +113,8 @@
       "title": "$LINK: Former Google CEO Eric Schmidt Expresses His Admiration for Chainlink",
       "link": "https://www.cryptoglobe.com/latest/2022/10/link-former-google-ceo-eric-schmidt-expresses-his-admiration-for-chainlink/",
       "pubDate": "2022-10-03T12:20:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "In a recent fireside chat, former Google CEO Eric Schmidt explained why he considers Chainlink ($LINK) a “winner”. Schmidt, whom Forbes currently calls the world’s 90th richest person with a net worth of $16.8 billion (as of 3 October 2022), made his comments during a fireside chat with Chainlink Labs Co-Founder and CEO Sergey Nazarov […]",
       "currencies": [
@@ -400,44 +127,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "In his guest piece for @VietNamNetVN, @hunykardia talks about the role of blockchain technology to the 4.0 industr…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T12:19:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "With #BitcoinSV's sustained lead of #blockchain transaction propagation and negatable fees, it's no wonder that top…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T12:10:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "#AladdinWallet offers a number of impressive features that make it an ideal cryptocurrency wallet even for beginner…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T11:12:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Bank for International Settlements: Global banks’ total exposure to crypto is 0.01%",
       "link": "https://finbold.com/bank-for-international-settlements-global-banks-total-exposure-to-crypto-is-0-01/",
       "pubDate": "2022-10-03T10:32:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "Despite the growing adoption of cryptocurrencies like Bitcoin (BTC) and Ethereum (ETH) around the world, the total exposure to digital... Continue reading",
       "currencies": [
@@ -451,46 +145,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "#NFTs are all the rage, but have you ever considered designing your own? With @anytaskofficial you can hire incredi…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @OVioHQ: 2/ Great work by @enzymefinance for releasing the Fee Splitter feature! Vault managers can now split fees among several wallet…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:51:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "Share 200 USDT! 🪅 Complete the interactive tasks to share the 200 USDD prize pool equally! Join now …",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:50:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
       "title": "Ethereum lost almost 20% of its market cap since the Merge upgrade",
       "link": "https://finbold.com/ethereum-lost-almost-20-of-its-market-cap-since-the-merge-upgrade/",
       "pubDate": "2022-10-03T09:28:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "The historic Merge upgrade resulted in anticipation regarding Ethereum’s (ETH) prospects for the future with the possibility of attracting new... Continue reading",
       "currencies": [
@@ -503,61 +162,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin mining power reaches all-time high in spite of macroeconomic concerns",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:28:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Despite the total cryptocurrency market capitalization remaining below the coveted $1 trillion mark it had surpassed in early September and... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 8,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "#USDD Bonanza is coming with @Poloniex! Get your hands on 5 HOT bonuses! 0 fees trading in all $USDD pairs …",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:26:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "I just published ScarpaCoin Business Plan",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:09:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
-      "title": "LAST DAY TO VOTE! vlCVX voters, don't forget to vote for #USDD's incentive pools and get a chance to share a to…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T09:08:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
       "title": "Cardano’s Hoskinson Challenges IOTA’s Co-Founder to a Debate On ADA, MIOTA Milestones",
       "link": "https://zycrypto.com/cardanos-hoskinson-challenges-iotas-co-founder-to-a-debate-on-ada-miota-milestones/",
       "pubDate": "2022-10-03T08:50:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "The tone of communication between the two founders has mostly been cordial and based on mutual respect in the past. Although, there have also been heated moments between the vibrant communities.",
       "currencies": [
@@ -574,8 +183,8 @@
       "title": "Coinbase Says Funds Are Safe After 6-hour Bank Outage",
       "link": "https://blockworks.co/coinbase-says-funds-are-safe-after-6-hour-bank-outage/",
       "pubDate": "2022-10-03T08:37:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "regulation",
       "description": "A glitch with the Automated Clearing House blocked Coinbase users from withdrawals and payments via US bank accounts for several hours; Solana was also down",
       "currencies": [
@@ -588,58 +197,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "#USDD Bonanza Coming! 5 Bonuses up for Grabs Trade with 0 fees in all USDD pairs Hold USDD: Chance to be a SU…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T08:26:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "#Ergo miners have passed EIP-37 and the hard fork has taken place at block height 844,673",
-      "link": "NULL",
-      "pubDate": "2022-10-03T07:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "#Ergo miners have passed EIP-37 and the hard fork has taken at place block height 844,673",
-      "link": "NULL",
-      "pubDate": "2022-10-03T06:50:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "#Klaytn projects are now supported on @hypedotday, a platform where you can build a high-quality community for your…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T06:32:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Cardano’s performance in Q4 may have a September connection – Here’s how",
       "link": "https://ambcrypto.com/cardanos-performance-in-q4-may-have-a-september-connection-heres-how/",
       "pubDate": "2022-10-03T06:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Cardano’s [ADA] show of strength per its development activity seemed to have stood at crossroads due to some contrasting views. According to Santiment, development activity on the ADA chain had decreased significantly since 28 September after reaching peaks. However, Input Output Global (IOG), the development team behind the Vasil upgrade, had opposing opinions. In the […]",
       "currencies": [
@@ -652,63 +214,11 @@
       }
     },
     {
-      "title": "Due to recent signatory authorization incidents in DeFi, Tokenlon has also received a lot of questions from the com…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T06:28:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LON",
-        "imBTC"
-      ]
-    },
-    {
-      "title": "Robert Kiyosaki calls Bitcoin a ‘buying opportunity’ as US dollar surges",
-      "link": "NULL",
-      "pubDate": "2022-10-03T05:27:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The best-selling author of Rich Dad Poor Dad has tipped Bitcoin and two other commodities as buying opportunities, noting a U.S. dollar crash could occur by January.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 27,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "#Ergonauts, all node operators need to update to version 4.0.100 or later.",
-      "link": "NULL",
-      "pubDate": "2022-10-03T04:35:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "We're taking yet another step towards our vision of an open #metaverse Read more to find out about our partnersh…",
-      "link": "NULL",
-      "pubDate": "2022-10-03T03:37:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Bitcoin Price and Ethereum Bears Keep Pushing, LUNC Could Rally Again",
       "link": "https://cryptonews.com/news/bitcoin-price-ethereum-bears-keep-pushing-lunc-could-rally-again.htm",
       "pubDate": "2022-10-03T03:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "Bitcoin price failed to stay above the $19,500 level. BTC is currently (03:10 UTC) consolidating above the $19,200 level. A downside break and close below $19,000 might start another drop to $18,500 or even $18,250. Similarly, most major altcoins are showing a few bearish signs. ETH is consolidating below the $1,320 resistance zone. XRP declined below the $0.455 and $0.450 support levels....",
       "currencies": [
@@ -724,17 +234,6 @@
         "negative": 2
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "NFTs that tell stories.",
-      "link": "NULL",
-      "pubDate": "2022-10-03T03:22:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LOOKS"
-      ]
     }
   ]
 }

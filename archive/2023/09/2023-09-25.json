@@ -1,102 +1,15 @@
 {
   "date": "2023-09-25",
-  "fetchedAt": "2026-02-05T07:45:52.134Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.535Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "How-To Guide: Running an Ecash Mint",
-      "link": "NULL",
-      "pubDate": "2023-09-25T23:14:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Aave back in top two as DeFi TVL recovers",
-      "link": "NULL",
-      "pubDate": "2023-09-25T22:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DAI",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Huobi Hacked For $8 Million Worth Of ETH, Offers Hacker 5% Bounty",
-      "link": "NULL",
-      "pubDate": "2023-09-25T22:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "TRX",
-        "HT"
-      ]
-    },
-    {
-      "title": "Stellar finds recovery elusive after hitting key demand zone",
-      "link": "NULL",
-      "pubDate": "2023-09-25T21:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Terra Classic Price Prediction As Renewed Recovery Targets $0.00007",
-      "link": "NULL",
-      "pubDate": "2023-09-25T21:10:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Crypto’s Six-Week Bleed Out: XRP And Solana Defy The Outflow Downtrend",
-      "link": "NULL",
-      "pubDate": "2023-09-25T21:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "SOL",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Curve Finance whales spark volume surge, bullish momentum",
-      "link": "NULL",
-      "pubDate": "2023-09-25T20:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
     {
       "title": "SHIB Army Gets A Load Of $0.001 Price Even As Shiba Inu Whales Continue to Buy Up SHIB Heavily",
       "link": "https://zycrypto.com/shib-army-gets-a-load-of-0-001-price-even-as-shiba-inu-whales-continue-to-buy-up-shib-heavily/",
       "pubDate": "2023-09-25T20:18:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Shiba Inu (SHIB) has found itself in a bearish consolidation phase over the past few weeks, causing concern among investors.",
       "currencies": [
@@ -109,44 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SEC raises concerns over Coinbase in objection to Celsius restructuring plan",
-      "link": "NULL",
-      "pubDate": "2023-09-25T18:20:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Critical Warning from Cryptocurrency Sleuth: “Stay Away From Altcoin Projects Working With This Market Maker”",
-      "link": "NULL",
-      "pubDate": "2023-09-25T18:16:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Huobi Global suffers $8 million hack",
-      "link": "NULL",
-      "pubDate": "2023-09-25T17:49:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
       "title": "Cardano Sees Spike In Development Activity, Can The Price Of ADA Follow?",
       "link": "https://www.newsbtc.com/news/cardano/cardano-sees-spike-in-development-activity-can-the-price-of-ada-follow/",
       "pubDate": "2023-09-25T17:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano (ADA) has been experiencing a persistent downside trend since the start of 2023; the selling pressure has increased in the past week. However, network development continues to grow and could hint at a reversal for the cryptocurrency. Related Reading: Is Cardano (ADA) The Worst Investment Of 2023? Here’s What The Data Says Cardano (ADA) trades at $0.24 with sideways movement on its...",
       "currencies": [
@@ -159,66 +39,11 @@
       }
     },
     {
-      "title": "Huobi’s HTX Exchange Becomes Victim of $8 Million Hack Days After Controversial Rebranding",
-      "link": "NULL",
-      "pubDate": "2023-09-25T16:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Price analysis 9/25: SPX, DXY, BTC, ETH, BNB, XRP, ADA, DOGE, TON, SOL",
-      "link": "NULL",
-      "pubDate": "2023-09-25T16:21:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "TON"
-      ]
-    },
-    {
-      "title": "Japan’s Largest Bank Taps Binance to Issue Yen-Backed Stablecoins",
-      "link": "NULL",
-      "pubDate": "2023-09-25T16:01:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "BUSD",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Justin Sun says HTX hacked for 5,000 ETH but will cover losses",
-      "link": "NULL",
-      "pubDate": "2023-09-25T14:57:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
       "title": "ChatGPT analyzes XRP price as Ripple v. SEC set post BTC halving",
       "link": "https://finbold.com/chatgpt-analyzes-xrp-price-as-ripple-v-sec-set-post-btc-halving/",
       "pubDate": "2023-09-25T14:52:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Ripple and the United States Securities and Exchange Commission (SEC) are expected to engage in additional courtroom battles during the second quarter … Continued",
       "currencies": [
@@ -232,39 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Huobi Global hacked for $7.9M: Report",
-      "link": "NULL",
-      "pubDate": "2023-09-25T14:48:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Crypto Exchange Huobi Hacked for $7.9 Million",
-      "link": "NULL",
-      "pubDate": "2023-09-25T14:26:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "HT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "JUST IN: 5,000 Ethereum Allegedly Stolen from Huobi's Hot Wallets!",
       "link": "https://en.bitcoinsistemi.com/just-in-5000-ethereum-allegedly-stolen-from-huobis-hot-wallets/",
       "pubDate": "2023-09-25T13:59:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "Cyvers Alerts claimed that one of the Huobi exchange's hot wallets was hacked and 5,000 Ethereum (ETH) was stolen. Continue Reading: JUST IN: 5,000 Ethereum Allegedly Stolen from Huobi's Hot Wallets!",
       "currencies": [
@@ -278,68 +75,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Neo News: Week in Review – September 18 – September 24",
-      "link": "NULL",
-      "pubDate": "2023-09-25T13:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "RUNE loses momentum after strong rally",
-      "link": "NULL",
-      "pubDate": "2023-09-25T13:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Bitcoin has the Largest Asset Value at Lazarus Group",
-      "link": "NULL",
-      "pubDate": "2023-09-25T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Weekend Gainers: These 3 Altcoins Outpaced Market",
-      "link": "NULL",
-      "pubDate": "2023-09-25T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "CRV"
-      ]
-    },
-    {
-      "title": "CRV Price Skyrockets and Curve's Michael Egorov Responds With $12 Million Masterstroke",
-      "link": "NULL",
-      "pubDate": "2023-09-25T12:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
       "title": "Why is the crypto market down today?",
       "link": "https://finbold.com/why-is-the-crypto-market-down-today/",
       "pubDate": "2023-09-25T12:01:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Although the beginning of last week triggered a strong recovery for the majority of assets in the cryptocurrency market, this … Continued",
       "currencies": [
@@ -352,93 +92,11 @@
       }
     },
     {
-      "title": "Terra Classic Ceases USTC Minting as SEC Investigates Former CEO Do Kwon",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:59:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Analyst Set's Bullish Outcomes From Synthetix (SNX), Render (RNDR) And Shiba Budz (BUDZ), BUDZ on Track to 10X first",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:50:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Crypto sees outflows for 6th consecutive week, XRP and SOL gain investor confidence",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:50:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: CRV, APT, AXS, and CFX Surge in Value",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "TechCrunch founder Arrington steps down from new Celsius board over constitution disagreement",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAVA"
-      ]
-    },
-    {
-      "title": "Tyrion Set to Decentralize the $377B Digital Advertising Industry",
-      "link": "NULL",
-      "pubDate": "2023-09-25T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "ETH’s Inevitable Downfall Could Lead To XRP’s Rise: Analyst",
-      "link": "NULL",
-      "pubDate": "2023-09-25T10:49:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
       "title": "Stock market to crash? Bankruptcy filings soar to ‘dangerous levels’",
       "link": "https://finbold.com/stock-market-to-crash-bankruptcy-filings-soar-to-dangerous-levels/",
       "pubDate": "2023-09-25T10:48:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Amid continuous warnings from finance experts and prominent investors alike on the bleak state of the economy in the United … Continued",
       "currencies": [
@@ -450,162 +108,11 @@
       }
     },
     {
-      "title": "Cardano (ADA) Claims Top Spot in Crypto Development Activity",
-      "link": "NULL",
-      "pubDate": "2023-09-25T10:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "DOT",
-        "LINK",
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Will Dogecoin Bounce Back To $0.07? Here’s What To Watch For",
-      "link": "NULL",
-      "pubDate": "2023-09-25T10:30:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "DOGE",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ether fall with Toncoin leading losses in top 10 cryptos",
-      "link": "NULL",
-      "pubDate": "2023-09-25T10:27:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "TON"
-      ]
-    },
-    {
-      "title": "Is Terra Classic Planning For USTC To Be Pegged To The Dollar Again?",
-      "link": "NULL",
-      "pubDate": "2023-09-25T08:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "FLOW",
-        "IMX",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bankruptcies on the Rise: Temporary Adjustment or Ominous Sign?",
-      "link": "NULL",
-      "pubDate": "2023-09-25T07:58:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MANA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Upbit Stems Flow Of Fake APT Token, Resumes Services",
-      "link": "NULL",
-      "pubDate": "2023-09-25T06:54:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Stellar Lumen (XLM) Price Turns Red As Bears Aim $0.10",
-      "link": "NULL",
-      "pubDate": "2023-09-25T05:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Quirky Soul College announces the “Hollow World Story”: An interactive NFT storytelling venture",
-      "link": "NULL",
-      "pubDate": "2023-09-25T02:42:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Polkadot makes a new attempt to garner attention – Will it succeed?",
-      "link": "NULL",
-      "pubDate": "2023-09-25T02:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ether drop; top cryptos retreat with Toncoin leading losers",
-      "link": "NULL",
-      "pubDate": "2023-09-25T01:40:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TON"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 24 Sep: The global crypto market traded in the red",
-      "link": "NULL",
-      "pubDate": "2023-09-25T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LTC",
-        "LINK",
-        "CRV",
-        "TON"
-      ]
-    },
-    {
       "title": "Chainlink (LINK) and Three Low-Cap Altcoins Could Witness More Rallies Amid Strong Network Activity: Santiment",
       "link": "https://dailyhodl.com/2023/09/24/chainlink-link-and-three-low-cap-altcoins-could-witness-more-rallies-amid-strong-network-activity-santiment/",
       "pubDate": "2023-09-25T00:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "A leading analytics firm says that Chainlink (LINK) and three additional altcoins may continue to see more surges amid bullish on-chain data readings. Looking at Chainlink, Santiment says the decentralized oracle network is rallying on the back of increased unique address activity. “The amount of unique LINK addresses interacting on the network hit 3,964 yesterday, […]",
       "currencies": [

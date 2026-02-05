@@ -1,15 +1,15 @@
 {
   "date": "2021-04-13",
-  "fetchedAt": "2026-02-05T07:45:51.881Z",
-  "articleCount": 59,
+  "fetchedAt": "2026-02-05T07:48:35.486Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
     {
       "title": "Ripple CTO: It's Time to 'Seriously Consider' Selling Some Crypto",
       "link": "https://decrypt.co/66427/ripple-cto-time-seriously-consider-selling-some-crypto",
       "pubDate": "2021-04-13T22:37:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Meanwhile, Ripple’s XRP hit a year-to-date high of $1.81.",
       "currencies": [
@@ -22,45 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "When you try other platforms",
-      "link": "NULL",
-      "pubDate": "2021-04-13T22:05:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
-      "title": "RT @CENNZnet: We've given our documentation a bit of a refresh 🧹Check out our new Wiki here",
-      "link": "NULL",
-      "pubDate": "2021-04-13T21:56:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "Our whole ecosystem in one image!",
-      "link": "NULL",
-      "pubDate": "2021-04-13T21:27:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "XRP Above $2? Why DeFi Integration Could Be Game Changer",
       "link": "https://www.newsbtc.com/news/xrp-above-2-why-defi-integration-could-be-game-changer/",
       "pubDate": "2021-04-13T20:03:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "defi",
       "description": "With the biggest gains in the crypto top 10 by market cap, XRP trades at $1.88 recording a 35.9% rally over the past day. In the weekly and monthly chart, XRP is up 107% and 307% respectively. Operator Altstreet Bets has shared the chart below to indicate XRP’s price could go to $3 “without resistance”. […]",
       "currencies": [
@@ -76,8 +42,8 @@
       "title": "Coinbase Listing Sends Binance Coin (BNB), Exchange Tokens Soaring",
       "link": "https://www.newsbtc.com/news/binance-coin/coinbase-listing-binance-coin/",
       "pubDate": "2021-04-13T20:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "exchange",
       "description": "There’s less than 24 hours standing in between now and the time San Francisco-based cryptocurrency exchange Coinbase is listed publicly for the first time. The shot heard ’round Wall Street has caused exchange tokens in particular to surge. One of the biggest benefactors has been competitor platform utility token, Binance Coin, along with other similar […]",
       "currencies": [
@@ -94,8 +60,8 @@
       "title": "Cardano, Ontology, BTT, VeChain Price Analysis: 13 April",
       "link": "https://ambcrypto.com/cardano-ontology-btt-vechain-price-analysis-13-april/",
       "pubDate": "2021-04-13T19:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Cardano saw a breakout from a symmetrical triangle, but bullish conditions were not enough for a move above $1.45. Ontology needed to maintain its $1.5-support level to avoid an extended sell-off, while BitTorrent remained within a descending triangle. Finally, VeChain can be projected to reach $0.150 if the price breaks north of its descending channel. […]",
       "currencies": [
@@ -114,8 +80,8 @@
       "title": "XRP price soars to new highs after recent legal victories and relisting rumors",
       "link": "https://cointelegraph.com/news/xrp-price-soars-to-new-highs-after-recent-legal-victories-and-relisting-rumors",
       "pubDate": "2021-04-13T19:25:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "XRP price rallied more than 30% as retail traders rotate into \"cheaper\" altcoins and investor sentiment turns positive after Ripple's recent legal victories against the SEC.",
       "currencies": [
@@ -129,93 +95,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are constantly improving ️",
-      "link": "NULL",
-      "pubDate": "2021-04-13T19:23:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
-      "title": "what will happen when dent reach total suply?",
-      "link": "NULL",
-      "pubDate": "2021-04-13T18:58:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "Why Purpose-Built, Niche Blockchains Are Set To Win in the Long Run",
-      "link": "NULL",
-      "pubDate": "2021-04-13T18:09:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: You know how @maidsafe aimed to have v2 ready to go in a few days? Well, the future is now! The Fleming v2 Testnet is…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T17:11:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "DENT to 6X",
-      "link": "NULL",
-      "pubDate": "2021-04-13T17:02:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "We’ve proved the ability to run a secure &amp; stable network with priority @safenetworktech features: community nodes…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T16:49:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "PowWow 14/50: Bitcoin rising; Scala Centre Partnership; NFts; CHSB Yield Program & team updates",
-      "link": "NULL",
-      "pubDate": "2021-04-13T16:38:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Polkadot and Cosmos connect as Plasm and Secret Network release bridge MVP",
       "link": "https://cointelegraph.com/news/polkadot-and-cosmos-connect-as-plasm-and-secret-network-release-bridge-mvp",
       "pubDate": "2021-04-13T16:38:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "The two projects seek to become the forerunners of Cosmos and Polkadot interoperability.",
       "currencies": [
@@ -232,8 +116,8 @@
       "title": "Here’s what you might gain with ADA, IOTA, ICX, and BNB in your portfolio",
       "link": "https://ambcrypto.com/heres-what-you-might-gain-with-ada-iota-icx-and-bnb-in-your-portfolio/",
       "pubDate": "2021-04-13T16:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Several altcoins in the top-50 have offered double-digit gains to retail traders over the past month. In the top-10, Cardano offered gains worth 694%, with the alt’s price climbing from $0.18 at the beginning of 2021 to $1.43 in the last week of February 2021. In fact, the price had remained largely below $0.55 throughout […]",
       "currencies": [
@@ -250,8 +134,8 @@
       "title": "XRP ETP to Be Listed on Europe's Third-Biggest Stock Exchange",
       "link": "https://u.today/xrp-etp-to-be-listed-on-europes-third-biggest-stock-exchange",
       "pubDate": "2021-04-13T15:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The SIX Swiss exchange will list an exchange-traded product backed by the controversial XRP cryptocurrency",
       "currencies": [
@@ -264,34 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "TOMO sent to KuCoin did not arrive",
-      "link": "NULL",
-      "pubDate": "2021-04-13T15:21:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "RT @OVRtheReality: inSure DeFi is partnering with OVR to provide insurance for their AR &amp; VR platforms. by @InsureToken",
-      "link": "NULL",
-      "pubDate": "2021-04-13T15:19:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AR",
-        "SURE"
-      ]
-    },
-    {
       "title": "Ripple Execs Move To Completely Throw Out SEC Suit – XRP Hits Highest Point In Three Years",
       "link": "https://zycrypto.com/ripple-execs-move-to-completely-throw-out-sec-suit-xrp-hits-highest-point-in-three-years/",
       "pubDate": "2021-04-13T15:18:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "In an abrupt turn of events, top Ripple executives have asked that the SEC case with all charges be completely dropped. As a result, Ripple CEO Brad Garlinghouse and Chris Larsen have filed separate motions to dismiss the SEC lawsuit. In an unprecedented move, the organization identified two high-profile executives as defendants in its lawsuit […]",
       "currencies": [
@@ -304,45 +165,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BNBSwap: .@insuretoken is a Decentralized Insurance Ecosystem, trusted by thousands of community members to protect their #crypto portf…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T15:18:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "Why Bithumb and other exchanges stopped BCHA deposit/withdrawal? and when it will resume?",
-      "link": "NULL",
-      "pubDate": "2021-04-13T15:06:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Almost 4m TVL now on",
-      "link": "NULL",
-      "pubDate": "2021-04-13T15:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "XRP Targets $3 While On-Chain Metrics Suggest Profit-Taking Spike",
       "link": "https://cryptobriefing.com/xrp-targets-3-while-on-chain-metrics-forecast-profit-taking-spike/",
       "pubDate": "2021-04-13T14:21:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "XRP has enjoyed an impressive rally over the past week, hitting a three-year high. Although the technicals point to further gains on the horizon, a particular on-chain metric forecasts an incoming spike in profit-taking. XRP Targets New All-Time Highs As trading veteran Peter Brandt anticipated, XRP is going “boatloads” higher. The cross-border remittances token has...",
       "currencies": [
@@ -359,8 +186,8 @@
       "title": "Orion Protocol (ORN) Integrates Polkadot After Cardano (ADA), Ethereum (ETH)",
       "link": "https://u.today/orion-protocol-orn-integrates-polkadot-after-cardano-ada-ethereum-eth",
       "pubDate": "2021-04-13T14:21:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Orion Protocol (ORN) adds one more blockchain to its Orion Terminal mechanisms. It has announced an integration with Polkadot (DOT)",
       "currencies": [
@@ -375,44 +202,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Do you love ARK? Then grab some fresh gear at Shop.ARK.io! Check out 5 of my favorite items in this video.",
-      "link": "NULL",
-      "pubDate": "2021-04-13T13:51:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Get Y’a Moon  Boots Ready , Fractal Playing Out 🤑 #ATH  #DiamondHands",
-      "link": "NULL",
-      "pubDate": "2021-04-13T13:28:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "ICYMI, @OKEx will be supporting the $SPND to $STRK migration on Thursday, April 16. To find out more detailed infor…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T13:26:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
       "title": "Orion Protocol To Implement Polkadot Into Orion Terminal, Following Integrations With Cardano, Ethereum",
       "link": "https://zycrypto.com/orion-protocol-to-implement-polkadot-into-orion-terminal-following-integrations-with-cardano-ethereum/",
       "pubDate": "2021-04-13T13:14:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "The Orion Protocol has been on an integration run of late, during which time it has integrated Cardano, Fantom, BSC, Huobi’s ECO Chain, Avalanche, Ethereum, and Elrond into its system. Now, the network has once again announced an integration, this time of Polkadot. This integration was done via Moonbeam and the UI/UX needed for integration […]",
       "currencies": [
@@ -431,8 +225,8 @@
       "title": "USDT Issued on Tron is About to Surpass that Issued on Ethereum",
       "link": "https://en.ethereumworldnews.com/usdt-issued-on-tron-is-about-to-surpass-that-issued-on-ethereum/",
       "pubDate": "2021-04-13T12:55:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "ethereum",
       "description": "The amount of Tether (USDT) issued on Tron is slowly catching up to that issued on Ethereum $23.416 Billion ERC20-USDT has been issued compared to $21.994 Billion TRC20-USDT Tron issued USDT is gaining popularity due to its low fees and its use in the Tron ecosystem The value of TRX has benefited from the increased activity on the network The amount of Tether (USDT) issued on Tron (TRX) is about...",
       "currencies": [
@@ -450,8 +244,8 @@
       "title": "With Ripple Being Out In Front, Will Grayscale Regret Liquidating Its XRP Holdings?",
       "link": "https://zycrypto.com/with-ripple-being-out-in-front-will-grayscale-regret-liquidating-its-xrp-holdings/",
       "pubDate": "2021-04-13T12:26:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Ripple has been in the news a lot recently, and for valid reasons. The company and its executives have been through some tough times since the SEC filed a suit against them in December last year. The case which is still in court has turned many of Ripple’s former allies into non-allies, to say the […]",
       "currencies": [
@@ -464,33 +258,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "My best invest",
-      "link": "NULL",
-      "pubDate": "2021-04-13T12:09:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "I sold",
-      "link": "NULL",
-      "pubDate": "2021-04-13T11:47:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Ripple Emerges Victorious in Case Against Tetragon",
       "link": "https://beincrypto.com/ripple-victorious-case-against-tetragon/",
       "pubDate": "2021-04-13T11:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Attorney Jeremy Hogan retweeted defense lawyer James K. Filan on Monday evening. In the original tweet, Filan attached a copy of the Order and Final Judgment from the Delaware Chancery Court. The document revealed that the court had ruled in Ripple Labs’ favor, against the plaintiff, Tetragon Financial Group. Hogan, a partner at Hogan & … Continued",
       "currencies": [
@@ -503,44 +275,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @gregoryklumov: market is reacting positively ;) $BTC $ETH #ATH",
-      "link": "NULL",
-      "pubDate": "2021-04-13T11:41:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "What things do you think Swissborg could do better?",
-      "link": "NULL",
-      "pubDate": "2021-04-13T11:31:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "For everyone bitching around and downvoting people who say the bought more. In 2018 we had 3 major corrections. The last coupe days was just the first real one. In my opinion there is a lot of upside to go.",
-      "link": "NULL",
-      "pubDate": "2021-04-13T11:31:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Grayscale Adds $1.6 Billion in Bitcoin, XLM, MANA, BAT, LTC Over Weekend",
       "link": "https://u.today/grayscale-adds-16-billion-in-bitcoin-xlm-mana-bat-ltc-over-weekend",
       "pubDate": "2021-04-13T11:23:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Over the weekend and in the past month in general, Grayscale has increased its holdings of BTC and other cryptocurrencies, including recently launched altcoin trusts",
       "currencies": [
@@ -557,8 +296,8 @@
       "title": "Ripple executives file to dismiss SEC lawsuit as XRP prices soar",
       "link": "https://forkast.news/xrp-price-ripple-executives-motion-to-dismiss-sec-lawsuit/?utm_source=rss&utm_medium=rss&utm_campaign=xrp-price-ripple-executives-motion-to-dismiss-sec-lawsuit",
       "pubDate": "2021-04-13T11:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "trading",
       "description": "Tailwind of legal wins propel XRP’s market cap past US$70 billion as Ripple CEO and chairman ask court to drop SEC’s charges against them.",
       "currencies": [
@@ -574,8 +313,8 @@
       "title": "The Simplest Bitcoin Analysis as BTC/USD Refreshes Milestone High",
       "link": "https://bitcoinist.com/the-simplest-bitcoin-analysis-as-btc-usd-refreshes-milestone-high/?utm_source=rss&utm_medium=rss&utm_campaign=the-simplest-bitcoin-analysis-as-btc-usd-refreshes-milestone-high",
       "pubDate": "2021-04-13T09:28:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "A quick look into the world’s leading cryptocurrency Bitcoin and what’s ahead for it as it achieves another lifetime high. And So It Goes, And So It Goes In retrospect, the BTC/USD exchange rate reached $62,750 ahead of the European opening bell on Tuesday. Some traders really showed their conviction for an extended bullish bias in the Bitcoin market. The previous top, near $61,778, now looks...",
       "currencies": [
@@ -591,8 +330,8 @@
       "title": "XRP Use Cases To Explode With DeFi Crypto Integration, Says Wanchain CEO",
       "link": "https://dailyhodl.com/2021/04/13/xrp-use-cases-explode-with-defi-crypto-integration/",
       "pubDate": "2021-04-13T09:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "defi",
       "description": "XRP could soon witness a burst in new use cases in the growing decentralized finance (DeFi) space. Wanchain’s (WAN) CEO and founder Jack Lu says XRP tokens will soon be available for DeFi integration through the blockchain interoperability platform. “I’m so happy to announce that Wanchain’s decentralized cross-chain bridges for XRP are about to go […]",
       "currencies": [
@@ -605,33 +344,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Glitzkoin GTN crypto, trading since 2018. LaToken starts trade for GTN - 14 Apr 2021 12pm EST. The first multifacet…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T09:04:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "Congrats #Bitcoin!",
-      "link": "NULL",
-      "pubDate": "2021-04-13T08:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
       "title": "131 Million XRP Moved by Coinbase and Huobi, While XRP Surges 23%",
       "link": "https://u.today/131-million-xrp-moved-by-coinbase-and-huobi-while-xrp-surges-23",
       "pubDate": "2021-04-13T08:03:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Several major crypto exchanges have shifted 131.2 million XRP while the coin has surged over 23 percent in the past twenty-four hours",
       "currencies": [
@@ -644,22 +361,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Which wallets support BCHA currently?",
-      "link": "NULL",
-      "pubDate": "2021-04-13T07:32:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "$XRP Joins World of DeFi Thanks to Wanchain’s Cross-Chain Bridges, XRP Breaks $1.61",
       "link": "https://www.cryptoglobe.com/latest/2021/04/xrp-joins-world-of-defi-thanks-to-wanchains-cross-chain-bridges-xrp-breaks-1-61/",
       "pubDate": "2021-04-13T07:09:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "defi",
       "description": "On Monday (April 12), the Wanchain team announced that now “XRP token holders can put their XRP to work and engage with the world’s many DeFi applications.” Wanchain is a blockchain interoperability platform. Since “Wan” means “ten thousand” in Chinese, the brand name “Wanchain” translates to “ten thousand blockchains”. This makes sense when you consider […]",
       "currencies": [
@@ -676,8 +382,8 @@
       "title": "XRP lawsuit: Ripple execs file motions to dismiss citing ‘failure to allege recklessness’",
       "link": "https://ambcrypto.com/xrp-lawsuit-ripple-execs-file-motion-to-dismiss-citing-failure-to-allege-recklessness/",
       "pubDate": "2021-04-13T07:05:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "A few days ago, Judge Sarah Netburn ruled that Ripple execs Brad Garlinghouse and Chris Larsen’s personal financial records are mostly irrelevant and not proportional to the needs of the case. On the back of the same, Garlinghouse and Larsen have now filed twin motions to dismiss the SEC’s lawsuit. In fact, the aforementioned motions […]",
       "currencies": [
@@ -690,121 +396,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @sylo: Have you had the chance to play with the Crypto Tracker yet? Read the #releasenotes from this build here &gt;",
-      "link": "NULL",
-      "pubDate": "2021-04-13T06:12:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "Interview With Fabian Vogelsteller May 1st, 2021!",
-      "link": "NULL",
-      "pubDate": "2021-04-13T05:45:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Our 2D Artist started on the #nftcollector Cards for the game, which will be usable to mint the real Mogwai #NFTs …",
-      "link": "NULL",
-      "pubDate": "2021-04-13T05:13:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
-      "title": "RT @elihampton_: @AugurProject is still one of the most fascinating projects to me. Unlimited bets on the future. Unlimited rewards for p…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T04:28:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "A #NFT themed MeetUp in Chengdu will be held by Cocos-BCX,#BSC,and Blockbeats. ⁦@BinanceChain⁩ ⁦@BlockBeatsChina⁩",
-      "link": "NULL",
-      "pubDate": "2021-04-13T04:18:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "#XWC Attended the Second Blockchain Expo TOKYO (Spring)",
-      "link": "NULL",
-      "pubDate": "2021-04-13T03:35:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XWC"
-      ]
-    },
-    {
-      "title": "Cocos-BCX has participated in the #DeFi Innovation section of BlockChain Innovation Season hosted…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T03:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "🤔Any feedbacks after we just burnt 9 billion $HYN?",
-      "link": "NULL",
-      "pubDate": "2021-04-13T02:15:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Check out this great article on the latest &amp; greatest @safenetworktech news! Just as we’re super excited about the…",
-      "link": "NULL",
-      "pubDate": "2021-04-13T00:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Just hopped in!",
-      "link": "NULL",
-      "pubDate": "2021-04-13T00:25:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "Enjin 2.0 is under development coming hot boys!!!",
       "link": "https://www.reddit.com/r/EnjinCoin/comments/mpo5mt/enjin_20_is_under_development_coming_hot_boys/",
       "pubDate": "2021-04-13T00:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "ENJ"

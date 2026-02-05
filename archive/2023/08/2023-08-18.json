@@ -1,15 +1,15 @@
 {
   "date": "2023-08-18",
-  "fetchedAt": "2026-02-05T07:45:52.142Z",
-  "articleCount": 53,
+  "fetchedAt": "2026-02-05T07:48:35.538Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "SEC Cannot Call ETH Security and Approve ETH Futures ETF: Analyst",
       "link": "https://coinedition.com/sec-cannot-call-eth-security-and-approve-eth-futures-etf-analyst/",
       "pubDate": "2023-08-18T23:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "ethereum",
       "description": "Adam Cochran, a partner at Cinneamhain Ventures, has stated in a recent Twitter post that the SEC cannot simultaneously argue that ETH is a new intrinsic “crypto asset security” that is unregistered, and approve an ETH Futures ETF. â€œYou couldn’t have a futures ETF made out of an unregistered security,â€ argued the crypto analyst. The […]",
       "currencies": [
@@ -21,44 +21,11 @@
       }
     },
     {
-      "title": "Andrew Lawrence – Censo – The Smart Economy Podcast: Episode 44",
-      "link": "NULL",
-      "pubDate": "2023-08-18T23:09:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Neo opens registration for APAC Hackathon Seoul GAS Station on Sep. 1 and 2",
-      "link": "NULL",
-      "pubDate": "2023-08-18T22:47:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "US Judge Grants SEC’s Motion to Interrogate Terra Labs Co-founder Daniel Shin",
-      "link": "NULL",
-      "pubDate": "2023-08-18T21:32:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Shiba Inu’s Lead Dev Unveils Ambitious Vision Amid Shibarium Debut — What To Expect From SHIB",
       "link": "https://zycrypto.com/shiba-inus-lead-dev-unveils-ambitious-vision-amid-shibarium-debut-what-to-expect-from-shib/",
       "pubDate": "2023-08-18T21:03:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "At the 5th Blockchain Futurist Conference held in Toronto, Shytoshi Kusama, the pseudonymous lead developer of the Shiba Ecosystem, delivered a rousing keynote speech titled...",
       "currencies": [
@@ -71,34 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Algorand Faces Tough Times, Records New All-Time Low As Crypto Market Plunges",
-      "link": "NULL",
-      "pubDate": "2023-08-18T21:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "These 3 Altcoins Hit All-Time Lows Today",
-      "link": "NULL",
-      "pubDate": "2023-08-18T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE",
-        "ICP"
-      ]
-    },
-    {
       "title": "DailyCoin Cardano Regular: Bears Dominate ADA, Voltaire Era, Cross-Chain Bridges",
       "link": "https://dailycoin.com/dailycoin-cardano-regular-bears-dominate-ada-voltaire-era-cross-chain-bridges/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-18T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "As ADA struggles to find footing, its persistent downtrend fuels concerns among investors about their holdings.",
       "currencies": [
@@ -111,62 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Cryptocurrency Monero Down More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-18T19:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Huobi Announces Strategic Partnership With TradingView",
-      "link": "NULL",
-      "pubDate": "2023-08-18T18:35:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Top 10 Stablecoins Witness Massive Supply Reductions, Yet Dominate 61% of Global Trade Volume",
-      "link": "NULL",
-      "pubDate": "2023-08-18T18:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "DAI",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "US Court Greenlights SEC’s Request To Probe Terra Co-Founder In Korea",
-      "link": "NULL",
-      "pubDate": "2023-08-18T16:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Cardano Crashes Into Bearish Territory, ADA Taps $0.24",
       "link": "https://dailycoin.com/cardano-crashes-into-bearish-territory-ada-taps-0-24/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-18T16:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "With ADA firmly landing into the Bears’ territory, will Cardano Bulls stage a recovery?",
       "currencies": [
@@ -178,92 +71,11 @@
       }
     },
     {
-      "title": "Investor Stuck In The Last Drop Lost $55M In Ethereum!",
-      "link": "NULL",
-      "pubDate": "2023-08-18T16:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Top 5 Altcoin Gainers This Week: SEI Leads With 650% Price Increase",
-      "link": "NULL",
-      "pubDate": "2023-08-18T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "ApeCoin's Dramatic Plunge: New APE Bottom in Crypto Meltdown",
-      "link": "NULL",
-      "pubDate": "2023-08-18T15:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "OKB Profitable Addresses Top 97% Despite Market Slump",
-      "link": "NULL",
-      "pubDate": "2023-08-18T15:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
-      "title": "Lido Staked Ether Decreases More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-18T15:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Wrapped Bitcoin Decreases More Than 7% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-18T15:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Unknown trader swallows $55 million loss in wake of crypto market crash",
-      "link": "NULL",
-      "pubDate": "2023-08-18T14:59:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "BUSD"
-      ]
-    },
-    {
       "title": "JUST IN: No Decision Today in Grayscale’s Bitcoin Spot ETF Lawsuit Against SEC",
       "link": "https://en.bitcoinsistemi.com/just-in-no-decision-today-in-grayscales-bitcoin-spot-etf-lawsuit-against-sec/",
       "pubDate": "2023-08-18T14:58:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to the last minute information, the decision in the lawsuit filed by Grayscale with the SEC was announced today as expected. Here are the details. Continue Reading: JUST IN: No Decision Today in Grayscale’s Bitcoin Spot ETF Lawsuit Against SEC",
       "currencies": [
@@ -276,179 +88,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Tether stops USDT stablecoin mints on three blockchains",
-      "link": "NULL",
-      "pubDate": "2023-08-18T14:32:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Apecoin (APE) Slides to All-Time Lows Amid Market Downswing – Is a Recovery Possible?",
-      "link": "NULL",
-      "pubDate": "2023-08-18T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Messari: Maker’s Profit Expectation Drops From $80M to Below $2M",
-      "link": "NULL",
-      "pubDate": "2023-08-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Week in Crypto: Miners Sell, TradFi HODLs, Shibarium, and Evergrande Saga",
-      "link": "NULL",
-      "pubDate": "2023-08-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "MATIC",
-        "APE",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Venus Protocol Liquidates $60 Million of BNB Hacker’s Collateral",
-      "link": "NULL",
-      "pubDate": "2023-08-18T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDC",
-        "BNB",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Cosmos devoted funds to boost DeFi activity. It scored a token windfall in return",
-      "link": "NULL",
-      "pubDate": "2023-08-18T13:14:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "$43 Million Proposal For FTX From This Altcoin Community!",
-      "link": "NULL",
-      "pubDate": "2023-08-18T13:12:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Slump As Uncertainty Resolves Between Traders On Downside",
-      "link": "NULL",
-      "pubDate": "2023-08-18T12:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "LEO",
-        "PAXG"
-      ]
-    },
-    {
-      "title": "Mantle proposes FTX, Alameda BIT tokens should not auto-convert to MNT",
-      "link": "NULL",
-      "pubDate": "2023-08-18T12:11:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT",
-        "MNT"
-      ]
-    },
-    {
-      "title": "First Mover Americas: Bitcoin Tumbles Below $26.5K",
-      "link": "NULL",
-      "pubDate": "2023-08-18T12:03:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Coinbase Suspends Trading of Three Major Stablecoins in Canada",
-      "link": "NULL",
-      "pubDate": "2023-08-18T11:37:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Polkadot vs Cosmos: Neck-to-neck, but one shows more potential",
-      "link": "NULL",
-      "pubDate": "2023-08-18T11:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "ATOM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Coinbase Moves To Delist 3 Stablecoins For Canadian Users",
-      "link": "NULL",
-      "pubDate": "2023-08-18T11:20:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
       "title": "Algorand (ALGO) hits new all-time low amid regulatory uncertainty",
       "link": "https://finbold.com/algorand-algo-hits-new-all-time-low-amid-regulatory-uncertainty/",
       "pubDate": "2023-08-18T11:10:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Algorand (ALGO) finds itself in an unexpected position as one of the bottom 15 performers among the top 200 cryptocurrencies … Continued",
       "currencies": [
@@ -461,47 +105,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Injective (INJ) Price Up 4+% While Rest of the Market Bleeds",
-      "link": "NULL",
-      "pubDate": "2023-08-18T11:03:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Algorand Hits New All-Time Low Amid Market Downturn",
-      "link": "NULL",
-      "pubDate": "2023-08-18T10:58:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Tether Decides to Discontinue Bitcoin Stablecoin amid Lack of Usage",
-      "link": "NULL",
-      "pubDate": "2023-08-18T10:42:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
       "title": "SHIB dev team says ‘funds are SAFU’ after failed Shibarium launch",
       "link": "https://finbold.com/shib-dev-team-says-funds-are-safu-after-failed-shibarium-launch/",
       "pubDate": "2023-08-18T10:41:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The team behind Shibarium — the layer-2 blockchain created for the Shiba Inu (SHIB) ecosystem — has already posted two … Continued",
       "currencies": [
@@ -514,60 +122,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Kivach Donations: 5 GitHub projects it has helped so far",
-      "link": "NULL",
-      "pubDate": "2023-08-18T10:04:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW",
-        "GBYTE"
-      ]
-    },
-    {
-      "title": "Tether to Withdraw Support for USDT on Omni, Kusama, and Bitcoin Cash’s SLP",
-      "link": "NULL",
-      "pubDate": "2023-08-18T10:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH",
-        "KSM"
-      ]
-    },
-    {
-      "title": "Coinbase Canada Suspends Trading on These 3 Crypto Tokens Amid Stricter Rules",
-      "link": "NULL",
-      "pubDate": "2023-08-18T09:48:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Mantle pauses token migration to stop FTX converting $43M in BIT tokens to MNT",
-      "link": "NULL",
-      "pubDate": "2023-08-18T08:29:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
       "title": "Hoskinson Fires Back at Critic for Demeaning the Cardano Network",
       "link": "https://coinedition.com/hoskinson-fires-back-at-critic-for-demeaning-the-cardano-network/",
       "pubDate": "2023-08-18T08:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "Charles Hoskinson, Cardano founder, has said that the Hydra protocol on the Cardano mainnet is live and evolving fast. Hoskinson tweeted this while responding to one of the Cardano critics who thinks the Hydra project is unsustainable. Hoskinson noted that besides Hydra, Mithril is also live and functioning. According to Hoskinson, the Cardano team already […]",
       "currencies": [
@@ -580,69 +139,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Coinbase Plans to Suspend Tether (USDT) Stablecoin for Canadian Users",
-      "link": "NULL",
-      "pubDate": "2023-08-18T08:02:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Algorand (ALGO) Price Falls to New All-Time Low, Hitting $0.09 – Where to Next?",
-      "link": "NULL",
-      "pubDate": "2023-08-18T08:01:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Celsius Creditors to Vote on Bankruptcy-Escape Plan After Judicial Approval",
-      "link": "NULL",
-      "pubDate": "2023-08-18T07:13:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Analysis: Nosedives, Bears Aim $150",
-      "link": "NULL",
-      "pubDate": "2023-08-18T03:28:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "17-Month Losing Streak Brings Stablecoin Market Cap Down to $124 Billion",
-      "link": "NULL",
-      "pubDate": "2023-08-18T01:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Over $1 billion in crypto market liquidations as Bitcoin hits 2-month low",
       "link": "https://forkast.news/1-billion-crypto-liquidations-bitcoin-2-month-low/",
       "pubDate": "2023-08-18T01:33:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "bitcoin",
       "description": "Bitcoin traded at around US$26,800 on Thursday morning in Asia after hitting a two-month low of around US$25,400. Ether fell below US$1,700.",
       "currencies": [
@@ -655,51 +156,6 @@
         "negative": 5
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "24 Crypto Update, 17 Aug: Crypto market turmoil after sudden sell-off",
-      "link": "NULL",
-      "pubDate": "2023-08-18T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "ADA",
-        "SOL",
-        "DOGE",
-        "DAI",
-        "SHIB",
-        "LTC"
-      ]
-    },
-    {
-      "title": "LUNC Sheds 13% Of Its Value – A Further Retreat In The Offing?",
-      "link": "NULL",
-      "pubDate": "2023-08-18T01:10:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "CHZ",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Post-Hack Shenanigans: Curve (CRV) To Launch On TRON Following $2 Million Investment",
-      "link": "NULL",
-      "pubDate": "2023-08-18T00:10:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TRX",
-        "MKR",
-        "CRV"
-      ]
     }
   ]
 }

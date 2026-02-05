@@ -1,15 +1,15 @@
 {
   "date": "2021-02-11",
-  "fetchedAt": "2026-02-05T07:45:51.839Z",
-  "articleCount": 22,
+  "fetchedAt": "2026-02-05T07:48:35.508Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
     {
       "title": "Grayscale Incorporates Yearn.Finance Trust as YFI Soars to $45K",
       "link": "https://u.today/grayscale-incorporates-yearnfinance-trust-as-yfi-soars-to-45k",
       "pubDate": "2021-02-11T19:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Grayscale has formed a new trust for DeFi darling Yearn.Finance (YFI)",
       "currencies": [
@@ -22,84 +22,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BCH Breaks Out From Long-Term Resistance, Can It Reach $1,000?",
-      "link": "NULL",
-      "pubDate": "2021-02-11T19:09:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "The Top 15 Crypto-Friendly Tax Havens",
-      "link": "NULL",
-      "pubDate": "2021-02-11T18:33:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDC"
-      ]
-    },
-    {
-      "title": "This month, it's The Blockchains of Black Mirror, out now and also including topics such as corporations, govt, and cancel culture",
-      "link": "NULL",
-      "pubDate": "2021-02-11T18:32:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Major #DeFi organizations create a #crypto alliance called #GoodFi. Those involved include @Chainlink, @Aaveaave,…",
-      "link": "NULL",
-      "pubDate": "2021-02-11T18:27:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: This week we continued to iron out the kinks in rewards to release the public-shared network (thanks for your patience…",
-      "link": "NULL",
-      "pubDate": "2021-02-11T18:15:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "May this new lunar year be prosperous and full of happiness! Our warmest wishes to all the members of the #EFFORCE…",
-      "link": "NULL",
-      "pubDate": "2021-02-11T17:44:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "IOTA Announces Alvarium, an Oracle Collaboration With Dell",
       "link": "https://beincrypto.com/iota-announces-alvarium-an-oracle-collaboration-with-dell/",
       "pubDate": "2021-02-11T16:16:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "According to the press release, Dell first introduced the idea in 2019, calling it Data Confidence Fabric. It later adapted the technology using the IOTA streams framework, leveraging the trustless nature of blockchain solutions. Alvarium will record the flow of data as it moves between Internet-of-Things (IoT) devices. The IOTA cryptocurrency partly takes its name … Continued",
       "currencies": [
         "MIOTA"
@@ -114,9 +42,9 @@
       "title": "Mogul Film Financier Integrates with Chainlink Oracle to Launch v1",
       "link": "https://btcmanager.com/mogul-film-financier-chainlink-oracle-launch-v1/",
       "pubDate": "2021-02-11T16:02:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "For the purposes of enhancing not just accessibility but also transparency in the film production and financing, Mogul intends to integrate Chainlink. With the technology, the film financier hopes to effectively manage voting, investment, and rewards activities using blockchain technology. Disbursement of fair-market dividends to investors will occur in an accurate and more transparent wayRead...",
       "currencies": [
         "LINK"
@@ -131,8 +59,8 @@
       "title": "Chainlink (LINK) to Power Mogul's Decentralized Film Financing Instruments",
       "link": "https://u.today/chainlink-link-to-power-moguls-decentralized-film-financing-instruments",
       "pubDate": "2021-02-11T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Decentralized film financing platform Mogul integrates Chainlink (LINK) oracles in its v1 release to ensure transparency of profits distribution",
       "currencies": [
@@ -148,8 +76,8 @@
       "title": "IOTA and Dell Giant to Demonstrate Project Alvarium on February 24",
       "link": "https://u.today/iota-and-dell-giant-to-demonstrate-project-alvarium-on-february-24",
       "pubDate": "2021-02-11T15:37:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "IOTA has joined forces with Dell Technologies and Intel to demonstrate project Alvarium for measuring the trustworthiness of data",
       "currencies": [
@@ -165,8 +93,8 @@
       "title": "Jed McCaleb Sells $69 Million of XRP in a Week",
       "link": "https://decrypt.co/57443/jed-mccaleb-sells-69-million-of-xrp-in-a-week",
       "pubDate": "2021-02-11T15:05:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Ripple co-founder Jed McCaleb has resumed selling his XRP holdings, dumping 130 million tokens over the last week.",
       "currencies": [
@@ -182,8 +110,8 @@
       "title": "Analyst Says XRP Poised To Pop and Outperform Bitcoin – Here’s His New Target",
       "link": "https://dailyhodl.com/2021/02/11/analyst-says-xrp-poised-to-pop-and-outperform-bitcoin-heres-his-new-target/",
       "pubDate": "2021-02-11T14:35:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A pseudonymous crypto strategist with a large following on Twitter is bullish on XRP. The trader, known in the industry as Credible Crypto, tells his 113,100 followers that the crypto asset is likely to break out against Bitcoin in the short term. “Did I mention I think XRP is gonna pop? Odds XRP increases against […]",
       "currencies": [
@@ -200,8 +128,8 @@
       "title": "Together IOTA and Dell Technologies Demonstrate Project Alvarium",
       "link": "http://blog.iota.org/together-iota-and-dell-technologies-demonstrate-project-alvarium/",
       "pubDate": "2021-02-11T14:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "ethereum",
       "description": "Project Alvarium creates the first Data Confidence Fabric capable of measuring data trust. (BERLIN, GERMANY -- February 9, 2021) IOTA Foundation, a non-profit focused on distributed ledger technology and the machine economy, and Dell Technologies introduce a world-first demonstration that measures the trustworthiness of data. Modern industries often rely on",
       "currencies": [
@@ -214,22 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#Counos #Web_Wallet is a fully #decentralized online wallet for storing digital assets. With this Web Wallet, you…",
-      "link": "NULL",
-      "pubDate": "2021-02-11T13:55:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "Iota (MIOTA) Spikes 50 Percent Overnight: Reasons Behind the Pump",
       "link": "https://u.today/iota-miota-spikes-50-percent-overnight-reasons-behind-the-pump",
       "pubDate": "2021-02-11T12:49:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Which solid technology and marketing fundamentals are behind splendid IOTA rally?",
       "currencies": [
@@ -245,8 +162,8 @@
       "title": "3 Reasons Why 2021 is Shaping up to be The Year of Cardano",
       "link": "https://www.newsbtc.com/news/cardano/3-reasons-why-2021-is-shaping-up-to-be-the-year-of-cardano/",
       "pubDate": "2021-02-11T12:15:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "At the start of the year, Cardano’s market cap was hovering around $5.6bn. However, in five weeks, a flood of bullish sentiment has propelled this figure to $28.4bn. This was enough to leapfrog the likes of XRP and Polkadot to take the fourth spot on CoinMarketCap. Likewise, over this period, the price of ADA is […]",
       "currencies": [
@@ -261,38 +178,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ripple Cofounder McCaleb Dumps 40 Million XRP, Still Holding 499 Million XRP",
-      "link": "NULL",
-      "pubDate": "2021-02-11T11:33:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Since it's Lunar New Years Eve, we would like to wish everybody a Happy #LunarNewYear for 2021 - There will be some…",
-      "link": "NULL",
-      "pubDate": "2021-02-11T05:49:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
       "title": "TA: Ethereum Holding Gains above $1,700, Why ETH Remains In Strong Uptrend",
       "link": "https://www.newsbtc.com/analysis/eth/ta-ethereum-holding-gains-above-1700-why-eth-remains-in-strong-uptrend/",
       "pubDate": "2021-02-11T05:18:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Ethereum traded to a new all-time high at $1,840 before correcting lower against the US Dollar. ETH price is holding the $1,700 level and it is likely to start a fresh increase. Ethereum started a downside correction after trading to a new all-time high near $1,840. The price is now trading nicely above $1,700 and […]",
       "currencies": [
@@ -304,28 +194,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @Delta_Token: Delta: Tokenizing Open Vested Liquidity",
-      "link": "NULL",
-      "pubDate": "2021-02-11T04:59:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
-      "title": "RT @JoshClsn: Get excited! It's coming.",
-      "link": "NULL",
-      "pubDate": "2021-02-11T00:51:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
     }
   ]
 }

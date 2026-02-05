@@ -1,27 +1,15 @@
 {
   "date": "2021-07-16",
-  "fetchedAt": "2026-02-05T07:45:51.615Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.355Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "NEM, Augur and District0x price push higher while Bitcoin trades below $32K",
-      "link": "NULL",
-      "pubDate": "2021-07-16T23:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XEM"
-      ]
-    },
     {
       "title": "Harmony announces $1M hackathon aimed at merging traditional finance and DeFi",
       "link": "https://cointelegraph.com/news/harmony-announces-1m-hackathon-aimed-at-merging-traditional-finance-and-defi",
       "pubDate": "2021-07-16T21:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The hackathon will run for roughly six weeks from Aug. 15 to Sept. 30 and include four challenges from three different categories.",
       "currencies": [
@@ -37,8 +25,8 @@
       "title": "Ethereum Co-Founder to Sell Firm, Quit Cryptocurrency: Report",
       "link": "https://decrypt.co/76212/ethereum-co-founder-sell-firm-quit-cryptocurrency-report",
       "pubDate": "2021-07-16T21:26:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Anthony Di Iorio founded Ethereum in 2014 alongside Vitalik Buterin, Gavin Wood, Charles Hoskinson, Joseph Lubin, and others.",
       "currencies": [
@@ -53,8 +41,8 @@
       "title": "Hacking group Anonymous launches Anon Inu crypto token “to fight Musk and China”",
       "link": "https://cryptoslate.com/hacking-group-anonymous-launches-anon-inu-crypto-token-to-fight-musk-and-china/",
       "pubDate": "2021-07-16T19:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "general",
       "description": "The decentralized hacker collective known as Anonymous is set to launch a crypto token called Anon Inu on the Binance Smart Chain (BSC).",
       "currencies": [
@@ -66,22 +54,11 @@
       }
     },
     {
-      "title": "Have you missed some sky-high APYs on the largest crypto euro? Don't miss out now! Get back in the game with our ne…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T17:09:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Binance USD Stablecoin Market Cap Surpasses $10 Billion",
       "link": "https://u.today/binance-usd-stablecoin-market-cap-surpasses-10-billion",
       "pubDate": "2021-07-16T15:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "exchange",
       "description": "Second U.S. Dollar Tether (USDT) rival joins 11-digit club: BUSD breaks into top 10",
       "currencies": [
@@ -95,49 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The XinFin community has reduced the supply of $XDCE tokens by 10 Million and the token burn continues until XDCE c…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T15:13:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "The TELxDFX AMA is live on youtube! Thank you @kevinzhangTO and the @DFXFinance team for joining. Check out the vid…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T14:55:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "RT @RSKsmart: RSK Community Call - Iris 3.0.0. Hard-Fork introduction and overview",
-      "link": "NULL",
-      "pubDate": "2021-07-16T14:49:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
       "title": "Pontem to Use Polkadot to Connect Diem and DeFi",
       "link": "https://cryptobriefing.com/pontem-use-polkadot-connect-diem-defi/",
       "pubDate": "2021-07-16T14:46:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "currencies": [
         "DOT"
@@ -149,77 +88,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @RichardHeartWin: Someone made a sacrifice tracker (ETH network only)",
-      "link": "NULL",
-      "pubDate": "2021-07-16T14:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @aubreydegrey: We’re all working tirelessly to keep up with donors and hold up our part of the process. We are probably closing in on th…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T13:49:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @aubreydegrey: Our work will be greatly accelerated, resulting in huge numbers of lives saved in the future, as a direct result of Richa…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T13:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: @cz_binance MAKE SURE YOU ARE SACRIFICING FROM YOUR OWN WALLET YOU HAVE THE KEYS TO! NOT FROM AN EXCHANGE!",
-      "link": "NULL",
-      "pubDate": "2021-07-16T13:13:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: Great news! sacrifice phase is bringing adoption to #BinanceSmartChain. Thanks @cz_binance…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T13:11:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "The #cryptocurrency world development is driven by challenges and innovations, and not just speculations. Lower you…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T13:09:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "PayPal users can now buy $100,000 worth of Bitcoin, Ethereum, Litecoin, and Bitcoin Cash weekly",
       "link": "https://cryptoslate.com/paypal-users-can-now-buy-100000-worth-of-bitcoin-ethereum-litecoin-and-bitcoin-cash-weekly/",
       "pubDate": "2021-07-16T13:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "US financial player PayPal has announced that its users can now purchase as much as $100,000 worth of supported cryptocurrencies via its platform starting this week. The post PayPal users can now buy $100,000 worth of Bitcoin, Ethereum, Litecoin, and Bitcoin Cash weekly appeared first on CryptoSlate.",
       "currencies": [
@@ -236,8 +109,8 @@
       "title": "Judge Denies SEC Motion to Suppress Deposition in Ripple Case",
       "link": "https://beincrypto.com/judge-denies-sec-motion-suppress-deposition-ripple-case/",
       "pubDate": "2021-07-16T11:07:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "US District Court Judge Sarah Netburn denied the SEC's motion in its case against Ripple to suppress the deposition of William Hinman.",
       "currencies": [
@@ -253,8 +126,8 @@
       "title": "Dorsey Plans DeFi on Bitcoin, Critics Point to Ethereum",
       "link": "https://cryptobriefing.com/dorsey-plans-defi-on-bitcoin-critics-point-to-ethereum/",
       "pubDate": "2021-07-16T10:37:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "currencies": [
         "BTC",
@@ -267,33 +140,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @PulsechainCom: You don't need to use to sacrifice #Ethereum or ERC20s to 0x9Cd83BE15a79646A3D22B81fc8dDf7B7240a…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T10:24:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: is having problems estimating the \"gas limit\" that it should use by default to send erc20s. I…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T10:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "DeFi darling ThorChain (RUNE) suffers multi-million dollar exploit",
       "link": "https://cryptoslate.com/defi-darling-thorchain-rune-suffers-multi-million-dollar-exploit/",
       "pubDate": "2021-07-16T10:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "defi",
       "description": "ThorChain, a decentralized finance (DeFi) token swap protocol based on the Cosmos blockchain, lost roughly $4.8 million worth of Ethereum (ETH) from its liquidity pools to a hacker attack today.",
       "currencies": [
@@ -310,8 +161,8 @@
       "title": "$5M in Ethereum Lost in THORChain Exploit",
       "link": "https://cryptobriefing.com/5m-in-ethereum-lost-in-thorchain-chaosnet-exploit/",
       "pubDate": "2021-07-16T09:28:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "A recent exploit of the THORChain platform resulted in the loss of $5 million in Ethereum. The incident highlights vulnerabilities in decentralized finance protocols, raising concerns about security measures within the crypto space. Efforts are underway to investigate the breach and mitigate future risks.",
       "currencies": [
@@ -325,22 +176,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @RichardHeartWin: Come with with us. | |",
-      "link": "NULL",
-      "pubDate": "2021-07-16T09:10:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "Thorchain’s RUNE Token Slides 15% Following Multi-Million Dollar Exploit",
       "link": "https://decrypt.co/76117/thorchains-rune-token-slides-following-multi-million-exploit",
       "pubDate": "2021-07-16T08:27:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Decentralized finance protocol Thorchain will use its treasury funds to reimburse the Ethereum liquidity providers affected by the recent hack.",
       "currencies": [
@@ -357,8 +197,8 @@
       "title": "Court grants Ripple bid to force ex-SEC director to testify in XRP case",
       "link": "https://forkast.news/court-grants-ripple-sec-director-testify-xrp/",
       "pubDate": "2021-07-16T07:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "Ripple scores major discovery win as judge rules ex-SEC official William Hinman must answer ‘central question’ on Ethereum in the globally-watched case about XRP.",
       "currencies": [
@@ -375,8 +215,8 @@
       "title": "THORChain Exploited for $5 Million in Latest DeFi Attack",
       "link": "https://beincrypto.com/thorchain-exploited-5-million-defi-hack/",
       "pubDate": "2021-07-16T05:42:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "Cross-chain decentralized exchange (DEX) THORChain has been added to the lengthening list of exploited protocols as details emerge of a multi-million dollar hack. The post THORChain Exploited for $5 Million in Latest DeFi Attack appeared first on BeInCrypto.",
       "currencies": [
@@ -389,55 +229,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @RichardHeartWin: People often ask me, HEX or sacrifice? I pulled the number 1/3 HEX (You'll get it on 2 chains at the fork) and 2/3 sac…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T04:47:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: You can watch the millions of dollars pouring into in real time! https…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T04:31:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: Congrats on the 50x @MichaelSuppo!",
-      "link": "NULL",
-      "pubDate": "2021-07-16T03:57:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "PNY @PNYTechnologies just announced 2 Chia optimized NVMe drives - Our own @LebanonJon rece…",
-      "link": "NULL",
-      "pubDate": "2021-07-16T03:12:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Judge allows Ripple to depose SEC official who decided ETH is not a security",
       "link": "https://cointelegraph.com/news/judge-allows-ripple-to-depose-sec-official-who-decided-eth-is-not-a-security",
       "pubDate": "2021-07-16T02:51:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Bill Hinman could be called to testify on his 2018 comments regarding Ethereum’s security status.",
       "currencies": [
@@ -449,17 +245,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Join @DeFinePlatform airdrop event on #Blockzone and share $5000 $USDT. For more details",
-      "link": "NULL",
-      "pubDate": "2021-07-16T02:07:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STPT"
-      ]
     }
   ]
 }

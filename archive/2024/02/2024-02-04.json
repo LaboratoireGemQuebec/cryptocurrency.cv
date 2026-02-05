@@ -1,29 +1,15 @@
 {
   "date": "2024-02-04",
-  "fetchedAt": "2026-02-05T07:45:53.387Z",
-  "articleCount": 31,
+  "fetchedAt": "2026-02-05T07:48:35.655Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Chainlink Price Stalls As $287 Million Worth Of LINK Makes Its Way To Binance",
-      "link": "NULL",
-      "pubDate": "2024-02-04T23:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "LINK",
-        "ALI"
-      ]
-    },
     {
       "title": "Will XRP climb above $0.53? Here are the odds",
       "link": "https://ambcrypto.com/will-xrp-climb-above-0-53-here-are-the-odds/",
       "pubDate": "2024-02-04T22:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "XRP’s weekly chart remains in the red, but the possibility of a recovery cannot be ruled out yet.",
       "currencies": [
@@ -36,161 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "WHAT IS XRP LEDGER (XRP)?",
-      "link": "NULL",
-      "pubDate": "2024-02-04T22:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "UNI",
-        "KAS",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Cardano founder Charles Hoskinson critiques Bitcoin L2, sparks crypto debate",
-      "link": "NULL",
-      "pubDate": "2024-02-04T20:51:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA"
-      ]
-    },
-    {
-      "title": "Bitcoin’s muted price volatility shifts traders’ focus to LINK, ICP, RNDR and SUI",
-      "link": "NULL",
-      "pubDate": "2024-02-04T19:25:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "ICP",
-        "RNDR",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Nearly 10 Million Ethereum (ETH) Now Staked in Lido DAO",
-      "link": "NULL",
-      "pubDate": "2024-02-04T19:25:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "VGX Foundation and Gala Games to Collaborate on new Web3-Enabled Games",
-      "link": "NULL",
-      "pubDate": "2024-02-04T19:19:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA",
-        "VGX"
-      ]
-    },
-    {
-      "title": "What Is Kaspa (KAS) Blockchain?",
-      "link": "NULL",
-      "pubDate": "2024-02-04T19:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DAG",
-        "IQ",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – LINK, PENDLE, MANTLE, JUP",
-      "link": "NULL",
-      "pubDate": "2024-02-04T18:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "MNT",
-        "JUP"
-      ]
-    },
-    {
-      "title": "This Week in Crypto: Turbulent Token Launches for WEN and JUP, Plus Vitalik’s Retreat",
-      "link": "NULL",
-      "pubDate": "2024-02-04T16:31:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Genesis Seeks Court Approval to Offload $1.4 Billion in GBTC Assets Post-SEC Settlement",
-      "link": "NULL",
-      "pubDate": "2024-02-04T16:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "How To Mint BRC-20 Tokens On The Bitcoin Network",
-      "link": "NULL",
-      "pubDate": "2024-02-04T16:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "FTX Expands Sell-Off: AI Startup Stake Next to Go",
-      "link": "NULL",
-      "pubDate": "2024-02-04T13:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "FTT"
-      ]
-    },
-    {
       "title": "Cardano Heats Up: Transactions Break Past 4 Million As Ecosystem Thrives",
       "link": "https://www.newsbtc.com/news/cardano-heats-up-transactions-break-past-4-million-as-ecosystem-thrives/",
       "pubDate": "2024-02-04T13:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Cardano, a blockchain platform known for its research-oriented strategy and eco-friendly Proof-of-Stake consensus, is experiencing substantial growth. Increased transaction volumes, a variety of project launches, and active development within its ecosystem underline this expansion. Related Reading: Avalanche To Unleash 9.5 Million Tokens, Traders Brace For Impact Cardano Transaction Boom...",
       "currencies": [
@@ -206,76 +42,11 @@
       }
     },
     {
-      "title": "USA crypto investors pile into Kelexo (KLXO) presale as Internet Computer (ICP) & Ethereum Classic (ETC) have a mass exodus",
-      "link": "NULL",
-      "pubDate": "2024-02-04T12:47:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "PlanB Predicts Timeline for New Bitcoin All-Time High, Says BTC Won’t Go Below This Floor Price",
-      "link": "NULL",
-      "pubDate": "2024-02-04T12:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "DOJ Charges Belarusian National With Money Laundering Conspiracy and Operating Unlicensed Crypto Exchange",
-      "link": "NULL",
-      "pubDate": "2024-02-04T12:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "FX"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) investors are loving DeeStream (DST) as presale sets sail! Meanwhile BNB (BNB) future looks worrying to investors",
-      "link": "NULL",
-      "pubDate": "2024-02-04T12:29:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "KAS"
-      ]
-    },
-    {
-      "title": "5 Questions With SCENE: Gala Marija Vrbanic",
-      "link": "NULL",
-      "pubDate": "2024-02-04T12:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Ripple's XRP Services to Go Live in US",
       "link": "https://u.today/ripples-xrp-services-to-go-live-in-us",
       "pubDate": "2024-02-04T11:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Ripple prepares to transform US cross-border payments, expanding payment services and utilizing XRP as key bridge currency",
       "currencies": [
@@ -288,33 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MakerDAO: As DAI supply hits 18-month low, what’s next?",
-      "link": "NULL",
-      "pubDate": "2024-02-04T11:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "Trump: Although CBDCs Are ‘Very Dangerous’, AI Is ‘The Most Dangerous Thing out There’ and ‘Something Has To Be Done About This’",
-      "link": "NULL",
-      "pubDate": "2024-02-04T10:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
       "title": "This Cardano (ADA) Price Level Is Almost Impossible to Beat",
       "link": "https://u.today/this-cardano-ada-price-level-is-almost-impossible-to-beat",
       "pubDate": "2024-02-04T10:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano investors actively taking profits or breaking even as this resistance level clearly causes some issues for price",
       "currencies": [
@@ -327,23 +76,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "This Week’s Best and Worst Alt Performers as Bitcoin Stalls at $43K (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2024-02-04T09:53:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "JUP"
-      ]
-    },
-    {
       "title": "Solana DEX Jupiter Overtakes Uniswap with $480 Million Daily Trading Volume",
       "link": "https://www.cryptointelligence.co.uk/solana-dex-jupiter-overtakes-uniswap-with-480-million-daily-trading-volume/",
       "pubDate": "2024-02-04T08:34:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "defi",
       "description": "Welcome to Finance Redefined, your weekly source of critical decentralized finance (DeFi) insights. Our newsletter...",
       "currencies": [
@@ -361,8 +98,8 @@
       "title": "Analyst Predicts Cardano Price To Skyrocket By 1,400% – Here’s How",
       "link": "https://bitcoinist.com/analyst-predicts-cardano-price-to-skyrocket-by-1400/",
       "pubDate": "2024-02-04T08:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Cardano, like the majority of the cryptocurrency market, put up a positive price performance over the past week. While the ADA token largely struggled to replicate its December run in January, the tides seem to be turning in favor of the altcoin at the moment. In fact, a popular crypto analyst has weighed in on […]",
       "currencies": [
@@ -372,70 +109,6 @@
         "positive": 5,
         "negative": 9
       }
-    },
-    {
-      "title": "FTX’s scrapped relaunch raises alarm on legal team’s profits",
-      "link": "NULL",
-      "pubDate": "2024-02-04T08:16:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "5 Decentralized Services You Can Use For Free and Donate to via Kivach (Ep VI)",
-      "link": "NULL",
-      "pubDate": "2024-02-04T07:42:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Bitcoin SV (BSV) Price Dips Following Coinbase Delisting",
-      "link": "NULL",
-      "pubDate": "2024-02-04T06:39:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "BSV"
-      ]
-    },
-    {
-      "title": "DOJ Charges Trio Behind $400 Million SIM Swap Attack on FTX",
-      "link": "NULL",
-      "pubDate": "2024-02-04T05:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "FTT"
-      ]
-    },
-    {
-      "title": "Solana-Based Altcoin Surges More Than 42% This Week Amid New Listing on Top Crypto Exchange Binance",
-      "link": "NULL",
-      "pubDate": "2024-02-04T01:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "PYTH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

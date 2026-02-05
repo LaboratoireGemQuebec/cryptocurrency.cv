@@ -1,15 +1,15 @@
 {
   "date": "2022-11-19",
-  "fetchedAt": "2026-02-05T07:45:52.389Z",
-  "articleCount": 45,
+  "fetchedAt": "2026-02-05T07:48:35.555Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
     {
       "title": "Bitcoin hits ‘this’ low, but what’s the unrevealed narrative around BTC",
       "link": "https://ambcrypto.com/bitcoin-hits-this-low-but-whats-the-unrevealed-narrative-around-btc/",
       "pubDate": "2022-11-19T22:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Bitcoin’s SOPR hit its lowest point more than two years after the last one Short-term projections for the king coin showed bearish signs despite more long-term holders remaining in profit Bitcoin [BTC], for the first time since March 2020, hit its lowest point per Spent Output Profit Ratio (SOPR) on 19 November. According to CryptoQuant […]",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Despite Solana’s Tumble Amid the FTX Collapse, The Community Is Keeping Its Hopes High",
       "link": "https://zycrypto.com/despite-solanas-tumble-amid-the-ftx-collapse-the-community-is-keeping-its-hopes-high/",
       "pubDate": "2022-11-19T22:26:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "FTX’s rapid debacle has caused widespread pain for the crypto community, but certainly not close to that of the Solana community. Since November 6th, Solana’s token (SOL) price has plunged by...",
       "currencies": [
@@ -43,8 +43,8 @@
       "title": "Leading Ethereum Rival To Plunge by Over 40% Amid FTX Collapse, Predicts Coin Bureau Host",
       "link": "https://dailyhodl.com/2022/11/19/leading-ethereum-rival-to-plunge-by-over-40-amid-ftx-collapse-predicts-coin-bureau-host/",
       "pubDate": "2022-11-19T21:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Coin Bureau host Guy is sending out a warning that a top Ethereum (ETH) competitor faces more downside risks in the FTX fallout. The Coin Bureau host tells his 2.17 million YouTube subscribers that the collapse of the FTX crypto exchange has made the road ahead for Solana (SOL) difficult. According to the host, Solana […]",
       "currencies": [
@@ -58,46 +58,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @BitTorrent: BitTorrent Chain is now supported by @elk_finance! Elk Finance is building a peer-to-peer network for cross-chain value…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T20:45:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "XCN",
-        "ELK"
-      ]
-    },
-    {
-      "title": "Chiliz [CHZ] holders could witness some gains but here’s the caveat",
-      "link": "NULL",
-      "pubDate": "2022-11-19T20:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "RT @avantgardefi: Thanks to @thegrifft for hosting this Spaces! @eek637 discussed Avantgarde’s @ENS_DAO investment strategy, answering spec…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T20:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
       "title": "FTX illustrated why banks need to take over cryptocurrency",
       "link": "https://cointelegraph.com/news/ftx-illustrated-why-banks-need-to-take-over-cryptocurrency",
       "pubDate": "2022-11-19T20:05:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Banks should embrace crypto as a way to mitigate risk and prevent losses that consumers at the hands of rogue crypto exchanges.",
       "currencies": [
@@ -113,8 +78,8 @@
       "title": "Shiba Inu Army Reaches New Major Milestone in Just 2 Days",
       "link": "https://u.today/shiba-inu-army-reaches-new-major-milestone-in-just-2-days",
       "pubDate": "2022-11-19T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Another big milestone has been set as the number of SHIB whales keeps expanding",
       "currencies": [
@@ -130,9 +95,9 @@
       "title": "Algorand’s current market standing could have investors eyeing ALGO because…",
       "link": "https://ambcrypto.com/algorands-current-market-standing-could-have-investors-eyeing-algo-because/",
       "pubDate": "2022-11-19T19:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "ALGO shows improvements on the social front dApps witnessed a surge in unique users and TVL shows growth With most eyes on the events that transpired around FTX in the last 13 days, a network slowly climbed its way up the social ladder. Amid the havoc that occurred thanks to SBF and the FTX exchange, […]",
       "currencies": [
         "ALGO"
@@ -144,98 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Decred Journal — October 2022",
-      "link": "NULL",
-      "pubDate": "2022-11-19T19:07:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOGE",
-        "LTC",
-        "ZEC",
-        "MKR",
-        "DCR"
-      ]
-    },
-    {
-      "title": "RT @behindtext: the obvious solution here is to make the process of exchange non-custodial. this can *only* be accomplished with cryptoasse…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T17:33:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
-      "title": "Thanks to the @Polkadot LATAM Hackathon for putting on an outstanding event. An amazing example of grassroots, comm…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T16:29:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "RT @thegrifft: I'm going to host a very brief twitter space today w/ @eek637 from @avantgardefi to understand the risk that depositing @ENS…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T16:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "Louder for the people in the back: The Arie Test demonstrates and explains why truly decentralized assets cannot be…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T16:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @Wavelength_DAO: In this Tread, Wavelength aims to explain the advantages of using an AMM, like Wavelength, compared to a traditional AM…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T15:57:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VLX",
-        "WVLX"
-      ]
-    },
-    {
-      "title": "‘Bitcoin rainbow’ indicator drops to all-time low; Can BTC slump to $10k?",
-      "link": "NULL",
-      "pubDate": "2022-11-19T15:38:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "After days of battling to contain further losses, Bitcoin (BTC) bulls have gained some ground stabilising the price below $17,000. … Continued",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 2
-      }
-    },
-    {
       "title": "Is DOGE really worth the hype even after Musk’s Twitter buyout?",
       "link": "https://cointelegraph.com/news/is-doge-really-worth-the-hype-even-after-musk-s-twitter-buyout",
       "pubDate": "2022-11-19T15:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Though Dogecoin has seen a near 45% rally over the past month, its use cases remain limited, especially given that it can’t interact with smart contracts.",
       "currencies": [
@@ -247,79 +125,11 @@
       }
     },
     {
-      "title": "Chiliz Price Prediction – CHZ Shoots Up 4%, $1 Incoming During World Cup?",
-      "link": "NULL",
-      "pubDate": "2022-11-19T15:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Chiliz price is preparing for a showdown ahead of the 2022 World Cup in Qatar. The world's leading blockchain and fintech provider for Sports and Entertainment token has recovered a great deal following the FTX contagion. Since support at $0.145 was respected, CHZ has sustained movement to the upside while holding firmly to an ascending trend line.... Read More: Chiliz Price Prediction –...",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Why CHZ investors can savor their current position despite a dull market view",
-      "link": "NULL",
-      "pubDate": "2022-11-19T15:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "XCN"
-      ]
-    },
-    {
-      "title": "If you find yourself running low on mobile #airtime and #data, you can save time by topping up your phone instantly…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T15:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Making a Splinterlands account for first time",
-      "link": "NULL",
-      "pubDate": "2022-11-19T13:56:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Pantera Buys $140 Million Bitcoin",
-      "link": "NULL",
-      "pubDate": "2022-11-19T12:54:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The Pantera Bitcoin Fund has bought $137 million worth of bitcoin according to Matthew Gorham, its Chief Operating Officer.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 37,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Crypto Analyst Who Accurately Called 2022 Bitcoin Crash Sets New Price Targets for BTC and Cardano",
       "link": "https://dailyhodl.com/2022/11/19/crypto-analyst-who-predicted-2022-bitcoin-crash-sets-lower-btc-targets-warns-cardano-ada-could-plunge-by-50/",
       "pubDate": "2022-11-19T12:45:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "The widely followed crypto analyst who nailed this year’s Bitcoin (BTC) collapse says the king crypto is likely on its way to new bear market lows. The pseudonymous analyst Capo tells his 665,000 Twitter followers that he believes rallies in the crypto markets are meant to trap bulls. “What I see: -Technicals looking bad ([BTC] […]",
       "currencies": [
@@ -335,8 +145,8 @@
       "title": "Bitcoin sees record Stock-to-Flow miss — BTC price model creator brushes off FTX ‘blip’",
       "link": "https://cointelegraph.com/news/bitcoin-sees-record-stock-to-flow-miss-btc-price-model-creator-brushes-off-ftx-blip",
       "pubDate": "2022-11-19T11:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin price action since FTX “feels like the world has ended,” says Stock-to-Flow creator PlanB.",
       "currencies": [
@@ -349,22 +159,11 @@
       }
     },
     {
-      "title": "Have a great and fun weekend️",
-      "link": "NULL",
-      "pubDate": "2022-11-19T11:14:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
       "title": "FTX begins reviewing its assets as part of bankruptcy process",
       "link": "https://www.theblock.co/post/188571/ftx-begins-reviewing-its-assets-as-part-of-bankruptcy-process?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-19T10:52:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "regulation",
       "description": "The FTX asset review will be spearheaded by a major New York financial services firm upon approval by the court.",
       "currencies": [
@@ -379,8 +178,8 @@
       "title": "$SOL: Real Vision CEO Says Solana Is a ‘Great Bloody Opportunity’ at Current Price Levels",
       "link": "https://www.cryptoglobe.com/latest/2022/11/sol-real-vision-ceo-says-solana-is-a-great-bloody-opportunity-at-current-price-levels/",
       "pubDate": "2022-11-19T10:28:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Recently, a former Goldman Sachs executive explained why this could be a great time to buy $SOL, the native token of the Solana blockchain, despite all the doom and gloom surrounding the Solana ecosystem in the wake of the collapse of FTX. Here is how Coinbase described Solana in a blog post published on 29 June 2022: “Solana is a decentralized […]",
       "currencies": [
@@ -393,153 +192,12 @@
       }
     },
     {
-      "title": "RT @zilliqa_gaming: So watch your step! Let's go.... #WEB3WAR",
-      "link": "NULL",
-      "pubDate": "2022-11-19T10:25:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "Top 6 purchased tokens by 2000 biggest #ETH whales today 🥇 $USDC 🥈 $USDT 🥉 $ETH 4️⃣ $PAXG @paxosglobal 5️⃣…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T09:31:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PAXG",
-        "BBW"
-      ]
-    },
-    {
-      "title": "RT @XcademyOfficial: We’re excited to announce @duckybhai who has over 4 Million subscribers and averages an incredible 1m+ views per video…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T09:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @takegreenpill: This 🧵is a piece on how the animation film industry could be decentralized by @soullesscitadel to: 1⃣ Bring more opport…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T09:10:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @DrDeathCultClub: mentioned in a recent @MarketWatch article 4.3 mil followers Are you bullish yet? Join me now whilst I’m s…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T09:10:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "World-renowned ink-artist JinhuaYuan is dropping his first NFT collection on Neo next week!",
-      "link": "NULL",
-      "pubDate": "2022-11-19T08:09:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO",
-        "GAS"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 135 – The News in #DeFi -",
-      "link": "NULL",
-      "pubDate": "2022-11-19T07:54:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "INSIGHT: $CHZ social engagements measured daily hit 50.45M, the highest point in the last 90 days.",
-      "link": "NULL",
-      "pubDate": "2022-11-19T07:40:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "CHZ",
-        "LUNR"
-      ]
-    },
-    {
-      "title": "RT @shahafbg: Thank you @IOHK_Charles and for the @COTInetwork community for tuning in. I'll be back on main stage NOV 21st with some news…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T04:38:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
-      "title": "JUST IN: $CHZ @chiliz now on top 10 by trading volume among 5000 biggest #ETH whales in the last 24hrs Peep the…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T04:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CHZ",
-        "BBW"
-      ]
-    },
-    {
-      "title": "BitTorrent Chain is now supported by @elk_finance! Elk Finance is building a peer-to-peer network for cross-cha…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T03:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
-      "title": "SBF Was ’One of the Most Brilliant Traders in the Crypto Universe, Says Shark Tank Star",
-      "link": "NULL",
-      "pubDate": "2022-11-19T02:58:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
       "title": "A key reason why Litecoin [LTC] holders should be wary is…",
       "link": "https://ambcrypto.com/a-key-reason-why-litecoin-ltc-holders-should-be-wary-is/",
       "pubDate": "2022-11-19T01:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Litecoin beat other top cryptos to register the most gains in the last 24 hours The latest rally is less likely to be sustained considering unimpressive circulation and possible sell-offs Litecoin [LTC] recorded the highest gains in the last 24 hours out of the market’s top-20 cryptos. According to CoinMarketCap, the altcoin was trading at […]",
       "currencies": [
         "LTC"
@@ -554,8 +212,8 @@
       "title": "$ADA: Cardano Getting Its First Fully Dollar-Backed Regulatory-Compliant Stablecoin",
       "link": "https://www.cryptoglobe.com/latest/2022/11/ada-cardano-getting-its-first-fully-dollar-backed-regulatory-compliant-stablecoin/",
       "pubDate": "2022-11-19T01:20:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On Friday (18 November 2022), EMURGO, which is the commercial arm of Cardano, announced the planned launch of its new dollar-backed stablecoin USDA, which is “the first fully fiat-backed, regulatory compliant stablecoin in the Cardano ecosystem.” EMURGO, which was founded in 2017, is “a global blockchain technology company providing solutions for developers, startups, enterprises, and...",
       "currencies": [
@@ -568,44 +226,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Want to learn more about Ethos? Check out this lovely write up detailing all the unique features and perks of the E…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T00:24:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Acala's @danreecer_ and @TapioProtocol's @terrycflam will speak to developers at the @Polkadot LATAM Hackathon's cl…",
-      "link": "NULL",
-      "pubDate": "2022-11-19T00:21:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "How do you find an 'Era' on Acala Network?",
-      "link": "NULL",
-      "pubDate": "2022-11-19T00:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
       "title": "Is Solana Next to Enter Cryptocurrency Graveyard?",
       "link": "https://u.today/is-solana-next-to-enter-cryptocurrency-graveyard",
       "pubDate": "2022-11-19T00:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Current cryptocurrency market and FTX circumstances may prevent Solana from reaching its target of being Ethereum killer",
       "currencies": [

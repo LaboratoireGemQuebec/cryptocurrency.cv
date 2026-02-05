@@ -1,26 +1,15 @@
 {
   "date": "2023-08-23",
-  "fetchedAt": "2026-02-05T07:45:52.906Z",
-  "articleCount": 37,
+  "fetchedAt": "2026-02-05T07:48:35.607Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Algorand: Bearish overload keeps ALGO near this price level",
-      "link": "NULL",
-      "pubDate": "2023-08-23T23:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
     {
       "title": "Cardano Founder’s Algorand Sidechain Offer Makes Rounds on Reddit",
       "link": "https://dailycoin.com/cardano-founders-algorand-sidechain-offer-makes-rounds-on-reddit/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-23T23:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Charles Hoskinson's Algorand sidechain proposal is sparking heated debates within the community.",
       "currencies": [
@@ -37,8 +26,8 @@
       "title": "BNB Falls 14% After Binance Helps Russians ‘Move Money’",
       "link": "https://coinedition.com/bnb-falls-14-after-binance-helps-russians-move-money/",
       "pubDate": "2023-08-23T20:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "exchange",
       "description": "The Wall Street Journal (WSJ) claimed that the leading crypto exchange Binance is helping Russians “move money.” According to the report, Binance still handles transactions for a minimum of five Russian financial institutions that have been sanctioned by Western countries. Binance was already in the limelight since July due to accusations of supporting money laundering […]",
       "currencies": [
@@ -50,63 +39,11 @@
       }
     },
     {
-      "title": "DAI Stablecoin Surpasses $5B Market Cap on Higher Yield, Lifting Spark Protocol",
-      "link": "NULL",
-      "pubDate": "2023-08-23T18:45:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Teenage Hacker Who Leaked 'Grand Theft Auto 6' Details Convicted in UK",
-      "link": "NULL",
-      "pubDate": "2023-08-23T18:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bitcoin Exchange Reserve Shoots Up, Pain Not Over Yet?",
-      "link": "NULL",
-      "pubDate": "2023-08-23T18:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "GRT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "What Happened in the Last 1 Year? – Bitcoin, XRP, Ethereum, Bitcoin Cash, EOS",
-      "link": "NULL",
-      "pubDate": "2023-08-23T17:28:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "EOS"
-      ]
-    },
-    {
       "title": "US SEC is Not Coming After Cardano (ADA): Charles Hoskinson",
       "link": "https://cryptopotato.com/us-sec-is-not-coming-after-cardano-ada-charles-hoskinson/",
       "pubDate": "2023-08-23T17:07:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "Hoskinson explained that the SEC’s continuous crackdown on crypto entities is political and has nothing to do with securities laws.",
       "currencies": [
@@ -119,55 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "LUNC, USTC Price In Freefall As L1JTF Pinpoints Cap Issue",
-      "link": "NULL",
-      "pubDate": "2023-08-23T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Social Poker App PokerGO Play Lands on Gala Games",
-      "link": "NULL",
-      "pubDate": "2023-08-23T16:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Axie Infinity (AXS) Price Targets $5 as Long-Term Holders Remain Bullish",
-      "link": "NULL",
-      "pubDate": "2023-08-23T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "LUNC Price Gears Up for 25% Rally in Near Term; Here’s the Catch",
-      "link": "NULL",
-      "pubDate": "2023-08-23T15:08:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Ripple's XRP the Dominant Choice Among Young Crypto Investors",
       "link": "https://dailycoin.com/ripple-xrp-altcoin-investments-20s-age-group/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-23T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Investors in their twenties have exhibited assertive altcoin preferences, reflecting agile strategies in the cryptocurrency market.",
       "currencies": [
@@ -179,27 +72,11 @@
       }
     },
     {
-      "title": "Cryptocurrency Monero Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-23T15:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Solana's Payment Platform Integrated with Shopify! This Cryptocurrency Has Been Selected For Payments!",
       "link": "https://en.bitcoinsistemi.com/solanas-payment-platform-integrated-with-shopify-this-cryptocurrency-has-been-selected-for-payments/",
       "pubDate": "2023-08-23T14:55:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "According to the statement, Solana's (SOL) decentralized payment system Solana Pay has been integrated with e-commerce giant Shopify. Continue Reading: Solana's Payment Platform Integrated with Shopify! This Cryptocurrency Has Been Selected For Payments!",
       "currencies": [
@@ -215,8 +92,8 @@
       "title": "XRP lost 45% value since July’s pump as fear now surges",
       "link": "https://finbold.com/xrp-lost-45-value-since-julys-pump-as-fear-now-surges/",
       "pubDate": "2023-08-23T14:51:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "XRP went from $0.47 to a local high of $0.93 in July amid sentiment shifts as the Ripple v. SEC … Continued",
       "currencies": [
@@ -229,23 +106,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Terra Luna Classic Validator To Fund USTC Repeg Team As Community Rejects Proposal",
-      "link": "NULL",
-      "pubDate": "2023-08-23T14:26:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
       "title": "Shop Till You Drop Using USDC: Solana Pay Integrates with Shopify",
       "link": "https://cryptobriefing.com/solana-pay-integrates-with-shopify/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-23T14:19:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Solana Labs decentralized payment protocol, Solana Pay, has taken a decisive step in the e-commerce sector, announcing its integration with Shopify, announced on August 23 via TechCrunch. This development will empower numerous businesses to seamlessly facilitate payments using USDC, the stablecoin closely tied to the U.S. dollar.https://twitter.com/solana/status/1694336131599393186Initiated in...",
       "currencies": [
@@ -258,105 +123,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "USDC launching on Polygon PoS, Base and Polkadot blockchains",
-      "link": "NULL",
-      "pubDate": "2023-08-23T14:18:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "DOT",
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Bitcoin Falls Below $26,000 Following PMI Data; Maker Becomes Top Loser",
-      "link": "NULL",
-      "pubDate": "2023-08-23T14:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Mobile RPG Champions Arena Launches on Gala Games",
-      "link": "NULL",
-      "pubDate": "2023-08-23T14:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Atomic Wallet Sued by Russian Users Over $100M Hack and Lack of Action",
-      "link": "NULL",
-      "pubDate": "2023-08-23T13:40:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "NEAR Jumps 5% After Nexo Integration, Bucking Market Trend",
-      "link": "NULL",
-      "pubDate": "2023-08-23T13:37:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Curve DAO Token (CRV) touches $0.44 as “slow bleed” continues",
-      "link": "NULL",
-      "pubDate": "2023-08-23T13:15:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Making the Call: Is Chancer a Token to Buy for Future Growth?",
-      "link": "NULL",
-      "pubDate": "2023-08-23T13:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Bitcoin’s DeFi Ecosystem Continues To Grow: Pyth Networks Integrates with Stacks",
-      "link": "NULL",
-      "pubDate": "2023-08-23T12:58:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
       "title": "Elon Musk says X (Twitter) is a ‘DOGE friendly place’",
       "link": "https://finbold.com/elon-musk-says-x-twitter-is-a-doge-friendly-place/",
       "pubDate": "2023-08-23T12:35:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "In the ever-evolving landscape of cryptocurrencies, every utterance by Elon Musk carries the weight of a seismic event. The latest … Continued The post Elon Musk says X (Twitter) is a ‘DOGE friendly place’ appeared first on Finbold.",
       "currencies": [
@@ -368,123 +139,11 @@
       }
     },
     {
-      "title": "Binance CEO Accused of Tanking Bitcoin to Prop Up BNB",
-      "link": "NULL",
-      "pubDate": "2023-08-23T11:17:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Unleashing Potential: Tezos (XTZ), THORChain (RUNE), and the Game-Changer VC Spectra (SPCT)",
-      "link": "NULL",
-      "pubDate": "2023-08-23T11:05:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Google Crypto Ad Scam Drains Victim of $900,000; Do We Need Stricter Rules?",
-      "link": "NULL",
-      "pubDate": "2023-08-23T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "PEPE Coin Price Dips, Investors Moving to HIPP",
-      "link": "NULL",
-      "pubDate": "2023-08-23T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "UNI",
-        "TWT"
-      ]
-    },
-    {
-      "title": "Elon Musk Isn’t Done With Twitter Yet: Another Legacy Feature Will Be Removed",
-      "link": "NULL",
-      "pubDate": "2023-08-23T07:59:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Sam Bankman-Fried pleads not guilty to misusing customer funds",
-      "link": "NULL",
-      "pubDate": "2023-08-23T07:43:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Terra Freezes Website to Curb Further Phishing Attacks",
-      "link": "NULL",
-      "pubDate": "2023-08-23T07:39:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Curve DAO Token (CRV) Nears Liquidation Price of $0.37",
-      "link": "NULL",
-      "pubDate": "2023-08-23T05:48:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "This is how RUNE reacted to THORChain’s latest launch",
-      "link": "NULL",
-      "pubDate": "2023-08-23T05:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
       "title": "XRP, Solana, Stellar, Chainlink, and Hedera To Hit High Values Soon",
       "link": "https://coinedition.com/xrp-solana-stellar-chainlink-and-hedera-to-hit-high-values-soon/",
       "pubDate": "2023-08-23T01:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "Crypto trader and BitBoy’s YouTube channel host Ben Armstrong went live on August 21 to discuss the upcoming altcoins that will perform best in the next bull run. According to his predictions, XRP will penetrate the mass market and emerge as the number one player. On August 19, Armstrong retweeted journalist Eleanor Terett’s post about […] The post XRP, Solana, Stellar, Chainlink, and Hedera To Hit High Values Soon appeared first on Coin Edition.",
       "currencies": [

@@ -1,48 +1,15 @@
 {
   "date": "2022-08-02",
-  "fetchedAt": "2026-02-05T07:45:52.981Z",
-  "articleCount": 29,
+  "fetchedAt": "2026-02-05T07:48:35.613Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Vires.Finance to be “reset” following Waves revival plan proposal to solve liquidity crisis",
-      "link": "NULL",
-      "pubDate": "2022-08-02T23:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDN"
-      ]
-    },
-    {
-      "title": "RT @BerrosJeremy: Now #truecontribution rank #137 (top 1%) at @numerai",
-      "link": "NULL",
-      "pubDate": "2022-08-02T21:42:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
-      "title": "RT @NumerEye: Companies are posting data science job ads asking for @numerai performance",
-      "link": "NULL",
-      "pubDate": "2022-08-02T21:17:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
     {
       "title": "Stablecoin Pattern Suggests Massive Bitcoin Breakout May Be Incoming, According to Crypto Analytics Firm Santiment",
       "link": "https://dailyhodl.com/2022/08/02/stablecoin-pattern-suggests-massive-bitcoin-breakout-may-be-incoming-according-to-crypto-analytics-firm-santiment/",
       "pubDate": "2022-08-02T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Crypto analytics firm Santiment says that the dwindling supply of stablecoins may be a sign that a massive Bitcoin (BTC) breakout is on the horizon. According to the market intelligence firm, the circulating supply of Tether (USDT) and USD Coin (USDC), the two biggest stablecoins by market cap, has been dramatically decreasing since May 2022. […]",
       "currencies": [
@@ -60,8 +27,8 @@
       "title": "‘Big Move’ Coming to MATIC, Hints Price Metric As Polygon Gains Massive Edge With zkEVM Rollups",
       "link": "https://zycrypto.com/big-move-coming-to-matic-hints-price-metric-as-polygon-gains-massive-edge-with-zkevm-rollups/",
       "pubDate": "2022-08-02T19:43:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Polygon has taken Ethereum scaling to the next level in what appears to be a massive technological innovation for the crypto industry.",
       "currencies": [
@@ -78,8 +45,8 @@
       "title": "Sygnum Bank to Offer Cardano (ADA) Staking",
       "link": "https://beincrypto.com/sygnum-bank-to-offer-cardano-ada-staking/",
       "pubDate": "2022-08-02T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "Zurich-based Sygnum Bank has announced Cardano (ADA) staking, adding to its portfolio of Ethereum, Internet Computer (ICP), and Tezos (XTZ).",
       "currencies": [
@@ -97,8 +64,8 @@
       "title": "XRP In Bearish Mode As Ripple Unlatches 1 Billion Tokens From 2 Wallets",
       "link": "https://www.newsbtc.com/news/ripple/xrp-in-bearish-mode/",
       "pubDate": "2022-08-02T17:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Ripple (XRP) is in bearish mode and was down 1.93% as seen overnight. Moreover, Ripple has recently freed up over 1 billion XRP tokens coming from two separate escrow wallets. Currently, the crypto trades at $0.38 on the biggest spot exchanges. Ripple has evidently locked over 55% of XRP’s total supply in escrows way back 2017. Analysts believe that its bearish sentiment or weakness is relevant to Bitcoin’s failure to surpass the $24,000 mark as opposed to the controversial unclasping of new tok",
       "currencies": [
@@ -111,30 +78,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Ethereum POW Fork Is ‘Coming Soon’, Says Chinese Miner",
-      "link": "NULL",
-      "pubDate": "2022-08-02T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "A Chinese Bitcoin miner has claimed that a Proof of Work (POW) fork for Ethereum is “coming soon” as Ethereum prepares to migrate to its Proof of Stake (POS) consensus mechanism.",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 7
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Why Amazon And VeChain Will Enable Carbon Management Services",
       "link": "https://bitcoinist.com/amazon-vechain-enable-carbon-management-services/",
       "pubDate": "2022-08-02T17:09:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "The VeChain Foundation recently revealed a partnership with Amazon Web Services (AWS) to support their VeCarbon platform. The product will enable companies to obtain information on their carbon footprint to properly manage it and remain compliant with emissions targets. Across the world, countries like China have set strict carbon emission goals that must be met […]",
       "currencies": [
         "VET"
@@ -149,8 +98,8 @@
       "title": "SHIB monthly transactions in July slightly recover after falling to a 15-month low",
       "link": "https://finbold.com/shib-monthly-transactions-in-july-slightly-recover-after-falling-to-a-15-month-low/",
       "pubDate": "2022-08-02T16:37:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Meme cryptocurrency Shiba Inu (SHIB) has in recent months undergone a massive price sell-off in correlation with the general crypto... Continue reading",
       "currencies": [
@@ -166,8 +115,8 @@
       "title": "Gucci Now Accepts Payments in ApeCoin",
       "link": "https://cryptobriefing.com/gucci-accepts-payments-apecoin/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-02T16:06:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Gucci added ApeCoin to its list of accepted crypto payments today, marking another step in the luxury brands exploration of the crypto ecosystem. Gucci is doubling down on Web3.The high fashion brand announced on Twitter today that it had started accepting ApeCoin payments via BitPay in select boutiques across the United States. It comes after Gucci declared in early May that it would...",
       "currencies": [
@@ -179,22 +128,11 @@
       }
     },
     {
-      "title": "RT @felixmxu: 1/n Thanks @Cointelegraph and @JagatiShiraz for sharing my view - crypto Lehman moment is nothing new to tradFi, where highly…",
-      "link": "NULL",
-      "pubDate": "2022-08-02T15:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Staking Goes Live On Swiss Digital Bank Sygnum Along With ETH 2.0, ICP, And Tezos",
       "link": "https://en.ethereumworldnews.com/cardano-ada-staking-goes-live-sygnum/",
       "pubDate": "2022-08-02T15:37:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "ethereum",
       "description": "Cardano ADA staking added to Sygnum staking services ahead of Vasil Hard Fork.",
       "currencies": [
@@ -212,8 +150,8 @@
       "title": "Gucci now accepts ApeCoin through BitPay",
       "link": "https://www.theblock.co/post/160953/gucci-now-accepts-apecoin-through-bitpay?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-02T15:19:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "The move is the latest in a series of crypto initiatives from Gucci, which has a team dedicated to web3 initiatives and gaming.",
       "currencies": [
@@ -225,33 +163,11 @@
       }
     },
     {
-      "title": "The project #CEEK is the king of #metaverse",
-      "link": "NULL",
-      "pubDate": "2022-08-02T14:13:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "RT @H_O_L_O_: The last week was a beehive of activity as the Holo dev team prepared the release of the Publish hApps milestone for QA testi…",
-      "link": "NULL",
-      "pubDate": "2022-08-02T13:29:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "VeChain Onboards Amazon Web Services For Blockchain Carbon Management",
       "link": "https://en.ethereumworldnews.com/vechain-amazon-blockchain-carbon/",
       "pubDate": "2022-08-02T13:18:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: VeChain and Amazon have signed a partnership geared toward blockchain-based carbon management services. The deal exists between VeCarbon and Amazon Web Services, the company’s cloud computing division. Amazon will provide technology to scale up operations to a national and continent level, per details of the agreement. This could also help the blockchain developer comply with carbon...",
       "currencies": [
@@ -267,8 +183,8 @@
       "title": "Terra LUNA retakes top spot of most trending crypto as traders bet on price rise",
       "link": "https://finbold.com/terra-luna-retakes-top-spot-of-most-trending-crypto-as-traders-bet-on-price-rise/",
       "pubDate": "2022-08-02T13:01:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Volatility to crypto traders is nothing new, and the turbulence for the Terra (LUNA) ecosystem and its subsequent relaunch as... Continue reading",
       "currencies": [
@@ -281,33 +197,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "🧰 #RIF is the toolset for building #DeFi4Bitcoin",
-      "link": "NULL",
-      "pubDate": "2022-08-02T12:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
-      "title": "RT @helioscomm: whoa, #HoloMonday is almost over! Here are some more pics from the #DeveloperImmersive . Thanks to @mracus / @5thingol @mme…",
-      "link": "NULL",
-      "pubDate": "2022-08-02T12:17:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "Polygon’s MATIC Has Lost a Vital Support Level",
       "link": "https://cryptobriefing.com/polygons-matic-has-lost-a-vital-support-level/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-02T11:40:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "layer2",
       "description": "Polygon has dropped below a vital area of support after a series of on-chain transactions sparked a furore within the cryptocurrency community. Polygon has become the talk of the crypto community after 14% of the total MATIC supply was transferred from its vesting contract.A sense of commotion struck the cryptocurrency market after on-chain data revealed that 1.4 billion MATIC tokens had been...",
       "currencies": [
@@ -323,8 +217,8 @@
       "title": "World’s first digital asset bank announces it will offer Cardano staking",
       "link": "https://finbold.com/worlds-first-digital-asset-bank-announces-it-will-offer-cardano-staking/",
       "pubDate": "2022-08-02T10:52:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "On August 2, Swiss digital bank Sygnum Bank made the announcement that it has extended its bank-grade staking service to... Continue reading",
       "currencies": [
@@ -340,8 +234,8 @@
       "title": "Swiss Sygnum Bank expands crypto staking with Cardano",
       "link": "https://cointelegraph.com/news/swiss-sygnum-bank-expands-crypto-staking-with-cardano",
       "pubDate": "2022-08-02T10:27:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Sygnum debuted cryptocurrency staking about two years ago with Tezos staking, eventually expanding the service to ICP and Et2.",
       "currencies": [
@@ -360,8 +254,8 @@
       "title": "Charles Hoskinson affirms he doesn’t ‘anticipate any further delays’ with Vasil hard fork",
       "link": "https://finbold.com/charles-hoskinson-affirms-he-doesnt-anticipate-any-further-delays-with-vasil-hard-fork/",
       "pubDate": "2022-08-02T08:56:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "The highly anticipated Vasil hard fork upgrade for Cardano (ADA) has been pushed back for several weeks as the smart... Continue reading",
       "currencies": [
@@ -374,23 +268,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "[Klaytn x @GroundX_Corp at #KBW2022] Immerse yourself in a unique #NFT experience with GroundX at the #Klaytn boot…",
-      "link": "NULL",
-      "pubDate": "2022-08-02T06:56:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Shiba Inu Team Reveals Name of Much-Anticipated Game",
       "link": "https://u.today/shiba-inu-team-reveals-name-of-much-anticipated-game",
       "pubDate": "2022-08-02T06:17:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The Shiba Inu team has finally revealed the name of the project’s much-anticipated video game",
       "currencies": [
@@ -403,22 +285,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @FelixProducer: 1/ I've been working day and night on this one. Miu is an original metaverse idol that I produced in collaboration with…",
-      "link": "NULL",
-      "pubDate": "2022-08-02T05:20:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
       "title": "DOT Clamping On $8 Support Crucial To Maintain Bullish Pace",
       "link": "https://www.newsbtc.com/news/dot-clamping-on-8-support/",
       "pubDate": "2022-08-02T03:01:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Can Polkadot (DOT) hold on to dear life as its price nosedived by 4% on the daily charts right after it peaked at $8.84? The $8 support line is seen as a critical zone for the coin, especially with the prevailing seller pressure going on. DOT is seen to go downhill or can plunge to $6 in the coming days. On the brighter side, the token’s price is generally bullish as shown in the extended increase which propelled its price to a high of $8.84 seen yesterday. On the other hand, DOT is seen to have",
       "currencies": [
@@ -434,23 +305,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "TA: Bitcoin Price Signals Bearish Reaction, Why BTC Could Revisit $22K",
-      "link": "NULL",
-      "pubDate": "2022-08-02T02:28:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin is showing a few bearish signs below the $24,000 resistance zone against the US Dollar. BTC is declining and might test the $22,000 support zone. Bitcoin is slowly moving lower below the $24,000 pivot level. The price is now trading below the $23,500 level and the 100 hourly simple moving average. There is a key bearish trend line forming with resistance near $23,300 on the hourly...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 5
-      },
-      "sentiment": "bearish"
     }
   ]
 }

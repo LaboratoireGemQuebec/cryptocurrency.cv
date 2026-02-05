@@ -1,58 +1,15 @@
 {
   "date": "2024-03-18",
-  "fetchedAt": "2026-02-05T07:45:53.380Z",
-  "articleCount": 65,
+  "fetchedAt": "2026-02-05T07:48:35.657Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Best Crypto to Buy Today March 18 – Jupiter, Fantom, XRP",
-      "link": "NULL",
-      "pubDate": "2024-03-18T23:53:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Turn $1,000 Into $150 A Month? Explore These High-Yield Crypto Staking Options",
-      "link": "NULL",
-      "pubDate": "2024-03-18T23:52:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOT",
-        "XLM",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Bitcoin (BTC) and Ethereum (ETC) Developments Encourage Exploration of Furrever Token Presale for Diverse Portfolios",
-      "link": "NULL",
-      "pubDate": "2024-03-18T23:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
-    },
     {
       "title": "JUST IN: Fidelity Updates Ethereum Spot ETF Application to Include Staking",
       "link": "https://en.bitcoinsistemi.com/just-in-fidelity-updates-ethereum-spot-etf-application-to-include-staking/",
       "pubDate": "2024-03-18T21:43:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "The development, which is considered interesting by analysts, may bring staking, one of the important building blocks of Ethereum, to the Spot ETF world. Continue Reading: JUST IN: Fidelity Updates Ethereum Spot ETF Application to Include Staking",
       "currencies": [
@@ -65,48 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is Toxic Bitcoin Maximalism Getting Less Toxic?",
-      "link": "NULL",
-      "pubDate": "2024-03-18T20:35:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "The Trading World Takes Notice: Fezoo (FEZ) Positions Itself as a Strong Rival to OKX, Luring Dogecoin (DOGE) & Stellar (XLM) Investors",
-      "link": "NULL",
-      "pubDate": "2024-03-18T20:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Venture Capitalists Pour Millions Into AI Tokens",
-      "link": "NULL",
-      "pubDate": "2024-03-18T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GT",
-        "TON"
-      ]
-    },
-    {
       "title": "AI Predicts When Shiba Inu Price Will Cross New All-Time High And What Will Drive It",
       "link": "https://zycrypto.com/ai-predicts-when-shiba-inu-price-will-cross-new-all-time-high-and-what-will-drive-it/",
       "pubDate": "2024-03-18T20:04:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Gemini's predictions, revealed in a recent report, shed light on three potential scenarios for SHIB's price by the end of 2024, providing crypto enthusiasts with multiple factors to consider.",
       "currencies": [
@@ -118,53 +38,11 @@
       }
     },
     {
-      "title": "Restaking Summer’s Airdrop Mania Begins",
-      "link": "NULL",
-      "pubDate": "2024-03-18T19:19:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "Rebel Satoshi’s second token ($RECQ) takes market by storm while ApeCoin And GALA soar",
-      "link": "NULL",
-      "pubDate": "2024-03-18T19:11:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "APE",
-        "GALA"
-      ]
-    },
-    {
-      "title": "Solana’s Stellar Rise in 2024: What’s Behind the Success?",
-      "link": "NULL",
-      "pubDate": "2024-03-18T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "XLM",
-        "BONK",
-        "WIF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana Surpasses Ethereum In Major Metric Amid Surge Above $200",
       "link": "https://www.newsbtc.com/news/solana/solana-ethereum-surge-200/",
       "pubDate": "2024-03-18T19:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Solana has recently become one of the trendiest cryptocurrencies in the space, capturing the interest of both crypto investors and enthusiasts in the space. The popular cryptocurrency has witnessed a significant surge in network activity, surpassing even that of Ethereum, the world’s second-largest cryptocurrency. Solana Outpaces Ethereum Network Activity On March 16, Solana experienced a...",
       "currencies": [
@@ -182,137 +60,11 @@
       }
     },
     {
-      "title": "Price analysis 3/18: SPX, DXY, BTC, ETH, SOL, BNB, XRP, ADA, AVAX, DOGE",
-      "link": "NULL",
-      "pubDate": "2024-03-18T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "AMP"
-      ]
-    },
-    {
-      "title": "Stride and dYdX community consider major staking collaboration to secure network",
-      "link": "NULL",
-      "pubDate": "2024-03-18T18:28:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "dYdX community to vote on staking 20M DYDX with Stride",
-      "link": "NULL",
-      "pubDate": "2024-03-18T17:26:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Is It Too Late to Buy Jupiter? JUP Price Tops Charts, Eco-Friendly Bitcoin Rival Secures $5.9M",
-      "link": "NULL",
-      "pubDate": "2024-03-18T17:04:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "COTI Launches $8 Million V2 Airdrop: Details",
-      "link": "NULL",
-      "pubDate": "2024-03-18T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
-      "title": "Solana's Stellar Performance: Sustainable or Speculative? Expand Your Crypto Portfolio Now",
-      "link": "NULL",
-      "pubDate": "2024-03-18T16:17:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin L2s Are Poised to Breakout, Stacks Creator Muneeb Ali Says",
-      "link": "NULL",
-      "pubDate": "2024-03-18T16:16:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Signs Strategic Partnership with Unagi and LFP to Launch Coach Ligue 1 Fantasy Football Game",
-      "link": "NULL",
-      "pubDate": "2024-03-18T16:13:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BREAKING:  Coinbase Announces It Will List a New Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-03-18T15:56:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "AKT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "$ADA: EMURGO Invests in NMKR to Drive Adoption of Cardano’s Web3 Ecosystem",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-03-18T15:53:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "EMURGO has strategically invested in NMKR, aiming to accelerate the adoption of Cardano’s Web3 ecosystem, as announced in a recent press release. This move is anticipated to support NMKR in its endeavors to scale its business operations, including the development of a new tokenization launchpad and enhancement of its tokenization tools. EMURGO is a global […]",
       "currencies": [
@@ -324,35 +76,11 @@
       }
     },
     {
-      "title": "Ether.Fi (ETHFI) token dumps after trading debut",
-      "link": "NULL",
-      "pubDate": "2024-03-18T15:48:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "Shiba Inu Rebounds 15% as Lead Dev Updates on Shiba Eternity",
-      "link": "NULL",
-      "pubDate": "2024-03-18T15:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "KSM"
-      ]
-    },
-    {
       "title": "Is Cardano’s Hydra project ‘abandoned’? Hoskinson says…",
       "link": "https://ambcrypto.com/is-cardanos-hydra-project-abandoned-charles-hoskinson-chips-in/",
       "pubDate": "2024-03-18T15:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "Charles Hoskinson clarifies rumors surrounding Cardano's Hydra project.",
       "currencies": [
@@ -364,349 +92,11 @@
       }
     },
     {
-      "title": "Jupiter Soars by Nearly 100%, Leading This Week’s Crypto Gainers",
-      "link": "NULL",
-      "pubDate": "2024-03-18T15:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "AVAX",
-        "WIF",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Pixudi celebrates Neo Board with competition following successful GrantShares proposal",
-      "link": "NULL",
-      "pubDate": "2024-03-18T15:20:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Analyst Predicts Breakout Rallies for BNB and One Ethereum Rival – Here Are His Targets",
-      "link": "NULL",
-      "pubDate": "2024-03-18T14:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Why LDO might jump to $22 this altcoin season",
-      "link": "NULL",
-      "pubDate": "2024-03-18T14:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "ETHFI token’s strong start fades with over 20% drop post-debut",
-      "link": "NULL",
-      "pubDate": "2024-03-18T14:19:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "IMF Doesn't Give Up on Bitcoin and Cryptocurrencies: Cryptocurrency Tax Requirement from IMF for 3 Billion Dollars!",
-      "link": "NULL",
-      "pubDate": "2024-03-18T14:02:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Coti launches $10M rewards program to support v2 token rollout",
-      "link": "NULL",
-      "pubDate": "2024-03-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
-      "title": "FTM Rockets As Fantom’s Sonic Upgrade Looms",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Apple reportedly wants to power its iPhones with Google's Gemini AI system",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ]
-    },
-    {
-      "title": "Ether.Fi Token Makes Debut at $4.13 Following Airdrop and Binance Launchpad Distribution",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:40:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "Bitcoin Tops $68,000; dogwifhat Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:34:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AVAX",
-        "THETA",
-        "QNT",
-        "ZRX",
-        "CFX",
-        "OP",
-        "TAO",
-        "WIF",
-        "FLOKI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin Sentiment Cools Off, Price Rebound Soon?",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Crypto News Today,18 March: Avalanche, Dogwifhat Drive Rally",
-      "link": "NULL",
-      "pubDate": "2024-03-18T13:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SOL",
-        "AVAX",
-        "THETA",
-        "NFT",
-        "FDUSD",
-        "TAO",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Quant Price Recovers Above $119 Support",
-      "link": "NULL",
-      "pubDate": "2024-03-18T12:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "UK’s LSE set to list innovative crypto ETP offerings",
-      "link": "NULL",
-      "pubDate": "2024-03-18T12:15:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETC"
-      ]
-    },
-    {
-      "title": "Ether.Fi Token Debuts at $4.13 After Airdrop and Binance Launchpad Distribution",
-      "link": "NULL",
-      "pubDate": "2024-03-18T12:06:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHFI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Approaches Risky Territory As Halving Event Draws Near",
-      "link": "NULL",
-      "pubDate": "2024-03-18T12:04:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Craig Wright’s Long-Running Satoshi Claim, Analyzed and Debunked",
-      "link": "NULL",
-      "pubDate": "2024-03-18T12:01:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "News and prices of the crypto Dogecoin (DOGE), Ripple (XRP) and Crypto.com (CRO)",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:59:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "DOGE",
-        "CRO"
-      ]
-    },
-    {
-      "title": "Here’s Why the Render (RNDR) Price Could Fall by 11% After Hitting an All-Time High",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "RNDR",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Slash Payment Adds Support for Oasys Enabling Businesses to Accept $OAS Payments",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:21:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OAS"
-      ]
-    },
-    {
-      "title": "Shrapnel Blockchain Game to Earn Cryptocurrency",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AVAX",
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Announced Its New Partnership, There Was a Sudden Rise in Price!",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Solana Skyrockets Past $200: Unveiling 3 Key Growth Drivers",
-      "link": "NULL",
-      "pubDate": "2024-03-18T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "UNI",
-        "ARB",
-        "BONK",
-        "JUP"
-      ]
-    },
-    {
       "title": "Cardano could rocket 150% with this pattern, says expert",
       "link": "https://finbold.com/cardano-could-rocket-150-with-this-pattern-says-expert/",
       "pubDate": "2024-03-18T10:38:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Recent months have brought a multitude of positive developments for the entire Cardano (ADA) ecosystem. The work done on the … Continue reading",
       "currencies": [
@@ -722,8 +112,8 @@
       "title": "Solana (SOL) Flips Binance Coin (BNB), Is Ethereum Next?",
       "link": "https://u.today/solana-sol-flips-binance-coin-bnb-is-ethereum-next",
       "pubDate": "2024-03-18T09:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Solana (SOL) outshines Binance Coin (BNB) in market ranking",
       "currencies": [
@@ -738,25 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Weekly Market Analysis: Altcoins Retreat As They Reach Bullish Exhaustion",
-      "link": "NULL",
-      "pubDate": "2024-03-18T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HNT",
-        "KAS",
-        "OP",
-        "TAO"
-      ]
-    },
-    {
       "title": "\"Solana Targets $1 Trillion Cap as The Retail Chain of Choice",
       "link": "https://coinpaprika.com/news/solana-targets-1-trillion-cap-as-the-retail-chain-of-choice/",
       "pubDate": "2024-03-18T09:42:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "Solana eyes $1T market cap, outshining Ethereum as retail's favorite blockchain",
       "currencies": [
@@ -769,23 +145,11 @@
       }
     },
     {
-      "title": "Litecoin (LTC) and Fantom (FTM) See Weekly Price Gains and InsanityBets (IBET)’s Presale Reaches New Heights",
-      "link": "NULL",
-      "pubDate": "2024-03-18T09:27:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC",
-        "FTM"
-      ]
-    },
-    {
       "title": "Developer Burns $10.4 Million in Solana Token Meant for Memecoin Launch",
       "link": "https://www.cryptopolitan.com/developer-burns-tokens-for-memecoin-launch/",
       "pubDate": "2024-03-18T09:21:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "In a shocking turn of events within the cryptocurrency space, a developer has inadvertently burnt a staggering amount of Solana (SOL) tokens intended for launching a meme coin. The mishap, which resulted in the loss of 535,000 SOL, equivalent to approximately $10.4 million, underscores the risks associated with pre-sale fundraising and the volatile nature of […]",
       "currencies": [
@@ -797,23 +161,11 @@
       }
     },
     {
-      "title": "Reddit Community Token MOON Hits Record High Ahead of Celer's Multidirectional Bridge Launch",
-      "link": "NULL",
-      "pubDate": "2024-03-18T09:10:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CELR",
-        "ARB"
-      ]
-    },
-    {
       "title": "Solana’s 22x hike from 2022’s low flips BNB – Is Ethereum next?",
       "link": "https://ambcrypto.com/solanas-22x-hike-from-2022s-low-flips-bnb-is-ethereum-next/",
       "pubDate": "2024-03-18T08:30:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Increasing on-chain activity was likely boosting Solana's value.",
       "currencies": [
@@ -828,22 +180,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MANTA Token Unlock Today: Price Poised for Surge or Sell-Off?",
-      "link": "NULL",
-      "pubDate": "2024-03-18T08:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MANTA"
-      ]
-    },
-    {
       "title": "Solana Market Cap Set To Skyrocket 1,000%, Says Crypto Fund CEO",
       "link": "https://www.newsbtc.com/news/solana/solana-market-cap-1000-crypto-fund-ceo/",
       "pubDate": "2024-03-18T07:40:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Joe McCann, the CEO and CIO of the crypto hedge fund Asymmetric, recently made a bold statement on X (formerly Twitter), forecasting a $1 trillion market cap for Solana. McCann’s argument hinges on several key points that detail why he believes Solana has achieved product-market fit (PMF) as “The Chain for Retail,” juxtaposing it against Ethereum’s challenges and perceived shortcomings for...",
       "currencies": [
@@ -860,50 +201,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin and Ethereum Rebound; DOGWIFHAT Sparks Crypto Rally",
-      "link": "NULL",
-      "pubDate": "2024-03-18T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "ADA",
-        "XRP",
-        "SOL",
-        "AVAX",
-        "CAKE",
-        "RNDR",
-        "TON",
-        "PEPE",
-        "ARB",
-        "WIF"
-      ]
-    },
-    {
-      "title": "SOL Price Crosses $200 Milestone, What’s Next For Solana?",
-      "link": "NULL",
-      "pubDate": "2024-03-18T05:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
       "title": "Cardano Creator Comes Forward in Support of Partnerchains, Addresses Speculations",
       "link": "https://coinedition.com/cardano-creator-comes-forward-in-support-of-partnerchains-addresses-speculations/",
       "pubDate": "2024-03-18T04:37:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "Charles Hoskinson, the founder of Cardano (ADA), addressed the blockchain community, which has been plagued with speculation and concern surrounding the Layer 1 blockchain, in a recent post on social media platform X. Notably, Hoskinson shed light on the groundbreaking partnership between Cardano and World Mobile, first announced in April 2021. Hoskinson said: “With respect […]",
       "currencies": [
@@ -915,36 +217,11 @@
       }
     },
     {
-      "title": "Stellar Lumen (XLM) Price Eyes Fresh Surge To $0.165",
-      "link": "NULL",
-      "pubDate": "2024-03-18T04:31:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Hits Support But Fresh Rally Faces Many Hurdles",
-      "link": "NULL",
-      "pubDate": "2024-03-18T03:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Mehen Debuts USDM, Cardano’s First Fiat-Backed Stablecoin",
       "link": "https://dailycoin.com/mehen-usdm-cardanos-first-fiat-backed-stablecoin/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-18T01:26:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Cardano welcomes its first fiat-backed stablecoin, USDM.",
       "currencies": [

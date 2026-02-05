@@ -1,130 +1,15 @@
 {
   "date": "2023-09-20",
-  "fetchedAt": "2026-02-05T07:45:52.136Z",
-  "articleCount": 60,
+  "fetchedAt": "2026-02-05T07:48:35.535Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Huobi Global Faces Risks As Investments In stUSDT Surge To $1.8 Billion",
-      "link": "NULL",
-      "pubDate": "2023-09-20T22:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TRX",
-        "HT"
-      ]
-    },
-    {
-      "title": "Circle’s USDC Stablecoin is Now Available on Polkadot Asset Hub",
-      "link": "NULL",
-      "pubDate": "2023-09-20T20:18:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Is Bitcoin Bull Run Coming Soon? What Network Fundamentals Say",
-      "link": "NULL",
-      "pubDate": "2023-09-20T20:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Will Polkadot’s USDC integration boost the network?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T19:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Evmos, Swing, Tashi, Wormhole team up to solve Cosmos’ liquidity issues",
-      "link": "NULL",
-      "pubDate": "2023-09-20T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Aave Up More Than 4% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-20T19:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "CHANCER presale price set to hit $0.013 as Rollbit Coin drops 21% in a week",
-      "link": "NULL",
-      "pubDate": "2023-09-20T18:21:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLB"
-      ]
-    },
-    {
-      "title": "dYdX v4 Enables 1-Click Onboarding With Squid & Axelar",
-      "link": "NULL",
-      "pubDate": "2023-09-20T18:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Axie Infinity (AXS) Price In Recovery Mode – But Will it Last?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
     {
       "title": "Elon Musk Floats Charging All X Users Subscription Fees To Combat Bots — Dogecoin To Play A Huge Part?",
       "link": "https://zycrypto.com/elon-musk-floats-charging-all-x-users-subscription-fees-to-combat-bots-dogecoin-to-play-a-huge-part/",
       "pubDate": "2023-09-20T17:58:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Musk’s evangelism of Dogecoin has been well-documented over the years, and now, with the potential introduction of his new pay-for-play system, speculation is growing about the potential impact on the canine-themed token’s price.",
       "currencies": [
@@ -136,103 +21,11 @@
       }
     },
     {
-      "title": "Toncoin Surges Into Top 10 Cryptocurrencies, Briefly Topping Dogecoin",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:53:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "TON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Cryptocurrency price update: Dogecoin, Polkadot",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:43:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Uniswap (UNI) Network Surge: Will It Translate to a Price Increase?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "HT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "DYdX v4 integrates Squid and Axelar for Cosmos appchain onboarding",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Terra Classic’s 160M LUNC Funding Proposal Enrages Community",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Algorand Foundation Announces Build-a-Bull Hackathon in Collaboration With AWS",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:01:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Toncoin (TON) Continues To Shine, Is $3 Mark Possible?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T17:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "TON"
-      ]
-    },
-    {
       "title": "Ripple moves another 75 million of unlocked XRP",
       "link": "https://finbold.com/ripple-moves-another-75-million-of-unlocked-xrp/",
       "pubDate": "2023-09-20T16:54:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Following this month’s activity related to September’s tokens unlock by Ripple, the company moved another 75 million XRP ($38 million) … Continued",
       "currencies": [
@@ -244,52 +37,11 @@
       }
     },
     {
-      "title": "MakerDAO’s MKR Nears 16-Month High as Whales Accumulate, Crypto Hedge Fund Sets Bullish Price Target",
-      "link": "NULL",
-      "pubDate": "2023-09-20T16:39:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Price analysis 9/20: BTC, ETH, BNB, XRP, ADA, DOGE, SOL, TON, DOT, MATIC",
-      "link": "NULL",
-      "pubDate": "2023-09-20T16:23:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "DOT",
-        "MATIC",
-        "TON"
-      ]
-    },
-    {
-      "title": "OKX Concludes 21st Round of OKB Burn Program",
-      "link": "NULL",
-      "pubDate": "2023-09-20T16:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
       "title": "Coinbase says Zcash risks 51% amid ViaBTC control",
       "link": "https://coinjournal.net/news/coinbase-says-zcash-risks-51-amid-viabtc-control/",
       "pubDate": "2023-09-20T16:19:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "bitcoin",
       "description": "ViaBTC controls more than 51% of Zcash hashrate, Coinbase said in a report. The mining pool’s control of over half of hashrate poses risk of a 51% for the Zcash network. Coinbase has taken measures to protect users, including increasing Zcash confirmation threshold to 110 blocks. A report by the Coinbase security team claims that […]",
       "currencies": [
@@ -302,22 +54,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "a16z crypto leads $3.6 million seed round for Freatic’s information markets protocol",
-      "link": "NULL",
-      "pubDate": "2023-09-20T15:15:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
       "title": "Ripple Sells Millions of XRP as Price Jumps 7% Weekly",
       "link": "https://u.today/ripple-sells-millions-of-xrp-as-price-jumps-7-weekly",
       "pubDate": "2023-09-20T15:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Fintech monster Ripple takes advantage of weekly price surge to sell big chunk of XRP",
       "currencies": [
@@ -330,166 +71,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "USDC to Enhance Interoperability of Polkadot Parachains",
-      "link": "NULL",
-      "pubDate": "2023-09-20T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Cryptocurrency XDC Network Rises More Than 4% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-20T15:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "'We Can't Build Something Like This on Ethereum,' Says DYdX Founder as Mainnet Nears",
-      "link": "NULL",
-      "pubDate": "2023-09-20T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ATOM",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Algorand Foundation Announces Build-A-Bull Hackathon in Collaboration  With AWS",
-      "link": "NULL",
-      "pubDate": "2023-09-20T14:48:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Prices Today: Bitcoin Recovery at Halt Tumbles Toncoin, XRP by 2-4%",
-      "link": "NULL",
-      "pubDate": "2023-09-20T14:06:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "TON"
-      ]
-    },
-    {
-      "title": "Ethereum Edges Lower Ahead Of Fed Decision; Litecoin, Gala Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2023-09-20T14:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "GALA"
-      ]
-    },
-    {
-      "title": "ZCash Developer ECC Reacts To Coinbase’s Double Spend Warning",
-      "link": "NULL",
-      "pubDate": "2023-09-20T14:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZEC"
-      ]
-    },
-    {
-      "title": "The Graph (GRT) Price Prediction 2023-2030: Will GRT Price Hit $0.5 Soon?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T13:40:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Balancer Protocol Gets Compromised Second Time In Less Than A Month",
-      "link": "NULL",
-      "pubDate": "2023-09-20T13:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic (LUNC) Proposal For USTC Burn By Binance Officially Passed",
-      "link": "NULL",
-      "pubDate": "2023-09-20T12:49:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Justin Sun’s High-Yield Project Is Set to Eclipse Huobi Global",
-      "link": "NULL",
-      "pubDate": "2023-09-20T12:44:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Stellar's Big Upgrade Day Arrives, Here's Price Impact on XLM",
-      "link": "NULL",
-      "pubDate": "2023-09-20T12:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "News and prices of crypto assets The Graph (GRT), Cronos (CRO) and Casper (CSPR)",
-      "link": "NULL",
-      "pubDate": "2023-09-20T12:05:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO",
-        "GRT"
-      ]
-    },
-    {
       "title": "Bitcoin transactions need 2 hours to be safe, says developer",
       "link": "https://finbold.com/bitcoin-transactions-need-2-hours-to-be-safe-says-developer/",
       "pubDate": "2023-09-20T12:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "If someone asked you how many blocks (or minutes) they should wait to make sure their Bitcoin (BTC) transaction is … Continued",
       "currencies": [
@@ -502,41 +88,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Polkadot price prediction: Break and retest pattern forms",
-      "link": "NULL",
-      "pubDate": "2023-09-20T11:50:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Toncoin leads top 10 cryptos with weekly gain of 31%, could Bitcoin rise to US$30,000 by October?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T10:09:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TON"
-      ]
-    },
-    {
       "title": "Is $10,000 Possible For XRP Price? Crypto Analysts Weigh In",
       "link": "https://www.newsbtc.com/analysis/xrp/10000-xrp-price/",
       "pubDate": "2023-09-20T10:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "The possibilities of how high the XRP price can go has triggered heated debate among crypto community members over the past week. One particular forecast put the price of the cryptocurrency as high as $10,000 as Ripple advances in the payments sector. However, the validity of this prediction is still heavily debated, leading crypto analysts to weigh in on whether this price point is possible....",
       "currencies": [
@@ -552,8 +108,8 @@
       "title": "All Eyes on Bitcoin are on the FED Interest Rate Decision! At what time will it be announced? Here are the Expectations!",
       "link": "https://en.bitcoinsistemi.com/all-eyes-on-bitcoin-are-on-the-fed-interest-rate-decision-at-what-time-will-it-be-announced-here-are-the-expectations/",
       "pubDate": "2023-09-20T09:53:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Today, all eyes on Bitcoin (BTC) are turned to the FED's interest rate decision, which will be announced at 21:00 CET. What are the expectations? What time will it be announced? Continue Reading: All Eyes on Bitcoin are on the FED Interest Rate Decision! At what time will it be announced? Here are the Expectations!",
       "currencies": [
@@ -564,229 +120,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Telegram Lauches Crypto Wallet on Toncoin; High Hopes for Stellar, XRP and InQubeta Persist",
-      "link": "NULL",
-      "pubDate": "2023-09-20T09:47:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM",
-        "TON"
-      ]
-    },
-    {
-      "title": "Toncoin: Bull run continues, but is a correction on the cards?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T09:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "$100 to $1,000 Dream: Is Domini, NEAR Protocol, or $BNB the next 10x investment opportunity?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T09:25:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "USDC stablecoin launched on Polkadot Asset Hub",
-      "link": "NULL",
-      "pubDate": "2023-09-20T09:20:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Bitcoin Tapped 20-Day High, Toncoin Soars 30% Weekly (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-20T08:51:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TON"
-      ]
-    },
-    {
-      "title": "Toncoin breaks into the top 10 after adding 30% in one week",
-      "link": "NULL",
-      "pubDate": "2023-09-20T08:43:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "TRX",
-        "TON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoin Upswing Is Against An Overbought Condition",
-      "link": "NULL",
-      "pubDate": "2023-09-20T08:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "VET",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Circle Launches Its USDC Stablecoin on Polkadot Asset Hub",
-      "link": "NULL",
-      "pubDate": "2023-09-20T07:40:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Circle Launches USDC On Polkadot, Extends Parachain Compatibility",
-      "link": "NULL",
-      "pubDate": "2023-09-20T07:12:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "‘Lack of Finality’ — Single Mining Pool Commands 53% of Zcash’s Hashrate",
-      "link": "NULL",
-      "pubDate": "2023-09-20T07:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "ZEC"
-      ]
-    },
-    {
-      "title": "Celsius creditors flag renewed phishing attacks ahead of bankruptcy plan",
-      "link": "NULL",
-      "pubDate": "2023-09-20T05:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Native USDC Rolls Out Across Polkadot Ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-09-20T04:51:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
-    },
-    {
-      "title": "AAVE breaks above $61: Can buyers extend gains?",
-      "link": "NULL",
-      "pubDate": "2023-09-20T04:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Cosmos releases 2024 roadmap; ATOM reacts",
-      "link": "NULL",
-      "pubDate": "2023-09-20T03:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Neo hosts booth at TOKEN2049 Singapore featuring OneBand activation",
-      "link": "NULL",
-      "pubDate": "2023-09-20T02:58:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "24 Crypto, 19 Sep: Crypto flat before Federal Reserve rate decision",
-      "link": "NULL",
-      "pubDate": "2023-09-20T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "XEC",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin trades above US$27,000; Toncoin extends rally",
-      "link": "NULL",
-      "pubDate": "2023-09-20T00:35:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TON"
-      ]
-    },
-    {
-      "title": "Circle Launches USDC Stablecoin On Polkadot Network – Details",
-      "link": "NULL",
-      "pubDate": "2023-09-20T00:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "DOT"
-      ]
     }
   ]
 }

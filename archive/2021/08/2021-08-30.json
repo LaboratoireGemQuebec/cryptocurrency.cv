@@ -1,15 +1,15 @@
 {
   "date": "2021-08-30",
-  "fetchedAt": "2026-02-05T07:45:51.572Z",
-  "articleCount": 40,
+  "fetchedAt": "2026-02-05T07:48:35.346Z",
+  "articleCount": 25,
   "source": "historical-import",
   "articles": [
     {
       "title": "Ripple Fights Back: Seeks to Expose SEC Employees XRP Holdings",
       "link": "https://cryptopotato.com/ripple-fights-back-seeks-to-expose-sec-employees-xrp-holdings/",
       "pubDate": "2021-08-30T23:45:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "The company’s recent motion cites a five-year window in which SEC members were “free to buy, sell, and hold XRP”.",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Bitcoin Mempool Shows Low Demand?, Why Bears Could Stage A Comeback",
       "link": "https://www.newsbtc.com/news/bitcoin/the-bitcoin-mempool-shows-low-demand/",
       "pubDate": "2021-08-30T22:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "There is a before and after in one particular Bitcoin indicator that could be signaling bearish price action in the short term. As stated by many experts, the current bullish momentum can only be supported by strong demand, otherwise, BTC’s price could move sideways or risk returning to its former range below $40,000. If anything has me concerned it's this. Where is the demand?...",
       "currencies": [
@@ -42,8 +42,8 @@
       "title": "“We are very excited about the mutual prospects of bringing payments on the Algorand #blockchain to Panama” - Micha…",
       "link": "https://twitter.com/Algorand/status/1432426589036466178",
       "pubDate": "2021-08-30T19:34:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "ALGO"
@@ -58,9 +58,9 @@
       "title": "Fantom Foundation Unveils 370M FTM Incentive Program",
       "link": "https://beincrypto.com/fantom-foundation-unveils-370-m-ftm-incentive-program/",
       "pubDate": "2021-08-30T19:16:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Fantom Foundation has announced they will be committing 370,000,000 Fantom (FTM) to a new rewards program.",
       "currencies": [
         "FTM"
@@ -75,8 +75,8 @@
       "title": "PlanB: S2F Model Predicts Bitcoin To Break $100k By Christmas",
       "link": "https://www.newsbtc.com/news/bitcoin/planb-s2f-bitcoin-100k-christmas/",
       "pubDate": "2021-08-30T19:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "PlanB, the popularizer behind the Bitcoin S2F method, says the model predicts BTC will break $100k by this Christmas. The Bitcoin Stock-To-Flow Model According to PlanB on Twitter, the BTC stock-to-flow (or S2F in short) model predicts that the cryptocurrency is on its way to break $100k by Christmas. The S2F model is a method to predict the price of an asset based on the ratio of the stock...",
       "currencies": [
@@ -90,33 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin drops from $50k to $48k. Ups and downs will happen but this drop - shows the maturity of crypto investors!…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T18:59:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "RT @enyaai: Boba Network is our next-gen Ethereum Layer 2 Optimistic Rollup scaling solution that reduces gas fees, improves transaction th…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T18:14:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "CELO, Fantom and Keep3rV1 rally after liquidity mining programs launch",
       "link": "https://cointelegraph.com/news/celo-fantom-and-keep3rv1-rally-after-liquidity-mining-programs-launch",
       "pubDate": "2021-08-30T17:56:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Newly launched incentive programs and protocol upgrades were followed by 50% rallies in CELO, FTM and KP3R.",
       "currencies": [
@@ -129,22 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Burn completed",
-      "link": "NULL",
-      "pubDate": "2021-08-30T17:07:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Getting Ready For A $3 Retest?",
       "link": "https://www.newsbtc.com/analysis/ada/cardano-getting-ready-for-3/",
       "pubDate": "2021-08-30T17:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "At this point, there is not a crypto investor that has not heard of Cardano. The network is famed for being the number 1 competitor to Ethereum, seeing that one of its co-founders had created Cardano after exiting the project. Its growth has been tremendous in the past month alone. Giving returns of over 100% in the space of a single month alone. Related Reading | Crypto Analyst Lays Out...",
       "currencies": [
@@ -163,8 +130,8 @@
       "title": "Ripple Price Analysis: XRP Loses 9% in a Week But a Big Move Could be Ahead",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-loses-9-in-a-week-but-a-big-move-could-be-ahead/",
       "pubDate": "2021-08-30T16:55:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP is down a sharp 9% this week as the coin consolidates inside a symmetrical triangle. Against BTC, XRP is trading inside a descending wedge pattern as it battles to hold above 2300 SAT.",
       "currencies": [
@@ -177,33 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Burn Will start at 5pm UTC today on 30th August... #blackberrytoken",
-      "link": "NULL",
-      "pubDate": "2021-08-30T16:45:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
-      "title": "1/  We are proud to share the second article in our BandChain Phase 2 Whitepaper Digest series with our community…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T16:40:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "Ripple files motion to expose XRP holdings of SEC employees",
       "link": "https://cointelegraph.com/news/ripple-files-motion-to-expose-xrp-holdings-of-sec-employees",
       "pubDate": "2021-08-30T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "The court has reportedly given the U.S. SEC until Sept. 3 to respond to Ripple’s motion to compel the authority to provide data on its employees’ XRP holdings.",
       "currencies": [
@@ -219,8 +164,8 @@
       "title": "Fantom Rallies 71% as DeFi Ecosystem Expands",
       "link": "https://cryptobriefing.com/fantom-rallies-71-as-defi-ecosystem-expands/",
       "pubDate": "2021-08-30T16:16:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "description": "The cryptocurrency Fantom has experienced a remarkable 71% surge in value, driven by the expansion of its decentralized finance (DeFi) ecosystem. As new projects and applications emerge on the platform, investor interest and market activity have increased significantly, contributing to the token's rapid price growth.",
       "currencies": [
@@ -236,8 +181,8 @@
       "title": "Polkadot-based DeFi protocol Parallel Finance raises $22 million in Series A funding",
       "link": "https://www.theblockcrypto.com/post/115984/polkadot-based-defi-protocol-parallel-finance-raises-21-million-funding?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-08-30T16:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "defi",
       "description": "Parallel Finance, a Polkadot-based DeFi protocol, has raised $22 million in a Series A funding round.",
       "currencies": [
@@ -250,51 +195,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Russian Law Enforcement Imprisons A Man For 3 Years For Stealing Cryptocurrency Mining Equipment",
-      "link": "NULL",
-      "pubDate": "2021-08-30T16:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DASH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "(1) The ETN-Network team are investigating the anomalous activity. Meticulous investigations are currently in progr…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T15:43:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @binance: #Binance Will Support the Paxos Standard $PAX Rebrand to Pax Dollar $USDP",
-      "link": "NULL",
-      "pubDate": "2021-08-30T15:21:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD",
-        "USDP",
-        "PAXG"
-      ]
-    },
-    {
       "title": "Three Arrows Capital CEO Explains Why He Is ‘Very Bullish’ on Dogecoin ($DOGE)",
       "link": "https://www.cryptoglobe.com/latest/2021/08/three-arrows-capital-ceo-explains-why-he-is-very-bullish-on-dogecoin-doge/",
       "pubDate": "2021-08-30T14:19:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Recently, Su Zhu, Co-Founder, CIO, and CEO of Singapore-based crypto-focused hedge fund Three Arrows Capital talked about what makes him very bullish on Dogecoin. Zhu’s comments were made during an episode of the “Uncommon Core” podcast that was released on August 25. In short, as reported by The Daily Hodl, Zhu said that his bullishness is due […]",
       "currencies": [
@@ -309,8 +214,8 @@
       "title": "The IOTA Foundation Joins the Gaia-X Community",
       "link": "http://blog.iota.org/iota-foundation-joins-the-gaia-x-community/",
       "pubDate": "2021-08-30T14:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "Building a federated infrastructure to host the next generation of data and services in Europe What is Gaia-X, why does it exist, and how does it work? Gaia-X is an initiative driven by leading enterprises, research institutions, and the European public sector, aiming to enable secure, open, and sovereign use",
       "currencies": [
@@ -326,8 +231,8 @@
       "title": "Elrond-Based Assets and EGLD Token Added by Copper.co Custody Services Provider",
       "link": "https://u.today/elrond-based-assets-and-egld-token-added-by-copperco-custody-services-provider",
       "pubDate": "2021-08-30T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "High-performance blockchain platform Elrond (EGLD) is now supported by Copper.co",
       "currencies": [
@@ -340,33 +245,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$XEC is newly listed at instant exchange! #eCash #XEC",
-      "link": "NULL",
-      "pubDate": "2021-08-30T13:28:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "very interesting! We look forward to it! More interesting things will happen in the coming week!",
-      "link": "NULL",
-      "pubDate": "2021-08-30T13:19:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
       "title": "Leading DeFi projects launch $100M global adoption initiative",
       "link": "https://cointelegraph.com/news/leading-defi-projects-launch-100m-global-adoption-initative",
       "pubDate": "2021-08-30T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The initiative — built on the Celo ecosystem — identified the lack of inclusivity and accessibility in the traditional financial markets.",
       "currencies": [
@@ -380,23 +263,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "You can trade major cryptos like Bitcoin, Ethereum, Litecoin, Dash etc. on and earn 80% pay…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T11:31:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SXDT",
-        "SXUT"
-      ]
-    },
-    {
       "title": "XRP Searches for Support After Rejection from Resistance",
       "link": "https://beincrypto.com/xrp-find-support-after-rejection/",
       "pubDate": "2021-08-30T10:56:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "XRP has been increasing since bouncing at the $0.62 long-term horizontal support area at the end of July. So far, it has reached a high of $1.35.",
       "currencies": [
@@ -409,29 +280,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Here’s what happens to Ethereum (ETH) revenue after multimillion NFT sales",
-      "link": "NULL",
-      "pubDate": "2021-08-30T10:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "The latest research from crypto analytics company Nansen analyzed the flow of ether (ETH) that has come into the NFT market to determine whether it had any effect on ETH’s price.",
-      "currencies": [
-        "ETH",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "​​Cream Finance DeFi platform loses $19M in a flash loan hack",
       "link": "https://cointelegraph.com/news/cream-finance-defi-platform-loses-19m-in-a-flash-loan-hack",
       "pubDate": "2021-08-30T09:34:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The Cream Finance hacker gained $18.8 million by exploiting a reentrancy bug in the AMP token in a set of 17 transactions.",
       "currencies": [
@@ -447,8 +300,8 @@
       "title": "Standard Chartered launches blockchain trade platform with Chinese fintech",
       "link": "https://cointelegraph.com/news/standard-chartered-launches-blockchain-trade-platorm-with-chinese-fintech",
       "pubDate": "2021-08-30T09:18:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The joint venture operating the new blockchain-powered platform will be headquartered in Singapore and led by SC Ventures’ Amelia Ng as CEO.",
       "currencies": [
@@ -464,8 +317,8 @@
       "title": "Ripple May Have To Wait Before Settling SEC Lawsuit, According to Legal Expert Jeremy Hogan – Here’s Why",
       "link": "https://dailyhodl.com/2021/08/30/ripple-may-have-to-wait-before-settling-sec-lawsuit-according-to-legal-expert-jeremy-hogan-heres-why/",
       "pubDate": "2021-08-30T09:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Attorney and crypto legal expert Jeremy Hogan says Ripple may have to wait a few months before trying to settle their lawsuit with the U.S. Securities and Exchange Commission (SEC) The SEC sued Ripple late last year for allegedly selling XRP as a security. In a new video, Hogan notes that the lawsuit’s discovery phase […]",
       "currencies": [
@@ -481,8 +334,8 @@
       "title": "$20 billion outflows crypto market in a day as BTC waits to re-take $50k",
       "link": "https://finbold.com/20-billion-outflows-crypto-market-in-a-day-as-btc-waits-to-re-take-50k/",
       "pubDate": "2021-08-30T08:56:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "As investors grow wary after the recent surge in digital tokens, cryptocurrency prices fluctuated on Monday. At the time of... Continue reading",
       "currencies": [
@@ -499,8 +352,8 @@
       "title": "Ethereum network splits into two; update is urged",
       "link": "https://forkast.news/ethereum-network-splits-into-two-chains/",
       "pubDate": "2021-08-30T08:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "A network patch designed to fix a bug on the Geth network has led to the world’s second-largest blockchain splitting in two.",
       "currencies": [
@@ -512,23 +365,11 @@
       }
     },
     {
-      "title": "#Binance Will Support the Paxos Standard $PAX Rebrand to Pax Dollar $USDP",
-      "link": "NULL",
-      "pubDate": "2021-08-30T08:14:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "USDP"
-      ]
-    },
-    {
       "title": "Cream Finance Loses $18 Million in Crypto In Second Hackers’ Attack This Year",
       "link": "https://u.today/cream-finance-loses-18-million-in-crypto-in-second-hackers-attack-this-year",
       "pubDate": "2021-08-30T07:58:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Cream Finance has been attacked by cyber criminals, who managed to steal around $18 million in cryptocurrencies from it, pushing AMP and CREAM down",
       "currencies": [
@@ -541,38 +382,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Cointelegraph: New partnerships with banks and FinTech giants, and a handful of exchange listings sent #XinFin $XDC price to a new all-…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T07:55:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: I'm afraid to show people the real price chart. Look at where it is pointed. $1,000,000+ per H…",
-      "link": "NULL",
-      "pubDate": "2021-08-30T07:32:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HEX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Elon Musk Highlights Importance of New Doge Upgrade That Prepares Ground for Fees Reduction",
       "link": "https://u.today/elon-musk-highlights-importance-of-new-doge-upgrade-that-prepares-ground-for-fees-reduction",
       "pubDate": "2021-08-30T07:25:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Head of Tesla and the most influential Dogecoin fan has supported the call of the Doge community to spread the new upgrade to as many computers as possible",
       "currencies": [
@@ -588,8 +402,8 @@
       "title": "has the best price chart in the history of the universe.",
       "link": "https://twitter.com/HEXcrypto/status/1432237683351465985",
       "pubDate": "2021-08-30T07:04:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "trading",
       "currencies": [
         "HEX"
@@ -604,8 +418,8 @@
       "title": "Bitcoin (BTC) Drops Back After Failure to Reclaim Support",
       "link": "https://beincrypto.com/btc-drops-after-failure-reclaim-support/",
       "pubDate": "2021-08-30T05:48:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "The bitcoin (BTC) price decreased only slightly last week, opening at $49,239 and closing at $48,524. Technical indicator readings are mixed.",
       "currencies": [

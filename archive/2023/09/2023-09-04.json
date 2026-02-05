@@ -1,57 +1,15 @@
 {
   "date": "2023-09-04",
-  "fetchedAt": "2026-02-05T07:45:52.502Z",
-  "articleCount": 62,
+  "fetchedAt": "2026-02-05T07:48:35.563Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Gala Games co-founders clash in opposing lawsuits seeking $130M, $600M in damages",
-      "link": "NULL",
-      "pubDate": "2023-09-04T22:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Elon Musk Has “Secretly” Been Funding Dogecoin Development, Report Reveals",
-      "link": "NULL",
-      "pubDate": "2023-09-04T22:27:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Pseudonymous Analyst Predicts $XRP Price Could Breakout to $100-$130 In Future",
-      "link": "NULL",
-      "pubDate": "2023-09-04T22:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "This Ethereum Rival Is the ‘Most Loved Altcoin’ by Institutional Investors This Year, According to CoinShares",
       "link": "https://dailyhodl.com/2023/09/04/this-ethereum-rival-is-the-most-loved-altcoin-by-institutional-investors-this-year-according-to-coinshares/",
       "pubDate": "2023-09-04T22:01:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Digital assets manager CoinShares says that one top Ethereum (ETH) rival is being cherished over all other altcoins this year. In its latest Digital Asset Fund Flows Weekly Report, CoinShares finds that while the overall digital asset markets suffered minor outflows last week, Solana (SOL) saw minor inflows for the ninth consecutive week. “While Solana saw […]",
       "currencies": [
@@ -64,74 +22,11 @@
       }
     },
     {
-      "title": "No Vitalik, No Problem: Whale Sells Ethereum (ETH) For Maker (MKR)",
-      "link": "NULL",
-      "pubDate": "2023-09-04T22:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "XRP",
-        "DAI",
-        "SHIB",
-        "XLM",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cosmos primed for more downside on the price chart- here’s why",
-      "link": "NULL",
-      "pubDate": "2023-09-04T21:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Gala Games Scandal: CEO Claims Co-Founder Brains Behind $130-M Token Theft",
-      "link": "NULL",
-      "pubDate": "2023-09-04T20:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Whale With a History of Profitable Trades Goes Long on Ethereum-Based Casino Coin: On-Chain Data",
-      "link": "NULL",
-      "pubDate": "2023-09-04T19:55:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RLB"
-      ]
-    },
-    {
-      "title": "Gala Games Founders Feud Over Millions of Dollars Worth of Misused Tokens",
-      "link": "NULL",
-      "pubDate": "2023-09-04T19:37:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Crypto gambling site Stake sees suspicious withdrawals totalling $16M",
       "link": "https://coinjournal.net/news/crypto-gambling-site-stake-sees-suspicious-withdrawals-totalling-16m/",
       "pubDate": "2023-09-04T19:34:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "general",
       "description": "The withdrawals were flagged by Security firm Cyvers Alerts. The cryptocurrencies involved in the withdrawals include USDT, ETH, DAI, USDC and STAKE. Alphapo, a supplier of payment services to several crypto-gambling sites saw similar erroneous withdrawals on July 23. Security firm Cyvers Alerts has flagged withdrawals from the cryptocurrency gambling Slake platform totalling $16 million...",
       "currencies": [
@@ -147,8 +42,8 @@
       "title": "Solana Is the ‘Most Loved Altcoin Among investors’, Says CoinShares",
       "link": "https://decrypt.co/154920/solana-most-loved-altcoin-among-investors-coinshares-report",
       "pubDate": "2023-09-04T19:27:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Investors have been withdrawing from altcoin crypto funds, but Solana is an exception.",
       "currencies": [
@@ -160,54 +55,11 @@
       }
     },
     {
-      "title": "Australian cardiac institute ditches cloud storage in favor of Filecoin",
-      "link": "NULL",
-      "pubDate": "2023-09-04T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "More Than Half of All Adults in High-Inflation Turkey Are Crypto Investors: KuCoin Study",
-      "link": "NULL",
-      "pubDate": "2023-09-04T18:45:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KCS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "DYDX Token Slated To Be Native Asset for New Standalone Blockchain After Unanimous Vote",
-      "link": "NULL",
-      "pubDate": "2023-09-04T18:41:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MKR",
-        "DYDX"
-      ]
-    },
-    {
       "title": "XRP Will Replace US$ as World’s Reserve Currency: Ripple CTO",
       "link": "https://coinedition.com/xrp-will-replace-us-as-worlds-reserve-currency-ripple-cto/",
       "pubDate": "2023-09-04T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "In a recent Twitter Spaces titled “What’s Happening with XRP,” David “JoelKatz” Schwartz, the CTO of Ripple hypothesized a scenario wherein XRP could emerge as the world’s reserve currency. Speaking about world reserve currencies, Schwartz stated that he believed that a lot of the world was done with the American dollar as the reserve currency. […]",
       "currencies": [
@@ -219,56 +71,11 @@
       }
     },
     {
-      "title": "Must-Have Coins Under $1: Polygon (MATIC), Stellar (XLM) and Watchvestor (WVTR)",
-      "link": "NULL",
-      "pubDate": "2023-09-04T18:03:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Stellar’s XLM Skyrockets Amid Teases of ‘Massive Reveal’",
-      "link": "NULL",
-      "pubDate": "2023-09-04T17:04:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "GALA Token Down 20% as Co-Founders Sue Each Other",
-      "link": "NULL",
-      "pubDate": "2023-09-04T16:53:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Vitalik Sells MKR after MakerDAO Eyes Solana’s Codebase",
-      "link": "NULL",
-      "pubDate": "2023-09-04T16:40:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Will Cardano (ADA) Price Hold or Fold at $0.25?",
       "link": "https://beincrypto.com/cardano-ada-price-analysis-mixed-signs/",
       "pubDate": "2023-09-04T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The price of Cardano (ADA) is trading inside a crucial horizontal support area at $0.25. The area has been in place since the start of the year. Readings from the weekly and daily timeframes are mixed, making it difficult to determine the future trend’s direction until the price makes a decisive movement in one or the other direction. Cardano Price Hovers Above Support The...",
       "currencies": [
@@ -280,81 +87,11 @@
       }
     },
     {
-      "title": "Biggest Movers: XLM 7% Higher, TON Nears $2.00 Threshold",
-      "link": "NULL",
-      "pubDate": "2023-09-04T16:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "TON"
-      ]
-    },
-    {
-      "title": "FTX Wallets Begin Moving Tokens One Month To Sam Bankman-Fried’s Trial",
-      "link": "NULL",
-      "pubDate": "2023-09-04T15:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "WBTC",
-        "SHIB",
-        "FTT"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Bucks the Trend with 11% Surge as Anticipation Builds",
-      "link": "NULL",
-      "pubDate": "2023-09-04T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Stellar Up More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-04T15:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency LEO Token Falls More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-04T15:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "How Much Cardano (ADA) You Should Buy to Become a Millionaire in the Next Bull Run",
       "link": "https://beincrypto.com/cardano-ada-fans-earn-1-million/",
       "pubDate": "2023-09-04T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Cardano is a prominent proof-of-stake blockchain supporting decentralized apps. Its native token, ADA, is trading at 91.7% below its all-time high. While new crypto investors can panic during a market downturn, experienced traders use them to buy coins they think will add value to their investments in the medium to long term. We estimate how much longer-term traders must invest for...",
       "currencies": [
@@ -369,8 +106,8 @@
       "title": "Betting platform Stake sees over $41 million in suspicious crypto outflows",
       "link": "https://www.theblock.co/post/248998/betting-platform-stake-sees-over-15-million-in-suspicious-funds-outflow?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-04T14:59:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Suspicious outflows on Stake reportedly amount to over $41 million across Ethereum, Polygon and BNB Chain.",
       "currencies": [
@@ -384,76 +121,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Aave price is in trouble as US money market fund yields rise",
-      "link": "NULL",
-      "pubDate": "2023-09-04T14:38:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Stellar (XLM) Shows Breakout Potential Amid Heavy Shorting By Traders",
-      "link": "NULL",
-      "pubDate": "2023-09-04T14:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Developers of the dYdX Protocol Shared the Latest Changes on the Chain! Here are the Details!",
-      "link": "NULL",
-      "pubDate": "2023-09-04T14:11:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "GALA Drops 98% in 18 Months Amid Company’s Internal Troubles",
-      "link": "NULL",
-      "pubDate": "2023-09-04T14:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Stellar (XLM) Price Surges Above Resistance After Surprise Announcement",
-      "link": "NULL",
-      "pubDate": "2023-09-04T13:49:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Cardano Djed Stablecoin Receives Big Code Upgrade: Details",
       "link": "https://u.today/cardano-djed-stablecoin-receives-big-code-upgrade-details",
       "pubDate": "2023-09-04T13:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Upgrade aims to incentivize more users to use protocol",
       "currencies": [
@@ -465,23 +137,11 @@
       }
     },
     {
-      "title": "Stellar Tough Spot: Will XLM Prices See A Dip Amid Mid-Range Struggles?",
-      "link": "NULL",
-      "pubDate": "2023-09-04T13:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM",
-        "TON"
-      ]
-    },
-    {
       "title": "Bernstein: “Not Only Bitcoin, But Also ETH, SOL, MATIC and Other Tokens Will Have Spot ETFs Approved”",
       "link": "https://en.bitcoinsistemi.com/bernstein-not-only-bitcoin-but-also-eth-sol-matic-and-other-tokens-will-have-spot-etfs-approved/",
       "pubDate": "2023-09-04T13:18:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "In his latest report, Bernstein argued that in addition to the Bitcoin spot ETF, there will also be ETF opportunities for other cryptocurrencies. Continue Reading: Bernstein: “Not Only Bitcoin, But Also ETH, SOL, MATIC and Other Tokens Will Have Spot ETFs Approved”",
       "currencies": [
@@ -495,276 +155,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MakerDAO Whale Defies Vitalik Buterin – Moves $12 Million Into Self-Custody",
-      "link": "NULL",
-      "pubDate": "2023-09-04T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Quant Returns Above The Support Of The Range of $97",
-      "link": "NULL",
-      "pubDate": "2023-09-04T12:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Binance-backed BUSD circulating supply drops to less than $3B",
-      "link": "NULL",
-      "pubDate": "2023-09-04T12:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "First Mover Americas: Bitcoin Hovers Below $26K; Stellar’s XLM Rallies",
-      "link": "NULL",
-      "pubDate": "2023-09-04T12:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Gala Games’ founders engulfed in legal feud",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:51:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Gala Games Co-Founders Sue Each Other Alleging Corporate Waste, $130 Million Theft",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:50:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "ChatGPT predicts Shiba Inu price in 2024, 2028, 2032 and 2050",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:38:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Since the meteoric rise of the meme cryptocurrency Shiba Inu (SHIB) in 2021, it has remained one of the most … Continued",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "SFP, CSPR, SNX, MKR, FXS Lead the Way in Terms of 24H Gains",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:16:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR",
-        "FRAX",
-        "FXS"
-      ]
-    },
-    {
-      "title": "TrueUSD (TUSD) Market Cap Jumps to $3.4B, Overtakes Binance USD (BUSD)",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Surges 11% in Single Day; Here's Likely Reason",
-      "link": "NULL",
-      "pubDate": "2023-09-04T11:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "DYDX token approved to become native asset of upcoming dYdX Chain",
-      "link": "NULL",
-      "pubDate": "2023-09-04T10:45:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Vitalik Buterin Sells MKR Tokens as MakerDAO Co-Founder Pushes for Solana-based ‘NewChain’",
-      "link": "NULL",
-      "pubDate": "2023-09-04T10:22:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Clash between Gala Games founders sends GALA token crashing",
-      "link": "NULL",
-      "pubDate": "2023-09-04T10:19:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Gala Games Founders Sue Each Other Over Alleged $130M Theft",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Shibarium Achieves 1 Million Wallets Milestone amid SHIB Price Challenges",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:28:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DAI",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Ethereum Creator Vitalik Buterin Sells All Remaining MKR Tokens After Two Years of Inactivity: On-Chain Data",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:15:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Huobi’s spot market share jumps to highest point in two years",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:09:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "HT"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Crucial Proposal For Dynamic Minimum Commission Is Passed",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:07:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin flatlines again, but TON, LINK, MKR, XTZ are poised for up-move",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "XTZ",
-        "MKR",
-        "TON"
-      ]
-    },
-    {
-      "title": "Vitalik Buterin Dumps MKR After Two Years In Unexpected Move",
-      "link": "NULL",
-      "pubDate": "2023-09-04T09:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "As Gala Games co-founders take each other to court, here’s what followed",
-      "link": "NULL",
-      "pubDate": "2023-09-04T08:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Gala Games Co-founders Engage in Legal Battle over $130M Theft Issue",
-      "link": "NULL",
-      "pubDate": "2023-09-04T08:23:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Colorado Now Accepts Crypto for Driver’s License and Vehicle Registration Renewals",
       "link": "https://beincrypto.com/colorado-now-accepts-crypto-for-drivers-license-and-vehicle-registration-renewals/",
       "pubDate": "2023-09-04T07:11:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Colorado residents can now renew their driver’s licenses and vehicle registrations using cryptocurrency. The state’s Department of Motor Vehicles (DMV) now accepts cryptocurrency through PayPal for online payments, according to a new press release. The DMV says it will charge a service fee of $1 plus 1.83% of the total transaction cost for paying with […]",
       "currencies": [
         "BTC",
@@ -777,53 +173,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Filecoin consolidates above $3.1, what next",
-      "link": "NULL",
-      "pubDate": "2023-09-04T05:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "More than half of Turkey has turned to crypto amid rapid currency devaluation – KuCoin report",
-      "link": "NULL",
-      "pubDate": "2023-09-04T05:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Gala Games founders biff over $130M theft, corporate waste allegations",
-      "link": "NULL",
-      "pubDate": "2023-09-04T03:21:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Kava Chain Now Live on Fireblocks, Opening Cosmos DeFi to Institutional Investors",
-      "link": "NULL",
-      "pubDate": "2023-09-04T02:35:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "KAVA"
-      ]
     }
   ]
 }

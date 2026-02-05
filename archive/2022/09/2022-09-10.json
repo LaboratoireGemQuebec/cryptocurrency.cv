@@ -1,67 +1,15 @@
 {
   "date": "2022-09-10",
-  "fetchedAt": "2026-02-05T07:45:52.894Z",
-  "articleCount": 37,
+  "fetchedAt": "2026-02-05T07:48:35.605Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "What if..?",
-      "link": "NULL",
-      "pubDate": "2022-09-10T23:16:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Helium (HNT) Recovers With Double-digit Gain, Can Bulls Push to $12?",
-      "link": "NULL",
-      "pubDate": "2022-09-10T22:21:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "APE"
-      ]
-    },
-    {
-      "title": "RT @UacatN: $White Ethereum - understanding the use case. White Wash your ethereum. @WhiteETHtoken launched the dapp today!  Check the vid…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T22:18:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "Michael Saylor Buys $500M Bitcoin | EP 574",
-      "link": "NULL",
-      "pubDate": "2022-09-10T19:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Michael Saylor's MicroStrategy to sell $500 Million in stock to buy more Bitcoin! ✓ SUBSCRIBE - https://bit.ly/3QbgqTQ ✓ LEAVE A LIKE ✓ COMMENT Join our Telegram, Give us Memes to Review! ► https://t.me/TheSimplyBitcoinChannel Check out our Sponsors, support Bitcoin ONLY Businesses: Pacific Bitcoin Conference: https://www.pacificbitcoin.com/ ► The biggest Bitcoin event on the West Coast November 10-11, 2022 in Santa Monica, CA USE PROMO CODE 'SIMPLY' FOR 20% OFF YOUR TICKET - Pacific Bitcoin NOD",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 15,
-        "negative": 6
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Reasons why XRP’s 14% uptick could turn into a full-fledged bull run",
       "link": "https://ambcrypto.com/reasons-why-xrps-14-uptick-could-turn-into-a-full-fledged-bull-run/",
       "pubDate": "2022-09-10T18:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Ripple [XRP] is finally regaining its affinity for the upside after about three weeks of weak price action. The cryptocurrency slipped out of its short-term ascending channel after a bearish performance at the end of August. XRP’s bullish performance in the last three days has pushed it back to the previous range. But the question […]",
       "currencies": [
@@ -73,56 +21,11 @@
       }
     },
     {
-      "title": "For those of you wondering why the ‘Crossing The Yellow Blocks’ docuseries is not available on Prime Video in your…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T16:21:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "$White has a unique feature to restrict hackers from using our dapp, that means the funds of a common person and ha…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T15:47:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "Is your spirit craving some @AaveAave? Store, send, and trade $AAVE on @0xPolygon today like a proper spectre  Dow…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T15:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "TEL"
-      ]
-    },
-    {
-      "title": "RT @Cultmander76: @LBank_Exchange GM! you know who else is having a good morning? $WHITE token holders. Devs have been building and final…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T14:55:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
       "title": "Binance Coin Surpasses 1 Billion Trading Volume After BNB Network Upgrade",
       "link": "https://www.newsbtc.com/news/binance-coin/binance-coin-surpasses-1-billion-trading-volume/",
       "pubDate": "2022-09-10T14:55:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "exchange",
       "description": "There is strength in numbers and Binance Coin (BNB) has proven that time and again with its robust community of Bitcoin enthusiasts whose faith in the coin has always been its strong fortress. BNB surpasses 1 billion in terms of trading volume following network upgrade BNB price up by 2.04% Binance launches Binance Account Bond (BAB) for KYC verification Recently, Binance rolled out the...",
       "currencies": [
@@ -138,22 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celebrating the launch of our $Whitewash dapp, $White will be investing 0.5 ETH in to the best projects with strong…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T14:54:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
       "title": "Biggest Movers: ADA, SAND Surge to Multi-Week Highs on Saturday",
       "link": "https://news.bitcoin.com/biggest-movers-ada-sand-surge-to-multi-week-highs-on-saturday/",
       "pubDate": "2022-09-10T14:08:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "trading",
       "description": "Cardano was one of Saturday’s notable gainers, with the token surging to a three-week high. The sandbox was also in the green, rising to a multi-week peak, as sentiment in the cryptocurrency market remains mostly bullish. Overall, the global crypto market cap is up nearly 2% as of writing. Cardano (ADA) Cardano (ADA) climbed to […]",
       "currencies": [
@@ -170,8 +62,8 @@
       "title": "Singapore’s biggest bank DBS to acquire land in The Sandbox metaverse",
       "link": "https://www.theblock.co/post/169047/singapores-biggest-bank-dbs-to-acquire-land-in-the-sandbox-metaverse?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-09-10T13:59:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "regulation",
       "description": "DBS has partnered with The Sandbox to create a metaverse experience. The bank will also buy a 3x3 land plot in The Sandbox.",
       "currencies": [
@@ -184,39 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrencies are gradually gaining acceptance in emerging markets. #Buyaladdin is committed to providing a new…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T12:47:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Whales Grab 600 Billion SHIB Overnight As Number of SHIB Holders Hits New ATH",
-      "link": "NULL",
-      "pubDate": "2022-09-10T12:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Top investors have bought nearly 600 billion SHIB worth $7.8 million",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "$BTC: Cardano Founder Says White House Report Suggests Bitcoin Could be Banned in U.S.",
       "link": "https://www.cryptoglobe.com/latest/2022/09/btc-cardano-founder-says-white-house-report-suggests-bitcoin-could-be-banned-in-u-s/",
       "pubDate": "2022-09-10T12:01:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "On Friday (September 9), Charles Hoskinson, Co-Founder and CEO of IOG, the blockchain technology firm behind Cardano’s R&D, explained why a recently released White House report paints a worrying picture for Bitcoin in the U.S. It all started on March 9, when President Joe Biden signed the Executive Order on Ensuring Responsible Development of Digital Assets. […]",
       "currencies": [
@@ -230,177 +94,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "White House Report Recommends Banning Bitcoin Mining to Slash GHG Emissions",
-      "link": "NULL",
-      "pubDate": "2022-09-10T11:53:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The White House recommended “eliminating” the use of energy-intensive consensus methods if other measures fail to reduce crypto carbon emissions.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 9
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "We can see a retrace so recommend to manage your risk. For updates check discord 🤝",
-      "link": "NULL",
-      "pubDate": "2022-09-10T11:09:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "When you apply the functions of a blockchain to your dApp, wouldn’t it be cool if you could tweak those functions?…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T11:01:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "RT @Cultmander76: @WhiteETHtoken  one of $CULT DAOs investments. Congrats on a strong day yesterday and release of your dapp!",
-      "link": "NULL",
-      "pubDate": "2022-09-10T10:56:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "RT @Mzcoco77: swapped to my @cyberphunks twin on the @NFTX_ vault. the vaults are so easy and fun it should be a default for each collecti…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T08:29:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SOLO",
-        "META",
-        "MASK",
-        "BEAM",
-        "ANIME",
-        "WHALE",
-        "ALPACA",
-        "DUCK",
-        "PUNK",
-        "UWU",
-        "NFTX",
-        "PUNK-BASIC",
-        "PUNK-FEMALE",
-        "PUNK-ATTR-4",
-        "PUNK-ATTR-5",
-        "PUNK-ZOMBIE",
-        "AVASTR",
-        "COOL",
-        "BAYC",
-        "KITTY",
-        "BERRY",
-        "FACE",
-        "HYPER",
-        "MINUTE",
-        "PATH",
-        "WAIFU",
-        "BGAN",
-        "BUNNY",
-        "BONSAI",
-        "CARD",
-        "MOONCAT",
-        "GLYPH",
-        "MEEB",
-        "SQGL",
-        "BAKC",
-        "ENERGY",
-        "RINGER",
-        "MANEKI",
-        "SPUNK",
-        "PASTA",
-        "PUPS",
-        "TOSHIMON",
-        "SODIUM",
-        "CNHPD",
-        "PHUNK",
-        "HDPUNK",
-        "KONGZ",
-        "MORPH",
-        "WIZARD",
-        "COLLECTIVE",
-        "KAMAX",
-        "TOPDOG",
-        "DFNORM",
-        "CLOCK",
-        "CITIES",
-        "LONDON",
-        "MILADY"
-      ]
-    },
-    {
-      "title": "Are you good NFT trader? Are you good at alpha calls? Don't wait and dm us rn 🤝",
-      "link": "NULL",
-      "pubDate": "2022-09-10T08:25:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "We are long on $SOL from 34.24 after 30$ long. Would you like to see chart ? With target and SL?",
-      "link": "NULL",
-      "pubDate": "2022-09-10T08:10:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BORG"
-      ]
-    },
-    {
-      "title": "AXS, RON see red despite seizing 10% of Ronin hack funds",
-      "link": "NULL",
-      "pubDate": "2022-09-10T07:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "GM fam 🤝",
-      "link": "NULL",
-      "pubDate": "2022-09-10T07:24:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
       "title": "Cardano Creator Charles Hoskinson Warns That the White House’s New Crypto Proposals Pose Grave Threat to Bitcoin",
       "link": "https://dailyhodl.com/2022/09/10/cardano-creator-charles-hoskinson-warns-that-the-white-houses-new-crypto-proposals-pose-grave-threat-to-bitcoin/",
       "pubDate": "2022-09-10T07:04:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Cardano (ADA) creator Charles Hoskinson is warning that new recommendations by the US government do not bode well for Bitcoin (BTC) and other crypto assets. Taking issue with the recommendations of a new White House Office of Science and Technology Policy report that calls for the involvement of the U.S. Environmental Protection Agency (EPA) and […]",
       "currencies": [
@@ -413,67 +111,11 @@
       }
     },
     {
-      "title": "Happy Weekend",
-      "link": "NULL",
-      "pubDate": "2022-09-10T06:52:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "RiftWatchers Epic Summoners: Any \"Must Haves\" for you? Thoughts and comments.",
-      "link": "NULL",
-      "pubDate": "2022-09-10T06:02:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 125 – The News in #DeFi -",
-      "link": "NULL",
-      "pubDate": "2022-09-10T05:54:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "US authorities recover 30M USD from Axie Infinity hack",
-      "link": "NULL",
-      "pubDate": "2022-09-10T05:29:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "UDO"
-      ]
-    },
-    {
-      "title": "Happy mid-autumn festival to all the people under the moonlight!",
-      "link": "NULL",
-      "pubDate": "2022-09-10T04:36:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
       "title": "$SHIB Is Most Googled Altcoin in Europe, $ADA Was Most Googled Crypto in 3 EU Countries, Says Report",
       "link": "https://www.cryptoglobe.com/latest/2022/09/shib-is-most-googled-altcoin-in-europe-ada-was-most-googled-crypto-in-3-eu-countries-says-report/",
       "pubDate": "2022-09-10T02:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "A newly released study has shown that the meme-inspired cryptocurrency Shiba Inu ($SHIB) and smart contract platform Cardano ($ADA) are among the most ‘Googled’ cryptocurrencies throughout Europe, surpassing competitors with larger market capitalization. While the top five cryptocurrencies by market capitalization, excluding altcoins, are Bitcoin ($BTC), Ethereum ($ETH), BNB ($BNB), and XRP...",
       "currencies": [
@@ -488,61 +130,6 @@
         "positive": 5,
         "negative": 3
       }
-    },
-    {
-      "title": "RT @goobygambles: @criptopaul @WhiteETHtoken lets goo",
-      "link": "NULL",
-      "pubDate": "2022-09-10T01:46:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "ICYMI️We sat down with @Cointelegraph to discuss our mainnet, testnet, and all the exciting features coming to our…",
-      "link": "NULL",
-      "pubDate": "2022-09-10T01:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "EARNING MORE WITH GUILDS - SPS BRAWL REWARDS AND MORE",
-      "link": "NULL",
-      "pubDate": "2022-09-10T00:27:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @criptopaul: $white dapp is live!",
-      "link": "NULL",
-      "pubDate": "2022-09-10T00:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
-      "title": "RT @EricCryptoman: $WHITE round 2 incoming",
-      "link": "NULL",
-      "pubDate": "2022-09-10T00:03:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WHITE"
-      ]
     }
   ]
 }

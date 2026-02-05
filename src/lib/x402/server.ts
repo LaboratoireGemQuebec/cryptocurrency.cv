@@ -122,7 +122,7 @@ export function validateConfig(): { valid: boolean; errors: string[]; warnings: 
   }
 
   // Add warnings for non-critical issues
-  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
+  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x40252CFDF8B20Ed757D61ff157719F33Ec332402') {
     warnings.push('PAYMENT_ADDRESS is not set - payments will not work');
   }
   

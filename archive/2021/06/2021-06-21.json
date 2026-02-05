@@ -1,15 +1,15 @@
 {
   "date": "2021-06-21",
-  "fetchedAt": "2026-02-05T07:45:51.514Z",
-  "articleCount": 25,
+  "fetchedAt": "2026-02-05T07:48:35.323Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
     {
       "title": "Stablecoin inflows to exchanges dip as traders watch Bitcoin from the sidelines",
       "link": "https://cointelegraph.com/news/stablecoin-inflows-to-exchanges-dip-as-traders-watch-bitcoin-from-the-sidelines",
       "pubDate": "2021-06-21T22:20:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Stablecoin inflows to exchanges tapered off as investors turned bearish on Bitcoin, but a surge in USDC minting could be a signal of upcoming regulation.",
       "currencies": [
@@ -26,8 +26,8 @@
       "title": "Digital Currency Group Buying $50M of Ethereum Classic Grayscale Shares",
       "link": "https://decrypt.co/74145/ethereum-classic-dcg-grayscale",
       "pubDate": "2021-06-21T19:33:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "The $50 million purchase comes amid questions about the viability of DCG's flagship Bitcoin Trust investment product.",
       "currencies": [
@@ -45,9 +45,9 @@
       "title": "Most Expensive Virtual Plot of Land Ever Sells for $900,000 on Decentraland",
       "link": "https://beincrypto.com/most-expensive-virtual-plot-of-land-ever-sells-for-900000-on-decentraland/",
       "pubDate": "2021-06-21T18:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "A plot of virtual land on the blockchain-based game Decentraland broke sales records on the platform by selling for nearly $1 million.",
       "currencies": [
         "MANA"
@@ -59,45 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @dematerialised: Look at all the variety of the applications layer for @lukso_io that @m_h_d_v is outlining  #blockchain",
-      "link": "NULL",
-      "pubDate": "2021-06-21T18:25:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "What do you like the most of our Supra Bridges?",
-      "link": "NULL",
-      "pubDate": "2021-06-21T17:08:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Reef Finance is excited to partner with @shield2protocol to allow users to save their #2FA codes on #ReefChain",
-      "link": "NULL",
-      "pubDate": "2021-06-21T16:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
       "title": "Polywhale Team Abandon $100 Million Project Amid Scam Allegations",
       "link": "https://cryptobriefing.com/polywhale-team-abandon-100m-project-amid-scam-allegations/",
       "pubDate": "2021-06-21T15:48:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "currencies": [
         "MATIC"
@@ -112,8 +78,8 @@
       "title": "Dogecoin Tanks 71 Percent Since Elon Musk's \"SNL\" Debut, Reaches 60-Day Low",
       "link": "https://u.today/dogecoin-tanks-71-percent-since-elon-musks-snl-debut-reaches-60-day-low",
       "pubDate": "2021-06-21T15:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Dogecoin is getting clobbered harder than other major cryptocurrencies",
       "currencies": [
@@ -125,23 +91,12 @@
       }
     },
     {
-      "title": "Probably is Chanpeng Zatoshi :D",
-      "link": "NULL",
-      "pubDate": "2021-06-21T13:10:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
       "title": "Why this growth of SUSHI on MATIC should matter to traders",
       "link": "https://ambcrypto.com/why-this-growth-of-sushi-on-matic-should-matter-to-traders/",
       "pubDate": "2021-06-21T13:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "SUSHI was trading at the same level as last week, however, there are metrics that suggest the sentiment and ROI have changed. At the $7.91 level, SUSHI’s trading volume was up 83%. This increase in trading volume is not indicative of the dip; it represents the selling pressure that SUSHI has resisted over the past […]",
       "currencies": [
         "MATIC",
@@ -154,23 +109,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @michael_saylor: MicroStrategy has purchased an additional 13,005 bitcoins for ~$489 million in cash at an average price of ~$37,617 per…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T12:19:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Google for Blockchains: Unmarshal Launches a Multi-Chain Blockchain Explorer",
       "link": "https://www.newsbtc.com/news/company/google-for-blockchains-unmarshal-launches-a-multi-chain-blockchain-explorer/",
       "pubDate": "2021-06-21T11:33:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Imagine relating the ease of searching for information on the world wide web using Google with the blockchain; Unmarshal has launched Xscan.io, the Google for blockchain networks. The multi-chain DeFi data indexing network releases Xscan, a multi-chain explorer with support for Ethereum, Polygon and Binance Smart Chain. With zero technical experience requirement, anyone can simply […]",
       "currencies": [
         "MATIC"
@@ -182,34 +126,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @btsfav: You can now buy and sell $AVA directly from your L1 Wallet and... @THORChain @SKIPswap",
-      "link": "NULL",
-      "pubDate": "2021-06-21T11:25:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @buyaladdinapp:  Today marks the 50th day of our 100 x 100 x 100 #ABBCEvent! Don't miss the chance to win awesome rewards now. Join the…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T10:19:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Polkadot (DOT) Struggles to Hold Support After Breakdown",
       "link": "https://beincrypto.com/polkadot-dot-struggles-to-hold-support-after-breakdown/",
       "pubDate": "2021-06-21T10:13:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Polkadot (DOT) is attempting to hold on above a long-term support area at $19. The direction of the trend is undetermined.",
       "currencies": [
         "DOT"
@@ -221,34 +143,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @btsfav: #Bitcoin crashing? Exchange to $BUSD or $USDT directly from your own wallet! #yourkeysyourcoins via #th…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T10:09:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BUSD",
-        "STEEM"
-      ]
-    },
-    {
-      "title": "It is time that big crypto players, stopped making astronomical Bitcoin price predictions - with little logical sen…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T10:01:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
       "title": "Ethereum Dropped Below $2K for the First Time in a Month as BTC Slipped to $32K (Market Watch)",
       "link": "https://cryptopotato.com/ethereum-dropped-below-2k-for-the-first-time-in-a-month-as-btc-slipped-to-32k-market-watch/",
       "pubDate": "2021-06-21T08:46:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "More Chinese FUD has caused significant price drops in the market as ether plummeted to its lowest price line in a month below $2,000.",
       "currencies": [
@@ -265,8 +164,8 @@
       "title": "$1 Billion in Liquidations as Crypto Markets Lose $120B in a Day",
       "link": "https://cryptopotato.com/1-billion-in-liquidations-as-crypto-markets-lose-120b-in-a-day/",
       "pubDate": "2021-06-21T08:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "The crypto market has faced another volatile trading day, and the total liquidations have jumped to roughly $1 billion.",
       "currencies": [
@@ -280,22 +179,11 @@
       }
     },
     {
-      "title": ".@Wendys what time does my shift start?",
-      "link": "NULL",
-      "pubDate": "2021-06-21T07:06:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Dogecoin (DOGE) car crashes during NASCAR race",
       "link": "https://cryptoslate.com/dogecoin-doge-car-crashes-during-nascar-race/",
       "pubDate": "2021-06-21T06:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "trading",
       "description": "A Dogecoin-branded race car crashed into the wall during Saturday’s NASCAR race on its return to the track, finishing last and causing a temporary price dump on DOGE.",
       "currencies": [
@@ -308,22 +196,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @CitadelDAO: As we all know Validator Universe is huge and today we’ve prepared some @BandProtocol facts and htt…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T06:14:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "XRP Might Not Be a Security, According to SEC Commissioner",
       "link": "https://u.today/xrp-might-not-be-a-security-according-to-sec-commissioner",
       "pubDate": "2021-06-21T05:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "SEC Commissioner Hester Peirce is calling for greater regulatory clarity",
       "currencies": [
@@ -334,28 +211,6 @@
         "negative": 5
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Cocos-BCX Will Complete Migration from MainNet at 2 PM SGT, June 30th and Develop More in Ethereum Ecosystem.…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T03:56:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "Here is another article from @coreycosta123 regarding Blockchain voting. Well related to current global environmen…",
-      "link": "NULL",
-      "pubDate": "2021-06-21T02:55:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
     }
   ]
 }

@@ -1,103 +1,15 @@
 {
   "date": "2021-07-14",
-  "fetchedAt": "2026-02-05T07:45:51.988Z",
-  "articleCount": 24,
+  "fetchedAt": "2026-02-05T07:48:35.515Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "We are happy to announce the release of version 1.2.2, which is a maintenance release fixing the reported CA certs…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T20:44:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "#TELx is live with 6 incentivized markets on @QuickswapDEX and has grown to more than US$16M in total liquidity in…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T19:37:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: and are great ways to get a better deal buying or selling HEX.",
-      "link": "NULL",
-      "pubDate": "2021-07-14T16:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "Summer is heating up , and NKN's Geekathon is attracting talented students from top Chinese universities like Tsin…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T16:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "Anyone know if the weather was good for the Bastille Day parade today?",
-      "link": "NULL",
-      "pubDate": "2021-07-14T16:29:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "June's Decred Journal is out! Check out the detailed report on development, network and social stats, ecosystem gro…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T16:18:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
-      "title": "RT @BankCexExchange: BankCEX Launches A BITCOIN GOLD COIN (ABG) Trading on July 14, 2021 08:00 AM UTC",
-      "link": "NULL",
-      "pubDate": "2021-07-14T14:01:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTG"
-      ]
-    },
-    {
-      "title": "RT @BankCexExchange: On 2021/07/14 08:00 AM (UTC), the trading of A BITCOIN GOLD COIN (ABG) will be opened on BankCEX. User can join the tr…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T14:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTG"
-      ]
-    },
     {
       "title": "Solana Wallet Phantom Raises $9M to go Multi-Chain",
       "link": "https://cryptobriefing.com/solana-wallet-phantom-closes-9m-funding-round/",
       "pubDate": "2021-07-14T13:22:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "SOL"
@@ -112,8 +24,8 @@
       "title": "Bitcoin sell-off continues as BTC nears $31K ahead of Powell’s speech",
       "link": "https://cointelegraph.com/news/bitcoin-sell-off-continues-as-btc-nears-31k-ahead-of-powell-s-speech",
       "pubDate": "2021-07-14T12:56:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "The latest price declines came after the U.S. inflation rose to a 30-year high in June.",
       "currencies": [
@@ -130,8 +42,8 @@
       "title": "Buying Spree: The Top 10 Ethereum Wallets Now Own 20.58% of ETH’s Supply",
       "link": "https://cryptopotato.com/buying-spree-the-top-10-ethereum-wallets-now-own-20-58-of-eths-supply/",
       "pubDate": "2021-07-14T12:20:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "By increasing their holdings by more than 2% in 40 days, the top ten Ethereum wallets now own about 20.5% of all the asset's overall supply.",
       "currencies": [
@@ -143,62 +55,11 @@
       }
     },
     {
-      "title": "Q2-2021 Non-HUNT Revenue Burning: 82,759 HUNT (worth $30,620.59) burned. #HUNT #HUNTToken",
-      "link": "NULL",
-      "pubDate": "2021-07-14T11:41:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
-      "title": "Hey pssst, guys I need your help... I forgot to buy @binance a birthday present for today, anyone got any ideas? …",
-      "link": "NULL",
-      "pubDate": "2021-07-14T09:51:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "1/ Dear Band Community, we would like to share our post-mortem per the migration process with a detailed timeline o…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T08:54:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "Altcoin Daily Looks at Ethereum, Cardano, and 6 Other Altcoins",
-      "link": "NULL",
-      "pubDate": "2021-07-14T08:41:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Uniswap v3 launches Optimistic Ethereum layer two scaling in alpha",
       "link": "https://cointelegraph.com/news/uniswap-v3-launches-optimistic-ethereum-layer-two-scaling-in-alpha",
       "pubDate": "2021-07-14T05:49:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Long-awaited layer two scaling is finally being launched on Uniswap v3, albeit in a limited format initially.",
       "currencies": [
@@ -212,22 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Good day, CT! We are excited to have @sharonlourdes our Head of Regional Payments (Southeast Asia) share more about…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T05:48:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
       "title": "TA: Ethereum (ETH) Tumbles, Why Key Indicators Suggest More Pain",
       "link": "https://www.newsbtc.com/analysis/eth/ethereum-tumbles-2k/",
       "pubDate": "2021-07-14T05:28:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Ethereum declined below the main $2,000 support zone against the US Dollar. ETH price is showing bearish signs and it remains at a risk of more downsides below $1,800. Ethereum extended its decline below the $2,000 and $1,920 levels. The price is now trading well below the $2,000 resistance and the 100 hourly simple moving […]",
       "currencies": [
@@ -243,8 +93,8 @@
       "title": "Coinbase Connects Wallet to Polygon Network For L2 Scaling",
       "link": "https://cryptopotato.com/coinbase-connects-wallet-to-polygon-network-for-l2-scaling/",
       "pubDate": "2021-07-14T05:12:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "exchange",
       "description": "North American cryptocurrency exchange giant Coinbase is keen to embrace layer 2 scaling technologies with its latest move to integrate the Polygon Network.",
       "currencies": [
@@ -257,37 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Decred Journal — June 2021",
-      "link": "NULL",
-      "pubDate": "2021-07-14T05:02:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UNI",
-        "ATOM",
-        "ZEC",
-        "RUNE",
-        "DCR"
-      ]
-    },
-    {
-      "title": "RT @CoinDesk: “Chia’s expansion and key talent acquisitions will support our growth and the broader adoption of our crypto currency,” said…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T03:39:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Concern as Uniswap-backed 'DeFi Education Fund' dumps $10M worth of UNI",
       "link": "https://cointelegraph.com/news/concern-as-uniswap-backed-defi-education-fund-dumps-10m-worth-of-uni",
       "pubDate": "2021-07-14T02:54:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The recently formed DeFi Education Fund has come under fire for abruptly announcing it had liquidated half of the 1 million UNI tokens donated to it through UNI governance.",
       "currencies": [
@@ -297,28 +121,6 @@
         "positive": 2,
         "negative": 4
       }
-    },
-    {
-      "title": "STP 2.0's Beta Launch Public Test Event is Now Live! We welcome our community to join our public test event to impr…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T02:15:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STPT"
-      ]
-    },
-    {
-      "title": "SOMESING team is pleased to announce that its SSX token is to be listed on Bittrex Global exchange to expand into g…",
-      "link": "NULL",
-      "pubDate": "2021-07-14T00:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SSX"
-      ]
     }
   ]
 }

@@ -1,51 +1,15 @@
 {
   "date": "2022-08-24",
-  "fetchedAt": "2026-02-05T07:45:52.805Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.592Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @icenetwork_io: 🤝 Polkadot{.js} (@PolkadotJs), built by @ParityTech, integrates SNOW Network for Kusama Parachain Auction",
-      "link": "NULL",
-      "pubDate": "2022-08-24T23:41:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KSM",
-        "ICX"
-      ]
-    },
-    {
-      "title": "Electrum ABC 5.1.4 is released! This release brings significant improvements to the Avalanche proof tool, minor i…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T23:23:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "Our crazy 88's have now been airdropped. These and all 88 limited edition NFT characters will be playable in the up…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T22:45:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "VICE"
-      ]
-    },
     {
       "title": "Tether Won’t Freeze Tornado Wallets Unless Directly Ordered",
       "link": "https://cryptobriefing.com/tether-wont-freeze-tornado-wallets-unless-directly-ordered/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-24T21:47:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Stablecoin firm Tether said today that it would not freeze Tornado Cash addresses without specific orders from law enforcement. Tether says it has not been ordered to freeze Tornado addresses.Several addresses related to the Ethereum coin mixer Tornado Cash were added to a U.S. sanctions list on August 8.In an announcement today, Tether said that it is cooperating with U.S. law enforcement on...",
       "currencies": [
@@ -61,9 +25,9 @@
       "title": "Cosmos ATOM Breaks Above Key Resistance – Eyes $16",
       "link": "https://www.newsbtc.com/analysis/cosmos-atom-breaks-above-key-resistance-eyes-16/",
       "pubDate": "2022-08-24T20:16:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Cosmos (ATOM) ranged in a wedge against Tether (USDT) as it builds more strength to break above the $12 key resistance. The price of Cosmos ATOM has shown bullish strength as the price breaks above resistance after ranging for days. (Data from Binance) Related Reading: Crypto Market Rally Stopped Short Ahead Of Reaching Full-Blown Greed Cosmos ATOM Price Analysis On The Weekly Chart From the...",
       "currencies": [
         "USDT",
@@ -76,22 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1. Holo publishing has passed QA testing. Four hApps were tested during QA: HoloFuel, Kizuna, Place and Clutter.…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T19:32:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "Cardano and Polygon Termed As “More Secure Than Solana” By Market Pundits",
       "link": "https://zycrypto.com/cardano-and-polygon-termed-as-more-secure-than-solana-by-market-pundits/",
       "pubDate": "2022-08-24T19:29:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "Consequently, all networks in the crypto space promise a level of security to attract users, including the self-acclaimed 'ethereum killers'. However, amongst these networks, Cardano and Polygon have been recently regarded as more secure than Solana, following new events.",
       "currencies": [
@@ -108,8 +61,8 @@
       "title": "Tether says it would not freeze sanctioned Tornado Cash addresses unless instructed by law enforcement",
       "link": "https://cointelegraph.com/news/tether-says-it-would-not-freeze-sanctioned-tornado-cash-addresses-unless-instructed-by-law-enforcement",
       "pubDate": "2022-08-24T19:14:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "\"In our dealings with law enforcement we are sometimes specifically instructed not to freeze addresses as this could alert suspects,\" says Tether.",
       "currencies": [
@@ -125,8 +78,8 @@
       "title": "Cardano Getting back to $1? Unlikely, Here’s a Few Alternatives",
       "link": "https://www.newsbtc.com/news/company/cardano-getting-back-to-1-unlikely-heres-a-few-alternatives/",
       "pubDate": "2022-08-24T17:56:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "One of the biggest altcoins in the crypto space, Cardano is an open-sourced blockchain network and cryptocurrency that has provided significant returns since its launch in 2017. However, after massive price corrections, investors are looking for new alternatives. This guide will discuss three of the best alternatives to Cardano, which can potentially provide high returns in 2022. Cardano Price...",
       "currencies": [
@@ -146,8 +99,8 @@
       "title": "Uniswap in Talks With 7 Lending Platforms to Build ‘NFT Financialization’",
       "link": "https://beincrypto.com/uniswap-in-talks-with-7-lending-platforms-to-build-nft-financialization/",
       "pubDate": "2022-08-24T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "The decentralized cryptocurrency exchange Uniswap is currently in talks with seven NFT lending protocols to bring about NFT financialization.",
       "currencies": [
@@ -159,55 +112,11 @@
       }
     },
     {
-      "title": "Why do you think this one achievement stands out as the greatest? Is it a milestone, is it foundational, did it cha…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T17:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Mid-Year 2022 NKN AMA on Twitter Space is coming up this Friday! Our Co-Founder Bruce @zbruceli and CTO Yilun…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T17:14:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "This new partnership between @Zetlydotio and @hastearcade will provide sports teams new revenue streams and ways to…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @hesterbruikman:  Doing some research for @ethnimbus and have a few questions for anyone who's ever tried setting up an Ethereum node.…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T16:50:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
       "title": "Dogecoin Primed For A Momentous Bull Run To $1 Dream Price As The DOGE-ETH Bridge Nears",
       "link": "https://zycrypto.com/dogecoin-primed-for-a-momentous-bull-run-to-1-dream-price-as-the-doge-eth-bridge-nears/",
       "pubDate": "2022-08-24T16:27:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "Dogecoin, the world’s largest meme cryptocurrency by market capitalization is about to get a major structural facelift that could give its price the much-needed boost to $1.",
       "currencies": [
@@ -222,8 +131,8 @@
       "title": "DOGE Better Watch Out as Sentiment Around Polkadot Is Most Positive Since 2021",
       "link": "https://u.today/doge-better-watch-out-as-sentiment-around-polkadot-is-most-positive-since-2021",
       "pubDate": "2022-08-24T15:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "DOT about to conquer Dogecoin's place in top 10 as Polkadot's social dominance is surging",
       "currencies": [
@@ -237,153 +146,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ljin18: One of the most significant trends in web3 is the re-imagining of fandom: the blurring of lines between fan and creator, betwee…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T14:45:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Bootstrap In-App Economics with RLY Protocol by @thenewstack",
-      "link": "NULL",
-      "pubDate": "2022-08-24T14:27:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Centi aims to completely change the payments landscape through removing the bottlenecks in the traditional financia…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T13:21:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Trade a growing list of world-renowned #cryptocurrencies with just a few taps of your smartphone. Fast, affordable,…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T13:10:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "RT @Polkadot: Why true cross-chain interoperability is one of the most important principles for the blockchain space, and how Polkadot's XC…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T13:09:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KSM"
-      ]
-    },
-    {
-      "title": "loving the SPS battle rewards",
-      "link": "NULL",
-      "pubDate": "2022-08-24T13:04:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @Poloniex: 10,000 USDD Airdrop to Celebrate the Listing of #SSV! @ssv_network 2,000 USDD for New Signups Deposit and Share 3,000 U…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:50:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "CDT"
-      ]
-    },
-    {
-      "title": "Tell us about an unbelievable #experience you made with #crypto ⬇️⬇️⬇️ #Bitcoin",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:35:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "Bugs Discovered In Ethereum Clients’ Mainnet Merge Updates",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XCN"
-      ]
-    },
-    {
-      "title": "Over 60% of U.S. parents say schools should teach crypto, poll finds",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "More than half of the parents who participated in a poll said their children should “learn about the future of... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "10,000 USDD Airdrop to Celebrate the Listing of #SSV! @ssv_network 2,000 USDD for New Signups Deposit and Sha…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:08:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "This Thursday Co-Founder @feindura will be joining @paisanodao on Twitter Spaces to discuss BUILD 🆙 # 1, Universal…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T12:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "Bitcoin and Ethereum Aim At Key Upside Break",
       "link": "https://cryptonews.com/exclusives/bitcoin-ethereum-aim-key-upside-break.htm",
       "pubDate": "2022-08-24T11:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "Bitcoin price consolidated above the USD 21,000 support zone. BTC is still struggling to gain pace above the USD 21,650 resistance. It is currently (11:20 UTC) showing a few positive signs and might start a recovery wave towards USD 22,000. Similarly, most major altcoins are facing important hurdles. ETH is facing a major resistance near USD 1,650 and USD 1,665. XRP might rise if it...",
       "currencies": [
@@ -400,33 +167,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today we're happy to announce that asset managers can now access @CurveFinance via Enzyme's @0xPolygon deployment …",
-      "link": "NULL",
-      "pubDate": "2022-08-24T10:21:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "How will Band Protocol, as an infrastructure builder, contribute to better security and scalability for the #web3 i…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T10:17:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "SHIB, ADA Now Accepted at More Than 90 Million Mastercard Merchants: Details",
       "link": "https://u.today/shib-ada-now-accepted-at-more-than-90-million-mastercard-merchants-details",
       "pubDate": "2022-08-24T10:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Supported by Binance Argentina card, users can now use their assets for purchases",
       "currencies": [
@@ -442,8 +187,8 @@
       "title": "Crypto market holds above $1 trillion as Nexo leads the top 100 coins",
       "link": "https://finbold.com/crypto-market-holds-above-1-trillion-as-nexo-leads-the-top-100-coins/",
       "pubDate": "2022-08-24T10:03:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "The cryptocurrency market cap, amid weeks of heightened volatility, is holding above the $1 trillion threshold as the market awaits... Continue reading",
       "currencies": [
@@ -456,51 +201,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SHIB Burn Rate Surges 90% as SHIB Army Burns 390 Million SHIB with Amazon's Contribution",
-      "link": "NULL",
-      "pubDate": "2022-08-24T09:54:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "390 million SHIB moved from circulation over past 48 hours; part of it was wired with help of Amazon giant and new SHIB burn website",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "We’re excited to welcome @KlayCellar to the #Klaytn family as today marks the launch of their testnet on Klaytn! K…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T09:53:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Looking for mining pools with juicy rewards? 🤑 #2pool LP（Fixed+Flexible) up to 70% MAX APY $USDD $USDT LP V2（…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T09:47:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
       "title": "Assessing if Solana holders are struggling to stay profitable",
       "link": "https://ambcrypto.com/assessing-if-solana-holders-are-struggling-to-stay-profitable/",
       "pubDate": "2022-08-24T09:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Bitcoin [BTC] is not the only cryptocurrency that has taken a hit in the past few days. Altcoin, Solana [SOL] too hopped on the same bandwagon of plummeting prices. Down by a massive 20% in the last seven days, the price of SOL stood at $34.96, on 23 August, at the time of writing. Although […]",
       "currencies": [
@@ -511,124 +216,6 @@
         "negative": 4
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Once you truly understand #Bitcoin, you want to have as much as possible as quickly as possible #Bitcoin #Blockchain #crypto",
-      "link": "NULL",
-      "pubDate": "2022-08-24T09:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "Adam Draper famously described #blockchainas the new technology that cuts out the middleman. Instead of trusting a…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T08:59:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "#Ethereum leads in development activity, Polkadot and Kusama rank second and third. #ETH's lead in development acti…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T08:50:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DOT",
-        "KSM"
-      ]
-    },
-    {
-      "title": "Popular Crypto Analyst Warns Bitcoin (BTC) Poised To Trap Bulls, Updates Outlook on Ethereum (ETH)",
-      "link": "NULL",
-      "pubDate": "2022-08-24T07:04:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "A closely followed crypto strategist believes that Bitcoin (BTC) is setting up bulls to believe that the $20,000 area could be the bear market bottom. Pseudonymous analyst Pentoshi warns his 600,100 Twitter followers that Bitcoin has touched support around $20,000 three times in span of about a month. “Things that look safe, but aren’t… Can […]",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "NFT platform SudoRare vanishes with 519 Ethereum",
-      "link": "NULL",
-      "pubDate": "2022-08-24T06:56:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "KLAY"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Don't miss out on @Chainlink's workshop later today on how to integrate #Klaytn DApps with Chainlink 24 Aug, 8…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T05:16:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Bitcoin RISKS HUGE DROP - 3 Reasons Why!!",
-      "link": "NULL",
-      "pubDate": "2022-08-24T01:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "ALTCOIN BUZZ - BINANCE - GET UP TO $800* ON SIGN UP Sign up using the links below on Binance Exchange and get the following benefits $100 Sign-Up bonus* 20% Trading fee discount for life* FREE $200 worth of Altcoin Buzz Access PRO Membership* Plus $500 Unlockables* Sign-Up Links - Binance Global https://accounts.binance.com/en/register?ref=WTYDIUEH Binance US http://binance.pxf.io/altcoinbuzzweburl-us For more details visit* Binance Sign Up Offer Page https://access.altcoinbuzz.io/binance-signup",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 4
-      }
-    },
-    {
-      "title": "RT @BSCNews: @Ellipsisfi has introduced new functionality for swapping between stable and normal crypto pairs. Check out the article to le…",
-      "link": "NULL",
-      "pubDate": "2022-08-24T01:21:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "RT @thenewstack: Bootstrap In-App Economics with RLY Protocol @jakeludington #DApps @RLYNetworkAssoc",
-      "link": "NULL",
-      "pubDate": "2022-08-24T00:39:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
     }
   ]
 }

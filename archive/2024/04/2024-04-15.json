@@ -1,80 +1,15 @@
 {
   "date": "2024-04-15",
-  "fetchedAt": "2026-02-05T07:45:53.299Z",
-  "articleCount": 82,
+  "fetchedAt": "2026-02-05T07:48:35.638Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Bitcoin Will Become the Best Savings Tool After the Upcoming Halving",
-      "link": "NULL",
-      "pubDate": "2024-04-15T23:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Currently, traditional assets are continually debased due to overproduction and inflation. Bitcoin emerges as a beacon of stability with its immutable scarcity and superior monetary properties. As the next Bitcoin halving approaches, experts and market analysts spotlight BTC as the ultimate tool for long-term savings. Bitcoin: the Ultimate Savings Tool According to a new report,...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 12,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "The real risks to Ethena’s stablecoin model (are not the ones you think)",
-      "link": "NULL",
-      "pubDate": "2024-04-15T22:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
-      "title": "Analyst Predicts $650K Bitcoin Price Once ETF Investors Fully Deploy Asset Manager Recommendations",
-      "link": "NULL",
-      "pubDate": "2024-04-15T22:27:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Curve Founder Nearly Liquidated During Weekend Crypto Crash",
-      "link": "NULL",
-      "pubDate": "2024-04-15T22:15:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Altcoins Shine: $MANA, $BAT, $LDO See Large Inflows Despite Bitcoin’s Jitters",
-      "link": "NULL",
-      "pubDate": "2024-04-15T22:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MANA",
-        "BAT",
-        "LDO"
-      ]
-    },
     {
       "title": "Is Cardano (ADA) Preparing for a Recovery After a 25% Price Correction?",
       "link": "https://beincrypto.com/ada-recovery-next-after-correction/",
       "pubDate": "2024-04-15T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Cardano’s (ADA) price followed the broader market cues, which declined by more than 25% on the daily chart over the weekend. As ADA gears up for a potential recovery, investors display bullish signals that may pave the way for a rally in the cryptocurrency. Cardano Investors Can Take Back Control Cardano’s price has historically reacted to ADA holders’ actions, which could be...",
       "currencies": [
@@ -90,87 +25,13 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Solana Price Jumps 7% On Bitcoin And Ethereum ETF Approvals, Network Congestion Update",
-      "link": "NULL",
-      "pubDate": "2024-04-15T21:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "TON",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Price analysis 4/15: SPX, DXY, BTC, ETH, BNB, SOL, XRP, TON, DOGE, ADA",
-      "link": "NULL",
-      "pubDate": "2024-04-15T20:49:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AMP",
-        "TON"
-      ]
-    },
-    {
       "title": "Solana's Promising AI Plays",
       "link": "https://www.bankless.com/solanas-promising-ai-plays",
       "pubDate": "2024-04-15T20:47:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bankless",
+      "sourceKey": "bankless",
       "category": "altcoin",
       "description": "Solana AI projects to watch as io.net's launch draws near.",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 3
-      }
-    },
-    {
-      "title": "Bitcoin BRC-20 Token Prices Plunge Ahead of Halving—Are Runes to Blame?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T20:47:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "GALA Poised for Significant Recovery as Whales Accumulate",
-      "link": "NULL",
-      "pubDate": "2024-04-15T20:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Will Solana Update Fix Congestion? Here's What It Relies On",
-      "link": "NULL",
-      "pubDate": "2024-04-15T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Solana’s recent update went live, focusing on fixing network congestion. However, to work, it relies on one key factor.",
       "currencies": [
         "SOL"
       ],
@@ -183,8 +44,8 @@
       "title": "Solana Whales Scoop Up Millions of Dollars Worth of Memecoins As Crypto Markets Dip: Lookonchain",
       "link": "https://dailyhodl.com/2024/04/15/solana-whales-scoop-up-millions-of-dollars-worth-of-memecoins-as-crypto-markets-dip-lookonchain/",
       "pubDate": "2024-04-15T20:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Whales on the Solana (SOL) blockchain are gobbling up memecoin discounts following a marketwide correction over the weekend, according to on-chain data. Blockchain tracking firm Lookonchain spotted two Solana whales that went in to accumulate sloth-themed Slerf (SLERF), Pepe the Frog-themed Book of Meme (BOME) and President Joe Biden-inspired Jeo Boden (BODEN) from crypto exchanges […]",
       "currencies": [
@@ -197,119 +58,11 @@
       }
     },
     {
-      "title": "Filecoin Foundation launches Chinese legal inquiry into STFIL incident",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:47:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Dogecoin (DOGE) in Green After New Elon Musk Post",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Dogecoin (DOGE) saw a brief pice spike following a post by Elon Musk",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Blockchain for Good Alliance launches at Blockchain Life Dubai",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "APT"
-      ]
-    },
-    {
-      "title": "USDe maintains full collateralization amid first market ‘stress test’",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:09:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Bittensor Decreases More Than 11% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:03:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Stacks Down More Than 6% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Aptos Decreases More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-04-15T19:01:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "SUI Rises 14% in a Single Day as Crypto Market Crash Calms",
-      "link": "NULL",
-      "pubDate": "2024-04-15T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
-      "title": "Amount of FDUSD Participating in Binance Launchpool Allegedly Exceeded the Total Supply: Binance Responds – What’s the Truth?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T18:14:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FDUSD"
-      ]
-    },
-    {
       "title": "Solana’s Cat-Themed MEW Soars 88% Upon Whale’s 479M Purchase",
       "link": "https://dailycoin.com/solanas-cat-themed-mew-soars-88-upon-whales-479m-purchase/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-04-15T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "The everlasting fight between cats and dogs enters the crypto realm as Solana memecoin MEW leads the day’s top gainers.",
       "currencies": [
@@ -322,142 +75,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "PAXG Reaches All-Time High Amid Middle East Unrest, Prompting Bitcoin Hedge Discussion",
-      "link": "NULL",
-      "pubDate": "2024-04-15T17:27:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PAXG"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now April 15 – CORE, NEO, PENDLE",
-      "link": "NULL",
-      "pubDate": "2024-04-15T17:12:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEO",
-        "CORE"
-      ]
-    },
-    {
-      "title": "Telegram’s Toncoin Outstrips Dogecoin: New ATH on the Way?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Toncoin breaks above $7 twice in 7 days, while TON Foundation's new partnership overshadows SEC controversy.",
-      "currencies": [
-        "DOGE",
-        "TON"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Curve Founder Michael Egorov Faced Liquidation Amid Weekend Altcoin Crash: Report",
-      "link": "NULL",
-      "pubDate": "2024-04-15T16:55:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRV"
-      ]
-    },
-    {
-      "title": "EOS Enters Tokenized Real-World Assets: Launches Wrapped RAM (WRAM)",
-      "link": "NULL",
-      "pubDate": "2024-04-15T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – April 8 – April 14",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:57:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "ADA and BNB Price Prediction for April 15",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Has correction of altcoins ended yet?",
-      "currencies": [
-        "BNB",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 6
-      }
-    },
-    {
-      "title": "Cardano (ADA) Sees Epic 28,372% Inflow Surge; Where Will This Lead?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Cardano currently ranks as 10th largest cryptocurrency by market capitalization",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 6
-      }
-    },
-    {
-      "title": "BlockDAG Dominates with Stellar Presale Of $17.3 Million and Fool-Proof Roadmap, Outshines Uniswap and Toncoin",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:38:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "XLM",
-        "TON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Adidas Releasing $2,500 Solana NFT Sneakers in Move-to-Earn Game 'Stepn'",
       "link": "https://decrypt.co/226477/adidas-2500-solana-nft-sneakers-stepn-game",
       "pubDate": "2024-04-15T15:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "nft",
       "description": "Sportswear giant Adidas has partnered with move-to-earn game Stepn to release some pricey virtual running sneakers as Solana NFTs.",
       "currencies": [
@@ -469,188 +91,11 @@
       }
     },
     {
-      "title": "Arbitrum Set to Unlock 92.65 Million ARB Tokens in ‘Cliff Unlock’ Event",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:17:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "AXS",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Shiba Inu (SHIB) Jumps 8% as Price Makes Sudden Reversal",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "BONE",
-        "LEASH"
-      ]
-    },
-    {
-      "title": "Crypto Crash Puts Curve DAO CEO at Risk of Liquidation",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
-      "title": "STEPN x Adidas Collaboration Unveils NFT Sneaker Collection",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:03:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "GMT",
-        "NFT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Rebounds After Nearing Cost Basis Of Short-Term Whales",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "GRT",
-        "QNT",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "From Dogs to Cats: OKX Capitalizes on Meme Coin Craze with Latest Listings",
-      "link": "NULL",
-      "pubDate": "2024-04-15T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "WIF",
-        "FLOKI",
-        "MEW",
-        "MEME",
-        "00"
-      ]
-    },
-    {
-      "title": "Where do gold and platinum come from? The mystery deepens after a huge cosmic explosion",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:55:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Ethena (ENA) Token Rides Bullish Wave Fueled by Whale Stakings",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:51:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
-      "title": "NEO rebounds past $22.8 as this meme coin presale surges past $4.8 million",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:20:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Despite Market Challenges for Celestia & Sui, Fezoo Exchange Presale Success Signals Broad Investor Optimism",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:01:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SUI",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Bitcoin Goes Pro: UFC Winner Wants $300,000 Bonus Paid In BTC",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SOL",
-        "SHIB",
-        "VET"
-      ]
-    },
-    {
-      "title": "GALA Price Hints at 43% Recovery as Whale Accumulation Increases",
-      "link": "NULL",
-      "pubDate": "2024-04-15T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "GALA"
-      ]
-    },
-    {
-      "title": "Crypto Prices Apr 15: Hong Kong Approval Fuels Crypto Surge",
-      "link": "NULL",
-      "pubDate": "2024-04-15T13:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "NEO",
-        "RNDR"
-      ]
-    },
-    {
       "title": "Cardano smart contracts soar with over 1,000 added in April",
       "link": "https://finbold.com/cardano-smart-contracts-soar-with-over-1000-added-in-april/",
       "pubDate": "2024-04-15T13:16:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Cardano (ADA), currently the eleventh-largest cryptocurrency by market capitalization, is experiencing significant growth in its Plutus V2 smart contracts. The … Continue reading",
       "currencies": [
@@ -662,118 +107,11 @@
       }
     },
     {
-      "title": "The Latest Breakthrough in Onchain Trading– All You Need to Know",
-      "link": "NULL",
-      "pubDate": "2024-04-15T13:08:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNT",
-        "DAO",
-        "MNT",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Two Giant Whales Moved After the Fall! They Purchased Large Amounts in These Two Altcoins: Here are the Transactions They Made!",
-      "link": "NULL",
-      "pubDate": "2024-04-15T13:06:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "MEW",
-        "SLERF"
-      ]
-    },
-    {
-      "title": "Move Over Shiba Inu, Doge: OKX Lists Soaring Memecoins WIF And MEW",
-      "link": "NULL",
-      "pubDate": "2024-04-15T12:18:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "SHIB",
-        "WIF",
-        "MEW"
-      ]
-    },
-    {
-      "title": "Charles Schwab Reports $0.74 EPS for Q1, Beat Expectations by $0.01",
-      "link": "NULL",
-      "pubDate": "2024-04-15T12:15:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Blockchain for Good Alliance (BGA) Unites Web3 for Societal Impact, Launching at Blockchain Life Dubai With Bybit Web3, Harvard Blockchain Club, Solana Foundation, Moledao, Aptos, ICP.Hub UAE, Alchemy Pay as Key Partners",
-      "link": "NULL",
-      "pubDate": "2024-04-15T12:15:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "ICP",
-        "APT"
-      ]
-    },
-    {
-      "title": "What Does the Future Hold For APT and Raboo as BTC and ETH Explode",
-      "link": "NULL",
-      "pubDate": "2024-04-15T12:15:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "APT"
-      ]
-    },
-    {
-      "title": "Crypto Market Rebounds: Top 3 Altcoin Gainers Post Weekend Sell-Off",
-      "link": "NULL",
-      "pubDate": "2024-04-15T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "NEO",
-        "CORE",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Goldman Sachs Beats Q1 EPS and Revenue Expectations Comfortably",
-      "link": "NULL",
-      "pubDate": "2024-04-15T11:38:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
       "title": "Crypto Exchange OKX to List Solana-based Meme Coins WIF and MEW on April 15",
       "link": "https://www.coinspeaker.com/okx-list-meme-wif-mew/",
       "pubDate": "2024-04-15T11:13:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "altcoin",
       "description": "Coinspeaker Crypto Exchange OKX to List Solana-based Meme Coins WIF and MEW on April 15 Unlike WIF, MEW is a newly launched token aiming to challenge dog-centric meme coins with its unique cat-centric theme. Crypto Exchange OKX to List Solana-based Meme Coins WIF and MEW on April 15",
       "currencies": [
@@ -788,22 +126,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "JUST IN!  Adidas Partnership with This Altcoin in Binance, Price Moved!",
-      "link": "NULL",
-      "pubDate": "2024-04-15T11:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GMT"
-      ]
-    },
-    {
       "title": "Solana (SOL) Jumps 9% as Major Congestion Fix Hits Mainnet",
       "link": "https://u.today/solana-sol-jumps-9-as-major-congestion-fix-hits-mainnet",
       "pubDate": "2024-04-15T11:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Solana congestion challenges finally get major fix",
       "currencies": [
@@ -815,72 +142,11 @@
       }
     },
     {
-      "title": "Shiba Inu Insider Reveals Top 5 Shibarium Investment Rules",
-      "link": "NULL",
-      "pubDate": "2024-04-15T11:06:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "BONE",
-        "LEASH"
-      ]
-    },
-    {
-      "title": "Foundership and XDC Network Unveil Token Launch Program to Boost Web3 Startups",
-      "link": "NULL",
-      "pubDate": "2024-04-15T10:32:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "M&T Bank (MTB) Reports $3.02 EPS and $531 M in Net Income for Q1",
-      "link": "NULL",
-      "pubDate": "2024-04-15T10:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EPS",
-        "T"
-      ]
-    },
-    {
-      "title": "Exploring the Super-charged Layer 1 Omni Network – Binance’s Latest Launchpool Project",
-      "link": "NULL",
-      "pubDate": "2024-04-15T10:22:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "Fighter’s Bitcoin Challenge: UFC 300 Winner Calls For $300,000 Crypto Bonus",
-      "link": "NULL",
-      "pubDate": "2024-04-15T10:10:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "VET"
-      ]
-    },
-    {
       "title": "Hong Kong approves spot Bitcoin ETF",
       "link": "https://forkast.news/hong-kong-approves-spot-bitcoin-etf/",
       "pubDate": "2024-04-15T09:47:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "bitcoin",
       "description": "City's inaugural Bitcoin ETF approval spurs price surge, signaling crypto investment growth.",
       "currencies": [
@@ -896,8 +162,8 @@
       "title": "Doctor Doge (DRDOGE) to Rally Over 8,000% Within 48 Hours as it Prepares to Challenge SHIB and DOGE",
       "link": "https://www.cryptointelligence.co.uk/doctor-doge-drdoge-to-rally-over-8000-within-48-hours-as-it-prepares-to-challenge-shib-and-doge/",
       "pubDate": "2024-04-15T09:20:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "trading",
       "description": "People who invested into Shiba Inu (SHIB) and Dogecoin (DOGE) while these coins had small...",
       "currencies": [
@@ -911,29 +177,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "OKX launches WIF and MEW spot trading amid memecoin craze",
-      "link": "NULL",
-      "pubDate": "2024-04-15T09:14:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "WIF",
-        "MEW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Surprise Cryptocurrency Move from the German Banking Giant!",
       "link": "https://en.bitcoinsistemi.com/surprise-cryptocurrency-move-from-the-german-banking-giant/",
       "pubDate": "2024-04-15T09:03:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "Landesbank Baden-Württemberg (LBBW), Germany's largest federal bank, plans to start offering cryptocurrency custody services. Continue Reading: Surprise Cryptocurrency Move from the German Banking Giant!",
       "currencies": [
@@ -946,29 +194,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Solana DEXs Volume is Back to $1 Billion Amid Heightened DeFi Scrutiny",
-      "link": "NULL",
-      "pubDate": "2024-04-15T08:02:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "UNI",
-        "WIF",
-        "MEW",
-        "DEFI",
-        "SLERF"
-      ]
-    },
-    {
       "title": "Bitcoin Mining Difficulty Reaches New Peak Ahead of Halving Event",
       "link": "https://coinpaprika.com/news/bitcoin-mining-difficulty-reaches-new-peak-ahead-of-halving-event/",
       "pubDate": "2024-04-15T07:25:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Bitcoin mining hits record difficulty, soaring ahead of the Halving event",
       "currencies": [
@@ -981,37 +211,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Geopolitical tensions prompt record high for PAX Gold as Bitcoin faces sharp decline",
-      "link": "NULL",
-      "pubDate": "2024-04-15T07:05:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PAXG"
-      ]
-    },
-    {
-      "title": "Dogwifhat Left Trailing In The Dust By 'Ethereum Of China,' Which Is Up Over 35% Today: Here's What's Going On",
-      "link": "NULL",
-      "pubDate": "2024-04-15T07:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEO",
-        "WIF"
-      ]
-    },
-    {
       "title": "Breaking: Spot Bitcoin And Ethereum ETFs Approved In Hong Kong",
       "link": "https://www.newsbtc.com/news/spot-bitcoin-ethereum-etfs-approved-hong-kong/",
       "pubDate": "2024-04-15T07:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "The Hong Kong Securities and Futures Commission (SFC) has officially approved several spot Bitcoin and Ethereum exchange-traded funds (ETFs), a decision that marks a significant development in the region’s burgeoning crypto market. These approvals were granted to prominent asset managers including China Asset Management, Bosera Capital, and HashKey Capital Limited, alongside an in-principle...",
       "currencies": [
@@ -1020,161 +224,6 @@
       ],
       "votes": {
         "positive": 32,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Halving Has Crypto Miners Racing for 'Epic Sat' Potentially Worth Millions",
-      "link": "NULL",
-      "pubDate": "2024-04-15T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Foundership Global Accelerator Partners with XDC Network  to Boost Web3 Startup Innovation.",
-      "link": "NULL",
-      "pubDate": "2024-04-15T06:12:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: BTC Rebounds After Iran's Israel Strike",
-      "link": "NULL",
-      "pubDate": "2024-04-15T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "NEO",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "PAXG hit new high on Middle East tensions, raising questions about Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-04-15T05:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PAXG"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Stellar Lumen (XLM) Price Recovery Faces Many Hurdles At $0.1150",
-      "link": "NULL",
-      "pubDate": "2024-04-15T05:08:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "SOL Price Dump and Pump, Can Solana Overcome Selling Pressure?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T04:58:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin miners could dump $5B in BTC after halving: 10x Research",
-      "link": "NULL",
-      "pubDate": "2024-04-15T03:39:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Downside Thrust Over Or The Bears Are Not Done Yet?",
-      "link": "NULL",
-      "pubDate": "2024-04-15T03:15:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Only 6 altcoins in the top 50 have outperformed Bitcoin this year",
-      "link": "NULL",
-      "pubDate": "2024-04-15T03:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "DOGE",
-        "SHIB",
-        "RNDR",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Analyst Says One Memecoin Setting the Stage for Stronger Rally, Names Altcoin Presenting Opportunity After Dip",
-      "link": "NULL",
-      "pubDate": "2024-04-15T00:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "TRX",
-        "WIF",
-        "ENA"
-      ],
-      "votes": {
-        "positive": 1,
         "negative": 0
       },
       "sentiment": "bullish"

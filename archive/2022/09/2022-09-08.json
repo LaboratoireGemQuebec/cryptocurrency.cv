@@ -1,71 +1,15 @@
 {
   "date": "2022-09-08",
-  "fetchedAt": "2026-02-05T07:45:52.837Z",
-  "articleCount": 71,
+  "fetchedAt": "2026-02-05T07:48:35.597Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "More Plaintiffs Join $258 Billion Dogecoin Lawsuit Against Elon Musk",
-      "link": "NULL",
-      "pubDate": "2022-09-08T23:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Chainalysis Aids in Recovering $30M From Axie Infinity, Ronin Hack",
-      "link": "NULL",
-      "pubDate": "2022-09-08T21:42:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Quick update on our website and app, no cause for alarm - CTO is changing DNS after takeover of domain. Situation i…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T21:38:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
-    {
-      "title": "The Flippening: Will Ether Flip Bitcoin in the Next Year?",
-      "link": "NULL",
-      "pubDate": "2022-09-08T20:31:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin has forever remained the top crypto, but Ethereum’s Merge could mark the beginning of a major divergence",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "Terra Classic Price Keeps Pumping Higher - LUNC up 80%",
       "link": "https://cryptonews.com/news/terra-classic-price-keeps-pumping-higher-lunc-up-40.htm",
       "pubDate": "2022-09-08T20:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Terra Classic (LUNC) appears to be making a comeback following its apparent collapse in early May 2022. One of the year's most impressive comebacks is taking shape around the token. LUNC has increased by 37,000% ever since it gained its bottom following the Terra collapse. The 1.2% token burn tax on all transactions significantly contributes to this exponential growth. This project is...",
       "currencies": [
@@ -77,224 +21,11 @@
       }
     },
     {
-      "title": "Come say hi",
-      "link": "NULL",
-      "pubDate": "2022-09-08T20:09:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOLO",
-        "META",
-        "MASK",
-        "BEAM",
-        "ANIME",
-        "WHALE",
-        "ALPACA",
-        "DUCK",
-        "PUNK",
-        "UWU",
-        "NFTX",
-        "PUNK-BASIC",
-        "PUNK-FEMALE",
-        "PUNK-ATTR-4",
-        "PUNK-ATTR-5",
-        "PUNK-ZOMBIE",
-        "AVASTR",
-        "COOL",
-        "BAYC",
-        "KITTY",
-        "BERRY",
-        "FACE",
-        "HYPER",
-        "MINUTE",
-        "PATH",
-        "WAIFU",
-        "BGAN",
-        "BUNNY",
-        "BONSAI",
-        "CARD",
-        "MOONCAT",
-        "GLYPH",
-        "MEEB",
-        "SQGL",
-        "BAKC",
-        "ENERGY",
-        "RINGER",
-        "MANEKI",
-        "SPUNK",
-        "PASTA",
-        "PUPS",
-        "TOSHIMON",
-        "SODIUM",
-        "CNHPD",
-        "PHUNK",
-        "HDPUNK",
-        "KONGZ",
-        "MORPH",
-        "WIZARD",
-        "COLLECTIVE",
-        "KAMAX",
-        "TOPDOG",
-        "DFNORM",
-        "CLOCK",
-        "CITIES",
-        "LONDON",
-        "MILADY"
-      ]
-    },
-    {
-      "title": "Been a few days.. but still crazy to think about!️#Helium",
-      "link": "NULL",
-      "pubDate": "2022-09-08T20:07:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Check out the trailer for #CrossingTheYellowBlocks - #TheYellowblocks #descenland #Youtube #blockchain #CryptoNews",
-      "link": "NULL",
-      "pubDate": "2022-09-08T19:55:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "Latin America’s leading e-commerce technology company, @Mercadolibre, has reached 2M+ users of their digital wallet…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T19:10:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Law enforcement recovers $30 million from Ronin Bridge hack with the help of Chainalysis",
-      "link": "NULL",
-      "pubDate": "2022-09-08T19:01:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "See you in Berlin! Orchid is proud to sponsor @dappcon_berlin this year! The team is looking forward to meeting eve…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:58:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "BigONE ETF Daily Top 3 Ranking 🥇 $ATOM 5L 🥈 $HNT 3L 🥉 $SUSHI 5L - 8 SEP 2022- Download BigONE Mobile APP NOW…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:53:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ATOM",
-        "ONE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @NKN_ORG: What Makes Web 3.0 \"Trust\" Worthy? Web 3.0 Tech Talk 2022 Panel 1 coming tomorrow Friday Sept'9 10:30AM PDT. Panelists @Raulle…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:40:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "RT @qc_qizhou: Let us discuss Web3 technologies with experts tomorrow!",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:36:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "Law Enforcement Reclaims $30 Million From Axie Infinity Hack",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:34:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Investigators Recover $30M in Stolen Crypto From Axie Infinity Hack",
-      "link": "NULL",
-      "pubDate": "2022-09-08T18:23:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Set a reminder here",
-      "link": "NULL",
-      "pubDate": "2022-09-08T17:44:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @Bybit_Official: Daily Top 5 Gainers on #Bybit 🥇 $CHRP/USDT +134.40% @chirpley 🥈 $HNT/USDT +44.13% @helium 🥉 #EOS2L/USDT +34.38% @EOSn…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T17:44:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "HNT",
-        "CHRP"
-      ]
-    },
-    {
       "title": "Polygon (MATIC) to Increase Workforce by 40% Amidst Crypto Winter",
       "link": "https://beincrypto.com/polygon-to-increase-workforce-by-40-percent/",
       "pubDate": "2022-09-08T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "layer2",
       "description": "Polygon plans on ramping up its hiring by increasing its staff compliment by up to 40% during an ongoing crypto winter.",
       "currencies": [
@@ -307,82 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "5 Reasons to Be Bearish on Cardano Price and Bullish on Tamadoge",
-      "link": "NULL",
-      "pubDate": "2022-09-08T17:28:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Is Bitcoin heading to $15K? Why are the markets suddenly pulling back?",
-      "link": "NULL",
-      "pubDate": "2022-09-08T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Is Bitcoin (BTC) heading back down? What caused the sudden pullback to $18.5K? Join us as we discuss this and more with Tim Warren, co-host of Coffee N Crypto, and Ray Salmond.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "What Makes Web 3.0 \"Trust\" Worthy? Web 3.0 Tech Talk 2022 Panel 1 coming tomorrow Friday Sept'9 10:30AM PDT. Paneli…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T16:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "We are thrilled to welcome our first dedicated Chief Compliance Officer Carolina Ceballos to Paxos. She'll ensure P…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T16:38:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Would you go for the purse or the crypto?",
-      "link": "NULL",
-      "pubDate": "2022-09-08T16:05:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
       "title": "Terra Classic investors may be off to a bull party as LUNC is heading…",
       "link": "https://ambcrypto.com/terra-classic-investors-may-be-off-to-a-bull-party-as-lunc-is-headed/",
       "pubDate": "2022-09-08T16:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Terra Classic [LUNC] had been on the death bed for a few months after the massive Terra crash. However, the altcoin recently showed massive signs of revival. The token registered more than 100% gains, making it one of the top gainers of the last month. The same trend seems to be continuing in September. At […]",
       "currencies": [
@@ -394,144 +54,11 @@
       }
     },
     {
-      "title": "RT @qc_qizhou: I will give a talk with @Dapp_Learning on scaling Ethereum storage, especially based on latest data availability technologie…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:58:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "RT @ja_morris: This is EXACTLY what we are solving at @energywebx with #greenproofs for $BTC — if you are are a $BTC miner and want to prov…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:56:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "Bitcoin Whales Are Pulling The Rug Out From Under Market As BTC Wavers At $19,000 — What Next?",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:52:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "After seesawing just under $20,000 during the long US. On Tuesday, Labour Day weekend, Bitcoin fell below $19,000 as investors intensified their risk-off activities.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 6
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Chainalysis helps US government seize $30M linked to Axie Infinity hack",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:51:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Trading #Bitcoin? Did you know that #BSV is available in @latokens, one of the largest exchanges? Guess which…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @ja_morris: Kudos to the @WhiteHouse for producing a report with a nuanced understanding of the implications of #crypto for climate and…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:42:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "Some of our new episodes will feature the following subjects; “Community” , “Banking” , “Products” , and “Companies…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:39:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "Just in: White House fears crypto production might hinder climate change efforts",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:35:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "The White House has expressed concern that the production of cryptocurrencies such as Bitcoin (BTC) may have a negative effect... Continue reading",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 6
-      }
-    },
-    {
-      "title": "RT @douglasingram: Steady grinding. Bear markets are where legends are born, #borgborg - don't sleep on the Borgs.",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:29:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "who could have seen this coming...",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:12:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "RT @Mr_Greenone:  @SpiderMan @solBOOGLE @ZillazNFT  Only 100 Sol ️",
-      "link": "NULL",
-      "pubDate": "2022-09-08T15:07:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
       "title": "Helium Price Benefits From Solana Migration Plans - Where Next for HNT?",
       "link": "https://cryptonews.com/news/helium-price-benefits-from-solana-migration-plans-where-next-for-hnt.htm",
       "pubDate": "2022-09-08T14:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Helium crypto is trading 14% higher today as enthusiasm for its proposed migration to the Solana blockchain picks up steam. Currently priced at $4.92 on CoinGecko, HNT has seen trading volumes surge 164% to $182 million in the past 24 hours. Helium is building a decentralised wireless network but the bold vision hasn’t been matched by product development progress. ... Read More:...",
       "currencies": [
@@ -545,44 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🧠 ICYMI: Can you stake your $HNT after @Helium HIP-70? YES! Any HNT holder will be able to stake their HNT in the…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T14:24:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @ethnimbus: We've identified an issue that affects block production in 22.8 for nodes that were restarted after Bellatrix (Sep 6), resul…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T14:15:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "Stop paying high fees to centralized exchanges. Low cost #DeFi trades in the Telcoin App - download today and…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T14:15:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
       "title": "An Ethereum Core Dev Saved Avalanche From $24B Network “Insta-Death”",
       "link": "https://cryptobriefing.com/an-ethereum-core-dev-saved-avalanche-from-24b-network-insta-death/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-09-08T14:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "A malicious actor could have taken down the entire Avalanche network for less than $200,000. A since-patched vulnerability with the power to take down the Avalanche blockchain has been revealed.Ethereum core developer Pter Szilgyi released an Avalanche Vulnerability report Thursday, detailing a critical bug he found in the Avalanche network code earlier this year. In the report, dated March...",
       "currencies": [
@@ -596,90 +90,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @RedEyedApple: The token will be also useful in the dapp to increase chat limits, to pin your trade higher in the trades list etc https:…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T13:52:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GIGA"
-      ]
-    },
-    {
-      "title": "Australians🇦🇺can now purchase fuel using #cryptocurrency from 175 outlets of the country's largest gas station cha…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T13:41:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "R. Kiyosaki warns Biden’s crypto order correlates to Orwell’s totalitarian vision in ‘1984’",
-      "link": "NULL",
-      "pubDate": "2022-09-08T13:39:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Over the past few years, digital assets, including cryptocurrencies, have seen explosive growth, shooting past the $3 trillion market cap... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 5
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Sony Music Becomes Latest Entertainment Business to Embrace NFTs",
-      "link": "NULL",
-      "pubDate": "2022-09-08T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Some big changes are coming to Status. We can't wait to show you!",
-      "link": "NULL",
-      "pubDate": "2022-09-08T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "2 hours countdown! Share 10,000 USDD with @apenftorg",
-      "link": "NULL",
-      "pubDate": "2022-09-08T11:54:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
       "title": "Investors pump $1.7 billion into Terra Classic in a week as LUNC gains 107%",
       "link": "https://finbold.com/investors-pump-1-7-billion-into-terra-classic-as-lunc-gains-107-in-a-week/",
       "pubDate": "2022-09-08T11:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Investors continue to express interest in Terra Classic (LUNC), the original chain of the now collapsed Terra (LUNA) ecosystem pumping... Continue reading",
       "currencies": [
@@ -695,8 +110,8 @@
       "title": "Uniswap Dex Fully Backs Ethereum PoS Upgrade, No Support For ETHPOW Forks",
       "link": "https://en.ethereumworldnews.com/uniswap-ethereum-pos-upgrade/",
       "pubDate": "2022-09-08T11:22:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "ethereum",
       "description": "Uniswap is all in on Ethereum's proof-of-stake upgrade as the merge draws closer.",
       "currencies": [
@@ -710,79 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "GM BORG fam. Traders absolutely crushing it. We are in bear market. We are only warming up 🫡 Working on the roadmap…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T10:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "Are there hidden treasures on the #BitcoinSV #blockchain? Let’s find them! Discover a bug on the #BSV blockchain…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T10:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Celebrate #USDD's debut in Times Square, the 1st USDD community meme contest is coming! Post your USDD meme in…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T09:06:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @trondaoreserve: Do you still have questions about our #PSM (Peg Stability Module) ? Watch this short tutorial to find out how to swa…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T09:04:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @Crypto_Dep: ️Trending Searches by @CoinGecko 8 September 2022 $EVMOS $DC $GMX $AMB $FLUX $HNT $ERG #Ethereum $ETH #ETH $ATOM $SOL htt…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T09:03:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SOL",
-        "ATOM",
-        "AMB"
-      ]
-    },
-    {
-      "title": "We’re always looking for new developers to join us at #Golem and we understand that talent knows talent. That’s why…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T08:01:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
       "title": "BNB Chain announces zero-knowledge proof scaling technology",
       "link": "https://www.theblock.co/post/168514/bnb-chain-announces-zero-knowledge-proof-scaling-technology?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-09-08T07:23:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Binance’s layer one BNB Chain has announced the launch of its zero-knowledge proof scaling technology zkBNB.",
       "currencies": [
@@ -795,51 +142,11 @@
       }
     },
     {
-      "title": "Ethereum Classic Price Prediction: Gives Back Gains at $37, Merge Still Value Supportive",
-      "link": "NULL",
-      "pubDate": "2022-09-08T06:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Holochain apps can now be published to the Holo network! That means HoloPorts around the world make #p2p apps acc…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T06:12:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "We're now listed on @BitMEX, one of the world's largest crypto derivatives exchanges!",
-      "link": "NULL",
-      "pubDate": "2022-09-08T06:09:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Aave devs look set to receive $16.3M via retroactive funding",
       "link": "https://cointelegraph.com/news/aave-devs-look-set-to-receive-16-3m-via-retroactive-funding",
       "pubDate": "2022-09-08T05:39:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "A proposal to reward members of the Aave Companies with $16.28 million in retroactive funding for the development of v3 of the Aave Protocol looks set to pass.",
       "currencies": [
@@ -854,136 +161,11 @@
       }
     },
     {
-      "title": "QuarkChain co-founder and CMO, @Anthurine, recently participated in several local meetups to introduce #QuarkChain…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T05:20:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "Yep!",
-      "link": "NULL",
-      "pubDate": "2022-09-08T05:16:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "Lucky Draw Live in ON!",
-      "link": "NULL",
-      "pubDate": "2022-09-08T04:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BIO"
-      ]
-    },
-    {
-      "title": "Today's v#Klaymakers22 workshop will be about Zero-Knowledge Proofs (ZKPs) on Klaytn ecosystems ⏰ 8 Sept (Thu),…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T04:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Share 10,000 USDD by joining @apenftorg Marketplace Mystery Box sale! Join #APENFT event directly through…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T03:48:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "Share 10,000 USDD by joining @apenftorg Marketplace Mystery Box sale! Click to join",
-      "link": "NULL",
-      "pubDate": "2022-09-08T03:45:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "Share 10,000 USDD by joining #APENFT Marketplace Mystery Box sale! Join here",
-      "link": "NULL",
-      "pubDate": "2022-09-08T03:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "New Coin to be #Listed on #DigiFinex $HNT @helium ⏰Trading Time: Sept 8, 2022 07:00 (UTC) To Trade:…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T03:36:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETHW",
-        "ETHS",
-        "DFT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "APYs are looking good today! USDD/3CRV up to 15.82% USDDFRAXBP up to 41.66% It's time to stake and earn wit…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T03:26:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Hot Cross Dash Board Get an overview of your Cross Pool, Cross Yield, NFT Staking, and total rewards informat…",
-      "link": "NULL",
-      "pubDate": "2022-09-08T01:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DASH",
-        "HOTCROSS"
-      ]
-    },
-    {
       "title": "Cardano ($ADA) and Lido DAO ($LDO) Could Soon Rally, Crypto Analyst Predicts",
       "link": "https://www.cryptoglobe.com/latest/2022/09/cardano-ada-and-lido-dao-ldo-could-soon-rally-crypto-analyst-predicts/",
       "pubDate": "2022-09-08T00:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "A popular cryptocurrency analyst has predicted that the prices of both Cardano ($ADA) and Lido DAO’s governance token $LDO could soon rally based on two upcoming hard forks, including Ethereum’s Merge upgrade. The host of Coin Bureau, as Daily Hodl reports, has shared a new video with his 2.1 million YouTube subscribers detailing that he […]",
       "currencies": [

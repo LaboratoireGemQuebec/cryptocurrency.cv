@@ -1,16 +1,16 @@
 {
   "date": "2023-08-09",
-  "fetchedAt": "2026-02-05T07:45:52.641Z",
-  "articleCount": 58,
+  "fetchedAt": "2026-02-05T07:48:35.581Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
     {
       "title": "Why Hedera should be on your watchlist",
       "link": "https://ambcrypto.com/why-hedera-should-be-on-your-watchlist/",
       "pubDate": "2023-08-09T23:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Amid the growth in its social activity, increased accumulation does wonders for HBAR's value.",
       "currencies": [
         "HBAR"
@@ -25,8 +25,8 @@
       "title": "BREAKING: SEC Appeals Ripple (XRP) Decision!",
       "link": "https://en.bitcoinsistemi.com/breaking-sec-appeals-ripple-xrp-decision/",
       "pubDate": "2023-08-09T21:15:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "According to court records, the SEC is appealing Judge Torres' final decision. The SEC has submitted a letter of intent to appeal against Judge Torres' summary judgment in the SEC and Ripple case on July 13. In a letter to Judge Analisa Torres, the SEC indicated its intent to file an appeal under 28 USC […] Continue Reading: BREAKING: SEC Appeals Ripple (XRP) Decision!",
       "currencies": [
@@ -39,37 +39,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Best Crypto to Buy Now 9 August – Rollbit Coin, Toncoin, Hedera",
-      "link": "NULL",
-      "pubDate": "2023-08-09T21:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR",
-        "TON"
-      ]
-    },
-    {
-      "title": "MakerDAO Debates New EDSR Optimization Plan As MKR Bears Retain Market Control",
-      "link": "NULL",
-      "pubDate": "2023-08-09T21:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
       "title": "Hedera (HBAR) Will Become a Top 10 Cryptocurrency: Analyst",
       "link": "https://coinedition.com/hedera-hbar-will-become-a-top-10-cryptocurrency-analyst/",
       "pubDate": "2023-08-09T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "general",
       "description": "Hedera (HBAR) will be a top 10 cryptocurrency, according to the Classy Crypto YouTube channel’s host. The influencer made a video discussing how the HBAR ecosystem is getting better and making the cryptocurrency do well. According to the renowned crypto influencer, HBAR would be one of the highest beneficiaries of an upcoming bull run. He […]",
       "currencies": [
@@ -82,24 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cardano-Native MuesliSwap To Refund Users After “Slippage” Misunderstanding",
-      "link": "NULL",
-      "pubDate": "2023-08-09T20:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "MKR",
-        "CRV"
-      ]
-    },
-    {
       "title": "Dogecoin Eyes Record Highs As Elon Musk Hints on Some Exciting News — DOGE Payments Coming To X?",
       "link": "https://zycrypto.com/dogecoin-eyes-record-highs-as-elon-musk-hints-on-some-exciting-news-doge-payments-coming-to-x/",
       "pubDate": "2023-08-09T19:52:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "After Elon Musk rebranded Twitter as X, speculation flourished regarding the payment infrastructure that could turn X into the Everything app, similar to WeChat.",
       "currencies": [
@@ -112,79 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Huobi Faces Solvency Concerns Amid Rumors of Chinese Authorities’ Investigation",
-      "link": "NULL",
-      "pubDate": "2023-08-09T19:31:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "How Decentraland Is Using AI to Make the Metaverse Feel More Alive",
-      "link": "NULL",
-      "pubDate": "2023-08-09T19:22:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MANA"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Mantle Down More Than 8% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-09T19:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "Rollbit Coin (RLB) Goes Parabolic As Co-Founder Reveals Revamped Tokenomics System",
-      "link": "NULL",
-      "pubDate": "2023-08-09T18:05:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLB"
-      ]
-    },
-    {
-      "title": "Stablecoin supply continues to drop despite wider adoption signals",
-      "link": "NULL",
-      "pubDate": "2023-08-09T18:04:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Fantom DEX forced to shut down after multichain incident",
-      "link": "NULL",
-      "pubDate": "2023-08-09T17:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
       "title": "Ripple is working with Bank for International Settlements on payments taskforce",
       "link": "https://finbold.com/ripple-is-working-with-bank-for-international-settlements-on-payments-taskforce/",
       "pubDate": "2023-08-09T16:57:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "The Bank for International Settlements (BIS) announced Ripple (XRP) as an official member of its ‘cross-border payments interoperability and extension … Continued",
       "currencies": [
@@ -197,165 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitstamp To Halt Trading Of Polygon, Chiliz And Other Altcoins: Is SEC To Blame?",
-      "link": "NULL",
-      "pubDate": "2023-08-09T16:36:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Curve Finance Makes Public Appeal to Hacker Yet to Return Stolen $19M",
-      "link": "NULL",
-      "pubDate": "2023-08-09T16:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Aave’s Earning Farm protocol targeted by reentrancy attack — PeckShield",
-      "link": "NULL",
-      "pubDate": "2023-08-09T15:44:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Bitstamp Exchange to Suspend Trading of Several Popular Altcoins Due to US Regulatory Concerns – What Coins are Included?",
-      "link": "NULL",
-      "pubDate": "2023-08-09T15:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "NEAR",
-        "MANA",
-        "SAND",
-        "AXS",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Another Fantom project winds down citing Multichain exposure",
-      "link": "NULL",
-      "pubDate": "2023-08-09T15:16:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency OKB Rises More Than 4% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-09T15:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
-      "title": "BSV Blockchain Association Case Study: HandCash",
-      "link": "NULL",
-      "pubDate": "2023-08-09T14:57:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "ApeCoin Whales Stir the Waters on APE's Recovery Efforts",
-      "link": "NULL",
-      "pubDate": "2023-08-09T14:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Rollbit To Buy Back And Burn RLB Tokens Daily: What Does This Mean For The Price?",
-      "link": "NULL",
-      "pubDate": "2023-08-09T14:23:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLB"
-      ]
-    },
-    {
-      "title": "Fantom is exploring adding optimistic rollups to connect to Ethereum",
-      "link": "NULL",
-      "pubDate": "2023-08-09T14:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Backed Integrate Tokenized RWAs to Multiple Blockchains",
-      "link": "NULL",
-      "pubDate": "2023-08-09T14:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "AVAX",
-        "MATIC",
-        "LINK",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "You've Heard Of Double Entry Accounting, But What About Triple Entry Accounting? BSV Blockchain Association Offers Masterclass With nChain Chief Scientist Dr. Wright",
-      "link": "NULL",
-      "pubDate": "2023-08-09T13:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Pundit Highlights Possibility Of XRP Price At $1,800 As Ripple Enters $1 Quadrillion Derivatives Market",
       "link": "https://zycrypto.com/pundit-highlights-possibility-of-xrp-price-at-1800-as-ripple-enters-1-quadrillion-derivatives-market/",
       "pubDate": "2023-08-09T13:39:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Ripple Labs, a prominent player in the cryptocurrency market, recently achieved a significant milestone by becoming a member of the...",
       "currencies": [
@@ -368,102 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Curve Finance (CRV) Exploit Saga Takes New Turn",
-      "link": "NULL",
-      "pubDate": "2023-08-09T13:39:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Bitstamp Delists AXS, CHZ, MANA, MATIC, NEAR, SAND and SOL for US Customers",
-      "link": "NULL",
-      "pubDate": "2023-08-09T13:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "NEAR",
-        "SAND"
-      ]
-    },
-    {
-      "title": "EOS Foundation urges creditors to reject $22M Block.one settlement",
-      "link": "NULL",
-      "pubDate": "2023-08-09T13:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Bitstamp Halts Trading For Multiple Altcoins Following SEC Ruling",
-      "link": "NULL",
-      "pubDate": "2023-08-09T12:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "NEAR",
-        "MANA",
-        "SAND",
-        "AXS",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Bitstamp suspends trade for seven SEC-flagged tokens",
-      "link": "NULL",
-      "pubDate": "2023-08-09T12:29:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "SAND"
-      ]
-    },
-    {
-      "title": "Prices and news of the crypto assets Cronos (CRO), Cardano (ADA) and Pepe (PEPE)",
-      "link": "NULL",
-      "pubDate": "2023-08-09T12:07:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "CRO",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Bitstamp to halt trading in Polygon, Solana and other tokens in the US",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "MANA",
-        "SAND"
-      ]
-    },
-    {
       "title": "Google Bard favors XLM over XRP, citing greater decentralization",
       "link": "https://finbold.com/google-bard-favors-xlm-over-xrp-citing-greater-decentralization/",
       "pubDate": "2023-08-09T11:39:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "With OpenAI launching its artificial intelligence (AI) tool ChatGPT, the ensuing hype has given birth to other powerful AI platforms, … Continued",
       "currencies": [
@@ -480,8 +128,8 @@
       "title": "XRP makes over 1 million transactions daily; Here’s why it matters",
       "link": "https://finbold.com/xrp-makes-over-1-million-transactions-daily-heres-why-it-matters/",
       "pubDate": "2023-08-09T11:36:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Both the XRP Network (XRP) and the Ethereum Network (ETH) are among the most used crypto networks, considering the daily … Continued",
       "currencies": [
@@ -493,304 +141,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Maker whales take a pause, market reacts",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Is Algorand Teaming Up With Clinton Foundation To Fight Climate Change?",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Breaking: Earning Farm on AAVE Protocol Hit, Immediate Action Needed",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "XRP Price: Breaking This Key Resistance Could Propel Crypto To $21 By 2025 – Analyst",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:15:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "LTC",
-        "CRV"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Moves Into The El Salvador Market With Two Crypto Licenses",
-      "link": "NULL",
-      "pubDate": "2023-08-09T11:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Rollbit's RLB Token Rockets 60% as Crypto Casino Bets on Daily Token Burn",
-      "link": "NULL",
-      "pubDate": "2023-08-09T10:46:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "RLB"
-      ]
-    },
-    {
-      "title": "EOS Network Foundation calls on community to reject Block.one’s $22 million settlement",
-      "link": "NULL",
-      "pubDate": "2023-08-09T10:44:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Rock And Roll: Rollbit Coin Dominates Top 100 Crypto Ranking With 130% Gain",
-      "link": "NULL",
-      "pubDate": "2023-08-09T09:55:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "LTC",
-        "CRV"
-      ]
-    },
-    {
-      "title": "XRP, SOL Lead Crypto Market Bounce; RLB and UNIBOT Surge on Bullish Sentiment",
-      "link": "NULL",
-      "pubDate": "2023-08-09T09:41:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "RLB"
-      ]
-    },
-    {
-      "title": "LINK, MKR, GMX Poised for a Breakout? Whale Activity Suggests So",
-      "link": "NULL",
-      "pubDate": "2023-08-09T08:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR",
-        "GMX"
-      ]
-    },
-    {
-      "title": "Huobi sees US$105 million outflow amid insolvency rumors",
-      "link": "NULL",
-      "pubDate": "2023-08-09T08:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "TRX",
-        "HT"
-      ]
-    },
-    {
-      "title": "ChatGPT Identifies VC Spectra (SPCT), Shiba Inu (SHIB), and Maker (MKR) as Top Cryptocurrencies to Watch in 2023",
-      "link": "NULL",
-      "pubDate": "2023-08-09T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Why Is Bitcoin And Crypto Surging Today?",
-      "link": "NULL",
-      "pubDate": "2023-08-09T06:15:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "SHIB",
-        "HBAR",
-        "HT",
-        "SNX",
-        "TON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Trader Who Placed $10 Million Bet Against LUNA Loading Up Reddit’s Moons",
-      "link": "NULL",
-      "pubDate": "2023-08-09T05:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Bitstamp to halt U.S. trading of seven tokens identified as securities by SEC in Coinbase, Binance cases",
-      "link": "NULL",
-      "pubDate": "2023-08-09T05:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "NEAR",
-        "MANA",
-        "SAND",
-        "AXS",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Why Maker might witness another price correction",
-      "link": "NULL",
-      "pubDate": "2023-08-09T04:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Record-Breaking $10 Billion Open Interest Fuels Bullish Speculation For Bitcoin Reversal",
-      "link": "NULL",
-      "pubDate": "2023-08-09T04:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CRV"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Back to the future? Why a new wave of blockchain games is a blast from the past: Opinion",
-      "link": "NULL",
-      "pubDate": "2023-08-09T03:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Beware Of Crypto Firms Falsely  Claiming To Have Submitted License Applications",
-      "link": "NULL",
-      "pubDate": "2023-08-09T01:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Beware Of Crypto Firms Falsely Claiming To Have Submitted License Applications",
-      "link": "NULL",
-      "pubDate": "2023-08-09T01:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Analyst Predicts Deep Correction for Sam Altman’s Worldcoin, Updates Outlook on Solana and Two Other Altcoins",
-      "link": "NULL",
-      "pubDate": "2023-08-09T00:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Huobi Set To Become First Exchange Listing PayPal’s Stablecoin PYUSD",
-      "link": "NULL",
-      "pubDate": "2023-08-09T00:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
     }
   ]
 }

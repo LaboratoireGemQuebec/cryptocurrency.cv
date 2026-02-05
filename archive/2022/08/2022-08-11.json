@@ -1,126 +1,15 @@
 {
   "date": "2022-08-11",
-  "fetchedAt": "2026-02-05T07:45:52.815Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.593Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Bullish on PUDGY",
-      "link": "NULL",
-      "pubDate": "2022-08-11T23:14:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOLO",
-        "META",
-        "MASK",
-        "BEAM",
-        "ANIME",
-        "WHALE",
-        "ALPACA",
-        "DUCK",
-        "PUNK",
-        "UWU",
-        "NFTX",
-        "PUNK-BASIC",
-        "PUNK-FEMALE",
-        "PUNK-ATTR-4",
-        "PUNK-ATTR-5",
-        "PUNK-ZOMBIE",
-        "AVASTR",
-        "COOL",
-        "BAYC",
-        "KITTY",
-        "BERRY",
-        "FACE",
-        "HYPER",
-        "MINUTE",
-        "PATH",
-        "WAIFU",
-        "BGAN",
-        "BUNNY",
-        "BONSAI",
-        "CARD",
-        "MOONCAT",
-        "GLYPH",
-        "MEEB",
-        "SQGL",
-        "BAKC",
-        "ENERGY",
-        "RINGER",
-        "MANEKI",
-        "SPUNK",
-        "PASTA",
-        "PUPS",
-        "TOSHIMON",
-        "SODIUM",
-        "CNHPD",
-        "PHUNK",
-        "HDPUNK",
-        "KONGZ",
-        "MORPH",
-        "WIZARD",
-        "COLLECTIVE",
-        "KAMAX",
-        "TOPDOG",
-        "DFNORM",
-        "CLOCK",
-        "CITIES",
-        "LONDON",
-        "MILADY"
-      ]
-    },
-    {
-      "title": "Following a successful period in beta, we are officially graduating the following suite of new @AuraFinance vaults…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T23:13:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BADGER"
-      ]
-    },
-    {
-      "title": "RT @RLYNetworkAssoc: RLY Rewards: Earn Tokens &amp; Bootstrap Growth In All Market Conditions (our latest post)",
-      "link": "NULL",
-      "pubDate": "2022-08-11T20:16:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "RT @OfficialXYO: Hmm, this mysterious message is showing up in the metaverse around #XYO. It's hard to make out what it says. Looks like a…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T20:16:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "can’t wait to see what  pack will build @MariuszKrolWolf ? 🫣",
-      "link": "NULL",
-      "pubDate": "2022-08-11T19:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
     {
       "title": "MakerDAO Co-Founder Proposes Dumping $3.5 Billion USDC Reserves for ETH",
       "link": "https://cryptopotato.com/makerdao-co-founder-proposes-dumping-3-5-billion-usdc-reserves-for-eth/",
       "pubDate": "2022-08-11T18:09:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "While bullish for Ethereum, Vitalik Buterin called the potential conversion a “terrible idea.”",
       "currencies": [
@@ -134,22 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RLY Rewards: Earn Tokens &amp; Bootstrap Growth In All Market Conditions (our latest post)",
-      "link": "NULL",
-      "pubDate": "2022-08-11T18:01:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
       "title": "MakerDAO Should “Seriously Consider Preparing” for DAI Depeg: Founder",
       "link": "https://cryptobriefing.com/makerdao-should-seriously-consider-preparing-for-dai-depeg-founder/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-11T17:23:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "stablecoin",
       "description": "The U.S. Treasury Department's sanctions against Tornado Cash have led MakerDAO founder Rune Christensen to believe that the DAI creator is endangered by its $3.5 billion worth of USDC collateral. Rune Christensen is worried that the Tornado Cash sanctions are putting MakerDAO in a dangerous spot.In two messages posted on Discord and later shared by Yearn.Finance developer banteg on Twitter,...",
       "currencies": [
@@ -158,23 +36,11 @@
       ]
     },
     {
-      "title": "RT @ThetaDrop: In partnership with @ABSCBNNews @FremantleUS we are excited to launch the first official @idolphilippines NFT collection!…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T17:05:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Binance Labs Invests in Cross-Chain Staking Protocol Ankr After $500 Million Web3 Fund",
       "link": "https://en.ethereumworldnews.com/binance-labs-invests-staking-ankr/",
       "pubDate": "2022-08-11T15:49:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "exchange",
       "description": "Summary: Ankr protocol has received fresh capital from Binance Labs, Binance’s venture capital arm. The exact amount invested remains undisclosed at press time. The pair previously collaborated to build out key infrastructure for the BNB Chain. Ankr provides support by delivering DeFi composability to BNB Liquid Staking as well. Zhao’s VC department recently announced a $500 million fund to...",
       "currencies": [
@@ -187,22 +53,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @arietrouw: One more example of why #crypto is something new, for which we need new, well thought out laws. Under current law, it is po…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T15:46:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Former U.S. 2020 Presidential candidate unveils Super PAC to popularise Web3",
       "link": "https://finbold.com/crypto-mogul-and-tether-founder-unveils-super-pac-to-popularise-web3/",
       "pubDate": "2022-08-11T15:42:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "The founder of Tether stablecoin and 2020 United States Presidential candidate Brock Pierce has announced the formation of a super... Continue reading",
       "currencies": [
@@ -218,8 +73,8 @@
       "title": "Polygon Maintains Solid Footing As MATIC Balloons By 300% Since June",
       "link": "https://www.newsbtc.com/news/polygon-maintains-solid-footing-as-matic-balloons-by-300-since-june/",
       "pubDate": "2022-08-11T15:10:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Polygon (MATIC) price prediction relies heavily on the CPI numbers for July. Polygon price soared by 125% since July 1; Analysts spotted a rally of 68% catapulting to an 85% boost in terms of profit. MATIC price has overlapped targets found in the $1.25 mark; retracement is still a possibility at $0.64. A break below the $0.54 mark hints at an invalidation of MATIC’s uptrend movement....",
       "currencies": [
@@ -236,68 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @FelixProducer: Guys, Meta Miu’s debut song Uptown Boy NFT collection just began its drop. Go to and get your ha…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T14:18:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
-      "title": "Meta Miu NFT drop is Live",
-      "link": "NULL",
-      "pubDate": "2022-08-11T13:05:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "FLZ"
-      ]
-    },
-    {
-      "title": "Great progress @ImagineReplay team! The TNT-20 RPLAY token will be a strong incentive for user growth",
-      "link": "NULL",
-      "pubDate": "2022-08-11T12:58:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "Hmm, this mysterious message is showing up in the metaverse around #XYO. It's hard to make out what it says. Looks…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T12:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "$KLAY is now listed on @BTSEcom",
-      "link": "NULL",
-      "pubDate": "2022-08-11T11:25:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Solana, Avalanche Meet Stiff Resistance",
       "link": "https://cryptobriefing.com/solana-avalanche-meet-stiff-resistance/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-11T11:11:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "While Ethereum is rallying in the lead-up to the network's \"Merge\" upgrade, Solana and Avalanche appear to be bound for brief corrections. Solana and Avalanche appear to have reached critical areas of resistance after posting significant gains in the last 24 hours.SOL jumped by more than 15% over the past 24 hours, rising from a low of $39.2 to a high of $45.1. The sudden upswing appears to...",
       "currencies": [
@@ -315,8 +113,8 @@
       "title": "Cardano Tests $0.51 Support – Can ADA Reach Safe Zone And Hit $0.67?",
       "link": "https://www.newsbtc.com/analysis/ada/cardano-tests-0-51-support/",
       "pubDate": "2022-08-11T11:03:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Cardano spikes by 5% as seen on the daily price chart Bulls likely to touch bullish triangle from $0.67 to $0.69 ADA at risk of retreating to $0.50 Cardano (ADA) price is looking straightforward bullish today bouncing back from yesterday’s dip. However, the price isn’t completely out of risk. ADA plunged to roughly $0.5067 yesterday and then increased to more than 5% shooting to $0.5401 today....",
       "currencies": [
@@ -335,48 +133,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$KLAY @klaytn_official New Listing Giveaways! Steps to win $100 BTSE token! 1⃣ Deposit or Trade ≥$20 of KLAY…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T11:01:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "BTSE",
-        "WXMR"
-      ]
-    },
-    {
-      "title": "RT @rogerfederer: You know you’re getting old when the candles cost more than the cake. 🤣          Thanks for all the amazing bir…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T10:39:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRTS"
-      ]
-    },
-    {
-      "title": "BTSE is excited to welcome @klaytn_official ! Deposit $KLAY here Trade $KLAY here.…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T10:33:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "BTSE",
-        "WXMR"
-      ]
-    },
-    {
       "title": "‘ADA Ape’ Says in July Cardano ($ADA) Had Much Higher Adjusted Volume on Chain Than Ethereum ($ETH)",
       "link": "https://www.cryptoglobe.com/latest/2022/08/ada-ape-says-in-july-cardano-ada-had-much-higher-adjusted-volume-on-chain-than-ethereum-eth/",
       "pubDate": "2022-08-11T10:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Cardano ($ADA) has seen its network transaction volume tower that of Ethereum since the beginning of the year, and at one point, it was also above that of the flagship cryptocurrency Bitcoin ($BTC) before slowing to e on pair with it. According to Kraken’s July 2022 crypto on-chain digest report, network transaction volume is also […]",
       "currencies": [
@@ -391,68 +152,11 @@
       }
     },
     {
-      "title": "RT @BPSAA_Official: 1/5 The problem with @TornadoCash being added to the SDN list that too many people don't realize, is that it's a major…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T09:09:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
-      "title": "We are very proud of our client, the @JustCarbonCom featured in Singapore's leading newspaper, the Business Times.…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T08:21:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Come join #Klaytn's 1st ever flagship global #hackathon! #buidlonklaytn",
-      "link": "NULL",
-      "pubDate": "2022-08-11T07:40:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Announcement The 4th scheduled gas fee burn has been completed. Amount : 319,553.7 $KLAY Blocks: 94739204 t…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T07:19:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Klaytn chief says reducing ‘human elements’ can prevent hacks",
-      "link": "NULL",
-      "pubDate": "2022-08-11T04:31:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY"
-      ]
-    },
-    {
       "title": "Decentralized apps on Polygon hit 37,000, rocketing 400% this year",
       "link": "https://cointelegraph.com/news/decentralized-apps-on-polygon-hit-37-000-rocketing-400-this-year",
       "pubDate": "2022-08-11T03:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "It comes as the number of monthly active teams for the blockchain reached 11,800 in July, up from 8,000 in March.",
       "currencies": [
@@ -464,41 +168,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "At 10pm KST, @HuobiGlobal will host a live stream centered on blockchain games and Yoshi Shin, our Game Partnership…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T03:16:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Our blockchain digital asset platform eliminates the complexity of issuance, trading and custody, allowing wealth m…",
-      "link": "NULL",
-      "pubDate": "2022-08-11T02:44:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "We're happy to announce that @wormholecrypto's bridge is now live on @klapfinance",
-      "link": "NULL",
-      "pubDate": "2022-08-11T01:33:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
     }
   ]
 }

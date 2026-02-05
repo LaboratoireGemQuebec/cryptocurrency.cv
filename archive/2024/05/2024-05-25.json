@@ -1,133 +1,15 @@
 {
   "date": "2024-05-25",
-  "fetchedAt": "2026-02-05T07:45:53.263Z",
-  "articleCount": 45,
+  "fetchedAt": "2026-02-05T07:48:35.632Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Why Did CORE Price Surge 20% While The Crypto Market Dumped?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T23:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "SHIB",
-        "UNI",
-        "AR",
-        "CORE",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Breaking: Terra Luna Classic Set For v3.0.1 Upgrade, LUNC Price Rally In June",
-      "link": "NULL",
-      "pubDate": "2024-05-25T21:45:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Aptos Flips Solana in Daily Transactions, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-05-25T21:36:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "APT",
-        "SUI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "UBS Raises Gold Price Forecast Amid Rising Central Bank Demand and Geopolitical Tensions",
-      "link": "NULL",
-      "pubDate": "2024-05-25T21:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Just In: Elon Musk’s xAI Teams Up with Oracle for AI Supercomputer",
-      "link": "NULL",
-      "pubDate": "2024-05-25T21:08:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Historical Cycle Data Suggests Bitcoin Is Out Of The Danger Zone — Is Return To $73,000 Imminent?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T20:34:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Elon Musk reportedly building ‘Gigafactory of Compute’ for AI",
-      "link": "NULL",
-      "pubDate": "2024-05-25T19:34:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Solana Vs. XRP ETF: Expert Predicts Which One Will Be Approved First",
-      "link": "NULL",
-      "pubDate": "2024-05-25T18:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "LUSD"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Ethereum Faces Supply Crunch",
       "link": "https://coinpaprika.com/news/ethereum-faces-supply-crunch/",
       "pubDate": "2024-05-25T17:56:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "The SEC's approval of spot Ethereum ETFs is set to spark significant institutional demand, potentially causing a supply crunch and reshaping the market dynamics.",
       "currencies": [
@@ -140,80 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Google blames users for wildly inaccurate ‘AI Overview’ outputs",
-      "link": "NULL",
-      "pubDate": "2024-05-25T16:34:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "What Will Be My Portfolio If BRETT Price Hits 1?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T16:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "3 Altcoins To Skip Trading This Week Due To Token Unlocks",
-      "link": "NULL",
-      "pubDate": "2024-05-25T15:58:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Bitcoin Spot ETF Records Consecutive Weeks Of Inflows As Investor Confidence Grows",
-      "link": "NULL",
-      "pubDate": "2024-05-25T15:50:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LDO",
-        "ARK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Whales Scoop Up 20,000 BTC In 24-Hour Buying Spree Amid Bitcoin Price Drop",
-      "link": "NULL",
-      "pubDate": "2024-05-25T15:27:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Cardano Founder Drops Surprising Dogecoin, Bitcoin Insight",
       "link": "https://u.today/cardano-founder-drops-surprising-dogecoin-bitcoin-insight",
       "pubDate": "2024-05-25T14:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Cardano founder was reacting to passing of Kabosu",
       "currencies": [
@@ -230,8 +43,8 @@
       "title": "Spot Ethereum ETF Approval Could Send ETH to a New Record High, Says Bitwise CIO Matt Hougan",
       "link": "https://dailyhodl.com/2024/05/25/spot-ethereum-etf-approval-could-send-eth-to-a-new-record-high-says-bitwise-cio-matt-hougan/",
       "pubDate": "2024-05-25T14:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The chief investment officer of crypto fund manager Bitwise is predicting new all-time highs for Ethereum (ETH) if spot ETH exchange-traded funds (ETFs) are ultimately approved. Earlier this week, the U.S. Securities and Exchange Commission (SEC) approved a rule change that sets the stage for the potential green lighting of spot market Ethereum ETFs. In […]",
       "currencies": [
@@ -244,48 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Market Analysis: BTC Climbs to $69K, Altcoins Stagnate Amid ETF Uncertainties",
-      "link": "NULL",
-      "pubDate": "2024-05-25T14:26:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BONK",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "BounceBit Price Soars 40%, Will The Rally Continue?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T14:25:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Turn $10 Into $10,000 Investing In AI Meme Coins By June",
-      "link": "NULL",
-      "pubDate": "2024-05-25T13:31:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TURBO",
-        "$GROK",
-        "CORGIAI"
-      ]
-    },
-    {
       "title": "ETH vs. ADA: Is Cardano or Ethereum a Better Investment in 2024?",
       "link": "https://cryptopotato.com/eth-vs-ada-is-cardano-or-ethereum-a-better-investment-in-2024/",
       "pubDate": "2024-05-25T13:06:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Markets got a big spike in prices this week on crypto exchanges. What's behind it, and what factors can investors take into consideration to determine whether ETH or its friend ADA is the better buy?",
       "currencies": [
@@ -301,8 +77,8 @@
       "title": "‘Severely undervalued,’ says influencer on PEPE, but activity suggests otherwise",
       "link": "https://finbold.com/severely-undervalued-says-influencer-on-pepe-but-activity-suggests-otherwise/",
       "pubDate": "2024-05-25T13:05:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "In the vast and still experimental cryptocurrency market, influencers and enthusiasts often share insights into their favorite cryptocurrencies. Usually, they … Continue reading",
       "currencies": [
@@ -315,125 +91,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Ethereum Dominates NFT Sales Despite Overall Market Drop",
-      "link": "NULL",
-      "pubDate": "2024-05-25T12:44:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Terra LUNA’s LUNC Set To Jump 13x, Analyst Reveals The Drivers",
-      "link": "NULL",
-      "pubDate": "2024-05-25T12:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "USTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "3 cryptocurrencies to avoid trading this week",
-      "link": "NULL",
-      "pubDate": "2024-05-25T11:43:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Ether.Fi price breaks above key resistance, is $10 next?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T11:33:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "Bitcoin or Monero? Comparative analysis",
-      "link": "NULL",
-      "pubDate": "2024-05-25T10:39:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "TRB vs LINK: Comparing Potential",
-      "link": "NULL",
-      "pubDate": "2024-05-25T10:39:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LINK",
-        "TRB"
-      ]
-    },
-    {
-      "title": "Starknet Token Activity Dives as 3AC Liquidator Makes Major Binance Transfer",
-      "link": "NULL",
-      "pubDate": "2024-05-25T10:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DYDX",
-        "STRK"
-      ]
-    },
-    {
-      "title": "DTX Exchange Stuns With Hybrid Trading Infrastructure, Onchain Data Shows Interest From Worldcoin & GALA Investors",
-      "link": "NULL",
-      "pubDate": "2024-05-25T10:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "GALA"
-      ]
-    },
-    {
-      "title": "Bitcoin Price To Hit $1 Mln, Strike CEO Jack Mallers Unveils Potential Timeline",
-      "link": "NULL",
-      "pubDate": "2024-05-25T10:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "STRK"
-      ]
-    },
-    {
       "title": "Cardano’s price loss – Is it time to scoop more ADA?",
       "link": "https://ambcrypto.com/cardanos-price-loss-is-it-time-to-scoop-more-ada/",
       "pubDate": "2024-05-25T09:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Historical correlation between ADA's price and profit/loss ratio points to a potential bullish reversal.",
       "currencies": [
@@ -443,195 +105,6 @@
         "positive": 9,
         "negative": 5
       }
-    },
-    {
-      "title": "This Ethereum Rival Could Skyrocket by Nearly 2x Over the Short to Medium-Term, Says Coin Bureau’s Guy Turner",
-      "link": "NULL",
-      "pubDate": "2024-05-25T09:15:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTM"
-      ]
-    },
-    {
-      "title": "US and Hong Kong Spot Crypto ETFs Show Mixed Results After SEC Approval",
-      "link": "NULL",
-      "pubDate": "2024-05-25T09:13:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AAVE",
-        "ETN"
-      ]
-    },
-    {
-      "title": "Lido DAO Price Prediction: Can LDO Reach $5 in the Coming Months?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T08:36:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Bitcoin and Altcoins Experience Price Fluctuations, Uniswap and PEPE See Significant Gains",
-      "link": "NULL",
-      "pubDate": "2024-05-25T08:12:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "DOT",
-        "SHIB",
-        "UNI",
-        "NEAR",
-        "IMX",
-        "TON",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Audius crypto rallies +65% in two days – What are the next key targets?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T08:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AUDIO"
-      ]
-    },
-    {
-      "title": "AI Crypto Products Surge Amid High Demand for Compute Power",
-      "link": "NULL",
-      "pubDate": "2024-05-25T07:51:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "NEAR",
-        "AR"
-      ]
-    },
-    {
-      "title": "4 Meme Coins To Buy Before May Ends",
-      "link": "NULL",
-      "pubDate": "2024-05-25T07:45:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Crypto News: Bulls Charge Ahead as US Data Turns Favorable",
-      "link": "NULL",
-      "pubDate": "2024-05-25T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LINK",
-        "UNI",
-        "LDO",
-        "DAO",
-        "CORE",
-        "PEPE",
-        "TAO",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Here Are The 3 Crypto Tokens That Earned A Trader $42 Million Profit In One Year",
-      "link": "NULL",
-      "pubDate": "2024-05-25T04:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "PEPE",
-        "ONDO",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Lido (LDO) Takes The Lead With 13% Surge Post Ethereum ETF Approval – Key Levels To Watch",
-      "link": "NULL",
-      "pubDate": "2024-05-25T02:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "LDO"
-      ]
-    },
-    {
-      "title": "From Japan to London: BlockDAG’s Viral Displays Spur Predictions of $10 by 2025, Outshines Solana (SOL) Price & Filecoin Value",
-      "link": "NULL",
-      "pubDate": "2024-05-25T02:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Gala Games CEO Blames Internal Controls for $23 Million GALA Token Hack",
-      "link": "NULL",
-      "pubDate": "2024-05-25T01:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Ethereum Classic surges 17%: A shadow rally amid ETH ETF buzz?",
-      "link": "NULL",
-      "pubDate": "2024-05-25T01:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Blockchain Gaming Altcoin Axie Infinity Flashing Signs of Potential 194% Surge, Says Crypto Trader – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-05-25T00:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
     }
   ]
 }

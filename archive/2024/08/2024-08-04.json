@@ -1,85 +1,15 @@
 {
   "date": "2024-08-04",
-  "fetchedAt": "2026-02-05T07:45:53.467Z",
-  "articleCount": 32,
+  "fetchedAt": "2026-02-05T07:48:35.672Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Cypherpunks Write Code: The Mysterious Satoshi Nakamoto",
-      "link": "NULL",
-      "pubDate": "2024-08-04T22:09:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ADA",
-        "DAI",
-        "DAG"
-      ]
-    },
-    {
-      "title": "Binance Coin In Turmoil: Nearly 10% Value Erased In Market Shake-Up",
-      "link": "NULL",
-      "pubDate": "2024-08-04T20:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "SOL",
-        "STX"
-      ]
-    },
-    {
-      "title": "ZKX Shutdown: Amber Group Slams the Protocol’s Lack of Transparency",
-      "link": "NULL",
-      "pubDate": "2024-08-04T19:45:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – AAVE, XAUT, WIF, PYTH",
-      "link": "NULL",
-      "pubDate": "2024-08-04T19:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "XAUT",
-        "WIF",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Bitcoin falls into demand zone — Will SOL, XRP, KAS and AAVE follow?",
-      "link": "NULL",
-      "pubDate": "2024-08-04T18:56:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "AAVE",
-        "KAS"
-      ]
-    },
     {
       "title": "AI predicts Solana price for August 31, 2024",
       "link": "https://finbold.com/ai-predicts-solana-price-for-august-31-2024/",
       "pubDate": "2024-08-04T18:35:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Solana (SOL) recently faced a steep decline of over 7% in the past 24 hours, driven by a shift in … Continue reading",
       "currencies": [
@@ -91,26 +21,11 @@
       }
     },
     {
-      "title": "Crypto Market Liquidations Top $197 Million As Bitcoin Price Plunges Below $60,000",
-      "link": "NULL",
-      "pubDate": "2024-08-04T18:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "STX",
-        "ARB"
-      ]
-    },
-    {
       "title": "US Senate Advances Bill to Make Bitcoin a Strategic Reserve",
       "link": "https://coinpaprika.com/news/us-senate-advances-bill-to-make-bitcoin-a-strategic-reserve/",
       "pubDate": "2024-08-04T17:53:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Senator Cynthia Lummis proposes a bill to adopt Bitcoin as a U.S. strategic reserve, sparking bipartisan interest and widespread public support.",
       "currencies": [
@@ -126,8 +41,8 @@
       "title": "Support Grows for Bitcoin Reserve as 2,200 Letters Reach Senate",
       "link": "https://coinpaprika.com/news/support-grows-for-bitcoin-reserve-as-2-200-letters-reach-senate/",
       "pubDate": "2024-08-04T17:49:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "A surge of over 2,200 letters to U.S. senators calls for a Bitcoin Strategic Reserve, highlighting bipartisan support and shifting views on cryptocurrency.",
       "currencies": [
@@ -143,8 +58,8 @@
       "title": "Bitcoin needs to break this massive BTC sell wall to seek higher prices",
       "link": "https://finbold.com/bitcoin-needs-to-break-this-massive-btc-sell-wall-to-seek-higher-prices/",
       "pubDate": "2024-08-04T17:17:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) has crashed again below the $60,000 technical and psychological support following macroeconomic developments and recession fears. The negative … Continue reading",
       "currencies": [
@@ -157,26 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin layer-2 face uncertain future amid high operational costs",
-      "link": "NULL",
-      "pubDate": "2024-08-04T17:15:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
       "title": "Presidential Candidate Kamala Harris Adds Ex-Binance Adviser to Campaign Team: Report",
       "link": "https://dailyhodl.com/2024/08/04/presidential-candidate-kamala-harris-adds-ex-binance-adviser-to-campaign-team-report/",
       "pubDate": "2024-08-04T16:55:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "Democratic presidential candidate Kamala Harris is reportedly adding an ex-Binance adviser to her campaign team. According to a new report by Politico, the Harris campaign has hired David Plouffe – an ex-political advisor to former President Barack Obama who once served on Binance’s Global Advisory Board. An anonymous source familiar with the matter tells Politico […]",
       "currencies": [
@@ -192,8 +92,8 @@
       "title": "JUST IN: #Bitcoin is having a 15% discount sale for a limited time. 🤑",
       "link": "https://x.com/BTC_Archive/status/1820140455511675325",
       "pubDate": "2024-08-04T16:51:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -205,53 +105,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Filecoin (FIL) Portfolios Stay Red With 18% Weekly Losses",
-      "link": "NULL",
-      "pubDate": "2024-08-04T16:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "FIL",
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Up This Week Alongside SOL; Rollblock Outperforms Both As Revenue Share Model Continues Turning Heads",
-      "link": "NULL",
-      "pubDate": "2024-08-04T15:42:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SOL",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Post-Decline, ETH and BTC Poised for Historic Growth – Best 5 Altcoins That Could Raise x20 on Bulls Party",
-      "link": "NULL",
-      "pubDate": "2024-08-04T15:31:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOT",
-        "TRX",
-        "AVAX",
-        "MATIC"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Faces Death Cross Amid Market Sell-Off",
       "link": "https://u.today/cardano-ada-faces-death-cross-amid-market-sell-off",
       "pubDate": "2024-08-04T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "In case of Cardano, this pattern has appeared on four-hour chart",
       "currencies": [
@@ -263,33 +121,11 @@
       }
     },
     {
-      "title": "Polkadot Price Analysis: $DOT Slips Below $5",
-      "link": "NULL",
-      "pubDate": "2024-08-04T14:25:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "WazirX Ditches ‘Socialized Loss’ Strategy After Community Uproar",
-      "link": "NULL",
-      "pubDate": "2024-08-04T13:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
       "title": "Ripple prepares to sell 200 million XRP in August, worth $110 million",
       "link": "https://finbold.com/ripple-prepares-to-sell-200-million-xrp-in-august-worth-110-million/",
       "pubDate": "2024-08-04T13:04:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Ripple, the leading developer of XRP Ledger (XRP) and the token’s largest holder is ready to sell 200 million XRP … Continue reading",
       "currencies": [
@@ -302,43 +138,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Ethereum Crash A Buying Opportunity? This Whale Thinks So",
-      "link": "NULL",
-      "pubDate": "2024-08-04T12:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Solana Memecoins Worth Adding to Your Portfolio: $HINU, $WIF and $BOME",
-      "link": "NULL",
-      "pubDate": "2024-08-04T11:26:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "WIF",
-        "BOME",
-        "MEME"
-      ]
-    },
-    {
       "title": "Solana DeFi Trading Volume Tops Ethereum for the First Time in July—Here's Why",
       "link": "https://decrypt.co/242977/solana-defi-dex-volume-tops-ethereum-first-time",
       "pubDate": "2024-08-04T11:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "With meme coins on Solana exploding, the Ethereum rival has become “the blockchain of fun and for the people,” one expert says.",
       "currencies": [
@@ -350,120 +154,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Polkadot inflation sparks debate: DOT prices to tank?",
-      "link": "NULL",
-      "pubDate": "2024-08-04T11:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Bitcoin Triple Threat: Analyst Identifies Three Signals For BTC Price Rebound",
-      "link": "NULL",
-      "pubDate": "2024-08-04T09:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SOL",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Bonk (BONK) Plummets by Double Digits, Falls to Support Level",
-      "link": "NULL",
-      "pubDate": "2024-08-04T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "BONK"
-      ]
-    },
-    {
-      "title": "BlackRock’s BUIDL Paid Out $2.1 Million Dividends in July",
-      "link": "NULL",
-      "pubDate": "2024-08-04T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Stacks (STX) Drops 23%, But Recent Devs Might Slow The Trend",
-      "link": "NULL",
-      "pubDate": "2024-08-04T06:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "STX",
-        "APT"
-      ]
-    },
-    {
-      "title": "Polkadot Price Analysis: Can Bulls Prevent DOT From Slipping Below $5?",
-      "link": "NULL",
-      "pubDate": "2024-08-04T05:03:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "StarkNet's ZKX Protocol Shocks Major Market Makers With Sudden Quick Shutdown",
-      "link": "NULL",
-      "pubDate": "2024-08-04T04:09:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "Blast Community Token PacMoon Is About to Have a Big Change",
-      "link": "NULL",
-      "pubDate": "2024-08-04T02:51:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "SOL",
-        "BLAST",
-        "PAC"
-      ]
-    },
-    {
-      "title": "Top US Crypto Exchange Coinbase Adds Newly Rebranded Layer-1 Token to Listing Roadmap",
-      "link": "NULL",
-      "pubDate": "2024-08-04T00:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GAL"
-      ]
     }
   ]
 }

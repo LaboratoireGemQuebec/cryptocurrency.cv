@@ -1,15 +1,15 @@
 {
   "date": "2021-08-06",
-  "fetchedAt": "2026-02-05T07:45:51.578Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.348Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
     {
       "title": "Alleged Tether (USDT) ‘shadow banker’ set for 2022 trial",
       "link": "https://cryptoslate.com/alleged-tether-usdt-shadow-banker-set-for-2022-trial/",
       "pubDate": "2021-08-06T22:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "ethereum",
       "description": "Reggie Fowler, a former NFL team owner and the suspected “shadow banker” involved in the Tether and Bitfinex saga, will finally have his day in court as his trial is scheduled for early 2022.",
       "currencies": [
@@ -22,39 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @RoKhanna: We absolutely need to ensure tax compliance for crypto but without picking winners and losers in the industry or ensnaring so…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T21:52:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "Crypto Spot Volumes Fall to Yearly Low as Open Interest Rises",
-      "link": "NULL",
-      "pubDate": "2021-08-06T21:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Chainlink Expands Its Services to Incorporate Decentralized Off-Chain Computation",
       "link": "https://zycrypto.com/chainlink-expands-its-services-to-incorporate-decentralized-off-chain-computation/",
       "pubDate": "2021-08-06T21:33:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "general",
       "description": "Chainlink has introduced a service known as decentralized off-chain computation to monitor and automate triggers to blockchain smart contracts. The Chainlink Keeper Network service was announced during Chainlink’s annual event. It will also facilitate what has been called anti-fraud and anti-risk methods on blockchains when they are exchanging data with other blockchains. Additionally, parties to...",
       "currencies": [
@@ -70,8 +42,8 @@
       "title": "Ethereum Game Axie Infinity Daily Users Grow 10X Since June to Hit 1 Million",
       "link": "https://decrypt.co/77949/ethereum-game-axie-infinity-daily-users-10x-1-million",
       "pubDate": "2021-08-06T21:21:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Axie’s recent surge continues as the game sets a new user benchmark, but not everyone has the NFTs needed to play.",
       "currencies": [
@@ -88,8 +60,8 @@
       "title": "Elrond Becomes First Carbon Negative Blockchain in Europe",
       "link": "https://cryptopotato.com/elrond-becomes-first-carbon-negative-blockchain-in-europe/",
       "pubDate": "2021-08-06T20:45:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Elrond announced today that it is now the first blockchain company to become carbon negative in Europe.",
       "currencies": [
@@ -105,8 +77,8 @@
       "title": "CFTC Commissioner Brian Quintenz Fires Back At SEC, Affirms It Has No Authority Over Crypto Assets",
       "link": "https://zycrypto.com/cftc-commissioner-brian-quintenz-fires-back-at-sec-affirms-it-has-no-authority-over-crypto-assets/",
       "pubDate": "2021-08-06T20:09:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "Cryptocurrencies have received a lot of heat in recent times as governments have tried to bring the runaway “wildcat” industry under regulation. US regulatory bodies, courts, and Congress are all brainstorming how to favorably satisfy the public’s expectation of them concerning cryptocurrencies. While crypto regulation still has a long way to go before there is […]",
       "currencies": [
@@ -121,81 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Did you miss our AMA with @relitefinance? That's okay, the full AMA is now available on Relite's YouTube channel! W…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T19:03:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
-      "title": "Bitcoin Nears $43k, Indicators Suggest Bull Market Ahead",
-      "link": "NULL",
-      "pubDate": "2021-08-06T19:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The Bitcoin fund flow ratio for all exchanges is on a decline, while BTC transactions are rising. This could suggest a bull market is ahead. Bitcoin Fund Flow Ratio For All Exchanges Goes Down As pointed out by a CryptoQuant post, the BTC fund flow ratio for all exchanges seems to be on a downwards trend. Also, BTC transactions are going up. The Bitcoin fund flow ratio is an indicator that’s...",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 21,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Roars as Crypto Takes Center Stage in Congress",
-      "link": "NULL",
-      "pubDate": "2021-08-06T18:31:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin has jumped some 6% to near $43,000 as cryptos become the debate in Congress and thus all mainstream media following the movements of the Infrastructure bill. “Cryptocurrency brawl bogs...",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Whether you're buying and selling NFTs, creating your own, or just want to earn passive income in the form of royal…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T18:04:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "Reef Finance is happy to announce an important new collaboration with @curio_invest, a Real World Assets Fractional…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T16:59:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
       "title": "Terra’s LUNA in Overbought Territory After 180% Rally",
       "link": "https://cryptobriefing.com/terras-luna-in-overbought-territory-after-180-rally/",
       "pubDate": "2021-08-06T16:59:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "trading",
       "currencies": [
         "NULL"
@@ -210,8 +112,8 @@
       "title": "New SEC Regulations Add Cryptocurrency Under Security-Based Swap Rules",
       "link": "https://www.newsbtc.com/news/sec-cryptocurrency-security-based-swap-rules/",
       "pubDate": "2021-08-06T16:34:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "regulation",
       "description": "The cryptocurrency industry might soon be flooded with different kinds of rules to checkmate its operations. The recent developments in the sector point towards a new SEC rule that will guide the security swaps occurring in many financial assets, including crypto. This information came from the SEC Chairman during a speech he gave to the American Bar Association Derivative & Future Law...",
       "currencies": [
@@ -224,44 +126,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Stairway to the moon... Yes we still have faith .....on it",
-      "link": "NULL",
-      "pubDate": "2021-08-06T16:32:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
-      "title": ".@Ethereum just got an upgrade. Read about the new London Hard Fork by #Ethereum from our clever friends at @BinanceAcademy ⬇️",
-      "link": "NULL",
-      "pubDate": "2021-08-06T16:27:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "On Aug 4, a press release announced an unaffiliated project called “Weownomy” will use eCash. The eCash team has n…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T16:09:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Elon Musk's Latest Twitter Profile Change Is Bad News for Dogecoin Community",
       "link": "https://u.today/elon-musks-latest-twitter-profile-change-is-bad-news-for-dogecoin-community",
       "pubDate": "2021-08-06T16:06:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "After a multi-week reign, Doge is no longer on Elon Musk's Twitter profile picture",
       "currencies": [
@@ -277,8 +146,8 @@
       "title": "XRP Case Gets Heated As Ripple’s Garlinghouse Ponders On SEC Creating Regulatory Confusion Around Crypto",
       "link": "https://zycrypto.com/xrp-case-gets-heated-as-ripples-garlinghouse-ponders-on-sec-creating-regulatory-confusion-around-crypto/",
       "pubDate": "2021-08-06T15:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "Prominent figures in the cryptocurrency space have continued to remark on the implied intensifying crypto-hostile atmosphere that was expressed by the US SEC Chair Gary Gensler on Tuesday, during the agency’s most elaborate commentary about its view on the cryptocurrency market. In so many words, Gensler said that the SEC stands on the various sectors […]",
       "currencies": [
@@ -291,29 +160,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Theta blockchain is now compatible with ETH RPC API suite, Metamask, and dev tools Truffle, Hardhat, and Remix! Thi…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T15:43:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Tezos Successfully Completes Granada Network Upgrade",
       "link": "https://cryptobriefing.com/tezos-successfully-completes-granada-network-upgrade/",
       "pubDate": "2021-08-06T15:36:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "XTZ"
@@ -325,34 +176,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "\"The ETN-Network team is focused on ensuring the best timing for all future releases\" - Richard Ells. Read the late…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T15:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "THETA Bulls Dominate After The Announcement Of Metamask Support : #⃣: ️: dan saada…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T14:17:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "THETA",
-        "TCAT"
-      ]
-    },
-    {
       "title": "Binance’s ‘commitment to compliance’ now means this for Hong Kong’s users",
       "link": "https://ambcrypto.com/binances-commitment-to-compliance-now-means-this-for-hong-kongs-users/",
       "pubDate": "2021-08-06T14:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "exchange",
       "description": "Binance, arguably the world’s biggest crypto-exchange, has been under a lot of regulatory fire in recent months. Many authorities around the world are now seeking to clamp down on the exchange, and by extension, the crypto-market. These actions have had an impact on Binance Coin’s price as well, with the altcoin noting major corrections over […]",
       "currencies": [
@@ -368,8 +196,8 @@
       "title": "Inside the Polkadot network and ecosystem with Rob Habermeier",
       "link": "https://www.theblockcrypto.com/post/113697/inside-the-polkadot-network-and-ecosystem-with-rob-habermeier?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-08-06T13:41:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "Polkadot co-founder Rob Habermeier chats with The Block's Frank Chaparro in the latest episode of The Scoop podcast.",
       "currencies": [
@@ -382,69 +210,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "*Hey Siri, wake me up when I'm a millionaire*",
-      "link": "NULL",
-      "pubDate": "2021-08-06T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Good sign for today... It's time to kill more zero.. and wait for our NFT gaming platform ... Don't Miss the train.",
-      "link": "NULL",
-      "pubDate": "2021-08-06T13:19:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
-      "title": "RT @BitrueOfficial: Four new options have just been added for credit card purchases! You can now buy $SOL, $VET, $XDC and $SHIB directly on…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T13:16:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "VET",
-        "XDC",
-        "VTHO"
-      ]
-    },
-    {
-      "title": "Create a token on XDC Network with NO CODING right from your browser. All you need to do is to fill in the paramet…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T12:59:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "RT @bantg: DeFi is Punk",
-      "link": "NULL",
-      "pubDate": "2021-08-06T12:43:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
       "title": "Kusama Introduces First-Ever Stablecoin kUSD, Teases KAR Liquidity Programs",
       "link": "https://u.today/kusama-introduces-first-ever-stablecoin-kusd-teases-kar-liquidity-programs",
       "pubDate": "2021-08-06T12:16:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "defi",
       "description": "Karura (KAR) community approves stablecoin release and launch of new liquidity initiatives",
       "currencies": [
@@ -457,44 +227,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @BLACKBERRYBSC: We proudly announce that our new website has been launch... Stay tune for the next....",
-      "link": "NULL",
-      "pubDate": "2021-08-06T11:12:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
-      "title": "Like to see such great mints on our platform",
-      "link": "NULL",
-      "pubDate": "2021-08-06T11:06:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "We proudly announce that our new website has been launch... Stay tune for the next....",
-      "link": "NULL",
-      "pubDate": "2021-08-06T10:38:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
       "title": "Ripple expands XRP into NFTs amid escalating legal battles",
       "link": "https://forkast.news/ripple-expands-xrp-nft-sec-legal-war/",
       "pubDate": "2021-08-06T09:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "nft",
       "description": "As court grants CEO request to obtain info from Binance to bolster defense in SEC lawsuit, Ripple seeks to expand use cases for XRP Ledger.",
       "currencies": [
@@ -507,22 +244,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$BAND will be listed on @krakenfx, a major licensed US-based digital asset trading platform, and begin trading on…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T09:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "New Bitcoin Users Activity Spikes To New All-Time Highs, What Does It Mean?",
       "link": "https://www.newsbtc.com/news/bitcoin/new-bitcoin-users-activity-spikes-to-new-all-time-highs-what-does-it-mean/",
       "pubDate": "2021-08-06T08:19:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "The new Bitcoin users graph is a sight to behold. Even though Bitcoin’s price was horizontal for a while there, the network kept growing. And, with each new participant, the network expands infinitely. And, with that, the value of the network increases in the same magnitude. Such is the nature of the “network effect” phenomenon. That is what this chart by on-chain analyst Will Clemente shows:...",
       "currencies": [
@@ -536,44 +262,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$XEC trading is now live at Binance! Thanks @binance @cz_binance for supporting eCash.",
-      "link": "NULL",
-      "pubDate": "2021-08-06T04:46:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Announcing 16th Annual \"Seoul Drama Awards\" voting will begin on August 9th to the 20th on $AERGO based eVoting ap…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T02:18:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
-      "title": "RT @BlocksterCom: We're proud to partner with @InsureToken, a project helping DeFi users insure their portfolio of digital assets. Head to…",
-      "link": "NULL",
-      "pubDate": "2021-08-06T00:26:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
       "title": "Bitcoin bulls overtake the $40K barrier ahead of Friday’s $625M options expiry",
       "link": "https://cointelegraph.com/news/bitcoin-bulls-overtake-the-40k-barrier-ahead-of-friday-s-625m-options-expiry",
       "pubDate": "2021-08-06T00:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Securing a close above $40,000 will give bullish pro traders a sizeable advantage in Friday's $625 million BTC options expiry.",
       "currencies": [

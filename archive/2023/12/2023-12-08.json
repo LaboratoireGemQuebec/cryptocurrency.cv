@@ -1,73 +1,15 @@
 {
   "date": "2023-12-08",
-  "fetchedAt": "2026-02-05T07:45:53.154Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.624Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "What Is USDC?",
-      "link": "NULL",
-      "pubDate": "2023-12-08T23:59:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "BUSD",
-        "SOL",
-        "TRX"
-      ]
-    },
-    {
-      "title": "IMX token surges as VanEck says release of new blockchain-based video games like Illuvium next year could boost value",
-      "link": "NULL",
-      "pubDate": "2023-12-08T21:26:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IMX",
-        "ILV"
-      ]
-    },
-    {
-      "title": "The Bitcoin Spot ETF Boom: VanEck Forecasts $2.4 Billion Inflows In Q1 2024",
-      "link": "NULL",
-      "pubDate": "2023-12-08T21:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Cardano Jumps 20% as Analyst Eyes Bitcoin Pullback to $40K to 'Fill CME Gap'",
-      "link": "NULL",
-      "pubDate": "2023-12-08T19:19:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Market observers \"underappreciate\" future inflows from institutional investors to bitcoin, asset 21.co CEO said in a CoinDesk TV interview.",
-      "currencies": [
-        "BTC",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 14,
-        "negative": 8
-      }
-    },
     {
       "title": "Solana to join spot ETF race in 2024, VanEck predicts",
       "link": "https://cryptobriefing.com/solana-join-spot-etf-race-2024-vaneck-predicts/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-12-08T19:08:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Investment manager VanEck expects Solana to join the crypto spot ETF wars in 2024 as stated by analysts Matthew Sigel and Patrick Bush in a new report published today: \"Solana will join the spot ETF wars thanks to a flurry of asset managers submitting filings.\"The analysts expect Solana to become a top 3 blockchain by market capitalization, total value locked (TVL), and active users within the...",
       "currencies": [
@@ -79,47 +21,11 @@
       }
     },
     {
-      "title": "Cryptocurrency Cosmos Hub Up More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-12-08T19:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Dogecoin Above $0.1? Crypto Analyst Lists Reasons Why DOGE Price Will Continue To Rally",
-      "link": "NULL",
-      "pubDate": "2023-12-08T19:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Ripple’s XRP To Hit $1 Price Before 2024 Comes? Here’s What AI Predicts",
       "link": "https://zycrypto.com/ripples-xrp-to-hit-1-price-before-2024-comes-heres-what-ai-predicts/",
       "pubDate": "2023-12-08T18:59:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP, like a handful of other altcoins, has had an interesting 2023. As the year comes to an end, many investors and traders are anticipating an exponential price ascent for the asset.",
       "currencies": [
@@ -131,68 +37,11 @@
       }
     },
     {
-      "title": "This Week’s Biggest Gainers and Losers: BONK, ORDI, BTT Lead Triple-Digit Growth in Booming Crypto Market",
-      "link": "NULL",
-      "pubDate": "2023-12-08T16:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BTT"
-      ]
-    },
-    {
-      "title": "XRP Claims Top Spot for 2024-2025 Bull Run: Ben Armstrong",
-      "link": "NULL",
-      "pubDate": "2023-12-08T16:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Tops $2,300 Following Jobs Report; BitTorrent Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-12-08T14:35:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BTT"
-      ]
-    },
-    {
-      "title": "DWF Labs Allegedly Invested in This Altcoin: Price Surges More Than 50 Percent",
-      "link": "NULL",
-      "pubDate": "2023-12-08T14:29:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "TON blockchain halts as ordinals-inspired protocols pick pace",
       "link": "https://www.cryptopolitan.com/ton-ordinals-inspired-protocols-pick-pace/",
       "pubDate": "2023-12-08T14:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "general",
       "description": "The Open Network (TON) blockchain faced significant challenges in transaction processing as a new protocol, inspired by Bitcoin Ordinals, led to a surge in activity. Issues began on Tuesday, and by Thursday afternoon, over 2.5 million transactions were pending, causing the blockchain’s speed to plummet to less than 1 transaction per second. TON wallets halt ... Read more",
       "currencies": [
@@ -206,37 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Exploring the Surge in Altcoins: A Deep Dive into UNI, RUNE, and $RBLZ’s Market Dynamics",
-      "link": "NULL",
-      "pubDate": "2023-12-08T14:03:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "UNI",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Layer-2 Tokens OP, ARB, IMX Surge as ETH Shows Bullish Signs",
-      "link": "NULL",
-      "pubDate": "2023-12-08T13:25:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "IMX",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
       "title": "Solana to the moon? Crypto expert predicts SOL at $90",
       "link": "https://finbold.com/solana-to-the-moon-crypto-expert-predicts-sol-at-90/",
       "pubDate": "2023-12-08T11:06:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "In line with the recent upswing in the overall cryptocurrency market, Solana (SOL) has followed suit, experiencing a growth of … Continued",
       "currencies": [
@@ -249,238 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Countdown to the World Blockchain Summit Bangkok Begins!",
-      "link": "NULL",
-      "pubDate": "2023-12-08T09:52:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "UAE Bitcoin Miner Signs Order Worth Over $380 Million With Microbt",
-      "link": "NULL",
-      "pubDate": "2023-12-08T07:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "VanEck Predicts $2.4 Billion Influx into Bitcoin ETFs in Early 2024",
-      "link": "NULL",
-      "pubDate": "2023-12-08T05:35:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Matrixport's $45K End of Year Target for Bitcoin Looks to Be Accurate",
-      "link": "NULL",
-      "pubDate": "2023-12-08T05:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Ethereum Shorts Take A $27 M Hit, Bitcoin Long Positions Suffer Liquidations — Analytics Firm Reveals Large ETH Wallets Hit Record Highs",
-      "link": "NULL",
-      "pubDate": "2023-12-08T05:09:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ]
-    },
-    {
-      "title": "Crypto investors fear a ‘Bull Trap’ as Bitcoin price continues to drop – What’s the problem?",
-      "link": "NULL",
-      "pubDate": "2023-12-08T04:56:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Crypto Guru Who Nailed Bitcoin’s 2018 Bottom Predicts Major Surge for Solana (SOL)",
-      "link": "NULL",
-      "pubDate": "2023-12-08T04:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL"
-      ]
-    },
-    {
-      "title": "America Has a New Threat and It’s Crypto, Claims Elizabeth Warren",
-      "link": "NULL",
-      "pubDate": "2023-12-08T03:19:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Short Sellers Lose Over $6 Billion as Bitcoin and Crypto Stocks Soar",
-      "link": "NULL",
-      "pubDate": "2023-12-08T03:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cathie Wood's Ark Invest Trims Bitcoin Exposure, Sells $2.9M Worth Of GBTC Shares Amid Crypto Market Volatility",
-      "link": "NULL",
-      "pubDate": "2023-12-08T03:10:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ]
-    },
-    {
-      "title": "Bitcoin, Dogecoin In Red, Ethereum Zooms As Traders Fear 'Bull Trap' — Analyst Says ETH 'Ready For $3K'",
-      "link": "NULL",
-      "pubDate": "2023-12-08T02:54:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Robert Kiyosaki Warns ‘This Next Crash May Turn Into a Depression’",
-      "link": "NULL",
-      "pubDate": "2023-12-08T02:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Early Bitcoin Ordinals Art Sells for Record $450,000",
-      "link": "NULL",
-      "pubDate": "2023-12-08T02:21:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "BLUR Is Down 30%, And Whales Are To Blame–Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-12-08T02:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ]
-    },
-    {
-      "title": "Block Inc. Launches Self-Custody Bitcoin Wallet in 95 Countries",
-      "link": "NULL",
-      "pubDate": "2023-12-08T01:38:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "How Bitcoin, Solana eased market pressure on its price predictions",
-      "link": "NULL",
-      "pubDate": "2023-12-08T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 7 Dec: BTC Takes a Nap as Altcoins Ignite the Market",
-      "link": "NULL",
-      "pubDate": "2023-12-08T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "INJ"
-      ]
-    },
-    {
-      "title": "LayerZero announces native token, commits $3M to community distribution pool",
-      "link": "NULL",
-      "pubDate": "2023-12-08T01:20:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Sam Altman-Backed Crypto Startup Looks To Secure $100 Million For Bitcoin Private Credit Fund",
-      "link": "NULL",
-      "pubDate": "2023-12-08T01:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL"
-      ]
-    },
-    {
       "title": "Massive Uptick in Exchange Volumes Could Suggest Growing Institutional Demand Ahead of ETF Approval: Glassnode",
       "link": "https://dailyhodl.com/2023/12/07/massive-uptick-in-exchange-volumes-could-suggest-growing-institutional-demand-ahead-of-etf-approval-glassnode/",
       "pubDate": "2023-12-08T01:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "A massive surge in crypto exchange flows suggests institutions could be preparing for the potential approval of spot market Bitcoin (BTC) exchange-traded funds (ETFs), according to the market intelligence firm Glassnode. Glassnode notes in a new analysis that the 30-day simple moving average (SMA) of Bitcoin flows in and out of exchanges grew from $930 million […]",
       "currencies": [
@@ -491,70 +87,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin community clashes over censorship and privacy tools",
-      "link": "NULL",
-      "pubDate": "2023-12-08T00:53:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Navigating The Virtual World of The Sandbox: An Interview with Sebastian Borget",
-      "link": "NULL",
-      "pubDate": "2023-12-08T00:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "I Would ‘Close Down’ Crypto If I Were the Government, Says JPMorgan’s CEO",
-      "link": "NULL",
-      "pubDate": "2023-12-08T00:07:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Top 20 DEXes Like Uniswap, PancakeSwap Have Cumulatively Processed Over $4.4 Trillion",
-      "link": "NULL",
-      "pubDate": "2023-12-08T00:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Avalanche Pays Premium to Incentivize Validators, Will AVAX Soar To $145?",
-      "link": "NULL",
-      "pubDate": "2023-12-08T00:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AVAX",
-        "MATIC"
-      ]
     }
   ]
 }

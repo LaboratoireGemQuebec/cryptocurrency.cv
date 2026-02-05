@@ -1,90 +1,15 @@
 {
   "date": "2021-07-19",
-  "fetchedAt": "2026-02-05T07:45:51.908Z",
-  "articleCount": 30,
+  "fetchedAt": "2026-02-05T07:48:35.501Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Ether EFT Gets Approval From Brazilian Securities Regulator",
-      "link": "NULL",
-      "pubDate": "2021-07-19T22:05:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "The Brazilian Securities Regulator, Comissão de Valores Mobiliários (CVM) gives approval for an Ether exchange-traded fund (ETF). The holding company of QR Asset Management, QR Capital, announced the approval. 🔴 BREAKING: CVM aprova o 1º ETF de Ethereum da América Latina, o QETH11. O ETF da QR Asset Management, gestora do grupo QR Capital, será listado na B3, que se torna a 1ª bolsa na América...",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 14,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "POW#45: Don't focus on the fud, focus on the mission",
-      "link": "NULL",
-      "pubDate": "2021-07-19T21:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @CENNZnet: So you know what Apps are but what do you know about their decentralised cousins #DApps? Learn exactly what DApps are and how…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T21:40:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "RT @GD10V: Check out our most recent article, a first look at @FormationFi, the cutting edge #crosschain project that promises to revolutio…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T20:13:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "This week in #CelsiusRewardsExplorer, more than $25K rewards in $PAX were distributed to #Celsians. Did you kn…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T19:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL",
-        "PAX"
-      ]
-    },
-    {
-      "title": "Thank for @Investingcom for the great article - Forked Cryptocurrencies Demonstrate Great Price Performance. #eCash…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T19:26:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XEC"
-      ]
-    },
     {
       "title": "Bitcoin Miners Have Started Selling, Bear Market Ahead?",
       "link": "https://www.newsbtc.com/news/bitcoin/bitcoin-miners-selling-bear-market/",
       "pubDate": "2021-07-19T19:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin on-chain data has revealed that miners have started selling more BTC on exchanges, an indicator that a bear market could be ahead. Miners To Exchanges Flow Has Sharply Risen As pointed out by a CryptoQuant post, the all miners to all exchanges flow mean for Bitcoin seems to have sharply risen this past weekend. Related to the data are three basic terms. First is the all miners to all...",
       "currencies": [
@@ -102,8 +27,8 @@
       "title": "Polkadot Is the Only Blockchain Protocol Fitting the Revolutionary Bill: Interview With Parity",
       "link": "https://cryptopotato.com/polkadot-is-the-only-blockchain-protocol-fitting-the-revolutionary-bill-interview-with-parity/",
       "pubDate": "2021-07-19T18:40:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Parity Technologies' head of public affairs explains why Polkadot is superior to Ethereum, how do Parachains work, the role of Kusama, and more.",
       "currencies": [
@@ -120,8 +45,8 @@
       "title": "Coinbase Sued Over “Deceptive” Dogecoin Campaign",
       "link": "https://cryptobriefing.com/coinbase-sued-for-over-deceptive-dogecoin-campaign/",
       "pubDate": "2021-07-19T17:57:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "DOGE"
@@ -133,22 +58,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "The gang 🤩 #CrossingTheYellowBlocks #CBK work in progress 🤓 with @bamboodefi",
-      "link": "NULL",
-      "pubDate": "2021-07-19T17:22:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
       "title": "Binance Burns Hundreds Of Millions Worth Of Coins, Crypto Market Reacts",
       "link": "https://bitcoinist.com/binance-burns-hundreds-of-millions-worth-of-coins-crypto-market-reacts/?utm_source=rss&utm_medium=rss&utm_campaign=binance-burns-hundreds-of-millions-worth-of-coins-crypto-market-reacts",
       "pubDate": "2021-07-19T17:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "exchange",
       "description": "Binance has now burned over $300 million worth of crypto coins in its quarterly burns. The Binance burn consisted of 1,296,728 BNB burned, and an additional 5,163 burned as part of the Binance Pioneer Burn Program. Keeping its promise of helping out developers on the Binance Smart Chain who, by honest mistake, lost their BNB […]",
       "currencies": [
@@ -161,23 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Thetaboard1: Even if you know your Whitedoves from your BigDogs, growth of our network still requires new people joining, so let us not…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T16:59:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Polygon Launches NFT Gaming Studio",
       "link": "https://cryptobriefing.com/polygon-launches-nft-gaming-studio/",
       "pubDate": "2021-07-19T16:36:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "nft",
       "currencies": [
         "MATIC"
@@ -189,45 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Ultra_platform: THREAD: What makes games on Ultra so special",
-      "link": "NULL",
-      "pubDate": "2021-07-19T16:25:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UOS"
-      ]
-    },
-    {
-      "title": "\"OKEx completes token migration from BCHA to XEC and opens XEC/USDT spot trading\" #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-07-19T16:23:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XEC",
-        "BCHA"
-      ]
-    },
-    {
-      "title": "RT @RichardHeartWin: Going live now!",
-      "link": "NULL",
-      "pubDate": "2021-07-19T16:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "Polygon Unveils New Blockchain Gaming and NFT Division",
       "link": "https://cryptopotato.com/polygon-unveils-new-blockchain-gaming-and-nft-division/",
       "pubDate": "2021-07-19T16:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "nft",
       "description": "Polygon's new blockchain unit focuses on growing the global decentralized gaming and NFT markets while also bridging the gap between web 2 and web 3 gaming.",
       "currencies": [
@@ -240,22 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @PulsechainCom: Congratulations! The code is now released at ! We're going to help make #…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T15:08:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "Grayscale Launches a DeFi Fund Consisting of Uniswap (UNI), Aave (AAVE), and Compound (COMP)",
       "link": "https://cryptopotato.com/grayscale-launches-a-defi-fund-consisting-of-uniswap-uni-aave-aave-and-compound-comp/",
       "pubDate": "2021-07-19T14:44:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "The world's largest cryptocurrency asset manager, Grayscale Investments, has launched a new product focused on assets from the DeFi space only.",
       "currencies": [
@@ -273,8 +130,8 @@
       "title": "BTC, ETH and XRP Price Analysis for July 19",
       "link": "https://u.today/btc-eth-and-xrp-price-analysis-for-july-19",
       "pubDate": "2021-07-19T13:58:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Can Ethereum (ETH) or XRP withstand the fall of Bitcoin (BTC)?",
       "currencies": [
@@ -292,8 +149,8 @@
       "title": "Binance ‘burns’ nearly $400 million worth of BNB",
       "link": "https://cryptoslate.com/binance-burns-nearly-400-million-worth-of-bnb/",
       "pubDate": "2021-07-19T13:16:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "exchange",
       "description": "Major cryptocurrency exchange Binance has announced that it successfully completed the 16th quarterly token burn yesterday, removing $393.6 million worth of Binance Coin (BNB) from circulation.",
       "currencies": [
@@ -306,33 +163,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Prosperpredict: Prosper, Prometeus and Binance launch $PROM / $PROS trading \"Collect &amp; Win\" contest for Russia, Ukraine, Kazakhstan and…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T13:09:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PROM"
-      ]
-    },
-    {
-      "title": "RT @PulsechainCom: 17.5 hours until the rate increases 5%! It keeps doing that until the rate is 1.98x higher than now!",
-      "link": "NULL",
-      "pubDate": "2021-07-19T11:22:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "Dogecoin rallies as Musk dons sunglasses",
       "link": "https://forkast.news/headlines/doge-rallies-as-musk-dons-sunglasses/",
       "pubDate": "2021-07-19T10:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "altcoin",
       "description": "The price of Dogecoin rose more than 15% at the weekend after Tesla CEO Elon Musk changed his Twitter profile picture to a photo featuring the dog breed whose likeness features on the memecoin. Fast facts Musk’s new picture featured the billionaire wearing mirrored, aviator-style glasses with a Shiba Inu dog reflected in them. Dogecoin’s […]",
       "currencies": [
@@ -349,8 +184,8 @@
       "title": "DeFi lending platform Aave to ‘build Twitter on Ethereum’",
       "link": "https://forkast.news/headlines/aave-to-will-build-twitter-on-ethereum/",
       "pubDate": "2021-07-19T09:25:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "Decentralized lending platform Aave will build “Twitter on Ethereum,” its founder, Stani Kulechov, tweeted during the weekend. His message came seemingly in response to an announcement that Twitter founder Jack Dorsey was developing a Bitcoin-oriented fintech platform resembling Aave. Fast facts Dorsey, who is also CEO of payments company Square, tweeted that the firm was […]",
       "currencies": [
@@ -363,22 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @RichardHeartWin: Going live now",
-      "link": "NULL",
-      "pubDate": "2021-07-19T09:07:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
       "title": "84.3 Million XRP Transferred to Binance, While Coin Sits at $0.5",
       "link": "https://u.today/843-million-xrp-transferred-to-binance-while-coin-sits-at-05",
       "pubDate": "2021-07-19T08:53:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Anonymous whale has moved 84.3 million XRP to Binance, while the popular Ripple-affiliated coin remains at the $0.50 level",
       "currencies": [
@@ -394,8 +218,8 @@
       "title": "Binance burns $390M worth of BNB tokens",
       "link": "https://cointelegraph.com/news/binance-burns-390m-worth-of-bnb-tokens",
       "pubDate": "2021-07-19T07:34:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "Binance has destroyed $400 million worth of BNB in its 16th quarterly token burn event, but the markets don’t seem to care.",
       "currencies": [
@@ -411,8 +235,8 @@
       "title": "Binance Burns Almost $400 Million Worth of BNB, Price Unfazed",
       "link": "https://cryptopotato.com/binance-burns-almost-400-million-worth-of-bnb-price-unfazed/",
       "pubDate": "2021-07-19T07:17:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Binance completed another quarterly burn of BNB. This time, however, the price failed to react.",
       "currencies": [
@@ -423,17 +247,6 @@
         "negative": 10
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @PulsechainCom: Congratulations #tron Users! sacrifice phase is bringing #TronNetwork adoption! #TRX is now va…",
-      "link": "NULL",
-      "pubDate": "2021-07-19T05:37:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HEX"
-      ]
     }
   ]
 }

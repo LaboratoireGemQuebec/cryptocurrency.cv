@@ -1,48 +1,15 @@
 {
   "date": "2021-03-08",
-  "fetchedAt": "2026-02-05T07:45:51.844Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.471Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Watch only",
-      "link": "NULL",
-      "pubDate": "2021-03-08T23:02:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "JUST MY OPINION BUT NUCYPHER IS NOT GOING ANYWHERE BUT UP.......",
-      "link": "NULL",
-      "pubDate": "2021-03-08T22:31:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "How long for a newly created ERC-20 token to reflect fiat value in app?",
-      "link": "NULL",
-      "pubDate": "2021-03-08T21:33:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TWT"
-      ]
-    },
     {
       "title": "VeChain Hits All-Time High, But Technicals Spell Trouble",
       "link": "https://cryptobriefing.com/vechain-hits-all-time-high-but-technicals-spell-trouble/",
       "pubDate": "2021-03-08T21:26:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "While the market waits for a volatility spike that will kick-start a new uptrend, VeChain has stolen the spotlight with new all-time highs. VeChain Enters Price Discovery VeChain made headlines after rising to a new all-time high of $0.0643 on Monday, Mar. 8. The milestone was achieved following a spike in buying pressure at a crucial support level that saw the price of VET rise by more...",
       "currencies": [
@@ -56,73 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Everything but NU is increasing. It’s hard to watch.",
-      "link": "NULL",
-      "pubDate": "2021-03-08T21:17:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Damn! NuCypher is tweeting out a flurry of tweets in the last bit. Something big coming???",
-      "link": "NULL",
-      "pubDate": "2021-03-08T20:45:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Uniswap Airdop Value Reaches $13,000 For Those That Didn’t Sell Early",
-      "link": "NULL",
-      "pubDate": "2021-03-08T20:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "description": "DeFi platform Uniswap has exploded in popularity since its debut last year, which has been to the benefit of UNI token holders – especially those who got them completely free for being among the earliest users of the platform. Here’s a look at just how fast the platform and its token have come up in […]",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "https://stocktwits.com/mdotfresh/message/300932335",
-      "link": "NULL",
-      "pubDate": "2021-03-08T19:50:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "https://stocktwits.com/RagingCrypto/message/300824888",
-      "link": "NULL",
-      "pubDate": "2021-03-08T19:31:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "PayPal Acquires Crypto Security Firm Curv for Nearly $200M. Could this be huge for Algorand?",
       "link": "https://www.reddit.com/r/algorand/comments/m0ieuo/paypal_acquires_crypto_security_firm_curv_for/",
       "pubDate": "2021-03-08T18:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "regulation",
       "currencies": [
         "ALGO"
@@ -137,8 +42,8 @@
       "title": "Balancer Is Coming to Polkadot via Moonbeam",
       "link": "https://cryptobriefing.com/balancer-is-coming-polkadot-ecosystem-moonbeam/",
       "pubDate": "2021-03-08T18:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Moonbeam, an Ethereum-compatible smart contract parachain, announced it would connect the Balancer protocol with the Polkadot ecosystem. Moonbeam Bridges Balancer, Polkadot The integration with Balancer will add value to the growing DeFi ecosystem to Polkadot. “[Balancer] provides useful DeFi services for investors looking to create investment portfolios consisting of...",
       "currencies": [
@@ -155,8 +60,8 @@
       "title": "Brad Garlinghouse: XRP Will Continue Trading Even if Ripple Goes Away",
       "link": "https://cryptopotato.com/brad-garlinghouse-xrp-will-continue-trading-even-if-ripple-goes-away/",
       "pubDate": "2021-03-08T17:26:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "While explaining why XRP is not a security, the CEO of Ripple promised that the token will continue trading, even if the company disappears.",
       "currencies": [
@@ -169,22 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A proposal for the first-ever decentralized, on-chain network hard merge between Keep and NuCypher. Codename KEANU",
-      "link": "NULL",
-      "pubDate": "2021-03-08T17:02:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Chiliz (CHZ) Rides NFT Bullet Train to New All-Time High",
       "link": "https://beincrypto.com/chiliz-chz-rides-nft-bullet-train-new-all-time-high/",
       "pubDate": "2021-03-08T16:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "nft",
       "description": "CHZ is currently on a rollercoaster. It recorded a new all-time high of $0.1698 about two hours ago. Although it has retraced slightly since then, it is still up by 23% since yesterday. The price surge has consequently sent the token’s market capitalization soaring. It’s currently north of the $910 million mark. The world’s … Continued",
       "currencies": [
@@ -197,22 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Latest Nu post - interesting thread if you head over to Twitter",
-      "link": "NULL",
-      "pubDate": "2021-03-08T15:43:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Active user wallets on Ethereum DeFi have dipped 40% in one month",
       "link": "https://cointelegraph.com/news/active-user-wallets-on-ethereum-defi-have-dipped-40-in-one-month",
       "pubDate": "2021-03-08T15:38:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Wallets interacting with Ethereum-based decentralized finance protocols have dipped significantly since mid-February.",
       "currencies": [
@@ -228,8 +111,8 @@
       "title": "Cardano Price Analysis: ADA Facing Critical Support Following 13% Weekly Drop",
       "link": "https://cryptopotato.com/cardano-price-analysis-ada-facing-critical-support-following-13-weekly-drop/",
       "pubDate": "2021-03-08T15:18:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "ADA is now down by a steep 13.5% over the past week as it sits at support on a rising trend line. Against Bitcoin, it's also facing important support.",
       "currencies": [
@@ -245,8 +128,8 @@
       "title": "BNB Overtakes ADA by Market Cap, Yet Again",
       "link": "https://beincrypto.com/bnb-overtakes-ada-by-market-cap-yet-again/",
       "pubDate": "2021-03-08T14:18:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "BNB has now overtaken ADA. The race for fourth place on the list of the world’s largest cryptocurrencies continues to gain momentum. After momentarily grabbing the position, Cardano’s ADA has been flipped again by Binance’s BNB. Both digital currencies have been on a wild run since the beginning of the year. They both flipped a … Continued",
       "currencies": [
@@ -261,57 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Quppy — the first neobank to support instant mobile top-ups",
-      "link": "NULL",
-      "pubDate": "2021-03-08T14:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Thank you to our friends @BinanceTR 🇹🇷 for working on this $TWT airdrop with us",
-      "link": "NULL",
-      "pubDate": "2021-03-08T13:32:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "RT @BitcoinKingom: Never leave the Office without the Essentials. PAX A920 XPOS $NPXS",
-      "link": "NULL",
-      "pubDate": "2021-03-08T13:21:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "NPXS",
-        "PXS",
-        "NPXSXEM"
-      ]
-    },
-    {
-      "title": "Doing an AMA with @HanbitcoKr. Ask us anything and claim your $PCI reward! We would like to thank Hanbitco for this…",
-      "link": "NULL",
-      "pubDate": "2021-03-08T10:29:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
-    },
-    {
       "title": "ETC Group to Launch Ethereum ETP on Deutsche Borse",
       "link": "https://decrypt.co/60515/etc-group-to-launch-ethereum-etp-on-deutsche-borse",
       "pubDate": "2021-03-08T10:02:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "The financial services company is set to launch the first Ethereum exchange-traded product on the Deutsche Borse marketplace.",
       "currencies": [
@@ -328,8 +165,8 @@
       "title": "ICON (ICX) unaffected by South Korean tax investigation into ICONLOOP, says chairman",
       "link": "https://cointelegraph.com/news/icon-icx-unaffected-by-south-korean-tax-investigation-into-iconloop-says-chairman",
       "pubDate": "2021-03-08T10:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The South Korean tax authority is trying to track the movement of ICO funds raised in foreign countries into its domestic markets.",
       "currencies": [
@@ -346,8 +183,8 @@
       "title": "Central Bank of France Eyes XRP as Basis for Digital Euro",
       "link": "https://u.today/central-bank-of-france-eyes-xrp-as-basis-for-digital-euro",
       "pubDate": "2021-03-08T09:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "One of the major European central banks is eyeing XRP as a potential platform for issuing digital Euro",
       "currencies": [
@@ -360,44 +197,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Github Crypto Weekly Rank #8 : Ark Credits: @rosske in slack #trading_crypto channel.",
-      "link": "NULL",
-      "pubDate": "2021-03-08T08:42:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "It's what you must do before fully understand $HYN &amp; $RP",
-      "link": "NULL",
-      "pubDate": "2021-03-08T08:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "The swap fee from native $TOMO to $TOMOE (#ERC20) has been updated to 20 TOMO/transaction, effective today, Mar 8,…",
-      "link": "NULL",
-      "pubDate": "2021-03-08T08:03:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "IoT Industry Migrates to Polkadot – What to Expect",
       "link": "https://dailyhodl.com/2021/03/07/iot-industry-migrates-to-polkadot-what-to-expect/",
       "pubDate": "2021-03-08T04:40:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "The launch of parachains on the ambitious Polkadot project scheduled for the first quarter of 2021 has set off a quest to merge blockchain technology with IoT services, allowing developers to finally explore the benefits of the scalable multi-chain architecture. At the same time, the interoperability protocol based on Substrate now finds itself in fourth […]",
       "currencies": [
@@ -408,50 +212,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @catnip_exchange: Will there be a smart contract exploit in 2021 where over one billion USD in funds are stolen?",
-      "link": "NULL",
-      "pubDate": "2021-03-08T03:42:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "Nucypher news that could move the price: Amazon, Binance, and Ford...",
-      "link": "NULL",
-      "pubDate": "2021-03-08T03:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "STP Now Integrates with #Curve Finance to Launch $USTP Metapool! Go to and select the $USTP…",
-      "link": "NULL",
-      "pubDate": "2021-03-08T03:01:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STPT"
-      ]
-    },
-    {
-      "title": "RT @HYNkailaw: After the acquisition by Auspacific Fund &amp; Trust Management, co-established Hyperion Fund will be brought to market. It will…",
-      "link": "NULL",
-      "pubDate": "2021-03-08T02:52:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HYN"
-      ]
     }
   ]
 }

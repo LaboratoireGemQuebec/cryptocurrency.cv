@@ -1,56 +1,15 @@
 {
   "date": "2023-09-12",
-  "fetchedAt": "2026-02-05T07:45:52.396Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Champions Arena Beginner's Guide: How to Start Playing the NFT Fantasy Game",
-      "link": "NULL",
-      "pubDate": "2023-09-12T22:22:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Tron’s Justin Sun Mulls Over Making A Move On FTX’s Crypto Stash, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-09-12T21:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "TRX",
-        "MATIC",
-        "FTT",
-        "HT"
-      ]
-    },
-    {
-      "title": "AVOID LOSSES l Stop Trading Crypto - Bitcoin BTC, XTZ, RUNE Price Prediction",
-      "link": "NULL",
-      "pubDate": "2023-09-12T20:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ]
-    },
     {
       "title": "iPhone 15 Unveiled: Incredible Change in the Amount of Bitcoin Needed to Buy a New iPhone",
       "link": "https://en.bitcoinsistemi.com/iphone-15-unveiled-incredible-change-in-the-amount-of-bitcoin-needed-to-buy-a-new-iphone/",
       "pubDate": "2023-09-12T20:02:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "At the Apple event, the new iPhone series was introduced with its features and price. So how many BTC does it take to buy every new iPhone? Continue Reading: iPhone 15 Unveiled: Incredible Change in the Amount of Bitcoin Needed to Buy a New iPhone",
       "currencies": [
@@ -63,38 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Cash Up More Than 10% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-12T19:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Neo upgrades TestNet to Neo v3.6.0 and plans second hard fork",
-      "link": "NULL",
-      "pubDate": "2023-09-12T18:57:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
       "title": "Stellar’s (XLM) Big announcement, Which Has Been Expected for Days, Ended in Frustration: Price Dumped",
       "link": "https://en.bitcoinsistemi.com/stellars-xlm-big-announcement-which-has-been-expected-for-days-ended-in-frustration-price-dumped/",
       "pubDate": "2023-09-12T18:33:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "trading",
       "description": "The price dropped after the official announcement made by Stellar was not liked by the community. Continue Reading: Stellar’s (XLM) Big announcement, Which Has Been Expected for Days, Ended in Frustration: Price Dumped",
       "currencies": [
@@ -107,105 +39,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "GAS Station Winners: Ho Chi Minh City, Vietnam",
-      "link": "NULL",
-      "pubDate": "2023-09-12T18:25:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Klaytn Foundation Aims to Deliver Positive Social Change through Financial Accessibility and Tokenization",
-      "link": "NULL",
-      "pubDate": "2023-09-12T18:10:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY"
-      ]
-    },
-    {
-      "title": "Mantle Announces Ondo Finance Token As RWA Showcase Partner",
-      "link": "NULL",
-      "pubDate": "2023-09-12T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "IOTA Excites Community With Mainnet Upgrade, What Changed?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MIOTA"
-      ]
-    },
-    {
-      "title": "LUNC Price Prediction: Can Channel Pattern Lead to a Spike Beyond $0.000075?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T16:06:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Biggest Movers: BCH 6% Higher, as Price Nears $200 Level",
-      "link": "NULL",
-      "pubDate": "2023-09-12T16:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Top 5 builders: Cryptocurrencies with the highest GitHub scores",
-      "link": "NULL",
-      "pubDate": "2023-09-12T15:54:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Tezos Price Action And The Crypto Bear Market",
-      "link": "NULL",
-      "pubDate": "2023-09-12T15:03:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "XTZ"
-      ]
-    },
-    {
       "title": "Solana is coming to MetaMask thanks to Snaps",
       "link": "https://blockworks.co/news/metamask-snaps-solana",
       "pubDate": "2023-09-12T14:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "Before MetaMask Snaps, functionality that offers wider wallet customization, Metamask was primarily an EVM-based platform",
       "currencies": [
@@ -218,103 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terra Luna Classic v2.2.1 Core Upgrade Goes Live",
-      "link": "NULL",
-      "pubDate": "2023-09-12T14:36:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Klaytn Foundation Welcomes Two New Partners In Its RWA Tokenization Program",
-      "link": "NULL",
-      "pubDate": "2023-09-12T14:26:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY"
-      ]
-    },
-    {
-      "title": "Did FTX Manipulate GameStop’s Price?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T14:10:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "MANA"
-      ]
-    },
-    {
-      "title": "Binance's Support for Terra Luna Classic Network to Upgrade User Experience",
-      "link": "NULL",
-      "pubDate": "2023-09-12T14:01:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Bullish Run Falters: Time To Brace For A Price Dip?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T14:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK",
-        "FIL"
-      ]
-    },
-    {
-      "title": "ApeCoin, BAYC NFTs Fall as Yuga Sets HV-MTL Rift Launch Date",
-      "link": "NULL",
-      "pubDate": "2023-09-12T13:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Horizen Partners with Tatum to Enabling Blockchain Application Development and Integrations on EON, Horizen’s EVM-Compatible Smart Contracting Platform",
-      "link": "NULL",
-      "pubDate": "2023-09-12T13:03:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Uniswap Becomes Top DEX on Polygon as Whale Transactions Heighten",
-      "link": "NULL",
-      "pubDate": "2023-09-12T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MATIC",
-        "UNI",
-        "MKR"
-      ]
-    },
-    {
       "title": "MetaMask to be usable outside the EVM ecosystem with Snaps launch",
       "link": "https://www.theblock.co/post/250393/metamask-snaps-launch?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-12T13:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "MetaMask announced a new software mechanism called Snaps to expand its use on non-EVM blockchains including Cosmos, Solana, Tezos, Starknet and Algorand, among others.",
       "currencies": [
@@ -333,8 +79,8 @@
       "title": "Replacing the Coordinator with a Validator Committee",
       "link": "http://blog.iota.org/replacing-coordinator-with-validator-committee/",
       "pubDate": "2023-09-12T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "We are upgrading the current Coordinator to a decentralized Validator Committee. This change means that the placement of milestones will no longer rely solely on a single Coordinator managed by the IOTA Foundation.",
       "currencies": [
@@ -347,34 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Former Celsius CEO Mashinsky seeks dismissal of FTC case",
-      "link": "NULL",
-      "pubDate": "2023-09-12T12:36:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Mantle expands to RWA via Ondo Finance’s USDY",
-      "link": "NULL",
-      "pubDate": "2023-09-12T12:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MNT"
-      ]
-    },
-    {
       "title": "Ripple moves 100 million unlocked XRP amid price crash",
       "link": "https://finbold.com/ripple-moves-100-million-unlocked-xrp-amid-price-crash/",
       "pubDate": "2023-09-12T11:41:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Ripple has moved 100 million XRP from the 200 million kept from September’s 1 billion XRP token unlock. From that, … Continued",
       "currencies": [
@@ -390,8 +113,8 @@
       "title": "Solana: Why impending danger could be a blessing in disguise for SOL",
       "link": "https://ambcrypto.com/solana-why-impending-danger-could-be-a-blessing-in-disguise-for-sol/",
       "pubDate": "2023-09-12T11:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "The FUD around SOL heightened as FTX prepares to liquidate its holdings. However, some participants consider the declining price as an opportunity to accumulate. Does on-chain data agree?",
       "currencies": [
@@ -404,37 +127,11 @@
       }
     },
     {
-      "title": "Report Reveals The Stablecoins That Have Suffered The Most De-Peg Events",
-      "link": "NULL",
-      "pubDate": "2023-09-12T11:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "BUSD",
-        "DAI",
-        "HT"
-      ]
-    },
-    {
-      "title": "Milady Maker Parent Remilia Divulges $1M NFT Fee Diversion Scheme by Rogue Developer",
-      "link": "NULL",
-      "pubDate": "2023-09-12T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Bitcoin rally ‘around the corner’ as BTC dominance about to break out",
       "link": "https://finbold.com/bitcoin-rally-around-the-corner-as-btc-dominance-about-to-break-out/",
       "pubDate": "2023-09-12T09:51:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "With Bitcoin (BTC) back to its sideways trading trend following a brief trip into the lower $25,000s, chart patterns suggest … Continued The post Bitcoin rally ‘around the corner’ as BTC dominance about to break out appeared first on Finbold.",
       "currencies": [
@@ -445,174 +142,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Stellar (XLM) Turns Bullish: Can Price Reclaim $0.13?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T09:28:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "$150,000,000,000 Coming to Bitcoin Market Once BlackRock BTC ETF Gets Approved, Predicts Bloomberg Analyst",
-      "link": "NULL",
-      "pubDate": "2023-09-12T09:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Can Pepe Coin Bounce Back? Insights On Its Future Post-Critical Support Drop",
-      "link": "NULL",
-      "pubDate": "2023-09-12T09:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Binance Announces Support For Terra Luna Classic (LUNC) Network",
-      "link": "NULL",
-      "pubDate": "2023-09-12T08:53:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Filecoin Uphill Battle To $3.5 – What’s Holding It Back?",
-      "link": "NULL",
-      "pubDate": "2023-09-12T06:59:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Former Celsius CEO Alex Mashinsky Seeks to Quash U.S. FTC Case",
-      "link": "NULL",
-      "pubDate": "2023-09-12T06:15:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "DeFi group petitions to stop ‘patent troll’ targeting DeFi protocols",
-      "link": "NULL",
-      "pubDate": "2023-09-12T06:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "COMP"
-      ]
-    },
-    {
-      "title": "Decentralized Exchange Sushi Ventures Beyond Ethereum by Expanding to Aptos",
-      "link": "NULL",
-      "pubDate": "2023-09-12T06:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR",
-        "APT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Quant Retests Support At $98 And Fears Further Decline",
-      "link": "NULL",
-      "pubDate": "2023-09-12T05:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Teen Crypto Hacker Surrenders $3.1M Bitcoin and Sports Car to Authorities",
-      "link": "NULL",
-      "pubDate": "2023-09-12T05:34:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Price Signals Fresh Increase Despite Weakness in BTC and ETH",
-      "link": "NULL",
-      "pubDate": "2023-09-12T05:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Stablecoin de-pegging plagued USDC and DAI more than others: Analysts",
-      "link": "NULL",
-      "pubDate": "2023-09-12T04:25:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "DAI"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 11 Sep: Cryptocurrencies experience a sharp decline",
-      "link": "NULL",
-      "pubDate": "2023-09-12T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "MATIC",
-        "TWT",
-        "RPL"
-      ]
     }
   ]
 }

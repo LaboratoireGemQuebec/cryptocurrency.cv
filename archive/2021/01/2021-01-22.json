@@ -1,26 +1,15 @@
 {
   "date": "2021-01-22",
-  "fetchedAt": "2026-02-05T07:45:51.894Z",
-  "articleCount": 22,
+  "fetchedAt": "2026-02-05T07:48:35.492Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "If the Red Pocket is built on geo targeting and open to all participants, and we add an exclusive airdrop only to n…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T23:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
     {
       "title": "Tezos Price Recovers Following DAO Announcement",
       "link": "https://cryptobriefing.com/tezos-price-recovers-following-dao-announcement/",
       "pubDate": "2021-01-22T22:16:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "trading",
       "description": "Tezos (XTZ) appears to be leading the recovery in the cryptocurrency market after a team of developers announced that users will soon be able to create DAOs on the blockchain. Tezos Expands to Meet Market’s Needs Tezos saw its market value fall by more than 20% in the past 24 hours. XTZ crashed from a high of $2.90 to a low of $2.30, generating nearly $1.80 million in...",
       "currencies": [
@@ -37,8 +26,8 @@
       "title": "Is Crypto Giant Grayscale Preparing to Support Chainlink?",
       "link": "https://dailyhodl.com/2021/01/22/is-crypto-giant-grayscale-preparing-to-support-chainlink/",
       "pubDate": "2021-01-22T22:15:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Crypto sleuths have discovered a document that suggests the crypto asset management giant Grayscale could be gearing up to support Chainlink (LINK). A popular Chainlink enthusiast on Twitter discovered the documents, and warns the filing could be an elaborate hoax designed to pump the coin. Grayscale Chainlink Trust (LINK) Filed on December 18th, 2020 as […]",
       "currencies": [
@@ -54,8 +43,8 @@
       "title": "Tether Users Flee to TRON From Ethereum Amid High Fees",
       "link": "https://decrypt.co/55082/tether-users-flee-to-tron-from-ethereum-amid-high-fees",
       "pubDate": "2021-01-22T21:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Transactions using Tether dollar-pegged stablecoins on the TRON blockchain are outpacing those on Ethereum.",
       "currencies": [
@@ -70,33 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "“If confirmed, I intend to work closely with the Federal Reserve Board and the other federal banking and securities…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T20:54:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Blog: Neměli byste poslouchat centrální banky - zde je důvod",
-      "link": "NULL",
-      "pubDate": "2021-01-22T19:01:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
       "title": "Grayscale has incorporated six more trusts, including ones for Chainlink and Tezos",
       "link": "https://www.theblockcrypto.com/linked/92191/grayscale-trust-incorporation-chainlink-tezos?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-01-22T18:43:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "Crypto asset manager Grayscale has incorporated six more trusts, including those tied to Chainlink (LINK) and Tezos (XTZ) tokens.",
       "currencies": [
@@ -111,23 +78,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ICYMI: ARK.io recently joined Square's Crypto Open Patent Alliance, with members including Coinbase and Blockstream - learn more in this video announcement.",
-      "link": "NULL",
-      "pubDate": "2021-01-22T17:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "IOTA Foundation to Enhance Blockchain Development for Smart City Projects",
       "link": "https://btcmanager.com/iota-foundation-blockchain-development-smart-city/",
       "pubDate": "2021-01-22T17:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "IOTA Foundation has entered into a strategic agreement with the South Korean Observer Observation and Tanglehub to apply for smart city projects in South Korea, Asia, and Europe. The agreement which is set to kick in this year is expected to expand the use cases of IOTA in these regions. Partnership Set to Drive BlockchainRead More",
       "currencies": [
         "MIOTA"
@@ -139,22 +95,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#pNetwork Portals enable smart contracts living on different #blockchains to interact with each other as if they we…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T16:27:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
       "title": "Tether’s Bank Deltec Says Stablecoin Is Fully Backed by Reserves",
       "link": "https://www.coindesk.com/tether-bank-deltec-stablecoin-reserves",
       "pubDate": "2021-01-22T14:15:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "ethereum",
       "description": "\"Every tether is backed by a reserve and their reserve is more than what is in circulation,\" said Gregory Pepin, Deltec Bank's deputy CEO.",
       "currencies": [
@@ -167,22 +112,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What is a #replay_attack? #Hackers will do anything to gain access to your sensitive information in order to caus…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T13:54:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "IOTA Foundation to Power Smart Cities in South Korea: New Partnership Inked",
       "link": "https://u.today/iota-foundation-to-power-smart-cities-in-south-korea-new-partnership-inked",
       "pubDate": "2021-01-22T12:25:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "IOTA Foundation, the non-profit behind the development and adoption of solutions based on IOTA DLT, has announced a new partnership in South Korea",
       "currencies": [
@@ -195,72 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How to make a transaction on your Titan wallet. Let's take $HYN as an example",
-      "link": "NULL",
-      "pubDate": "2021-01-22T12:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Quant Analyst Who Predicted Bitcoin Rise to $100,000 Says BTC Whales Quietly Fueling Crypto Correction",
-      "link": "NULL",
-      "pubDate": "2021-01-22T09:29:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @Douglas_Horn: Big thanks  to @NewdexOfficial for adding the $TLOS/ $pBTC trading pair. This will help power defi on Telos with easy ar…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T07:01:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "HODL #Bitcoin or #Ethereum?🤔",
-      "link": "NULL",
-      "pubDate": "2021-01-22T06:55:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #LiveStreamFail [#NSFW] underboobs lol #hive",
-      "link": "NULL",
-      "pubDate": "2021-01-22T05:54:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
       "title": "Is Grayscale about to unveil a LINK Trust?",
       "link": "https://cointelegraph.com/news/is-grayscale-is-about-to-unveil-a-link-trust",
       "pubDate": "2021-01-22T03:31:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Mystery filings using Grayscale’s name suggest the multi-billion dollar firm may be looking to expand the number of Trusts.",
       "currencies": [
@@ -271,39 +144,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "As #TomoChain's Halving is on the way, let's take a look back at how $TOMO originated, how it's being used &amp; what t…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T02:42:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "What happened to #Bitcoin ? Can anyone explain the reason why it dropped?",
-      "link": "NULL",
-      "pubDate": "2021-01-22T02:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Today, we're excited to announce that the hardware wallet @coolwallet officially supports QuarkChain mainnet tok…",
-      "link": "NULL",
-      "pubDate": "2021-01-22T01:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
     }
   ]
 }

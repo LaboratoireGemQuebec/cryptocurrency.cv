@@ -1,15 +1,15 @@
 {
   "date": "2021-12-12",
-  "fetchedAt": "2026-02-05T07:45:51.901Z",
-  "articleCount": 67,
+  "fetchedAt": "2026-02-05T07:48:35.496Z",
+  "articleCount": 28,
   "source": "historical-import",
   "articles": [
     {
       "title": "Solana co-founder believes NFTs will eradicate ‘external poison marketplaces’",
       "link": "https://ambcrypto.com/solana-co-founder-believes-nfts-will-eradicate-external-poison-marketplaces/",
       "pubDate": "2021-12-12T23:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "nft",
       "description": "The mania around Non-Fungible Tokens (NFT) has only seen a whirlwind spike over the past year, with sales crossing $12.7 billion. Such sales figures have made it the best-performing cryptocurrency sector. In fact, over 73,000 NFT sales worth a whopping $271.5 million have been made in just the past week alone. With an added boost […]",
       "currencies": [
@@ -26,8 +26,8 @@
       "title": "ZK-rollups step into the limelight after the quest to scale Ethereum evolves",
       "link": "https://cointelegraph.com/news/zk-rollups-step-into-the-limelight-after-the-quest-to-scale-ethereum-evolves",
       "pubDate": "2021-12-12T23:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "ZK-rollups become the latest trending solution for scalability on the Ethereum network as developers strive to increase throughput capabilities while decreases transaction costs.",
       "currencies": [
@@ -43,8 +43,8 @@
       "title": "The Sandbox Partners With Metaverse Platform BlockchainSpace",
       "link": "https://cryptopotato.com/the-sandbox-partners-with-metaverse-platform-blockchainspace/",
       "pubDate": "2021-12-12T22:45:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "The blockchain-based gaming platform, The Sandbox, has partnered with BlockchainSpace, a metaverse platform, to amass more guilds and players.",
       "currencies": [
@@ -57,23 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @netswapofficial: #LINKMARINES can now bridge your $LINK with Metis Bridge and start swapping&amp;adding liquidity on",
-      "link": "NULL",
-      "pubDate": "2021-12-12T21:59:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LINK",
-        "METIS"
-      ]
-    },
-    {
       "title": "Cardano, its downtrend, and what can stop it",
       "link": "https://ambcrypto.com/why-not-much-can-stop-cardanos-downtrend-now/",
       "pubDate": "2021-12-12T21:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "It has been a while since Cardano’s price rallied. Way back in September, it peaked at $3.101. Post that, however, things have only gone downhill for this altcoin. Towards mid-September, ADA’s price entered a symmetrical triangle on the charts. And, by mid-October, it broke below the lower support line to continue its extended downtrend. After […]",
       "currencies": [
@@ -85,22 +73,11 @@
       }
     },
     {
-      "title": "RT @Ehrls15: great article...give it a read..@investvoyager",
-      "link": "NULL",
-      "pubDate": "2021-12-12T21:01:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
       "title": "Polygon Announces Nearly $500,000,000 Deal in Effort To Lead Ethereum-Scaling Solution Race",
       "link": "https://dailyhodl.com/2021/12/12/polygon-announces-nearly-500000000-deal-in-effort-to-lead-ethereum-scaling-solution-race/",
       "pubDate": "2021-12-12T21:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Ethereum layer 2 solution Polygon is unveiling a massive acquisition worth hundreds of millions of dollars to expand its repertoire of scaling technologies. In a new blog post, Polygon (MATIC) announces the acquisition of Mir, a startup focused on developing zero-knowledge (ZK) technology. ZK-rollups are layer 2 solutions that bundle hundreds of transactions off-chain and […]",
       "currencies": [
@@ -116,8 +93,8 @@
       "title": "Hackers take control of Indian prime minister’s Twitter account to promote bitcoin giveaway scam",
       "link": "https://www.theblockcrypto.com/linked/127246/hackers-take-control-of-indian-prime-ministers-twitter-account-to-promote-bitcoin-giveaway-scam?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-12-12T20:28:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "bitcoin",
       "description": "The official Twitter account for India's prime minister, Narendra Modi, was briefly taken over by hackers and used to promote a bitcoin giveaway scam.",
       "currencies": [
@@ -132,8 +109,8 @@
       "title": "Bitcoin Bounces Back to $50K in Weekend Consolidation",
       "link": "https://decrypt.co/88097/bitcoin-bounces-back-to-50k-in-weekend-consolidation",
       "pubDate": "2021-12-12T20:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The gains come after a flash crash at the beginning of December.",
       "currencies": [
@@ -146,55 +123,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "&gt;&gt; f for frens.",
-      "link": "NULL",
-      "pubDate": "2021-12-12T20:01:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "RT @jeongunlee1: @Ravencoin It's simple and clear, but this is the truth. Raven coins are increasing due to many actual use cases. We don't…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:50:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RVN"
-      ]
-    },
-    {
-      "title": "RT @RavenRickGrime1: It is with great honor I present to you a beautiful piece of craftsmanship by OG @Ravencoin Kawmunity member @nike8866…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:49:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RVN"
-      ]
-    },
-    {
-      "title": "Great VC everyone! 45 minutes talk about the project, answering all the questions and we had a Quiz at the end of t…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:47:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
       "title": "Anti-Corruption Watchdog Sues SEC To Comply With Freedom of Information Request, Alleges Conflict of Interest in XRP Lawsuit",
       "link": "https://dailyhodl.com/2021/12/12/anti-corruption-watchdog-sues-sec-to-comply-with-freedom-of-information-request-alleges-conflict-of-interest-in-xrp-lawsuit/",
       "pubDate": "2021-12-12T19:45:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "A non-profit dedicated to government oversight is taking legal action against the U.S. Securities and Exchange Commission (SEC), alleging conflicts of interest in its handling of the crypto space. Empower Oversight is suing the SEC to compel the regulator to comply with the Freedom of Information Act (FOIA) and reveal communications between its senior officials […]",
       "currencies": [
@@ -207,56 +140,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MetisDAO: Seems smartest #DeFi projects and minds in the industry are noticing the amazing business plan that our native Layer 2 DEX @n…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:43:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "Metaface chart is looking good for itself..",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:36:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "Bitcoin DeFi and Bitcoin NFTs continue to blossom thanks to the builders leveraging Stacks and the Clarity smart co…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T19:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "RT @joey__santoro: Tribe shirt by ⁦@SubvertedN⁩ getting me HYPED for Fei v2",
-      "link": "NULL",
-      "pubDate": "2021-12-12T18:35:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FEI",
-        "TRIBE"
-      ]
-    },
-    {
       "title": "Is Ethereum in any position to trigger a DeFi summer right now",
       "link": "https://ambcrypto.com/is-ethereum-in-any-position-to-trigger-a-defi-summer-right-now/",
       "pubDate": "2021-12-12T18:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "The DeFi’s market movement has been quite dismal over the past few weeks. Right from MKR, AAVE, and COMP to UNI, SUSHI, and YFI, almost all the top tokens from this space have been incurring losses. Amidst the larger downtrend or ‘winter’ phase going on, the aggregate value locked in DeFi slipped to $85 billion […]",
       "currencies": [
@@ -270,55 +158,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Seems smartest #DeFi projects and minds in the industry are noticing the amazing business plan that our native Laye…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T18:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "𝗗𝗶𝘀𝗰𝗹𝗮𝗶𝗺𝗲𝗿: Collecting NFTs on Proton can be addictive!  ️",
-      "link": "NULL",
-      "pubDate": "2021-12-12T18:29:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "Another awesome video featuring @elf_token, courtesy of Steven Clarke! Take some time to watch, one of the most res…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T18:01:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
-      "title": "#HiveAdventCalendar question of the day: What's your favorite Hive-based #NFT that you own or wish you owned?",
-      "link": "NULL",
-      "pubDate": "2021-12-12T18:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "HIVE"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Suddenly Spikes 8%",
       "link": "https://u.today/shiba-inu-shib-suddenly-spikes-8",
       "pubDate": "2021-12-12T18:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba (SHIB) is outperforming nearly all of the top 100 coins after a sudden price spike",
       "currencies": [
@@ -334,8 +178,8 @@
       "title": "Ethereum Cofounder Joe Lubin: High Gas Fees Are a 'Measure of Success'",
       "link": "https://decrypt.co/88020/ethereum-cofounder-joe-lubin-high-gas-fees-are-a-measure-of-success",
       "pubDate": "2021-12-12T17:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Joe Lubin waded into the ongoing debate over Ethereum gas fees: they're a \"growth pain\" and a sign of the network's popularity, he says.",
       "currencies": [
@@ -350,8 +194,8 @@
       "title": "3 reasons why Ethereum price can drop below $3K by the end of 2021",
       "link": "https://cointelegraph.com/news/3-reasons-why-ethereum-price-can-drop-below-3k-by-the-end-of-2021",
       "pubDate": "2021-12-12T17:23:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "The bearish setup appears amid growing divergence between Ether’s price and momentum.",
       "currencies": [
@@ -366,8 +210,8 @@
       "title": "Can We Define Bitcoin As A Religion?",
       "link": "https://bitcoinmagazine.com/culture/can-we-define-bitcoin-as-a-religion",
       "pubDate": "2021-12-12T17:13:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "This essay will attempt to answer a question often discussed yet semantically challenging.",
       "currencies": [
@@ -379,121 +223,11 @@
       }
     },
     {
-      "title": "Today 19pm UTC LIVE VOICECHAT with the #SpaceXliFe Dev DidaSync. Make sure to tune in and ask any questions about t…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T16:44:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "RT @MetisDAO: We love the idea so much, $METIS actually executed the first ever community minted NFT. Sold for 16.1 ETH, proceeds split 256…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T16:38:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "METIS"
-      ]
-    },
-    {
-      "title": "You can now purchase #music, #apps, #movies, and much more, from one of the world's largest entertainment libraries…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T16:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Great news - Buy tax has been dropped 4% for this week! Giving everyone the opportunity to load up their bags befor…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T15:41:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
-      "title": "my meal plan? crypto for breakfast, lunch, and dinner.",
-      "link": "NULL",
-      "pubDate": "2021-12-12T15:01:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "What do you like most about Proton? ️",
-      "link": "NULL",
-      "pubDate": "2021-12-12T14:17:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "1st vote on Stabilize governance has ended, and we will raise the Transfer Fee to 15% based on the results of the v…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T14:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUSD"
-      ]
-    },
-    {
-      "title": "Brand new arena mode is available now ！Details",
-      "link": "NULL",
-      "pubDate": "2021-12-12T13:52:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIN"
-      ]
-    },
-    {
-      "title": "Heard @elonmusk has a pet CobraGoose.",
-      "link": "NULL",
-      "pubDate": "2021-12-12T13:19:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBG"
-      ]
-    },
-    {
-      "title": "ℹ️ We are hosting an AMA with @NotableNFT team, to talk about their successful presale &amp; the upcoming listing of th…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T12:54:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
       "title": "Solana Gearing Up for 255% Rally Early Next Year: Crypto Exchange Kraken",
       "link": "https://dailyhodl.com/2021/12/12/solana-gearing-up-for-255-rally-early-next-year-crypto-exchange-kraken/",
       "pubDate": "2021-12-12T12:45:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Crypto exchange Kraken is saying that Ethereum competitor and smart contract platform Solana (SOL) could be jockeying for a strong rally by early 2022. In a recent report, Kraken says that Solana has been trading within a large bullish pattern dating as far back as 2020. According to the crypto exchange, Solana’s corrective move from […]",
       "currencies": [
@@ -511,8 +245,8 @@
       "title": "Gemini-Backed Flexa Adds Shiba Inu (SHIB) as a Payment Method",
       "link": "https://cryptopotato.com/gemini-backed-flexa-adds-shiba-inu-shib-as-a-payment-method/",
       "pubDate": "2021-12-12T12:44:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Users of Flexa's SPEDN application will now be able to pay with their SHIB tokens across a broad network of merchants including GameStop and Lowe's.",
       "currencies": [
@@ -525,33 +259,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @kitkatkitkat87: Thought I might share my Christmas card for this year, happy holidays everyone! Buddy and I are so happy to be on the #…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T12:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
-      "title": "Another #ElfToken YouTube video dropped last night! Check out what Jim Crypto has to say about the token!…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T12:29:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
       "title": "Bitcoin & Crypto Bull Run Will End In 2022",
       "link": "https://www.youtube.com/watch?v=uJM-Sb_cSnM",
       "pubDate": "2021-12-12T11:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheCryptoLark",
+      "sourceKey": "thecryptolark",
       "category": "bitcoin",
       "description": "Bitcoin and cryptocurrency to pump well into 2022 surprising crypto world! 🤖 UNSTOPPABLE DOMAINS ►► https://cryptolark.co/UNSTOPPABLE 🔥 RECEIVE MY FREE INVESTMENT REPORT EVERY WEEK ►► https://cryptolark.co/WEALTHMASTERY 0:00 Today in Bitcoin 1:56 Bitcoin ETF 4:04 Cycles Getting Longer 6:00 Ethereum 7:52 Cardano and Others 9:15 NFTs 10:50 Gaming 12:16 Big Money #bitcoin #crypto #btc 💰 BINANCE BEST EXCHANGE FOR BUYING & TRADING CRYPTO 👉 10% OFF FEES & $700 BONUS ►► https://cryptolark.co/BINANC",
       "currencies": [
@@ -564,33 +276,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Possible shift!!!",
-      "link": "NULL",
-      "pubDate": "2021-12-12T11:10:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
-      "title": "RT @alexpfeiffer: I created some #fanfrenchies for #mad2022 conference. Each frenchie represents a hosting university. See you 2022 :). The…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T10:46:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
       "title": "You Can Now Spend Shiba Inu at GameStop, Lowe’s and Nordstrom",
       "link": "https://u.today/you-can-now-spend-shiba-inu-at-gamestop-lowes-and-nordstrom",
       "pubDate": "2021-12-12T10:42:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "GameStop, Nordstrom, Lowe’s, Petco, Bed Bath & Beyond and Ulta Beauty are among the merchants that can now accept the Shiba Inu cryptocurrency",
       "currencies": [
@@ -606,8 +296,8 @@
       "title": "Polygon Acquires Mir Protocol in $400M Deal in Order to Bolster ‘Groundbreaking ZK Rollup Tech’",
       "link": "https://news.bitcoin.com/polygon-acquires-mir-protocol-in-400m-deal-in-order-to-bolster-groundbreaking-zk-rollup-tech/",
       "pubDate": "2021-12-12T10:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "layer2",
       "description": "On December 9, Polygon co-founder Mihailo Bjelic announced that the project has acquired the Ethereum scaling startup Mir in a $400 million deal. The Mir team of cryptographers and engineers are joining Polygon in order to create a “highly-scalable, Ethereum-compatible ZK rollup” called Polygon Zero. Mihailo Bjelic: ‘Polygon Is Focused on Zero-Knowledge Cryptography as the […]",
       "currencies": [
@@ -624,8 +314,8 @@
       "title": "Market Watch: Bitcoin Amid $49K, Cardano (ADA) Spikes 6%",
       "link": "https://cryptopotato.com/market-watch-bitcoin-amid-49k-cardano-ada-spikes-6/",
       "pubDate": "2021-12-12T09:41:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "While bitcoin and most altcoins have remained relatively still since yesterday, ADA has jumped by 6%.",
       "currencies": [
@@ -639,22 +329,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Our community continues to grow rapidly (we even had to create a second TG group to accommodate more members). Than…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T08:47:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
       "title": "Solana Faces A Turbulent Future After Recent Network Outages — Why This Could Prove Fatal For SOL",
       "link": "https://zycrypto.com/solana-faces-a-turbulent-future-after-recent-network-outages-why-this-could-prove-fatal-for-sol/",
       "pubDate": "2021-12-12T08:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Solana blockchain suffered a DDoS attack that slowed down the network’s speed. Cyber security enthusiasts say the attack portrays the security flaws of Solana’s PoH consensus framework. The incident is likely to heighten concerns over Solana. The Solana blockchain network has suffered a distributed denial of service (DDoS) attack. The attack was first highlighted by […]",
       "currencies": [
@@ -672,8 +351,8 @@
       "title": "No, Indian Government Didn’t Buy Bitcoin",
       "link": "https://u.today/no-indian-government-didnt-buy-bitcoin",
       "pubDate": "2021-12-12T08:33:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Prime Minister Narendra Modi was unwittingly promoting a Bitcoin scam earlier today",
       "currencies": [
@@ -689,8 +368,8 @@
       "title": "Indian Prime Minister Modi’s Twitter Account Hacked By Bitcoin (BTC) Scammers",
       "link": "https://usethebitcoin.com/indian-prime-minister-twitter-hacked-bitcoin-scam/",
       "pubDate": "2021-12-12T08:33:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Usethebitcoin",
+      "sourceKey": "usethebitcoin",
       "category": "bitcoin",
       "description": "Scammers took control of Indian Prime Minister Narendra Modi’s Twitter account. The account has over 73 million followers and it promoted a very known cryptocurrency scam that affected […]",
       "currencies": [
@@ -706,8 +385,8 @@
       "title": "⏳3-days countdown! Stay tuned to the SunSwap V2.0 launch on Dec 15th, 2021.",
       "link": "https://twitter.com/Tronfoundation/status/1469943418126172161",
       "pubDate": "2021-12-12T08:13:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@tronfoundation",
+      "sourceKey": "tronfoundation",
       "category": "general",
       "currencies": [
         "TRX"
@@ -722,8 +401,8 @@
       "title": "Crypto Exchange AscendEX (Formerly Bitmax) Hacked: $80 Million Allegedly Stolen",
       "link": "https://cryptopotato.com/crypto-exchange-ascendex-formerly-bitmax-hacked-80-million-allegedly-stolen/",
       "pubDate": "2021-12-12T08:08:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "exchange",
       "description": "Another cryptocurrency exchange has fallen victim to a hack; this time it was AscendEX - formerly known as BitMax.",
       "currencies": [
@@ -740,8 +419,8 @@
       "title": "AscendEX loses $80M following ERC-20, BSC, Polygon hot wallet compromise",
       "link": "https://cointelegraph.com/news/ascendex-loses-80m-following-erc-20-bsc-polygon-hot-wallet-compromise",
       "pubDate": "2021-12-12T07:16:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Out of the lot, around $60 million worth of tokens were transferred over the Ethereum blockchain alone. Tokens stolen from BSC and Polygon are worth $9.2 million and $8.5 million, respectively.",
       "currencies": [
@@ -755,22 +434,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Pursetoken: That’s right! Another poll..let’s get some more options going for what we can give away in 2022!  $PURSE @Pursetoken @Pla…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T07:11:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
       "title": "India: PM Modi’s ‘briefly compromised’ Twitter account talks about ‘adopting Bitcoin’",
       "link": "https://ambcrypto.com/india-pm-modis-briefly-compromised-twitter-account-talks-of-adopting-bitcoin/",
       "pubDate": "2021-12-12T06:40:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Earlier today, Indian Prime Minister Narendra Modi’s Twitter account “announced” that the country had adopted Bitcoin as legal tender. Now, while there was some surprise and joy in some quarters, as expected, it soon turned out that the PM’s account had in fact been hacked. At around 2:00 am on 12 December, PM Modi “tweeted” […]",
       "currencies": [
@@ -783,22 +451,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @YoroiWallet: Incredible initiative from @singularity_net, providing ease-of-use &amp; interoperability between both #Cardano &amp; #Ethereum. A…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T06:29:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
       "title": "Indian prime minister Modi's hacked Twitter account attempts BTC scam",
       "link": "https://cointelegraph.com/news/indian-prime-minister-modi-s-hacked-twitter-account-attempts-btc-scam",
       "pubDate": "2021-12-12T05:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Soon after Modi's Twitter account, with over 73.4 million followers, got hacked, attackers shared misleading information about the mainstream adoption of Bitcoin and a 500 BTC giveaway.",
       "currencies": [
@@ -810,57 +467,11 @@
       }
     },
     {
-      "title": "Hope everyone had a good day. The door dash giveaway is still going on! Get in on it for the chance to get a burger…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T04:25:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "BRGB"
-      ]
-    },
-    {
-      "title": "RT @AdamPaigge: I collab with smaller BSV companies because I want to see them succeed in a space that is dominated by a few big players.",
-      "link": "NULL",
-      "pubDate": "2021-12-12T03:45:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @kaiynne: This is a really good overview of the current state of synthetix. The only thing I think it underplays is the investment in ti…",
-      "link": "NULL",
-      "pubDate": "2021-12-12T03:04:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX",
-        "SUSD"
-      ]
-    },
-    {
-      "title": "Chain of burn day 5+6: another 1 billion #RACA was burned. Praise the #RACA God!",
-      "link": "NULL",
-      "pubDate": "2021-12-12T02:43:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
       "title": "Ethereum Whale With $800 Million in Assets Accumulated Over 1.6 Trillion $SHIB",
       "link": "https://www.cryptoglobe.com/latest/2021/12/ethereum-whale-with-800-million-in-assets-accumulated-over-1-6-trillion-shib/",
       "pubDate": "2021-12-12T01:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "An Ethereum whale with over $800 million in various cryptocurrencies on its wallet has been accumulating Shiba Inu ($SHIB), so much so it now has over 1-67 trillion tokens of the meme-inspired cryptocurrency in its wallet. As first reported by Insider, the Ethereum whale has purchased close to $1.8 million worth of the cryptocurrency over […]",
       "currencies": [
@@ -872,51 +483,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "You can build anything you want here",
-      "link": "NULL",
-      "pubDate": "2021-12-12T01:05:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RVN"
-      ]
-    },
-    {
-      "title": "RT @CryptoLyssa: Come learn!!!! It’s going to be #crypto #ETH #BTC #cryptocurrency #womenincrypto #ravencoin $rvn",
-      "link": "NULL",
-      "pubDate": "2021-12-12T01:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RVN"
-      ]
-    },
-    {
-      "title": "Radio Caca Just burned 1 billion RACA",
-      "link": "NULL",
-      "pubDate": "2021-12-12T00:55:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
-      "title": "RT @iamZatoshi: I will give 5 $BSV ($700) to 1 person in 72 hours. Like, Retweet & Follow @relayxio",
-      "link": "NULL",
-      "pubDate": "2021-12-12T00:37:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV",
-        "DCD"
-      ]
     }
   ]
 }

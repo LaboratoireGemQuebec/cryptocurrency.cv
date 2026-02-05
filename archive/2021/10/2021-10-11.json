@@ -1,26 +1,15 @@
 {
   "date": "2021-10-11",
-  "fetchedAt": "2026-02-05T07:45:51.824Z",
-  "articleCount": 40,
+  "fetchedAt": "2026-02-05T07:48:35.464Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "We've just enabled the \"hacktoberfest\" tag on the chia-blockchain repo, so come help make Chia more awesome with yo…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T23:08:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
     {
       "title": "XRP Scores Major Win As Active Addresses Hit New All-Time High — The Driving Factors Behind The Surge",
       "link": "https://zycrypto.com/xrp-scores-major-win-as-active-addresses-hit-new-all-time-high-the-driving-factors-behind-the-surge/",
       "pubDate": "2021-10-11T19:23:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Key takeaways Number of active user addresses reached a new all time high on the XRP blockchain. The surge in activity may be related to increased adoption following recent partnerships Ripple made. The SEC lawsuit against Ripple may also be driving sentiment in favor of XRP. Despite the uncertainty surrounding Ripple because of its legal […]",
       "currencies": [
@@ -37,8 +26,8 @@
       "title": "Shiba Inu Outranks Chainlink And Takes Place In Top 15 Crypto-Assets",
       "link": "https://www.newsbtc.com/news/shiba-inu-takes-place-in-top-15-cryptos/",
       "pubDate": "2021-10-11T19:20:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Shiba Inu, the self-acclaimed Dogecoin-killer, has shaken the market with its recent bullish momentum. The meme coin has surmounted over 350% upsurge within one week, ranking it amongst the top 12 cryptocurrencies based on market capitalization. Presently, SHIBA is the most traded currency on leading exchanges like Coinbase, Binance, and Huobi. Memecoins A meme coin is a digital currency...",
       "currencies": [
@@ -52,44 +41,11 @@
       }
     },
     {
-      "title": "RT @QuarkChainFC: Did you know #Quarkchain $QKC was launched with the goal of using sharding technology to deliver 1 million transactions p…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T18:56:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "RT @qc_qizhou: We are working on an interesting idea of the optimistic bridge with an instant withdraw/mint feature! Any comments/feedback…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T18:55:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "Reef Finance is delighted to share that $REEF is now visible on @moonlight_bsc’s Bubble Maps! This Binance Smart Ch…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T18:17:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
       "title": "VeChain Foundation Announces Vote To Implement Upgrade, Bullish For VET?",
       "link": "https://www.newsbtc.com/news/vechain-foundation-announces-vote-to-upgrade/",
       "pubDate": "2021-10-11T18:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Via their Twitter handle, the VeChain Foundation announced the start of the voting process that will allow the community to decide to implement or reject a major update to their network: Proof-of-Authority (PoA) 2.0. This upgrade could usher a new wave of blockchain “mass adoption”, the announcement said. As NewsBTC reported, the PoA 2.0 upgrade will eliminate the tradeoffs of the Nakamoto Consensus and Byzantine Fault Tolerance (BFT) consensus implemented on cryptocurrencies such as Bitcoin. Re",
       "currencies": [
@@ -103,33 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A New Direction and Focus For Scorum, MVP games, new NFT assets, and an expanding network of existing game operator…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T17:48:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "#AGI-21 #AGI #GraceRobot #singularity $AGIX",
-      "link": "NULL",
-      "pubDate": "2021-10-11T17:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
       "title": "Enterprise-grade hybrid blockchain XDC Network unveils new multi-platform SDKs",
       "link": "https://www.cryptoninjas.net/2021/10/11/enterprise-grade-hybrid-blockchain-xdc-network-unveils-new-multi-platform-sdk/",
       "pubDate": "2021-10-11T16:18:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "XDC Network, the enterprise-grade hybrid blockchain specializing in global trade and finance, today released a collection of multiplatform software development kits (SDKs), covering iOS, Android, .NET, Java, and Go. The SDKs will allow application developers to easily incorporate XRC-based tokens and smart contracts into their domain-specific applications without expertise in blockchain technology. Last month, XDC […] The post Enterprise-grade hybrid blockchain XDC Network unveils new multi-plat",
       "currencies": [
@@ -142,23 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$GAIA IDO coming by the end of October- first days of November #NFT #UnilayerEcosystem",
-      "link": "NULL",
-      "pubDate": "2021-10-11T15:59:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LAYER",
-        "LAYERX"
-      ]
-    },
-    {
       "title": "We're excited to share that #Monero is now supported at over 1000 ATMs!",
       "link": "https://twitter.com/monero/status/1447587653118005253",
       "pubDate": "2021-10-11T15:39:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "XMR"
@@ -170,44 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Things may turn out better with an \"X\". #SquidGame @Playstation #Crypto #XPOS #Gamechanger #PundiXChain #PlayToEarn",
-      "link": "NULL",
-      "pubDate": "2021-10-11T15:17:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "ChainBing Monthly Report 2020.09.01-09.30",
-      "link": "NULL",
-      "pubDate": "2021-10-11T15:06:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBG"
-      ]
-    },
-    {
-      "title": "Amazing",
-      "link": "NULL",
-      "pubDate": "2021-10-11T13:51:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
       "title": "XRP Surges 13%, Michael Dell Passes on Bitcoin, Vitalik Buterin Slams El Salvador’s BTC Experiment: Crypto News Digest by U.Today",
       "link": "https://u.today/xrp-surges-13-michael-dell-passes-on-bitcoin-vitalik-buterin-slams-el-salvadors-btc-experiment",
       "pubDate": "2021-10-11T13:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Stay tuned for the latest events in the crypto world with U.Today’s news digest!",
       "currencies": [
@@ -221,22 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The liquidity issue with REEF BEP-20 on Klever has been solved! You are now free to swap REEF-20/BEP-20 once more.…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T13:43:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
       "title": "SHIB’s trading volume is 2x higher than DOGE’s despite 3x lower market cap",
       "link": "https://finbold.com/shibs-trading-volume-is-2x-higher-than-doges-despite-3x-lower-market-cap/",
       "pubDate": "2021-10-11T13:27:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Continuing its positive retracement move from last week’s low of $0.00002058, Shiba Inu (SHIB) opened the new weekly session in... Continue reading",
       "currencies": [
@@ -250,33 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We will be making an announcement about $BETA staking this week... stay tuned",
-      "link": "NULL",
-      "pubDate": "2021-10-11T13:16:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BETA"
-      ]
-    },
-    {
-      "title": "1/5 Gm ️ Phase 2 is now live! $BETA LM rewards will be distributed to users who lend, borrow, and short tokens fro…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T13:14:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BETA"
-      ]
-    },
-    {
       "title": "‘$DOT Face Melting Season Will Come Soon’, Says Prominent Crypto Analyst",
       "link": "https://www.cryptoglobe.com/latest/2021/10/dot-face-melting-season-will-come-soon-says-prominent-crypto-analyst/",
       "pubDate": "2021-10-11T13:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "On Sunday (October 10), highly popular New Zealand based crypto analyst Lark Davis explained why he is currently so bullish on $DOT, which is the native token of Polkadot. What Is Polkadot? Here is an overview of Polkadot using information from the Polkadot website: “Polkadot is a network protocol that allows arbitrary data—not just tokens—to be transferred […]",
       "currencies": [
@@ -292,8 +148,8 @@
       "title": "This historic trend could take XRP past $1.5, provided…",
       "link": "https://ambcrypto.com/this-historic-trend-could-take-xrp-past-1-5-provided/",
       "pubDate": "2021-10-11T12:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "For the most part of this month, XRP has been trading above $1, and as the alt valued $1.17 after weekly gains close to 13%, its daily fall of 2.5% at the time of writing, was almost worrying. Now, while XRP’s growth seemed decent, the sixth-ranked alt’s long-term price trajectory relative to the larger market […]",
       "currencies": [
@@ -309,8 +165,8 @@
       "title": "Ethereum Index Flashes \"Greed\" as ETH Price Begins Rising",
       "link": "https://u.today/ethereum-index-flashes-greed-as-eth-price-begins-rising",
       "pubDate": "2021-10-11T11:57:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Ethereum Fear and Greed Index flashes 62, showing that investors are in the \"greed\" phase",
       "currencies": [
@@ -323,27 +179,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RSK Infrastructure Framework (RIF) is building the decentralized infrastructure for #Web3 on #Bitcoin, interoperabl…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T11:37:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RIF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Shiba Inu rebounds 40% despite major selling by SHIB whales",
       "link": "https://cointelegraph.com/news/shiba-inu-rebounds-40-despite-major-selling-by-shib-whales",
       "pubDate": "2021-10-11T11:35:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "The sharp upside retracement surfaces as retail frenzy around Shiba Inu hints at testing May peak levels.",
       "currencies": [
@@ -359,8 +199,8 @@
       "title": "Samsung backs blockchain-based gaming, invests in Axie Infinity",
       "link": "https://forkast.news/headlines/samsung-investment-axie-infinity-sky-mavis/",
       "pubDate": "2021-10-11T11:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "South Korean conglomerate Samsung is increasingly involved in the burgeoning world of blockchain-based gaming, while within Korea, games with blockchain elements are banned from official release in the country. Fast facts Samsung Next, the tech giant’s investment subsidiary, participated in a US$152 million Series B round of Sky Mavis, the Vietnam-based blockchain game company and […]",
       "currencies": [
@@ -376,8 +216,8 @@
       "title": "SHIB Is Rebounding After Largest Dump in Token's History",
       "link": "https://u.today/shib-is-rebounding-after-largest-dump-in-tokens-history",
       "pubDate": "2021-10-11T10:16:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "While remaining among the monthly return leaders, Shiba's recent retrace remains one of the biggest on the market",
       "currencies": [
@@ -390,34 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Theta Edge Node v3.2.2 has been released on macOS and Windows with updates to improve Folding@Home compute jobs: -…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T10:02:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "RT @transhumanismAU: AI &amp; Robots: Charles &amp; Ben talk past, present and future via @IOHK_Charles @bengoertzel @Carda…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T09:29:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
       "title": "Polkadot ($DOT) Could Reach New All-Time High After Launch of Parachain Slot Auctions",
       "link": "https://www.cryptoglobe.com/latest/2021/10/polkadot-dot-could-reach-new-all-time-high-after-launch-of-parachain-slot-auctions/",
       "pubDate": "2021-10-11T08:45:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "Popular crypto trading and market analysis show Coin Bureau claims a highly-anticipated milestone for Polkadot ($DOT) could push the asset’s price to a new high. What Is Polkadot? Polkadot is a network protocol that allows arbitrary data—not just tokens—to be transferred across blockchains. This means Polkadot is a true multi-chain application environment where things like […]",
       "currencies": [
@@ -430,24 +247,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Travelers Will Be Able to Purchase Airline Tickets With Crypto in Venezuela",
-      "link": "NULL",
-      "pubDate": "2021-10-11T08:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "DASH"
-      ]
-    },
-    {
       "title": "Dogecoin Rival Shiba Inu Lambasted by Michael Burry of “The Big Short”",
       "link": "https://u.today/dogecoin-rival-shiba-inu-lambasted-by-michael-burry-of-the-big-short",
       "pubDate": "2021-10-11T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Michael Burry has trashed Dogecoin copycat Shiba Inu in a recent tweet",
       "currencies": [
@@ -461,56 +265,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Are you ready for the #EfforceSummit ? From tomorrow (October 12th) we start officially announcing the speakers who…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T06:49:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "#BTC once again above $56,000!",
-      "link": "NULL",
-      "pubDate": "2021-10-11T05:13:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "RT @FUNCTIONX_IO: Be decentralized, be inclusive. f(x)Wallet will support assets on @BinanceChain @0xPolygon @Tronfoundation @PundiXLabs #B…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T04:52:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "$EXCL rocking it, missed? oldest #masternode #masternodes after $DASH and similar to $PIVX $SYS and others. trading #Bittrex",
-      "link": "NULL",
-      "pubDate": "2021-10-11T03:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "EXCL"
-      ]
-    },
-    {
       "title": "Despite criticism, Shiba Inu may have a ‘point’ to make",
       "link": "https://ambcrypto.com/despite-criticism-shiba-inu-may-have-a-point-to-make/",
       "pubDate": "2021-10-11T02:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Michael Burry, the investor who is famous for accurately predicting the 2008 U.S. financial crisis, has called Shiba Inu “pointless.” Burry’s dismissal of the DOGE spinoff is based on its inflationary supply. The meme coin’s supply is now past 1 quadrillion coins. He said, “Just saying, one quadrillion seconds is about 32 million years; One […]",
       "currencies": [
@@ -521,39 +280,6 @@
         "positive": 29,
         "negative": 15
       }
-    },
-    {
-      "title": "Today marks a major milestone for @StraitsX. We are delighted to share that we have processed over SGD 2 billion in…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T02:06:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
-      "title": "The additional issuance rewards mechanism is an important mechanism to stabilize WENWEN stablecoin prices and keep…",
-      "link": "NULL",
-      "pubDate": "2021-10-11T01:50:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDN"
-      ]
-    },
-    {
-      "title": "Where do you see #Bitcoin at on December 31, 2021?",
-      "link": "NULL",
-      "pubDate": "2021-10-11T01:42:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
     }
   ]
 }

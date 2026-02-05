@@ -1,26 +1,15 @@
 {
   "date": "2021-10-31",
-  "fetchedAt": "2026-02-05T07:45:51.897Z",
-  "articleCount": 44,
+  "fetchedAt": "2026-02-05T07:48:35.493Z",
+  "articleCount": 19,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Recap of today's Public Meeting! #SafeCoin $SAFE",
-      "link": "NULL",
-      "pubDate": "2021-10-31T23:19:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
     {
       "title": "Top Trader Predicts Epic Dogecoin Rally to New All-Time High, Warns Not To Sleep on Binance Coin",
       "link": "https://dailyhodl.com/2021/10/31/top-trader-predicts-epic-dogecoin-rally-to-new-all-time-high-warns-not-to-sleep-on-binance-coin/",
       "pubDate": "2021-10-31T22:05:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "A popular crypto strategist and trader expects Dogecoin (DOGE) to pull off a massive rally and warns traders not to sleep on Binance Coin (BNB). Pseudonymous analyst Smart Contracter tells his 176,700 Twitter followers that he sees Dogecoin launching a strong surge to $1.00, marking potential gains of over 270% from its current value of […]",
       "currencies": [
@@ -37,8 +26,8 @@
       "title": "Retail Is Here, They’re Just Buying Shiba Inu (SHIB) Instead of Bitcoin",
       "link": "https://cryptopotato.com/retail-is-here-theyre-just-buying-shiba-inu-shib-instead-of-bitcoin/",
       "pubDate": "2021-10-31T20:37:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "While bitcoin is yet to see the return of retail investors, Shiba Inu has taken center stage, according to Google Trends.",
       "currencies": [
@@ -52,34 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Happy Halloween!",
-      "link": "NULL",
-      "pubDate": "2021-10-31T20:22:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Play the Doge Dash Game Demo Now! We love hearing feedback on the Demo, so give it a go an…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T20:21:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DASH",
-        "DOGEDASH"
-      ]
-    },
-    {
       "title": "Top 5 cryptocurrencies to watch this week: BTC, ETH, BNB, MATIC, FTM",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-eth-bnb-matic-ftm",
       "pubDate": "2021-10-31T20:17:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin is witnessing modest profit-booking, but the long-term trend remains intact and altcoins like ETH, BNB, MATIC and FTM may remain in focus in the short term.",
       "currencies": [
@@ -94,22 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The current “Dust Storm” of transactions is creating pain for anyone running low-end node hardware or an otherwise…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T19:36:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Is there ‘just no way’ Shiba Inu will go higher and flip Ethereum",
       "link": "https://ambcrypto.com/is-there-just-no-way-shiba-inu-will-go-higher-and-flip-ethereum/",
       "pubDate": "2021-10-31T19:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Shiba Inu, the meme coin that the market had written off after its continuous streak of underperformance, has now become the talk of the market. Mainly due to its unprecedented surge in price- this even led to the token entering the top 10 list of cryptocurrencies. Ergo, surpassing its direct rival- DOGE. However, the two […]",
       "currencies": [
@@ -125,8 +80,8 @@
       "title": "Dog Dump: Shiba Inu And Dogecoin Down More Than 20% In Three Days",
       "link": "https://bitcoinist.com/dog-dump-shiba-inu-and-dogecoin-down-more-than-20-in-three-days/?utm_source=rss&utm_medium=rss&utm_campaign=dog-dump-shiba-inu-and-dogecoin-down-more-than-20-in-three-days",
       "pubDate": "2021-10-31T19:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "After observing some pumps recently, it looks like it’s time to take the dogs out for the dump as both Dogecoin and Shiba Inu record 20% losses in the last three days. Dogecoin Loses 22%, While Shiba Inu Down 26% Since The Memecoins’ Recent Peaks Both the memecoins have enjoyed some big pumps recently as […]",
       "currencies": [
@@ -140,22 +95,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "A new brand will emerge for Qtum this year. We have commissioned a design firm to guide us through the rebranding p…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T18:39:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QTUM"
-      ]
-    },
-    {
       "title": "Huge Shiba Inu Billboard Appears in Times Square",
       "link": "https://u.today/huge-shiba-inu-billboard-appears-in-times-square",
       "pubDate": "2021-10-31T18:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The Shiba Inu cryptocurrency is taking over Times Square after hitting record highs earlier this week",
       "currencies": [
@@ -168,22 +112,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "CEO Kabir Veitas is going live in 5 minutes with a NuNet Token Launch AMA! Tune in here",
-      "link": "NULL",
-      "pubDate": "2021-10-31T17:56:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
       "title": "Shiba Inu, Dogecoin, Floki Inu boom reveals this about crypto investors’ psyche",
       "link": "https://ambcrypto.com/shiba-inu-dogecoin-floki-inu-boom-reveals-this-about-crypto-investors-psyche/",
       "pubDate": "2021-10-31T17:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Of late the crypto market experienced a much-needed boom, with Bitcoin reaching an ATH and BTC ETF getting approval. As the king coin had a smooth ride uphill, the global crypto market cap sat at a staggering $2.57 trillion at the time of writing. However, the highlight of the last few months wasn’t any of […]",
       "currencies": [
@@ -200,8 +133,8 @@
       "title": "IOTA Introduces New Smart Contracts To Circumvent The Network Flaws",
       "link": "https://www.newsbtc.com/news/iota-introduces-new-smart-contracts-to-circumvent-the-network-flaws/",
       "pubDate": "2021-10-31T17:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "regulation",
       "description": "The use of smart contracts remains the key turnaround factor with the cryptocurrency space. Smart contracts brought about the decentralization of digital assets and eliminated third-party interferences in crypto transactions. Distributed ledger and open-source cryptocurrency, IOTA, has just launched a new smart contract beta. This latest move offers its users a platform for getting high-speed and zero-fee transactions. IOTA emerged within the 2017 ICO boom. The digital asset came to support the ",
       "currencies": [
@@ -216,50 +149,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Happy Halloween!! #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-10-31T16:15:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Hey all, our new app update is rolling out across Android and iOS. For those that haven't received it, it should be…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T16:09:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "RT @Cointelegraph: Will we see more creative use-cases emerging, with NFTs granting fans all kinds of nifty perks? asks @mitchliu, co-found…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T16:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Dogelon Mars (ELON) Surges Into Top 100 as Meme Coins Continue to Gain Popularity",
       "link": "https://beincrypto.com/dogelon-mars-elon-surges-into-top-100-as-meme-coins-continue-to-gain-popularity/",
       "pubDate": "2021-10-31T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Dogelon Mars has surged into the 100 top cryptocurrencies listed by market capitalization and sits in the #98 position at the time of writing. Over the past 48 hours, the market cap and token value of Dogelon Mars (ELON) have appreciated by +56.72% with a market capitalization of over $1 billion at the time of writing. The post Dogelon Mars (ELON) Surges Into Top 100 as Meme Coins Continue to Gain Popularity appeared first on BeInCrypto.",
       "currencies": [
@@ -273,22 +167,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Our featured artists invite you to a special #halloween2021 night through a series of 11 excellent #NFT artworks…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T15:32:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
       "title": "These factors make Basic Attention Token a good investment option",
       "link": "https://ambcrypto.com/these-factors-make-basic-attention-token-a-good-investment-option/",
       "pubDate": "2021-10-31T15:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "mining",
       "description": "Basic Attention Token has been trending for the last couple of days, thanks to its meteoric rise. It noted more growth than major coins. What’s more, from an investment perspective, it deserves attention, since it is more than just a temporarily trending coin. Basic Attention Token in the last 3 days In the last 3 […]",
       "currencies": [
@@ -301,44 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celebrating #Bitcoin white paper turns 13, the very first cryptocurrency white paper inspiring #PUNDIX developing…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T14:58:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "RT @11Shixi: @ZB_Group is listing #RChain $REV .I am so happy that ZB has chosen us  and look forward to more technical cooperation. @rcha…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T14:57:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZB"
-      ]
-    },
-    {
-      "title": "Coming up",
-      "link": "NULL",
-      "pubDate": "2021-10-31T14:47:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
       "title": "Snowden Warns Against Meme Tokens Following Recent Shiba Inu (SHIB) Mania",
       "link": "https://beincrypto.com/snowden-warns-against-meme-tokens-following-recent-shiba-inu-shib-mania/",
       "pubDate": "2021-10-31T14:44:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Edward Snowden, former NSA agent consultant, has cautioned his followers against investing their hard-earned money into Shiba Inu. The post Snowden Warns Against Meme Tokens Following Recent Shiba Inu (SHIB) Mania appeared first on BeInCrypto.",
       "currencies": [
@@ -353,8 +203,8 @@
       "title": "Bitcoin set for record monthly close with BTC price still below ‘worst case scenario’",
       "link": "https://cointelegraph.com/news/bitcoin-set-for-record-monthly-close-with-btc-price-still-below-worst-case-scenario",
       "pubDate": "2021-10-31T14:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "$60,000 would be a monthly record, but longstanding analysis demands a minimum of $63,000 by the start of November.",
       "currencies": [
@@ -369,8 +219,8 @@
       "title": "BTC, ADA and BNB Price Analysis for October 31",
       "link": "https://u.today/btc-ada-and-bnb-price-analysis-for-october-31",
       "pubDate": "2021-10-31T14:19:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Is November going to be bullish for the cryptocurrency market?",
       "currencies": [
@@ -384,22 +234,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @alexfilatoff: Happy birthday #bitcoin! 13 years from the start of the new era. #ThankYouSatoshi And it’s just the beginning as new prot…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T13:40:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
       "title": "Here’s How Close Shiba Inu Is To Reaching Dogecoin’s $0.2 Price",
       "link": "https://zycrypto.com/heres-how-close-shiba-inu-is-to-reaching-dogecoins-0-2-price/",
       "pubDate": "2021-10-31T13:21:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Crypto analysts say Shiba Inu is far from surpassing Dogecoin in terms of price value. His reasoning is that SHIB holders cannot stand the test of time. Shiba Inu proponents retort by remaining bullish. Shiba Inu, the meme coin that the market had written off after its continuous streak of underperformance, is becoming the talk […]",
       "currencies": [
@@ -413,44 +252,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Happy weekend family!! We are super busy working away in the background!! lots of great things planned STAY TUNED!!! 🥳",
-      "link": "NULL",
-      "pubDate": "2021-10-31T13:04:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BLAST"
-      ]
-    },
-    {
-      "title": "13 years since the publication of this document. The rest is history.",
-      "link": "NULL",
-      "pubDate": "2021-10-31T12:20:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZB"
-      ]
-    },
-    {
-      "title": "RT @ZenlinkPro: 4/ We will use the cross-chain bridge service provided by @AnyswapNetwork to access assets such as ETH, WBTC, USDC, USDT, D…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T12:18:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ANY"
-      ]
-    },
-    {
       "title": "Shiba Inu Price Analysis: After 13% Daily Drop, SHIB Eyes Crucial Support Level",
       "link": "https://cryptopotato.com/shiba-inu-price-analysis-after-13-daily-drop-shib-eyes-crucial-support-level/",
       "pubDate": "2021-10-31T12:02:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "SHIB has recently broken below an ascending trendline which maintained the price for the past eight days, since the 23rd of October. Following a 13% daily decrease, Shiba Inu is now more than 25% far below Thursday’s all-time high level and currently facing the $0.000060 key support. Key Support level: $0.000060 Key Resistance level: $0.000066 […]",
       "currencies": [
@@ -462,44 +268,11 @@
       }
     },
     {
-      "title": "Our series on Choice Architecture: PART 1: PART 2: PART 3: Coming soon",
-      "link": "NULL",
-      "pubDate": "2021-10-31T12:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "RT @PatrickXDai: Anyone like a Halloween trick or treat? We have a treat for you later today, more information about what is Qtum's rebrand…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T11:44:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "QTUM"
-      ]
-    },
-    {
-      "title": "SSV/ETH pool initialized in @Uniswap",
-      "link": "NULL",
-      "pubDate": "2021-10-31T10:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SSV"
-      ]
-    },
-    {
       "title": "Ripple Price Analysis: XRP Facing Huge Decision, Breakout Imminent?",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-facing-huge-decision-breakout-imminent/",
       "pubDate": "2021-10-31T10:17:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Following a 20% rally that led XRP to reach $1.15, the price was quickly rejected back to a critical support line. Ripple will look for another opportunity to break above the crucial resistance of $1.2. Key Support levels: $1.06, $0.96 Key Resistance level: $1.2 Following the drop that took place on the 27th of October, […]",
       "currencies": [
@@ -512,22 +285,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Let's say you have 10,000 USDT to spare for investing in crypto. Which is the safest bet to turn you into a millionaire?",
-      "link": "NULL",
-      "pubDate": "2021-10-31T08:54:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ZB"
-      ]
-    },
-    {
       "title": "Edward Snowden Speaks Out Against Shiba Inu Mania",
       "link": "https://u.today/edward-snowden-speaks-out-against-shiba-inu-mania",
       "pubDate": "2021-10-31T08:12:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Edward Snowden claims that Shiba Inu is unlikely to make you rich",
       "currencies": [
@@ -542,8 +304,8 @@
       "title": "Decentraland (MANA) Surges By Over 333% In Just Days",
       "link": "https://usethebitcoin.com/decentraland-mana-surges-by-over-333-in-just-days/",
       "pubDate": "2021-10-31T07:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Usethebitcoin",
+      "sourceKey": "usethebitcoin",
       "category": "trading",
       "description": "Decentralnad (MANA) is now among the top 50 largest cryptocurrencies in the world. In less than seven days, this virtual currency registered a price increase of over 333% […]",
       "currencies": [
@@ -557,55 +319,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "From Nov 4th, we are holding a $TON Airdrop event to new wallet with gratitude for those who visit the venue to com…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T06:06:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "So with DiaEx now live - preponed launch from 2022 to 2021 - when will future Glitzkoin platforms be announced. Wil…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T04:42:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "You can support our new NFT game project on Hackerlink  #NFT #P2E #GameFi #Scorum…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T03:13:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @PatrickXDai: Qtum is a UTXO based smart contract platform since 2017. It can process transactions in a parallel way which ETH and all…",
-      "link": "NULL",
-      "pubDate": "2021-10-31T03:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QTUM"
-      ]
-    },
-    {
       "title": "#NFTs Are Dead, a Halloween event featuring @wolfofwallst Jordan Belfort in a 1/1 wolf head wearable, starts shortl…",
       "link": "https://twitter.com/decentraland/status/1454644326554914817",
       "pubDate": "2021-10-31T03:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "nft",
       "currencies": [
         "MANA"

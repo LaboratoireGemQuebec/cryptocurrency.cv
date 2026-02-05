@@ -1,39 +1,15 @@
 {
   "date": "2025-03-09",
-  "fetchedAt": "2026-02-05T07:45:53.754Z",
-  "articleCount": 9,
+  "fetchedAt": "2026-02-05T07:48:35.715Z",
+  "articleCount": 1,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Polygon nears $100B volume mark – Factors that will help POL",
-      "link": "NULL",
-      "pubDate": "2025-03-09T22:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "BTC, ETH, XRP Lead $334.99M Crypto Liquidation, Key Trends To Watch?",
-      "link": "NULL",
-      "pubDate": "2025-03-09T16:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
     {
       "title": "XRP Transfers Explode Past $5 Billion In 24 Hours as Wallets Surge over 600%",
       "link": "https://zycrypto.com/xrp-transfers-explode-past-5-billion-in-24-hours-as-wallets-surge-over-600/",
       "pubDate": "2025-03-09T14:05:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP traded relatively flat following a sharp rebound on Tuesday, fueled by President Trump’s proposal for a U.S. strategic crypto reserve that includes XRP.",
       "currencies": [
@@ -43,79 +19,6 @@
         "positive": 4,
         "negative": 3
       }
-    },
-    {
-      "title": "Polkadot (DOT) Nears Critical Zone: A Reversal Could Trigger 180% Surge",
-      "link": "NULL",
-      "pubDate": "2025-03-09T13:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "DOT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Dogecoin Price Could Shoot Up To $2.74 – Here’s The Support Level To Watch",
-      "link": "NULL",
-      "pubDate": "2025-03-09T12:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Coinbase Adds AI Altcoin and DeFi Token to Listing Roadmap, Triggering Price Jumps",
-      "link": "NULL",
-      "pubDate": "2025-03-09T10:15:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "ATH",
-        "SYRUP"
-      ]
-    },
-    {
-      "title": "Stellar Price Could Target $0.33 In Next Move — Time To Buy?",
-      "link": "NULL",
-      "pubDate": "2025-03-09T09:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Can Decentralized Platforms Fix Social Media’s Biggest Problems?",
-      "link": "NULL",
-      "pubDate": "2025-03-09T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
-      "title": "XRP Price Is Consolidating Within This Pattern — What’s Next?",
-      "link": "NULL",
-      "pubDate": "2025-03-09T02:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "ALI"
-      ]
     }
   ]
 }

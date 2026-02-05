@@ -1,15 +1,15 @@
 {
   "date": "2021-03-18",
-  "fetchedAt": "2026-02-05T07:45:51.952Z",
-  "articleCount": 34,
+  "fetchedAt": "2026-02-05T07:48:35.511Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
     {
       "title": "Coin Bureau Names Top Three Projects Built on Crypto Newcomer Polkadot",
       "link": "https://dailyhodl.com/2021/03/18/coin-bureau-names-top-three-projects-built-on-crypto-newcomer-polkadot/",
       "pubDate": "2021-03-18T21:15:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "The pseudonymous host of Coin Bureau is sharing his favorite projects built on the new crypto network Polkadot. The host, known simply as Guy, tells his 531,000 subscribers that he is keeping his eye on three projects with a fair shot at winning a parachain slot, which is essentially a Polkadot-powered blockchain with a higher […]",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "DeFiance Capital Joins Bancor (BNT) Ecosystem as Strategic Advisors",
       "link": "https://btcmanager.com/defiance-capital-bancor-protocol-strategic-advisors/",
       "pubDate": "2021-03-18T21:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "DeFi investment fund DeFiance Capital has become part of the DeFi protocol Bancor’s ecosystem and will provide advice on tokenomics, financial and institutional liquidity management in the capacity of strategic advisors. DeFiance in Bancor Protocol DeFiance will use its BNT token to provide Bancor with network liquidity while enjoying impermanent loss security and earning aRead More",
       "currencies": [
@@ -39,50 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "VeChain (VET) will be Onboarding 250+ More Clients Transforming Technology Value to Business Value :…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T21:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "TCAT"
-      ],
-      "votes": {
-        "positive": 8,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "NU popularity",
-      "link": "NULL",
-      "pubDate": "2021-03-18T20:15:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "We are excited to announce that DeepLock Launchpad development is complete and the platform is ready for launch! …",
-      "link": "NULL",
-      "pubDate": "2021-03-18T20:04:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DEEP"
-      ]
-    },
-    {
       "title": "Ripple Exploring Ways To Bring NFTs to XRP Ledger, Says CTO David Schwartz",
       "link": "https://dailyhodl.com/2021/03/18/ripple-exploring-ways-to-bring-nfts-to-xrp-ledger-says-cto-david-schwartz/",
       "pubDate": "2021-03-18T19:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "nft",
       "description": "Ripple chief technology officer David Schwartz says the San Francisco payments company is looking at ways to bring non-fungible tokens (NFTs) to the XRP Ledger. In a new interview on Thinking Crypto, Schwartz notes that he personally has been interested in two particular ideas regarding NFTs and the space they occupy in the digital world. […]",
       "currencies": [
@@ -94,22 +55,11 @@
       }
     },
     {
-      "title": "What would be the best analogy to describe NU?",
-      "link": "NULL",
-      "pubDate": "2021-03-18T18:52:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Gold 2.0: Crypto and Altcoins | Ethereum, Crypto.com, Chainlink Updates!!!",
       "link": "https://www.youtube.com/watch?v=y8ooxXQYOXo",
       "pubDate": "2021-03-18T18:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AltcoinBuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "ethereum",
       "description": "Bitcoin vs Gold on CNBC | Morgan Stanley and Macro ETH + BTC News | IOST, Crypto.com CRO, PAID Network, Chainlink | FUSE Network, KardiaChain, LABS Group, Bancor, Paralink and Litentry Timestamps 00:00 Bitcoin vs Gold on CNBC 03:06 Morgan Stanley and Macro ETH + BTC News 05:47 IOST, Crypto.com CRO, PAID Network, Chainlink 10:42 FUSE Network, KardiaChain, LABS Group, Bancor, Paralink and Litentry #bitcoin #ethereum #altcoins #theta #VeChain #btc #eth #altcoin #ENJ #VET #altcoinbuzz #investing #cr",
       "currencies": [
@@ -125,8 +75,8 @@
       "title": "Bybit Launches Cardano Perpetual Contracts With Up To 25x Leverage",
       "link": "https://beincrypto.com/bybit-launches-cardano-perpetual-contracts-with-up-to-25x-leverage/",
       "pubDate": "2021-03-18T18:24:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Bybit Ramps Up Leverage Bybit, one of the cryptocurrency market’s largest exchanges, earlier announced it is launching perpetual contracts for three of the largest cryptocurrencies in the space. These include Cardano (ADA), Uniswap (UNI), and Polkadot (DOT), all three of which are in the top 10 cryptocurrencies by market capitalization. The contracts come with up … Continued",
       "currencies": [
@@ -141,22 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @safenetworktech: From the new BambooGarden Fund that provides 1000 $ETH in support of #SafeNetwork development &amp; adoption to cracking t…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T17:03:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "3 key Chainlink price metrics signal LINK is gathering strength",
       "link": "https://cointelegraph.com/news/3-key-chainlink-price-metrics-signal-link-is-gathering-strength",
       "pubDate": "2021-03-18T16:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Chainlink is down 30% from its all-time high, but on-chain and derivatives indicators show there is increasing interest from investors.",
       "currencies": [
@@ -169,23 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Here is a quick tutorial on how to borrow USDC using our protocol",
-      "link": "NULL",
-      "pubDate": "2021-03-18T16:47:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "MFT"
-      ]
-    },
-    {
       "title": "US Actress Lindsay Lohan to Release Exclusive NFT Collection on TRON",
       "link": "https://cryptopotato.com/us-actress-lindsay-lohan-to-release-exclusive-nft-collection-on-tron/",
       "pubDate": "2021-03-18T15:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "nft",
       "description": "Popular US actress Lindsay Lohan has doubled-down on her support for NFT and TRON with plans to launch exclusive collectibles on Justin Sun’s platform.",
       "currencies": [
@@ -198,29 +125,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "The official #VeChain subreddit community has just hit 100,000 subscribers! We're super proud of this milestone. W…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T15:09:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "VTHO",
-        "VEN"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bybit adds Cardano, Polkadot, and Uniswap to its trading platform",
       "link": "https://zycrypto.com/bybit-adds-cardano-polkadot-and-uniswap-to-its-trading-platform/",
       "pubDate": "2021-03-18T14:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "defi",
       "description": "Leading crypto derivatives trading platform Bybit is launching three new USDT trading pairs. Going forward, Bybit users will have access to UNI, DOT, and ADA as USDT-margined perpetual contracts. Traders will be free to choose between 1x and 25x for trading the new pairs. This is the second time such additions have been made for […]",
       "currencies": [
@@ -238,8 +147,8 @@
       "title": "Bybit Adds ADA, DOT and UNI to Its USDT Margined Offerings",
       "link": "https://btcmanager.com/bybit-ada-dot-uni-usdt-margined-offerings/",
       "pubDate": "2021-03-18T14:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "SINGAPORE, March 18, 2021 — Cryptocurrency derivatives exchange Bybit has announced today the arrival of three new USDT trading pairs with Cardano’s ADA, Polkadot’s DOT, and Uniswap’s UNI. The introduction of these new trading pairs is the second expansion of Bybit’s markets in as many weeks, following the arrival of the BTCUSD0625 futures contract onRead More",
       "currencies": [
@@ -254,33 +163,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Merger",
-      "link": "NULL",
-      "pubDate": "2021-03-18T11:05:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Chintai CTO @HamnettPhillip gave a speech at the @block_one_ #EOSIO hackathon on building compliant blockchain-bas…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T10:57:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
       "title": "Chiliz (CHZ) scores 1,600% gains in March as fan tokens outperform everything",
       "link": "https://cointelegraph.com/news/chiliz-chz-scores-1-600-gains-in-march-as-fan-tokens-outperform-everything",
       "pubDate": "2021-03-18T10:45:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "A mesmerizing performance over the past two-and-a-half weeks brings serious returns to those who bought in February or earlier.",
       "currencies": [
@@ -293,45 +180,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The utility of #TomoChain's blockchain has expanded significantly with the #TomoBridge upgrade, enabling cross-chai…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T10:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "MBL Enabled on Binance Isolated Margin",
-      "link": "NULL",
-      "pubDate": "2021-03-18T09:07:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "MBL"
-      ]
-    },
-    {
-      "title": "You now can use $PAX to book +3M Travel Products Worldwide on - the world's first merchant…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T08:33:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVA",
-        "PAX"
-      ]
-    },
-    {
       "title": "How Polkadot ‘bridges’ bring cross-chain functionality to the $35b network",
       "link": "https://cryptoslate.com/how-polkadot-bridges-bring-cross-chain-functionality-to-the-35b-network/",
       "pubDate": "2021-03-18T07:45:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "general",
       "description": "Web 3, the next generation of the internet, has been envisioned by proponents to run on a fully-decentralized blockchain to create a user-friendly web wherein a user’s identity and data are their own.",
       "currencies": [
@@ -347,8 +200,8 @@
       "title": "SEC Has Evidence That Ripple's Chris Larsen Keeps Moving His XRP Despite Facing Lawsuit",
       "link": "https://u.today/sec-has-evidence-that-ripples-chris-larsen-keeps-moving-his-xrp-despite-facing-lawsuit",
       "pubDate": "2021-03-18T06:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "THE SEC wants to find out whether Ripple executives live off their XRP sales",
       "currencies": [
@@ -358,119 +211,6 @@
         "positive": 5,
         "negative": 9
       }
-    },
-    {
-      "title": "RT @safenetworktech: Built with great UXD in mind, the #SafeNetwork will allow you to earn tokens for sharing your resources with the Netwo…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T05:19:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "An updated version of an overview of the well-known sharding projects. Yeah, $qkc is the most___ sharding project.",
-      "link": "NULL",
-      "pubDate": "2021-03-18T05:15:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "#SOMESING collaborates with #junggigo, one of the famous artists in Korea to develop #NFT business using artist's I…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T03:33:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SSX"
-      ]
-    },
-    {
-      "title": "As you probably know, Supra Finance launched nearly at the same time as Bat True Dollar, Pika has a strong connect…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T03:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Presenting first Vlad Finance vault! LIFE-BUSD, enjoy a great APY!",
-      "link": "NULL",
-      "pubDate": "2021-03-18T03:29:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "How long would it take before you could buy a lambo with $RP?",
-      "link": "NULL",
-      "pubDate": "2021-03-18T02:49:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Just grabbed another 100",
-      "link": "NULL",
-      "pubDate": "2021-03-18T02:37:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Presenting our newest post, Supra tokenomics.",
-      "link": "NULL",
-      "pubDate": "2021-03-18T02:29:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "You’re welcome guys. I decided to finish paying off my motorcycle and took 500 in profits. That’s why there’s a jump.",
-      "link": "NULL",
-      "pubDate": "2021-03-18T01:51:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "We are excited to announce that #CGV will join #Paycoin's merchant network. There are 169 stores with more than 1,2…",
-      "link": "NULL",
-      "pubDate": "2021-03-18T00:57:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
     }
   ]
 }

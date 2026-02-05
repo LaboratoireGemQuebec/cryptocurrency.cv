@@ -1,123 +1,15 @@
 {
   "date": "2023-12-15",
-  "fetchedAt": "2026-02-05T07:45:53.352Z",
-  "articleCount": 31,
+  "fetchedAt": "2026-02-05T07:48:35.647Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Top Altcoins To Buy In December 15: Bonk (BONK), Internet Computer (ICP)",
-      "link": "NULL",
-      "pubDate": "2023-12-15T19:11:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ICP",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Kaspa Decreases More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-12-15T19:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Immutable Rises More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-12-15T19:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Bitget Forecasts BTC to Reach $100,000 and ORDI’s Ascent in Next Bull Market",
-      "link": "NULL",
-      "pubDate": "2023-12-15T19:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Dogecoin Miners Dump 240 Million Tokens, Can DOGE Price Still Recover To $0.2?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T18:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "DOGE",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Arbitrum is Down on Network Traffic Surge",
-      "link": "NULL",
-      "pubDate": "2023-12-15T17:18:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitcoin’s ORDI Could Surge 1,200% in 2024: Bitget Report",
-      "link": "NULL",
-      "pubDate": "2023-12-15T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Popular Analyst's 150 Percent Increase Prediction for This China-Based Altcoin in the Short Term!",
-      "link": "NULL",
-      "pubDate": "2023-12-15T16:54:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "Massive Bitcoin Options Expiry Imminent, BTC Inflows Spike",
-      "link": "NULL",
-      "pubDate": "2023-12-15T16:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW"
-      ]
-    },
     {
       "title": "Shiba Inu Team Tease Announcement That Will ‘Break The Internet’",
       "link": "https://bitcoinist.com/shiba-inu-break-the-internet/",
       "pubDate": "2023-12-15T15:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The Shiba Inu (SHIB) community could be in for a treat as the team recently teased an imminent announcement that could be a defining moment for the ecosystem. This comes on the back of the recent accolade that SHIB’s lead developer received for his efforts and that of the team. SHIB’s Announcement Will “Break The […]",
       "currencies": [
@@ -129,39 +21,11 @@
       }
     },
     {
-      "title": "Cosmos DeFi hub Osmosis registers gains amid volume spike",
-      "link": "NULL",
-      "pubDate": "2023-12-15T15:13:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ATOM",
-        "OSMO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Internet Computer Up More Than 11% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-12-15T15:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
       "title": "SEC Rejects Bitcoin Exchange Coinbase!",
       "link": "https://en.bitcoinsistemi.com/sec-rejects-bitcoin-exchange-coinbase/",
       "pubDate": "2023-12-15T14:43:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "SEC Chairman Gary Gensler announced that they rejected Coinbase's petition to establish cryptocurrency rules. Continue Reading: SEC Rejects Bitcoin Exchange Coinbase!",
       "currencies": [
@@ -174,65 +38,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin Falls Below This Key Level; KuCoin Token, BitTorrent Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2023-12-15T14:41:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KCS",
-        "BTT"
-      ]
-    },
-    {
-      "title": "Cosmos Layer 1 Namada allocates 3% of token supply to incentivized testnet users",
-      "link": "NULL",
-      "pubDate": "2023-12-15T14:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "The latest news on crypto Bonk, Solana, and Filecoin",
-      "link": "NULL",
-      "pubDate": "2023-12-15T13:53:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "6 Altcoins to Watch for Gains as the Year Comes to an End",
-      "link": "NULL",
-      "pubDate": "2023-12-15T13:24:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "UNI",
-        "VET"
-      ]
-    },
-    {
       "title": "Solana’s BONK Blasts Off 121% Upon Binance Surprise Listing",
       "link": "https://dailycoin.com/solanas-bonk-blasts-off-121-upon-binance-surprise-listing/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-12-15T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "The orange dog-encrusted BONK breaks $1 billion in market capitalization just a month after nearly exiting the TOP 1000.",
       "currencies": [
@@ -246,33 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BTT Price Dips 10% Amid Resistance: Can Bulls Reclaim Momentum?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T11:56:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTT"
-      ]
-    },
-    {
-      "title": "Filecoin completes Watermelon Upgrade (nv21) as investors flock to Memeinator’s presale",
-      "link": "NULL",
-      "pubDate": "2023-12-15T11:45:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
       "title": "Cyber.Fund Commits $100M to Blockchain Projects Merging AI and IoT",
       "link": "https://www.coinspeaker.com/cyber-fund-100m-blockchain-ai-iot/",
       "pubDate": "2023-12-15T11:22:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "general",
       "description": "Coinspeaker Cyber.Fund Commits $100M to Blockchain Projects Merging AI and IoT With a history of backing successful ventures like Cosmos, Solana, and Polkadot, Cyber.Fund aims to foster the development of what it terms the \"cybernetic economy\", where blockchain forms the foundation. Cyber.Fund Commits $100M to Blockchain Projects Merging AI and IoT",
       "currencies": [
@@ -286,138 +74,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Influx: Celsius And FTX Deposit Millions To Exchanges",
-      "link": "NULL",
-      "pubDate": "2023-12-15T11:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTT"
-      ]
-    },
-    {
-      "title": "Bonk’s 7610% Growth Leads The Way For Meme Coins. Can These 3 Join The Fold?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T11:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "MKR",
-        "BONK"
-      ]
-    },
-    {
-      "title": "How to List on KuCoin: Step by Step Guide",
-      "link": "NULL",
-      "pubDate": "2023-12-15T10:40:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW",
-        "KCS"
-      ]
-    },
-    {
-      "title": "The Sandbox Launches ‘Revamped’ Marketplace on Polygon for Reduced Gas Fees",
-      "link": "NULL",
-      "pubDate": "2023-12-15T09:15:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MATIC",
-        "SAND"
-      ]
-    },
-    {
-      "title": "SHIB, GALA, & CHZ Leads Smart Money Token Inflow List",
-      "link": "NULL",
-      "pubDate": "2023-12-15T08:43:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Fantom’s price jumps 18% – Why the outrage? What of its predictions?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T07:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Bitcoin ETF Redemption Methods Pose Challenges to Issuers",
-      "link": "NULL",
-      "pubDate": "2023-12-15T03:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bitcoin “Mega Whales” Are Now Selling, Is The Top In?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T03:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Nirvana Finance Hacker Surrenders More Than $12.3 Million, After Pleading Guilty",
-      "link": "NULL",
-      "pubDate": "2023-12-15T01:48:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "DeFi Researcher Questions Injective Protocol’s Appeal: Is INJ Overvalued?",
-      "link": "NULL",
-      "pubDate": "2023-12-15T01:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "ATOM",
-        "INJ",
-        "OP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
     }
   ]
 }

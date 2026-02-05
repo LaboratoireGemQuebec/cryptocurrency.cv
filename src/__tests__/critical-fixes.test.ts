@@ -133,7 +133,7 @@ describe('Critical Agent Fixes', () => {
       
       if (IS_PRODUCTION) {
         expect(PAYMENT_ADDRESS).toBeDefined();
-        expect(PAYMENT_ADDRESS).not.toBe('0x0000000000000000000000000000000000000000');
+        expect(PAYMENT_ADDRESS).not.toBe('0x40252CFDF8B20Ed757D61ff157719F33Ec332402');
         expect(PAYMENT_ADDRESS).toMatch(/^0x[a-fA-F0-9]{40}$/);
       }
     });

@@ -1,15 +1,15 @@
 {
   "date": "2021-09-10",
-  "fetchedAt": "2026-02-05T07:45:51.802Z",
-  "articleCount": 60,
+  "fetchedAt": "2026-02-05T07:48:35.454Z",
+  "articleCount": 24,
   "source": "historical-import",
   "articles": [
     {
       "title": "Serious Bitcoin ‘Collapse’ Alert Issued After $300 Billion Crypto Price Crash Sends Ethereum, Cardano, BNB, Solana, XRP And Dogecoin Sharply Lower",
       "link": "https://www.forbes.com/sites/billybambrough/2021/09/10/serious-bitcoin-collapse-alert-issued-after-300-billion-crypto-price-crash-sends-ethereum-cardano-bnb-solana-xrp-and-dogecoin-sharply-lower/",
       "pubDate": "2021-09-10T23:45:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Two high-profile central bankers have warned bitcoin and other cryptocurrencies are at risk of collapsing and are not \"a good safeguard of value\"...",
       "currencies": [
@@ -24,22 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Thanks for hanging out in our AMA! If you missed the live stream, fear not, the archived video is right here!",
-      "link": "NULL",
-      "pubDate": "2021-09-10T23:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "XRP Price Spikes After Sudden Reappearance on Coinbase",
       "link": "https://dailyhodl.com/2021/09/10/xrp-price-spikes-after-sudden-reappearance-on-coinbase/",
       "pubDate": "2021-09-10T22:01:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "The delisted crypto asset XRP just made a brief reappearance on Coinbase Pro, causing its price to jump 14% in a matter of minutes. The top US-based exchange removed the ability to trade the token on its platform soon after the U.S. Securities and Exchange Commission (SEC) launched its lawsuit against Ripple, which claims Ripple […]",
       "currencies": [
@@ -52,34 +41,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @IsaMaulana_: the phoenix symbolizes renewal and strength. Likewise with eCash, born from its predecessor namely BCHA, eCash has a new a…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T21:51:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @enyaai: We’re happy to announce we’re band-ing together for a new partnership with @BandProtocol, a cross-chain data oracle platform! …",
-      "link": "NULL",
-      "pubDate": "2021-09-10T21:19:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "Algorand Has Rallied 600% This Year—What Has Fueled These Gains?",
       "link": "https://www.forbes.com/sites/cbovaird/2021/09/10/algorand-has-rallied-600-this-year-what-has-fueled-these-gains/",
       "pubDate": "2021-09-10T20:37:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Forbes",
+      "sourceKey": "forbes",
+      "category": "mainstream",
       "description": "The price of algo, the token for the Algorand platform, has risen sharply this year, climbing higher as this network benefits from rising adoption and widespread visibility.",
       "currencies": [
         "ALGO"
@@ -91,23 +58,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "An important bit of context on why it's important that you upgrade to 1.2.6 sooner than later:…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T19:13:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Magnificent Seven: ROSE, FTM, QNT, ALGO, IOST, ONE, NEAR – Biggest Gainers Sept 3 – 10",
       "link": "https://beincrypto.com/magnificent-seven-biggest-gainers-sept-3-10/",
       "pubDate": "2021-09-10T18:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "BeInCrypto takes a look at the seven altcoins that increased the most over the past seven days, from September 3 to 10.",
       "currencies": [
         "NEAR",
@@ -123,8 +79,8 @@
       "title": "You can be a Shiba Inu (SHIB) millionaire for $7 dollars",
       "link": "https://finbold.com/you-can-be-a-shiba-inu-shib-millionaire-for-7-dollars/",
       "pubDate": "2021-09-10T18:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Launched in August 2020 as a direct challenge to Dogecoin (DOGE), investors for as little as $7 can have over... Continue reading",
       "currencies": [
@@ -141,8 +97,8 @@
       "title": "New fund aims to put hundreds of millions toward Algorand DeFi growth",
       "link": "https://cointelegraph.com/news/new-fund-aims-to-put-hundreds-of-millions-toward-algorand-defi-growth",
       "pubDate": "2021-09-10T18:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "Different decentralized finance solutions building on the Algorand blockchain could receive a chunk of a new $300 million fund.",
       "currencies": [
@@ -158,8 +114,8 @@
       "title": "If ‘Ethereum is already more popular than Bitcoin,’ what are institutions waiting for",
       "link": "https://ambcrypto.com/if-ethereum-is-already-more-popular-than-bitcoin-what-are-institutions-waiting-for/",
       "pubDate": "2021-09-10T18:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Since Bitcoin’s rally last year, high-level financial institutions have placed a lot more importance on the cryptocurrency’s value. However, while companies like Microstrategy and Tesla have gone big on the top digital asset, Ethereum is still well behind in making that cut. Companies like Coinbase may be changing that narrative, however, with the NASDAQ-listed cryptocurrency […]",
       "currencies": [
@@ -176,8 +132,8 @@
       "title": "Algorand Foundation Launches $300M DeFi Fund",
       "link": "https://blockworks.co/algorand-foundation-launches-300m-defi-fund/",
       "pubDate": "2021-09-10T18:25:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "defi",
       "description": "The fund, called Viridis, will focus on financing the development of DeFi on Algorand’s network",
       "currencies": [
@@ -190,133 +146,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The growth continues! Doubled from 10K to 20K followers in 10 days!! #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-09-10T18:14:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @leleng_joe: @CainBCHA Amazing eCash #eCash #Xec",
-      "link": "NULL",
-      "pubDate": "2021-09-10T18:07:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "NKN CTO Yilun's tech workshop and hands-on tutorial is live now! @gitcoin GR11",
-      "link": "NULL",
-      "pubDate": "2021-09-10T18:03:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "NKN CTO Yilun's tech workshop and hands-on tutorial will be live in 15 minutes! @gitcoin GR11 let's #BUIDL #web3!…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T17:44:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "Binance has updated eCash's info. Good job @binance! #eCash #XEC",
-      "link": "NULL",
-      "pubDate": "2021-09-10T17:43:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @BitrueOfficial: We're partnering with the @LGCYNetwork @LGCY_LEGION team to list $LGCY today after they passed the #BTRVote! It's a Lay…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T17:26:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDL",
-        "LGCY"
-      ]
-    },
-    {
-      "title": "RT @andyboyan: I started a sports show for @chainlink sports data with @AugurProject!",
-      "link": "NULL",
-      "pubDate": "2021-09-10T17:25:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "The ETN-Network is incredibly pleased to announce that the system is now once again live. Please note, some minor f…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T17:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Introducing the #DENT marketplace  #dent #eSIM #roaming #payasyougo #traveling #mobile #data #marketplace #dent…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T16:37:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "RT @elycolz: @CainBCHA #100millionXEC100days @eCashOfficial I am still experimenting with eCash, today I created this animation. I is dedic…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T16:09:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "@upbitglobal expected eCash rebrand schedule: \"Last week of September to beginning of October\"…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T16:08:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Protests in El Salvador intensify following the passing of the Bitcoin Law",
       "link": "https://cryptoslate.com/protests-in-el-salvador-intensify-following-the-passing-of-the-bitcoin-law/",
       "pubDate": "2021-09-10T16:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "El Salvador made history on Tuesday as the Bitcoin Law came into effect, sanctioning the leading cryptocurrency as legal tender in the Central American country.",
       "currencies": [
@@ -331,8 +165,8 @@
       "title": "Algorand Aims to Attract DeFi Builders With $300M Fund",
       "link": "https://cryptobriefing.com/algorand-aims-to-attract-defi-builders-with-300m-fund/",
       "pubDate": "2021-09-10T14:59:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "description": "Algorand has announced a $300 million fund aimed at attracting developers and innovators in the decentralized finance (DeFi) space. The initiative seeks to bolster growth and enhance the ecosystem by supporting projects that leverage Algorand's blockchain technology. This funding is part of a broader strategy to position Algorand as a leading platform for DeFi applications.",
       "currencies": [
@@ -345,33 +179,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#QuarkChain $QKC recently participated at the #Upbit Developer Conference #UDC2021. We made a quick recap article i…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T14:58:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "RT @Fuse_network: In case you missed yesterday's AMA session with the founders of @Fuse_network and @RequestNetwork, we just uploaded the v…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T14:56:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "Bitcoin Price Analysis: BTC Continues Consolidation, Here are the Key Levels to Watch",
       "link": "https://cryptopotato.com/bitcoin-price-analysis-btc-continues-consolidation-here-are-the-key-levels-to-watch/",
       "pubDate": "2021-09-10T14:35:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Once again, BTC held support at the critical 200-day moving average of around $46k after shaking another round of weak hands. Although the near term charts look bearish, the overall trend in fundamental, technical, and on-chain data remain firmly bullish, indicating Bitcoin will likely head higher in the next few months. BTC Falls While Strong […]",
       "currencies": [
@@ -384,51 +196,11 @@
       }
     },
     {
-      "title": "CORE: Floor Price and Lending",
-      "link": "NULL",
-      "pubDate": "2021-09-10T13:55:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
-      "title": "Bitcoin exchange reserves near record low, with traders eyeing $43K BTC price support",
-      "link": "NULL",
-      "pubDate": "2021-09-10T13:29:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "BTC price action may be struggling, but one analyst is hoping for a “sell-side liquidity crisis.”",
-      "currencies": [
-        "BTC",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 2
-      }
-    },
-    {
-      "title": "USDP/USDT trading is live ️ We've successfully completed the PAX rebranding to USDP at a ratio of 1 PAX = 1 USDP…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T13:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "WRX",
-        "BWRX"
-      ]
-    },
-    {
       "title": "Ukrainian President Meets Crypto Representatives",
       "link": "https://www.trustnodes.com/2021/09/10/ukrainian-president-meets-crypto-representatives",
       "pubDate": "2021-09-10T12:41:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Trustnodes",
+      "sourceKey": "trustnodes",
       "category": "general",
       "description": "The President of Ukraine, Volodymyr Zelensky, visited Silicon Valley last Friday (Sep 3) after meeting US President Joe Biden and others in Washington. There he met with representatives of the...",
       "currencies": [
@@ -444,8 +216,8 @@
       "title": "Algorand Foundation Launched a $300M Fund for DeFi Innovation: ALGO Taps a 2-Year High",
       "link": "https://cryptopotato.com/algorand-foundation-launched-a-300m-fund-for-defi-innovation-algo-taps-a-2-year-high/",
       "pubDate": "2021-09-10T11:37:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "The Algorand Foundation announced it had launched a $300 million fund focused on the decentralized finance industry.",
       "currencies": [
@@ -458,22 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Hateful Eight: SLP, TOMO, BAKE, DENT, TEL, UNI, DCR, DASH — Biggest Losers Sept 3-10",
-      "link": "NULL",
-      "pubDate": "2021-09-10T11:31:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
       "title": "Bitcoin From Major Addresses Started Moving to Exchanges: Here's What Might Happen to Market",
       "link": "https://u.today/bitcoin-from-major-addresses-started-moving-to-exchanges-heres-what-might-happen-to-market",
       "pubDate": "2021-09-10T11:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Major Bitcoin addresses are moving their funds from the spot market to derivatives exchanges",
       "currencies": [
@@ -488,8 +249,8 @@
       "title": "RBI governor says India has ‘serious and major concerns’ about cryptocurrencies",
       "link": "https://finbold.com/rbi-governor-says-india-has-serious-and-major-concerns-about-cryptocurrencies/",
       "pubDate": "2021-09-10T11:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "The governor of India’s central bank (RBI) Shaktikanta Das has further expressed skepticism around the use of cryptocurrencies, stating that... Continue reading",
       "currencies": [
@@ -505,8 +266,8 @@
       "title": "Is Bitcoin going ‘in reverse’ as it faces ‘first real test’ in El Salvador",
       "link": "https://ambcrypto.com/is-bitcoin-going-in-reverse-as-it-faces-first-real-test-in-el-salvador/",
       "pubDate": "2021-09-10T10:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "El Salvador’s adoption of Bitcoin as legal tender earlier this week made the whole cryptocurrency community rejoice. While many believe this to be an important milestone in the path towards financial freedom, some have suggested that other countries should follow suit too. Even so, it’s worth noting that the aforementioned roll-out hasn’t escaped criticism. Most […]",
       "currencies": [
@@ -521,8 +282,8 @@
       "title": "SEC Postpones VanEck Bitcoin ETF Decision Yet Again",
       "link": "https://beincrypto.com/sec-postpones-vaneck-bitcoin-etf-decision/",
       "pubDate": "2021-09-10T09:54:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "The U.S. Securities and Exchange Commission (SEC) has continued to drag its feet over approving a bitcoin exchange-traded fund (ETF).",
       "currencies": [
@@ -535,38 +296,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "GameDAO&amp; @ONTOWallet pixel master theme creation activity, voting will start soon, and we will wait and see who wi…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T09:28:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
-      "title": "Bitcoin price risks losing weekly uptrend as NFT launch sends Tezos (XTZ) to 3-month highs",
-      "link": "NULL",
-      "pubDate": "2021-09-10T09:25:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XTZ"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
       "title": "Tezos, Icon, Celo enjoy double-digit gains as crypto market cap back to over $2 trillion",
       "link": "https://finbold.com/tezos-icon-celo-enjoy-double-digit-gains-as-crypto-market-cap-back-to-over-2-trillion/",
       "pubDate": "2021-09-10T09:01:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Among the top 100 cryptocurrencies, five digital assets, including Tezos (XTZ), Celo (CELO), Icon (ICX), Harmony (ONE), and Cosmos (ATOM), lead... Continue reading The post Tezos, Icon, Celo enjoy double-digit gains as crypto market cap back to over $2 trillion appeared first on Finbold.",
       "currencies": [
@@ -584,8 +318,8 @@
       "title": "Tezos up 24% on Back of Doja Cat NFT Launch",
       "link": "https://decrypt.co/80635/tezos-back-doja-cat-nft-launch",
       "pubDate": "2021-09-10T08:50:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "nft",
       "description": "The price of Tezos has skyrocketed over the past 24 hours following the launch of an exclusive NFT collection from the musician Doja Cat.",
       "currencies": [
@@ -598,22 +332,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Let's GO!!!",
-      "link": "NULL",
-      "pubDate": "2021-09-10T08:44:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
       "title": "Ripple Participates in Moving 204.7 Million XRP, While Coin Drops to $1.09",
       "link": "https://u.today/ripple-participates-in-moving-2047-million-xrp-while-coin-drops-to-109",
       "pubDate": "2021-09-10T08:42:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Over 204 million XRP tokens have been transferred by Ripple and several large crypto exchanges in big lumps as XRP lost almost 12%",
       "currencies": [
@@ -626,105 +349,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Is eCash (XEC) The Next Shiba Inu? Why You Should Exercise Caution : #⃣: #ecash #XEC…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T07:31:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XEC",
-        "TCAT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @AndreCronjeTech: updated, amazing improvements by the team! Functionality and UX is much better than the first…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T07:25:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANY"
-      ]
-    },
-    {
-      "title": "Paxos Standard (PAX) Token is now rebranded as Pax Dollar (USDP)",
-      "link": "NULL",
-      "pubDate": "2021-09-10T07:22:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDP"
-      ]
-    },
-    {
-      "title": "(1/3) We are happy to share audit reports for BiFi BTC Lending. @certik_io and @theori_io audited our codes. We can…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T05:28:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "What?! a two-player dino 🦖 game? Yes NKN can enable any two player on two @googlechrome compatible browsers to rac…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T05:07:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @useteller: Big things ahead for the @enyaai team and @bobanetwork with their recent partnership with @API3DAO!",
-      "link": "NULL",
-      "pubDate": "2021-09-10T04:01:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
-      "title": "RT @Drian831: When the root is deep there is no reason to fear the wind. - TREeCash $XEC @CainBCHA for fun only how many xec leaves can…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T03:58:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @ilhamaditya710: Enjoy life @CainBCHA $XEC",
-      "link": "NULL",
-      "pubDate": "2021-09-10T03:58:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "XRP Price Slides 10 Percent as Coinbase Pro Denies Relisting Rumors",
       "link": "https://u.today/xrp-price-slides-10-percent-as-coinbase-pro-denies-relisting-rumors",
       "pubDate": "2021-09-10T03:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Coinbase Pro was quick to shut down the relisting rumors that started swirling on the social media",
       "currencies": [
@@ -740,8 +369,8 @@
       "title": "Why Algorand’s price is on a two-year high right now",
       "link": "https://forkast.news/headlines/algorand-algo-price-two-year-high/",
       "pubDate": "2021-09-10T02:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "trading",
       "description": "Algorand’s ALGO cryptocurrency prices have surged by 90% over the past seven days, crossing the US$2 mark and hit a two-year high of US$2.44 today, according to CoinGecko data. ALGO, ranked the 17th largest cryptocurrency by market value, has not seen such price heights since its launch in 2019. Fast facts Algorand is an open-source, […]",
       "currencies": [
@@ -754,55 +383,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bringing the world as one--Jasmy born to solve the real problems of the IoT world and to create a world of digital…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T02:21:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "RT @YTGamin24732548: Baby girl also found the gem XEC-eCASH HOLDer $XEC eCASH @CainBCHA",
-      "link": "NULL",
-      "pubDate": "2021-09-10T01:40:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @Sarahmaygloria1: Let me know what you guy's think of #eCash $XEC. @CainBCHA",
-      "link": "NULL",
-      "pubDate": "2021-09-10T01:39:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "We've just released v. 1.2.6 to address a resource bug with nodes, &amp; want to stress the importance of updating to i…",
-      "link": "NULL",
-      "pubDate": "2021-09-10T00:43:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Here’s why Algorand's price just rallied to a new multi-year high",
       "link": "https://cointelegraph.com/news/here-s-why-algorand-algo-price-just-rallied-to-a-new-multi-year-high",
       "pubDate": "2021-09-10T00:09:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Institutional investment, new governance features and a groundbreaking project with the government of El Salvador are just a few of the factors behind ALGO’s rally to a new all-time high.",
       "currencies": [
@@ -818,8 +403,8 @@
       "title": "Mark Cuban Weighs In On Latest SEC Action By Urging Coinbase To Go On The Offensive",
       "link": "https://bitcoinist.com/mark-cuban-weighs-in-on-latest-sec-action-by-urging-coinbase-to-go-on-the-offensive/?utm_source=rss&utm_medium=rss&utm_campaign=mark-cuban-weighs-in-on-latest-sec-action-by-urging-coinbase-to-go-on-the-offensive",
       "pubDate": "2021-09-10T00:01:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "The billionaire owner of the Dallas Mavericks and Dogecoin advocate Mark Cuban advises Coinbase CEO Brian Armstrong to go on the offensive. Cuban’s words were in reference to news that the U.S securities regulator will sue the exchange if it goes ahead with offering its Lend program to users. Armstrong said they were planning to […]",
       "currencies": [

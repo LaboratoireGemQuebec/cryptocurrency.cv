@@ -1,26 +1,15 @@
 {
   "date": "2022-10-28",
-  "fetchedAt": "2026-02-05T07:45:52.594Z",
-  "articleCount": 60,
+  "fetchedAt": "2026-02-05T07:48:35.575Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Poll - what natively Cross-chain app do you want to see on the #BIFROST network first?",
-      "link": "NULL",
-      "pubDate": "2022-10-28T23:53:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
     {
       "title": "Terra’s Do Kwon Facing Yet Another Lawsuit",
       "link": "https://cryptobriefing.com/terras-do-kwon-facing-yet-another-lawsuit/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-28T22:18:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "description": "Do Kwon and others involved in the TerraUSD project are facing a $57 million class action suit from aggrieved investors. Do Kwon and associates are facing yet another court case that could come with massive civil penalties.According to the Wall Street Journal, Kwon faces a class action suit on behalf of investors who lost $57 million during the collapse of TerraUSD stablecoin. Those investors...",
       "currencies": [
@@ -36,8 +25,8 @@
       "title": "Dogecoin Soars Another 8%, Re-Enters Crypto’s Top Ten",
       "link": "https://cryptopotato.com/dogecoin-soars-another-8-re-enters-cryptos-top-ten/",
       "pubDate": "2022-10-28T21:21:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "After Elon Musk bought Twitter, Dogecoin passed Solana on the cryptocurrency rankings.",
       "currencies": [
@@ -51,22 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Proposal To Burn Chaos Packs",
-      "link": "NULL",
-      "pubDate": "2022-10-28T21:04:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
       "title": "Dogecoin Should Be Cardano Sidechain, Charles Hoskinson Says",
       "link": "https://u.today/dogecoin-should-be-cardano-sidechain-charles-hoskinson-says",
       "pubDate": "2022-10-28T19:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Input Output CEO Charles Hoskinson wants both Dogecoin and Cardano to be part of Elon Musk-owned Twitter",
       "currencies": [
@@ -83,8 +61,8 @@
       "title": "Ethereum’s Vitalik Buterin Believes Twitter HQ Should Be Moved To Switzerland",
       "link": "https://en.ethereumworldnews.com/vitalik-buterin-twitter-hq-in-switzerland/",
       "pubDate": "2022-10-28T18:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "ethereum",
       "description": "Ethereum founder Vitalik Buterin believes that the Twitter headquarters should be moved to Switzerland. His comments came barely hours after Elon Musk took over Twitter.",
       "currencies": [
@@ -96,49 +74,11 @@
       }
     },
     {
-      "title": "Circular economy is replacing the linear economy model. In this panel, @msjemmagreen will discuss how technology ca…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:57:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "Badgers, remember to always verify links and social handles before interacting with them. If something seems off, i…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:56:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BADGER"
-      ]
-    },
-    {
-      "title": "Maker founder uses influence to pass vote that breaks up the DAO",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:54:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Matter Labs releases first phase of zkSync 2.0 mainnet called ‘baby alpha’",
       "link": "https://www.theblock.co/post/180846/matter-labs-releases-first-phase-of-zksync-2-0-mainnet-called-baby-alpha?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-28T17:46:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "layer2",
       "description": "Matter Labs, the developer of zkSync, has launched the zkSync 2.0 mainnet but is controlling access for now.",
       "currencies": [
@@ -154,8 +94,8 @@
       "title": "Cosmos Ecosystem Will Soon Vote on ATOM 2.0’s Revised White Paper",
       "link": "https://blockworks.co/cosmos-ecosystem-will-soon-vote-on-atom-2-0-revised-white-paper/",
       "pubDate": "2022-10-28T17:35:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "The updated white paper has addressed community concerns around ATOM issuance",
       "currencies": [
@@ -168,44 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#RootstockSummit 2022 will feature a much-awaited presentation from @toby_box! He will outline the principles fo…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:23:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
-      "title": "RT @MantaNetwork: In case you missed our Twitter space with @priv_alliance on Global Encryption Day, we've highlighted our favorite parts h…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:10:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
-      "title": "Orchid is looking forward to @saurik’s panel discussion @NFTSFConference in SF on “NFT Government, Policies, and Re…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T17:09:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "OXT"
-      ]
-    },
-    {
       "title": "FriesDAO hacked for $2.3 million in latest Profanity exploit",
       "link": "https://www.theblock.co/post/180973/friesdao-hacked-for-2-3-million-in-latest-profanity-exploit?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-28T17:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "An unknown attacker stole $2.3 million in tokens from a decentralized autonomous organization called FriesDAO.",
       "currencies": [
@@ -221,8 +128,8 @@
       "title": "Terra Luna Classic Price Prediction – Can LUNC Reach $1 Parity?",
       "link": "https://cryptonews.com/news/terra-luna-classic-price-prediction-can-lunc-reach-1-parity.htm",
       "pubDate": "2022-10-28T17:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Terra Luna Classic price prediction remains slightly bullish above the $0.00022 level, which is supported by a triple bottom pattern. The Terra Luna Classic has been struggling in the market for many months, particularly since rebranding in the aftermath of the collapse of the original Luna cryptocurrency. The recent decline in crypto shows that traders have not yet gained full confidence in the network, which is also the reason for the market's low to no volatility. ... Read More: Terra Luna Cl",
       "currencies": [
@@ -235,55 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @CentralChartsEN: $REQ $REQUSD #REQUESTNETWORK @RequestNetwork - 1H: We are currently in a phase of short-term indecision. In a case lik…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T16:20:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "Over the last month of beta testing our #New Network Driver, we have seen more than 150 unique nodes. Thank you! Th…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T15:55:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "Have you checked out the official Bitcoin SV Discord channel? Whether you’re a newcomer or a BSV veteran, this is t…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T15:48:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @Jelurida: Today and tomorrow, @elimanzieri is representing #Jelurida at the #LuganoPlanB, the #blockchain &amp; #crypto conference in Lugan…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T15:22:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
       "title": "400 Million DOGE Moved to Binance in One Hour, Here's What's Happening",
       "link": "https://u.today/400-million-doge-moved-to-binance-in-one-hour-heres-whats-happening",
       "pubDate": "2022-10-28T15:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Slightly over 400 million Dogecoin shifted from top 20 wallet to Binance consecutively",
       "currencies": [
@@ -299,8 +162,8 @@
       "title": "Cross-chain swap protocol Thorchain is back online after 20-hour outage",
       "link": "https://www.theblock.co/post/180816/cross-chain-swap-protocol-thorchain-back-online-after-20-hour-outage?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-28T15:04:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Cross-chain swap protocol Thorchain is back online after a software error halted the network for 20 hours.",
       "currencies": [
@@ -313,50 +176,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "It had to be done, @arietrouw. #XYO",
-      "link": "NULL",
-      "pubDate": "2022-10-28T15:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "'Bloomberg Terminal' for Crypto Traders Catches Experts' Attention – Time to Buy?",
-      "link": "NULL",
-      "pubDate": "2022-10-28T15:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
-      "title": "Over 70% of Bitcoin millionaires were wiped over three quarters in 2022",
-      "link": "NULL",
-      "pubDate": "2022-10-28T14:40:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Since the start of the year, the cryptocurrency market has lost almost $1 trillion in market cap due to the... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 5
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Why Polygon MATIC Price Could Experience Another Bullish Breakout",
       "link": "https://beincrypto.com/polygon-matic-could-experience-bullish-breakout/",
       "pubDate": "2022-10-28T14:29:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Polygon MATIC price has maintained a relatively stable uptrend despite the larger crypto market’s uncertainty. The post Why Polygon MATIC Price Could Experience Another Bullish Breakout appeared first on BeInCrypto.",
       "currencies": [
@@ -369,39 +193,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin bulls battle to maintain price uptrend after losing momentum to break past $21,000",
-      "link": "NULL",
-      "pubDate": "2022-10-28T14:17:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin (BTC) is facing a possible crash below $20,000 after recording a short-term rally on October 27 that saw the... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Are you a #solutionsarchitect or #developer who wants to stay abreast of the latest in #blockchain that can benefit…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T14:01:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Final Fantasy developer partners with Avalanche to launch its first Web3 game",
       "link": "https://finbold.com/final-fantasy-developer-partners-with-avalanche-to-launch-its-first-web3-game/",
       "pubDate": "2022-10-28T13:56:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "With the expansion of the cryptocurrency industry, including virtual worlds collectively called the metaverse, Web3-based games are growing in popularity... Continue reading The post Final Fantasy developer partners with Avalanche to launch its first Web3 game appeared first on Finbold.",
       "currencies": [
@@ -414,159 +210,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terra LUNA and LUNC Price: Why Bears Remain in Control",
-      "link": "NULL",
-      "pubDate": "2022-10-28T13:49:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @avantgardefi: Last week, Avantgarde submitted a proposal responding to @ENS_DAO’s Endaoment RFP. We plan to build and manage the fund u…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T13:25:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "Aptos \"Solana Killer\" Airdrop Triggers Record High of Daily Transactions on This Chain",
-      "link": "NULL",
-      "pubDate": "2022-10-28T13:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XCN"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "For the average US enterprise, a hack that goes beyond 30 days costs an average of $9M In the pilot episode of ou…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:50:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Knock knock! Wishing our wonderful ABBC Community a Happy Halloween and we hope you are filled with more crypto tr…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:32:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "#USDD x @HuobiGlobal special event is here! Don’t miss it! 🤩 Lock #HT Flexibly to Win 400,000 $USDD 🤑 08:00 UTC,…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:31:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @HuobiGlobal: #Huobi #Primepool Returns! Lock #HT Flexibly to Win 400,000 USDD 08:00,Oct 30 — 08:00,Nov 6 (UTC) Learn more:h…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:17:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "#Huobi #Primepool Returns! Lock #HT Flexibly to Win 400,000 USDD 08:00,Oct 30 — 08:00,Nov 6 (UTC) Learn…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:10:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "HBTC",
-        "HPT"
-      ]
-    },
-    {
-      "title": "With the latest release of 0.0.169 on Holochain, Holo testing of HoloFuel countersigning reliability will be unbloc…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:10:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "Sign up for Finblox and join this week’s Pool Party to win 200 USDD at ! 🦖 #crypto…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T12:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "FBX"
-      ]
-    },
-    {
-      "title": "RT @pnxgrp: TOP 10 COINS BY LUNARCRUSH GALAXY SCORE $XLM $FIL $AXS $APT $RVN $BOSON $LOOKS $WAN $DODO $UTK",
-      "link": "NULL",
-      "pubDate": "2022-10-28T11:53:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAN",
-        "WWAN",
-        "WANUSDT"
-      ]
-    },
-    {
-      "title": "Generate yield with less risk. Protecting and growing your crypto portfolio across all economic conditions (i.e. in…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T11:41:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
       "title": "1.3 Trillion SHIB Moved in 858 and 420 Billion Lumps, Here's What's Happening",
       "link": "https://u.today/13-trillion-shib-moved-in-858-and-420-billion-lumps-heres-whats-happening",
       "pubDate": "2022-10-28T11:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Astonishing amount of Shiba Inu was transferred in merely two transactions, while price showed large fluctuations",
       "currencies": [
@@ -579,67 +227,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are happy to announce that after a long time of waiting, we will officially list the Dohrnii Token (DHN) will be…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T11:04:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "Announcing Request Network Connector - an initiative to connect the siloed financial system under web3 principles…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T10:58:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "🤩Congratulations to #USDJ for joining the #PSM (Peg Stability Module)! @DeFi_JUST It's simple, safe, and sustaina…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T10:31:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "The performance of #BitcoinSV apps, @my2cents_app, @Relysia_SV, Certihash, @Vaionex_Corp & @CryptoFights is mooning…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T10:04:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "KLAY is the native digital asset that fuels and secures the Klaytn protocol. It was launched with 10 billion KLAY i…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T10:02:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KLAY",
-        "HIT"
-      ]
-    },
-    {
       "title": "1 year later: Bitcoin investors lost over 60% since Matt Damon’s crypto ad first aired",
       "link": "https://finbold.com/1-year-later-bitcoin-investors-lost-over-60-since-matt-damons-crypto-ad-first-aired/",
       "pubDate": "2022-10-28T09:13:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "On October 28, 2021, a year ago, crypto exchange Crypto.com debuted a commercial featuring Matt Damon promoting cryptocurrencies. The “Fortune... Continue reading",
       "currencies": [
@@ -653,22 +245,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "International #payments using traditional methods should be quick and low-cost, but it's not. #ETN can be sent and…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T09:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Crypto Faithfuls Await Elon Musk’s Blockchain Plans for Twitter",
       "link": "https://blockworks.co/crypto-faithfuls-await-elon-musks-blockchain-plans-for-twitter/",
       "pubDate": "2022-10-28T08:42:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "Elon Musk is the new head honcho at Twitter, and crypto is abuzz with what it could mean for the digital asset space",
       "currencies": [
@@ -683,8 +264,8 @@
       "title": "Number of smart contracts on Ethereum soars to 16-month high following Merge upgrade",
       "link": "https://finbold.com/number-of-smart-contracts-on-ethereum-soars-to-16-month-high-following-merge-upgrade/",
       "pubDate": "2022-10-28T08:25:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "As the cryptocurrency market seemingly started waking up from its weeks-long hibernation, the smart contract activity on some blockchains seems... Continue reading",
       "currencies": [
@@ -697,34 +278,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @officialPlayOne: Here Comes a New INO Let’s fight in crypto world We are thrilled to announce our the first INO Please tune in next M…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T07:59:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Mr. Ellis Wang will be speaking on Cybersecurity in Blockchain Metaverse at the Cysec UAE Summit on the 1st &amp; 2nd o…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T07:21:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HPO"
-      ]
-    },
-    {
       "title": "Web3 sees 15 new scam smart contracts an hour — Solidus Labs",
       "link": "https://cointelegraph.com/news/web3-sees-15-new-scam-smart-contracts-an-hour-solidus-labs",
       "pubDate": "2022-10-28T05:55:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Solidus Labs, which has been monitoring 12 leading blockchains, has detected the majority of scam-like tokens originating from Binance’s BNB Smart Chain.",
       "currencies": [
@@ -735,85 +293,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "COLLAPSE: World's Largest Bitcoin Miner is Going Bankrupt | EP 608",
-      "link": "NULL",
-      "pubDate": "2022-10-28T05:19:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin Miner Core Scientific Says It May Seek Bankruptcy due to market conditions ✓ SUBSCRIBE - https://bit.ly/3QbgqTQ ✓ LEAVE A LIKE ✓ COMMENT Join our Telegram, Give us Memes to Review! ► https://t.me/TheSimplyBitcoinChannel Check out our Sponsors, support Bitcoin ONLY Businesses: Pacific Bitcoin Conference: https://www.pacificbitcoin.com/ ► The biggest Bitcoin event on the West Coast November 10-11, 2022 in Santa Monica, CA USE PROMO CODE 'SIMPLY' FOR 20% OFF YOUR TICKET - Pacific Bitcoin NO",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 4
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @LooksRare: 🧵 Starting today, #LooksRare will no longer support creator royalties by default, and instead, share 25% of the LooksRare Pr…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T05:02:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "Elon has taken control of Twitter",
-      "link": "NULL",
-      "pubDate": "2022-10-28T05:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBK"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Guild looking for members",
-      "link": "NULL",
-      "pubDate": "2022-10-28T02:55:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @TronDao_JPN: #TRON #ハロウィンイベント 最大14000円相当の賞金を貰える！ キャンペーン① 抽選で、1名様に100 $USDD 、5名様に10USDDをそれぞれ フォーム️ キャンペーン②…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T01:56:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "WTRX"
-      ]
-    },
-    {
-      "title": "Our co-founder Dr Jemma Green shares her story on how walking the Camino de Santiago altered her career path and le…",
-      "link": "NULL",
-      "pubDate": "2022-10-28T01:35:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POWR"
-      ]
     }
   ]
 }

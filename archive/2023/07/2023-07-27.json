@@ -1,15 +1,15 @@
 {
   "date": "2023-07-27",
-  "fetchedAt": "2026-02-05T07:45:52.402Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.559Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
     {
       "title": "Shiba Inu Now Accounts For Almost 12% Of The Top Ethereum Whale Holdings",
       "link": "https://bitcoinist.com/shiba-inu-top-ethereum-whale-holdings/",
       "pubDate": "2023-07-27T23:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Shiba Inu has always been a favorite of the largest Ethereum whales and it seems that sentiment has not changed. When it comes to the largest token holdings among these large investors, Shiba Inu continues to play a prominent role. Shiba Inu Making Up Almost 12% Of Token Holdings The top 100 largest Ethereum whales […]",
       "currencies": [
@@ -23,63 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Best Crypto to Buy Now 27 July – Synthetix, Pepe, Maker",
-      "link": "NULL",
-      "pubDate": "2023-07-27T22:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Distrust Wallet? A Crypto User’s Experience With Popular Storage Solution",
-      "link": "NULL",
-      "pubDate": "2023-07-27T21:28:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "TWT"
-      ]
-    },
-    {
-      "title": "BNB Chain’s Q2 Performance Sparks Optimism Amidst Regulatory Uncertainty",
-      "link": "NULL",
-      "pubDate": "2023-07-27T21:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "AI tokens see the lowest weekly trading volume this year",
-      "link": "NULL",
-      "pubDate": "2023-07-27T20:15:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GRT",
-        "RNDR",
-        "INJ"
-      ]
-    },
-    {
       "title": "Ripple takes notice of South Korea, looks to boost XRPL adoption",
       "link": "https://blockworks.co/news/ripple-expanding-south-korea",
       "pubDate": "2023-07-27T20:13:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "The company behind the cryptocurrency XRP and the XRP ledger is partnering with a local research firm to shore up its footing in South Korea",
       "currencies": [
@@ -92,28 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Cash Miners’ Withdrawals Spell A Bearish Trend For BCH",
-      "link": "NULL",
-      "pubDate": "2023-07-27T20:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "XRP Army Beware: Pro-XRP Lawyer’s Twitter Account Hacked, Don’t Click on the Link He Shared",
       "link": "https://en.bitcoinsistemi.com/xrp-army-beware-pro-xrp-lawyers-twitter-account-hacked-dont-click-on-the-link-he-shared/",
       "pubDate": "2023-07-27T19:37:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "Jeremy Hogan, a lawyer and a popular figure in the cryptocurrency community, especially among XRP fans, was the victim of a Twitter hack. The hacker posted a tweet from Hogan’s account claiming to be feeling generous and offering to double back all XRP tokens sent to a specific wallet address. The tweet also provided wallet […] Continue Reading: XRP Army Beware: Pro-XRP Lawyer’s...",
       "currencies": [
@@ -129,8 +60,8 @@
       "title": "Shiba Inu Ecosystem Developments Are Blowing Up As SHIB Whales Activity Soar Ahead Of Shibarium Launch",
       "link": "https://zycrypto.com/shiba-inu-ecosystem-developments-are-blowing-up-as-shib-whales-activity-soar-ahead-of-shibarium-launch/",
       "pubDate": "2023-07-27T19:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "These initiatives are paving the way for the highly anticipated mainnet launch of Shibarium, scheduled to take place during the upcoming Blockchain Futurist Conference in August.",
       "currencies": [
@@ -143,67 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MakerDAO increases DAI yield in bid to boost demand",
-      "link": "NULL",
-      "pubDate": "2023-07-27T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "Sui Foundation Dumps MovEX After Contract Violation",
-      "link": "NULL",
-      "pubDate": "2023-07-27T19:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Flow blockchain resilience amid global NFT decline in Q2 2023",
-      "link": "NULL",
-      "pubDate": "2023-07-27T18:45:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "MakerDAO Community Supports Proposal To Increase DAI Interest Rate Up To 8%",
-      "link": "NULL",
-      "pubDate": "2023-07-27T18:28:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "MakerDAO Looks to Ignite Growth for $4.6B DAI Stablecoin With Up to 8% Reward",
-      "link": "NULL",
-      "pubDate": "2023-07-27T16:28:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
       "title": "SEC Chairman Gary Gensler Spoke About Bitcoin ETF and Cryptocurrencies",
       "link": "https://en.bitcoinsistemi.com/sec-chairman-gary-gensler-spoke-about-cryptocurrencies/",
       "pubDate": "2023-07-27T15:45:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "SEC chairman Gary Gensler gave a stern warning about the cryptocurrency market in his latest speech. Continue Reading: SEC Chairman Gary Gensler Spoke About Bitcoin ETF and Cryptocurrencies",
       "currencies": [
@@ -215,46 +90,11 @@
       }
     },
     {
-      "title": "Cryptocurrency Synthetix Network Up More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-27T15:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX"
-      ]
-    },
-    {
-      "title": "Top Trader Predicts One Ethereum Rival Will Repeat Parabolic ETH Rallies of Past Cycle",
-      "link": "NULL",
-      "pubDate": "2023-07-27T14:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Block.one ICO damages ‘far beyond’ $22M, ENF founder says",
-      "link": "NULL",
-      "pubDate": "2023-07-27T13:41:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
       "title": "How the Stablecoin Supply Ratio Helps Determine BTC Market Trends",
       "link": "https://dailycoin.com/how-stablecoin-supply-ratio-determine-btc-market-trends/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-27T13:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "bitcoin",
       "description": "Unlocking market trends: Stablecoin Supply Ratio reveals crypto sentiment and buying power dynamics for investors.",
       "currencies": [
@@ -267,97 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ripple, Solana, And Stellar-based Products Record Massive Institutional Investments As Market Rebounds",
-      "link": "NULL",
-      "pubDate": "2023-07-27T12:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Will Filecoin reach $100? ChatGPT predicts…",
-      "link": "NULL",
-      "pubDate": "2023-07-27T12:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "EOS Foundation Would Be Suing Block.One for Failing to Honour $1B Commitment",
-      "link": "NULL",
-      "pubDate": "2023-07-27T12:15:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Bitcoin Still in a Bull Cycle Despite Correction, According to Quant Analyst – But There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2023-07-27T11:45:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Ripple is Going to Zero as XRP Price Drops 15% in a Week and Evil Pepe Just Raised $950,000 – How to Buy Early?",
-      "link": "NULL",
-      "pubDate": "2023-07-27T11:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "“Art NFTs Will Bring Billions into Web3,” Claims NFT Experts",
-      "link": "NULL",
-      "pubDate": "2023-07-27T11:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Fantom Coin (FTM) Is Going to Zero, Chainlink (LINK) Predicted to Reach $10, Borroe ($ROE) Presale Strong",
-      "link": "NULL",
-      "pubDate": "2023-07-27T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "FTM"
-      ]
-    },
-    {
       "title": "Binance Pool Unveils Bitcoin Cash (BCH) Mining Service",
       "link": "https://cryptopotato.com/binance-pool-unveils-bitcoin-cash-bch-mining-service/",
       "pubDate": "2023-07-27T10:47:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Bitcoin Cash (BCH) mining service will now be available on Binance Pool.",
       "currencies": [
@@ -371,53 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Early EOS Investors Face Big Decision Ahead Of U.S. Class Action",
-      "link": "NULL",
-      "pubDate": "2023-07-27T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Dogecoin Ascendance: How It Captured PEPE Investors’ Attention",
-      "link": "NULL",
-      "pubDate": "2023-07-27T10:01:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "MATIC",
-        "LTC",
-        "APE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "CoinsPaid Believes Dreaded Lazarus Group Orchestrated $37M Hack",
-      "link": "NULL",
-      "pubDate": "2023-07-27T09:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
       "title": "XRP, Stellar and Solana Products See Increased Institutional Investments This Year",
       "link": "https://www.coindesk.com/markets/2023/07/27/xrp-stellar-and-solana-products-see-increased-institutional-investments-this-year/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-07-27T09:01:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "Products focused on XLM saw nearly 63% higher inflows this year.",
       "currencies": [
@@ -427,37 +139,6 @@
       ],
       "votes": {
         "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "EOS Price Analysis: Risk of More Losses Below $0.73",
-      "link": "NULL",
-      "pubDate": "2023-07-27T05:08:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Memecoin Magic Heating Up As Dogecoin, Shiba Inu and Apecoin Social Buzz Rises, Says Analytics Firm",
-      "link": "NULL",
-      "pubDate": "2023-07-27T00:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "SHIB",
-        "APE"
-      ],
-      "votes": {
-        "positive": 2,
         "negative": 0
       },
       "sentiment": "bullish"

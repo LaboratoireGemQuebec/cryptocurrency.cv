@@ -1,38 +1,15 @@
 {
   "date": "2021-09-26",
-  "fetchedAt": "2026-02-05T07:45:51.863Z",
-  "articleCount": 35,
+  "fetchedAt": "2026-02-05T07:48:35.479Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @Michael15364227: @nobilitytoken @IronsidePC OMG  I just woke up and I see I won that beautiful 🤩 PC I’m so happy  I literally jumping…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T23:18:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
-      "title": "RT @TehSlaw: Dash is on the way. The project has been hard at work building a Dash bifrost bridge to connect the chain to @THORChain A few…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T23:02:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RUNE",
-        "DASH"
-      ]
-    },
     {
       "title": "Axie Infinity Co-Founder: Gaming Is the Key to Crypto Adoption",
       "link": "https://decrypt.co/81952/axie-infinity-co-founder-gaming-is-the-key-to-crypto-adoption",
       "pubDate": "2021-09-26T22:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Sky Mavis has big plans to spur crypto adoption through NFT gaming, and Axie Infinity is just its first step.",
       "currencies": [
@@ -48,8 +25,8 @@
       "title": "Bullish: Cardano Gearing Up To Fully Dominate The Smart Contracts Market With New Chainlink Partnership",
       "link": "https://zycrypto.com/cardano-gearing-up-to-fully-dominate-the-smart-contracts-market-with-new-chainlink-partnership/",
       "pubDate": "2021-09-26T21:26:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Smart contracts have only just arrived on the Cardano network, but it seems like developers are not taking a break. In their quest for dominance, the team at Cardano is joining forces with Chainlink, one of the promising blockchains, to accelerate the growth of smart contracts on the network. Cardano recently revealed that it had […]",
       "currencies": [
@@ -66,8 +43,8 @@
       "title": "Top 5 cryptocurrencies to watch this week: BTC, AVAX, ALGO, XTZ, EGLD",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-avax-algo-xtz-egld",
       "pubDate": "2021-09-26T19:47:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bears continue to pressure BTC price but any signs of consolidation could lead to a breakout in AVAX. ALGO, XTZ, and EGLD.",
       "currencies": [
@@ -82,22 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Good overview of what we're working on for the future of eCash. Worth a read! #eCash…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T19:44:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Ripple’s Garlinghouse expects ‘absolute certainty,’ from the U.S. SEC",
       "link": "https://ambcrypto.com/american-innovation-is-on-the-line-because-of-the-sec/",
       "pubDate": "2021-09-26T19:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "The XRP lawsuit began in December last year, when the U.S. SEC took action against Ripple. Yet, uncertainty prevails till date, even as the proceedings continue to unfold. With reference to the same, Ripple CEO Brad Garlinghouse doesn’t hold back. Be it in the past or the present. During his interview with Fox Business, Ripple […]",
       "currencies": [
@@ -113,8 +79,8 @@
       "title": "Cardano Partners With Chainlink for DeFi Smart Contracts Development",
       "link": "https://cryptopotato.com/cardano-partners-with-chainlink-for-defi-smart-contracts-development/",
       "pubDate": "2021-09-26T18:52:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "Cardano has announced a strategic partnership with Chainlink to provide oracle integration for smart contract developers.",
       "currencies": [
@@ -131,8 +97,8 @@
       "title": "China’s latest crypto crackdown is its toughest yet",
       "link": "https://qz.com/2065015/how-chinas-new-ban-on-crypto-breaks-from-the-past/",
       "pubDate": "2021-09-26T18:45:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Qz",
+      "sourceKey": "qz",
       "category": "general",
       "description": "China has gradually restricted crypto in the past, but its latest rules isolate the industry.",
       "currencies": [
@@ -147,8 +113,8 @@
       "title": "Absolute BEST DOT And KSM Gems!",
       "link": "https://www.youtube.com/watch?v=Lymy6gJvPgg",
       "pubDate": "2021-09-26T18:37:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "FUDTV",
+      "sourceKey": "fudtv",
       "category": "altcoin",
       "description": "#Moonbeam or #Moonriver? That is the question of the day. What say you? Do you even know the difference? If you don’t, fret not. We got you covered. We’re deciding to take a brief #FUD intermission to talk about two of the hottest projects in the #Polkadot and #Kusama ecosystems. We’re breaking down what makes these #altcoins special, what the differences between the two are, and which one you should be paying attention to. One thing we can say without a doubt, is that we’re bullish on most Polk",
       "currencies": [
@@ -165,8 +131,8 @@
       "title": "Dolce & Gabbana Wants to Crown Dogecoin Fan Elon Musk as \"King of Crypto\"",
       "link": "https://u.today/dolce-gabbana-wants-to-crown-dogecoin-fan-elon-musk-as-king-of-crypto",
       "pubDate": "2021-09-26T18:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Will Elon Musk be crowned as the new crypto king?",
       "currencies": [
@@ -179,22 +145,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @RequestdApps: Soon, you'll be able to send an invoice in fiat that can be paid by your client via bank transfer, while you receive paym…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T17:29:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "China Crypto Ban: Crypto Exchange Huobi To Retire User Accounts",
       "link": "https://bitcoinist.com/china-crypto-ban-crypto-exchange-huobi-to-retire-user-accounts/?utm_source=rss&utm_medium=rss&utm_campaign=china-crypto-ban-crypto-exchange-huobi-to-retire-user-accounts",
       "pubDate": "2021-09-26T17:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "Top Crypto Exchange Huobi Global has said it will suspend all China-based user accounts later this year. The exchange said in an announcement on Sunday that it has discontinued account registration for new users in Mainland China. This event comes after China’s central bank intensifies its crackdown on crypto activities. Last week, China intensified a crackdown on cryptocurrencies. […]",
       "currencies": [
@@ -206,22 +161,11 @@
       }
     },
     {
-      "title": "Follow the @PirateARRRmada for a collection of great merchants accepting $ARRR as payment. Transact privately.…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T16:40:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
       "title": "\"DFINITY Foundation’s Internet Computer blockchain is bringing smart-contract capabilities to the Bitcoin (#BTC) ne…",
       "link": "https://twitter.com/dfinity/status/1442153488524451841",
       "pubDate": "2021-09-26T15:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "bitcoin",
       "currencies": [
         "BTC",
@@ -234,34 +178,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "@JihanWu's @realMatrixport is supporting the eCash rebrand #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-09-26T15:15:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Why will #eCash use both PoW and Avalanche together? Because using both technologies together allows the downside…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T14:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AVAX",
-        "XEC"
-      ]
-    },
-    {
       "title": "Solana Adoption Speed Is Ridiculous, Crypto Asset Is Likely the Ethereum of This Cycle: Macro Guru Raoul Pal",
       "link": "https://dailyhodl.com/2021/09/26/solana-adoption-speed-is-ridiculous-crypto-asset-is-likely-the-ethereum-of-this-cycle-macro-guru-raoul-pal/",
       "pubDate": "2021-09-26T14:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Marco guru Raoul Pal says smart contract platform Solana is poised to be one of the best performers this cycle as he believes it is following the footsteps of Ethereum’s 2017 bull cycle. In a new interview on BitBoy Crypto, the founder of Real Vision and Global Macro Investor identifies key factors that could make SOL […]",
       "currencies": [
@@ -277,8 +198,8 @@
       "title": "Bitcoin To Become The 21st Century’s Digital Gold, Deutsche Bank’s Analyst Posits",
       "link": "https://zycrypto.com/bitcoin-to-become-the-21st-centurys-digital-gold-deutsche-banks-analyst-posits/",
       "pubDate": "2021-09-26T13:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Bitcoin’s near $1 trillion feasible market valuation and its potential for further growth have made it impossible for banks to continue ignoring its validity, according to Marion Laboure, a research analyst at Deutsche Bank. Laboure, a senior economist and market strategist at Deutsche Bank, said that people have always sought to store their wealth in […]",
       "currencies": [
@@ -292,23 +213,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @RequestdApps: Are you getting paid in #crypto?",
-      "link": "NULL",
-      "pubDate": "2021-09-26T12:54:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "These factors are helping Avalanche, Terra stay afloat in stormy waters",
       "link": "https://ambcrypto.com/these-factors-are-helping-avax-and-luna-stay-afloat-in-stormy-waters/",
       "pubDate": "2021-09-26T12:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "With the market crashing after the news of crypto ban in China hit the floor, Bitcoin saw a close to 10% price drop. On the back of the BTC losses, a market-wide crash began which resulted in most of the top altcoins shedding their prices too. However, some alts showed higher resistance to the crash […]",
       "currencies": [
         "BTC",
@@ -324,8 +234,8 @@
       "title": "Ripple CEO Brad Garlinghouse Says He’s Open to Settling Landmark XRP Case With SEC",
       "link": "https://dailyhodl.com/2021/09/26/ripple-ceo-brad-garlinghouse-says-hes-open-to-settling-landmark-xrp-case-with-sec/",
       "pubDate": "2021-09-26T11:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Ripple’s chief executive Brad Garlinghouse says the San Francisco-based payments firm is open to settling its lawsuit with the U.S. Securities and Exchange Commission (SEC) under one condition. In a new interview with Fox Business, Garlinghouse says Ripple would be willing to settle with the SEC if the regulator clearly defines the regulatory status of […]",
       "currencies": [
@@ -338,22 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ravencoin has no central control, no board, no treasury, no CEO, no executives and no legal structure. Ravencoin i…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T11:34:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "RVN"
-      ]
-    },
-    {
       "title": "With its future prospects looking bright, can Tezos upset Ethereum’s DeFi dominance",
       "link": "https://ambcrypto.com/with-its-future-prospects-looking-bright-can-tezos-upset-ethereums-defi-dominance/",
       "pubDate": "2021-09-26T11:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Ever since August, the market has been witnessing uptrends and downtrends in phases. However, during every phase, there have been exceptions defying the broader trend. Cardano, Solana, Avalanche, Fantom and Cosmos have been a few of those resistant coins. As the market continues to consolidate, yet another alt has made both traders and investors take […]",
       "currencies": [
@@ -372,8 +271,8 @@
       "title": "Crypto In Q4, Burger King NFTs, Bitcoin Rat, Bitcoin Smart Contracts & XRP NFTs Coming",
       "link": "https://www.youtube.com/watch?v=Bk3nit0ApMk",
       "pubDate": "2021-09-26T09:33:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheModernInvestor",
+      "sourceKey": "themoderninvestor",
       "category": "bitcoin",
       "description": "Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------ Art Instagram: https://www.instagram.com/theartistmodern/ ------------------------------------------- Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledg",
       "currencies": [
@@ -387,28 +286,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Theta's @wes_levitt joined the @Ultra_platform \"Ultra Chill\" podcast with Co-CEO Nicolas Gilot to chat about Theta…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T09:32:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Crypto Analyst Predicts Fresh All-Time Highs for Two Explosive Altcoins, Says Chainlink Is Primed To Rally",
       "link": "https://dailyhodl.com/2021/09/26/crypto-analyst-predicts-fresh-all-time-highs-for-two-explosive-altcoins-says-chainlink-is-primed-to-rally/",
       "pubDate": "2021-09-26T09:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "A prominent crypto strategist and trader is predicting new all-time highs for two explosive altcoins, while anticipating a surge in the value of Chainlink (LINK). The trader known in the industry as Inmortal tells his 72,600 followers that he’s keeping a close watch on FTX Token (FTT), the utility token of crypto exchange FTX. According […]",
       "currencies": [
@@ -421,100 +303,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @DefiLlama: Now tracking @AnyswapNetwork on @ethereum @BinanceChain @OKExChain @FantomFDN @xdaichain @HECO_Chain @0xPolygon @KCCOfficial…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T08:45:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ANY"
-      ]
-    },
-    {
-      "title": "[Research by @thefintechtimes] Asia Pacific POS Terminals Market Set for Rapid Growth $40Billion by 2026…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T07:42:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "RT @tungdin53550391: Anyswap Cross-chain protocol @AnyswapNetwork  will be a \"Bridge invader\" in the multichain world! Let me explain why:…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T07:23:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANY"
-      ]
-    },
-    {
-      "title": "We are very pleased to announce that #ABBC is now listed on Liquid Exchange with ABBC/BTC, ABBC/USDT, and ABBC/USD…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T05:32:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "RT @mindbayes: To all of the people giving out to FUD, I really hope you’ll be able to take some time to read this thread  $WOZX",
-      "link": "NULL",
-      "pubDate": "2021-09-26T05:15:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "[THREAD OF TWEETS] Efforce represents the best chance to enter a completely new asset class which is not tied in an…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T05:06:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Wallet Accounts on #BitTorrent Speed exceeded 279,000,000！ #BitTorrent Speed aims to incentivize more users to…",
-      "link": "NULL",
-      "pubDate": "2021-09-26T03:27:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @LispNYC: We’re thrilled to share the recording of this month’s @chia_project talk by @bramcohen and @richardkiss.",
-      "link": "NULL",
-      "pubDate": "2021-09-26T01:37:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
     }
   ]
 }

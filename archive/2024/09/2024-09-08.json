@@ -1,26 +1,15 @@
 {
   "date": "2024-09-08",
-  "fetchedAt": "2026-02-05T07:45:53.430Z",
-  "articleCount": 87,
+  "fetchedAt": "2026-02-05T07:48:35.666Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Asia Crypto Roundup: OKX Gets License in Singapore, India Reconsiders Global Exchange Registrations, and More",
-      "link": "NULL",
-      "pubDate": "2024-09-08T23:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
     {
       "title": "Cardano’s network activity soars post-upgrade: Will prices follow?",
       "link": "https://ambcrypto.com/cardanos-network-activity-soars-post-upgrade-will-prices-follow/",
       "pubDate": "2024-09-08T23:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Cardano's active addresses hit a five-month high, signaling renewed interest after its latest network upgrade.",
       "currencies": [
@@ -32,163 +21,11 @@
       }
     },
     {
-      "title": "Litecoin Sees Massive Surge In Whale Activity: Price Surge Incoming?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T21:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Why SHIB Executive Dismisses Comparisons With DOGE, PEPE?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T20:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Stacks’ smart contract reaches ATH as Nakamoto upgrade activation window opens",
-      "link": "NULL",
-      "pubDate": "2024-09-08T20:27:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Pepe, Brett; & Mpeppe: Pepecoin and Brett Investors Add Mpeppe Casino To Their Profit Making Machines",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:23:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Bitcoin range recovery could boost UNI, SUI, OP and HNT",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:17:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "UNI",
-        "HNT",
-        "SUI",
-        "OP"
-      ]
-    },
-    {
-      "title": "Pepecoin Whale Holders Add Mpeppe Casino To Holdings As MPEPE Presale Prepares For Launch",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:11:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Tokyo Electric Power Company’s Subsidiary Mines Bitcoin With Surplus Energy",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:10:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SXP"
-      ]
-    },
-    {
-      "title": "Helium: Crypto Bulls Pump HNT and Mpeppe Casino During Bitcoin’s BTC Downturn",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:07:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Top Cryptos Continue to Struggle as TON Falls Double Digits",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "TON"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – STRK, HNT, DOGS, and ATOM",
-      "link": "NULL",
-      "pubDate": "2024-09-08T19:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "HNT",
-        "STRK"
-      ]
-    },
-    {
-      "title": "Internet Computer: ICP, Decide AI and Mpeppe Are Projects You Must Hold In September",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "SUI Price Target $1 Breakout as AUSD Stablecoin Drives Network Activity",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:50:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
       "title": "Cardano Founder Outlines Future Plans For ADA Network Post-Chang Hardfork",
       "link": "https://zycrypto.com/cardano-founder-outlines-future-plans-for-ada-network-post-chang-hardfork/",
       "pubDate": "2024-09-08T18:49:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Charles Hoskinson has outlined the next steps for Cardano (ADA) following the successful implementation of the Chang hard fork last weekend.",
       "currencies": [
@@ -200,202 +37,11 @@
       }
     },
     {
-      "title": "Crypto News Today: Sui Deploys Radio Wave Banking, While Mpeppe Cross into Stage 4 Presale Raising $1.8M",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:46:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
-      "title": "Mpeppe Casino Presale Readies For Launch As Helium HNT Investors Take Position In 1100X Rocket",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:41:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Helium vs Mpeppe: HNT Investors Add Mpeppe Casino To Moonshot Bags As Helium Gains 19%",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:35:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Decide AI Gains Major Support From Internet Computer Whales, ICP Investors Add DCD & Mpeppe To Long-Term Holdings",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:27:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "ICP"
-      ]
-    },
-    {
-      "title": "These 3 startups are using blockchain technology and crypto to innovate",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:15:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ]
-    },
-    {
-      "title": "Decide AI (DCD) Price Prediction: Internet Computer and Decide AI Investors Enter New A.I Casino Presale",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:08:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Decide AI, Internet Computer & Mpeppe: Top Analyst Dives In Decide A.I & Mpeppe Ecosystems",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:03:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Whales are buying #QNT ️ Last price: 68.8 (+15.798%) Alerts in last 7 days: 2 24h Volume: 7.25M USDT Score: 8/10 | Risk: 8/10 $QNT #BTC",
-      "link": "NULL",
-      "pubDate": "2024-09-08T18:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Mpeppe vs Decide AI (DCD): Internet Computer Project Decide AI Gains New Casino Rival Priced $0.0021",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Pepe Coin Price Prediction 2024, 2025 & 2026: Mpeppe Investors Add New Pepecoin (PEPE) Rival To Moonbags",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:55:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "MEME FIGHT! Pepecoin (PEPE) Takes On New PEPE Rival Known As The New Gains Machine",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:40:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Top Meme Coins With Huge Potential: DOGE, SHIB, PEPE, BONK",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Polkadot Price Analysis: $DOT Holds Above $4. Can It Stay There?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:36:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Solana (SOL), Bonk (BONK) & Mpeppe: Find Out Why Solana (SOL) Investors Prefer Mpeppe Over Bonk (BONK) Memecoin",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:31:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Solana (SOL) Community Add Mpeppe Casino and SOL Memecoins To Watchlist, Here’s Whaat To Expect",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:27:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Which Crypto Will Hit $1000 First, SOL or TAO? Here’s One Altcoin Set To Outperform The Entire Market",
-      "link": "NULL",
-      "pubDate": "2024-09-08T17:12:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "TAO"
-      ]
-    },
-    {
       "title": "Cardano Founder Reveals Game-Changing Plan for Unmatched Scalability",
       "link": "https://u.today/cardano-founder-reveals-game-changing-plan-for-unmatched-scalability",
       "pubDate": "2024-09-08T16:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano founder blueprint for network scalability revealed",
       "currencies": [
@@ -407,35 +53,11 @@
       }
     },
     {
-      "title": "Litecoin Whales On The Move — Can They Drive LTC Price Back To $75?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T16:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Husky Inu ($HINU) and Pepe ($PEPE) Prepare for Lift Off",
-      "link": "NULL",
-      "pubDate": "2024-09-08T15:33:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
       "title": "Weekly ETF Recap: Bitcoin Sees Longest Negative Streak, Ethereum Demand Missing",
       "link": "https://cryptopotato.com/weekly-etf-recap-bitcoin-sees-longest-negative-streak-ethereum-demand-missing/",
       "pubDate": "2024-09-08T15:21:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The AUM of all BTC ETFs have dumped below $50 billion.",
       "currencies": [
@@ -448,107 +70,11 @@
       }
     },
     {
-      "title": "ONDO Price In Correction Mode: How Long Will The Decline Last?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Bonk Airdrop: Objectives, Eligibility, and Community Impact Explained",
-      "link": "NULL",
-      "pubDate": "2024-09-08T14:31:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "This Week in Crypto Games: 'X Empire' Airdrop Details, 'Catizen' Token Date, and Sui Handheld Specs",
-      "link": "NULL",
-      "pubDate": "2024-09-08T14:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
-      "title": "Dogecoin Price Prediction: Extended Consolidation Or A Break Below/Above?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T14:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Tron Network Set for Major Transformation, According to Justin Sun",
-      "link": "NULL",
-      "pubDate": "2024-09-08T14:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Tomarket Daily Combo September 9, 2024, Get 2500 $TOMATO",
-      "link": "NULL",
-      "pubDate": "2024-09-08T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "HNT",
-        "TON"
-      ]
-    },
-    {
-      "title": "Stacks’ smart contracts reach record high ahead of Nakamoto upgrade",
-      "link": "NULL",
-      "pubDate": "2024-09-08T13:05:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Chainlink’s $22 potential: Why this analyst sees big gains for LINK",
-      "link": "NULL",
-      "pubDate": "2024-09-08T13:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Sees Sudden Surge in Trading Activity, What Happened?",
       "link": "https://u.today/cardano-ada-sees-sudden-surge-in-trading-activity-what-happened",
       "pubDate": "2024-09-08T12:54:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Is Cardano finally ready for bounce?",
       "currencies": [
@@ -563,8 +89,8 @@
       "title": "Cardano hits record trading volume with Snek.Fun launch",
       "link": "https://www.cryptopolitan.com/cardano-hits-record-trading-volume/",
       "pubDate": "2024-09-08T12:48:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Cardano achieved its highest daily trading volume ever, exceeding 36,000 ADA, following the launch of Snek Fun on September 5.",
       "currencies": [
@@ -576,34 +102,11 @@
       }
     },
     {
-      "title": "PixelTap Daily Combo Code for 9 September 2024 by Pixelverse",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Political Meme Coin Economy Shrinks by $420M as US Election Nears",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEOPLE"
-      ]
-    },
-    {
       "title": "ASI Alliance To Deploy FET On Cardano,  How It Impacts Price?",
       "link": "https://www.thecoinrepublic.com/2024/09/08/asi-alliance-to-deploy-fet-on-cardano-how-it-impacts-price/",
       "pubDate": "2024-09-08T12:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "The Artificial Superintelligence (ASI) Alliance project has announced the deployment of its native token, FET, on the Cardano blockchain. This deployment signals a significant step toward creating a decentralized and ethical AI ecosystem. FET on Cardano: A Milestone for Decentralized AI In an article shared with the community on X, ASI Alliance stated that this […]",
       "currencies": [
@@ -617,172 +120,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Injective Price Prediction September 2024: Will Injective Reach $20 Before Mpeppe (MPEPE) Reaches $1?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Injective Chain Update Is Unable To Reduce INJ Selling Pressure, Mpeppe (MPEPE) Positioned For Top 50",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "“Get Rich Or Buy Trying” Mpeppe (MPEPE) Whale Disclaims after Liquidating Fraction Of Injective Coins",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Notcoin (NOT) Price Prediction 2024, 2025 & 2026: NOT vs Mpeppe (MPEPE), Mobile gaming Cryptocurrencies",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Latest News: Down 5.30%, Analyst Anticipates Breaking Support Level, Mpeppe (MPEPE) Remain Triumph",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Crypto Investors Go Into Panic After Notcoin (NOT) Price Drops 10.1% While Mpeppe (MPEPE) Brings Holders Consistency",
-      "link": "NULL",
-      "pubDate": "2024-09-08T12:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Are you loading up on $SUI this weekend?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:55:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
-      "title": "OKX Announces Support for Altcoin Dubbed ‘Dogecoin Sister’ and Two Other Memecoins",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:45:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "DOGE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Sonic blockchain reaches record 720ms finality in testnet phase",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:19:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Is Bitcoin Headed for a Major Drop? September Slump vs. October Rally Analysis",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Whales are buying #APE ️ Last price: 0.722 (+5.102%) Alerts in last 7 days: 14 24h Volume: 24.01M USDT Score: 7/10 | Risk: 4/10 $APE #BTC",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "APE"
-      ]
-    },
-    {
-      "title": "Avalanche Price Prediction: How will AVAX navigate the rest of the decade?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Top Cryptocurrencies for Long-Term Investment",
-      "link": "NULL",
-      "pubDate": "2024-09-08T10:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "AAVE",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Wait...I just discovered that @aave is generating $1m in weekly revenue, while distributing only $327k in $AAVE incentives. 🫡",
-      "link": "NULL",
-      "pubDate": "2024-09-08T10:07:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Rally Brewing? On-Chain Metrics Suggest Investors Optimism",
       "link": "https://www.newsbtc.com/news/cardano/cardano-ada-rally-brewing-on-chain-metrics-suggest-investors-optimism/",
       "pubDate": "2024-09-08T10:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano (ADA) is currently trading just below a critical resistance level at $0.33 after a week of intense fear and uncertainty in the market. However, on-chain data from IntoTheBlock suggests that some investors see this as a potential buying opportunity, anticipating a market recovery in the near future. Related Reading: Why Is Ethereum (ETH) Losing Ground To Bitcoin? Key Report Explains...",
       "currencies": [
@@ -799,72 +141,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Elon Musk denies Tesla will pay xAI for AI technology partnership",
-      "link": "NULL",
-      "pubDate": "2024-09-08T09:52:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XAI",
-        "$ELON"
-      ]
-    },
-    {
-      "title": "Shibarium’s Key Milestone And Why NFT Creators Are Loving It",
-      "link": "NULL",
-      "pubDate": "2024-09-08T09:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SHIB",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Top Cryptocurrencies to Buy Today: Injective (INJ) and Casino Coin Mpeppe (MPEPE)",
-      "link": "NULL",
-      "pubDate": "2024-09-08T09:32:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Why Arbitrum could be poised for a 25% surge in September",
-      "link": "NULL",
-      "pubDate": "2024-09-08T09:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Reclaims $54K Level, SUI Explodes 11% Daily (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2024-09-08T08:55:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "AVAX",
-        "XMR",
-        "SUI"
-      ]
-    },
-    {
       "title": "Arthur Hayes Closes Short Bitcoin Position, Hints at Upcoming BTC Rally",
       "link": "https://cryptopotato.com/arthur-hayes-closes-short-bitcoin-position-hints-at-upcoming-btc-rally/",
       "pubDate": "2024-09-08T08:11:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The BitMEX co-founder said he made a modest profit by shorting BTC.",
       "currencies": [
@@ -877,29 +158,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Whales are buying #FTM ️ Last price: 0.4102 (+6.897%) Alerts in last 7 days: 1 24h Volume: 21.34M USDT Score: 8/10 | Risk: 4/10 $FTM #BTC",
-      "link": "NULL",
-      "pubDate": "2024-09-08T08:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano (ADA) Sees Increased Activity, But Price Remains Flat",
       "link": "https://cryptodnes.bg/en/cardano-ada-sees-increased-activity-but-price-remains-flat/",
       "pubDate": "2024-09-08T06:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "trading",
       "description": "Recently, previously inactive Cardano (ADA) coins were moved, coinciding with a surge in daily active addresses and increased trading activity.",
       "currencies": [
@@ -911,89 +174,11 @@
       }
     },
     {
-      "title": "Pepe’s double whammy: Price slips below key level as network activity slumps",
-      "link": "NULL",
-      "pubDate": "2024-09-08T06:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Solana Flashes Buy Signal As Analysts Predict Rally For The Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-09-08T05:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Prices Today Sep 8: BTC Regains $54K, DOGE Up 6%, QNT Shoots 11%",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:38:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Memecoin Master Discusses Current Cycle",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Amazon Success 2 TapSwap: Why Trending on Google",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "W"
-      ]
-    },
-    {
-      "title": "Solana Bulls Regain Strength, Target $137 Amid Weakening Resistance",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
       "title": "Cardano – Is the ‘biggest threat to Bitcoin’s dominance’ close to its bottom now?",
       "link": "https://ambcrypto.com/cardano-is-the-biggest-threat-to-bitcoins-dominance-close-to-its-bottom-now/",
       "pubDate": "2024-09-08T04:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Whales holdings could dictate where ADA's price moves next on the charts.",
       "currencies": [
@@ -1004,117 +189,6 @@
         "positive": 7,
         "negative": 7
       }
-    },
-    {
-      "title": "Whales are buying #APE ️ Last price: 0.762 (+19.309%) Alerts in last 7 days: 13 24h Volume: 20.96M USDT Score: 7/10 | Risk: 10/10 $APE #BTC",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "APE"
-      ]
-    },
-    {
-      "title": "Whales are buying #ICP ️ Last price: 7.266 (+3.372%) Alerts in last 7 days: 2 24h Volume: 7.94M USDT Score: 9/10 | Risk: 3/10 $ICP #Crypto",
-      "link": "NULL",
-      "pubDate": "2024-09-08T04:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "ICP"
-      ]
-    },
-    {
-      "title": "EOS crypto rolls out significant update, but still fails to crack top-50 – Why?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T03:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Whales are buying #APE ️ Last price: 0.748 (+17.268%) Alerts in last 7 days: 12 24h Volume: 19.63M USDT Score: 7/10 | Risk: 8/10 $APE #BTC",
-      "link": "NULL",
-      "pubDate": "2024-09-08T03:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "APE"
-      ]
-    },
-    {
-      "title": "Whales are buying #BCH ️ Last price: 302.6 (+2.610%) Alerts in last 7 days: 9 24h Volume: 7.72M USDT Score: 8/10 | Risk: 2/10 $BCH #Crypto",
-      "link": "NULL",
-      "pubDate": "2024-09-08T03:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Ether Liquidity Plummets 40% On Exchanges After ETF Debut",
-      "link": "NULL",
-      "pubDate": "2024-09-08T02:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SOL",
-        "APT"
-      ]
-    },
-    {
-      "title": "Hamster Kombat: Could This Meme Game Ignite Crypto’s Next Bull Run?",
-      "link": "NULL",
-      "pubDate": "2024-09-08T02:11:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "FLOKI price prediction – Watch THIS level for a price bounce!",
-      "link": "NULL",
-      "pubDate": "2024-09-08T01:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Helium (HNT) Network Expansion Fuels 13% Gains Despite Faltering Market",
-      "link": "NULL",
-      "pubDate": "2024-09-08T00:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "HNT",
-        "APT"
-      ]
     }
   ]
 }

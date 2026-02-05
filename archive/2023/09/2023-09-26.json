@@ -1,66 +1,15 @@
 {
   "date": "2023-09-26",
-  "fetchedAt": "2026-02-05T07:45:52.134Z",
-  "articleCount": 61,
+  "fetchedAt": "2026-02-05T07:48:35.535Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Resurrecting The Dead: Can This Terra Classic Proposal Send USTC To $1?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T23:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Huobi (HTX) Troubles Mount: Justin Sun Accused Of $2.4B Shortfall In User Funds",
-      "link": "NULL",
-      "pubDate": "2023-09-26T22:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "TRX",
-        "TUSD",
-        "MKR",
-        "HT"
-      ]
-    },
-    {
-      "title": "Bitcoin Ordinals Creator Launches Bitcoin Token Protocol Called RUNE",
-      "link": "NULL",
-      "pubDate": "2023-09-26T21:40:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Updates on Horizen Node Challenges and Node System Changes",
-      "link": "NULL",
-      "pubDate": "2023-09-26T21:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
     {
       "title": "SEC moves to delay decision on ARK 21Shares Bitcoin ETF into next year",
       "link": "https://www.theblock.co/post/253108/sec-moves-to-delay-decision-on-ark-21shares-bitcoin-etf-into-next-year?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-26T20:34:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "The Securities and Exchange Commission moved to delay a decision on the proposed ARK 21Shares Bitcoin ETF into next year.",
       "currencies": [
@@ -73,22 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto Outflows Continue Amid Market Downturn",
-      "link": "NULL",
-      "pubDate": "2023-09-26T20:31:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
       "title": "JUST IN: SEC Delays Review of ARK 21 Shares Spot Bitcoin ETF – Here’s the New Date",
       "link": "https://en.bitcoinsistemi.com/just-in-sec-delays-review-of-ark-21-shares-spot-bitcoin-etf-heres-the-new-date/",
       "pubDate": "2023-09-26T20:31:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "The US Securities and Exchange Commission (SEC) has announced a delay in its decision on the spot listing of the ARK 21Shares Bitcoin ETF application. The SEC has extended the deadline for an additional 60 days to decide whether to approve or disapprove the rule change proposed in the filing. In order to have sufficient […] Continue Reading: JUST IN: SEC Delays Review of ARK 21 Shares...",
       "currencies": [
@@ -100,22 +38,11 @@
       }
     },
     {
-      "title": "Moneygram Introduces Non-Custodial Crypto Wallet for Cross-Border Payments",
-      "link": "NULL",
-      "pubDate": "2023-09-26T20:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Lawmakers urge SEC Chair Gensler to allow spot bitcoin ETFs ‘immediately’",
       "link": "https://www.theblock.co/post/253093/lawmakers-urge-sec-chair-gensler-to-allow-spot-bitcoin-etfs-immediately?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-26T19:44:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "A group of lawmakers pressed SEC Chair Gary Gensler to urgently allow the listing of a spot bitcoin ETF on Tuesday.",
       "currencies": [
@@ -128,25 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Circle launches EURC stablecoin on Stellar network",
-      "link": "NULL",
-      "pubDate": "2023-09-26T19:33:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "AVAX",
-        "XLM"
-      ]
-    },
-    {
       "title": "Circle Makes a Giant Listing Move for Stellar (XLM)",
       "link": "https://en.bitcoinsistemi.com/circle-makes-a-giant-listing-move-for-stellar-xlm/",
       "pubDate": "2023-09-26T19:28:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "stablecoin",
       "description": "Circle, one of the largest stablecoin companies, announced that it has taken an important step regarding the international payment network Stellar. Continue Reading: Circle Makes a Giant Listing Move for Stellar (XLM)",
       "currencies": [
@@ -159,148 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Let's Compare KuCoin Token (KCS) and eCash (XEC) to Shiba Budz (BUDZ)",
-      "link": "NULL",
-      "pubDate": "2023-09-26T18:53:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "KCS",
-        "XEC"
-      ]
-    },
-    {
-      "title": "Circle launches native euro stablecoin on Stellar",
-      "link": "NULL",
-      "pubDate": "2023-09-26T18:48:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Aave V3 to Deploy on Polygon zkEVM as Proposal Passes",
-      "link": "NULL",
-      "pubDate": "2023-09-26T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MATIC",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Huobi Solvency Concerns Resurface as Sun Addresses $8M Hack",
-      "link": "NULL",
-      "pubDate": "2023-09-26T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "ATOM’s bullish rally stalls: Are sellers back?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T17:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Terra Classic Resets LUNC Commission Fee in Expedition Offer",
-      "link": "NULL",
-      "pubDate": "2023-09-26T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "MoneyGram to launch non-custodial digital wallet in 2024",
-      "link": "NULL",
-      "pubDate": "2023-09-26T16:45:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "As Shiba Budz (BUDZ) Set’s To 10X Will There Still Be a Place In The Market For Avalanche and Stellar",
-      "link": "NULL",
-      "pubDate": "2023-09-26T16:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "AVAX",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Whale dumps Ethereum (ETH) for Maker (MKR), is this trending DeFi token next?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:57:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "MoneyGram Announces Non-Custodial Wallet to Facilitate Cross-Border Transactions",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:54:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "MATIC",
-        "LINK",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Circle's Euro-Pegged Stablecoin Is Now Available on Stellar Network",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:45:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XLM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Ethereum Hits $10 Billion in Revenue Faster Than Facebook & Microsoft",
       "link": "https://cryptobriefing.com/ethereum-revenue-surpassing-tech-giants/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-26T15:45:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Ethereum, the leading smart contract platform, has reached over $10 billion in cumulative revenue since its launch in 2015. This growth rate outpaces many of the largest software companies in history according to a new report by crypto brokerage firm Caleb & Brown.It took Ethereum around 7.5 years to reach $10 billion in annual revenue, faster than Meta (formerly Facebook), which reached...",
       "currencies": [
@@ -313,151 +89,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Biggest Movers: BCH 5% Higher, as BNB Nears Key Price Target",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:31:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Ripple Ex-Partner MoneyGram Unveils New Crypto Wallet With Stellar",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Decred Journal — August 2023",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:14:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "UNI",
-        "XMR",
-        "BCH",
-        "MKR",
-        "DCR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Swiss Web3 Tornado",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:07:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash (BCH) Hodlers: 96% Now Committed for the Long Haul – Is $300 Next?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T15:06:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Web3’s Triple Threat: Thriving Relationship Between Entertainment, Gaming, and Finance",
-      "link": "NULL",
-      "pubDate": "2023-09-26T14:29:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Ethereum Rises But Remains Below This Key Level; Maker Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:32:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Ethereum Liquid Staking Protocols Hit New Milestone Following Massive Inflows",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
-      "title": "MoneyGram to launch noncustodial crypto wallets by Q1 2024",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:28:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash price outlook: Symmetrical triangle forms",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:22:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bitcoin price prediction for Halloween 2023",
       "link": "https://finbold.com/bitcoin-price-prediction-for-halloween-2023/",
       "pubDate": "2023-09-26T13:19:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "With the quickly approaching Halloween, an interesting belief has arisen among cryptocurrency traders during this time of the year when … Continued",
       "currencies": [
@@ -470,149 +106,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Circle’s EURC Stablecoin Launches on Stellar Network",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:08:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "CZ To Help HTX Track Stolen Funds, Appoints Binance Security Team to Investigate",
-      "link": "NULL",
-      "pubDate": "2023-09-26T13:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Maker (MKR) Price Continues to Climb Higher Level, Will It Surpass $1500?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:58:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DAI",
-        "LINK",
-        "BCH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto market maker KeyRock secures Swiss regulatory clearance",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:58:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Does SushiSwap’s rising demand mark an upcoming bull run?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUSHI"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: MKR, GLMR, LOOM, and 1INCH in Focus",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:18:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Using Blockchain Explorers and the NEAR Protocol API",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Market Maker KeyRock Secures Swiss Anti-Money Laundering Clearance",
-      "link": "NULL",
-      "pubDate": "2023-09-26T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Major Market Maker DWF Labs Started Accumulating This Altcoin, Its Price Started to Rise!",
-      "link": "NULL",
-      "pubDate": "2023-09-26T10:44:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Decentralize Derivatives Trading with Custom Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-26T10:37:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "BTC’s Trading Volume Plummets to Historic Lows – What Does It Mean for Investors?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T10:28:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Price at Make or Break: Testing Critical $0.11 Support",
-      "link": "NULL",
-      "pubDate": "2023-09-26T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Investing $100/week into SHIB in 2023 would be this worth today",
       "link": "https://finbold.com/investing-100-week-into-shib-in-2023-would-be-this-worth-today/",
       "pubDate": "2023-09-26T09:32:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "With the majority of assets in the cryptocurrency market back in the sideways trading mode, Shiba Inu (SHIB) is no … Continued",
       "currencies": [
@@ -628,8 +126,8 @@
       "title": "Here’s how much MicroStrategy is down on its Bitcoin investment",
       "link": "https://finbold.com/heres-how-much-microstrategy-is-down-on-its-bitcoin-investment/",
       "pubDate": "2023-09-26T09:29:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Three years ago, Michael Saylor, the visionary co-founder of MicroStrategy, unveiled a ‘Bitcoin Initiative’ – a corporate strategy aimed at … Continued",
       "currencies": [
@@ -642,34 +140,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance reopens services in Belgium after regulatory hiatus",
-      "link": "NULL",
-      "pubDate": "2023-09-26T09:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin Defends $26K Following MicroStrategy’s Latest BTC Purchase (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-26T08:45:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
       "title": "R. Kiyosaki on Citibank tokenization: ‘Bye bye Bitcoin and USD?’",
       "link": "https://finbold.com/r-kiyosaki-on-citibank-tokenization-bye-bye-bitcoin-and-usd/",
       "pubDate": "2023-09-26T08:38:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Although he has praised Bitcoin (BTC) as one of the best assets to invest in to protect oneself against the … Continued",
       "currencies": [
@@ -680,127 +155,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "CZ appoints Binance security team to track Huobi HTX stolen funds",
-      "link": "NULL",
-      "pubDate": "2023-09-26T08:16:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "ValeVerse: the Valentino Rossi metaverse goes up on The Sandbox",
-      "link": "NULL",
-      "pubDate": "2023-09-26T08:06:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Community Votes To Reset Validator Commission; LUNC To Rally?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T07:32:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Venture Capitalist Says Bitcoin, Ethereum and Three More Projects Are Core Networks for Crypto Space",
-      "link": "NULL",
-      "pubDate": "2023-09-26T07:04:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Huobi Global Reportedly Loses Nearly $8M in Fresh HTX Hack",
-      "link": "NULL",
-      "pubDate": "2023-09-26T07:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Celsius' Bankruptcy Nears End as Creditors Approve Reorganization Plan",
-      "link": "NULL",
-      "pubDate": "2023-09-26T06:26:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "FIL could offer a buying opportunity if it tests the $3 support. Here’s why…",
-      "link": "NULL",
-      "pubDate": "2023-09-26T05:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "New Blockchains Boom Creates Opportunity and Challenges",
-      "link": "NULL",
-      "pubDate": "2023-09-26T02:07:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 25 Sep: Bitcoin crosses $26K; Altcoins varied",
-      "link": "NULL",
-      "pubDate": "2023-09-26T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LTC",
-        "ALGO",
-        "FRAX",
-        "FXS"
-      ]
-    },
-    {
-      "title": "NEAR Protocol’s Daily Active Addresses Spike, Will Prices Follow?",
-      "link": "NULL",
-      "pubDate": "2023-09-26T00:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "NEAR"
-      ]
     }
   ]
 }

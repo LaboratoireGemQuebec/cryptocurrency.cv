@@ -1,15 +1,15 @@
 {
   "date": "2023-12-09",
-  "fetchedAt": "2026-02-05T07:45:53.379Z",
-  "articleCount": 22,
+  "fetchedAt": "2026-02-05T07:48:35.654Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
     {
       "title": "XRP, Cardano, Shiba Inu: 3 Altcoins Primed for Insane Price Moves as Bitcoin Lunges for $50,000",
       "link": "https://zycrypto.com/xrp-cardano-shiba-inu-3-altcoins-primed-for-insane-price-moves-as-bitcoin-lunges-for-50000/",
       "pubDate": "2023-12-09T20:53:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "According to data from on-chain analytics platforms, 3 major altcoins are seeing a significant spike in market valuation.",
       "currencies": [
@@ -24,29 +24,11 @@
       }
     },
     {
-      "title": "What Is A DAO",
-      "link": "NULL",
-      "pubDate": "2023-12-09T20:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "DAI",
-        "UNI",
-        "ETC",
-        "MKR",
-        "IMX"
-      ]
-    },
-    {
       "title": "Why Solana Will Outperform Ethereum in the Ongoing Bull Market",
       "link": "https://beincrypto.com/solana-outperform-ethereum-vaneck/",
       "pubDate": "2023-12-09T19:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "In the current bull market frenzy focusing on Bitcoin and Ethereum, a quieter yet significant surge is happening with SOL, the primary token of the Solana blockchain. Despite previous connections to disgraced crypto tycoon Sam Bankman-Fried, Solana has managed to thrive, reaching unprecedented levels and attracting a growing number of users to its network. VanEck Highlights Thriving...",
       "currencies": [
@@ -66,8 +48,8 @@
       "title": "Tether announces new wallet-freezing policy to boost security—what you need to know",
       "link": "https://www.cryptopolitan.com/tether-announces-new-wallet-freezing-policy/",
       "pubDate": "2023-12-09T19:04:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "Tether, the company responsible for the largest stablecoin in the cryptocurrency market, has taken a proactive step in its security measures by announcing a new wallet-freezing policy today. This initiative, decided on December 1, 2023, aligns with the U.S. Office of Foreign Asset Controls (OFAC) regulations, particularly focusing on individuals on the Specially Designated Nationals ... Read...",
       "currencies": [
@@ -80,138 +62,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "‪BTC Price To $500,000? — Bloomberg Analysts Cite Bitcoin’s Fresh Super Cycle As 2024 Knocks",
-      "link": "NULL",
-      "pubDate": "2023-12-09T18:33:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bloomberg asserted that the asset’s recent surge above $42,000 has spotlighted the beginning of a cycle that can spearhead this bullish rally.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Analyst Identifies Cardano (ADA) Bullish Cross That Led To 6,000% Increase",
-      "link": "NULL",
-      "pubDate": "2023-12-09T18:05:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "A crypto analyst has identified an indicator that could suggest that Cardano’s (ADA) price is set to enjoy a parabolic move. This comes just as the altcoin led others as the top gainer in the last 24 hours. Related Reading: Bitcoin ‘Targeting $50,000’ In The Next Few Days, These Analysts Say ADA On The Way […]",
-      "currencies": [
-        "BTC",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 2
-      }
-    },
-    {
-      "title": "Bitcoin ETF News Sends BTC To Yearly Highs; Tezos (XTZ) And Pullix (PLX) Prepare For 1,800% Gains",
-      "link": "NULL",
-      "pubDate": "2023-12-09T17:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Swiss City Accepts Bitcoin for Taxes, What City Is Next? Helium and Everlodge Continue Bullish Rise",
-      "link": "NULL",
-      "pubDate": "2023-12-09T16:52:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Terra Classic Up Over 200% Over The Month, Pullix Predicted to 10x And KAVA Poised For Rally",
-      "link": "NULL",
-      "pubDate": "2023-12-09T16:37:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAVA"
-      ]
-    },
-    {
-      "title": "Analyst Places XRP As The Top Coin For The 2024-2025 Bull Run",
-      "link": "NULL",
-      "pubDate": "2023-12-09T16:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "BTC Price Targets $48,000 as Fidelity and SEC Discuss Bitcoin ETF",
-      "link": "NULL",
-      "pubDate": "2023-12-09T14:40:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Polygon to Benefit From Immutable X’s Predicted 2024 Web3 Games Boom",
-      "link": "NULL",
-      "pubDate": "2023-12-09T13:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "IMX",
-        "OP"
-      ]
-    },
-    {
-      "title": "Cardano Rises $56% To Dominate Weekend’s Top 10 Roster – Details",
-      "link": "NULL",
-      "pubDate": "2023-12-09T13:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "FLOW",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
       "title": "Solana (SOL) Price to Go Higher: Analyst Reveals One Simple Reason",
       "link": "https://u.today/solana-sol-price-to-go-higher-analyst-reveals-one-simple-reason",
       "pubDate": "2023-12-09T12:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Seasoned trader Jacob Canfield indicated potential catalyst of next Solana (SOL) rally",
       "currencies": [
@@ -224,24 +79,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Solana's Marginfi Witnesses Explosive Growth, Adds $100M to Supplied Assets in just two days.",
-      "link": "NULL",
-      "pubDate": "2023-12-09T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "JTO",
-        "DEFI"
-      ]
-    },
-    {
       "title": "Polkadot (DOT) Jumps 20% as It Eyes Major Milestone",
       "link": "https://u.today/polkadot-dot-jumps-20-as-it-eyes-major-milestone",
       "pubDate": "2023-12-09T11:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Polkadot (DOT) bearish stalemate is over as bulls enter ambitious run",
       "currencies": [
@@ -257,8 +99,8 @@
       "title": "Cardano's ADA Leads Cryptocurrency Surge, Soaring 54% in a Week",
       "link": "https://www.coingabbar.com/en/crypto-currency-news/cardanos-ada-boosts-crypto-market-surges-54-per-cent",
       "pubDate": "2023-12-09T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coingabbar",
+      "sourceKey": "coingabbar",
       "category": "trading",
       "description": "ADA Surges with Innovation and Sustainability in Cryptocurrency Market The cryptocurrency industry is booming with impressive growth and innovations, and one standout example is Cardano's native token, ADA. It has also played an important role in pushing the expansion of the crypto market. Cardano, a blockchain platform known for its unique proof-of-stake mechanism and a strong focus on...",
       "currencies": [
@@ -271,64 +113,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Quant Price Recovers From Its Decline By Challenging The Level Of $116",
-      "link": "NULL",
-      "pubDate": "2023-12-09T10:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Top 5 Crypto-friendly cities to live and work — and their taxes (2023)",
-      "link": "NULL",
-      "pubDate": "2023-12-09T08:40:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "NFT Volumes Break 7-Month Downtrend, Surging to $915M",
-      "link": "NULL",
-      "pubDate": "2023-12-09T08:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "GrantShares update: Rust proposal moves forward, new dApps get a leg up",
-      "link": "NULL",
-      "pubDate": "2023-12-09T00:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "SEC’s “Crypto Asset Securities” Alert Boosts Spot Bitcoin ETF Prospects – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-12-09T00:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW",
-        "OP"
-      ]
     }
   ]
 }

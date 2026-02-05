@@ -1,115 +1,15 @@
 {
   "date": "2022-05-14",
-  "fetchedAt": "2026-02-05T07:45:51.413Z",
-  "articleCount": 172,
+  "fetchedAt": "2026-02-05T07:48:35.262Z",
+  "articleCount": 38,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @Cardon_Saguaro: @NFTDaily @PlayCrabada @radixdlt @BabyCatcoinBSC @VitaInuCoin @Chromia @VulcanForged @DigiByteCoin @tezos @PhantasmaCha…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T23:13:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "RT @riddle245: Wait so there is a proposal on Frax to move Frax to being 100% collateralized by USDC presumably which is at 88% rn. Am I du…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T23:11:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "FRAX"
-      ]
-    },
-    {
-      "title": "Bitcoin Whale Breaks 8 Year Long Silence With $30 Million Worth Of BTC Transfer",
-      "link": "NULL",
-      "pubDate": "2022-05-14T23:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ]
-    },
-    {
-      "title": "RT @Free_Patriot76: The Comedy Event Sponsored by @Shib_nobi just made @CBSNews. The entire clip is about the comedy event but you can here…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:56:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CVC"
-      ]
-    },
-    {
-      "title": "Digits DAO has committed $100,000 to the $AMP sale. We're excited to see what this team has in store beyond their i…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:37:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMP"
-      ]
-    },
-    {
-      "title": "RT @XENSAMS: Tune in tonight for another amazing segment on #Amomentofxen at 9pm on @710WOR @iHeartRadio @network_tempus @ZEBASOLAR @Go…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:30:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "What is the meaning of Kadena?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "roadmap for @Jigstack &amp; @Lemonade_Defi includes an integration with @Hedera",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:11:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "RT @JackLongarzo: While not the hot topic of this week, the post mortem on the recent Fuse exploit is live. It analyzes the nature of the v…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RGT"
-      ]
-    },
     {
       "title": "Top Crypto Analyst Predicts Massive Price Dive for Cardano, Says One Solana-Based Altcoin Will ‘Go Down to the Basement’",
       "link": "https://dailyhodl.com/2022/05/14/top-crypto-analyst-predicts-massive-price-dive-for-cardano-says-one-solana-based-altcoin-will-go-down-to-the-basement/",
       "pubDate": "2022-05-14T22:05:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "A widely followed crypto trader is predicting further corrective moves smart contract platform Cardano (ADA) and one of this year’s trending altcoins. Pseudonymous crypto analyst Capo tells his 307,500 Twitter followers ADA is poised for another leg down before it completes its five-wave downtrend, based on the Elliott Wave theory. “ADA Fifth wave missing. Main […]",
       "currencies": [
@@ -123,44 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Wen Ledger???",
-      "link": "NULL",
-      "pubDate": "2022-05-14T22:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "RT @elonmusk: The bots are angry at being counted 🤣",
-      "link": "NULL",
-      "pubDate": "2022-05-14T21:58:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FXS"
-      ]
-    },
-    {
-      "title": "What do you think will happen when #NFTs are a part of major social media platforms?🤔",
-      "link": "NULL",
-      "pubDate": "2022-05-14T21:32:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MDX"
-      ]
-    },
-    {
       "title": "VeChain Treasury Held $1.2B in Crypto, Q1 Report States",
       "link": "https://cryptopotato.com/vechain-treasury-held-1-2b-in-crypto-q1-report-states/",
       "pubDate": "2022-05-14T21:17:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "VeChain Foundation said the project had accelerated its European expansion in Q1 as being ready to hire 1,000 technical staff in Ireland.",
       "currencies": [
@@ -173,23 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are currently working to resume Venus Protocol operations. Please be aware that any changes reflected in the Das…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T21:10:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XVS",
-        "VAI"
-      ]
-    },
-    {
       "title": "Here’s why LUNA ‘is pumping’ days after total collapse",
       "link": "https://finbold.com/heres-why-luna-is-pumping-days-after-total-collapse/",
       "pubDate": "2022-05-14T21:05:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "After undergoing a massive crash that shocked the cryptocurrency community, the Terra (LUNA) token is witnessing a pumping activity as... Continue reading",
       "currencies": [
@@ -202,68 +57,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1/2 Floor price can only be changed upwards. Even if USDT @Tether_to , Ethereum @ethereum, BNB @binance would copy…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:43:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ZEON"
-      ]
-    },
-    {
-      "title": "This week’s Casper Standup covered refinements of the interpretation of QM into rho-calculus. We also reviewed mete…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:36:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REV"
-      ]
-    },
-    {
-      "title": "May 2's Casper Standup covered an interpretation of symmetric monoidal categories in the rho-calculus.…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:36:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REV"
-      ]
-    },
-    {
-      "title": "1/1 The collapse of Terra Luna (and UST) has alarmed the crypto industry, and that’s why Zeon Foundation officially…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:35:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC",
-        "ZEON"
-      ]
-    },
-    {
-      "title": "Ottersync now on Trust Wallet for KAVA Staking",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:31:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAVA"
-      ]
-    },
-    {
       "title": "MANA recovers by 61% in 24 hours thanks to its relentless…",
       "link": "https://ambcrypto.com/mana-recovers-by-61-in-24-hours-thanks-to-its-relentless/",
       "pubDate": "2022-05-14T20:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Decentraland, the largest Metaverse in the crypto space, has been a pioneer with its wearables, and further demand for similar features has led to the platform noting higher traffic on both the DeFi as well as investor front. Decentraland jumps back up While some cryptocurrencies continue to take damage from the crash of 9 May, […]",
       "currencies": [
         "MANA"
@@ -275,66 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Elastos_Houston: Excellent work by the Cyber Republic Council in supporting this new market maker proposal! @Cyber__Republic @ElastosIn…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:29:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "1/ The Injective blockchain has seen a huge spike in user activity the past few days with dApps reaching nearly $7…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:23:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "RT @cz_binance: @ARafayGadit Do they really think they can fork BTC at the snapshot on Nov 18, 2021, and the new fork will have the new BTC…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T20:11:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TT"
-      ]
-    },
-    {
-      "title": "Kadena Gained 22.87% today and is leading the Charts!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T19:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "Join the future of trading. dYdX is the next generation of trading platforms, built on the blockchain.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T19:18:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
       "title": "Dan Gambardello Calls Cardano ($ADA) ‘Most Sound, Secure, & Scalable Blockchain’",
       "link": "https://www.cryptoglobe.com/latest/2022/05/dan-gambardello-calls-cardano-ada-most-sound-secure-scalable-blockchain/",
       "pubDate": "2022-05-14T19:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "regulation",
       "description": "On Thursday (May 12), Dan Gambardello, Founder of Crypto Capital Venture, said that Cardano is “silently positioning itself as the most sound, secure, & scalable blockchain.” On May 12, Gambadello, who has long been a huge fan of Cardano and is a respected member of the Cardano community, told his over 225K Twitter followers: Gambadello […]",
       "currencies": [
@@ -347,45 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @rsalame7926: Huge difference between what happened to UST and what happened to USDT (disingenuous to compare them) however the dialogue…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T19:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "FTT"
-      ]
-    },
-    {
-      "title": "RT @Stepnofficial: The @SBF_FTX Sneaker had been sold in auction for 2,100 SOL, all proceeds will be donated to charity",
-      "link": "NULL",
-      "pubDate": "2022-05-14T19:01:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Our friend @MrBrownNFT is running a nice challenge!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:57:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AURORA"
-      ]
-    },
-    {
       "title": "Citadel Securities, BlackRock Push Back Against Rumors of Involvement in Terra (LUNA) Collapse: Report",
       "link": "https://dailyhodl.com/2022/05/14/citadel-securities-blackrock-push-back-against-rumors-of-involvement-in-terra-luna-collapse-report/",
       "pubDate": "2022-05-14T18:45:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Prominent blue-chip institutions are debunking rumors circulating on social media that they had a hand in the recent collapse of Ethereum challenger Terra (LUNA) after its algorithmic stablecoin depegged from the dollar. According to a new report by Bloomberg, massive institutional investors such as BlackRock and Citadel Securities are pushing back against the notion that […]",
       "currencies": [
@@ -398,146 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Filecoin is collaborating with @gitcoin for its L2 Rollathon, a virtual hackathon that recognizes Ethereum’s potent…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:39:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Apecoin’s rejection from $9.5 level says this for its short-term technical view",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "APE"
-      ]
-    },
-    {
-      "title": "RT @TheTNetwork: 🟪 Have you voted?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:28:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KEEP"
-      ]
-    },
-    {
-      "title": "RT @DeFiFUDDestroy: @BarrySilbert $Zen @horizenglobal is capped at 21M $Zen with the largest node network in crypto approaching 50,000 node…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Terra Luna @terra_money stablecoin collapse: there is no use of UST in Zeon Network’s payment ecosystem, so there…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:24:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USTC",
-        "ZEON"
-      ]
-    },
-    {
-      "title": "RT @Hammer86R: Talking #web3 and #NFT in @orbs_network @JapanOrbs meetup in #tokyo",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:10:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
-      "title": "Blog: Pro trader tips on what to do during a market crash",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "Not seeing DOT rewards staking LDOT",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "ACA"
-      ]
-    },
-    {
-      "title": "We are excited to announce the grand prize winners of our @creaticles #NFT competition",
-      "link": "NULL",
-      "pubDate": "2022-05-14T18:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "USDB"
-      ]
-    },
-    {
-      "title": "🪀Add extra yield and usability on top of liquid staking $KSM with $taiKSM",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:54:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "KSM"
-      ]
-    },
-    {
-      "title": "The #vergefam and @voicelifetech are totally stoked to hear about this #win Congratulations @nicolorocca !!!…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:36:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XVG"
-      ]
-    },
-    {
-      "title": "Will you be joining web3 enthusiasts and members of the Filecoin community at the FIL-Singapore Summit on Aug 16th…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
       "title": "Ripple files a response to SEC’s ‘Client Privilege’ claims ─ what’s different this time",
       "link": "https://ambcrypto.com/ripple-files-a-response-to-secs-client-privilege-claims-%e2%94%80-whats-different-this-time/",
       "pubDate": "2022-05-14T17:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "The ever-lasting lawsuit between the fintech firm, Ripple and U.S. regulatory watchdog continues to take different turns. One of the most elaborate tussles has been regarding William Hinman’s 2018 speech. A talk about crypto securities was delivered by the SEC’s former Director of the Division of Corporation Finance. You ask whether this was an expression […]",
       "currencies": [
@@ -550,80 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @EnhanceToken: @EnhanceToken has halted trading on the #SafemoonSwap until the new contract launches. Stay tuned for updates on the rela…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:23:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFEMOON"
-      ]
-    },
-    {
-      "title": "Meeting &amp; greeting with enthusiasts, builders and some true visionaries at the Avalanche House in Berlin for the…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "JOE"
-      ]
-    },
-    {
-      "title": "USD Coin (USDC) on Tron (TRX) Smashes Through Major Milestone Amid UST Drama",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "RT @WCEFteam: Christian Hasker @chasker, CMO at @hedera, is going to speak at #WCEF2022. #WCEF2022 will cover #DeFi, #DAO, #NFT, #Meta, #I…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:12:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "RT @robert_lauko: @VitalikButerin @sassal0x @technocrypto It's a pity that \"algostable\" has become a poisoned term for undercollateralized…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:08:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LUSD",
-        "LQTY"
-      ]
-    },
-    {
-      "title": "Trending like a mfer.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T17:07:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
       "title": "Terra Skyrockets 1000% On Bullish Sentiments As Traders Envision LUNA As “The Next Shiba Inu”",
       "link": "https://zycrypto.com/terra-skyrockets-1000-on-bullish-sentiments-as-traders-envision-luna-as-the-next-shiba-inu/",
       "pubDate": "2022-05-14T17:02:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "After losing over 99% of its total value on Thursday, LUNA’s price surged over 1000% to $0.0005395 on Saturday, igniting bullish sentiments...",
       "currencies": [
@@ -639,8 +145,8 @@
       "title": "Will the Ethereum 2.0 update reduce high gas fees?",
       "link": "https://cointelegraph.com/explained/will-the-ethereum-20-update-reduce-high-gas-fees",
       "pubDate": "2022-05-14T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Ethereum’s gas fees have long been an issue among its users. Will Ethereum 2.0 finally eliminate this problem?",
       "currencies": [
@@ -652,22 +158,11 @@
       }
     },
     {
-      "title": "RT @omg_its_pepe: Hey #bobarians! While it was sadly a dark time for many, the @bobanetwork news did not let up this week. Here's what's go…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T16:55:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BOBA"
-      ]
-    },
-    {
       "title": "The Luna Foundation Guard Allegedly Sent 52k Bitcoin to Gemini and 28k to Binance to Try Stabilize UST’s Peg",
       "link": "https://en.ethereumworldnews.com/luna-foundation-guard-allegedly-sent-52k-bitcoin-to-gemini-28k-to-binance-to-stabilize-usts-peg/",
       "pubDate": "2022-05-14T16:25:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "bitcoin",
       "description": "Summary: The crypto community has begun investigating the flow of the Luna Foundation Guard’s Bitcoin reserves during USTs depegging event According to one analysis, 52k Bitcoin was sent to Gemini and another 28k to Binance, but it is not clear if the assets were sold Another analysis by CryptoQuant states that 37k BTC moved from the LFG wallet to Gemini, but there was no significant increment in...",
       "currencies": [
@@ -684,8 +179,8 @@
       "title": "Shiba Inu Holders Keep Adding as Community Hits New Milestones",
       "link": "https://u.today/shiba-inu-holders-keep-adding-as-community-hits-new-milestones",
       "pubDate": "2022-05-14T16:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Since the start of May, Shiba Inu has gained thousands of new holders",
       "currencies": [
@@ -698,168 +193,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "About to kick off, @famemmatv 14! Along with the gala, Metahero is right on-site scanning the fighters, celebrities…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T16:16:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
-    {
-      "title": "#Ethereum DeFi protocols such as Aave and Compound are some of the most prominent DeFi lending platforms. But one p…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T16:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Here is our bulletin for #cvc #coinviewcap. We want to thank the mods for doing a great job and the CVC community.…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T16:04:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CVC"
-      ]
-    },
-    {
-      "title": "RT @RenderToken: PSA: Fast Company‘s list of the World’s Most Innovative Companies for being the industry’s first blockchain GPU marketplac…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:56:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "RT @SwapSpaceCo: #DAO is entering the mainstream. Some of the greatest examples of a DAO are @MakerDAO, @AmpleforthOrg, @compoundfinance …",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:50:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AMPL"
-      ]
-    },
-    {
-      "title": "Hummus is coming for that top spot!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:39:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUM"
-      ]
-    },
-    {
-      "title": "RT @DGBAT_Official: In a world of rugpulls, paid influencers and centralized scams exists something else. A #technology created and improve…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:32:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "Proposed Stabilisation of USDX through burn",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAVA"
-      ]
-    },
-    {
-      "title": "RT @bradherenow: Gm, it’s a great day to be resilient, determined, and optimistic. @VenusProtocol devs working around the clock to resume…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XVS",
-        "VAI"
-      ]
-    },
-    {
-      "title": "$DERO is revolution of Freedom, Privacy &amp; Decentralization.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:20:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DERO"
-      ]
-    },
-    {
-      "title": "Borrows. Real APR paid in original principal",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:18:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNGO"
-      ]
-    },
-    {
-      "title": "THE YIELD MAXIMIZOOOR",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "GHST",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "We're going to keep talking about it. #xyo",
-      "link": "NULL",
-      "pubDate": "2022-05-14T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @Polkadot: Existential Deposits ensure Polkadot &amp; @kusamanetwork maintain peak performance and reduce fees by eliminating unnecessary bl…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:53:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "KSM"
-      ]
-    },
-    {
       "title": "Cardano Founder: Vasil Hard Fork on Track, Testnet Set to Launch by End of May",
       "link": "https://u.today/cardano-founder-vasil-hard-fork-on-track-testnet-set-to-launch-by-end-of-may",
       "pubDate": "2022-05-14T14:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Upcoming Vasil update will introduce four different CIPs",
       "currencies": [
@@ -875,8 +213,8 @@
       "title": "How Terra's UST and LUNA Imploded",
       "link": "https://decrypt.co/100402/how-terra-ust-luna-imploded-crypto-crash",
       "pubDate": "2022-05-14T14:37:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Even as the entire crypto market tanked, the biggest story was the dual implosion of Terra's UST and LUNA. Here's what happened.",
       "currencies": [
@@ -892,8 +230,8 @@
       "title": "Binance CEO Does Not Think Forking Terra is the Solution to LUNA and UST’s Woes",
       "link": "https://en.ethereumworldnews.com/binance-ceo-does-not-think-forking-terra-is-the-solution-to-luna-and-usts-woes/",
       "pubDate": "2022-05-14T14:37:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "altcoin",
       "description": "Summary: CZ has expressed concerns over a proposal to fork the Terra chain to create new LUNA and UST digital assets Binance CEO states that the new fork will not have value, and one cannot void all transactions after an old snapshot, particularly on crypto exchanges He also questioned where all the Bitcoin reserves owned by the Luna Foundation Guard went Do Kwon had earlier mentioned that the...",
       "currencies": [
@@ -908,44 +246,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @michelle_dgb: Nice to see #DigiByte logo featured in this video next to #Bitcoin  today from the @Reuters @twitter account which has ov…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:35:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "GameFi Tokenomics 101: Dual-token blockchain games",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:35:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Why pow is better than pos?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:25:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
       "title": "Bitcoin Whales Are Filling Their Bags Despite Warnings BTC Price Could Nosedive To $20,000",
       "link": "https://zycrypto.com/bitcoin-whales-are-filling-their-bags-despite-warnings-btc-price-could-nosedive-to-20000/",
       "pubDate": "2022-05-14T14:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "In the wake of this “speculation derived fear,” Bitcoin has ceded and currently trading at $28,991 after briefly plunging as low as $26,700 Thursday morning.",
       "currencies": [
@@ -958,22 +263,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Interest paying #FlexUSD by @CoinFLEXdotcom is on its way to being the default stable coin for the whole @SmartBCH…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:17:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BCH"
-      ]
-    },
-    {
       "title": "XRP Lawsuit: Parties File for Extension of Deadline on Metz Report as Ripple Presents Case on Emails",
       "link": "https://u.today/xrp-lawsuit-parties-file-for-extension-of-deadline-on-metz-report-as-ripple-presents-case-on-emails",
       "pubDate": "2022-05-14T14:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Ripple has filed a six-page response to the SEC's assertions",
       "currencies": [
@@ -986,99 +280,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What's the kadena ecosystem grant wallet address?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T14:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "RT @LongMeadow_: Digibyte is the answer to questions that many don't know to ask yet. I believe alot are beginning to now see issues that n…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "RT @DanielZirkel: About 2.5 days left to vote on the current DFIPs and CFPs on DefiChain. Every masternode owner use your right to vote, pl…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:50:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "RT @DanielZirkel: On Wednesday we hit 60 million $DFI burned via Vaults &amp; Loans on DefiChain. That's 5% of the max supply.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:50:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "RT @defichainac: Sponsoring this year’s Mainnet in New York!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:50:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "RT @BranaRakic: I don't speak about this often enough, but knowledge graphs are the perfect AI substrate. Proven by @netflix @amazon @Googl…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:49:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRAC"
-      ]
-    },
-    {
-      "title": "Three days, two talks, and one workshop later… We had an unforgettable time connecting with everyone IRL at…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:34:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLMR"
-      ]
-    },
-    {
-      "title": "RT @WartuII: My $veBAL on @BalancerLabs is netting me in fee and emission share alone around 2% weekly right now. Combine that with increas…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:25:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAL"
-      ]
-    },
-    {
       "title": "PancakeSwap’s New Proposal Aims to Cap CAKE Supply at 750 Million",
       "link": "https://cryptopotato.com/pancakeswaps-new-proposal-aims-to-cap-cake-supply-at-750-million/",
       "pubDate": "2022-05-14T13:25:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "With the current circulating supply of CAKE nearing 300 million, the new proposal seeks to limit the max supply to 750 million.",
       "currencies": [
@@ -1091,44 +297,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Buy $Alphacoin, Hold $Alphacoin, enjoy Passive Income, enjoy $Alpha City as your home away from home. This is some…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:19:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Stratis is a L1 blockchain platform with Smart contracts, Sidechains, Gaming SDKs and much more, all developed from…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:12:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
-      "title": "Stratis is a L1 blockchain platform with Smart contracts, Sidechains, Gaming SDKs and much more all developed from…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:12:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
       "title": "Bitcoin No Longer Rat Poison? Warren Buffett-Backed Nubank Unveils Crypto Trading",
       "link": "https://bitcoinist.com/bitcoin-no-longer-rat-poison/",
       "pubDate": "2022-05-14T13:10:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "It appears that the rising popularity of Bitcoin and other cryptocurrencies — despite the continuous carnage on the broader crypto market — has caused one of the greatest investors of all time, Warren Buffett, to change his mind. The 91-year-old investor was asked on May 2 at the annual Berkshire Hathaway shareholders meeting if he […]",
       "currencies": [
@@ -1141,56 +314,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A proposal has been put forward by the @GnosisDAO to deploy Uniswap v3 onto @GnosisChain. UNI and GNO holders are a…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "GNO"
-      ]
-    },
-    {
-      "title": "RT @CBoisss:  This was live for tens of thousands of people and I heard the Verge car just won the race as well! Great coverage for @verge…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:04:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XVG"
-      ]
-    },
-    {
-      "title": "Watch @deggen's explanation of how the Node/Miner interface of the LiteClient Toolbox makes the process easier and…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T13:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "John Nahas (@SJohn_Nahas) Vice President of Business Development at @avalabsofficial talks about conundrum of scal…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LCX"
-      ]
-    },
-    {
       "title": "Singaporean LUNA and UST Investor Reportedly Files a Police Report Against Terra’s Do Kwon",
       "link": "https://en.ethereumworldnews.com/singaporean-luna-ust-investor-reportedly-files-police-report-against-terras-do-kwon/",
       "pubDate": "2022-05-14T12:12:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: A user on Reddit claims that he has filed a police report on behalf of 1,000 Singaporeans against Terra’s Do Kwon and the LUNA project The police report states that the concerned citizen lost money in ‘the Luna Cryptocurrency scam’ Earlier today, Do Kwon had clarified via Twitter that he did not sell any LUNA or UST during the crisis He also said that he was heartbroken that his...",
       "currencies": [
@@ -1203,40 +331,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Cephii1: This is a spaces that was scheduled with developers of Kadena before the recent Terra disaster. They were supportive of Terra/…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T12:08:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin Sentiment Wavers As Crypto Fear and Greed Index in ‘Extreme Fear’ Territory",
-      "link": "NULL",
-      "pubDate": "2022-05-14T12:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Will Clemente: Bitcoin (BTC) Is Very Close to a Bottom – 6 Arguments",
       "link": "https://beincrypto.com/will-clemente-bitcoin-btc-is-very-close-to-a-bottom-6-arguments/",
       "pubDate": "2022-05-14T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "In today's article, BeInCrypto looks at 6 selected on-chain indicators whose charts suggest that Bitcoin is very close to reaching a bottom. These were highlighted in a tweet yesterday by Will Clemente - a well-known on-chain analyst - who suggests that \"it's a great time to DCA heavily.\"",
       "currencies": [
@@ -1248,22 +347,11 @@
       }
     },
     {
-      "title": "Here’s what USDC is doing right to maintain certainty amidst Terra’s meltdown",
-      "link": "NULL",
-      "pubDate": "2022-05-14T11:45:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
       "title": "‘Revival Plan’ Boosts ‘Essentially Zero’ Luna Price By 1,000% Amid Bitcoin, Ethereum And Crypto Crash",
       "link": "https://www.forbes.com/sites/billybambrough/2022/05/14/revival-plan-boosts-essentially-zero-luna-price-by-1000-amid-bitcoin-ethereum-and-crypto-crash/",
       "pubDate": "2022-05-14T11:25:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Luna﻿, the collapsed cryptocurrency that was designed to support the terraUSD (UST﻿﻿) stablecoin, has rocketed higher over the last 24 hours despite falling to near zero this week...",
       "currencies": [
@@ -1277,66 +365,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What's everyone's average and what are you realistically hoping Celr will hit in the future?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T11:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CELR"
-      ]
-    },
-    {
-      "title": "You deserve nothing less IMO.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T11:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WXT"
-      ]
-    },
-    {
-      "title": "Cryptopay supports more than 35 digital assets including Bitcoin (BTC), Ethereum (ETH), Dai (DAI), Tether USD (USDT…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T10:58:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "It's been a crazy week for crypto. There's so much going on and we break it down for you before you head into next…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T10:57:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "Our 5th AMA moderated by @coreycosta123. Featuring @mobilejae and Wonbeom Kim, answering our $AERGO community ques…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T10:56:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
       "title": "Jack Dorsey Names Reason for Next Bitcoin Price Surge",
       "link": "https://u.today/jack-dorsey-names-reason-for-next-bitcoin-price-surge",
       "pubDate": "2022-05-14T10:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Former Twitter CEO says he does not watch the current Bitcoin price fall, here’s why",
       "currencies": [
@@ -1352,8 +385,8 @@
       "title": "Crypto.com unblocks users, reverses glitched LUNA trades that made 30-40x",
       "link": "https://cointelegraph.com/news/crypto-com-unblocks-users-reverses-glitched-luna-trades-that-made-30-40x",
       "pubDate": "2022-05-14T10:49:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "On May 13, Crypto.com abruptly barred users from trading after an internal tool detected the system quoting incorrect prices for LUNA.",
       "currencies": [
@@ -1369,8 +402,8 @@
       "title": "Bitcoin stays under $30K as LUNA gains 600% during ‘insane volatility’",
       "link": "https://cointelegraph.com/news/bitcoin-stays-under-30k-as-luna-gains-600-during-insane-volatility",
       "pubDate": "2022-05-14T10:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Traders' risk appetite seems untainted as speculation around LUNA runs wild once again.",
       "currencies": [
@@ -1386,8 +419,8 @@
       "title": "Terra’s Do Kwon: I Sold No Luna Nor UST During the Crisis",
       "link": "https://en.ethereumworldnews.com/terras-do-kwon-i-sold-no-luna-nor-ust-during-the-crisis/",
       "pubDate": "2022-05-14T10:25:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "altcoin",
       "description": "Summary: Terra’s Do Kwon has stated that he did not sell any LUNA nor UST during the depegging crisis and subsequent inflation of LUNA Do Kwon also explained that he was heartbroken ‘about the pain [his] invention has brought’ He also explained that the team at Terra is working on documenting the Luna Foundation Guard Bitcoin reserves during the events of the last few days Mr. Kwon has urged the...",
       "currencies": [
@@ -1403,9 +436,9 @@
       "title": "Terra (LUNA) Founder Breaks Silence, Proposes New Revival Plan for Ecosystem",
       "link": "https://beincrypto.com/terra-luna-founder-breaks-silence-proposes-new-revival-plan-for-ecosystem/",
       "pubDate": "2022-05-14T10:25:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Terra co-founder and CEO of Terra Labs, Do Kwon, has finally spoken on the crash of its network. He has submitted a proposal on how the embattled Terra ecosystem can be salvaged from its current ruins.",
       "currencies": [
         "NULL"
@@ -1420,8 +453,8 @@
       "title": "Central African bank regulator reminds member states of crypto ban, Reuters reports",
       "link": "https://www.theblockcrypto.com/linked/146953/central-african-bank-regulator-reminds-member-states-of-crypto-ban-reuters-reports?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-05-14T10:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "regulation",
       "description": "The reminder came after a chaotic week for crypto when the linked meltdown of the algorithmic stablecoin UST and Terra's native Luna asset resulted in big losses for many.",
       "currencies": [
@@ -1433,22 +466,11 @@
       }
     },
     {
-      "title": "In case you missed it, Snapchat have been trialing their AR shopping feature and it’s had some pretty great reviews…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T10:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
       "title": "Biggest Bitcoin ETF in Canada Absorbs 6,900 BTC – Largest Inflow So Far",
       "link": "https://u.today/biggest-bitcoin-etf-in-canada-absorbs-6900-btc-largest-inflow-so-far",
       "pubDate": "2022-05-14T10:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Someone bought nearly 7,000 BTC on the dip and put into the largest Canadian Bitcoin ETF",
       "currencies": [
@@ -1461,47 +483,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "️ MARK YOUR CALENDAR! @StakingRewards will be hosting @derekyoo on their next episode of #StakingMondays on YouTub…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T10:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLMR"
-      ]
-    },
-    {
-      "title": "Starling Lab has been using blockchain to restore trust online, preserve the USC Shoah Foundation's Holocaust archi…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T09:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Update review May.14.2022 ---->>>> hi Dollar @hi_com_official $0.096  Cronos @cryptocom $0.18 ️ Cardano @Cardano $0.53 🤘 Polygon @0xPolygon $0.67 🤟",
-      "link": "NULL",
-      "pubDate": "2022-05-14T09:44:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "MATIC",
-        "CRO",
-        "HI"
-      ]
-    },
-    {
       "title": "Circle’s USDC Stablecoin Reserves are 77.1% in US Treasuries and 22.9% in Cash",
       "link": "https://en.ethereumworldnews.com/circles-usdc-stablecoin-reserves-are-77-1-in-us-treasuries-22-9-in-cash/",
       "pubDate": "2022-05-14T09:43:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "stablecoin",
       "description": "Summary: USDC’s reserves are 77.1% ($39 billion) in US Treasuries and 22.9% in Cash ($11.6 billion) The reserves are worth $50.6 billion and match the amount of USDC in circulation Circle, the parent company of USDC, is committed to transparency and trust concerning the stablecoin The update on USDC’s reserves comes at a time when other stablecoins have depegged from the $1 mark, and users are...",
       "currencies": [
@@ -1516,33 +502,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Curent crypto situation in world.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T09:21:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "RT @OfficialPearDAO: Learn how to participate in How To Web3 Learn &amp; Earn Campaign by PearDAO, @CoinMarketCap @BNBCHAIN and @ProjectGalaxyH…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T09:18:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
       "title": "Two Ethereum-Based Altcoins Erupt in Defiant Rallies, Outrunning Bitcoin and Crypto Markets in Week of Wild Volatility",
       "link": "https://dailyhodl.com/2022/05/14/two-ethereum-based-altcoins-erupt-in-defiant-rallies-outrunning-bitcoin-and-crypto-markets-in-week-of-wild-volatility/",
       "pubDate": "2022-05-14T09:15:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Two Ethereum (ETH)-based altcoins are bucking the trend and making gains this week despite the widespread crypto meltdown. The native token for blockchain technology company Chain (XCN) is surging by more than 30% this week from a low of $0.071 to a high of $0.091. The 51st-ranked crypto asset by market cap has corrected since […]",
       "currencies": [
@@ -1557,34 +521,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "T-7 days until @Fetch_ai's CEO @HMsheikh4 and Director of BizDev @MariaMinaricova along with our partner…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T09:01:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "RT @ParamountMovies: Get ready to Live Long and Prosper! See the long awaited remastered version of Star Trek: The Motion Picture - Directo…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:44:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
       "title": "Twitter Shares Shed 20% As Elon Musk Says $44 Billion Takeover Deal Postponed",
       "link": "https://bitcoinist.com/twitter-shares-shed-20/",
       "pubDate": "2022-05-14T08:37:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "Elon Musk said that his $44 billion Twitter acquisition would be put on hold in order to determine how many users are indeed \"fake accounts.\"",
       "currencies": [
         "BTC",
@@ -1597,44 +539,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "When it comes to learning, language shouldn't be a barrier. Thus, India's trusted Bitcoin &amp; Crypto blog is now avai…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Deso Creator coin on twitter",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:20:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DESO"
-      ]
-    },
-    {
-      "title": "RT @nftsummitist: Hi all!  @SheludkoDmitriy , CEO of @Biconomy_Global has a message for you",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:17:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BIT"
-      ]
-    },
-    {
       "title": "‘Bitcoin fixes’ inflation and government control over people’s wealth says ‘The Bitcoin Standard’ author",
       "link": "https://finbold.com/bitcoin-fixes-inflation-and-government-control-over-peoples-wealth-says-the-bitcoin-standard-author/",
       "pubDate": "2022-05-14T08:12:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "With the present global market instability, the notion that Bitcoin (BTC) is a safe haven against inflation has been called... Continue reading The post ‘Bitcoin fixes’ inflation and government control over people’s wealth says ‘The Bitcoin Standard’ author appeared first on Finbold.",
       "currencies": [
@@ -1647,45 +556,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Be part of a wonderful team, join the #AI revolution and learn what it takes to work your magic in #blockchain …",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VAI"
-      ]
-    },
-    {
-      "title": "Money moves different now. Buy, store, exchange and seamlessly spend #Litecoin $LTC with Wirex. From anywhere.…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LTC",
-        "WXT"
-      ]
-    },
-    {
-      "title": "Is it just me or does it feel like DAI is the only stablecoin that has the potential to meaningful exist and be decentralised?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T08:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
       "title": "Cardano whale transactions hit a 4-month high as large players buy the dip",
       "link": "https://finbold.com/cardano-whale-transactions-hit-a-4-month-high-as-large-players-buy-the-dip/",
       "pubDate": "2022-05-14T07:53:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Although the rapid slide of Bitcoin and other leading cryptocurrencies such as Cardano (ADA) seems to have slowed, it appears... Continue reading",
       "currencies": [
@@ -1699,22 +574,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Come chat with us and the community",
-      "link": "NULL",
-      "pubDate": "2022-05-14T07:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "Polkadot ($DOT) and Cosmos ($ATOM) Go Head-to-Head in Latest Coin Bureau Episode",
       "link": "https://www.cryptoglobe.com/latest/2022/05/polkadot-dot-and-cosmos-atom-go-head-to-head-in-latest-coin-bureau-episode/",
       "pubDate": "2022-05-14T07:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "Popular crypto analytics and market commentary show Coin Bureau has examined the potential of competing blockchains Polkadot ($DOT) and Cosmos ($ATOM). Speaking in a recent YouTube update, Coin Bureau host “Guy” told viewers that he has big expectations for both Polkadot and Cosmos as blockchains built for scaling and cross-chain interoperability. Guy highlighted the demand […]",
       "currencies": [
@@ -1728,88 +592,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Dynamo_Patrick: $CRV was the most obvious beneficiary, its revenue skyrocketing 625% week over week. This was one of the best weeks eve…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T07:25:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 108 – The News in #DeFi",
-      "link": "NULL",
-      "pubDate": "2022-05-14T06:51:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @Promisphere_io: 1/ We are elated to announce the official completion of our seed round, which includes: @ivcryptofund (IVC), @bigbrain…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T06:50:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "RT @XDCFoundation: Panama is crucial to global trade, its canal seeing 5% of  shipping traffic. Its assembly recently passed a bill approv…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T06:01:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
-      "title": "Out of #KyberSwap's 11 chains @ethereum @0xPolygon @BNBCHAIN @avalancheavax @FantomFDN @cronos_chain @arbitrum…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T05:40:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "KNC"
-      ]
-    },
-    {
-      "title": "Nice to see you all at @BlockDownConf! And thanks @Lili_Zurich @FlamingoFinance @GrantShares @DogeRift for all th…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T05:38:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "RT @langerstwit: While chatting with @superphiz, he asked whether @Rocket_Pool would limit our governance to 22% of all validators for the…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T05:16:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "RPL"
-      ]
-    },
-    {
       "title": "Polkadot vs. Ethereum: Two equal chances to dominate the Web3 world",
       "link": "https://cointelegraph.com/news/polkadot-vs-ethereum-two-equal-chances-to-dominate-the-web3-world",
       "pubDate": "2022-05-14T05:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Examine how Polkadot's ecosystem and Substrate platform can be compared to Ethereum’s upcoming upgrade as the race toward Web3 gathers momentum.",
       "currencies": [
@@ -1822,138 +609,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Etherscan, CoinGecko warn against ongoing MetaMask phishing attacks",
-      "link": "NULL",
-      "pubDate": "2022-05-14T05:12:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "APE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Update: The rules of the S7 game have changed a little. The invitation reward has been increased to $20. The reward…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T04:29:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": ".@RealVision Our CEO is in! Let’s set it up!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T03:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
-      "title": "RT @KentoInami: You can borrow SOL for 1% ish on @solendprotocol and lend at 10% ish on @mangomarkets.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T03:40:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Please stay safe frens",
-      "link": "NULL",
-      "pubDate": "2022-05-14T03:36:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GHST",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Join the conversation with @Theirsverse, to discover a young community without gender, color, beauty, and prejudice…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T03:15:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MASK"
-      ]
-    },
-    {
-      "title": "RT @YakuCorp: Weekend vibes  @AudiusProject",
-      "link": "NULL",
-      "pubDate": "2022-05-14T03:07:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AUDIO"
-      ]
-    },
-    {
-      "title": "RT @subwalletapp: For 6 months, we hold on to our vision of becoming #Web3 Ultimate Gateway for #Dotsama ecosystem, with the mission of pul…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T02:39:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ASTR"
-      ]
-    },
-    {
-      "title": "Snipe targeting",
-      "link": "NULL",
-      "pubDate": "2022-05-14T02:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Insurance protocols are paying out millions to UST holders",
-      "link": "NULL",
-      "pubDate": "2022-05-14T02:35:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Phenomenal interview with Kadena's Co-founder Stuart Popejoy, and Director of Engineering Doug Beardsley!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T02:31:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
       "title": "Metaverse-as-a-service will be the basis of the next internet era of Web3",
       "link": "https://cointelegraph.com/news/metaverse-as-a-service-will-be-the-basis-of-the-next-internet-era-of-web3",
       "pubDate": "2022-05-14T02:11:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The success and mass adoption of the Metaverse relies on the ability of users to build their own. In other words, utilizing metaverse-as-a-service technology.",
       "currencies": [
@@ -1966,22 +626,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "I cant unstake and claim my rewards - why???",
-      "link": "NULL",
-      "pubDate": "2022-05-14T02:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
       "title": "HORRIBLE News from Crypto.com",
       "link": "https://www.youtube.com/watch?v=PK09fuNl-_o",
       "pubDate": "2022-05-14T01:59:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoTips",
+      "sourceKey": "cryptotips",
       "category": "general",
       "description": "Sign Up Here for the CT Club! https://patreon.com/cryptotips Get My Free Newsletter: https://learningcrypto.com Join our Public Discord Channels Here: https://discord.gg/Hseq2nkeHr ((If you are a Patreon member, connect through Patreon to access exclusive channels as well)) Ledger hardware wallets 👉 https://shop.ledger.com/pages/ledger-nano-x?r=67ef Trezor hardware wallet with $25 voucher for Coinify 👉 https://shop.trezor.io/product/trezor-starter-pack?offer_id=114&aff_id=10937 10% Binance Dis",
       "currencies": [
@@ -1993,136 +642,11 @@
       }
     },
     {
-      "title": "RT @arpaofficial: A little throwback from our @arpaofficial and @BellaProtocol Istanbul meetup with @wildwoodmoo and @kriptokurduu! Had so…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "Show me your NFTs",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "RT @ercwl: It wouldn’t have done anything to fix the LUNA death spiral, but it could have given us decentralization and transparency about…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:34:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KEEP",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "RT @ercwl: No one is going to care about this now I realize, but from my early conversation with @mhluongo there is probably something that…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:34:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "KEEP"
-      ]
-    },
-    {
-      "title": "RT @ercwl: Fwiw, one thing that was keeping my mind preoccupied the days before the UST collapse was whether it was actually technically po…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:34:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "KEEP",
-        "USTC"
-      ]
-    },
-    {
-      "title": "RT @BlumbergKellen: 1/ It's been a tumultuous week, but wanted to take time to highlight the great work of @flipsidecrypto analysts with t…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:27:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Proud to partner with @BNBCHAIN &amp; @CoinMarketCap for the How To Web3 Campaign. Join now to earn a part of the $400k…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:21:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XVS",
-        "VAI"
-      ]
-    },
-    {
-      "title": "RT @jerallaire: Thanks @jackshaftoes and @FTX_Official for the opportunity and the conversation. Big topics in this interview!",
-      "link": "NULL",
-      "pubDate": "2022-05-14T01:10:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Today, we were notified of a potentially exploitable scenario thanks to a benevolent hacker who disclosed the vulne…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:52:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAL"
-      ]
-    },
-    {
-      "title": "This article by @BartlettWenzel reviews recent NNS proposals that incentivize participation in #InternetComputer go…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:39:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "RT @Cointelegraph: A new hackathon is upon us; get ready to code and grab a piece of the $1M in bounties.",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:34:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "BTTOLD"
-      ]
-    },
-    {
       "title": "Bitcoin: What you should look out for as BTC recovers over 10% in a day",
       "link": "https://ambcrypto.com/bitcoin-what-you-should-look-out-for-as-btc-recovers-over-10-in-a-day/",
       "pubDate": "2022-05-14T00:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "BTC has managed to recover above $30,000 level after crashing below $26,000 in the latest episode of the crypto crash. BTC prices have rallied nearly 10% in the past 24 hours showing strong bullish signals after this debacle. The Bitcoin bulls are looking to consolidate this position onto a gradual recovery despite macro factors still […]",
       "currencies": [
@@ -2133,39 +657,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "The future of fashion. Will you be wearing AR glasses?",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:23:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "RT @BNBCHAIN: How to Web3 on #BNBChain is in full swing and Lesson 2 is How to Navigate a Multi-chain Future in Web 3.0 with @CelerNetwork…",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CELR"
-      ]
-    },
-    {
-      "title": "Latest update by Scott Stuart, CEO of Kava Labs",
-      "link": "NULL",
-      "pubDate": "2022-05-14T00:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAVA"
-      ]
     }
   ]
 }

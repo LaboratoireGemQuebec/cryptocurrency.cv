@@ -1,15 +1,15 @@
 {
   "date": "2021-04-25",
-  "fetchedAt": "2026-02-05T07:45:51.793Z",
-  "articleCount": 30,
+  "fetchedAt": "2026-02-05T07:48:35.448Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
     {
       "title": "Polygon (MATIC) jumps ahead as the race for Layer-2 adoption picks up",
       "link": "https://cointelegraph.com/news/polygon-matic-jumps-ahead-as-the-race-for-layer-2-adoption-picks-up",
       "pubDate": "2021-04-25T22:36:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "Increasing volume and TVL on QuickSwap, along with steady growth in the number of projects joining Polygon have analysts suggesting that MATIC price is undervalued.",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Ethereum co-founder Buterin donates  $600k in ETH, MKR towards India’s Covid-19 relief",
       "link": "https://finbold.com/ethereum-co-founder-buterin-donates-600-in-eth-mkr-towards-indias-covid-19-relief/",
       "pubDate": "2021-04-25T21:19:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Ethereum co-founder Vitalik Buterin has donated approximately $600,000 in ETH and MKR towards India’s coronavirus relief package. Through his Twitter... Continue reading",
       "currencies": [
@@ -41,52 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum co-founder Buterin donates $600k in ETH, MKR towards India’s Covid-19 relief",
-      "link": "NULL",
-      "pubDate": "2021-04-25T21:19:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Ethereum co-founder Vitalik Buterin has donated approximately $600,000 in ETH and MKR towards India’s coronavirus relief package. Through his Twitter... Continue reading The post Ethereum co-founder Buterin donates $600k in ETH, MKR towards India’s Covid-19 relief appeared first on Finbold.",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Only 14 days remain to swap #SafeCoin Classic to SafeCoin. On May 9th, the swap closes permanently and support for…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T21:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "RT @chainlink: The #Chainlink Network’s Proof of Reserve Data Feeds support #DeFi by offering transparency around the collateralization of…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T20:36:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Cardano and Stellar Lumens Hit Milestone As Swiss Investment Fund Launches New Crypto ETPs",
       "link": "https://dailyhodl.com/2021/04/25/cardano-and-stellar-lumens-hit-milestone-as-swiss-investment-fund-launches-new-crypto-etps/",
       "pubDate": "2021-04-25T20:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "A Swiss fintech company is rolling out the first crypto exchange-traded products (ETPs) for Cardano (ADA) and Stellar Lumens (XLM). 21Shares AG is listing Stellar XLM ETP (AXLM) and Cardano ADA ETP (AADA) on the Swiss stock exchange (SIX Exchange) on April 26th with a base fee of 2.5% per year. It is also adding […]",
       "currencies": [
@@ -100,55 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ZMiller_82: 1964 Olympic Men’s Ice Hockey Tournament Recap",
-      "link": "NULL",
-      "pubDate": "2021-04-25T19:36:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @daniel_taze: Liverpool owners are under pressure",
-      "link": "NULL",
-      "pubDate": "2021-04-25T19:36:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @ZMiller_82: 1968 Olympic Men’s Ice Hockey Tournament Recap",
-      "link": "NULL",
-      "pubDate": "2021-04-25T19:35:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "$SUPDOG is a deflationary meme coin that has a 6% tax rate applied to every transaction.",
-      "link": "NULL",
-      "pubDate": "2021-04-25T19:02:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Ripple: Here’s the ‘good news’ since the XRP lawsuit was first filed",
       "link": "https://ambcrypto.com/after-coinbase-is-a-ripple-ipo-next/",
       "pubDate": "2021-04-25T19:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "The SEC’s lawsuit against Ripple Labs and execs Brad Garlinghouse and Chris Larsen has been a game-changer in many ways. Not only because it is one of those rare cases where the defendants’ execs have been personally charged, but also because Ripple and the altcoin at the center of the lawsuit, XRP, remain two of […]",
       "currencies": [
@@ -161,38 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SB Wealth App Search Function UI Concept [Unofficial] Would love to hear your thoughts.",
-      "link": "NULL",
-      "pubDate": "2021-04-25T18:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "LUKSO Mainnet Progress Update #1",
-      "link": "NULL",
-      "pubDate": "2021-04-25T18:12:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Ethereum DeFi Lending Platforms Print Record High of $25,000,000,000 in Total Value Locked",
       "link": "https://dailyhodl.com/2021/04/25/ethereum-defi-lending-platforms-print-record-high-of-25000000000-in-total-value-locked/",
       "pubDate": "2021-04-25T17:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Market analytics toolkit Messari is reporting that the top Ethereum-based decentralized lending platforms have hit a massive milestone in the first quarter of 2021. Messari revealed the news in a tweet this week, highlighting the progress made by decentralized finance (DeFi) platforms Aave, Compound (COMP) and MakerDAO (MKR). “The lending sector went parabolic during the […]",
       "currencies": [
@@ -210,8 +98,8 @@
       "title": "Bitcoin dominance teeters at 50% as ETH, altcoins gain traction",
       "link": "https://cointelegraph.com/news/bitcoin-dominance-teeters-at-50-as-eth-altcoins-gain-traction",
       "pubDate": "2021-04-25T17:03:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "The Bitcoin dominance index has collapsed by 20 percentage points since the start of 2021. ETH, BNB and more speculative altcoin bets have seen their dominance rise over the same period.",
       "currencies": [
@@ -225,55 +113,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MXC_Fans: According to @MXC_Exchange data, $BRG broke through 0.38 $USDT. Compared with the price of 0.1 $USDT, the price of $BRG rose…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T16:22:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
-      "title": "To celebrate the $ALCH auction we are giving away 100 ALCH ($300) to 3 lucky winners! To enter RT the tweet below a…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T16:03:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "The $ALCH Dutch Auction has launched! This auction will help us to finally achieve a decentralized distribution as…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T16:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "With big jump through downward channel - invers H&S ... hopefully we see 0.01$ soon",
-      "link": "NULL",
-      "pubDate": "2021-04-25T15:31:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Solana Hits New All-Time High as Ecosystem Grows",
       "link": "https://beincrypto.com/solana-hits-new-all-time-high-as-ecosystem-grows/",
       "pubDate": "2021-04-25T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Solana has reached a new all-time high on Sunday, tagging $43.64 as the Solana ecosystem continues to expand.",
       "currencies": [
@@ -289,8 +133,8 @@
       "title": "CAKE, Maker, Compound: Why top DeFi tokens have offered double digit gains in the past two days",
       "link": "https://ambcrypto.com/cake-maker-compound-why-top-defi-tokens-have-offered-double-digit-gains-in-the-past-two-days/",
       "pubDate": "2021-04-25T12:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "defi",
       "description": "Dogecoin is not the only altcoin that has rallied offering double-digit gains, nearing a 100% in the current alt season. Top DeFi tokens have offered double-digit gains in the past two days. LUNA and CAKE have offered 16% and 13% gains respectively. The price for top DeFi tokens has increased consistently despite several price corrections. […]",
       "currencies": [
@@ -306,8 +150,8 @@
       "title": "XRP Holds $1 Level as Support Against the SEC Increases",
       "link": "https://beincrypto.com/xrp-holds-1-level-as-support-against-the-sec-increases/",
       "pubDate": "2021-04-25T10:48:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "XRP has managed to hold above the $1 mark following several days of bearish selling. The SEC charges appear to be playing less of a role in price movement lately as support against the SEC case grows",
       "currencies": [
@@ -323,8 +167,8 @@
       "title": "DeFi Deep Dive — Uniswap, King Of the Ethereum Ecosystem",
       "link": "https://beincrypto.com/defi-deep-dive-uniswap-king-of-the-ethereum-ecosystem/",
       "pubDate": "2021-04-25T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "The Uniswap protocol facilitates decentralized swaps of crypto-assets through an automated market maker (AMM) type design. The protocol has become one of the pillars of the DeFi ecosystem in Ethereum.",
       "currencies": [
@@ -342,9 +186,9 @@
       "title": "It is interesting to note a fundamental change in the way Chainlink’s market is operating",
       "link": "https://ambcrypto.com/it-is-interesting-to-note-a-fundamental-change-in-the-way-chainlinks-market-is-operating/",
       "pubDate": "2021-04-25T08:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Akin to many in the altcoin market, Chainlink too witnessed a substantial price correction in the past week, after having shed over 27 percent of its trading price on 22 April. However since then, in the days that followed the coin was able to arrest the bearishness, stabilize the price and begin a recovery run. […]",
       "currencies": [
         "LINK"
@@ -355,55 +199,11 @@
       }
     },
     {
-      "title": "Started from the bottom now we're here. Top 3 NFT protocol on @DappRadar and we just launched 4w back! Big thankyou…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T07:56:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "RT @BTCTN: Despite his controversial approach and limited technological abilities, Justin Sun has managed to position himself as one of the…",
-      "link": "NULL",
-      "pubDate": "2021-04-25T07:27:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CTC"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 40 #hive -",
-      "link": "NULL",
-      "pubDate": "2021-04-25T06:36:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "This means Saturday Night Live, the TV show, Don't mix up...",
-      "link": "NULL",
-      "pubDate": "2021-04-25T06:22:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNL"
-      ]
-    },
-    {
       "title": "RT @justinsuntron: #TRON is launching something new very soon! Leave your guess at what #TRON's next great endeavor would be in the com…",
       "link": "https://twitter.com/Tronfoundation/status/1386171262909566977",
       "pubDate": "2021-04-25T04:12:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@tronfoundation",
+      "sourceKey": "tronfoundation",
       "category": "ethereum",
       "currencies": [
         "TRX"
@@ -413,17 +213,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Predictions from a year ago",
-      "link": "NULL",
-      "pubDate": "2021-04-25T02:25:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
     }
   ]
 }

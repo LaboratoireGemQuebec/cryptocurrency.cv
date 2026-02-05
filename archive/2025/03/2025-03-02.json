@@ -1,52 +1,15 @@
 {
   "date": "2025-03-02",
-  "fetchedAt": "2026-02-05T07:45:53.707Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.702Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Ethereum Developers Address Holesky Testnet Validator Issues",
-      "link": "NULL",
-      "pubDate": "2025-03-02T23:33:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "X"
-      ]
-    },
-    {
-      "title": "Crypto’s First Act: How 2013 Set the Stage for a Financial Revolution",
-      "link": "NULL",
-      "pubDate": "2025-03-02T23:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "FLOKI: Key factors favoring the bears as the memecoin sinks lower",
-      "link": "NULL",
-      "pubDate": "2025-03-02T21:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLOKI",
-        "MEME",
-        "$1"
-      ]
-    },
     {
       "title": "President Trump Reveals U.S. Crypto Reserve Bombshell — Sending BTC, ETH, Ripple’s XRP, Solana, And Cardano Rocketing",
       "link": "https://zycrypto.com/president-trump-reveals-u-s-crypto-reserve-bombshell-sending-btc-eth-ripples-xrp-solana-and-cardano-rocketing/",
       "pubDate": "2025-03-02T19:31:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "The prices of XRP, Solana (SOL), and other crypto assets have soared after Trump announced that the aforementioned tokens would be part of the strategic cryptocurrency reserve.",
       "currencies": [
@@ -67,8 +30,8 @@
       "title": "MICHAEL SAYLOR: \"Bitcoin is the foundation of the crypto economy.\"",
       "link": "https://x.com/BTC_Archive/status/1896277879027347756",
       "pubDate": "2025-03-02T19:14:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -83,8 +46,8 @@
       "title": "Ripple’s XRP Bulls Show Dominant Presence as Bears Get Rejected at Major 2017-2018 Support Level",
       "link": "https://zycrypto.com/ripples-xrp-bulls-show-dominant-presence-as-bears-get-rejected-at-major-2017-2018-support-level/",
       "pubDate": "2025-03-02T19:10:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP price action has got the crypto community talking after the third-largest cryptocurrency hit a historic support level.",
       "currencies": [
@@ -97,93 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto market’s weekly winners and losers – IP, BERA, LDO, ENS",
-      "link": "NULL",
-      "pubDate": "2025-03-02T19:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO",
-        "ENS",
-        "IP",
-        "BERA"
-      ]
-    },
-    {
-      "title": "Elon Musk’s D.O.G.E tightens grip on ‘what did you do last week?’ emails",
-      "link": "NULL",
-      "pubDate": "2025-03-02T18:50:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G",
-        "D",
-        "O"
-      ]
-    },
-    {
-      "title": "Qubetics Crypto ICO Presale Surges Past $14.4M – This CertiK-Audited Project Thrives While Bitcoin & Litecoin Push the Market to New Heights in 2025",
-      "link": "NULL",
-      "pubDate": "2025-03-02T18:21:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "XRP Surges 30% With Increased Buying Pressure After Trump’s US Crypto Reserve",
-      "link": "NULL",
-      "pubDate": "2025-03-02T17:38:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "MOVE",
-        "ATH",
-        "00",
-        "PDA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Solana Price Could Rebound After $120 Support; But Expert Advises to Keep Eye On These Altcoins",
-      "link": "NULL",
-      "pubDate": "2025-03-02T17:34:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "PNUT"
-      ]
-    },
-    {
-      "title": "Crypto Czar Hints At Expansion Of Valuable Digital Assets",
-      "link": "NULL",
-      "pubDate": "2025-03-02T17:23:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "X"
-      ]
-    },
-    {
       "title": "Bitcoin Will Explode Over $120,000 on Monday as ETF Demand Skyrockets Amid Trump’s BTC Reserve Announcement",
       "link": "https://www.cryptointelligence.co.uk/bitcoin-will-explode-over-120000-on-monday-as-etf-demand-skyrockets-amid-trumps-btc-reserve-announcement/",
       "pubDate": "2025-03-02T17:20:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "bitcoin",
       "description": "In a move signaling a significant shift in U.S. cryptocurrency policy, President Donald Trump announced the inclusion of several digital assets—namely Bitcoin (BTC), Ethereum (ETH), Solana (SOL), XRP (XRP), and Cardano’s ADA (ADA)—into a newly established U.S. Crypto Strategic Reserve. This initiative underscores the administration’s commitment to positioning the United States as a leader in the rapidly evolving digital asset landscape. Bitcoin to Hit $120,000 on Monday Bitcoin has already exper",
       "currencies": [
@@ -204,8 +85,8 @@
       "title": "Breaking: Trump Announces U.S. Crypto Strategic Reserve Including XRP, SOL, ADA, BTC, and ETH",
       "link": "https://coinpedia.org/news/breaking-trump-announces-u-s-crypto-strategic-reserve-including-xrp-sol-ada-btc-and-eth/",
       "pubDate": "2025-03-02T17:11:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "bitcoin",
       "description": "The post Breaking: Trump Announces U.S. Crypto Strategic Reserve Including XRP, SOL, ADA, BTC, and ETH appeared first on Coinpedia Fintech News In a big move to strengthen the U.S. cryptocurrency sector, President Donald Trump has announced plans for a “Crypto Strategic Reserve,” which will include Bitcoin (BTC) and Ethereum (ETH) alongside popular altcoins like XRP, SOL, and ADA. The reserve aims to elevate the industry after what Trump describes as “years of corrupt attacks” by the …",
       "currencies": [
@@ -223,50 +104,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Best Meme Coins To Buy Now | Which Top Meme Coins Are Booming Right Now Ahead of Bull Run",
-      "link": "NULL",
-      "pubDate": "2025-03-02T17:07:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE",
-        "SPX",
-        "PENGU",
-        "MEOW"
-      ]
-    },
-    {
-      "title": "Why Is Crypto Market Pumping?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T17:06:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "X"
-      ]
-    },
-    {
-      "title": "Whale Movements Suggest This $0.18 Altcoin Could Outperform XRP & AVAX Before Q3 2025",
-      "link": "NULL",
-      "pubDate": "2025-03-02T16:51:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "AVAX"
-      ]
-    },
-    {
       "title": "Trump says Bitcoin and Ethereum will be included in US crypto reserve",
       "link": "https://cryptobriefing.com/us-crypto-reserve-trump-bitcoin-ethereum/",
       "pubDate": "2025-03-02T16:46:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "President Donald Trump said today that Bitcoin and Ethereum will be included in his proposed US crypto reserve, expanding the plan that featured XRP, Solana, and Cardano.The proposed policy would establish government holdings of crypto assets as part of US financial reserves, similar to gold. Trump critiqued the Biden administration for what he called \"corrupt attacks\" on crypto, referring to...",
       "currencies": [
@@ -283,23 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Bloodbath: Can DTX Exchange Save Avalanche and Cardano Traders From Q2 Dump?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T16:16:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "AVAX"
-      ]
-    },
-    {
       "title": "President Trump announces a Crypto Strategic Reserve that includes XRP, SOL, and ADA",
       "link": "https://www.cryptopolitan.com/trump-crypto-strategic-reserve-xrp-sol-ada/",
       "pubDate": "2025-03-02T16:01:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "After long weeks of waiting, US President Donald Trump has finally decided to give the crypto industry what it wants the most; a strategic crypto reserve.",
       "currencies": [
@@ -314,35 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "AAVE tests $194 support as breakout nears – Will bulls take control?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T16:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "who's the real competition?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T15:54:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "HBAR",
-        "SUI"
-      ]
-    },
-    {
       "title": "Trump directs working group to ‘move forward’ on SOL, XRP, and ADA Crypto Strategic Reserve",
       "link": "https://www.theblock.co/post/344092/trump-directs-working-group-to-move-forward-on-sol-xrp-and-ada-crypto-strategic-reserve?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-03-02T15:47:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "The announcement notably excludes Bitcoin, which the federal government already holds $17 billion worth.",
       "currencies": [
@@ -362,8 +168,8 @@
       "title": "Trump to include XRP, SOL, and ADA in US crypto reserve",
       "link": "https://cryptobriefing.com/trump-us-crypto-reserve/",
       "pubDate": "2025-03-02T15:34:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "President Donald Trump proposed establishing a US Crypto Reserve and directed the Presidential Working Group to include XRP, SOL, and ADA digital assets in an effort to position the US as a global crypto hub.The initiative comes as a response to what Trump characterized as attacks on the crypto industry by the Biden Administration. The proposed reserve would aim to strengthen the digital asset sector in the United States.The plan specifically highlights the inclusion of three prominent crypto...",
       "currencies": [
@@ -378,245 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Can This Viral Crypto Outpace Solana’s 21% Fall? Experts Compare Top AI Contenders",
-      "link": "NULL",
-      "pubDate": "2025-03-02T15:32:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "TAO"
-      ]
-    },
-    {
-      "title": "XRP Sky-High Target: Analyst Predicts $385 – Here’s The Case",
-      "link": "NULL",
-      "pubDate": "2025-03-02T15:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Investor Arthur Cheong Predicts Solana (SOL) Will Soon Be ‘Substantially Higher’ – Here’s His Timeline",
-      "link": "NULL",
-      "pubDate": "2025-03-02T15:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "JUP",
-        "JTO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Solana and Avalanche Holders Aggressively Buy Coldware (COLD) Presale, Rallying 100% Per Day",
-      "link": "NULL",
-      "pubDate": "2025-03-02T15:13:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Bitcoin Mining Platforms Approach Profitability Amid Price Increase",
-      "link": "NULL",
-      "pubDate": "2025-03-02T13:33:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "T",
-        "W",
-        "X"
-      ]
-    },
-    {
-      "title": "Onyxcoin Fails Breakout Despite Whales Accumulating 368 Million XCN",
-      "link": "NULL",
-      "pubDate": "2025-03-02T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCN"
-      ]
-    },
-    {
-      "title": "Cronos Introduces ‘Instant’ Crypto Off-Ramp with Prepaid Card Integration",
-      "link": "NULL",
-      "pubDate": "2025-03-02T12:51:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Crypto Weekly Roundup: SEC Drops Coinbase and Uniswap Lawsuits, & More",
-      "link": "NULL",
-      "pubDate": "2025-03-02T12:33:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "XRP Price Bubble Burst? This Pattern Suggests Imminent Drop To $1.1",
-      "link": "NULL",
-      "pubDate": "2025-03-02T12:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "ALI"
-      ]
-    },
-    {
-      "title": "KAITO Token Surges 53.4% This Week: This Is Behind The Rapid Price Increase",
-      "link": "NULL",
-      "pubDate": "2025-03-02T12:29:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAITO"
-      ]
-    },
-    {
-      "title": "Snoop Dogg’s Tune.fm Partnership Drives HBAR Token Surge: Up 10.9% in Past 24 Hours",
-      "link": "NULL",
-      "pubDate": "2025-03-02T12:06:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Tether And Circle Freeze Addresses Linked To Bybit Hack",
-      "link": "NULL",
-      "pubDate": "2025-03-02T11:53:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "YZi Labs Offers Priority Review for Projects Based on CZ's \"Crazy Idea for Token Issuance\"",
-      "link": "NULL",
-      "pubDate": "2025-03-02T10:42:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "X"
-      ]
-    },
-    {
-      "title": "BTC touches $78K, Tariffs Blamed, Crypto Market-cap below 2021!",
-      "link": "NULL",
-      "pubDate": "2025-03-02T10:13:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "UNI",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "U.S. spends the largest federal revenue share on debt since early 1990s",
-      "link": "NULL",
-      "pubDate": "2025-03-02T10:10:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "S",
-        "ATH"
-      ]
-    },
-    {
-      "title": "Best Presales to Buy After Binance Denies Rumors About Dumping Solana",
-      "link": "NULL",
-      "pubDate": "2025-03-02T10:09:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "BONK",
-        "TRUMP",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "Bitcoin STH Average Cost Basis At $90,950 — Why Is It Relevant?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T09:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "LTC",
-        "MOVE",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Will A Close Above $136 Confirm Litecoin Price’s Bullish Breakout?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T09:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
       "title": "El Salvador continues to buy the Bitcoin dip adding to its National Reserve",
       "link": "https://www.cryptopolitan.com/el-salvador-buys-the-bitcoin-dip/",
       "pubDate": "2025-03-02T08:10:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "bitcoin",
       "description": "El Salvador bought the Bitcoin dip again and added more BTC to their strategic Bitcoin reserve, bringing their total holdings to 6,093.18 BTC worth over $523M.",
       "currencies": [
@@ -629,39 +201,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Short-term BONK holders at record losses! Is there more pain ahead?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T08:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
-      "title": "THORChain (RUNE) Tipped For 70% Decline Amid North Korean Transactions Debacle",
-      "link": "NULL",
-      "pubDate": "2025-03-02T08:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "DOGE",
-        "TRX",
-        "RUNE"
-      ]
-    },
-    {
       "title": "Senator Lummis to discuss US Bitcoin reserve bill with industry leaders on March 11",
       "link": "https://cryptobriefing.com/us-bitcoin-reserve-initiative/",
       "pubDate": "2025-03-02T07:49:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "Senator Cynthia Lummis is actively working on a bill related to a US Bitcoin reserve and has scheduled a gathering on March 11 in Washington DC to discuss the initiative with industry leaders, said Bitwise CEO Hunter Horsley on CNBCs Fast Money this week.When asked about the current status of the potential establishment of a strategic Bitcoin reserve in the US, given the perceived lack of...",
       "currencies": [
@@ -672,85 +216,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Examining if dogwifhat traders can push WIF past THIS major hurdle",
-      "link": "NULL",
-      "pubDate": "2025-03-02T06:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "WIF",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Chart Signals Major Rally —Is A 330% Surge Coming?",
-      "link": "NULL",
-      "pubDate": "2025-03-02T05:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "DOGE",
-        "XLM",
-        "MOVE",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Hedera [HBAR] defies market trend – All you need to know about altcoin’s 27% hike!",
-      "link": "NULL",
-      "pubDate": "2025-03-02T03:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Strong inflows into ARK 21Shares, Fidelity Bitcoin ETFs end 8-day outflow streak",
-      "link": "NULL",
-      "pubDate": "2025-03-02T02:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Why Berachain (BERA) Price Rallied 35% Last Week, Despite $900M liquidations in BTC, ETH and SOL",
-      "link": "NULL",
-      "pubDate": "2025-03-02T01:23:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "BERA"
-      ]
-    },
-    {
-      "title": "Top 5 Underpriced Cryptos To Buy Before The Market Rebounds: Solana, Pi Network, Remittix, PEPE and AVAX",
-      "link": "NULL",
-      "pubDate": "2025-03-02T00:49:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "AVAX",
-        "PEPE"
-      ]
     }
   ]
 }

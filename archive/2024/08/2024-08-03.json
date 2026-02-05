@@ -1,50 +1,15 @@
 {
   "date": "2024-08-03",
-  "fetchedAt": "2026-02-05T07:45:53.484Z",
-  "articleCount": 26,
+  "fetchedAt": "2026-02-05T07:48:35.678Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "ZKX investors, market makers say they were blindsided by sudden shutdown",
-      "link": "NULL",
-      "pubDate": "2024-08-03T22:56:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "Arthur Hayes’s $10 Ethena Prediction Flops? ENA Plummets to $0.32",
-      "link": "NULL",
-      "pubDate": "2024-08-03T19:03:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
-      "title": "Top Altcoins Boosted by Crypto Whales",
-      "link": "NULL",
-      "pubDate": "2024-08-03T18:23:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "PEPE",
-        "ONDO"
-      ]
-    },
     {
       "title": "Cardano (ADA) Prediction for August 3",
       "link": "https://u.today/cardano-ada-prediction-for-august-3",
       "pubDate": "2024-08-03T18:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Can next week become bullish for Cardano (ADA)?",
       "currencies": [
@@ -59,8 +24,8 @@
       "title": "‘Stable engagement, but…’ – Here’s what a look at Cardano’s market tells us",
       "link": "https://ambcrypto.com/stable-engagement-but-heres-what-a-look-at-cardanos-market-tells-us/",
       "pubDate": "2024-08-03T18:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Cardano's recovery effort has hit a roadblock over the last few days.",
       "currencies": [
@@ -72,63 +37,11 @@
       }
     },
     {
-      "title": "Terra LUNA Classic Votes On Major Tax2Gas Proposal, LUNC To $0.0001?",
-      "link": "NULL",
-      "pubDate": "2024-08-03T17:22:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Experts Say BTC Will Stay Over $60,000 and Possibly Hit All-Time High Price Next 3 Month – Top 5 Altcoins to Invest Before the Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-08-03T17:05:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "TON",
-        "KAS",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Revamped NeoPod ambassador program goes live following the release of Neo X EVM sidechain",
-      "link": "NULL",
-      "pubDate": "2024-08-03T15:36:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Morgan Stanley’s Wealth Advisors to Offer Bitcoin ETFs",
-      "link": "NULL",
-      "pubDate": "2024-08-03T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "ETN"
-      ]
-    },
-    {
       "title": "Ethereum selling spree ‘almost over’ with 80% ETH outflow drop",
       "link": "https://finbold.com/ethereum-selling-spree-almost-over-with-80-eth-outflow-drop/",
       "pubDate": "2024-08-03T15:29:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Ethereum (ETH) price is down nearly 15% since the exchange-traded funds (ETFs) first trading day on July 23. Grayscale’s Trust … Continue reading",
       "currencies": [
@@ -141,79 +54,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "AAVE and Curve DAO Price Show Strength in Sea of Red",
-      "link": "NULL",
-      "pubDate": "2024-08-03T14:18:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Terra Classic (LUNC) Struggles Despite Binance’s 1.15 Billion Token Burn",
-      "link": "NULL",
-      "pubDate": "2024-08-03T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Solana Meme Coin Trader Makes 4,497x Profit Amid Bearish Market",
-      "link": "NULL",
-      "pubDate": "2024-08-03T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "WIF",
-        "POPCAT",
-        "BOME"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Crypto community slams WazirX’s 'socialized losses' plan after hack",
-      "link": "NULL",
-      "pubDate": "2024-08-03T13:50:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "SHIB Rivals WIF, BRETT Worst Performers Today",
-      "link": "NULL",
-      "pubDate": "2024-08-03T13:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "SHIB",
-        "WIF",
-        "BRETT"
-      ]
-    },
-    {
       "title": "Cardano Bulls Eye 4,000% Price Surge For ADA If This Historical Pattern Repeats",
       "link": "https://zycrypto.com/cardano-bulls-eye-4000-price-surge-for-ada-if-this-historical-pattern-repeats/",
       "pubDate": "2024-08-03T12:37:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "This growing interest is mirrored by market intelligence firm IntoTheBlock data, which shows that Cardano has seen substantial transaction volumes.",
       "currencies": [
@@ -225,22 +70,11 @@
       }
     },
     {
-      "title": "WazirX Hack Update: Exchange Scraps Plan To Distribute Loss Among Users",
-      "link": "NULL",
-      "pubDate": "2024-08-03T11:39:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
       "title": "8% of Solana’s Supply is With FTX? Can SOL Price Dip?",
       "link": "https://www.thecoinrepublic.com/2024/08/03/8-of-solanas-supply-is-with-ftx-can-sol-price-dip/",
       "pubDate": "2024-08-03T11:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "A recent disclosure by a former FTX employee has sent shockwaves through the crypto community. A whistleblower has reportedly disclosed a startling revelation about FTX and Solana. The now-bankrupt FTX exchange holds a substantial 8% stake in the total supply of Solana (SOL). SOL, as we are aware is the fifth-largest cryptocurrency by market capitalization. This […]",
       "currencies": [
@@ -249,108 +83,6 @@
       "votes": {
         "positive": 2,
         "negative": 6
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Lido’s New Institutional Staking Platform Boosts Ethereum Liquidity for Big Players",
-      "link": "NULL",
-      "pubDate": "2024-08-03T09:31:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Says Ethereum-Based Altcoin To Go Much Higher, Updates Outlook on Bitcoin and dogwifhat",
-      "link": "NULL",
-      "pubDate": "2024-08-03T09:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRV",
-        "DAO",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Ex-Binance Global Adviser Now Becomes Senior Adviser for Harris’ 2024 Campaign",
-      "link": "NULL",
-      "pubDate": "2024-08-03T06:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "BOME Trades Green But Meme Coin Moonshot Raboo Attracts DOGE Investors With 20% Flash Sale",
-      "link": "NULL",
-      "pubDate": "2024-08-03T05:57:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "BOME"
-      ]
-    },
-    {
-      "title": "Crypto Executives Meeting Coming Soon Seeking White House Help for Crypto and Web3",
-      "link": "NULL",
-      "pubDate": "2024-08-03T04:58:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Wormhole, XAI, IMX set to partake in next week's token unlocks worth over $200 million",
-      "link": "NULL",
-      "pubDate": "2024-08-03T01:29:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Polymarket traffic surpasses DeFi giants amid Trump-Harris election betting craze",
-      "link": "NULL",
-      "pubDate": "2024-08-03T00:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "GMX"
-      ]
-    },
-    {
-      "title": "Top Crypto to Invest In Today August 2 – Bitcoin (BTC), Solana (SOL), Near Protocol (NEAR)",
-      "link": "NULL",
-      "pubDate": "2024-08-03T00:07:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
       },
       "sentiment": "bearish"
     }

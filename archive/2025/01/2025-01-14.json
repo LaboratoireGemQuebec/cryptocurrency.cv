@@ -1,64 +1,15 @@
 {
   "date": "2025-01-14",
-  "fetchedAt": "2026-02-05T07:45:53.750Z",
-  "articleCount": 96,
+  "fetchedAt": "2026-02-05T07:48:35.710Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Ethereum Whales Absorb $1 Million Loss As Market Caution Intensifies",
-      "link": "NULL",
-      "pubDate": "2025-01-14T23:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "DAI",
-        "LTC"
-      ]
-    },
-    {
-      "title": "VIRTUAL whales buy the dip – Analyzing impact on price action",
-      "link": "NULL",
-      "pubDate": "2025-01-14T23:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VIRTUAL"
-      ]
-    },
-    {
-      "title": "Polygon Launches Season 2 of Community Grants Program With 35 Million POL for AI, DePIN, and Memecoins",
-      "link": "NULL",
-      "pubDate": "2025-01-14T22:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "POL"
-      ]
-    },
-    {
-      "title": "AI Agent Tokens Skyrocket as Franklin Templeton Highlights 'Significant Promise'",
-      "link": "NULL",
-      "pubDate": "2025-01-14T22:12:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VIRTUAL",
-        "AI16Z"
-      ]
-    },
     {
       "title": "Ethereum Price Rebounds: Analysts Predicts Bullish Breakout Above $5k",
       "link": "https://www.thecoinrepublic.com/2025/01/14/ethereum-price-rebounds-analysts-predicts-bullish-breakout-above-5k/",
       "pubDate": "2025-01-14T22:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "ethereum",
       "description": "Ethereum (ETH) price has bounced back strongly from the $2,920 low recorded on January 13. This has sparked optimism for a bullish breakout. The crypto is now trading above $3,100, showing signs of recovery. As it moves toward key resistance levels it could pave the way for a new all-time high (ATH) in 2025. Ethereum […] The post Ethereum Price Rebounds: Analysts Predicts Bullish Breakout...",
       "currencies": [
@@ -72,33 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Polkadot thoughts?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T21:31:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "IoTeX Integrates with Fireblocks to Scale Institutional DePIN Operations",
-      "link": "NULL",
-      "pubDate": "2025-01-14T21:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTX"
-      ]
-    },
-    {
       "title": "Solana and XRP ETFs Could Attract Billions, But Will Fall Short of Bitcoin: JP Morgan",
       "link": "https://decrypt.co/300982/solana-xrp-etfs-attract-billions-fall-short-bitcoin-jp-morgan",
       "pubDate": "2025-01-14T21:24:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "Expected Solana and XRP ETFs could attract sizable investment, JP Morgan analysts said, but it's unlikely they'll match the Bitcoin boom.",
       "currencies": [
@@ -112,158 +41,11 @@
       }
     },
     {
-      "title": "Trader Says Large-Cap Memecoins ‘Don’t Look Great,’ Updates Forecast on Dogecoin (DOGE) and POPCAT",
-      "link": "NULL",
-      "pubDate": "2025-01-14T21:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "POPCAT",
-        "X"
-      ]
-    },
-    {
-      "title": "PENGU Gains Over 9%, Tightening Competition With BONK for Top Solana Meme Coin",
-      "link": "NULL",
-      "pubDate": "2025-01-14T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "MOVE",
-        "PENGU",
-        "ADX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Coinbase Triggers Rallies After Announcing Listing of Solana-Based Memecoin Peanut the Squirrel (PNUT)",
-      "link": "NULL",
-      "pubDate": "2025-01-14T20:55:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "PNUT",
-        "MEME",
-        "X"
-      ]
-    },
-    {
-      "title": "5 Crypto Tokens That Could Rally 100% Ahead of Trump’s Cabinet Selection",
-      "link": "NULL",
-      "pubDate": "2025-01-14T20:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR",
-        "AAVE",
-        "SUSHI",
-        "COW"
-      ]
-    },
-    {
-      "title": "SPX6900 (SPX) Soars 27%, Recovers $1 Billion Market Cap Despite Bearish Indicators",
-      "link": "NULL",
-      "pubDate": "2025-01-14T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MOVE",
-        "FARTCOIN",
-        "SPX"
-      ]
-    },
-    {
-      "title": "AI16Z Surges 36% as AI Coins Recover Following Recent Strong Correction",
-      "link": "NULL",
-      "pubDate": "2025-01-14T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MOVE",
-        "VIRTUAL",
-        "AI16Z",
-        "ADX"
-      ]
-    },
-    {
-      "title": "ai16z’s Eliza Labs ships white paper for Web3-native AI agents",
-      "link": "NULL",
-      "pubDate": "2025-01-14T19:58:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AI16Z",
-        "DEFI",
-        "ELIZA"
-      ]
-    },
-    {
-      "title": "Ethereum price rebound will take time, even if ETH data looks bullish",
-      "link": "NULL",
-      "pubDate": "2025-01-14T19:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RLY",
-        "DEFI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin’s low relative volatility suggests further upside in 2025: ARK",
-      "link": "NULL",
-      "pubDate": "2025-01-14T19:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK",
-        "TRUMP"
-      ]
-    },
-    {
-      "title": "Meta Shareholder Proposes Bitcoin Investment to Combat Inflation",
-      "link": "NULL",
-      "pubDate": "2025-01-14T19:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "META"
-      ]
-    },
-    {
       "title": "JPMorgan Chase Predicts XRP, Solana ETFs Will Attract up to $8,000,000,000 Each: Report",
       "link": "https://dailyhodl.com/2025/01/14/jpmorgan-chase-predicts-xrp-solana-etfs-will-attract-up-to-8000000000-each-report/",
       "pubDate": "2025-01-14T19:05:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "JPMorgan Chase expects that potential Solana (SOL) and XRP exchange-traded funds (ETFs) could see multi-billion dollar inflows. VanEck’s head of digital asset research Matthew Sigel reports on the social media platform X that JPMorgan says SOL and XRP ETFs could attract up to $16 billion in total. “SOL & XRP exchange-traded products (ETPs) Could Attract […] The post JPMorgan Chase Predicts XRP, Solana ETFs Will Attract up to $8,000,000,000 Each: Report appeared first on The Daily Hodl.",
       "currencies": [
@@ -277,331 +59,11 @@
       }
     },
     {
-      "title": "Solana meme coin PNUT jumps 30% as Coinbase trading kicks off",
-      "link": "NULL",
-      "pubDate": "2025-01-14T18:59:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "PNUT",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Filecoin (FIL) price prediction for the upcoming bull cycle",
-      "link": "NULL",
-      "pubDate": "2025-01-14T18:37:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Solana-Based DEX Mango Markets Shutting Down Following SEC and CFTC Enforcement Actions",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:55:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "MNGO",
-        "S"
-      ]
-    },
-    {
-      "title": "Nansen’s Staking Platform Hits $1 Billion TVL in Just 4 Months",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:44:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "SUI",
-        "HYPE",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "How Gate.io’s Quant Fund Is Redefining Crypto Investment",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:40:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Peanut the Squirrel (PNUT) Explodes 30% Daily as Coinbase Trading Begins: Details",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:40:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PNUT"
-      ]
-    },
-    {
-      "title": "President Biden signs executive order to promote AI infrastructure",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Coinbase Officially Adds Peanut the Squirrel (PNUT) to Its Platform",
-      "link": "NULL",
-      "pubDate": "2025-01-14T17:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PNUT"
-      ]
-    },
-    {
-      "title": "Koni Stack Partners with Mythical Games to Launch ‘Football Rivals’ on Telegram, Introducing a New Use Case for Polkadot and Accelerating Web3 Adoption",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:49:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Why These Altcoins Are Trending Today — January 14",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VIRTUAL",
-        "AI16Z",
-        "AIXBT"
-      ]
-    },
-    {
-      "title": "The Best AI Agent Coins to Buy Now — Analysts Claim 13X Potential",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:24:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "ICP",
-        "FET",
-        "PEPE",
-        "TAO",
-        "RENDER",
-        "VIRTUAL",
-        "AI16Z",
-        "FAI",
-        "PAAL",
-        "X"
-      ]
-    },
-    {
-      "title": "Best 4 Web3 Crypto Picks with Explosive Growth Potential In 2025—Why 3BAY, FIL, LINK & STX Stand Out!",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:16:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "FIL",
-        "STX"
-      ]
-    },
-    {
-      "title": "Koni Stack Partners with Mythical Games to Launch 'Football Rivals' on Telegram, Introducing a New Use Case for Polkadot and Accelerating Web3 Adoption",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:15:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Maple Finance mulls token buybacks",
-      "link": "NULL",
-      "pubDate": "2025-01-14T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AAVE",
-        "MPL",
-        "ENA",
-        "ETHFI",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "Bison Digital Assets Partners with Circle to Offer MiCA-Compliant Stablecoins",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:57:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "EURC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Polkadot Rebounds Slowly As Oversold Conditions Ignite Bullish Hopes",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "DOT",
-        "TUSD",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "‘We May Have a Breakout on Our Hands Here’: Analyst Says One Top-10 Altcoin Is Primed for a New All-Time High",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "CRV",
-        "X"
-      ]
-    },
-    {
-      "title": "Crypto market is ‘not playing ball’ so far in 2025: Jason Pizzino, X Hall of Flame",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TIA",
-        "X"
-      ]
-    },
-    {
-      "title": "Injective's iAgent & io.net's GPUs Unite to Shape the Future of DeFAI",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:06:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "io.net and Injective Partner to Revolutionize Decentralized AI with New Collaboration",
-      "link": "NULL",
-      "pubDate": "2025-01-14T15:06:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "BCH Miner helps you earn $7,800 a day — providing free cloud mining",
-      "link": "NULL",
-      "pubDate": "2025-01-14T14:58:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BCH"
-      ]
-    },
-    {
-      "title": "OKX Founder Eyes 100x Growth for Bitcoin and the Crypto Ecosystem",
-      "link": "NULL",
-      "pubDate": "2025-01-14T14:44:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OKB"
-      ]
-    },
-    {
-      "title": "Fartcoin Soars 46% In A Day, Outperforms Dogecoin Shiba Inu To Enter $1 Billion Valuation Club",
-      "link": "NULL",
-      "pubDate": "2025-01-14T14:42:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "WIF",
-        "FARTCOIN",
-        "POPCAT"
-      ]
-    },
-    {
-      "title": "President Trump will have to cancel Elon Musk’s D.O.G.E now, for the economy’s survival",
-      "link": "NULL",
-      "pubDate": "2025-01-14T14:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G"
-      ]
-    },
-    {
-      "title": "Craig Wright ‘likely’ filed COPA case appeal request to Supreme Court",
-      "link": "NULL",
-      "pubDate": "2025-01-14T13:58:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "GAL"
-      ]
-    },
-    {
       "title": "Italy’s largest bank enters crypto market with $1M Bitcoin investment",
       "link": "https://cointelegraph.com/news/italy-largest-bank-buys-11-bitcoin-intesa-sanpaolo-1m-btc-investment?utm_source=rss_feed&utm_medium=rss%3Ft%3D1736909787205&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-01-14T13:49:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Intesa Sanpaolo has become Italy’s first bank to make a Bitcoin investment after buying more than $1 million worth of BTC during a period of growing institutional interest.",
       "currencies": [
@@ -614,83 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "North Korean Hackers Stole $660 Million in Cryptocurrency in 2024",
-      "link": "NULL",
-      "pubDate": "2025-01-14T13:34:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Solana Whales Load Up on CATZILLA While DOGE and NEIRO Face Struggles on Market Decline - Read Why",
-      "link": "NULL",
-      "pubDate": "2025-01-14T13:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "NEIRO"
-      ]
-    },
-    {
-      "title": "DOT, PEPETO, XRP, DOGE; Which Should You Buy For 2025?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T12:59:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "DOGE",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Battle of the Memes: Which Will Remain Victorious in 2025, Shiba, Bonk, or Floki—and Why?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T12:44:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BONK",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Fartcoin Price Rockets 60%: Is $2 Next Target?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T12:43:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FARTCOIN",
-        "POPCAT"
-      ]
-    },
-    {
-      "title": "EigenLayer Introduces Protocol Council for Ecosystem Development and Proposal Evaluation",
-      "link": "NULL",
-      "pubDate": "2025-01-14T12:26:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EIGEN"
-      ]
-    },
-    {
       "title": "JPMorgan Issues Major Solana and XRP ETF Predictions: Details",
       "link": "https://www.thecoinrepublic.com/2025/01/14/jpmorgan-issues-major-solana-and-xrp-etf-predictions-details/",
       "pubDate": "2025-01-14T12:21:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "Analysts at JPMorgan are optimistic that introducing Solana (SOL) and XRP Exchange Traded Funds (ETFs) could inject up to $8 billion into the assets. Matthew Sigel, Head of Digital Assets Research at VanEck, recently highlighted this stance in an X post. The JPMorgan Inflow Forecast He said that Bitcoin ETP assets, which are approximately $108 […] The post JPMorgan Issues Major Solana and XRP...",
       "currencies": [
@@ -705,23 +95,11 @@
       }
     },
     {
-      "title": "XYZVerse, PENGU, and BONK: 3 Meme Coins That Could Make You a Millionaire by Summer 2025",
-      "link": "NULL",
-      "pubDate": "2025-01-14T12:06:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "PENGU"
-      ]
-    },
-    {
       "title": "Stablecoins make up one-third of all crypto payments in 2024 – CoinGate report",
       "link": "https://finbold.com/stablecoins-make-up-one-third-of-all-crypto-payments-in-2024-coingate-report/",
       "pubDate": "2025-01-14T12:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "stablecoin",
       "description": "The cryptocurrency market reached significant milestones in 2024. With mainstream appeal steadily rising on account of increased accessibility through Bitcoin … Continue reading The post Stablecoins make up one-third of all crypto payments in 2024 – CoinGate report appeared first on Finbold.",
       "currencies": [
@@ -735,81 +113,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum Trader Behind $10M NEIRO Success Eyes XRP and TRX and New Meme Coin with Over 10,000% Upside",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:57:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "TRX",
-        "NEIRO"
-      ]
-    },
-    {
-      "title": "Altcoins Recovery: Strong Uptrend Continues",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:57:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Trump Inauguration to Host First-Ever ‘Crypto Ball’ in D.C.",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:53:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "S",
-        "W"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Dogwifhat Approaching $1.30, Correcting impending? Also, PEPETO Becomes Token of the Season",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:52:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF"
-      ]
-    },
-    {
-      "title": "Humanity Protocol Advances Decentralized Identity Goals with Foundation Launch",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:46:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WLD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "XRP eyes $100 this cycle if historical pattern plays out, according to technical analyst",
       "link": "https://finbold.com/xrp-eyes-100-this-cycle-if-historical-pattern-plays-out-according-to-technical-analyst/",
       "pubDate": "2025-01-14T11:39:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "XRP breakout in the current cycle could be preparing the token to rally to $100 if a repeating historical pattern … Continue reading The post XRP eyes $100 this cycle if historical pattern plays out, according to technical analyst appeared first on Finbold.",
       "currencies": [
@@ -822,78 +130,11 @@
       }
     },
     {
-      "title": "Can Dogecoin Cross $5 This Cycle? Expert Recommends These 2 Utility Altcoins Instead",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Gate 2024 Annual Report: Trading Volume Exceeds $3.8 Trillion, Solidifying Top 4 Market Position",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:27:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "GT",
-        "TON"
-      ]
-    },
-    {
-      "title": "Binance Reveals Major Update on BANANA and These Crypto, Will Prices React?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:25:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONE",
-        "KDA",
-        "IOST",
-        "LPT",
-        "LQTY",
-        "TRB",
-        "BANANA"
-      ]
-    },
-    {
-      "title": "After PancakeSwap, can Aerodrome turn around Uniswap and become the top DeFi contender?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "AERO"
-      ]
-    },
-    {
-      "title": "ai16z – Assessing impact of $6.37M whale withdrawal on coin’s price",
-      "link": "NULL",
-      "pubDate": "2025-01-14T11:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AI16Z"
-      ]
-    },
-    {
       "title": "Intesa Sanpaolo, Italy’s largest bank, purchases 11 Bitcoins for over $1M",
       "link": "https://www.cryptopolitan.com/intesa-sanpaolo-italy-bank-11-btc/",
       "pubDate": "2025-01-14T10:52:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "bitcoin",
       "description": "Italy's biggest bank, Intesa Sanpaolo, has acquired Bitcoin worth $1.03 million.",
       "currencies": [
@@ -906,125 +147,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Price Analysis 1-14 BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, RIPPLE: XRP, ARBITRUM: ARB, FILECOIN: FIL, INJECTIVE: INJ",
-      "link": "NULL",
-      "pubDate": "2025-01-14T10:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "FIL",
-        "INJ",
-        "ARB"
-      ]
-    },
-    {
-      "title": "BTC below $91K, Dollar at 2-year High, AI Crypto faces Deep sell-off",
-      "link": "NULL",
-      "pubDate": "2025-01-14T10:10:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "ONDO",
-        "USD0"
-      ]
-    },
-    {
-      "title": "Kaspa price prediction – KAS buyers have THESE bullish targets in mind!",
-      "link": "NULL",
-      "pubDate": "2025-01-14T10:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "OKX Founder Teases Secret Business Line Alongside Crypto Growth Predictions",
-      "link": "NULL",
-      "pubDate": "2025-01-14T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "OKB",
-        "X"
-      ]
-    },
-    {
-      "title": "4 of the Best Altcoins That Might Skyrocket if Solana ETFs Launch in 2025",
-      "link": "NULL",
-      "pubDate": "2025-01-14T09:53:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DOGE",
-        "PEPE",
-        "BONK",
-        "PENGU"
-      ]
-    },
-    {
-      "title": "Meta Investors Push Mark Zuckerberg To Replace $72B Cash With Bitcoin To Combat Inflation: Here's What It Means For Investors",
-      "link": "NULL",
-      "pubDate": "2025-01-14T09:42:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "META",
-        "MSTR"
-      ]
-    },
-    {
-      "title": "Soneium blockchain launches as Sony dives deeper into NFT and crypto space",
-      "link": "NULL",
-      "pubDate": "2025-01-14T09:29:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETH",
-        "OP",
-        "S"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Pi Coin Network: Potential Risks Ahead For Pi Network",
-      "link": "NULL",
-      "pubDate": "2025-01-14T09:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOGS"
-      ]
-    },
-    {
       "title": "#Bitcoin and other #crypto prices will shoot upward as traditional banks integrate crypto into their services",
       "link": "https://x.com/Bitcoinsensus/status/1879096720812089684",
       "pubDate": "2025-01-14T09:22:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinsensus",
+      "sourceKey": "bitcoinsensus",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -1039,8 +166,8 @@
       "title": "JUST IN: 🇸🇻 El Salvador’s President Bukele commits to installing a Bitcoin node in every home - Max Keiser",
       "link": "https://x.com/BTC_Archive/status/1879094337461752149",
       "pubDate": "2025-01-14T09:12:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -1052,23 +179,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ancient8 (A8) Price Rockets 30% And Drift Token Up 7% Post Major Listing",
-      "link": "NULL",
-      "pubDate": "2025-01-14T09:07:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DRIFT",
-        "A8"
-      ]
-    },
-    {
       "title": "Cardano in Talks to Integrate Ripple’s RLUSD Stablecoin",
       "link": "https://coinpaprika.com/news/cardano-in-talks-to-integrate-ripple-s-rlusd-stablecoin/",
       "pubDate": "2025-01-14T08:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "Cardano's Charles Hoskinson confirms talks with Ripple to integrate RLUSD, aiming to boost DeFi adoption and expand both ecosystems' stablecoin reach.",
       "currencies": [
@@ -1080,240 +195,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Zk零知识证明将如何塑造我们的数字未来",
-      "link": "NULL",
-      "pubDate": "2025-01-14T08:22:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN",
-        "ZK"
-      ]
-    },
-    {
-      "title": "OKX Founder Predicts 100x Growth For Crypto Industry",
-      "link": "NULL",
-      "pubDate": "2025-01-14T07:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "OKB"
-      ]
-    },
-    {
-      "title": "95% of ONT holders still in red despite 33% hike – Price ceiling ahead?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T07:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONT"
-      ]
-    },
-    {
-      "title": "Crypto Ball: Inaugural Gala Signals a New Dawn for US Crypto Leadership",
-      "link": "NULL",
-      "pubDate": "2025-01-14T06:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA",
-        "TRUMP",
-        "S",
-        "W"
-      ]
-    },
-    {
-      "title": "Whale movements and bearish signals mean here’s what’s next for WIF!",
-      "link": "NULL",
-      "pubDate": "2025-01-14T06:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WIF",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Sony Enters Blockchain Game with “Soneium” Launch",
-      "link": "NULL",
-      "pubDate": "2025-01-14T05:47:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Monero Price Forecast: XMR bulls remain strong, eyes double-digit gains",
-      "link": "NULL",
-      "pubDate": "2025-01-14T05:40:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Ethereum Classic: Why holding THIS level could push ETC to $37",
-      "link": "NULL",
-      "pubDate": "2025-01-14T05:05:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "How Artificial Intelligence Is Shaping a New Crypto Narrative: Industry Leaders Weigh In",
-      "link": "NULL",
-      "pubDate": "2025-01-14T04:25:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "FARTCOIN",
-        "AI16Z",
-        "AIXBT",
-        "AGI",
-        "BULLY"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 14 January 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-01-14T04:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Hints at Rebound: Early Signs of Recovery Emerge",
-      "link": "NULL",
-      "pubDate": "2025-01-14T02:53:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Sony’s public blockchain platform Soneium launches on mainnet",
-      "link": "NULL",
-      "pubDate": "2025-01-14T02:10:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Fresh addresses are accumulating Bitcoin despite the heavy price drawdown",
-      "link": "NULL",
-      "pubDate": "2025-01-14T02:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Ethereum Setting Up for a ‘Face-Melting’ Rally Later This Year, According to Crypto Trader – But There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2025-01-14T01:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "WIF",
-        "X"
-      ]
-    },
-    {
-      "title": "US Supreme Court Rejects Binance’s Appeal on Class-Action Lawsuit",
-      "link": "NULL",
-      "pubDate": "2025-01-14T00:49:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "TRX",
-        "EOS",
-        "OMG",
-        "FUN",
-        "ELF"
-      ]
-    },
-    {
-      "title": "PEPE Coin Whales Accumulating, Time to Buy?",
-      "link": "NULL",
-      "pubDate": "2025-01-14T00:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JASMY",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Coinbase adds support for Peanut (PNUT) on Solana, warns against wrong network transfers",
-      "link": "NULL",
-      "pubDate": "2025-01-14T00:11:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "PNUT"
-      ]
-    },
-    {
-      "title": "Analyzing FLOKI’s recovery odds after memecoin’s price drops to 3-week-low",
-      "link": "NULL",
-      "pubDate": "2025-01-14T00:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLOKI",
-        "MEME"
-      ]
     }
   ]
 }

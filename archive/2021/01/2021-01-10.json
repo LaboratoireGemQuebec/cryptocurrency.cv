@@ -1,37 +1,15 @@
 {
   "date": "2021-01-10",
-  "fetchedAt": "2026-02-05T07:45:51.907Z",
-  "articleCount": 11,
+  "fetchedAt": "2026-02-05T07:48:35.500Z",
+  "articleCount": 3,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "YOUengine Launch Day! Beta Test Completed",
-      "link": "NULL",
-      "pubDate": "2021-01-10T22:59:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "YOUC"
-      ]
-    },
-    {
-      "title": "Get $PNT rewards when staking in the #pNetwork DAO —and help govern the development of your favorite #DeFi project!…",
-      "link": "NULL",
-      "pubDate": "2021-01-10T19:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "PLTC"
-      ]
-    },
     {
       "title": "Top 5 cryptocurrencies to watch this week: BTC, ADA, EOS, THETA, AAVE",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-ada-eos-theta-aave",
       "pubDate": "2021-01-10T19:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Altcoins rallied strongly over the past week, but Bitcoin’s current consolidation could be a sign that the trend may reverse soon.",
       "currencies": [
@@ -48,22 +26,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How can #Blockchain change the #healthcare system? The Blockchain technology can be used to store all #medical re…",
-      "link": "NULL",
-      "pubDate": "2021-01-10T19:01:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "EOS Plummets After Block.one CTO Dan Larimer Resigns",
       "link": "https://cryptobriefing.com/eos-plummets-block-one-cto-dan-larimer-resigns/",
       "pubDate": "2021-01-10T17:09:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Dan Larimer announced his resignation as chief technology officer (CTO) of the crypto company, Block.one. The company is responsible for building an alleged “Ethereum killer” and earned over $4 billion during an ICO promising the same. Larimer: “All Good Things Must Come to an End” In a brief blog post, the Block.one CTO thanked his colleagues and announced that he would be leaving the company to turn to build more censorship-resistant technologies. He said: “I have come to believe that you cann",
       "currencies": [
@@ -78,22 +45,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @block_one_: today announced that Daniel Larimer, CTO at , has departed to pursue new per…",
-      "link": "NULL",
-      "pubDate": "2021-01-10T16:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
       "title": "Dan Larimer Announces Departure From EOS Builder Block.One",
       "link": "https://www.coindesk.com/cto-dan-larimer-announces-departure-from-eos-builder-block-one",
       "pubDate": "2021-01-10T14:33:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "general",
       "description": "Dan Larimer has left Block.one, the company that raised $4 billion to build the software behind the EOS blockchain.",
       "currencies": [
@@ -105,57 +61,6 @@
         "negative": 5
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "The Future of DeFi",
-      "link": "NULL",
-      "pubDate": "2021-01-10T09:51:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Set up a #pNetwork node and secure the movement of $BTC, $ETH, $LTC and other #crypto assets into the #DeFi ecosyst…",
-      "link": "NULL",
-      "pubDate": "2021-01-10T09:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LTC",
-        "PLTC"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 26 #hive",
-      "link": "NULL",
-      "pubDate": "2021-01-10T08:41:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @DogeDomains: Welcome  to #Defi Shibes  So bullish for $DOGE Wow 🤩 #dogecointo1dollar #Dogecoinarmy #dogecoin #DogeArmy #doge #dogecoi…",
-      "link": "NULL",
-      "pubDate": "2021-01-10T02:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DOGE",
-        "PLTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

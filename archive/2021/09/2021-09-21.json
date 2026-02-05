@@ -1,15 +1,15 @@
 {
   "date": "2021-09-21",
-  "fetchedAt": "2026-02-05T07:45:51.568Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.343Z",
+  "articleCount": 28,
   "source": "historical-import",
   "articles": [
     {
       "title": "Solana’s 17-Hour Outage Was Sad And Frustrating, Says FTX’s Sam Bankman-Fried",
       "link": "https://cryptopotato.com/solanas-17-hour-outage-was-sad-and-frustrating-says-ftxs-sam-bankman-fried/",
       "pubDate": "2021-09-21T23:45:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "According to Sam Bankman-Fried, Solana's network has been expanding too quickly, and that caused its recent disruption.",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Robinhood Is Testing A New Wallet To Allow Users Withdraw Their Cryptocurrencies, Including Dogecoin",
       "link": "https://bitcoinist.com/robinhood-is-testing-a-new-wallet-to-allow-users-withdraw-their-cryptocurrencies-including-dogecoin/?utm_source=rss&utm_medium=rss&utm_campaign=robinhood-is-testing-a-new-wallet-to-allow-users-withdraw-their-cryptocurrencies-including-dogecoin",
       "pubDate": "2021-09-21T23:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Robinhood has grown so much this year thanks to increased interest in Dogecoin. The trading platform recently revealed that crypto trading made up 50% of its revenue for the second quarter of the year. And that number is expected to grow as Robinhood’s focus falls on crypto. This is why the most recent feature that […]",
       "currencies": [
@@ -42,8 +42,8 @@
       "title": "Bitcoin Slides 6% as Ethereum Sinks Below $3,000 to Hit Near Two-Month Low",
       "link": "https://decrypt.co/81494/bitcoin-ethereum-solana-price-continued-slide",
       "pubDate": "2021-09-21T22:56:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The entire crypto market took a beating yesterday, seemingly as a result of uncertainty in the Chinese markets. Things don't look better today.",
       "currencies": [
@@ -61,8 +61,8 @@
       "title": "RT @RichardHeartWin: #WallStreet is starting to notice.",
       "link": "https://twitter.com/HEXcrypto/status/1440433551070031873",
       "pubDate": "2021-09-21T21:51:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "HEX"
@@ -74,22 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "“The bridge is an important milestone in achieving interoperability and demonstrating the use cases underpinned by…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T21:33:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
       "title": "Solana is back and how! Sees inflows worth $4.8 million last week",
       "link": "https://ambcrypto.com/solana-is-back-and-how-sees-inflows-worth-us4-8-million-last-week/",
       "pubDate": "2021-09-21T20:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Solana, is one of the most trending blockchain platforms, and SOL witnessed a massive rise since recently. The price surge boosted Solana’s market cap above $40 billion. Note this, the token had made its debut only 18 months ago and a year ago, it was worth less than $2. Diagnosis The network suffered a major […]",
       "currencies": [
@@ -102,56 +91,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "We are T-3 hours from finalizing the auction of the “Lambada Dyed Red White Blue” digital dress created by…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T20:28:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Another new release of Bitcoin ABC, the full node software the powers the eCash network. #eCash #BitcoinABC #XEC",
-      "link": "NULL",
-      "pubDate": "2021-09-21T20:19:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Bitcoin ABC 0.24.2 is now available! This release rebrands the header for signed messages and adds a new RPC. Dow…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T20:15:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "RT @enyaai: @MessariCrypto #Mainnet2021 attendees, don’t forget to stop by booth #301 on Floor 6 learn about @bobanetwork 🧋 and grab some…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T20:05:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "Roughly $11,800,000 Worth of Bitcoin Stolen From DeFi Platform in Latest Crypto Hack",
       "link": "https://dailyhodl.com/2021/09/21/roughly-11800000-worth-of-bitcoin-stolen-from-defi-platform-in-latest-crypto-hack/",
       "pubDate": "2021-09-21T20:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A cross-chain decentralized finance (DeFi) platform says it has lost millions of dollars worth of Bitcoin (BTC) to hackers. pNetwork, which allows the teleporting of any digital asset to a different blockchain, says in a tweet that an attacker stole 277 Bitcoin wrapped as pBTC on the Binance Smart Chain (BSC). “We’re sorry to inform […]",
       "currencies": [
@@ -164,33 +108,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @DecredSociety: Exciting times! #Decred Society has just gone live on Apple Podcasts -",
-      "link": "NULL",
-      "pubDate": "2021-09-21T19:47:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
-      "title": "Happy Moon Festival everyone! To the Moon with eCash! #eCash, #XEC, #MoonFestival, #MidAutumnFestival",
-      "link": "NULL",
-      "pubDate": "2021-09-21T18:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Is Ether's True Value Actually Closer To $1,500?",
       "link": "https://www.forbes.com/sites/cbovaird/2021/09/21/is-ethers-true-value-actually-closer-to-1500/",
       "pubDate": "2021-09-21T18:17:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "ethereum",
       "description": "Recently, a J.P. Morgan strategist offered an analysis stating that ether's fair value is near $1,500. Is this assessment accurate? Several market observers weigh in.",
       "currencies": [
@@ -206,8 +128,8 @@
       "title": "Smart contracts are coming to Bitcoin through Dfinity’s Internet Computer",
       "link": "https://cointelegraph.com/news/smart-contracts-are-coming-to-bitcoin-through-dfinity-s-internet-computer",
       "pubDate": "2021-09-21T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Efforts to expand Bitcoin’s functionality for payments, smart contracts and Web 3.0 are well underway, opening the door to wider mainstream adoption.",
       "currencies": [
@@ -221,33 +143,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @PaulFord: Climate Change is Real! Chia’s Neil Cohen, VP of Sustainability and a Seasoned Climate Expert discusses the state of the plan…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T17:56:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "RT @Bloqport: $80 billion Brazilian investment bank BTG Pactual has announced the launch of a new crypto platform, enabling customers to di…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T17:16:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTG"
-      ]
-    },
-    {
       "title": "Jim Cramer Urges for Caution in The Cryptocurrency Market Amid Evergrande Saga",
       "link": "https://cryptopotato.com/jim-cramer-urges-for-caution-in-the-cryptocurrency-market-amid-evergrande-saga/",
       "pubDate": "2021-09-21T17:15:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Investors should cash out some of their cryptocurrency holdings to prevent future losses, according to CNBC's Jim Cramer.",
       "currencies": [
@@ -265,8 +165,8 @@
       "title": "Assessing the odds of Solana dropping below $100 soon",
       "link": "https://ambcrypto.com/assessing-the-odds-of-solana-dropping-below-100-soon/",
       "pubDate": "2021-09-21T16:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "A $100 investment in Solana a year back would have led to a $5000 return on investments right now. The digital asset has undoubtedly taken the market by storm and over the past couple of months, its valuation has parabolically risen. However, thanks to a major invalidation on the daily chart, a correction is possibly […]",
       "currencies": [
@@ -282,8 +182,8 @@
       "title": "Ethereum 'head & shoulders' chart pattern puts ETH price at risk of dropping to $2K",
       "link": "https://cointelegraph.com/news/ethereum-head-shoulders-chart-pattern-puts-eth-price-at-risk-of-dropping-to-2k",
       "pubDate": "2021-09-21T16:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "The bearish setup positions Ethereum price to extend the decline toward $2,000.",
       "currencies": [
@@ -297,51 +197,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "BTG Pactual becomes first bank in Brazil to participate directly in the crypto market",
-      "link": "NULL",
-      "pubDate": "2021-09-21T16:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "BTG"
-      ]
-    },
-    {
-      "title": "RT @nomorebear: Building oracle is not easy. As easy as it sounds (just feed price from API to blockchains!), there's a lot of design detai…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T15:34:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "Solana Price Analysis: SOL Trades Inside Price Channel Following Near 19% 7-Day Drop",
-      "link": "NULL",
-      "pubDate": "2021-09-21T15:32:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "SOL is down a sharp 18.5% this week as it trends inside a descending price channel. Against BTC, SOL recently found support at 0.0306 BTC.",
-      "currencies": [
-        "NEAR",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
       "title": "BTC, ETH, XRP, BNB and ADA Price Analysis for September 21",
       "link": "https://u.today/btc-eth-xrp-bnb-and-ada-price-analysis-for-september-21",
       "pubDate": "2021-09-21T15:01:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Is there a chance to see the continuation of growth on the market?",
       "currencies": [
@@ -355,33 +215,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "If you’re at #Mainnet2021 and haven’t stopped by the Hifi booth (#410) you are missing out! We’re giving away sets…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T14:50:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "RT @ecash_is_art: #eCash for beginners. #XEC @CainBCHA #100millionXEC100days @eCashOfficial",
-      "link": "NULL",
-      "pubDate": "2021-09-21T14:46:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Monero’s former maintainer released from US custody",
       "link": "https://cointelegraph.com/news/monero-s-former-maintainer-released-from-us-custody",
       "pubDate": "2021-09-21T14:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "“I am actively working with my attorneys on a way to return to South Africa as soon as possible so I can address this matter and get it behind me once and for all,” said Riccardo Spagni.",
       "currencies": [
@@ -394,33 +232,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We think it is a good time to expand the circle, don't you think so @kalataofficial ?",
-      "link": "NULL",
-      "pubDate": "2021-09-21T13:47:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
-      "title": "Congrats @SYP_Protocol and $SYP launch on @AscendEX_Global - a Bella portfolio",
-      "link": "NULL",
-      "pubDate": "2021-09-21T13:25:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
       "title": "$80 Billion Brazilian Investment Bank Launches Bitcoin and Crypto Trading App",
       "link": "https://bitcoinmagazine.com/culture/80-billion-brazilian-investment-bank-launches-bitcoin-and-crypto-trading-app",
       "pubDate": "2021-09-21T13:13:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "Brazilian investment bank BTG Pactual becomes first large financial institution in Brazil to enable customers to make direct investments in Bitcoin.",
       "currencies": [
@@ -437,8 +253,8 @@
       "title": "Shiba Inu (SHIB) adds over 100,000 new holders in three months",
       "link": "https://finbold.com/shiba-inu-shib-adds-over-100000-new-holders-in-three-months/",
       "pubDate": "2021-09-21T12:37:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The new findings presented by Finbold reveal that Shiba Inu (SHIB) added over 100,000 new holders to its decentralized meme token in... Continue reading",
       "currencies": [
@@ -450,22 +266,11 @@
       }
     },
     {
-      "title": "RT @unmarshal: XDC Chain has been Successfully integrated into our Ecosystem. Thanks to @XinFin_Official for the extension of the grants.…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T12:05:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
       "title": "Avalanche DeFi Platform Vee Finance Suffers $35M Hack",
       "link": "https://cryptobriefing.com/avalanche-defi-platform-vee-finance-hit-for-35m/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-09-21T12:05:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "currencies": [
         "AVAX"
@@ -480,8 +285,8 @@
       "title": "Major Brazilian Bank BTG Pactual to Offer Investment Options in Bitcoin and Ethereum",
       "link": "https://cryptopotato.com/major-brazilian-bank-btg-pactual-to-offer-investment-options-in-bitcoin-and-ethereum/",
       "pubDate": "2021-09-21T11:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "By launching the platform Mynt, Brazil's top financial institution - BTG Pactual - would enable its customers to trade bitcoin and ether.",
       "currencies": [
@@ -499,8 +304,8 @@
       "title": "Celo Defies Crypto Market Dip as Token Soars 28%",
       "link": "https://cryptobriefing.com/celo-defies-crypto-market-dip-as-token-soars-28/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-09-21T11:18:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "description": "Celo's token experienced a remarkable 28% increase despite a downturn in the broader cryptocurrency market, highlighting investor confidence and unique factors driving its growth. Analysts are curious about the reasons behind Celo's resilience and potential future trends in the crypto landscape.",
       "currencies": [
@@ -516,8 +321,8 @@
       "title": "Deutsche Boerse launches Solana and Polkadot ETNs by VanEck",
       "link": "https://cointelegraph.com/news/deutsche-boerse-launches-solana-and-polkadot-etns-by-vaneck",
       "pubDate": "2021-09-21T11:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Three new crypto ETNs are now live on Deutsche Boerse, following previous ETN listings on BTC, ETH, BCH and LTC.",
       "currencies": [
@@ -532,22 +337,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The #Electroneum #blockchain #update will now enable users to follow a #transaction from #wallet to wallet, and con…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T11:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Avalanche-Based DeFi Lender Vee Finance Hacked for $36M in BTC and ETH",
       "link": "https://cryptopotato.com/avalanche-based-defi-lender-vee-finance-hacked-for-36m-in-btc-and-eth/",
       "pubDate": "2021-09-21T10:55:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Vee finance is the latest decentralized finance protocol to be hacked, with $36 million worth of BTC and ETH stolen.",
       "currencies": [
@@ -564,8 +358,8 @@
       "title": "Dogecoin “Millionaire” Loses $500,000 on His Doge Holdings",
       "link": "https://u.today/dogecoin-millionaire-loses-500000-on-his-doge-holdings",
       "pubDate": "2021-09-21T10:51:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "YouTuber and Doge holder Glauber Contessoto has lost almost $500,000 as Dogecoin dropped hard in the past month",
       "currencies": [
@@ -577,22 +371,11 @@
       }
     },
     {
-      "title": "RT @JohannesReck: Business travel is alive and doing very well",
-      "link": "NULL",
-      "pubDate": "2021-09-21T10:39:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Ethereum on Shaky Ground as Top Trader Turns Bearish",
       "link": "https://cryptobriefing.com/ethereum-on-shaky-ground-as-top-trader-turns-bearish/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-09-21T10:21:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "currencies": [
         "ETH"
@@ -607,8 +390,8 @@
       "title": "Bitcoin will rally again but might correct to $18k, market strategist suggests",
       "link": "https://finbold.com/bitcoin-will-rally-again-but-might-correct-to-18k-market-strategist-suggests/",
       "pubDate": "2021-09-21T10:18:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Gareth Soloway, the chief market strategist at stock technical guidance platform InTheMoneyStocks.com has stated that Bitcoin could experience a further... Continue reading",
       "currencies": [
@@ -620,22 +403,11 @@
       }
     },
     {
-      "title": "RT @cryptoastekz: $OMG one of many positions I hold. 30k sign up bonus &gt;",
-      "link": "NULL",
-      "pubDate": "2021-09-21T07:06:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "Analyst Who Called Bitcoin Collapse in May Plots ‘Worst Case Scenario’ for BTC As Crypto Markets Tumble",
       "link": "https://dailyhodl.com/2021/09/21/analyst-who-called-bitcoin-collapse-in-may-plots-worst-case-scenario-for-btc-as-crypto-markets-tumble/",
       "pubDate": "2021-09-21T07:04:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "The crypto analyst and trader who accurately called Bitcoin’s top just under $65,000 in May is now laying out his worst-case scenario for BTC. The pseudonymous trader, known as Dave the Wave, tells his 77,700 followers that Bitcoin’s current price action looks similar to 2014, where the leading crypto asset plunged from around $988 down […]",
       "currencies": [
@@ -648,22 +420,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @highrewardcoin: Top Brazilian investment bank BTG Pactual launches crypto trading app",
-      "link": "NULL",
-      "pubDate": "2021-09-21T05:47:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTG"
-      ]
-    },
-    {
       "title": "Top Brazilian investment bank BTG Pactual launches crypto trading app",
       "link": "https://cointelegraph.com/news/top-brazilian-investment-bank-btg-pactual-launches-crypto-trading-app",
       "pubDate": "2021-09-21T05:31:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Initially supporting BTC and ETH only, BTG Pactual’s new crypto trading platform plans to allow its users to trade a wide range of altcoins.",
       "currencies": [
@@ -681,9 +442,9 @@
       "title": "Vee Finance Exploited for $35M on Avalanche",
       "link": "https://beincrypto.com/vee-finance-exploited-35m-avalanche/",
       "pubDate": "2021-09-21T05:29:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Decentralized finance platform Vee Finance appears to have become the latest victim in this year’s DeFi exploit season.",
       "currencies": [
         "AVAX"
@@ -694,39 +455,11 @@
       }
     },
     {
-      "title": "TA: Ethereum Breaking This Confluence Resistance Could Spark a Recovery",
-      "link": "NULL",
-      "pubDate": "2021-09-21T05:08:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @ecash_is_art: 2000 year old Greek mosaic with the #eCash symbol accidentally discovered in Turkey. This world surprises me more every…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T04:32:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "#Binance Will Support the @avalancheavax $AVAX Network Upgrade",
       "link": "https://twitter.com/binance/status/1440171858297430017",
       "pubDate": "2021-09-21T04:31:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "exchange",
       "currencies": [
         "BNB",
@@ -742,8 +475,8 @@
       "title": "TA: Bitcoin Dives To $40K, Why Recovery Could Be Capped",
       "link": "https://www.newsbtc.com/analysis/btc/bitcoin-dives-to-40k/",
       "pubDate": "2021-09-21T03:08:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin price settled below $46,000 and declined heavily against the US Dollar. BTC even traded close to $40,000 before starting an upside correction. Bitcoin is down over 10% and it broke the $45,000 and $43,000 support levels. The price is now trading below $43,000 and the 100 hourly simple moving average. There is a major bearish trend line forming with resistance near $43,100 on the hourly...",
       "currencies": [
@@ -754,18 +487,6 @@
         "positive": 4,
         "negative": 6
       }
-    },
-    {
-      "title": "ALL ABOUT THE LIGHT DEFI PROJECT. with RODRIGO DIGITAL, CEO of DASH DIGITAL & @Dan_Ifran , LIGHT DEFI BUSINESS REL…",
-      "link": "NULL",
-      "pubDate": "2021-09-21T01:02:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DASH",
-        "LIGHT"
-      ]
     }
   ]
 }

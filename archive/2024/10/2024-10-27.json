@@ -1,77 +1,15 @@
 {
   "date": "2024-10-27",
-  "fetchedAt": "2026-02-05T07:45:53.628Z",
-  "articleCount": 28,
+  "fetchedAt": "2026-02-05T07:48:35.691Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "MEW soars 47%, but analysts say a pullback could be coming – Here’s why",
-      "link": "NULL",
-      "pubDate": "2024-10-27T23:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MEW",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Goatseus Maximus (GOAT) Slumps 24%, Sparking Bearish Bets",
-      "link": "NULL",
-      "pubDate": "2024-10-27T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "ATH",
-        "GOAT"
-      ]
-    },
-    {
-      "title": "Terra Classic Votes on This Key Community Proposal",
-      "link": "NULL",
-      "pubDate": "2024-10-27T21:44:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNA"
-      ]
-    },
-    {
-      "title": "Bitcoin price push through $68K adds strength to SOL, DOGE, RUNE and BGB",
-      "link": "NULL",
-      "pubDate": "2024-10-27T21:08:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOGE",
-        "RUNE",
-        "BGB"
-      ]
-    },
-    {
-      "title": "Lens Protocol Prepares for Q4 ICO on Polygon",
-      "link": "NULL",
-      "pubDate": "2024-10-27T20:59:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
     {
       "title": "Shiba Inu Launches ShibaSwap 2.0 with Major Upgrades",
       "link": "https://coinpaprika.com/news/shiba-inu-launches-shibaswap-2-0-with-major-upgrades/",
       "pubDate": "2024-10-27T20:55:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "Shiba Inu unveils ShibaSwap 2.0, bringing enhanced features and greater accessibility, aiming to boost activity on the Shibarium network.",
       "currencies": [
@@ -84,50 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto market’s weekly winners and losers – SAFE, RAY, IMX, APE",
-      "link": "NULL",
-      "pubDate": "2024-10-27T19:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE",
-        "IMX",
-        "SAFE",
-        "RAY"
-      ]
-    },
-    {
-      "title": "Marc Andreesen shoutouts help AI-powered VC fund ai16z to nearly $100 million market cap",
-      "link": "NULL",
-      "pubDate": "2024-10-27T18:39:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AI16Z",
-        "VC"
-      ]
-    },
-    {
-      "title": "Coinbase Reveals Tool for Faster Blockchain AI Agent Creation",
-      "link": "NULL",
-      "pubDate": "2024-10-27T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "ARB"
-      ]
-    },
-    {
       "title": "Toncoin grows 210x faster than Ethereum: TON over ETH soon?",
       "link": "https://ambcrypto.com/toncoin-grows-210x-faster-than-ethereum-ton-over-eth-soon/",
       "pubDate": "2024-10-27T18:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "TON addresses have been growing faster than ETH addresses, and could soon flip Ethereum!",
       "currencies": [
@@ -140,62 +39,11 @@
       }
     },
     {
-      "title": "Ethereum Rally Stalls Due to 2-Month High-Profit Taking",
-      "link": "NULL",
-      "pubDate": "2024-10-27T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "RAY"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Price Holds Strong Above $2,400 — Is $2,650 The Next Stop?",
-      "link": "NULL",
-      "pubDate": "2024-10-27T15:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "3 signs Ethereum price is gearing up for a rebound toward $6K",
-      "link": "NULL",
-      "pubDate": "2024-10-27T15:06:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Ethereum is now testing a key support level that last helped it rebound by over 160%. Multiple factors support this bullish fractal.",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 10,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano To Host Nation States By 2030 – Charles Hoskinson",
       "link": "https://www.thecoinrepublic.com/2024/10/27/cardano-to-host-nation-states-by-2030-charles-hoskinson/",
       "pubDate": "2024-10-27T14:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "Cardano founder Charles Hoskinson has shared a bold vision that may drive better decentralization and self-governing systems in the protocol. In a video on X, Hoskinson shared reasons his plans would work. He believes running a nation-state by 2030 might seem ambitious, but it remains achievable as Cardano can handle it. Cardano As a Tool […]",
       "currencies": [
@@ -207,117 +55,11 @@
       }
     },
     {
-      "title": "Uniswap (UNI) and PancakeSwap (CAKE) Show Growth, But ZDEX’s Capital Efficiency Could Bring Massive Returns Up to 1000%",
-      "link": "NULL",
-      "pubDate": "2024-10-27T14:01:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Ethereum Prepares For Potential Rally To $6,000, Analyst Says",
-      "link": "NULL",
-      "pubDate": "2024-10-27T13:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "ALI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Justin Sun Reveals USDD Upgrade as Tron’s ‘Top Priority” in Q4",
-      "link": "NULL",
-      "pubDate": "2024-10-27T13:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "The Best Altcoins to Invest in October-November: SOL, CYBRO, KAS, AAVE Are Among Experts Hottest Picks",
-      "link": "NULL",
-      "pubDate": "2024-10-27T13:04:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "AAVE",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Exploring the Impact of Zig Network (ZIG) on Ripple (XRP) and Polkadot (DOT) Market Dynamics",
-      "link": "NULL",
-      "pubDate": "2024-10-27T12:50:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "DOT",
-        "ZIG"
-      ]
-    },
-    {
-      "title": "$1k invested into the Top Ten Cryptos in January 2021 - Month 45 (UP +196%)",
-      "link": "NULL",
-      "pubDate": "2024-10-27T12:38:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "MOON"
-      ]
-    },
-    {
-      "title": "Treasure Tapper Daily Code 28 October 2024, Tap to Earn $TREZ",
-      "link": "NULL",
-      "pubDate": "2024-10-27T11:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Cats Youtube Code Today October 28, 2024: Boost Your Earnings",
-      "link": "NULL",
-      "pubDate": "2024-10-27T10:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS",
-        "TON"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Price Stalls at $0.33 as 2-Month-Old Bullish Momentum Fades",
       "link": "https://beincrypto.com/cardano-stalls-bullish-momentum-fades/",
       "pubDate": "2024-10-27T09:47:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Cardano (ADA) price has been trapped in a consolidation phase since early August, unable to break free from macro-level stagnation. Despite initial signs of bullish momentum, ADA has struggled to sustain upward movement. This prolonged consolidation has left investors questioning what’s next for Cardano’s price as it approaches key support levels. Cardano Faces the...",
       "currencies": [
@@ -331,40 +73,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "An AI Bot Worth Millions? The Unbelievable Story of Truth Terminal and GOAT",
-      "link": "NULL",
-      "pubDate": "2024-10-27T07:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GOAT"
-      ]
-    },
-    {
-      "title": "Altcoin seasons ‘will be weaker’ moving forward, says analyst",
-      "link": "NULL",
-      "pubDate": "2024-10-27T06:53:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Why Solana Cannot Become the Global Blockchain Backbone",
       "link": "https://coincu.com/289285-why-solana-cannot-become-the-global-blockchain/",
       "pubDate": "2024-10-27T04:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coincu",
+      "sourceKey": "coincu",
       "category": "altcoin",
       "description": "Why Solana cannot become the global blockchain backbone: Due to centralization, bandwidth needs, and lack of client diversity, Solana struggles to match Ethereum.",
       "currencies": [
@@ -376,31 +89,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Biggest Altcoin Gainers of the Fourth Week of October 2024",
-      "link": "NULL",
-      "pubDate": "2024-10-27T04:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "SAFE",
-        "RAY"
-      ]
-    },
-    {
-      "title": "Helium (HNT) Price Aims for 20% Surge: Is It A Buy For Investors?",
-      "link": "NULL",
-      "pubDate": "2024-10-27T00:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HNT"
-      ]
     }
   ]
 }

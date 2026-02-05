@@ -15,17 +15,24 @@
  *   --start-date  Start date to import (YYYY-MM-DD)
  *   --end-date    End date to import (YYYY-MM-DD)
  *   --dry-run     Preview without writing files
+ *   --resolve-urls  Resolve CryptoPanic URLs to real source URLs (slow but complete)
  */
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const readline = require('readline');
+const https = require('https');
+const http = require('http');
 
 // Configuration
 const ARCHIVE_DIR = process.env.ARCHIVE_DIR || path.join(__dirname, '../../archive');
 const TEMP_DIR = path.join(__dirname, '.temp-import');
 const DATASET_BASE_URL = 'https://github.com/soheilrahsaz/cryptoNewsDataset/raw/main/csvOutput';
+const RESOLVED_CACHE_PATH = path.join(TEMP_DIR, 'resolved-urls.json');
+
+// Resolved URL cache (loaded at startup)
+let resolvedUrlCache = {};
 
 // RAR files to download (in order of preference for joined data)
 const RAR_FILES = [
@@ -469,10 +476,23 @@ function convertToArticle(row) {
     return null;
   }
   
-  // Only use sourceurl (real article URL), skip CryptoPanic redirects
-  const url = row.sourceurl || '';
+  // Get article ID for cache lookup
+  const articleId = row.id || '';
   
-  // Skip articles without real source URLs
+  // Priority: 1) Resolved URL from cache, 2) sourceurl from CSV
+  let url = '';
+  
+  // Check resolved URL cache first (from running resolve-urls.js)
+  if (articleId && resolvedUrlCache[articleId]) {
+    url = resolvedUrlCache[articleId];
+  }
+  
+  // Fall back to sourceurl from CSV if available
+  if (!isValidUrl(url)) {
+    url = row.sourceurl || '';
+  }
+  
+  // Skip articles without valid source URLs
   if (!isValidUrl(url)) {
     return null;
   }
@@ -493,8 +513,17 @@ function convertToArticle(row) {
     return null;
   }
   
-  // Get source from domain (sourcedomain column)
-  const domain = row.sourcedomain || '';
+  // Get source from domain - prefer extracting from resolved URL, fall back to CSV domain
+  let domain = row.sourcedomain || '';
+  try {
+    const urlObj = new URL(url);
+    const urlDomain = urlObj.hostname.replace(/^www\./, '');
+    if (urlDomain && !urlDomain.includes('cryptopanic')) {
+      domain = urlDomain;
+    }
+  } catch (e) {
+    // Keep CSV domain
+  }
   const sourceName = getSourceNameFromDomain(domain);
   
   // Get description
@@ -690,6 +719,22 @@ async function main() {
   console.log();
   
   ensureTempDir();
+  
+  // Load resolved URL cache if available
+  if (fs.existsSync(RESOLVED_CACHE_PATH)) {
+    try {
+      resolvedUrlCache = JSON.parse(fs.readFileSync(RESOLVED_CACHE_PATH, 'utf-8'));
+      const cacheSize = Object.keys(resolvedUrlCache).length;
+      console.log(`Loaded resolved URL cache: ${cacheSize.toLocaleString()} URLs`);
+    } catch (e) {
+      console.warn('Warning: Failed to load resolved URL cache:', e.message);
+      resolvedUrlCache = {};
+    }
+  } else {
+    console.log('Note: No resolved URL cache found. Run resolve-urls.js first for best results.');
+    console.log('      Articles without sourceUrl will be skipped otherwise.');
+  }
+  console.log();
   
   // Step 1: Download or locate RAR file
   let csvPath = null;

@@ -1,75 +1,15 @@
 {
   "date": "2023-07-14",
-  "fetchedAt": "2026-02-05T07:45:52.154Z",
-  "articleCount": 47,
+  "fetchedAt": "2026-02-05T07:48:35.542Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Best Crypto to Buy Now 14 July – Lido DAO, Polygon, ApeCoin",
-      "link": "NULL",
-      "pubDate": "2023-07-14T23:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "APE",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Synthetix Founder Launches Infinex Perpetuals Exchange $SNX",
-      "link": "NULL",
-      "pubDate": "2023-07-14T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "SNX"
-      ]
-    },
-    {
-      "title": "Synthetix to go head-to-head with dYdX, Aevo with new DEX proposal",
-      "link": "NULL",
-      "pubDate": "2023-07-14T20:40:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SNX"
-      ]
-    },
-    {
-      "title": "The Horizen Q2 2023 Report",
-      "link": "NULL",
-      "pubDate": "2023-07-14T20:34:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Ethereum scaling protocols drive zero-knowledge proof use: Finance Redefined",
-      "link": "NULL",
-      "pubDate": "2023-07-14T20:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "ALGO"
-      ]
-    },
     {
       "title": "Crypto Analyst Breaks Down the Bitcoin (BTC) and Altcoin Explosion Following XRP’s Historic Ruling",
       "link": "https://dailyhodl.com/2023/07/14/crypto-analyst-breaks-down-the-bitcoin-btc-and-altcoin-explosion-following-xrps-historic-ruling/",
       "pubDate": "2023-07-14T19:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A popular crypto analyst is diving into the exploding markets following the favorable ruling for XRP in the U.S. Securities and Exchange Commission (SEC) lawsuit. Crypto trader Michaël van de Poppe tells his 660,200 Twitter followers that after yesterday’s favorable ruling for XRP traders, which spurred a market-wide rally, Bitcoin (BTC) may dip before continuing upwards. “Everything […]",
       "currencies": [
@@ -89,8 +29,8 @@
       "title": "Cardano Price Prediction as $1 Billion Trading Volume Floods In – What's Going On?",
       "link": "https://cryptonews.com/news/cardano-price-prediction-as-1-billion-trading-volume-floods-whats-going-on.htm",
       "pubDate": "2023-07-14T19:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Cardano (ADA) is down nearly 10% on Friday as the cryptocurrency gets caught up in a broader market pullback that has seen the likes of bitcoin drop back below $30,000. ADA was last trading just above $0.32, down more than 15% from the multi-week highs it high at $0.38 earlier in the session. The big market moves have been, unsurprisingly, accompanied by high trading...",
       "currencies": [
@@ -107,8 +47,8 @@
       "title": "Why Is The Bitcoin Price Falling? What is the Latest Situation in BTC and Altcoins? Here is the Data",
       "link": "https://en.bitcoinsistemi.com/why-is-the-bitcoin-price-falling-what-is-the-latest-situation-in-btc-and-altcoins-here-is-the-data/",
       "pubDate": "2023-07-14T19:28:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "There was a surprising sudden decline in the price of Bitcoin. So what could be the reasons for the recent decline in BTC? Continue Reading: Why Is The Bitcoin Price Falling? What is the Latest Situation in BTC and Altcoins? Here is the Data",
       "currencies": [
@@ -123,8 +63,8 @@
       "title": "Cardano DeFi Breaks into Top 15 Rankings After Surging 29%",
       "link": "https://dailycoin.com/cardano-defi-top-15-rankings-surging-29/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-14T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "defi",
       "description": "After consistently breaking records, Cardano’s DeFi ecosystem now stands tall among the top platforms.",
       "currencies": [
@@ -136,38 +76,11 @@
       }
     },
     {
-      "title": "Filecoin storage utilization surpasses 7% in Q2: Report",
-      "link": "NULL",
-      "pubDate": "2023-07-14T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Crypto lender Geist Finance shuts down permanently over Multichain hack",
-      "link": "NULL",
-      "pubDate": "2023-07-14T18:10:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "$218,000,000 in Liquidations Hits Short Sellers in 24 Hours As Crypto Market Rallies After Favorable XRP Ruling",
       "link": "https://dailyhodl.com/2023/07/14/218000000-in-liquidations-hits-short-sellers-in-24-hours-as-crypto-market-rallies-after-favorable-xrp-ruling/",
       "pubDate": "2023-07-14T18:05:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Short sellers are getting slammed by hundreds of millions of dollars worth of liquidations as the crypto markets rally due to XRP receiving a favorable ruling for crypto traders. New data from market intelligence firm Coinglass reveals that during the last 24 hours, $218 million worth of digital assets were liquidated from prominent crypto exchange […]",
       "currencies": [
@@ -186,88 +99,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Security and Staking: Algorand CTO Reveals Future of The Popular Blockchain And New Features",
-      "link": "NULL",
-      "pubDate": "2023-07-14T17:50:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "XRP’s Rise Causes Ripple of Gains in Crypto Economy",
-      "link": "NULL",
-      "pubDate": "2023-07-14T17:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "NEAR",
-        "XLM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Neo APAC Hackathon Kicks Off at Tokyo GAS Station: Uncovering Local Web3 Talents and Empowering Regional Development",
-      "link": "NULL",
-      "pubDate": "2023-07-14T17:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Everything that’s happened with Celsius and Alex Mashinsky so far",
-      "link": "NULL",
-      "pubDate": "2023-07-14T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Tradecurve Hybrid Exchange Challenges OKB For Global Expansion",
-      "link": "NULL",
-      "pubDate": "2023-07-14T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "OKB"
-      ]
-    },
-    {
-      "title": "Biggest Risk For Crypto? Full Control Of TUSD Shifts To Offshore Owner",
-      "link": "NULL",
-      "pubDate": "2023-07-14T16:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TUSD"
-      ]
-    },
-    {
       "title": "JUST IN: The SEC has agreed to review Blackrock's spot Bitcoin ETF application.",
       "link": "https://en.bitcoinsistemi.com/just-in-the-sec-has-agreed-to-review-blackrocks-spot-bitcoin-etf-application/",
       "pubDate": "2023-07-14T15:18:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Bitcoin has moved on with the recent application of a Bitcoin spot ETF by Blackrock, the world's largest institutional asset manager. Many companies have similarly filed with the SEC after Blackrock's application. However, the SEC did not examine these applications due to some shortcomings and requested that they be revised. Blackrock and other companies reviewed […] Continue Reading:...",
       "currencies": [
@@ -280,35 +116,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin SV is Going to Zero But Viral Meme Coin Thug Life Just Raised $1.4 Million – Less Than 3 Days Left",
-      "link": "NULL",
-      "pubDate": "2023-07-14T15:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "LUNC Community Urges Binance to Assist in USTC Repeg Mission",
-      "link": "NULL",
-      "pubDate": "2023-07-14T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
       "title": "This Altcoin Announces New Exchange To Rival Binance, Price Soars!",
       "link": "https://en.bitcoinsistemi.com/this-altcoin-announces-new-exchange-to-rival-binance-price-soars/",
       "pubDate": "2023-07-14T14:46:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "trading",
       "description": "DeFi protocol Synthetix announced today the launch of a new decentralized platform Infinex. SNX price is on the rise. Continue Reading: This Altcoin Announces New Exchange To Rival Binance, Price Soars!",
       "currencies": [
@@ -321,24 +133,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto exchange report shows downward slide for first half of year",
-      "link": "NULL",
-      "pubDate": "2023-07-14T14:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LEO",
-        "HT",
-        "OKB"
-      ]
-    },
-    {
       "title": "Can XRP make you a millionaire in 2023?",
       "link": "https://finbold.com/can-xrp-make-you-a-millionaire-in-2023/",
       "pubDate": "2023-07-14T13:08:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "After the groundbreaking ruling that declared XRP not a security in the Ripple vs. Securities Exchange (SEC) case, attention has … Continued",
       "currencies": [
@@ -351,143 +150,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Algorand Is All Go With 14% Increase As Crypto Market Basks In Green",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:47:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Whale Makes Large ETH Purchase; Can Investors Expect a Potential Rally?",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:47:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "How the Celsius Affair Plays Into the U.S. Crypto Regulatory Debate",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Crypto price prediction: Cardano (ADA), Solana (SOL), ApeCoin",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:10:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "SOL",
-        "APE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "7 blockchain-based platforms for content creators",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "FTX, Celsius Bankruptcy Claims Can Now Be Sold on OPNX",
-      "link": "NULL",
-      "pubDate": "2023-07-14T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Bullish Surge Lifts Cronos (CRO) to 7-Day High: Potential Reversal Ahead?",
-      "link": "NULL",
-      "pubDate": "2023-07-14T11:54:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Stablecoin TrueUSD Owner Techteryx to Take Full Control of Operation",
-      "link": "NULL",
-      "pubDate": "2023-07-14T11:35:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
-      "title": "India’s own Digital Currency: e-rupee launch by RBI",
-      "link": "NULL",
-      "pubDate": "2023-07-14T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOGE",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "MultiversX introduces on-chain 2FA to combat theft and scams",
-      "link": "NULL",
-      "pubDate": "2023-07-14T09:07:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ]
-    },
-    {
-      "title": "MultiversX launches on-chain two-factor authentication standard",
-      "link": "NULL",
-      "pubDate": "2023-07-14T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ]
-    },
-    {
       "title": "Stellar to the moon? Can XLM hit $0.20 after surging 50% in a day?",
       "link": "https://finbold.com/stellar-to-the-moon-can-xlm-hit-0-20-after-surging-50-in-a-day/",
       "pubDate": "2023-07-14T08:53:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Stellar (XLM) experienced significant gains following Ripple’s victory in the SEC v. Ripple lawsuit, in which the Judge ruled that … Continued",
       "currencies": [
@@ -500,71 +167,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celsius ‘pleased’ with resolutions amid $4.7B FTC fine",
-      "link": "NULL",
-      "pubDate": "2023-07-14T08:47:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "CoinMarketCap’s Top Gainers Over Past 24 Hours",
-      "link": "NULL",
-      "pubDate": "2023-07-14T07:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "ICP",
-        "RUNE",
-        "TON"
-      ]
-    },
-    {
-      "title": "Top Analyst Says One Mid-Cap Altcoin on Cusp of Skyrocketing Higher, Updates Outlook on Ethereum and Litecoin",
-      "link": "NULL",
-      "pubDate": "2023-07-14T07:04:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LTC",
-        "FTM"
-      ]
-    },
-    {
-      "title": "ATOM: Will bears flip the $8.98 support level?",
-      "link": "NULL",
-      "pubDate": "2023-07-14T06:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Alex Mashinsky's Bail Set at $40M, Travel Restricted",
-      "link": "NULL",
-      "pubDate": "2023-07-14T06:02:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
       "title": "XRP flips BNB for first time in 2 years after court ruling",
       "link": "https://blockworks.co/news/xrp-flips-binance-bnb",
       "pubDate": "2023-07-14T05:51:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "XRP is once again the fourth most valuable crypto after a healthy rally inspired by Thursday’s positive ruling",
       "currencies": [
@@ -578,22 +185,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "KuCoin Spot and Futures Markets Hit $1T, with 12M Trading Bots Created",
-      "link": "NULL",
-      "pubDate": "2023-07-14T05:15:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "XRP Short Traders Log Highest Losses in 2023 After Landmark Court Ruling",
       "link": "https://www.coindesk.com/markets/2023/07/14/xrp-short-traders-log-highest-losses-in-2023-after-landmark-court-ruling/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-07-14T04:17:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "XRP token market capitalization has jumped to over $40 billion, its largest level since April 2022.",
       "currencies": [
@@ -609,8 +205,8 @@
       "title": "‘Altcoin season’ anyone? Bitcoin dominance tumbles after XRP victory",
       "link": "https://cointelegraph.com/news/altcoin-season-bitcoin-btc-dominance-ripple-xrp-victory",
       "pubDate": "2023-07-14T04:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin market dominance briefly dipped below 50% as altcoins deemed securities by the SEC notched double-digit gains.",
       "currencies": [
@@ -622,28 +218,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "$1,600,000,000,000 Bank Warns ‘Original Sin’ of Money Printing Will Force US Into Recession",
-      "link": "NULL",
-      "pubDate": "2023-07-14T03:08:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Algorand: A detour may be on the cards for ALGO thanks to these findings",
-      "link": "NULL",
-      "pubDate": "2023-07-14T02:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ]
     }
   ]
 }

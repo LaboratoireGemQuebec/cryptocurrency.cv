@@ -1,30 +1,15 @@
 {
   "date": "2024-07-13",
-  "fetchedAt": "2026-02-05T07:45:53.481Z",
-  "articleCount": 58,
+  "fetchedAt": "2026-02-05T07:48:35.677Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Analysts Unanimous: Solana (SOL) To Soar 100% – Details",
-      "link": "NULL",
-      "pubDate": "2024-07-13T23:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "UNI",
-        "AAVE",
-        "USTC"
-      ]
-    },
     {
       "title": "Crypto Analyst Says Bitcoin Price Will Surge 500% To $330,000, Here’s When",
       "link": "https://bitcoinist.com/bitcoin-price-500-to-330000/",
       "pubDate": "2024-07-13T23:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "In a bold forecast, a crypto analyst predicted that Bitcoin (BTC), the world’s largest cryptocurrency will witness a massive 500% surge to $330,000. Considering how ambitious this price target is, the analyst’s bullish projection has caught the attention of various members of the crypto community. Analyst Predicts Bitcoin’s Rally To $330,000 On July 10, Arsen […]",
       "currencies": [
@@ -41,8 +26,8 @@
       "title": "Is Cardano’s 20% hike enough? Not if Litecoin has its say and…",
       "link": "https://ambcrypto.com/is-cardanos-20-hike-enough-no-if-litecoin-has-its-say-and/",
       "pubDate": "2024-07-13T23:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Key on-chain indicators revealed that the token may not be done with its recent hike yet.",
       "currencies": [
@@ -55,79 +40,11 @@
       }
     },
     {
-      "title": "Dogwifhat price prediction 2024 – 2030: Will WIF reach $10?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T22:37:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "XMR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Dogwifhat price prediction 2025 – 2031: Will WIF reach $10?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T22:37:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "XMR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Dogwifhat price prediction 2025 – 2031: Can WIF reach $10?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T22:37:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "XMR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Elon Musk Exposes Secret EU Censorship Deal Proposal",
-      "link": "NULL",
-      "pubDate": "2024-07-13T21:30:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ELON"
-      ]
-    },
-    {
-      "title": "How did MakerDAO’s $1 billion program spur MKR’s price rally?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T21:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Why Did The Cardano Price Surge 17% Amid The Crypto Market Crash?",
       "link": "https://www.newsbtc.com/news/cardano/cardano-price-surge-17-crypto/",
       "pubDate": "2024-07-13T21:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano (ADA) has recorded a significant 20.29% price increase for the past seven days in line with the current green movement for most cryptocurrencies. ADA trading volume has spiked massively since it bottomed out at $0.335 on July 8, allowing it to outperform the majority of the large market-cap cryptocurrencies. For those wondering, ADA’s price surge can primarily be attributed to large...",
       "currencies": [
@@ -141,133 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Abra Acquires Valkyrie’s Tron and Zilliqa Trusts",
-      "link": "NULL",
-      "pubDate": "2024-07-13T20:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "ZIL"
-      ]
-    },
-    {
-      "title": "Maker Whales Accumulate $6 Million MKR Amid 6% Price Jump",
-      "link": "NULL",
-      "pubDate": "2024-07-13T20:06:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "More Than a Third of Ethereum Supply Worth Over $147,000,000,000 Now Staked, According to Santiment",
-      "link": "NULL",
-      "pubDate": "2024-07-13T20:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MANA",
-        "SKL",
-        "IMX"
-      ]
-    },
-    {
-      "title": "180% Upside For Fetch.ai (FET)? Analyst Makes Bold Prediction Amid Market Jitters",
-      "link": "NULL",
-      "pubDate": "2024-07-13T18:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "FET",
-        "USTC"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Daily Combo and Cipher Code for 14 July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-13T17:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "Catch MOONHOP Presale’s Potential 100x Returns as PEPE Sinks and Brett Bails",
-      "link": "NULL",
-      "pubDate": "2024-07-13T17:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEPE",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "BlockDAG Coin Surge Past CGI Video, IMX price analysis, BNB update",
-      "link": "NULL",
-      "pubDate": "2024-07-13T17:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Bitcoin futures term structure indicates bullish sentiment",
-      "link": "NULL",
-      "pubDate": "2024-07-13T16:37:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "ICP Skyrockets 12% in 24 Hours: Discover the Real World Value Behind the Surge",
-      "link": "NULL",
-      "pubDate": "2024-07-13T16:02:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Stacks Celebrates as SEC Ceases Investigation Efforts",
-      "link": "NULL",
-      "pubDate": "2024-07-13T15:49:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "BUSD",
-        "STX"
-      ]
-    },
-    {
       "title": "Ethereum ETFs Could Draw Significant Monthly Inflows",
       "link": "https://coinpaprika.com/news/ethereum-etfs-could-draw-significant-monthly-inflows/",
       "pubDate": "2024-07-13T15:31:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Ethereum ETFs could draw up to $1 billion monthly, boosting prices and benefiting the crypto market, according to Kraken's Thomas Perfumo.",
       "currencies": [
@@ -280,50 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terra Luna Classic Approaches New Milestone Ahead TFL LUNC & USTC Burn",
-      "link": "NULL",
-      "pubDate": "2024-07-13T15:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) Shoots 12%, Analyst Predicts Further Rally",
-      "link": "NULL",
-      "pubDate": "2024-07-13T15:04:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Superstate and Other Major Players to Join MakerDAO’s $1 Billion Tokenized Treasury Plan",
-      "link": "NULL",
-      "pubDate": "2024-07-13T14:57:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DAI",
-        "MKR",
-        "DAO",
-        "ARB",
-        "ONDO"
-      ]
-    },
-    {
       "title": "Ripple CEO Celebrates Historic XRP SEC Ruling One Year On",
       "link": "https://u.today/ripple-ceo-celebrates-historic-xrp-sec-ruling-one-year-on",
       "pubDate": "2024-07-13T14:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Ripple CEO reminisces on date that will be remembered in XRP and cryptocurrency history",
       "currencies": [
@@ -336,54 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Year-to-Date Crypto Winners: Meme Coins Outperform in 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-13T14:20:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Benzinga Bulls And Bears: Apple, Nvidia, Palantir, MicroStrategy And Shiba Inu's Ambitious Trillion-Dollar Vision",
-      "link": "NULL",
-      "pubDate": "2024-07-13T13:34:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "META"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Dai (DAI) and Solana (SOL) Face Market Pressure Amid Political Uncertainty, While Clandeno (CLD) Gains Attention; Presale Open Now",
-      "link": "NULL",
-      "pubDate": "2024-07-13T13:15:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DAI"
-      ]
-    },
-    {
       "title": "21.87 Billion Cardano (ADA) in 24 Hours to Make All Difference",
       "link": "https://u.today/2187-billion-cardano-ada-in-24-hours-to-make-all-difference",
       "pubDate": "2024-07-13T13:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano whales set ADA on ambitious path",
       "currencies": [
@@ -396,39 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "STX profits after SEC drops its investigation into Stacks & Hiro but…",
-      "link": "NULL",
-      "pubDate": "2024-07-13T13:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Nvidia drives the market, stocks hit records, Trump talks Bitcoin: Markets news roundup",
-      "link": "NULL",
-      "pubDate": "2024-07-13T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ELON"
-      ]
-    },
-    {
       "title": "The Possible Reasons Ripple (XRP) Exploded by 10% Today",
       "link": "https://cryptopotato.com/the-possible-reasons-ripple-xrp-exploded-by-10-today/?__cf_chl_rt_tk=1_3PYNcvIXe.kIuXGELoKL30hV_GYk1WnhWWr_r1.zs-1747038111-1.0.1.1-TgtYd3DAjJAgnIagbxpSylvcVR7v8Zyh8PYTmEqVHe8",
       "pubDate": "2024-07-13T12:46:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "Why did the XRP price soar today? Here are a few possible reasons.",
       "currencies": [
@@ -442,124 +127,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "3 BRC-20 Altcoins to Sell as Bitcoin Fails $60000 Breakout",
-      "link": "NULL",
-      "pubDate": "2024-07-13T12:40:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Blur recovers 9.8% after Machi Big Brother sold all his 18M $BLUR coins",
-      "link": "NULL",
-      "pubDate": "2024-07-13T12:34:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Bitcoin Lags Behind S&P 500, Signaling Potential Bullish Catch-Up",
-      "link": "NULL",
-      "pubDate": "2024-07-13T12:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Restoring trust to BTC in 2024: Let’s start with wrapping",
-      "link": "NULL",
-      "pubDate": "2024-07-13T12:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DLC",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "UK Authorities Seize and Sell Monero from Drug Dealer",
-      "link": "NULL",
-      "pubDate": "2024-07-13T12:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency dethrones BTC payments in Europe’s biggest Bitcoin store",
-      "link": "NULL",
-      "pubDate": "2024-07-13T11:44:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Classic – Swing traders, watch out for these key levels!",
-      "link": "NULL",
-      "pubDate": "2024-07-13T11:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Listing on CoinDCX: Rumor or Reality?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GMT"
-      ]
-    },
-    {
-      "title": "Abra Capital Management acquires crypto trusts from Valkyrie",
-      "link": "NULL",
-      "pubDate": "2024-07-13T10:45:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "ZIL"
-      ]
-    },
-    {
       "title": "How Cynthia Lummis Plans to Integrate Bitcoin and Strengthen the US Dollar",
       "link": "https://coinedition.com/how-cynthia-lummis-plans-to-integrate-bitcoin-and-strengthen-the-us-dollar/",
       "pubDate": "2024-07-13T10:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "Senator Cynthia Lummis of Wyoming has unveiled her plans for integrating Bitcoin into the U.S. financial system and opposing central bank digital currencies (CBDCs). In a Fox Business interview on July 12, Lummis, a long-time crypto advocate, emphasized her goal of restoring the dollar’s dominance in the digital age. In the interview, Lummis, known as […]",
       "currencies": [
@@ -572,35 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Chainlink Investors In Accumulation Mode – LINK Price Primed For A Rally?",
-      "link": "NULL",
-      "pubDate": "2024-07-13T10:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Donald Trump Wins Elon Musk’s Election Backing Despite Previous Denials",
-      "link": "NULL",
-      "pubDate": "2024-07-13T09:54:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
       "title": "$3.3 Billion To $350 Million: German Government Bitcoin Sale Saga",
       "link": "https://www.thecoinrepublic.com/2024/07/13/3-3-billion-to-350-million-german-government-bitcoin-sale-saga/",
       "pubDate": "2024-07-13T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "bitcoin",
       "description": "German police confiscated over $2 Billion worth of Bitcoin during an investigation into a movie pirating site named movie2k.to. It was one of the largest seizures of cryptocurrency by the German state police. As per the reports by spiegl.de, 50,000 Bitcoins were secured in Saxony. As per polizei.saschen.de, the investigation into the suspicion of commercial, […]",
       "currencies": [
@@ -613,22 +161,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "MOCA Coin Turns Heads as Animoca Brands Explores IPO",
-      "link": "NULL",
-      "pubDate": "2024-07-13T09:13:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
       "title": "Ethereum Gas Fees At Lowest Level Since May – Impact On ETH Price?",
       "link": "https://bitcoinist.com/ethereum-gas-fees-at-lowest-level-since-eth-price/",
       "pubDate": "2024-07-13T09:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "According to the latest on-chain observation, gas fees on the Ethereum network have fallen to their lowest level in nearly two months. How will this impact the price of ETH? Ethereum Network Activity Wanes Ahead Of Spot ETF In a new Quicktake post, a pseudonymous analyst revealed that the activity on the Ethereum network has […]",
       "currencies": [
@@ -643,8 +180,8 @@
       "title": "Cardano (ADA) Price is Rising 17%; What Investors should know",
       "link": "https://coingape.com/blog/cardano-ada-price-is-rising-17-what-investors-should-know/",
       "pubDate": "2024-07-13T08:38:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "trading",
       "description": "The recent surge in Cardano (ADA) price, increasing by 17% in one week, has drawn considerable interest. Many ADA investors are now making profits due to certain factors like a significant rise in large investor activity and recent advancements in blockchain technology. Let’s take a closer look at the reasons behind ADA’s increasing price and",
       "currencies": [
@@ -657,56 +194,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Elon Musk Lauds AI Spotlighting OpenAI’s Reasoning Tech Strawberry",
-      "link": "NULL",
-      "pubDate": "2024-07-13T08:21:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "MakerDAO to invest $1b in tokenized US Treasury products",
-      "link": "NULL",
-      "pubDate": "2024-07-13T08:04:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Top Billionaires Back Trump: Elon Musk’s Major Contribution Revealed",
-      "link": "NULL",
-      "pubDate": "2024-07-13T07:46:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON",
-        "JOE"
-      ]
-    },
-    {
-      "title": "England Announced It Is Selling This Altcoin!",
-      "link": "NULL",
-      "pubDate": "2024-07-13T07:32:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
       "title": "Cardano Chang Fork Could Still Launch In July After Whispers Of A Delay",
       "link": "https://zycrypto.com/cardano-chang-fork-could-still-launch-in-july-after-whispers-of-a-delay/",
       "pubDate": "2024-07-13T07:26:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Cardano’s community is rippling with enthusiasm after the project’s co-founder Charles Hoskinson hinted at the launch of the Chang hard fork after an ill-fated delay in Q2.",
       "currencies": [
@@ -719,73 +211,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto News Today: XRP Surge Ahead While Bitcoin Bulls Pause",
-      "link": "NULL",
-      "pubDate": "2024-07-13T06:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "DOT",
-        "BCH",
-        "ICP",
-        "MKR",
-        "SAFE",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Trader’s Binance sell-off triggers BLUR’s 7% price decline – All the details",
-      "link": "NULL",
-      "pubDate": "2024-07-13T06:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR",
-        "FI"
-      ]
-    },
-    {
-      "title": "Analyst Predicts 2,750% Celestia (TIA) Price Explosion To $188, Here’s The Roadmap",
-      "link": "NULL",
-      "pubDate": "2024-07-13T05:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "SHIB",
-        "TIA"
-      ]
-    },
-    {
-      "title": "DeFi Protocol Dough Finance Exploit Swipes $1.96 Million In User Funds",
-      "link": "NULL",
-      "pubDate": "2024-07-13T05:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "AAVE",
-        "COMP"
-      ]
-    },
-    {
       "title": "Controversial 3-Year SEC Investigation Into Bitcoin L2 Stacks Concludes With No Charges",
       "link": "https://bitcoinist.com/sec-investigation-stacks-concludes-with-no-charges/",
       "pubDate": "2024-07-13T00:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "The US Securities and Exchange Commission (SEC) has concluded its three-year investigation into Bitcoin Layer 2 (L2) blockchain Stacks (STX) and Hiro Systems without taking any action. Related Reading: Shiba Inu Team Member Says Major Update Is Coming – Here’s What We Know SEC Ends Probe Into Stacks Muneeb Ali, co-creator of the Stacks protocol, […]",
       "currencies": [
@@ -798,20 +228,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Trader Says Top-10 Altcoin To Have a Strong Run in the Fourth Quarter, Updates Outlook on Celestia and Render",
-      "link": "NULL",
-      "pubDate": "2024-07-13T00:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "RNDR",
-        "TIA"
-      ]
     }
   ]
 }

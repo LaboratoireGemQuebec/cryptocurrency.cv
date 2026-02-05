@@ -1,37 +1,15 @@
 {
   "date": "2023-01-08",
-  "fetchedAt": "2026-02-05T07:45:52.708Z",
-  "articleCount": 38,
+  "fetchedAt": "2026-02-05T07:48:35.585Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "CONFIRMED  BORG BEHAVIOR",
-      "link": "NULL",
-      "pubDate": "2023-01-08T23:46:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "Nice troop..",
-      "link": "NULL",
-      "pubDate": "2023-01-08T23:09:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
     {
       "title": "Solana-Based Meme Coin Massively Outperforms Shiba Inu and Dogecoin in a Week Amid 5,000,000,000,000 Token Burn",
       "link": "https://dailyhodl.com/2023/01/08/solana-based-meme-coin-massively-outperforms-shiba-inu-and-dogecoin-in-a-week-amid-5000000000000-token-burn/",
       "pubDate": "2023-01-08T23:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "A new meme coin based on the Solana (SOL) blockchain is immensely outpacing its established rivals Shiba Inu (SHIB) and Dogecoin (DOGE) to open the year. Bonk (BONK) is starting 2023 with a bang after posting astronomical gains in the first few days of 2023 despite the persistent crypto bear winter. The new meme token […]",
       "currencies": [
@@ -45,71 +23,11 @@
       }
     },
     {
-      "title": "$LDO $GALA $ZIL binance perps on Sunday evening. Doesn't look like the most recent pump and dumps. Someone is str…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T22:46:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ZIL",
-        "LDO",
-        "TTT"
-      ]
-    },
-    {
-      "title": "Quant: Assessing whether or not QNT remains a profitable investment",
-      "link": "NULL",
-      "pubDate": "2023-01-08T22:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "CHAD ACTIVITY",
-      "link": "NULL",
-      "pubDate": "2023-01-08T22:23:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORG"
-      ]
-    },
-    {
-      "title": "Quant Explains How Bitcoin MVRV MACD Can Signal Trends",
-      "link": "NULL",
-      "pubDate": "2023-01-08T21:50:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "QNT",
-        "PDRY"
-      ]
-    },
-    {
-      "title": "RT @XTZNews: Crunchy Launches V1 Of The Tezos Token Tracker #Tezos #DeFi #DeFiNews @CrunchyTez",
-      "link": "NULL",
-      "pubDate": "2023-01-08T21:24:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XTZ",
-        "CRNCHY",
-        "CRDAO"
-      ]
-    },
-    {
       "title": "DOJ Officially Seizes Over $456,000,000 Worth of Robinhood Shares Tied to FTX Founder Sam Bankman-Fried",
       "link": "https://dailyhodl.com/2023/01/08/doj-officially-seizes-over-456000000-worth-of-robinhood-shares-tied-to-ftx-founder-sam-bankman-fried/",
       "pubDate": "2023-01-08T19:45:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "The U.S. Department of Justice (DOJ) has officially seized shares of popular trading app Robinhood linked to Sam Bankman-Fried despite objections from the disgraced FTX founder’s legal team. In a filing dated January 6th, prosecutors with the Commercial Litigation branch of the DOJ Civil Division inform the bankruptcy court in the district of New Jersey […]",
       "currencies": [
@@ -122,34 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Would anyone in the Zilliqa community #Zilfam be interested in auditing our reputation-based DAO treasury? (Smart Contract + Frontend)",
-      "link": "NULL",
-      "pubDate": "2023-01-08T19:39:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "PELE"
-      ]
-    },
-    {
-      "title": "RT @yukiamasan: Tokyo, get ready to witness the future of digital art. The #TEZINJAPAN exhibit is fully set up and ready to blow your minds…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T19:12:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Solana Network Remains Functional Despite Foundation’s Public RPCs Being Offline",
       "link": "https://beincrypto.com/solana-network-functional-despite-foundations-public-rpcs-being-offline/",
       "pubDate": "2023-01-08T19:12:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Solana Foundation-ran Remote Procedure Call (RPC) endpoints are offline because of a bug in the Validator client's test release 1.14.",
       "currencies": [
@@ -161,22 +56,11 @@
       }
     },
     {
-      "title": "RT @cryptopepeteam: Have you ever seen such a high #APY from $WAVES staking? 🤑 #staking #crypto #invest #sWAVES h…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T18:19:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
       "title": "Ohio Man Steals Over $12,000,000 in Bitcoin (BTC) From IRS, Faces 40 Years in Prison: Report",
       "link": "https://dailyhodl.com/2023/01/08/ohio-man-steals-over-12000000-in-bitcoin-btc-from-irs-faces-40-years-in-prison-report/",
       "pubDate": "2023-01-08T17:55:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "An Ohio man is facing decades in prison after pleading guilty to stealing millions of dollars worth of Bitcoin (BTC) from the Internal Revenue Service (IRS). According to a new press release from the U.S. Department of Justice (DOJ), 31-year-old Gary Harmon of Cleveland, Ohio is facing 40 years behind bars for stealing digital assets […]",
       "currencies": [
@@ -191,67 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Japan has recently announced that it will lift its ban on foreign stablecoins, allowing them to be used as a form o…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T17:18:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDB"
-      ]
-    },
-    {
-      "title": "RT @NoxGallery: 1月7日(土)-8日(日)🇮🇹イタリアのクリエイティブディレクターYuki Ama がキュレートするNFTアート展「Tez in Japan」日本初開催Tezos シーンをリードするNFTアーティストたちの作品が集結します️ @yukiam…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T17:17:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "RT @IgniteDAO: Over 550 new smart contract wallets created in just 2 days!",
-      "link": "NULL",
-      "pubDate": "2023-01-08T17:16:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "well said, kind ser🤌",
-      "link": "NULL",
-      "pubDate": "2023-01-08T16:31:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRB"
-      ]
-    },
-    {
-      "title": "Shahaf Bar-Geffen will be hosted on #CardanoOverCoffee this Tuesday at 3pm UTC, where he'll be talking about $DJED.…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T16:26:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
       "title": "Cryptocurrencies to watch for the week of January 9, 2023",
       "link": "https://finbold.com/cryptocurrencies-to-watch-for-the-week-of-january-9-2023/",
       "pubDate": "2023-01-08T16:21:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "As the first week of 2023 ends, most cryptocurrencies have traded in the green zone after massive sell-offs over the … Continued",
       "currencies": [
@@ -265,108 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dogecoin (DOGE) Is Now 4th Most Popular Cryptocurrency On BitPay",
-      "link": "NULL",
-      "pubDate": "2023-01-08T14:04:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Dogecoin, a dog-themed meme crypto that appears to enjoy strong ties with tech billionaire and Twitter owner Elon Musk, appears to be struggling to gain enough ground for a major upward swing. After peaking at $0.0749 on January 5, DOGE fell victim to a price retracement that pulled it all the way down to $0.0705 the following day. Since then, the altcoin launched a mini rally to recoup some...",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "RT @KryptoInsider1: Theta is utilizing web3 technology to establish a new class of decentralized, community-oriented businesses in the medi…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T13:58:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "You know you’re in an NFT bull market when…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T13:55:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "RT @cappasity: AR holograms can be used for sportsmen’s training. #Cappasity works with several sports organizations to create immersive tu…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T13:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "What do you think sets #Nervos apart from other #blockchain networks?",
-      "link": "NULL",
-      "pubDate": "2023-01-08T13:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CKB"
-      ]
-    },
-    {
-      "title": "RT @iIIiquidasfvck: Check Brice good Brice",
-      "link": "NULL",
-      "pubDate": "2023-01-08T12:20:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
-      "title": "Which exchange do you think Beldex will be listed in next⁉️",
-      "link": "NULL",
-      "pubDate": "2023-01-08T11:56:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BDX"
-      ]
-    },
-    {
-      "title": "We have decided to reward staking in $LGCY until #myriadex is up and running. You will have the option to swap your…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T11:38:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDL",
-        "LGCY"
-      ]
-    },
-    {
       "title": "Solana Foundation RPC endpoints go offline",
       "link": "https://www.theblock.co/post/200018/solana-foundation-rpc-endpoints-go-offline?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-01-08T11:28:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "RPC endpoints run by Solana Foundation are currently unavailable.",
       "currencies": [
@@ -382,8 +113,8 @@
       "title": "Ethereum developers eye February public testnet for Shanghai upgrade",
       "link": "https://www.theblock.co/post/200005/ethereum-developers-eye-february-public-testnet-for-shanghai-upgrade?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-01-08T10:38:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "The Shanghai upgrade of the Ethereum network in March will focus exclusively on ether (ETH) withdrawals.",
       "currencies": [
@@ -394,105 +125,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Classic (ETC) Price Balloons To Nearly 30% In Last 7 Days",
-      "link": "NULL",
-      "pubDate": "2023-01-08T10:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "RT @MrPags_eth: Oh yeah.",
-      "link": "NULL",
-      "pubDate": "2023-01-08T09:38:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "OMI",
-        "WOMI"
-      ]
-    },
-    {
-      "title": "*Opens Twitter first thing in the morning* gm GM good morning gmgm gm gmgmgm gm gm…",
-      "link": "NULL",
-      "pubDate": "2023-01-08T04:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "ETHDOWN",
-        "ETHUP"
-      ]
-    },
-    {
-      "title": "Ethereum Classic [ETC] sends cautionary signals as price grows by over 25%",
-      "link": "NULL",
-      "pubDate": "2023-01-08T03:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "is the referral bonus meant for influencers?",
-      "link": "NULL",
-      "pubDate": "2023-01-08T03:04:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HI"
-      ]
-    },
-    {
-      "title": "RT @LeasedFerrari: @Zig_0101 @ZillazNFT BAM Strong",
-      "link": "NULL",
-      "pubDate": "2023-01-08T02:40:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
-      "title": "𝐆𝐮𝐞𝐬𝐬 𝐖𝐡𝐚𝐭?🤔",
-      "link": "NULL",
-      "pubDate": "2023-01-08T02:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BDX"
-      ]
-    },
-    {
-      "title": "Does Dogecoin Have a Cap or Supply Limit?",
-      "link": "NULL",
-      "pubDate": "2023-01-08T01:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Dogecoin ($DOGE) is a cryptocurrency that was created in 2013 as a joke by its developers, Billy Markus and Jackson Palmer. Despite its origins, DOGE has gained a significant following and has even been used for charitable causes and as a form of payment for goods and services. One question that many people have about […]",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
     }
   ]
 }

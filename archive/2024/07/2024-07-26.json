@@ -1,76 +1,15 @@
 {
   "date": "2024-07-26",
-  "fetchedAt": "2026-02-05T07:45:53.472Z",
-  "articleCount": 102,
+  "fetchedAt": "2026-02-05T07:48:35.674Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Bitcoin ETFs Added To Michigan State Pension Fund With $6.6 Million Allocation",
-      "link": "NULL",
-      "pubDate": "2024-07-26T23:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ARK"
-      ]
-    },
-    {
-      "title": "U.S. presidential candidate Robert F. Kennedy Jr. promises to issue Bitcoin-related executive orders if elected",
-      "link": "NULL",
-      "pubDate": "2024-07-26T22:57:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ]
-    },
-    {
-      "title": "HTX Ex-Employees Sentenced to 3 Years for Stealing 27,000 Mnemonics and 10,000 User Private Keys",
-      "link": "NULL",
-      "pubDate": "2024-07-26T22:04:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "HT"
-      ]
-    },
-    {
-      "title": "Michigan’s Pension Fund Dives into Bitcoin: A Bold Move into the Crypto World",
-      "link": "NULL",
-      "pubDate": "2024-07-26T21:39:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "SEC approves Grayscale Bitcoin Mini Trust, awaiting registration statement greenlight",
-      "link": "NULL",
-      "pubDate": "2024-07-26T21:14:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ]
-    },
     {
       "title": "Solana Finally Gets Restaking: Why It's the Key to Decentralization",
       "link": "https://dailycoin.com/solana-finally-gets-restaking-why-its-the-key-to-decentralization/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-07-26T20:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Solana adopts restaking technology to enhance security and flexibility, promising faster and more decentralized dApps.",
       "currencies": [
@@ -82,54 +21,11 @@
       }
     },
     {
-      "title": "Crypto AI Token RENDER Soars 15.6% After Rebrand, Can It Hit $10?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T20:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Zoom Higher As Bitcoin Conference Awaits Donald Trump's Keynote Speech",
-      "link": "NULL",
-      "pubDate": "2024-07-26T20:28:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "CFX",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Bitwise Unveils Ethereum ETF with NYSE Banner Display",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:57:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
       "title": "Cardano Founder Charles Hoskinson Criticizes Peter Schiff’s Bitcoin Knowledge",
       "link": "https://coingape.com/cardano-founder-charles-hoskinson-criticizes-peter-schiff-bitcoin-knowledge/",
       "pubDate": "2024-07-26T19:24:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "bitcoin",
       "description": "Cardano founder Charles Hoskinson has publicly criticized Peter Schiff’s understanding of Bitcoin. Peter Schiff, known for his anti-Bitcoin stance, has often voiced his skepticism about the cryptocurrency. In a series of recent X posts, Schiff has called BTC a “pyramid scheme” scam. However, Hoskinson’s recent remarks highlight the ongoing debate between crypto advocates and skeptics.",
       "currencies": [
@@ -142,138 +38,11 @@
       }
     },
     {
-      "title": "Michigan pension fund discloses $6.6M investment in Bitcoin ETFs",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Michigan Retirement System Invests $6.59M in Ark Invest’s Bitcoin Fund",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:16:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Rises More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "NEAR Protocol Up More Than 10% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:02:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "CRV Dumps 50% In 1 Year: Founder’s Forced Liquidations A Pain For Holders",
-      "link": "NULL",
-      "pubDate": "2024-07-26T19:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Ethereum Team Lead Péter Szilágyi says he feels ‘Ethereum is losing the plot’",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:53:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "This Week in Crypto: Ethereum ETFs Launch, Bitcoin 2024 Conference, and BANANA Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:48:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "BNB",
-        "TON",
-        "ETHW",
-        "BANANA"
-      ]
-    },
-    {
-      "title": "Fintech Innovators To Gather At Benzinga's Deal Day & Awards In NYC: '$100M Of Deals To Be Done'",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:40:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMP"
-      ]
-    },
-    {
-      "title": "Michigan’s pension fund invests $6.6 million in Bitcoin ETFs",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:37:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Solana Perps TVL Up 447% YTD: Jupiter, Drift Leading the Charge",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ]
-    },
-    {
       "title": "Filecoin Price Poised For Q1-Style Rally After Waffle Network Update",
       "link": "https://coingape.com/markets/filecoin-price-poised-for-q1-style-rally-after-waffle-network-update/",
       "pubDate": "2024-07-26T18:12:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "trading",
       "description": "Filecoin price is back in the green as it consistently prints bullish candles in lower timeframes. The leading DePIN token surged 10% to exchange hands at $4.56 amid a trend reversal triggered by news of a network update called Waffle. Price data by CoinMarketCap revealed modest increases in the 24-hour trading volume and the market",
       "currencies": [
@@ -286,144 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Biggest Altcoin Gainers of the Last Week of July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "HNT",
-        "BONK",
-        "WIF",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Governance on dYdX: How Community Shapes the Exchange",
-      "link": "NULL",
-      "pubDate": "2024-07-26T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "UNI",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Michigan pension fund adds $6.6 million in Bitcoin ETF holdings",
-      "link": "NULL",
-      "pubDate": "2024-07-26T17:45:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Jersey City mayor and NJ gubernatorial candidate Fulop sees bitcoin as an ‘inflation hedge’",
-      "link": "NULL",
-      "pubDate": "2024-07-26T17:11:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now July 26 – Bittensor, Brett, JasmyCoin",
-      "link": "NULL",
-      "pubDate": "2024-07-26T17:10:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "JASMY",
-        "TAO",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "BlockDAG–Alex Pereira Collab Booms Presale; Insights on XLM Forecast & Cardano ETF",
-      "link": "NULL",
-      "pubDate": "2024-07-26T17:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "XLM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Majority of US crypto owners will consider presidential candidates’ crypto positions in November: Gemini survey.",
-      "link": "NULL",
-      "pubDate": "2024-07-26T17:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Can VeChain’s VeBetterDAO End VET Price Crash?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T16:07:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "VET"
-      ]
-    },
-    {
-      "title": "Michigan pension fund invests $6.6 million in Bitcoin via ARK 21Shares ETF",
-      "link": "NULL",
-      "pubDate": "2024-07-26T15:40:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "LUNA Classic Community Criticizes eToro for Delisting",
-      "link": "NULL",
-      "pubDate": "2024-07-26T15:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "17 Billion Cardano (ADA) in 24 Hours, What's Happening?",
       "link": "https://u.today/17-billion-cardano-ada-in-24-hours-whats-happening",
       "pubDate": "2024-07-26T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "17 billion Cardano in 24 hours, Chang Hard Fork effect?",
       "currencies": [
@@ -435,22 +71,11 @@
       }
     },
     {
-      "title": "LUNC News: Terra Luna Classic Dev Reveals Severe Issues In Tax2Gas Review",
-      "link": "NULL",
-      "pubDate": "2024-07-26T15:28:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Raoul Pal Reveals Major Shift in Investment Strategy Towards Solana, Away From BTC, ETH",
       "link": "https://coinpedia.org/news/raoul-pal-reveals-major-shift-in-investment-strategy-towards-solana-away-from-btc-eth/",
       "pubDate": "2024-07-26T15:13:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "bitcoin",
       "description": "Raoul Paul, the CEO of Real Vision and a prominent financial analyst, has recently disclosed his investment strategy reflecting a drastic shift. Pal has shifted from Bitcoin and other Altcoins, relocating a staggering 90% of his liquid assets into Solana. 90% Of Pal’s Network Allocated To SOL! In a recent video address, Pal explained his …",
       "currencies": [
@@ -467,8 +92,8 @@
       "title": "Is Solana's (SOL) Head and Shoulders Pattern Ready? What It Means",
       "link": "https://u.today/is-solanas-sol-head-and-shoulders-pattern-ready-what-it-means",
       "pubDate": "2024-07-26T14:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Solana on verge of momentum boost, especially if this bullish pattern plays out",
       "currencies": [
@@ -480,34 +105,11 @@
       }
     },
     {
-      "title": "Kamala Harris’ team wants to take a position on crypto, source says, as outreach to the industry forges on",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:42:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Warren claims foreign-owned US crypto mines could be used to ‘bring down the power grid’",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:42:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
       "title": "Solana Sees Strong Rally in June 2024, Bullish Pattern Forms on Charts.",
       "link": "https://droomdroom.com/solana-bullish-pattern/",
       "pubDate": "2024-07-26T14:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Droomdroom",
+      "sourceKey": "droomdroom",
       "category": "trading",
       "description": "Solana is in a strong uptrend despite all the market volatility. If the crypto continues its uptrend, it might soon make a new ATH.",
       "currencies": [
@@ -519,24 +121,11 @@
       }
     },
     {
-      "title": "Crypto Whales’ Top Altcoin Picks For The Fourth Week of July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:33:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "ARB",
-        "ONDO"
-      ]
-    },
-    {
       "title": "Solana Flips Binance Coin to Take the Number Four Spot",
       "link": "https://cryptodnes.bg/en/solana-flips-binance-coin-to-take-the-number-four-spot/",
       "pubDate": "2024-07-26T14:31:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "altcoin",
       "description": "Amid the crypto resurgence, a notable shift in the top 10 cryptocurrencies by market cap caught the investors' attention.",
       "currencies": [
@@ -548,35 +137,11 @@
       }
     },
     {
-      "title": "Stay in Crypto for Greater Returns, Quant Fund Kbit Advises Investors",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:22:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Kbit Quant Fund Dominates Crypto ETF Market with Innovative Strategies",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:18:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "QNT"
-      ]
-    },
-    {
       "title": "Solana Price Forecast: Can SOL Beat XRP to Secure ETF Approval?",
       "link": "https://cryptonews.com/news/solana-price-forecast-can-sol-beat-xrp-to-secure-etf-approval.htm?__cf_chl_rt_tk=3LffFW2FHvyORKzz24Svzi3fBrmVu9.wPyZRDi4dDVw-1747035505-1.0.1.1-cT2ngK4N8jQNy4jKGjVZDUqAjFwWWs9cxklBtwj20Rg",
       "pubDate": "2024-07-26T14:16:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Amidst regulatory advancements, Solana's robust tech and market growth spotlight its potential, fueling optimistic price predictions as it vies for ETF approval.",
       "currencies": [
@@ -589,35 +154,11 @@
       }
     },
     {
-      "title": "Lisk Price Surges 10% as Community Votes on 100M LSK Burn Proposal",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LSK"
-      ]
-    },
-    {
-      "title": "HTX User Private Keys Infringed, Former Exchange Employee Gets 3 Years in Prison",
-      "link": "NULL",
-      "pubDate": "2024-07-26T14:08:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
       "title": "BlackRock Doubts Demand for Solana ETFs Despite Ethereum Approval",
       "link": "https://cryptodnes.bg/en/blackrock-doubts-demand-for-solana-etfs-despite-ethereum-approval/",
       "pubDate": "2024-07-26T14:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "ethereum",
       "description": "The SEC's approval of spot Ethereum ETFs has sparked interest in future crypto ETF launches, with some anticipating Solana ETFs might be next.",
       "currencies": [
@@ -633,8 +174,8 @@
       "title": "Solana Monkey Business reclaims top spot with US$679K in sales",
       "link": "https://forkast.news/solana-monkey-business-reclaims-top-spot-with-us679k-in-sales/",
       "pubDate": "2024-07-26T13:45:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "altcoin",
       "description": "Solana Monkey Business tops daily sales for the second time this week.",
       "currencies": [
@@ -647,50 +188,11 @@
       }
     },
     {
-      "title": "CoinDesk 20 Performance Update: RNDR's 12% Gain Leads as Index Rebounds",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:38:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Over 75% of Bitcoin short-term holders in profit as BTC breaches $67K",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:34:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Unlock Rewards On MemeFi Daily Combo For 27 July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
       "title": "Cardano’s Big Upgrade: Chang Hard Fork Could Skyrocket ADA Price",
       "link": "https://cryptodnes.bg/en/cardanos-big-upgrade-chang-hard-fork-could-skyrocket-ada-price/",
       "pubDate": "2024-07-26T13:15:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "trading",
       "description": "Cardano is gearing up for a transformative upgrade with the upcoming Chang Hard Fork, which promises to significantly impact the ADA token and its community.",
       "currencies": [
@@ -702,45 +204,11 @@
       }
     },
     {
-      "title": "Forthewin Network becomes first dApp to launch on Neo X with Smith",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:05:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Best BRC20 Cryptos To Invest In: SATS, ORDI Pump As Bitcoin Price Recovers",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "How long will BONK struggle? Watch out for these key levels",
-      "link": "NULL",
-      "pubDate": "2024-07-26T13:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
       "title": "Ripple and Solana Steal the Show as Ethereum ETF Launch Disappoints: This Week’s Crypto Update",
       "link": "https://cryptopotato.com/ripple-and-solana-steal-the-show-as-ethereum-etf-launch-disappoints-this-weeks-crypto-update/",
       "pubDate": "2024-07-26T12:48:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "In what seems to have been an eventful week for the industry, the total cryptocurrency market capitalization has remained largely unchanged.",
       "currencies": [
@@ -755,126 +223,11 @@
       }
     },
     {
-      "title": "Starknet (STRK) May Fall Below All-Time Low With Decreasing Buying Pressure",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Jumps 7% amid Mt. Gox Repayments, Eyes $400",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:44:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Japan’s First Bitcoin ETFs Coming Soon via Franklin Templeton and SBI",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "ETN"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Floki Listed On Bitstamp, 'Poised To Follow Dogecoin's Movements,' States Trader",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:24:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Proton Privacy’s controversial statement splits crypto community; Here’s why",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Shiba Inu Holders Receive Crucial Warnings on These Two Things: Details",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "BONE",
-        "LEASH"
-      ]
-    },
-    {
-      "title": "Solana (SOL) and Injective Protocol (INJ) retest support - up from here",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Berachain Airdrop Coming Soon: Rumour or Reality",
-      "link": "NULL",
-      "pubDate": "2024-07-26T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "WBTC",
-        "ARB",
-        "HONEY"
-      ]
-    },
-    {
       "title": "Cardano Validators Begin Migration In Preparation for Chang Hard Fork",
       "link": "https://thedefiant.io/news/blockchains/cardano-validator-begin-migration-in-preparation-for-chang-hard-fork",
       "pubDate": "2024-07-26T11:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "altcoin",
       "description": "The Chang hard fork aims to shift control from centralized entities to the holders.",
       "currencies": [
@@ -886,46 +239,11 @@
       }
     },
     {
-      "title": "Mantle Ecosystem Invests Strategically in UXLINK: Driving User Growth and Ecosystem Building",
-      "link": "NULL",
-      "pubDate": "2024-07-26T11:37:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MNT"
-      ]
-    },
-    {
-      "title": "It’s Like Buying ETH for $1 – Discover Extremely Cheap and Bullish Altcoins Right Now",
-      "link": "NULL",
-      "pubDate": "2024-07-26T11:35:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Colgate-Palmolive Exceeds Q2 Market Expectations with $0.91 EPS",
-      "link": "NULL",
-      "pubDate": "2024-07-26T11:27:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
       "title": "Cardano Ready for the Chang Hard Fork Completion, Expect This From ADA Price",
       "link": "https://www.thecoinrepublic.com/2024/07/26/cardano-ready-for-the-chang-hard-fork-completion/",
       "pubDate": "2024-07-26T11:25:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "This is because Cardano (ADA) has just achieved a significant achievement with the launch of Node 9.1. This update is a step before the Chang hard fork, which is expected to happen soon. The new node includes governance and technical improvements. Cardano Releases Node 9.1. for Chang Upgrade The Cardano Node 9.1.0 is out, marking […]",
       "currencies": [
@@ -937,118 +255,11 @@
       }
     },
     {
-      "title": "3M Co. (NYSE: MMM) Reports $1.93 Adjusted EPS in Q2, $6.3 B in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-07-26T10:59:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "X seemingly drops Bitcoin emoji during Bitcoin Conference week surprising community",
-      "link": "NULL",
-      "pubDate": "2024-07-26T10:46:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NEXO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bittensor (TAO) Price Bounces off Support, Eyes $418",
-      "link": "NULL",
-      "pubDate": "2024-07-26T10:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "Arkham ‘deanonymizes blockchains,’ obscures its own ARKM token sales",
-      "link": "NULL",
-      "pubDate": "2024-07-26T10:34:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARKM"
-      ]
-    },
-    {
-      "title": "WazirX Assures Users: Platform Security Uncompromised",
-      "link": "NULL",
-      "pubDate": "2024-07-26T10:33:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Crypto Whales Bought These Altcoins in the Fourth Week of July 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-26T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "ARB",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Elizabeth Warren: Foreign Crypto Miners Threaten US Security and Energy Grid Stability",
-      "link": "NULL",
-      "pubDate": "2024-07-26T09:42:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Solana Set For 900% Rally With Breakout From This Pattern — Analyst",
-      "link": "NULL",
-      "pubDate": "2024-07-26T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "SOL",
-        "ENS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Robert F. Kennedy Jr. Vows to Push Government to Buy 9.17 Million BTC",
       "link": "https://www.coinspeaker.com/robert-f-kennedy-jr-government-9-17m-btc/",
       "pubDate": "2024-07-26T09:25:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "bitcoin",
       "description": "Coinspeaker Robert F. Kennedy Jr. Vows to Push Government to Buy 9.17 Million BTC Earlier this month, Kennedy announced his intention to back the US dollar with Bitcoin if elected, arguing that this would help stabilize the economy. Robert F. Kennedy Jr. Vows to Push Government to Buy 9.17 Million BTC",
       "currencies": [
@@ -1061,54 +272,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BONK Displays Resilience: Holding Steady Above Critical Support Level of $0.000025",
-      "link": "NULL",
-      "pubDate": "2024-07-26T09:24:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Analysts Reveal Top Crypto Portfolio Strategies For Upcoming Altcoin Season",
-      "link": "NULL",
-      "pubDate": "2024-07-26T09:09:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "PEPE",
-        "APT",
-        "ARB",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Bitcoin (BTC) Bounces Above $67K, Stacks (STX) Skyrockets 10% Daily (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2024-07-26T08:57:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "STX",
-        "BRETT",
-        "ORDI"
-      ]
-    },
-    {
       "title": "Solana Meme Coin POPCAT",
       "link": "https://coinpaprika.com/news/solana-meme-coin-popcat/",
       "pubDate": "2024-07-26T08:51:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "altcoin",
       "description": "POPCAT, a meme coin on Solana, sees renewed positive sentiment and rising investor confidence, indicating a potential price rebound.",
       "currencies": [
@@ -1118,289 +286,6 @@
         "positive": 2,
         "negative": 2
       }
-    },
-    {
-      "title": "MorphoLabs Launches SuperFest Campaign on July 23, $8M Deposited on Base, $51M in RE7Capital Vaults, OP Rewards Available",
-      "link": "NULL",
-      "pubDate": "2024-07-26T08:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OP"
-      ]
-    },
-    {
-      "title": "Elon Musk’s X removes crypto emojis, leaving community puzzled",
-      "link": "NULL",
-      "pubDate": "2024-07-26T08:47:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "CRO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Ethereum(ETH) ETF Fails To Ignite Altcoin Season, Market rebounds above $1 Trillion",
-      "link": "NULL",
-      "pubDate": "2024-07-26T08:06:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "T"
-      ]
-    },
-    {
-      "title": "Toncoin (TON) & Notcoin (NOT) Prices Attempt for a Rebound—Will They Secure a Bullish Weekend Close?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T07:42:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "TON",
-        "MNT",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Analysts Bullish on FLOKI and Mantle But is DTX Exchange the Real Deal?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T07:31:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "MNT",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Monero Price Jumps 10% Today! Will XMR Price Reclaim $200?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T06:58:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Ethereum Banner Raised Outside NYSE, Industry Observer Says Moment 'Might End Up In The History Books'",
-      "link": "NULL",
-      "pubDate": "2024-07-26T06:50:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "Litecoin (LTC), Monero (XMR) and Rollblock (RBLK): Which Crypto Has 200x Potential This Year?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T06:07:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Crypto News: Crypto Market Rebound Strongly After Market Dip",
-      "link": "NULL",
-      "pubDate": "2024-07-26T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "SOL",
-        "UNI",
-        "XMR",
-        "BCH",
-        "AAVE",
-        "RUNE",
-        "STX",
-        "MNT",
-        "PYTH",
-        "OM",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Ethereum ETF Outflow Streak Continues For The Second Day!",
-      "link": "NULL",
-      "pubDate": "2024-07-26T05:59:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "Washington Regulator Warns of Miami Equity Fund 005 Crypto Fraud",
-      "link": "NULL",
-      "pubDate": "2024-07-26T05:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DFI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "StarkWare is working to integrate Cosmos’ IBC protocol into Starknet",
-      "link": "NULL",
-      "pubDate": "2024-07-26T05:12:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "STRK"
-      ]
-    },
-    {
-      "title": "Solana Price (SOL) Targets New Monthly High: Bulls in Control",
-      "link": "NULL",
-      "pubDate": "2024-07-26T04:58:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Hive Announces Plans to Move Into Paraguay Amidst Bitcoin Mining Power Hike Turmoil",
-      "link": "NULL",
-      "pubDate": "2024-07-26T04:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HIVE"
-      ]
-    },
-    {
-      "title": "hki.eth (#HashKey Capital) Re-enters PENDLE Market with Major Purchase",
-      "link": "NULL",
-      "pubDate": "2024-07-26T04:23:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PENDLE"
-      ]
-    },
-    {
-      "title": "dYdX Exchange Releases Postmortem on $31K Squarespace Account Hack Lost",
-      "link": "NULL",
-      "pubDate": "2024-07-26T03:35:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Recovers Lost Ground: Is the Bull Run Back?",
-      "link": "NULL",
-      "pubDate": "2024-07-26T02:39:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "WazirX Preliminary Investigation Finds No Evidence of Compromised Signer Machines in $235M Hack",
-      "link": "NULL",
-      "pubDate": "2024-07-26T02:20:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "2.91 Million ETH Held by 9 Ethereum ETFs: A Reserve Overview",
-      "link": "NULL",
-      "pubDate": "2024-07-26T02:02:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "How Litecoin, Dogecoin are winning the altcoin adoption race",
-      "link": "NULL",
-      "pubDate": "2024-07-26T02:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "LTC",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Bitcoin Mining Giant Marathon Digital Makes Major $100M BTC Acquisition",
-      "link": "NULL",
-      "pubDate": "2024-07-26T00:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "DOGE",
-        "KAS"
-      ]
     }
   ]
 }

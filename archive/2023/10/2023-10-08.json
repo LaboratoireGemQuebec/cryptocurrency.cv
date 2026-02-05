@@ -1,16 +1,16 @@
 {
   "date": "2023-10-08",
-  "fetchedAt": "2026-02-05T07:45:52.133Z",
-  "articleCount": 27,
+  "fetchedAt": "2026-02-05T07:48:35.534Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
     {
       "title": "These 2 Blockchains Dominated Transaction Fees Over Past 12 Months: Bloomberg Analyst",
       "link": "https://beincrypto.com/transaction-fees-blockchain-ethereum-tron/",
       "pubDate": "2023-10-08T23:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Bloomberg crypto analyst Jamie Coutts declares that two blockchains have taken the lion’s share of transaction fees among all smart contract and Proof-of-Stake (PoS) blockchains over the last twelve months. The Ethereum and TRON networks accounted for a substantial 88% of the total transaction fees, with Ethereum leading at 57% and TRON following closely behind at 31%. Two...",
       "currencies": [
         "BTC",
@@ -24,191 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Five teams receive awards at Singapore GAS Station, the final stop ahead of the grand finale in Hong Kong",
-      "link": "NULL",
-      "pubDate": "2023-10-08T23:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Will the Current Recovery Push LUNC Price Above $0.0001?",
-      "link": "NULL",
-      "pubDate": "2023-10-08T20:07:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Huobi Reclaims $8 Million In Stolen Ethereum After Offering Bounty to Hacker",
-      "link": "NULL",
-      "pubDate": "2023-10-08T18:31:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "An Analyst Warns on TUSD, stUSDT, and Huobi/HTX",
-      "link": "NULL",
-      "pubDate": "2023-10-08T17:55:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "description": "Respected analyst Dylan Leclair has recently put together a thread warning crypto market participants about some questions around TUSD, stUSDT and other assets surrounding Huobi/HTX. In the spirit of starting the next bull market cleaner than we left the last one, NLW presents the thread: https://twitter. com/DylanLeClair_/status/1709712204675555651 Enjoying this content? SUBSCRIBE to the Podcast: https://pod. link/1438693620 Watch on YouTube: https://www",
-      "currencies": [
-        "TUSD",
-        "HT",
-        "HTX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "XMR breaks above $150: Can buyers extend gains?",
-      "link": "NULL",
-      "pubDate": "2023-10-08T17:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "This is the extent of Binance’s regulatory woes",
-      "link": "NULL",
-      "pubDate": "2023-10-08T16:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Top Altcoins to Watch Next Week: LTC, SOL, and MATIC",
-      "link": "NULL",
-      "pubDate": "2023-10-08T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MATIC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Here’s what ChatGPT thinks about Litecoin’s next move",
-      "link": "NULL",
-      "pubDate": "2023-10-08T14:22:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bitcoin Mining Giant Bitmain Halted Employee Salaries",
-      "link": "NULL",
-      "pubDate": "2023-10-08T14:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "ChatGPT has extremely high expectations for Filecoin’s 2023 journey",
-      "link": "NULL",
-      "pubDate": "2023-10-08T14:20:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "ChatGPT appears a tad too enthusiastic about Ethereum Classic’s 2023 prospects",
-      "link": "NULL",
-      "pubDate": "2023-10-08T13:50:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "I asked ChatGPT to forecast Polkadot’s 2023 price trends, it obliged",
-      "link": "NULL",
-      "pubDate": "2023-10-08T13:42:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Coinbase Ranks As Second Largest ETH Staking Entity As Lido’s Dominance Raises Concerns",
-      "link": "NULL",
-      "pubDate": "2023-10-08T13:40:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FLOW",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Can Filecoin clear the $3.4 hurdle?",
-      "link": "NULL",
-      "pubDate": "2023-10-08T13:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "HBAR May Hold More Promise Than XRP, According to Analyst",
-      "link": "NULL",
-      "pubDate": "2023-10-08T12:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "HBAR"
-      ]
-    },
-    {
       "title": "Ripple trial: Legal expert dismisses SEC’s odds, presents 2 alternative paths",
       "link": "https://finbold.com/ripple-trial-legal-expert-dismisses-secs-odds-presents-2-alternative-paths/",
       "pubDate": "2023-10-08T12:19:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "The legal dispute between blockchain company Ripple and the Securities and Exchange Commission (SEC) continues to capture significant attention as … Continued",
       "currencies": [
@@ -221,47 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Highest Crypto Gainers of the Week; TWT, RNDR, BSV Price Analysis",
-      "link": "NULL",
-      "pubDate": "2023-10-08T11:48:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "Why MKR’s Q4 rests on its whales",
-      "link": "NULL",
-      "pubDate": "2023-10-08T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Continue Their Uptrend But Are In An Overbought Condition",
-      "link": "NULL",
-      "pubDate": "2023-10-08T09:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX",
-        "RNDR",
-        "TWT"
-      ]
-    },
-    {
       "title": "Cardano Founder Charles Hoskinson Refutes Claims of Abandoned Projects",
       "link": "https://u.today/cardano-founder-charles-hoskinson-refutes-claims-of-abandoned-projects",
       "pubDate": "2023-10-08T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Cardano founder Charles Hoskinson recently took to X to voice spirited defense against allegations of abandoning projects",
       "currencies": [
@@ -276,8 +60,8 @@
       "title": "ChatGPT CEO warns US government wants to control Bitcoin",
       "link": "https://finbold.com/chatgpt-ceo-warns-us-government-wants-to-control-bitcoin/",
       "pubDate": "2023-10-08T09:14:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Sam Altman, the founder of OpenAI, the parent company behind the interactive artificial intelligence (AI) platform ChatGPT, has voiced his … Continued",
       "currencies": [
@@ -288,65 +72,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "These Are This Week’s Top Performers as Bitcoin Price Stalls at $28K (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2023-10-08T08:51:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TWT"
-      ]
-    },
-    {
-      "title": "Quant Hovers Over $85, Bearish Trend Approaching",
-      "link": "NULL",
-      "pubDate": "2023-10-08T07:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Tron: Is the bullish rebound enough for an uptrend?",
-      "link": "NULL",
-      "pubDate": "2023-10-08T07:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Cosmos-Based Stride Governance Token, STRD, Surges 330% YTD, Outperforming ETH and LDO",
-      "link": "NULL",
-      "pubDate": "2023-10-08T04:32:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ATOM",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Huobi hacker returns 4997 ETH stolen via hot wallet breach, receives $400k bounty",
-      "link": "NULL",
-      "pubDate": "2023-10-08T04:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
     }
   ]
 }

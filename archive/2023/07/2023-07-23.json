@@ -1,34 +1,15 @@
 {
   "date": "2023-07-23",
-  "fetchedAt": "2026-02-05T07:45:52.504Z",
-  "articleCount": 18,
+  "fetchedAt": "2026-02-05T07:48:35.564Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Tesla Boots Bitcoin But Retains Once-Joke Crypto Dogecoin As A Means Of Payment",
-      "link": "NULL",
-      "pubDate": "2023-07-23T20:16:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Electric car maker Tesla has removed the source code that once permitted BTC payments. However, the Elon Musk-owned company is retaining the OG meme cryptocurrency Dogecoin (DOGE) as a payment option.",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "XRP Futures Contracts Open Interest Peaks at $1.2B, Highest Since November 2021",
       "link": "https://u.today/xrp-futures-contracts-open-interest-peaks-at-12b-highest-since-november-2021",
       "pubDate": "2023-07-23T19:47:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Data from CoinGlass reveals that the open interest for XRP futures contracts has reached a staggering $1.2 billion",
       "currencies": [
@@ -44,8 +25,8 @@
       "title": "Famous Analyst Draws Attention to Support-Resistance Points in Bitcoin and Dogecoin!",
       "link": "https://en.bitcoinsistemi.com/famous-analyst-draws-attention-to-support-resistance-points-in-bitcoin-and-dogecoin/",
       "pubDate": "2023-07-23T18:42:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Bitcoin On-chain data caught the attention of technical analyst Ali Martinez, who pointed out the highlights in Bitcoin. Continue Reading: Famous Analyst Draws Attention to Support-Resistance Points in Bitcoin and Dogecoin!",
       "currencies": [
@@ -59,37 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin’s dull price action ignites buying interest in LINK, FIL, SNX and THETA",
-      "link": "NULL",
-      "pubDate": "2023-07-23T18:10:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "FIL",
-        "THETA",
-        "SNX"
-      ]
-    },
-    {
-      "title": "Quant Recovers, But Fluctuates Between $95 And $110",
-      "link": "NULL",
-      "pubDate": "2023-07-23T17:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
       "title": "Ripple Teams Up With Research and Development Firm To Run CBDC and Crypto Experiments",
       "link": "https://dailyhodl.com/2023/07/23/ripple-teams-up-with-research-and-development-firm-to-run-cbdc-and-crypto-experiments/",
       "pubDate": "2023-07-23T16:55:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Ripple Labs is teaming up with a Northern Europe-based research and development firm to run experiments centered on crypto assets and central bank digital currencies (CBDCs). In a new company blog post, Ripple says it will be collaborating with SUPER HOW?, a private blockchain technology research lab based in Latvia to work on the Axiology […]",
       "currencies": [
@@ -102,23 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Google Bard Picks InQubeta (QUBE), Klaytn (KLAY), and Internet Computer (ICP) For Performance in Q3 2023",
-      "link": "NULL",
-      "pubDate": "2023-07-23T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP",
-        "KLAY"
-      ]
-    },
-    {
       "title": "Cardano Founder Gives Update on Network Rollup Strategy",
       "link": "https://u.today/cardano-founder-gives-update-on-network-rollup-strategy",
       "pubDate": "2023-07-23T14:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano founder delivers interesting update on rollups",
       "currencies": [
@@ -130,39 +73,11 @@
       }
     },
     {
-      "title": "I asked ChatGPT about ETC rising to $50 this year, it portrayed confidence",
-      "link": "NULL",
-      "pubDate": "2023-07-23T13:55:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Crypto Weekly Roundup: UK Rejects Treasury’s Proposal And More",
-      "link": "NULL",
-      "pubDate": "2023-07-23T13:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "MATIC",
-        "AR"
-      ]
-    },
-    {
       "title": "Even if the SEC appealed, Ripple could win again, says pro-XRP lawyer John Deaton",
       "link": "https://cryptoslate.com/even-if-the-sec-appealed-ripple-could-win-again-says-pro-xrp-lawyer-john-deaton/",
       "pubDate": "2023-07-23T13:39:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "regulation",
       "description": "Renowned crypto lawyer John Deaton, who represents over 75,000 XRP holders, said on July 23 that an SEC appeal will not necessarily change the outcome of the Ripple ruling. In the ever-changing landscape of crypto regulations, the recent Ripple ruling has sparked hope and uncertainty for the crypto industry. Earlier this week, the U.S. Securities […]",
       "currencies": [
@@ -178,8 +93,8 @@
       "title": "Americans bullish on cryptos despite growing regulatory concerns",
       "link": "https://ambcrypto.com/americans-bullish-on-cryptos-despite-growing-regulatory-concerns/",
       "pubDate": "2023-07-23T13:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Despite the pessimism around regulatory oversight, Americans still find faith in the long-term prospects of cryptocurrencies.",
       "currencies": [
@@ -196,8 +111,8 @@
       "title": "Will the SEC’s Appeal in the Ripple-SEC Case Cause Trouble for XRP? Lawyer Answered",
       "link": "https://en.bitcoinsistemi.com/will-the-secs-appeal-in-the-ripple-sec-case-cause-trouble-for-xrp-lawyer-answered/",
       "pubDate": "2023-07-23T13:19:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "The implications of this are questionable after Ripple signaled that it would appeal the decision in the SEC case. Continue Reading: Will the SEC’s Appeal in the Ripple-SEC Case Cause Trouble for XRP? Lawyer Answered",
       "currencies": [
@@ -213,8 +128,8 @@
       "title": "$ADA: Cardano’s Ecosystem Set for Major Boost as Mithril Nears Mainnet Release",
       "link": "https://www.cryptoglobe.com/latest/2023/07/ada-cardanos-ecosystem-set-for-major-boost-as-mithril-nears-mainnet-release/",
       "pubDate": "2023-07-23T12:19:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Mithril, is on the brink of its mainnet release. Developed by IO Global (IOG), the tech firm behind much of Cardano’s research, Mithril is set to tackle some of the biggest challenges in blockchain applications. Think of Cardano as a two-story building. The first floor, the Cardano Settlement Layer (CSL), is where the cryptocurrency ADA […]",
       "currencies": [
@@ -226,22 +141,11 @@
       }
     },
     {
-      "title": "KuCoin Data Shows Varied Crypto Habits in France, Germany For Gen Z, Y, X",
-      "link": "NULL",
-      "pubDate": "2023-07-23T11:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "Once again, Elon Musk changed the Twitter Logo, which he once transformed into DOGE: CZ Reacts Too!",
       "link": "https://en.bitcoinsistemi.com/once-again-elon-musk-changed-the-twitter-logo-which-he-once-transformed-into-doge-cz-reacts-too/",
       "pubDate": "2023-07-23T09:02:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "Billionaire Elon Musk informed the platform community that the Twitter logo will be permanently changed this time. Continue Reading: Once again, Elon Musk changed the Twitter Logo, which he once transformed into DOGE: CZ Reacts Too!",
       "currencies": [
@@ -250,32 +154,6 @@
       "votes": {
         "positive": 2,
         "negative": 2
-      }
-    },
-    {
-      "title": "Filecoin: Will the $5 hurdle offer a shorting opportunity again?",
-      "link": "NULL",
-      "pubDate": "2023-07-23T05:30:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "SEC Contemplates Appeal Over Controversial XRP Ruling",
-      "link": "NULL",
-      "pubDate": "2023-07-23T02:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
       }
     }
   ]

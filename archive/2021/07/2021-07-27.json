@@ -1,27 +1,15 @@
 {
   "date": "2021-07-27",
-  "fetchedAt": "2026-02-05T07:45:51.974Z",
-  "articleCount": 25,
+  "fetchedAt": "2026-02-05T07:48:35.514Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @iSafePal: @iSafePal has fully supported the @Theta_Network network & $THETA token from our previous V2.7.1 App update🥳 Store your @Th…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T23:51:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
     {
       "title": "Bitcoin More Likely to Move to $60,000 Than Drop Further, Says Bloomberg Analyst",
       "link": "https://www.cryptoglobe.com/latest/2021/07/bitcoin-more-likely-to-move-to-60000-than-drop-further-says-bloomberg-analyst/",
       "pubDate": "2021-07-27T21:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "Bloomberg commodity strategist Mike McGlone has weighed in on Bitcoin’s outlook for the near future and revealed he believes the cryptocurrency is more likely to move upward toward the $60,000 than to drop back down to $20,000. According to a section shared by Bloomberg’s exchange-traded fund (ETF) senior analyst Eric Balchunas, McGlone wrote in a […]",
       "currencies": [
@@ -35,45 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "PAX & POLY are launching on & in the iOS & Android apps within the next 15 mins. You may ne…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T21:32:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COIN"
-      ]
-    },
-    {
-      "title": "RT @PulsechainCom: solves this! It shouldn't cost $73 dollars to send a coin. It shouldn't cost $225 to swap coins.…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T21:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "RT @CryptoSlate: Theta’s Head of Strategy talks purpose-built blockchains, major partnerships and future roadmap",
-      "link": "NULL",
-      "pubDate": "2021-07-27T19:16:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Dogecoin Fan Offers 10 Percent Discount on His House if Buyer Pays Him in DOGE",
       "link": "https://u.today/dogecoin-fan-offers-10-percent-discount-on-his-house-if-buyer-pays-him-in-doge",
       "pubDate": "2021-07-27T17:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "A Utah man has decided to do his part in pushing Dogecoin adoption by offering a generous discount on his house",
       "currencies": [
@@ -89,8 +43,8 @@
       "title": "Binance Reduces Daily Withdrawals for Unverified Accounts to 0.06 BTC",
       "link": "https://en.ethereumworldnews.com/binance-reduces-daily-withdrawals-for-unverified-accounts-to-0-06-btc/",
       "pubDate": "2021-07-27T16:56:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "bitcoin",
       "description": "Binance has reduced daily withdrawal limits for unverified accounts from 2 BTC to 0.06 BTC Binance has also reduced leverage on new futures accounts to 20x There is also a new tax reporting tool on Binance for users who are obligated to report their capital gains The exchange has implemented the new changes as it works towards complying with regulators globally The popular crypto exchange of...",
       "currencies": [
@@ -104,85 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Listening to community feedback, now the New NKN Mining Help is on wiki! So you can contribute, edit and update the…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T16:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RIF Multisig enables #DeFi4Bitcoin developers to deploy @gnosisSafe smart contracts in the @RSKsmart ecosystem and…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T16:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
-      "title": "$PAX and $PAXG are now listed on C.R.E.A.M. ETH v1 Users can supply and borrow at @PaxosGlobal",
-      "link": "NULL",
-      "pubDate": "2021-07-27T15:24:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CREAM",
-        "PAX",
-        "CRETH2"
-      ]
-    },
-    {
-      "title": "What would be the first thing you bought with your crypto if everywhere started accepting it as payment?",
-      "link": "NULL",
-      "pubDate": "2021-07-27T14:44:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Today, Theta was officially issued U.S. patent 11,075,891 for \"NFT based digital rights management in a decentraliz…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T14:35:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "#DeFi4Bitcoin on @RSKsmart gets a boost with @xcapitla's integration of the RIF token to their investment wallet! S…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T14:19:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
       "title": "Newly found Monero bug may impact transaction privacy, developers warn",
       "link": "https://cointelegraph.com/news/newly-found-monero-bug-may-impact-transaction-privacy-developers-warn",
       "pubDate": "2021-07-27T12:32:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Monero developers are working on a software fix for a newly identified bug that may expose the occurrence of an output transaction made right away after receiving funds.",
       "currencies": [
@@ -195,22 +75,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @alanchiu: The strength of a community lies in the quality of its members, and by that measure, the #Ethereum community is stronger than…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T11:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "Monero Bug Breaks Transaction Privacy",
       "link": "https://cryptobriefing.com/monero-bug-breaks-transaction-privacy/",
       "pubDate": "2021-07-27T10:46:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "A recently discovered bug in the Monero cryptocurrency has compromised transaction privacy, raising concerns about the security of user data. This vulnerability could potentially allow unauthorized parties to access sensitive transaction information, prompting urgent calls for users to take precautions. Developers are working to fix the issue and restore Monero's privacy features.",
       "currencies": [
@@ -223,39 +92,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "BTC, ETH, XRP, XMR, KAVA, ICX, XEM — Technical Analysis July 27",
-      "link": "NULL",
-      "pubDate": "2021-07-27T10:41:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XRP",
-        "XEM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Want to mine eCash ($XEC) on @ViaBTC mining pool? Here are instructions: #eCash #XEC",
-      "link": "NULL",
-      "pubDate": "2021-07-27T09:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Crypto Markets Turn Red After Amazon Denied Reports of Accepting BTC (Market Watch)",
       "link": "https://cryptopotato.com/crypto-markets-turn-red-after-amazon-denied-reports-of-accepting-btc-market-watch/",
       "pubDate": "2021-07-27T08:41:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The entire market is painted red today. This comes after Amazon denied the rumors of planning to accept BTC this year.",
       "currencies": [
@@ -272,8 +113,8 @@
       "title": "Tether rejects claims of renewed scrutiny over suspected bank fraud",
       "link": "https://forkast.news/tether-rejects-claims-renewed-scrutiny-over-bank-fraud/",
       "pubDate": "2021-07-27T07:37:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "World’s largest stablecoin dismisses report suggesting possibility of U.S. investigation, despite claims of recent Justice Department interest and track record of legal woes.",
       "currencies": [
@@ -283,70 +124,6 @@
         "positive": 2,
         "negative": 4
       }
-    },
-    {
-      "title": "RT @PlayPolkadot: We are happy to inform you about the latest developments via . Get exciting insights and news abou…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T07:32:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
-      "title": "TA: Bitcoin Tops Near $40K, Why BTC Remains Well Supported",
-      "link": "NULL",
-      "pubDate": "2021-07-27T03:08:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin price surged and it even spiked above the $40,000 resistance against the US Dollar. BTC is correcting gains, but it is likely to remain stable near $36,000. Bitcoin started a strong increase above the $36,000 and $38,000 resistance levels. The price is now trading well above $36,000 and the 100 hourly simple moving average. There is a major bullish trend line forming with support near...",
-      "currencies": [
-        "BTC",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @RichardHeartWin: Easy to watch sacrifice addresses: Some easy to watch sacrifice wallet links.",
-      "link": "NULL",
-      "pubDate": "2021-07-27T02:40:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HEX"
-      ]
-    },
-    {
-      "title": "We have completed registering as one of @Tokamak_Network's #DAO candidates as of today. We plan to expand our servi…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T00:54:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
-    },
-    {
-      "title": "RT @mdudas: good news: $PAX will be available on @CoinbasePro starting tomorrow @PaxosGlobal PAX-USD PAX-USDT (@T…",
-      "link": "NULL",
-      "pubDate": "2021-07-27T00:21:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
     }
   ]
 }

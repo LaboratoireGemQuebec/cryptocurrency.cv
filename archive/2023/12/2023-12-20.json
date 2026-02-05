@@ -1,87 +1,15 @@
 {
   "date": "2023-12-20",
-  "fetchedAt": "2026-02-05T07:45:53.378Z",
-  "articleCount": 49,
+  "fetchedAt": "2026-02-05T07:48:35.654Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Judge Kaplan Rejects Bankman-Fried’s Request for Sentencing Delay, Affirms March 2024 Date",
-      "link": "NULL",
-      "pubDate": "2023-12-20T23:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "40% of American Investors Expect Crypto To Be Part of Their Future Portfolio, According to Grayscale Poll",
-      "link": "NULL",
-      "pubDate": "2023-12-20T23:01:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FTT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Price Analysis: How Can CRO Reach $1,000?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T22:56:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "LEO Access to Binance Data Allegedly Compromised By Hacker",
-      "link": "NULL",
-      "pubDate": "2023-12-20T22:54:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Testnet Node Software Upgrade: ZEN 4.2.0-rc1 is Available to Download",
-      "link": "NULL",
-      "pubDate": "2023-12-20T21:54:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Matthew Commons – Verified USD Foundation – The Smart Economy Podcast: Episode 53",
-      "link": "NULL",
-      "pubDate": "2023-12-20T21:10:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
     {
       "title": "Shiba Inu Developers Advance ‘.shib’ Domain Plans — Why This Is Crazily Bullish For SHIB",
       "link": "https://zycrypto.com/shiba-inu-developers-advance-shib-domain-plans-why-this-is-crazily-bullish-for-shib/",
       "pubDate": "2023-12-20T21:09:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "In a groundbreaking development, the developers behind the popular Shiba Inu (SHIB) meme token have unveiled plans to acquire a...",
       "currencies": [
@@ -94,22 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "HashKey Cloud joins on Neo Council with roughly 787,000 NEO votes",
-      "link": "NULL",
-      "pubDate": "2023-12-20T20:42:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
       "title": "Phantom adds support for Bitcoin, Ordinals and BRC-20 tokens",
       "link": "https://www.theblock.co/post/268707/phantom-adds-support-for-bitcoin-ordinals-and-brc-20-tokens?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-12-20T20:40:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "Popular digital wallet adds Bitcoin functionality as it strives to embrace \"cross-chain interoperability\" while growing its user base.",
       "currencies": [
@@ -125,8 +42,8 @@
       "title": "Solana (SOL) market cap flips XRP — What’s behind the price surge?",
       "link": "https://cointelegraph.com/news/solana-sol-market-cap-flips-xrp-what-is-behind-the-price-surge",
       "pubDate": "2023-12-20T20:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "SOL price roared to a 2023 high above $84. Cointelegraph investigates what is behind the rally.",
       "currencies": [
@@ -140,111 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NEAR Protocol spikes 20% to hit $3: Is NEAR just getting started?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T20:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Judge denies request from SBF lawyers to delay sentencing",
-      "link": "NULL",
-      "pubDate": "2023-12-20T19:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Immutable Hits 20-Month High as Gaming Tokens Outpace Bitcoin Gains",
-      "link": "NULL",
-      "pubDate": "2023-12-20T19:11:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SAND",
-        "GALA",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Lido holds 76% of ETH staking: Does LDO stand to gain?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T18:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Judge denies SBF request for delays on eve of sentencing interview",
-      "link": "NULL",
-      "pubDate": "2023-12-20T18:24:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Stacks (STX) Soars 26% After Endorsement From Tim Draper",
-      "link": "NULL",
-      "pubDate": "2023-12-20T17:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Is Ethereum Classic (ETC) and Litecoin (LTC) Stability a Solid Basis for Portfolio Diversification Pre-2024 Altseason?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T17:37:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LTC",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Emerging Trends in Digital Currency: Monero and Ethereum Classic Enthusiasts Eye a New Cryptocurrency",
-      "link": "NULL",
-      "pubDate": "2023-12-20T17:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XMR",
-        "ETC"
-      ]
-    },
-    {
       "title": "Why Ripple’s XRP could smash all-time high in 2024",
       "link": "https://www.cryptopolitan.com/why-xrp-could-smash-all-time-high-in-2024/",
       "pubDate": "2023-12-20T16:39:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "As the cryptocurrency world continues to evolve at a breakneck pace, Ripple’s XRP stands out as a token with significant potential. The year 2023 has been a rollercoaster for cryptocurrencies, but XRP has shown remarkable resilience and growth, surging by almost 80% since the beginning of the year. This growth trajectory has fueled speculations and […]",
       "currencies": [
@@ -257,36 +74,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bonk (BONK) Price Skyrockets 700% in 30 Days; Eos (EOS) & Borroe Finance ($ROE) Gear Up for Gains",
-      "link": "NULL",
-      "pubDate": "2023-12-20T16:31:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "EOS",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Solana Q4 Triumph: Soaring Activity Leaves Ethereum In The Dust – Report",
-      "link": "NULL",
-      "pubDate": "2023-12-20T16:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "WOO"
-      ]
-    },
-    {
       "title": "4 altcoins under $0.10 to buy in January 2024",
       "link": "https://finbold.com/4-altcoins-under-0-10-to-buy-in-january-2024/",
       "pubDate": "2023-12-20T16:06:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "As January 2024 is getting closer, a renewed wave of optimism has flooded the cryptocurrency market, the participants of which … Continued",
       "currencies": [
@@ -302,84 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Stacks' STX Soars 27% on Positive Comments From Tim Draper",
-      "link": "NULL",
-      "pubDate": "2023-12-20T14:54:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin Edges Higher Following Current Account Report; Stacks Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-12-20T14:32:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "STX"
-      ]
-    },
-    {
-      "title": "MATIC Enters Correction Phase, Bleeds 10% In The Past Week",
-      "link": "NULL",
-      "pubDate": "2023-12-20T14:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "XLM",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Latest Xbox Firmware Update Addresses Baldur’s Gate 3 Crashes",
-      "link": "NULL",
-      "pubDate": "2023-12-20T13:55:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GT"
-      ]
-    },
-    {
-      "title": "Immutable launches Passport for seamless gaming",
-      "link": "NULL",
-      "pubDate": "2023-12-20T13:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Is BitTorrent (BTT) a Good Investment For 2024 ?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T13:44:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "BTT"
-      ]
-    },
-    {
       "title": "Cardano Community up in Arms Over Messari 2024 Report Omission",
       "link": "https://coinedition.com/cardano-community-up-in-arms-over-messari-2024-report-omission/",
       "pubDate": "2023-12-20T13:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "Cryptocurrency market intelligence platform Messari and its founder, Ryan Selkis, came under fire from Cardano community members following their 2024 Messari crypto report. Cardano community members complained that the report largely ignored the Cardano blockchain and its strides this year. A community member pointed out that Cardano had no single mention in the report, despite […]",
       "currencies": [
@@ -391,155 +110,11 @@
       }
     },
     {
-      "title": "Fantom: Can rising interest in inscriptions boost the network",
-      "link": "NULL",
-      "pubDate": "2023-12-20T12:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "KuCoin Lists Machine Learning-Focused Crypto Project Bittensor (TAO)",
-      "link": "NULL",
-      "pubDate": "2023-12-20T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS",
-        "TAO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Stacks (STX) and Injective (INJ) among biggest altcoin gainers",
-      "link": "NULL",
-      "pubDate": "2023-12-20T11:57:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Crypto Price Prediction For December 20: STX, INJ, SOL",
-      "link": "NULL",
-      "pubDate": "2023-12-20T11:52:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "STX",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Solana Can Outperform XRP to Take Top 5 by Market Cap",
-      "link": "NULL",
-      "pubDate": "2023-12-20T11:47:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "SOL",
-        "EOS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Immutable Debuts New Crypto Wallet ‘Passport’ for Online Gamers",
-      "link": "NULL",
-      "pubDate": "2023-12-20T11:24:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Shiba Inu Eyes Whopping 4.8 Trillion SHIB Flow into Whale Wallets Overnight",
-      "link": "NULL",
-      "pubDate": "2023-12-20T10:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Injective (INJ) Skyrockets 75% Weekly, Bitcoin (BTC) Stalls Around $43K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-12-20T09:56:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "INJ"
-      ]
-    },
-    {
-      "title": "ZKEX's Role in the Future of Decentralized Trading",
-      "link": "NULL",
-      "pubDate": "2023-12-20T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Woo-ing Buyers: Woo Network Token 75% Rally Sparks Investor Interest",
-      "link": "NULL",
-      "pubDate": "2023-12-20T08:24:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "HNT",
-        "MKR",
-        "WOO"
-      ]
-    },
-    {
       "title": "$30,000,000,000,000 Floodgates Will Open for Bitcoin Upon Approval of Spot BTC ETFs: Grayscale CEO",
       "link": "https://dailyhodl.com/2023/12/20/30000000000000-floodgates-will-open-for-bitcoin-upon-approval-of-spot-btc-etfs-grayscale-ceo/",
       "pubDate": "2023-12-20T08:04:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Grayscale CEO Michael Sonnenshein believes that a deluge of capital will flow into Bitcoin (BTC) once the U.S. Securities and Exchange Commission (SEC) greenlights a spot market BTC exchange-traded fund (ETF). In a new CNBC Television interview, Sonnenshein says the approval of spot Bitcoin ETF applications will open up the opportunity for a group of investors […]",
       "currencies": [
@@ -553,30 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto vs. SEC: Lawsuits, Regulations, and Consequences For Users",
-      "link": "NULL",
-      "pubDate": "2023-12-20T07:23:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "TRX",
-        "MATIC",
-        "ETC",
-        "ALGO",
-        "MANA",
-        "FIL",
-        "AXS"
-      ]
-    },
-    {
       "title": "BlackRock and Nasdaq Met with The SEC To Discuss Listing Terms",
       "link": "https://coinpaprika.com/news/blackrock-and-nasdaq-met-with-the-sec",
       "pubDate": "2023-12-20T07:20:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "regulation",
       "description": "Major firms like BlackRock and Nasdaq meet with the SEC to discuss a new Bitcoin ETF, aiming to boost Bitcoin investment and market safety.",
       "currencies": [
@@ -587,91 +143,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Frax Votes To Move $20M Of Stablecoin Collateral Into Treasury Bills",
-      "link": "NULL",
-      "pubDate": "2023-12-20T07:19:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "FRAX"
-      ]
-    },
-    {
-      "title": "Crypto Roundup 20 Dec: Bitcoin ETF Approval Signals Market Shake-Up",
-      "link": "NULL",
-      "pubDate": "2023-12-20T07:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "What next for Blur as 49M tokens get unlocked",
-      "link": "NULL",
-      "pubDate": "2023-12-20T06:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Bitcoin Ban Bill Exposed: Bankers’ Involvement Confession Surfaces",
-      "link": "NULL",
-      "pubDate": "2023-12-20T06:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Through 2023, Bitcoin and the crypto industry have faced increasing scrutiny from US Senator Elizabeth Warren, who has expressed concerns about the potential misuse of cryptocurrencies for illicit activities. Now, the senator has highlighted the involvement of former military personnel, civilian government officials, and lawmakers in crypto organizations as a particular area of concern. ...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Current Vechain (VET) Price Breakout Opens Up Gates for 150% Rally Ahead",
-      "link": "NULL",
-      "pubDate": "2023-12-20T04:40:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "FTX Digital Markets Secure Global Settlement: Positive Outcome For Customers?",
-      "link": "NULL",
-      "pubDate": "2023-12-20T04:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Zooko Wilcox Ends Eight-Year Association With Company Behind Privacy Coin Zcash",
-      "link": "NULL",
-      "pubDate": "2023-12-20T03:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEC"
-      ]
     }
   ]
 }

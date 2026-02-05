@@ -1,43 +1,15 @@
 {
   "date": "2022-11-06",
-  "fetchedAt": "2026-02-05T07:45:53.098Z",
-  "articleCount": 38,
+  "fetchedAt": "2026-02-05T07:48:35.619Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @HeliumFndn: Don't miss all the @helium events on the last day of @SolanaConf. We have @abhay and @redacted_noah presenting bright and e…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T22:02:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Warning To Crypto Holders: Cz Sparks Worst Ftx Fud!! Reminder To Never Keep Your Coins On Exchanges",
-      "link": "NULL",
-      "pubDate": "2022-11-06T21:07:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "This whole episode is a GREAT reminder of the GOLDEN RULE: not your keys, not your crypto! It's always the safe bet to store your own coins on a hardware wallet. My preference is Ledger. -- Search \"how to store crypto on ledger hardware wallet\" on YouTube for more info The rumors around FTX are just that, rumors! However in a year like 2022 we've seen some crazy s#!t go down, it's a time for caution. I have not seen any hard evidence FTX is in trouble, but I want this audience to remain safe. Wi",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 8
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "Billionaire Sam Bankman-Fried Explains Why Crypto Exchange FTX Passed on Funding Twitter Acquisition",
       "link": "https://dailyhodl.com/2022/11/06/billionaire-sam-bankman-fried-explains-why-crypto-exchange-ftx-passed-on-funding-twitter-acquisition/",
       "pubDate": "2022-11-06T21:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "The chief executive of FTX is revealing why the crypto exchange passed on funding Elon Musk’s acquisition of social media giant Twitter. FTX CEO Sam Bankman-Fried tells his 793,500 Twitter followers that FTX stayed on the sidelines because it wasn’t clear how the social media platform would incorporate crypto technology into its business model with […]",
       "currencies": [
@@ -53,8 +25,8 @@
       "title": "Solana’s future looks quite promising but only if these metrics change course",
       "link": "https://ambcrypto.com/solanas-future-looks-quite-promising-but-only-if-these-metrics-change-course/",
       "pubDate": "2022-11-06T20:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Solana’s [SOL] ecosystem was quite active last week considering the announcement of several promising developments. Most recently, Google Cloud tweeted that it was working with Solana to bring Blockchain Node Engine to the Solana chain next year. This partnership would help anyone looking to launch a dedicated Solana node in the cloud. Did you think […]",
       "currencies": [
@@ -67,23 +39,11 @@
       }
     },
     {
-      "title": "RT @spreekaway: ftx main address down to very low amounts of USDC (still $60m of USDT, $10m of USDP/DAI, $5m of BUSD)",
-      "link": "NULL",
-      "pubDate": "2022-11-06T20:12:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT",
-        "USDP"
-      ]
-    },
-    {
       "title": "Solana News Can’t Help SOL Soar. What’s Next for the High-Speed Layer 1?",
       "link": "https://cryptobriefing.com/solana-news-cant-sol-soar-whats-next-high-speed-layer-1/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-06T20:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Solana is one of several Layer 1 networks to have suffered in the enduring crypto winter. But sunny skies could return, Chris Williams writes. It was a big weekend for Solana as the Layer 1 network hosted the 2022 edition of its Breakpoint conference. As for SOL? Not so much.The thousands of Solana fans that flocked to Lisbon for the Layer 1 blockchains flagship event were treated to several...",
       "currencies": [
@@ -96,23 +56,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @SolanaConf: @amirhaleem @helium @DRONEDEK_Corp .@helium is expanding into a \"network of networks model\", starting with the Helium 5G ne…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T19:48:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT",
-        "PHY"
-      ]
-    },
-    {
       "title": "Polkadot (DOT) Developer Addresses SEC, Says DOT Token Has Transformed From Security to Software",
       "link": "https://dailyhodl.com/2022/11/06/polkadot-dot-developer-addresses-sec-says-dot-token-has-transformed-from-security-to-software/",
       "pubDate": "2022-11-06T19:45:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "A top executive of the development team behind Polkadot (DOT) is asserting to the U.S. Securities and Exchange Commission (SEC) that the interoperability blockchain’s native token no longer counts as a security. In a new blog post, Daniel Schoenberger, the Web3 Foundation’s chief legal officer, tells the SEC that DOT has transformed from a security […]",
       "currencies": [
@@ -125,33 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We believe at Ethos the best future in Crypto is a future where you're in control. Self-custody is key, and is one…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T19:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Today we'll talk about another important concept in tokenomic -- \"Value Capture\". There are a lot of miss-intercept…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T19:17:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
       "title": "Binance to sell FTX token holdings, Alameda CEO says leaked balance sheet is incomplete",
       "link": "https://www.theblock.co/post/183570/binance-to-sell-ftx-token-holdings-alameda-ceo-says-leaked-balance-sheet-is-incomplete?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-06T19:03:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "Following comments from the CEOs of Alameda Research and Binance on the exchange token FTT, the token dipped 8.75% before recovering somewhat.",
       "currencies": [
@@ -167,8 +93,8 @@
       "title": "Polygon Witnesses Sharp Drop in Supply As MATIC Disappears From Exchanges: Crypto Insights Firm Santiment",
       "link": "https://dailyhodl.com/2022/11/06/polygon-witnesses-sharp-drop-in-supply-as-matic-disappears-from-exchanges-crypto-insights-firm-santiment/",
       "pubDate": "2022-11-06T17:55:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "A leading analytics firm is revealing that blockchain scaling solution Polygon is witnessing a dramatic drop in the supply of MATIC on crypto exchanges even after the token’s explosive rally in the last few days. In a new report, Santiment says the “crowd is piling in” on Polygon as supply on crypto exchanges plummets from […]",
       "currencies": [
@@ -181,72 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Did someone say party 🦒? The #SolanaBreakpoint festivities continue in Lisbon tonight at the Proof of Physical Work…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T17:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "\"For enterprises, having a low-cost mechanism to process a large number of transactions is very valuable, and will…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T16:18:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ]
-    },
-    {
-      "title": "In this article, we'll cover some of the most common crypto scams so that you can keep yourself protected. Awarenes…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T16:01:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @HeliumFndn: What do you want to learn most about the @helium network?",
-      "link": "NULL",
-      "pubDate": "2022-11-06T15:48:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Altcoin season imminent? Bitcoin dominance drops to 4-year low despite BTC reclaiming $21k",
-      "link": "NULL",
-      "pubDate": "2022-11-06T15:23:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin’s (BTC) dominance continues to drop despite the maiden digital asset recording a relief rally in recent weeks. Notably, Bitcoin... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Aptos Airdrop Season Is Coming. Here’s How You Can Profit",
       "link": "https://cryptobriefing.com/aptos-airdrop-season-coming-heres-how-profit/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-06T15:13:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "In crypto, new network launches are typically followed by airdrop seasons. These \"seasons\" are periods when all the new projects that have successfully built applications on the network's testnet get ready to launch them on mainnet. To spur activity and attract new users to their product, they airdrop an allocation of their native token to early adopters.For new projects, airdrops are a great...",
       "currencies": [
@@ -259,44 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @HeliumFndn: Didn't catch @amirhaleem and The State of the Helium Network? A 🧵,",
-      "link": "NULL",
-      "pubDate": "2022-11-06T15:08:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @SolanaConf: Up next at #SolanaBreakpoint, @amirhaleem is here to talk about the State of the @helium Network. Let's dive in. https:/…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T14:56:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Anddd we’re live ! @amirhaleem on the State of the Helium Network at #SolanaBreakpoint. LFG.",
-      "link": "NULL",
-      "pubDate": "2022-11-06T14:29:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "Over 60 Billion Dogecoins Purchased At Key Support As Traders Eye $1 DOGE Price",
       "link": "https://zycrypto.com/over-60-billion-dogecoins-purchased-at-key-support-as-traders-eye-1-doge-price/",
       "pubDate": "2022-11-06T14:08:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Dogecoin continued to exhibit strength this week taking centerstage against the backdrop of Elon Musk’s acquisition of Twitter.",
       "currencies": [
@@ -309,34 +141,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Day 2. Here for it. @amirhaleem will be taking the stage soon… #SolanaBreakpoint @SolanaConf",
-      "link": "NULL",
-      "pubDate": "2022-11-06T13:57:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "GLX drop for SPS stakers announced",
-      "link": "NULL",
-      "pubDate": "2022-11-06T13:51:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
       "title": "Polkadot DOT Token Has Morphed Into Software, Web3 Foundation Says",
       "link": "https://beincrypto.com/polkadot-dot-token-has-morphed-into-software-web3-foundation-says/",
       "pubDate": "2022-11-06T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Web3 Foundation, the company responsible for Polkadot and Kusama, has announced that Polkadot native token DOT is now software and no longer a security. The Foundation claimed that the announcement is premised on its three years of active engagement with the US Securities and Exchange Commission (SEC) which started in November 2019. The company took … Continued",
       "currencies": [
         "DOT"
@@ -348,81 +158,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why Ethereum Could Drop To $1,500, After ETH Gained 30% In Last 2 Weeks",
-      "link": "NULL",
-      "pubDate": "2022-11-06T12:20:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Axie Infinity Can Recoup Its 6-Month Loss And Rise 25%, But It Must First Do This",
-      "link": "NULL",
-      "pubDate": "2022-11-06T10:26:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "With only a small number of permissioned #miners required to operate and secure the network, the #Electroneum…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T10:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "\"I want giga to become an advanced type of CEX but without kyc and central servers. The user connects their wallet…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T09:16:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GIGA"
-      ]
-    },
-    {
-      "title": "#BNBChain leading #web3 adoption!",
-      "link": "NULL",
-      "pubDate": "2022-11-06T09:09:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAKE"
-      ]
-    },
-    {
-      "title": "Who is your mentor on the Hive blockchain?",
-      "link": "NULL",
-      "pubDate": "2022-11-06T08:27:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
       "title": "Solana unveils Google partnership, smartphones, Web3 store at Breakpoint",
       "link": "https://cointelegraph.com/news/solana-unveils-google-partnership-smartphones-web3-store-at-breakpoint",
       "pubDate": "2022-11-06T06:02:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Solana Breakpoint, a four-day conference scheduled from Nov. 4 to Nov. 7, attracted 13,000 people in just one of the four venues it’s being held simultaneously.",
       "currencies": [
@@ -433,82 +173,6 @@
         "negative": 3
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Axie Infinity Price Prediction as AXS Pumps Up 20% – How High Can it Go?",
-      "link": "NULL",
-      "pubDate": "2022-11-06T05:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "More from the @MessariCrypto report about the state of $USDD in Q3. \"The stablecoin remains well backed by non-n…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T05:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "WTRX"
-      ]
-    },
-    {
-      "title": "Klaytn Blockchain Explained On our Beta Version of WeRent, we are using Klaytn Network as our only mainnet. Why di…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T04:30:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WE"
-      ]
-    },
-    {
-      "title": "RT @HeliumFndn: So much interest in the @helium network out here at @SolanaConf! The Helium Foundation wants to support you. Have ideas t…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T01:36:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "JUST IN: $AXS @axieinfinity now on top 10 purchased tokens among 500 biggest #ETH whales in the last 24hrs We've…",
-      "link": "NULL",
-      "pubDate": "2022-11-06T01:05:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AXS",
-        "BBW"
-      ]
-    },
-    {
-      "title": "Axie Infinity (AXS) Rallies By 23%; Are The Bulls Taking Over From Here?",
-      "link": "NULL",
-      "pubDate": "2022-11-06T00:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "MATIC"
-      ]
     }
   ]
 }

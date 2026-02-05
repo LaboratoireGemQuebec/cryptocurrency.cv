@@ -1,41 +1,15 @@
 {
   "date": "2024-06-02",
-  "fetchedAt": "2026-02-05T07:45:53.254Z",
-  "articleCount": 49,
+  "fetchedAt": "2026-02-05T07:48:35.631Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "BlockDAG’s $37M Presale Surge And Updated Dashboard Outshines DOGE Forecast & Uniswap’s SEC Fight",
-      "link": "NULL",
-      "pubDate": "2024-06-02T22:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Lido & SSV – Integrating Distributed Validator Technology",
-      "link": "NULL",
-      "pubDate": "2024-06-02T21:33:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO",
-        "DAO",
-        "SSV"
-      ]
-    },
     {
       "title": "Bitcoin Bull Nayib Bukele is President of El Salvador Again: Here’s How Much BTC His Country Owns",
       "link": "https://en.bitcoinsistemi.com/bitcoin-bull-nayib-bukele-is-president-of-el-salvador-again-heres-how-much-btc-his-country-owns/",
       "pubDate": "2024-06-02T21:02:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "The BTC-friendly president of El Salvador, the first country in the world to declare Bitcoin as its official currency, has begun his second term. Continue Reading: Bitcoin Bull Nayib Bukele is President of El Salvador Again: Here’s How Much BTC His Country Owns",
       "currencies": [
@@ -51,8 +25,8 @@
       "title": "Ripple Transfers 3 Billion XRP Tokens, Raising Market Stability Concerns",
       "link": "https://beincrypto.com/ripple-xrp-escrow/",
       "pubDate": "2024-06-02T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Ripple’s XRP token has experienced substantial activity over the past 24 hours, drawing attention from the crypto community. Blockchain tracker Whale Alert reported the transfer of 3 billion XRP tokens, valued at approximately $1.5 billion, in several transactions. This large-scale movement has sparked concerns about potential price impact. Ripple Escrow Activities Triggers Market...",
       "currencies": [
@@ -70,8 +44,8 @@
       "title": "$1 XRP Price Nigh as Ripple’s Move To Become Stablecoin Giant Proves Weighty with Whales Moving Millions",
       "link": "https://zycrypto.com/1-xrp-price-nigh-as-ripples-move-to-become-stablecoin-giant-proves-weighty-with-whales-moving-millions/",
       "pubDate": "2024-06-02T19:47:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "As the XRP community grapples with the implications of significant whale activity and regulatory developments, the path to $1 XRP price remains uncertain.",
       "currencies": [
@@ -87,8 +61,8 @@
       "title": "Ethena's USDe Stablecoin Reaches $3 Billion Supply",
       "link": "https://coinpaprika.com/news/ethena-s-usde-stablecoin-reaches-3-billion-supply/",
       "pubDate": "2024-06-02T19:38:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Ethena Labs' USDe stablecoin hits $3 billion supply in just four months, becoming the fastest USD asset to reach this milestone.",
       "currencies": [
@@ -101,36 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Voter Backlash: How Biden’s Veto May Have Cost Him the 2024 Election",
-      "link": "NULL",
-      "pubDate": "2024-06-02T19:32:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Ethereum Classic – Expect this buying opportunity from ETC’s price IF…",
-      "link": "NULL",
-      "pubDate": "2024-06-02T19:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
       "title": "Babylon Leads Crypto Funding with $70M Investment",
       "link": "https://coinpaprika.com/news/babylon-leads-crypto-funding-with-70m-investment/",
       "pubDate": "2024-06-02T18:51:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "general",
       "description": "Babylon secures $70M funding led by Paradigm to boost Bitcoin-secured decentralized economy, marking significant progress in crypto infrastructure development.",
       "currencies": [
@@ -143,242 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Scaramucci Warns Biden's Veto Of Crypto Custody Bill Will 'Cost Him More Than He Realizes': 'Out Of Step With The Future'",
-      "link": "NULL",
-      "pubDate": "2024-06-02T18:49:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Terra Classic v3.0.1 Upgrade To Trigger Temporary Chain Halt, LUNC Price Reacts",
-      "link": "NULL",
-      "pubDate": "2024-06-02T18:43:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "3 Token Unlocks to Watch Next Week",
-      "link": "NULL",
-      "pubDate": "2024-06-02T18:38:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "1INCH",
-        "LUSD",
-        "GAL",
-        "LQTY"
-      ]
-    },
-    {
-      "title": "These two cryptocurrencies show recovery potential this week",
-      "link": "NULL",
-      "pubDate": "2024-06-02T18:04:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Tether Co-Founder Returns to Hong Kong With His New Business: Report",
-      "link": "NULL",
-      "pubDate": "2024-06-02T18:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Inside the Crypto Fortunes of Justin Sun, Vitalik Buterin, and Other Influencers",
-      "link": "NULL",
-      "pubDate": "2024-06-02T17:33:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Ethena’s USDe Hits $3 Billion Supply in Four Months, Surpasses FDUSD",
-      "link": "NULL",
-      "pubDate": "2024-06-02T17:16:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FDUSD",
-        "ENA"
-      ]
-    },
-    {
-      "title": "BNB, AR, XMR, and TIA set to rally — Will Bitcoin's $70K breakout be the trigger?",
-      "link": "NULL",
-      "pubDate": "2024-06-02T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "XMR",
-        "AR",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Meta’s AI chief slams Elon Musk over hype, conspiracy theories",
-      "link": "NULL",
-      "pubDate": "2024-06-02T16:44:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "What’s behind the nearly $1 billion surge in blockchain gaming investments",
-      "link": "NULL",
-      "pubDate": "2024-06-02T16:43:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Musk vs. Nakamoto: A 210% Bitcoin Surge Could Change the World’s Wealth Rankings",
-      "link": "NULL",
-      "pubDate": "2024-06-02T16:04:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ELON"
-      ]
-    },
-    {
-      "title": "Crypto Expert Says This Crypto Bull Run “Will Melt Faces”, Top 3 Altcoins To Take Advantage Of The Surge",
-      "link": "NULL",
-      "pubDate": "2024-06-02T16:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ATOM",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitmain Launches Antminer L9 With Enhanced 16 GH/s Capacity for Scrypt-Based Coins",
-      "link": "NULL",
-      "pubDate": "2024-06-02T15:21:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LTC"
-      ]
-    },
-    {
-      "title": "ARK Invest Backs Out of Spot Ethereum ETF With 21Shares",
-      "link": "NULL",
-      "pubDate": "2024-06-02T15:21:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "US Banking Lobby Made Last-Ditch Effort to Block SAB 121 Veto",
-      "link": "NULL",
-      "pubDate": "2024-06-02T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "May Madness: Crypto Industry Suffers $385 Million Loss To Hackers",
-      "link": "NULL",
-      "pubDate": "2024-06-02T15:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GALA"
-      ]
-    },
-    {
-      "title": "Cathie Wood's Ark Investment Drops Plans For Spot-Ether ETF, Says It Will Focus On Spot Bitcoin ETF Instead",
-      "link": "NULL",
-      "pubDate": "2024-06-02T14:15:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Ethena’s USDE Stablecoin Surpasses $3 Billion, Flipping First Digital’s FDUSD",
-      "link": "NULL",
-      "pubDate": "2024-06-02T14:10:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "FDUSD",
-        "ENA"
-      ]
-    },
-    {
       "title": "Could XRP hit a $3 trillion market cap? Here’s when it might happen",
       "link": "https://finbold.com/could-xrp-hit-a-3-trillion-market-cap-heres-when-it-might-happen/",
       "pubDate": "2024-06-02T13:33:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The cryptocurrency market in 2024 has seen a surge of activity, with significant rallies for major cryptocurrencies, approvals of Bitcoin … Continue reading",
       "currencies": [
@@ -392,36 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin or Bitcoin Cash? Vitalik Buterin delves into the blocksize war",
-      "link": "NULL",
-      "pubDate": "2024-06-02T13:11:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Declining But Dominant: WBTC Maintains Market Lead Over BTCB, RBTC, LBTC, and Other Derivatives",
-      "link": "NULL",
-      "pubDate": "2024-06-02T13:01:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WBTC"
-      ]
-    },
-    {
       "title": "Crazy $3 Trillion XRP Market Cap Journey Mapped Out As Ripple CEO Calls XRP ETF “Inevitable”",
       "link": "https://zycrypto.com/crazy-3-trillion-xrp-market-cap-journey-mapped-out-as-ripple-ceo-calls-xrp-etf-inevitable/",
       "pubDate": "2024-06-02T12:45:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Investors have been long anticipating a breakout from XRP, especially with the market trends and regulatory outlook swinging in its favor.",
       "currencies": [
@@ -436,8 +129,8 @@
       "title": "Cardano Creator Breaks Silence on ADA Price",
       "link": "https://u.today/cardano-creator-breaks-silence-on-ada-price",
       "pubDate": "2024-06-02T12:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano creator Charles Hoskinson reveals rare reaction to ADA price",
       "currencies": [
@@ -449,51 +142,11 @@
       }
     },
     {
-      "title": "UBS Raises Gold Price Targets, TRUMP Coin Hits All-Time High, and More — Week in Review",
-      "link": "NULL",
-      "pubDate": "2024-06-02T12:05:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Here’s How Much Crypto Was Lost in May Due to Hacks: CertiK",
-      "link": "NULL",
-      "pubDate": "2024-06-02T11:51:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "USDe Hits $3 Billion Market Supply Just Four Months After Launching",
-      "link": "NULL",
-      "pubDate": "2024-06-02T11:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI",
-        "ENA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "‘Hundreds of Trillions’– Sergey Nazarov Says 2024 Is Year Crypto and Global Financial System Merge",
       "link": "https://dailyhodl.com/2024/06/02/hundreds-of-trillions-sergey-nazarov-says-2024-is-year-crypto-and-global-financial-system-merge/",
       "pubDate": "2024-06-02T11:45:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Chainlink (LINK) co-creator Sergey Nazarov says this could be the year that sees a great merger between blockchain and the traditional global financial system. In a speech at the Consensus 2024 conference, Nazarov says the market for on-chain assets is more than $100 trillion. The Chainlink co-creator shares a chart showing that the $2.7 trillion […]",
       "currencies": [
@@ -506,23 +159,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "El Salvador’s Bukele Begins Second Term,  Pledges Economic Transformation with Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-06-02T11:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
       "title": "Whales pour $110 million into DOGE, betting big on meme coin surge",
       "link": "https://finbold.com/whales-pour-110-million-into-doge-betting-big-on-meme-coin-surge/",
       "pubDate": "2024-06-02T11:20:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Dogecoin (DOGE) has attracted significant attention from crypto investors, with a whopping $110 million funneled into the meme coin by … Continue reading",
       "currencies": [
@@ -535,27 +176,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin In ‘Euphoria Wave’ – How Long Until The Bull Run Ends?",
-      "link": "NULL",
-      "pubDate": "2024-06-02T10:50:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SOL",
-        "DOGE",
-        "XLM",
-        "BONK"
-      ]
-    },
-    {
       "title": "Ripple could sell 400 million XRP in June; Largest dump in 7 years",
       "link": "https://finbold.com/ripple-could-sell-400-million-xrp-in-june-largest-dump-in-7-years/",
       "pubDate": "2024-06-02T10:38:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Ripple has prepared its treasury account for what could be the largest monthly XRP dump since 2017. The company has … Continue reading",
       "currencies": [
@@ -565,129 +190,6 @@
         "positive": 2,
         "negative": 4
       }
-    },
-    {
-      "title": "NOT, PYTH, ICP, FIL Price Analysis: is Altcoin Season On the Horizon?",
-      "link": "NULL",
-      "pubDate": "2024-06-02T10:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL",
-        "ICP",
-        "NOT",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Binance Market Update (2024-06-02)",
-      "link": "NULL",
-      "pubDate": "2024-06-02T09:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "WBTC",
-        "AVAX",
-        "SHIB",
-        "LINK",
-        "UNI",
-        "NOT",
-        "TNSR",
-        "REZ"
-      ]
-    },
-    {
-      "title": "21Shares Updates Ethereum ETF Application and Ends Partnership with ARK Invest",
-      "link": "NULL",
-      "pubDate": "2024-06-02T08:57:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Study: Crypto Losses 28% Lower in May; Attackers Primarily Targeting Defi Platforms",
-      "link": "NULL",
-      "pubDate": "2024-06-02T08:05:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "GALA"
-      ]
-    },
-    {
-      "title": "Wyoming Senator Cynthia Lummis Castigates US President Joe Biden’s Veto",
-      "link": "NULL",
-      "pubDate": "2024-06-02T06:34:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Tron (TRX) Faces Dip While AVAX Rises: Why BlockDAG Is The Best Long-Term Crypto Investment For 2024",
-      "link": "NULL",
-      "pubDate": "2024-06-02T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "President Biden’s Veto Shields SEC’s SAB121 Rule from Overturn",
-      "link": "NULL",
-      "pubDate": "2024-06-02T04:47:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Uniswap Foundation Postpones Highly Anticipated Vote on UNI Staking and Delegation Rewards",
-      "link": "NULL",
-      "pubDate": "2024-06-02T03:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "Top DEX Altcoin Uniswap (UNI) Dips in Price After Project Delays Protocol Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-06-02T00:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
     }
   ]
 }

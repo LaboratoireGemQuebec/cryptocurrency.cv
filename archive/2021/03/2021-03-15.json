@@ -1,26 +1,15 @@
 {
   "date": "2021-03-15",
-  "fetchedAt": "2026-02-05T07:45:51.837Z",
-  "articleCount": 54,
+  "fetchedAt": "2026-02-05T07:48:35.468Z",
+  "articleCount": 28,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "You should never enter a #market without enough information and #analysis. Any professional #trader knows that a ma…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T22:38:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
     {
       "title": "Ethereum’s Top Decentralized Exchange Heads to Rival Avalanche",
       "link": "https://decrypt.co/61517/ethereums-top-decentralized-exchange-heads-to-rival-avalanche",
       "pubDate": "2021-03-15T22:23:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "SushiSwap is about to provide DeFi devotees with a reason to use Avalanche.",
       "currencies": [
@@ -33,27 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto is KING! 200%+ Growth for 10 Years + Enjin, VeChain, ONT, REEF, MATIC and Elrond",
-      "link": "NULL",
-      "pubDate": "2021-03-15T21:32:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "EGLD"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
       "title": "Price analysis 3/15: BTC, ETH, BNB, ADA, DOT, XRP, UNI, LTC, LINK, BCH",
       "link": "https://cointelegraph.com/news/price-analysis-3-15-btc-eth-bnb-ada-dot-xrp-uni-ltc-link-bch",
       "pubDate": "2021-03-15T21:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin’s rejection at its all-time high and a negative divergence on the RSI suggest that BTC's bullish momentum could be weakening and altcoins may see profit-booking as a result.",
       "currencies": [
@@ -77,8 +50,8 @@
       "title": "Chainlink (LINK) Price Could Surge Over Support for Dynamic NFTs, Analyst Explains",
       "link": "https://www.cryptoglobe.com/latest/2021/03/chainlink-link-price-could-surge-over-support-for-dynamic-nfts-analyst-explains/",
       "pubDate": "2021-03-15T20:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "nft",
       "description": "Popular cryptocurrency analyst Tyler Swope has revealed he believes the price of Chainlink (LINK) will surge in the near future as the project enters the non-fungible token (NFT) market with the release of so-called dynamic NFTs. In a new video, Swope highlighted a Chainlink blog post from June of last year on the project’s strategies […]",
       "currencies": [
@@ -92,22 +65,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "So, on the zoom call there was talk about the ticker for Keep+NU being KNU. Thoughts?",
-      "link": "NULL",
-      "pubDate": "2021-03-15T20:40:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "NEM officially launches its next-gen public blockchain – Symbol",
       "link": "https://www.cryptoninjas.net/2021/03/15/nem-officially-launches-its-next-gen-public-blockchain-symbol/",
       "pubDate": "2021-03-15T20:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » NEM officially launches its next-gen public blockchain – Symbol NEM Group, the chief developer and supporter of the NEM blockchain platform, today announced the official launch of Symbol, its next-generation Proof-of-Stake+ (PoS+) public blockchain. Boasting enterprise-grade programmability and security, Symbol from NEM brings technical features which can be leveraged by...",
       "currencies": [
@@ -120,33 +82,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Amount of NU required for staking to be profitable?",
-      "link": "NULL",
-      "pubDate": "2021-03-15T20:34:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Definitely if you need straight forward information on NUcypher! The engineer justin myles holmes is your man! I bet everyone who was in the zoom call aswel felt it too! The guy will make you want to invest in Nucypher!",
-      "link": "NULL",
-      "pubDate": "2021-03-15T20:18:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "SushiSwap Launches on Avalanche, Bringing Another Leading DEX to Avalanche’s Growing DeFi Ecosystem",
       "link": "https://www.reddit.com/r/Avax/comments/m5s8zc/sushiswap_launches_on_avalanche_bringing_another/",
       "pubDate": "2021-03-15T20:10:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "R/avax",
+      "sourceKey": "ravax",
       "category": "defi",
       "currencies": [
         "AVAX"
@@ -158,23 +98,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Polkadotbabecom: Today's DNS redirect attack on @PancakeSwap and @CreamdotFinance dampened our DeFi trading fun on @finance_supra, so w…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T20:03:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "Ripple-SEC case: Over 6000 XRP holders want to participate as third-party defendants",
       "link": "https://ambcrypto.com/ripple-sec-case-over-6000-xrp-holders-want-to-participate-as-third-party-defendants/",
       "pubDate": "2021-03-15T19:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "In a new set of developments in the ongoing legal battle between Ripple and the US regulator Securities and Exchange Commission (SEC), over 6,000 XRP holders have petitioned to participate in the lawsuit. In a letter to Judge Analisa Torres, John Deaton, an XRP hodler, of Deaton Law Firm LLC has filed a motion to […]",
       "currencies": [
@@ -187,33 +115,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NU Buy & Sell Ratio",
-      "link": "NULL",
-      "pubDate": "2021-03-15T19:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "NuCypher community call is happening now. Come ask a question or give a comment.",
-      "link": "NULL",
-      "pubDate": "2021-03-15T19:02:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Privacy Chat App Signal Now Takes Donations in Bitcoin, Other Crypto",
       "link": "https://decrypt.co/61473/signal-bitcoin-crypto-donations",
       "pubDate": "2021-03-15T18:40:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The nonprofit behind the privacy-focused client is now accepting a range of cryptocurrencies, from Chainlink to Zcash.",
       "currencies": [
@@ -226,33 +132,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Toxic Environment",
-      "link": "NULL",
-      "pubDate": "2021-03-15T18:03:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "I wasn't able to catch the conference call, can somebody please summarise the key talking points?",
-      "link": "NULL",
-      "pubDate": "2021-03-15T17:57:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "The IOTA Foundation Joins CHAISE Consortium to Design Europe's Strategy for Blockchain Skills",
       "link": "http://blog.iota.org/the-iota-foundation-joins-chaise-consortium/",
       "pubDate": "2021-03-15T17:12:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "The IOTA Foundation (IF) joined the CHAISE consortium together with some of Europe’s most influential organizations in the blockchain and technology space, namely INATBA, Fujitsu and the European Digital SME Alliance. CHAISE will provide blockchain innovation and skills development under a four-year grant with the support of the Erasmus+",
       "currencies": [
@@ -268,8 +152,8 @@
       "title": "DeFi platforms PancakeSwap, Cream Finance hit by domain name system hijacks",
       "link": "https://www.theblockcrypto.com/linked/98353/defi-pancakeswap-cream-dns-hijackings?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-03-15T16:57:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "defi",
       "description": "DeFi platforms PancakeSwap and Cream Finance warned users on Monday that they were hit by domain name system (DNS) hijackings.",
       "currencies": [
@@ -282,34 +166,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @metaquestions: @SotRos25 @maidsafe @lexfridman @safenetworktech I would be happy to chat for sure. I feel decentalised anything is not…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T16:18:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "RT @SotRos25: Who would like to hear @maidsafe’s CEO @metaquestions chat with @lexfridman about @safenetworktech’s unique approach to decen…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T16:18:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "PancakeSwap, Cream.Finance Suffer DNS Attack, Urge Users to Exercise Caution",
       "link": "https://btcmanager.com/pancakeswap-cream-finance-suffer-dns-attack-users/",
       "pubDate": "2021-03-15T16:05:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Cream.Finance and PancakeSwap tweeted they are under a DNS attack by a third-party. Users Urged to Be Cautious In tweets made today, DeFi protocols Cream.Finance and PancakeSwap reported that their DNS had been compromised leading to a pop-up on the website that asks users for their seed phrase as a precondition to using the dApp.Read More",
       "currencies": [
         "CAKE"
@@ -323,8 +185,8 @@
       "title": "Phishing attack uses PancakeSwap and Cream domains to steal money",
       "link": "https://cointelegraph.com/news/phishing-attack-uses-pancakeswap-and-cream-domains-to-steal-money",
       "pubDate": "2021-03-15T15:36:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Two BSC-based projects have been attacked by replacing their websites with a malicious interface.",
       "currencies": [
@@ -340,8 +202,8 @@
       "title": "DeFi Exchange PancakeSwap Warns of Hack: ‘Do Not Use the Site’",
       "link": "https://decrypt.co/61431/pancakeswap-hacked",
       "pubDate": "2021-03-15T15:29:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "defi",
       "description": "The project's Twitter account is warning users to stay off the site because it is under a DNS hijack attack.",
       "currencies": [
@@ -354,22 +216,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Using Ethereum on @awscloud Managed Blockchain has helped Hifi streamline our back office processes and radially ma…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T15:15:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "Cream Finance, PancakeSwap Websites Compromised",
       "link": "https://cryptobriefing.com/cream-finance-pancakeswap-websites-compromised/",
       "pubDate": "2021-03-15T14:59:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "DeFi protocol Cream Finance is experiencing its second hack of 2021. This time, attackers have targeted the website’s DNS and are using it to request users’ private keys and seed phrases. Cream Finance Compromised According to the team, Cream’s smart contracts are fine, but hackers have taken control of the website. They’re now using this control to request users seed phrases and empty...",
       "currencies": [
@@ -386,8 +237,8 @@
       "title": "Number of BSC DeFi Projects Under a DNS Hijack Attack, CZ Binance Warns",
       "link": "https://cryptopotato.com/number-of-bsc-defi-projects-under-a-dns-hijack-attack-cz-binance-warns/",
       "pubDate": "2021-03-15T14:58:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "defi",
       "description": "A number of DeFi-related projects on the Binance Smart Chain including PancakeSwap and Cream Finance are under a DNS hijack attack, CZ warns.",
       "currencies": [
@@ -403,8 +254,8 @@
       "title": "IOTA's Chrysalis Will Allow \"Significantly More\" Devices to Use It, Co-Founder Dominik Schiener Says",
       "link": "https://u.today/iotas-chrysalis-will-allow-significantly-more-devices-to-use-it-co-founder-dominik-schiener-says",
       "pubDate": "2021-03-15T14:45:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Dominik Schiener, co-founder of IOTA Foundation, has shared his opinion on how Chrysalis implementation will boost the massive adoption of IOTA-based technologies",
       "currencies": [
@@ -417,23 +268,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "hodl for a few years! this is a long term play",
-      "link": "NULL",
-      "pubDate": "2021-03-15T14:26:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "ALGO Breaks Out And Begins Ascent Towards $2",
       "link": "https://beincrypto.com/algo-breaks-out-and-begins-ascent-towards-2/",
       "pubDate": "2021-03-15T14:18:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "ALGO could gradually increase towards the closest resistance at $1.90 and potentially go higher. Long-Term Range For ALGO In the final week of Feb., ALGO returned to validate the $0.87 area as support. Previously, the same area had been acting as resistance. Since then, the token has been moving upwards, though it has yet to … Continued The post ALGO Breaks Out And Begins Ascent Towards $2 appeared first on BeInCrypto.",
       "currencies": [
         "ALGO"
@@ -448,8 +288,8 @@
       "title": "NEM launches Symbol blockchain and XYM crypto for new token economy",
       "link": "https://forkast.news/nem-launch-new-symbol-blockchain-xym/?utm_source=rss&utm_medium=rss&utm_campaign=nem-launch-new-symbol-blockchain-xym",
       "pubDate": "2021-03-15T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "NEM’s Symbol blockchain will be interoperable, enable NFTs and allow assets like whiskey to be tokenized for investing. What will happen to XEM and NIS1?",
       "currencies": [
@@ -462,40 +302,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "With the continued market’s demand for better products, #TomoChain works hard to transform ourselves to become a be…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "UNI and DOT Drop After Scoring New All-Time Highs",
-      "link": "NULL",
-      "pubDate": "2021-03-15T12:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Similarly, Polkadot (DOT) has been falling back since reaching its all-time high on Feb. 20. New All-Time High for UNI UNI has been on an extended upward move for the entirety of 2021. On March 8 it reached a new all-time high price of $34.92. However, it generated some bearish divergence and has decreased slightly … Continued",
-      "currencies": [
-        "DOT",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Alameda is not affiliated with REEF!",
       "link": "https://www.reddit.com/r/ReefDeFi/comments/m5jbs6/alameda_is_not_affiliated_with_reef/",
       "pubDate": "2021-03-15T12:31:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "REEF"
@@ -507,23 +318,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "What questions do you want the NU team to answer at the conference call later?",
-      "link": "NULL",
-      "pubDate": "2021-03-15T12:22:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Five Biggest Altcoin Gainers from March 8-15",
       "link": "https://beincrypto.com/five-biggest-altcoin-gainers-march-8-15/",
       "pubDate": "2021-03-15T10:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "During the week of March 8 – March 15, these were the biggest altcoin gainers: Chiliz (CHZ) – 363% Holo (HOT) – 170% Hedera Hashgraph (HBAR) – 158% Harmony (ONE) – 146% Theta Fuel (TFUEL) – 143% Biggest Altcoin Gainers CHZ reached an all-time high price of $0.94 on March 10. The rally is … Continued",
       "currencies": [
         "HBAR",
@@ -541,8 +341,8 @@
       "title": "Over 6,000 XRP holders volunteer as third-party defendants in SEC lawsuit",
       "link": "https://cointelegraph.com/news/over-6-000-xrp-holders-volunteer-as-third-party-defendants-in-sec-lawsuit",
       "pubDate": "2021-03-15T10:35:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "XRP holders claim their interests aren't being represented in an ongoing SEC lawsuit against Ripple Labs. Now, they want to enter the fray as third-party defendants.",
       "currencies": [
@@ -558,8 +358,8 @@
       "title": "Bitcoin falls near $55,000 level as over $1 billion in crypto futures are liquidated",
       "link": "https://www.theblockcrypto.com/linked/98309/bitcoin-falls-55000-over-1-billion-crypto-futures-liquidated?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-03-15T10:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "bitcoin",
       "description": "The price of bitcoin has fallen near $55,000 level from around $61,000 on Saturday as derivatives positions worth over $1 billion get force liquidated by crypto exchanges.",
       "currencies": [
@@ -576,8 +376,8 @@
       "title": "Jed McCaleb Has Cashed Out 152 Million XRP Over Past Nine Days",
       "link": "https://u.today/jed-mccaleb-has-cashed-out-152-million-xrp-over-past-nine-days",
       "pubDate": "2021-03-15T09:26:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Over the past week, Ripple cofounder and Stellar founder Jed McCaleb has moved a whopping 152 million XRP to be dumped on the market with 453 million XRP left on balance",
       "currencies": [
@@ -591,44 +391,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "[ARK Weekly Price & Trading Discussion Thread] - March 15, 2021",
-      "link": "NULL",
-      "pubDate": "2021-03-15T09:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "[ARK Weekly Discussion Thread] - March 15, 2021",
-      "link": "NULL",
-      "pubDate": "2021-03-15T09:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "CoinEx will suspend LOOM deposit/withdrawal on March 16th 2021 02:00 UTC to prepare for the LOOM token swap. If y…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T08:59:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
       "title": "Bitcoin At Risk of “Faking Out” As Price Hovers Near $60,000, Analyst Asserts",
       "link": "https://bitcoinist.com/bitcoin-at-risk-of-faking-out-as-price-hovers-near-60000-analyst-asserts/?utm_source=rss&utm_medium=rss&utm_campaign=bitcoin-at-risk-of-faking-out-as-price-hovers-near-60000-analyst-asserts",
       "pubDate": "2021-03-15T08:40:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "A recent wild run-up in the Bitcoin market faces risks of faltering as traders hesitate to buy the cryptocurrency at higher rates, asserts Marc Principato.",
       "currencies": [
@@ -645,8 +412,8 @@
       "title": "Charted: Polkadot (DOT) Setting Up For Fresh Surge Above $40",
       "link": "https://www.newsbtc.com/analysis/dot/polkadot-dot-could-surge-above-40/",
       "pubDate": "2021-03-15T07:08:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Polkadot’s DOT started a fresh increase from the $28.00 support against the US Dollar. It is rising and the bulls seem to be eyeing an upside break above the $40.00 resistance DOT is holding the ground above the $35.00 and $36.00 levels against the US dollar. The price is trading nicely above the $35.00 support […]",
       "currencies": [
@@ -659,22 +426,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Funniest thing is no one ever thought Mana would have this growth until they stepped up to the plate! So panic sellers who sell NUCYPHER are going to regret it down the line! As i believe NU rocket won't be just $1 or so i believe it will me multiple $'s, remember people don't realise what Nu is yet",
-      "link": "NULL",
-      "pubDate": "2021-03-15T06:53:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "XRP Holders Want to Intervene in SEC vs. Ripple Case as Third-Party Defendant",
       "link": "https://u.today/xrp-holders-want-to-intervene-in-sec-vs-ripple-case-as-third-party-defendant",
       "pubDate": "2021-03-15T06:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "John E. Deaton of Deaton Law Firm has filed a motion to intervene in the SEC vs. Ripple legal battle",
       "currencies": [
@@ -687,22 +443,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Have been asked many times what is the difference between QuarkChain and other sharding projects. Spend 1min and wa…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T05:36:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
       "title": "NEM to Launch Symbol (XYM) for Custom Security Token Markets",
       "link": "https://beincrypto.com/nem-to-launch-symbol-xym-for-custom-security-token-markets/",
       "pubDate": "2021-03-15T05:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "The Symbol platform, launching on March 15, is a next-generation enterprise-grade blockchain that has been in development for the past four years. The network uses a proof-of-stake consensus mechanism and enables the creation of specialized digital assets. Each will have configurable properties that can act as security tokens. The platform is from the same team … Continued",
       "currencies": [
@@ -715,33 +460,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Keep the faith!!!!!!!!!!!",
-      "link": "NULL",
-      "pubDate": "2021-03-15T04:57:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "We are announcing our partnership with #emart24, one of the largest convenient stores in South Korea. Users will so…",
-      "link": "NULL",
-      "pubDate": "2021-03-15T01:41:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
-    },
-    {
       "title": "I ain’t selling shit, watch a movie. Let it Fly ↗️",
       "link": "https://www.reddit.com/r/EnjinCoin/comments/m56zm5/i_aint_selling_shit_watch_a_movie_let_it_fly/",
       "pubDate": "2021-03-15T01:31:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "ENJ"
@@ -753,22 +476,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Community Conference Call",
-      "link": "NULL",
-      "pubDate": "2021-03-15T01:21:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Ripple Executives Call Investigation Into Personal Finances an ‘Overreach’",
       "link": "https://www.cryptoglobe.com/latest/2021/03/ripple-executives-call-investigation-into-personal-finances-an-overreach/",
       "pubDate": "2021-03-15T01:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The legal team for Ripple co-founders Brad Garlinghouse and Chris Larsen have argued investigations into personal finances are irrelevant to the SEC’s ongoing lawsuit.",
       "currencies": [
@@ -778,17 +490,6 @@
         "positive": 7,
         "negative": 5
       }
-    },
-    {
-      "title": "How to send TOMO from MyEtherWallet to Binance?",
-      "link": "NULL",
-      "pubDate": "2021-03-15T00:18:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TOMO"
-      ]
     }
   ]
 }

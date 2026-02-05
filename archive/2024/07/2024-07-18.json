@@ -1,88 +1,15 @@
 {
   "date": "2024-07-18",
-  "fetchedAt": "2026-02-05T07:45:53.478Z",
-  "articleCount": 131,
+  "fetchedAt": "2026-02-05T07:48:35.676Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "ICP Bulls Set to Explode: Can They Smash Through the $10 Barrier?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T21:42:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "NEAR Surges 20%: Pantera Capital MP Reveals 5 Reasons For Bullish Outlook",
-      "link": "NULL",
-      "pubDate": "2024-07-18T21:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "NEAR",
-        "FIL",
-        "RUNE",
-        "RNDR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Injective Labs, 21Shares launch first INJ-linked ETP on Euronext exchanges",
-      "link": "NULL",
-      "pubDate": "2024-07-18T21:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Ether.Fi Releases Season 2 of its ETHFI Token Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-07-18T21:07:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETHFI"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Trade Lower, But 'August Will Be Great' If Bitcoin Holds On To This Key Level",
-      "link": "NULL",
-      "pubDate": "2024-07-18T20:23:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "RNDR",
-        "MOG"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "Solana Sees Mayor Ecosystem Growth As Stripe, and PayPal Integrations Lead the Way: Report",
       "link": "https://dailycoin.com/solana-sees-mayor-ecosystem-growth-as-stripe-and-paypal-integrations-lead-the-way-report/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-07-18T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Solana's Q2 2024 growth is driven by key partnerships with PayPal and Stripe, along with innovative scaling solutions and robust ecosystem engagement.",
       "currencies": [
@@ -94,228 +21,11 @@
       }
     },
     {
-      "title": "Big For Shiba Inu: This Game Will Fully Integrate With Shibarium",
-      "link": "NULL",
-      "pubDate": "2024-07-18T20:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "BONE",
-        "FOR"
-      ]
-    },
-    {
-      "title": "Fetch.ai (FET) in Opportunity Zone After 864 Million Tokens Join ASI Merge",
-      "link": "NULL",
-      "pubDate": "2024-07-18T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "LTC - Litecoin is now available through Fidelity Crypto®",
-      "link": "NULL",
-      "pubDate": "2024-07-18T19:57:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "BCH",
-        "MOON"
-      ]
-    },
-    {
-      "title": "Analyst Says Altcoin That’s Up Over 120% in Two Weeks Primed for Another Leg Up, Updates Outlook on Shiba Inu",
-      "link": "NULL",
-      "pubDate": "2024-07-18T19:55:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "SHIB",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency VeChain Decreases More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-07-18T19:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Hedera Down More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-07-18T19:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "WazirX Declares $230M Hack A Force Majeure Event, Pledges Full Investigation",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:48:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "‘Ancient’ Ethereum (ETH)-Based Altcoin Jumps Over 50% on New Coinbase Listing",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:41:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "Engineer Deems SHIB, LUNC Burns too Slow for 1 Cent Dream",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "President Biden's Odds Of Exiting The Race Surge To 80%: Here's Who's Favored Now",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:38:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "DeFi Technologies (DEFTF) Buys Another $6 Million in Bitcoin, Doubles BTC Holdings",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:35:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "CORE"
-      ]
-    },
-    {
-      "title": "Indian Crypto Exchange Wazirx Updates on Major Multisig Wallet Hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:32:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "WRX"
-      ]
-    },
-    {
-      "title": "Render (RNDR) Network Activity Surges Ahead of Crucial Token Migration",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Donald Trump Presidential Campaign Is Now Adding More Hype to Bitcoin Than Ever Before",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:26:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "BitGo and Stacks Partner to Enhance Bitcoin Capabilities with sBTC Conversion",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:06:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Coinbase To Launch Perpetual Futures For Toncoin, Bittensor & Tellor",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:03:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TON",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Tune in now to get the scoop on 0x v2 from the one and only @willwarren (,🧡)",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZRX"
-      ]
-    },
-    {
-      "title": "MOVR Bulls Assemble: Crypto Analyst Says A 2,000% Surge To $234 Is Imminent",
-      "link": "NULL",
-      "pubDate": "2024-07-18T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "MOVR"
-      ]
-    },
-    {
       "title": "Charles Hoskinson Warns: Biden Victory Equals Demise for US Crypto Sector",
       "link": "https://cryptopotato.com/charles-hoskinson-warns-biden-victory-equals-demise-for-us-crypto-sector/",
       "pubDate": "2024-07-18T17:45:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "Cardano's Charles Hoskinson believes that Biden's policies could destroy American crypto industry.",
       "currencies": [
@@ -329,144 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "21Shares launches Injective ETP with staking on Euronext",
-      "link": "NULL",
-      "pubDate": "2024-07-18T17:38:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now July 18 – Render, Jupiter, Axie Infinity",
-      "link": "NULL",
-      "pubDate": "2024-07-18T17:20:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "RNDR",
-        "JUP"
-      ]
-    },
-    {
-      "title": "UFC Star Alex Pereira Powers BDAG,ETH Whales and DAI Insights",
-      "link": "NULL",
-      "pubDate": "2024-07-18T17:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Mantle (MNT) Whales Increase Accumulation, Eye Price Growth",
-      "link": "NULL",
-      "pubDate": "2024-07-18T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Lido DAO Price 20% Rally Holds As Staking TVL Rises Reaching $34B",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:56:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Bitcoin Slumps Towards $63K as Speculation About Biden Dropout Intensifies",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:47:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Predicts XRP Price To Hit $1.03 Soon, Warns Of Initial Dip",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "ARK"
-      ]
-    },
-    {
-      "title": "'Dogecoin Killer' Shiba Inu Down 8%: WazirX Exploiter Sells $92M In SHIB Amid $230M Hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:28:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "WRX",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "WazirX Hack Mystery Deepens: Bounty Offered as Experts Suspect North Korea in $235M Exploit",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:25:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "BREAKING: Coinbase Decides to List 3 Surprise Altcoins in Futures",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:06:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TON",
-        "TAO"
-      ]
-    },
-    {
-      "title": "ZetaChain Launches Gateway, Targets Devs and Users",
-      "link": "NULL",
-      "pubDate": "2024-07-18T16:02:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZETA"
-      ]
-    },
-    {
       "title": "21Shares Sets 0.21% Fee for Upcoming Ethereum ETF Launch",
       "link": "https://www.thecoinrepublic.com/2024/07/18/21shares-sets-0-21-fee-for-upcoming-ethereum-etf-launch/",
       "pubDate": "2024-07-18T15:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "ethereum",
       "description": "21Shares has recently amended its S-1 registration statement for its upcoming Spot Ethereum ETF called the Core Ethereum Trust (CETH). The filing made on Wednesday, July 17th, reveals a sponsor fee of 0.21% of the Ethereum assets in the trust. This fee is higher than the one proposed by VanEck at 0.20%, which places 21Shares […]",
       "currencies": [
@@ -479,23 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DC and Candy Digital to Debut Their ‘Catwoman: The Legacy Cowl’ NFT at SDCC 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-18T15:37:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AR",
-        "NFT"
-      ]
-    },
-    {
       "title": "Solana DEX Trading Volume Explodes, Surpasses Ethereum: Prices Set to Skyrocket",
       "link": "https://crypto-economy.com/solana-dex-trading-volume-explodes-surpasses-ethereum-prices-set-to-skyrocket/",
       "pubDate": "2024-07-18T15:34:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Economy",
+      "sourceKey": "cryptoeconomy",
       "category": "ethereum",
       "description": "TL;DR Solana has surpassed Ethereum in DEX trading volume over the past seven days, marking a historic shift in leadership. SOL has risen by 11.2% in the last week. The fee reduction on Jupiter from 0.07% to 0.06% has stimulated trading volume on SOL. The trading volume on Solana’s decentralized exchanges (DEX) has surpassed Ethereum’s ... Read more",
       "currencies": [
@@ -509,111 +74,11 @@
       }
     },
     {
-      "title": "BitGo integrates Stacks for Bitcoin staking: institutional demand grows",
-      "link": "NULL",
-      "pubDate": "2024-07-18T15:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "21Shares AINJ ETP Will Offer Staking Rewards Of INJ",
-      "link": "NULL",
-      "pubDate": "2024-07-18T15:06:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "THORChain (RUNE) Primed For Big Gains, Analyst Eyes $20 Milestone",
-      "link": "NULL",
-      "pubDate": "2024-07-18T15:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "OKX Exchange to Exit Nigeria amid Regulatory Challenges",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:53:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Meme Coins Surge as Biden Tests Positive for COVID-19",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:45:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Bloomberg Analyst Confirms Date for Ethereum ETFs, Traders Eye Internet Computer and Algotech (ALGT) Over SUI",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:45:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ICP",
-        "SUI"
-      ]
-    },
-    {
-      "title": "WazirX Hack Pushes Shiba Inu (SHIB) Price Down by 10%",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:40:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "MATIC",
-        "WRX",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Giant Company Listed on Nasdaq Bought Bitcoin (BTC) and These Two Altcoins!",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:32:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "CORE"
-      ]
-    },
-    {
       "title": "Michael Saylor Rallies Bitcoin Believers with Moon Tweet",
       "link": "https://www.thecoinrepublic.com/2024/07/18/michael-saylor-rallies-bitcoin-believers-with-moon-tweet/",
       "pubDate": "2024-07-18T14:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "bitcoin",
       "description": "Michael Saylor, co-founder of MicroStrategy, recently sent many in the Bitcoin (BTC) community into a frenzy with a simple tweet. The tweet included a picture of an astronaut’s suit with a Bitcoin logo and the caption, “Bitcoin to the Moon.” This message was shared while Bitcoin continued to fight for the $65,000 price level. Michael […]",
       "currencies": [
@@ -626,209 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DeFi Technologies amplifies Bitcoin holdings, adds Solana to treasury",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:15:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "CORE"
-      ]
-    },
-    {
-      "title": "JUP Price Targets $2 Even As Jupiter DEX Volume Plunges",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:06:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "JUP"
-      ]
-    },
-    {
-      "title": "BitGo Launches Support for Bitcoin L2 Stacks and sBTC",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) Bears Pause as Exchange Supply Hits 2-Year Low",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BitGo integrates Stacks for Bitcoin rewards, following institutional Bitcoin demand",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "BitGo integrates Stacks to enhance Bitcoin capabilities",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Stargate announces integration with Flare and connects it with over 25 chains",
-      "link": "NULL",
-      "pubDate": "2024-07-18T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLR"
-      ]
-    },
-    {
-      "title": "IoTeX Unveils Version 2.0 to Build Modular Infrastructure For All DePins",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:35:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTX",
-        "NOT"
-      ]
-    },
-    {
-      "title": "$235 Million WazirX Exchange Exploit Believed to Be Masterminded by North Korean Hackers",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:34:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "A single malicious transaction led to $230M drained from WazirX",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:26:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Indian Crypto Exchange Wazirx Suspends Withdrawals Amid $230M Security Breach",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "WRX"
-      ]
-    },
-    {
-      "title": "Bitget Climbs to Top 5 in App Rankings as OKX Exits Nigerian Market",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:09:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Top Cryptocurrency Community Picks for Q3 2024 – ETH, SOL, ONDO, STRUMP, and?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:07:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Solana (SOL) and ThorChain (RUNE) among first altcoin breakouts",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Book of Meme (BOME) Bulls Awaken As Meme Coin Attempts Short-Term Rally",
-      "link": "NULL",
-      "pubDate": "2024-07-18T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "BOME",
-        "MEME",
-        "BOOK"
-      ]
-    },
-    {
-      "title": "Crypto sleuth ZachXBT wins second Arkham bounty after WazirX hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:46:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
       "title": "Vitalik Buterin Warns Against Crypto-Based Political Endorsements",
       "link": "https://www.thecoinrepublic.com/2024/07/18/vitalik-buterin-warns-against-crypto-based-political-endorsements/",
       "pubDate": "2024-07-18T12:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "ethereum",
       "description": "Vitalik Buterin, the co-founder of Ethereum, recently highlighted a worrying trend of endorsing political candidates based on their views regarding cryptocurrencies. In a lengthy blog, Buterin was quick to point out that endorsing candidates for the sake of being pro-crypto could come at the cost of compromising the principles of crypto. This statement is made […]",
       "currencies": [
@@ -840,58 +107,11 @@
       }
     },
     {
-      "title": "Onchain analysts tie $235M Indian exchange exploit to North Korean hackers",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:37:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
-      "title": "Allium Labs Raises $16.5M in Series A Funding, says Jupiter Airdrop the Most Significant Blockchain Moment of 2024",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Whale Alert in Altcoins! Corporate Giant Whales Made Large Sales in Three Altcoins Including AVAX!",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:20:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "MKR",
-        "UMA"
-      ]
-    },
-    {
-      "title": "Arkham Announces Bounty For Information On WazirX’s $235 Million Hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:15:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARKM"
-      ]
-    },
-    {
       "title": "Ripple News : XRP Price Corrects After Large Transactions: What Lies Ahead?",
       "link": "https://coinpedia.org/news/ripple-news-xrp-price-corrects-after-large-transactions-what-lies-ahead/",
       "pubDate": "2024-07-18T12:01:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "trading",
       "description": "After rallying more than 50 percent since July 8, Ripple Labs-backed XRP price dropped nearly 10 percent in the last 24 hours to trade around $0.5731 on Thursday, during early New York. Session. The large-cap altcoin, with a fully diluted valuation of about $57 billion and a daily average traded volume of around $4.4 billion, …",
       "currencies": [
@@ -906,8 +126,8 @@
       "title": "XRP Price Plummets To $0.5724, Can Bulls Maintain Support?",
       "link": "https://www.newsbtc.com/analysis/xrp/xrp-price-plummets-to-0-5724-can-bulls-maintain-support/",
       "pubDate": "2024-07-18T12:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "In recent trading activities, XRP has experienced a significant retracement, dipping toward a critical support level of $0.5724. This retracement which is seen as a correctional movement to the crypto asset’s recent rally has caught the attention of traders and investors alike thereby raising speculations as to whether the bulls can maintain the $0.5724 support level. This article provides an...",
       "currencies": [
@@ -922,8 +142,8 @@
       "title": "Chainlink unveils Digital Asset Sandbox, speeds up tokenization trials from months to days",
       "link": "https://cryptobriefing.com/chainlink-digital-asset-sandbox-tokenization/",
       "pubDate": "2024-07-18T12:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Decentralized oracle network Chainlink has launched Chainlink Digital Assets Sandbox (DAS), a platform designed to fast-track digital asset innovation, said the firm in a Thursday press release. With Chainlinks DAS, financial institutions can conduct tokenization trials and Proof of Concepts (PoCs) within days, instead of months.The motive behind the new solution is ongoing strong demand for...",
       "currencies": [
@@ -936,196 +156,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Filecoin (FIL) Hits 30-Day High After Grayscale AI Fund Launch",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "FIL",
-        "LPT",
-        "RNDR",
-        "TON",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Chainlink Unveils Digital Assets Sandbox to Transform Capital Markets",
-      "link": "NULL",
-      "pubDate": "2024-07-18T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "AVAX",
-        "MATIC",
-        "LINK",
-        "WEMIX",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Abbott Laboratories Reports Strong Q2, Beating EPS and Revenue Forecasts",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:54:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "VeWorld Wallet Incorporates Apple Pay Through Transak Integration",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:45:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Market Update: STRK Plunges 5%, ICP Dips as WIF Gains 6%",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ICP",
-        "STRK",
-        "WIF",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "WazirX Suffers $230M Hack, Suspends Withdrawals Amid Security Breach",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:39:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "SHIB",
-        "MATIC",
-        "WRX",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "WazirX Hacked: Over $230 Million in Crypto Stolen, Withdrawals Paused",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:39:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Mt. Gox Clients Alarmed by Hack Attempts as Repayment Claim Website Goes Down",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "WazirX News: Arkham Announces Bounty, N. Korea Hackers Behind $235M Hack?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:22:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Pyth leads perps trading on Solana, Sui, but $600B trading volume will 10x",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:17:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "AVAX",
-        "FTM",
-        "INJ",
-        "TON",
-        "APT",
-        "SUI",
-        "PYTH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Upbit Issues First Public Disclosure Under New User Protection Act",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:15:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "AI sets Shiba Inu (SHIB) price for August 1 after $100 million hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:08:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
-      "title": "This Shiba Inu Rival Is Set To Surpass The Fantom (FTM) And Avalanche (AVAX) Rally That Made Teenage Millionaires In 2021",
-      "link": "NULL",
-      "pubDate": "2024-07-18T11:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX",
-        "SHIB",
-        "FTM"
-      ]
-    },
-    {
       "title": "Cardano Founder Challenges Buterin’s Views On Pro-Crypto Politicians",
       "link": "https://bitcoinist.com/cardano-founder-vs-buterin-pro-crypto-politicians/",
       "pubDate": "2024-07-18T11:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Vitalik Buterin, co-founder of Ethereum, and Charles Hoskinson, founder of Cardano, made their opinions about “pro-crypto” politicians known on Wednesday. First, Buterin released his essay titled “Against choosing your political allegiances based on who is ‘pro-crypto’”, where he expressed concerns over the increasing politicization of crypto. This trend has gained prominence as former...",
       "currencies": [
@@ -1138,81 +173,11 @@
       }
     },
     {
-      "title": "Hackers Drain $235M From Indian Exchange WazirX, WRX Plunges 15%",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:57:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "GALA",
-        "WRX",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Internet Computer (ICP) Price Records 36% Gains; Time to Buy, Sell, or HODL?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:49:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "ON-CHAIN ANALYSIS - GROWTH OF ALTCOIN MANTRA DAO. CRYPTO WHALE TRACK WITH ARBITRAGESCANNER",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:46:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO",
-        "OM"
-      ]
-    },
-    {
-      "title": "Render (RNDR) Price Breakout Rally Hints A 50% Upside?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:42:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Shiba Inu price drops 10% — SHIB sell-off risk soars amid WazirX $235M hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:39:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "SHIB",
-        "MATIC",
-        "LINK",
-        "FTM",
-        "GALA",
-        "WRX",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
       "title": "Charles Hoskinson Suggests ID Solution for X Hacks",
       "link": "https://coingape.com/charles-hoskinson-offers-elon-musk-free-did-integration-on-x/",
       "pubDate": "2024-07-18T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "Ever since Cardano founder Charles Hoskinson revealed his yet-to-materialize partnership with Elon Musk, the former has become more interested in what happens with the billionaire. Now, he is talking about integrating Decentralized Identity (DID) into the free-speech X app. Another Scam on Musk’s X On Monday, July 15, Ben Goertzel, the CEO of SingularityNet was",
       "currencies": [
@@ -1225,23 +190,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Indian exchange WazirX hit by $235 million hack, North Korea link suspected",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:20:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "WRX"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Price Set to Add to Its 14% Recent Gains",
       "link": "https://beincrypto.com/cardano-ada-price-gains-bullish-outlook/",
       "pubDate": "2024-07-18T10:10:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "As with many altcoins, Cardano’s (ADA) price has experienced notable relief within the last seven days. Specifically, the cryptocurrency’s price increased by 14.15%. However, in the last 24 hours, ADA has stalled around $0.45. This on-chain analysis explains why the token’s uptrend is not yet over. Will Cardano Follow XRP’s Lead With Large Buying Presence? A noteworthy basis for...",
       "currencies": [
@@ -1254,66 +207,12 @@
       }
     },
     {
-      "title": "WazirX Confirms $234M “Security Breach” on Its Safe Multisig Wallet",
-      "link": "NULL",
-      "pubDate": "2024-07-18T10:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Lido DAO token price reveals long-term effects of supply dilution",
-      "link": "NULL",
-      "pubDate": "2024-07-18T09:52:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Indian Crypto Exchange Hack Sends SHIB, WRX Tumbling as Bitcoin, Tether Trade at Massive Discount",
-      "link": "NULL",
-      "pubDate": "2024-07-18T09:49:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 7-18 BTC, ETH, SOL, TRX, RNDR, ATOM, SEI",
-      "link": "NULL",
-      "pubDate": "2024-07-18T09:28:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "TRX",
-        "ATOM",
-        "RNDR",
-        "SEI"
-      ]
-    },
-    {
       "title": "Algorand (ALGO) Investors Fill Their Bags as Token Value Climbs 10%",
       "link": "https://beincrypto.com/algorand-investors-fill-bags-as-tokens-value/",
       "pubDate": "2024-07-18T09:23:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Algorand (ALGO) has witnessed a renewed interest in its investors amid the recent broader market rally. The past few days have been marked by a surge in the demand for the token, pushing its price upward. By exchanging hands at $0.15, ALGO’s value has increased by 12% in the past seven days. Algorand Sees Spike in Buying Pressure Algorand’s (ALGO) key momentum indicators...",
       "currencies": [
         "ALGO"
@@ -1324,37 +223,11 @@
       }
     },
     {
-      "title": "Altcoin Built on Base Layer-2 Blockchain Could Explode by 340% if This Happens, According to Crypto Trader",
-      "link": "NULL",
-      "pubDate": "2024-07-18T09:15:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "WazirX Hacked: $230 Million Stolen, SHIB and FLOKI Worth Millions For Sale!",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:47:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "WRX",
-        "FLOKI"
-      ]
-    },
-    {
       "title": "Charles Hoskinson rejects Vitalik Buterin's view on pro-crypto voting",
       "link": "https://cointelegraph.com/news/hoskinson-counters-buterin-pro-crypto-voting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-07-18T08:33:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "This clash of views comes as the 2024 U.S. presidential election approaches, with significant implications for the future of cryptocurrency regulation in the country.",
       "currencies": [
@@ -1367,147 +240,11 @@
       }
     },
     {
-      "title": "Biden Dropout Chances Rise to 68% After Covid Diagnosis",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:25:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "LayerZero Bounty Hunters List Released, Rewards on July 23!",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZRO"
-      ]
-    },
-    {
-      "title": "Biggest Indian Crypto Exchage WazirX Hacked on 18 July",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "GALA",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "WazirX Hack: Indian Crypto Exchange Suffers $230M Exploit, Pauses Withdrawals",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:01:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "SHIB",
-        "MATIC",
-        "WRX",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Breaking: $234 Million Drained From Indian Exchange WazirX, Withdrawals Suspended",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:01:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Indian crypto exchange WazirX confirms $230 million hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T08:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "GALA",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Dymension Price Analysis: DYM Surges 11% After Dymension Name Service Debut",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:58:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DYM"
-      ]
-    },
-    {
-      "title": "Shiba Inu Coin: Over 5Tln SHIB Sacked From Indian Exchange Amid Hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:58:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
-      "title": "Indian Crypto Exchange WazirX’s $234.9 Million Transaction Raises Hack Fear",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:40:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "GALA",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Ronin Network's DAA Surges 93.43% in 26 Days Amid Runiverse Game Migration, Token Up 17%",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
-      "title": "Indian crypto exchange falls victim to $235M hack",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:29:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "WRX"
-      ]
-    },
-    {
       "title": "Solana Overtakes Ethereum in DEX Volume",
       "link": "https://coinedition.com/solana-overtakes-ethereum-in-dex-volume/",
       "pubDate": "2024-07-18T07:08:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "ethereum",
       "description": "The decentralized exchange (DEX) volume on Solana surged to a record high, surpassing even Ethereum, the largest blockchain by Total Value Locked (TVL). Both blockchains’ native tokens, Ether (ETH) and SOL, saw price increases over the past week as well. As noted by @SolaniansHub on X (formerly Twitter), Solana’s DEX volume led all major blockchains […]",
       "currencies": [
@@ -1520,53 +257,11 @@
       }
     },
     {
-      "title": "Aptos and NEAR Holders Attracted To Rollblock’s Passive Income Potential As Well As 100x Growth Predictions",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:06:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "APT"
-      ]
-    },
-    {
-      "title": "Grayscale Launches New Artificial Intelligence (AI) Fund Featuring 5 Key Protocols",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "FIL",
-        "LPT",
-        "RNDR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "FET Surges 12% Ahead Of ASI Token Merger Phase 2, Can It Hit $5?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T07:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR",
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
       "title": "Mt. Gox Bitcoin Repayments",
       "link": "https://bitcoinist.com/ju-addreses-fears-around-mt-gox-bitcoin-moves/",
       "pubDate": "2024-07-18T06:51:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "The now-defunct Tokyo-based crypto platform Mt. Gox recently executed a huge transaction carrying over 48,641 Bitcoin, igniting speculations about an upcoming repayment to creditors after the firm went bankrupt years ago. Thus, cryptocurrency enthusiasts and investors are closely watching the reaction of Bitcoin as Mt. Gox continues to carry out massive BTC transactions. However, Ki […]",
       "currencies": [
@@ -1577,188 +272,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Beating Bitcoin: The Coins Set to Perform Bitcoin This Year",
-      "link": "NULL",
-      "pubDate": "2024-07-18T06:32:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "LTC",
-        "PEPE",
-        "APT"
-      ]
-    },
-    {
-      "title": "Crypto News Today: Bitcoin's Challenge to Surge Past $65K",
-      "link": "NULL",
-      "pubDate": "2024-07-18T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "LDO",
-        "DAO",
-        "JASMY",
-        "BRETT",
-        "MOG"
-      ]
-    },
-    {
-      "title": "MakerDAO Wallets Continue Strategic Sales of $MKR on Binance",
-      "link": "NULL",
-      "pubDate": "2024-07-18T05:52:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Grayscale’s AI Fund Sparks Rally in NEAR, Filecoin, Livepeer, Render, Bittensor",
-      "link": "NULL",
-      "pubDate": "2024-07-18T05:49:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEAR",
-        "FIL",
-        "LPT",
-        "RNDR",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Dogwifhat, Popcat, Bonk brace for key competitor: Poodlana",
-      "link": "NULL",
-      "pubDate": "2024-07-18T05:45:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "WIF",
-        "BOME"
-      ]
-    },
-    {
-      "title": "XRP Surges 39% As Sharks & Whales Push Supply Share Past 85%",
-      "link": "NULL",
-      "pubDate": "2024-07-18T05:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "GRT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Top 3 Altcoins That Every Bitcoin Billionaire Holds In Their Wallet",
-      "link": "NULL",
-      "pubDate": "2024-07-18T03:41:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Steadies: What Are the Chances of Another Rise?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T02:47:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Fake Professors Scam Crypto Investors on Telegram and Whatsapp, DFI Warns",
-      "link": "NULL",
-      "pubDate": "2024-07-18T02:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DFI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "DeFi Technologies’ Valour introduces an exchange-traded product (ETP) for NEAR",
-      "link": "NULL",
-      "pubDate": "2024-07-18T02:29:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Cardano Analyst: ADA To 2X After Breakout, Chang Hard Fork As Tailwinds?",
-      "link": "NULL",
-      "pubDate": "2024-07-18T02:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Odds of Biden Dropping Out Of Race Surge To 66% — Pollster Nate Silver Joins Crypto-Based Prediction Market Polymarket",
-      "link": "NULL",
-      "pubDate": "2024-07-18T01:33:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JOE"
-      ]
-    },
-    {
-      "title": "Mena Suvari Nominated for Emmy for Gala Film Sci-Fi Series",
-      "link": "NULL",
-      "pubDate": "2024-07-18T00:53:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
     }
   ]
 }

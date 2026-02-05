@@ -1,15 +1,15 @@
 {
   "date": "2024-02-24",
-  "fetchedAt": "2026-02-05T07:45:53.325Z",
-  "articleCount": 42,
+  "fetchedAt": "2026-02-05T07:48:35.642Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
     {
       "title": "Polygon sets a new record as MATIC gears up for a move north",
       "link": "https://ambcrypto.com/polygon-sets-a-new-record-as-matic-gears-up-for-a-move-north/",
       "pubDate": "2024-02-24T23:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "layer2",
       "description": "Polygon concluded the week with a historic number of active addresses and a climb back to the $1 zone for MATIC.",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Why Bitcoin Inventor Satoshi Nakamoto Found FinTech Firm Ripple ‘Interesting’",
       "link": "https://www.cryptoglobe.com/latest/2024/02/why-bitcoin-inventor-satoshi-nakamoto-found-fintech-firm-ripple-interesting/",
       "pubDate": "2024-02-24T22:05:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "In a fascinating revelation from the early days of cryptocurrency, an email exchange from 2009 has surfaced, showcasing Bitcoin founder Satoshi Nakamoto’s praise for the Ripple project. This exchange involves Martti ‘Sirius’ Malmi, an active Bitcoin developer from 2009 to 2011, who played a crucial role in the initial development and growth of Bitcoin. Malmi […]",
       "currencies": [
@@ -40,108 +40,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Top Crypto Picks for High Returns with Low Risk",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:42:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ARB",
-        "JUP",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Crypto Whales' Next Big Bet: Altcoins on the Verge of a Breakout",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:37:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Analysts Name Top Coins for This Spring",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:31:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Cosmos co-founder says GovGen will show how governance can be used in blockchain development",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "New Crypto Wave is Here: 5 Coins with 1000% Upside Potential",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:25:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Ethereum Rise: What It Means for Smaller Altcoins?",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:18:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARB",
-        "JUP",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Solana Drops Below 100-Day MA On 4-Hour Chart, SOL Price In Danger?",
-      "link": "NULL",
-      "pubDate": "2024-02-24T19:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
       "title": "Brave integrates on-chain Solana wallet for reward payments",
       "link": "https://www.cryptopolitan.com/brave-integrate-solana-wallet-reward-payment/",
       "pubDate": "2024-02-24T18:39:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Brave, the company recognized for its privacy-centric Brave browser, is taking a significant step forward in enhancing its Rewards program by integrating on-chain Solana payments. This new feature aims to empower its browser users to directly transfer BAT tokens to a self-custody Solana wallet, bypassing centralized exchanges. Brave adopts Solana wallet for rewards transfer The […]",
       "currencies": [
@@ -155,37 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "FIL breaks above early January highs – Is a move to $10 next?",
-      "link": "NULL",
-      "pubDate": "2024-02-24T18:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Stablecoin Market Jumps by Over $2.5 Billion in 10 Days, Led by Rise in Key Players",
-      "link": "NULL",
-      "pubDate": "2024-02-24T17:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "DAI",
-        "FDUSD"
-      ]
-    },
-    {
       "title": "New crypto opportunity at $0.04 for investors who missed SOL and AVAX price rally",
       "link": "https://finbold.com/new-crypto-opportunity-at-0-04-for-investors-who-missed-sol-and-avax-price-rally/",
       "pubDate": "2024-02-24T16:25:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Solana (SOL) and Avalanche (AVAX) were top performers in 2021 and 2023, offering a more scalable solution to Ethereum (ETH). … Continue reading",
       "currencies": [
@@ -203,8 +80,8 @@
       "title": "Hoskinson expresses willingness for MMA fight against Buterin",
       "link": "https://www.cryptopolitan.com/hoskinson-fight-against-buterin/",
       "pubDate": "2024-02-24T15:47:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "general",
       "description": "Cryptocurrency enthusiasts are buzzing with excitement following a surprising declaration from Charles Hoskinson, the co-founder of Ethereum and founder of Cardano. In response to a social media post suggesting a potential MMA fight between him and Vitalik Buterin, Hoskinson expressed unexpected earnestness, stating his willingness to “train very hard for that one.” Origins of the […]",
       "currencies": [
@@ -218,100 +95,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Worldcoin's Wild Rise",
-      "link": "NULL",
-      "pubDate": "2024-02-24T15:14:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "Hedera (HBAR) holders snap up DeeStream (DST) streaming money earner Pre Bitcoin (BTC) halving for major profits",
-      "link": "NULL",
-      "pubDate": "2024-02-24T14:46:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Dai investors shift interest towards Bitcoins mirrored coin BlockDAG",
-      "link": "NULL",
-      "pubDate": "2024-02-24T13:45:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DAI"
-      ]
-    },
-    {
-      "title": "DeFi Coins Rocketing on Game-Chaining Uniswap (UNI) Milestone",
-      "link": "NULL",
-      "pubDate": "2024-02-24T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "AAVE",
-        "SNX",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Binance's Regulatory Approach to Cryptocurrency Challenges",
-      "link": "NULL",
-      "pubDate": "2024-02-24T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Forget AWS Storage, DePIN Storage Is The New Crypto Trend And It's Pumping Hard",
-      "link": "NULL",
-      "pubDate": "2024-02-24T13:11:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "FIL",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Uniswap 71% Single-Day Rally Raises Eyebrows – Can DeFi Maintain Momentum?",
-      "link": "NULL",
-      "pubDate": "2024-02-24T13:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "AAVE",
-        "COMP",
-        "SC",
-        "SUSHI"
-      ]
-    },
-    {
       "title": "ADA and Satoshi: Cardano Founder Reacts to Intriguing Correlation Tweet",
       "link": "https://u.today/ada-and-satoshi-cardano-founder-reacts-to-intriguing-correlation-tweet",
       "pubDate": "2024-02-24T12:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Satoshi's earliest collaborator recently revealed 120 pages of email correspondences",
       "currencies": [
@@ -323,35 +111,11 @@
       }
     },
     {
-      "title": "Scam Alert: XRP Competitor Hedera (HBAR) Warns About Fake Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-02-24T12:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Starknet Token Plummets Over 60% in Value Amidst Sell-Offs and Airdrop Controversy",
-      "link": "NULL",
-      "pubDate": "2024-02-24T12:06:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "STRK"
-      ]
-    },
-    {
       "title": "Bitcoin’s price rally driven by manipulation, criminal acts, and inadequate regulation: ECB officials",
       "link": "https://cryptobriefing.com/bitcoin-price-rally-driven-manipulation-criminal-acts-inadequate-regulation/",
       "pubDate": "2024-02-24T12:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "Bitcoin's current price rally is unlikely to be driven by fundamental factors. Instead, it's attributed to temporary and potentially unsustainable influences, including price manipulation, demand for illegal activities, and misguided regulations, said the European Central Bank (ECB) in a report published this week.\"While the current rally is fueled by temporary factors, there are three...",
       "currencies": [
@@ -366,8 +130,8 @@
       "title": "Cardano Creator Responds Seriously to MMA Fight With Vitalik Buterin",
       "link": "https://u.today/cardano-creator-responds-seriously-to-mma-fight-with-vitalik-buterin",
       "pubDate": "2024-02-24T11:43:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Cardano's Charles Hoskinson surprises with serious response to challenge Ethereum's Vitalik Buterin in MMA fight",
       "currencies": [
@@ -380,59 +144,11 @@
       }
     },
     {
-      "title": "Pro-Ripple Lawyer Tags Poor XRP Price Performance As Unnatural, Rally Imminent?",
-      "link": "NULL",
-      "pubDate": "2024-02-24T11:10:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "LINK",
-        "SC"
-      ]
-    },
-    {
-      "title": "$9.7M Stolen From Axie Infinity Co-Founder’s Personal Wallets",
-      "link": "NULL",
-      "pubDate": "2024-02-24T10:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Important Binance Update Affecting SOL, ETH, and FIL Users",
-      "link": "NULL",
-      "pubDate": "2024-02-24T10:15:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "SOL",
-        "HBAR",
-        "FIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Uniswap's New Plan Boosts Token Prices by 60%",
       "link": "https://coinpaprika.com/news/uniswap-s-new-plan-boosts-token-prices-by-60",
       "pubDate": "2024-02-24T10:04:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "defi",
       "description": "Uniswap's governance proposal spikes UNI prices, promising rewards for token holders",
       "currencies": [
@@ -445,25 +161,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Top DeFi Tokens Skyrocket as Uniswap Proposes Significant Change",
-      "link": "NULL",
-      "pubDate": "2024-02-24T09:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "AAVE",
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
       "title": "Top 3 global exchange ByBit, lists CSPR with a 3,800,000 CSPR prize pool",
       "link": "https://ambcrypto.com/top-3-global-exchange-bybit-lists-cspr-with-a-3800000-cspr-prize-pool/",
       "pubDate": "2024-02-24T08:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "exchange",
       "description": "Casper (cspr), a future-proofed L1 blockchain built for DeFi and upgradability has been welcomed onto […]",
       "currencies": [
@@ -471,141 +173,6 @@
       ],
       "votes": {
         "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Can Filecoin Solve Solana’s Data Accessibility Challenges? Forecasting a Bright Future for Monero & Rising AI Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-02-24T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "XMR",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Bitget Token (BGB) is Becoming the New Crypto Staple",
-      "link": "NULL",
-      "pubDate": "2024-02-24T07:09:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BGB"
-      ]
-    },
-    {
-      "title": "Prices and news of the crypto Fetch.Ai (FET), Chainlink (LINK) and Theta Network (THETA)",
-      "link": "NULL",
-      "pubDate": "2024-02-24T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK",
-        "THETA",
-        "FET"
-      ]
-    },
-    {
-      "title": "Fluidkey Launches to Tackle the Transaction Privacy Issues on EVM Chains",
-      "link": "NULL",
-      "pubDate": "2024-02-24T06:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ENS"
-      ]
-    },
-    {
-      "title": "Starknet token unlock takes a new turn amidst criticisms, details here",
-      "link": "NULL",
-      "pubDate": "2024-02-24T06:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 23 Feb: BTC at $51K, UNI Explosive Growth",
-      "link": "NULL",
-      "pubDate": "2024-02-24T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "UNI",
-        "AAVE",
-        "AXS",
-        "GALA",
-        "COMP",
-        "SC",
-        "SUSHI",
-        "FLR",
-        "RON"
-      ]
-    },
-    {
-      "title": "46% of largest crypto airdrops peaked within 14 days — CoinGecko",
-      "link": "NULL",
-      "pubDate": "2024-02-24T05:22:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Flare, Leading Blockchain for Data, Secures Round From Early Backers, Reducing Liquidity, Increasing Investment to Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-02-24T04:51:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "FLR"
-      ]
-    },
-    {
-      "title": "3,248 ETH Stolen In Axie Infinity Co-Founder Hack – Here Are The Details",
-      "link": "NULL",
-      "pubDate": "2024-02-24T04:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "AXS",
-        "RON"
-      ]
-    },
-    {
-      "title": "Zcash (ZEC) Jumps More Than 20% After Digital Asset Manager Grayscale Proposes New ‘Privacy ETF’ to the SEC",
-      "link": "NULL",
-      "pubDate": "2024-02-24T01:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ZEC"
-      ],
-      "votes": {
-        "positive": 1,
         "negative": 0
       },
       "sentiment": "bullish"

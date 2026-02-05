@@ -1,26 +1,15 @@
 {
   "date": "2022-07-27",
-  "fetchedAt": "2026-02-05T07:45:52.859Z",
-  "articleCount": 35,
+  "fetchedAt": "2026-02-05T07:48:35.606Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @PolyXtoken: Money is made during bull market but Millionaires are made during the bear market. The smart ones are accumulating NOW unli…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T23:57:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PXT"
-      ]
-    },
     {
       "title": "Why Cardano (ADA) May Breakout In A Bull Run To $1",
       "link": "https://www.newsbtc.com/analysis/ada/why-cardano-ada-may-breakout-in-a-bull-run-to-1/",
       "pubDate": "2022-07-27T23:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Cardano (ADA) is one of the few digital assets that has managed to hold its own through the downtrend. The digital asset has garnered a healthy following of supporters and continues to grow in conditions where others are struggling. However, Cardano’s price is down significantly from its all-time high that it attained last year. Its price has now fallen below $0.5 but is there still hope to...",
       "currencies": [
@@ -35,35 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @OlympusDAO: Olympus has just made a major quality of life upgrade! Our Treasury Dash V2 just released, and is more: - Transparent - Ac…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T22:24:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GRT",
-        "DASH"
-      ]
-    },
-    {
-      "title": "RT @NewToTheStreet: Unlike other payment platforms, @LootUpApp is non-custodial, all while utilizing the strength and power of @LGCYNetwork…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T19:49:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDL",
-        "LGCY"
-      ]
-    },
-    {
       "title": "BNB Basks In The Green As Price Glows 5.84% In Fields Of Red",
       "link": "https://www.newsbtc.com/news/bnb-basks-in-the-green/",
       "pubDate": "2022-07-27T19:10:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "While the rest of the tokens are smothered in red Wednesday, Binance Coin (BNB) is relishing its place in the green zone for the third day in a row this week. Binance Coin’s price surged by 5.84% and is currently trading at $256.54 as of this writing. The coin currently has a total market cap of $41,367,894,785. The coin is primarily targeting 61.80% on the upside, and then shooting for the...",
       "currencies": [
@@ -78,149 +43,11 @@
       }
     },
     {
-      "title": "Selling chaos legion packs",
-      "link": "NULL",
-      "pubDate": "2022-07-27T19:04:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "IMF Issues Warning, Says Recession To Drag Down Crypto and Spark Stablecoin Chaos: Report",
-      "link": "NULL",
-      "pubDate": "2022-07-27T19:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Prediction Contest: Chaos Packs Sold",
-      "link": "NULL",
-      "pubDate": "2022-07-27T18:58:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Cardano Moves In The Red With The Market, Can The Price Of ADA Stay Above $0.46?",
-      "link": "NULL",
-      "pubDate": "2022-07-27T18:07:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Cardano trends to the downside with the crypto market recording small profits on lower timeframes. The cryptocurrency continues to move in tandem with Bitcoin and Ethereum and seems poised for some volatility over today’s trading session. Related Reading | Dogecoin Seen Doubling In Price, Despite Shedding 10% In Last 7 Days At the time of writing, Cardano (ADA) trades at $0.46 with a 2% profit...",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 6
-      }
-    },
-    {
-      "title": "Academic #researchers, business #leaders, #FinTech advisors, #investors and #developers are looking for information…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T18:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @AtomicWallet: What do you know about @Theta_Network? Find out about Theta's background, main purpose, $THETA & $TFUEL, and much more i…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T17:56:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "RT @SmartCryptoNew1: @Dashpay coin $DASH will be listed on @KangaExchange #Kanga is a dynamically developing of tools and Fintech ser…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T17:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DASH",
-        "KNG"
-      ]
-    },
-    {
-      "title": "RT @Dashpay: We are thrilled to announce that Dash is available on @KangaExchange, the largest central Europe crypto-asset exchange, with m…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T17:25:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DASH",
-        "KNG"
-      ]
-    },
-    {
-      "title": "Olympus has just made a major quality of life upgrade! Our Treasury Dash V2 just released, and is more: - Transpar…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T17:07:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OHM",
-        "SOHM",
-        "WSOHM"
-      ]
-    },
-    {
-      "title": "RT @bsc_daily:  @CEEK allowed both #VirtualReality &amp; non #VR Modes for ease of use and accessibility needed for VR technology mass adoptio…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T16:55:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "Check out @DavidVorick's talk at @MITBitcoinClub, focusing on censorship on the 2020 internet",
-      "link": "NULL",
-      "pubDate": "2022-07-27T16:26:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
       "title": "Crypto community predicts bullish VeChain price for August 31, 2022",
       "link": "https://finbold.com/crypto-community-predicts-bullish-vechain-price-for-august-31-2022/",
       "pubDate": "2022-07-27T16:25:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
       "currencies": [
@@ -233,23 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Polkadot: July 27 at 5pm CEST, join the #PolkadotCommunityCall to learn about the latest updates in the Polkadot &amp; Kusama ecosystem, as…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T14:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "KSM"
-      ]
-    },
-    {
       "title": "Quant and Ethereum Classic lead the top 100 cryptocurrencies in 24-hour gains",
       "link": "https://finbold.com/quant-and-ethereum-classic-lead-the-top-100-cryptocurrencies-in-24-hour-gains/",
       "pubDate": "2022-07-27T14:50:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "The majority of cryptocurrencies have traded positively in the last 24 hours, with some digital assets recording solid gains, being... Continue reading",
       "currencies": [
@@ -267,8 +82,8 @@
       "title": "Trust Wallet token and Bitcoin Gold lead the top 100 pack recording double-digit gains",
       "link": "https://finbold.com/trust-wallet-token-and-bitcoin-gold-lead-the-top-100-pack-recording-double-digit-gains/",
       "pubDate": "2022-07-27T14:15:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Although fluctuations in the cryptocurrency market continue, some of its digital assets are recording solid weekly gains, including the recently... Continue reading",
       "currencies": [
@@ -286,8 +101,8 @@
       "title": "Dogecoin's New Website Goes Live",
       "link": "https://u.today/dogecoins-new-website-goes-live",
       "pubDate": "2022-07-27T13:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Upgraded Dogecoin website is now live",
       "currencies": [
@@ -300,23 +115,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What do you know about @Theta_Network? Find out about Theta's background, main purpose, $THETA & $TFUEL, and much…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T13:18:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "AWC"
-      ]
-    },
-    {
       "title": "Do Kwon And Terraform Employees Face Fraud Allegations From South Korean Authorities",
       "link": "https://en.ethereumworldnews.com/do-kwon-terra-employees-fraud-allegations/",
       "pubDate": "2022-07-27T12:05:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Do Kwon asked to notify authorities on entry into South Korea as investigations into possible Terra fraud continue.",
       "currencies": [
@@ -332,8 +135,8 @@
       "title": "AntPool invested $10M to support Ethereum Classic developers, CEO says",
       "link": "https://finbold.com/antpool-invested-10m-to-support-ethereum-classic-developers-ceo-says/",
       "pubDate": "2022-07-27T11:27:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "As the anticipated Ethereum Merge upgrade nears, the CEO of one of the largest cryptocurrency mining pools has told the... Continue reading",
       "currencies": [
@@ -350,8 +153,8 @@
       "title": "Terra’s Do Kwon handed ‘notice of arrival’ for entering South Korea",
       "link": "https://finbold.com/terras-do-kwon-handed-notice-of-arrival-for-entering-south-korea/",
       "pubDate": "2022-07-27T10:49:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "South Korean prosecutors investigating the collapse of Terra (LUNA) asked that the Ministry of Justice issue a “notice upon arrival”... Continue reading",
       "currencies": [
@@ -366,8 +169,8 @@
       "title": "Ethereum Classic Jumps Double Digits After Antpool Adds $10M Backing",
       "link": "https://decrypt.co/106035/ethereum-classic-jumps-double-digits-antpool-adds-10m-backing",
       "pubDate": "2022-07-27T10:01:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Ethereum Classic is up 14% following crypto miner Antpool’s $10 million investment and Vitalik’s supportive comments.",
       "currencies": [
@@ -381,23 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Thrust will succeed Kakao Space in the Governance Council Contributing to the stability and reliability of the…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T09:51:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Can Cardano hit $1 by the end of August? Here’s what the crypto community says",
       "link": "https://finbold.com/can-cardano-hit-1-by-the-end-of-august-heres-what-the-crypto-community-says/",
       "pubDate": "2022-07-27T09:47:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
       "currencies": [
@@ -410,59 +201,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @KlaytnGames: Don't forget! $NPT Airdrop Staking begins today @NeopinOfficial Stake $KLAY and receive $NPT 1️⃣ Visit",
-      "link": "NULL",
-      "pubDate": "2022-07-27T09:01:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "NPT"
-      ]
-    },
-    {
-      "title": "MEXC adds $LTC/BTC, $BCH/BTC, $XLM/BTC, $DASH/BTC, $NEO/BTC, and $QTUM/BTC trading pairs ⬇️",
-      "link": "NULL",
-      "pubDate": "2022-07-27T08:14:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LTC",
-        "XLM",
-        "MX"
-      ]
-    },
-    {
-      "title": "RT @Real_Alex01: The relationship between the @glorious_digi and @Wimbledon has caused quite a stir, showcasing elite premium arts and hono…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T04:24:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "Expanding Bitcoin Custody Models With FediMint",
-      "link": "NULL",
-      "pubDate": "2022-07-27T03:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XEC"
-      ]
-    },
-    {
       "title": "Cardano ($ADA) Enters BNB Whales’ Top 10 Holdings Ahead of Vasil Hard Fork",
       "link": "https://www.cryptoglobe.com/latest/2022/07/cardano-ada-enters-bnb-whales-top-10-holdings-ahead-of-vasil-hard-fork/",
       "pubDate": "2022-07-27T02:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Cardano ($ADA) has become one of the top 10 holdings of whales n the BNB Chain (which was formerly known as the Binance Smart Chain) as investors are betting on the cryptocurrency ahead of its highly anticipated Vasil hard fork. According to data shared by whale monitoring service WhaleStats, Cardano recently became a top 10 […]",
       "currencies": [
@@ -475,29 +218,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Player Controlled Bets has 2 open guild spots",
-      "link": "NULL",
-      "pubDate": "2022-07-27T01:07:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "As July comes to end, the #Klaytn team is gearing up for the next big conference, @kbwofficial And of course, our…",
-      "link": "NULL",
-      "pubDate": "2022-07-27T01:05:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
     }
   ]
 }

@@ -1,43 +1,15 @@
 {
   "date": "2021-05-25",
-  "fetchedAt": "2026-02-05T07:45:51.763Z",
-  "articleCount": 43,
+  "fetchedAt": "2026-02-05T07:48:35.426Z",
+  "articleCount": 24,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @THETAtv: Live Now: @CoinDesk #Consensus2021 on Watch & Earn $TFUEL Broadcast powered by @Theta_Network ht…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T23:09:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @CENNZnet: LIVE IN 10 MINS: our Co-Founder @aaronmcdnz and CEO of @wearetenzing @Brooke_hs will discuss what #NFTs are and why all the h…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T21:31:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
     {
       "title": "OneOf raises $63M for new Green NFT platform for musicians",
       "link": "https://cointelegraph.com/news/oneof-raises-63m-for-new-green-nft-platform-for-musicians",
       "pubDate": "2021-05-25T20:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "nft",
       "description": "The soon-to-be-launched platform will feature NFTs from artists like Whitney Houston, Doja Cat, John Legend, TLC, H.E.R, Quincy Jones, Charlie Puth, Jacob Collier, G-Easy, AURORA, The Kid LAROI, Alesso and more.",
       "currencies": [
@@ -52,8 +24,8 @@
       "title": "‘Green’ NFT Platform Raises $63 Million to Launch Music Collectibles on Tezos",
       "link": "https://decrypt.co/71929/green-nft-music-platform-whitney-houston-tezos",
       "pubDate": "2021-05-25T20:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "nft",
       "description": "The Tezos-powered OneOf marketplace will feature collectibles from current and legacy artists, such as Whitney Houston and Quincy Jones.",
       "currencies": [
@@ -66,29 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Stellar Lumens, THETA, Aave Price Analysis: 25 May",
-      "link": "NULL",
-      "pubDate": "2021-05-25T20:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XLM",
-        "THETA",
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Negative funding rates incentivize traders to long Polygon (MATIC) and AAVE",
       "link": "https://cointelegraph.com/news/negative-funding-rates-incentivize-traders-to-long-polygon-matic-and-aave",
       "pubDate": "2021-05-25T19:55:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "The funding rate for MATIC and AAVE is currently rewarding traders who are leveraged longs, but it might not last for long.",
       "currencies": [
@@ -105,8 +59,8 @@
       "title": "Mark Cuban officially backs Polygon",
       "link": "https://cointelegraph.com/news/mark-cuban-officially-backs-polygon",
       "pubDate": "2021-05-25T19:52:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "The Ethereum-based scaling solution recently appeared on the Mark Cuban Companies website, seemingly affirming his investment in the project.",
       "currencies": [
@@ -119,23 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "250 SUPRA burnt!",
-      "link": "NULL",
-      "pubDate": "2021-05-25T19:44:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "‘Green mining’ crypto maker Chia Network valued at $500 million ahead of possible IPO",
       "link": "https://cryptoslate.com/green-mining-crypto-chia-network-valued-at-500-million-ahead-of-possible-ipo/",
       "pubDate": "2021-05-25T19:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "mining",
       "description": "Chia Network, the firm behind recently launched home mining-friendly cryptocurrency XCH, has raised $61 million in a Series D funding round led by Andreessen Horowitz (a16z) and Richmond Global Ventures, Bloomberg reported today.",
       "currencies": [
@@ -150,8 +92,8 @@
       "title": "DOGE Aims for Breakout, SHIB, AKITA Scramble for Support",
       "link": "https://beincrypto.com/doge-aims-for-breakout/",
       "pubDate": "2021-05-25T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "DOGE has been following a descending resistance line since reaching an ATH price on May 8. It is currently making its fourth breakout attempt.",
       "currencies": [
@@ -164,28 +106,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @BlockchainBoyy: TheBlockchainBoy X @ThetaDrop exclusive #NFTs Coming this summer. #THETA #TFUEL #NFT @Theta_Network",
-      "link": "NULL",
-      "pubDate": "2021-05-25T17:58:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Ripple Adds NFT Support on XRP Ledger to Minimize Gas Fees",
       "link": "https://beincrypto.com/ripple-adds-nft-support-to-minimize-gas-fees/",
       "pubDate": "2021-05-25T17:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Ripple announced today its next step toward reducing gas fees and minting costs for NFTs on the XRP Ledger.",
       "currencies": [
@@ -199,23 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "GTN and XLM could be in for a tough fight in 2021. This at a time when crypto investors are, keeping a close watch…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T17:37:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "GTN"
-      ]
-    },
-    {
       "title": "DFINITY launches $200M+ developer grant program for the ‘Internet Computer’ ecosystem",
       "link": "https://www.cryptoninjas.net/2021/05/25/dfinity-launches-200m-developer-grant-program-for-the-internet-computer-ecosystem/",
       "pubDate": "2021-05-25T17:29:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » DFINITY launches $200M+ developer grant program for the ‘Internet Computer’ ecosystem The DFINITY Foundation, a not-for-profit organization created to build, promote, and maintain the ‘Internet Computer’ a public computing platform powered by blockchain, today announced the launch of the Internet Computer Developer Ecosystem Program to support network development. For...",
       "currencies": [
@@ -228,22 +141,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Mogwais to the Moon #NFTs in the #Polkadot Ecosystem @SwissGames @polkastarter",
-      "link": "NULL",
-      "pubDate": "2021-05-25T17:26:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
       "title": "Fundstrat’s Tom Lee On Why Bitcoin Can Exit The Year Over $100k Despite Being In The “Penalty Box”",
       "link": "https://zycrypto.com/fundstrats-tom-lee-on-why-bitcoin-can-exit-the-year-over-100k-despite-being-in-the-penalty-box/",
       "pubDate": "2021-05-25T17:15:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "It has been a bloody period for Bitcoin after the crypto started experienced some market troubles after reaching a new all-time high above $65k. The decision of Tesla to suspend bitcoin payments and the company’s CEO Elon Musk tweeting against Bitcoin’s power consumption while supporting Dogecoin have added to the pressure. As a result, BTC’s […]",
       "currencies": [
@@ -257,23 +159,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Which other network bridge would you like to see on Supra Bridges?",
-      "link": "NULL",
-      "pubDate": "2021-05-25T16:32:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "You can now buy or sell property in New York City with BTC, DOGE, and ETH",
       "link": "https://finbold.com/you-can-now-buy-or-sell-property-in-new-york-city-with-btc-doge-and-eth/",
       "pubDate": "2021-05-25T15:14:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "New York-based real estate brokerage firm Algocap Real Estate has announced it will start accepting cryptocurrencies like bitcoin, dogecoin, and... Continue reading",
       "currencies": [
@@ -291,8 +181,8 @@
       "title": "XRP Price Surges 10%, Crypto Influencer Says $XRP Is Going to $10",
       "link": "https://www.cryptoglobe.com/latest/2021/05/xrp-price-surges-10-crypto-influencer-says-xrp-is-going-to-10/",
       "pubDate": "2021-05-25T15:14:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "On Tuesday (May 25), on crypto exchange Bitstamp, the XRP price reached its intraday high of $1.06 at 00:40 UTC. Currently (as of 14:45 UTC), XRP is trading around $0.9452, up 10% in the past 24-hour period. As for the year-to-date period, XRP is up 330% vs USD. As you can see in the above […]",
       "currencies": [
@@ -304,22 +194,11 @@
       }
     },
     {
-      "title": "Kudos to the @etherisc's team! inSure #DeFi community fully supports the vision and work done by this project! Keep…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T15:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
       "title": "Formation Fi to Launch Cross-Chain AMM on Polygon",
       "link": "https://cryptobriefing.com/formation-fi-to-launch-cross-chain-amm-on-polygon/",
       "pubDate": "2021-05-25T14:57:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "layer2",
       "currencies": [
         "MATIC"
@@ -331,22 +210,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "️ Community votes STP 10: Responsive Restorative Rebase and STP 11: Hashrate Assurance Lock have passed! Our devs…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T14:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
       "title": "Ripple Joins Top Crypto Exchanges in Shifting 238 Million XRP",
       "link": "https://u.today/ripple-joins-top-crypto-exchanges-in-shifting-238-million-xrp",
       "pubDate": "2021-05-25T12:47:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Ripple fintech decacord has helped several major crypto trading venues to transfer almost 240 million XRP, while XRP-friendly Bybit bans access to Chinese clients",
       "currencies": [
@@ -359,44 +227,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#Cryptocurrency industry development must not be about fast enrichment only. Evolution happens during tough times.…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T11:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "Tokens for Alchemy BSC will be auctioned starting at $2 USD a token and going down slowly until all are sold. Token…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T11:40:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
-      "title": "We would like to announce Alchemy on @BinanceChain smartchain! Alchemy now allows users to easily create their own…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T11:39:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
       "title": "Dogecoin (DOGE) Mocked by IOTA Foundation's Dominik Schiener, Here's Why",
       "link": "https://u.today/dogecoin-doge-mocked-by-iota-foundations-dominik-schiener-heres-why",
       "pubDate": "2021-05-25T11:38:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "As Elon Musk refuses to dive deeply into Ethereum, Cardano and Solano, IOTA Foundation co-founder Dominik Schiener revealed surprising advance of IOTA",
       "currencies": [
@@ -414,8 +249,8 @@
       "title": "Tether’s market cap tops US$60B despite crypto outflows",
       "link": "https://forkast.news/tethers-market-cap-tops-us60b-despite-crypto-outflows/?utm_source=rss&utm_medium=rss&utm_campaign=tethers-market-cap-tops-us60b-despite-crypto-outflows",
       "pubDate": "2021-05-25T11:34:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "Despite recent outflows from crypto, U.S. dollar-linked stablecoin Tether (USDT) has surpassed US$60 billion for the first time this week.",
       "currencies": [
@@ -431,8 +266,8 @@
       "title": "HashEx Identifies Critical Vulnerability In Code of SafeMoon DeFi Project",
       "link": "https://bitcoinist.com/hashex-identifies-critical-vulnerability-in-code-of-safemoon-defi-project/?utm_source=rss&utm_medium=rss&utm_campaign=hashex-identifies-critical-vulnerability-in-code-of-safemoon-defi-project",
       "pubDate": "2021-05-25T11:16:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "defi",
       "description": "A slew of critical vulnerabilities has recently been identified by the developers at DeFi security provider HashEx when examining the code of the SafeMoon DeFi project. The identified issues are so severe that users are being warned to stay away from the protocol for fear of losing their funds. As reported in a press release […]",
       "currencies": [
@@ -445,36 +280,12 @@
       "sentiment": "bearish"
     },
     {
-      "title": "CoinEx will delist $PAX $DAI $TUSD on CoinEx Details",
-      "link": "NULL",
-      "pubDate": "2021-05-25T11:10:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "CET",
-        "PAX"
-      ]
-    },
-    {
-      "title": "RT @vkholostenko: Looking forward to seeing you at Building Substrate Standalone Chain vs a Parachain, you can share your questions here fo…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T11:05:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ]
-    },
-    {
       "title": "HashEx: 20 Million Users Might Be Threatened by SafeMoon’s Critical Vulnerabilities",
       "link": "https://www.newsbtc.com/news/company/hashex-20-million-users-might-be-threatened-by-safemoons-critical-vulnerabilities/",
       "pubDate": "2021-05-25T11:05:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "The SafeMoon DeFi protocol is the latest project to have vulnerabilities revealed in its smart contract code. A recent audit conducted by analysts from HashEx, a blockchain security consulting firm, has revealed that 12 critical vulnerabilities are placing the funds of over 20 million users and the protocol with over $3.5 billion in market capitalization […]",
       "currencies": [
         "SAFEMOON"
@@ -489,9 +300,9 @@
       "title": "The Internet Computer (ICP) Responds To Criticism",
       "link": "https://bitcoinist.com/the-internet-computer-icp-responds-to-criticism/?utm_source=rss&utm_medium=rss&utm_campaign=the-internet-computer-icp-responds-to-criticism",
       "pubDate": "2021-05-25T10:34:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "As the last project to capture the crypto ecosystem’s imagination before the recent bloodbath, there are many interesting things about the Internet Computer. A recent report made a compelling case against it, though. And now it’s time for the Dfinity Foundation to indirectly respond and explain. How will that work? Continue to find out. This […]",
       "currencies": [
         "ICP"
@@ -503,22 +314,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "The word is out already. #EFFORCE first industrial client is a global brand in one of the most energy intensive and…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T08:46:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Tesla CEO Elon Musk Explains Why He Favors Dogecoin ($DOGE) Over Other Altcoins",
       "link": "https://www.cryptoglobe.com/latest/2021/05/tesla-ceo-elon-musk-explains-why-he-favors-dogecoin-doge-over-other-altcoins/",
       "pubDate": "2021-05-25T08:32:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On Monday (May 24), Tesla and Space X CEO Elon Musk commented once again on Dogecoin ($DOGE), which has to be his favourite cryptocurrency based on how often he talks about it. He started by sending a tweet to invite people to suggest improvements for Dogecoin on GitHub and Reddit, and gave an example of […]",
       "currencies": [
@@ -534,8 +334,8 @@
       "title": "Elon Musk Reveals Why He’s Backing Dogecoin Over Bitcoin, Ethereum And Others After His Surprise Call For Upgrade ‘Ideas’ Sends Its Price Sharply Higher",
       "link": "https://www.forbes.com/sites/billybambrough/2021/05/25/elon-musk-reveals-why-hes-backing-dogecoin-over-bitcoin-ethereum-and-others-after-surprise-call-for-upgrade-ideas-sends-its-price-sharply-higher/",
       "pubDate": "2021-05-25T07:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Elon Musk, the Tesla﻿﻿ chief executive that has sent the bitcoin price on a roller coaster this year, has continued his potentially ironic support of the \"joke\" bitcoin rival dogecoin...",
       "currencies": [
@@ -553,8 +353,8 @@
       "title": "Litecoin Surges 21%, Analyst Says $LTC Could Hit $1000 in Current Bull Market",
       "link": "https://www.cryptoglobe.com/latest/2021/05/litecoin-surges-21-analyst-says-ltc-could-hit-1000-in-current-bull-market/",
       "pubDate": "2021-05-25T06:03:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Recently, popular pseudo-anonymous crypto analyst and influencer “Coin Bureau” (“@coinbureau” on Twitter) talked about “one of the oldest serving alt coins on the market.” In a YouTube video (titled: “Litecoin: Is LTC Seriously Underrated? My Take!!”) released on May 18, he explained what Litecoin is, how it works, Litecoin’s upcoming privacy support, analysed $LTC’s price action, […]",
       "currencies": [
@@ -570,8 +370,8 @@
       "title": "Elon Musk Asks Followers to Submit Dogecoin Development Ideas",
       "link": "https://u.today/elon-musk-asks-followers-to-submit-dogecoin-development-ideas",
       "pubDate": "2021-05-25T05:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Elon Musk is determined to fix Dogecoin, and he needs your help",
       "currencies": [
@@ -587,9 +387,9 @@
       "title": "Concerns About Internet Computer (ICP)? Here’s What We Know",
       "link": "https://bitcoinist.com/concerns-about-internet-computer-icp-heres-what-we-know/?utm_source=rss&utm_medium=rss&utm_campaign=concerns-about-internet-computer-icp-heres-what-we-know",
       "pubDate": "2021-05-25T04:05:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "It happened a few weeks ago, even though it seems further back. A new cryptocurrency few had heard about forced its way into Coinmarketcap’s Top10 in record time. In the middle of an overcrowded bull market, Internet Computer (ICP) was the talk of the town for a few days. The coin debuted with listings in most […]",
       "currencies": [
         "ETH",
@@ -602,44 +402,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Qi Zhou, CEO of QuarkChain, gave a talk at the University of Washington to Introduction to Cryptocurrency! You can…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T02:55:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "Hi Elon, ever heard of the Standard Hashrate Group @BTCST2020, which has standardized hashrate globally from clean…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T02:44:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "The first #Techweek2021 event set off to a great start  The room was full at our meetup yesterday. So much passion…",
-      "link": "NULL",
-      "pubDate": "2021-05-25T00:57:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
       "title": "XRP community demands ‘seat at the table!’ What are the Ripple effects?",
       "link": "https://ambcrypto.com/xrp-community-demands-seat-at-the-table-what-are-the-ripple-effects/",
       "pubDate": "2021-05-25T00:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "The ‘Ripple v. SEC’ lawsuit, to a certain extent, has been fueling volatility in the already erratic XRP market. In fact, there have been varied predictions about the positive and the negative impact the outcome of the lawsuit could bring. However, the most impacted by the result will likely be XRP holders. Ripple and the […]",
       "currencies": [

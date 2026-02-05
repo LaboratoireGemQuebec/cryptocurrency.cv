@@ -1,75 +1,15 @@
 {
   "date": "2023-10-10",
-  "fetchedAt": "2026-02-05T07:45:52.128Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.533Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "10 Privacy Coins Under $1 To Help Diversify Your Crypto Investments",
-      "link": "NULL",
-      "pubDate": "2023-10-10T23:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "LDO falls below $1.6 again; why a bullish relief is nowhere in sight",
-      "link": "NULL",
-      "pubDate": "2023-10-10T22:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "How MakerDAO plans to beat the market",
-      "link": "NULL",
-      "pubDate": "2023-10-10T21:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "What is Tezos (XTZ)?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T21:08:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Tezos pumps +10% in 24 hours – Will the bullish momentum extend?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T20:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XTZ"
-      ]
-    },
     {
       "title": "This Market Pundit Has 20 Reasons To Be Extremely Bullish On Ripple’s XRP Price Prospects",
       "link": "https://zycrypto.com/this-market-pundit-has-20-reasons-to-be-extremely-bullish-on-ripples-xrp-price-prospects/",
       "pubDate": "2023-10-10T20:09:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "A renowned analyst in the crypto community has listed a multitude of reasons why he thinks the future of the XRP token is insanely bright.",
       "currencies": [
@@ -81,45 +21,11 @@
       }
     },
     {
-      "title": "Ethereum Plunge Drives Liquidation Above $30 Million, More Pain To Come?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T20:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "BCH",
-        "HT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Binance CEO’s Risky Bet: $1 Billion Rescue Fund Crashes",
-      "link": "NULL",
-      "pubDate": "2023-10-10T20:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "BUSD",
-        "FTT"
-      ]
-    },
-    {
       "title": "Is a price correction imminent for Ethereum",
       "link": "https://ambcrypto.com/is-a-price-correction-imminent-for-ethereum/",
       "pubDate": "2023-10-10T19:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Social discussions around Ethereum have climbed to their highest since February. While this accompanied by growing bearish sentiments often precedes a price rally, Ether might not be properly positioned for the same at the moment.",
       "currencies": [
@@ -132,82 +38,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Tether Continues To Flow Into Exchanges: Why This Is Bullish For Bitcoin",
-      "link": "NULL",
-      "pubDate": "2023-10-10T19:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Crypto Exchange Binance To List New Low-Cap Altcoin Project Built on Cosmos (ATOM)",
-      "link": "NULL",
-      "pubDate": "2023-10-10T18:41:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Is Binance's $1B Crypto Recovery Fund A Gigantic Fizzle?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T18:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Ripple XRP Price Prediction: Tradecurve Markets Surges 200%, As Apecoin Forms A Bullish Pattern",
-      "link": "NULL",
-      "pubDate": "2023-10-10T18:09:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XRP",
-        "APE"
-      ]
-    },
-    {
-      "title": "Why Developers Should Seriously Consider Building on EOS EVM with v0.6.0 Release",
-      "link": "NULL",
-      "pubDate": "2023-10-10T17:47:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Caroline Ellison tells court that SBF directed her to commit crimes",
-      "link": "NULL",
-      "pubDate": "2023-10-10T17:40:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
       "title": "Jim Cramer thinks ‘Mr. Bitcoin is about to go down big’",
       "link": "https://www.theblock.co/post/255712/jim-cramer-thinks-mr-bitcoin-is-about-to-go-down-big?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-10-10T17:17:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "CNBC's loudest financial advisor appears frustrated by the current investment landscape and thinks bitcoin is of no interest.",
       "currencies": [
@@ -223,8 +58,8 @@
       "title": "Is Ripple Due for a God Candle? Realistic XRP Price Prediction",
       "link": "https://cryptopotato.com/is-ripple-due-for-a-god-candle-realistic-xrp-price-prediction/",
       "pubDate": "2023-10-10T16:17:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "According to EGRAG CRYPTO, XRP might spike above $1.10 at the beginning of 2024 should it overcome some key resistance levels.",
       "currencies": [
@@ -236,23 +71,11 @@
       }
     },
     {
-      "title": "Binance Liquid Swap to Delist Ripple (XRP) Pair as Transactions Decline to 2023 Lows",
-      "link": "NULL",
-      "pubDate": "2023-10-10T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "BUSD"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Struggles To Stay Above $0.26: What This Means For Traders",
       "link": "https://www.newsbtc.com/news/cardano-ada-nearing-multi-month-support-of-0-24-what-this-means-for-traders/",
       "pubDate": "2023-10-10T16:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Cardano (ADA) has been grappling with maintaining its position above the recently reclaimed $0.26 threshold, signaling the possibility of a bull trap. The cryptocurrency’s price has retraced below this critical level, raising concerns of accelerated selling momentum that could potentially drive ADA toward the multi-month support level at $0.2. As of the latest data from CoinGecko, the current...",
       "currencies": [
@@ -267,57 +90,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Binance to List Neutron (NTRN) with Seed Tag to Enable Mainstream Adoption of Interoperable Smart Contracts",
-      "link": "NULL",
-      "pubDate": "2023-10-10T15:58:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Monero (XMR) price forms a symmetrical triangle pattern",
-      "link": "NULL",
-      "pubDate": "2023-10-10T15:32:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Biggest Movers: MATIC Drops to 10-Day Low, ATOM Rebounds From Key Support Level",
-      "link": "NULL",
-      "pubDate": "2023-10-10T15:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Polkadot unable to reclaim $4: Time to short?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T14:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
       "title": "Cardano Top Wallet Gets Major Upgrade With New Release",
       "link": "https://u.today/cardano-top-wallet-gets-major-upgrade-with-new-release",
       "pubDate": "2023-10-10T14:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Lace light wallet platform has gone through multiple upgrades since its April 2023 launch",
       "currencies": [
@@ -329,22 +106,11 @@
       }
     },
     {
-      "title": "APE Investors Disheartened as Its Price Dips 97% From ATH",
-      "link": "NULL",
-      "pubDate": "2023-10-10T14:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
       "title": "AI forecasts SHIB price for the start of 2024",
       "link": "https://finbold.com/ai-forecasts-shib-price-for-the-start-of-2024/",
       "pubDate": "2023-10-10T13:52:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As geopolitical uncertainties escalate, much of the cryptocurrency market has responded by turning red, including Shiba Inu (SHIB), but artificial … Continued",
       "currencies": [
@@ -357,46 +123,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Edges Higher; Tezos Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-10-10T13:31:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Litecoin (LTC) Smashes Historic New Milestone: Details",
-      "link": "NULL",
-      "pubDate": "2023-10-10T13:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "ALGO Could Rally Significantly During the Bull Market: Influencer",
-      "link": "NULL",
-      "pubDate": "2023-10-10T12:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
       "title": "Ripple moves 60m tokens from October unlock; Will it impact XRP?",
       "link": "https://finbold.com/ripple-moves-60m-tokens-from-october-unlock-will-it-impact-xrp/",
       "pubDate": "2023-10-10T11:59:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Ripple moved 60 million XRP ($30 million) on October 9, from the 200 million kept from this month’s 1 billion … Continued",
       "currencies": [
@@ -409,44 +140,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Hacken and Radix Join Forces for More Secure Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-10-10T11:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRD"
-      ]
-    },
-    {
-      "title": "Ethereum-Based Altcoin Explodes 40% in 24 Hours As Crypto Whale Rapidly Accumulates: On-Chain Data",
-      "link": "NULL",
-      "pubDate": "2023-10-10T11:45:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Tezos (XTZ) Shows 937% Increase in Volume as Price Jumps; Here's Why",
-      "link": "NULL",
-      "pubDate": "2023-10-10T11:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
       "title": "Ethereum’s bull run at risk? Inside ETH whales’ $8 billion sell-off",
       "link": "https://finbold.com/ethereums-bull-run-at-risk-inside-eth-whales-8-billion-sell-off/",
       "pubDate": "2023-10-10T11:23:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Ethereum (ETH), the second-largest cryptocurrency by market cap, has been at the forefront of the crypto bull run, amassing significant … Continued",
       "currencies": [
@@ -458,55 +156,11 @@
       }
     },
     {
-      "title": "Ripple Rival Quant (QNT) Presents Innovative Blockchain Solution for Banks",
-      "link": "NULL",
-      "pubDate": "2023-10-10T11:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Litecoin Falls And Approaches Its Previous Low Of $53",
-      "link": "NULL",
-      "pubDate": "2023-10-10T10:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Tezos Jumps 7% on South Korean Volume Spike, Futures Liquidations",
-      "link": "NULL",
-      "pubDate": "2023-10-10T10:05:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "LUNC Token Nosedives to a 30-Day Low as Market Eyes Token Burn",
-      "link": "NULL",
-      "pubDate": "2023-10-10T10:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "The war in Israel escalates; How will crypto market react?",
       "link": "https://finbold.com/the-war-in-israel-escalates-how-will-crypto-market-react/",
       "pubDate": "2023-10-10T08:47:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "After the long-standing conflict in the Middle East took an unprecedented turn with the massive terrorist attack on Israeli soil, … Continued The post The war in Israel escalates; How will crypto market react? appeared first on Finbold.",
       "currencies": [
@@ -517,170 +171,6 @@
         "negative": 5
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Tezos (XTZ) Makes an Impressive Comeback to Top 50 – What’s Next for the Price?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T08:43:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "ATOM may be the token of the hour and Cosmos’ efforts could be why",
-      "link": "NULL",
-      "pubDate": "2023-10-10T08:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 10 Oct: Crypto slide amid Israel-Hamas conflict",
-      "link": "NULL",
-      "pubDate": "2023-10-10T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "SHIB",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "HTX Recovers $8 Million Post Exploit, 250 $ETH Bounty Awarded",
-      "link": "NULL",
-      "pubDate": "2023-10-10T07:10:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Binance Removing XRP, FTM And 10 Other Liquidity Pools",
-      "link": "NULL",
-      "pubDate": "2023-10-10T06:45:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XRP",
-        "MANA",
-        "FTM"
-      ]
-    },
-    {
-      "title": "DOT’s struggle to wrestle the bears may intensify in Q4 and this is why",
-      "link": "NULL",
-      "pubDate": "2023-10-10T05:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Tether Gold, Other Bullion-Backed Cryptos Show Strong Performance Amid Israel-Hamas War",
-      "link": "NULL",
-      "pubDate": "2023-10-10T04:34:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Toncoin [TON] extends retracement — More shorting gains likely?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T04:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Israeli Web3 Community Establishes Crypto Aid Fund for Humanitarian Support",
-      "link": "NULL",
-      "pubDate": "2023-10-10T03:55:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "AAVE holders may have much to celebrate as this detail comes to light",
-      "link": "NULL",
-      "pubDate": "2023-10-10T01:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 09 Oct: Cryptocurrency market in turmoil",
-      "link": "NULL",
-      "pubDate": "2023-10-10T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "LTC",
-        "XTZ",
-        "GALA"
-      ]
-    },
-    {
-      "title": "XRP Is A Better Buy Now Than H1 2023: What’s Keeping Prices Low?",
-      "link": "NULL",
-      "pubDate": "2023-10-10T01:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "TWT"
-      ]
-    },
-    {
-      "title": "Tron’s 5% pullback may not discourage TRX’s bullish stride for this reason",
-      "link": "NULL",
-      "pubDate": "2023-10-10T00:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
     }
   ]
 }

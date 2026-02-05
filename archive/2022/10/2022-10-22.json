@@ -1,26 +1,15 @@
 {
   "date": "2022-10-22",
-  "fetchedAt": "2026-02-05T07:45:53.004Z",
-  "articleCount": 21,
+  "fetchedAt": "2026-02-05T07:48:35.615Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @ceekvr: Congrats to @WeAreMKTO on 1 BILLION streams of #Classic Join @therealmalcolm &amp; @FollowOller in this rare CEEK live #virtualconc…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T19:25:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
     {
       "title": "Shiba Inu Price Prediction – Is SHIB Preparing for a Breakout?",
       "link": "https://cryptonews.com/news/shiba-inu-price-prediction-is-shib-preparing-for-breakout.htm",
       "pubDate": "2022-10-22T18:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "Shiba Inu price prediction will likely remain bearish unless it breaks above the $0.0000101 level. On October 22, the SHIB/USD pair opened the day at $0.00001002. It has ranged between a high of $0.00001007 and a low of $0.00000992. Shiba Inu is gaining traction following the announcement that SHIB token holders can now pay for Netflix streaming service subscriptions and Amazon purchases...",
       "currencies": [
@@ -36,8 +25,8 @@
       "title": "Expert Cryptographer and XRP Ledger (XRPL) Legend Nik Bougalis is Leaving Ripple",
       "link": "https://www.cryptoglobe.com/latest/2022/10/expert-cryptographer-and-xrp-ledger-xrpl-legend-nik-bougalis-is-leaving-ripple/",
       "pubDate": "2022-10-22T18:56:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On Friday (October 21), Cryptographer and software engineer Nik Bougalis, who is currently Director of Engineering at Ripple, announced that he is leaving the Californian FinTech firm in a few weeks. Bougalis, who has been working on the XRP Ledger (XRPL) for around 10 years, took to Twitter to say: “My decade-long journey at @Ripple […]",
       "currencies": [
@@ -52,8 +41,8 @@
       "title": "Shiba Inu ($SHIB) HODLers’ Median Hold time on Coinbase Nears 200 Days",
       "link": "https://www.cryptoglobe.com/latest/2022/10/shiba-inu-shib-hodlers-median-hold-time-on-coinbase-nears-200-days/",
       "pubDate": "2022-10-22T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The median time that users on Coinbase hold onto the meme-inspired cryptocurrency Shiba Inu ($SHIB) before either selling it or moving it to an external address is now reaching the 200-day mark. According to data from Coinbase’s price pages, the typical hold time for Shiba Inu investors on the platform is now 198 days, above […]",
       "currencies": [
@@ -66,50 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin breakout imminent ahead of key macro events-filled week",
-      "link": "NULL",
-      "pubDate": "2022-10-22T15:43:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin (BTC) is still looking for a trigger to break past the $20,000 level, having consolidated around the zone for... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 10,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Guess which oracle network is featured in this piece from @realcoincentral? That's right, #XYO!…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T15:02:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Logo competition ends winners will be announced soon. Thanks to all the artists for their generous contributions.",
-      "link": "NULL",
-      "pubDate": "2022-10-22T14:23:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WHITE"
-      ]
-    },
-    {
       "title": "Cardano Founder Pokes Fun at Ethereum Classic, Here's What Happened",
       "link": "https://u.today/cardano-founder-pokes-fun-at-ethereum-classic-heres-what-happened",
       "pubDate": "2022-10-22T13:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Ethereum Classic project Twitter account mired in controversy",
       "currencies": [
@@ -123,61 +73,11 @@
       }
     },
     {
-      "title": "Did you know that Gamma has been live for weeks and it’s composed of only stablecoins across 3 chains? Gamma is the…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T12:58:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "RT @ParleyLabs: Kicking off the @freshbrewedtech @cityofescondido #AgTech hackathon with @NealBloom. Excited to bring more smart farming so…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T12:45:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Billionaire F. Giustra hails Bitcoin as ‘anti-sovereign fiat play’ and CBDCs competitor",
-      "link": "NULL",
-      "pubDate": "2022-10-22T12:15:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Frank Giustra, the CEO of investment management firm Fiore Group, has suggested that the growth of Bitcoin (BTC) poses a... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 10,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @_cryptocurrent_: Did you listen to our VIP Market Leader, @RequestNetwork podcast episode? You should! We had a great discussion on man…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T11:11:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "Number of Dogecoin holders spike in October, adding almost 100,000 in 3 months",
       "link": "https://finbold.com/number-of-dogecoin-holders-spike-in-october-adding-almost-100000-in-3-months/",
       "pubDate": "2022-10-22T10:04:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Meme cryptocurrency Dogecoin (DOGE) is still struggling with an extended downward price movement, a factor that has cast doubt on... Continue reading",
       "currencies": [
@@ -188,99 +88,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @draper_u: It's almost time for @Neo_Blockchain Demo Day! Come see new and established projects in the Neo blockchain ecosystem! This is…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T09:41:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO",
-        "GAS"
-      ]
-    },
-    {
-      "title": "Proud to be the leader in blockchain technology in Vietnam and Southeast Asia. KardiaChain's mission is to break do…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T09:07:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "Sending payments should be as simple as sending an email and yet international payments can still take days to proc…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T09:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 131 – The News in #DeFi",
-      "link": "NULL",
-      "pubDate": "2022-10-22T05:45:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @CryptoHallmark: DAILY #Crypto MARKET UPDATE: 21st October 2022️ Top #Gainers:: $TON $CSPR $KLAY $LDO $QNT New #ATH:: $OXB $ESNC $SD…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T03:19:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "LDO",
-        "CSPR",
-        "SDAO"
-      ]
-    },
-    {
-      "title": "JUST IN: $AXS @axieinfinity flipped $LINK for MOST TRADED token among top 500 #ETH whales Peep the top 100 whale…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T02:46:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LINK",
-        "AXS",
-        "BBW"
-      ]
-    },
-    {
-      "title": "We are very excited to declare that @thewastedlands is officially partnering with @playWAM to organize more tourna…",
-      "link": "NULL",
-      "pubDate": "2022-10-22T02:42:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAL"
-      ]
-    },
-    {
-      "title": "DAO Proposal: SPS Brawl Rewards",
-      "link": "NULL",
-      "pubDate": "2022-10-22T00:05:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
     }
   ]
 }

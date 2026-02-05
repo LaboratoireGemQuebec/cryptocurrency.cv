@@ -1,27 +1,15 @@
 {
   "date": "2024-02-11",
-  "fetchedAt": "2026-02-05T07:45:53.375Z",
-  "articleCount": 27,
+  "fetchedAt": "2026-02-05T07:48:35.652Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Playdapp Breach: Hacker Mints Tokens Worth $31 Million, Gaming Platform Offers Reward for Silence",
-      "link": "NULL",
-      "pubDate": "2024-02-11T23:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PLA"
-      ]
-    },
     {
       "title": "Shiba Inu On Cusp Of Lunar Launch As 1.3 Trillion SHIB Barrier On Crosshair",
       "link": "https://www.newsbtc.com/news/shiba-inu-on-cusp-of-lunar-launch-as-1-3-trillion-shib-barrier-on-crosshair/",
       "pubDate": "2024-02-11T22:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Shiba Inu (SHIB), the self-proclaimed “Dogecoin Killer,” is wagging its tail with anticipation as it approaches a critical juncture. The meme coin, known for its massive community and playful branding, is on the cusp of breaking through a key resistance level, potentially unleashing a new wave of bullish momentum. Related Reading: BONK Stays Alive In Top 100 List With 25% Single-Day Rally –...",
       "currencies": [
@@ -40,8 +28,8 @@
       "title": "Ethereum NFT volume approaching yearly high as Pudgy Penguins eye #2 spot",
       "link": "https://www.theblock.co/post/277002/ethereum-nft-volume-approaching-yearly-high-as-pudgy-penguins-eye-2-spot?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-02-11T22:24:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Will Pudgy Penguins flip Bored Apes? Either way, Ethereum NFT volume is on the rise.",
       "currencies": [
@@ -55,126 +43,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What Are The Top 5 XRP Wallets To Use?",
-      "link": "NULL",
-      "pubDate": "2024-02-11T21:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "XMR",
-        "TWT",
-        "XNO",
-        "KAS",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Bitcoin bulls chase after $50K, opening the door for IMX, KAS, TIA an STX to rally higher",
-      "link": "NULL",
-      "pubDate": "2024-02-11T20:31:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX",
-        "IMX",
-        "KAS",
-        "TIA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "How is Pyth Network doing since Binance’s listing?",
-      "link": "NULL",
-      "pubDate": "2024-02-11T20:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Best Three Cryptos to Buy in February 2024: Kaspa (KAS), Chainlink (LINK), and NuggetRush (NUGX)",
-      "link": "NULL",
-      "pubDate": "2024-02-11T19:42:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "KAS",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Pullix (PLX) Surges in Price Ahead of April Launch While Cardano (ADA) and Cosmos (ATOM) Navigate Price Declines",
-      "link": "NULL",
-      "pubDate": "2024-02-11T19:26:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – BEAM, KAS, XMR, FXS",
-      "link": "NULL",
-      "pubDate": "2024-02-11T18:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR",
-        "FXS",
-        "KAS",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "How an XRP ETF Could Unleash the Full Potential of XRP",
-      "link": "NULL",
-      "pubDate": "2024-02-11T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Gaming Platform PlayDapp Suffers $31 Million Hack – Details",
-      "link": "NULL",
-      "pubDate": "2024-02-11T17:20:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PLA"
-      ]
-    },
-    {
       "title": "Ark 21Shares' Bitcoin ETF Crosses $1 Billion: A Big Win for Crypto Investment",
       "link": "https://coinpaprika.com/news/ark-21shares-bitcoin-etf-crosses-1-billion-a-big-win-for-crypto-investment/",
       "pubDate": "2024-02-11T17:09:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Ark 21Shares' Bitcoin ETF hits $1B, marking a milestone in crypto investment growth.",
       "currencies": [
@@ -187,105 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Mantra, Kaspa price surges as Bitbot token sale hits $507k",
-      "link": "NULL",
-      "pubDate": "2024-02-11T15:50:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS",
-        "OM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Dai (DAI) & Dogecoin (DOGE) move into DeeStream (DST) platform as investors see the gap in the market",
-      "link": "NULL",
-      "pubDate": "2024-02-11T15:48:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Can Aave (AAVE) and BNB (BNB) Charts Catch Up with Kelexo's (KLXO) Phenomenal Performance?",
-      "link": "NULL",
-      "pubDate": "2024-02-11T15:37:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BNB",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Nabla Finance’s Incentive Program: A Million Reasons to Engage",
-      "link": "NULL",
-      "pubDate": "2024-02-11T15:10:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PYTH"
-      ]
-    },
-    {
-      "title": "What Is Sui (SUI) Network?",
-      "link": "NULL",
-      "pubDate": "2024-02-11T15:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "KAS",
-        "SUI",
-        "SEI"
-      ]
-    },
-    {
-      "title": "dYdX Community Takes a Bold Step Towards Greater Inclusivity",
-      "link": "NULL",
-      "pubDate": "2024-02-11T14:56:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash (BCH) holders are selling out, while DeeStream (DST) presale takes big investments from Monero (XMR) holders post-Binance exit",
-      "link": "NULL",
-      "pubDate": "2024-02-11T14:18:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XMR",
-        "BCH"
-      ]
-    },
-    {
       "title": "SHIB Community Stunned by Elon Musk AI Bot Grok Revelation on Shibarium",
       "link": "https://u.today/shib-community-stunned-by-elon-musk-ai-bot-grok-revelation-on-shibarium",
       "pubDate": "2024-02-11T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shibarium has surpassed 341 million mark in its total transactions",
       "currencies": [
@@ -297,77 +76,11 @@
       }
     },
     {
-      "title": "Bitcoin to $240K, Monero Plummets, El Salvador Supports Bitcoin, and More — Week in Review",
-      "link": "NULL",
-      "pubDate": "2024-02-11T13:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Binance Drops Monero",
-      "link": "NULL",
-      "pubDate": "2024-02-11T11:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Is XRP Dead? Community Debates",
-      "link": "NULL",
-      "pubDate": "2024-02-11T09:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Solana Price Prediction as SOL Blasts Above $100 – $1,000 SOL Incoming?",
-      "link": "NULL",
-      "pubDate": "2024-02-11T08:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Network States: Crypto-Powered Communities",
-      "link": "NULL",
-      "pubDate": "2024-02-11T07:53:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
       "title": "Chainlink whales step up accumulation – What next for LINK prices",
       "link": "https://ambcrypto.com/chainlink-whales-step-up-accumulation-what-next-for-link-prices/",
       "pubDate": "2024-02-11T04:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "The price of Chainlink has been stuck in a particular range recently, but its trend remains strong.",
       "currencies": [
@@ -383,8 +96,8 @@
       "title": "Low-Cap Altcoin Surges More Than 40% in 24 Hours Amid Efforts To Pivot to a Privacy-Centric Ethereum Layer-2",
       "link": "https://dailyhodl.com/2024/02/10/low-cap-altcoin-surges-more-than-40-in-24-hours-amid-efforts-to-pivot-to-a-privacy-centric-ethereum-layer-2/",
       "pubDate": "2024-02-11T01:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A small-cap altcoin is surging 40% as it upgrades to a privacy-focused Ethereum (ETH) layer-2 (L2) blockchain. In a recent article, the development team behind the decentralized payments platform Coti (COTI) says that it has successfully upgraded the project to become a privacy-centric layer-2 (L2) for the second-largest digital asset by market cap. “Upgrading COTI […]",
       "currencies": [

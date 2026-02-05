@@ -1,44 +1,28 @@
 /**
  * Metrics Endpoint
  * 
- * Provides API usage metrics:
- * - Request counts
- * - Error rates
- * - Response times
- * - Rate limit stats
+ * Provides comprehensive API usage metrics:
+ * - Request counts by endpoint, method, status
+ * - Response times (avg, p95, p99)
+ * - Rate limit statistics with IP tracking
+ * - Error tracking by code
+ * - API key usage by tier
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
 import { ApiError } from '@/lib/api-error';
+import { getMetrics, getAllEndpointMetrics, type AggregatedMetrics } from '@/lib/api-metrics';
 
 export const runtime = 'edge';
 
-interface Metrics {
+interface MetricsResponse extends AggregatedMetrics {
   timestamp: string;
-  period: {
-    start: string;
-    end: string;
-    duration: string;
-  };
-  requests: {
-    total: number;
-    byStatus: Record<string, number>;
-    byEndpoint: Record<string, number>;
-  };
-  performance: {
+  topEndpoints?: Array<{
+    endpoint: string;
+    totalRequests: number;
     avgResponseTime: number;
-    p95ResponseTime: number;
-    p99ResponseTime: number;
-  };
-  rateLimits: {
-    totalBlocked: number;
-    topBlockedIps: Array<{ ip: string; count: number }>;
-  };
-  errors: {
-    total: number;
-    byCode: Record<string, number>;
-  };
+    errorRate: number;
+  }>;
 }
 
 /**
@@ -47,6 +31,7 @@ interface Metrics {
  * Query params:
  * - period: 1h, 24h, 7d (default: 1h)
  * - admin_key: Required for access
+ * - include_endpoints: true/false (default: false) - include per-endpoint breakdown
  */
 export async function GET(request: NextRequest) {
   // Require admin authentication
@@ -58,7 +43,7 @@ export async function GET(request: NextRequest) {
   }
 
   const period = request.nextUrl.searchParams.get('period') || '1h';
-  const now = Date.now();
+  const includeEndpoints = request.nextUrl.searchParams.get('include_endpoints') === 'true';
   
   // Calculate time window
   const windows: Record<string, number> = {
@@ -68,48 +53,30 @@ export async function GET(request: NextRequest) {
   };
   
   const windowMs = windows[period] || windows['1h'];
-  const startTime = now - windowMs;
 
   try {
-    // Fetch metrics from KV (collected by middleware/routes)
-    const [requestCountsRaw, errorCountsRaw, rateLimitBlocksRaw] = await Promise.all([
-      kv.get<Record<string, number>>('metrics:requests'),
-      kv.get<Record<string, number>>('metrics:errors'),
-      kv.get<number>('metrics:rate_limit_blocks'),
-    ]);
+    // Fetch comprehensive metrics
+    const metrics = await getMetrics(windowMs);
     
-    const requestCounts = requestCountsRaw ?? {};
-    const errorCounts = errorCountsRaw ?? {};
-    const rateLimitBlocks = rateLimitBlocksRaw ?? 0;
-
-    const metrics: Metrics = {
+    const response: MetricsResponse = {
       timestamp: new Date().toISOString(),
-      period: {
-        start: new Date(startTime).toISOString(),
-        end: new Date(now).toISOString(),
-        duration: period,
-      },
-      requests: {
-        total: Object.values(requestCounts).reduce((a, b) => a + b, 0),
-        byStatus: requestCounts,
-        byEndpoint: {}, // TODO: Implement endpoint tracking
-      },
-      performance: {
-        avgResponseTime: 0, // TODO: Implement timing tracking
-        p95ResponseTime: 0,
-        p99ResponseTime: 0,
-      },
-      rateLimits: {
-        totalBlocked: rateLimitBlocks,
-        topBlockedIps: [], // TODO: Implement IP tracking
-      },
-      errors: {
-        total: Object.values(errorCounts).reduce((a, b) => a + b, 0),
-        byCode: errorCounts,
-      },
+      ...metrics,
     };
+    
+    // Optionally include per-endpoint breakdown
+    if (includeEndpoints) {
+      const endpointMetrics = await getAllEndpointMetrics();
+      response.topEndpoints = endpointMetrics.slice(0, 20).map(ep => ({
+        endpoint: ep.endpoint,
+        totalRequests: ep.totalRequests,
+        avgResponseTime: Math.round(ep.avgResponseTime * 100) / 100,
+        errorRate: ep.totalRequests > 0 
+          ? Math.round((ep.errorCount / ep.totalRequests) * 10000) / 100 
+          : 0,
+      }));
+    }
 
-    return NextResponse.json(metrics, {
+    return NextResponse.json(response, {
       headers: {
         'Cache-Control': 'private, max-age=60',
       },

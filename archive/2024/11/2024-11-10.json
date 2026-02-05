@@ -1,52 +1,15 @@
 {
   "date": "2024-11-10",
-  "fetchedAt": "2026-02-05T07:45:53.621Z",
-  "articleCount": 56,
+  "fetchedAt": "2026-02-05T07:48:35.690Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Hot New Crypto Presale Hits $5 Million; How Does It Compare to Cardano and Monero?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T21:39:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Bull Run Drives Market Buzz Drives Solana and Monero’s Rising Momentum",
-      "link": "NULL",
-      "pubDate": "2024-11-10T21:27:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Stacks founder Muneeb Ali eyes early December for sBTC upgrade launch",
-      "link": "NULL",
-      "pubDate": "2024-11-10T20:49:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC",
-        "STX"
-      ]
-    },
     {
       "title": "Bitcoin is gonna rip through Wall Street on Monday morning...",
       "link": "https://x.com/BTC_Archive/status/1855709290201485316",
       "pubDate": "2024-11-10T20:29:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -58,59 +21,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Render: THIS pattern points to $10 – But can RNDR first break $6.75?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T20:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RENDER"
-      ]
-    },
-    {
-      "title": "3 Cryptocurrencies That Reached All-Time Highs Today — November 10",
-      "link": "NULL",
-      "pubDate": "2024-11-10T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SUI",
-        "NEIRO"
-      ]
-    },
-    {
-      "title": "POPCAT Faces Pressure from Emerging Memecoin CATZILLA – Expected to Break the $1 Mark by 2025",
-      "link": "NULL",
-      "pubDate": "2024-11-10T19:36:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POPCAT"
-      ]
-    },
-    {
-      "title": "Post-Election Surge: XYZVerse Primed for $10, with Cardano and Polkadot Setting Sights on $5!",
-      "link": "NULL",
-      "pubDate": "2024-11-10T19:18:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "DOT"
-      ]
-    },
-    {
       "title": "BREAKING: #Bitcoin is about to close the biggest weekly candle EVER!",
       "link": "https://x.com/BTC_Archive/status/1855688819565347020",
       "pubDate": "2024-11-10T19:07:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC",
@@ -123,49 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto market’s weekly winners and losers – NEIRO, ADA, POPCAT, MOG",
-      "link": "NULL",
-      "pubDate": "2024-11-10T19:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "MOG",
-        "POPCAT",
-        "NEIRO"
-      ]
-    },
-    {
-      "title": "This $0.0005 Token Could Turn $100 into $30,000 by 2025—Here’s Why It’s Outshining Polygon and Solana!",
-      "link": "NULL",
-      "pubDate": "2024-11-10T18:55:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Could Solcat Be the Next Popcat? Aiming to Surpass Solana Meme Hype",
-      "link": "NULL",
-      "pubDate": "2024-11-10T18:50:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "POPCAT"
-      ]
-    },
-    {
       "title": "Solana Joins $100B Club, Hitting Nearly a Three-Year High Above $210",
       "link": "https://www.coindesk.com/markets/2024/11/10/solana-joins-100b-club-hitting-nearly-a-three-year-high-above-210?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-11-10T18:10:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "The fourth largest crypto could potentially reach its 2021 record highs in the coming days given its relative strength through crypto's eight-month long consolidation phase, one analyst noted.",
       "currencies": [
@@ -178,22 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Hamster Kombat (HMSTR) Explodes 60% As Team Shares Update On Season 2",
-      "link": "NULL",
-      "pubDate": "2024-11-10T17:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
       "title": "$97 Billion and Growing: Solana’s Staggering Climb Captivates Crypto Market",
       "link": "https://news.bitcoin.com/97-billion-and-growing-solanas-staggering-climb-captivates-crypto-market/",
       "pubDate": "2024-11-10T16:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "altcoin",
       "description": "In the latest twist of crypto market action, solana (SOL) has waltzed past binance coin (BNB) this week, securing its place as the fourth largest digital asset by market cap. Solana Surges Ahead Currently, solana boasts a market cap of $97.68 billion, capturing 3.66% of the $2.67 trillion crypto economy. As of Nov. 10, SOL […]",
       "currencies": [
@@ -210,9 +76,9 @@
       "title": "Biggest Altcoin Gainers of the First Week of November 2024",
       "link": "https://beincrypto.com/biggest-altcoin-gainers-first-week-of-november/",
       "pubDate": "2024-11-10T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "The month of November started on a positive note with Bitcoin forming a new all–time high multiple times in the last few days. Capitalizing on this bullish momentum, certain altcoins also ended up registering massive rallies. BeInCrypto has analyzed this week’s top altcoin gainers, which were mostly dominated by altcoins led by First Neiro on Ethereum (NEIRO). First Neiro on Ethereum...",
       "currencies": [
         "BTC",
@@ -229,8 +95,8 @@
       "title": "\"Buy Bitcoin\" is at pre-parabolic bull market levels and rising fast.",
       "link": "https://x.com/BTC_Archive/status/1855636155972178382",
       "pubDate": "2024-11-10T15:38:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -242,67 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Pendle Team Moves Over 2M Tokens Worth $11M to Binance",
-      "link": "NULL",
-      "pubDate": "2024-11-10T15:22:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PENDLE"
-      ]
-    },
-    {
-      "title": "145% growth for Filecoin? 2 factors supporting FIL’s upside",
-      "link": "NULL",
-      "pubDate": "2024-11-10T15:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Treasure Tapper Daily Code 11 November 2024, Tap to Earn $TREZ",
-      "link": "NULL",
-      "pubDate": "2024-11-10T14:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Cats Youtube Code Today November 11, 2024: Boost Your Earnings",
-      "link": "NULL",
-      "pubDate": "2024-11-10T14:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS",
-        "TON"
-      ]
-    },
-    {
-      "title": "Tellor Price Tumbles As Whales Offload On Exchanges",
-      "link": "NULL",
-      "pubDate": "2024-11-10T14:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRB"
-      ]
-    },
-    {
       "title": "Ethereum Surpasses $3,000, Three Reasons Behind Comeback",
       "link": "https://u.today/ethereum-surpasses-3000-three-reasons-behind-comeback",
       "pubDate": "2024-11-10T14:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Ethereum has surpassed $3,100 and on track for five days of gains",
       "currencies": [
@@ -315,46 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Polymarket Teases Token Launch as Platform Looks Beyond Election Hype",
-      "link": "NULL",
-      "pubDate": "2024-11-10T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Scroll Review: Enhancing Ethereum’s Scalability with zkEVM",
-      "link": "NULL",
-      "pubDate": "2024-11-10T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SCR"
-      ]
-    },
-    {
-      "title": "Notcoin: More gains ahead? Why $0.012 is next for NOT",
-      "link": "NULL",
-      "pubDate": "2024-11-10T13:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
       "title": "Cardano Price Soars 76% — Whales Return, But Overbought Risk Looms",
       "link": "https://beincrypto.com/cardano-price-soars-whales-return/",
       "pubDate": "2024-11-10T12:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Cardano (ADA) has experienced a transformative week, marking a sharp departure from its three-month-long consolidation phase due to bearish momentum since October. Often called a “third generation cryptocurrency,” Cardano has rallied 76% this week, signaling a potential turning point for the altcoin. The renewed momentum has sparked optimism, especially as large-scale investors, or “whales,”...",
       "currencies": [
@@ -366,51 +141,11 @@
       }
     },
     {
-      "title": "Analyst Reveals Bitcoin Key Support Levels For Reaccumulation – Details",
-      "link": "NULL",
-      "pubDate": "2024-11-10T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Near plans to build world’s largest 1.4T parameter open-source AI model",
-      "link": "NULL",
-      "pubDate": "2024-11-10T12:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Altseason 2024: Why Crypto Investors Are Flocking to Ethereum and XRP Right Now!",
-      "link": "NULL",
-      "pubDate": "2024-11-10T11:57:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "NFT",
-        "RLY"
-      ]
-    },
-    {
       "title": "BREAKING: $80,000 #Bitcoin",
       "link": "https://x.com/BTC_Archive/status/1855572235118879037",
       "pubDate": "2024-11-10T11:24:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BTC_Archive",
+      "sourceKey": "btcarchive",
       "category": "bitcoin",
       "currencies": [
         "BTC"
@@ -422,37 +157,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The Future of Polygon? AggLayer Insights from Bangkok Summit",
-      "link": "NULL",
-      "pubDate": "2024-11-10T11:21:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Dogwifhat (WIF) Shines With 15% Rally In The Past Week — Is $2.8 The Next Stop?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T11:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "PEPE",
-        "WIF",
-        "ALI"
-      ]
-    },
-    {
       "title": "Cardano’s ADA Rockets 35% as Hoskinson Says He’s Helping U.S. Crypto Policy",
       "link": "https://www.coindesk.com/markets/2024/11/10/cardanos-ada-rockets-35-as-hoskinson-says-hes-helping-us-crypto-policy?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-11-10T10:29:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "ADA extended 7-day gains to 77% as Charles Hoskinson said development company Input Output will set up a policy office in the U.S.",
       "currencies": [
@@ -465,27 +174,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Polygon surges 22% in 7 days: Is $0.45 next for POL?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T09:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "ADA price pumps 30% amid rumors of Cardano founder-Trump collaboration",
       "link": "https://cointelegraph.com/news/ada-price-pumps-30-rumors-cardano-founder-trump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-11-10T08:44:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "ADA looks poised to rise by over 100% in early 2025 after breaking above a three-year-old resistance trendline.",
       "currencies": [
@@ -501,8 +194,8 @@
       "title": "Charles Hoskinson Joins Trump Administration to Shape Crypto Regulation",
       "link": "https://coinscreed.com/charles-hoskinson-joins-trump-to-shape-crypto.html",
       "pubDate": "2024-11-10T08:12:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinscreed",
+      "sourceKey": "coinscreed",
       "category": "regulation",
       "description": "Charles Hoskinson, the founder of Cardano, disclosed his intention to collaborate with the administration of former U.S. President Donald Trump in order to influence the evolution of crypto regulations. The objective is to establish unambiguous regulatory frameworks for the cryptocurrency industry, which has long been plagued by uncertainty. Charles Hoskinson’s take on Trump Administration...",
       "currencies": [
@@ -514,157 +207,13 @@
       }
     },
     {
-      "title": "Ethereum Classic bulls eye $23.8 amid short-term volatility fears",
-      "link": "NULL",
-      "pubDate": "2024-11-10T08:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Predicts Notcoin Price To Surge 76% — Here’s How",
-      "link": "NULL",
-      "pubDate": "2024-11-10T08:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "NOT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 10 November 2024: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2024-11-10T07:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA"
-      ]
-    },
-    {
-      "title": "Will Shiba Inu Price Jump Over 300%? This Analyst Thinks So",
-      "link": "NULL",
-      "pubDate": "2024-11-10T06:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "DOGE",
-        "SHIB",
-        "CRO"
-      ]
-    },
-    {
-      "title": "SushiSwap Price Prediction 2024, 2025: Will SUSHI Hit $2?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T05:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUSHI"
-      ]
-    },
-    {
-      "title": "Kadena (KDA) Price Prediction 2024, 2025, 2026-2030: Is KDA A Promising Investment For 2024?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T05:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "Kadena Price Prediction 2025, 2026 – 2030: Will KDA Price 3X This 2025?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T05:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "Chainlink 125% Target In Sight As Whale, On-Chain Activity Soar—Analyst",
-      "link": "NULL",
-      "pubDate": "2024-11-10T05:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "LINK",
-        "SNX",
-        "DUSK"
-      ]
-    },
-    {
-      "title": "Cronos (CRO) Price Explodes 47% WTD: Here’s The Real Reason",
-      "link": "NULL",
-      "pubDate": "2024-11-10T04:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "ICP Nears Key Resistance As Analysts Set Targets Up To $30",
-      "link": "NULL",
-      "pubDate": "2024-11-10T03:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano Founder Reports Crypto Advisor Role Under  Trump",
       "link": "https://coinscreed.com/cardano-founder-reports-crypto-advisor-role.html",
       "pubDate": "2024-11-10T02:58:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinscreed",
+      "sourceKey": "coinscreed",
       "category": "altcoin",
       "description": "Charles Hoskinson, Cardano founder, intends to work with the United States government to develop crypto legislation that will facilitate more transparent industry regulations. The Cardano Founder has announced his intention to work with the U.S. government under Donald Trump to assist in the development of crypto legislation. The objective is to establish unambiguous regulatory frameworks...",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 13,
-        "negative": 6
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cardano Founder Reports Crypto Advisor Role Under Trump",
-      "link": "NULL",
-      "pubDate": "2024-11-10T02:58:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Charles Hoskinson, Cardano founder, intends to work with the United States government to develop crypto legislation that will facilitate more transparent industry regulations. The Cardano Founder has announced his intention to work with the U.S. government under Donald Trump to assist in the development of crypto legislation. The objective is to establish unambiguous regulatory frameworks […] The post Cardano Founder Reports Crypto Advisor Role Under Trump appeared first on Coinscreed.",
       "currencies": [
         "ADA"
       ],
@@ -678,8 +227,8 @@
       "title": "Breaking: Cardano Founder Charles Hoskinson Confirms Crypto Advisor Role Under Donald Trump",
       "link": "https://coingape.com/cardano-founder-charles-hoskinson-confirms-crypto-advisor-role-under-donald-trump/",
       "pubDate": "2024-11-10T01:35:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "altcoin",
       "description": "Cardano Founder Charles Hoskinson has confirmed plans to collaborate with the U.S. government under Donald Trump to help shape crypto legislation. The goal is to create clear regulatory frameworks for the cryptocurrency industry, which has faced years of uncertainty and regulatory challenges. Charles Hoskinson revealed these plans during a recent address, where he emphasized the The post...",
       "currencies": [
@@ -690,79 +239,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "BRETT price prediction – Traders, should you be worried about long-term risks?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T01:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BRETT",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Solana Decentralized Exchange Altcoin Skyrockets by More Than 400% on Friday After New Exchange Listing",
-      "link": "NULL",
-      "pubDate": "2024-11-10T01:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DRIFT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Notcoin Price Rallies 25% in a Day; NOT Traders Optimism Pays Off",
-      "link": "NULL",
-      "pubDate": "2024-11-10T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Celestia Hints At Potential Breakout: Can TIA Gain Over 231%?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T00:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Reverses Tax Mechanism: LUNC to Recoup $1?",
-      "link": "NULL",
-      "pubDate": "2024-11-10T00:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "ICP’s road to $20 depends on altcoin hitting THESE milestones",
-      "link": "NULL",
-      "pubDate": "2024-11-10T00:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
     }
   ]
 }

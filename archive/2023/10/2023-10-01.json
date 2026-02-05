@@ -1,15 +1,15 @@
 {
   "date": "2023-10-01",
-  "fetchedAt": "2026-02-05T07:45:52.391Z",
-  "articleCount": 45,
+  "fetchedAt": "2026-02-05T07:48:35.556Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "SEC Has No Right to Fill Crypto’s Regulatory Gaps, Says Paradigm",
       "link": "https://beincrypto.com/sec-crypto-regulations-congress-paradigm/",
       "pubDate": "2023-10-01T23:43:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "Venture capital firm Paradigm has accused the United States Securities and Exchange Commission (SEC) of exceeding its jurisdiction in its regulation of cryptocurrencies. The firm detailed its arguments in an amicus brief as part of the lawsuit between the SEC and cryptocurrency exchange Binance. “Regulatory gaps exist in crypto, as the Chair himself has acknowledged in the past—only...",
       "currencies": [
@@ -22,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Frax Finance faces intense selling pressure as whales offload",
-      "link": "NULL",
-      "pubDate": "2023-10-01T23:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FRAX",
-        "FXS"
-      ]
-    },
-    {
       "title": "Sudden Rise in Cryptocurrencies: Bitcoin Hits $28,000, Ethereum Hits $1750!",
       "link": "https://en.bitcoinsistemi.com/sudden-rise-in-cryptocurrencies-bitcoin-hits-28000-ethereum-hits-1750/",
       "pubDate": "2023-10-01T22:33:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Bitcoin made a sharp move in the past few minutes and reached the level of $ 28,000. BTC, which recorded a 3 percent increase within minutes, caused other altcoins to rise as well. On the Ethereum side, daily gains reached 3 percent and the price rose to $ 1750. The fear and greed index is […] Continue Reading: Sudden Rise in Cryptocurrencies: Bitcoin Hits $28,000, Ethereum Hits...",
       "currencies": [
@@ -52,50 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is Polkadot Live the catalyst DOT needs for an uptrend?",
-      "link": "NULL",
-      "pubDate": "2023-10-01T22:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Will MKR witness a price correction soon?",
-      "link": "NULL",
-      "pubDate": "2023-10-01T20:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "FTX Hacker Holding $300,000,000 in Crypto Suddenly Moves Millions Worth of Assets: On-Chain Data",
-      "link": "NULL",
-      "pubDate": "2023-10-01T20:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "BNB",
-        "DAI",
-        "FTT"
-      ]
-    },
-    {
       "title": "Chainlink Secures Partnership With $670,000,000,000 Bank, As Sergey Nazarov Says SWIFT Project Going ‘Very Well’",
       "link": "https://dailyhodl.com/2023/10/01/chainlink-secures-partnership-with-670000000000-bank-as-sergey-nazarov-says-swift-project-going-very-well/",
       "pubDate": "2023-10-01T18:45:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "The decentralized oracle service Chainlink (LINK) is teaming up with lending giant Australia and New Zealand Banking Group (ANZ). According to a press release from Chainlink, ANZ participated in a case study involving the oracle’s new Cross-Chain Interoperability Protocol (CCIP) technology. The case study reportedly demonstrated that ANZ-issued stablecoins could be transferred cross-chain via...",
       "currencies": [
@@ -108,36 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Stablecoin Economy Sheds $1.52 Billion in September, Revisiting a 2-Year Low",
-      "link": "NULL",
-      "pubDate": "2023-10-01T18:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "FRAX"
-      ]
-    },
-    {
-      "title": "Will Bitcoin ‘Uptober’ bring gains for MKR, AAVE, RUNE and INJ?",
-      "link": "NULL",
-      "pubDate": "2023-10-01T18:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR",
-        "RUNE",
-        "INJ"
-      ]
-    },
-    {
       "title": "Users Can Now Trade XRP and DOGE Against PayPal’s Stablecoin",
       "link": "https://cryptopotato.com/users-can-now-trade-xrp-and-doge-against-paypals-stablecoin/",
       "pubDate": "2023-10-01T17:05:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "Crypto.com users are allowed to trade XRP, DOGE, and SOL against PYUSD.",
       "currencies": [
@@ -153,35 +77,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Invests a Lot of Money into Curve’s Stable Asset",
-      "link": "NULL",
-      "pubDate": "2023-10-01T17:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Ethereum’s Vitalik Buterin Weighs Pros and Cons of Core Expansion",
-      "link": "NULL",
-      "pubDate": "2023-10-01T16:39:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
       "title": "This Automobile Giant Now Accepts Ripple (XRP) and Shiba Inu (SHIB) for Payments",
       "link": "https://cryptopotato.com/this-automobile-giant-now-accepts-ripple-xrp-and-shiba-inu-shib-for-payments/",
       "pubDate": "2023-10-01T15:34:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "People can now buy Honda products in numerous crypto assets, such as Ripple (XRP) and Shiba Inu (SHIB).",
       "currencies": [
@@ -194,72 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Axie Infinity (AXS) and Optimism (OP) Drive $200M October Token Release",
-      "link": "NULL",
-      "pubDate": "2023-10-01T14:34:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "APE",
-        "AXS",
-        "IMX"
-      ]
-    },
-    {
-      "title": "FTX Exploiter Executes Ongoing Funds Exodus, Moves $17 Million In ETH In One Day",
-      "link": "NULL",
-      "pubDate": "2023-10-01T14:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTT",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "INJ, SOL and RAD Are 3 Cryptos That Display Breakout Potential",
-      "link": "NULL",
-      "pubDate": "2023-10-01T14:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "INJ"
-      ]
-    },
-    {
-      "title": "I asked ChatGPT about Litecoin’s prospects in Q4 2023, the bot showed optimism",
-      "link": "NULL",
-      "pubDate": "2023-10-01T14:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "I asked ChatGPT to predict Filecoin’s prices as Q4 2023 begins",
-      "link": "NULL",
-      "pubDate": "2023-10-01T14:20:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
       "title": "This is the first known Satoshi Nakamoto’s email; What’s inside?",
       "link": "https://finbold.com/this-is-the-first-known-satoshi-nakamotos-email-whats-inside/",
       "pubDate": "2023-10-01T14:14:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "A previously undisclosed email sent by the anonymous creator of Bitcoin (BTC), Satoshi Nakamoto, has come to light. The email, … Continued",
       "currencies": [
@@ -272,106 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "I asked ChatGPT about Ethereum Classic as 2024 draws near",
-      "link": "NULL",
-      "pubDate": "2023-10-01T13:50:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Tezos Foundation backed Tezos Domains announces Gate.io listing with 500,000 $TED competition.",
-      "link": "NULL",
-      "pubDate": "2023-10-01T13:42:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "I asked ChatGPT about Polkadot’s 2023-24 journey, it had a riveting answer",
-      "link": "NULL",
-      "pubDate": "2023-10-01T13:42:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Highest Crypto Gainers of the Week; GMX, COMP, MKR Price Analysis",
-      "link": "NULL",
-      "pubDate": "2023-10-01T13:21:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Major Exchange Experienced $116 Million in Outflow in Ethereum, Bitcoin and USDT",
-      "link": "NULL",
-      "pubDate": "2023-10-01T13:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Tips Bitcoin (BTC) To Reach $40,000 In Q4 2023",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:55:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Crypto Weekly Roundup: HTX Loses 5000 ETH In Major Hack And More",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:50:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Over 1 Billion XRP Released from Escrow as Price Gains Facelift",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:41:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
       "title": "Accumulation opportunity looms for BTC; Time to ride the Bitcoin train?",
       "link": "https://finbold.com/accumulation-opportunity-looms-for-btc-time-to-ride-the-bitcoin-train/",
       "pubDate": "2023-10-01T12:28:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) is displaying signs of bullish momentum, aiming for the $30,000 threshold following weeks of consolidation. Given the current … Continued",
       "currencies": [
@@ -384,89 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$23,000 Bitcoin (BTC) Prediction Changed by Analyst Benjamin Cowen",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Prices Hold Steady as Bitcoin make Strong Comeback",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "THETA",
-        "MKR",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Tezos Price Analysis: XTZ Posts Worrying Losses, $ROE Booming Amid Market Volatility",
-      "link": "NULL",
-      "pubDate": "2023-10-01T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "XRP Price Threatened As Ripple Unlocks 1 Billion Coins",
-      "link": "NULL",
-      "pubDate": "2023-10-01T11:20:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "MKR",
-        "CRV"
-      ]
-    },
-    {
-      "title": "5 Crypto-Stealing Malware Threats: How to Stay Safe and Aware",
-      "link": "NULL",
-      "pubDate": "2023-10-01T11:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "OP, AXS and APT Are the Biggest Unlock Events for This October",
-      "link": "NULL",
-      "pubDate": "2023-10-01T09:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE",
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana (SOL) Breakout Imminent? Analyst Highlights Interesting Price Movement",
       "link": "https://u.today/solana-sol-breakout-imminent-analyst-highlights-interesting-price-movement",
       "pubDate": "2023-10-01T09:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Solana showing signs of potential breakout against Ethereum on weekly time frame",
       "currencies": [
@@ -479,115 +145,11 @@
       }
     },
     {
-      "title": "FTX exploiter moved over $17M in ETH in the last 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-10-01T09:14:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTT",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "After Strong September Growth, Are Maker and Inqubeta Top Alternatives to Xrp and Cardano?",
-      "link": "NULL",
-      "pubDate": "2023-10-01T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "XRP",
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "LUNC Community Rejects Proposal to Pay Terra Rebels $15K Monthly",
-      "link": "NULL",
-      "pubDate": "2023-10-01T08:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Quant Hits Another Low And Recovers Over $90",
-      "link": "NULL",
-      "pubDate": "2023-10-01T07:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Bulls Charge: 13% Price Rally Driven By Fresh Demand",
-      "link": "NULL",
-      "pubDate": "2023-10-01T06:07:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BCH",
-        "MKR",
-        "CRV"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Konrad Kirpluk: The virtuoso of vector art in the NFT world",
-      "link": "NULL",
-      "pubDate": "2023-10-01T05:43:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash rises by 10%, spurred by new demand",
-      "link": "NULL",
-      "pubDate": "2023-10-01T03:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Fantom addresses multichain hack after 3 months: How did FTM react?",
-      "link": "NULL",
-      "pubDate": "2023-10-01T01:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
       "title": "Is Cardano (ADA) Aiming at Fundamental Trend Change?",
       "link": "https://u.today/is-cardano-ada-aiming-at-fundamental-trend-change",
       "pubDate": "2023-10-01T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano's breakthrough sets it up for longer term reversal",
       "currencies": [
@@ -597,17 +159,6 @@
         "positive": 12,
         "negative": 11
       }
-    },
-    {
-      "title": "Under-the-Radar DeFi Altcoin Surges by 22% on Friday Amid the Rollout of New Mining Rewards",
-      "link": "NULL",
-      "pubDate": "2023-10-01T00:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TRX"
-      ]
     }
   ]
 }

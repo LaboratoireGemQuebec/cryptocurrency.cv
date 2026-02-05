@@ -1,27 +1,15 @@
 {
   "date": "2023-09-24",
-  "fetchedAt": "2026-02-05T07:45:52.135Z",
-  "articleCount": 27,
+  "fetchedAt": "2026-02-05T07:48:35.535Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "AAVE eases to a demand zone – Will buyers benefit?",
-      "link": "NULL",
-      "pubDate": "2023-09-24T23:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "AAVE"
-      ]
-    },
     {
       "title": "Vitalik Buterin Warns CBDCs Moving in Wrong Direction, Calls Them ‘Front Ends’ for the Banking System: Report",
       "link": "https://dailyhodl.com/2023/09/24/vitalik-buterin-says-cbdcs-moving-in-wrong-direction-calls-them-front-ends-for-the-banking-system-report/",
       "pubDate": "2023-09-24T20:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Ethereum (ETH) co-creator Vitalik Buterin reportedly says that central bank digital currencies (CBDCs) are not developing in the way he had once hoped for. In a new interview with CNBC, Buterin says that he was once more optimistic about CBDCs, but now he believes they have mostly become “front ends” for the traditional banking system. […]",
       "currencies": [
@@ -34,34 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Terra Classic Community Votes to Halt USTC Minting as SEC Moves to Depose Do Kwon",
-      "link": "NULL",
-      "pubDate": "2023-09-24T18:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Interoperable Chain Polkadot (DOT) Says Roadmap in Place To Support 1,000 Parachains",
-      "link": "NULL",
-      "pubDate": "2023-09-24T18:45:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
       "title": "Cardano: Will ADA react to the spike in development activity",
       "link": "https://ambcrypto.com/cardano-will-ada-react-to-the-spike-in-development-activity/",
       "pubDate": "2023-09-24T18:30:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Cardano’s weekly development report highlighted the work done by multiple teams along with updated statistics of the Cardano blockchain.",
       "currencies": [
@@ -76,8 +41,8 @@
       "title": "Fake Coin Shock to Bitcoin Exchange Upbit! It is estimated that 100,000 accounts are affected!",
       "link": "https://en.bitcoinsistemi.com/fake-coin-shock-to-bitcoin-exchange-upbit-it-is-estimated-that-100000-accounts-are-affected/",
       "pubDate": "2023-09-24T18:03:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Upbit, South Korea's leading exchange, is having a major problem with a fraudulent deposit. Continue Reading: Fake Coin Shock to Bitcoin Exchange Upbit! It is estimated that 100,000 accounts are affected!",
       "currencies": [
@@ -90,23 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "How far can Maker prices retrace after losing $1300",
-      "link": "NULL",
-      "pubDate": "2023-09-24T17:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
       "title": "Ethereum Average Transaction Fee Plummets: What It Means for ETH Price",
       "link": "https://beincrypto.com/ethereum-average-transaction-fee-drops/",
       "pubDate": "2023-09-24T16:40:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Ethereum average transaction fee has hit its lowest point of the year, a change that aligns with reduced on-chain activity. Notably, this drop comes when the supply of ETH has transitioned back to an inflationary phase. Blockchain analytical firm Santiment revealed that the transaction fees on the Ethereum network dropped to $1.15 per transaction, the lowest level since last...",
       "currencies": [
@@ -120,29 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto traders shift focus to 4 altcoins as Bitcoin price flatlines",
-      "link": "NULL",
-      "pubDate": "2023-09-24T16:37:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Chainlink surges 15% in a week as Bitcoin and Ethereum lag behind",
       "link": "https://ambcrypto.com/chainlink-surges-15-in-a-week-as-bitcoin-and-ethereum-lag-behind/",
       "pubDate": "2023-09-24T16:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "While Bitcoin and Ethereum remain in a tight range, Chainlink bucks the trend to climb by 15% in the last week.",
       "currencies": [
@@ -157,185 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why Chainlink gaining whale attention was bad for Synthetix",
-      "link": "NULL",
-      "pubDate": "2023-09-24T15:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "SNX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "What is Vitalik Buterin's interest in Ripple? Former Ethereum Advisor Explained!",
-      "link": "NULL",
-      "pubDate": "2023-09-24T14:22:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Here’s what ChatGPT says about Filecoin’s upcoming price trajectory",
-      "link": "NULL",
-      "pubDate": "2023-09-24T14:20:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Terra Classic Price Prediction: What’s Ahead For $LUNC After Reclaiming $0.00006 Mark?",
-      "link": "NULL",
-      "pubDate": "2023-09-24T14:01:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Terra LUNA Classic Community Passes Proposal to Halt USTC Minting",
-      "link": "NULL",
-      "pubDate": "2023-09-24T13:53:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "What ChatGPT says about Ethereum Classic as 2023 draws to a close",
-      "link": "NULL",
-      "pubDate": "2023-09-24T13:50:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "I asked ChatGPT about Polkadot’s prospects in 2023-24, here’s what it said",
-      "link": "NULL",
-      "pubDate": "2023-09-24T13:42:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "What The Drop In Spot And Derivatives Volumes Means For The Price Of Bitcoin",
-      "link": "NULL",
-      "pubDate": "2023-09-24T13:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Explosive 6-Week Growth Sees Base Hit New Milestone",
-      "link": "NULL",
-      "pubDate": "2023-09-24T12:45:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOT"
-      ]
-    },
-    {
-      "title": "RNDR’s Price Takes A Hit: Analyst Cautions Altcoin Investors",
-      "link": "NULL",
-      "pubDate": "2023-09-24T11:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Ex-Ethereum Advisor Applauds XRP Community Amid ETH Gate News",
-      "link": "NULL",
-      "pubDate": "2023-09-24T10:50:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "GT"
-      ]
-    },
-    {
-      "title": "LUNC Delivers Stellar Performance and Gains 3+% Over the Past 24H",
-      "link": "NULL",
-      "pubDate": "2023-09-24T10:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "VC Spectra (SPCT) Rises in Popularity: Why Maker (MKR) & Aptos (APT) Traders Are Shifting Their Focus",
-      "link": "NULL",
-      "pubDate": "2023-09-24T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR",
-        "APT"
-      ]
-    },
-    {
-      "title": "These Are This Week’s Best and Worst Performers as BTC Stagnates at $26.5K (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-24T08:55:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "RUNE",
-        "IMX"
-      ]
-    },
-    {
       "title": "XRP is the Only Crypto in the US With Legal Clarity: Opinion",
       "link": "https://coinedition.com/xrp-is-the-only-crypto-in-the-us-with-legal-clarity-opinion/",
       "pubDate": "2023-09-24T08:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "regulation",
       "description": "A renowned digital asset investor and XRP supporter identified as Digital Asset Investor. XRP has said that XRP is the only digital asset in the United States with legal clarity. According to the investor, he told Ryan Rugg, head of digital assets for Citibank’s TTS business, that her organization would ditch Ethereum for XRP. The […]",
       "currencies": [
@@ -347,28 +108,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "ApeCoin Community To Acquire Top NFTs Through New DAO",
-      "link": "NULL",
-      "pubDate": "2023-09-24T04:26:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "What’s behind Curve Finance’s mass token exodus?",
-      "link": "NULL",
-      "pubDate": "2023-09-24T02:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
     }
   ]
 }

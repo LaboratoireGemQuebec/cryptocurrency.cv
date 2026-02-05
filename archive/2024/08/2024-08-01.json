@@ -1,75 +1,15 @@
 {
   "date": "2024-08-01",
-  "fetchedAt": "2026-02-05T07:45:53.468Z",
-  "articleCount": 148,
+  "fetchedAt": "2026-02-05T07:48:35.673Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "SUN.io launches SUN DAO to enhance decentralized governance and drive ecosystem innovation",
-      "link": "NULL",
-      "pubDate": "2024-08-01T23:21:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "DAO",
-        "SUN"
-      ]
-    },
-    {
-      "title": "Starknet Warns of Discord Compromise: Avoid Links and Messages Until Further Notice",
-      "link": "NULL",
-      "pubDate": "2024-08-01T22:58:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "STRK"
-      ]
-    },
-    {
-      "title": "Coinbase’s $1.45 billion Q2 revenue exceeds estimates despite decline in transaction revenue",
-      "link": "NULL",
-      "pubDate": "2024-08-01T21:38:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Ripple Invests In Tokenized US Treasury Bills On XRP Ledger",
-      "link": "NULL",
-      "pubDate": "2024-08-01T21:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Kaspa hits $0.20 ATH, flips MATIC’s market cap: More gains for KAS?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T21:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "KAS"
-      ]
-    },
     {
       "title": "Ripple – U.S T-bills make their way to XRP Ledger, thanks to…",
       "link": "https://ambcrypto.com/ripple-u-s-t-bills-make-their-way-to-xrp-ledger-thanks-to/",
       "pubDate": "2024-08-01T20:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "A first for the XRP Ledger!",
       "currencies": [
@@ -83,67 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "5 DePin Coins to Add to Your Portfolio in August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-01T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Move Lower Ahead Of Crypto Options Expiry: 'Bears Are Getting Cocky,' Analyst Says",
-      "link": "NULL",
-      "pubDate": "2024-08-01T20:24:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "RUNE",
-        "WIF",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Smart trader made $15.62 million in PEPE and MOG, Here’s How",
-      "link": "NULL",
-      "pubDate": "2024-08-01T20:12:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "PEPE",
-        "ONDO",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Fantom Rebrands To Sonic Labs Ahead Of Major EVM Launch",
-      "link": "NULL",
-      "pubDate": "2024-08-01T20:03:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM",
-        "DAG"
-      ]
-    },
-    {
       "title": "Analyst Says XRP on Cusp of Bullish Breakout if It Can Break Through This Major Resistance Level",
       "link": "https://dailyhodl.com/2024/08/01/analyst-says-xrp-on-cusp-of-bullish-breakout-if-it-can-break-through-this-major-resistance-level/",
       "pubDate": "2024-08-01T19:55:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "One widely followed crypto analyst says the native token of the XRP Ledger (XRPL) is on the verge of a rally. Crypto trader Ali Martinez tells his 68,700 followers on the social media platform X that XRP just needs to break through $0.90. “XRP has been consolidating within a symmetrical triangle for six years! A […]",
       "currencies": [
@@ -161,8 +45,8 @@
       "title": "XRPL to Feature Tokenized US T-bills with $10M Ripple Boost, Eyes 600x XRP Growth",
       "link": "https://www.thecoinrepublic.com/2024/08/01/xrpl-to-feature-tokenized-us-t-bills-with-10m-ripple-boost-eyes-600x-xrp-growth/",
       "pubDate": "2024-08-01T19:54:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "The XRP Ledger (XRPL) has stated that they are going to include tokenized US Treasury bills (T-bills). Announcement came after receiving an investment of $10 million from Ripple. This project is implemented with the help of the OpenEden platform. It sets an example of the integration of traditional finance and DEFI. Expansion of Decentralized Finance […]",
       "currencies": [
@@ -175,133 +59,11 @@
       }
     },
     {
-      "title": "Stacks (STX) Weak Investor Conviction Could Lead to Further Losses",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Everyone headed into $AAPL $AMZN $COIN $INTC $SNAP $MARA $X $SQ $DKNG $DASH $ROKU $NET $MSTR earnings",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:27:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
-      "title": "Coinbase Layer 2 Base Introduced New Identity Tool",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:24:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "ENS"
-      ]
-    },
-    {
-      "title": "Ripple Injects $10 Million Into Tokenized U.S. T-Bills On XRP Ledger — Can It Boost XRP To $1?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:11:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Polkadot Falls More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Lido Staked Ether Falls More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:02:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Falls More Than 8% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-01T19:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Coinbase’s Base blockchain is getting a custom onchain identity tool",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:54:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NFT",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Hello Celo!",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:52:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNT",
-        "DAO",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Cathie Wood’s ARK Invest Sells More Coinbase Stock as Crypto Markets Nosedive",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:41:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
       "title": "Important Ripple (XRP) Announcement: Real World Assets on XRPL?",
       "link": "https://cryptopotato.com/important-ripple-xrp-announcement-real-world-assets-on-xrpl/",
       "pubDate": "2024-08-01T18:39:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "Ripple plans to establish a fund and invest $10 million to specific T-Bill tokens: check out for more details.",
       "currencies": [
@@ -314,37 +76,11 @@
       }
     },
     {
-      "title": "Crypto Whale Scores $5.85 Million on PEPE Trading – Here Are the Top 5 Memecoins for Huge Year-End Profits",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:37:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Celestia on pace to surpass Ethereum in data storage — Research",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:33:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TIA"
-      ]
-    },
-    {
       "title": "Cardano Whales Accumulate 120 Million ADA in Two Weeks, What’s Next?",
       "link": "https://coingape.com/markets/cardano-whales-accumulate-120-million-ada-in-two-weeks-whats-next/",
       "pubDate": "2024-08-01T18:14:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "altcoin",
       "description": "Cardano, a layer 1 altcoin, has experienced a market correction recently. Despite the dip in price, underlying on-chain data and technical analyses suggest a promising outlook for the ADA token. Cardano Whales Continue to Accumulate In a notable development in cryptocurrency, wallets holding between 0.1 million to 10 million ADA tokens have collectively increased their",
       "currencies": [
@@ -357,152 +93,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Jupiter Launches Voting For JUP Supply Cut By 3 Billion",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:11:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Zcash community rallies to find consensus on a new 1-year dev fund",
-      "link": "NULL",
-      "pubDate": "2024-08-01T18:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEC"
-      ]
-    },
-    {
-      "title": "Coinbase Reveals Major Support For MEW, JASMY, & MEME",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:58:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "Potentially Profitable Memecoins: $HINU, $BRETT, $BONK, and $WIF",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:46:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "WIF",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Injective Launches Altaris Mainnet Upgrade: Why It Promises to Revolutionize the Platform",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:43:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Euro Stablecoin EURC Stablecoin Launches On Ethereum Layer-2 Blockchain Base",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:41:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "UNI",
-        "EURC"
-      ]
-    },
-    {
-      "title": "Montenegro Appellate Court upholds Do Kwon extradition to South Korea",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:36:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "New Memecoin Sensation Neiro Hits $200 Million Market Cap In Four Days",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Terra Hack: Network Blacklists Exploiters Wallet, Pledges Full Disclosure",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:24:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "WazirX Faces SHIB Community Backlash Over Compensation Plan",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "WRX"
-      ]
-    },
-    {
-      "title": "The Next 50x Crypto Plays: Popcat (POPCAT), Brett (BRETT) and DTX Exchange (DTX)",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BRETT"
-      ]
-    },
-    {
       "title": "Cardano price prediction: A bounce to $0.432 could commence soon IF…",
       "link": "https://ambcrypto.com/cardano-price-prediction-a-bounce-to-0-432-could-commence-soon-if/",
       "pubDate": "2024-08-01T17:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "ADA bulls can expect a bullish rebound next week provided Bitcoin is able to defend the $64k support zone.",
       "currencies": [
@@ -515,213 +110,11 @@
       }
     },
     {
-      "title": "Bitcoin Layer-2s Attract VC Funding Amid Rising Interest",
-      "link": "NULL",
-      "pubDate": "2024-08-01T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "STX"
-      ]
-    },
-    {
-      "title": "100x Gains? Bonk Holders Bet Big on This New ICO",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:58:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Chamath Palihapitiya-Backed Altcoin Collapses After SEC Charges Co-Founder With Fraud",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:55:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DESO"
-      ]
-    },
-    {
-      "title": "$META is up 5.2% today",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:54:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Montenegro appeals court rules Do Kwon will be extradited to South Korea",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:45:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GAL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Defunct Mt. Gox drops Bitcoin repayment update, will BTC react to it?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:35:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Celestia (TIA) Price Nears Oversold Region Following 12% Price Decline",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TIA"
-      ]
-    },
-    {
-      "title": "Man Utd Subs in Fantasy Trading Cards: How to Get Yours for 24/25 Season",
-      "link": "NULL",
-      "pubDate": "2024-08-01T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "Zilliqa (ZIL) Struggles Continue as Price Dips Below Critical Zone",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:59:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ZIL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Intel Faces Legal Probe Amid Processor Issues, Stock Dips",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:47:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "Tapbit Exchange – A Rising Year of Opportunities And Challenges",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "PEOPLE",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Top Crypto Performers Today – August 1 – AIOZ, AAVE, HNT",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:29:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "HNT",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Curve DAO (CRV) soars 11% amid market downturn, Here’ why",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:12:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Andreessen Horowitz Leads $9 Million Investment in DePin Project Daylight Energy",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:11:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Stagnates Ahead of Upcoming Network Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-08-01T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Stocks to Watch Today: MRNA, META, and AMAT",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:54:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
       "title": "Cardano’s IOHK Rolls Out alpha v1 To Tighten Network Security",
       "link": "https://coingape.com/cardano-iohk-rolls-out-alpha-v1-to-tighten-network-security/",
       "pubDate": "2024-08-01T14:52:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "regulation",
       "description": "Blockchain engineering company Input Output (IOHK), the developers of Cardano have launched alpha v1 marking the first step to partner chains. This will help reduce the vulnerability challenge faced by some chains in preventing low-cost attacks. Blockchains continue to release upgrades as the scalability race ramps up. Cardano’s IOHK Launches alpha v1 IOHK has released",
       "currencies": [
@@ -733,55 +126,11 @@
       }
     },
     {
-      "title": "Bitcoin Stuck In Sideways Mode: Can We Forget About 'Altcoin Season' Altogether?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:48:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "FET",
-        "PEPE",
-        "TAO",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Aptos Foundation and OKX Ventures Launch $10M Accelerator to Boost Ecosystem Growth",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:37:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "XRPScan Issues Crucial Warning To XRP Community Amidst Latest Development",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:36:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Pundit Predicts Ripple’s XRP Surge to $366 Price Based on These Historical Indicators",
       "link": "https://zycrypto.com/pundit-predicts-ripples-xrp-surge-to-366-price-based-on-these-historical-indicators/",
       "pubDate": "2024-08-01T14:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP, the native cryptocurrency of the fintech company Ripple, started the new month on a sour note, with its price suffering a significant drop of just over 7% over the past 24 hours. Notably, apart from factors affecting the wider crypto sector, this dip was exacerbated by the abrupt cancellation of another highly anticipated closed-door meeting between […]",
       "currencies": [
@@ -793,134 +142,11 @@
       }
     },
     {
-      "title": "Spot Bitcoin ETFs See Light Inflows as Grayscale Adds Mini Bitcoin Trust",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:20:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "'Golden Boys' Move on CompoundDAO Wasn't a Governance Attack: Tally Protocol CEO",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:07:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "COMP",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) Hits New All-Time High for Third Consecutive Month",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:06:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "24,393,080 #XRP (14,811,505 USD) transferred from #Binance to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 3
-      }
-    },
-    {
-      "title": "24,393,080 #XRP (14,811,505 USD) transferred from #Binance to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-01T14:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 3
-      }
-    },
-    {
-      "title": "Ark Invest Offloads Another 12K Coinbase Shares Worth $2.7M",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:58:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "GOMINING Token Now Available on BingX Exchange",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:57:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GOMINING"
-      ]
-    },
-    {
-      "title": "CoinDesk 20 Performance Update: ICP and RNDR Lead Losses as Index Slips 2.2%",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:46:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Top 3 Solana Tokens to Buy During the August Dip",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:32:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "WIF",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Top Meme Coins Crash But Experts Are Still Bullish On These New Crypto Tokens",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:13:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLR"
-      ]
-    },
-    {
       "title": "Bitcoin Shows Positive Trend as Investor Profitability Remains Strong",
       "link": "https://cryptodnes.bg/en/bitcoin-shows-positive-trend-as-investor-profitability-remains-strong/",
       "pubDate": "2024-08-01T13:10:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "bitcoin",
       "description": "Bitcoin’s current market behavior suggests a continuation of its upward trend with investor profitability staying robust, according to a recent Glassnode report.",
       "currencies": [
@@ -933,71 +159,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Another Terra? Kuji token crashes as team’s position gets liquidated",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:06:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Cosmos crypto project Kujira is facing a massive liquidation event that has seen its token KUJI tank by over 47% since early Thursday. The team claims their leveraged positions were attacked. Kujira Foundation is said to have four leveraged LP positions – KUJI/USDC, KUJI/ATOM, KUJI/USK, and USDC/USK – on its Ops wallet. These positions are […]",
-      "currencies": [
-        "USDC",
-        "ATOM"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
-      "title": "Top 10 Altcoins with the Highest Potential Gains",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:06:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MOG"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ki Young Ju Predicts Altcoin Season as Bitcoin Dominance Hits 3-Year Highs",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:04:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "OpenEden launches tokenized T-Bills on XRP Ledger with $10M investment from Ripple",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
       "title": "Secure These Two Tokens Before They Reach $1 Cardano and Mpeppe (MPEPE)",
       "link": "https://bitcoinist.com/secure-these-two-tokens-before-they-reach-1-cardano-and-mpeppe-mpepe/",
       "pubDate": "2024-08-01T13:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "Certain tokens are standing out for their potential to deliver substantial returns. Among these, Cardano (ADA) and Mpeppe (MPEPE) are gaining significant attention. Both offer unique opportunities for investors looking to secure their positions before prices potentially soar to $1 and beyond. This article explores why these tokens are attracting interest and how they might […]",
       "currencies": [
@@ -1012,8 +178,8 @@
       "title": "Hoskinson Claims Cardano Will Flip Bitcoin As Leading Crypto",
       "link": "https://www.newsbtc.com/news/hoskinson-cardano-will-flip-bitcoin-leading-crypto/",
       "pubDate": "2024-08-01T13:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "In an interview with the hosts of “Altcoin Daily,” a popular cryptocurrency-focused YouTube channel, Charles Hoskinson, the founder of Cardano, made bold assertions about the future of Cardano in relation to Bitcoin. Addressing nearly 1.5 million subscribers, Hoskinson laid out a vision for Cardano that he believes will not only compete with but eventually surpass Bitcoin as the world’s...",
       "currencies": [
@@ -1029,8 +195,8 @@
       "title": "Cardano Investors Look for More Aggressive Gains With Mpeppe (MPEPE)",
       "link": "https://bitcoinist.com/cardano-investors-look-for-more-aggressive-gains-with-mpeppe-mpepe/",
       "pubDate": "2024-08-01T13:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "As the cryptocurrency market continues to expand, Cardano (ADA) investors are seeking new avenues for aggressive gains. While Cardano has established itself as a robust platform with a focus on scalability and sustainability, many are now looking towards emerging projects like Mpeppe (MPEPE) for potential high returns. This article explores why Cardano investors are turning […]",
       "currencies": [
@@ -1042,392 +208,11 @@
       }
     },
     {
-      "title": "Cardano Whale Feels Their Pockets With Mpeppe (MPEPE) Currently At $0.00107",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Cryptocurrency enthusiasts and investors are constantly on the lookout for the next big opportunity in the evolving digital asset landscape. For Cardano (ADA) holders, the emergence of Mpeppe (MPEPE) presents an intriguing investment prospect. This article delves into why Cardano (ADA) whales and investors are turning their attention to Mpeppe (MPEPE), exploring its origins, potential, and...",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 3
-      }
-    },
-    {
-      "title": "Altcoins With Huge Potential Bonk and Mpeppe (MPEPE)",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Bonk Investors Seek To Become Mpeppe (MPEPE) Whales and 500x Their Bag",
-      "link": "NULL",
-      "pubDate": "2024-08-01T13:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Jupiter Community To Vote On Reducing JUP Supply By 30%",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Community Funds EVM Growth",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTA"
-      ]
-    },
-    {
-      "title": "Toncoin Faces Bearish Momentum as Price Approaches Key Support",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:50:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TWT",
-        "TON"
-      ]
-    },
-    {
-      "title": "Cathie Wood’s Ark sells $2.7M Coinbase shares as BTC fails $70K retest",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:44:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ZachXBT alleges StarkWare-backed ZKX raised millions, launched token knowing it would likely shut down",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:33:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Altcoins To Dodge Trading As Over $580M Worth Token Unlocks Loom",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:27:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "SAND",
-        "APT"
-      ]
-    },
-    {
-      "title": "What is Aptos?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:24:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Ripple invests $10 million in tokenized US T-bills through OpenEden",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:20:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "OKX Ventures and Aptos Foundation launch $10m ecosystem fund",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:18:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Mark Zuckerberg of $META predicts a future where nearly everyone is wearing AI-powered smart glasses, per BI.",
-      "link": "NULL",
-      "pubDate": "2024-08-01T12:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Cummins Inc. (CMI) Beats Q2 EPS and Revenue Expectations",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:56:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Polkadot OpenGov: A Decentralized, Open Governance Platform",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:41:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Casper Network back online following security incident halt",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:38:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CSPR"
-      ]
-    },
-    {
-      "title": "Top 3 Ethereum-based Altcoins For 3X – 5X Surge This Q3!",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:26:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TRB"
-      ]
-    },
-    {
-      "title": "Will CRV Price Find Support After Whale’s Large-Scale Withdrawal?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:20:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRV",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Aptos Foundation Launches Yield-Bearing Stablecoin USDY and $10 Million Fund for Web3 Growth",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:15:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APT",
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "OKX Ventures and Aptos Foundation Announce $10 Million Fund to Drive DeFi, RWA, and AI Innovation",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:13:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "OKX Ventures, Aptos Foundation Create $10M Accelerator Fund to Further Web3 Adoption",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:01:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Avalanche anticipates ‘most bullish unlock’ amid broader market $1 billion in token release",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:01:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "AVAX",
-        "APT",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Polkadot’s falling wedge: What August has in store for DOT traders",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "XRP Ledger to Launch Tokenized US Treasury Bills",
-      "link": "NULL",
-      "pubDate": "2024-08-01T11:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Eaton Corporation (ETN) Beats Q2 Expectations with $2.73 Adj. EPS, $6.35 B in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:51:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS",
-        "ETN"
-      ]
-    },
-    {
-      "title": "Investors are rushing to Doge2014 Presale as PEPE, BONK and BRETT Meme Coin Prices Dip",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:49:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "PEPE",
-        "BONK",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "Ripple to Allocate $10M to Tokenized U.S. Treasury Bills on XRP Ledger",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:44:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Bitcoin’s ‘ultimate price’ could surpass $700K based on 3% portfolio allocation — Analyst",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:28:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Compound hijacked by whale proposal, ends up redistributing fees for staking COMP",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:21:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "COMP"
-      ]
-    },
-    {
-      "title": "Crypto Whales Boost Ethereum, Pepe, and ONDO",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:11:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "PEPE",
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto projects lose $278 million to July hacks, second-highest in 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-01T10:05:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
       "title": "Tether Halts Bitcoin Purchases",
       "link": "https://coinpaprika.com/news/tether-halts-bitcoin-purchases/",
       "pubDate": "2024-08-01T10:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Tether pauses Bitcoin purchases despite a $1.3 billion profit in Q2 2024, opting to maintain reserve levels and prompting questions from crypto enthusiasts.",
       "currencies": [
@@ -1441,22 +226,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why is the Polkadot Price dropping?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T09:59:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
       "title": "Senator Cynthia Lummis Proposes Bill for Bitcoin Reserve",
       "link": "https://www.coinspeaker.com/lummis-fed-gold-bitcoin-reserves/",
       "pubDate": "2024-08-01T09:52:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Coinspeaker Sen. Cynthia Lummis Proposed Revaluing Fed Gold for Bitcoin Reserves The Bitcoin Purchase Plan proposed by Senator Cynthia Lummis involves the US buying 200,000 Bitcoin every year for the next five years, resulting in a total accumulation of 1 million BTC. Sen. Cynthia Lummis Proposed Revaluing Fed Gold for Bitcoin Reserves",
       "currencies": [
@@ -1469,71 +243,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "First of August: Bitcoin Hard Fork Independence Day",
-      "link": "NULL",
-      "pubDate": "2024-08-01T09:43:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "$2.1 Billion in Bitcoin Still Held by Mt. Gox After Repayments",
-      "link": "NULL",
-      "pubDate": "2024-08-01T09:31:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Aptos Foundation and OKX Ventures Launch $10 Million Growth Fund",
-      "link": "NULL",
-      "pubDate": "2024-08-01T09:29:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Cathie Wood’s Ark Invest resumes Coinbase share sales, offloads $2.7 million worth of COIN",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:59:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "OpenEden launches tokenized T-Bills on XRP Ledger",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:53:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
       "title": "XRP and SOL Retrace Hard, While BTC Price Dropped to 2-Week Lows (Market Watch)",
       "link": "https://cryptopotato.com/xrp-and-sol-retrace-hard-while-btc-price-dropped-to-2-week-lows-market-watch/",
       "pubDate": "2024-08-01T08:43:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The total crypto market cap declined to under $2.4 trillion earlier today.",
       "currencies": [
@@ -1547,92 +261,11 @@
       }
     },
     {
-      "title": "July Price Performance Review of Major Exchange Coins/Tokens",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LEO",
-        "UNI",
-        "MOON"
-      ]
-    },
-    {
-      "title": "Against The Bearish Tides, KAS Price Rounding Reversal Eyes $0.28",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Altcoin Whales Prepare for Rally After September Fed Rate Cut",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:00:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "OKX Ventures, Aptos Foundation Initiate $10M Fund for the Move-Based Layer-1 Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-08-01T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "July crypto hacks total $266M, WazirX leads losses",
-      "link": "NULL",
-      "pubDate": "2024-08-01T07:51:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "XEC Price Faces Multiple Hurdles Before 2x Breakout  Surge",
-      "link": "NULL",
-      "pubDate": "2024-08-01T07:18:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "XEC Price Faces Multiple Hurdles Before 2x Breakout Surge",
-      "link": "NULL",
-      "pubDate": "2024-08-01T07:18:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Why Cardano (ADA) Price Is Falling Continuously? What’s Next for ADA?",
       "link": "https://coinpedia.org/news/why-cardano-ada-price-is-falling-continuously-whats-next-for-ada/",
       "pubDate": "2024-08-01T07:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "trading",
       "description": "Cardano (ADA), a major player in the crypto world, has seen its price tumble by 50% from a high of $0.8100 in March to $0.385. Despite a positive move from the SEC, which has declared ADA as not a security, the token is still struggling with strong sell pressure. This has left traders and analysts …",
       "currencies": [
@@ -1644,244 +277,11 @@
       }
     },
     {
-      "title": "BONK poised for 53% hike? These are the signs which say yes!",
-      "link": "NULL",
-      "pubDate": "2024-08-01T07:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Report Reveals China Continues to Secretly Grow Its Gold Stash, Misleading Market to Cause Price Cool-Off",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SCRT"
-      ]
-    },
-    {
-      "title": "Jupiter's Recent Price Movement: An In-Depth Look at Market Trends in the World’s Best Crypto Presales",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "XLM",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Bitcoin A CIA Creation? Tucker Carlson Believes So: 'They Got There First. It's Honey Trap'",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:25:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Could Meme Coins SHIB, Raboo or BONK Give You Higher ROI In 2024?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:12:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Tether Reports Record-Breaking $5.2 Billion Net Profit In Latest 2024 Audit",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Crypto News: FOMC Steady Rates Trigger Crypto Market Slide",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "SOL",
-        "RUNE",
-        "T",
-        "MNT",
-        "WIF",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Rollblock (RBLK) Sets Red Hot Presale Pace As $2 Million Mark Is In Sight. Celestia (TIA) Trickles Red As Floki (FLOKI) Records Flakey 7-DA",
-      "link": "NULL",
-      "pubDate": "2024-08-01T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "FLOKI",
-        "TIA"
-      ]
-    },
-    {
-      "title": "XRP Ledger To Offer Tokenized US Treasury Bills In Partnership With OpenEden",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:40:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "SingularityNET Enhances AI with OpenCog Hyperon Integration: Latest Token Merger Insights in Best Crypto Presale Projects 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Will AKT & BNX Recovery Surge 50%, Despite Market Pullback?",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:27:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AKT"
-      ]
-    },
-    {
-      "title": "Over $220 Million in Liquidations as Bitcoin (BTC) Plummets Toward $63K",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:23:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "STX",
-        "PEPE",
-        "MNT"
-      ]
-    },
-    {
-      "title": "XRP Ledger Offers Tokenized US Treasury Bills With This New Partnership",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:16:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Ethereum Spot ETFs Stumble Again, Records An Outflow Of $77.2 Million!",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:11:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW",
-        "CETH"
-      ]
-    },
-    {
-      "title": "US T-Bills Coming to XRP Ledger",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:09:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "BONK price prediction – How FOMC, Bitcoin will dictate memecoin’s short term",
-      "link": "NULL",
-      "pubDate": "2024-08-01T05:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Mt. Gox Repayments Now Completed for Over 17,000 Creditors",
-      "link": "NULL",
-      "pubDate": "2024-08-01T04:37:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Exploring Immutable X's Recent 15.2% Increase: Key Insights and Market Impact in the Best Ongoing Presales 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-01T04:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "IMX"
-      ]
-    },
-    {
       "title": "Hedera's Recent Surge in User Adoption: What 400,000 New Accounts Mean for the World's Best Crypto Presales",
       "link": "https://www.coingabbar.com/en/crypto-blogs-details/hedera-and-moonbag-top-crypto-investments-in-2024",
       "pubDate": "2024-08-01T03:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coingabbar",
+      "sourceKey": "coingabbar",
       "category": "trading",
       "description": "Have you ever wondered how different cryptocurrencies manage their growth and real-world applications? Hedera (HBAR) and MoonBag (MBAG) offer unique insights. Hedera, launched in 2017, focuses on high throughput and secure infrastructure for decentralised applications. It has recently seen a surge in user adoption and notable partnerships, like Fresh Supply Co.'s transition to its...",
       "currencies": [
@@ -1892,58 +292,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Slip Amid Flare-Up Of Iran-Israel Tensions: Analyst Says 'A Big Move Is Coming Soon' For King Crypto",
-      "link": "NULL",
-      "pubDate": "2024-08-01T02:42:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "FLR"
-      ]
-    },
-    {
-      "title": "NUPL ratio shows why long-term holders are better market top indicators",
-      "link": "NULL",
-      "pubDate": "2024-08-01T02:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Pichi Finance Integrates ERC-6551 Standard  to Enable Pre and Post-TGE Points Trading",
-      "link": "NULL",
-      "pubDate": "2024-08-01T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NFT",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Terra Blockchain (LUNC) Hit By $5 Million Hack And Outage: Details",
-      "link": "NULL",
-      "pubDate": "2024-08-01T00:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "LUNC"
-      ]
     }
   ]
 }

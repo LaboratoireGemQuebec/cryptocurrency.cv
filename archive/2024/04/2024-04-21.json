@@ -1,50 +1,15 @@
 {
   "date": "2024-04-21",
-  "fetchedAt": "2026-02-05T07:45:53.293Z",
-  "articleCount": 28,
+  "fetchedAt": "2026-02-05T07:48:35.637Z",
+  "articleCount": 15,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Terra says ‘yes’ to crucial proposals: How about LUNC?",
-      "link": "NULL",
-      "pubDate": "2024-04-21T22:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Analyst CRYTPOWZRD’s Bullish DOT Prediction: Stellar Faces Bearish Momentum While KANG Surges",
-      "link": "NULL",
-      "pubDate": "2024-04-21T21:38:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin Miners Reap Windfall as 'Runes' Debut Sends Transaction Fees to Record Highs",
-      "link": "NULL",
-      "pubDate": "2024-04-21T20:18:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
     {
       "title": "Bitcoin turns bullish after the halving — Will BNB, NEAR, MNT and RNDR follow?",
       "link": "https://cointelegraph.com/news/bitcoin-turns-bullish-after-the-halving-will-bnb-near-mnt-and-rndr-follow",
       "pubDate": "2024-04-21T19:17:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin surprised traders with a strong rebound after the halving, possibly setting a bullish path for BNB, NEAR, MNT and RNDR to follow.",
       "currencies": [
@@ -64,9 +29,9 @@
       "title": "Crypto market’s weekly winners and losers – BONK, SUI, STRK, TAO",
       "link": "https://ambcrypto.com/crypto-market-weekly-review-21-april/",
       "pubDate": "2024-04-21T19:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Here is how some of your favorite assets concluded the week.",
       "currencies": [
         "STRK",
@@ -81,29 +46,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Week in Crypto Games: Notcoin Token Delay, Ragnarok on Ethereum, More Saga Airdrops",
-      "link": "NULL",
-      "pubDate": "2024-04-21T18:55:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "If you spent last week following the frenzy around the Bitcoin halving and Runes launch, here's all of the crypto gaming news you missed.",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bitcoin Generates 24 Time More Fees Compared to Ethereum",
       "link": "https://u.today/bitcoin-generates-24-time-more-fees-compared-to-ethereum",
       "pubDate": "2024-04-21T18:32:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Rules could solve Bitcoin's security problem, but will their success last?",
       "currencies": [
@@ -120,8 +67,8 @@
       "title": "Mt. Gox’s 142,000 Bitcoin Payout Could Trigger a Sell-Off",
       "link": "https://beincrypto.com/mt-gox-bitcoin-payout-trigger-sell-off/",
       "pubDate": "2024-04-21T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "The trustee overseeing the bankruptcy proceedings of the defunct crypto exchange Mt. Gox has reportedly taken a significant step forward in facilitating Bitcoin repayments. Several users of the social media platform Reddit reported that Mt. Gox’s official website was amended to include crypto payment options. Mt. Gox’s Bitcoin Payout The recent update has sparked mixed reactions...",
       "currencies": [
@@ -135,36 +82,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "‘Bitcoin fees’ keyword trends on Google and social aggregators",
-      "link": "NULL",
-      "pubDate": "2024-04-21T17:46:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Will Celestia (TIA) Hit $130? Analyst Makes Bold Prediction",
-      "link": "NULL",
-      "pubDate": "2024-04-21T17:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "SHIB",
-        "TIA"
-      ]
-    },
-    {
       "title": "XRP Advances by 22.86% Amid Bull Comeback Post-Halving",
       "link": "https://coinedition.com/xrp-advances-by-22-86-amid-bull-comeback-post-halving/",
       "pubDate": "2024-04-21T15:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "XRP soars to $0.534, reflecting a 22.86% growth from the pre-halving bottom of $0.4351. An analyst expects XRP to surge 845% to $5 by September 2025. Ripple’s CLO Stuart Alderoty crushes rumor of potential settlement in the SEC lawsuit. In the last 24 hours, XRP has been one of the gainers among the most prominent […]",
       "currencies": [
@@ -181,8 +103,8 @@
       "title": "Solana, Ethereum Meme Coin Prices Blast Off as Bitcoin Stays Steady After Halving",
       "link": "https://decrypt.co/227391/solana-ethereum-meme-coin-prices-surge-bitcoin-steady-halving",
       "pubDate": "2024-04-21T14:40:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "Bitcoin was the biggest story coming into the weekend, but hype around the halving hasn’t fueled a price surge—not yet, at least.",
       "currencies": [
@@ -200,8 +122,8 @@
       "title": "XRP Skyrockets 10%, Here's Next Major Target to Watch",
       "link": "https://u.today/xrp-skyrockets-10-heres-next-major-target-to-watch",
       "pubDate": "2024-04-21T14:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "XRP joins next bull rally with defined 10% upsurge",
       "currencies": [
@@ -214,24 +136,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "An often overlooked reason for Bitcoin to continue to go up",
-      "link": "NULL",
-      "pubDate": "2024-04-21T14:01:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT",
-        "SOBTC"
-      ]
-    },
-    {
       "title": "Bitcoin Halving, Elon Musk's Dogecoin Tweet, Solana's Rise And More: This Week In Cryptocurrency",
       "link": "https://www.benzinga.com/markets/cryptocurrency/24/04/38348301/bitcoin-halving-elon-musks-dogecoin-tweet-solanas-rise-and-more-this-week-in-cryptocurrenc?utm_source=cryptopanic.com&utm_campaign=partner_feed&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2024-04-21T13:02:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "The weekend was a rollercoaster ride for the cryptocurrency market. Bitcoin’s fourth halving event took place, reducing miner rewards and causing a slight increase in its price. Meanwhile, former Goldman Sachs executive Raoul Pal revealed a significant shift in his crypto portfolio, favoring Solana over Ethereum. read more",
       "currencies": [
@@ -248,36 +157,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Cathie Wood's Ark Buys More Of Its In-House Spot Bitcoin ETF Ahead Of Halving, Pauses Tesla Buying",
-      "link": "NULL",
-      "pubDate": "2024-04-21T12:43:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "BOME and SHIB Challenger Sleepy Shiba (SLESHIB) Surges Over 700%, Prepares for Another 2,500% Rally Amid MEXC Listing",
-      "link": "NULL",
-      "pubDate": "2024-04-21T11:51:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "BOME"
-      ]
-    },
-    {
       "title": "Ethereum ETFs may be coming soon – THIS is a huge sign",
       "link": "https://ambcrypto.com/ethereum-etfs-may-be-coming-soon-this-is-a-huge-sign/",
       "pubDate": "2024-04-21T11:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Ethereum reacted to previous high outflows differently in the past. What will be the case this time around?",
       "currencies": [
@@ -293,8 +177,8 @@
       "title": "$0.001 Shiba Inu Price Now ‘Crazily’ In View as Memecoins’ Performance Go Through The Roof",
       "link": "https://zycrypto.com/0-001-shiba-inu-price-now-crazily-in-view-as-memecoins-performance-go-through-the-roof/",
       "pubDate": "2024-04-21T09:51:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "It's a new dawn for meme coins, as they continue showing stellar performance thanks to the bullish momentum in the crypto market.",
       "currencies": [
@@ -308,23 +192,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SHIB and BOME ‘Killer’ Sleepy Shiba (SLESHIB) Will Rally 13,000% Before MEXC Listing",
-      "link": "NULL",
-      "pubDate": "2024-04-21T09:18:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "BOME"
-      ]
-    },
-    {
       "title": "BlackRock Bitcoin ETF hits 69 days of inflows on '4/20' halving day",
       "link": "https://cointelegraph.com/news/black-rock-bitcoin-etf-hits-69-days-inflows-4-20-halving",
       "pubDate": "2024-04-21T09:05:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin memes keep flowing as one of the year's biggest success stories adds to the sense of fate around the 2024 halving.",
       "currencies": [
@@ -337,25 +209,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Analyst Sounds Buy Alarm For Dogecoin – Can DOGE Price Reclaim $0.2?",
-      "link": "NULL",
-      "pubDate": "2024-04-21T08:13:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "SHIB",
-        "ALI"
-      ]
-    },
-    {
       "title": "Hedge Fund Veteran Mark Yusko Says Bitcoin FOMO Incoming As BTC Completes Halving – Here’s When",
       "link": "https://dailyhodl.com/2024/04/21/hedge-fund-veteran-mark-yusko-says-bitcoin-fomo-incoming-as-btc-completes-halving-heres-when/",
       "pubDate": "2024-04-21T07:04:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Morgan Creek Capital founder Mark Yusko thinks that we have not yet seen the FOMO (fear of missing out) phase grip Bitcoin (BTC) market participants. Speaking at the Bitcoin Investor Day, the hedge fund veteran says that Bitcoin’s latest halving kicked up BTC’s fair value from $50,000 to about $80,000. According to Yusko, he sees sidelined […]",
       "currencies": [
@@ -371,8 +229,8 @@
       "title": "Has Cardano’s rally started? Exploring if ADA will reach $1 this time",
       "link": "https://ambcrypto.com/has-cardanos-rally-started-exploring-if-ada-will-reach-1-this-time/",
       "pubDate": "2024-04-21T07:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "The price of ADA may experience a dramatic extension to the surprise of many skeptics.",
       "currencies": [
@@ -384,23 +242,11 @@
       }
     },
     {
-      "title": "BOME price rises, but you should not sell just yet – Here’s why",
-      "link": "NULL",
-      "pubDate": "2024-04-21T06:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BOME",
-        "MEME"
-      ]
-    },
-    {
       "title": "Examining Cardano’s 52% hike and what NFTs have to do with it",
       "link": "https://ambcrypto.com/examining-cardanos-52-hike-and-what-nfts-have-to-do-with-it/",
       "pubDate": "2024-04-21T04:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "nft",
       "description": "Cardano hasn't had a great month on the price front. Could this change thanks to its NFT volumes?",
       "currencies": [
@@ -412,23 +258,11 @@
       }
     },
     {
-      "title": "SHIB and BOME Challenger Sleepy Shiba (SLESHIB) Will Rally 13,000% Amid MEXC Listing",
-      "link": "NULL",
-      "pubDate": "2024-04-21T00:55:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "BOME"
-      ]
-    },
-    {
       "title": "Solana Memecoin Scientist Doge (SCDOGE) Will Skyrocket 5,800% Within 72 Hours, But Can it Challenge SHIB and DOGE?",
       "link": "https://www.cryptointelligence.co.uk/solana-memecoin-scientist-doge-scdoge-will-skyrocket-5800-within-72-hours-but-can-it-challenge-shib-and-doge/",
       "pubDate": "2024-04-21T00:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "altcoin",
       "description": "Scientist Doge (SCDOGE) has huge potential, and it is poised to skyrocket over 5,800% in...",
       "currencies": [

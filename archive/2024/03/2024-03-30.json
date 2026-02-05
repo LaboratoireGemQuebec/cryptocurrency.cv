@@ -1,27 +1,15 @@
 {
   "date": "2024-03-30",
-  "fetchedAt": "2026-02-05T07:45:53.359Z",
-  "articleCount": 19,
+  "fetchedAt": "2026-02-05T07:48:35.649Z",
+  "articleCount": 3,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Warren Buffett Is Cashing In on Bitcoin, Crypto Via Nu Holdings",
-      "link": "NULL",
-      "pubDate": "2024-03-30T23:11:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
     {
       "title": "Bitcoin Braces for Supply Crunch as Demand Skyrockets, Warns CryptoQuant",
       "link": "https://www.cryptointelligence.co.uk/bitcoin-braces-for-supply-crunch-as-demand-skyrockets-warns-cryptoquant/",
       "pubDate": "2024-03-30T21:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "bitcoin",
       "description": "Bitcoin is on the verge of a supply crunch, according to recent insights from CryptoQuant’s...",
       "currencies": [
@@ -34,76 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Litecoin Surges by Nearly 20% After US Regulator Refers to LTC as a Commodity in KuCoin Complaint",
-      "link": "NULL",
-      "pubDate": "2024-03-30T18:45:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "BlockDAG: Your Top Crypto Pick for 2024 Vs Monero Price Prediction and Book of Meme (BOME) Perspectives",
-      "link": "NULL",
-      "pubDate": "2024-03-30T18:44:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Influencer declares war on AI crypto; Community fights back",
-      "link": "NULL",
-      "pubDate": "2024-03-30T18:24:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "In Q2 2024, Expect DeeStream (DST) to Prosper as Ethereum Classic (ETC) and Kusama (KSM) Encounter Headwinds",
-      "link": "NULL",
-      "pubDate": "2024-03-30T18:08:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC",
-        "KSM"
-      ]
-    },
-    {
-      "title": "Stellar (XLM) and Ripple (XRP) Investors Shift to Fezoo (FEZ) Amid Crypto Fluctuations, Aiming High Against OKX and Binance",
-      "link": "NULL",
-      "pubDate": "2024-03-30T17:51:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
       "title": "3 best Cardano tokens to invest in 2024",
       "link": "https://finbold.com/3-best-cardano-tokens-to-invest-in-2024/",
       "pubDate": "2024-03-30T16:07:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The Cardano (ADA) ecosystem has shown multiple growth signals in the past few years. Investors now look for promising tokens … Continue reading",
       "currencies": [
@@ -115,144 +38,11 @@
       }
     },
     {
-      "title": "Solana (SOL) Continues To Soar – How High Can It Go?",
-      "link": "NULL",
-      "pubDate": "2024-03-30T16:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "The Solana network’s native cryptocurrency, SOL, has been on an upward surge in the past three days, climbing from around $180 to over $210. Having failed to break its previous low of $162.74, the coin, which is currently ranked 5th in the crypto market with a total supply of 441 million and a market capitalization of over $88 billion, SOL is showing no signs of stopping. Will Solana Continue...",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "LUSD"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 5
-      }
-    },
-    {
-      "title": "Vintage Bitcoin Vaults Awaken — Over $41M in BTC Moves After 11.7 Years of Slumber",
-      "link": "NULL",
-      "pubDate": "2024-03-30T15:39:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Daniel Cheung's Filecoin (FIL) Tweet Mystifies Community, Here's Reason",
-      "link": "NULL",
-      "pubDate": "2024-03-30T14:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash’s Easter comeback amid impressive price surge",
-      "link": "NULL",
-      "pubDate": "2024-03-30T13:39:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin Cash (BCH) remarkably resurges on Easter Eve and is back to the top 15 most valuable cryptocurrencies by capitalization. … Continue reading",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Can This Bullish Chart Pattern Propel Bitcoin Price To $75,000?",
-      "link": "NULL",
-      "pubDate": "2024-03-30T11:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "PEPE",
-        "WIF",
-        "ALI"
-      ]
-    },
-    {
-      "title": "3 Bullish Altcoins Predicted to Outshine Bitcoin (BTC) in April 2024",
-      "link": "NULL",
-      "pubDate": "2024-03-30T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALGO",
-        "CAKE",
-        "GT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Is $ROE The Ultimate Bull Run Bet? Expert Pits It Against Cronos And MATIC",
-      "link": "NULL",
-      "pubDate": "2024-03-30T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "CRO"
-      ]
-    },
-    {
-      "title": "DAI (DAI) and Ethereum Classic (ETC) Investors Get Comfortable with Koala Coin (KLC) Seeing It as the Next Big Snuggle in Crypto",
-      "link": "NULL",
-      "pubDate": "2024-03-30T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI",
-        "ETC"
-      ]
-    },
-    {
-      "title": "How WIF, JUP, LTC, and RNDR Prices Compare to One Another",
-      "link": "NULL",
-      "pubDate": "2024-03-30T07:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC",
-        "RNDR",
-        "WIF",
-        "JUP"
-      ]
-    },
-    {
       "title": "Consensys Urges The SEC To Recognize Ethereum’s Advanced Safeguards",
       "link": "https://coinedition.com/consensys-urges-the-sec-to-recognize-ethereums-advanced-safeguards/",
       "pubDate": "2024-03-30T07:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "ethereum",
       "description": "Consensys, a leading blockchain software technology company, has asked the U.S. Securities and Exchange Commission (SEC) to recognize the advanced safeguards inherent in Ethereum’s design. The company proposed this in response to the SEC’s request for comments on the potential approval of Ethereum ETF applications. In line with the applications, the SEC asked whether Ethereum’s […]",
       "currencies": [
@@ -263,17 +53,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "New memecoins begin to land on Neo N3",
-      "link": "NULL",
-      "pubDate": "2024-03-30T06:57:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
     }
   ]
 }

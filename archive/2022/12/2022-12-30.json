@@ -1,39 +1,15 @@
 {
   "date": "2022-12-30",
-  "fetchedAt": "2026-02-05T07:45:52.710Z",
-  "articleCount": 54,
+  "fetchedAt": "2026-02-05T07:48:35.585Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "WOW, we have been in ETC for a year. The last HEBE migration is coming to an end. Our work is going according to pl…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T23:46:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETC",
-        "WETC",
-        "HEBE"
-      ]
-    },
-    {
-      "title": "Happy New Year from all of us at Orchid! 🥳",
-      "link": "NULL",
-      "pubDate": "2022-12-30T23:37:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OXT"
-      ]
-    },
     {
       "title": "Ethereum (ETH) Founder Vitalik Buterin Offers Support for Solana Developers As SOL Stumbles Into 2023",
       "link": "https://dailyhodl.com/2022/12/30/ethereum-eth-founder-vitalik-buterin-offers-support-for-solana-developers-as-sol-stumbles-into-2023/",
       "pubDate": "2022-12-30T23:01:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The founder of Ethereum (ETH) is offering words of encouragement to the developers of rival smart contract platform Solana (SOL) as its bear market struggles continue. The former billionaire says that since the “awful opportunistic money” has been washed out of Solana, the blockchain’s future looks bright and he hopes they thrive from here on […]",
       "currencies": [
@@ -47,133 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Check our blog outlining the challenges of defining #Web3 AND discusses some interesting connections between Web3 a…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T22:48:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "RT @ExchangeTsunami: 2022 was our first and very productive year Despite the conditions in the market, we achieved great heights! Rea…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T22:33:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "RT @POKTnetwork: Always pumped to see app developers like @EuropaLabsInc and projects like @inBetweenersNFT showing how important decentral…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T21:56:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "Sam Bankman-Fried denies moving funds from Alameda wallets",
-      "link": "NULL",
-      "pubDate": "2022-12-30T21:48:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "MOST USED smart contracts for the top 100 biggest #ETH whales today 🥇 $USDC 🥈 $USDT 🥉 $ETH 4️⃣ $CHZ @chiliz 5️⃣…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T20:35:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CHZ",
-        "BBW"
-      ]
-    },
-    {
-      "title": "We always have, we always will. We hope you'll join us. #XYO",
-      "link": "NULL",
-      "pubDate": "2022-12-30T18:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: We now have 3 separate patents &amp; roughly 75 claims in the 1st and 3rd largest economies and the first and 2nd largest…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T17:20:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "RT @eceertrey: Showed artwork at my 3rd @EthereumDenver, showed AR sculptures at a fashion show, worked with more Ai, released an #augmente…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T17:05:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: When has #WallStreet layoffs ever presaged a boom in the economy? Those hoping to avoid a recession are highly unreali…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T17:01:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "RT @ReggieMiddleton: Breaking: @Veritaseuminc #VeritaseumCapital has filed suit against @circle for use, transfer &amp; minting of $USDC stable…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T16:53:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "VERI"
-      ]
-    },
-    {
-      "title": "We've been working hard on the developer tooling for Holochain to get all the relevant libraries and developer envi…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T16:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
       "title": "XRP price in danger of plummeting with a ton of liquidity to the downside",
       "link": "https://finbold.com/xrp-price-in-danger-of-plummeting-with-a-ton-of-liquidity-to-the-downside/",
       "pubDate": "2022-12-30T16:04:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "defi",
       "description": "The price of XRP has recently faced rejection at critical positions as the asset continues to be affected by various … Continued",
       "currencies": [
@@ -185,33 +39,11 @@
       }
     },
     {
-      "title": "Bitfinex Talks - our conversations with inspirational leaders in #crypto, brings you an end of year gift The fu…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T16:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "I just published 2022 STAIKA PROJECT WRAP UP",
-      "link": "NULL",
-      "pubDate": "2022-12-30T15:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STIK"
-      ]
-    },
-    {
       "title": "Here’s Why Solana’s Future Is Still Bright Despite SOL Price Nuking 97% Below ATH: Vitalik Buterin",
       "link": "https://zycrypto.com/heres-why-solanas-future-is-still-bright-despite-sol-price-nuking-97-below-ath-vitalik-buterin/",
       "pubDate": "2022-12-30T14:50:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "Solana, the crypto once backed by FTX’s Sam Bankman-Fried, is one of the leading Layer 1 networks to have suffered in the enduring crypto winter. Despite the...",
       "currencies": [
@@ -224,55 +56,11 @@
       }
     },
     {
-      "title": "RT @StellaSwap: Presenting the first farm of Pulsar: @AcalaNetwork's $aUSD 🥳",
-      "link": "NULL",
-      "pubDate": "2022-12-30T14:42:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "To say 2022 has been eventful for the digital token industry would be an understatement. Join us as we review the y…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T14:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Cool tech alert! A system that allows for the input of a lot of data at once builds a complete picture faster than…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T13:56:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "XCN, SOL, APT, AXS and Sand Are the Crypto Market’s Least Successful Cryptocurrencies",
-      "link": "NULL",
-      "pubDate": "2022-12-30T13:55:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
       "title": "$1 billion leaves Solana market cap in a week; Will SOL crash further?",
       "link": "https://finbold.com/1-billion-leaves-solana-market-cap-in-a-week-will-sol-crash-further/",
       "pubDate": "2022-12-30T13:16:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "The price of the decentralized finance (DeFi) token Solana (SOL) continues to fall over questions about the network’s close affiliation with … Continued The post $1 billion leaves Solana market cap in a week; Will SOL crash further? appeared first on Finbold.",
       "currencies": [
@@ -285,60 +73,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Crypto_Potato: Coti's MultiDAG 2.0 public mainnet went live on Thursday.",
-      "link": "NULL",
-      "pubDate": "2022-12-30T13:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "COTI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "The Satellounge Multiplayer is our new feature that will allow Miners from across the globe to meet up &amp; show-off i…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T13:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "DAR"
-      ]
-    },
-    {
-      "title": "RT @Zig_0101: Picked up a @ZillazNFT on a collection offer ($3.60). For the nostalgia. Check brice…interesting brice.",
-      "link": "NULL",
-      "pubDate": "2022-12-30T12:53:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "RAD"
-      ]
-    },
-    {
-      "title": "Let’s take a look back at the events in the crypto space this 2022 and see how 2023 will roll out for all crypto tr…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T12:44:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HPO"
-      ]
-    },
-    {
       "title": "Solana Price Sinks To Single Digits For First Time In Nearly 2 Years",
       "link": "https://blockworks.co/news/solana-price-sinks-to-single-digits-for-first-time-in-nearly-2-years",
       "pubDate": "2022-12-30T12:40:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "trading",
       "description": "The price of solana is now squarely below $10, having sunk 75% since the FTX saga sent tokens tied to Sam Bankman-Fried ablaze",
       "currencies": [
@@ -351,24 +90,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Tokens To Watch In 2023: Orbeon Protocol (#ORBN), Quant (#QNT), and ImmutableX (#IMX) #Crypto #cryptocurrency",
-      "link": "NULL",
-      "pubDate": "2022-12-30T12:39:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT",
-        "IMX",
-        "TWJ"
-      ]
-    },
-    {
       "title": "Cardano Now Most Actively Developed Chain in 2022: Details",
       "link": "https://u.today/cardano-now-most-actively-developed-chain-in-2022-details",
       "pubDate": "2022-12-30T12:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano clinched title of most developed asset in 2022",
       "currencies": [
@@ -382,44 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "IT’S ALMOST OVER! #USDD has a ZERO FEE trade on all trading pairs happening with @HuobiGlobal until the end of the…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T11:37:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Following @bit_castle 's announcement regarding the delay of the #HPO listing on their exchange, the listing schedu…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T11:28:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HPO"
-      ]
-    },
-    {
-      "title": "RT @Mona_El_Isa: If 2022 taught us one thing, it's that there is no crypto future without transparent, easily auditable &amp; trustless asset m…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T11:03:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
       "title": "FTX founder reportedly cashes out $684K after being released on bail",
       "link": "https://cointelegraph.com/news/ftx-founder-reportedly-cashes-out-684k-after-being-released-on-bail",
       "pubDate": "2022-12-30T10:57:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "SBF has allegedly cashed out $684,000 from a crypto exchange in Seychelles while being under house arrest, according to an on-chain investigation.",
       "currencies": [
@@ -432,114 +125,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "As 2022 comes to a close, we've made it through a year filled with its fair share of struggles. KardiaChain is grat…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T10:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "RT @zilliqa_gaming: A look back at the other 4 WEB3WAR maps released in 2022. 1. Office 2. City 3. Construction 4. Containers What would…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T10:29:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "The year is coming to an end but our #MyUSDDChristmasNewYear is still ongoing! Enter the #giveaway quick and get…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T10:06:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @KeeperWallet: New Year Miracles happen, and our mobile app on iOS has just gone live! We did it! Download the app",
-      "link": "NULL",
-      "pubDate": "2022-12-30T10:06:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "RT @AvelyFinance: Happy New Year #Zilliqa #ZilFam! Today is the last working day of the year and we have breaking news & present for you …",
-      "link": "NULL",
-      "pubDate": "2022-12-30T09:23:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "Bitfinex Leafy appeared in Amsterdam, El Salvador and many more places in 2022! Paris Blockchain Week, Money2020 an…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T09:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Which token are you most excited about in 2023?",
-      "link": "NULL",
-      "pubDate": "2022-12-30T09:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "With tech upgrades, partnerships and collaborations, #Klaytn united Web2 companies, game publishers, content creato…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T08:33:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "JUST IN: $CHZ @chiliz one of the MOST USED smart contracts among top 1000 #ETH whales in the last 24hrs We've als…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T06:37:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CHZ",
-        "BBW"
-      ]
-    },
-    {
       "title": "Non-US FTX customers want private info redacted from bankruptcy filings",
       "link": "https://cointelegraph.com/news/non-us-ftx-customers-want-private-info-redacted-from-bankruptcy-filings",
       "pubDate": "2022-12-30T04:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "The group stressed that publicly revealing the names and private information of customers runs the potential risk of identity theft, targeted attacks and “other injury.”",
       "currencies": [
@@ -555,8 +145,8 @@
       "title": "Shiba Inu ($SHIB) Becomes One of Ethereum Whales’ Biggest Holdings as SHIBArmy Grows",
       "link": "https://www.cryptoglobe.com/latest/2022/12/shiba-inu-shib-becomes-one-of-ethereum-whales-biggest-holdings-as-shibarmy-grows/",
       "pubDate": "2022-12-30T04:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "The meme-inspired cryptocurrency Shiba Inu ($SHIB) has become one of the top holdings of the largest whales on the Ethereum network at a time in which the SHIBArmy keeps on growing and SHIB’s burn rate helps its supply drop. According to data from whale monitoring service WhaleStats, Shiba Inu has become one of the top […]",
       "currencies": [
@@ -569,68 +159,11 @@
       }
     },
     {
-      "title": "A centralized VPN collects your data like IP address, email ID and browsing history which can be hacked or shared…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T04:04:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BDX"
-      ]
-    },
-    {
-      "title": "RT @DaniyalAjdadi: THREAD 1/5: Our plan in 2023 to help companies easily adopt @EnergyWebx's technology and navigate the energy transition…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T02:49:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
-      "title": "RT @mulan_bean: I'm really surprised how much extra you get from @LooksRare. I had higher listing price on LooksRare every time but people…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T02:38:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "RT @officialPlayOne: New INO with #AVATARA Exciting news! NFT sale for our top-tier action MMORPG @Avatara_main will be open soon Ex…",
-      "link": "NULL",
-      "pubDate": "2022-12-30T02:29:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "$KLAY is now supported on @WOOnetwork, one of the leading derivative platforms",
-      "link": "NULL",
-      "pubDate": "2022-12-30T02:23:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Cardano ($ADA) Staking Arrives on iOS Devices via Trust Wallet",
       "link": "https://www.cryptoglobe.com/latest/2022/12/cardano-ada-staking-arrives-on-ios-devices-via-trust-wallet/",
       "pubDate": "2022-12-30T01:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The team behind Binance’s official non-custodial cryptocurrency wallet app, Trust Wallet, has recently announced support for staking Cardano ($ADA) on its iOS application, allowing users to earn interest on their $ADA holdings while securing the network on these devices. According to Trust Wallet, Cardano staking is now also available on iOS devices after first launching […]",
       "currencies": [
@@ -644,34 +177,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @proguerra: Merged mining is the best way to leverage PoW and add value to the #Bitcoin network.",
-      "link": "NULL",
-      "pubDate": "2022-12-30T01:13:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SYS"
-      ]
-    },
-    {
-      "title": "Why Bella Protocol's #FlexSavings?",
-      "link": "NULL",
-      "pubDate": "2022-12-30T01:13:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
       "title": "Why Polkadot is still one of the best projects to put on your watchlist in 2023",
       "link": "https://ambcrypto.com/why-polkadot-is-still-one-of-the-best-projects-to-put-on-your-watchlist-in-2023/",
       "pubDate": "2022-12-30T00:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Disclaimer: The information presented does not constitute financial, investment, trading, or other types of advice and is solely the writer’s opinion. Polkadot has been attracting crypto ventures and hedge funds in 2022. Is now a good time to buy considering DOT’s heavy discount? It is that time of the year when investors start to re-evaluate […]",
       "currencies": [
         "DOT"

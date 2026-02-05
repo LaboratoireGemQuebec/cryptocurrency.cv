@@ -1,15 +1,15 @@
 {
   "date": "2021-03-22",
-  "fetchedAt": "2026-02-05T07:45:51.884Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.488Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
     {
       "title": "The Harmony and Binance Smart Chain bridge is now live",
       "link": "https://www.reddit.com/r/harmony_one/comments/mazwjy/the_harmony_and_binance_smart_chain_bridge_is_now/",
       "pubDate": "2021-03-22T23:31:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "exchange",
       "currencies": [
         "ONE"
@@ -21,22 +21,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SpendCard: Spend Card ($SPND) memberships are now unlocked ahead of the @StrikeFinance ($STRK) main network launch. All benefits will r…",
-      "link": "NULL",
-      "pubDate": "2021-03-22T21:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
       "title": "TRON Embraces NFTs and Gaming with MixMarvel Partnership",
       "link": "https://cryptopotato.com/tron-embraces-nfts-and-gaming-with-mixmarvel-partnership/",
       "pubDate": "2021-03-22T20:59:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "nft",
       "description": "Tron has partnered with MixMarve to bring NFT gaming together in an interesting iteration, putting power back in the hands of gamers.",
       "currencies": [
@@ -49,24 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$USDf and $GAIA coming to @CoinMarketCap soon",
-      "link": "NULL",
-      "pubDate": "2021-03-22T19:35:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDX",
-        "USDF",
-        "SHARE"
-      ]
-    },
-    {
       "title": "XRP Touches $0.60 as Calls for Exchange Relistings Grow Louder",
       "link": "https://u.today/xrp-touches-060-as-calls-for-exchange-relistings-grow-louder",
       "pubDate": "2021-03-22T19:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "XRP has touched $0.60 for the time since late February amid growing momentum",
       "currencies": [
@@ -82,8 +58,8 @@
       "title": "Why ‘Relist’ XRP campaign is gaining momentum?",
       "link": "https://ambcrypto.com/why-relist-xrp-campaign-is-gaining-momentum/",
       "pubDate": "2021-03-22T18:34:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Alongside Ripple execs, many investors have not shied away from supporting XRP. Recently, XRP petitioners even claimed that due to the lawsuit against Ripple, former Commissioner Jay Clayton “knowingly and intentionally” caused “multi-billion-dollar” losses to XRP investors. They hoped to amend the SEC’s complaint about the status of XRP. Regulators stated the investors cannot prove […]",
       "currencies": [
@@ -99,8 +75,8 @@
       "title": "XRP Army gets 'RelistXRP' trending, demands exchanges comply",
       "link": "https://cointelegraph.com/news/xrp-army-gets-relistxrp-trending-demands-exchanges-comply",
       "pubDate": "2021-03-22T17:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Many crypto exchanges halted trading for XRP or delisted the token after the SEC announced its lawsuit last year.",
       "currencies": [
@@ -116,8 +92,8 @@
       "title": "Firefly Beta Release",
       "link": "http://blog.iota.org/firefly-beta-release/",
       "pubDate": "2021-03-22T17:36:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "We are proud to release the first public beta version of Firefly, our new wallet for Chrysalis. This marks an important milestone in the lead up to Chrysalis - the biggest network upgrade in the IOTA Foundation’s history - and gives the community a first taste of what the",
       "currencies": [
@@ -130,33 +106,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "There is more to this coin, and the crypto market, than Reddit.",
-      "link": "NULL",
-      "pubDate": "2021-03-22T17:03:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Efforce is a blockchain-based energy saving trading platform.",
-      "link": "NULL",
-      "pubDate": "2021-03-22T15:01:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "$100 Million in Monero (XMR) Ransom Reportedly Demanded from Computer Giant Acer",
       "link": "https://cryptopotato.com/100-million-in-monero-xmr-ransom-reportedly-demanded-from-computer-giant-acer/",
       "pubDate": "2021-03-22T14:37:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "The sixth-largest personal computer maker in the world, Acer, was reportedly compromised after a ransomware attack and the demand could reach $100M in XMR.",
       "currencies": [
@@ -173,8 +127,8 @@
       "title": "\"Relist XRP\" Campaign by XRP Army Gains Steam. What Do They Demand?",
       "link": "https://u.today/relist-xrp-campaign-by-xrp-army-gains-steam-what-do-they-demand",
       "pubDate": "2021-03-22T13:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Passionate supporters of Ripple and XRP launched viral campaign on social media to make top crypto platforms reconsider XRP delisting",
       "currencies": [
@@ -187,22 +141,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Feeling now every time I see a fake Binance listing announcement on twitter",
-      "link": "NULL",
-      "pubDate": "2021-03-22T13:03:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Ripple’s XRP Hits One-Month High on Exchange Re-Listing Prospect",
       "link": "https://www.newsbtc.com/news/ripple/ripples-xrp-hits-one-month-high-on-exchange-re-listing-prospect/",
       "pubDate": "2021-03-22T13:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Ripple’s native blockchain asset XRP surged to its one-month high on Monday as traders grappled with the prospects of its re-listing on cryptocurrency exchanges. The seventh-largest cryptocurrency experienced a dramatic decline in recent months after the US Securities and Exchange filed a lawsuit against its parent company, Ripple Labs, for its alleged role in selling […]",
       "currencies": [
@@ -215,27 +158,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "India Weighs Crypto Exchange IP Address Ban: Report",
-      "link": "NULL",
-      "pubDate": "2021-03-22T12:43:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
       "title": "KAVA Retests Previous All-Time High, Aims for Higher Prices",
       "link": "https://beincrypto.com/kava-retests-previous-all-time-high-aims-higher-prices/",
       "pubDate": "2021-03-22T11:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "However, KAVA has retested its previous all-time high, validating it as support. It’s expected to continue moving upwards, possibly reaching an eventual high near $12. KAVA Retests All-Time High KAVA has been decreasing since reaching a new all-time high price of $7.40 on March 13. While the token price has been decreasing since the drop … Continued",
       "currencies": [
@@ -251,8 +178,8 @@
       "title": "Bitcoin Third Largest World Currency, No Crypto Ban, Relisting XRP Legally & Pension Funds Run Low",
       "link": "https://www.youtube.com/watch?v=f53U6GaDOkg",
       "pubDate": "2021-03-22T10:50:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheModernInvestor",
+      "sourceKey": "themoderninvestor",
       "category": "bitcoin",
       "description": "MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ------------------------------------------ Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- DOGE Address: DJmfX6vZi6BE1iELwHf2icEMBGz8xKprRM ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/",
       "currencies": [
@@ -266,66 +193,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @coinquora_: #US-Based @buyaladdinapp is launching an update that will allow users to complete the payment with #BTC and @ethereum. @abb…",
-      "link": "NULL",
-      "pubDate": "2021-03-22T10:25:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "RT @aladdin_wallet: #AladdinMC offers an innovative solution in today’s rising demand for crypto-wallets. We deliver exceptional products w…",
-      "link": "NULL",
-      "pubDate": "2021-03-22T10:24:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Appreciation Post for Ark | Justin Renken",
-      "link": "NULL",
-      "pubDate": "2021-03-22T09:03:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "[ARK Weekly Discussion Thread] - March 22, 2021",
-      "link": "NULL",
-      "pubDate": "2021-03-22T09:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "[ARK Weekly Price & Trading Discussion Thread] - March 22, 2021",
-      "link": "NULL",
-      "pubDate": "2021-03-22T09:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Markets wrap: Bitcoin, Ethereum see resistance while VeChain (VET) sets ATH",
       "link": "https://cryptoslate.com/markets-wrap-bitcoin-ethereum-see-resistance-while-vechain-vet-sets-ath/",
       "pubDate": "2021-03-22T08:37:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "Bitcoin, Ethereum, and other large-cap cryptocurrencies saw a mixed weekend as price action remained choppy after Friday.",
       "currencies": [
@@ -339,22 +211,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Cointelegraph: Whales withdraw more BTC from exchanges — Here are 5 things to watch in Bitcoin this week.",
-      "link": "NULL",
-      "pubDate": "2021-03-22T08:33:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
       "title": "Ripple Cofounder Jed McCaleb Cashes Out 222.6 Million XRP In Past Two Weeks",
       "link": "https://u.today/ripple-cofounder-jed-mccaleb-cashes-out-2226-million-xrp-in-past-two-weeks",
       "pubDate": "2021-03-22T07:56:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Former Ripple CTO McCaleb has moved a whopping 222.6 million XRP since March 6 from his wallet set up back in 2012",
       "currencies": [
@@ -367,38 +228,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Exactly",
-      "link": "NULL",
-      "pubDate": "2021-03-22T07:53:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "#PancakeSwap currently has 16,891 unique LPs. Last week there was 11k and before that, just over 6k. …",
-      "link": "NULL",
-      "pubDate": "2021-03-22T06:24:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CAKE"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "#PancakeSwap is #1 for visits on @coingecko!",
       "link": "https://twitter.com/PancakeSwap/status/1373859815575855107",
       "pubDate": "2021-03-22T04:51:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "CAKE"
@@ -410,23 +244,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ICYDK: The ARK business entity is well funded with around 10 years of budget",
-      "link": "NULL",
-      "pubDate": "2021-03-22T03:50:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Phase 1 of IOST Integration with Japanese Medical Project Pracs is Successful",
       "link": "https://btcmanager.com/phase-1-iost-integration-japanese-medical-project-pracs/",
       "pubDate": "2021-03-22T03:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "In an announcement made today, decentralized, high-throughput, enterprise-grade smart contracts platform IOST stated that Japan’s medical project Pracs had completed phase 1 of its IOST integration. Pracs’ Phase 1 Integration into IOST Completed Japanese health tech venture Pracs and IOST core developer EverSystem have jointly developed a prototype and successfully completed phase 1 of theRead...",
       "currencies": [
         "IOST"
@@ -438,22 +261,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Nucypher and Ethereum 2.0. What happens?",
-      "link": "NULL",
-      "pubDate": "2021-03-22T02:17:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Why Popular Crypto Analyst and Trader ‘Kaleo’ Is Bullish on $XRP and $TRX",
       "link": "https://www.cryptoglobe.com/latest/2021/03/why-popular-crypto-analyst-and-trader-kaleo-is-bullish-on-xrp-and-trx/",
       "pubDate": "2021-03-22T02:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Recently, popular pseudo-anonymous crypto analyst and trader “Kaleo” said that he’s bullish on the outlook for TRON (TRX) and XRP. First, with regard to XRP, he said that XRP was in a position to revisit its all-time high of $3.84. The trader predicted the possibility of another breakout that would take the coin to its […]",
       "currencies": [
@@ -470,8 +282,8 @@
       "title": "IOTA Finally Launches Its Completely New Wallet, Firefly. Here's What's New",
       "link": "https://u.today/iota-finally-launches-its-completely-new-wallet-firefly-heres-whats-new",
       "pubDate": "2021-03-22T00:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "New wallet is an \"entry point\" for enthusiasts of the upcoming Chrysalis phase of IOTA progress. What is special about it?",
       "currencies": [

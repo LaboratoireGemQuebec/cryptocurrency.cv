@@ -1,26 +1,15 @@
 {
   "date": "2023-11-24",
-  "fetchedAt": "2026-02-05T07:45:52.051Z",
-  "articleCount": 112,
+  "fetchedAt": "2026-02-05T07:48:35.521Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Poly Network shares investigation findings for July 2 attack in breach report",
-      "link": "NULL",
-      "pubDate": "2023-11-24T23:32:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
     {
       "title": "SEC Spares XRP from Kraken “Crypto Securities” Firing Line",
       "link": "https://dailycoin.com/sec-spares-xrp-from-kraken-crypto-securities-firing-line/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-11-24T23:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "regulation",
       "description": "SEC's lawsuit against Kraken excludes XRP from alleged securities, raising eyebrows and inviting scrutiny over cryptocurrency regulations.",
       "currencies": [
@@ -36,39 +25,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NFT Marketplace Altcoin Blur Leaps After Listing on Top Crypto Exchange by Trading Volume Binance",
-      "link": "NULL",
-      "pubDate": "2023-11-24T23:01:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Market Cap Soars: $1.5 Trillion Milestone Achieved, Bitcoin Sets New Record",
-      "link": "NULL",
-      "pubDate": "2023-11-24T23:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MINA"
-      ]
-    },
-    {
       "title": "Conservative Bitcoin price prediction for late 2025",
       "link": "https://finbold.com/conservative-bitcoin-price-prediction-for-late-2025/",
       "pubDate": "2023-11-24T22:28:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) is currently dominated by bullish sentiments, with the leading cryptocurrency aiming to reclaim the $40,000 spot in pursuit … Continued",
       "currencies": [
@@ -84,8 +45,8 @@
       "title": "$ADA: What Are Midnight Smart Contracts and Why They Could Be a Game-Changer in Terms of Increasing Cardano’s Adoption",
       "link": "https://www.cryptoglobe.com/latest/2023/11/ada-what-are-midnight-smart-contracts-and-why-they-could-be-a-game-changer-in-terms-of-increasing-cardanos-adoption/",
       "pubDate": "2023-11-24T22:13:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "In a recent blog post, Mauricio Magaldi, Head of Product at Midnight, took a close look at how smart contracts in Midnight — which is a data protection-based sidechain solution for Cardano — work. Midnight’s smart contracts are designed to address a critical challenge in blockchain technology: ensuring data protection while maintaining the decentralized ethos […]",
       "currencies": [
@@ -97,43 +58,11 @@
       }
     },
     {
-      "title": "DailyCoin Cardano Regular: ADA Prepares For Bull Run;  Influencers Broker Peace Between Communities Following Insider Drama, And More",
-      "link": "NULL",
-      "pubDate": "2023-11-24T22:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Valour XRP ETP Set To Begin Trading, Can Institutional Inflows Drive Price To $10?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T22:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SHIB",
-        "FLOW"
-      ]
-    },
-    {
       "title": "$ADA: Cardano SPO Rick McCracken on ‘Potential Applications of Midnight Across Diverse Global Industries’",
       "link": "https://www.cryptoglobe.com/latest/2023/11/ada-cardano-spo-rick-mccracken-on-potential-applications-of-midnight-across-diverse-global-industries/",
       "pubDate": "2023-11-24T21:39:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Midnight represents an emerging initiative in the blockchain space, positioned to address critical data protection needs in sectors like finance, insurance, and e-commerce. As a platform still in development, it promises to introduce selective data disclosure for Decentralized Applications (DApps), a significant departure from the traditional public ledger model prevalent in blockchain...",
       "currencies": [
@@ -145,27 +74,11 @@
       }
     },
     {
-      "title": "Blast network hits $400M TVL, rebuts claim that it’s too centralized",
-      "link": "NULL",
-      "pubDate": "2023-11-24T21:36:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MATIC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Midnight: Cardano’s Trailblazing Sidechain Enhancing Privacy in Blockchain",
       "link": "https://www.cryptoglobe.com/latest/2023/11/midnight-cardanos-trailblazing-sidechain-enhancing-privacy-in-blockchain/",
       "pubDate": "2023-11-24T21:10:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Introduction The blockchain ecosystem is set to witness a transformative leap in privacy and enterprise adoption with the introduction of Midnight, a privacy-centric sidechain developed under the Cardano banner. Announced at ScotFest 2022 in Edinburgh, Scotland, this project represents a significant stride in Cardano’s ongoing commitment to innovation. The Genesis of Midnight Midnight’s...",
       "currencies": [
@@ -177,81 +90,11 @@
       }
     },
     {
-      "title": "Ethereum Outperforms Bitcoin: Is The Altcoin Season Officially On?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T21:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Crypto Trader Says Altcoin Markets Approaching a ‘Historic’ Retest, Deep Dives Into Polkadot (DOT)",
-      "link": "NULL",
-      "pubDate": "2023-11-24T20:55:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Impact of FTX’s Sam Bankman-Fried Conviction on Crypto Industry",
-      "link": "NULL",
-      "pubDate": "2023-11-24T20:42:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "TRON Founder Justin Sun Announces ‘Epic Airdrop’ for Crypto Users",
-      "link": "NULL",
-      "pubDate": "2023-11-24T20:31:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Changpeng Zhao’s legal team challenges U.S. motion to restrict travel",
-      "link": "NULL",
-      "pubDate": "2023-11-24T20:09:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Polkadot (DOT) and Polygon (MATIC) Ride the Crypto Wave - What's Behind the Surge?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T20:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "MATIC"
-      ]
-    },
-    {
       "title": "Bitcoin Lightning App ‘Wallet of Satoshi’ Exits US Market",
       "link": "https://cryptopotato.com/bitcoin-lightning-app-wallet-of-satoshi-exits-us-market/",
       "pubDate": "2023-11-24T19:26:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Wallets of Satoshi said it remains hopeful that future developments will enable the app to revisit and possibly resume our operations in the United States.",
       "currencies": [
@@ -267,8 +110,8 @@
       "title": "Top Analyst Benjamin Cowen Issues Cardano Alert, Says He’s Still Convinced ADA Could Go Lower – Here’s Why",
       "link": "https://dailyhodl.com/2023/11/24/top-analyst-benjamin-cowen-issues-cardano-alert-says-hes-still-convinced-ada-could-go-lower-heres-why/",
       "pubDate": "2023-11-24T19:05:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Closely followed crypto analyst Benjamin Cowen is warning that one Ethereum (ETH) competitor may not be done correcting. In a new strategy session, Cowen tells his 788,000 YouTube subscribers that smart contract platform Cardano (ADA) may fall lower against Bitcoin (ADA/BTC) due to the Federal Reserve not yet cutting interest rates. “If you look at […]",
       "currencies": [
@@ -282,182 +125,11 @@
       }
     },
     {
-      "title": "Cross-Border Legal Drama: Do Kwon To Be Extradited By Montenegro",
-      "link": "NULL",
-      "pubDate": "2023-11-24T19:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Cryptocurrency The Graph Rises More Than 9% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-24T19:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GRT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency NEAR Protocol Up More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-24T19:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "ADA Could Surge off the Back of a BTC Breakout, Says Analyst",
-      "link": "NULL",
-      "pubDate": "2023-11-24T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA"
-      ]
-    },
-    {
-      "title": "Avalanche ASC-20 transactions surge: How about AVAX?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T18:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BNB Price Resilience Amid CEO Resignation Sparks Optimism",
-      "link": "NULL",
-      "pubDate": "2023-11-24T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Market Watch: These 5 Altcoins Are Poised For Breakouts, Says Crypto Expert",
-      "link": "NULL",
-      "pubDate": "2023-11-24T18:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "MATIC",
-        "LINK",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Binance Labs and BNB Chain Open New Founder-Focused Track To Incubate 100 Early-Stage Projects",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:59:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Price analysis 11/24: BTC, ETH, BNB, XRP, SOL, ADA, DOGE, TON, LINK, AVAX",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:58:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "AVAX",
-        "LINK",
-        "TON"
-      ]
-    },
-    {
-      "title": "Axie Infinity Starts Giving NFT Owners Commercial Rights as Official Merch Drops",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:54:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETH",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Tether, Bitfinex to Drop Opposition to New York Freedom of Information Law Request",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:42:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Binance Listing Sparks Excitement in Blur’s NFT Community",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Mad Money’s Jim Cramer Backtracks, Endorses Buying And Investing In Bitcoin",
       "link": "https://bitcoinist.com/jim-cramer-endorses-bitcoin/",
       "pubDate": "2023-11-24T17:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Mad Money host, Jim Cramer has backed down from his initial skepticism about Bitcoin investments, now encouraging people to buy and invest in BTC. Cramer Advocates Bitcoin Investments Jim Cramer, a TV host for the American investment advice show, Mad Money has shocked the crypto community with his sudden endorsement of Bitcoin. Related Reading: Only […]",
       "currencies": [
@@ -469,36 +141,11 @@
       }
     },
     {
-      "title": "FOIL Request Accepted, Tether, and Bitfinex Embrace Openness",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Will Recent Binance Events Trigger This Historical Bitcoin Bull Run Signal?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T17:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LINK",
-        "QNT"
-      ]
-    },
-    {
       "title": "ADA would trade at this price if Cardano hits its all-time high market cap",
       "link": "https://finbold.com/ada-would-trade-at-this-price-if-cardano-hits-its-all-time-high-market-cap/",
       "pubDate": "2023-11-24T16:56:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Crypto traders often do not pay enough attention to how the supply of cryptocurrencies can increase and inflate. Understanding this … Continued",
       "currencies": [
@@ -510,41 +157,11 @@
       }
     },
     {
-      "title": "NFT Platform Blur's Token Jumps 22% Amid Binance Listing and Blast Optimism",
-      "link": "NULL",
-      "pubDate": "2023-11-24T16:41:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "OP",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Here’s When 'Final Fantasy' Maker Square Enix Is Dropping NFTs for its Ethereum Game",
-      "link": "NULL",
-      "pubDate": "2023-11-24T16:29:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana Sees Heightened Discussion Rate Amid Price Hitting 18-Month High — SOL Destined For $100?",
       "link": "https://zycrypto.com/solana-sees-heightened-discussion-rate-amid-price-hitting-18-month-high-sol-destined-for-100/",
       "pubDate": "2023-11-24T16:22:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Solana (SOL) has been experiencing positive crowd sentiment. This has been one of the pivotal factors enabling the sixth-largest cryptocurrency based on market valuation to surge to levels last seen in 2022.",
       "currencies": [
@@ -557,57 +174,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "With an Altcoin Bull Run on the Horizon, Cardano (ADA) and Litecoin (LTC) May Jostle for the Top Spot",
-      "link": "NULL",
-      "pubDate": "2023-11-24T16:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Blur price doubles following Season 2 airdrop and Binance listing",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:51:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Bitcoin Soars to 18-Month High Above $38K Despite Changpeng Zhao’s Departure From Binance: This Week’s Recap",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:49:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "BLUR Price Prediction as Buyers Escape 5-Month Accumulation; Is $1 Next Target?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:41:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
       "title": "3 cryptos to buy under $0.10 next week",
       "link": "https://finbold.com/3-cryptos-to-buy-under-0-10-next-week/",
       "pubDate": "2023-11-24T15:40:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Numerous cryptocurrencies, such as Bitcoin (BTC) and Ethereum (ETH), have been methodically challenging and surpassing new resistance levels amidst the … Continued",
       "currencies": [
@@ -626,8 +197,8 @@
       "title": "Crypto Analyst Says Ethereum Competitor Solana Primed To Surge by at Least 70% – Here’s the Timeline",
       "link": "https://dailyhodl.com/2023/11/24/crypto-analyst-says-ethereum-competitor-solana-primed-to-surge-by-at-least-70-heres-the-timeline/",
       "pubDate": "2023-11-24T15:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A popular crypto analyst is predicting that one Ethereum (ETH) competitor will soar to three figures in 2024. Pseudonymous trader Altcoin Sherpa tells his 198,500 followers on the social media platform X that Solana (SOL) will likely increase by at least 72% from its current value next year. “SOL: hoping for a bit lower to […]",
       "currencies": [
@@ -643,79 +214,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether and Bitfinex Decline to Contest FOIL Request, But There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Filecoin Up More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Cronos's Price Increased More Than 8% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Kaspa Up More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-24T15:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Tether and Bitfinex yield to FOIL request amid transparency pledge",
-      "link": "NULL",
-      "pubDate": "2023-11-24T14:47:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Ethereum Tops $2,100; Blur Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-11-24T14:31:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BLUR"
-      ]
-    },
-    {
       "title": "ChatGPT predicts BNB price for the start of 2024",
       "link": "https://finbold.com/chatgpt-predicts-bnb-price-for-the-start-of-2024/",
       "pubDate": "2023-11-24T14:24:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Binance, the world’s largest cryptocurrency exchange, is grappling with a seismic shift as its chief, Changpeng Zhao, pleaded guilty to … Continued",
       "currencies": [
@@ -728,58 +231,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BLUR Accumulation Surges After Binance Listing, Price Jumps 97%",
-      "link": "NULL",
-      "pubDate": "2023-11-24T14:17:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "XRP Price Could Hit $10,000 If It Overtakes SWIFT, Pundit Suggests",
-      "link": "NULL",
-      "pubDate": "2023-11-24T14:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "FTX’s Sam Bankman-Fried Requests To Be Released From Prison, Court Responds",
-      "link": "NULL",
-      "pubDate": "2023-11-24T14:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "IRBT Jumps in Premarket as Amazon Acquisition Reportedly Set to Be Approved",
-      "link": "NULL",
-      "pubDate": "2023-11-24T13:59:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Ethereum new yearly highs on the horizon as ETH breaks key resistance",
       "link": "https://finbold.com/ethereum-new-yearly-highs-on-the-horizon-as-eth-breaks-key-resistance/",
       "pubDate": "2023-11-24T13:54:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "In line with the overwhelming bullish sentiment in the general cryptocurrency market, Ethereum (ETH) has continued its gains from previous … Continued",
       "currencies": [
@@ -792,102 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether, Bitfinex agree to drop opposition to FOIL request",
-      "link": "NULL",
-      "pubDate": "2023-11-24T13:42:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "The Graph (GRT) Joins AI Token Surge With 19% Rise: Details",
-      "link": "NULL",
-      "pubDate": "2023-11-24T13:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "UNI Price Dips as 1inch Foundation Sells Tokens at $500K+ Profit",
-      "link": "NULL",
-      "pubDate": "2023-11-24T13:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Is BNB Still a Good Buy? Investors Eying These Popular New Altcoins",
-      "link": "NULL",
-      "pubDate": "2023-11-24T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Jim Cramer Admits He Was Wrong with Premature Call to Sell Bitcoin",
-      "link": "NULL",
-      "pubDate": "2023-11-24T12:31:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "What next for MATIC as bulls are forced to take a back seat",
-      "link": "NULL",
-      "pubDate": "2023-11-24T12:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "BLUR Soars 83% Weekly as Binance Lists Token With New Trading Pairs",
-      "link": "NULL",
-      "pubDate": "2023-11-24T12:23:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
       "title": "Is it too late to invest in Cardano?",
       "link": "https://finbold.com/is-it-too-late-to-invest-in-cardano/",
       "pubDate": "2023-11-24T12:10:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "As the majority of assets in the cryptocurrency market take a bullish turn, Cardano (ADA) is no exception, recording increases … Continued",
       "currencies": [
@@ -900,117 +265,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BLUR Token Rules Today’s Top 100 Crypto Ranking With 88% Rally – Details",
-      "link": "NULL",
-      "pubDate": "2023-11-24T12:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XRP",
-        "OP",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Concentrated Liquidity Market Maker (CLMM): A Complete Guide Including 5 Examples",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:53:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "India’s Shemaroo Partners with The Sandbox to Bring Bollywood to Metaverse",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:36:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "What is an Automated Market Maker (AMM)? A Complete Guide",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:32:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Binance Labs & BNB Chain Open New Founder-focused Track to Incubate 100 Early-stage Projects",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Lists BLUR, Token Pumps Over 28%",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:29:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Solana (SOL) and its oracle Pyth Network (PYTH) to play big part in this crypto bull market",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "PYTH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Gate.io Implements Zero-Knowledge Tech in New Proof of Reserves Method",
-      "link": "NULL",
-      "pubDate": "2023-11-24T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
       "title": "Legal expert: XRP not on list of securities in SEC’s Kraken lawsuit",
       "link": "https://finbold.com/legal-expert-xrp-not-on-list-of-securities-in-secs-kraken-lawsuit/",
       "pubDate": "2023-11-24T10:48:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "With the lawsuit against cryptocurrency trading platform Kraken becoming the newest instance of the United States Securities and Exchange Commission … Continued",
       "currencies": [
@@ -1026,8 +285,8 @@
       "title": "Court in Montenegro approves extradition of Terra founder Do Kwon",
       "link": "https://finbold.com/court-in-montenegro-approves-extradition-of-terra-founder-do-kwon/",
       "pubDate": "2023-11-24T10:39:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Do Kwon, former CEO of Terraform Labs, which acted as a parent company of Terra (LUNA), might soon face justice … Continued",
       "currencies": [
@@ -1040,73 +299,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BLUR Up 30% Following Season 2 Airdrop, Binance Listing",
-      "link": "NULL",
-      "pubDate": "2023-11-24T10:28:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Trader Says Ethereum-Based Altcoin Looking Massively Bullish, Updates Outlook on Polygon, Chainlink and XRP",
-      "link": "NULL",
-      "pubDate": "2023-11-24T10:15:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "LINK",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Price Increase Takes a Pause – Is There a Path to $20 This Year?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T10:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis Nov-24: ETH, XRP, ADA, SOL, and BNB",
-      "link": "NULL",
-      "pubDate": "2023-11-24T10:07:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Chainflip Launch: A New Project on KuCoin Broadens its Asset Cluster",
-      "link": "NULL",
-      "pubDate": "2023-11-24T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "FTX founder gives crypto tips to guards behind bars",
       "link": "https://finbold.com/ftx-founder-gives-crypto-tips-to-guards-behind-bars/",
       "pubDate": "2023-11-24T09:59:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "exchange",
       "description": "Sam Bankman-Fried, once revered as a “King of Crypto,” has experienced a fall from grace in a year that saw … Continued",
       "currencies": [
@@ -1119,34 +316,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "OKX to list Fetch.ai (FET), SingularityNET (AGIX) for spot trading",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:56:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "BLUR Explodes 25% Daily as Bitcoin Price Eyes $38K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:53:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BLUR"
-      ]
-    },
-    {
       "title": "Spot Bitcoin ETF approval could unlock $70 billion capital influx, data shows",
       "link": "https://finbold.com/spot-bitcoin-etf-approval-could-unlock-70-billion-capital-influx-data-shows/",
       "pubDate": "2023-11-24T09:48:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "As the cryptocurrency industry awaits a massive step toward the mainstream in the form of the United States Securities and … Continued",
       "currencies": [
@@ -1159,90 +333,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "KuCoin To Delists 10 Altcoins In Strategic Platform Adjustment",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:45:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "USDT cements leadership with 72% hold on stablecoin market",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Do Kwon extradition approved by Montenegro court",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:42:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Shiba Inu Community Project Calls Out Founders For Refusing To Burn 103 Trillion SHIB",
-      "link": "NULL",
-      "pubDate": "2023-11-24T09:40:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "AVAX",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "25 Whales Purchased Millions Of BLUR Tokens, Price Jumps 90% In Week",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:44:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETH",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "BLUR Goes Parabolic Amid Potential Binance Listing",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Sam Bankman-Fried’s ‘Mackerel Currency’ Creates A Stir In Prison",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
       "title": "Giant Whale is Collecting from This Altcoin on the Radar of Institutional Investors!",
       "link": "https://en.bitcoinsistemi.com/giant-whale-is-collecting-from-this-altcoin-on-the-radar-of-institutional-investors/",
       "pubDate": "2023-11-24T08:28:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "The whale, which has been purchasing Lido DAO since October, deposited all of its LDOs into Aave for the repurchase and borrowed 1.56 million USDT. Continue Reading: Giant Whale is Collecting from This Altcoin on the Radar of Institutional Investors!",
       "currencies": [
@@ -1256,99 +351,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "AVAX On-Chain Metrics Surge Amidst Upcoming Token Unlock Event: Data",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:19:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "BNB Oscillates In A Range But Faces A Drop To $220",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "100,000 Koreans to Participate in CBDC Experiment in 2024",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:14:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Raiffeisenlandesbank to launch Bitcoin trading in early 2024",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:08:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLB"
-      ]
-    },
-    {
-      "title": "French-based Lacoste Announces Strategic Partnership with The Sandbox to Celebrate 90th Anniversary",
-      "link": "NULL",
-      "pubDate": "2023-11-24T08:07:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance To List Blur (BLUR) Token As BLUR Price Surges 30%",
-      "link": "NULL",
-      "pubDate": "2023-11-24T07:43:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "How FRC-20 propelled Fantom transactions to a record high",
-      "link": "NULL",
-      "pubDate": "2023-11-24T07:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
       "title": "Ripple (XRP) Price Predictions, Cardano (ADA) Targets, Shiba Inu (SHIB) Developments: Bits Recap Nov 24",
       "link": "https://cryptopotato.com/ripple-xrp-price-predictions-cardano-ada-targets-shiba-inu-shib-developments-bits-recap-nov-24/",
       "pubDate": "2023-11-24T07:16:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP was projected to reach the ridiculous $470, ADA might continue its uptrend in the future, while Shibarium keeps smashing milestones.",
       "currencies": [
@@ -1362,55 +369,11 @@
       }
     },
     {
-      "title": "Shifting Gears in Crypto: Moving from Avalanche (AVAX) and Arbitrum (ARB) to a High-Potential New Coin",
-      "link": "NULL",
-      "pubDate": "2023-11-24T07:11:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Swiss City Lugano’s Payment App Integrates Polygon PoS for Enhanced Web3 Access",
-      "link": "NULL",
-      "pubDate": "2023-11-24T07:09:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Justin Sun Could Be the Next Sam Bankman-Fried, Analyst Claims",
-      "link": "NULL",
-      "pubDate": "2023-11-24T05:45:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Court Upholds Detention of Ex-FTX CEO Sam Bankman-Fried, Deeming Release Arguments ‘Unpersuasive’",
-      "link": "NULL",
-      "pubDate": "2023-11-24T04:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
       "title": "Why Ethereum’s time to shine may be here",
       "link": "https://eng.ambcrypto.com/why-ethereum-time-to-shine-may-be-here",
       "pubDate": "2023-11-24T04:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "ETH may hit $2,100 if buying pressure continues. Many transactions ended in profit in the last 24 hours. Unlike other altcoins, Ethereum’s [ETH] price action failed to break out for a whil",
       "currencies": [
@@ -1423,46 +386,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "UNI Price Prediction – After 25% Rally Uniswap Turned Attractive On Dips",
-      "link": "NULL",
-      "pubDate": "2023-11-24T04:24:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "UNI"
-      ]
-    },
-    {
-      "title": "PancakeSwap Adopts Vote Escrow Tokenomics",
-      "link": "NULL",
-      "pubDate": "2023-11-24T04:19:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Analysis: Downtrend Resistance Sits at $230",
-      "link": "NULL",
-      "pubDate": "2023-11-24T03:28:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
       "title": "Cardano's Hoskinson Delivers Eulogy for CZ’s Binance Ouster",
       "link": "https://dailycoin.com/cardanos-hoskinson-eulogy-cz-binance-ouster/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-11-24T03:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Charles Hoskinson anticipates the beginning of a new era for crypto following CZ’s sudden exit.",
       "currencies": [
@@ -1472,65 +400,6 @@
         "positive": 4,
         "negative": 4
       }
-    },
-    {
-      "title": "BNB Chain L2 opBNB: The next destination for GameFi?",
-      "link": "NULL",
-      "pubDate": "2023-11-24T02:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Bankrupt Crypto Exchange FTX Transfers $36,000,000 Worth of Altcoins to Exchanges: On-Chain Data",
-      "link": "NULL",
-      "pubDate": "2023-11-24T01:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AVAX",
-        "MATIC",
-        "FTT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Former SEC Official Exposes Binance As ‘Big Crypto Cartel’ In Scathing Verdict",
-      "link": "NULL",
-      "pubDate": "2023-11-24T01:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Injective launches bridge, places Solana users at the head",
-      "link": "NULL",
-      "pubDate": "2023-11-24T00:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "INJ"
-      ]
     }
   ]
 }

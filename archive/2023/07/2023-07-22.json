@@ -1,15 +1,15 @@
 {
   "date": "2023-07-22",
-  "fetchedAt": "2026-02-05T07:45:52.152Z",
-  "articleCount": 27,
+  "fetchedAt": "2026-02-05T07:48:35.541Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "Ripple CEO Brad Garlinghouse addressed the SEC after the SEC hinted that it would appeal: “You Have No Authority!”",
       "link": "https://en.bitcoinsistemi.com/ripple-ceo-brad-garlinghouse-addressed-the-sec-after-the-sec-hinted-that-it-would-appeal-you-have-no-authority/",
       "pubDate": "2023-07-22T22:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "Ripple CEO Brad Garlinghouse heavily criticized the SEC, which signaled an appeal in his statement. Continue Reading: Ripple CEO Brad Garlinghouse addressed the SEC after the SEC hinted that it would appeal: “You Have No Authority!”",
       "currencies": [
@@ -22,30 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Decred Journal — June 2023",
-      "link": "NULL",
-      "pubDate": "2023-07-22T20:47:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "MATIC",
-        "BCH",
-        "FLOW",
-        "KCS",
-        "AAVE",
-        "USDP",
-        "CRV",
-        "DCR"
-      ]
-    },
-    {
       "title": "Giant Whale Sells Ethereum and Builds a Massive Stash of this Altcoin",
       "link": "https://en.bitcoinsistemi.com/giant-whale-sells-ethereum-and-builds-a-massive-stash-of-this-altcoin/",
       "pubDate": "2023-07-22T17:36:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "A giant cryptocurrency whale has recently added from a bullish altcoin, according to on-chain data. Continue Reading: Giant Whale Sells Ethereum and Builds a Massive Stash of this Altcoin",
       "currencies": [
@@ -61,8 +42,8 @@
       "title": "SEC Prepares To Challenge Ripple Court Victory — Here’s What This Could Mean For XRP",
       "link": "https://zycrypto.com/sec-prepares-to-challenge-ripple-court-victory-heres-what-this-could-mean-for-xrp/",
       "pubDate": "2023-07-22T16:21:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "Ripple Lab’s battle with the SEC is far from over.",
       "currencies": [
@@ -74,34 +55,11 @@
       }
     },
     {
-      "title": "NFT Collection Dimension X Set to Launch on August 8",
-      "link": "NULL",
-      "pubDate": "2023-07-22T16:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETH",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Celsius Network reaches settlements to exit bankruptcy",
-      "link": "NULL",
-      "pubDate": "2023-07-22T15:59:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
       "title": "Why Bitcoin (BTC) and Ethereum (ETH) Aren’t Moving? What is the Latest Data?",
       "link": "https://en.bitcoinsistemi.com/why-bitcoin-btc-and-ethereum-eth-arent-moving-what-is-the-latest-data/",
       "pubDate": "2023-07-22T14:48:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) and Ethereum (ETH) have been following a sideways trend for a relatively long time. So why did the low volatility occur? Continue Reading: Why Bitcoin (BTC) and Ethereum (ETH) Aren’t Moving? What is the Latest Data?",
       "currencies": [
@@ -118,8 +76,8 @@
       "title": "Pro-XRP Lawyer Says Favorable Ripple Ruling Less Likely To Be Overturned on Appeal – Here’s Why",
       "link": "https://dailyhodl.com/2023/07/22/pro-xrp-lawyer-says-favorable-ripple-ruling-less-likely-to-be-overturned-on-appeal-heres-why/",
       "pubDate": "2023-07-22T14:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Pro-XRP attorney Jeremy Hogan says that the historic ruling in the U.S. Securities and Exchange Commission’s (SEC) lawsuit against Ripple will likely withstand an appeal. In a new YouTube interview with Darren Moore Jr., Hogan says that Judge Analisa Torres ruled in favor of Ripple based on the Howey Test while couching her decision on the […]",
       "currencies": [
@@ -132,29 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Will Reach $175,000 If Prices Break Above This Rising Channel, Trader Claims",
-      "link": "NULL",
-      "pubDate": "2023-07-22T14:20:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Weekend technical analysis for Bitcoin: Incoming volatility and potential pump",
       "link": "https://finbold.com/weekend-technical-analysis-for-bitcoin-incoming-volatility-and-potential-pump/",
       "pubDate": "2023-07-22T12:45:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) has once again fallen into familiar territories, trading below the $30,000 mark, with investors closely monitoring its subsequent … Continued",
       "currencies": [
@@ -167,109 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Multichain Hack Led To The Smartest Arbitrage In Crypto History",
-      "link": "NULL",
-      "pubDate": "2023-07-22T12:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDC",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Fantom: Following Multichain Bridge hack, TVL falls to 2-year low",
-      "link": "NULL",
-      "pubDate": "2023-07-22T12:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Conic Finance Becomes Latest DeFi Protocol To Suffer Exploit",
-      "link": "NULL",
-      "pubDate": "2023-07-22T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Maker (MKR) Surges 26% In A Week As Token Buyback Program Goes Live",
-      "link": "NULL",
-      "pubDate": "2023-07-22T12:20:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "DAI",
-        "UNI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "TUSD Archblock Ex-CEO Sues Colleagues for Forcing Him Out of Business",
-      "link": "NULL",
-      "pubDate": "2023-07-22T12:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Trader Warns of Steep Decline for One DEX Altcoin, Updates Outlook on Bitcoin and Four Other Crypto Assets",
-      "link": "NULL",
-      "pubDate": "2023-07-22T11:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GMX"
-      ]
-    },
-    {
-      "title": "Crypto Craze Sweeps France: Survey Proclaims It As The Defining Future",
-      "link": "NULL",
-      "pubDate": "2023-07-22T11:40:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Ethereum (ETH) Records Highest CEX Inflows In 2 Months",
-      "link": "NULL",
-      "pubDate": "2023-07-22T11:33:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DOGE",
-        "XDC"
-      ]
-    },
-    {
       "title": "SEC Hints at Challenging Court XRP Ruling in Separate Lawsuit",
       "link": "https://cryptobriefing.com/sec-may-challenge-ripple-ruling/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-22T11:27:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "description": "The U.S. Securities and Exchange Commission (SEC) has given itsresponse to the recent court decision in its case against Ripple Labs, arguing that XRP isn't a security when sold to retail investors.The Ripple comments were made in a separate filing in the SECs ongoing lawsuit against Terraform Labs and its founder, Do Kwon, for an alleged multi-billion-dollar crypto asset securities...",
       "currencies": [
@@ -282,95 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How Did Shiba Inu Price React To 3 Trillion SHIB Investor Accumulation?",
-      "link": "NULL",
-      "pubDate": "2023-07-22T11:15:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "LINK",
-        "XDC"
-      ]
-    },
-    {
-      "title": "Binance Is the Top Performing IEO Launchpad: Analysis Platform",
-      "link": "NULL",
-      "pubDate": "2023-07-22T09:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS",
-        "HT"
-      ]
-    },
-    {
-      "title": "XDC Network Dominates Weekend Top 100 Roster With 50% Rally",
-      "link": "NULL",
-      "pubDate": "2023-07-22T09:12:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LINK",
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Maker bears have emerged; time to exercise caution?",
-      "link": "NULL",
-      "pubDate": "2023-07-22T08:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Ethereum’s Aave V3 reaches new milestone in under six months",
-      "link": "NULL",
-      "pubDate": "2023-07-22T06:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE",
-        "MKR"
-      ]
-    },
-    {
-      "title": "McDonald’s Hong Kong: the launch of McNuggets land in The Sandbox (SAND)",
-      "link": "NULL",
-      "pubDate": "2023-07-22T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
       "title": "SEC hints at potential appeal to XRP ruling from Ripple Labs lawsuit",
       "link": "https://cointelegraph.com/news/sec-hints-at-potential-appeal-to-xrp-ruling-from-ripple-labs-lawsuit",
       "pubDate": "2023-07-22T04:57:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "According to court documents, the SEC stated it is now “considering the various available avenues for further review” on the ruling.",
       "currencies": [
@@ -386,8 +144,8 @@
       "title": "$XRP Millionaires on the Rise as Crypto Surges to New Highs",
       "link": "https://www.cryptoglobe.com/latest/2023/07/xrp-millionaires-on-the-rise-as-crypto-surges-to-new-highs/",
       "pubDate": "2023-07-22T01:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The number of $XRP token holders with at least one million tokens on the cryptocurrency’s ledger has now surpass the 1,900 mark as an accumulation trend set off earlier this month was triggered by an uptick in investor sentiment. According to on-chain data, there are now 1,988 XRP wallets holding at least one million XRP, […]",
       "currencies": [

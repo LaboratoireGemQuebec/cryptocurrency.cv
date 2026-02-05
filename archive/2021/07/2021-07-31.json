@@ -1,70 +1,15 @@
 {
   "date": "2021-07-31",
-  "fetchedAt": "2026-02-05T07:45:51.914Z",
-  "articleCount": 14,
+  "fetchedAt": "2026-02-05T07:48:35.503Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @agfnzn1: Some important publications with achievements in Tokyo 2021 Olympics #scorum @SCORUM_en #Halterofilia…",
-      "link": "NULL",
-      "pubDate": "2021-07-31T23:07:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @ZMiller_82: Top 2 NASCAR/ARCA Drivers From the Netherlands",
-      "link": "NULL",
-      "pubDate": "2021-07-31T21:40:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @ZMiller_82: 2021 Olympic Women’s Rugby Tournament Recap",
-      "link": "NULL",
-      "pubDate": "2021-07-31T21:36:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "Have you seen that the #ETNApp has been downloaded over 3,000,000 times? You can read all about it here:…",
-      "link": "NULL",
-      "pubDate": "2021-07-31T19:13:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @merej99: No contentious hardforks as DECRED $DCR evolves thanks to stakeholders consensus vote. Check out the announcement on @geekinsi…",
-      "link": "NULL",
-      "pubDate": "2021-07-31T18:02:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
     {
       "title": "German law allowing institutional funds to hold crypto comes into effect Aug. 2",
       "link": "https://cointelegraph.com/news/german-law-allowing-institutional-funds-to-hold-crypto-comes-into-effect-aug-2",
       "pubDate": "2021-07-31T16:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "As much as $415 billion worth of investments could flow into cryptocurrencies as new laws governing German Spezialfonds go into effect.",
       "currencies": [
@@ -80,8 +25,8 @@
       "title": "Ripple Releases Q2 XRP Markets Report… And It’s Quite An Eventful One",
       "link": "https://zycrypto.com/ripple-releases-q2-xrp-markets-report-and-its-quite-an-eventful-one/",
       "pubDate": "2021-07-31T15:59:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "The average daily average volume for XRP doubled to $4.49 billion in Q2 2020 from $2.26 billion in the previous quarter, according to Ripple’s Q2 XRP Markets Report. “Notably, XRP volumes posted four of the highest volume days ever recorded.” The quarterly report gives a summary of the company’s market data reports, observations, market conditions, […]",
       "currencies": [
@@ -98,8 +43,8 @@
       "title": "XRP Volume Soars Nearly 100% in Q2 2021 Amid Crypto Volatility: Ripple Report",
       "link": "https://dailyhodl.com/2021/07/31/xrp-volume-soars-nearly-100-in-q2-2021-amid-crypto-volatility-ripple-report/",
       "pubDate": "2021-07-31T11:45:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Digital payments firm Ripple Labs is reporting that XRP’s trading volume soared in the second financial quarter of 2021 as the crypto market met some turbulence. In a new blog post, Ripple says that blockchain insights platform CryptoCompare TopTier (CCTT) found that the daily trading volume for XRP wildly increased between Q1 and Q2 of […]",
       "currencies": [
@@ -112,33 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @btsfav: #DeFinitely 67 - The News in #DeFi",
-      "link": "NULL",
-      "pubDate": "2021-07-31T11:34:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "Bitcoin on Glitzkoin DiaEx? Some confusion here. DiaEx will keep GTN as the sole mode of payment. But similar platf…",
-      "link": "NULL",
-      "pubDate": "2021-07-31T09:33:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
       "title": "New Catalysts Could Boost Five Crypto Assets in August, According to Trader Lark Davis",
       "link": "https://dailyhodl.com/2021/07/31/new-catalysts-could-boost-five-crypto-assets-in-august-according-to-trader-lark-davis/",
       "pubDate": "2021-07-31T09:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Crypto trader and influencer Lark Davis is naming his top five digital assets to watch for big gains in August. In a new video, Davis starts his list with Ethereum (ETH), noting the second-biggest crypto by market cap is scheduled to receive its London Hard Fork update on August 4th. The London Hard Fork will […]",
       "currencies": [
@@ -156,9 +79,9 @@
       "title": "Are Axie Infinity, ENJ, ALICE’s performances proof that ‘gaming summer’ is upon us",
       "link": "https://ambcrypto.com/are-axie-infinity-enj-alices-performances-proof-that-gaming-summer-is-upon-us/",
       "pubDate": "2021-07-31T08:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Until a few months back, Axie Infinity was just another random token that existed in the market. Fast-forward to July 2021, and this token has already made a place for itself among the top 50 cryptos. In fact, it now boasts a market cap of over $2.56 billion. Launched in November 2020, this token has […]",
       "currencies": [
         "AXS"
@@ -169,27 +92,11 @@
       }
     },
     {
-      "title": "RT @SimplexCC: “We’re delighted to be adding support for @XinFin_Official, empowering millions of users to purchase #XDC instantly with th…",
-      "link": "NULL",
-      "pubDate": "2021-07-31T06:09:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Traders forecast $3K Ethereum price but derivatives data suggests otherwise",
       "link": "https://cointelegraph.com/news/traders-forecast-3k-ethereum-price-but-derivatives-data-suggests-otherwise",
       "pubDate": "2021-07-31T01:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "ETH might have rallied 35% off its $1,750 low but derivatives data shows pro traders are not so bullish.",
       "currencies": [

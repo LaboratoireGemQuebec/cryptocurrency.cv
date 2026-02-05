@@ -1,95 +1,15 @@
 {
   "date": "2024-12-05",
-  "fetchedAt": "2026-02-05T07:45:53.589Z",
-  "articleCount": 131,
+  "fetchedAt": "2026-02-05T07:48:35.684Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "EOS Network Foundation partners with Binance’s Ceffu to advance CeDeFi and strengthen asset security",
-      "link": "NULL",
-      "pubDate": "2024-12-05T23:20:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Aerodrome Finance rises 39% in 7 days – Can AERO flip $2 to support?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T23:00:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AERO"
-      ]
-    },
-    {
-      "title": "Ethereum faces a $500M blow as Uniswap’s shift to Unichain challenges the deflationary model",
-      "link": "NULL",
-      "pubDate": "2024-12-05T22:35:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "PEPE, PONKE, and POPCAT Face a New Bullish Rival Primed for Dominate the Meme Token Space With 15,000% Potential!",
-      "link": "NULL",
-      "pubDate": "2024-12-05T22:11:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PEPE",
-        "POPCAT",
-        "PONKE"
-      ]
-    },
-    {
-      "title": "Next Low-Cap Sensations: These 5 Memecoins Could Match the Success of PNUT and MOODENG!",
-      "link": "NULL",
-      "pubDate": "2024-12-05T22:06:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PNUT",
-        "MOODENG"
-      ]
-    },
-    {
-      "title": "‘China’s MicroStrategy’ sells all of its Bitcoin and Ethereum: Asia Express",
-      "link": "NULL",
-      "pubDate": "2024-12-05T21:52:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Cardano Price: Analyst Predicts Possible All-Time High",
       "link": "https://www.thecoinrepublic.com/2024/12/05/cardano-price-analyst-predicts-possible-all-time-high/",
       "pubDate": "2024-12-05T21:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "Cardano (ADA) price has recently surged, and market analysts are now looking at the possibility of ADA to reach its all-time high within the next 30 to 60 days. Dan Gambardello, a crypto analyst, states that ADA is capable of rising above $3 by December. This forecast was derived using technical analysis, the technology developed […] The post Cardano Price: Analyst Predicts Possible All-Time High appeared first on The Coin Republic.",
       "currencies": [
@@ -102,95 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Ethereum-Based Altcoin Looks Ready To Explode by Over 500%, According to Crypto Analyst Justin Bennett",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:55:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRV"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin Breaks $100,000, Falls Back Below, Ethereum, Dogecoin Follow Lower: A 'Scam Dump' To Wipe Out Leverage?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:41:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "JASMY",
-        "SUI",
-        "WLD"
-      ]
-    },
-    {
-      "title": "Missed JasmyCoin (JASMY)? This AI token could be the next catch",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:33:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "RENDER Hits $5 Billion Market Cap, Strengthening Its Position Among AI Coins",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Crypto Today: DOGE, BCH and LTC emerge as top gainers with Bitcoin’s $100K breakout sparking PoW rally",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:09:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Terra Classic Set for Major Upgrade Amid LUNC’s Bullish Momentum",
-      "link": "NULL",
-      "pubDate": "2024-12-05T20:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Crypto Giant Grayscale Seeking To Convert Its Solana Trust Into ETF, According to New Filing",
       "link": "https://dailyhodl.com/2024/12/05/crypto-giant-grayscale-seeking-to-convert-its-solana-trust-into-etf-according-to-new-filing/",
       "pubDate": "2024-12-05T19:45:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Leading crypto asset manager Grayscale just submitted a 19b-4 filing to the U.S. Securities and Exchange Commission (SEC) to convert its Solana Trust into a spot exchange-traded fund. The Digital Currency Group (DCG) subsidiary’s Solana Trust is currently the largest Solana investment fund by assets under management (AUM). It manages $134.2 million worth of SOL, […] The post Crypto Giant...",
       "currencies": [
@@ -202,290 +38,11 @@
       }
     },
     {
-      "title": "XRP Exchange Outflow Trends Reverse, Shedding $2 Billion as Price Falls 10%",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Ripple’s (XRP) price, which recently surged by 350% over 30 days, has now fallen from its peak of $2.80. This downturn may be tied to a decrease in XRP exchange outflows, as recent data indicates. If this trend persists, XRP could lose more of its recent gains. Ripple Investors No Longer HODLing in Numbers On December 4, XRP exchange outflow was 980.65 million. As of this writing, it has decreased to 44.17 million, indicating a difference of 936.48 million. This metric tracks the number of token",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 6
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Binance Labs Initiates Significant Altcoin Sell-Off",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GMT"
-      ]
-    },
-    {
-      "title": "Ceffu Joins Forces With EOS To Deliver Advanced Custody and CeDeFi Opportunities",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:11:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Bitcoin futures premium hits 8-month high — Will the BTC rally continue?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:06:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Evrloot Launches Free-To-Play RPG Campaign on Polkadot’s Moonbeam Chain",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:01:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Sand crypto tests $1 level: Retracement or breakout ahead?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T19:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "🇩🇪 German government sold 50,000 #Bitcoin at $55,000 - Bitcoin is up 85% since then. Missed out on a cool $2.35 BILLION profit...",
-      "link": "NULL",
-      "pubDate": "2024-12-05T18:34:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 17,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Uniswap wallet profitability soars, but here’s what can stall UNI’s rally",
-      "link": "NULL",
-      "pubDate": "2024-12-05T18:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "Crypto execs embrace Trump’s pick for SEC chair as change from Gensler’s approach",
-      "link": "NULL",
-      "pubDate": "2024-12-05T18:22:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "Big Returns Ahead: Experts Reveal Why Kaspa, BlockDAG, Solana, XRP & Uniswap Are the Best Cryptos to Buy Right Now!",
-      "link": "NULL",
-      "pubDate": "2024-12-05T18:19:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XRP",
-        "SOL",
-        "UNI",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy in December 2024: 5 Must-Watch Projects from DeFi Leaders to Presale Giants",
-      "link": "NULL",
-      "pubDate": "2024-12-05T18:18:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BCH",
-        "INJ",
-        "SUI",
-        "SEI"
-      ]
-    },
-    {
-      "title": "The Sandbox and GALA Are Climbing Fast – Is This the Last Chance Before ATH?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND",
-        "GALA",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Phantom Wallet Adds Sui as the Blockchain’s TVL Reaches Record $1.72 Billion",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:49:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "AVAX",
-        "SUI"
-      ]
-    },
-    {
-      "title": "The Daily: Bitcoin breaks $100K, Emergence discussions and more",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:47:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "PEOPLE",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Sui 'The Next Solana' Surges 20% In A Day, Trader Hails It As The One 'If You Missed Bitcoin'",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:43:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOT",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Mining Company Sees Profit Surge After Shifting Focus From Bitcoin to Dogecoin and Litecoin",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Why These Altcoins Are Trending Today — December 5",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "HYPE",
-        "RENDER"
-      ]
-    },
-    {
-      "title": "Chinese app giant sells all Bitcoin ahead of $100,000 milestone",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:17:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ]
-    },
-    {
-      "title": "US Government Transfers $33.6M in Seized FTX Crypto to Unknown Wallets",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:17:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BUSD",
-        "WBTC",
-        "SHIB",
-        "AERGO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "According to Forbes Uniswap’s Transition to Unichain Could Impact Ethereum Validator Revenue by $500M",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:17:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ]
-    },
-    {
-      "title": "Dogecoin and Litecoin Even More Profitable Than Bitcoin, Says Mining Firm",
-      "link": "NULL",
-      "pubDate": "2024-12-05T17:10:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LTC"
-      ]
-    },
-    {
       "title": "Cardano whales buy over 100 million ADA in 24 hours",
       "link": "https://finbold.com/cardano-whales-buy-over-100-million-ada-in-24-hours/",
       "pubDate": "2024-12-05T16:49:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Decentralized finance (DeFi) cryptocurrency Cardano (ADA) has recorded an uptick in whale activity, a shift that remains key to helping … Continue reading The post Cardano whales buy over 100 million ADA in 24 hours appeared first on Finbold.",
       "currencies": [
@@ -498,248 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Solana OGs Lash Out at Magic Eden Following $ME Airdrop Snub",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:47:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "ME"
-      ]
-    },
-    {
-      "title": "Avalanche Reveals Discussions With Trump; Can AVAX Rally Along With New Altcoin Already Showing 106.67% ROI?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:21:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "EOS Network Foundation Boosts Crypto Security With Binance Custody Platform",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:07:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Despite Bitcoin’s Blistering Run Past $100K, ARK’s Cathie Wood Believes It’s Still In ‘Early Innings’",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Cosmos-based Noble first to launch custom stablecoin using cryptodollar infrastructure startup M^0",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Ethereum Breaks Barriers, Targets $6K Amid Record ETF, TVL Activity",
-      "link": "NULL",
-      "pubDate": "2024-12-05T16:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "SEI hits new ATH with 280k daily users – What’s next for its growth?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "SEI",
-        "ATH"
-      ]
-    },
-    {
-      "title": "JasmyCoin (JASMY) Surpasses $2 Billion Market Cap, Claims Top Performing Altcoin Spot",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "What is Truth Terminal and the Rise of AI Agents: In-Depth Look at GOAT And Beyond",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GOAT"
-      ]
-    },
-    {
-      "title": "Mt. Gox Wallet Sends $2.4B BTC to Mystery Address: Is the Bull Run in Danger?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:14:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Ethereum Validators Face $500 Million Loss if Uniswap Exits Network",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:11:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "‘Pixels’ Reveals Guild Wars Competition With $4 Million in Token Rewards",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:05:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "GemZ Daily Combo and Cipher Code 06 December 2024: Play To Earn",
-      "link": "NULL",
-      "pubDate": "2024-12-05T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "Battle Hard launches $B token giveaway to celebrate upcoming MainNet deployment",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:44:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Gevulot Launches Firestarter: Revolutionizing ZK Proofs with High Speed and Affordability",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZK"
-      ]
-    },
-    {
-      "title": "Ceffu and EOS Partner for CeDeFi Solutions",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:15:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Trump congratulates bitcoiners on $100,000 milestone as industry reacts to new all-time high",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:15:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PEOPLE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin 30-Day Trader Profits Back In ‘Healthy’ Range, Is BTC Ready For $100,000?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "QNT"
-      ]
-    },
-    {
-      "title": "BLUM Daily Video Codes 06 December 2024: Earn 250 BP Points",
-      "link": "NULL",
-      "pubDate": "2024-12-05T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DOGS"
-      ]
-    },
-    {
       "title": "Ethereum Whale Turns Extremely Bullish On $ETH Tokens!",
       "link": "https://coinpedia.org/crypto-live-news/ethereum-whale-turns-extremely-bullish-on-eth-tokens/",
       "pubDate": "2024-12-05T13:46:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "ethereum",
       "description": "The post Ethereum Whale Turns Extremely Bullish On $ETH Tokens! appeared first on Coinpedia Fintech News A whale named “kamisatoayaka.eth” has expressed its optimism on the largest altcoin by market capitalization. As per the latest reports, the whale kamisatoayaka.eth deposited ETH tokens into Spark to borrow more stablecoins. Reportedly, this whale has accumulated more Ethereum tokens with...",
       "currencies": [
@@ -752,57 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin rally, ETF inflows led to USDT market cap surge, says Tether CEO",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:32:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "PEOPLE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Kroger Co. Beats EPS Expectations in Q3 Despite Revenue Shortfall",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:31:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Terra Luna Classic Votes On Major Upgrade Amid XRP-Like Breakout, LUNC to $1?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:29:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "LUNC"
-      ]
-    },
-    {
       "title": "PancakeSwap Debuts 'All-in-One' Pump.fun Contender SpringBoard as Alts Surge",
       "link": "https://decrypt.co/294984/pancakeswap-pump-fun-contender-springboard",
       "pubDate": "2024-12-05T13:21:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Chef Kids, PancakeSwap's Head Chef, said SpringBoard differentiates itself from alternatives “by offering an all-in-one token launch process.”",
       "currencies": [
@@ -815,22 +89,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto VCs say it’s still early this cycle: ‘sell when people are partying, dating supermodels and buying yachts’",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:18:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
       "title": "WikiLeaks turns to Bitcoin blockchain to protect Assange’s Afghan War Logs",
       "link": "https://www.theblock.co/post/329627/wikileaks-turns-to-bitcoin-blockchain-to-protect-assanges-afghan-war-logs?utm_source=rss&utm_medium=rss",
       "pubDate": "2024-12-05T13:14:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "Project Spartacus is publishing over 70,000 Afghan War logs as Bitcoin Ordinals to commemorate Assange's story as a part of Bitcoin history.",
       "currencies": [
@@ -844,34 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "3 Crypto Coins Gearing to Explode 200% Before December Ends",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:10:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "EOS Partners with Ceffu to Offer Institutional Custody and CeDeFi Services",
-      "link": "NULL",
-      "pubDate": "2024-12-05T13:01:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
       "title": "Tron (TRX) Leads The Crypto Market With 100% Rally To New ATH, $0.5 Next?",
       "link": "https://www.newsbtc.com/news/tron-trx-leads-the-crypto-market-with-100-rally-to-new-ath-0-5-next/",
       "pubDate": "2024-12-05T13:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Tron (TRX) joined the crypto market’s rally by jumping over 100% in 24 hours to a new all-time high (ATH). Its surge ignited a bullish sentiment among crypto investors and market watchers, fueling optimism for higher targets. Related Reading: Bitcoin (BTC) Crashes 33% In South Korea Amid Increasing Political Turmoil Tron Hits New ATH After 7 Years As Bitcoin (BTC) continues moving sideways...",
       "currencies": [
@@ -889,81 +129,11 @@
       }
     },
     {
-      "title": "Top 3 Altcoins Of 2024: XRP Nears $3 And DOGE Heading To $1; Newcomer Closes In On Stage 1 End",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:58:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "DOGE",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Binance Labs Dumps This Crypto Token Worth Millions",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:39:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GMT"
-      ]
-    },
-    {
-      "title": "Mysten Labs co-founder Kostas Chalkias kicks off Emergence with discussion on how AI may change the crypto industry",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:18:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Dollar General Fails to Meet EPS Expectations with Q3 Results",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:16:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Hedera Price Analysis: Is The HBAR Price Rally Over With A 23% Drop?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Avalanche Daily Fees Surge Ahead of Etna Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-12-05T12:02:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
       "title": "Ethereum Set for Major Gains as Strong Fundamentals and Institutional Interest Surge",
       "link": "https://cryptodnes.bg/en/ethereum-set-for-major-gains-as-strong-fundamentals-and-institutional-interest-surge/",
       "pubDate": "2024-12-05T12:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "ethereum",
       "description": "Ethereum's recent underperformance may actually present an enticing opportunity, according to Gautam Chhugani, the managing director of Bernstein’s global digital assets division. The post Ethereum Set for Major Gains as Strong Fundamentals and Institutional Interest Surge appeared first on Cryptodnes.",
       "currencies": [
@@ -979,8 +149,8 @@
       "title": "$8 billion of BTC shorts at risk as Bitcoin climbs toward $110,000",
       "link": "https://finbold.com/8-billion-of-btc-shorts-at-risk-as-bitcoin-climbs-toward-110000/",
       "pubDate": "2024-12-05T11:59:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "After a relatively protracted stagnation between approximately $94,000 and about $99,000, Bitcoin (BTC) finally broke above $100,000 late on Wednesday, … Continue reading The post $8 billion of BTC shorts at risk as Bitcoin climbs toward $110,000 appeared first on Finbold.",
       "currencies": [
@@ -993,69 +163,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "QCP Capital: Trump's Capital Gains Tax Proposal Sparks Altcoin Market Surge",
-      "link": "NULL",
-      "pubDate": "2024-12-05T11:47:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "ADA",
-        "XRP",
-        "XLM",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "As Bitcoin Hits $100K For The First Time, Ark Invest's Cathie Wood Calls It 'A Much Bigger Idea Than Gold' And That It Is 'Still Is In Early Innings'",
-      "link": "NULL",
-      "pubDate": "2024-12-05T11:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Eigen Foundation Launches Multi-Stakeholder Protocol Council to Strengthen EigenLayer Governance",
-      "link": "NULL",
-      "pubDate": "2024-12-05T11:34:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "Blockfrost & Filecoin Partner to Strengthen Cardano’s Data",
-      "link": "NULL",
-      "pubDate": "2024-12-05T11:14:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "FIL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Sandbox Price Records New 52-week High, $1.50 On The Horizon?",
       "link": "https://coinpedia.org/price-analysis/sandbox-price-records-new-52-week-high-1-50-on-the-horizon/",
       "pubDate": "2024-12-05T11:09:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "trading",
       "description": "The post Sandbox Price Records New 52-week High, $1.50 On The Horizon? appeared first on Coinpedia Fintech News Story Highlights The SAND price has reclaimed the $1 mark with a monthly surge of over 300%. The EMA 50/200-day indicator shows a Golden Cross in 1D time frame, hinting at a price target of $1.50. Short-term bullish price targets are $1.07 and $1.25 respectively. As Bitcoin price...",
       "currencies": [
@@ -1069,180 +181,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Algorand drops despite a 300% surge in active addresses – Why?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T11:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Crypto miner Mawson pushed into bankruptcy court by creditors",
-      "link": "NULL",
-      "pubDate": "2024-12-05T10:59:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "W"
-      ]
-    },
-    {
-      "title": "Bitcoin ‘still in early innings’ at $100K —ARK’s Cathie Wood",
-      "link": "NULL",
-      "pubDate": "2024-12-05T10:54:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "UK Drug Ring Tied to Russian Crypto Laundering Network, 84 Arrests Made",
-      "link": "NULL",
-      "pubDate": "2024-12-05T10:49:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "Circle-backed Layer 1 Xion launches mainnet and gamified token airdrop mechanism",
-      "link": "NULL",
-      "pubDate": "2024-12-05T10:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ATOM",
-        "NFT"
-      ]
-    },
-    {
-      "title": "3 Cryptocurrencies That Reached All-Time Highs Today — December 5",
-      "link": "NULL",
-      "pubDate": "2024-12-05T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SUI",
-        "BGB",
-        "ATH",
-        "00"
-      ]
-    },
-    {
-      "title": "Wormhole Launches Staking Rewards Program for W Holders",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:51:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "ARB",
-        "W"
-      ]
-    },
-    {
-      "title": "Opinions on Near Protocol",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:43:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Vertus Coin Pre Market Price: Binance, Bybit, OKX, Bitget, XTvertus-co",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IO",
-        "XT"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 12-5 BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, CHAINLINK: LINK, UNISWAP: UNI, BITTENSOR: TAO, APECOIN: APE",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:12:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "LINK",
-        "UNI",
-        "APE",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Flag patterns and SpaceX – Here’s what’s next for HBAR’s price action now",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "NEIRO, MORPHO and SUNDOG Score Major Exchange Listing, Will Prices Rally?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MORPHO",
-        "NEIRO",
-        "SUNDOG"
-      ]
-    },
-    {
-      "title": "Google Trends Confirms Altcoin Season as Interest Matches Record Highs of 2021",
-      "link": "NULL",
-      "pubDate": "2024-12-05T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "TRX",
-        "FIL",
-        "FTM"
-      ]
-    },
-    {
       "title": "Mt. Gox Moves Billions After Bitcoin Hits Milestone",
       "link": "https://coinpaprika.com/news/mt-gox-moves-billions-after-bitcoin-hits-milestone/",
       "pubDate": "2024-12-05T08:44:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Mt. Gox transfers 24,052 BTC after Bitcoin breaks a key milestone, fueling speculation about creditor repayments or internal moves.",
       "currencies": [
@@ -1258,8 +201,8 @@
       "title": "Bitcoin Hits $100K",
       "link": "https://coinpaprika.com/news/bitcoin-hits-100k/",
       "pubDate": "2024-12-05T08:39:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Bitcoin soars past $100,000 for the first time, driven by rising investor confidence and a pro-crypto stance from the incoming U.S. administration.",
       "currencies": [
@@ -1272,111 +215,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "PancakeSwap SpringBoard: A New PumpFun Competitor",
-      "link": "NULL",
-      "pubDate": "2024-12-05T08:38:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Ethereum To $10,000: Analyst Reveals Mid & Long-Term ETH Targets",
-      "link": "NULL",
-      "pubDate": "2024-12-05T08:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "QNT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Surpasses $100K Mark with Paul Atkins’ Pick",
-      "link": "NULL",
-      "pubDate": "2024-12-05T08:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "SOL",
-        "LTC",
-        "RSR"
-      ]
-    },
-    {
-      "title": "Hedera Sees 7X Returns in a Month: Can HBAR Crypto Surge Past $0.6?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T08:06:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Which Altcoins to Get Into Right Now? Today December 5th",
-      "link": "NULL",
-      "pubDate": "2024-12-05T07:50:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT",
-        "NEAR",
-        "TON"
-      ]
-    },
-    {
-      "title": "RNDR Price Jumps 9.29%: Is a Bull Run to $13 on the Horizon?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T07:34:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "RENDER"
-      ]
-    },
-    {
-      "title": "Uncertain Future Of Bitcoin: Insights From Jameson Lopp",
-      "link": "NULL",
-      "pubDate": "2024-12-05T06:51:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
       "title": "Why Is Ripple (XRP) Plunging When Trump Picked Pro-Crypto SEC Chair?",
       "link": "https://cryptopotato.com/why-is-ripple-xrp-plunging-when-trump-picked-pro-crypto-sec-chair/",
       "pubDate": "2024-12-05T06:45:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "XRP is among the poorest performers in the past 24 hours.",
       "currencies": [
@@ -1389,209 +232,11 @@
       }
     },
     {
-      "title": "LUNA’s 30% surge – Will the breakout push it past $1.50 on the charts?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T06:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNA"
-      ]
-    },
-    {
-      "title": "PancakeSwap Trading Volume Record Hits $1.27B on December 4",
-      "link": "NULL",
-      "pubDate": "2024-12-05T06:18:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 05 December 2024: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2024-12-05T06:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA"
-      ]
-    },
-    {
-      "title": "Dogecoin Follows Bitcoin's $100K Flourish With 9% Rally As Bullish Predictions Rise, But Here's What You Should Know",
-      "link": "NULL",
-      "pubDate": "2024-12-05T05:56:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Significant Surge in Altcoins Raises Concerns Over Potential Price Correction",
-      "link": "NULL",
-      "pubDate": "2024-12-05T05:43:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "XLM",
-        "ALGO",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Shiba Inu Developer Teases Shifu, the Latest Addition to Token Lineup",
-      "link": "NULL",
-      "pubDate": "2024-12-05T05:20:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "NFT",
-        "IO",
-        "OG",
-        "LEASH",
-        "BUBBLE"
-      ]
-    },
-    {
-      "title": "BIT Mining saw 3X profits mining DOGE, LTC instead of just Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-12-05T05:16:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "LTC",
-        "BEL"
-      ]
-    },
-    {
-      "title": "Will CHZ’s 140% monthly gains be enough for a hike to $0.35?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T05:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Mt. Gox moves $2.4B in Bitcoin as BTC surged past $100K",
-      "link": "NULL",
-      "pubDate": "2024-12-05T04:51:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Bitcoin's Future Brightens With New SEC Leadership",
-      "link": "NULL",
-      "pubDate": "2024-12-05T04:43:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Arbitrum Becomes The First L2 To Hit $20B On Uniswap",
-      "link": "NULL",
-      "pubDate": "2024-12-05T04:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Market Today Dec 5: BTC Hits $100K, CRV Up 20%, SAND Surges 16%",
-      "link": "NULL",
-      "pubDate": "2024-12-05T04:16:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "SOL",
-        "TRX",
-        "SAND",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Happy Bitcoin $100K Day: Here's How Nayib Bukele, Brian Armstrong, And Peter Schiff Reacted To The Historic Milestone",
-      "link": "NULL",
-      "pubDate": "2024-12-05T03:56:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "November Crypto Performance: Memecoins Up 95%, ADA, SOL, And DOT Follow With Strong Gains",
-      "link": "NULL",
-      "pubDate": "2024-12-05T03:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOT",
-        "UNI",
-        "XLM",
-        "AAVE",
-        "NFT",
-        "TIA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Bitcoin surpasses $100,000 milestone in continued crypto optimism following Trump’s victory",
       "link": "https://www.theblock.co/post/327591/bitcoins-price-crosses-100000-milestone-setting-new-all-time-high-on-gensler-resignation?utm_source=rss&utm_medium=rss",
       "pubDate": "2024-12-05T03:07:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "bitcoin",
       "description": "Bitcoin rose over _% in the past 24 hours, surpassing $100,000, driven by positive market sentiment after Donald Trump’s election victory.",
       "currencies": [
@@ -1604,50 +249,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How Will BSV And BCH Price React As BTC Price Hits $100k?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T03:01:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "BSV"
-      ]
-    },
-    {
-      "title": "USDT killer? Over $25K locked within hours on new BCH L1 stablecoin ‘Moria’",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:54:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Soars to $100K: A New Era in Crypto Begins",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:44:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Bitcoin Officially Hits $100,000 For The First Time Ever",
       "link": "https://bitcoinmagazine.com/markets/bitcoin-officially-hits-100000-for-the-first-time-ever",
       "pubDate": "2024-12-05T02:34:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "This is a historic day that will be cemented in history.",
       "currencies": [
@@ -1660,25 +266,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today’s Top Crypto Performers: Not XRP or ADA, These Three Coins Are Quietly Surging",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:33:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "GALA"
-      ]
-    },
-    {
       "title": "Bitcoin price hits $100K for first time in history",
       "link": "https://cointelegraph.com/news/bitcoin-price-hits-100-000-first-time-new-all-time-high?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2024-12-05T02:33:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin has rallied 126% since January to reach $100,000, driven by Bitcoin ETF demand, April's halving and Donald Trump's US election win.",
       "currencies": [
@@ -1690,115 +282,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "WBTC Reaching a New All-Time High, Increase of 4.15% in 24 Hours",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDT",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Hedera Breakthrough Moment: HBAR Rockets Over 800% – Details",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Curve: Why CRV is 1 key catalyst away from a rally",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "VeChain surges 6.72% in a day: Can VET rally past $0.07105?",
-      "link": "NULL",
-      "pubDate": "2024-12-05T02:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "EigenLayer Establishes Protocol Council for Governance Oversight",
-      "link": "NULL",
-      "pubDate": "2024-12-05T01:54:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EIGEN"
-      ]
-    },
-    {
-      "title": "$63 Million of XLM Outflow, Bullish Signal or What",
-      "link": "NULL",
-      "pubDate": "2024-12-05T01:19:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Top Analyst Predicts New Record-High Surge for Ethereum-Based Altcoin, Updates Forecast on NEAR and WIF",
-      "link": "NULL",
-      "pubDate": "2024-12-05T01:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LINK",
-        "NEAR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Congressman Buys Meme Coins? Ski Mask Dog Coin Climbs In Value After Disclosure: 'I Liked The Coins, So I Bought Them'",
-      "link": "NULL",
-      "pubDate": "2024-12-05T00:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "GRT",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "U.S. Government Allegedly Pressured Banks to Cut Ties with Crypto Industry",
-      "link": "NULL",
-      "pubDate": "2024-12-05T00:23:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XLM"
-      ]
     }
   ]
 }

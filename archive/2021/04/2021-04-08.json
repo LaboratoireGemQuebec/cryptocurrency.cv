@@ -1,53 +1,15 @@
 {
   "date": "2021-04-08",
-  "fetchedAt": "2026-02-05T07:45:51.905Z",
-  "articleCount": 49,
+  "fetchedAt": "2026-02-05T07:48:35.500Z",
+  "articleCount": 22,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "History in the making",
-      "link": "NULL",
-      "pubDate": "2021-04-08T23:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "AHOOOOOOY Added PALM single token vault on",
-      "link": "NULL",
-      "pubDate": "2021-04-08T22:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "This Under-the-Radar Altcoin Could Be the Next Big Smart Contract Blockchain, According to Coin Bureau",
-      "link": "NULL",
-      "pubDate": "2021-04-08T22:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "EGLD"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
     {
       "title": "The End Of Ethereum As You Know It! Huge Eth 2.0 News",
       "link": "https://www.youtube.com/watch?v=vKDctWDyJ-U",
       "pubDate": "2021-04-08T20:44:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheCryptoLark",
+      "sourceKey": "thecryptolark",
       "category": "ethereum",
       "description": "Huge Ethereum 2.0 changes everything! Big Ethereum news re supply 👀 BLOCKFI LENDING $250 FREE CRYPTO! ►► http://blockfi.com/lark 🔥 WEALTH MASTERY ►► https://cryptolark.co/WEALTHMASTERY 0:00 Today in Ethereum 1:47 Ethereum Supply Crisis 3:38 Defi Milestone 5:28 Ethereum 2.0 News 👨‍🎓 COURSES FOR BEGINNERS 👨‍🎓 👉 CRYPTO EXPLAINED COURSE ►► https://cryptolark.co/beginner-course 👉 TRADING COURSE ►► https://cryptolark.co/trading-course 💲 BEST EXCHANGES FOR BUYING & TRADING 💲 💰 BINANCE BEST E",
       "currencies": [
@@ -62,8 +24,8 @@
       "title": "Revolut adds 11 new tokens and calls 2021 ‘the year of crypto’",
       "link": "https://www.theblockcrypto.com/linked/101156/revolut-11-new-crypto-tokens?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-04-08T20:41:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "Revolut users now have 21 total cryptocurrencies to choose from.",
       "currencies": [
@@ -81,8 +43,8 @@
       "title": "Bitcoin, Ethereum, and XRP Are Primed for Higher Highs",
       "link": "https://cryptobriefing.com/bitcoin-ethereum-xrp-primed-for-higher-highs/",
       "pubDate": "2021-04-08T20:25:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "A spike in profit-taking seems to have pushed Bitcoin, Ethereum, and XRP into a consolidation period. Still, these digital assets are expected to resume their respective uptrend soon. Bitcoin Consolidates Before Higher Highs Bitcoin has been dormant after rising to a new all-time high of nearly $62,000 in mid-March. The stagnation phase led to the formation of an inverse...",
       "currencies": [
@@ -97,22 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @safenetworktech: We have lift off! @MaidSafe has just released the Fleming Testnet!! Now you can join the public shared-network that pr…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T20:10:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Federal Judge Sides With Ripple, Grants Access to Agency’s Internal Discussions on Bitcoin, Ethereum and XRP",
       "link": "https://dailyhodl.com/2021/04/08/federal-judge-sides-with-ripple-grants-access-to-agencys-internal-discussions-on-bitcoin-ethereum-and-xrp/",
       "pubDate": "2021-04-08T20:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Public documents reveal that the U.S. Securities and Exchange Commission (SEC) has previously referred to Ripple as a “digital currency company.” Lawyer and XRP enthusiast Jeremy Hogan unearthed the reference in an SEC public document from 2016. Explains the lawyer, “Apparently the SEC agreed with FinCen – at least back in 2016! The SEC must […]",
       "currencies": [
@@ -129,8 +80,8 @@
       "title": "Theta Labs to Bring NFTs to Millions of Poker Fans",
       "link": "https://u.today/theta-labs-to-bring-nfts-to-millions-of-poker-fans",
       "pubDate": "2021-04-08T19:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "nft",
       "description": "Move over, Ethereum! The World Poker Tour has chosen the Theta network for its NFT marketplace",
       "currencies": [
@@ -143,33 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Qhuesten: @ricburton @0monkeytalks @jokershodl Augur v2 was decentralized right from the launch @AugurProject",
-      "link": "NULL",
-      "pubDate": "2021-04-08T19:13:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "CHSB Badges distribution",
-      "link": "NULL",
-      "pubDate": "2021-04-08T19:02:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Litecoin Forming ‘Ultimate Alpha’ Bullish Setup, Says Top Analyst Nicholas Merten",
       "link": "https://dailyhodl.com/2021/04/08/litecoin-forming-ultimate-alpha-bullish-setup-says-top-analyst-nicholas-merten/",
       "pubDate": "2021-04-08T18:45:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Popular trader Nicholas Merten says Litecoin (LTC) is poised to significantly outperform Ethereum over the course of the next month. In a new DataDash video, Merten notes that LTC appears to be bottoming out against Ethereum. The trader reveals that he allocated a significant chunk of his portfolio into the Bitcoin fork as he believes […]",
       "currencies": [
@@ -187,8 +116,8 @@
       "title": "XRP Enthusiast Starts Petition Asking Incoming SEC Chairman Gary Gensler To Withdraw Ripple Lawsuit",
       "link": "https://zycrypto.com/xrp-enthusiast-starts-petition-asking-incoming-sec-chairman-gary-gensler-to-withdraw-ripple-lawsuit/",
       "pubDate": "2021-04-08T18:31:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "As Ripple prepares for court, XRP enthusiasts are rallying around a petition that is asking the SEC chair nominee Gary Gensler to drop the lawsuit alleging that the blockchain payments firm conducted a $1.3 billion sale of an unregistered securities offering after his official confirmation as the agency’s chairman. The petition launched on Change.org by […]",
       "currencies": [
@@ -201,28 +130,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Polygon (MATIC) Aiming to Transform Insurance Industry with M-Setu",
-      "link": "NULL",
-      "pubDate": "2021-04-08T18:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "MATIC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "XRP Flashing Powerful Buy Signal, Says Legendary Trader Peter Brandt",
       "link": "https://dailyhodl.com/2021/04/08/xrp-flashing-powerful-buy-signal-says-legendary-trader-peter-brandt/",
       "pubDate": "2021-04-08T17:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Veteran trader and Bitcoin enthusiast Peter Brandt is turning bullish on XRP as the asset surges by 63% in one week. This week, Brandt has seemingly changed his tune on the crypto asset. In a new tweet, the career trader tells his 456,000 followers that XRP is poised to break out against Bitcoin (XRP/BTC). “This […]",
       "currencies": [
@@ -239,8 +151,8 @@
       "title": "Meitu buys another $10 million in bitcoin to complete its treasury allocation plan",
       "link": "https://www.theblockcrypto.com/linked/101124/meitu-btc-purchase-100-million-crypto-assets?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-04-08T16:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "bitcoin",
       "description": "In total, the Hong Kong-based app maker holds 31,000 ETH at $50.5 million and 940 BTC at $49.5 million in its treasury.",
       "currencies": [
@@ -255,22 +167,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Don't miss this!",
-      "link": "NULL",
-      "pubDate": "2021-04-08T16:13:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
       "title": "Stock-To-Flow Creator: Bitcoin Cycle “Nowhere Near The Top”",
       "link": "https://bitcoinist.com/stock-to-flow-creator-bitcoin-cycle-nowhere-near-the-top/?utm_source=rss&utm_medium=rss&utm_campaign=stock-to-flow-creator-bitcoin-cycle-nowhere-near-the-top",
       "pubDate": "2021-04-08T15:46:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Bitcoin price still can’t crack back above $60,000 and prices are slowly moving downward. And while the creator of the popular stock-to-flow model agrees there’s no avoiding regular corrections in the leading cryptocurrency, the top of the current cycle is “nowhere near.” Here’s a closer look at why the model’s creator is so confident in further price appreciation, along with a technical look...",
       "currencies": [
@@ -284,84 +185,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "All aboard!! We’ve just released the public shared testnet that includes all the essential functionality to confirm…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T15:38:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "We're pleased to have worked with Daniel Nortje, Director of Strategy & Architecture at @Salesforce. Daniel has ch…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T15:12:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "VTHO",
-        "VEN"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "I’m part of the dent family!",
-      "link": "NULL",
-      "pubDate": "2021-04-08T15:07:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "Economical reason for going down of the yield percentage",
-      "link": "NULL",
-      "pubDate": "2021-04-08T15:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "RT @SotRos25: “...it will be the first time any of us see @safenetworktech in all its glory...quite incredible &amp; I believe world changing.…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T15:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "We hope you’re getting ready to join us on @safenetworktech!!",
-      "link": "NULL",
-      "pubDate": "2021-04-08T14:54:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Ripple community launches a new petition to ‘stop the war’ on XRP",
       "link": "https://ambcrypto.com/ripple-community-launches-a-new-petition-to-stop-the-war-on-xrp/",
       "pubDate": "2021-04-08T14:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Thomas Hodge, founder of Crypto and Policy recently launched a petition directed at Gary Gensler, the US Securities and Exchange Commission Chair nominee to “stop the war on XRP,” or end the SEC lawsuit against Ripple, after he is confirmed as chair. The petition also wants Gensler to begin an investigation into the Commission’s former […]",
       "currencies": [
@@ -379,8 +207,8 @@
       "title": "Grayscale Acquires Huge Amounts of Recently Added Alts: BAT, MANA, LPT, FIL, LINK",
       "link": "https://u.today/grayscale-acquires-huge-amounts-of-recently-added-alts-bat-mana-lpt-fil-link",
       "pubDate": "2021-04-08T14:20:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Recently emerged analytics data states that Grayscale has added a massive amount of altcoins that it has recently used to launch new crypto trusts",
       "currencies": [
@@ -396,8 +224,8 @@
       "title": "Bitcoin exchanges just saw massive Tether stablecoin deposits",
       "link": "https://cointelegraph.com/news/bitcoin-exchanges-just-saw-massive-tether-stablecoin-deposits",
       "pubDate": "2021-04-08T14:02:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Is a broader rally forming for Bitcoin as sidelined capital makes its way onto exchanges?",
       "currencies": [
@@ -414,8 +242,8 @@
       "title": "The Mathematics Behind Safemoon Reaching $0.001",
       "link": "https://www.reddit.com/r/SafeMoon/comments/mmqb0r/the_mathematics_behind_safemoon_reaching_0001/",
       "pubDate": "2021-04-08T14:02:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "SAFEMOON"
@@ -430,8 +258,8 @@
       "title": "Ripple Price Analysis: XRP Eyes $1 Again Following Swift Recovery",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-eyes-1-again-following-swift-recovery/",
       "pubDate": "2021-04-08T13:56:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XEP exploded by an impressive 65% over the past week. Against Bitcoin reached as high as the July 2020 lows before dropping to the current 1670 SAT level.",
       "currencies": [
@@ -444,33 +272,11 @@
       }
     },
     {
-      "title": "Getting awards",
-      "link": "NULL",
-      "pubDate": "2021-04-08T12:41:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Great to see Binance Smart Chain is making all the right moves to drive adoption.",
-      "link": "NULL",
-      "pubDate": "2021-04-08T12:40:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
       "title": "‘End the War on XRP’ Pleas Petition to Gary Gensler",
       "link": "https://beincrypto.com/end-the-war-on-xrp-pleas-petition-to-gary-gensler/",
       "pubDate": "2021-04-08T12:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "First and foremost, the petition asks Gensler to end the ongoing lawsuit against Ripple Labs and its executives. It further requests that the SEC no longer legislates cryptocurrencies through lawsuits. Instead, it asks Gensler to collaborate with the crypto community in crafting legislation. “Join together with U.S. crypto and blockchain developers and digital asset holders … Continued",
       "currencies": [
@@ -486,8 +292,8 @@
       "title": "3 reasons Enjin Coin price surged by over 30% in a single day",
       "link": "https://cointelegraph.com/news/3-reasons-enjin-coin-price-surged-by-over-30-in-a-single-day",
       "pubDate": "2021-04-08T11:54:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "ENJ, the native token of the Enjin blockchain ecosystem, is up 31% in the last 24 hours for three key reasons.",
       "currencies": [
@@ -500,44 +306,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "On April 8th, Cocos-BCX NFT Mining 2.0 is ready to start,with upgraded gameplay of #COCOS Mining NFT. ⁦…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T11:14:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "RT @mindbayes: @EfforceOfficial @Forbes No way this could have ever happened without @jacopovisetti @vanettiJ @stefanoscozzese @stevewoz an…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T11:04:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Team work makes dream work! Congratulations to @mindbayes and all the honourees of this year’s @Forbes #30Under30 L…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T11:02:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Whales Deposit 476 Million USDT in One Hour to Grab Bitcoin Dip: Glassnode Data",
       "link": "https://u.today/whales-deposit-476-million-usdt-in-one-hour-to-grab-bitcoin-dip-glassnode-data",
       "pubDate": "2021-04-08T10:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Glassnode data shows that whales are moving large amounts of USDT to exchanges to acquire Bitcoin on the dip",
       "currencies": [
@@ -551,44 +324,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "With the complex Glitzkoin project making confident headway and the multifaceted nature of the GTN token being bett…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T09:01:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "March Smart Yield Report",
-      "link": "NULL",
-      "pubDate": "2021-04-08T08:57:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
-      "title": "We are extremely excited to proceed with our launch of Safecoin Validators on Sunday, April…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T08:42:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
       "title": "New petition asks SEC chair nominee Gary Gensler to drop Ripple lawsuit",
       "link": "https://cointelegraph.com/news/new-petition-asks-sec-chair-nominee-gary-gensler-to-drop-ripple-lawsuit",
       "pubDate": "2021-04-08T08:37:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "An XRP advocate started a petition to SEC chair nominee Gary Gensler, asking him to end the lawsuit against Ripple should he be confirmed as the new chair.",
       "currencies": [
@@ -604,8 +344,8 @@
       "title": "Ripple Helps Transfer 110.3 Million XRP, Some of It Goes to Binance and Bitso",
       "link": "https://u.today/ripple-helps-transfer-1103-million-xrp-some-of-it-goes-to-binance-and-bitso",
       "pubDate": "2021-04-08T08:01:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Slightly more than 110 million XRP has been wired by Ripple and several crypto exchanges, including Binance and Bitso, which received lumps of XRP from the fintech giant",
       "currencies": [
@@ -621,8 +361,8 @@
       "title": "Microsoft and Enjin Bring Cross-Platform Custom NFTs to Minecraft",
       "link": "https://www.reddit.com/r/EnjinCoin/comments/mmm4hv/microsoft_and_enjin_bring_crossplatform_custom/",
       "pubDate": "2021-04-08T07:45:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "nft",
       "currencies": [
         "ENJ"
@@ -634,22 +374,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @cryptoladyyy: STASIS / EURS - The Largest And Most Transparent Euro-backed Stablecoin ... через @YouTube The EU…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T07:16:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Lawyer for 11,000 XRP holders pushing to fight SEC in Ripple lawsuit",
       "link": "https://forkast.news/xrp-fight-sec-ripple-lawsuit/?utm_source=rss&utm_medium=rss&utm_campaign=xrp-fight-sec-ripple-lawsuit",
       "pubDate": "2021-04-08T06:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "As Ripple and SEC intensify their legal battles, attorney John Deaton and his clients are trying to jump into the fray. Will XRP investors get their day in court?",
       "currencies": [
@@ -660,51 +389,6 @@
         "negative": 2
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Is it too late?",
-      "link": "NULL",
-      "pubDate": "2021-04-08T03:06:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Where's all the Dent haters now?? To the flipping               ‍ ‍  ‍ ‍",
-      "link": "NULL",
-      "pubDate": "2021-04-08T01:31:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "Pleased to announce that our cumulative TX on Klaytn has surpassed 7M, which is in a month since our 6M TX achievem…",
-      "link": "NULL",
-      "pubDate": "2021-04-08T01:15:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "SSX"
-      ]
-    },
-    {
-      "title": "Circulating Supply at Network Launch",
-      "link": "NULL",
-      "pubDate": "2021-04-08T00:17:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
     }
   ]
 }

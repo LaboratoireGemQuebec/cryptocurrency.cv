@@ -1,77 +1,15 @@
 {
   "date": "2023-09-27",
-  "fetchedAt": "2026-02-05T07:45:52.397Z",
-  "articleCount": 62,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "On-chain Investigator Digs Into Ethereum Foundation’s Connection To The Filecoin ICO",
-      "link": "NULL",
-      "pubDate": "2023-09-27T23:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Curve (CRV) Is Up 20%, But This Whale May End The Run",
-      "link": "NULL",
-      "pubDate": "2023-09-27T22:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Curve Founder Michael Egorov Clears Aave Loan, Reduces Total Debt To $42.7 Million",
-      "link": "NULL",
-      "pubDate": "2023-09-27T21:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "SEC's Gensler taken to task over crypto custody guidance again in House hearing",
-      "link": "NULL",
-      "pubDate": "2023-09-27T20:31:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Six Ethereum-Based Altcoins and Two Low-Cap Crypto Assets Flashing Bullish On-Chain Signal: Santiment",
-      "link": "NULL",
-      "pubDate": "2023-09-27T20:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "INJ"
-      ]
-    },
     {
       "title": "JUST IN: SEC Delays ARK 21 Shares Ethereum Spot ETF Application",
       "link": "https://en.bitcoinsistemi.com/just-in-sec-delays-ark-21-shares-ethereum-spot-etf-application/",
       "pubDate": "2023-09-27T19:47:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "According to breaking information, the US Securities and Exchange Commission (SEC) postponed the joint Ethereum Spot ETF application of ARK Invest and 21Shares. Bloomberg's ETF expert James Seyffart commented on the postponement of the Spot Ethereum ETF as follows: Wow. We thought that was enough for today, but the SEC also postponed ARK Invest and […] Continue Reading: JUST IN: SEC...",
       "currencies": [
@@ -84,152 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Chainlink (LINK) Brushes Off Market Downtrend, Scores 11% In Last Week",
-      "link": "NULL",
-      "pubDate": "2023-09-27T19:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "XRP",
-        "LINK",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Curve Founder Eases Contagion Fears, Slashing Debt to $42.7M",
-      "link": "NULL",
-      "pubDate": "2023-09-27T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "HBAR: Is this the perfect time to go long?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T18:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "How Ethereum Staking Stacks Up in the Proof-of-Stake Landscape",
-      "link": "NULL",
-      "pubDate": "2023-09-27T18:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "STX"
-      ]
-    },
-    {
-      "title": "The Protocol: Google Pushes Deeper into Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-27T17:36:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DOT"
-      ]
-    },
-    {
-      "title": "Price analysis 9/27: BTC, ETH, BNB, XRP, ADA, DOGE, SOL, TON, DOT, MATIC",
-      "link": "NULL",
-      "pubDate": "2023-09-27T17:31:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "DOT",
-        "MATIC",
-        "TON"
-      ]
-    },
-    {
-      "title": "What’s Next for $CRV Price After 34% Surge In a Fortnight?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T17:08:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Bitcoin Bearish Signal: Long-Term Holders Deposit To Exchanges",
-      "link": "NULL",
-      "pubDate": "2023-09-27T17:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "LINK Price Broke Critical Level, Macro Downtrend Behind? Analyst Forecasts",
-      "link": "NULL",
-      "pubDate": "2023-09-27T16:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LINK",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Horizen Reaches a Key Milestone in Decentralized Governance – Introducing Horizen DAO",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:41:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Biggest Movers: BCH, LINK Move to 6-Week Highs on Wednesday",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "BCH"
-      ]
-    },
-    {
       "title": "Ripple’s XRPL Primed For Massive Upgrade That Could Lift XRP Price — Here’s Everything You Need To Know",
       "link": "https://zycrypto.com/ripples-xrpl-primed-for-massive-upgrade-that-could-lift-xrp-price-heres-everything-you-need-to-know/",
       "pubDate": "2023-09-27T15:21:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP has grabbed headlines today with the introduction of a ground-breaking XRPL infrastructure upgrade.",
       "currencies": [
@@ -242,93 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Plena Crypto Super App: Leading the Way With Account Abstraction, Backed by Dao Maker",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Algorand Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Best Crypto To Buy In September Apecoin (APE), Stellar (XLM) And Shiba Budz (BUDZ)",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XLM",
-        "APE"
-      ]
-    },
-    {
-      "title": "ETH Gate Saga Continues: What Is Lubin’s ‘Piece Of Paper’?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T15:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "GT"
-      ]
-    },
-    {
-      "title": "Circle Amplifies EURC Accessibility with Stellar Alliance",
-      "link": "NULL",
-      "pubDate": "2023-09-27T14:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "FalconX participates in $3 million seed round for DeFi portfolio manager Bril Finance",
-      "link": "NULL",
-      "pubDate": "2023-09-27T14:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "EOS Is Becoming a Climate Positive Network That Will Offset Its Energy Consumption by 3x",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:59:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
       "title": "XRP price prediction for Halloween 2023",
       "link": "https://finbold.com/xrp-price-prediction-for-halloween-2023/",
       "pubDate": "2023-09-27T13:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As September gets close to its end, preparations for the celebration of Halloween begin, but cryptocurrency traders are focusing more … Continued",
       "currencies": [
@@ -341,212 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why APE and GALA’s Downtrend Could Turn Profitable Soon",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE",
-        "GALA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Shiba Inu Price Prediction: Everlodge and Curve DAO Set the Pace but Who Has Most Potential?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:40:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SHIB",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Tradecurve Markets’ (TCRV) Launches Demo Platform, While ApeCoin (APE) and Floki Inu (FLOKI) Suffer Existential Crisis",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:36:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Ethereum Tops $1,600; Maker, Injective Among Top Gainers",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:34:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Bullish On Play-To-Earn Coin Shiba Budz? Here's Why Algorand And Convex Will Get Left Behind",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:31:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Crypto price outlook: Bitcoin, Maker, Shiba Memu",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:24:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash price prediction as the crypto betting economy expands",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:15:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "THORChain (RUNE) Price Approaches Yearly High – Will It Finally Reach $2?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum explorer Rated raises $12.89 million to expand to other blockchains, including Polygon and Solana",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:05:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Cricket World Cup to feature Web3 fan app as ICC taps into Near blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "EOS Network Foundation, Upland, Aerial Team up to Make EOS Climate-Positive Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-27T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "This Government Wants to Run Whole City on Blockchain",
-      "link": "NULL",
-      "pubDate": "2023-09-27T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "6 Cryptos That Could Boom as Their Supplies Enter Self-Custody",
-      "link": "NULL",
-      "pubDate": "2023-09-27T12:15:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRV",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Curve Founder Michael Egorov Deposits $35M CRV to Settle Debt on Aave",
-      "link": "NULL",
-      "pubDate": "2023-09-27T12:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Curve Finance founder cuts debt to $42.7M, settles entire Aave loan",
-      "link": "NULL",
-      "pubDate": "2023-09-27T11:55:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Will LUNC Price Surpass $0.00007? Bullish Pattern Signals a Green Light",
-      "link": "NULL",
-      "pubDate": "2023-09-27T11:53:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Investing $100/week into Dogecoin in 2023 would be this worth today",
       "link": "https://finbold.com/investing-100-week-into-dogecoin-in-2023-would-be-this-worth-today/",
       "pubDate": "2023-09-27T11:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "While the major part of the cryptocurrency sector is settling back into the sideways trading mode, Dogecoin (DOGE) is keeping … Continued",
       "currencies": [
@@ -559,74 +73,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Top 10 cryptos mixed, SEC again delays decision on Ark Invest ETF filing",
-      "link": "NULL",
-      "pubDate": "2023-09-27T11:04:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "TON"
-      ]
-    },
-    {
-      "title": "1xBit Rockets into the Future: Welcoming Algorand and Arbitrum as Novel Deposit Methods!",
-      "link": "NULL",
-      "pubDate": "2023-09-27T10:50:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Curve founder Michael Egorov settles entire debt position on Aave",
-      "link": "NULL",
-      "pubDate": "2023-09-27T10:22:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "MoneyGram Will Soon Let Customers Swap Fiat and USDC Stablecoins Via New Crypto Wallet",
-      "link": "NULL",
-      "pubDate": "2023-09-27T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "XLM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "buzzlightning – The Symbiot of Reality and Virtuality",
-      "link": "NULL",
-      "pubDate": "2023-09-27T09:43:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Can Bitcoin recover this week? Yes, if this happens",
       "link": "https://finbold.com/can-bitcoin-recover-this-week-yes-if-this-happens/",
       "pubDate": "2023-09-27T09:07:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "After making a false move up, Bitcoin (BTC) is demonstrating a certain level of weakness, and more pain could be … Continued",
       "currencies": [
@@ -639,92 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Circle launches euro stablecoin on Stellar- Will this boost XLM?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T08:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 27 Sep: Crypto Volatility and Key Developments",
-      "link": "NULL",
-      "pubDate": "2023-09-27T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOGE",
-        "SHIB",
-        "MKR",
-        "APT",
-        "GMX"
-      ]
-    },
-    {
-      "title": "Maker (MKR) Price Moves Above $1,400 – Reaches Highest Price Since May 2022",
-      "link": "NULL",
-      "pubDate": "2023-09-27T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Ethereum OFAC compliance dips to 45% post-Merge upgrade",
-      "link": "NULL",
-      "pubDate": "2023-09-27T08:22:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Circle and SDF Launch EURC on Stellar Network to Enhance European Remittance Network",
-      "link": "NULL",
-      "pubDate": "2023-09-27T07:53:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "BTC Flatlines Above $26K, MKR Explodes 9% Weekly (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-27T07:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR"
-      ]
-    },
-    {
       "title": "Ripple Appoints Former White House Official To Secure Position in ‘Conversation’",
       "link": "https://beincrypto.com/ripple-appoints-former-white-house-official/",
       "pubDate": "2023-09-27T06:48:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "Ripple Labs has reportedly appointed a former United States White House Official as its new head of policy and government. This comes amid Ripple executives criticizing the US government for its recent stance against crypto. The Former White House Official Asserts Ripple’s Leadership Position In a LinkedIn post dated September 26, Lauren Belive announced her new role as the head...",
       "currencies": [
@@ -735,78 +105,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Cash [BCH] holds onto $210; can buyers push it past $220?",
-      "link": "NULL",
-      "pubDate": "2023-09-27T06:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Former Ripple Partner MoneyGram to Launch Non-Custodial Crypto Wallet With Stellar Partnership",
-      "link": "NULL",
-      "pubDate": "2023-09-27T03:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Can whales rescue MANA from its dwindling price action",
-      "link": "NULL",
-      "pubDate": "2023-09-27T01:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MANA"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 26 Sep: Crypto traded with a negative tone",
-      "link": "NULL",
-      "pubDate": "2023-09-27T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "TON"
-      ]
-    },
-    {
-      "title": "Four winners emerge from Seoul GAS Station, magipop and SuperSquad en route to finale in Hong Kong",
-      "link": "NULL",
-      "pubDate": "2023-09-27T01:10:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Huobi Changes Name to HTX and Almost Immediately Gets Hacked",
-      "link": "NULL",
-      "pubDate": "2023-09-27T00:34:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "HTX"
-      ]
     }
   ]
 }

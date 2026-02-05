@@ -1,37 +1,15 @@
 {
   "date": "2021-03-14",
-  "fetchedAt": "2026-02-05T07:45:51.857Z",
-  "articleCount": 28,
+  "fetchedAt": "2026-02-05T07:48:35.475Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Newb",
-      "link": "NULL",
-      "pubDate": "2021-03-14T23:31:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "COBOL Programmers are Back In Demand. Seriously.",
-      "link": "NULL",
-      "pubDate": "2021-03-14T21:33:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
     {
       "title": "Age Of Rust: excited to play! Tips for a smooth experience?",
       "link": "https://www.reddit.com/r/EnjinCoin/comments/m52bnd/age_of_rust_excited_to_play_tips_for_a_smooth/",
       "pubDate": "2021-03-14T21:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "ENJ"
@@ -43,56 +21,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Meme says it all",
-      "link": "NULL",
-      "pubDate": "2021-03-14T20:02:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Dark mode implemented on Supra Finance!",
-      "link": "NULL",
-      "pubDate": "2021-03-14T19:32:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "To the paper hands: I'LL WAVE FROM THE TOP!",
-      "link": "NULL",
-      "pubDate": "2021-03-14T19:31:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "The Co-Founder of Ark created the petition proposing that the Banque de France be able to buy cryptocurrencies",
-      "link": "NULL",
-      "pubDate": "2021-03-14T19:25:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Top 5 cryptocurrencies to watch this week: BTC, ETH, VET, XMR, FTT",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-eth-vet-xmr-ftt",
       "pubDate": "2021-03-14T19:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "If Bitcoin can hold $58,000 as support, altcoins like ETH, VET, XMR and FTT may resume their uptrend and hit new highs this week.",
       "currencies": [
@@ -110,8 +43,8 @@
       "title": "Over 100 Companies to Shift from Ethereum to Cardano: Charles Hoskinson",
       "link": "https://u.today/over-100-companies-to-shift-from-ethereum-to-cardano-charles-hoskinson",
       "pubDate": "2021-03-14T18:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Cardano’s Charles Hoskinson compares Uniswap to Beanie Babies, dismissing Ethereum",
       "currencies": [
@@ -125,33 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bought more NU! Always love a good sale",
-      "link": "NULL",
-      "pubDate": "2021-03-14T18:02:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "NU Sale",
-      "link": "NULL",
-      "pubDate": "2021-03-14T18:01:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "3M+ ZIL Removed From Circulation Since Zilliqa Introduced ‘Burning’",
       "link": "https://en.ethereumworldnews.com/3m-zil-removed-from-circulation-since-zilliqa-introduced-burning/",
       "pubDate": "2021-03-14T16:17:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "In brief: Over 3 million Zilliqa coins have been removed from circulation since the network implemented its version of burning ZIL ZIL fee burning, simply sends the gas paid out in each transaction to a special address where all mining rewards come from This gas can then be used for block rewards in a process known as ‘recycling’ The President of Zilliqa, Amrit Kummer, has updated the ZIL...",
       "currencies": [
@@ -163,34 +74,11 @@
       }
     },
     {
-      "title": "Few understand $FLP",
-      "link": "NULL",
-      "pubDate": "2021-03-14T15:40:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Just joined the NU club and I’m surprised by the panic mood of some posts",
-      "link": "NULL",
-      "pubDate": "2021-03-14T15:31:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "SBI Holdings Continues to Give More Weight to Ripple and XRP",
       "link": "https://zycrypto.com/sbi-holdings-continues-to-give-more-weight-to-ripple-and-xrp/",
       "pubDate": "2021-03-14T14:57:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Japanese Strategic Business Innovator Group, commonly known as SBI Holdings stated that it will reward its shareholders with Ripple’s XRP for the second year in a row, after a successful first round that’s ending on March 31. SBI Holdings said in an official statement that Shareholders with 100 or more shares will get $22.92 or […]",
       "currencies": [
@@ -203,22 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This is the reward for early adopters who believe in the project and hodl.",
-      "link": "NULL",
-      "pubDate": "2021-03-14T13:31:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "XEM Snapshot for XYM Airdrop Completed: Binance",
       "link": "https://beincrypto.com/xem-snapshot-for-xym-airdrop-completed-binance/",
       "pubDate": "2021-03-14T13:13:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "exchange",
       "description": "The NEM Network plans to release its new Symbol network on Mar. 15. It will run in separately from the old network, and the team will maintain both networks. It does use a new token, called XYM. XEM will still be used on the old network. To get the new network in gear, NEM will … Continued",
       "currencies": [
@@ -234,8 +111,8 @@
       "title": "About quiet holders.",
       "link": "https://www.reddit.com/r/algorand/comments/m4sbr2/about_quiet_holders/",
       "pubDate": "2021-03-14T12:50:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "ALGO"
@@ -247,22 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Getting started with COBOL development on Fedora Linux 33 -- \"COBOL is still powering business critical operations within many major organizations. As the need to update, upgrade and troubleshoot these applications grows, so may the demand for anyone with COBOL development knowledge.\"",
-      "link": "NULL",
-      "pubDate": "2021-03-14T10:01:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "9 Crypto Assets Have Massive Potential in March and April, According to Altcoin Daily’s Austin Arnold",
       "link": "https://dailyhodl.com/2021/03/14/9-crypto-assets-have-massive-potential-in-march-and-april-according-to-altcoin-dailys-austin-arnold/",
       "pubDate": "2021-03-14T08:04:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "stablecoin",
       "description": "Altcoin Daily host and crypto analyst Austin Arnold is listing the top projects that he has on his radar in the coming weeks. In a new video, Arnold tells his 562,000 YouTube subscribers that Ethereum (ETH) is the number one project he is keeping an eye on over the coming period. The trader highlights that […]",
       "currencies": [
@@ -276,49 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 35 #hive",
-      "link": "NULL",
-      "pubDate": "2021-03-14T06:45:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "$2,000 $CAKE GIVEAWAY To enter: 🥞 Follow @PancakeSwap 🥞 Retweet Also, if you haven't set up #BSC on your Met…",
-      "link": "NULL",
-      "pubDate": "2021-03-14T05:53:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CAKE"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Imagine coinbase could give rewards for staking Nucypher with a 10% APY and keep the other 12% for gas fees or whatever else they need it for! Imagine the growth",
-      "link": "NULL",
-      "pubDate": "2021-03-14T05:31:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "It took #Bitcoin 3.6x less time than Microsoft to reach $1 trillion market cap.",
       "link": "https://twitter.com/binance/status/1370970445168705538",
       "pubDate": "2021-03-14T05:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "bitcoin",
       "currencies": [
         "BNB"
@@ -329,51 +157,11 @@
       }
     },
     {
-      "title": "At VeChain, we focus on unleashing the power of blockchain on the real economy. Learn how Yizhiji, Sino-French cos…",
-      "link": "NULL",
-      "pubDate": "2021-03-14T03:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "VTHO",
-        "VEN"
-      ],
-      "votes": {
-        "positive": 18,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ICYMI: Ark Desktop Wallet has over 500,000 downloads and is still one of the best cryptocurrency wallets",
-      "link": "NULL",
-      "pubDate": "2021-03-14T02:07:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "1st ARK in outer space via  SpaceX Starlink  #amongthestars",
-      "link": "NULL",
-      "pubDate": "2021-03-14T01:24:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Bitcoin price rally to $61,800 shows BTC bulls are in full control",
       "link": "https://cointelegraph.com/news/bitcoin-price-rally-to-61-800-shows-btc-bulls-are-in-full-control",
       "pubDate": "2021-03-14T00:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "As Bitcoin price skyrocketed to a new all-time high above $61,800, altcoins like Decentraland rallied more than 90%.",
       "currencies": [

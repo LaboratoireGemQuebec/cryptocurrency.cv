@@ -1,31 +1,15 @@
 {
   "date": "2021-11-05",
-  "fetchedAt": "2026-02-05T07:45:51.830Z",
-  "articleCount": 96,
+  "fetchedAt": "2026-02-05T07:48:35.465Z",
+  "articleCount": 34,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "3 reasons why DeFi users are bullish on Abracadabra, Magic Internet Money and SPELL",
-      "link": "NULL",
-      "pubDate": "2021-11-05T23:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SPELL"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Dogecoin Founder Bill Markus Clarifies His Stance On Shiba Inu",
       "link": "https://bitcoinist.com/dogecoin-founder-bill-markus-clarifies-his-stance-on-shiba-inu/?utm_source=rss&utm_medium=rss&utm_campaign=dogecoin-founder-bill-markus-clarifies-his-stance-on-shiba-inu",
       "pubDate": "2021-11-05T23:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The hype around dog-themed coins is yet to die down completely. Despite declining prices in both Dogecoin and Shiba Inu, the communities continue to remain very active in social media spaces. A recent development in meme coin communities has been to jump on any and all changes to drive awareness to whatever tokens they are […]",
       "currencies": [
@@ -41,8 +25,8 @@
       "title": "JPMorgan Analysts Put Ethereum Fair Value At $1,500, With Bullish Outlook For Bitcoin",
       "link": "https://www.newsbtc.com/news/bitcoin/jpmorgan-analysts-put-ethereum-fair-value-at-1500-with-bullish-outlook-for-bitcoin/",
       "pubDate": "2021-11-05T23:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Ethereum’s value has hit a recent all-time high above $4,600. However, not everyone agrees that the altcoin is fairly priced. Analysts at JPMorgan fall into this category. Although the altcoin has made great strides in utility recently, the analysts do not believe that the coin is fairly valued. They believed that the fair price of the digital asset is in fact much lower than its current...",
       "currencies": [
@@ -56,22 +40,11 @@
       }
     },
     {
-      "title": "RT @hackernoon: \"The Sport's First Global NFT Marketplace is Happening in Partnership with FIDE and Free TON\" by @CommunityTon",
-      "link": "NULL",
-      "pubDate": "2021-11-05T22:04:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
       "title": "Ripple Executives Call on Congress for Clear Crypto Guidelines As SEC’s XRP Lawsuit Rolls On",
       "link": "https://dailyhodl.com/2021/11/05/ripple-executives-call-on-congress-for-clear-crypto-guidelines-as-secs-xrp-lawsuit-rolls-on/",
       "pubDate": "2021-11-05T22:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Top executives at Ripple Labs are calling upon Congress to create transparent crypto regulations as Ripple’s legal battle over XRP with the U.S. Securities and Exchange Commission (SEC) continues. In response to a report that federal agencies asked Congress for more power to regulate stablecoins, Ripple Labs CEO Brad Garlinghouse took to Twitter to say […] The post Ripple Executives Call on Congress for Clear Crypto Guidelines As SEC’s XRP Lawsuit Rolls On appeared first on The Daily Hodl.",
       "currencies": [
@@ -84,78 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Gotta bounce, happy Friday!",
-      "link": "NULL",
-      "pubDate": "2021-11-05T22:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "Well that was quick! Doge Dash has now passed 25,000 holders! We love you Dashers! #dogedash #dogedasharmy…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T21:43:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DASH",
-        "DOGEDASH"
-      ]
-    },
-    {
-      "title": "Lisbon Blockchain Week retro: Thank you Lisbon! @0xliscon @voteWithTally @GnosisGuild @vita_dao @witnet_io",
-      "link": "NULL",
-      "pubDate": "2021-11-05T21:31:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "RT @Ben_XPR: Want to buy, send or receive #cryptocurrency but getting stung with HUGE Gas fees and slow transactions? Just like you do with…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T20:56:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "Sunny skies and #crypto at Top Golf in Fenway Park ️️",
-      "link": "NULL",
-      "pubDate": "2021-11-05T20:37:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "OMG YOU KILLED THIS!!!",
-      "link": "NULL",
-      "pubDate": "2021-11-05T20:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
       "title": "Next generation of crypto millionaires: SHIB allows warehouse manager to retire",
       "link": "https://cointelegraph.com/news/next-generation-of-crypto-millionaires-shib-allows-warehouse-manager-to-retire",
       "pubDate": "2021-11-05T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The funds gave him the ability to quit his job, which paid $68,000 annually, to stay at home taking care of his son and participate in online discussions about projects related to the memecoin.",
       "currencies": [
@@ -168,22 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Jake Yocom-Piatt (@behindtext) talks to @Benzinga about the fundamentals of #Decred, marketing, and future plans.",
-      "link": "NULL",
-      "pubDate": "2021-11-05T19:55:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
       "title": "Ripple vs. SEC — XRP Proponent Confidently Tells Fox That Ripple Will Get A Settlement",
       "link": "https://zycrypto.com/ripple-vs-sec-xrp-proponent-confidently-tells-fox-that-ripple-will-get-a-settlement/",
       "pubDate": "2021-11-05T19:47:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "The legal battle between the Securities and Exchange Commission (SEC) and Ripple will soon come to an end according to the belief of popular cryptocurrency YouTuber Ben Armstrong aka “BitBoy.” The crypto influencer told Fox Business that the price of XRP is set for a massive breakout stemming from the SEC and Ripple reaching a […]",
       "currencies": [
@@ -199,8 +94,8 @@
       "title": "Robinhood Competitor Adds Support for Shiba Inu",
       "link": "https://u.today/robinhood-competitor-adds-support-for-shiba-inu",
       "pubDate": "2021-11-05T19:26:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu is now available on online brokerage platform TastyWorks",
       "currencies": [
@@ -213,85 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are honored to join hands with @inkfinance and support them from the very beginning. This marks the beginning of…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T19:13:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
-      "title": "You can easily add  $AMA token to your wallet on the BSC directly through the official website to avoid any error…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T18:57:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "Altcoin Daily Says Fundamental Factors Will Fuel Ethereum Explosion, Explores Metaverse Altcoins",
-      "link": "NULL",
-      "pubDate": "2021-11-05T18:41:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "A crypto-focused YouTube channel with over 1 million followers is predicting an Ethereum (ETH) explosion possibly as soon as this weekend. In a new video, Altcoin Daily co-host Austin lays out two fundamental factors that he says will drive up the price of the leading smart contract platform even further. First, Austin notes that major […]",
-      "currencies": [
-        "ETH",
-        "THETA"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "From being hailed as one of the best startups in Sweden, new partnerships, to multiple NFT sales - it was indeed an…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T18:35:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CHR"
-      ]
-    },
-    {
-      "title": "We're very pleased to announce today that William Lovell of the @bankofengland will be joining Richard Ells and the…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T18:20:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "We have detected an annomaly with Quickswap and wBUSD liquidity, we have paused all the bridge services until further investigation",
-      "link": "NULL",
-      "pubDate": "2021-11-05T18:16:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
       "title": "Finance Redefined: Avalanche launches $200M fund, wXRP to debut on Ethereum Oct. 29–Nov. 5",
       "link": "https://cointelegraph.com/news/finance-redefined-avalanche-launches-200m-fund-wxrp-to-debut-on-ethereum-oct-29-nov-5",
       "pubDate": "2021-11-05T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Avalanche Foundation showcases a six-figure ecosystem fund, wXRP set to launch smart contracts on Ethereum, and AllianceBlock joins forces with Flare — all coming to you in this week’s Finance Redefined.",
       "currencies": [
@@ -309,8 +130,8 @@
       "title": "Why Ripple Partnered The Digital Pound Foundation To Develop CBDCs In The U.K.",
       "link": "https://bitcoinist.com/why-ripple-partnered-the-digital-pound-foundation-to-develop-cbdcs-in-the-u-k/?utm_source=rss&utm_medium=rss&utm_campaign=why-ripple-partnered-the-digital-pound-foundation-to-develop-cbdcs-in-the-u-k",
       "pubDate": "2021-11-05T18:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Payment solution company Ripple will join the Digital Pound Foundation to develop a Central Bank Digital Currency (CBDC) for the United Kingdom. The company will become a foundation member and will be represented in its board by their Head of Policy Susan Friedman, according to an official post. Related Reading | David v. Goliath, How […]",
       "currencies": [
@@ -326,8 +147,8 @@
       "title": "Fantom Could Rebound to New All-Time Highs",
       "link": "https://cryptobriefing.com/fantom-could-rebound-to-new-all-time-highs/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-11-05T17:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "The article discusses the potential for the cryptocurrency Fantom to recover and reach new all-time highs. Analysts highlight positive market trends and developments within the Fantom ecosystem that could drive its price upward. Factors such as increased adoption, partnerships, and technological advancements are examined as key contributors to its potential rebound.",
       "currencies": [
@@ -340,33 +161,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "OMG !!!!!",
-      "link": "NULL",
-      "pubDate": "2021-11-05T17:59:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
-      "title": "RT @pundixturkiye: The first crypto store in a mall… Pundi X Cryptocurrency Kiosk opened in Marmara Park shopping center in İstanbul.. @Pun…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T17:47:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
       "title": "Cardano ($ADA) Going to $10, Polkadot ($DOT) Going to $250, Says Crypto Analyst",
       "link": "https://www.cryptoglobe.com/latest/2021/11/cardano-ada-going-to-10-polkadot-dot-going-to-250-says-crypto-analyst/",
       "pubDate": "2021-11-05T17:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Popular pseudonymous analyst and trader “Crypto Capo” (“@CryptoCapo_” on Twitter) says that in this bull cycle $ADA and $DOT, which are the native tokens of Cardano and Polkadot respectively, are headed to at least $10 and $250 respectively. On Wednesday (November 3), Crypto Capo told his over Twitter 191,000 followers that he is still bullish on […]",
       "currencies": [
@@ -380,55 +179,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "zk-sNARKs (Zero Knowledge Succinct Non-Interactive Argument of Knowledge) refers to a proof construction where one…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T17:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
-      "title": "RT @TheCryptoMewtwo: Excited to announce that @LassuytChristop, Co-Founder of @RequestNetwork, will be on the #BasedSpace this Sunday, 11/7…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T16:25:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "Decentralization.",
-      "link": "NULL",
-      "pubDate": "2021-11-05T16:20:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @BloombergLive: JUST IN: @chia_project President &amp; COO @hoffmang discusses their newly announced partnership with @WorldBank. \"The goal…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T16:16:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Sushi DeFi Heavyweight Comes to Polkadot's Moonbeam, Teases IDO and NFT Products",
       "link": "https://u.today/sushi-defi-heavyweight-comes-to-polkadots-moonbeam-teases-ido-and-nft-products",
       "pubDate": "2021-11-05T16:07:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "defi",
       "description": "One of the largest DeFi protocols, Sushi, comes to Polkadot's Moonbeam, liquidity mining starts today",
       "currencies": [
@@ -441,45 +196,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What are some of your 'best practices' for DAO management? via @ShawnzoGonzo",
-      "link": "NULL",
-      "pubDate": "2021-11-05T16:02:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
-      "title": "Ok @CryptoBriefing, @Cointelegraph @CoinDesk and @decryptmedia - it's all yours now. ‍",
-      "link": "NULL",
-      "pubDate": "2021-11-05T15:15:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "Check out this video from the new #DENT marketing campaign running on #LinkedIn. Download DENT #iPhone App here:…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T15:08:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Breeders see surging demand for Shiba Inu dogs amid SHIB, DOGE hype",
       "link": "https://finbold.com/breeders-see-surging-demand-for-shiba-inu-dogs-amid-shib-doge-hype/",
       "pubDate": "2021-11-05T15:06:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Shiba Inu (SHIB) and Dogecoin (DOGE), two popular cryptocurrencies based on dogs, have seen a surge in demand as virtual... Continue reading",
       "currencies": [
@@ -493,27 +214,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Reef Finance is looking for seasoned, process-oriented Business Development professional to oversee the full sales…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T15:04:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "hashport launches to power cross-network digital asset transfers",
       "link": "https://forkast.news/headlines/hashport-cross-network-digital-asset-transfers/",
       "pubDate": "2021-11-05T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "hashport, a public utility that facilitates the movement of digital assets between distributed ledger technology networks without the need for a native network token, today announced that it will launch on Nov. 9, according to a media statement. At launch, hashport will connect the Hedera public distributed ledger to the Ethereum and Polygon networks. Fast […]",
       "currencies": [
@@ -528,35 +233,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Who the bloody hell runs and , and how are you so quick on the annou…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:55:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "RT @DaggerOwlShield: @GeomsNFT Im in @samoyedcoin, @WoofSolana, @SolanaDoge, @FLOOF_SOLANA, @pizzapugcoin and a dash of @theCheemsToken …",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:45:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DASH",
-        "PPUG"
-      ]
-    },
-    {
       "title": "Shiba Inu Turns Supermarket Worker into Millionaire, 3 Reasons Why SHIB Plunged 51%, Robinhood Teases SHIB Army: Crypto News Digest by U.Today",
       "link": "https://u.today/shiba-inu-turns-supermarket-worker-into-millionaire-3-reasons-why-shib-plunged-51-robinhood-teases",
       "pubDate": "2021-11-05T14:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Check out U.Today’s latest news digest!",
       "currencies": [
@@ -569,50 +250,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We’re proud to announce that #DeCus has been approved by @AstarNetwork/@ShidenNetowrk to join the Builder’s Progr…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SATS"
-      ]
-    },
-    {
-      "title": "The Sandbox (SAND), Six Others Reach New All-Time High – Top Weekly Altcoin Gainers",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:26:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Today, we're announcing the Cyprus hardfork for #Symbol - allowing nodes to explicitly signal their support for the…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:18:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
       "title": "SHIB 800% Rally Reflected in Real Shiba Inu Puppy Sales",
       "link": "https://u.today/shib-800-rally-reflected-in-real-shiba-inu-puppy-sales",
       "pubDate": "2021-11-05T14:13:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu token apparently had a direct impact on Shiba Inu puppy sales, according to this dog breeding center",
       "currencies": [
@@ -628,8 +270,8 @@
       "title": "FTX, Solana Ventures and Lightspeed Create $100M Web3 Gaming Investment",
       "link": "https://blockworks.co/ftx-solana-ventures-and-lightspeed-create-100m-web3-gaming-investment/",
       "pubDate": "2021-11-05T14:07:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "altcoin",
       "description": "The initiative will help advance and develop new decentralized models for gaming as well as the tools developers need to build, Solana Ventures told Blockworks.",
       "currencies": [
@@ -642,33 +284,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "happy friday friends!",
-      "link": "NULL",
-      "pubDate": "2021-11-05T14:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "In 30 minutes, @Hoffmang and David Frazee are going live with Bloomberg’s @jennzaba at 10:05 ET. Tune in at…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
       "title": "Dogecoin vs. Shiba Inu – Michael Saylor ‘Stays In His Lane’ Regarding Intense Comparisons",
       "link": "https://zycrypto.com/dogecoin-vs-shiba-inu-michael-saylor-stays-in-his-lane-regarding-intense-comparisons/",
       "pubDate": "2021-11-05T13:26:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Dogecoin and Shiba Inu are in stiff competition on the cryptocurrency leaderboard. Michael Saylor sits on the fence when asked for his opinion about the comparisons between the two meme coins. Shiba Inu recently flipped Dogecoin to occupy the 9th spot in the list of largest cryptocurrencies. The recent surge of Dogecoin and Shiba Inu […]",
       "currencies": [
@@ -681,45 +301,11 @@
       }
     },
     {
-      "title": "RT @Vincentlauth: Welcome @EfforceOfficial! Come and check out the latest development for $WOXZ community on November 10th at 12:00 (UTC)…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T13:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Today, we're announcing the Harlock hardfork for #NEM - allowing nodes to explicitly signal their support for #NEM…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T13:08:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "\"...These reasons alone give DAOs a huge competitive advantage over traditional companies and organizations.\"",
-      "link": "NULL",
-      "pubDate": "2021-11-05T13:01:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
       "title": "HBAR will flip ETH",
       "link": "https://www.reddit.com/r/Hedera/comments/qn9197/hbar_will_flip_eth/",
       "pubDate": "2021-11-05T13:01:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "ethereum",
       "currencies": [
         "HBAR"
@@ -733,9 +319,9 @@
       "title": "Shell parachain is first to be added to Polkadot; to ensure ‘block production, inclusion, finalization’",
       "link": "https://ambcrypto.com/shell-parachain-becomes-the-polkadot-adds-its-very-first-to-ensure-block-production-inclusion-finalization/",
       "pubDate": "2021-11-05T12:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Followed by the heightened anticipation and buzz surrounding it, decentralized storage network Polkadot finally released its very first parachain earlier today. The platform now seems ready to begin its much-awaited parachain auctions later in the month, with 100s of projects vying for a top spot on the top blockchain. Polkadot’s team made the announcement on […]",
       "currencies": [
         "DOT"
@@ -750,8 +336,8 @@
       "title": "Kroger Denies Accepting Bitcoin Cash",
       "link": "https://u.today/kroger-denies-accepting-bitcoin-cash",
       "pubDate": "2021-11-05T12:14:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "No, America's leading grocery retailer will not accept Bitcoin Cash",
       "currencies": [
@@ -763,28 +349,11 @@
       }
     },
     {
-      "title": "Theta version 3.1.2 including fixes for Trezor transaction signing will go into effect at block height 12749952, ap…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T12:07:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "What Solana prices will be at the end of 2021 and beyond",
       "link": "https://forkast.news/what-solana-prices-will-be-2021-beyond/",
       "pubDate": "2021-11-05T11:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "trading",
       "description": "As Solana surges to new all-time highs, 50 fintech experts surveyed by Finder offer predictions on SOL’s price outlook for the end of the year and longer-term.",
       "currencies": [
@@ -799,8 +368,8 @@
       "title": "400% Cardano Surge Likely – But Another Altcoin Looks Even Stronger, According to Crypto Analyst",
       "link": "https://dailyhodl.com/2021/11/05/400-percent-cardano-surge-likely-but-another-altcoin-looks-even-stronger-according-to-crypto-analyst/",
       "pubDate": "2021-11-05T11:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "A widely followed cryptocurrency trader and analyst is predicting a major Cardano (ADA) rally. The pseudonymous crypto trader known as Capo tells his 189,600 Twitter followers that Cardano will likely hit $10 before this cycle ends, which represents a rise of around 400% from current levels. However, Capo says that altcoin Polkadot (DOT), currently the […]",
       "currencies": [
@@ -817,8 +386,8 @@
       "title": "Binance Partners With Portuguese Football Club, Helping $BNB To Break Above $614",
       "link": "https://www.cryptoglobe.com/latest/2021/11/binance-partners-with-portuguese-football-club-helping-bnb-to-break-above-614/",
       "pubDate": "2021-11-05T11:20:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "exchange",
       "description": "On Friday (November 5), crypto exchange Binance announced a multi-year partnership with FC Porto, which is one of Europe’s top professional football clubs. “Futebol Clube do Porto”, more commonly known as FC Porto, is a professional football club based in Porto, Portugal. The club, which was founded in 1893, plays in Portugal’s top league, which […]",
       "currencies": [
@@ -834,8 +403,8 @@
       "title": "NFL Player Brandon King Says He Is Buying More SHIB",
       "link": "https://u.today/nfl-player-brandon-king-says-he-is-buying-more-shib",
       "pubDate": "2021-11-05T10:45:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "The NFL player has tweeted that he is getting more Shiba Inu tokens",
       "currencies": [
@@ -848,29 +417,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The phase1 of PoA2.0 is live on #testnet! We are looking forward to the next step on #mainnet. ⏰…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T10:12:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "VTHO",
-        "VEN"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bitcoin Consolidation Continues While BNB Surges Towards $600 (Market Watch)",
       "link": "https://cryptopotato.com/bitcoin-consolidation-continues-while-bnb-surges-towards-600-market-watch/",
       "pubDate": "2021-11-05T09:50:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Binance Coin has stolen the larger-cap show with an impressive leg up towards $600, while bitcoin has remained around $62,000 again.",
       "currencies": [
@@ -884,22 +435,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @mindbayes: @JoshGoodbody @EfforceOfficial @HuobiUK @HuobiGlobal @stevewoz Thank you so much for the support as always my dear friend …",
-      "link": "NULL",
-      "pubDate": "2021-11-05T09:31:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Elon Musk Supports Dogecoin Co-Founder in His Twitter Tirade Against Hype in Crypto",
       "link": "https://u.today/elon-musk-supports-dogecoin-co-founder-in-his-twitter-tirade-against-hype-in-crypto",
       "pubDate": "2021-11-05T08:58:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "In a tweet, DOGE co-founder started to criticize hype around certain crypto coins, Tesla CEO supported him as if he were also against hype",
       "currencies": [
@@ -915,8 +455,8 @@
       "title": "Kusama, Cardano and Polkadot Are Top Three Development Activity Coins",
       "link": "https://u.today/kusama-cardano-and-polkadot-are-top-three-development-activity-coins",
       "pubDate": "2021-11-05T08:41:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Three most actively developed coins saw more than 100 GitHub commits",
       "currencies": [
@@ -933,8 +473,8 @@
       "title": "Shiba Inu Dumps 45% In 8 Days | Here's What You Need To Know",
       "link": "https://www.youtube.com/watch?v=kShqEyNib2k",
       "pubDate": "2021-11-05T08:34:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DataDash",
+      "sourceKey": "datadash",
       "category": "trading",
       "description": "#bitcoin #crypto #cryptocurrencies Looking to buy Get Paid In Crypto? Sign up for Digifox 🦊📈➡️ https://digifox.finance Interested in our newsletter, the DashReport? 💹➡️ http://nicholasmerten.com/dashreport/ Want a DataDash Hoodie? 👘➡️ https://merch.nicholasmerten.com/ Want to support my channel and get great perks? 💚⬇️ http://patreon.com/data_dash ---------------------------------------------------------------------------------------------------------- If you want me to be able to contact y",
       "currencies": [
@@ -947,23 +487,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$SHIBA challenged $DOGE and for a few days became the top meme coin. $TITAN will not have the same mercy when we de…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T08:25:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "TITAN"
-      ]
-    },
-    {
       "title": "Dogecoin Co-Founder Wants Shiba Inu Community to Leave Him Alone",
       "link": "https://u.today/dogecoin-co-founder-wants-shiba-inu-community-to-leave-him-alone",
       "pubDate": "2021-11-05T08:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Dogecoin co-founder Billy Markus is fed up with the Shiba Inu community",
       "currencies": [
@@ -977,66 +505,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A reminder that BCIP-5 which includes the IBC token transfer feature is concluding next Friday, Nov 11th, 2021.…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T08:06:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "Bitcoin added 100% in the past 30 days but Glitzkoin GTN rose 200%+ during the same time. Not forcing you to buy GT…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T07:35:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "Tomorrow is the day! We’re happy to present our last fantastic speaker - @Nicholas_Merten who is the creator of Da…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T07:34:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "We're proud to announce that Xfers is a finalist in @sgfintechfest Festival's Global FinTech Awards Our mission of…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T07:17:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
-      "title": "On November 10th at 12:00 (UTC) we begin a series of AMA’s together with our partner exchange @HuobiGlobal ! It is…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T07:06:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Top Crypto Analyst Charts Path for VeChain and UniSwap, Says Bitcoin and Ethereum Could Hit These New All-Time Highs",
       "link": "https://dailyhodl.com/2021/11/05/top-crypto-analyst-charts-path-for-vechain-and-uniswap-says-bitcoin-and-ethereum-could-hit-these-new-all-time-highs/",
       "pubDate": "2021-11-05T07:04:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Analyst and trader Justin Bennett is predicting new all-time highs as he provides the outlook for four top-30 crypto assets. In a newsletter, the crypto analyst says that if Bitcoin (BTC) replicates the 2017 price action, it could hit $80,000 sometime in November. “…if Bitcoin continues following its 2017 fractal, we should see prices reach $80,000 […] The post Top Crypto Analyst Charts Path for VeChain and UniSwap, Says Bitcoin and Ethereum Could Hit These New All-Time Highs appeared first on T",
       "currencies": [
@@ -1051,22 +524,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @AlanBarber: If you have ever wondered what it takes to run a public #Decred full node, here is a breakdown of data usage stats for my n…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T07:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Approaches Support After 50% Drop",
       "link": "https://beincrypto.com/shiba-inu-shib-approaches-support-after-50-drop/",
       "pubDate": "2021-11-05T06:38:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "After decreasing by 50% since its all-time high, Shiba Inu (SHIB) has reached the first potential bounce area and is just above a confluence of support levels.",
       "currencies": [
@@ -1079,22 +541,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ChainBing Monthly Report 2021.10.01–10.31",
-      "link": "NULL",
-      "pubDate": "2021-11-05T06:33:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CBG"
-      ]
-    },
-    {
       "title": "Canada’s Top Online Trading App Lists Shiba Inu",
       "link": "https://u.today/canadas-top-online-trading-app-lists-shiba-inu",
       "pubDate": "2021-11-05T06:08:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Canada's Robinhood has added support for the Shiba Inu cryptocurrency",
       "currencies": [
@@ -1107,146 +558,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "As we near @safenetworktech’s launch, we’re optimizing the team—including the addition of a new finance officer wit…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T06:01:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "MAID"
-      ]
-    },
-    {
-      "title": "\"Where did my tokens go?! I went to PancakeSwap and they stole them!\" If you see something like this in MetaMask…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T05:46:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Tomorrow, our CEO Dohyun Pak @Bifrost001 will be speaking at NFT Busan 2021, a government-backed conference, around…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T05:07:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "Harlock is coming. Very Soon™.",
-      "link": "NULL",
-      "pubDate": "2021-11-05T05:06:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "We just passed 50,000 Twitter followers! Thanks #eCashArmy, your hard work is paying off! #eCash #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-11-05T04:43:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "Join us at @sgfintechfest's Digital Currencies panel on 8 Nov 2021, as Sharon, Head of Regional Payments SEA, leads…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T04:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
-      "title": "RT @brandonbryant02: Going to the gym call me when BSV is 420.69",
-      "link": "NULL",
-      "pubDate": "2021-11-05T03:59:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Powerledger is proud to be attending the @COP26 with our Co-Founder &amp; Chairman @msjemmagreen. As a signatory of the…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T03:57:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "Congrats @graphprotocol, @NEARProtocol, and @chainlink, glad to be building together!",
-      "link": "NULL",
-      "pubDate": "2021-11-05T03:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "Got #XEM?",
-      "link": "NULL",
-      "pubDate": "2021-11-05T03:22:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
-    },
-    {
-      "title": "\"The journey is never easy. Setbacks, desperate moments, unforeseen casualties. But those who take the journey are…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T02:31:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @PolyxArmy: @coingecko Look #PolyX",
-      "link": "NULL",
-      "pubDate": "2021-11-05T02:21:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PXT"
-      ]
-    },
-    {
       "title": "Prominent Crypto Analyst Reaffirms $XRP Is Due for Massive Breakout",
       "link": "https://www.cryptoglobe.com/latest/2021/11/prominent-crypto-analyst-reaffirms-xrp-is-due-for-massive-breakout/",
       "pubDate": "2021-11-05T01:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Prominent cryptocurrency analyst Credible Crypto has reaffirmed his prediction for XRP, revealing he believes the cryptocurrency is due for a massive breakout in the near future based on its price chart. As the Daily Hodl reports, Credible Crypto shared charts with his over 250,000 followers on social media that XRP’s price structure is very similar […]",
       "currencies": [
@@ -1263,8 +579,8 @@
       "title": "Is Solana Getting A Bump And Dump By Chamath Palihapitiya?",
       "link": "https://bitcoinist.com/is-solana-getting-a-bump-and-dump-by-chamath-palihapitiya/?utm_source=rss&utm_medium=rss&utm_campaign=is-solana-getting-a-bump-and-dump-by-chamath-palihapitiya",
       "pubDate": "2021-11-05T01:05:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Solana (SOL) was put in the spotlight after a clip from a big tech investors’ podcast, such as Chamath Palihapitiya, showed them joking about buying SOL with discounts and their intentions for its future. Many saw this as an open example of venture capitalists manipulating prices on the market and further damaging projects. The podcast […]",
       "currencies": [
@@ -1274,55 +590,6 @@
         "positive": 2,
         "negative": 3
       }
-    },
-    {
-      "title": "never again",
-      "link": "NULL",
-      "pubDate": "2021-11-05T01:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
-      "title": "RT @feindura: If you want to be the first to build something cool with #UniversalProfiles 🆙, our first #hackathon is a great opportunity fo…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T00:44:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NULL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "At 17:00 KST today, @dooropen_space $DOC #IDO's Claim period will begin. We have published an #LP guide and event g…",
-      "link": "NULL",
-      "pubDate": "2021-11-05T00:06:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "DAOs as Purpose-led Organizations",
-      "link": "NULL",
-      "pubDate": "2021-11-05T00:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANT"
-      ]
     }
   ]
 }

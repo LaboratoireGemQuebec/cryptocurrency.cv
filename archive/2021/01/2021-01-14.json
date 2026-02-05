@@ -1,16 +1,16 @@
 {
   "date": "2021-01-14",
-  "fetchedAt": "2026-02-05T07:45:51.815Z",
-  "articleCount": 26,
+  "fetchedAt": "2026-02-05T07:48:35.462Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
     {
       "title": "DOT Reaches New All-Time High as Polkadot Braces for Multiple Project Launches in 2021",
       "link": "https://btcmanager.com/dot-all-time-high-polkadot-project-2021/",
       "pubDate": "2021-01-14T22:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Polkadot has witnessed a massive surge in price by almost +37.9% in the last 24 hours, driving the market cap to $10 billion, bringing it to a new all-time high at $12.74. And for the first time, DOT became the 5th biggest cryptocurrency in market cap. DOT Price Soars Record-High Polkadot is viewed as aRead More",
       "currencies": [
         "DOT"
@@ -22,73 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today MarketSquare is excited to welcome Mazer Gaming - a professional gaming and entertainment organization.",
-      "link": "NULL",
-      "pubDate": "2021-01-14T21:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Video Guide on How to Stake YOUC was added.",
-      "link": "NULL",
-      "pubDate": "2021-01-14T21:13:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "YOUC"
-      ]
-    },
-    {
-      "title": "Uniswap Now Has More Than $3 Billion in Liquidity",
-      "link": "NULL",
-      "pubDate": "2021-01-14T20:14:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "description": "Uniswap’s liquidity is surging. At press time, the decentralized exchange had $3.18 billion of liquidity. Uniswap Liquidity on the Rise Uniswap has reached this milestone without having any liquidity incentive program currently active. Previously, to incentivize Liquidity Providers (LPs), Uniswap’s native token UNI was given out as a reward. This meant that LPs who provided...",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @safenetworktech: Here’s the latest on #SafeNetwork development: we removed stream mgmt in nodes &amp; checked the box on several other nece…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T19:04:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "Today we are starting a new video series on the MarketSquare video channel exploring Blockchain in popular movies and TV shows. This is the first one, The Blockchains of Altered Carbon. Subscribe for the next one which will feature ARK!",
-      "link": "NULL",
-      "pubDate": "2021-01-14T19:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Paxos adopts Chainlink oracles to further adoption of PAX and PAXG tokens",
       "link": "https://www.cryptoninjas.net/2021/01/14/paxos-adopts-chainlink-oracles-to-further-adoption-of-pax-and-paxg-tokens/",
       "pubDate": "2021-01-14T18:57:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "Paxos, a crypto brokerage and infrastructure platform, today announced it is now working with Chainlink to leverage its market-leading decentralized oracle network. This will boost the adoption of the USD-backed stablecoin Paxos Standard (PAX) and the gold-backed token PAX Gold (PAXG) within the Decentralized Finance (DeFi) ecosystem—a parallel financial system built on the blockchain which...",
       "currencies": [
@@ -101,93 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "As you vote on adding $PAX to the $mUSD basket of assets, and consolidating all unallocated $Meta to the mStable…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T17:56:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "MTA",
-        "MUSD",
-        "IMUSD"
-      ]
-    },
-    {
-      "title": "RT @CoinDesk: Gemini, the cryptocurrency exchange and custodian founded by the Winklevoss brothers, has launched the Gemini Credit Card off…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T16:38:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "RT @TechCrunch: Gemini is launching a credit card with bitcoin rewards by @romaindillet",
-      "link": "NULL",
-      "pubDate": "2021-01-14T16:38:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "RT @chainlink: Leading crypto brokerage platform @PaxosGlobal launches #Chainlink Price Feeds for PAX & PAXG to boost their adoption within…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T16:31:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Leading crypto brokerage platform @PaxosGlobal launches #Chainlink Price Feeds for PAX & PAXG to boost their adopti…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T16:22:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK",
-        "PAX"
-      ]
-    },
-    {
-      "title": "Have questions about the #GeminiCreditCard and our @blockrizecard acquisition? Check out this FAQ to find the answ…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T15:36:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "The upcoming #GeminiCreditCard launch has been accelerated by our acquisition of @blockrizecard, a fintech startup…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T15:01:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
       "title": "Polkadot Price Analysis: DOT Surges 40% to a New ATH, Becoming the 5th Largest Cryptocurrency",
       "link": "https://cryptopotato.com/polkadot-price-analysis-dot-surges-40-to-a-new-ath-becoming-the-5th-largest-cryptocurrency/",
       "pubDate": "2021-01-14T13:31:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Polkadot saw a superb 38% price explosion over the past 24 hours as the coin hits $12.70. Against Bitcoin, DOT rebounded from support at 21,100 SAT this week and is now above 33,400 SAT.",
       "currencies": [
@@ -203,9 +59,9 @@
       "title": "Stellar blockchain selected by German real estate group to issue $24 million bond",
       "link": "https://ambcrypto.com/stellar-blockchain-selected-by-german-real-estate-group-to-issue-24-million-bond/",
       "pubDate": "2021-01-14T13:06:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "The Stellar blockchain has been the go-to blockchain for the European real estate group – Vanovia for issuing a €20 million [$24 million] bond. According to the announcement, this three-year bond will be deployed using Stellar blockchain to issue security tokens for the transfer of real estate rights. Vonovia made use of an online marketplace […]",
       "currencies": [
         "XLM"
@@ -217,33 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "In the last episode of Red Pocket Unveiling series, we will walk through the journey of Red Pocket unpacking. Check…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T12:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "What is a #fiat currency? A #monetary unit whose #value and worth is determined by a #government or governing ins…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T12:24:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "German real estate group issues $24M bond using Stellar blockchain",
       "link": "https://cointelegraph.com/news/german-real-estate-group-issues-24m-bond-using-stellar-blockchain",
       "pubDate": "2021-01-14T10:37:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Major German real estate group Vonovia has used the Stellar blockchain to transfer the ownership of real estate rights.",
       "currencies": [
@@ -256,22 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is it true?🧐",
-      "link": "NULL",
-      "pubDate": "2021-01-14T10:10:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
       "title": "DeFi DEX Loopring Launches L2-to-L1 Gas Free Transfers",
       "link": "https://beincrypto.com/defi-dex-loopring-launches-l2-l1-gas-free-transfers/",
       "pubDate": "2021-01-14T10:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "Anyone that has used Ethereum this month will have felt the financial pain of high gas fees. Naturally, this won’t bother the whales, but it makes participating in DeFi economically unviable for the majority of average users. Loopring, which launched its latest AMM in early December, is addressing these problems with the adoption and promotion … Continued",
       "currencies": [
@@ -285,33 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Main page design of has updated and we added a bonus calculator 🧮. Check out the new look n…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T08:19:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
-      "title": "#TomoChain’s new interoperability upgrades &amp; DEX reach for breaking Ethereum’s #DeFi dominance",
-      "link": "NULL",
-      "pubDate": "2021-01-14T07:43:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "Polkadot Price Hits Record High, Pushing Market Cap Past $10 Billion",
       "link": "https://decrypt.co/54104/polkadot-price-hits-record-high-pushing-market-cap-past-10-billion",
       "pubDate": "2021-01-14T02:29:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Polkadot is now the fifth-largest cryptocurrency by market cap. And it's hot on XRP's heels.",
       "currencies": [
@@ -324,22 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SafeNetwork_SNT: @michael_saylor The #SAFENetwork is a thermodynamiclly sound decentralized internet. It does for data what #Bitcoin do…",
-      "link": "NULL",
-      "pubDate": "2021-01-14T00:19:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Grayscale Investments liquidates all of its XRP... while it still can",
       "link": "https://cointelegraph.com/news/grayscale-investments-liquidates-all-of-its-xrp-while-it-still-can",
       "pubDate": "2021-01-14T00:05:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Grayscale is dissolving its XRP Trust and will distribute cash to investors after liquidating all XRP held by the trust.",
       "currencies": [

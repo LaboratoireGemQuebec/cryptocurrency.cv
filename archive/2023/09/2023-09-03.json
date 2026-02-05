@@ -1,15 +1,15 @@
 {
   "date": "2023-09-03",
-  "fetchedAt": "2026-02-05T07:45:52.541Z",
-  "articleCount": 29,
+  "fetchedAt": "2026-02-05T07:48:35.566Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
     {
       "title": "Shiba Inu ($SHIB) Developer Unveils Key Updates on Shibarium Network",
       "link": "https://www.cryptoglobe.com/latest/2023/09/shiba-inu-shib-developer-unveils-key-updates-on-shibarium-network/",
       "pubDate": "2023-09-03T20:49:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Earlier today, Kaal Dhairya, a developer working on the Shiba Inu (SHIB) project, published a blog post to update the community on several important developments. He began by congratulating the ShibArmy for achieving a milestone of one million wallets and nearly one million transactions. Dhairya emphasized that they aim to maintain Shibarium as one of […]",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Ripple Moves To Have SEC’s Request To Appeal XRP Decision Denied",
       "link": "https://zycrypto.com/ripple-moves-to-have-secs-request-to-appeal-xrp-decision-denied/",
       "pubDate": "2023-09-03T20:39:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "The Ripple legal team has pushed back against the Securities and Exchange Commission's (SEC) request to seek an interlocutory appeal in their ongoing legal fight, arguing that the regulator hasn’t satisfied the...",
       "currencies": [
@@ -39,64 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BUSD Falls to Fifth Among Stablecoin Leaders; TUSD and FDUSD Supplies Surge in a 3-Day Span",
-      "link": "NULL",
-      "pubDate": "2023-09-03T20:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BUSD",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "The Elite Ten: How a Handful of Ethereum Wallets Command Over a Third of ETH’s Total Supply",
-      "link": "NULL",
-      "pubDate": "2023-09-03T19:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XCN"
-      ]
-    },
-    {
-      "title": "MakerDAO and DAI Creator Proposes New Native Chain Based on Solana (SOL) Fork",
-      "link": "NULL",
-      "pubDate": "2023-09-03T18:45:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DAI",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Gala Games Investors File Suit Against Founder, Alleging Burning $600 Million In Tokens",
-      "link": "NULL",
-      "pubDate": "2023-09-03T18:20:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Mysterious Shiba Inu Whales Moving Trillions Of SHIB As Activity On Shibarium Blows Up Heavily",
       "link": "https://zycrypto.com/mysterious-shiba-inu-whales-moving-trillions-of-shib-as-activity-on-shibarium-blows-up-heavily/",
       "pubDate": "2023-09-03T17:36:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Shibarium, which aims to elevate Shiba Inu from a meme coin to a network with use cases, saw...",
       "currencies": [
@@ -109,22 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Gala Games CEO sues co-founder alleging $130 million theft, pattern of deception",
-      "link": "NULL",
-      "pubDate": "2023-09-03T17:28:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Ripple Files Motion To Oppose SEC Appeal Over Landmark XRP Ruling",
       "link": "https://dailyhodl.com/2023/09/03/ripple-files-motion-to-oppose-sec-appeal-over-landmark-xrp-ruling/",
       "pubDate": "2023-09-03T16:55:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "regulation",
       "description": "Ripple is pushing back on the U.S. Securities and Exchange Commission’s (SEC) efforts to secure a certification for an immediate appeal on the recent landmark lawsuit ruling that went against the regulator. Last month, Reuters reported that the SEC sought the approval of Judge Analisa Torres to allow an appeals court to review her ruling […]",
       "currencies": [
@@ -137,110 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "GALA Falls 8% as Leadership Team Faces $130 Million Token Theft Dispute",
-      "link": "NULL",
-      "pubDate": "2023-09-03T15:19:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Gala Games Founders in Court Over $130M Token Theft",
-      "link": "NULL",
-      "pubDate": "2023-09-03T14:51:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "52% of Turks Are Crypto Investors, Young Women Show Enhanced Appetite: KuCoin Study",
-      "link": "NULL",
-      "pubDate": "2023-09-03T14:41:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "MKR reacts as Vitalik Buterin sells his Maker holdings",
-      "link": "NULL",
-      "pubDate": "2023-09-03T14:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Ethereum co-founder Vitalik Buterin's recent sale of 500 MKR tokens has sparked market uncertainty, impacting MKR's price and leaving investors watchful.",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "What does ChatGPT say about Filecoin’s price by the end of 2023?",
-      "link": "NULL",
-      "pubDate": "2023-09-03T14:20:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Vitalik Buterin Ditches MKR",
-      "link": "NULL",
-      "pubDate": "2023-09-03T13:16:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Internal Turmoil at Gala (GALA): Founders Sue Each Other",
-      "link": "NULL",
-      "pubDate": "2023-09-03T13:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Domain Registrar Issue Takes Yearn Finance (YFI) Website Offline",
-      "link": "NULL",
-      "pubDate": "2023-09-03T12:29:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Reaches 'Adamantium' Support Level Once Again",
       "link": "https://u.today/cardano-ada-reaches-adamantium-support-level-once-again",
       "pubDate": "2023-09-03T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano has hit important support level it has previously used for retrace",
       "currencies": [
@@ -253,25 +90,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "GALA Sinks 72% In 2023 Alone – Blame Internal Wrangles And Lawsuits?",
-      "link": "NULL",
-      "pubDate": "2023-09-03T10:44:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "GALA"
-      ]
-    },
-    {
       "title": "Solana Chain Mints Record 15.6M NFTs Amid SEC First Enforcement at NFT",
       "link": "https://coinedition.com/solana-chain-mints-record-15-6m-nfts-amid-sec-first-enforcement-at-nft/",
       "pubDate": "2023-09-03T10:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "nft",
       "description": "In a recent tweet, prominent Chinese reporter Colin Wu spotlighted record-breaking developments surrounding Solana-based non-fungible tokens (NFT). Wu shared that in August, Solana’s ultra-low-cost Compressed NFTs saw a minting volume that exceeded 15.6 million. The Chinese reporter noted that the figure represents the ultra-low-cost Compressed NFTs’ record high. Moreover, Wu disclosed that...",
       "currencies": [
@@ -284,63 +107,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum Founder Vitalik Buterin Makes Mystery Move With Large ETH Transfer",
-      "link": "NULL",
-      "pubDate": "2023-09-03T10:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Ethereum’s Vitalik Buterin Sells $500k of Maker (MKR) Tokens: Community Asks Why",
-      "link": "NULL",
-      "pubDate": "2023-09-03T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "TRX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Gala Games’ CEO and Co-Founder File Lawsuits Against Each Other",
-      "link": "NULL",
-      "pubDate": "2023-09-03T09:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Case Involving Filecoin (FIL) in China: Court Rules Payment with FIL Illegal",
-      "link": "NULL",
-      "pubDate": "2023-09-03T09:57:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
       "title": "Solana (SOL) Ready to Outperform Ethereum (ETH) in Next Market Expansion, According to Chris Burniske",
       "link": "https://dailyhodl.com/2023/09/03/solana-sol-ready-to-outperform-ethereum-eth-in-next-market-expansion-according-to-chris-burniske/",
       "pubDate": "2023-09-03T09:15:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A venture capitalist who correctly called the 2022 crypto bottom says that one Ethereum (ETH) rival appears primed to outperform the leading smart contract platform. Chris Burniske, the founder of Placeholder Capital, tells his 263,000 followers on the social media platform X that Solana (SOL) looks poised to outperform the top altcoin during the next […]",
       "currencies": [
@@ -351,57 +122,6 @@
         "positive": 3,
         "negative": 3
       }
-    },
-    {
-      "title": "4 Cryptos That Could Hit New All-Time Highs in September",
-      "link": "NULL",
-      "pubDate": "2023-09-03T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BCH",
-        "OKB",
-        "TON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "AXS profitability hits historic low: Analyzing prospects for holder recovery",
-      "link": "NULL",
-      "pubDate": "2023-09-03T08:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Maker: Buyers can extend gains from this level",
-      "link": "NULL",
-      "pubDate": "2023-09-03T06:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Lose Bullish Gains As They Revisit Chart Bottom",
-      "link": "NULL",
-      "pubDate": "2023-09-03T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KCS"
-      ]
     }
   ]
 }

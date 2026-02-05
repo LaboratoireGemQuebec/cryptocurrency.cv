@@ -150,7 +150,7 @@ export const PAYMENT_ADDRESS: `0x${string}` = (() => {
   if (addr && /^0x[a-fA-F0-9]{40}$/.test(addr)) {
     return addr as `0x${string}`;
   }
-  return '0x0000000000000000000000000000000000000000' as `0x${string}`;
+  return '0x40252CFDF8B20Ed757D61ff157719F33Ec332402' as `0x${string}`;
 })();
 
 /**
@@ -163,7 +163,7 @@ export const SOLANA_PAYMENT_ADDRESS: string =
 // We use a function that's called at request time, not module load time
 export function validatePaymentConfig(): void {
   if (typeof window === 'undefined' && IS_PRODUCTION) {
-    if (PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
+    if (PAYMENT_ADDRESS === '0x40252CFDF8B20Ed757D61ff157719F33Ec332402') {
       const errorMessage = [
         '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
         '[x402] WARNING: X402_PAYMENT_ADDRESS not configured!',
@@ -236,7 +236,7 @@ export const ACCEPTED_ASSETS: PaymentAsset[] = [
  * Check if x402 payments are properly configured
  */
 export function isX402Enabled(): boolean {
-  return PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000';
+  return PAYMENT_ADDRESS !== '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
 }
 
 /**

@@ -1,39 +1,15 @@
 {
   "date": "2021-08-24",
-  "fetchedAt": "2026-02-05T07:45:51.501Z",
-  "articleCount": 51,
+  "fetchedAt": "2026-02-05T07:48:35.319Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @DDivs3: #BabySaitama AMA TOMORROW $ETH $TRON $ONT $LINK $DGB $BTC $BNB $HUSD $TELLOR $NEM $DASH $IOST $BCD $…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T23:35:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LINK",
-        "DASH",
-        "BABYSAITAMA"
-      ]
-    },
-    {
-      "title": "Some TELx users are reporting issues related to viewing &amp; claiming mining rewards. All staked liquidity is safe, ea…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T22:38:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TEL"
-      ]
-    },
     {
       "title": "Sudden Bitcoin Pullback Today - Short Term or Something More?",
       "link": "https://www.youtube.com/watch?v=385j25eENYY",
       "pubDate": "2021-08-24T22:14:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ToneVays",
+      "sourceKey": "tonevays",
       "category": "bitcoin",
       "description": "Join the MRI Alerts Channel: https://t.me/joinchat/AAAAAE4Hy84LAsx7HaRgSg * The alerts are not a buy/sell indication, you need to understand how to trade the MRI indicator to use them properly. See https://tonevays.com/indicator GBTC w/ Tyler Jenks: https://www.youtube.com/watch?v=R4oJngaKeQY https://ToneVays.com Events --- Bitcoin: https://unconfiscatable.com/ Finance/Trading/Investing https://thefinancialsummit.com/ How to Use Bitcoin Tech: https://understandingbtc.com/",
       "currencies": [
@@ -46,40 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Crypto_Kangaroo: @PaxosGlobal USDP is already taken by @unitprotocol",
-      "link": "NULL",
-      "pubDate": "2021-08-24T21:47:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDP"
-      ]
-    },
-    {
-      "title": "BIG Crypto News! Bitcoin Kisses $50K and Michael Saylor Wants MORE!",
-      "link": "NULL",
-      "pubDate": "2021-08-24T21:16:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Crypto news recap: Bitcoin at $50k, legislation from Ukraine, China, the SEC, Mexico and Japan. VISA bets big on NFTs and NFT infrastructure by purchasing a Crypto Punk! News from Tezos, Crypto.com CRO, AAX, XRP, Cartesi CTSI, TomoChain TOMO and Firo Lelantus. ⏱️ ⏱️ ⏱️ TIMESTAMPS. ⏱️ ⏱️ ⏱️ 0:00 Crypto Market Update 1:19 BTC $50k and Michael Saylor Buys $117 million in Bitcoin 4:35 Ukraine Bullish on Cryptocurrency 6:02 China Crackdown Continues 7:45 SEC Gary Gensler Proposes Crypto Regulation 10",
-      "currencies": [
-        "BTC",
-        "XTZ"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Crypto Market Retracts by $90 Billion as Dogecoin, Polkadot Fall 8%",
       "link": "https://decrypt.co/79336/crypto-market-retracts-90-billion-dogecoin-cardano-fall",
       "pubDate": "2021-08-24T19:54:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "Crypto prices reversed course toward the end of a solid August, as the total market cap decreased by 4%.",
       "currencies": [
@@ -95,8 +42,8 @@
       "title": "Dogecoin going to help real dogs — Chicago animal shelter now accepts crypto",
       "link": "https://cointelegraph.com/news/dogecoin-going-to-help-real-dogs-chicago-animal-shelter-now-accepts-crypto",
       "pubDate": "2021-08-24T19:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "\"We are eager to connect with the growing cryptocurrency community, who can help sustain the future of animal welfare in Chicago and save animals' lives,\" said PAWS Chicago CEO Susanna Homan.",
       "currencies": [
@@ -109,22 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We're glad to see that @BigCatRescue has chosen #Proton Market for their NFT campaign! By leveraging Proton's insta…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T18:41:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
       "title": "John Bollinger Says Bitcoin Traders Should Be on the Alert",
       "link": "https://u.today/john-bollinger-says-bitcoin-traders-should-be-on-the-alert",
       "pubDate": "2021-08-24T18:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Bitcoin is once again on the ropes after plunging below $48,000",
       "currencies": [
@@ -140,8 +76,8 @@
       "title": "ETHA Lend implementing Chainlink Keepers to automate yield harvesting on Ethereum",
       "link": "https://www.cryptoninjas.net/2021/08/24/etha-lend-implementing-chainlink-keepers-to-automate-yield-harvesting-on-ethereum/",
       "pubDate": "2021-08-24T17:03:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "ethereum",
       "description": "ETHA Lend, a composable DeFi yield optimizer built on Ethereum and Polkadot, announced today that it will integrate Chainlink Keepers on Ethereum to automate key protocol functions. Chainlink Keepers uses decentralized off-computation to monitor predefined events to auto-trigger on-chain actions when they are found to occur — all in a low cost, highly reliable, and […] The post ETHA Lend implementing Chainlink Keepers to automate yield harvesting on Ethereum appeared first on CryptoNinjas.",
       "currencies": [
@@ -158,8 +94,8 @@
       "title": "Avalanche to Add Sushi to Mining Incentive Program",
       "link": "https://blockworks.co/avalanche-to-add-sushi-to-mining-incentive-program/",
       "pubDate": "2021-08-24T17:02:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "mining",
       "description": "Sushi expansion comes after blockchain revealed it was adding DeFi protocols Aave and Curve",
       "currencies": [
@@ -174,35 +110,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @eCashOfficial: Great intro tutorial on Cashtab #eCash and #eToken wallet. Thanks Mihsak! #XEC $XEC",
-      "link": "NULL",
-      "pubDate": "2021-08-24T16:46:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "#eCash - Wealth Redefined \"To redefine. It's not about disrupting what is. It's about discovering what could be.\"…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T16:46:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Tezos Cofounder Kathleen Breitman Calls For Competing Blockchains To Finally Take The Kid Gloves Off",
       "link": "https://www.forbes.com/sites/stevenehrlich/2021/08/24/tezos-co-founder-kathleen-breitman-calls-for-competing-blockchains-to-finally-take-the-kid-gloves-off/",
       "pubDate": "2021-08-24T16:29:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Forbes",
+      "sourceKey": "forbes",
+      "category": "mainstream",
       "description": "Tezos co-founder Kathleen Breitman is one of the earliest entrepreneurs in the crypto industry. In this exclusive interview, she pushes back against blockchains pretending like they are not competing with each other and explains why most everts at crypto governance just marketing ploys.",
       "currencies": [
         "XTZ"
@@ -217,8 +130,8 @@
       "title": "Dogecoin Now Accepted by Largest No-Kill Animal Shelter in Midwest",
       "link": "https://u.today/dogecoin-now-accepted-by-largest-no-kill-animal-shelter-in-midwest",
       "pubDate": "2021-08-24T16:04:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "One of America's leading organizations in animal sheltering has started accepting \"Dogenations\"",
       "currencies": [
@@ -231,104 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Hey @Visa, wanna buy my #NFT?",
-      "link": "NULL",
-      "pubDate": "2021-08-24T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "BHEX has completed the swapping of eCash (XEC) BHEX has now completed the swap from BCHA to XEC. The launch time…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T14:11:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BHT",
-        "HBC"
-      ]
-    },
-    {
-      "title": "With huge news coming from PayPal, digital assets adoption in Europe is about to hit the next level. Check STASIS C…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T13:48:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "Proton (XPR) is now available for trading on @kucoincom! KuCoin users can now trade $XPR using BTC or USDT trading…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T13:23:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "1/ We’re excited to announce that Paxos Standard (PAX) will now be known as Pax Dollar (USDP). #PaxDollar #USDP…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T12:12:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "USDP",
-        "PAXG"
-      ]
-    },
-    {
-      "title": "Pixelated faces, rocks, monsters, apes... #NFT's come in an infinite number of designs. But what exactly are they a…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T12:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "RT @CoinDesk: USDC, USDT and now ... USDP. Paxos Standard (PAX) stablecoin is rebranded Pax Dollar (USDP) by @PaxosGlobal. By @JamieCrawl…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T12:03:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BUSD",
-        "USDP",
-        "PAXG"
-      ]
-    },
-    {
-      "title": "In the modern world, #cryptocurrency adoption is mostly driven by expectations of surreal profits, impossible to ge…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T11:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Ripple: SEC ex-chief Hinman’s views on XRP are ‘dubious’",
       "link": "https://forkast.news/ripple-sec-ex-chief-hinmans-views-xrp-dubious/",
       "pubDate": "2021-08-24T10:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "Ripple also challenges SEC’s use of ‘deliberative process privilege’ to prevent agency documents on Bitcoin, Ethereum and XRP from disclosure.",
       "currencies": [
@@ -345,8 +165,8 @@
       "title": "Bitcoin transactions stay low despite price rally: Data",
       "link": "https://cointelegraph.com/news/bitcoin-transactions-stay-low-despite-price-rally-data",
       "pubDate": "2021-08-24T10:53:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin on-chain activity dropped this low after May 2021’s crypto market crash and hasn’t risen above this level since.",
       "currencies": [
@@ -359,28 +179,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @jieyilong: Thanks @andrewlunde for continuing to explore applications of @Theta_Network in the enterprise world! This integration with…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T10:39:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Terra Token LUNA Sets Another New All-Time High",
       "link": "https://cryptobriefing.com/terra-token-luna-sets-another-new-all-time-high/",
       "pubDate": "2021-08-24T10:27:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "currencies": [
         "NULL"
@@ -395,8 +198,8 @@
       "title": "Poly Network hackers return remaining stolen assets",
       "link": "https://forkast.news/headlines/poly-network-hacking-saga-ends/",
       "pubDate": "2021-08-24T10:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "The Poly Network hacking saga has finally reached a happy ending with the crypto thieves releasing the last key to the remaining funds of 28,953 Ether and 1,032 Wrapped Bitcoin tokens, worth approximately US$141 million, on Monday. According to Poly Network, the company is in the process of returning full asset control to users, although […]",
       "currencies": [
@@ -410,22 +213,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @gregoryklumov: New times bring better opportunities. Sometimes, patience is rewarded greatly.",
-      "link": "NULL",
-      "pubDate": "2021-08-24T10:02:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Will everyone realize this ‘reality’ about El Salvador’s adoption of Bitcoin as legal tender",
       "link": "https://ambcrypto.com/will-everyone-realize-this-reality-about-el-salvadors-adoption-of-bitcoin-as-legal-tender/",
       "pubDate": "2021-08-24T10:02:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "The news of El Salvador passing the law on Bitcoin as legal tender had made headlines in June. As the date on which it takes effect, draws near (7 September), the country’s President shared a few updates regarding the same. Nayib Bukele, the President of El Salvador, and the man behind the country’s adoption of […]",
       "currencies": [
@@ -442,9 +234,9 @@
       "title": "Axie Infinity Profits Subject to Income Tax: Philippines Regulator",
       "link": "https://beincrypto.com/axie-infinity-profits-subject-income-tax-philippines-regulator/",
       "pubDate": "2021-08-24T10:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "The Finance Undersecretary of the Philippines, Antonette C. Tiono, said that earnings from games like Axie Infinity are subject to income tax.",
       "currencies": [
         "AXS"
@@ -459,8 +251,8 @@
       "title": "XTZ Rallies 11% as Swiss Firms Tap Tezos for New Token Standard",
       "link": "https://decrypt.co/79292/xtz-rallies-swiss-firms-tap-tezos-new-token-standard",
       "pubDate": "2021-08-24T09:55:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Fueled by the announcement of a new token standard, Tezos' native token XTZ has skyrocketed by 11% over the last day.",
       "currencies": [
@@ -476,8 +268,8 @@
       "title": "$740 Million in Bitcoin Transferred to Huobi",
       "link": "https://u.today/740-million-in-bitcoin-transferred-to-huobi",
       "pubDate": "2021-08-24T09:44:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "$740 million in Bitcoin have been transfered to Huobi exchange",
       "currencies": [
@@ -492,8 +284,8 @@
       "title": "Swiss Fintech Trio Enabled Asset Tokenization via Tezos: XTZ Spikes 15%",
       "link": "https://cryptopotato.com/swiss-fintech-trio-enabled-asset-tokenization-via-tezos-xtz-spikes-15/",
       "pubDate": "2021-08-24T09:40:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Crypto Finance Group, InCore Bank, and Inacta are the three Swiss financial institutions that picked Tezos as their choice for tokenization.",
       "currencies": [
@@ -506,22 +298,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Damn, I knew I should have invested my spare $1.18m on #2140 and not @mcdonalds drive thru. Gotta love a Big Mac th…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T09:31:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Dogecoin Looks Poised to Break Out",
       "link": "https://cryptobriefing.com/dogecoin-looks-poised-to-break-out/",
       "pubDate": "2021-08-24T09:16:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "DOGE"
@@ -532,23 +313,11 @@
       }
     },
     {
-      "title": "Our Dash Board has been updated on HubDAO is Baby AMM on top of HECO #heco #amm #defi #dex…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T08:45:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DASH",
-        "HD"
-      ]
-    },
-    {
       "title": "Philippines wants to tax Axie Infinity and players’ earnings",
       "link": "https://forkast.news/headlines/philippines-to-tax-axie-infinity-and-users/",
       "pubDate": "2021-08-24T08:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "With play-to-earn crypto games like Axie Infinity continuing to attract users, tax authorities in the Philippines are looking into taxing such blockchain-based game companies as well as the income earned by users on such platforms, according to a report by the Manila Bulletin. Fast facts Philippines’ finance undersecretary Antonette C. Tionko said earnings from these […]",
       "currencies": [
@@ -563,8 +332,8 @@
       "title": "Monero price rises 20% after Atomic Swap implementation",
       "link": "https://cointelegraph.com/news/monero-price-rises-20-after-atomic-swap-implementation",
       "pubDate": "2021-08-24T07:47:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "The Monero Project introduced a new trustless way to exchange between Monero and Bitcoin last week.",
       "currencies": [
@@ -581,8 +350,8 @@
       "title": "USDC to be 100% backed by cash, US Treasuries",
       "link": "https://forkast.news/headlines/usdc-backed-100-cash-us-treasuries/",
       "pubDate": "2021-08-24T07:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "stablecoin",
       "description": "Circle, issuer of the world’s second-largest stablecoin USDC, has announced plans to be 100% backed by cash and short-term U.S. Treasuries by September. The company’s most recent attestation showed USDC’s US$22.2 billion supply was backed by only 61% “cash and cash equivalents.” Fast facts Circle had indicated earlier in the month that it wishes to […]",
       "currencies": [
@@ -598,8 +367,8 @@
       "title": "Elon Musk Touts Dogecoin, Referring to “Ancient Doges”",
       "link": "https://u.today/elon-musk-touts-dogecoin-referring-to-ancient-doges",
       "pubDate": "2021-08-24T07:37:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Tesla CEO is pumping his beloved Dogecoin in what some may call a very…\"original\"...manner, without posting memes this time",
       "currencies": [
@@ -612,33 +381,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Looking forward！🥰🥰🥰#NFT #metaverse @BinanceChain",
-      "link": "NULL",
-      "pubDate": "2021-08-24T07:31:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "Our Global CSO - Mr. Arben Kane will be focusing on expanding the reach of ABBC projects across the world and acti…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T05:05:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "Tezos (XTZ) to Support Crypto Finance Group, InCore Bank, Inacta with Tokenization Tools: Details",
       "link": "https://u.today/tezos-xtz-to-support-crypto-finance-group-incore-bank-inacta-with-tokenization-tools-details",
       "pubDate": "2021-08-24T04:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Tezos (XTZ), a leading smart contracts platform for retail and business use cases, inks a crucial partnership with a clutch of major banks",
       "currencies": [
@@ -649,85 +396,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @financegrim: FOUR new Totem pools have just dropped! Featuring 3 classic stable pairs with  APYs, and one never before seen token on G…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T02:55:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "Followed up with the bug bounty, here's the step-to-step tutorial about how to use Metamask to connect to…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T02:34:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "EIP155 has been successfully deployed to the QuarkChain testnet recently, and will be updated to the mainnet soon.…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T02:24:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QKC"
-      ]
-    },
-    {
-      "title": "Dash is up over 33% in the last 7 days! Earn #DASH and other #cryptocurrencies by Playing games and Taking Sur…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T01:47:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "NTK",
-        "LIQUID"
-      ]
-    },
-    {
-      "title": "RT @SmallCapScience: Looking at the valuations of these L1 platforms, I think we are closer to the top than the bottom. With L1's looking m…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T00:48:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OMG"
-      ]
-    },
-    {
-      "title": "RT @Mofatness: #SafeCoin will soon activate #WormHole tech, which will unlock #Crosschain functionality between projects like #Ethereum, #T…",
-      "link": "NULL",
-      "pubDate": "2021-08-24T00:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "RT @alanchiu: We can't wait for more developers to help build Web3! BTW, we're hiring @enyaai @bobanetwork",
-      "link": "NULL",
-      "pubDate": "2021-08-24T00:32:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "OMG"
-      ]
     }
   ]
 }

@@ -1,26 +1,15 @@
 {
   "date": "2023-02-25",
-  "fetchedAt": "2026-02-05T07:45:52.792Z",
-  "articleCount": 44,
+  "fetchedAt": "2026-02-05T07:48:35.590Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Axie Infinity: A-Z of how the P2E game fared in the last week",
-      "link": "NULL",
-      "pubDate": "2023-02-25T23:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
     {
       "title": "Ethereum (ETH) Competitor Dominating GitHub Daily Development Activity Amid Flurry of New Improvements",
       "link": "https://dailyhodl.com/2023/02/25/ethereum-eth-competitor-dominating-github-daily-development-activity-amid-flurry-of-new-improvements/",
       "pubDate": "2023-02-25T23:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "One Ethereum (ETH) competitor shot to the top of the charts on Friday in terms of daily development activity on the development hosting platform GitHub. The pseudonymous crypto analyst Bagsy shared a chart through the Twitter account ProofofGitHub indicating Cardano (ADA) was leading all other crypto projects in daily GitHub development activity. ProofofGitHub is powered […]",
       "currencies": [
@@ -34,68 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Keep an eye out for Hive in the #WRC rally circuit!",
-      "link": "NULL",
-      "pubDate": "2023-02-25T21:55:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HIVE"
-      ]
-    },
-    {
-      "title": "Without these two gentlemen, we all would be somewhere OVER the rainbow instead of an AR metaverse OVER the real wo…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T18:06:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "🦬 Don't miss a thing with Moonbeam at ETHDenver! Check out this blog for all details on Moonbeam talks, side events, booth info, sponsored bounties & more!",
-      "link": "NULL",
-      "pubDate": "2023-02-25T18:04:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "GLMR",
-        "MOVR"
-      ]
-    },
-    {
-      "title": "The future of global banking is already here All in on $EGLD $BSK #EGLD #crypto #cryptolife",
-      "link": "NULL",
-      "pubDate": "2023-02-25T17:55:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EGLD",
-        "BSK-BAA025"
-      ]
-    },
-    {
-      "title": "🤔 What are Merkle trees? Todd Price explores how cryptographic hash functions create a secure digital fingerprint…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T17:50:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Solana faces slowdown in block production, network restarted",
       "link": "https://cointelegraph.com/news/solana-faces-slowdown-in-block-production-network-restarted",
       "pubDate": "2023-02-25T17:07:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "The issue is linked to the recent network upgrade from 1.13 to 1.14, which slowed block finalization.",
       "currencies": [
@@ -108,272 +40,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Let’s learn! 🧠",
-      "link": "NULL",
-      "pubDate": "2023-02-25T16:16:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "If you haven’t already made plans for Saturday night, why not check out , you can enjoy your…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T15:47:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDB"
-      ]
-    },
-    {
-      "title": "Interactive AR fights at our @nft_paris booth  @BlackpoolHQ apes landed and hacked realities in web3 sports #web3…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T15:44:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "#Everscale will celebrate its third anniversary at #EVERPOINT 2023 in the #UAE on May 7, and representatives of…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T14:57:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EVER"
-      ]
-    },
-    {
-      "title": "HI token long term potential?",
-      "link": "NULL",
-      "pubDate": "2023-02-25T14:32:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HI"
-      ]
-    },
-    {
-      "title": "Where do Bitfinex traders gather? On our official Discord channel! Share trading tips 🤝 Discuss the latest cryp…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T14:00:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "50k Android download for Xcad Plug-in in a jiffy & Xcad is just getting started 🫡 #Xcad #Zilliqa #Watch2earn…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T12:44:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @Oly245: Ducky Bhai's XCAD promotional video has gone live and has already brought in over 10,000 users within the first 2hrs. #Watch2…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T12:35:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @en_fikri: Now, there are 1000+ King Pass (Free NFT) holders since release (3 days ago) What an amazing community @teamrrqofficial An…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T12:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "This Week on Tezos! 🟣 #XTZ weekly price update 🟣 Google Cloud <> Tezos partnership 🟣 Rarible supports Tezos #NFT…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T12:33:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "XTZ",
-        "INSTA"
-      ]
-    },
-    {
-      "title": "RT @buidlbee: Gaming powerhouse @zilliqa will launch the first-ever #Web3gaming console, but not before they create a one-stop #game wareho…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T12:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
-      "title": "RT @sinaEstavi: No one knows when the dragon will wake up.",
-      "link": "NULL",
-      "pubDate": "2023-02-25T11:50:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
-      "title": "Participate in pledging/staking $DLC tokens which would entitle staking/pledging token holders to participate in c…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T11:44:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DLC"
-      ]
-    },
-    {
-      "title": "RT @weiweigeng: Founder's letter: Why I decided to work on KUNGFU BEASTS @KUNGFUVERSE @RLYNetworkAssoc @superlayerio",
-      "link": "NULL",
-      "pubDate": "2023-02-25T11:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "What did you like the most about HOLD merging with xPortal?",
-      "link": "NULL",
-      "pubDate": "2023-02-25T11:14:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UTK"
-      ]
-    },
-    {
-      "title": "If you haven’t already made plans for Saturday night, why not check out , you can enjoy you…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDB"
-      ]
-    },
-    {
-      "title": "Splinterlands - The Set cards grouping would benefit some additional filterings",
-      "link": "NULL",
-      "pubDate": "2023-02-25T10:36:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @TezosCommons: Hot out of the Oven: 'The Baking Sheet' - Issue #139 This Week in the #Tezos Ecosystem:🧵",
-      "link": "NULL",
-      "pubDate": "2023-02-25T10:26:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ"
-      ]
-    },
-    {
-      "title": "$EGLD is well on its way to making the financial world more inclusive Give the gift of knowledge to your fellow in…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T10:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD",
-        "BSK-BAA025"
-      ]
-    },
-    {
-      "title": "Day3 Follow RT Campaign ／ 1 winner will get $100 #tezos ( $XTZ ) ＼ Follow us RT this post #Crypto…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T09:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XTZ",
-        "CASTLE"
-      ]
-    },
-    {
-      "title": "Leveling up cards...",
-      "link": "NULL",
-      "pubDate": "2023-02-25T08:54:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @bobrasX: #crypto winters are the best time to headhunt #talents and expand! We keep building all year round! #IYKYK @realSologenic @Cor…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T08:54:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOLO"
-      ]
-    },
-    {
-      "title": "RT @the_diamondrock: Looking forward to discussing the amazing developments CIAN and Llama are making in the leveraged staking realm and ho…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T08:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QI",
-        "SAVAX"
-      ]
-    },
-    {
       "title": "Strategist at $1,300,000,000 Digital Asset Fund Predicts Next Crypto Bull Market Will Be Record-Breaking",
       "link": "https://dailyhodl.com/2023/02/25/strategist-at-1300000000-digital-asset-fund-predicts-next-crypto-bull-market-will-be-record-breaking/",
       "pubDate": "2023-02-25T08:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "The chief investment officer of crypto fund Bitwise Asset Management, Matt Hougan, is expressing optimism about the digital asset markets over the next few years. In a new interview on The Wolf of All Streets YouTube channel, Hougan says he is “epically bullish on the next three years.” According to Hougan, the next bull cycle […]",
       "currencies": [
@@ -386,24 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "To all miners, holders, and enthusiasts of ETC: If the ETC ecosystem thrives to the same degree as the ETH ecosyste…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T08:16:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETC",
-        "WETC",
-        "HEBE"
-      ]
-    },
-    {
       "title": "Solana Network Stumbles, On-Chain Trading Slows After ‘Forking’ Incident",
       "link": "https://www.coindesk.com/tech/2023/02/25/solana-networks-transaction-processing-craters-after-forking-event/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-02-25T07:15:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "Validators and Solana Foundation and Labs engineers are investigating the issue.",
       "currencies": [
@@ -416,66 +74,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @realSidhuJag: I have a technical solution that requires political coordination but is easy to understand, run the AI as a deterministic…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T06:48:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SYS"
-      ]
-    },
-    {
-      "title": "Whoever gives the right answer...to the question in the previous post will be granted the title of “ACT’s Big Fan.”…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T06:32:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACT"
-      ]
-    },
-    {
-      "title": "The people want to know: Is there a way to swap 1 Bitcoin for USDT on your @Ledger without being scammed?",
-      "link": "NULL",
-      "pubDate": "2023-02-25T05:32:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Rob from @sudoblockio has provided a technical overview of how we index ICON Blockchain data and make it availabl…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T03:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ICX"
-      ]
-    },
-    {
-      "title": "RT @hunykardia: Proudly presenting @KardiaChain upcoming products to #Vietnam Ministry of Information and Communications alongside with leg…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T03:36:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
       "title": "Binance.US Launches Full Support for Shiba Inu (SHIB) – Is Bone ShibaSwap (BONE) Next?",
       "link": "https://dailyhodl.com/2023/02/24/binance-us-launches-full-support-for-shib-inu-shib-is-bone-shibaswap-bone-next/",
       "pubDate": "2023-02-25T03:16:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Binance.US just ditched a coin that’s designed to be mathematically pegged to Shiba Inu, deciding instead to launch full support for the native crypto asset SHIB. The US-based crypto exchange initially supported Kilo Shiba Inu (KSHIB), which is equivalent to 1,000 Shiba Inu (SHIB) tokens and designed to make it easier to buy SHIB with […]",
       "currencies": [
@@ -486,51 +89,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @RoseteDayan: Set a reminder for my upcoming Space! lets goooo #crofam #molefam open mics and chill vibes always…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T01:59:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VVS"
-      ]
-    },
-    {
-      "title": "RT @serpunketh: \" The Million Dollar Dash \" @Mongraal",
-      "link": "NULL",
-      "pubDate": "2023-02-25T01:11:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DASH",
-        "POW"
-      ]
-    },
-    {
-      "title": "Check out the latest #AIKit powered AI Assistant with cool AI tools and the ability to customize yourself! More to…",
-      "link": "NULL",
-      "pubDate": "2023-02-25T01:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "RT @blockswap_team: @ssv_network Meet you there 🦬🦄",
-      "link": "NULL",
-      "pubDate": "2023-02-25T00:12:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SSV"
-      ]
     }
   ]
 }

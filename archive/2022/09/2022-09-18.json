@@ -1,62 +1,15 @@
 {
   "date": "2022-09-18",
-  "fetchedAt": "2026-02-05T07:45:52.975Z",
-  "articleCount": 24,
+  "fetchedAt": "2026-02-05T07:48:35.612Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "FTX CEO Sam Bankman-Fried Says Firm Still Has $1,000,000,000 in Cash Left To Deploy for Acquisitions",
-      "link": "NULL",
-      "pubDate": "2022-09-18T22:05:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Solana Price Trades Laterally, What Could Be The Next Level?",
-      "link": "NULL",
-      "pubDate": "2022-09-18T22:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "McKinsey predicts #Metaverse spend to reach $5 Trillion by 2030. Brands are ceeking popular #avatar fashions and wa…",
-      "link": "NULL",
-      "pubDate": "2022-09-18T21:10:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "RT @DefiKingdoms: Votes have passed to incentivize KLAY and BTC.b pairs in the Crystalvale Gardens! We will be adding the new pairs and inc…",
-      "link": "NULL",
-      "pubDate": "2022-09-18T21:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "AVAX",
-        "WAVAX"
-      ]
-    },
     {
       "title": "Here is why a 0.75% Fed rate hike could be bullish for Bitcoin and altcoins",
       "link": "https://cointelegraph.com/news/here-is-why-a-0-75-fed-rate-hike-could-be-bullish-for-bitcoin-and-altcoins",
       "pubDate": "2022-09-18T20:47:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "The Federal Reserve is set to raise interest rates this week. Here’s why traders expect a 0.75% hike to trigger a crypto market rally.",
       "currencies": [
@@ -73,49 +26,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How to create a dynamic OTC Pair on GigaSwap 🤝⤵️",
-      "link": "NULL",
-      "pubDate": "2022-09-18T20:31:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GIGA"
-      ]
-    },
-    {
-      "title": "Psst. Did you hear?",
-      "link": "NULL",
-      "pubDate": "2022-09-18T19:06:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "Bitcoin Whales and Miners’ Distribution Reaches Peak Levels, Pumping More Sell Pressure",
-      "link": "NULL",
-      "pubDate": "2022-09-18T18:55:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Amid these unfavourable conditions, BTC whales' and miners' distribution rates appear to have hit peak levels.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 15,
-        "negative": 20
-      }
-    },
-    {
       "title": "GMX Allegedly Exploited For Over $565,000 On Avalanche (AVAX)",
       "link": "https://en.ethereumworldnews.com/gmx-exploited-avalanche-avax/",
       "pubDate": "2022-09-18T18:06:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: Decentralized exchange GMX might have suffered price manipulation on the AVAX/USD pair. Estimates losses from the incident exceed $500,000, per reports. The exploit was first noticed by on-chain security firm PeckShiled but the tweet was deleted shortly after. GMX responded with a cap on AVAX long and short futures trading. GMX, a decentralized crypto exchange powered by Artibitrum and...",
       "currencies": [
@@ -131,8 +46,8 @@
       "title": "ApeCoin (APE) Shows Signs Of Recovery, But Mini-Rally Could Be Short-Lived",
       "link": "https://www.newsbtc.com/news/apecoin-ape-shows-signs-of-recovery/",
       "pubDate": "2022-09-18T17:20:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "ApeCoin has had a long and complex history. When it was first released on March 17, it was immediately put to the test by the same market forces that were responsible for the general crypto market’s slump. The coin’s price has broken through the resistance of a head-and-shoulders pattern, rising to a new all-time high of $5.63. This may portend an impending upswing, but technical signs are...",
       "currencies": [
@@ -150,8 +65,8 @@
       "title": "Shiba Inu Lead Developer Provides Important Update on SHIB Burning Mechanism",
       "link": "https://u.today/shiba-inu-lead-developer-provides-important-update-on-shib-burning-mechanism",
       "pubDate": "2022-09-18T16:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu major spokesperson shares intriguing insight on SHIB burning",
       "currencies": [
@@ -164,27 +79,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ether plummets 20%, trading below $1,500: This week in markets",
-      "link": "NULL",
-      "pubDate": "2022-09-18T16:12:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "A weekly report on some of the biggest moves in crypto markets, with commentary from industry experts.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 3
-      }
-    },
-    {
       "title": "Dogecoin (DOGE) Returns to Top Biggest Cryptocurrencies by Capitalization After This",
       "link": "https://u.today/dogecoin-doge-returns-to-top-biggest-cryptocurrencies-by-capitalization-after-this",
       "pubDate": "2022-09-18T16:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "DOGE back on 10th place by market capitalization among all cryptocurrencies",
       "currencies": [
@@ -196,50 +95,11 @@
       }
     },
     {
-      "title": "RT @KinkyBedBugs: Ay whoever owns this gutter pigeon I put a bid on @LooksRare for it. .11 more than you would get on opensea. And we going…",
-      "link": "NULL",
-      "pubDate": "2022-09-18T14:45:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "Goldman Sachs' bearish macro outlook puts Bitcoin at risk of crashing to $12K",
-      "link": "NULL",
-      "pubDate": "2022-09-18T14:43:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin derivatives data also shows sentiment shifting in favor of a massive crash below $20,000, the current psychological support.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 5
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Gm! T-2 days until Helium House!",
-      "link": "NULL",
-      "pubDate": "2022-09-18T13:53:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "LUNC Might Make Comeback Only if This Happens: David Gokhshtein",
       "link": "https://u.today/lunc-might-make-comeback-only-if-this-happens-david-gokhshtein",
       "pubDate": "2022-09-18T13:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Gokhshtein referred to LUNC token as lottery ticket",
       "currencies": [
@@ -252,22 +112,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Shall we bring back the Sunday Fun night Game shows?",
-      "link": "NULL",
-      "pubDate": "2022-09-18T13:43:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
       "title": "Terra’s Do Kwon denies he is on the run after issuance of arrest warrant",
       "link": "https://finbold.com/terras-do-kwon-denies-he-is-on-the-run-after-issuance-of-arrest-warrant/",
       "pubDate": "2022-09-18T13:06:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Do Kwon, the founder of the troubled Terraform Labs platform behind the collapsed Terra (LUNA) ecosystem, has denied allegations that... Continue reading",
       "currencies": [
@@ -279,23 +128,11 @@
       }
     },
     {
-      "title": "LATEST: Due to an accounting error, Binance misallocated about $20 million of Helium's HNT coin to its customers, a…",
-      "link": "NULL",
-      "pubDate": "2022-09-18T12:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HNT",
-        "CODI"
-      ]
-    },
-    {
       "title": "Where Has Do Kwon Gone? Terra Chief Says He’s “Not On the Run” as Manhunt Continues",
       "link": "https://cryptobriefing.com/where-has-do-kwon-gone-terra-chief-says-not-on-run-manhunt-continues/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-09-18T11:52:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Kwon insisted that he was not on the run on Twitter Saturday. Authorities have suggested otherwise. Do Kwon may or may not be on the run, depending on whom you ask.Questions over the Terraform Labs CEOs whereabouts surfaced this weekend after Singapore authorities issued a statement claiming that he was not in the country. Reuters reported on the development...",
       "currencies": [
@@ -310,8 +147,8 @@
       "title": "Trading expert says Cardano run towards $1 in play around Vasil hard fork",
       "link": "https://finbold.com/trading-expert-says-cardano-run-towards-1-in-play-around-vasil-hard-fork/",
       "pubDate": "2022-09-18T10:53:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "The Cardano (ADA) community is gearing up for the Vasil hard fork that will enhance the decentralized network’s scalability and... Continue reading The post Trading expert says Cardano run towards $1 in play around Vasil hard fork appeared first on Finbold.",
       "currencies": [
@@ -323,28 +160,6 @@
         "negative": 4
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Unpopular opinion? Runi limit proposal.",
-      "link": "NULL",
-      "pubDate": "2022-09-18T10:51:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "#Sunday is #crypto #education #day. Use your free time to learn more about the #cryptospace, you will not regret it :D #educationisthekey",
-      "link": "NULL",
-      "pubDate": "2022-09-18T10:06:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DHN"
-      ]
     }
   ]
 }

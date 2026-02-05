@@ -1,15 +1,15 @@
 {
   "date": "2023-10-07",
-  "fetchedAt": "2026-02-05T07:45:52.129Z",
-  "articleCount": 32,
+  "fetchedAt": "2026-02-05T07:48:35.533Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
     {
       "title": "How Cardano surpassed Polkadot and Kusama in this metric",
       "link": "https://ambcrypto.com/how-cardano-surpassed-polkadot-and-kusama-in-this-metric/",
       "pubDate": "2023-10-07T22:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Development activity on Cardano rallies in the last month, placing the Layer 1 network ahead of Polkadot and Kusama.",
       "currencies": [
@@ -27,8 +27,8 @@
       "title": "$ADA: Cardano’s Latest Weekly Update: 146 Launched Projects and 76.1 Million Transactions",
       "link": "https://www.cryptoglobe.com/latest/2023/10/ada-cardanos-latest-weekly-update-146-launched-projects-and-76-1-million-transactions/",
       "pubDate": "2023-10-07T19:07:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On October 6, Essential Cardano provided the latest weekly development report about Cardano’s ecosystem. Core Technology: Making the Rules and Keeping the Peace The Cardano ledger team has been hard at work, setting up a constitutional committee to oversee the blockchain’s rules. They’ve also improved how the treasury functions and ensured that transactions comply with […]",
       "currencies": [
@@ -44,8 +44,8 @@
       "title": "XRP On Edge Of Massive Run to $3 Price If This Happens In Ripple vs. SEC Fight",
       "link": "https://zycrypto.com/xrp-on-edge-of-massive-run-to-3-price-if-this-happens-in-ripple-vs-sec-fight/",
       "pubDate": "2023-10-07T18:52:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The ongoing legal brawl between the SEC and Ripple has seen another major development.",
       "currencies": [
@@ -60,9 +60,9 @@
       "title": "Polkadot in Q3: Of staking, developments, and a new roadmap",
       "link": "https://ambcrypto.com/polkadot-in-q3-of-staking-developments-and-a-new-roadmap/",
       "pubDate": "2023-10-07T18:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "Although its native token failed to put up an impressive show, Polkadot made a lot of progress in Q3. Here are some of the major ones.",
       "currencies": [
         "DOT"
@@ -74,147 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Warren Buffett’s Right Hand Man Charlie Munger Answers Bitcoin Question",
-      "link": "NULL",
-      "pubDate": "2023-10-07T18:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "TRON Founder and Ethereum Co-Founder Conduct Major ETH Moves",
-      "link": "NULL",
-      "pubDate": "2023-10-07T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Unexpected Update: Hacker Who Stole 5,000 Ethereum from Huobi Returns the Funds",
-      "link": "NULL",
-      "pubDate": "2023-10-07T16:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Immense XRP Holdings Exposed In Detailed Proof of Reserves Report",
-      "link": "NULL",
-      "pubDate": "2023-10-07T16:10:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "BNB",
-        "XRP",
-        "BUSD",
-        "DOGE",
-        "LTC"
-      ]
-    },
-    {
-      "title": "September Marked Record Profits for Bitcoin Miners",
-      "link": "NULL",
-      "pubDate": "2023-10-07T16:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Bitcoin Shines as the Unprecedented Financial Star of 2023",
-      "link": "NULL",
-      "pubDate": "2023-10-07T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Just In: HTX Global Hacker Makes Full Refund of Stolen Funds",
-      "link": "NULL",
-      "pubDate": "2023-10-07T15:20:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "HT"
-      ]
-    },
-    {
-      "title": "Justin Sun’s $132M ETH Withdrawal: Is He About to Dump?",
-      "link": "NULL",
-      "pubDate": "2023-10-07T15:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Bitcoin Could Plunge by Nearly 50%, According to Crypto Analyst Nicholas Merten – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-10-07T14:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Biggest Movers: BCH, TRX Snap Losing Streak to Start the Weekend",
-      "link": "NULL",
-      "pubDate": "2023-10-07T14:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "BCH"
-      ]
-    },
-    {
       "title": "Ripple Says XRP Ledger XLS-30 AMM Testing Completed, What's Next?",
       "link": "https://u.today/ripple-says-xrp-ledger-xls-30-amm-testing-completed-whats-next",
       "pubDate": "2023-10-07T14:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Extensive performance testing of AMM on XRP Ledger concluded, protocol proceeds to mainnet",
       "currencies": [
@@ -227,35 +91,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Uranium-Backed Stablecoin? Maker Proposal Goes Nuclear",
-      "link": "NULL",
-      "pubDate": "2023-10-07T14:01:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: SUI, XMR, LDO Prices Rise In The Last 24H",
-      "link": "NULL",
-      "pubDate": "2023-10-07T12:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR",
-        "LDO"
-      ]
-    },
-    {
       "title": "'Don't Get Me Started On Bitcoins': Berkshire Hathaway's Charlie Munger Calls Crypto The 'Stupidest Investment I Ever Saw'",
       "link": "https://www.benzinga.com/markets/cryptocurrency/23/10/35136137/dont-get-me-started-on-bitcoins-berkshire-hathaways-charlie-munger-calls-crypto-the-stupid?utm_campaign=partner_feed&utm_source=cryptopanic.com&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2023-10-07T12:14:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Charlie Munger, the vice chairman of Warren Buffett‘s Berkshire Hathaway (NYSE:BRK) (NYSE:BRK), expressed skepticism about the hype around artificial intelligence, or AI, and criticized cryptocurrencies read more",
       "currencies": [
@@ -271,8 +111,8 @@
       "title": "Avalanche Friend.tech Copycat Stars Arena Suffers Second Attack in Three Days",
       "link": "https://u.today/avalanche-friendtech-copycat-stars-arena-suffers-second-attack-in-three-days",
       "pubDate": "2023-10-07T11:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "Novel Avalanche-based SocialFi exploited by same attacker with $2.9 million lost",
       "currencies": [
@@ -285,36 +125,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Inside Job Suspected As Huobi Wallet Falls Victim To $263,000 Exploit",
-      "link": "NULL",
-      "pubDate": "2023-10-07T11:40:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "TRX",
-        "HT"
-      ]
-    },
-    {
-      "title": "Here Are The Top 5 Crypto Token Unlocks For October 2023",
-      "link": "NULL",
-      "pubDate": "2023-10-07T11:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
       "title": "Justin Sun and Vitalik Buterin’s Cryptocurrency Wallets Experiencing Multiple Outward Transfers",
       "link": "https://en.bitcoinsistemi.com/justin-sun-and-vitalik-buterins-cryptocurrency-wallets-experiencing-multiple-outward-transfers/",
       "pubDate": "2023-10-07T11:12:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "There were large outflows from the wallets of Tron founder Vitalik Buterin and Ethereum founder Vitalik Buterin. Continue Reading: Justin Sun and Vitalik Buterin’s Cryptocurrency Wallets Experiencing Multiple Outward Transfers",
       "currencies": [
@@ -331,8 +146,8 @@
       "title": "Jefferies: Bitcoin is a ‘critical hedge’ against inflation, belongs in same bag as gold",
       "link": "https://finbold.com/jefferies-bitcoin-is-a-critical-hedge-against-inflation-belongs-in-same-bag-as-gold/",
       "pubDate": "2023-10-07T11:03:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Recently, Bitcoin (BTC) has garnered growing support from traditional financial institutions that see the asset as a potential hedge against … Continued",
       "currencies": [
@@ -348,8 +163,8 @@
       "title": "Cardano (ADA) Outshines DOT, LINK, ETH in This Area: Details",
       "link": "https://u.today/cardano-ada-outshines-dot-link-eth-in-this-area-details",
       "pubDate": "2023-10-07T10:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Cardano (ADA) leads peers in developer activities",
       "currencies": [
@@ -365,8 +180,8 @@
       "title": "Bitcoin is 2023’s best-performing asset among 40 wealth classes",
       "link": "https://finbold.com/bitcoin-is-2023s-best-performing-asset-among-40-wealth-classes/",
       "pubDate": "2023-10-07T09:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "In a year marked by economic uncertainty, persistently high inflation, and concerns over rising interest rates, Bitcoin (BTC) has emerged … Continued",
       "currencies": [
@@ -379,61 +194,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Decentralized Data Storage Altcoin Could Explode by Over 1,700% As AI Economy Booms: Arthur Hayes",
-      "link": "NULL",
-      "pubDate": "2023-10-07T09:15:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Millions of SAND Tokens Transferred to Exchanges: Selloff Coming?",
-      "link": "NULL",
-      "pubDate": "2023-10-07T08:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 07 Oct: Crypto market thrives on positive data",
-      "link": "NULL",
-      "pubDate": "2023-10-07T06:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 06 Oct: Cryptocurrency surge driven by positive data",
-      "link": "NULL",
-      "pubDate": "2023-10-07T05:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "AVAX",
-        "LTC",
-        "RUNE"
-      ]
-    },
-    {
       "title": "Solana (SOL) Sets Itself up for Golden Cross",
       "link": "https://u.today/solana-sol-sets-itself-up-for-golden-cross",
       "pubDate": "2023-10-07T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Solana's price movement might become basis for upcoming golden cross",
       "currencies": [
@@ -448,8 +213,8 @@
       "title": "Cardano Founder Hoskinson Claps Back At Claims of Dishonesty",
       "link": "https://dailycoin.com/cardano-hoskinson-claps-back-dishonesty/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-10-07T00:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Cardano Founder comes with a dossier of source material to clear the misinformation surrounding Hydra’s throughput.",
       "currencies": [
@@ -459,18 +224,6 @@
         "positive": 9,
         "negative": 6
       }
-    },
-    {
-      "title": "Top-100 Crypto Wallet Altcoin Jumps by More Than 20% This Week Amid Rollout of New Update",
-      "link": "NULL",
-      "pubDate": "2023-10-07T00:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "TWT"
-      ]
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "date": "2022-06-14",
-  "fetchedAt": "2026-02-05T07:45:52.883Z",
-  "articleCount": 40,
+  "fetchedAt": "2026-02-05T07:48:35.604Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
     {
       "title": "Shiba Inu Price Drop Is a ‘Huge Opportunity’ to Burn $SHIB, Burners Say",
       "link": "https://www.cryptoglobe.com/latest/2022/06/shiba-inu-price-drop-is-a-huge-opportunity-to-burn-shib-burners-say/",
       "pubDate": "2022-06-14T22:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The Shiba Inu ($SHIB) community has been rallying to burn more tokens amid the recent cryptocurrency market downturn, as it’s seen as a “huge opportunity” to reduce the meme-inspired cryptocurrency’s circulating supply. Shiba Inu’s price has dropped 90% from its all-time high seen late last year, with the cryptocurrency currently trading at around $0.00000803 after […]",
       "currencies": [
@@ -22,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Elliot0x: Volt is now live on Arbitrum! High tx fees to mint are officially a thing of the past!",
-      "link": "NULL",
-      "pubDate": "2022-06-14T22:21:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "FEI",
-        "TRIBE"
-      ]
-    },
-    {
       "title": "ICI Bucharest to use Elrond blockchain to develop DNS and NFT marketplace",
       "link": "https://cointelegraph.com/news/ici-bucharest-to-use-elrond-blockchain-to-develop-decentralized-domains-and-an-institutional-nft-marketplace",
       "pubDate": "2022-06-14T21:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "nft",
       "description": "The two entities seek to enhance the integration of innovative Web 3.0 technologies in everyday use.",
       "currencies": [
@@ -51,24 +39,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Come join us! @VulkaniaApp #VulkaniaCryptoLeague $LGCY $USDL",
-      "link": "NULL",
-      "pubDate": "2022-06-14T19:27:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDL",
-        "LGCY"
-      ]
-    },
-    {
       "title": "Tron (TRX) Risks Breaking Down From 826-Day Ascending Support Line",
       "link": "https://beincrypto.com/tron-trx-risks-breaking-down-from-826-day-ascending-support-line/",
       "pubDate": "2022-06-14T18:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Tron (TRX) has been decreasing since the end of May, but further accelerated its rate of descent last week. It is possible that the decrease is occurring as a result of the de-pegging of USDD, which had been announced as an overcollateralized stablecoin.",
       "currencies": [
         "TRX"
@@ -83,8 +59,8 @@
       "title": "Justin Sun Announces Hiring Plan to Increase Workforce by 50% Across Tron-Based Projects",
       "link": "https://en.ethereumworldnews.com/justin-sun-announces-hiring-plan-to-increase-workforce-by-50-across-tron-based-projects/",
       "pubDate": "2022-06-14T17:10:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: Justin Sun has invited anyone laid off during the ongoing crypto winter to apply for jobs across several Tron-based projects. They include Tron DAO, Poloniex, BitTorrent, USDD, Ape NFT, Just Network, and Sun.io. According to Justin Sun, the Tron ecosystem aims to increase its workforce by 50%. Tron’s Founder and former CEO, Justin Sun, has announced via Twitter that anyone affected by...",
       "currencies": [
@@ -98,34 +74,11 @@
       }
     },
     {
-      "title": "Good news for the @klaytn_official community, ChangeNOW is accepting $KLAY deposits Exchange $KLAY with 380+ coin…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T17:06:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NOW"
-      ]
-    },
-    {
-      "title": "Bitcoin ABC 0.25.8 is now available! This release features a new coin statistics indexer, for retrieving data suc…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T16:58:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
       "title": "Tron DAO Reserve adds another 500 million USDC to help USDD stablecoin peg",
       "link": "https://www.theblock.co/linked/151936/tron-dao-reserve-adds-another-500-million-usdc-to-help-usdd-stablecoin-peg?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-06-14T16:27:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "stablecoin",
       "description": "TronDAO has bought a further 500 million USDC stablecoin today, it announced on Twitter.",
       "currencies": [
@@ -143,8 +96,8 @@
       "title": "Terraform Labs Owned Wallet Behind UST Collapse, New Report Claims",
       "link": "https://cryptobriefing.com/terraform-labs-owned-wallet-behind-ust-collapse-new-report-claims/?utm_source=feed&utm_medium=rss",
       "pubDate": "2022-06-14T16:04:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "A new investigative report by blockchain security company Uppsala Security and CoinDesk Korea has suggested that Terraform Labs may have directly triggered Terra’s collapse over the second week of May....",
       "currencies": [
@@ -156,127 +109,11 @@
       }
     },
     {
-      "title": "Biggest Movers: THETA, HNT Rise Over 20%, Despite Crypto Crash",
-      "link": "NULL",
-      "pubDate": "2022-06-14T15:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HNT",
-        "THETA"
-      ]
-    },
-    {
-      "title": "Paying for digital Tasks with ETN on the AnyTask™ Platform means Sellers can spend the ETN earned through…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T15:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "'It's a misconception that you cannot build fully functioning programs on top of Bitcoin.' @deggen at @WeAreDevs…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T14:38:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Dogecoin (DOGE) Co-Creator Calls Crypto Industry a Facilitator of Scams That Exists Outside of Government Control",
-      "link": "NULL",
-      "pubDate": "2022-06-14T14:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "The co-creator of popular meme token Dogecoin (DOGE) says a lack of traditional oversight leaves crypto traders vulnerable to being fleeced. In a new interview with Australian media outlet The Project TV, Jackson Palmer, who along with Billy Markus developed Dogecoin in 2013 as a joke, says cryptocurrencies are speculative in nature because they derive […]",
-      "currencies": [
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
-      "title": "Stay with us, live from #Berlin Bitcoin is a Turing Complete System On Which You Can Build #SmartContracts and Iss…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T14:25:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "'If you want to scale on a global scale, Proof of Work is not just an option, you need #PoW' @jadwahab Director of…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T14:10:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "'You can focus on your business, we focus on running the infrastructure. No other blockchain works as simple as tha…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T14:04:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "'Already #BitcoinSV is the most energy-efficient #blockchain in the world' @Bitcoin_Beyond the Co-Founder & CEO , B…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T13:57:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @CryptoEnthusist: What #Cryptos launched two weeks ago could possibly be up over 500% @Challenge_Coin_ because it's founded by the #Navy…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T13:50:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
-    {
-      "title": "Live from #Berlin! If you are at @WeAreDevs, join us at the micro stage 3 at 15:45 and listen to @jadwahab talk ab…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T13:31:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Lido staked ether selloff continues as larger holder unloads 56,000 stETH",
       "link": "https://www.theblock.co/post/151894/lido-staked-ether-selloff-continues-as-larger-holder-unloads-56000-steth?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-06-14T13:29:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Lido’s staked ether (stETH) is now almost 7% cheaper than the price of ether (ETH) due to continued selling pressure from whale holders.",
       "currencies": [
@@ -289,35 +126,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "What are you doing in the current market",
-      "link": "NULL",
-      "pubDate": "2022-06-14T12:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "‘Original Bitcoin’ Makes Surprise 24% Climb As Crypto Markets See Red",
-      "link": "NULL",
-      "pubDate": "2022-06-14T12:33:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BCH"
-      ]
-    },
-    {
       "title": "New research reveals Terra’s collapse may have been an inside job",
       "link": "https://finbold.com/new-research-reveals-terras-collapse-may-have-been-an-inside-job/",
       "pubDate": "2022-06-14T12:28:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Apparently, the wallet identified as an “attacker” for generating a transaction that caused the collapse of the algorithm-based stablecoin project Terra... Continue reading",
       "currencies": [
@@ -330,73 +143,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "TRON’s USDD Stablecoin Losing Peg as TRX Price Slumps",
-      "link": "NULL",
-      "pubDate": "2022-06-14T12:10:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Hey @WeAreDevs! Spin the #BitcoinSV wheel and win attractive #prizes! #WAD2022 #lottery",
-      "link": "NULL",
-      "pubDate": "2022-06-14T12:04:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "We are glad to be one of the #sponsors at @WeAreDevs! Let's explore the full potential of #blockchain at…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T11:42:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @cryptogics: THE MOST ACTIVE CRYPTOS BASED ON #GITHUB DATA $DFI $USDP $REP $SYS $CHI $NMC $ACM $BTC $XSN $PTA",
-      "link": "NULL",
-      "pubDate": "2022-06-14T11:20:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDP",
-        "ACM"
-      ]
-    },
-    {
-      "title": "Do you know we have our own #PORN series ? #vicetaxi view the first episode for free on",
-      "link": "NULL",
-      "pubDate": "2022-06-14T11:15:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
       "title": "Dogecoin Co-Founder Believes Bear Market Will Last 4 Years, Here's Why",
       "link": "https://u.today/dogecoin-co-founder-believes-bear-market-will-last-4-years-heres-why",
       "pubDate": "2022-06-14T10:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "One of DOGE founders has opined on how long current bear market is likely to last and why",
       "currencies": [
@@ -411,8 +162,8 @@
       "title": "Cardano launches EVM side chain alpha",
       "link": "https://cryptoslate.com/cardano-launches-evm-side-chain/",
       "pubDate": "2022-06-14T10:50:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "Input-Output Hong Kong (IOHK), the parent company for the Cardano blockchain, announced the launch of an Ethereum Virtual Machine (EVM) sidechain alpha on June 12 and added that the sidechain is currently available on the testnet.",
       "currencies": [
@@ -429,8 +180,8 @@
       "title": "TRON’s USDD Stablecoin Still Below $1 Despite $2B Cash Injection",
       "link": "https://cryptobriefing.com/trons-usdd-stablecoin-still-below-1-despite-2b-cash-injection/?utm_source=feed&utm_medium=rss",
       "pubDate": "2022-06-14T10:46:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "stablecoin",
       "description": "TRONs USDD algorithmic stablecoin has been trading under its dollar peg for more than 24 hours. USDD Drops Below Peg Just 40 days after launching, USDD is fighting for its...",
       "currencies": [
@@ -447,8 +198,8 @@
       "title": "Tron’s algorithmic stablecoin slips further from its dollar peg",
       "link": "https://www.theblock.co/post/151872/tron-usdd-stablecoin-breaks-dollar-peg?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-06-14T10:22:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "stablecoin",
       "description": "The USDD stablecoin slipped further from its peg to the dollar on Tuesday in a sign of ongoing stress in crypto markets.",
       "currencies": [
@@ -462,69 +213,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @Jelurida: .@fsarrias is today in Malaga attending the #Blockchain and #NFT's Series of @DES_show, a major event dedicated to #DigitalTr…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T09:32:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ARDR"
-      ]
-    },
-    {
-      "title": "USDD, USDN lose their $1 peg; another UST fiasco-like event on the cards?",
-      "link": "NULL",
-      "pubDate": "2022-06-14T09:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "USDN"
-      ]
-    },
-    {
-      "title": "Who is working out today ?",
-      "link": "NULL",
-      "pubDate": "2022-06-14T08:54:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "The “Ni no Kuni: Cross Worlds Launch Event” is still ongoing! A total of 100,000 KLAY & $500 are up for grabs…",
-      "link": "NULL",
-      "pubDate": "2022-06-14T07:15:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "MBX"
-      ]
-    },
-    {
-      "title": "Hi @CoinMarketCap, we'd like to update $TITAN circulating supply. Thank you.",
-      "link": "NULL",
-      "pubDate": "2022-06-14T06:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
       "title": "TRON founder pledges US$2B defense fund after USDD stablecoin loses dollar parity",
       "link": "https://forkast.news/headlines/tron-defense-fund-usdd-stablecoin-parity/",
       "pubDate": "2022-06-14T05:26:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "stablecoin",
       "description": "TRON founder Justin Sun on Monday said he will set up a US$2 billion fund to support the dollar peg of the project’s stablecoin USDD and “fight” against short sellers, after the stablecoin’s price fell to US$0.97. See related article: Binance resumes Bitcoin withdrawals Fast facts USDD uses an algorithmic mechanism to keep its dollar […]",
       "currencies": [
@@ -542,9 +235,9 @@
       "title": "USDD Stumbles and De-Pegs Just Months After Launch",
       "link": "https://beincrypto.com/usdd-stumbles-and-de-pegs-just-months-after-launch/",
       "pubDate": "2022-06-14T00:08:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "TRON’s newly launched stablecoin (USDD) may be running into trouble just months after launch.",
       "currencies": [
         "TRX",

@@ -1,15 +1,15 @@
 {
   "date": "2021-03-01",
-  "fetchedAt": "2026-02-05T07:45:51.838Z",
-  "articleCount": 39,
+  "fetchedAt": "2026-02-05T07:48:35.469Z",
+  "articleCount": 20,
   "source": "historical-import",
   "articles": [
     {
       "title": "Ripple Co-Founder Jed McCaleb Cashes out Another 135 Million XRP",
       "link": "https://www.cryptoglobe.com/latest/2021/03/ripple-co-founder-jed-mccaleb-cashes-out-another-135-million-xrp/",
       "pubDate": "2021-03-01T23:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Jed McCaleb, one of the co-founder of Ripple, has sold an estimated 135 million XRP tokens over the last few weeks, and has around 30.5 million tokens left in his “tacostand” account, according to data from XRPScan. McCaleb is said to have started working on Ripple back in 2011, and was part of its founding […]",
       "currencies": [
@@ -22,22 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Delegate friendsoflittleyus has launched their webshop platform, complete with custom relay@home products and real-time ARK payments!",
-      "link": "NULL",
-      "pubDate": "2021-03-01T23:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Matic, xDai (STAKE) and Loopring (LRC) rally as Ethereum gas fees rise",
       "link": "https://cointelegraph.com/news/matic-xdai-stake-and-loopring-lrc-rally-as-ethereum-gas-fees-rise",
       "pubDate": "2021-03-01T22:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Soaring Etheruem gas costs are driving investors and protocols to take a closer look at layer-two solutions like Matic, Loopring and xDai.",
       "currencies": [
@@ -52,33 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Trust the Nu process",
-      "link": "NULL",
-      "pubDate": "2021-03-01T22:02:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Staking NU",
-      "link": "NULL",
-      "pubDate": "2021-03-01T21:17:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
       "title": "Wolfram Blockchain Labs Adds Support For Tezos On Its Platform Following Cardano",
       "link": "https://zycrypto.com/wolfram-blockchain-labs-adds-support-for-tezos-on-its-platform-following-cardano/",
       "pubDate": "2021-03-01T20:01:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "It has been announced that Wolfram Blockchain Labs (WBL) will be teaming up with Tezos. This is only a few months after a similar partnership was struck with Cardano. Thanks to this new partnership, Wolfram users and developers will be able to make use of the Tezos network, boosting blockchain interoperability. The Wolfram Blockchain offers […]",
       "currencies": [
@@ -94,8 +61,8 @@
       "title": "Dogecoin Struggles to Resume Uptrend Despite Renewal",
       "link": "https://cryptobriefing.com/dogecoin-struggles-to-resume-uptrend-despite-renewal/",
       "pubDate": "2021-03-01T19:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Dogecoin has entered the spotlight once again as developers have released a new protocol upgrade. However, DOGE sits beneath a supply barrier that may prevent prices from rising. Preparing Dogecoin for Mass Adoption The developers behind Dogecoin have realized that the cryptocurrency’s design must be further refined to live up to the bullish momentum it has seen since the beginning of...",
       "currencies": [
@@ -112,8 +79,8 @@
       "title": "CasinoCoin to migrate to XRP Ledger amidst rebranding",
       "link": "https://www.cryptoninjas.net/2021/03/01/casinocoin-to-migrate-to-xrp-ledger-amidst-rebranding/",
       "pubDate": "2021-03-01T19:28:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "altcoin",
       "description": "CryptoNinjas » CasinoCoin to migrate to XRP Ledger amidst rebranding CasinoCoin, an open-source cryptocurrency project designed for the online gambling industry, recently announced it is under new management. With that, the project will move forward with a rebranding; while also moving its token and platform to the XRP Ledger. Back on January 19th, 2021, the project put out a statement...",
       "currencies": [
@@ -128,8 +95,8 @@
       "title": "ADA & DOT Get Another Push From FD7",
       "link": "https://beincrypto.com/ada-dot-get-another-push-from-fd7/",
       "pubDate": "2021-03-01T18:51:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "The micro-fund will make annual investments between $1 million and $5 million across 50 companies specializing in developing ADA and DOT. Roughly 30% of these companies will receive secondary investment of $5 million to $20 million, depending on their growth, the announcement read. ADA and DOT’s Benefit The company noted it was bullish on non-fungible … Continued",
       "currencies": [
@@ -143,77 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Nu listed on Dodo exchange",
-      "link": "NULL",
-      "pubDate": "2021-03-01T18:31:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "NuCypher's response to the Coindesk senior reporter",
-      "link": "NULL",
-      "pubDate": "2021-03-01T18:02:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Nu outperforming every other coin on coinbase last couple of hours",
-      "link": "NULL",
-      "pubDate": "2021-03-01T18:02:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NU"
-      ]
-    },
-    {
-      "title": "Join Major League Hacking for another free ARK workshop this Thursday, March 4th at 5pm EST. Learn how to interact with blockchain technology and create your own blockchain-based taco shop!",
-      "link": "NULL",
-      "pubDate": "2021-03-01T17:53:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Tomochain stole 25k tomo (40-50k USD) from me while im dying of liver failure. I need this money to stay alive.",
-      "link": "NULL",
-      "pubDate": "2021-03-01T17:31:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Report Tomo to the FTC.",
-      "link": "NULL",
-      "pubDate": "2021-03-01T16:31:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "Horizen to integrate IOTA Oracles on its sidechain protocol Zendoo",
       "link": "https://www.cryptoninjas.net/2021/03/01/horizen-to-integrate-iota-oracles-on-its-sidechain-protocol-zendoo/",
       "pubDate": "2021-03-01T16:18:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "CryptoNinjas » Horizen to integrate IOTA Oracles on its sidechain protocol Zendoo Horizen, a technology platform that enables businesses and developers to create their own public or private blockchains, today announced a partnership with IOTA, an open-sourced, feeless data and value transfer protocol. This partnership will extend the functionality of the newly launched IOTA Oracles and...",
       "currencies": [
@@ -230,9 +131,9 @@
       "title": "BAT vs RSR – Which Coin Will Perform Better in March?",
       "link": "https://beincrypto.com/bat-vs-rsr-which-coin-will-perform-better-in-march/",
       "pubDate": "2021-03-01T16:16:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "These two coins are chosen since they both have similar price movement, having just broken out from long-term resistance areas and then validating them as support. BAT In the beginning of the year, BAT broke out from a long-term descending resistance line that had been in place for more than two years and reclaimed the … Continued",
       "currencies": [
         "BAT",
@@ -245,44 +146,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Fuck tomochain",
-      "link": "NULL",
-      "pubDate": "2021-03-01T16:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Stop stealing you cunts.",
-      "link": "NULL",
-      "pubDate": "2021-03-01T16:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Tomochain?",
-      "link": "NULL",
-      "pubDate": "2021-03-01T16:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "IOTA and Horizen Partner to Expand IOTA Oracles To New Blockchains",
       "link": "http://blog.iota.org/iota-and-horizen-partner-to-expand-iota-oracles-to-new-blockchains/",
       "pubDate": "2021-03-01T14:59:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Iota",
+      "sourceKey": "iota",
       "category": "general",
       "description": "Creating opportunities for interoperability between distributed networks has always been a key goal for the IOTA Foundation. Up until now, we have focused much of our attention on building the protocol and defining the specifications for Chrysalis and Coordicide (IOTA 2.0). Due to our new architecture, we can now",
       "currencies": [
@@ -299,8 +167,8 @@
       "title": "Horizen and IOTA Partner to Expand IOTA Oracles and Zendoo",
       "link": "https://blog.horizen.io/iota-and-horizen-partner-to-expand-iota-oracles-and-zendoo/",
       "pubDate": "2021-03-01T14:52:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Zensystem",
+      "sourceKey": "zensystem",
       "category": "general",
       "currencies": [
         "MIOTA",
@@ -313,33 +181,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This project going forward",
-      "link": "NULL",
-      "pubDate": "2021-03-01T14:31:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "YOU STOLE A DYING MAN'S MONEY.",
-      "link": "NULL",
-      "pubDate": "2021-03-01T14:02:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "Ripple Price Analysis: After 22% Weekly Plunge, Did XRP Find Support at Critical Zone?",
       "link": "https://cryptopotato.com/ripple-price-analysis-after-22-weekly-plunge-did-xrp-find-support-at-critical-zone/",
       "pubDate": "2021-03-01T12:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP is down by 222% last week but has found reliable support at the .618 Fib around $0.4. Against Bitcoin, XRP has been trading sideways for the past five days.",
       "currencies": [
@@ -355,8 +201,8 @@
       "title": "Google Finance Adds Bitcoin, Ethereum, Litecoin, and Bitcoin Cash",
       "link": "https://cryptobriefing.com/google-finance-adds-bitcoin-ethereum-litecoin-bitcoin-cash/",
       "pubDate": "2021-03-01T12:18:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "Google Finance has now added a crypto market tab to its business tool. Google Finance Recognizes Crypto The search engine has added a fifth “Crypto” tab on Google Finance—along with the U.S., Europe, Asian Markets, and Currencies. The application imports the price data from Coinbase. The section lists an ”about” widget for the four cryptocurrencies in BTC, ETH, LTC, and BCH...",
       "currencies": [
@@ -374,8 +220,8 @@
       "title": "Ripple Unlocks 1 Billion XRP As Coin Trades in $0.43 Range",
       "link": "https://u.today/ripple-unlocks-1-billion-xrp-as-coin-trades-in-043-range",
       "pubDate": "2021-03-01T11:56:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Ripple fintech giant has again unleashed a whopping one billion XRP from escrow, despite all the recent turmoil with the SEC lawsuit",
       "currencies": [
@@ -391,8 +237,8 @@
       "title": "$250M Fund to Invest in Polkadot and Cardano Launched in India",
       "link": "https://cryptopotato.com/250m-fund-to-invest-in-polkadot-and-cardano-launched-in-india/",
       "pubDate": "2021-03-01T11:36:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "Crypto investment fund opens an office in India and sets up a $250 million endeavor to invest in Cardano and Polkadot.",
       "currencies": [
@@ -409,8 +255,8 @@
       "title": "Fantom brushes off network outage with another 50% price surge",
       "link": "https://cointelegraph.com/news/fantom-brushes-off-network-outage-with-another-30-price-surge",
       "pubDate": "2021-03-01T11:28:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "With over 3,000% growth since the turn of the year, even a recent network outage couldn't stop Fantom's bullish surge.",
       "currencies": [
@@ -426,8 +272,8 @@
       "title": "The Future of Crypto Exchanges Is Decentralized, Says Binance CEO",
       "link": "https://cryptobriefing.com/future-crypto-exchanges-is-decentralized-says-binance-ceo/",
       "pubDate": "2021-03-01T11:27:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "exchange",
       "description": "DeFi users are looking to alternative networks after Ethereum gas fees have once again hit new highs. This time, the Binance Smart Chain has entered center stage. Binance Smart Chain Riding The DeFi Craze Users only have to pay a few cents for a simple transaction on the Binance Smart Chain (BSC), compared to more than $30 on Ethereum last month. At the time of press, the average...",
       "currencies": [
@@ -441,23 +287,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether Gets 500 BTC Ransom: Sender Threats to Leak Harmful Documents",
-      "link": "NULL",
-      "pubDate": "2021-03-01T09:41:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ]
-    },
-    {
       "title": "Vitalik Buterin Proposes Stopping Ethereum Gas Refunds",
       "link": "https://cryptobriefing.com/vitalik-buterin-proposes-stopping-ethereum-gas-refunds/",
       "pubDate": "2021-03-01T09:31:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Ethereum’s co-creator, Vitalik Buterin, has posted a proposal to remove gas refunds in the blockchain’s London update. Vitalik Buterin Seeks Refund Removal Buterin posted a proposal, titled EIP-3298, on Ethereum’s Github page this week. He suggests removing gas refunds for the “SSTORE” and “SELFDESTRUCT” functions in Ethereum’s London update. Ethereum currently allows users to...",
       "currencies": [
@@ -472,23 +306,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "[ARK Weekly Discussion Thread] - March 01, 2021",
-      "link": "NULL",
-      "pubDate": "2021-03-01T09:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Top Ten Aspiring Crypto Coins For March",
       "link": "https://beincrypto.com/top-ten-aspiring-crypto-coins-for-march/",
       "pubDate": "2021-03-01T08:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "1. Cardano (ADA) Current Price: $1.29 Market Cap: $41 billion Market Cap Rank: #3 On March 1, the ”Mary” hard fork for ADA is expected to be launched, making it one of the most important events for this month. The upgrade is expected to bring Cardano closer to realizing its potential in regards to NFTs, … Continued",
       "currencies": [
         "ADA",
@@ -502,22 +325,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Inflation v.s. Deflation",
-      "link": "NULL",
-      "pubDate": "2021-03-01T07:49:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
       "title": "Loopring DEX Launches Layer 2 Bitcoin Trading Pools",
       "link": "https://beincrypto.com/loopring-dex-launches-layer-2-bitcoin-trading-pools/",
       "pubDate": "2021-03-01T06:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "In a tweet declaring that the exchange has had no Bitcoin trading pairs for so long, Loopring announced the launch of four new pools for wrapped BTC on Layer 2. Traders on the DEX now have access to wrapped Bitcoin, three stablecoins (DAI, USDC, and USDT), automated market maker pools, and order book pairs. The … Continued",
       "currencies": [
@@ -536,8 +348,8 @@
       "title": "Dubai-Based FD7 Ventures Launches New $250 Million Fund Focused on Cardano and Polkadot",
       "link": "https://u.today/dubai-based-fd7-ventures-launches-new-250-million-fund-focused-on-cardano-and-polkadot",
       "pubDate": "2021-03-01T06:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Developers in India who build on Cardano and Polkadot could get $250 million from this Dubai fund",
       "currencies": [
@@ -549,33 +361,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "TA: Ethereum Bears Keep Pushing, Why ETH Could Face Hurdles Near $1,500",
-      "link": "NULL",
-      "pubDate": "2021-03-01T05:18:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "USA Ark Exchanges?",
-      "link": "NULL",
-      "pubDate": "2021-03-01T01:05:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
     }
   ]
 }

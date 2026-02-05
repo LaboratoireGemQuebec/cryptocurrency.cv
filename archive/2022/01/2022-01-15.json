@@ -1,60 +1,15 @@
 {
   "date": "2022-01-15",
-  "fetchedAt": "2026-02-05T07:45:51.450Z",
-  "articleCount": 37,
+  "fetchedAt": "2026-02-05T07:48:35.286Z",
+  "articleCount": 15,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "With our growth we've enlisted @beethoven_x to help conduct this symphony. The music plays on, but this is just the…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T23:49:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "Don't knock it until you've tried it.",
-      "link": "NULL",
-      "pubDate": "2022-01-15T23:18:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "Don't knock it until you've try it.",
-      "link": "NULL",
-      "pubDate": "2022-01-15T23:18:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @BettyK0: The $FLUX Marketplace contains $PRE, $FIRO, $DASH and $PIVX nodes! Anyone can run these nodes in a few clicks on this #Web3…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T23:07:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "FLUX"
-      ]
-    },
     {
       "title": "These Upcoming Crypto Milestones Could Trigger a Massive Rally for Solana, Dogecoin and Three Altcoins: Coin Bureau",
       "link": "https://dailyhodl.com/2022/01/15/these-upcoming-crypto-milestones-could-trigger-a-massive-rally-for-solana-dogecoin-and-three-altcoins-coin-bureau/",
       "pubDate": "2022-01-15T23:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Coin Bureau crypto channel host Guy is revealing why he remains bullish on five major crypto assets despite recent sell-offs. Guy tells his 1.87 million YouTube subscribers that he is unconvinced that the bull market is over and thinks there are “upcoming crypto milestones that could be a catalyst for a massive reversal.” Starting with Solana […]",
       "currencies": [
@@ -69,90 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$DIVI CEO @NSapProductions was interviewed on @news_ntd where he shared some key insight into $SOL, $EOS, $ETH and…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T22:56:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
-      "title": "Decred Journal — December 2021",
-      "link": "NULL",
-      "pubDate": "2022-01-15T20:29:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BCH",
-        "FLOW",
-        "EOS",
-        "RUNE",
-        "DCR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @StephenTalkin: We flying. Cheep nodes @ProjectXNodes",
-      "link": "NULL",
-      "pubDate": "2022-01-15T19:33:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PXT"
-      ]
-    },
-    {
-      "title": "This week at #StakeCube: - StakeCube in Numbers - Dash Masternodes No. 16 - SCPScan Updates ... and many more thi…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T19:11:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "SCC"
-      ]
-    },
-    {
-      "title": "RT @credefi_finance: Something BIG is coming...",
-      "link": "NULL",
-      "pubDate": "2022-01-15T17:53:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
-      "title": "ZEDXION EXCHANGE Launches #BSV Fellow ZEDXION EXCHANGE Members, The trading of BSV will be opened on ZEDXION. Us…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T16:26:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ZEDXION",
-        "USDZ",
-        "USDT.Z"
-      ]
-    },
-    {
       "title": "BabyDoge Now Held by Whopping 1.226 Million Users, SHIB Holders Fall Behind",
       "link": "https://u.today/babydoge-now-held-by-whopping-1226-million-users-shib-holders-fall-behind",
       "pubDate": "2022-01-15T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Number of BabyDoge holders has increased again, with the overall number of SHIB army still failing to catch up",
       "currencies": [
@@ -168,8 +44,8 @@
       "title": "Tether (USDT) No Longer Dominant Ether-Based Stablecoin: Data",
       "link": "https://u.today/tether-usdt-no-longer-dominant-ether-based-stablecoin-data",
       "pubDate": "2022-01-15T14:46:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Historical USDC/USDT flippening was spotted yesterday by Nansen's analytical tools",
       "currencies": [
@@ -183,22 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @kevinlee_mh: Congrats $CHR @Chromia reach 100k watchlists on @CoinMarketCap. Just the beginning",
-      "link": "NULL",
-      "pubDate": "2022-01-15T14:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHR"
-      ]
-    },
-    {
       "title": "What Bear Market? Analyst Highlights Three Bullish Catalysts For Bitcoin In 2022",
       "link": "https://zycrypto.com/what-bear-market-analyst-lists-three-bullish-catalysts-for-bitcoin-in-2022/",
       "pubDate": "2022-01-15T14:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "The Crypto market bulls continue to struggle with bears. But market players have a positive outlook in the near term. So far, three bullish catalysts have been spotted for Bitcoin in the long term. The cryptocurrency market sits in a danger zone as it falters following liquidations from last week. While fear rises, some market […]",
       "currencies": [
@@ -213,44 +78,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "TOKEN SALE: Pleased to announce $GARI @GariToken will be part of our token sale project on #OKExJumpstart startin…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T13:34:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
-      "title": "If Hal was still with us today, he'd definitely be a Pirate ‍️",
-      "link": "NULL",
-      "pubDate": "2022-01-15T13:17:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
-      "title": "️ Please be aware of people that might approach you by falsely presenting themselves as representatives from Chrom…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T12:13:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHR"
-      ]
-    },
-    {
       "title": "21.1 Million SHIB Burned in Past 24 Hours, While New SHIB Burn Site Kicks Off",
       "link": "https://u.today/211-million-shib-burned-in-past-24-hours-while-new-shib-burn-site-kicks-off",
       "pubDate": "2022-01-15T10:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "SHIB community keeps burning tokens and launches a new website that help track the burning process",
       "currencies": [
@@ -266,8 +98,8 @@
       "title": "Polygon Upgrade, Tennis Metaverse, Raising $900,000,000, Ethereum's Future & BTC Mining Made Easy",
       "link": "https://www.youtube.com/watch?v=Q2LpvUXnK0I",
       "pubDate": "2022-01-15T10:46:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheModernInvestor",
+      "sourceKey": "themoderninvestor",
       "category": "bitcoin",
       "description": "Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------ Open An Account With Binance! https:",
       "currencies": [
@@ -284,8 +116,8 @@
       "title": "Elrond ($EGLD) Unites With Utrust ($UTK) to Tackle Web3 Payments",
       "link": "https://www.cryptoglobe.com/latest/2022/01/elrond-egld-unites-with-utrust-utk-to-tackle-web3-payments/",
       "pubDate": "2022-01-15T10:02:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "The Elrond Network has announced a new partnership with Portugal-based payments start-up Utrust to tackle the future of Web3 technology. According to a joint press release issued by the two companies, Elrond has united with Utrust in what both teams called “not just a partnership” but a “union.” The release claims that both parties will […]",
       "currencies": [
@@ -301,8 +133,8 @@
       "title": "Risk management giant Moody’s: El Salvador’s BTC buying frenzy raises its default risk",
       "link": "https://finbold.com/risk-management-giant-moodys-el-salvadors-btc-buying-frenzy-raises-its-default-risk/",
       "pubDate": "2022-01-15T09:53:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "The adoption of Bitcoin (BTC) in El Salvador has resulted in international risk rating agencies keeping a close check on... Continue reading The post Risk management giant Moody’s: El Salvador’s BTC buying frenzy raises its default risk appeared first on Finbold.",
       "currencies": [
@@ -317,8 +149,8 @@
       "title": "ADALend CEO Kaspars Koskins : “We Are Building a Secure Lending Platform on Cardano”",
       "link": "https://www.newsbtc.com/news/adalend-ceo-kaspars-koskins-we-are-building-a-secure-lending-platform-on-cardano/",
       "pubDate": "2022-01-15T09:52:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "defi",
       "description": "Starting ADALend CEO Kaspars Koskins interview series, one of the most promising companies that is revolutionizing the lending industry by using blockchain technology to disintermediate the traditional middlemen – providing unprecedented access to loans for those ignored by the traditional banking system and providing high yields for investors in a persistently low-interest-rate environment. I...",
       "currencies": [
@@ -336,8 +168,8 @@
       "title": "Cardano Beats Solana And Bitcoin As Most Preferred Ethereum Alternative",
       "link": "https://zycrypto.com/cardano-beats-solana-and-bitcoin-as-most-preferred-ethereum-alternative/",
       "pubDate": "2022-01-15T09:50:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Cardano has emerged as the most preferred ETH alternative for transactions and savings by crypto users around the globe. This is according to a Twitter poll conducted by Vitalik Buterin on Friday asking which cryptocurrency Ethereum users would prefer if they woke up in 2035, and 80% of all transactions plus savings in the world […]",
       "currencies": [
@@ -352,22 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Moments like this make the whole team's hearts warm ️",
-      "link": "NULL",
-      "pubDate": "2022-01-15T09:39:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FWT"
-      ]
-    },
-    {
       "title": "IOG CEO Charles Hoskinson on Which Cardano ($ADA) Goals Are Achievable in 2022",
       "link": "https://www.cryptoglobe.com/latest/2022/01/iog-ceo-charles-hoskinson-on-which-cardano-ada-goals-are-achievable-in-2022/",
       "pubDate": "2022-01-15T09:38:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "In a recent interview (with Crypto Capital Venture Founder Dan Gambardello) Cardano founder Charles Hoskinson talked about his vision for Cardano in 2022. According to a report by The Daily Hodl, here are a few highlights from that interview: “I think everything will get done that I outlined – the sidechains, the pipelining, the import […]",
       "currencies": [
@@ -383,8 +204,8 @@
       "title": "Elon Musk’s New Tweet Leaves SHIB and Doge Holders Puzzled",
       "link": "https://u.today/elon-musks-new-tweet-leaves-shib-and-doge-holders-puzzled",
       "pubDate": "2022-01-15T09:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shib and Dogecoin community left pondering what Elon Musk’s new tweet could mean, particularly after Tesla launched merch buyable with Doge",
       "currencies": [
@@ -398,22 +219,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🥳🥳🥳Expected to see all of excellent projects!!!!! @DoraHacks",
-      "link": "NULL",
-      "pubDate": "2022-01-15T06:58:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
       "title": "Crypto Whales Have Been Quietly Accumulating Litecoin ($LTC), Data Shows",
       "link": "https://www.cryptoglobe.com/latest/2022/01/crypto-whales-have-been-quietly-accumulating-litecoin-ltc-data-shows/",
       "pubDate": "2022-01-15T06:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "Data from cryptocurrency analytics firm Santiment suggests cryptocurrency whales have been quietly accumulating Litecoin ($LTC), a cryptocurrency that has been described as the “silver to Bitcoin’s gold,” over the last 15 weeks. On social media, Santiment shared data showing that whale addresses holding between 10,000 and 1 million LTC have been accumulating the cryptocurrency for […]",
       "currencies": [
@@ -429,9 +239,9 @@
       "title": "Crypto.com Coin (CRO) Decreases by 55% After All-Time High: Biggest Weekly Losers",
       "link": "https://beincrypto.com/crypto-com-coin-cro-decreases-by-55-after-all-time-high-biggest-weekly-losers/",
       "pubDate": "2022-01-15T06:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "BeInCrypto takes a look at the seven cryptocurrencies that have decreased the most over the past seven days, more specifically from Jan 7 to Jan 14.",
       "currencies": [
         "CRO",
@@ -445,27 +255,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Cointelegraph: The new number one Bitcoin builder is @Stacks. The Stacks blockchain is moving toward a more programmable BTC.",
-      "link": "NULL",
-      "pubDate": "2022-01-15T03:52:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Solana ($SOL) Could ‘Become the Visa’ of Crypto, Bank of America Analyst Says",
       "link": "https://www.cryptoglobe.com/latest/2022/01/solana-sol-could-become-the-visa-of-crypto-bank-of-america-analyst-says/",
       "pubDate": "2022-01-15T03:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "regulation",
       "description": "Alkesh Shah, a digital asset strategist at Bank of America has revealed he believes Solana ($SOL) has the potential to “become the Visa” of the cryptocurrency space as it focuses on scalability, low transaction fees, and ease of use. As reported by Business Insider, Shah has pointed out that Solana has settled over 50 billion […]",
       "currencies": [
@@ -477,69 +271,6 @@
         "negative": 21
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Have you spotted Hive on the @Virtualand_tech map yet under @coinbase and between @binance and @Xbox?…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T03:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HIVE"
-      ]
-    },
-    {
-      "title": "RT @cryptogooonn: New FAAS play: @Roaring20sDAO It is a FaaS token, With a meme mob twist, There will be a live dash board for al capone'…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T02:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "ROAR"
-      ]
-    },
-    {
-      "title": "Crypto Pullback!! Solana and Metaverse Sandbox picking pace | Near Protocol Major DeFi Push!!",
-      "link": "NULL",
-      "pubDate": "2022-01-15T01:57:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "description": "Crypto Markets are flat but NOT flatlining, Mike Tyson is a born-again SOLANA SUPPORTER while he knocks out mental health through CRYPTO!! Apple puts its foot down on the METAVERSE while the Sandbox brings in NEW HYPE!! Near Protocol READY FOR HUGE DEFI PUSH!! And GamesPad launches first-ever NFT’s on a HUGE MARKETPLACE!! Get your crypto news here!! ⏱️TIMESTAMPS 0:00 Major Headlines 0:30 Introduction 0:54 Market Wrap 1:41 Mike Tyson loves Solana 2:32 Apple looking at AR, not the Metaverse | Sand",
-      "currencies": [
-        "SOL",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @BeingMatt: This guy gets it. @tonymontanaATH",
-      "link": "NULL",
-      "pubDate": "2022-01-15T00:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FWT"
-      ]
-    },
-    {
-      "title": "To spread the power in the combat of Fwar Finance, we release officially SHARE YOUR COMBAT SCREEN PICTURE TO GET 1…",
-      "link": "NULL",
-      "pubDate": "2022-01-15T00:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FWT"
-      ]
     }
   ]
 }

@@ -1,73 +1,15 @@
 {
   "date": "2023-09-17",
-  "fetchedAt": "2026-02-05T07:45:52.397Z",
-  "articleCount": 16,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Can Polkadot lure in more users with this latest development",
-      "link": "NULL",
-      "pubDate": "2023-09-17T23:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "PolkaWorld Hits Pause as Founder Faults Polkadot Governance Change",
-      "link": "NULL",
-      "pubDate": "2023-09-17T22:42:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Will the range-low ease Stellar’s retracement",
-      "link": "NULL",
-      "pubDate": "2023-09-17T21:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "NeoSPCC upgrades NeoGo to full Neo core v3.6.0 compatibility",
-      "link": "NULL",
-      "pubDate": "2023-09-17T20:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Bitcoin price holds $26K as MKR, AAVE, RUNE and RNDR flash bullish signals",
-      "link": "NULL",
-      "pubDate": "2023-09-17T19:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR",
-        "RUNE",
-        "RNDR"
-      ]
-    },
     {
       "title": "Watch Out: Crucial Week Ahead, Here are the Economic and Altcoin Events to Follow in the Coming Week",
       "link": "https://en.bitcoinsistemi.com/watch-out-crucial-week-ahead-here-are-the-economic-and-altcoin-events-to-follow-in-the-coming-week/",
       "pubDate": "2023-09-17T19:04:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "Many developments that may deeply affect the cryptocurrency market will be followed by investors in the new week. Continue Reading: Watch Out: Crucial Week Ahead, Here are the Economic and Altcoin Events to Follow in the Coming Week",
       "currencies": [
@@ -83,8 +25,8 @@
       "title": "Ripple Says It Will Fight SEC Case ‘All The Way Through’ To Score More Big Wins — XRP Moon Time?",
       "link": "https://zycrypto.com/ripple-says-it-will-fight-sec-case-all-the-way-through-to-score-more-big-wins-xrp-moon-time/",
       "pubDate": "2023-09-17T18:45:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "As per Long, the fact that the odds are currently in Ripple’s favor following the landmark ruling that XRP is not in itself a security raises hopes that a major victory is imminent.",
       "currencies": [
@@ -97,66 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DeFi exchange volume down 15% on a monthly basis amid UNI, CRV price crash – VanEck",
-      "link": "NULL",
-      "pubDate": "2023-09-17T18:07:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Lido’s new collaborations fail to make LDO see green – Why?",
-      "link": "NULL",
-      "pubDate": "2023-09-17T15:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Axie Infinity’s Stats Slump: A Play-to-Earn Reality Check",
-      "link": "NULL",
-      "pubDate": "2023-09-17T14:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "What ChatGPT says about Filecoin’s price at the end of 2023",
-      "link": "NULL",
-      "pubDate": "2023-09-17T14:20:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "EGLD Could Break Above $28 Soon as Technical Indicators Align",
-      "link": "NULL",
-      "pubDate": "2023-09-17T14:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD"
-      ]
-    },
-    {
       "title": "Which Layer 2s Are Most Promising? Cryptocurrency Analysis Company Dune Releases New Report",
       "link": "https://en.bitcoinsistemi.com/which-layer-2s-are-most-promising-cryptocurrency-analysis-company-dune-releases-new-report/",
       "pubDate": "2023-09-17T14:02:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "layer2",
       "description": "Cryptocurrency analysis company Dune has published its new report containing important information about Ethereum layer-2 solutions. Continue Reading: Which Layer 2s Are Most Promising? Cryptocurrency Analysis Company Dune Releases New Report",
       "currencies": [
@@ -169,23 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "I asked ChatGPT if Ethereum Classic can recover from its bearish movement",
-      "link": "NULL",
-      "pubDate": "2023-09-17T13:50:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
       "title": "Solana's #1 NFT Marketplace Beats Whole NFT Industry on Ethereum",
       "link": "https://u.today/solanas-1-nft-marketplace-beats-whole-nft-industry-on-ethereum",
       "pubDate": "2023-09-17T11:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Solana remains go-to network for NFT enthusiasts",
       "currencies": [
@@ -197,17 +72,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Assessing whether PEPE has a chance of recovery",
-      "link": "NULL",
-      "pubDate": "2023-09-17T10:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FLOW"
-      ]
     }
   ]
 }

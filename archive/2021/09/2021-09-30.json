@@ -1,95 +1,15 @@
 {
   "date": "2021-09-30",
-  "fetchedAt": "2026-02-05T07:45:51.567Z",
-  "articleCount": 60,
+  "fetchedAt": "2026-02-05T07:48:35.343Z",
+  "articleCount": 29,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @SingularityDao: We are incredibly proud to say that the $SDAO airdrop was the fourth largest ever in crypto measured by average airdrop…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T23:38:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Nearing $100k liquidity across all markets, come place your bets! ️",
-      "link": "NULL",
-      "pubDate": "2021-09-30T23:04:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "Nearing $100k liquidity across the daily sports markets, come place your bets! ️",
-      "link": "NULL",
-      "pubDate": "2021-09-30T23:04:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "RT @michael_saylor: The United States has no intention to ban #Bitcoin.",
-      "link": "NULL",
-      "pubDate": "2021-09-30T22:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "RT @kaiynne: Lol tell me the crypto market is inefficient without telling me. delegate your UNI and get 200% APY an…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T22:26:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UNI",
-        "SNX",
-        "SUSD"
-      ]
-    },
-    {
-      "title": "Staking your $SNX just got that much easier with the new Debt Hedging Bot just launched by the Synthetix grantsD…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T22:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX",
-        "SUSD"
-      ]
-    },
-    {
-      "title": "GR11 is over, so what will happen next? In the next two weeks, NKN team will thoroughly review all the submissions,…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T21:45:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
     {
       "title": "Emoji Bait-and-Switch Raised $138,000 on Solana",
       "link": "https://cryptobriefing.com/emoji-bait-and-switch-raised-138000-on-solana/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-09-30T20:48:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "SOL"
@@ -101,34 +21,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "When Woz and Ken leave the house, they do it in style  #EFFORCE $WOZX",
-      "link": "NULL",
-      "pubDate": "2021-09-30T20:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Don’t miss our first Coffee + Chess event with @OlympusDAO, featuring @ohmzeus and @kaiynne. Over a friendly chess…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T20:26:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX",
-        "SUSD"
-      ]
-    },
-    {
       "title": "XRP Ledger Is Taking on Ethereum with Federated Sidechains",
       "link": "https://u.today/xrp-ledger-is-taking-on-ethereum-with-federated-sidechains",
       "pubDate": "2021-09-30T19:53:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "XRPL developers want to lower the barrier to entry in the decentralized finance space",
       "currencies": [
@@ -145,8 +42,8 @@
       "title": "Dogecoin Creator Billy Marcus Says These Two Things Will Help Propel Dogecoin",
       "link": "https://zycrypto.com/dogecoin-creator-billy-marcus-says-these-two-things-will-help-propel-dogecoin/",
       "pubDate": "2021-09-30T19:43:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "There is no question that 2021 has been a great year for Dogecoin. The token has displayed an astounding performance for the better part of the year, subsequently beating some of its peers. For perspective, the DOGE price has ballooned from $0.004 at the start of the year to 20 cents at present. Dogecoin creator […]",
       "currencies": [
@@ -159,22 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @safenetworktech: Checkout this week’s dev update to see the latest progress &amp; learn about how we’re leveraging Merkle Registers too! ht…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T19:41:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "San José mayor partners with Helium to help lower internet costs for low-income residents",
       "link": "https://www.theblockcrypto.com/linked/119186/san-jose-mayor-partners-with-helium-to-help-lower-internet-costs-for-low-income-residents?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-09-30T19:17:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "HNT will be mined and converted into prepaid cash cards. The collaborators expect to help over 1,300 low-income residents over one year.",
       "currencies": [
@@ -190,8 +76,8 @@
       "title": "Rari, Telos and Polymath rally as Bitcoin price hits $44K",
       "link": "https://cointelegraph.com/news/rari-telos-and-polymath-rally-as-bitcoin-price-hits-44k",
       "pubDate": "2021-09-30T19:15:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "RGT, POLY and TLOS secure double-digit gains as investor sentiment rises after the Fed says it will not ban cryptocurrencies and Bitcoin briefly reclaims $44,000.",
       "currencies": [
@@ -208,8 +94,8 @@
       "title": "Quant: Bitcoin Indicators Now Look Similar To Q4 2020, Big Move Ahead?",
       "link": "https://www.newsbtc.com/news/bitcoin/quant-bitcoin-q4-2020-big-move/",
       "pubDate": "2021-09-30T19:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Quant says some Bitcoin indicators show the same trend as in during Q4 2020, suggesting that BTC could make a similar move up. Bitcoin Netflow And Stablecoins Supply Ratio Trends Look Similar To Q4 2020 As explained by an analyst in a CryptoQuant post, two BTC indicators: the netflow and the stablecoins supply ratio, are both trending similarly to how they did during the last quarter of 2020....",
       "currencies": [
@@ -222,61 +108,11 @@
       }
     },
     {
-      "title": "Community-created; Golem Completion Engine, an enhanced bash completion engine that extends built-in completions by…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T17:24:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "You may remember that a few weeks ago we warned you all to upgrade to 1.2.6+ as soon as feasible, so that you would…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T17:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "MASSIVE POTENTIAL!! Could Fantom FTM be the next Solana?",
-      "link": "NULL",
-      "pubDate": "2021-09-30T17:06:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Fantom is a baselayer blockchain that is aiming to compete with Ethereum ETH, Cardano ADA, Solana SOL, Avalanche AVAX, and Polkadot DOT. We look at the tokenomics of FTM and provide a token price prediction. We feel that Fantom could be massive and could play a crucial role on the internet of blockchains. 🚀 FREE CRYPTO PROJECT EVALUATION CHECKLIST 🚀 This resource includes the full 50 checklist items we use for our due own diligence process for any crypto project, at any stage. You can use this",
-      "currencies": [
-        "FTM"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Off to a nice start, every market on Turbo now has liquidity! Ramping up",
-      "link": "NULL",
-      "pubDate": "2021-09-30T16:56:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
       "title": "New Highs or New Crash? Crypto Trader Aaron Arnold Predicts Bitcoin History Set to Repeat",
       "link": "https://dailyhodl.com/2021/09/30/new-highs-or-new-crash-crypto-trader-aaron-arnold-predicts-bitcoin-history-set-to-repeat/",
       "pubDate": "2021-09-30T16:55:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Widely followed crypto trader and Altcoin Daily co-host Aaron Arnold is predicting new all-time highs for Bitcoin (BTC) in the near future. As Bitcoin finds support above $40,000, the crypto trader tells his 1 million YouTube subscribers that BTC could be gearing up for an explosive rally over the next few months. Arnold notes that, […]",
       "currencies": [
@@ -290,74 +126,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ThetaDrop: He stakes his tokens on GPOOL. He runs his own Elite Edge Node on @Theta_Network. He's in the THICK of it. Introducing excl…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T16:45:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @CoinDesk: .@0xPolygon is looking to help @AugurProject expand into betting markets such as the @NFL, the @NBA and @MLB with a $1 millio…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T16:18:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "Privacy gang... ASSEMBLE $XMR $ZEC $DCR $DASH $BEAM If you're into crypto, and you're into privacy — you're i…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEC",
-        "DASH",
-        "OXEN"
-      ]
-    },
-    {
-      "title": "To celebrate the launch of the liquidity mining program, trading fees on Turbo have been cut to 0%! 🥳",
-      "link": "NULL",
-      "pubDate": "2021-09-30T15:24:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
-      "title": "RT @Kurt_M_Barry: Smart contracts are unforgiving of the tiniest errors...COMP bug is a tragic case of \"&gt;\" instead of \"&gt;=\" (in two code loc…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T15:18:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
       "title": "BTC, BNB and ADA Price Analysis for September 30",
       "link": "https://u.today/btc-bnb-and-ada-price-analysis-for-september-30",
       "pubDate": "2021-09-30T15:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Have the major cryptocurrencies accumulated enough power to keep the rise going?",
       "currencies": [
@@ -371,22 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @RSKsmart: 8th RSK Ecosystem Update",
-      "link": "NULL",
-      "pubDate": "2021-09-30T15:08:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RIF"
-      ]
-    },
-    {
       "title": "Elon Musk Names His Goal for Space Flight, But Dogecoin Community Reminds Him of His DOGE-Moon Promise",
       "link": "https://u.today/elon-musk-names-his-goal-for-space-flight-but-dogecoin-community-reminds-him-of-his-doge-moon",
       "pubDate": "2021-09-30T15:02:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Elon Musk has clarified the goal he set for SpaceX flights, but the Dogecoin community reminded him he promised to take Dogecoin to the moon",
       "currencies": [
@@ -398,44 +160,11 @@
       }
     },
     {
-      "title": "The block height of 1,175,315 has finally been hit, which means the new #blockchain update has been applied to the…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T14:51:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "#DENT Swap is LIVE , check it out and be part of the #DeFi liquidity pool! Click here",
-      "link": "NULL",
-      "pubDate": "2021-09-30T14:20:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "When you first open your #ETNOnlineWallet after the blockchain fork it may take time to migrate to the new chain. T…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T14:05:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Can COTI be in the same league as Cardano or XRP",
       "link": "https://ambcrypto.com/can-coti-be-in-the-same-league-as-cardano-or-xrp/",
       "pubDate": "2021-09-30T14:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "During every bullish/bearish phase, at least a handful of cryptos manage to defy the broader market trend. Something similar has been seen of late too. Despite the humdrum state of the market, a few not-so-prominent altcoins have been carrying on with their respective rallies. COTI has been one such alt, with its price rallying massively […]",
       "currencies": [
@@ -452,8 +181,8 @@
       "title": "Terra Columbus-5 Network Upgrade Goes Live",
       "link": "https://cryptobriefing.com/terra-columbus-5-network-upgrade-goes-live/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-09-30T13:53:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "currencies": [
         "NULL"
@@ -468,9 +197,9 @@
       "title": "Top 10 Aspiring Crypto Coins for October",
       "link": "https://beincrypto.com/top-10-aspiring-crypto-coins-for-october/",
       "pubDate": "2021-09-30T13:53:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "A look at ten cryptocurrencies that have interesting developments lined up for the month of April and could increase their price.",
       "currencies": [
         "MATIC"
@@ -485,8 +214,8 @@
       "title": "Polygon Outstrips Ethereum With A 300% Upsurge In Daily Active Addresses",
       "link": "https://zycrypto.com/polygon-outstrips-ethereum-with-a-300-upsurge-in-daily-active-addresses/",
       "pubDate": "2021-09-30T13:39:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "On Tuesday, Polygon reported that its native coin MATIC had surpassed Ethereum in daily active users (DAU) for the first time. According to on-chain stats, the number of active addresses interacting with the polygon Network on Monday reached 351,000 beating that of Ethereum which at the time was 326,000. This is a new milestone considering […]",
       "currencies": [
@@ -503,8 +232,8 @@
       "title": "Billionaire Orlando Bravo is a Very Bullish Bitcoin HODLer",
       "link": "https://cryptopotato.com/billionaire-orlando-bravo-is-a-very-bullish-bitcoin-hodler/",
       "pubDate": "2021-09-30T13:26:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Thoma Bravo's Co-Founder is a bitcoin hodler who believes that institutional adoption would only increase in the near future.",
       "currencies": [
@@ -518,22 +247,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are happy to announce that $wARRR is now available on , the most popular Discord tipping…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T13:20:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
       "title": "The Strong Shakeout Expected For Bitcoin Bulls To Fully Charge Towards $52,000 Is Here",
       "link": "https://zycrypto.com/the-strong-shakeout-expected-for-bitcoin-bulls-to-fully-charge-towards-52000/",
       "pubDate": "2021-09-30T13:11:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Bitcoin may have run out of steam for now and may not be returning on a sustained bull run that would see the price exceed the previous records of $64,000 or $53,000 any time soon– until after there is a major shakeout. This is a notion held by renowned traders and analysts including Crypto Chase, […]",
       "currencies": [
@@ -548,8 +266,8 @@
       "title": "Compound supply bug mistakenly rewarded users with $70M in tokens",
       "link": "https://cointelegraph.com/news/compound-supply-bug-mistakenly-rewarded-users-with-70m-in-tokens",
       "pubDate": "2021-09-30T11:59:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "It is expected that the total figure of tokens could rise to north of $85 million.",
       "currencies": [
@@ -560,8 +278,8 @@
       "title": "Switzerland national postal service to debut crypto stamp on Polygon",
       "link": "https://cointelegraph.com/news/switzerland-national-postal-service-to-debut-crypto-stamp",
       "pubDate": "2021-09-30T11:20:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "The Swiss crypto stamp is a digital collectible linked to a traditional physical stamp issued by the Swiss Post.",
       "currencies": [
@@ -574,22 +292,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$BEL TOKEN #BURN UPDATE: In 2021 Q3, #Bella team has repurchased 3,367 $BEL, worth over $5,320, and burnt a total…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T11:12:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BEL"
-      ]
-    },
-    {
       "title": "Dogecoin Co-Creator: Ethereum Bridge and NFT Purchases Would 'Help Dogecoin'",
       "link": "https://decrypt.co/82258/dogecoin-creator-ethereum-bridge-and-nft-purchases-would-help-dogecoin",
       "pubDate": "2021-09-30T11:12:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "According to Billy Markus, co-founder of Dogecoin, DOGE needs an ETH bridge and inclusion on NFT marketplaces as a payment option to boost adoption.",
       "currencies": [
@@ -602,22 +309,11 @@
       }
     },
     {
-      "title": "RT @nunet_global: You asked for it: Raspberry Pi now running on NuNet Private Alpha!! 🥧🤙",
-      "link": "NULL",
-      "pubDate": "2021-09-30T10:40:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
       "title": "dYdX price surges 80% in a week to all-time high",
       "link": "https://forkast.news/headlines/dydx-surges-80-in-a-week-to-all-time-high/",
       "pubDate": "2021-09-30T10:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "trading",
       "description": "dYdX, the governance token for the dYdX exchange protocol, surged to a new all-time high of US$27.86 today, according to CoinGecko data. Fast facts dYdX is a decentralized exchange (DEX) built on Ethereum that currently supports perpetual contracts, margin trading and spot cryptocurrency trading, as well as lending and borrowing. It is a non-custodial exchange […]",
       "currencies": [
@@ -631,22 +327,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "At #PUNDIX, we care about sustainability and build the products with care. We are also committed to combating…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T10:14:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
       "title": "157.7 Million XRP Pushed Between Large Crypto Platforms",
       "link": "https://u.today/1577-million-xrp-pushed-between-large-crypto-platforms",
       "pubDate": "2021-09-30T09:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "As per recent analytics data, almost 158 million XRP coins have been wired recently by top-tier digital exchanges",
       "currencies": [
@@ -659,22 +344,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Busan International Film Festival has minted 50,000+ #NFT tickets so far!! Wow!! $AERGO in the mainstream!",
-      "link": "NULL",
-      "pubDate": "2021-09-30T09:07:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AERGO"
-      ]
-    },
-    {
       "title": "Here's Why Projects Like MATIC and AVAX Receive More Social Attention Amid Altcoin Market Bloodbath",
       "link": "https://u.today/heres-why-projects-like-matic-and-avax-receive-more-social-attention-amid-altcoin-market-bloodbath",
       "pubDate": "2021-09-30T09:03:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "While Bitcoin is not showing anything in particular, community is looking at altcoin market",
       "currencies": [
@@ -692,8 +366,8 @@
       "title": "These 5 Crypto Assets Have the Greatest Potential in October, According to Trader Lark Davis",
       "link": "https://dailyhodl.com/2021/09/30/here-are-5-cryptocurrencies-with-the-greatest-potential-in-october-according-to-trader-lark-davis/",
       "pubDate": "2021-09-30T09:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Widely followed crypto trader and market analyst Lark Davis is looking at five specific cryptocurrencies to shine in October. The trader tells his 437,000 YouTube subscribers that he is bullish on Solana (SOL), Polygon (MATIC), Elrond (EGLD), Polkadot (DOT), and Bitcoin (BTC). Starting with Solana, Davis thinks that Solana’s blooming NFT space will bring more […]",
       "currencies": [
@@ -713,8 +387,8 @@
       "title": "Bitcoin Reclaims $43K as Binance Coin Spikes 8% (Market Watch)",
       "link": "https://cryptopotato.com/bitcoin-reclaims-43k-as-binance-coin-spikes-8-market-watch/",
       "pubDate": "2021-09-30T08:55:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Bitcoin continues with its recovery by jumping to $43,000. After a new addition on Binance Launchpad, BNB has surged by 8%.",
       "currencies": [
@@ -728,22 +402,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Our Solo Staking is Live. Join the many users in acquiring the share of the 45 million $AMA #TRON #Crypto #DeFi",
-      "link": "NULL",
-      "pubDate": "2021-09-30T07:56:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
       "title": "Dogecoin Co-Founder Names Two Things He Believes Will Help DOGE",
       "link": "https://u.today/dogecoin-co-founder-names-two-things-he-believes-will-help-doge",
       "pubDate": "2021-09-30T07:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "DOGE co-founder Billy Markus has opined on two things that will likely improve Dogecoin and help it attract new users and fans",
       "currencies": [
@@ -758,8 +421,8 @@
       "title": "Terra’s Columbus-5 Sets Sail, Here’s What to Expect",
       "link": "https://blockworks.co/terras-columbus-5-sets-sail-heres-what-to-expect/",
       "pubDate": "2021-09-30T07:27:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "The highly anticipated Columbus-5 upgrade brings the UST stablecoin into the Cosmos ecosystem and could impact prices of $SOL, $DOT and $ATOM.",
       "currencies": [
@@ -777,8 +440,8 @@
       "title": "Ripple Announces $250M NFT Creator Fund for XRP Ledger",
       "link": "https://beincrypto.com/ripple-250m-nft-creator-fund-xrp-ledger/",
       "pubDate": "2021-09-30T05:39:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "nft",
       "description": "As NFTs and collectibles alike have gained popularity, the utility behind the art is greater than the current use cases, Ripple said.",
       "currencies": [
@@ -794,8 +457,8 @@
       "title": "Polygon briefly overtakes Ethereum for active addresses after 330% surge",
       "link": "https://cointelegraph.com/news/polygon-briefly-overtakes-ethereum-for-active-addresses-after-330-surge",
       "pubDate": "2021-09-30T04:58:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Layer-two aggregator Polygon has seen a 330% surge in active addresses over the past three months.",
       "currencies": [
@@ -812,8 +475,8 @@
       "title": "Compound bug leaves $80 million in COMP at risk of being misrewarded",
       "link": "https://www.theblockcrypto.com/linked/119086/compound-bug-comp-risk-misreward?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-09-30T01:49:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "defi",
       "description": "A new upgrade to the Compound Finance protocol has contained a bug that leaves some users with unusual amounts of COMP token as rewards to be claimed.",
       "currencies": [
@@ -826,28 +489,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "BIGGEST WIN FOR CRYPTO as Worst Tether FUD destroyed!!",
-      "link": "NULL",
-      "pubDate": "2021-09-30T01:17:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Hey ET Fam! After a great live today, I’m back again to deliver you all’s daily dose of #crypto gospel! Let’s end our Wednesday off the right way. It’s been a big day for #Tether, as they have secured a huge win in court today. Regardless of how you feel about Tether, a win for them is a win for all of crypto. Also, #DYDX is doing the darn thing. It has seen an 80% gain this week. All of this is due to the citizens of China looking for other solutions to use that will allow them to continue to p",
-      "currencies": [
-        "USDT"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "“XRP’s Primary Purpose Is Facilitating Cross Border Payments”, Says Former U.S. Treasurer",
       "link": "https://www.cryptoglobe.com/latest/2021/09/xrps-primary-purpose-is-facilitating-cross-border-payments-says-former-u-s-treasurer/",
       "pubDate": "2021-09-30T00:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Former U.S. Treasurer and Ripple board member Rosa Rios has said on social media that she sees the XRP token as a cryptocurrency whose primary purpose is “facilitating cross-border payments,” while most other cryptocurrencies “find their value in speculation.” Per Rios, who joined Ripple’s board of directors in May of this year, China’s latest crackdown […]",
       "currencies": [
@@ -858,17 +504,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "That was a wrap! @NKN_ORG - @gitcoin GR11 hackathon just ended. We are overjoyed to see so many developers, designe…",
-      "link": "NULL",
-      "pubDate": "2021-09-30T00:13:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
     }
   ]
 }

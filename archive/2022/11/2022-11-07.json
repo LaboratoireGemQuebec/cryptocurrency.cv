@@ -1,50 +1,15 @@
 {
   "date": "2022-11-07",
-  "fetchedAt": "2026-02-05T07:45:52.591Z",
-  "articleCount": 96,
+  "fetchedAt": "2026-02-05T07:48:35.574Z",
+  "articleCount": 28,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @mave99a: Good product white paper is timeless. ArcBlock's 2017 white paper is still accurate as of today, different is, in 2017, it's a…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T23:35:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "It's great to see thoughtful proposals on the Governance forum. The goal of BIFROST is to achieve inclusive, democr…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T23:14:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "️ Klaytn x MetaDerby Twitter Space! ️ ️ Launching in a downturn ️ Bear-proof projects ️ How long will we be i…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T23:06:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KLAY",
-        "DBY",
-        "HOOF"
-      ]
-    },
     {
       "title": "Binance Liquidating Its FTT, CEO Changpeng Zhao Says FTX Lobbying Against Others in Crypto Industry",
       "link": "https://dailyhodl.com/2022/11/07/binance-liquidating-its-ftt-ceo-changpeng-zhao-says-ftx-lobbying-against-others-in-crypto-industry/",
       "pubDate": "2022-11-07T23:01:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "Binance has announced it’s selling off all its FTX Token (FTT) as rumors swirl that the global crypto exchange FTX could become insolvent. In a Twitter thread, Zhao details how last year, Binance decided to sell its equity in FTX, receiving billions in stablecoins and the exchange’s native token FTT. Now Zhao, who heads the […]",
       "currencies": [
@@ -60,9 +25,9 @@
       "title": "Burned LUNC Crosses 26 Billion, But Is This Enough?",
       "link": "https://bitcoinist.com/burned-lunc-crosses-26-billion-but-is-this-enough/",
       "pubDate": "2022-11-07T23:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "The LUNA Classic (LUNC) community has now been burning the cryptocurrency for a couple of months now following the collapse of the Terra network. It has been on a reasonable momentum since then with the likes of Binance joining in on the action. So far, there have been more than 26 billion tokens burned, but […]",
       "currencies": [
         "LUNC"
@@ -74,117 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @enkrypt: We wrote a guide for connecting to @AcalaNetwork using @Enkrypt. Check it out below - and when you're done hop directly into #…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T22:42:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "Everyone at Ethos is so incredibly happy to see so much positive reception towards the $ETHOS Recovery Airdrop this…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T22:32:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Continues To Shine With Over 30% Gains",
-      "link": "NULL",
-      "pubDate": "2022-11-07T22:28:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LTC",
-        "FTT"
-      ]
-    },
-    {
-      "title": "Happy #HoloMonday! If you haven’t noticed, new #Holochain apps are getting built! Among those we want to reshare ab…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T22:07:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "US Seizes 50,000 Bitcoins",
-      "link": "NULL",
-      "pubDate": "2022-11-07T21:52:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Binance’s CZ says he’s building, not fighting amid FTX tensions",
-      "link": "NULL",
-      "pubDate": "2022-11-07T21:41:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "Binance CEO Changpeng \"CZ\" Zhao said he's surprised by reactions to the weekend announcement that his firm would start selling off holdings of FTX's FTT token.",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
-      "title": "We got some questions from the community, we'd like to share those questions and answers here...",
-      "link": "NULL",
-      "pubDate": "2022-11-07T21:36:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "Helium boasts of increased usage, but there’s more than meets the eye",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Dash 2 Trade Presale Blasts Past $5.5 Million Raised – Price Rise Incoming?",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
       "title": "Binance CEO Says He’s Not Trying to Fight FTX",
       "link": "https://u.today/binance-ceo-says-hes-not-trying-to-fight-ftx",
       "pubDate": "2022-11-07T20:25:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "exchange",
       "description": "Binance CEO Changpeng Zhao has spoken out about the feud with rival FTX",
       "currencies": [
@@ -196,146 +55,11 @@
       }
     },
     {
-      "title": "The XYO team would like to extend our heartfelt condolences to @JoeGibbsRacing following the loss of their vice cha…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:24:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "RT @theYellowBlocks: Makoto Tekemiya (@M4K070) Co-founder and CEO of @soramitsu_co clarifies that servers on the blockchain ¨work together,…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:21:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "GLX Hive Engine Market Now Live",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:10:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "FTX token shows signs of resilience after CZ tiff",
-      "link": "NULL",
-      "pubDate": "2022-11-07T20:04:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "\"Market makers are working overtime to maintain the price of FTT,\" according to data provider Kaiko.",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "US Government Now Has More BTC Than Largest Crypto Holders",
-      "link": "NULL",
-      "pubDate": "2022-11-07T19:37:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Roughly $1 billion worth of bitcoin was recovered in what the Department of Justice calls the second-largest financial seizure ever",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
-      "title": "What’s the best piece of NFT merch you’ve bought, or own?",
-      "link": "NULL",
-      "pubDate": "2022-11-07T19:18:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LOOKS"
-      ]
-    },
-    {
-      "title": "Together, Paxos and @PayPal are making watershed moments in cryptocurrency a reality. How? Listen to @EdwinAoki, CT…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T19:03:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "RT @sgfintechfest: Examining the case for stablecoins at #SFF were Richmond Teo, Co-founder of Paxos/BUSD and Changpeng Zhao, Founder & CEO…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T19:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "The U.S. Government Has Over $4.4B in Bitcoin It Could Dump Anytime",
-      "link": "NULL",
-      "pubDate": "2022-11-07T18:55:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Over the last few years, the United States government has become one of the largest Bitcoin whales simply by seizing illegally obtained funds. Eventually, it will probably seek to liquidate these funds through private auctions. The United States government owns an enormous amount of Bitcoin.Today, the Department of Justice (DOJ) announced that it seized a little over 50,676.17 BTC (worth...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 7
-      }
-    },
-    {
-      "title": "Odd movements out of Solana’s Wormhole bridge may benefit FTX",
-      "link": "NULL",
-      "pubDate": "2022-11-07T18:54:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "On-chain researchers suggest FTX may be pulling assets from Solana's Wormhole protocol to make sure it can cover liquidity needs.",
-      "currencies": [
-        "SOL",
-        "FTT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
       "title": "MATIC, XRP, Solana, DOGE Ripe For November Boost As Bitcoin Bulls Eye $25,000 Breakout",
       "link": "https://zycrypto.com/matic-xrp-solana-doge-may-be-ripe-for-november-boost-as-bitcoin-bulls-eye-25000-breakout/",
       "pubDate": "2022-11-07T18:45:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "According to crypto-focused onchain analytics firm Santiment, the altcoin hype will likely carry on through November, potentially extending to year-end.",
       "currencies": [
@@ -351,22 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @HeliumFndn: @SolanaConf Breakpoint is closing. @helium had a big presence this year. Here's what you missed",
-      "link": "NULL",
-      "pubDate": "2022-11-07T18:37:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "FTT Losses 13% in 24 Hours as Binance Adds Selling Pressure",
       "link": "https://usethebitcoin.com/ftx-losses-13-in-24-hours-as-binance-adds-selling-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=ftx-losses-13-in-24-hours-as-binance-adds-selling-pressure",
       "pubDate": "2022-11-07T18:37:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Usethebitcoin",
+      "sourceKey": "usethebitcoin",
       "category": "exchange",
       "description": "FTT has lost 13% of its value as the conflict between FTX and Binance continues. The digital asset of the FTX crypto exchange has been affected by Binance […]",
       "currencies": [
@@ -379,74 +92,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Have you joined the Ethos waitlist so far? Check it out at and earn free $ETHOS tokens as w…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T18:16:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "SBF calls for collaboration with Binance ‘for the ecosystem’",
-      "link": "NULL",
-      "pubDate": "2022-11-07T18:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "FTX’s founder denied that there were liquidity issues with the exchange’s FTT token and claimed to be the victim of false rumors.",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Lux Vega Sale Details Announced",
-      "link": "NULL",
-      "pubDate": "2022-11-07T17:57:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "MetaDerby ️ Weekly Updates ️ 10.30 - 11.5 8 Million $DBY coming to @klaytn_official Klaytn Gear Coming 🟢…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T17:45:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "DBY",
-        "HOOF"
-      ]
-    },
-    {
-      "title": "RT @XcademyOfficial: Today marks the start of the XCAD growth campaign. #TimeToMakeHistory",
-      "link": "NULL",
-      "pubDate": "2022-11-07T17:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Binance and FTX Face Off—But Which Crypto Exchange Will Come Out On Top?",
       "link": "https://cryptobriefing.com/binance-and-ftx-face-off-but-which-crypto-exchange-will-come-out-on-top/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-07T16:44:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "exchange",
       "description": "A spat between Changpeng Zhao and Sam Bankman-Fried could spark a crypto cold war between the space's two biggest exchanges. Conflict is brewing between two of crypto's biggest whales.Binance founder and CEO Changpeng \"CZ\" Zhao revealed Sunday his company would liquidate its exposure to FTX's FTT token, received as part of Binance's exit from FTX equity last year.On Twitter, Zhao teased that...",
       "currencies": [
@@ -459,101 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @HeliumFndn: Hey! New @solana followers, have you been LOVING learning about the @helium network? Keep the journey going by joining ou…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T16:29:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "FTX’s FTT risks drastic fall as tokens flood exchanges",
-      "link": "NULL",
-      "pubDate": "2022-11-07T16:17:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "Glassnode data, as analyzed by CryptoSlate, shows that around 50 million FTX’s FTT tokens have been dumped on exchanges following Changpeng Zhao’s announcement that Binance would liquidate its FTT position over the coming months.",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Agriculture as an industry requires a massive amount of water usage. With drought seasons and years becoming hotter…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T15:43:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "Hey scientists!🧪 Do you know the answer? #realtimechem #science #OA #openscience #scicomm #acwri #phdchat…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T15:22:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @Crypto_Dep: ️TOP #NFT Projects by Social Activity 7 November 2022 $TTC $FLOKI $CATE $SHM $FLOKIM $VINU $GMT $CHZ $AXS $VRA",
-      "link": "NULL",
-      "pubDate": "2022-11-07T14:31:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AXS",
-        "CHZ",
-        "FLOKIM"
-      ]
-    },
-    {
-      "title": "SBF says ‘FTX is fine. Assets are fine’ with over $1B in excess cash amid rumors of liquidity crunch",
-      "link": "NULL",
-      "pubDate": "2022-11-07T14:20:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "description": "FTX CEO Sam ‘SBF’ Bankman-Fried has taken to Twitter to call out a “competitor” for “trying to go after us” and reassured the industry that despite the attempt, “FTX is fine.",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 2
-      }
-    },
-    {
-      "title": "Meet @Bitcoin_Beyond, our Head of Protocol Stability. In his spare time, Connor enjoys playing golf, reading and sp…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T13:53:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Polygon (MATIC) jumps 5% in 24 hours despite crypto market in a sea of red; Here’s why",
       "link": "https://finbold.com/polygon-matic-jumps-5-in-24-hours-despite-crypto-market-in-a-sea-of-red-heres-why/",
       "pubDate": "2022-11-07T13:31:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "layer2",
       "description": "Polygon (MATIC) is among the beneficiaries of the recent relief rally across the general cryptocurrency market. However, MATIC is witnessing... Continue reading",
       "currencies": [
@@ -566,22 +126,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#USDD IS ON FIRE! TOMORROW 12 $USDD Trading Pairs will be listed on @HuobiGlobal with 0 FEE! Live Nov 8th f…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T13:16:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
       "title": "Sam Bankman-Fried Amid FTT Debacle: FTX Has Over $1 Billion Excess Cash, Client Assets Are Safe",
       "link": "https://en.ethereumworldnews.com/sam-bankman-fried-ftt-ftx-funds-safe/",
       "pubDate": "2022-11-07T13:11:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "regulation",
       "description": "Summary: Sam Bankman-Fried tweeted on Monday to assure FTX users that their funds and the crypto exchange remain out of immediate financial constraints following Binance boss Changpeng Zhao’s announcement about FTT. CZ’s tweet revealing Binance’s decision to exit the FTX utility token dubbed FTT has seemingly stirred a hornet’s nest, with FUD flooding social media and speculation that SBF’s...",
       "currencies": [
@@ -597,8 +146,8 @@
       "title": "Solana erases its ‘Google rally’ gains, but a 50% SOL price recovery is still in play",
       "link": "https://cointelegraph.com/news/solana-erases-its-google-rally-gains-but-a-50-sol-price-recovery-is-still-in-play",
       "pubDate": "2022-11-07T13:06:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Solana bulls show signs of countering the ongoing correction trend, raising anticipations that SOL price will recover in the coming months.",
       "currencies": [
@@ -612,28 +161,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "‘FTX is fine,’ Bankman-Fried insists as he appeals for Binance to work together",
-      "link": "NULL",
-      "pubDate": "2022-11-07T13:05:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Sam Bankman-Fried also threw a barb at Binance CEO Changpeng Zhao, saying \"I'd love it, @cz_binance, if we could work together for the ecosystem.\"",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Financial Crisis: Lebanese Economy Forces Residents Toward Crypto – Future of Money?",
       "link": "https://cryptonews.com/news/financial-crisis-lebanese-economy-forces-residents-toward-crypto-future-of-money.htm",
       "pubDate": "2022-11-07T12:39:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "regulation",
       "description": "As Lebanon’s financial woes continue, the Middle Eastern nation increasingly depends on cryptocurrencies, with many locals mining Bitcoin (BTC) to survive and using Tether (USDT) to buy groceries amid a legacy finance meltdown. ... Read More: Financial Crisis: Lebanese Economy Forces Residents Toward Crypto – Future of Money?",
       "currencies": [
@@ -650,8 +182,8 @@
       "title": "BitGo: Wrapped Dogecoin (wDoge) Allows $DOGE Holders to Interact With Ethereum DApps",
       "link": "https://www.cryptoglobe.com/latest/2022/11/bitgo-wrapped-dogecoin-wdoge-allows-doge-holders-to-interact-with-ethereum-dapps/",
       "pubDate": "2022-11-07T12:16:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Recently, BitGo, which works with clients, partners, and regulators to “deliver innovative security, custody, and liquidity solutions”, introduced a new cryptocurrency that should be of great interest to $DOGE holders: Wrapped Dogecoin (wDoge) on Ethereum. In a blog post published last Thursday (November 3), BitGo introduced wDoge, and here is what it had to say […]",
       "currencies": [
@@ -665,22 +197,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "With more than $254million on-chain invoices processed as at October 2022 on the protocol, invoice factoring using…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T12:10:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
       "title": "$FTT’s Performance 24 hours Following CZ’s revelation",
       "link": "https://en.ethereumworldnews.com/ftts-performance-24-hours-following-czs-revelation/",
       "pubDate": "2022-11-07T12:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: Yesterday, Binance CEO Changpeng Zhao revealed that the exchange intends to liquidate its FTT holdings. Putting the solvency of FTX in doubt, sellers have rampaged the FTT market in the last 24 hours. Daily trading volume was at a six-month high without a corresponding price growth. Following Binance CEO Changpeng Zhao’s confirmation that the cryptocurrency exchange would liquidate its...",
       "currencies": [
@@ -696,8 +217,8 @@
       "title": "Solana Price Prediction: Indecision Prevails After Rejection. So What Happens Now?",
       "link": "https://beincrypto.com/solana-price-prediction-indecision-prevails-after-rejection-so-where-now/",
       "pubDate": "2022-11-07T12:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The Solana (SOL) price failed to sustain its breakout and was rejected by the $37.60 resistance area on Nov. 5. The direction of the future trend remains unclear until a decisive movement occurs.",
       "currencies": [
@@ -713,8 +234,8 @@
       "title": "Neon Labs plans to support EVM on Solana in early December",
       "link": "https://www.theblock.co/post/183651/neon-labs-evm-solana-early-december?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-07T12:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "Neon Labs plans to deploy an Ethereum-based smart contract layer on the Solana blockchain in the first week of December.",
       "currencies": [
@@ -731,8 +252,8 @@
       "title": "XRP Could Beat BTC and DOGE on Twitter, CryptoLaw Founder Suggests, But There's Catch",
       "link": "https://u.today/xrp-could-beat-btc-and-doge-on-twitter-cryptolaw-founder-suggests-but-theres-catch",
       "pubDate": "2022-11-07T11:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "CryptoLaw founder believes that there is better candidate for \"currency of Twitter\" than Bitcoin or DOGE",
       "currencies": [
@@ -746,34 +267,11 @@
       }
     },
     {
-      "title": "RT @LassuytChristop: Web3 payment rails and stablecoins like $USDC and $DAI are game changers for businesses making cross-border payments.…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T11:40:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "REQ"
-      ]
-    },
-    {
-      "title": "RT @SolanaConf: @helium builders and partners talk about their migration to @solana at #SolanaBreakpoint. On stage are @web3princess of…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T11:27:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "FTX addresses user withdrawal complaints amid major token movement",
       "link": "https://cointelegraph.com/news/ftx-addresses-user-withdrawal-complaints-amid-major-token-movement",
       "pubDate": "2022-11-07T11:23:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "The exchange assured users in a series of Tweets that withdrawals should be moving along and matching engines are running as they should, though some users didn’t buy it.",
       "currencies": [
@@ -788,8 +286,8 @@
       "title": "FTX weekly stablecoin outflows surge as Binance piles on the pressure",
       "link": "https://www.theblock.co/post/183639/ftx-weekly-stablecoin-outflows-surge-as-binance-piles-on-the-pressure?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-11-07T11:14:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "trading",
       "description": "FTX has seen a huge surge in stablecoin outflows amid unsubstantiated insolvency fears related to sister firm Alameda Research.",
       "currencies": [
@@ -802,23 +300,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "You can trade a minimum of 300 BUSD and a maximum of 3,000 BUSD worth of #ABBC per month with #ABBCTrade. Once you…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T11:14:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "ABBC"
-      ]
-    },
-    {
       "title": "Solana price prediction for November 30, 2022",
       "link": "https://finbold.com/solana-price-prediction-for-november-30-2022/",
       "pubDate": "2022-11-07T11:12:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
       "currencies": [
@@ -830,56 +316,11 @@
       }
     },
     {
-      "title": "RT @AlexMCoffman: @jmarcelino showing how cost effective the @helium network is. Check it out for yourselves at: ht…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T11:06:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @RyanBethencourt: Great demo of @helium, decentralized wireless on @solana by @abhay with 4 live hotspots here at #SolanaBreakpoint http…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T11:05:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "RT @dspillere: Gm fam! The man @abhay showing the future of @helium $HNT @solana @SolanaConf @hotspotty",
-      "link": "NULL",
-      "pubDate": "2022-11-07T10:59:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "See the activity over the weekend and get into the game at",
-      "link": "NULL",
-      "pubDate": "2022-11-07T10:57:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Solana Token Down Double-Digits as NFT Growth Plummets",
       "link": "https://decrypt.co/113717/solana-down-double-digits-nft-growth-plummets",
       "pubDate": "2022-11-07T10:42:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "nft",
       "description": "The token backing the speedy layer-1 blockchain Solana has plummeted over the past 24 hours amid dwindling NFT activity.",
       "currencies": [
@@ -895,8 +336,8 @@
       "title": "BNB Could Jump to $443, Here's What Should Happen First: Analyst",
       "link": "https://u.today/bnb-could-jump-to-443-heres-what-should-happen-first-analyst",
       "pubDate": "2022-11-07T10:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "This crypto analyst believes that BNB is showing signs of strength",
       "currencies": [
@@ -908,22 +349,11 @@
       }
     },
     {
-      "title": "Looking for #freelance work? Interested in earning #crypto? Check out @anytaskofficial - a freelance marketplace wi…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T10:01:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
       "title": "Cardano founder says DOGE could help build decentralized Twitter",
       "link": "https://finbold.com/cardano-founder-says-doge-could-help-build-decentralized-twitter/",
       "pubDate": "2022-11-07T09:48:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "After the widely publicized purchase of Twitter (NYSE: TWTR) by Tesla (NASDAQ: TSLA) CEO Elon Musk, the founder of Cardano... Continue reading The post Cardano founder says DOGE could help build decentralized Twitter appeared first on Finbold.",
       "currencies": [
@@ -937,40 +367,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto War Between Binance And FTX Heats Up – SBF Takes The Fight",
-      "link": "NULL",
-      "pubDate": "2022-11-07T09:40:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "Let’s get ready to rumble. The war between two of the biggest bosses in crypto space, Binance CEO Changpeng Zhao and FTX CEO Sam Bankman-Fried (SBF) seems to be just picking up steam and is currently the most heated issue for the market. The drama began early Sunday morning when FTX’s FTT token took a […]",
-      "currencies": [
-        "FTT"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "1/ There has been miscommunication between us and the osmosis team, and misalignment within the @osmosiszone team.…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T09:02:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OSMO",
-        "BAND"
-      ]
-    },
-    {
       "title": "Dogecoin Trading in Turkey Surpasses Bitcoin and Ethereum Volume in the Past Month",
       "link": "https://beincrypto.com/dogecoin-trading-turkey-surpasses-bitcoin-ethereum-volume-past-month/",
       "pubDate": "2022-11-07T09:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Citizens in Turkey have traded over $380 million in Dogecoin over the past 30 days. This is more than both Bitcoin and Ethereum volumes combined. The post Dogecoin Trading in Turkey Surpasses Bitcoin and Ethereum Volume in the Past Month appeared first on BeInCrypto.",
       "currencies": [
@@ -985,90 +386,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @GuardaWallet: More #stablecoin support on Guarda Wallet ️ You are now able to flexibly manage @usddio $USDD on several blockchains of…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T08:41:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "We are proud to be your choice of #stablecoin on the market! Find out more about #USDD, the decentralized and ov…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T08:39:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "JUST IN: $AXS @axieinfinity is back on top 10 purchased tokens among 100 biggest #ETH whales in the last 24hrs C…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T08:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "AXS",
-        "BBW"
-      ]
-    },
-    {
-      "title": "Congrats to @KephiGallery for their recent partnership w/ one of the biggest art galleries in Argentina, Zurbaran!…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T08:10:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "Did you have time to read our quarterly report for Q3 yet? 🤔 It's a great way to start the week and keep yourself…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T08:08:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Wondering about Bitcoin’s decentralisation, environmental impact, fees and scaling? During @WeAreDevs Berlin,…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T07:52:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @ssiprotocol: The #SBTxWallet is another way out! To avoid giving personal data over & over again into private servers. A #SelfSovereig…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:43:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Vitalik reveals a new phase in the Ethereum roadmap: The Scourge",
       "link": "https://cointelegraph.com/news/vitalik-reveals-a-new-phase-in-the-ethereum-roadmap-the-scourge",
       "pubDate": "2022-11-07T05:42:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "The remaining milestones of the Ethereum roadmap consist of the Surge, the Scourge, the Verge, the Purge and the Splurge.",
       "currencies": [
@@ -1081,34 +403,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "KOK PLAY's first original drama &lt;Office Cooking&gt; will be uploaded every other week from episode 2 on Friday, Novemb…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:37:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KOK"
-      ]
-    },
-    {
-      "title": "RT @carol_licup: Last leg of Cabsycon/ Axie Infinity community meet up️ Thank you @Blockchain_SPC for making these children happy with th…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:35:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "GUILD"
-      ]
-    },
-    {
       "title": "Binance to sell FTX token holdings amid questions over trading arm Alameda finances",
       "link": "https://forkast.news/headlines/binance-ftx-token-holdings-trading-arm-alameda/",
       "pubDate": "2022-11-07T05:28:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "exchange",
       "description": "Binance CEO Changpeng Zhao said Binance will liquidate its remaining FTT tokens issued by the second-largest crypto exchange FTX amid questions over Alameda Research.",
       "currencies": [
@@ -1121,44 +420,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @HARA_JasmyCFO: SaganTosu Fun Token application launched on #GooglePlay /#AppleStore , presented by $Jasmy Inc. It comes standard with a…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:28:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "We're excited to share that @BinanceCustody now supports @BIFROSTio's native token $BFC and @BiFi_lending's nativ…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:22:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BFC"
-      ]
-    },
-    {
-      "title": "My LCDOT seems to have disappeared, though my Portfolio shows an overall balance higher than my Acala amount. But I used to see the LCDOT in my Acala app and now all I see is the Acala tokens. Does anyone know what may have happened? I hadn't logged in for a few months.",
-      "link": "NULL",
-      "pubDate": "2022-11-07T05:15:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
       "title": "SBF has been a ‘significant donor’ in the US midterm elections",
       "link": "https://cointelegraph.com/news/sbf-has-been-a-significant-donor-in-us-midterm-elections",
       "pubDate": "2022-11-07T04:21:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The FTX founder has reportedly spent almost $40 million mainly supporting Democrats during the current political cycle, according to Open Secrets.",
       "currencies": [
@@ -1171,23 +437,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @trondao: More from the @MessariCrypto report about the state of $USDD in Q3. \"The stablecoin remains well backed by non-native curre…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T03:37:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
       "title": "USDC Issuer Circle Adds Solana Support, But SOL Price Falls 10%",
       "link": "https://beincrypto.com/usdc-issuer-circle-adds-solana-support-sol-price-falls-10/",
       "pubDate": "2022-11-07T03:34:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "USDC issuer Circle is beefing up its Solana support in the first half of 2023 with the Euro Coin (EUROC) project and access to its Cross-chain Transfer Protocol.",
       "currencies": [
@@ -1201,40 +455,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin Price Starts Constructive Correction, Why BTC Could Drop Further",
-      "link": "NULL",
-      "pubDate": "2022-11-07T03:28:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin price traded to a new monthly high at $21,469 before it started a downside correction. BTC could drop towards $20,600 before it starts a fresh increase. Bitcoin gained pace above the $21,000 resistance zone before it faced sellers. The price is trading above $20,500 and the 100 hourly simple moving average. There is a key bearish trend line forming with resistance near $21,150 on the...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @HouseofChimera: What is the $XCAD Play Area? The Play Area allows $XCAD holders to mint a PLAY NFT; minting a PLAY, NFT costs $XCAD a…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T03:12:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ZIL",
-        "GZIL"
-      ]
-    },
-    {
       "title": "Binance to liquidate its entire FTX Token holdings after ‘recent revelations’",
       "link": "https://cointelegraph.com/news/binance-to-liquidate-its-entire-ftx-token-holdings-after-recent-revelations",
       "pubDate": "2022-11-07T02:55:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "Binance CEO Changpeng Zhao cited “recent revelations” as the reason for the liquidation, noting the sale of its tokens could take months to complete due to the size of its position.",
       "currencies": [
@@ -1250,8 +475,8 @@
       "title": "Binance Reveals FTX FTT Token Liquidation Intentions, Raising Insolvency Concerns",
       "link": "https://beincrypto.com/binance-ftx-ftt-token-liquidation-intentions-insolvency-concerns/",
       "pubDate": "2022-11-07T02:27:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "Binance founder Changpeng 'CZ' Zhao said on Sunday that the exchange is liquidating its position in the FTT token of its rival exchange, FTX.",
       "currencies": [
@@ -1262,65 +487,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "For those new to #Klaytn, @theSIXnetwork nicely sums up how to handle Klaytn Compatible Tokens (KCT) through the…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T02:09:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Get ready to race on @metaderby and win on the #Klaytn blockchain real soon!",
-      "link": "NULL",
-      "pubDate": "2022-11-07T02:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "The move is getting real @metaderby is ready to pump you up to race on the #Klaytn blockchain!",
-      "link": "NULL",
-      "pubDate": "2022-11-07T01:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "We're a sponsor for the @CoinbaseCloud Buidl the Future #hackathon! 🦾 Our #Klaytn bounty challenge has 5 tracks:…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T01:57:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "Congratulations to all the winners!!🥳 And also appreciate to all participants in collaboration with @Ancient8_gg!…",
-      "link": "NULL",
-      "pubDate": "2022-11-07T01:33:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BORA"
-      ]
     }
   ]
 }

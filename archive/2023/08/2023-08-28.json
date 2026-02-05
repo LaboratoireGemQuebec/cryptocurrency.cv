@@ -1,153 +1,15 @@
 {
   "date": "2023-08-28",
-  "fetchedAt": "2026-02-05T07:45:52.141Z",
-  "articleCount": 34,
+  "fetchedAt": "2026-02-05T07:48:35.538Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Filecoin finds recovery elusive after hitting long-term support",
-      "link": "NULL",
-      "pubDate": "2023-08-28T23:30:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "SUI and HBAR Slump Ahead of Latest Crypto Token Unlocks",
-      "link": "NULL",
-      "pubDate": "2023-08-28T23:19:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Bored Ape & Axie to Unlock 11% of Their Market Cap",
-      "link": "NULL",
-      "pubDate": "2023-08-28T23:19:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Technical Analysis BITCOIN, THORCHAIN, TELLOR",
-      "link": "NULL",
-      "pubDate": "2023-08-28T21:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Plot Twist: $20M in ETH to Sent to ‘Inaccessible’ Prime Trust Wallet",
-      "link": "NULL",
-      "pubDate": "2023-08-28T20:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TWT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Hedera Drives Launch of Asia’s First Digital Carbon Registry, GCR",
-      "link": "NULL",
-      "pubDate": "2023-08-28T19:59:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Binance Will Halt These 39 Liquidity Mining Pools This Week",
-      "link": "NULL",
-      "pubDate": "2023-08-28T19:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "ADA",
-        "DOT",
-        "WBTC",
-        "TRX",
-        "AVAX",
-        "MATIC",
-        "XMR",
-        "APE",
-        "FIL",
-        "ICP",
-        "THETA",
-        "NEO",
-        "CHZ",
-        "PAXG",
-        "GALA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "HBAR, OP, DYDX Set for Another Round of Token Unlocks",
-      "link": "NULL",
-      "pubDate": "2023-08-28T17:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Terra Classic price prediction as 5 Billion LUNC removed from staking",
-      "link": "NULL",
-      "pubDate": "2023-08-28T17:25:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Cardano Will Surpass Bitcoin and Ethereum: Cardano Founder",
       "link": "https://coinedition.com/cardano-will-surpass-bitcoin-and-ethereum-cardano-founder/",
       "pubDate": "2023-08-28T16:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "Charles Hoskinson, Cardano founder, predicts that the blockchain platfoFrm’s cryptocurrency, ADA, will surpass Bitcoin and Ethereum to become the biggest cryptocurrency in the world. Hoskinson predicted the Rare Evo blockchain event and said his product is currently the number one blockchain in development activity. Hoskinson told the listening audience at the blockchain event that Cardano’s...",
       "currencies": [
@@ -162,130 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "dYdX price: DYDX outlook ahead of $14M bump in token supply",
-      "link": "NULL",
-      "pubDate": "2023-08-28T15:53:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Cosmos: Why a bounce to $7.5 is possible amid strong bearish outlook",
-      "link": "NULL",
-      "pubDate": "2023-08-28T15:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Maker Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-28T15:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Hedera Down More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-28T15:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Monero: A new miner, growing concerns and the current state of the XMR token",
-      "link": "NULL",
-      "pubDate": "2023-08-28T14:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "New dYdX v4 reaches community vote stage",
-      "link": "NULL",
-      "pubDate": "2023-08-28T14:26:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Bitcoin Trades Above This Key Level; dYdX Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-08-28T14:03:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "ApeCoin’s tale of accumulation and selling sparks market speculation",
-      "link": "NULL",
-      "pubDate": "2023-08-28T13:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "DeFi Revolutionizing & Empowering Finance Through Decentralization",
-      "link": "NULL",
-      "pubDate": "2023-08-28T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "UNI",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – August 21 – August 27",
-      "link": "NULL",
-      "pubDate": "2023-08-28T13:24:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
       "title": "BlackRock is a major shareholder in 4 of the 5 largest Bitcoin miners",
       "link": "https://finbold.com/blackrock-is-a-major-shareholder-in-4-of-the-5-largest-bitcoin-miners/",
       "pubDate": "2023-08-28T12:54:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "BlackRock (NYSE: BLK) — one of the largest investment companies in the world — is positioning itself in the Bitcoin … Continued",
       "currencies": [
@@ -297,62 +40,11 @@
       }
     },
     {
-      "title": "Balancer Loses $900,000 to Security Vulnerability Despite Prior Warning",
-      "link": "NULL",
-      "pubDate": "2023-08-28T11:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "Binance Removes Cardano, MATIC, Pepe Coin, BTC & 35 Other Liquidity Pools, What It Means?",
-      "link": "NULL",
-      "pubDate": "2023-08-28T11:14:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "DOT",
-        "TRX",
-        "AVAX",
-        "MATIC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Oman Makes Big Investments in Bitcoin Mining Operations, But Is It Sharia Compliant?",
-      "link": "NULL",
-      "pubDate": "2023-08-28T10:48:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Binance Set to Remove PEPE and ADA Pairs From Liquidity Swap",
-      "link": "NULL",
-      "pubDate": "2023-08-28T10:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ADA",
-        "APE"
-      ]
-    },
-    {
       "title": "SHIB Price Explosion Hangs On As Shiba Inu’s Shibarium Relaunch Proves To Be ‘Game-Changer Factor’",
       "link": "https://zycrypto.com/shib-price-explosion-hangs-on-as-shiba-inus-shibarium-relaunch-proves-to-be-game-changer-factor/",
       "pubDate": "2023-08-28T09:22:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "After a shaky start to life, Shiba Inu’s Shibarium is inching toward a relaunch with developers introducing new measures to handle soaring demand levels.",
       "currencies": [
@@ -365,43 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "PEPE’s Weekly Losses Exceed 20%, BTC Slips Below $26K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-08-28T08:56:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "APE",
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Non-Fungible Tokens (NFTs): Anyone Can Do It and Earn From It",
-      "link": "NULL",
-      "pubDate": "2023-08-28T08:19:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DOGE",
-        "LTC",
-        "XMR",
-        "ETC"
-      ]
-    },
-    {
       "title": "September ‘crash’ to $22K? — 5 things to know in Bitcoin this week",
       "link": "https://cointelegraph.com/news/september-crash-5-things-bitcoin-btc-price-this-week",
       "pubDate": "2023-08-28T08:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "The BTC price looks frail as August comes to an end, and with Bitcoin bulls out of ammo, traders are preparing for more pain.",
       "currencies": [
@@ -412,69 +72,6 @@
         "negative": 4
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "dYdX Founder: Crypto Industry Should “Give Up” On US Markets",
-      "link": "NULL",
-      "pubDate": "2023-08-28T07:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Cronos Labs: growing use of AI indicates accelerated adoption of blockchain",
-      "link": "NULL",
-      "pubDate": "2023-08-28T07:33:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Quant Rises Upward In The Face Of Rejection At $105",
-      "link": "NULL",
-      "pubDate": "2023-08-28T06:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "Ethereum AMM Balancer Exploited for Roughly $900k Following Vulnerability Warning",
-      "link": "NULL",
-      "pubDate": "2023-08-28T05:01:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Price Could Restart Increase To $250 If It Breaks This Resistance",
-      "link": "NULL",
-      "pubDate": "2023-08-28T04:54:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

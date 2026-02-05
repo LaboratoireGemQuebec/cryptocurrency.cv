@@ -1,80 +1,15 @@
 {
   "date": "2023-08-29",
-  "fetchedAt": "2026-02-05T07:45:52.398Z",
-  "articleCount": 42,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Top Trader Says He’s Only Bullish on Solana and Two Other Crypto Assets Besides Bitcoin and Ethereum",
-      "link": "NULL",
-      "pubDate": "2023-08-29T19:55:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ]
-    },
-    {
-      "title": "dYdX Community Votes On Appchain Migration and V4 Deployment",
-      "link": "NULL",
-      "pubDate": "2023-08-29T19:51:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Cautions Against 'Next Bull Market' Assumptions",
-      "link": "NULL",
-      "pubDate": "2023-08-29T19:49:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Aave Launches sDAI Pool As MakerDAO Weighs Reducing Yields",
-      "link": "NULL",
-      "pubDate": "2023-08-29T19:35:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DAI",
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Cash Up 17% After Grayscale Prevails Over SEC in ETF Case",
-      "link": "NULL",
-      "pubDate": "2023-08-29T19:17:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "STX"
-      ]
-    },
     {
       "title": "X (Twitter) Obtains License To Store, Transfer, And Trade Bitcoin And Crypto",
       "link": "https://bitcoinmagazine.com/business/x-twitter-obtains-license-to-store-transfer-and-trade-bitcoin-and-crypto",
       "pubDate": "2023-08-29T19:06:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "This license also includes related service providers, such as wallets, payment processors, and exchanges.",
       "currencies": [
@@ -87,47 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Hater Peter Schiff Makes His First Comment on Grayscale’s Victory Against the SEC: “It Could Drive BTC Price Down”",
-      "link": "NULL",
-      "pubDate": "2023-08-29T18:34:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Best Play to Earn and Gambling Projects",
-      "link": "NULL",
-      "pubDate": "2023-08-29T18:05:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "AXS"
-      ]
-    },
-    {
-      "title": "5 billion LUNC unstaked, triggers price drop concerns",
-      "link": "NULL",
-      "pubDate": "2023-08-29T17:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Massive Whale Trades 10.000 Ethereum After Grayscale Wins the Lawsuit",
       "link": "https://en.bitcoinsistemi.com/massive-whale-trades-10-000-ethereum-after-grayscale-wins-the-lawsuit/",
       "pubDate": "2023-08-29T16:42:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "A huge cryptocurrency whale made heavy transactions after the Grayscale lawsuit decision was announced, according to onchain data. Continue Reading: Massive Whale Trades 10.000 Ethereum After Grayscale Wins the Lawsuit",
       "currencies": [
@@ -140,23 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "dYdX Community Votes on V4 Upgrade Proposal as $14 Million Worth of Tokens Unlock",
-      "link": "NULL",
-      "pubDate": "2023-08-29T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DYDX"
-      ]
-    },
-    {
       "title": "BREAKING: Grayscale Triumph: SEC Crushed, GBTC Rockets Towards ETF, Bitcoin Targets $28,000",
       "link": "https://www.newsbtc.com/breaking-news-ticker/breaking-grayscale-triumph-sec-crushed-gbtc-rockets-towards-etf-bitcoin-targets-28000/",
       "pubDate": "2023-08-29T15:17:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "In a significant turn of events for Bitcoin (BTC) and the overall market, cryptocurrency asset manager Grayscale has emerged victorious in its legal battle against the U.S. Securities and Exchange Commission (SEC). The U.S. District of Columbia Court of Appeals has ruled in favor of Grayscale, overturning the SEC’s lawsuit and potentially bringing the company one step closer to achieving Bitcoin Spot exchange-traded fund (ETF) status. Bitcoin Surges As Grayscale’s Legal Victory Boosts Market Sen",
       "currencies": [
@@ -173,8 +60,8 @@
       "title": "Securitize tokenizes U.S. Treasury Bond yield fund for accredited investors",
       "link": "https://www.theblock.co/post/247905/securitize-tokenizes-u-s-treasury-bond-yield-fund-for-accredited-investors?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-29T15:08:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "defi",
       "description": "The finance asset marketplace Tradeteq is launching a U.S. Treasury Bond token on the XDC network.",
       "currencies": [
@@ -187,45 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DWF Labs Withdraws 2M $CRV Tokens from Binance for Inventory Management",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "One Man’s Quest to Defeat Crypto Hackers Is More Old-School Than You Might Think",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:48:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "NEAR Protocol",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
       "title": "BREAKING: Decision Made in Grayscale-SEC Case, Grayscale Wins the Case!",
       "link": "https://en.bitcoinsistemi.com/breaking-decision-made-in-grayscale-sec-case-grayscale-wins-the-case/",
       "pubDate": "2023-08-29T14:25:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "The judge has finally made his decision in the highly followed Bitcoin Spot ETF case between Grayscale and the SEC. Continue Reading: BREAKING: Decision Made in Grayscale-SEC Case, Grayscale Wins the Case!",
       "currencies": [
@@ -236,312 +89,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Blockchain Is About To Surge, A CEO Says, And He's Launching A Fund To Take Advantage",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:15:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic Requisite Market Swap Reopening For LUNC And USTC To $1",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:13:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "SUI, HBAR Dip Despite New Partnerships Ahead of Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "PayPal’s PYUSD Fails To Capture Interest: 90% Of Supply Remains In Paxos’ Wallet",
-      "link": "NULL",
-      "pubDate": "2023-08-29T14:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CRV"
-      ]
-    },
-    {
-      "title": "DYDX Is Up By 11% In A Week, But Investors Must Watch Out For This Event",
-      "link": "NULL",
-      "pubDate": "2023-08-29T13:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Multisig Wallet and Wintermute Trading Send Large Amount of CHZ to Binance",
-      "link": "NULL",
-      "pubDate": "2023-08-29T12:52:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "DeFi Protocol Balancer Falls Victim to Exploit, Loses Nearly $900,000 in Recent Attack",
-      "link": "NULL",
-      "pubDate": "2023-08-29T12:35:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "ATOM Shows Resilience Amid Signs of Looming Bearish Turn",
-      "link": "NULL",
-      "pubDate": "2023-08-29T12:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "CRV, IMX, AAVE, COMP, YGG Poised for Strong Price Moves",
-      "link": "NULL",
-      "pubDate": "2023-08-29T12:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Top Trader Issues Crypto Warning, Says Next Bull Market Not a Guarantee – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-08-29T11:45:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Theta Network Price Prediction 2023-2030: Will THETA Price Hit $1.5 Soon?",
-      "link": "NULL",
-      "pubDate": "2023-08-29T11:40:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "THETA"
-      ]
-    },
-    {
-      "title": "DeOrderBook Set to Launch on Ethereum Mainnet, Pioneering Truly Trustless DeFi Optionality",
-      "link": "NULL",
-      "pubDate": "2023-08-29T11:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Tokenized U.S. Treasuries Arrive to XDC Network as Digital Bond Market Grows",
-      "link": "NULL",
-      "pubDate": "2023-08-29T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Governance proposal for upcoming dYdX Chain goes to Snapshot vote",
-      "link": "NULL",
-      "pubDate": "2023-08-29T10:44:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Millions of XRP Flow into Ripple Partner Exchange: What's Behind This Move?",
-      "link": "NULL",
-      "pubDate": "2023-08-29T09:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Stargate Deploys to Kava Chain Unifying Cosmos-Ethereum Liquidity",
-      "link": "NULL",
-      "pubDate": "2023-08-29T09:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "KAVA"
-      ]
-    },
-    {
-      "title": "DYdX to unlock 6.52M tokens worth $14M for community treasury, rewards",
-      "link": "NULL",
-      "pubDate": "2023-08-29T09:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "XDC Steals the Show With 15% Daily Surge, BTC Won’t Move From $26K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-08-29T08:53:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "CRV",
-        "XDC"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Trades Near Past Lows, Indicating A Potential Breakout",
-      "link": "NULL",
-      "pubDate": "2023-08-29T08:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "New crypto collaboration between SingularityNET and Vechain to revolutionize AI-Blockchain innovation",
-      "link": "NULL",
-      "pubDate": "2023-08-29T07:07:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "Hedera Sets Out for 1.15b Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-08-29T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Ethereum Staking Stash Almost Double Amount of ETH on Exchanges",
-      "link": "NULL",
-      "pubDate": "2023-08-29T06:31:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Lose Ground As Cryptocurrencies Struggle To Hold Current Support Levels",
-      "link": "NULL",
-      "pubDate": "2023-08-29T06:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BCH"
-      ]
-    },
-    {
-      "title": "Crypto Exchange Risks Exposed With These 3 Indicators: Glassnode",
-      "link": "NULL",
-      "pubDate": "2023-08-29T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "USDC",
-        "HT"
-      ]
-    },
-    {
-      "title": "Amid slow accumulation, Hedera gears up to unlock 1.5 billion tokens",
-      "link": "NULL",
-      "pubDate": "2023-08-29T00:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
     }
   ]
 }

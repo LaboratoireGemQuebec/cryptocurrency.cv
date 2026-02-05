@@ -1,28 +1,15 @@
 {
   "date": "2024-05-23",
-  "fetchedAt": "2026-02-05T07:45:53.267Z",
-  "articleCount": 127,
+  "fetchedAt": "2026-02-05T07:48:35.633Z",
+  "articleCount": 22,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Grayscale Increases Institutional Crypto Investment Options With NEAR And STX Trusts",
-      "link": "NULL",
-      "pubDate": "2024-05-23T23:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "STX"
-      ]
-    },
     {
       "title": "Dfinity’s new API boosts Internet Computer smart contracts with cross-chain prowess",
       "link": "https://cryptoslate.com/dfinitys-new-api-boosts-internet-computer-smart-contracts-with-cross-chain-prowess/",
       "pubDate": "2024-05-23T23:20:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "general",
       "description": "Dfinity Foundation has introduced a new API called EVM RPC to enhance cross-chain interoperability for Internet Computer (ICP) smart contracts, according to a May 23 press statement shared with CryptoSlate. EVM RPC allows ICP smart contracts to read and write on any Ethereum Virtual Machine-compatible chain, such as Optimism, Arbitrum, and Base, without relying on […]",
       "currencies": [
@@ -40,8 +27,8 @@
       "title": "SEC Interest in Ethereum ETFs Came from Nowhere, Or Did It?",
       "link": "https://dailycoin.com/sec-interest-ethereum-etfs-nowhere/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-05-23T23:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "ethereum",
       "description": "What prompted the SEC to break its silence and approve Ethereum ETF proposals?",
       "currencies": [
@@ -57,8 +44,8 @@
       "title": "Breaking News! Ethereum ETFs Approved By US SEC",
       "link": "https://cryptobriefing.com/sec-ethereum-etf-approval/",
       "pubDate": "2024-05-23T22:58:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "The US Securities and Exchange Commission said it has approved the launch of spot Ethereum ETFs for accelerated launch, according to a document uploaded to the agencys website. Ethereum ETFs face a weeks-long process of finalizing S-1 registration statements, a form required by the SEC for ETFs to list securities, and establishing exchange agreements through multiple rounds of SEC...",
       "currencies": [
@@ -74,8 +61,8 @@
       "title": "The SEC has approved eight spot Ether ETFs in a landmark decision",
       "link": "https://qz.com/the-sec-has-approved-eight-spot-ether-etfs-1851498074",
       "pubDate": "2024-05-23T22:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Qz",
+      "sourceKey": "qz",
       "category": "ethereum",
       "description": "The United States Securities and Exchange Commission has approved eight spot Ether exchange-traded funds (ETFs) in the country. In a landmark decision on Thursday evening, the financial watchdog approved 19b-4 forms for the ETFs from BlackRock, Fidelity, Grayscale, Bitwise, VanEck, Ark, Invesco Galaxy, and Franklin… Read more...",
       "currencies": [
@@ -93,8 +80,8 @@
       "title": "Ethereum ETF Proposals Clear Key SEC Hurdle in Sudden Crypto Turnaround",
       "link": "https://dailyhodl.com/2024/05/23/ethereum-etf-proposals-clear-key-sec-hurdle-in-sudden-crypto-turnaround/",
       "pubDate": "2024-05-23T22:47:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The U.S. Securities and Exchange Commission appears ready to pass eight spot Ethereum ETFs after expectations on their approval flipped overnight. The agency just approved form 19b-4 filings from BlackRock, Fidelity, VanEck, Grayscale, Bitwise, Ark, Franklin Templeton and Invesco Galaxy simultaneously. Although the products have nearly obtained the full go-ahead, the SEC must approve the...",
       "currencies": [
@@ -107,64 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is Axie Infinity (AXS) About To Skyrocket? Crypto Analysts Spot Major Breakout Patterns",
-      "link": "NULL",
-      "pubDate": "2024-05-23T22:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "AXS",
-        "RON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "AI tokens surge as whales dive in: What’s next for RNDR, FET?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T22:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR",
-        "FET"
-      ]
-    },
-    {
-      "title": "Grayscale Launches Investment Trusts for Stacks and Near Protocol",
-      "link": "NULL",
-      "pubDate": "2024-05-23T21:54:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "STX"
-      ]
-    },
-    {
-      "title": "Fantom unveils Sonic Foundation for new Sonic Chain",
-      "link": "NULL",
-      "pubDate": "2024-05-23T21:36:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
       "title": "Ethereum ETFs Approved in Abrupt SEC Policy About-Face",
       "link": "https://decrypt.co/231691/ethereum-etfs-approved-sec-policy-about-face",
       "pubDate": "2024-05-23T21:16:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Spot Ethereum ETFs will be traded in the United States, just months after spot Bitcoin ETFs received their own approval from the SEC.",
       "currencies": [
@@ -181,8 +115,8 @@
       "title": "Spot Ether ETFs receive official approval from the SEC",
       "link": "https://cointelegraph.com/news/sec-spot-ether-etf-approved",
       "pubDate": "2024-05-23T21:14:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "The U.S. Securities and Exchange Commission gave the green light to several spot Ether ETFs after speculation that the regulator was considering treating ETH as a security.",
       "currencies": [
@@ -198,8 +132,8 @@
       "title": "U.S. Securities Regulator Approves Spot Ether ETFs in Landmark Decision",
       "link": "https://thedefiant.io/news/tradfi-and-fintech/u-s-securities-regulator-approves-spot-ether-etfs-in-landmark-decision",
       "pubDate": "2024-05-23T21:14:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "ethereum",
       "description": "The SEC has issued an omnibus approval for ETH ETF applicants.",
       "currencies": [
@@ -212,58 +146,13 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance LUNC Burn Spikes Over 59 Billion After Latest Terra Classic Tokens Burn",
-      "link": "NULL",
-      "pubDate": "2024-05-23T21:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "SEC Approves the Ethereum ETFs",
       "link": "https://www.trustnodes.com/2024/05/23/sec-approves-the-ethereum-etfs",
       "pubDate": "2024-05-23T21:09:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Trustnodes",
+      "sourceKey": "trustnodes",
       "category": "ethereum",
       "description": "The Securities and Exchanges Commission (SEC) has approved the ethereum ETFs.",
-      "currencies": [
-        "ETH"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BREAKING: Ethereum spot ETFs approved by SEC",
-      "link": "NULL",
-      "pubDate": "2024-05-23T21:03:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "The US Securities and Exchange Commission said it has approved the launch of spot Ethereum ETFs for accelerated launch, according to a document uploaded to the agencys website. Ethereum ETFs face a weeks-long process of finalizing S-1 registration statements, a form required by the SEC for ETFs to list securities, and establishing exchange agreements through multiple rounds of SEC communication.The move is expected to bring a substantial influx of institutional capital into the Eth...",
-      "currencies": [
-        "ETH"
-      ],
-      "votes": {
-        "positive": 37,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BREAKING: Great News – Ethereum Spot ETFs Approved by SEC",
-      "link": "NULL",
-      "pubDate": "2024-05-23T21:03:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "The US Securities and Exchange Commission said it has approved the launch of spot Ethereum ETFs for accelerated launch, according to a document uploaded to the agencys website. Ethereum ETFs face a weeks-long process of finalizing S-1 registration statements, a form required by the SEC for ETFs to list securities, and establishing exchange agreements through multiple rounds of SEC communication.The move is expected to bring a substantial influx of institutional capital into the Eth...",
       "currencies": [
         "ETH"
       ],
@@ -277,8 +166,8 @@
       "title": "Bold Claim from Cardano Founder Charles Hoskinson: “I Don’t Think Bitcoin Will Survive”",
       "link": "https://en.bitcoinsistemi.com/bold-claim-from-cardano-founder-charles-hoskinson-i-dont-think-bitcoin-will-survive/",
       "pubDate": "2024-05-23T20:49:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Cardano (ADA) founder Charles Hoskinson evaluated the long-term future of Bitcoin (BTC) in his statement. Continue Reading: Bold Claim from Cardano Founder Charles Hoskinson: “I Don’t Think Bitcoin Will Survive”",
       "currencies": [
@@ -294,8 +183,8 @@
       "title": "Why Is The Ethereum Spot ETF Decision Still To Be Announced? Bloomberg Analyst Provides Latest Insights",
       "link": "https://en.bitcoinsistemi.com/why-is-the-ethereum-spot-etf-decision-still-to-be-announced-bloomberg-analyst-provides-latest-insights/",
       "pubDate": "2024-05-23T20:34:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "While everyone is waiting for the SEC's decision on Ethereum Spot ETFs, there is no development yet, even though it is 23:30. Bitcoin Spot ETFs were approved at 11:15 p.m. Regarding the delay, Bloomberg ETF analyst Eric Balchunas said: “Bloomberg Analyst Eric Balchunas: “No development yet. We're waiting to hear something. I've seen two different […] Continue Reading: Why Is The...",
       "currencies": [
@@ -309,151 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin, Ethereum, Dogecoin On A Knife's Edge As ETF Decision Looms: 'Weak Weak Weak' Market, Says Trader",
-      "link": "NULL",
-      "pubDate": "2024-05-23T20:31:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "RNDR",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Grayscale Launches Two New Trusts Investing in NEAR and STX",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:43:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "STX"
-      ]
-    },
-    {
-      "title": "Solana ETF Next? Ethereum Developments Stretch SOL ETF Odds",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "As the momentum continues with a plausible ETH ETF grant, analysts explain why Solana might be next in line.",
-      "currencies": [
-        "ETH",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 8,
-        "negative": 3
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "How SushiSwap Protects Users from Scam Tokens with GoPlus API",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "SUSHI"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Filecoin Falls More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:03:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Aptos Down More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:02:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "NEAR Protocol Down More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-05-23T19:01:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) Unveils New Token and Funding For Sonic Network",
-      "link": "NULL",
-      "pubDate": "2024-05-23T18:29:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM",
-        "DAG"
-      ]
-    },
-    {
-      "title": "Top 5 Booming Crypto to Buy For 100X Potential Ethereum ETF Take Off",
-      "link": "NULL",
-      "pubDate": "2024-05-23T18:11:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "SOL",
-        "MATIC",
-        "LDO",
-        "DAO",
-        "WIF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Securing the dYdX Chain: A Guide to Staking DYDX Tokens",
-      "link": "NULL",
-      "pubDate": "2024-05-23T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "DYDX"
-      ]
-    },
-    {
       "title": "Looming ETH ETF Deadline",
       "link": "https://www.bankless.com/looming-eth-etf-deadline",
       "pubDate": "2024-05-23T17:49:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bankless",
+      "sourceKey": "bankless",
       "category": "ethereum",
       "description": "The moment of truth is here for the first spot ETH ETF approvals",
       "currencies": [
@@ -466,65 +215,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Fantasy Top rebounds above US$1 mln to lead daily NFT sales",
-      "link": "NULL",
-      "pubDate": "2024-05-23T17:44:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETH",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Lightspeed Newsletter: Jupiter looks to collect a critical mass of on-chain assets, liquidity",
-      "link": "NULL",
-      "pubDate": "2024-05-23T17:33:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Is $77,600 The Next Step For Bitcoin? On-Chain Pricing Model Hints So",
-      "link": "NULL",
-      "pubDate": "2024-05-23T17:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Was Cathie Wood Right About Crypto As An Issue In 2024 White House Race? 'You Can't Be On The Wrong Side Of Young People And Win An Election'",
-      "link": "NULL",
-      "pubDate": "2024-05-23T17:21:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "WOO",
-        "ARK",
-        "JOE"
-      ]
-    },
-    {
       "title": "Algorand Pokes Ethereum and Solana In Anthony Scaramucci Featured Ad",
       "link": "https://coingape.com/algorand-pokes-ethereum-and-solana-in-anthony-scaramucci-featured-ad/",
       "pubDate": "2024-05-23T17:06:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "ethereum",
       "description": "The Algorand Layer-1 blockchain has released an advert that slammed Ethereum (ETH) and Solana (SOL) for their high cost and slow speed. The advert pitches Algorand as a better alternative with speed, low cost, and efficiency. Algorand Takes L1 Rivalry To New Level Algorand is one of the most revered blockchain networks, however, its luster",
       "currencies": [
@@ -538,553 +233,11 @@
       }
     },
     {
-      "title": "Gala Says Hacker Has Returned Over $20,000,000, Plans To Reimburse Users Affected by the Exploit",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:55:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Digital Second Amendment: Preserving Bitcoin Rights",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:40:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ]
-    },
-    {
-      "title": "Grayscale launches investments trusts for Stacks and Near Protocol",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "NEAR",
-        "STX"
-      ]
-    },
-    {
-      "title": "An Ethereum ETF Could Return 'Animal Spirits' To Crypto Reminiscent Of The 10x DOGE, SHIB Runs In 2021, Predicts Trader",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:27:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "DOGE",
-        "DOT",
-        "SHIB",
-        "FIL",
-        "ICP",
-        "AXS",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Montenegrin Justice Minister discussed Do Kwon’s case with SEC",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:25:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Hong Kong Regulators Plan to Allow Staking For Ethereum ETFs",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:15:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Ether ETFs approval could drive a 60% price increase, according to a crypto firm",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK",
-        "JOE"
-      ]
-    },
-    {
-      "title": "USDD partners ignore HTX danger",
-      "link": "NULL",
-      "pubDate": "2024-05-23T16:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Ethereum ETF rumors drive dramatic rise in ETH/BTC ratio",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:45:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Jupiter Unveils 'Giant Unified Market' to Bring RWAs, Stocks, and Forex to Solana",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash (BCH) Rises Bullishly with Strong On-Chain Data Support",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Zeneca’s portfolio peaked at $20M — and he has ‘2021 vibes’ again: NFT Collector",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "ITEM Systems bringing interactive scavenger hunt to Consensus 2024",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:21:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "SEC Chairman Gary Gensler Speaks on Approval of Ethereum Spot ETFs: He May Have Dropped a Hint",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:18:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) Value Up Only 17% Despite Bull Run, Traders Jump To Mollars ICO",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:09:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Ethereum (ETH) Exchange Volume Drops To 13.7M, ETF Crunch At Play?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:09:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MV"
-      ]
-    },
-    {
-      "title": "US lawmakers urge SEC’s Gensler to approve spot Ethereum ETF",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:06:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Wrapped Bitcoin Falls More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "#Breakout2024 – The Year of Radix",
-      "link": "NULL",
-      "pubDate": "2024-05-23T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "RUNE",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Grabby Trump (GRATRUMP) to Skyrocket 13,000% as KuCoin Listing Announced, While Shiba Inu and Dogecoin Struggle",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:59:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "KCS"
-      ]
-    },
-    {
-      "title": "ByBit insolvency rumors highlight Ethena’s centralization",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:55:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Grayscale Investments launches Near and Stacks crypto trusts",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:53:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Render and Helium fuel expansion of Solana’s DePIN ecosystem: Flipside",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:52:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "RNDR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cronos Upgrades zkEVM Testnet to Tethys before Mainnet Launch",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:52:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "CRO"
-      ]
-    },
-    {
-      "title": "Why Monero Will Survive Despite Being Delisted by Exchanges",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:51:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Stepn is Back: Solana-Based Game Gets Social Upgrade",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:47:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "GMT"
-      ]
-    },
-    {
-      "title": "Aave’s TVL Rises by $2.2 Billion Amid Anticipation of Spot Ethereum ETFs Approval",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:37:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "UNI",
-        "ETC",
-        "AAVE",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "This BlackRock-Related Crypto Is Termed 'The Strongest ETH Beta That Nobody Is Talking About'",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:33:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Fantom (FTM) Price Recovery Hindered by Resistance Block",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Grayscale Launches Grayscale Stacks and Grayscale Near Trust Funds",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:20:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "API3 Hits $1B Milestone in TVS, Showcasing Rapid Growth and Developer-Focused Approach",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:19:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
-      "title": "TruthLabs Exposes Ethereum’s ICO Ties to Bitcoins from Silk Road and Mt.Gox",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:12:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ETH",
-        "MEW",
-        "SILK"
-      ]
-    },
-    {
-      "title": "TRON Network Surpasses 231 Million Accounts, Outpaces Ethereum in Transaction Fees",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:08:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TRX",
-        "BTT"
-      ]
-    },
-    {
-      "title": "Terra Classic Price Analysis As Trading Volume Plunges To $77M: What’s Next For LUNC?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:05:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Grayscale Launches New Investment Trusts With Exposure To Bitcoin Layer 2 Projects",
-      "link": "NULL",
-      "pubDate": "2024-05-23T14:01:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "LINK",
-        "NEAR",
-        "STX"
-      ]
-    },
-    {
-      "title": "USDe Market Cap Jumps amid Spot ETH ETF Approval Speculation",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:54:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "AAVE",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Altcoins to buy for 100X Profits in June",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:52:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Binance’s Most Searched Tokens Show Shifts in Crypto Trends",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:40:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "NEAR",
-        "PEPE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bittensor Price Spikes 14.5% – Is It Too Late to Buy TAO and Could This Other Meme Coin Outperform?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:36:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "Bittensor (TAO) May Shed Gains as Key Indicator Signals Reversal",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "Binance Legal Struggles And Market Exit From Nigeria",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
       "title": "US Lawmakers pressure SEC for Ethereum ETF approval",
       "link": "https://cryptobriefing.com/ether-etfs-sec/",
       "pubDate": "2024-05-23T13:19:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "A bipartisan group of US lawmakers sent a letter to the SEC urging the approval of spot Ethereum exchange-traded funds (ETFs), as reported by Politico. The group consists of five members of the House Financial Services Committee, two Republicans and three Democrats, and is led by Rep. French Hill.The letter mentions the approval of spot Bitcoin ETFs in January, claiming that it represents \"a...",
       "currencies": [
@@ -1098,84 +251,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bullish Momentum: AXS Eyes $22 Resistance, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:18:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Santiment Warns These Popular Altcoin Investors: A $52 Million Dump May Come!",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:07:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "RNDR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Little Known Meme Coin CorgiAI Up 60%, Flips Pepecoin and Memecoin",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:02:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Grayscale Launches Trusts for Bitcoin Layer-2 Stacks, Near Protocol",
-      "link": "NULL",
-      "pubDate": "2024-05-23T13:01:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "STX"
-      ]
-    },
-    {
-      "title": "Bybit CEO Denies Insolvency Rumors, Confirms Healthy Balance Sheet",
-      "link": "NULL",
-      "pubDate": "2024-05-23T12:54:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "USDC",
-        "SOL",
-        "LTC"
-      ]
-    },
-    {
       "title": "Major Cardano Meme Coin SNEK Eyes Epic 21.6% Pump",
       "link": "https://u.today/major-cardano-meme-coin-snek-eyes-epic-216-pump",
       "pubDate": "2024-05-23T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "SNEK, largest meme coin of Cardano, has surged over 20% this week, fueled by meme mania and potential for major exchange listings",
       "currencies": [
@@ -1187,22 +267,11 @@
       }
     },
     {
-      "title": "Terra Classic (LUNC) Rallies After Key Governance Proposal Approval",
-      "link": "NULL",
-      "pubDate": "2024-05-23T12:25:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Ethereum (ETH) Call from US Lawmakers to the SEC! \"Confirm!\"",
       "link": "https://en.bitcoinsistemi.com/ethereum-eth-call-from-us-lawmakers-to-the-sec-confirm/",
       "pubDate": "2024-05-23T12:20:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "Members of Congress called on the US Securities and Exchange Commission (SEC) to approve spot Ethereum ETF applications. Continue Reading: Ethereum (ETH) Call from US Lawmakers to the SEC! \"Confirm!\"",
       "currencies": [
@@ -1215,22 +284,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SUI Network TVL Expands to Record High, After Peak Number of New Wallets Created in May",
-      "link": "NULL",
-      "pubDate": "2024-05-23T12:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
       "title": "Ethereum Rises Ahead of ETF Decision",
       "link": "https://www.trustnodes.com/2024/05/23/ethereum-rises-ahead-of-etf-decision",
       "pubDate": "2024-05-23T12:09:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Trustnodes",
+      "sourceKey": "trustnodes",
       "category": "ethereum",
       "description": "Ethereum crossed $3,900, touching $3,920 as of writing, ahead of the expected spot ETF decision later today.",
       "currencies": [
@@ -1246,8 +304,8 @@
       "title": "Bitcoin price at $150K in 2024 is 'base case' — Tom Lee",
       "link": "https://cointelegraph.com/news/bitcoin-price-150k-in-2024-base-case-tom-lee",
       "pubDate": "2024-05-23T12:07:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin bull Lee sees BTC price action doubling its current all-time highs before the end of the year.",
       "currencies": [
@@ -1263,8 +321,8 @@
       "title": "Solana Steps Up To The Plate: CEO Predicts It Could Be Next Crypto ETF",
       "link": "https://bitcoinist.com/solana-ceo-predicts-it-could-be-next-crypto-etf/",
       "pubDate": "2024-05-23T12:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "The long-awaited approval of a spot exchange-traded fund (ETF) for Ethereum in the US seems imminent, and industry insiders are already looking ahead. Solana, a high-speed blockchain network, is emerging as a potential frontrunner for the next cryptocurrency ETF. Related Reading: US House Delivers Surprise Knockout: Sweeping FIT21 Crypto Bill Passes Brian Kelly, founder and […]",
       "currencies": [
@@ -1282,8 +340,8 @@
       "title": "Protocol Village: HAQQ-evmOS Integration Enables Cross-Chain With Cosmos, Ethereum",
       "link": "https://www.coindesk.com/tech/2024/05/23/protocol-village?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-05-23T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "ethereum",
       "description": "The latest in blockchain tech upgrades, funding announcements and deals. For May 23. NOTE: Protocol Village will be on hiatus May 24-June 2 as we cover CoinDesk's Consensus conference in Austin, Texas. We will resume publishing June 3. Hope to see you there!",
       "currencies": [
@@ -1297,240 +355,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Update: Polkadot Nears $8, Chainlink’s Big Deal, Bitcoin Cash Hits $500, and Furrever Token’s Lucrative Presale",
-      "link": "NULL",
-      "pubDate": "2024-05-23T11:47:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOT",
-        "LINK",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Solana Memecoins with 100X Gains Potential This Week",
-      "link": "NULL",
-      "pubDate": "2024-05-23T11:47:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "SPX",
-        "CHEEMS",
-        "MANEKI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "New Crypto Legislation FIT 21: Cardano’s Decentralization Advantage",
-      "link": "NULL",
-      "pubDate": "2024-05-23T11:26:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Self-custodial Wallet MetaMask Plans Bitcoin Integration Soon: Report",
-      "link": "NULL",
-      "pubDate": "2024-05-23T11:22:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Triumph Group (TGI) Beats EPS and Revenue Forecasts in Fiscal Q4 2024",
-      "link": "NULL",
-      "pubDate": "2024-05-23T11:19:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Former nChain CEO jailed for 10 months over Craig Wright leaks",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:55:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "GAL"
-      ]
-    },
-    {
-      "title": "StarkWare Introduces ZKThreads to Improve DApp Scalability",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:50:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "Gate.io Ceases Operations in Hong Kong amid Tightening Crypto Regulations",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:39:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Can Open Campus’s EDU Token Disrupt the $5 Trillion Education Industry?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:39:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EDU"
-      ]
-    },
-    {
-      "title": "Optimism (OP) Price Under Pressure Due to Whale Selling",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
-      "title": "Binance Megadrop Announces Listing of LISTA as Its 2nd Project",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:23:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "DAO"
-      ]
-    },
-    {
-      "title": "BNB Chain’s Thriving AI Landscape and Infrastructure: An Overview",
-      "link": "NULL",
-      "pubDate": "2024-05-23T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "SAFE",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Taiko Announces a ‘Genesis Airdrop’ Pre-Mainnet Launch",
-      "link": "NULL",
-      "pubDate": "2024-05-23T09:51:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Gate.HK Withdraws License Application, Halts Hong Kong Operations",
-      "link": "NULL",
-      "pubDate": "2024-05-23T09:40:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "GT"
-      ]
-    },
-    {
-      "title": "Staking Sacrificed: BlackRock, Grayscale, Bitwise Amend Spot Ethereum ETF Proposals",
-      "link": "NULL",
-      "pubDate": "2024-05-23T09:33:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Tiny Pepe, Big Dreams: Memecoin Explodes, Eyes Dominance In The Dog House",
-      "link": "NULL",
-      "pubDate": "2024-05-23T09:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "PEPECOIN"
-      ]
-    },
-    {
-      "title": "Decentralized AI Platform Bittensor Gains 15% Amid Unconfirmed Grayscale Rumors",
-      "link": "NULL",
-      "pubDate": "2024-05-23T08:59:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "TAO"
-      ]
-    },
-    {
       "title": "Ethereum ETF Approval Could Spur 60% Rally as ETH Buying Increases",
       "link": "https://www.coindesk.com/markets/2024/05/23/ethereum-etf-approval-could-spur-60-rally-as-eth-buying-increases?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-05-23T08:45:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "ethereum",
       "description": "Holders cumulatively bought over 100,000 ETH in spot markets on Tuesday, the highest daily level since September 2023.",
       "currencies": [
@@ -1546,8 +375,8 @@
       "title": "Hong Kong Sees Record Inflows for Ethereum ETFs",
       "link": "https://coinpaprika.com/news/hong-kong-sees-record-inflows-for-ethereum-etfs/",
       "pubDate": "2024-05-23T08:34:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "Ethereum ETFs in Hong Kong hit record inflows, while Bitcoin ETFs continue to perform strongly, as investors speculate on potential US SEC approvals.",
       "currencies": [
@@ -1559,262 +388,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Exchange Upbit Released a New Listing Announcement!",
-      "link": "NULL",
-      "pubDate": "2024-05-23T07:34:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OAS"
-      ]
-    },
-    {
-      "title": "Nvidia Smashes Q1 2024 Estimates, Plans 10-for-1 Stock Split in June",
-      "link": "NULL",
-      "pubDate": "2024-05-23T06:52:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR",
-        "FET",
-        "AGIX",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Artificial general intelligence still more than 10 years away: Baidu CEO",
-      "link": "NULL",
-      "pubDate": "2024-05-23T06:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGI",
-        "GPT"
-      ]
-    },
-    {
-      "title": "NEAR to Focus on User-Owned AI",
-      "link": "NULL",
-      "pubDate": "2024-05-23T06:17:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Nvidia’s Q1 results sent its stock soaring 6% but AI tokens barely moved",
-      "link": "NULL",
-      "pubDate": "2024-05-23T06:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR",
-        "FET"
-      ]
-    },
-    {
-      "title": "Crypto News Today: Markets Stagnate Amid Fed Uncertainty",
-      "link": "NULL",
-      "pubDate": "2024-05-23T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "TON",
-        "CORE",
-        "JASMY",
-        "KAS",
-        "PEPE",
-        "TAO",
-        "WIF",
-        "FLOKI",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Shiba Inu Magazine Unveils 25th Edition, SHIB & K9 To Seize Global Limelight",
-      "link": "NULL",
-      "pubDate": "2024-05-23T05:29:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Experts Discuss Regulatory Challenges and the Potential for Spot Solana ETFs",
-      "link": "NULL",
-      "pubDate": "2024-05-23T05:05:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "SOL",
-        "MATIC",
-        "LTC",
-        "ETN"
-      ]
-    },
-    {
-      "title": "UK Gets Its First Low-Cost Crypto ETPs as WisdomTree Lands FCA Approval",
-      "link": "NULL",
-      "pubDate": "2024-05-23T05:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETHW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Investing In DePIN: Discover The Minutes Network & MNT",
-      "link": "NULL",
-      "pubDate": "2024-05-23T04:46:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNT"
-      ]
-    },
-    {
-      "title": "This One Crypto Is Most Associated With NVDA, Here How It's Doing After The Tech Giant's Blockbuster Quarter",
-      "link": "NULL",
-      "pubDate": "2024-05-23T03:40:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SHIB",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Polkadot Price Sets Sights on New Highs: DOT Bullish Momentum Building",
-      "link": "NULL",
-      "pubDate": "2024-05-23T02:58:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOT",
-        "TUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Bitcoin return to $73K could be a start to ‘escape velocity’ phase — Analyst",
-      "link": "NULL",
-      "pubDate": "2024-05-23T02:32:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "BlockDAG Dashboard Upgrade Boosts Presale to $30M Amid Litecoin and Lido DAO Struggles",
-      "link": "NULL",
-      "pubDate": "2024-05-23T02:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now May 22 – Dogwifhat, Bittensor, Dogecoin",
-      "link": "NULL",
-      "pubDate": "2024-05-23T01:25:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "TAO",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Hits Crucial Support: Will Bulls Ignite a Fresh Increase?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T01:25:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Ethereum Whales Come Alive: Are They Buying Or Selling?",
-      "link": "NULL",
-      "pubDate": "2024-05-23T01:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Whale Activity Surges in Optimism ($OP) and Chiliz ($CHZ) in ‘Signal Foreshadowing Price Reversals’",
-      "link": "NULL",
-      "pubDate": "2024-05-23T00:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "CHZ",
-        "OP"
-      ]
     }
   ]
 }

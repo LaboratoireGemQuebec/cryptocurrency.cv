@@ -1,16 +1,16 @@
 {
   "date": "2021-01-18",
-  "fetchedAt": "2026-02-05T07:45:51.885Z",
-  "articleCount": 14,
+  "fetchedAt": "2026-02-05T07:48:35.489Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
     {
       "title": "Chainlink Wealth Gap Widens as Top 1% Own Over 80% of LINK",
       "link": "https://beincrypto.com/chainlink-wealth-gap-widens-as-top-1-own-over-80-of-link/",
       "pubDate": "2021-01-18T19:26:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "The news is good for LINK holders, however, not necessarily on the wealth equality scale. The top 1% of holders now own over 80% of the supply, According to Glassnode. The on-chain market intelligence firm explains: “LINK Percent Balance of Top 1% Addresses just reached a 3-year high of 81.737%. Previous 3-year high of 81.658% … Continued",
       "currencies": [
         "LINK"
@@ -24,9 +24,9 @@
       "title": "VeChain (VET) Rebounds After Correction from All-Time High",
       "link": "https://beincrypto.com/vechain-vet-rebounds-after-correction-all-time-high/",
       "pubDate": "2021-01-18T15:48:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "While a short-term rejection could occur, VeChain is expected to eventually resume its upward movement toward new all-time highs. VeChain Scores New All-Time High The weekly chart shows that VET has finally moved above the $0.022 area, which had been acting as resistance since July 2020. On Jan. 6, VET reached a new … Continued",
       "currencies": [
         "VET"
@@ -38,49 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Today we observe #MLKDay. Dr. King's influence and teachings are just as important today as they were 50 years ago.…",
-      "link": "NULL",
-      "pubDate": "2021-01-18T15:45:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "Two days to go before our first official Community Gathering. Make sure you save the date! Besides the live comment…",
-      "link": "NULL",
-      "pubDate": "2021-01-18T15:43:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Bonfida merkeziyetsiz borsası artık Türkçe! 🇹🇷 @bonfida üzerinde, $BTC, $ETH ve $USDC kripto paralarını çok az bir…",
-      "link": "NULL",
-      "pubDate": "2021-01-18T14:18:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDC",
-        "TRYB"
-      ],
-      "votes": {
-        "positive": 41,
-        "negative": 21
-      }
-    },
-    {
       "title": "You can now set up your #Pollen node on #Azure Marketplace in 1-click thanks to the implementation by @AgEikona. Co…",
       "link": "https://twitter.com/iotatoken/status/1351122583991840770",
       "pubDate": "2021-01-18T11:01:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "MIOTA"
@@ -92,77 +54,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @btsfav: make sure to cross post your #HIVE blogs to #Torum!",
-      "link": "NULL",
-      "pubDate": "2021-01-18T10:38:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 39 - The News in #DeFi #hive",
-      "link": "NULL",
-      "pubDate": "2021-01-18T10:38:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "[ARK Weekly Price & Trading Discussion Thread] - January 18, 2021",
-      "link": "NULL",
-      "pubDate": "2021-01-18T09:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "With the latest upgrade, anyone can issue a wrapped #ERC20 token via #TomoIssuer add it to #TomoBridge for other us…",
-      "link": "NULL",
-      "pubDate": "2021-01-18T08:31:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "With the latest upgrade, anyone can issue a wrapped #ERC20 token via #TomoIssuer &amp; add it to #TomoBridge for others…",
-      "link": "NULL",
-      "pubDate": "2021-01-18T08:22:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "Open it or not? Here are some $RP cases demonstrated in details(Part1/2)",
-      "link": "NULL",
-      "pubDate": "2021-01-18T07:50:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
       "title": "Ethereum Layer 2 Optimism Increasing with Mainnet Soft Launch",
       "link": "https://beincrypto.com/ethereum-layer-2-optimism-increasing-mainnet-soft-launch/",
       "pubDate": "2021-01-18T07:14:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Following a year of development, Layer-2 Ethereum solutions provider Optimism has soft-launched on the mainnet over the weekend. In its latest blog post, the Optimism team laid out the particulars of the launch and detailed the battle testing that still needs to be carried out on the network. Industry leaders such as Uniswap founder Hayden … Continued",
       "currencies": [
@@ -174,17 +70,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "The fact that you might not know: 51 percent of the world’s population lives in those countries inside this circle.",
-      "link": "NULL",
-      "pubDate": "2021-01-18T02:52:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "HYN"
-      ]
     }
   ]
 }

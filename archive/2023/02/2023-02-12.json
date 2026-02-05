@@ -1,59 +1,15 @@
 {
   "date": "2023-02-12",
-  "fetchedAt": "2026-02-05T07:45:52.700Z",
-  "articleCount": 40,
+  "fetchedAt": "2026-02-05T07:48:35.584Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "There won't be any #crypto commercials this #SuperBowl Sunday, but #Ethos_io is covering the spread with a little…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T23:15:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Join us tomorrow ⬇️",
-      "link": "NULL",
-      "pubDate": "2023-02-12T22:50:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CVC"
-      ]
-    },
-    {
-      "title": "RT @4societyz: Here’s how I made the tweet quoted below using @ArcBlock_io new #AiKit 🤖 $ABT",
-      "link": "NULL",
-      "pubDate": "2023-02-12T22:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "Check out our founder explain what composability is and why it's important - don't miss out on this essential know…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T22:48:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
     {
       "title": "ConsenSys Founder Doubts U.S. Regulators Will Classify Ethereum as a Security",
       "link": "https://www.cryptoglobe.com/latest/2023/02/consensys-founder-doubts-u-s-regulators-will-classify-ethereum-as-a-security/",
       "pubDate": "2023-02-12T22:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Joseph Lubin, co-founder of Ethereum (ETH) and founder of ConsenSys, says there is little chance that U.S. financial regulators will call $ETH a security. During a recent interview with Cointelegraph, Lubin was asked his thoughts on the possibility of $ETH being labeled as a security with Ethereum’s transition to a proof-of-stake (PoS) model. He said, I […]",
       "currencies": [
@@ -65,77 +21,11 @@
       }
     },
     {
-      "title": "RT @familiarcow: Doing an AMA tomorrow about @THORChain, come through and ask some questions! Cc: @ninerealms_cap",
-      "link": "NULL",
-      "pubDate": "2023-02-12T22:27:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "@coingecko update Boba Network () GitHub to",
-      "link": "NULL",
-      "pubDate": "2023-02-12T22:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BOBA"
-      ]
-    },
-    {
-      "title": "The power of #composablearchitecture is here! Check out the #blocklets from @ArcBlock and see how you can compose t…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T21:56:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "Congratulations to the lucky winner who just won 2023 ABT in the Lantern Festival Sweepstakes! The gift card sweeps…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T21:53:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ABT"
-      ]
-    },
-    {
-      "title": "@CoinMarketCap ticket 617439",
-      "link": "NULL",
-      "pubDate": "2023-02-12T21:45:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BOBA"
-      ]
-    },
-    {
-      "title": "Hive Basic Income (2nd month )...",
-      "link": "NULL",
-      "pubDate": "2023-02-12T21:04:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "HIVE"
-      ]
-    },
-    {
       "title": "MATIC, HBAR, LDO and BIT gather strength as Bitcoin price rebounds",
       "link": "https://cointelegraph.com/news/matic-hbar-ldo-and-bit-gather-strength-as-bitcoin-price-rebounds",
       "pubDate": "2023-02-12T20:25:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "BTC price could remain range-bound in the near term, but MATIC, HBAR, LDO and BIT could continue higher.",
       "currencies": [
@@ -152,82 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "If you missed the $USDD or the #TRON Q4 reports, this article from @Bloomberg covers them both! \"Messari's report…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T20:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD",
-        "WTRX"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 147 – The News in #DeFi",
-      "link": "NULL",
-      "pubDate": "2023-02-12T19:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @SasuRobert: Once the resource pool becomes large enough, and live applications demonstrate a clear accumulation of utility and benefits…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T19:19:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EGLD",
-        "WEGLD"
-      ]
-    },
-    {
-      "title": "$D2T token is the token for Dash 2 Trade #Web3 platform. The $D2T token will be used for subscriptions to the d…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T18:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "D2T"
-      ]
-    },
-    {
-      "title": "\"Space has an immense impact on our daily lives. Think, for example, of Google Maps or any other navigation softwar…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T17:01:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "LSK"
-      ]
-    },
-    {
-      "title": "RT @DYORCryptoBot: [Scan results - - 15m] Top 5 bullish trends on BTC pair $SOLO $VRA $SDN $PAY $LEO Top 5 bulli…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T16:41:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LEO",
-        "PLACE"
-      ]
-    },
-    {
       "title": "Solana’s DeFi space suffers, but here’s the unexpected NFT twist",
       "link": "https://ambcrypto.com/solanas-defi-space-suffers-but-heres-the-unexpected-nft-twist/",
       "pubDate": "2023-02-12T16:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "defi",
       "description": "Solana’s DeFi activity declines, however, the NFT market shows a promising future. Following the broader market, the SOL token faces selling pressure. Solana’s hold in the DeFi space continued to dwindle. Despite the overall market observing a recovery, Solana underperformed in the DeFi market. Well, the fall in DeFi activity could signal an overall decline […]",
       "currencies": [
@@ -240,90 +59,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @alexfilatoff: @aestimaorg genuinely intrigued and touched by the vision of leveraging technology to improve the lives of the folks on t…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T16:06:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EVER"
-      ]
-    },
-    {
-      "title": "RT @sasha35625: #WavesArmy Let's help Turkey! I don't have to explain why. Every little helps. We will launch a #powerdao #earthquaketu…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T14:35:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "#SushiSwap is joining the Cosmos ecosystem, becoming another major cross-chain DEX alongside #dYdX leveraging…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T13:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "POLS"
-      ]
-    },
-    {
-      "title": "Hey, community  Here we are with another Weekly Recap to keep you updated on what's been happening lately. Let's s…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T13:06:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UTK"
-      ]
-    },
-    {
-      "title": "We will be hosting our inaugural community Ask-Me-Anything (AMA) session tomorrow, Monday, at 8 PM UTC on Twitter S…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T12:12:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "0x0"
-      ]
-    },
-    {
-      "title": "$USDD is now listed on #SwapBox @usddio #USDD is the first over-collateralized #decentralized #StableCoin transp…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T11:58:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD",
-        "NABOX"
-      ]
-    },
-    {
-      "title": "Ethereum Classic rebounds from $20.8, what’s next for the bulls?",
-      "link": "NULL",
-      "pubDate": "2023-02-12T11:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
       "title": "Ethereum Co-Founder Vitalik Buterin Donates $150,000 To Victims Of Turkey, Syria Earthquake",
       "link": "https://bitcoinist.com/ethereum-buterin-donates-to-quake-victims/",
       "pubDate": "2023-02-12T11:19:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Vitalik Buterin, co-founder of Ethereum, has shown his kindness and support for individuals affected by the recent earthquake in Turkey and Syria by making a sizeable donation. According to numerous news sources, Buterin gave approximately $150,000 worth of Ether to Ahbap Earthquake Support to assist with the recent natural disaster in the two countries. Ethereum […]",
       "currencies": [
@@ -334,151 +74,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Get detailed insights into crypto markets on BITFINEX ALPHA - It’s completely free and available every week - Re…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T11:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "RT @Ste13902524: @AgeOfGodsnet Game changer!!!  $AOG",
-      "link": "NULL",
-      "pubDate": "2023-02-12T10:08:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AOG"
-      ]
-    },
-    {
-      "title": "Tomorrow, 13 February at 7:00 PM (UTC), join the #AMA to hear from @dcaworld, @marycamacho, @artbrock, and…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T10:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HOT"
-      ]
-    },
-    {
-      "title": "This Valentine’s Day, own a piece of Web3 as well as a piece of your crypto lover’s heart",
-      "link": "NULL",
-      "pubDate": "2023-02-12T09:06:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HI"
-      ]
-    },
-    {
-      "title": "RT @AgeOfGodsnet: #GM Gods &amp; Goddesses",
-      "link": "NULL",
-      "pubDate": "2023-02-12T09:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AOG"
-      ]
-    },
-    {
-      "title": "We present the #TOP100 $ALTS that you can find on Kanga! #38 on @CoinMarketCap - @quant_network $QNT Market…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T08:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT",
-        "KNG"
-      ]
-    },
-    {
-      "title": "#GM Gods &amp; Goddesses",
-      "link": "NULL",
-      "pubDate": "2023-02-12T07:50:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AOG"
-      ]
-    },
-    {
-      "title": "We are excited to announce the launch of the privacy mixer app, available now at",
-      "link": "NULL",
-      "pubDate": "2023-02-12T03:18:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "0x0"
-      ]
-    },
-    {
-      "title": "RT @BitcoinMagazine: JUST IN: 🇷🇺 Russia \"ready to allow\" international trade in #Bitcoin and crypto - Central Bank Governor",
-      "link": "NULL",
-      "pubDate": "2023-02-12T03:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ORC"
-      ]
-    },
-    {
-      "title": "RT @EtcNFTSold: Classic Dawgs: 1102 1059 785 965 4 minted for 3.6 $ETC ($76.93 USD) Gas: 0.000594792 ETC ($0.01271 USD) 211 of 1234 minted…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T02:41:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ETC",
-        "SHIBC"
-      ]
-    },
-    {
-      "title": "RT @1msdj1: $DIVI #DEFI In Under Two Minutes. @DiviProject @DiviWallet @NSapProductions - @T0X1C_7174N1UM - DEFI in full effect! Now that…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T01:19:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
-      "title": "RT @coingecko: What #crypto are you trading this weekend?",
-      "link": "NULL",
-      "pubDate": "2023-02-12T01:16:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BRG"
-      ]
-    },
-    {
-      "title": "RT @bridge_oracle: 🧾 We have successfully received the audit for the #staking platform from @CertiK recently and in only a few days the pla…",
-      "link": "NULL",
-      "pubDate": "2023-02-12T01:16:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BRG"
-      ]
     }
   ]
 }

@@ -1,296 +1,15 @@
 {
   "date": "2024-03-07",
-  "fetchedAt": "2026-02-05T07:45:53.366Z",
-  "articleCount": 78,
+  "fetchedAt": "2026-02-05T07:48:35.651Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Tesla and SpaceX Currently Hold $1,340,000,000 in Bitcoin Across 96 Addresses, Says Blockchain Intelligence Firm",
-      "link": "NULL",
-      "pubDate": "2024-03-07T23:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Solana (SOL) Hits $144: Analysts Feel Optimistic, Is A New ATH Imminent?",
-      "link": "NULL",
-      "pubDate": "2024-03-07T23:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "XLM",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Crypto Wallet Provider SafePal Invests in Swiss Bank to Enable Banking Services for Crypto Users",
-      "link": "NULL",
-      "pubDate": "2024-03-07T22:31:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SFP"
-      ]
-    },
-    {
-      "title": "Dogecoin, Shiba Inu Welcome Dogwifhat In $2B Market Cap Club: Why Do Dogs Dominate Cats in Crypto?",
-      "link": "NULL",
-      "pubDate": "2024-03-07T22:24:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "XLM",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Gaming Tokens Rebound as Bitcoin, Ethereum Continue to Rally",
-      "link": "NULL",
-      "pubDate": "2024-03-07T22:01:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "IMX",
-        "RON"
-      ]
-    },
-    {
-      "title": "Fed Chair Powell Eases CBDC Concerns: US Far From Direct Fed Accounts, Emphasizes Need for Congressional Approval",
-      "link": "NULL",
-      "pubDate": "2024-03-07T21:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "AR"
-      ]
-    },
-    {
-      "title": "Did Tesla Buy More Bitcoin? Mysterious Wallet Increase Sparks Speculation",
-      "link": "NULL",
-      "pubDate": "2024-03-07T21:10:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Today March 7 – Jupiter, THORChain, EOS",
-      "link": "NULL",
-      "pubDate": "2024-03-07T21:05:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS",
-        "RUNE",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Jupiter Surges 35% as JUP Holders Stake $123 Million to Pick Next Solana Token Launch",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:56:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "The Graph Surges Over 100% in a Month – Can GRT Hit $1 Next?",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:49:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT"
-      ]
-    },
-    {
-      "title": "Solana (SOL) tops $150 amid Pantera Capital bid, surge in memecoin and DApp activity",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:11:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "RAY",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Nomura’s crypto arm teams up with Pyth Network to enhance web3 data’s diversity and quality",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:05:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Trader Makes $12M As Fetch.ai Enjoys 30-Day Surge On Heels Of $100M Infrastructure Deal",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:04:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR",
-        "FET",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Mysterious Moves – Is Tesla Dipping Its Toes Back In Bitcoin?",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "AI Tokens Skyrocket Amidst Nvidia’s Market Momentum",
-      "link": "NULL",
-      "pubDate": "2024-03-07T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Montenegro High Court may extradite Do Kwon to South Korea after appeal — Report",
-      "link": "NULL",
-      "pubDate": "2024-03-07T19:01:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Cryptocurrency VeChain Rises More Than 4% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-07T19:01:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Analyst Uses Historical Data To Show When The Bitcoin Price Will Reach $207,000",
-      "link": "NULL",
-      "pubDate": "2024-03-07T19:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "SHIB",
-        "MV"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Kaspa Up More Than 7% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-07T19:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Extraditing Do Kwon: South Korea Calls On Interpol For Support",
-      "link": "NULL",
-      "pubDate": "2024-03-07T19:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "BREAKING:  EOS Decided to Burn Half of Its Supply!",
-      "link": "NULL",
-      "pubDate": "2024-03-07T18:48:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Avalanche blockchain unveils new tool to enhance communications within its network",
       "link": "https://www.cryptopolitan.com/avalanche-tool-enhance-within-its-network/",
       "pubDate": "2024-03-07T18:47:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "general",
       "description": "Avalanche has unveiled Teleporter, a new tool aimed at enhancing communication within its network of application-specific chains, also known as subnets. This development is targeted at mitigating ecosystem fragmentation, ensuring a more cohesive operation across Avalanche’s network. Teleporter leverages the capabilities of Avalanche Warp Messaging (AWM), which also went live today on...",
       "currencies": [
@@ -302,22 +21,11 @@
       }
     },
     {
-      "title": "Algorithmic Trading Firms Cause Outages in Major Crypto Exchanges, dydx Executive Reveals",
-      "link": "NULL",
-      "pubDate": "2024-03-07T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
       "title": "Nayib Bukele Reacts to Bitcoin Critic’s Indictment with Laughter",
       "link": "https://cryptonews.com/news/nayib-bukele-reacts-to-bitcoin-critics-indictment-with-laughter.htm?__cf_chl_rt_tk=mZ7rIQKpYDFGufyODGGPUY.ISD7wFiDAOX6ormaSqgg-1747122192-1.0.1.1-jFgunMI_XF0tw1zCAQbye72Gc8bW3oSe35yOhVzB5lw",
       "pubDate": "2024-03-07T17:31:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "President Nayib Bukele has responded humorously to a social media post highlighting the legal troubles of Senator Bob Menendez's indictment, adding a touch of irony to the situation. The Senator is a vocal critic of El Salvador's Bitcoin policy, and is facing bribery and obstruction of justice charges in the US.",
       "currencies": [
@@ -330,77 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dogecoin Accumulation: DOGE Millionaires Have Shot Up By 76%",
-      "link": "NULL",
-      "pubDate": "2024-03-07T17:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "GRT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin’s Warm-up Phase: Analyst Predicts a Market Evolution That Could ‘Shock’ Traditional Finance",
-      "link": "NULL",
-      "pubDate": "2024-03-07T17:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
-      "title": "AI Tokens Rally: $NEAR, $RNDR, $FET, $AI, $AGIX Skyrocket Over 30%",
-      "link": "NULL",
-      "pubDate": "2024-03-07T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEAR",
-        "RNDR",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Shiba Inu, Dogecoin Caged As AI Coins Like Fetch.AI Excite Market: Here's Why",
-      "link": "NULL",
-      "pubDate": "2024-03-07T16:39:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "SHIB",
-        "RNDR",
-        "FET",
-        "AGIX",
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
       "title": "Shiba Inu Moving Insanely Bullish For Global Adoption With ‘Shib Name’ Launch As $0.001 SHIB Price Beckons",
       "link": "https://zycrypto.com/shiba-inu-moving-insanely-bullish-for-global-adoption-with-shib-name-launch-as-0-001-shib-price-beckons/",
       "pubDate": "2024-03-07T16:34:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Notably, this achievement is a product of the partnership unveiled in December 2023 between the SHIB ecosystem and Shiba Inu’s top-level domain (TLD) partner...",
       "currencies": [
@@ -413,56 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto.com offers up to 100% rebate on Apple Store purchases for its Visa Card users",
-      "link": "NULL",
-      "pubDate": "2024-03-07T16:12:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Reasons Why Fetch.AI’s FET Token Soared 360% and Hit All-Time High",
-      "link": "NULL",
-      "pubDate": "2024-03-07T16:07:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "FET"
-      ]
-    },
-    {
-      "title": "Tesla's Bitcoin Holdings Grow: What It Means for the Future",
-      "link": "NULL",
-      "pubDate": "2024-03-07T16:06:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Tesla's surprise Bitcoin boost sparks speculation and future market impacts",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Total ETH Burned Crosses 1.5 Million Ahead Of Ethereum Dencun Upgrade",
       "link": "https://www.newsbtc.com/news/ethereum/eth-burned-ethereum-dencun/",
       "pubDate": "2024-03-07T16:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "The Ethereum Dencun upgrade is fast approaching and there have already been notable developments leading up to it. Besides the price of ETH rising to new two-year highs, there has been a significant increase in the amount of ETH that has been burned so far. Over 50,000 ETH Burned The Ethereum burn, which was brought with the EIP-1559 upgrade, has been ramping up over the past year. The ETH...",
       "currencies": [
@@ -478,34 +75,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BlockDAG outshines SEI crypto and Cardano price surge",
-      "link": "NULL",
-      "pubDate": "2024-03-07T16:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "SEI"
-      ]
-    },
-    {
-      "title": "South Korean Police Request Aid in Extraditing Do Kwon: Report",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Gala Games Launches $1 Million GDC 2024 Hackathon With Alienware, AWS",
       "link": "https://decrypt.co/220549/gala-games-launches-1-million-gdc-2024-hackathon-with-alienware-aws",
       "pubDate": "2024-03-07T15:48:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "The layer-1 blockchain has partnered with Alienware and Amazon Web Services for the 24-hour hackathon at the 2024 Game Developers Conference.",
       "currencies": [
@@ -518,224 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitget Grows to 25M Users, Sign of Booming Crypto Markets",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BGB"
-      ]
-    },
-    {
-      "title": "Tesla and SpaceX’s Bitcoin holdings unveiled by Arkham Intelligence",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:34:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Singaporean fintech launches USDC-powered Visa card with Swiss bank Fiat24",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:21:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDC",
-        "ARB",
-        "SFP"
-      ]
-    },
-    {
-      "title": "Solana faces investor exodus; emerging AI crypto aims to surpass Quant by the next Bitcoin halving",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Can Homomorphic Encryption Improve Blockchain Security?",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Cronos Rises More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:03:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency The Graph's Price Increased More Than 16% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Identifies 8 Altcoins To Turn $1,000 Into $1 Million",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "XRP",
-        "SOL",
-        "MATIC",
-        "ATOM",
-        "NFT",
-        "STRK",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Immutable's Price Increased More Than 9% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-07T15:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Bitcoin Tops $67,000 Following Jobless Claims Data; SingularityNET Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2024-03-07T14:43:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "NEAR",
-        "RNDR",
-        "FET",
-        "AGIX",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Why Cosmos (ATOM) and Celestia (TIA) Could Outperform the Rest of Ethereum’s L2 Market",
-      "link": "NULL",
-      "pubDate": "2024-03-07T14:35:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ATOM",
-        "TIA"
-      ]
-    },
-    {
-      "title": "BREAKING!  The Court Made Its Decision About Do Kwon! LUNC Price Mobilized!",
-      "link": "NULL",
-      "pubDate": "2024-03-07T14:03:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "ANKR Token Rises After Confirmation that Its CEO and CTO Will Attend NVIDIA Conference",
-      "link": "NULL",
-      "pubDate": "2024-03-07T13:48:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ANKR",
-        "FET",
-        "AKT"
-      ]
-    },
-    {
-      "title": "German Spot ETP Now Holds Ethereum, Chainlink, Ada, Aave",
-      "link": "NULL",
-      "pubDate": "2024-03-07T13:19:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LINK",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Kroger Co. (KR) Hits $1.34 Adjusted EPS in Q4, Surpassing Expectations",
-      "link": "NULL",
-      "pubDate": "2024-03-07T13:16:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "SEC Charges ShapeShift, Sparks Crypto Regulation Debate",
-      "link": "NULL",
-      "pubDate": "2024-03-07T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
       "title": "Brave Browser Embraces Bitcoin (BTC), Enabling Seamless Crypto Integration for Users",
       "link": "https://www.coinspeaker.com/brave-browser-bitcoin-btc-crypto/",
       "pubDate": "2024-03-07T12:40:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "bitcoin",
       "description": "Coinspeaker Brave Browser Embraces Bitcoin (BTC), Enabling Seamless Crypto Integration for Users The latest desktop version (1.63) of Brave Wallet introduces Native SegWit Bitcoin accounts, a cutting-edge feature that offers users lower transaction fees and enhanced error detection capabilities. Brave Browser Embraces Bitcoin (BTC), Enabling Seamless Crypto Integration for...",
       "currencies": [
@@ -750,151 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Wallet SafePal Ventures into Banking with New USDC Visa Card",
-      "link": "NULL",
-      "pubDate": "2024-03-07T12:39:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDC",
-        "SFP"
-      ]
-    },
-    {
-      "title": "Investors buy Bitbot amid AI tokens surge",
-      "link": "NULL",
-      "pubDate": "2024-03-07T12:26:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "RNDR",
-        "FET",
-        "AGIX",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Everything wrong with ShapeShift’s SEC settlement",
-      "link": "NULL",
-      "pubDate": "2024-03-07T12:04:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNB",
-        "XRP",
-        "DASH"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Burlington Stores (BURL) Surpasses Expectations with a 25% Increase in Adjusted EPS",
-      "link": "NULL",
-      "pubDate": "2024-03-07T12:02:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Pantera launches fundraise to buy $250 million of SOL from FTX Estate: report",
-      "link": "NULL",
-      "pubDate": "2024-03-07T11:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "The $5.2 billion asset management giant is eyeing FTX’s discounted SOL stack worth around $5.4 billion.",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto expert reveals metaverse token set for huge gains with Fibonacci",
-      "link": "NULL",
-      "pubDate": "2024-03-07T11:49:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Microstrategy New 700M Debt Sale Explained",
-      "link": "NULL",
-      "pubDate": "2024-03-07T11:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "MicroStrategy ups convertible notes offering to $700M, eyeing Bitcoin buys and corporate needs",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 11,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "The Return of South Korea's Kimchi Premium",
-      "link": "NULL",
-      "pubDate": "2024-03-07T10:59:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Kimchi premium spikes in S. Korea, reviving profitable Bitcoin arbitrage opportunities",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Las Vegas CEO Faces Century Sentence for Bitcoin Money Laundering",
-      "link": "NULL",
-      "pubDate": "2024-03-07T10:59:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Martin Mizrahi, CEO of a Las Vegas internet service provider, faces a potential 127-year prison term. Convicted on charges of wire fraud, money laundering, and identity theft, his case underscores the harsh realities of engaging in crypto crimes. As Mizrahi’s downfall captivates, a global crackdown on similar illicit activities is gaining momentum. How Mizrahi Conducted Bitcoin...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 6,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Shibarium sets a record with over 400 million transactions",
       "link": "https://www.cryptopolitan.com/shibarium-sets-a-record-with-over-400m-transactions/",
       "pubDate": "2024-03-07T10:43:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Shibarium, the Layer 2 blockchain network associated with Shiba Inu, has crossed an important threshold by processing over 400 million transactions. This achievement marks a notable milestone for the network, underscoring its growing adoption and utilization in the digital currency space. According to Lucie, the marketing lead for Shiba Inu, the network had reached a […]",
       "currencies": [
@@ -910,8 +131,8 @@
       "title": "Ethereum leans into rollup-centric future as Dencun hard fork looms",
       "link": "https://cointelegraph.com/news/ethereum-rollup-centric-dencun-hard-fork",
       "pubDate": "2024-03-07T10:40:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Ethereum’s next set of hard forks is anticipated to benefit layer-2 scaling protocols significantly by reducing storage costs.",
       "currencies": [
@@ -925,37 +146,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "$73 Million Support for This Cryptocurrency Project from Ethereum, Solana and Filecoin!",
-      "link": "NULL",
-      "pubDate": "2024-03-07T10:09:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Ethena Expands Beyond Ethereum through Injective Integration",
-      "link": "NULL",
-      "pubDate": "2024-03-07T10:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ATOM",
-        "INJ"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Burns 146 Million Tokens in Fight to Retain Top 10",
       "link": "https://u.today/shiba-inu-shib-burns-146-million-tokens-in-fight-to-retain-top-10",
       "pubDate": "2024-03-07T09:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu (SHIB) and fight for top 10, resorting to token burning",
       "currencies": [
@@ -971,8 +166,8 @@
       "title": "Cardano Founder Dr. Charles Hoskinson on the Symptoms of Charles Derangement Syndrome (CDS)",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-03-07T09:47:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Earlier today, in a post on social media platform X, formerly known as Twitter, Charles Hoskinson, the co-founder of Ethereum and founder of Cardano, shed light on a phenomenon he calls “Charles Derangement Syndrome” (CDS). Hoskinson’s 10-point list dissects the characteristics and behaviors of individuals who may be affected by this condition. “Charles Derangement Syndrome” […]",
       "currencies": [
@@ -986,40 +181,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Another Surprise Altcoin Will Participate in the Big NVIDIA Conference! There was a sudden increase in price!",
-      "link": "NULL",
-      "pubDate": "2024-03-07T09:36:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ANKR"
-      ]
-    },
-    {
-      "title": "Cryptocurrencies priced in cents set to reach $1 in March",
-      "link": "NULL",
-      "pubDate": "2024-03-07T09:17:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "MANA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Biden-Themed Meme Coin 'Jeo Boden' Outperforms Dogecoin, Shiba Inu, Reaping Over 100x Returns In A Single Day Ahead Of US Elections",
       "link": "https://www.benzinga.com/markets/cryptocurrency/24/03/37528232/biden-themed-meme-coin-jeo-boden-outperforms-dogecoin-shiba-inu-reaping-over-100x-returns-?utm_campaign=partner_feed&utm_source=cryptopanic.com&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2024-03-07T08:05:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "altcoin",
       "description": "Cryptocurrency enthusiasts who invested early in a new meme coin named after a humorous misspelling of U.S. President Joe Biden’s name – “Jeo Boden” – saw substantial gains this Wednesday, with returns surpassing 100 times their initial investment. read more",
       "currencies": [
@@ -1036,23 +202,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "“A Who’s Who of Web3”: Sector’s Biggest Names Sign-up to Bionic’s Advisory Board",
-      "link": "NULL",
-      "pubDate": "2024-03-07T07:40:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XLM",
-        "DAO"
-      ]
-    },
-    {
       "title": "Avalanche Launches Durango Upgrade and Announces Teleporter Ecosystem Communication Tool",
       "link": "https://www.coinspeaker.com/avalanche-durango-teleporter/",
       "pubDate": "2024-03-07T07:40:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "general",
       "description": "Coinspeaker Avalanche Launches Durango Upgrade and Announces Teleporter Ecosystem Communication Tool The Teleporter release is part of the Avalanche Durango Upgrade, expected to improve developer experience on the network. Avalanche Launches Durango Upgrade and Announces Teleporter Ecosystem Communication Tool",
       "currencies": [
@@ -1062,79 +216,6 @@
         "positive": 2,
         "negative": 1
       }
-    },
-    {
-      "title": "Crypto Update, 06 March: BTC above $66K, ETH Momentum Builds",
-      "link": "NULL",
-      "pubDate": "2024-03-07T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "FET",
-        "BONK",
-        "TIA"
-      ]
-    },
-    {
-      "title": "A16z Eyes $6.9 Billion AI Investment, Pauses Crypto Fund Expansion",
-      "link": "NULL",
-      "pubDate": "2024-03-07T05:09:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "EOS Price Analysis: Uptrend Could Accelerate Above $1.10",
-      "link": "NULL",
-      "pubDate": "2024-03-07T05:08:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "DOT Price (Polkadot) Jumps 10%, Why Bulls Can Pump It To $12",
-      "link": "NULL",
-      "pubDate": "2024-03-07T04:58:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin Price At Risk of Another Downside Thrust Before Higher",
-      "link": "NULL",
-      "pubDate": "2024-03-07T03:08:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
     }
   ]
 }

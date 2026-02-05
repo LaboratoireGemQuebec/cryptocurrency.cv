@@ -1,15 +1,15 @@
 {
   "date": "2022-10-15",
-  "fetchedAt": "2026-02-05T07:45:52.603Z",
-  "articleCount": 18,
+  "fetchedAt": "2026-02-05T07:48:35.577Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
     {
       "title": "Polygon’s preference for this state-of-being may disappoint MATIC investors",
       "link": "https://ambcrypto.com/polygons-preference-for-this-state-of-being-may-disappoint-matic-investors/",
       "pubDate": "2022-10-15T23:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "layer2",
       "description": "Polygon [MATIC] in its latest string of collaborations, announced that the Polygon team will be working with Indian law enforcement. The blockchain would be working to create an online complaint (FIR) portal. Even though this collaboration may further improve the state of crypto adoption, it is still to be determined whether this new development can […]",
       "currencies": [
@@ -25,8 +25,8 @@
       "title": "Terra Classic Price Prediction - Is LUNC Dead, Two Experts Predict 'Zero'",
       "link": "https://cryptonews.com/news/terra-classic-price-prediction-is-lunc-dead-experts-predict-zero.htm",
       "pubDate": "2022-10-15T22:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "The day the Terra Classic price (LUNC) hit its 2022 top, two of the best crypto traders correctly predicted the bull run was over. That was September 8th, when the LUNC price reached $0.000593 on Binance, and as of mid October LUNC is now trading over 50% lower, below the $0.0003 support level. Light (@lightcrypto), who has 169,000 followers, tweeted: \"Think LUNC burn trade is about...",
       "currencies": [
@@ -42,8 +42,8 @@
       "title": "Top Crypto Analyst Warns Cardano Could Crash Further by Over 50%, Predicts What’s Next for Solana and Fantom",
       "link": "https://dailyhodl.com/2022/10/15/top-crypto-analyst-warns-cardano-could-crash-further-by-over-50-predicts-whats-next-for-solana-and-fantom/",
       "pubDate": "2022-10-15T22:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Closely followed crypto strategist Jason Pizzino is warning Cardano holders that ADA may witness an additional decline of over 50% even after this year’s deep correction. In a new strategy session, Pizzino tells his 276,000 YouTube subscribers that regardless of the smart contract platform’s fundamental growth over the past months, the charts tell him that […]",
       "currencies": [
@@ -57,47 +57,11 @@
       }
     },
     {
-      "title": "SplinterRents website launch and tournaments!",
-      "link": "NULL",
-      "pubDate": "2022-10-15T20:31:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Owners and Creators of BSV NFTs will be able to port their NFTs over to Radiant's unique L1 NFT standard. Complete…",
-      "link": "NULL",
-      "pubDate": "2022-10-15T20:25:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BSV",
-        "RXD"
-      ]
-    },
-    {
-      "title": "The Size of Bitcoin’s Distributed Ledger Nears a Half Terabyte",
-      "link": "NULL",
-      "pubDate": "2022-10-15T17:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DASH"
-      ]
-    },
-    {
       "title": "51% of Ethereum Node Validators Can Censor Your Transactions",
       "link": "https://beincrypto.com/ethereum-transactions-no-longer-censorship-resistant/",
       "pubDate": "2022-10-15T17:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Ethereum Maximum Extractable Value (MEV) boost-relays compliant with the U.S. Office of Foreign Assets Control (OFAC) rules.",
       "currencies": [
@@ -113,8 +77,8 @@
       "title": "Rogue Mango Markets Trader Owns Up to $100M Exploit",
       "link": "https://cryptobriefing.com/rogue-mango-markets-trader-owns-up-100m-exploit/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-15T17:10:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Avraham Eisenberg has admitted that he and his team \"operated a highly profitable trading strategy\" on Mango Markets. The attacker behind the $100 million exploit that hit Mango Markets earlier this week has admitted to his antics.https://twitter.com/avi_eisen/status/1581326197241180160?s=20&t=h_XXfZDSxXBr2-se5D0ybwDigital art dealer Avraham Eisenberg posted a tweet storm Saturday...",
       "currencies": [
@@ -127,28 +91,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Ark Investments’ Yassine Elmandjra Is Bullish On Bitcoin, Says Bitcoin Will Hit 1 Million Per Coin By 2030.",
-      "link": "NULL",
-      "pubDate": "2022-10-15T15:20:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Ark Investment Management analyst Yassine Elmamdjra believes that Bitcoin will reach $1 million per coin by the year 2030. Earlier, Cathie Wood, CEO of Ark Investments, had also reiterated a similar statement, adding that BTC will hit $1 million by 2030. Ark Investments management analyst Yassine Elmandjra is incredibly bullish on Bitcoin. In an interview with Bloomberg, Elmandjra predicted that...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Ethereum: What 50% OFAC censored blocks mean for the ETH blockchain",
       "link": "https://ambcrypto.com/ethereum-what-50-ofac-censored-blocks-mean-for-the-eth-blockchain/",
       "pubDate": "2022-10-15T15:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Ethereum [ETH], as of 14 October, witnessed a never-seen-before surge in censorship as over 50% blocks created over the past day. These blocks came under the purview of the U.S. Treasury Department’s Office of Foreign Assets Control (OFAC) following compliance recommendations. The development meant that more than half of the blocks developed during this period […]",
       "currencies": [
@@ -164,8 +111,8 @@
       "title": "$LUNC: Binance Adds Terra Classic’s $USTC to Borrowable Assets List",
       "link": "https://www.cryptoglobe.com/latest/2022/10/lunc-binance-adds-terra-classics-ustc-to-borrowable-assets-list/",
       "pubDate": "2022-10-15T14:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "exchange",
       "description": "Leading cryptocurrency exchange Binance has announced that Terra Classic’ TerraClassicUSD ($USTC) to its list of borrowable assets, effectively making it an asset the exchange’s millions of users can borrow to use in their trading activity. According to Binance’s announcement, $USTC is now available on the cryptocurrency exchange’s Binance Loans platform, which “ provides a large range […]",
       "currencies": [
@@ -176,91 +123,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @StratisphereNFT: Looking forward seeing everyone at the event",
-      "link": "NULL",
-      "pubDate": "2022-10-15T12:02:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "STRAX"
-      ]
-    },
-    {
-      "title": "R. Kiyosaki says Bitcoin can protect wealth ‘as economy crashes’, recommends side hustles",
-      "link": "NULL",
-      "pubDate": "2022-10-15T11:12:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The author of the personal finance book ‘Rich Dad, Poor Dad’ Robert Kiyosaki, has reiterated his projection of a possible... Continue reading",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 17,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "We can't help but think the algorithm might have buried this one. Surely a city of 12.5 million Angelinos (twice th…",
-      "link": "NULL",
-      "pubDate": "2022-10-15T10:58:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "#CEEK #Metaverse $CEEK #CeekArmy",
-      "link": "NULL",
-      "pubDate": "2022-10-15T10:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "Tired of paying fees selling your digital services online? With @anytaskofficial you keep 100% of your earnings and…",
-      "link": "NULL",
-      "pubDate": "2022-10-15T09:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 130 – The News in #DeFi -",
-      "link": "NULL",
-      "pubDate": "2022-10-15T08:45:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "RT @Hotbit_ETF: Top 3 on #Hotbit Leveraged #ETFs today. 🥇 $KLAY 1D5S 66.64% 🥈 $LUNA 1D5S 58.05% 🥉 $LUNA 21D5L 49.49% Start y…",
-      "link": "NULL",
-      "pubDate": "2022-10-15T00:52:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "LUNA",
-        "NUSD"
-      ]
     }
   ]
 }

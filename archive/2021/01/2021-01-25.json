@@ -1,15 +1,15 @@
 {
   "date": "2021-01-25",
-  "fetchedAt": "2026-02-05T07:45:51.724Z",
-  "articleCount": 16,
+  "fetchedAt": "2026-02-05T07:48:35.400Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
     {
       "title": "Moonbeam Will Link Ocean Protocol and Polkadot",
       "link": "https://cryptobriefing.com/moonbeam-will-link-ocean-protocol-and-polkadot/",
       "pubDate": "2021-01-25T20:42:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "Moonbeam, a Polkadot-based smart contract platform, has announced that it is integrating with the decentralized data marketplace Ocean Protocol. Bridging Ocean and Polkadot Once complete, the integration will allow users of the Polkadot blockchain to publish, stake, and buy data. It will also bridge the Ethereum-based OCEAN token to the platform. “We have long envisioned Ocean to...",
       "currencies": [
@@ -24,44 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RAI Finance is selected as FEATURED PRODUCT on @cryptoatlas_io this week",
-      "link": "NULL",
-      "pubDate": "2021-01-25T18:48:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STPT"
-      ]
-    },
-    {
-      "title": "RT @HamnettPhillip: One of the things we recently built at @ChintaiEOS is an equity token framework, with built in support for token #vesti…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T18:15:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Today we are happy to announce our ongoing collaboration with Axie Infinity! A great blockchain game with a strong community.",
-      "link": "NULL",
-      "pubDate": "2021-01-25T18:07:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Michael Saylor Believes the Tether Fud is Irrelevant and Can’t Stop Bitcoin",
       "link": "https://beincrypto.com/michael-saylor-believes-the-tether-fud-is-irrelevant-cant-stop-bitcoin/",
       "pubDate": "2021-01-25T18:03:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "The Tether (USDT) debacle has been going on for a while, and market participants usually love a good crypto drama. Is Tether Driving the Market? MicroStrategy CEO Michael Saylor maintains his strong belief towards Bitcoin. In a recent interview, he said that Tether was “totally irrelevant” due to how corporate investment in bitcoin actually works. … Continued",
       "currencies": [
@@ -75,33 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#crypto and fiat currencies offer two different sets of pros and cons. But, put together, the possibilities are inf…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T16:25:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "We've received reports of this bug affecting some Basechain users, if you see a \"No chainId defined\" error please u…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T16:23:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
       "title": "Moonbeam and Ocean Protocol to bring a new data economy to Polkadot",
       "link": "https://www.cryptoninjas.net/2021/01/25/moonbeam-and-ocean-protocol-to-bring-a-new-data-economy-to-polkadot/",
       "pubDate": "2021-01-25T16:09:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "Moonbeam, an Ethereum-compatible smart contract platform on Polkadot, today announced its integration with Ocean Protocol, a data exchange protocol for the Web3 data economy. The Moonbeam and Ocean teams have completed the first part of an initial integration: a successful deployment of Ocean’s contracts to Moonbeam. The full initial integration will also involve bridging OCEAN...",
       "currencies": [
@@ -115,22 +60,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "A #hard_fork is derived from a #Blockchain network for many reasons. For instance, a new Blockchain network can b…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T13:09:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
       "title": "Chainlink (LINK) Pumps to New All-Time High in a Bullish Resurgence",
       "link": "https://beincrypto.com/chainlink-link-pumps-new-all-time-high-bullish-resurgence/",
       "pubDate": "2021-01-25T11:25:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "Technical indicators are still bullish and suggest that Chainlink is expected to continue increasing to reach even higher. Chainlink All-Time High Price On Jan. 15, 2021, LINK broke out above the previous all-time high. It returned to validate the level as support and proceeded to increase towards the current all-time high price of $25.78 … Continued",
       "currencies": [
@@ -143,63 +77,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Uniswap (UNI) to $50 By February? | A Fundamental Opinion",
-      "link": "NULL",
-      "pubDate": "2021-01-25T11:06:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "description": "#bitcoin #crypto #cryptocurrencies Looking to buy the bitcoin dip? Try Digifox 2.0 today 📈⬇️ https://go.digifox.finance/start ---------------------------------------------------------------------------------------------------------- Interested in our newsletter, the DashReport? 💹 http://nicholasmerten.com/dashreport/ Want to support my channel and get great perks? 💚➡️ http://patreon.com/data_dash -------------------------------------------------------------------------------------------------",
-      "currencies": [
-        "UNI"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "As we wait for more exciting news coming up, let’s have a look back on how #TomoChain kick-started the previous one…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T11:02:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "The second scaling cycle occurs after the 90th epoch. The minimum requirement for Map3 is reduced, from 550K to 308…",
-      "link": "NULL",
-      "pubDate": "2021-01-25T10:25:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "RT @binance: #Binance Adds $BUSD Trading Pairs with 0 Trading Fees: $USDC/ $BUSD $TUSD/ $BUSD $PAX/ $BUSD",
-      "link": "NULL",
-      "pubDate": "2021-01-25T08:02:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "BUSD",
-        "TRX"
-      ]
-    },
-    {
       "title": "#Binance Adds $EOS/ $EUR and $LTC/ $BRL Trading Pairs",
       "link": "https://twitter.com/binance/status/1353553876222238720",
       "pubDate": "2021-01-25T04:02:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "exchange",
       "currencies": [
         "BNB",
@@ -216,8 +98,8 @@
       "title": "20 million users on #TRON 🥳 #TRX $TRX",
       "link": "https://twitter.com/justinsuntron/status/1353552248224157696",
       "pubDate": "2021-01-25T03:56:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "TRX"

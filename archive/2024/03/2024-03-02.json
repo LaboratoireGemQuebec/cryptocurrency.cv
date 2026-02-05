@@ -1,38 +1,15 @@
 {
   "date": "2024-03-02",
-  "fetchedAt": "2026-02-05T07:45:53.382Z",
-  "articleCount": 36,
+  "fetchedAt": "2026-02-05T07:48:35.659Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Under-the-Radar Altcoin Surges After Surprise Listing on Crypto Exchange Binance",
-      "link": "NULL",
-      "pubDate": "2024-03-02T21:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXL"
-      ]
-    },
-    {
-      "title": "Cyber Security Experts Explain How to Avoid Getting Your Crypto Wallet Hacked",
-      "link": "NULL",
-      "pubDate": "2024-03-02T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "AXS"
-      ]
-    },
     {
       "title": "SHIB Burns See 887% Surge After 634 Million SHIB Destruction in February",
       "link": "https://u.today/shib-burns-see-887-surge-after-634-million-shib-destruction-in-february",
       "pubDate": "2024-03-02T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu burns have witnessed tremendous rise as March has kicked off with massive burns done in February",
       "currencies": [
@@ -45,66 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Expert Picks: 3 Altcoins Set to Win Big in the 2024 Bull Market",
-      "link": "NULL",
-      "pubDate": "2024-03-02T19:40:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "OP",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Top 5 Altcoins Set to Soar 30x in March",
-      "link": "NULL",
-      "pubDate": "2024-03-02T19:22:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "BONK",
-        "SEI"
-      ]
-    },
-    {
-      "title": "The Most Profitable Altcoin Rotation Right Now!",
-      "link": "NULL",
-      "pubDate": "2024-03-02T18:46:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Crypto Billionaires Are Buying These ALTCOINS!",
-      "link": "NULL",
-      "pubDate": "2024-03-02T18:41:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ARB",
-        "SEI"
-      ]
-    },
-    {
       "title": "When Will Ripple’s XRP Hit The Coveted $500 Mark? These Crypto Exchange Analysts Have Shocking Answers",
       "link": "https://zycrypto.com/when-will-ripples-xrp-hit-the-coveted-500-mark-these-crypto-exchange-analysts-have-shocking-answers/",
       "pubDate": "2024-03-02T17:33:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Ripple-backed token XRP has the potential to surmount its present growth stagnancy, with longer-term forecasts setting up sky-high targets as high as $500.",
       "currencies": [
@@ -117,70 +39,11 @@
       }
     },
     {
-      "title": "Bitcoin (BTC) Price Approaches ATH, While KangaMoon (KANG) and Kaspa (KAS) Attract Whales",
-      "link": "NULL",
-      "pubDate": "2024-03-02T17:15:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "IOTA, BEFE Coin, and Osmosis Navigate the Path to $312,000 in Profits from a $150 Crypto Trade",
-      "link": "NULL",
-      "pubDate": "2024-03-02T16:38:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTA"
-      ]
-    },
-    {
-      "title": "Pundit Highlights Bitcoin’s Resilience as Over 1 Million Addresses Aggressively Accumulate BTC",
-      "link": "NULL",
-      "pubDate": "2024-03-02T16:32:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "From Rags to Riches, understanding the profitable journey of Axelar, BEFE coin and Terra Luna",
-      "link": "NULL",
-      "pubDate": "2024-03-02T15:36:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXL"
-      ]
-    },
-    {
-      "title": "Apecoin, BEFE Coin, and Axelar: How $300 Grew to $500,290 through Strategic Crypto Trading",
-      "link": "NULL",
-      "pubDate": "2024-03-02T15:22:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
       "title": "VET Opens Way For New Yearly Highs Following Significant Momentum-Induced Rally",
       "link": "https://coinedition.com/vet-opens-way-for-new-yearly-highs-following-significant-momentum-induced-rally/",
       "pubDate": "2024-03-02T15:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "trading",
       "description": "Cheeky Crypto analyst identifies a bullish structure on VET, the native token of the VeChain blockchain. VET confirmed its bullish movement by breaching the $0.04152 to $0.04638 crucial region. The analyst thinks VET could push higher toward $0.06379, with an upper limit of $0.06927. A Cheeky Crypto YouTube channel host has identified a bullish structure […]",
       "currencies": [
@@ -193,23 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Focus shifts to altcoins amid Ethereum (ETH) surge: Stacks (STX) and InQubeta (QUBE) emerge as tokens to watch",
-      "link": "NULL",
-      "pubDate": "2024-03-02T14:02:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "STX"
-      ]
-    },
-    {
       "title": "SHIB, WIF Climb 60% as Shorts Lose $50M Betting Against Meme Coins",
       "link": "https://www.coindesk.com/markets/2024/03/02/shib-wif-climb-60-as-shorts-lose-50m-betting-against-meme-coins?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-03-02T13:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "general",
       "description": "Pepe (PEPE), the frog-themed meme token on Ethereum, was up as much as 100% to set record highs.",
       "currencies": [
@@ -225,22 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Peter Schiff calls for balanced coverage between Gold and Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-03-02T13:47:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
       "title": "Binance Introduces New Trading Option for Telegram's Toncoin with High Leverage",
       "link": "https://coinpaprika.com/news/binance-introduces-new-trading-option-for-telegram-s-toncoin-with-high-leverage/",
       "pubDate": "2024-03-02T13:46:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "exchange",
       "description": "Binance launches TON futures with 50x leverage, sparking a 10% surge in Toncoin's price",
       "currencies": [
@@ -256,8 +96,8 @@
       "title": "Elon Musk Files Lawsuit Against OpenAI, Affecting Worldcoin's Market Price",
       "link": "https://www.coindesk.com/markets/2024/03/01/worldcoins-wld-slides-as-elon-musk-sues-openai?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-03-02T13:45:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "trading",
       "description": "WLD is considered a proxy bet on OpenAI, the Sam Altman-owned artificial intelligence company.",
       "currencies": [
@@ -270,109 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Mystery Investor 'Mr. 100' Holds $3.2 Billion in Bitcoin\"",
-      "link": "NULL",
-      "pubDate": "2024-03-02T13:43:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Mr. 100' amasses 54,164 BTC, stirring intrigue as market values soar",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Nigeria hits Binance with $10B fine: Is BNB feeling the heat?",
-      "link": "NULL",
-      "pubDate": "2024-03-02T13:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Terra Classic Poised To Reawaken As Binance Burns 2.2 Billion LUNC",
-      "link": "NULL",
-      "pubDate": "2024-03-02T13:10:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "LUNC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Ondo USDY Treasuries Token Now Available on Sui",
-      "link": "NULL",
-      "pubDate": "2024-03-02T12:26:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "USDY"
-      ]
-    },
-    {
-      "title": "What’s happening with LUNC price?",
-      "link": "NULL",
-      "pubDate": "2024-03-02T12:22:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Crypto Roundup, 2 March: Is Altcoin Season Around the Corner",
-      "link": "NULL",
-      "pubDate": "2024-03-02T12:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SHIB",
-        "BCH",
-        "NFT",
-        "PEPE",
-        "WIF",
-        "FLOKI",
-        "AGI"
-      ]
-    },
-    {
-      "title": "Over 53 billion LUNC tokens burned by Binance to aid market stability",
-      "link": "NULL",
-      "pubDate": "2024-03-02T12:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Ripple reserves 200 million XRP for March’s sell-off",
       "link": "https://finbold.com/ripple-reserves-200-million-xrp-for-marchs-sell-off/",
       "pubDate": "2024-03-02T11:35:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Ripple has around 40.1 billion XRP, locked in escrows and not part of the token’s circulating supply. The company unlocks … Continue reading",
       "currencies": [
@@ -387,8 +129,8 @@
       "title": "Whale Abandons Massive PEPE Position For Shiba Inu – How Much SHIB Did They Buy?",
       "link": "https://bitcoinist.com/whale-abandons-massive-pepe-position-for-shiba-inu-how-much-shib-did-they-buy/",
       "pubDate": "2024-03-02T10:48:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "A crypto whale has made a significant bet, opting to relinquish a significant chunk of his PEPE investment for the Shiba Inu native token, SHIB. Whale Buys Billions Of SHIB In a recent X (formerly Twitter) post, Lookonchain, a blockchain analytics platform has uncovered a strategic investment made by a crypto whale. According to the […]",
       "currencies": [
@@ -402,33 +144,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Centrifuge (CFG) price ready for parabolic rally, top analyst says",
-      "link": "NULL",
-      "pubDate": "2024-03-02T10:14:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CFG"
-      ]
-    },
-    {
-      "title": "LUNC’s Price Surges, Market Cap Hit $1 Billion: What’s Happening?",
-      "link": "NULL",
-      "pubDate": "2024-03-02T08:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Litecoin prices surge by 8% – Is $100 the next target of LTC bulls?",
       "link": "https://ambcrypto.com/litecoin-prices-surge-by-8-is-100-the-next-target-of-ltc-bulls/",
       "pubDate": "2024-03-02T08:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Litecoin’s price crossed a key resistance level, suggesting that it might soon touch $100",
       "currencies": [
@@ -441,57 +161,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "24 Crypto Update, 1 March: BTC Stability Fuels Altcoin Rally",
-      "link": "NULL",
-      "pubDate": "2024-03-02T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "SHIB",
-        "BCH",
-        "NFT",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "Solana ($SOL) Price Hits 22-Month High Despite Network Outage and Investor Outflows",
-      "link": "NULL",
-      "pubDate": "2024-03-02T03:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Decentralized Data Storage Altcoin Surges More Than 100% This Week Amid Testnet Rollout of New Network Project",
-      "link": "NULL",
-      "pubDate": "2024-03-02T01:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
       "title": "Cardano’s Price Performance In The Current Bull Run – Is ADA Lagging Behind?",
       "link": "https://www.newsbtc.com/news/cardano/cardanos-price-performance-current-bull-run-is-ada/",
       "pubDate": "2024-03-02T00:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "As Bitcoin (BTC) is currently in a bull run, eclipsing the $60,000 mark once again, the spotlight has turned to ADA performance in comparison. With a history that mirrors Ethereum’s (ETH) early days, ADA’s journey through the market’s ups and downs has prompted a closer examination of its potential trajectory. The eighth-largest cryptocurrency by market cap, ADA has seen its fair share of...",
       "currencies": [
@@ -504,17 +178,6 @@
         "positive": 1,
         "negative": 2
       }
-    },
-    {
-      "title": "Neo and Web3Labs unveil the first eight projects to join the Web3.0 Global Acceleration Program",
-      "link": "NULL",
-      "pubDate": "2024-03-02T00:16:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
     }
   ]
 }

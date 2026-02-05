@@ -1,48 +1,15 @@
 {
   "date": "2022-10-26",
-  "fetchedAt": "2026-02-05T07:45:52.596Z",
-  "articleCount": 57,
+  "fetchedAt": "2026-02-05T07:48:35.575Z",
+  "articleCount": 20,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Wishing major luck to @shingolavine and @adamlavine! They're taking part in the 400k min @stormxio invitational on…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T23:16:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "VGX"
-      ]
-    },
-    {
-      "title": "Here's finally our freshly pressed Monthly Update summarizing all important happenings in the $BAN $Banano ecosyste…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T22:14:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAN"
-      ]
-    },
-    {
-      "title": "Head to TG to hear our latest AMA on Challenge Coin!",
-      "link": "NULL",
-      "pubDate": "2022-10-26T22:11:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HERO"
-      ]
-    },
     {
       "title": "Polkadot On A Bullish Run, Is This Price Level The New Target?",
       "link": "https://www.newsbtc.com/news/polkadot-on-a-bullish-run-is-this-price-level-the-new-target/",
       "pubDate": "2022-10-26T22:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Polkadot price has registered a bullish revival on their 24-hour chart. Over the past day, DOT logged double-digit gains. In the past week, the altcoin has lost close to 3% of its market value. The major market movers have turned optimistic today, and most altcoins have followed suit. The technical indicator of Polkadot has registered bullish signals on the one-day chart. The demand for the...",
       "currencies": [
@@ -60,8 +27,8 @@
       "title": "Elon Musk Visits Twitter HQ, Dogecoin Pumps",
       "link": "https://cryptobriefing.com/elon-musk-visits-twitter-hq-dogecoin-pumps/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-26T21:47:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "trading",
       "description": "Elon Musk visited Twitter on Wednesday as his planned acquisition of the social media company nears completion. Elon Musk is visiting Twitter headquarters.Musk entered the headquarters carrying a sink fixture, later tweeting \"Entering Twitter HQlet that sink in.\" He also changed his Twitter bio to read \"Chief Twit.\"Leslie Berland, Twitter's Chief Marketing Officer and Head of People,...",
       "currencies": [
@@ -74,22 +41,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Got plans for #Halloween yet? If not, join us at the $Banano discord server for the community-organized Haunted Man…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T21:43:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAN"
-      ]
-    },
-    {
       "title": "63% of Ethereum transaction blocks are now OFAC-compliant",
       "link": "https://www.theblock.co/post/180158/63-of-ethereum-transaction-blocks-are-now-ofac-compliant?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-26T21:03:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "At 63%, the number of blocks in compliance with U.S. sanctions on Ethereum continues to grow, adding to concerns over censorship.",
       "currencies": [
@@ -105,8 +61,8 @@
       "title": "Crypto Exchange Binance To Launch New Oracle Service on BNB Chain, Citing Huge Opportunity",
       "link": "https://dailyhodl.com/2022/10/26/crypto-exchange-binance-to-launch-new-oracle-service-on-bnb-chain-citing-huge-opportunity/",
       "pubDate": "2022-10-26T21:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "Binance, the world’s largest crypto exchange platform by volume, is launching a new oracle service on its BNB blockchain. In a new company blog post, Binance says that it will be launching oracle services in a push to boost the BNB Chain ecosystem and the broader digital asset space. Oracles provide smart contracts with a […]",
       "currencies": [
@@ -123,8 +79,8 @@
       "title": "Changpeng Zhao Says Binance Zeroing In on Identity of Hacker Behind $570,000,000 Exploit",
       "link": "https://dailyhodl.com/2022/10/26/changpeng-zhao-says-binance-zeroing-in-on-identity-of-hacker-behind-570000000-exploit/",
       "pubDate": "2022-10-26T20:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "exchange",
       "description": "Binance CEO Changpeng Zhao says that the crypto exchange is making progress on identifying those responsible for the theft of Binance Coin (BNB) worth approximately $570 million in a cross-bridge exploit. Responding to a question on what can be done to reduce crypto hacking incidents, Zhao says in a new CNBC interview that the exchange […]",
       "currencies": [
@@ -136,57 +92,11 @@
       }
     },
     {
-      "title": "RT @CoinDesk: LIVE: $BTC rallies above $20,000, a new poll reveals a majority of U.S. voters want more crypto regulation and more. Former…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T19:43:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "RT @thegristleking: How do you get a #HeliumInTheWild shirt? Like many things in life, ya gotta show up. See ya in #Lisbon #London #Paris…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T19:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
-      "title": "our man cryptovet spreading the good word!",
-      "link": "NULL",
-      "pubDate": "2022-10-26T18:47:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DLC"
-      ]
-    },
-    {
-      "title": "A practical demonstration of the concept of decentralization, which also demonstrates why it's optimal or preferabl…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T18:32:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Trader Who Accurately Predicted 2022 Crypto Crash Updates Outlook on Bitcoin and Ethereum As Volatility Spikes",
       "link": "https://dailyhodl.com/2022/10/26/trader-who-accurately-predicted-2022-crypto-crash-updates-outlook-on-bitcoin-and-ethereum-as-volatility-spikes/",
       "pubDate": "2022-10-26T18:05:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A widely followed trader known for calling this year’s crypto crash is warning that the current market bounce will ultimately turn into a deadly fakeout. The pseudonymous trader known as Capo tells his 563,000 Twitter followers that the big wave of short liquidations this week will mark the beginning of a correction to a new […]",
       "currencies": [
@@ -203,8 +113,8 @@
       "title": "Zililqa (ZIL) Price Prediction: Why Collapse Below $0.028 Seems Imminent",
       "link": "https://beincrypto.com/zilliqa-zil-price-prediction-why-collapse-below-0-028-seems-imminent/",
       "pubDate": "2022-10-26T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The Zilliqa (ZIL) price has been consolidating above a descending support line over the past month and could soon initiate a short-term upward movement.",
       "currencies": [
@@ -220,8 +130,8 @@
       "title": "Dogecoin Sprints North As Musk Pledges To Close Twitter Acquisition Deal By Friday — $1 DOGE Coming?",
       "link": "https://zycrypto.com/dogecoin-sprints-north-as-musk-pledges-to-close-twitter-acquisition-deal-by-friday-1-doge-coming/",
       "pubDate": "2022-10-26T17:25:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Dogecoin has been the only major cryptocurrency at the centre of the Twitter acquisition deal by Musk. Upon declaring his interest in acquiring the social network in April, the Tesla CEO shared his intention to “decentralize” it.",
       "currencies": [
@@ -237,8 +147,8 @@
       "title": "Dogecoin Skyrockets by Over 10% As Twitter Deal Likely to Close on Friday",
       "link": "https://usethebitcoin.com/dogecoin-skyrockets-by-over-10-as-twitter-deal-likely-to-close-on-friday/?utm_source=rss&utm_medium=rss&utm_campaign=dogecoin-skyrockets-by-over-10-as-twitter-deal-likely-to-close-on-friday",
       "pubDate": "2022-10-26T17:06:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Usethebitcoin",
+      "sourceKey": "usethebitcoin",
       "category": "altcoin",
       "description": "Dogecoin (DOGE) skyrocketed by over 10% on Wednesday as the Twitter deal is likely to close on Friday. The whole crypto market is now following the current negotiations […]",
       "currencies": [
@@ -253,8 +163,8 @@
       "title": "Is Ethereum A Security? Cardano’s Charles Hoskinson Sheds Some Light",
       "link": "https://bitcoinist.com/is-ethereum-a-security/",
       "pubDate": "2022-10-26T17:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Since Ethereum moved from a proof of work (PoW) to a proof of stake (PoW) mechanism, there has been an ongoing debate on whether the digital asset is now a security or a commodity. Notable figures have shared their insight on this and how the regulatory bodies are actually classifying cryptocurrencies. The latest is Cardano […]",
       "currencies": [
@@ -268,46 +178,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Assessing Lido’s [LDO] status post-Ethereum [ETH] merge",
-      "link": "NULL",
-      "pubDate": "2022-10-26T16:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "HT",
-        "KLAY"
-      ]
-    },
-    {
-      "title": "Happy hour with @EthStorage @NKN_ORG @harmonyprotocol on \"Building Foundation for Future Web 3.0\". Friday Nov'4 6-9…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T16:27:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "“Ethereum 2.0 upgrades are a huge gain for blockchain overall, but the continued use and development of layer 2 sol…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T16:19:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Dogecoin Soars Past 12% As Elon Musk Twitter Saga Nears Completion",
       "link": "https://en.ethereumworldnews.com/dogecoin-soars-past-12-as-elon-musk-twitter-saga-nears-completion/",
       "pubDate": "2022-10-26T16:16:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "altcoin",
       "description": "Dogecoin is up 12% as Musk’s Twitter acquisition inches closer to its end. The Musk-Twitter deal may soon be finalized by the end of this week. As per the data from Coinmarketcap, Dogecoin is currently up 12% in the last 24 hours and is trading at $0.06845. Per a recent Bloomberg report, Musk’s Twitter acquisition will reportedly end this Friday, which could play an elemental role in boosting Dogecoin’s popularity across the board. Why Is Dogecoin Up And Trending? Per […]",
       "currencies": [
@@ -320,36 +195,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Driving responsible innovation at scale. Expanding accessibility and utility of digital currencies. Harnessing…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T16:14:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD",
-        "PAXG",
-        "BKRW"
-      ]
-    },
-    {
-      "title": "Lock the doors, turn off the lights and get ready for the Dash Of the Dead Demo to drop on HELLOWEEN 🧟‍️ #crypto…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T16:03:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "HELLO"
-      ]
-    },
-    {
       "title": "Binance releases oracle service on BNB Chain, rivaling Chainlink",
       "link": "https://www.theblock.co/post/180042/binance-releases-oracle-service-on-bnb-chain-rivaling-chainlink?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-26T15:24:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "Crypto exchange Binance has released an oracle service called Binance Oracle, to link real-world data to blockchain applications.",
       "currencies": [
@@ -363,22 +213,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "It’s TIME.. Come build and connect on this all-day TRAIN ride hackathon with a special line-up of #Helium spea…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T14:28:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT"
-      ]
-    },
-    {
       "title": "Solana projects reopen after getting funds back from Mango Markets",
       "link": "https://www.theblock.co/post/179996/solana-projects-reopen-after-getting-funds-back-from-mango-markets?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-10-26T14:24:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "altcoin",
       "description": "Two Solana-based protocols have taken initial steps to reopen their services after the Mango Markets exploit.",
       "currencies": [
@@ -391,22 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RSK peg-out service outage update: The improvement proposal for the RSK protocol has been published and is open fo…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T14:08:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RBTC"
-      ]
-    },
-    {
       "title": "Dogecoin Price Jumps 13% as Elon Musk Twitter Deal Nears Conclusion",
       "link": "https://u.today/dogecoin-price-jumps-13-as-elon-musk-twitter-deal-nears-conclusion",
       "pubDate": "2022-10-26T13:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Dogecoin is set to be in public eye if Twitter deal is successful",
       "currencies": [
@@ -419,34 +247,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Swapping your #ABBC coins to other networks such as Avalanche ABBC (AVABBC) using the ABBC Swap portal is just easy…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T13:17:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "ABBC"
-      ]
-    },
-    {
-      "title": "Did you know you receive a/b/g ‘fungible’ tokens when you deposit your money into Alpha, Beta, and Gamma? The a/b/…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T12:46:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
       "title": "Why These Major Crypto Wallets Acquired Over 100 Million XRP In Last 24 Hours",
       "link": "https://www.newsbtc.com/news/why-these-major-crypto-wallets-acquired-over-100-million-xrp-in-last-24-hours/",
       "pubDate": "2022-10-26T12:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "XRP seems to have fallen short in capitalizing on the procedural wins that Ripple has gained from its ongoing legal battle against the SEC. Although the asset managed to increase by almost 2% over the last 24 hours, it is still down by 1.6% over past week. On a 14-day and 30-day period, the crypto is staring at losses of 5.3% and 7%, respectively. On a year-to-date basis, the 6th largest...",
       "currencies": [
@@ -466,8 +271,8 @@
       "title": "​​Crypto market aims to reclaim $1 trillion in capitalisation after 6 weeks in the shadows",
       "link": "https://finbold.com/crypto-market-aims-to-reclaim-1-trillion-in-capitalisation-after-6-weeks-in-the-shadows/",
       "pubDate": "2022-10-26T11:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "There was a resurgence in the cryptocurrency market on October 26 as Bitcoin’s (BTC) price climbed above $20,000 for the first... Continue reading",
       "currencies": [
@@ -482,127 +287,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Aptos (APT) Price Prediction: Double Digits on Sight",
-      "link": "NULL",
-      "pubDate": "2022-10-26T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "ADSCARES",
-      "link": "NULL",
-      "pubDate": "2022-10-26T11:17:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADS"
-      ]
-    },
-    {
-      "title": "Calling out to game developers on Astar Network!! Band VRF is now available on @AstarNetwork's Shibuya Testnet, m…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T11:12:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
-      "title": "Towards a better planet and a better #energy future, Efforce is launching its first office hour to discuss the upco…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:41:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "Join \"Evermoon at Binance LIVE: ABGA & KLAYTN Blockchain Gaming Hackathon Winners & Runner-ups demo 04\" ‼️…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KLAY",
-        "EVM"
-      ]
-    },
-    {
-      "title": "We are more than a community, We are a family  #PolyXfam",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:31:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PXT"
-      ]
-    },
-    {
-      "title": "Hi @CoinMarketCap, we’d like to update the circulating supply of $TITAN. Thank you.",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:17:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
-      "title": "BLOCKCHAIN NEWS: The UK 🇬🇧 has voted in favor of recognizing #Bitcoin and other #Crypto assets as regulated financi…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:11:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "CBK"
-      ]
-    },
-    {
-      "title": "Got a great business idea but not into coding? Our new Blockchain Hustlers series introduce you to the Bitcoin SV-…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Dash 2 Trade Signals Platform Raises $2.5 Million in Presale – How to Buy?",
-      "link": "NULL",
-      "pubDate": "2022-10-26T10:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH"
-      ]
-    },
-    {
       "title": "Dogecoin jumps above 10% in a day – is DOGE price pump on the horizon?",
       "link": "https://finbold.com/dogecoin-jumps-above-10-in-a-day-is-doge-price-pump-on-the-horizon/",
       "pubDate": "2022-10-26T10:05:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As the cryptocurrency market is finally waking up from the weeks-long dormancy, multiple assets are logging double-digit gains, including the... Continue reading",
       "currencies": [
@@ -615,22 +304,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @trondao: #TRONChad @justinsuntron appearing from coast to coast. From New York to California, #TRON is everywhere. #TronStrong #T…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T09:50:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
       "title": "Cardano Is a Rocket, European Parliament Member Says",
       "link": "https://u.today/cardano-is-a-rocket-european-parliament-member-says",
       "pubDate": "2022-10-26T09:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano (ADA) was top gainer among top 10 cryptocurrencies, rising as much as 15%",
       "currencies": [
@@ -643,106 +321,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cardano Founder on Lack of Regulatory Clarity: Perhaps $ETH Is Now a Security",
-      "link": "NULL",
-      "pubDate": "2022-10-26T09:44:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Did you know, with @anytaskofficial you can keep 100% of your earnings?! The #freelance marketplace doesn't charge…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T09:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETN"
-      ]
-    },
-    {
-      "title": "Splinterlands - SPS burning is a must for balancing the supply",
-      "link": "NULL",
-      "pubDate": "2022-10-26T08:49:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "Join #IOSTStakingEvent for a chance to share a total prize pool of 100,000 $IOST. Only 50 slots available! End o…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T08:11:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOST"
-      ]
-    },
-    {
-      "title": "Attention all #USDD holders! We are adding 55,000 extra $USDD mining rewards to our USDD/3CRV Mining Pool on…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T07:38:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Axie Infinity investors, here’s where increased involvement has steered AXS",
-      "link": "NULL",
-      "pubDate": "2022-10-26T02:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "#CEEK #Metaverse 🥇$CEEK",
-      "link": "NULL",
-      "pubDate": "2022-10-26T02:15:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "Upcoming #AMA Topic: The Current State of the Klaytn Ecosystem Sam Seo, Chief Klaytn Officer Via Twitter Spa…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T01:28:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Dormant Whale Wallet Sends ETH Up by 8% After Making This Move",
       "link": "https://u.today/dormant-whale-wallet-sends-eth-up-by-8-after-making-this-move",
       "pubDate": "2022-10-26T01:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "ETH whale wallet which has been dormant since 2016 come active amid a surge in the price of the token",
       "currencies": [
@@ -754,24 +337,11 @@
       }
     },
     {
-      "title": "Unknown Miner Captured 64% of the #BitcoinSV Chain During the Past 7 Days, Empty BSV Blocks Renders Chain Useless a…",
-      "link": "NULL",
-      "pubDate": "2022-10-26T00:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV",
-        "XCN",
-        "AXN"
-      ]
-    },
-    {
       "title": "Connect everything - Flare enables decentralized interoperability",
       "link": "https://bravenewcoin.com/insights/podcasts/connect-everything-flare-enables-decentralized-interoperability",
       "pubDate": "2022-10-26T00:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bravenewcoin",
+      "sourceKey": "bravenewcoin",
       "category": "general",
       "description": "Hugo Philion is the co-founder and CEO of Flare Networks. Flare enables secure interoperability between chains, scaling the use of blockchain by enabling all digital assets and on-chain data to flow freely.",
       "currencies": [

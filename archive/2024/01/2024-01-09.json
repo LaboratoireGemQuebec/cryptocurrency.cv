@@ -1,33 +1,15 @@
 {
   "date": "2024-01-09",
-  "fetchedAt": "2026-02-05T07:45:53.347Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.646Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Privacy Token Liquidity Hits Record Low of $5 Million Amid Market Volatility, Report",
-      "link": "NULL",
-      "pubDate": "2024-01-09T23:10:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "XMR",
-        "ZEC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "BREAKING: Elon Musk Gets Involved in Fake Bitcoin Spot ETF Drama – He Tweeted About Dogecoin",
       "link": "https://en.bitcoinsistemi.com/breaking-elon-musk-gets-involved-in-fake-bitcoin-spot-etf-drama-he-tweeted-about-dogecoin/",
       "pubDate": "2024-01-09T22:22:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to the latest development, Elon Musk also made his comment after the SEC's Twitter account was hacked and a fake Tweet was sent about the approval of Bitcoin Spot ETFs. Under a post making fun of the hacking of the SEC's Twitter account and discussing what the SEC's Twitter password could be, Musk wrote […] Continue Reading: BREAKING: Elon Musk Gets Involved in Fake Bitcoin...",
       "currencies": [
@@ -40,61 +22,11 @@
       }
     },
     {
-      "title": "Hacker Commandeers Official SEC X Account, Falsely Claims Regulator Has Approved Spot Bitcoin ETF",
-      "link": "NULL",
-      "pubDate": "2024-01-09T22:18:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "SEC Social Media Hacked, Spreads False News on Bitcoin ETF Approval",
-      "link": "NULL",
-      "pubDate": "2024-01-09T22:14:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Gary Gensler, the chair of the SEC, reveals that the agency’s X (formerly Twitter) account was compromised, spreading false news about the approval of a spot Bitcoin exchange-traded fund (ETF). “The SEC gov Twitter account was compromised, and an unauthorized tweet was posted,” Gensler posted. Gensler Declares the Bitcoin ETF Announcement is False On X, Gensler announced that...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BREAKING: Gary Gensler says BTC ETFs haven’t been approved, SEC Twitter account hacked",
-      "link": "NULL",
-      "pubDate": "2024-01-09T22:08:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "The U.S. Securities and Exchange Commission (SEC) encountered a security breach in a recent development that has stirred the cryptocurrency market. The SEC’s official Twitter account was hacked, leading to the false announcement of the approval of Bitcoin Spot Exchange-Traded Funds (ETFs). SEC Chairman Gary Gensler promptly addressed the situation, clarifying that the tweet was […]",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "BREAKING: Gary Gensler Says SEC’s X Account Hacked, Bitcoin Spot ETFs Not Yet Approved",
       "link": "https://en.bitcoinsistemi.com/breaking-gary-gensler-says-secs-x-account-hacked-bitcoin-spot-etfs-not-yet-approved/",
       "pubDate": "2024-01-09T21:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to the SEC chairman's statement, the post announcing the approval of Bitcoin Spot ETFs was made by the hacker who took over the SEC's official X account. So currently Bitcoin Spot ETFs have not received official approval. On the other hand, the relevant confirmation post was deleted from the SEC's Twitter account. Gensler said […] Continue Reading: BREAKING: Gary Gensler Says...",
       "currencies": [
@@ -106,57 +38,11 @@
       }
     },
     {
-      "title": "How Much Will Flow Into BTC Post ETF Approval?",
-      "link": "NULL",
-      "pubDate": "2024-01-09T21:28:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "SEC Account Compromised Stating ETFs Approved",
-      "link": "NULL",
-      "pubDate": "2024-01-09T21:20:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "description": "“Today the SEC grants approval for Bitcoin ETFs for listing on all registered national securities exchanges. The approved Bitcoin ETFs will be subject to ongoing surveillance and compliance measures to.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 32,
-        "negative": 6
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BREAKING: Good News Finally Arrives – SEC Approves Bitcoin Spot ETFs",
-      "link": "NULL",
-      "pubDate": "2024-01-09T21:13:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "According to breaking information, the SEC has finally decided to allow Bitcoin Spot ETFs to be traded in the US market. Continue Reading: BREAKING: Good News Finally Arrives – SEC Approves Bitcoin Spot ETFs",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 2
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Fox Launches Protocol for Content Verification on Polygon",
       "link": "https://thedefiant.io/fox-launches-protocol-for-content-verification-on-polygon",
       "pubDate": "2024-01-09T20:10:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "layer2",
       "description": "89,000 pieces of content have been registered so far.",
       "currencies": [
@@ -169,76 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "NeoGo updated to v0.105.0 with RPC infrastructure and CLI utility enhancements",
-      "link": "NULL",
-      "pubDate": "2024-01-09T20:09:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "OKX Delisting Compounds Privacy Token Liquidity Woes",
-      "link": "NULL",
-      "pubDate": "2024-01-09T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "Here’re the Top Trending Cryptocurrencies in the Past 24 Hours",
-      "link": "NULL",
-      "pubDate": "2024-01-09T19:43:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "LTC",
-        "VET",
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Filecoin Down More Than 6% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-01-09T19:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "STX Hits 52-Week High! Ascending Channel Points to Bullish Trajectory",
-      "link": "NULL",
-      "pubDate": "2024-01-09T18:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "STX",
-        "OP"
-      ]
-    },
-    {
       "title": "Huge Claim: “CEO of the Company with Bitcoin Spot ETF Application Says Ripple (XRP) Spot ETF is Next”",
       "link": "https://en.bitcoinsistemi.com/huge-claim-ceo-of-the-company-with-bitcoin-spot-etf-application-says-ripple-xrp-spot-etf-is-next/",
       "pubDate": "2024-01-09T18:22:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to journalist Jacquelyn Melinek's claim, Valkyrie CEO said that after Bitcoin Spot ETF, it is Ripple's turn. Continue Reading: Huge Claim: “CEO of the Company with Bitcoin Spot ETF Application Says Ripple (XRP) Spot ETF is Next”",
       "currencies": [
@@ -252,100 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Top 3 Affordable Crypto Picks For January",
-      "link": "NULL",
-      "pubDate": "2024-01-09T18:06:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "IOTA"
-      ]
-    },
-    {
-      "title": "These Altcoins Are Showing Most Bullish & Bearish Divergences: Santiment",
-      "link": "NULL",
-      "pubDate": "2024-01-09T18:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "MKR",
-        "BONK",
-        "SEI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "CLAIM: Dogecoin’s Mascot Dog Allegedly Died, DOGE Price Makes Sudden Moves",
-      "link": "NULL",
-      "pubDate": "2024-01-09T17:40:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "AxLabs launches 1ClickNode, its Web3 node deployment service",
-      "link": "NULL",
-      "pubDate": "2024-01-09T17:20:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Cardano’s 2024 Rollercoaster: Price Plunges 18% Despite 250% Surge In Development Activity",
-      "link": "NULL",
-      "pubDate": "2024-01-09T17:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "MATIC",
-        "MKR",
-        "OP"
-      ]
-    },
-    {
-      "title": "Wemix blockchain to cease block minting rewards",
-      "link": "NULL",
-      "pubDate": "2024-01-09T16:44:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WEMIX"
-      ]
-    },
-    {
-      "title": "Cosmos developers propose reducing ATOM inflation rate",
-      "link": "NULL",
-      "pubDate": "2024-01-09T16:02:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
       "title": "Global Mega Bank Standard Chartered Releases Bullish Forecast For Spot Bitcoin ETFs",
       "link": "https://www.newsbtc.com/news/standard-chartered-spot-bitcoin-etf/",
       "pubDate": "2024-01-09T16:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Standard Chartered Bank is the latest to give its predictions on the impact Spot Bitcoin ETFs could have on Bitcoin’s price in the long term. The bank took a bullish stance as they predicted that BTC could rise to unprecedented heights by the end of 2025. Bitcoin Could Hit $200,000 By End Of 2024 According to a report by Standard Chartered shared on the X (formerly Twitter) platform, BTC’s...",
       "currencies": [
@@ -361,268 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Long Consolidation Period Looming for Crypto As Markets Have Already Used Up All the Juice, Says Analyst",
-      "link": "NULL",
-      "pubDate": "2024-01-09T15:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XLM",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Juniper Networks Jumps 21.8% After Reports of $13B Acquisition Offer",
-      "link": "NULL",
-      "pubDate": "2024-01-09T15:15:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Lido DAO's Price Increased More Than 7% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-01-09T15:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Filecoin: Rocky Start Hits Protocol With Slow New Year Progress – Here’s Why",
-      "link": "NULL",
-      "pubDate": "2024-01-09T15:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "FIL",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Hackathon Boosts Web3 Knowledge in Tunisian Universities",
-      "link": "NULL",
-      "pubDate": "2024-01-09T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Santiment Pointed to Six Altcoins: \"Three Give Bullish Signals, Three Give Bearish Signals!\"",
-      "link": "NULL",
-      "pubDate": "2024-01-09T12:49:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "MKR",
-        "BONK",
-        "SEI"
-      ]
-    },
-    {
-      "title": "NFT Craze Explodes: Collectible Tokens Like ICP, STX, IMX, RNDR, THETA Soar!",
-      "link": "NULL",
-      "pubDate": "2024-01-09T12:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "ICP",
-        "THETA",
-        "STX",
-        "IMX",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Maker Takes The Spotlight With 34% Gain – Can MKR Hold This Position?",
-      "link": "NULL",
-      "pubDate": "2024-01-09T12:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "MKR",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Crypto Roundup 09 Jan: BTC Peaks, ETF Approval Hovers on the Horizon",
-      "link": "NULL",
-      "pubDate": "2024-01-09T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Bitget Report 2023: Remarkable 94% Surge in Spot Trading, Accompanied by a 110% Spike in BGB Volume",
-      "link": "NULL",
-      "pubDate": "2024-01-09T11:25:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BGB"
-      ]
-    },
-    {
-      "title": "Evmos Foundation takes back $7.6 million in tokens from departed co-founder",
-      "link": "NULL",
-      "pubDate": "2024-01-09T10:38:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Top 5 Cryptocurrency that has Power to Establish Metaverse Transaction",
-      "link": "NULL",
-      "pubDate": "2024-01-09T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "MANA",
-        "SAND",
-        "AXS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Will Fantom Network Activity Give FTM Price A Shot In The Arm?",
-      "link": "NULL",
-      "pubDate": "2024-01-09T10:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "FTM",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Spot Bitcoin ETFs Could Trade 8% Above Fair Value: Renowned Expert",
-      "link": "NULL",
-      "pubDate": "2024-01-09T09:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bears Lose Over $100 Million Amid BTC Price Rise",
-      "link": "NULL",
-      "pubDate": "2024-01-09T07:37:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin's Price Surge Leads to $100M Loss for Short Traders Amid Anticipation of U.S. ETF Approval.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "How ‘Undervalued’ Ethereum Could Become the Next Spot ETF Hype Wave",
-      "link": "NULL",
-      "pubDate": "2024-01-09T07:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SOL",
-        "DOT",
-        "AVAX",
-        "MATIC",
-        "FLOW",
-        "ICP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Jim Cramer Now Says Bitcoin Is 'Topping Out'",
-      "link": "NULL",
-      "pubDate": "2024-01-09T07:29:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Cramer’s picks have the tendency to move in the opposite direction he touts.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 9,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Dip After ETF Approval Predicted, How Low Could It Go?",
-      "link": "NULL",
-      "pubDate": "2024-01-09T06:08:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
       "title": "Solana now boasts more than 2,500 monthly active developers",
       "link": "https://cointelegraph.com/news/solana-network-developers-2500-monthly-active-2024",
       "pubDate": "2024-01-09T06:08:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "The Solana Foundation notched a 50% increase in developer retention on the network over the last three months.",
       "currencies": [
@@ -633,45 +108,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Jim Cramer: Bitcoin (BTC) Price Is “Topping Out”",
-      "link": "NULL",
-      "pubDate": "2024-01-09T05:56:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Jim Cramer, known for his bold market predictions, recently suggested that Bitcoin (BTC) is \"topping out\"",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Will Fantom’s network activity help FTM beat the bears?",
-      "link": "NULL",
-      "pubDate": "2024-01-09T03:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Binance Defense Gains Momentum As Experts Question Terra Ruling’s Impact",
-      "link": "NULL",
-      "pubDate": "2024-01-09T01:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
   "date": "2022-01-19",
-  "fetchedAt": "2026-02-05T07:45:51.448Z",
-  "articleCount": 107,
+  "fetchedAt": "2026-02-05T07:48:35.283Z",
+  "articleCount": 43,
   "source": "historical-import",
   "articles": [
     {
       "title": "CoinMarketCap finally reaches out to SHIB devs to fix ‘wormhole’ contract issues",
       "link": "https://ambcrypto.com/coinmarketcap-finally-reaches-out-to-shib-devs-to-fix-wormhole-contract-issues/",
       "pubDate": "2022-01-19T23:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "It’s been quite the drama for a certain cryptocurrency over the past couple of days – Shiba Inu (SHIB) – with its vocal community part of an intense commotion on Twitter. In fact, SHIB’s community was in an online spat with CoinMarketCap and, it didn’t hold back. As one may know, SHIB incorporates only the […]",
       "currencies": [
         "ETH",
@@ -26,8 +26,8 @@
       "title": "Secret Network Announces $400M Ecosystem Funding, Reveals Big-Name Investors",
       "link": "https://blockworks.co/secret-network-announces-400m-ecosystem-funding-reveals-big-name-investors/",
       "pubDate": "2022-01-19T23:26:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "regulation",
       "description": "The privacy-focused blockchain will launch a $175 million accelerator pool and $225 million ecosystem fund",
       "currencies": [
@@ -43,8 +43,8 @@
       "title": "Crypto Analyst Justin Bennett Says Polkadot (DOT) Breakout Imminent – Here Are His Targets",
       "link": "https://dailyhodl.com/2022/01/19/crypto-analyst-justin-bennett-says-polkadot-dot-breakout-imminent-here-are-his-targets/",
       "pubDate": "2022-01-19T23:05:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Popular crypto strategist and trader Justin Bennett says a strong breakout is on the horizon for interoperability blockchain Polkadot (DOT). In a new strategy session, Bennett says that Polkadot’s price action is coiling as it trades within a bullish continuation pattern. “The fact that this is a falling wedge, which is inherently a bullish pattern, and […]",
       "currencies": [
@@ -57,38 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "On Monday January 24th @feindura will be speaking on Twitter Spaces with @Karinnagrant Co-Founder of…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T21:15:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "This is very exciting news for the #Casper ecosystem and Casper community!",
-      "link": "NULL",
-      "pubDate": "2022-01-19T21:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CSPR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Shark Tank Investor Kevin O’Leary Says Solana (SOL), Polygon (MATIC) and Hedera (HBAR) Have ‘Large’ Potential",
       "link": "https://dailyhodl.com/2022/01/19/shark-tank-investor-kevin-oleary-says-solana-sol-polygon-matic-and-hedera-hbar-have-large-potential/",
       "pubDate": "2022-01-19T21:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Shark Tank star and billionaire investor Kevin O’Leary sees several leading altcoins that he believes have the potential to add problem-solving value as the blockchain world expands and evolves. In an interview with Anthony Pompliano on The Best Business Show, O’Leary says cryptocurrencies should be viewed as functional “software” rather than simply alternate forms of […]",
       "currencies": [
@@ -106,8 +79,8 @@
       "title": "Bitcoin Flashes Ultra-Bullish Signal Following “First Selloff” Wave In Current Cycle",
       "link": "https://zycrypto.com/bitcoin-flashes-ultra-bullish-signal-following-first-selloff-wave-in-current-bull-cycle/",
       "pubDate": "2022-01-19T20:48:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Key Takeaways Bitcoin’s four-wave cycle is poised to enter the fake top wave according to BTC market pundits. The current wave gauges BTC at $100k-$220k by 2023. The speculation is highly bullish, but may not still play out. Bitcoin, the benchmark cryptocurrency has shown prospects that it is still very reassuring to look ahead. In […]",
       "currencies": [
@@ -121,57 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "v5.2.1 now live on Android PlayStore! KYC verification button fixed Import $SOL NFTs enhanced $THETA withd…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T20:15:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SOL",
-        "THETA",
-        "XCUR"
-      ]
-    },
-    {
-      "title": "RT @krypto_origin: The latest decentralized #Metaverse on cross-chain @pixelverse1 launched to offer wide range of features via its #PixelC…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T20:09:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Win Enjin NFT's, CRTS and more !",
-      "link": "NULL",
-      "pubDate": "2022-01-19T19:54:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CRTS"
-      ]
-    },
-    {
-      "title": "RT @snarkyzk: Great quant thread about the squeeeeeth greeks",
-      "link": "NULL",
-      "pubDate": "2022-01-19T19:47:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Metaverse Launches With Thousands Investing in Its Digital Real Estate",
       "link": "https://dailyhodl.com/2022/01/19/cardano-ada-metaverse-launches-with-thousands-investing-in-its-digital-real-estate/",
       "pubDate": "2022-01-19T19:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Play-to-earn gaming and non-fungible token (NFT) project Pavia is premiering on the Cardano (ADA) network months after the fifth-largest blockchain by market cap rolled out smart contract features. In a press release, Pavia says that it is the “first Cardano metaverse,” a virtual reality space that allows real-world activities and forms to be replicated digitally. […]",
       "currencies": [
@@ -187,8 +114,8 @@
       "title": "Ongoing macro-inflation trends are likely to affect Bitcoin this way",
       "link": "https://ambcrypto.com/ongoing-macro-inflation-trends-are-likely-to-affect-bitcoin-this-way/",
       "pubDate": "2022-01-19T19:30:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "Bitcoin‘s current price struggles are no secret to the cryptocurrency sector as the top asset continues to bleed red almost three weeks into the new year. It has lost 11% of its valuation over the past month, leading many experts to believe that the bears have settled in. Much of the downtrend has been triggered […]",
       "currencies": [
@@ -202,33 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @dbsmithsafemoon: We will be releasing the full panel discussion from Cryptopia 2022 on our official YouTube channel",
-      "link": "NULL",
-      "pubDate": "2022-01-19T19:04:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFEMOON"
-      ]
-    },
-    {
-      "title": "Learn about how decentralization enables applications to be more private and secure in storing data in Part 3 of ou…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T19:03:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
       "title": "How Bitcoin Is Controlling The Ebb And Flow Of Crypto",
       "link": "https://www.newsbtc.com/news/bitcoin/how-bitcoin-controlling-the-ebb-and-flow-crypto/",
       "pubDate": "2022-01-19T19:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Latest data shows that so far in the year 2022, the rest of the crypto market has been moving in tandem with Bitcoin. Crypto Indexes Follow Bitcoin In January So Far As per the latest weekly report from Arcane Research, all the various indexes in the crypto market have mimicked BTC’s movements so far in the month of January. The “crypto indexes” here refer to groups of cryptocurrencies...",
       "currencies": [
@@ -243,22 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @ja_morris: The @energywebx stack can help emerging economies leapfrog the way developed economies run energy markets by jumping straig…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:45:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
       "title": "Here’s how traders capitalize on crypto market crashes and liquidations",
       "link": "https://cointelegraph.com/news/here-s-how-traders-capitalize-on-crypto-market-crashes-and-liquidations",
       "pubDate": "2022-01-19T18:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Everyone’s a genius trader during bull markets, but there are also ways to generate profits during bear trends. Here’s how to capitalize on liquidations.",
       "currencies": [
@@ -271,68 +165,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @robert_lauko: @0xKolten @LiquityProtocol @DerrickN_ will take on additional responsibilities in the future, playing an important part i…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:25:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUSD",
-        "LQTY"
-      ]
-    },
-    {
-      "title": "RT @robert_lauko: @0xKolten @LiquityProtocol Thank you @0xkolten for your awesome work and achievements for Liquity! It has been a incredib…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:25:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUSD",
-        "LQTY"
-      ]
-    },
-    {
-      "title": "This morning, @arietrouw and a few other members of the #XYO team put their heads together to help our new XY Labs…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:16:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
-      "title": "1/7) We are currently crafting a response to the DCMA notice filed by a competitor project to our pirate repository…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:02:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARRR"
-      ]
-    },
-    {
-      "title": "In Episode 137 of the Divi Crypto Podcast, @thestevemcgarry sat down with @doyle126 who is the Co-Founder of…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T18:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
       "title": "Polygon Starts Burning MATIC Tokens After Successfully Implementing Ethereum (ETH) Update",
       "link": "https://dailyhodl.com/2022/01/19/polygon-starts-burning-matic-tokens-after-successfully-implementing-ethereum-eth-update/",
       "pubDate": "2022-01-19T17:55:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "The layer-2 scaling solution Polygon (MATIC) has successfully implemented a much-publicized Ethereum (ETH) update and is now burning native MATIC tokens. Ethereum Improvement Proposal 1559 (EIP-1559) went live on the Polygon mainnet on Thursday, occurring on Block #23850000. EIP-1559 first introduced a highly anticipated fee-burning mechanism into the Ethereum network in August, meaning that...",
       "currencies": [
@@ -346,22 +183,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @certik_io: Decentralization has become a buzzword with many people using the term to describe networks that may not be decentralized.…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T17:39:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CTK"
-      ]
-    },
-    {
       "title": "Shiba Inu, Ether, and DOGE Are Slowly Eating Into Bitcoin’s Multi-Billion Dollar Payments Sphere",
       "link": "https://zycrypto.com/shiba-inu-ether-and-doge-are-slowly-eating-into-bitcoins-multi-billion-dollar-payments-sphere/",
       "pubDate": "2022-01-19T17:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Altcoins and stablecoins have downsized Bitcoin’s dominance as a means for paying for goods and services online by 27%. This is according to a new report released by Bloomberg, citing data from BitPay. According to BitPay, Ether accounted for 15% of all global payments at merchant stores while stablecoins accounted for 13%. Dogecoin, Shiba Inu, […]",
       "currencies": [
@@ -376,89 +202,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "We are live! Join us. \"The future of Cloud Storage is Decentralized\".",
-      "link": "NULL",
-      "pubDate": "2022-01-19T17:10:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "#Bitcoin the only finite asset in the universe.",
-      "link": "NULL",
-      "pubDate": "2022-01-19T17:06:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "TITAN"
-      ]
-    },
-    {
-      "title": "RT @GBBCouncil: Can CeFi and DeFi coexist? We are LIVE to discuss the relationship between traditional finance &amp; next-generation finance wi…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T16:28:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
-      "title": "It's an honor to work with @Amberdataio.",
-      "link": "NULL",
-      "pubDate": "2022-01-19T16:10:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
-      "title": "Orbs co-founder, Daniel Peled, will go live in a few minutes to talk on @GBBCouncil Blockchain Central Davos 2022!…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T16:07:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
-      "title": "What you #ceek is ceeking you in the #Metaverse :D #Excitingtimes",
-      "link": "NULL",
-      "pubDate": "2022-01-19T16:03:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "The new #PayWithTether video series introduces businesses that accept #tether tokens for their goods and services.…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T16:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "XAUT"
-      ]
-    },
-    {
       "title": "Bitcoin’s transition to a risk-off asset will propel it to $100K in 2022, says Bloomberg analyst",
       "link": "https://cointelegraph.com/news/bitcoin-s-transition-to-a-risk-off-asset-will-propel-it-to-100k-in-2022-says-bloomberg-analyst",
       "pubDate": "2022-01-19T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Mike McGlone, senior commodity strategist at Bloomberg, is convinced that Bitcoin’s transition to digital gold will propel it to new all-time highs in 2022.",
       "currencies": [
@@ -472,44 +220,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @DefiLive_: @DefiLive_ 2021 was a huge success and we were so glad to have @Raullen from @iotex_io there giving us a very interesting ta…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:57:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "IOTX"
-      ]
-    },
-    {
-      "title": "More use cases to $PIXEL will come with the launch of #PixelLaunch on the #PixelVerse ecosystem. Exciting project…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:39:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Our grants program 𝗛𝗲𝗹𝗶𝗼𝘀 aims to engage projects, developers, and researchers in accelerating the growth &amp; accessi…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:35:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
       "title": "Shiba Inu Team Clarifies the Situation With CoinMarketCap",
       "link": "https://cryptopotato.com/shiba-inu-team-clarifies-the-situation-with-coinmarketcap/",
       "pubDate": "2022-01-19T15:33:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "The memecoin team had cautioned investors to steer clear of ‘malicious’ addresses on the tracking platform’s SHIB token page.",
       "currencies": [
@@ -521,22 +236,11 @@
       }
     },
     {
-      "title": "Vietnam’s largest blockchain gaming guild, @Ancient8_gg. They recently raised their Seed Funding from a high profil…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:32:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHR"
-      ]
-    },
-    {
       "title": "Bitcoin ‘Mega Whales’ Make Reappearance As BTC Struggles To Stay Above $40,000: Crypto Intelligence Firm Santiment",
       "link": "https://dailyhodl.com/2022/01/19/bitcoin-mega-whales-make-reappearance-as-btc-struggles-to-stay-above-40000-crypto-intelligence-firm-santiment/",
       "pubDate": "2022-01-19T15:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "As the price of Bitcoin (BTC) continues to track sideways in early 2022, BTC “mega whales” appear to be buying back into the space. According to crypto analytics firm Santiment, in the past three months 10 new Bitcoin whale addresses have reappeared that hold 10,000 or more BTC, raising the total number of “mega whales” to […]",
       "currencies": [
@@ -549,66 +253,11 @@
       }
     },
     {
-      "title": "RT @ZDNet: API3, the first-party blockchain oracle, is releasing beacon data feeds with Amberdata by @linked_do",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:25:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
-      "title": "#Dmusic partners with #CasperLabs to streamline the music industry with a new type of #NFT platform on the #Casper…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:14:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CSPR"
-      ]
-    },
-    {
-      "title": "We're excited to share that API3 is the official #DeFi track sponsor at #ETHDenver and we're making @Amberdataio…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:12:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
-      "title": "We are kicking off the #LetsTalkStorjDCS series with our first webinar of the year that will cover why decentralize…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T15:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "Here's what $FUN CEO Adriaan Brink had to say about the potential of FUNToken, in an exclusive interview",
-      "link": "NULL",
-      "pubDate": "2022-01-19T14:32:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FUN"
-      ]
-    },
-    {
       "title": "Hedera going open source with the Hashgraph!! This is gonna change the world",
       "link": "https://www.reddit.com/r/Hedera/comments/s7qy4j/hedera_going_open_source_with_the_hashgraph_this/",
       "pubDate": "2022-01-19T14:30:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "HBAR"
@@ -623,8 +272,8 @@
       "title": "Cardano ($ADA) Whale: ‘Transactions per Second Should Scale to 500-1000 This Year’",
       "link": "https://www.cryptoglobe.com/latest/2022/01/cardano-ada-whale-transactions-per-second-should-scale-to-500-1000-this-year/",
       "pubDate": "2022-01-19T14:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "regulation",
       "description": "A highly popular pseudonymous Cardano ($ADA) whale says that in 2022 he expects the L1 blockchain’s transaction throughput to increase to 500-1000. According to a report published by CoinDesk earlier today, “ADA Whale” (“cardano_whale” on Twitter) told them via a Twitter chat: “Keep eyes on the various scaling initiatives coming to Cardano the next months… […]",
       "currencies": [
@@ -637,22 +286,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @vocdoni: Must read! 'Remote Voting in the Age of Cryptography' being published in the @MIT Computational Law Report, outlining the chal…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T14:15:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ANT"
-      ]
-    },
-    {
       "title": "Cardano, Polkadot, Bitcoin, and Dogecoin Poised For Huge Rebound – What To Expect In The Near Term",
       "link": "https://zycrypto.com/cardano-polkadot-bitcoin-and-dogecoin-poised-for-huge-rebound-what-to-expect-in-the-near-term/",
       "pubDate": "2022-01-19T14:11:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Markets are showing signs of recovering from last week’s lows. BTC, ADA, DOT, and DOGE started the week well. Discussions on the environmental impacts of mining this week may cause market reactions. Following last week’s slump, markets are beginning to look up again. Assets like Bitcoin, Cardano, Polkadot, and DOGE have begun their slow, steady […]",
       "currencies": [
@@ -667,46 +305,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @eToro: This hump say is a little sweeter, we've got new stuff!",
-      "link": "NULL",
-      "pubDate": "2022-01-19T14:11:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RENBTC",
-        "REN"
-      ]
-    },
-    {
-      "title": "RT @niv_tomer: @Fetch_ai @synthetix_io @renprotocol Welcome to eToro!",
-      "link": "NULL",
-      "pubDate": "2022-01-19T14:11:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RENBTC",
-        "REN"
-      ]
-    },
-    {
-      "title": "EOS scalability, flexibility, and speed of transactions allow a seamless interaction within the ecosystem of…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T14:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
       "title": "Hedera Governing Council to buy hashgraph IP, and open-source projects code",
       "link": "https://cointelegraph.com/news/hedera-governing-council-to-buy-hashgraph-ip-and-open-source-projects-code",
       "pubDate": "2022-01-19T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Distributed ledger service Hedera Hashgraph is expected to deploy a panoply of upgrades in 2022 in line with their long-term pursuit of decentralization.",
       "currencies": [
@@ -722,8 +325,8 @@
       "title": "World’s first Decentralized Finance (DeFi) ETF launched in Brazil",
       "link": "https://finbold.com/worlds-first-decentralized-finance-defi-etf-launched-in-brazil/",
       "pubDate": "2022-01-19T13:55:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "defi",
       "description": "Hashdex, a major worldwide crypto-focused asset manager, revealed in a press statement on Wednesday, January 18 that the world’s first... Continue reading",
       "currencies": [
@@ -739,8 +342,8 @@
       "title": "Third-Largest Ethereum Whale Just Spent $14 Million on These 3 Altcoins",
       "link": "https://cryptopotato.com/third-largest-ethereum-whale-just-spent-14-million-on-these-3-altcoins/",
       "pubDate": "2022-01-19T13:42:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "A bullish whale recently spent more than $14 million in purchasing three altcoins including MANA and SAND",
       "currencies": [
@@ -755,33 +358,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Metaverse is the next big subject in connecting people, our verified creators and communities get their own tokens…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T13:38:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "The one-stop trading platform on Twitter",
-      "link": "NULL",
-      "pubDate": "2022-01-19T13:03:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MASK"
-      ]
-    },
-    {
       "title": "2.5 Billion SHIB Burned Since Dec. 1, 428 Million Gone This Week; Will Price Start Rising Soon?",
       "link": "https://u.today/25-billion-shib-burned-since-dec-1-428-million-gone-this-week-will-price-start-rising-soon",
       "pubDate": "2022-01-19T13:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Almost three billion Shiba Inu tokens have been burnt since start of December",
       "currencies": [
@@ -794,22 +375,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1/  Mask Network just integrated OpenOcean @OpenOceanGlobal as one of our multi-chain swap options.",
-      "link": "NULL",
-      "pubDate": "2022-01-19T12:58:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MASK"
-      ]
-    },
-    {
       "title": "Can Cardano Continue Its Rally? Crypto Analyst Benjamin Cowen Looks at What’s Ahead for ADA",
       "link": "https://dailyhodl.com/2022/01/19/can-cardano-continue-its-rally-crypto-analyst-benjamin-cowen-looks-at-whats-ahead-for-ada/",
       "pubDate": "2022-01-19T12:45:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Crypto analyst Benjamin Cowen says a handful of factors could prevent Cardano (ADA) from kicking off a bull run right now. In a new YouTube update, Cowen tells his 692,000 subscribers that Bitcoin (BTC) is the “number one” limiting factor that could prohibit ADA’s price from surging higher. The analyst explains that BTC controls the health of the market […]",
       "currencies": [
@@ -822,34 +392,11 @@
       }
     },
     {
-      "title": "RT @Dash_Community: The #Dash implementation on @THORChain recognizes #ChainLocks, a Dash innovation which makes blocks permanent once they…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T12:10:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE",
-        "DASH"
-      ]
-    },
-    {
-      "title": "The United Nations Environment Programme (@UNEP) and the Social Alpha Foundation (@safoundation17) just released a…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T11:59:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EWT"
-      ]
-    },
-    {
       "title": "USD Coin (USDC) Surpassed Tether on the Ethereum Blockchain",
       "link": "https://cryptopotato.com/usd-coin-usdc-surpassed-tether-on-the-ethereum-blockchain/",
       "pubDate": "2022-01-19T11:53:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Even as the controversial stablecoin Tether (USDT) continues to be the market leader, USD Coin (USDC) is slowly eating up its share.",
       "currencies": [
@@ -867,8 +414,8 @@
       "title": "EU securities regulator calls for proof-of-work crypto mining ban",
       "link": "https://cointelegraph.com/news/eu-securities-regulator-calls-for-proof-of-work-crypto-mining-ban",
       "pubDate": "2022-01-19T11:43:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "European regulators are concerned about crypto's risks to climate change goals.",
       "currencies": [
@@ -880,22 +427,11 @@
       }
     },
     {
-      "title": "\"TOP of OASIS\" Quadratic Voting Rules &amp; Tutorial @DoraHacks Vote for your favorite project! You will have the chan…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T11:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
       "title": "Ava Labs President Says Total Crypto Market Cap Will Go to $5 Trillion in 2022",
       "link": "https://www.cryptoglobe.com/latest/2022/01/ava-labs-president-says-total-crypto-market-cap-will-go-to-5-trillion-in-2022/",
       "pubDate": "2022-01-19T11:04:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "John Wu, President of blockchain startup Ava Labs — which develops the software for the Avalanche ($AVAX) blockchain — made a number of interesting predictions for the crypto market in 2022. What is Avalanche ($AVAX)? Below is a brief description of Avalanche from its developer documentation: “Avalanche is an open-source platform for launching decentralized applications and enterprise...",
       "currencies": [
@@ -913,8 +449,8 @@
       "title": "Bitcoin (BTC) RSI and MACD Generate Bullish Divergences Near $40,000 Support",
       "link": "https://beincrypto.com/bitcoin-btc-rsi-macd-bullish-divergences-40000-support/",
       "pubDate": "2022-01-19T10:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) indicators are showing several short-term bullish signals above a strong support level, making a breakout above resistance a likely scenario.",
       "currencies": [
@@ -928,64 +464,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#Telcoin aims to bring this cost down to 2% or less, from the convenience of your smartphone #SendMoneySmarter",
-      "link": "NULL",
-      "pubDate": "2022-01-19T10:04:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "Wrapped Bitcoin on @Stacks (xBTC) is now available on @ArkadikoFinance. Learn how to swap STX for xBTC through our…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T10:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC",
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Coin, Ethereum Classic, EOS Price Analysis: 19 January",
-      "link": "NULL",
-      "pubDate": "2022-01-19T10:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "ETC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Metaverse is referred as the next evolution of the Internet and @pixelverse1 will be a One-Stop-Shop for creators a…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T09:58:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
       "title": "Cardano, Monero and a Few Other Altcoins Show Possible Incoming Price Rise per This Metric",
       "link": "https://u.today/cardano-monero-and-a-few-other-altcoins-show-possible-incoming-price-rise-per-this-metric",
       "pubDate": "2022-01-19T09:53:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano, Monero and some altcoins depict likely incoming price rise according to this metric",
       "currencies": [
@@ -998,33 +481,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Defi_Shiller1: Most of the Metaverse projects are giving sure profit and the time to earn from $PIXEL • @pixelverse1 is on its edges.…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T09:47:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "are you ready guys",
-      "link": "NULL",
-      "pubDate": "2022-01-19T09:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
       "title": "Some SHIB Starts Going Back into Circulation, Here's Why",
       "link": "https://u.today/some-shib-starts-going-back-into-circulation-heres-why",
       "pubDate": "2022-01-19T09:23:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "SHIB circulating supply on recently opened SHIB burn website is increasing as more coins are going back into circulation, here's the reason",
       "currencies": [
@@ -1040,8 +501,8 @@
       "title": "Singapore is shutting down Bitcoin ATMs amid crackdown on crypto ads",
       "link": "https://finbold.com/singapore-is-shutting-down-bitcoin-atms-amid-crackdown-on-crypto-ads/",
       "pubDate": "2022-01-19T09:20:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "There will be no more active cryptocurrency ATMs in Singapore for the meantime as the city-state is taking drastic steps... Continue reading",
       "currencies": [
@@ -1057,8 +518,8 @@
       "title": "Ravendex on a mission to become the first AMM-powered DEX on Cardano",
       "link": "https://ambcrypto.com/ravendex-on-a-mission-to-become-the-first-amm-powered-dex-on-cardano/",
       "pubDate": "2022-01-19T09:15:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Cardano’s (ADA) price increased dramatically over the past few days largely because of the prospect of Dapps launching on the 3rd Generation proof of stake blockchain. Cardano for a long time has been under intense pressure and backlash over the lack of useable dApps but that would be changing in the near future a, Ravendex, […]",
       "currencies": [
@@ -1075,9 +536,9 @@
       "title": "Memes are Moving from the Cryptoverse to the Metaverse",
       "link": "https://www.newsbtc.com/news/company/memes-are-moving-from-the-cryptoverse-to-the-metaverse/",
       "pubDate": "2022-01-19T09:10:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
+      "category": "bitcoin",
       "description": "Decentralization, at its core, is and has always been a community-driven revolution in money and culture, and cryptocurrency has served as a key player in the movement. After the advent of cryptocurrency, Dogecoin came in as a meme coin purely to mock investors who bought crypto despite a lack of understanding of the concept. Ironically, Dogecoin grew to become one of the most valuable coins...",
       "currencies": [
         "ETH",
@@ -1093,8 +554,8 @@
       "title": "Cardano’s Incredible Milestones Set ADA For An Explosive Year — Here’s Why",
       "link": "https://zycrypto.com/cardanos-recent-milestones-sets-ada-for-an-explosive-year-heres-why/",
       "pubDate": "2022-01-19T08:58:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "The new year seems to be opening up in good light for Cardano as the blockchain network continues to earn praises across the crypto space. The latest boost of publicity for Cardano and ADA comes from proponents who continue to share express sentiments about the network. Evidently, ADA has recently seen a significant increase in […]",
       "currencies": [
@@ -1107,33 +568,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "\"US utilities are spending less on making electricity and more on getting it to customers.\" Learn how Powerledger's…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T08:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POWR"
-      ]
-    },
-    {
-      "title": "Decred treasury announcement: For December payments to contractors, three TSPENDs have been accidentally created i…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T08:49:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DCR"
-      ]
-    },
-    {
       "title": "Cardano (ADA) Has Best Staking with More than 1M Delegations : #⃣: #ADA ️: Steven A…",
       "link": "https://twitter.com/TheCurrencyA/status/1483718635092905986",
       "pubDate": "2022-01-19T08:31:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@thecurrencya",
+      "sourceKey": "thecurrencya",
       "category": "altcoin",
       "currencies": [
         "ADA"
@@ -1148,8 +587,8 @@
       "title": "Third-Richest Ethereum Whale Splurges Over $128,000,000, Accumulates Two Metaverse Tokens and Four Other Crypto Assets",
       "link": "https://dailyhodl.com/2022/01/19/third-richest-ethereum-whale-splurges-over-128000000-accumulates-two-metaverse-tokens-and-four-other-crypto-assets/",
       "pubDate": "2022-01-19T08:04:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "One crypto whale just embarked on an altcoin shopping spree to the tune of $14.1 million. The blockchain-transaction tracker WhaleStats reveals that the Ethereum whale wallet named Light bought 642,999 Decentraland (MANA) for $1,845,409. Decentraland is a 3D virtual reality world that runs on Ethereum. The 43rd-ranked crypto asset is priced at $2.81. The 3rd-richest […]",
       "currencies": [
@@ -1164,23 +603,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Radio Caca on Twitter: \"We are happy to announce that @UTAustin's Texas Blockchain @txblockchain has joined the USMverse Metaverse!\"",
-      "link": "NULL",
-      "pubDate": "2022-01-19T07:38:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
       "title": "Kim Kardashian And Floyd Mayweather Sued Over Crypto Token",
       "link": "https://bitcoinist.com/kim-kardashian-floyd-mayweather-sued-crypto/",
       "pubDate": "2022-01-19T07:35:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
+      "category": "bitcoin",
       "description": "Hollywood star Kim Kardashian and sports legend Floyd Mayweather Jr. are involved in a crypto scam that now is moving to the courts, following a class action lawsuit filed to start the year. Related Reading | Dogs Rejoice As SHIB and DOGE Jump 15% Over Past Day Pumped and Dumped? A class action lawsuit, filed […]",
       "currencies": [
         "DOGE",
@@ -1193,22 +621,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Orbs staking on @0xPolygon using the official Tetra wallet is almost ready! The team is doing final testings and QA…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T07:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
       "title": "Dvision LAND NFTs to Be Minted on Polygon Network (MATIC)",
       "link": "https://u.today/dvision-land-nfts-to-be-minted-on-polygon-network-matic",
       "pubDate": "2022-01-19T07:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "nft",
       "description": "One of the fastest and cheapest EVM-compatible blockchains is going to be integrated by Dvision Network multi-chain ecosystem",
       "currencies": [
@@ -1221,22 +638,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How to use SAFE Analyzer Bot?",
-      "link": "NULL",
-      "pubDate": "2022-01-19T07:12:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
       "title": "Shiba Inu Devs Start Cooperating with CoinMarketCap",
       "link": "https://u.today/shiba-inu-devs-start-cooperating-with-coinmarketcap",
       "pubDate": "2022-01-19T06:20:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "CoinMarketCap has started cooperating with the Shiba Inu team to fix recent issues related to “wormhole” addresses",
       "currencies": [
@@ -1248,44 +654,11 @@
       }
     },
     {
-      "title": "RT @NavV96: Excited to be discussing the future of #NFTs and the #Metaverse with the founders of @nftplayground and @NFTYLab next week at t…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T06:02:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "IQ"
-      ]
-    },
-    {
-      "title": "KardiaChain is excited to join hands with the @KambriaNetwork to host the Kambria Starter Program I about the…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T06:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KAI"
-      ]
-    },
-    {
-      "title": "Our Chief Community Officer @NavV96 will be joining the founders of @nftplayground and @NFTYLab to discuss the futu…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T05:56:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "IQ"
-      ]
-    },
-    {
       "title": "Strike wallet is 5th most popular finance app in Argentina, but where’s the BTC?",
       "link": "https://cointelegraph.com/news/strike-wallet-is-5th-most-popular-finance-app-in-argentina-but-where-s-the-btc",
       "pubDate": "2022-01-19T05:40:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "“The best monetary network in human history is here, it's open, and will disrupt the world quicker than anyone thinks. Open networks win,” said Strike CEO Jack Mallers.",
       "currencies": [
@@ -1302,8 +675,8 @@
       "title": "The cardano (ADA), the token of the homonymous network that has surpassed Ethereum in transaction volume, has turne…",
       "link": "https://twitter.com/cmnnewsofficial/status/1483674839886233602",
       "pubDate": "2022-01-19T05:37:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@cmnnewsofficial",
+      "sourceKey": "cmnnewsofficial",
       "category": "ethereum",
       "currencies": [
         "ADA"
@@ -1315,44 +688,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Getting your hands on top-notch projects at early stage is always exciting #PixelVerse has lined up very promising…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T05:25:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Todays live stream, demoing the Chialisp development environment on the Clovyr development platform is now up on ou…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T05:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCH"
-      ]
-    },
-    {
-      "title": "RT @19Chicken88: Proud #HODLer of $DIVI and loving my new coin! Thank you @DiviProject Cheers to new heights  @NSapProductions @knowcrypto…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T05:20:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
       "title": "USDC flips Tether on the Ethereum network",
       "link": "https://cointelegraph.com/news/usdc-flips-tether-on-the-ethereum-network",
       "pubDate": "2022-01-19T04:51:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "The total supply for USDC on Ethereum has surpassed that of Tether, putting USDT in second place on Ethereum for the first time.",
       "currencies": [
@@ -1370,8 +710,8 @@
       "title": "Cardano ($ADA): New Project to ‘Accelerate Decentralized Application Development’ Launched",
       "link": "https://www.cryptoglobe.com/latest/2022/01/cardano-ada-new-project-to-accelerate-decentralized-application-development-launched/",
       "pubDate": "2022-01-19T03:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The Cardano Foundation is accelerating decentralized application (DApp) development on Cardano (ADA) with the help of EMURGO. In a new announcement, the Cardano Foundation says they are teaming up with EMURGO, the commercial arm of Cardano, to develop a new set of tools to help developers support, maintain, and accelerate DApp growth within the ADA ecosystem. […]",
       "currencies": [
@@ -1384,55 +724,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Alex_E_Benton: Want to learn more about @numerai and tournament participation? Make sure to check out @petey_ling's Numerai video serie…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T03:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
-      "title": "Dusk Network solves privacy concerns for companies, allowing them to incorporate varying levels of #blockchain tech…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T01:45:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
-      "title": "See you in the #CEEK #Metaverse",
-      "link": "NULL",
-      "pubDate": "2022-01-19T01:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "RT @Alex_E_Benton: The @NumeraiCoE’s first twitter space will be held this Friday! Be sure to set your reminders! This will be a weekly eve…",
-      "link": "NULL",
-      "pubDate": "2022-01-19T01:21:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
-    {
       "title": "Robinhood to Wait for Regulatory Clarity Before Listing Shiba Inu ($SHIB) and Other Cryptos, CFO Says",
       "link": "https://www.cryptoglobe.com/latest/2022/01/robinhood-to-wait-for-regulatory-clarity-before-listing-shiba-inu-shib-and-other-cryptos-cfo-says/",
       "pubDate": "2022-01-19T01:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Popular commission-free trading platform Robinhood (NASDAQ:HOOD) is set to wait for regulatory clarity before listing new cryptocurrencies, including the meme-inspired cryptocurrency Shiba Inu ($SHIB), which over half a million users asked for. According to a report published by Bitcoin.com, the trading platform’s Chief Financial Officer, Jason Warnick, revealed during The Wall Street...",
       "currencies": [
@@ -1444,28 +740,11 @@
       }
     },
     {
-      "title": "Possible Crypto REBOUND?? MAJOR Polygon & Binance oves | Axie Infinity Rises Again & Moonbeam News",
-      "link": "NULL",
-      "pubDate": "2022-01-19T01:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "description": "The crypto market is leaving Bitcoin holders with new hope!! Moonbeam tries to TURN AROUND its market rollercoaster with MoonScan!! Polygon MATIC is walking in the same Ethereum deflationary footsteps, Axie Infinity released MASSIVE 2022 UPGRADES!! And Binance BURNS and CONQUERS!! Get your crypto news here!! ⏱️TIMESTAMPS 0:00 Major Headlines 0:27 Introduction 0:50 Market Wrap 1:41 Moonbeam Launches MoonScan 2:37 Polygon MATIC on its way to being Deflationary 3:41 Massive Axie Infinity Upgrades 4",
-      "currencies": [
-        "MATIC",
-        "AXS"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 2
-      }
-    },
-    {
       "title": "Will $ADA break $3 this month?",
       "link": "https://twitter.com/wirexapp/status/1483606409392848901",
       "pubDate": "2022-01-19T01:05:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "altcoin",
       "currencies": [
         "ADA",
@@ -1475,17 +754,6 @@
         "positive": 2,
         "negative": 1
       }
-    },
-    {
-      "title": "RT @DiviProject: Our good friends at @VoskCoin gave the @DiviWallet a nice review in their latest video. Check it out!",
-      "link": "NULL",
-      "pubDate": "2022-01-19T00:35:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DIVI"
-      ]
     }
   ]
 }

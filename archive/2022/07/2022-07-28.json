@@ -1,103 +1,15 @@
 {
   "date": "2022-07-28",
-  "fetchedAt": "2026-02-05T07:45:52.816Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.594Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Update: Scheduled maintenance is complete and the #Telcoin App is up and running. Thank you for your support and patience! $TEL",
-      "link": "NULL",
-      "pubDate": "2022-07-28T23:36:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "RT @vicewrld_: MOONPAY is now available on our nft store #nft #moonpay #crypto #sexy #babes #nftart #bsc #cryptocur…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T20:49:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "Attention: The #Telcoin App will be unavailable during a scheduled maintenance today at 5pm CDT. Thank you for your…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T20:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TEL"
-      ]
-    },
-    {
-      "title": "Trader Tone Vays Says Bitcoin Needs Miracle To Turn Bullish Again, Lays Out Downside Target for BTC",
-      "link": "NULL",
-      "pubDate": "2022-07-28T20:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Seasoned trader Tone Vays is bearish on Bitcoin’s (BTC) near future, saying the Bitcoin chart looks “terrible” in the short term. In a new video from Tuesday, the analyst noted BTC “got rejected” by the 200-week moving average last week. BTC was trading at around $21,000 at the time of Vays’ video, the trader noting […]",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 5
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Crypto market regains $1 trillion as Bitcoin nears $24,000",
-      "link": "NULL",
-      "pubDate": "2022-07-28T19:25:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Trading at $23,800 at press time, Bitcoin led a broader rebound that saw the global crypto market regain $1 trillion in market capitalization.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 3
-      }
-    },
-    {
-      "title": "What rulesets would you like to see?",
-      "link": "NULL",
-      "pubDate": "2022-07-28T18:04:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @richardcraib: Numerai has just passed $100m in AUM and we’re just 2 months away from a 3 year track record (). T…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T18:01:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NMR"
-      ]
-    },
     {
       "title": "Crypto use in emerging markets driven by necessity: KuCoin Labs head",
       "link": "https://cointelegraph.com/news/crypto-use-in-emerging-markets-driven-by-necessity-kucoin-labs-head",
       "pubDate": "2022-07-28T17:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Key differences in the use and development of cryptocurrencies come to the fore as Blockchain Economy Istanbul continues to focus on emerging markets.",
       "currencies": [
@@ -109,22 +21,11 @@
       }
     },
     {
-      "title": "Hello here is the form to apply for a beta spot for our partners at . There are only 25 spo…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T16:20:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
       "title": "Will Cardano Be Listed on Robinhood? Here's What Community Thinks",
       "link": "https://u.today/will-cardano-be-listed-on-robinhood-heres-what-community-thinks",
       "pubDate": "2022-07-28T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano users seem not unhappy with trading app Robinhood",
       "currencies": [
@@ -140,8 +41,8 @@
       "title": "Can Solana hit $100 by the end of August? Here’s what the crypto community says",
       "link": "https://finbold.com/can-solana-hit-100-by-the-end-of-august-heres-what-the-crypto-community-says/",
       "pubDate": "2022-07-28T15:59:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
       "currencies": [
@@ -153,44 +54,11 @@
       }
     },
     {
-      "title": "Our Winners for #ASUSTOR x @NKN_ORG Twitter campaign are out! Big Congrats!  ASUSTOR NAS for the 1st prize winner…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T15:21:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "#CEEK empowers creators to unlock opportunities in the #metaverse. Excited to be building with industry giants to m…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T15:11:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEEK"
-      ]
-    },
-    {
-      "title": "Community Call - July 27th",
-      "link": "NULL",
-      "pubDate": "2022-07-28T15:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "API3"
-      ]
-    },
-    {
       "title": "Can DOGE hit $0.1 by the end of August? Here’s what the crypto community says",
       "link": "https://finbold.com/can-doge-hit-0-1-by-the-end-of-august-heres-what-the-crypto-community-says/",
       "pubDate": "2022-07-28T14:43:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
       "currencies": [
@@ -202,22 +70,11 @@
       }
     },
     {
-      "title": "In this video @Bitcoin_Beyond and @deggen take the @WeAreDevs World Congress stage for a walkthrough of how to buil…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T13:02:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Clearpool launches uncollateralized stablecoin lending on Polygon",
       "link": "https://www.theblock.co/post/159992/clearpool-launches-uncollateralized-stablecoin-lending-on-polygon?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-07-28T13:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "defi",
       "description": "Clearpool, an uncollateralized stablecoin lending protocol, has launched on Polygon.",
       "currencies": [
@@ -233,8 +90,8 @@
       "title": "Bitcoin and Ethereum Consolidate Gains, Altcoins in Green",
       "link": "https://cryptonews.com/news/bitcoin-and-ethereum-consolidate-gains-altcoins-in-green.htm",
       "pubDate": "2022-07-28T11:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "Bitcoin price gained pace after it broke the USD 22,500 resistance and climbed above the USD 23,000 level before the bears appeared near USD 23,450. It is currently (11:44 UTC) consolidating gains near the USD 23,000 level and is up 8% in a day and down 1% in a week. Similarly, most major altcoins are consolidating gains. ETH corrected lower from the USD 1,675 resistance. XRP is trading...",
       "currencies": [
@@ -253,8 +110,8 @@
       "title": "Polygon Announces Plans for 2nd Half After Hitting Significant Milestones in H1",
       "link": "https://u.today/polygon-announces-plans-for-2nd-half-after-hitting-significant-milestones-in-h1",
       "pubDate": "2022-07-28T11:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "layer2",
       "description": "Polygon discusses its journey in first half of 2022",
       "currencies": [
@@ -270,8 +127,8 @@
       "title": "Bitcoin and Ethereum Clones Jump on Market Bounce",
       "link": "https://cryptobriefing.com/bitcoin-ethereum-clones-jump-on-market-bounce/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-07-28T11:53:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "Cryptocurrencies surged across the board Thursday, with the total crypto market gaining 7.1% on the day. Old forked coins of the industrys most established networks are leading the way. Despite sharp interest rate hikes and ongoing fears that the U.S. has entered a recession, the cryptocurrency market is rallying today.The global cryptocurrency market capitalization has risen by 7.1% today,...",
       "currencies": [
@@ -285,56 +142,11 @@
       }
     },
     {
-      "title": "We have some exciting news we have secured 25 spots on the beta testing for the news flooz trade wallets from our p…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T10:59:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "Seems the #Fantom ecosystem is loving our partnership with @ForwardProtocol!",
-      "link": "NULL",
-      "pubDate": "2022-07-28T10:35:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDB"
-      ]
-    },
-    {
-      "title": "As #Klaytn ramps up on dev community growth, we're happy to announce that @nuttar1t, a #Web3 enthusiast, will be jo…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T10:14:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "RT @nachortti: Join us on Aug 4 at 15:00 CET on a special AMA to answer all your questions &amp; give a rundown of the new model for review and…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T10:09:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KSM"
-      ]
-    },
-    {
       "title": "New Report Predicts USDC To Soon Replace USDT, What’s The Ground Reality?",
       "link": "https://bitcoinist.com/new-report-predicts-usdc-to-soon-replace-usdt-whats-the-ground-reality/",
       "pubDate": "2022-07-28T10:03:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "stablecoin",
       "description": "In the world of stablecoins, Tether USDT was the king until the crash. Since then, others have fought seriously to take the position. But amid all the striving stablecoins, reports have revealed that USDC might soon take over the its position. The 2022 crypto market crash left a sour taste for the investors. Even though […]",
       "currencies": [
@@ -348,34 +160,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Join the winning #team! To make your voice heard within the #community, submit your #projects, tools, libraries, a…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T10:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "Happy to see yet another #Klaytn project, @klaydice have their coin listed on a major #crypto exchange!…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T09:26:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
       "title": "Cardano Leading Bitcoin, Ethereum, Polkadot and Two Altcoins in One Metric: Analytics Firm Santiment",
       "link": "https://dailyhodl.com/2022/07/28/cardano-leading-bitcoin-ethereum-polkadot-and-two-altcoins-on-one-metric-analytics-firm-santiment/",
       "pubDate": "2022-07-28T09:15:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Crypto analytics firm Santiment is highlighting the continued growth of decentralized blockchain platform Cardano (ADA) as it outpaces several key competitors. According to a new post, the data aggregator showcases Cardano’s impressive number of GitHub repositories compared to lower numbers from layer-1 developer tool Flow (FLOW), cross-chain interoperability protocol Polkadot (DOT) and its...",
       "currencies": [
@@ -389,62 +178,6 @@
         "negative": 4
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "MOONPAY is now available on our nft store #nft #moonpay #crypto #sexy #babes #nftart #bsc #cryptocurrecy #vicewrld",
-      "link": "NULL",
-      "pubDate": "2022-07-28T08:49:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "VICE"
-      ]
-    },
-    {
-      "title": "BITONE prepared a guide for those who are waiting for the iOS version or who want to conveniently enjoy Lazy on PC.…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T08:21:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BIO"
-      ]
-    },
-    {
-      "title": "RT @SmartCryptoNew1: #SCN1 DAILY DIGEST 27.07.22 @ENQ_enecuum iOS Mobile Wallet Is Now Available @Dashpay $DASH Listing on @KangaEx…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T05:36:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DASH",
-        "BIT"
-      ]
-    },
-    {
-      "title": "Partnership with Forward Protocol",
-      "link": "NULL",
-      "pubDate": "2022-07-28T02:35:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDB"
-      ]
-    },
-    {
-      "title": "Hey #Gotchigang , cash in to $USDC straight from your bank account in the #Telcoin App (🇺🇸 users) and trade $GHST…",
-      "link": "NULL",
-      "pubDate": "2022-07-28T02:28:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "TEL"
-      ]
     }
   ]
 }

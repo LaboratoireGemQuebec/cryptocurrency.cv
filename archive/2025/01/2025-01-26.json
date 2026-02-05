@@ -1,84 +1,15 @@
 {
   "date": "2025-01-26",
-  "fetchedAt": "2026-02-05T07:45:53.740Z",
-  "articleCount": 72,
+  "fetchedAt": "2026-02-05T07:48:35.708Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Celestia (TIA) Popularity Drops Off Whilst New XRP Rival 1Fuel Soars in Early Stages.",
-      "link": "NULL",
-      "pubDate": "2025-01-26T23:58:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Russia’s Biggest Energy Provider Rosseti to Launch Crypto Mining Operations",
-      "link": "NULL",
-      "pubDate": "2025-01-26T23:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "This Week in Crypto Games: TON Exclusive to Telegram, Betting with TRUMP, Ronin Gets Meme Coins",
-      "link": "NULL",
-      "pubDate": "2025-01-26T23:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NFT",
-        "TON",
-        "TRUMP"
-      ]
-    },
-    {
-      "title": "Solana’s Jupiter JUP rises 20% following platform upgrades and token buyback plans",
-      "link": "NULL",
-      "pubDate": "2025-01-26T22:40:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Met Museum launches ‘Art Links,’ blockchain game in the vein of New York Times’ ‘Connections’",
-      "link": "NULL",
-      "pubDate": "2025-01-26T22:28:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NFT"
-      ]
-    },
     {
       "title": "Ripple Undermining U.S. Prosperity, Bitcoin Reserve: Jack Mallers",
       "link": "https://www.thecoinrepublic.com/2025/01/26/ripple-undermining-u-s-prosperity-bitcoin-reserve-jack-mallers/",
       "pubDate": "2025-01-26T22:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "bitcoin",
       "description": "Prominent Bitcoin advocate Jack Mallers takes aim at Ripple, saying that the blockchain company is aiming to do ‘everything they can to destroy USA’s bastion of strategic Bitcoin reserves.’ Ripple ‘is spending millions of dollars on corporate lobbying efforts disguised as technological innovation,’ Mallers alleged in a fiery statement on social media. He says these […] The post Ripple...",
       "currencies": [
@@ -91,94 +22,11 @@
       }
     },
     {
-      "title": "Jupiter Acquires Moonshot to Expand Memecoin Capabilities",
-      "link": "NULL",
-      "pubDate": "2025-01-26T22:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "JUP",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Crypto Czar David Sacks Labels NFTs Memecoins Collectibles",
-      "link": "NULL",
-      "pubDate": "2025-01-26T21:15:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Top Cryptocurrency That Could 100x; High Net-Worth Investors Flee BNB, SHIB, POL to Buy This Coin",
-      "link": "NULL",
-      "pubDate": "2025-01-26T20:48:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "SHIB",
-        "POL"
-      ]
-    },
-    {
-      "title": "SOL, LINK, OM, and RAY flash bullish signs as Bitcoin traders wait for BTC’s next move",
-      "link": "NULL",
-      "pubDate": "2025-01-26T20:35:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "LINK",
-        "RAY",
-        "OM"
-      ]
-    },
-    {
-      "title": "XRP Lawsuit: TRUMP Token Launch Supports Ripple’s Fight Against SEC Ruling, Asserts Pundit",
-      "link": "NULL",
-      "pubDate": "2025-01-26T20:07:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "description": "The launch of the TRUMP token sparked debate, with the XRP Army suggesting it could influence the ongoing legal battle between Ripple Labs and the SEC.",
-      "currencies": [
-        "XRP",
-        "TRUMP"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Aptos price prediction: Will APT break free or plunge to $4.30?",
-      "link": "NULL",
-      "pubDate": "2025-01-26T20:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT",
-        "$1"
-      ]
-    },
-    {
       "title": "Solana User Activity 26x Higher Than Ethereum as SOL Price Targets $300",
       "link": "https://beincrypto.com/solana-user-activity-higher-than-ethereum/",
       "pubDate": "2025-01-26T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Solana (SOL) has recently experienced a notable price surge, reaching a new all-time high (ATH) and showcasing increased demand for its ecosystem. This growth has been partly fueled by the popularity of the OFFICIAL TRUMP (TRUMP) token, which has heightened activity on the Solana blockchain. These developments position SOL as a strong contender to overcome historical bearish trends and...",
       "currencies": [
@@ -194,127 +42,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "FX Guys Leads January 2025’s Presale Boom as Celestia and Mantle Lose Steam",
-      "link": "NULL",
-      "pubDate": "2025-01-26T19:56:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FX",
-        "MNT",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Investors Bet Big On This New Crypto To Outshine DOGE, PEPE and FLOKI In 2025",
-      "link": "NULL",
-      "pubDate": "2025-01-26T19:35:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "NFTs Hit $187M: Ethereum Sales Soar While Bitcoin Slips in a Tumultuous Week",
-      "link": "NULL",
-      "pubDate": "2025-01-26T19:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – XCN, LDO, TRUMP, RUNE",
-      "link": "NULL",
-      "pubDate": "2025-01-26T19:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE",
-        "LDO",
-        "XCN",
-        "TRUMP"
-      ]
-    },
-    {
-      "title": "Elon Musk’s D.O.G.E. Is Considering Blockchain Use For US Government Efficiency And Transparency",
-      "link": "NULL",
-      "pubDate": "2025-01-26T18:51:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "S",
-        "G",
-        "$ELON",
-        "O"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Experts Pick Best 5 Cryptos Set To Double In Price Before March: Litecoin, Kaspa, Polkadot, Rollblock, and Algorand",
-      "link": "NULL",
-      "pubDate": "2025-01-26T18:27:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "LTC",
-        "ALGO",
-        "KAS"
-      ]
-    },
-    {
-      "title": "It's so obvious.... but literally no one knows",
-      "link": "NULL",
-      "pubDate": "2025-01-26T18:23:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "3 Altcoins That Reached All-Time Highs Today — January 26",
-      "link": "NULL",
-      "pubDate": "2025-01-26T18:19:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OM",
-        "MOVE",
-        "ATH",
-        "TOSHI",
-        "VINE"
-      ]
-    },
-    {
       "title": "Solana Price Plummets 6.21%: $14.98 Million Liquidated in 24 Hours",
       "link": "https://www.thecoinrepublic.com/2025/01/26/solana-price-plummets-6-21-14-98-million-liquidated-in-24-hours/",
       "pubDate": "2025-01-26T18:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "Solana price has dropped 6.21% in the past 24 hours, pushing the total liquidation of the asset to $14.98 million. This follows a brief period earlier in the day when Solana’s price neared $270, before slipping lower. According to data from CoinGlass, long traders were most affected, with $11.4 million worth of long positions getting […] The post Solana Price Plummets 6.21%: $14.98 Million...",
       "currencies": [
@@ -327,23 +59,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Propy Introduces Blockchain-Based Crypto Loans for Real Estate Sales",
-      "link": "NULL",
-      "pubDate": "2025-01-26T17:40:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PRO"
-      ]
-    },
-    {
       "title": "Dogecoin Appears Poised For Explosive 10,000%  Gain – Analyst",
       "link": "https://www.newsbtc.com/dogecoin-2/dogecoin-appears-poised-for-explosive-10000-gain-analyst/",
       "pubDate": "2025-01-26T17:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Dogecoin (DOGE) has shown some upward mobility in the last day following a rather bearish trading week. Based on data from CoinMarketCap, the premier memecoin remains an investors’ favorite amidst the current bull season with almost 90% of its community confident in future price gains. Notably, prominent crypto analyst Ali Martinez has dropped another bullish prediction on Dogecoin suggesting the token’s potential register a 10,000% price gain. Related Reading: Think Dogecoin Has Topped Out? Two",
       "currencies": [
@@ -359,39 +79,11 @@
       }
     },
     {
-      "title": "Dogecoin Appears Poised For Explosive 10,000% Gain – Analyst",
-      "link": "NULL",
-      "pubDate": "2025-01-26T17:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "Dogecoin (DOGE) has shown some upward mobility in the last day following a rather bearish trading week. Based on data from CoinMarketCap, the premier memecoin remains an investors’ favorite amidst the current bull season with almost 90% of its community confident in future price gains. Notably, prominent crypto analyst Ali Martinez has dropped another bullish prediction on Dogecoin suggesting the token’s potential register a 10,000% price gain. Related Reading: Think Dogecoin Has Topped Out? Two",
-      "currencies": [
-        "BTC",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 7,
-        "negative": 4
-      }
-    },
-    {
-      "title": "Will Onyxcoin (XCN) Price Rally Further After 1000% Upside In Two Weeks?",
-      "link": "NULL",
-      "pubDate": "2025-01-26T17:03:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XCN"
-      ]
-    },
-    {
       "title": "Jupiter spikes 40% as founder says 50% of fees will go to token buybacks",
       "link": "https://www.theblock.co/post/337071/jupiter-spikes-40-as-founder-says-50-of-fees-will-go-to-token-buybacks?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-01-26T16:55:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "The announcement caps off the platform's Catstanbul event, which saw Jupiter make a number of major moves in the AI and memecoin space.",
       "currencies": [
@@ -405,73 +97,11 @@
       }
     },
     {
-      "title": "Experts Predict WLD Could Soar to $380 by 2025—Analysts Are Also Eyeing Lightchain AI",
-      "link": "NULL",
-      "pubDate": "2025-01-26T16:55:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WLD"
-      ]
-    },
-    {
-      "title": "Elon Musk's D.O.G.E Eyes Blockchain to Streamline Government",
-      "link": "NULL",
-      "pubDate": "2025-01-26T16:46:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "S",
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "Bullish DOT Trends Emerge as Web3Bay Offers Perfect Web3 Integration Traditional E-Commerce Lacks",
-      "link": "NULL",
-      "pubDate": "2025-01-26T16:19:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "BlockDAG’s ‘LAUNCH300’ Offer To End Soon As Presale Nears $200M – Latest on Litecoin News & Polkadot Price Prediction",
-      "link": "NULL",
-      "pubDate": "2025-01-26T16:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Here’s How Aptos Price Could Slide Further Down Toward $4.3",
-      "link": "NULL",
-      "pubDate": "2025-01-26T16:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TON",
-        "APT",
-        "SUI",
-        "ALI",
-        "X"
-      ]
-    },
-    {
       "title": "David Sacks: NFT and MEME Coins As Collectibles - The New Vision on Cryptocurrency Regulation in the US",
       "link": "https://en.spaziocrypto.com/memecoins/david-sacks-nft-and-meme-coins-as-collectibles-the-new-vision-on-cryptocurrency-regulation-in-the-us/",
       "pubDate": "2025-01-26T15:54:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Spaziocrypto",
+      "sourceKey": "spaziocrypto",
       "category": "nft",
       "description": "The characterisation of digital currencies has recently been the subject of important discussions. One of the questions is whether assets, such as non-fungible tokens (NFT) and MEME coins, should be classified in the category of commodities and securities.",
       "currencies": [
@@ -485,66 +115,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Shiba Inu Embarks on Global Adoption Drive as Kusama Takes on New Role",
-      "link": "NULL",
-      "pubDate": "2025-01-26T15:47:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "KSM"
-      ]
-    },
-    {
-      "title": "Missed the Trump Coins Hype? Investors Are Buzzing About Lightchain AI’s Potential",
-      "link": "NULL",
-      "pubDate": "2025-01-26T15:43:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRUMP",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "Top Crypto Coins for 2025: BlockDAG, Solana, Binance Coin, Cardano, Polkadot, & Avalanche",
-      "link": "NULL",
-      "pubDate": "2025-01-26T14:51:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "DOT",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Polkadot (DOT) Breakout Looms With $17 Target In Sight – Details",
-      "link": "NULL",
-      "pubDate": "2025-01-26T14:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "XRP",
-        "DOT",
-        "TUSD",
-        "MOVE",
-        "ALI",
-        "X"
-      ]
-    },
-    {
       "title": "U.S. Congress Investigates Ethics of Donald Trump's Crypto Coins",
       "link": "https://coinpaper.com/7148/u-s-congress-investigates-ethics-of-donald-trump-s-crypto-coins",
       "pubDate": "2025-01-26T14:12:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaper",
+      "sourceKey": "coinpaper",
       "category": "ethereum",
       "description": "U.S. Representative Gerald Connolly has called for an investigation into a potential conflict of interest regarding Donald Trump's cryptocurrency projects.",
       "currencies": [
@@ -559,8 +134,8 @@
       "title": "Bullish chart pattern hints XRP to hit $9",
       "link": "https://finbold.com/bullish-chart-pattern-hints-xrp-to-hit-9/",
       "pubDate": "2025-01-26T14:12:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "XRP has seemingly lost steam in its push towards the $4 mark, showing stability in the short term. However, the … Continue reading The post Bullish chart pattern hints XRP to hit $9 appeared first on Finbold.",
       "currencies": [
@@ -573,60 +148,11 @@
       }
     },
     {
-      "title": "4 Crypto Coins to Buy With $555 and Make Just as Much as Ripple (XRP) Early Birds Did in 2017",
-      "link": "NULL",
-      "pubDate": "2025-01-26T13:42:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "DOT",
-        "AVAX",
-        "OM"
-      ]
-    },
-    {
-      "title": "JPMorgan, Citi, Bank of America, Goldman Sachs, Wells Fargo and Morgan Stanley Reap $145,680,000,000 in Profit in One Year",
-      "link": "NULL",
-      "pubDate": "2025-01-26T13:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "JUP Surges Over 17% to Exceed 1 USDT",
-      "link": "NULL",
-      "pubDate": "2025-01-26T13:18:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Jupiter Allocates Half Of Protocol Fees For JUP Buyback",
-      "link": "NULL",
-      "pubDate": "2025-01-26T13:17:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP",
-        "X"
-      ]
-    },
-    {
       "title": "Ripple [XRP] caught in the fire as U.S. digital reserve plan divides community",
       "link": "https://ambcrypto.com/ripple-xrp-caught-in-the-fire-as-u-s-digital-reserve-plan-divides-community/",
       "pubDate": "2025-01-26T13:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "As Bitcoin maximalists rage against XRP's potential inclusion in U.S. crypto reserves, market metrics tell a different story.",
       "currencies": [
@@ -640,23 +166,11 @@
       }
     },
     {
-      "title": "HBAR x ICP",
-      "link": "NULL",
-      "pubDate": "2025-01-26T12:05:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR",
-        "ICP"
-      ]
-    },
-    {
       "title": "Ripple Demands April 16 Deadline for Cross-Appeal Brief Vs SEC",
       "link": "https://www.thecoinrepublic.com/2025/01/26/ripple-demands-april-16-deadline-for-cross-appeal-brief-vs-sec/",
       "pubDate": "2025-01-26T12:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "regulation",
       "description": "Ripple Labs officially requested a new deadline for filing its cross-appeal brief in its ongoing legal battle with the U.S. Securities and Exchange Commission (SEC). Ripple’s legal team submitted the request for an April 16, 2025 deadline. The crypto giant continues its fight over the SEC’s classification of XRP sales. This move comes on the […] The post Ripple Demands April 16 Deadline for...",
       "currencies": [
@@ -669,25 +183,11 @@
       }
     },
     {
-      "title": "Can Elon Musk’s D.O.G.E. bolster the U.S. government? Mapping…",
-      "link": "NULL",
-      "pubDate": "2025-01-26T12:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "S",
-        "G",
-        "$1",
-        "O"
-      ]
-    },
-    {
       "title": "Ripple CTO Ends Speculations About XRP Centralization",
       "link": "https://u.today/ripple-cto-ends-speculations-about-xrp-centralization",
       "pubDate": "2025-01-26T11:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "XRP centralization debate shut down by key Ripple executive",
       "currencies": [
@@ -700,217 +200,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Spot Bitcoin ETFs Record Staggering $4.7 Billion In Seven-Day Inflow Streak — Details",
-      "link": "NULL",
-      "pubDate": "2025-01-26T11:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "ARK",
-        "MOVE",
-        "X",
-        "FBTC"
-      ]
-    },
-    {
-      "title": "Elon Musk’s D.O.G.E Explores Blockchain to Boost Government Efficiency",
-      "link": "NULL",
-      "pubDate": "2025-01-26T11:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "DOGE",
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "Canary Capital Registers AXL Trust in Delaware",
-      "link": "NULL",
-      "pubDate": "2025-01-26T11:03:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "HBAR",
-        "AXL"
-      ]
-    },
-    {
-      "title": "Nexo Dons White Glove to Exclusively Serve Clients With at Least $5K in Crypto Wealth",
-      "link": "NULL",
-      "pubDate": "2025-01-26T10:58:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEXO"
-      ]
-    },
-    {
-      "title": "Polkadot Breaking Out of a Bullish Pennant: Will Prices Surge?",
-      "link": "NULL",
-      "pubDate": "2025-01-26T10:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Solana, TRUMP, MELANIA: Google Searches Surge Amid Rising XYZVerse Investor Interest",
-      "link": "NULL",
-      "pubDate": "2025-01-26T10:05:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "TRUMP",
-        "MELANIA"
-      ]
-    },
-    {
-      "title": "AI Agent Coins Boom: Virtuals Protocol’s (VIRTUAL) Price Predictions Through 2030",
-      "link": "NULL",
-      "pubDate": "2025-01-26T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VIRTUAL"
-      ]
-    },
-    {
-      "title": "Elon Musk’s Department of Government Efficiency Exploring Blockchain Use Case: Report",
-      "link": "NULL",
-      "pubDate": "2025-01-26T09:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOGE",
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "Binance Market Update: Top Stories January 26, 2025",
-      "link": "NULL",
-      "pubDate": "2025-01-26T09:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "TRX",
-        "AVAX",
-        "LINK",
-        "RUNE",
-        "SKL",
-        "OM",
-        "TRUMP",
-        "S"
-      ]
-    },
-    {
-      "title": "As Jupiter DEX focuses on retail adoption, JUP rises 10% – What’s next?",
-      "link": "NULL",
-      "pubDate": "2025-01-26T09:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "JUP",
-        "$1"
-      ]
-    },
-    {
-      "title": "Big DeFi Exchange Expands Its Reach with Moonshot Acquisition",
-      "link": "NULL",
-      "pubDate": "2025-01-26T09:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Best Meme Coins To Invest In Now For Quick Wins This Year – DUP, FLOKI and PEPE",
-      "link": "NULL",
-      "pubDate": "2025-01-26T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Number Of Existing Cryptocurrencies Hit 36.4m",
-      "link": "NULL",
-      "pubDate": "2025-01-26T08:34:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DONUT"
-      ]
-    },
-    {
-      "title": "XAI's GROK Now Supports Real-Time Stock And Cryptocurrency Prices",
-      "link": "NULL",
-      "pubDate": "2025-01-26T08:15:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XAI"
-      ]
-    },
-    {
-      "title": "Trump Family's Crypto Holdings Reach $388 Million",
-      "link": "NULL",
-      "pubDate": "2025-01-26T08:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "WBTC",
-        "TRX",
-        "LINK",
-        "AAVE",
-        "ENA"
-      ]
-    },
-    {
       "title": "President Trump’s World Liberty Financial Crypto Holdings Cross $388,332,996 Amid New Ethereum Purchases: Arkham",
       "link": "https://dailyhodl.com/2025/01/26/president-trumps-world-liberty-financial-crypto-holdings-cross-388332996-amid-new-ethereum-purchases-arkham/",
       "pubDate": "2025-01-26T08:04:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "President Trump’s crypto project World Liberty Financial (WLFI) has now acquired over $388 million worth of digital assets, according to on-chain data. Blockchain “de-anonymizing” platform Arkham reports that World Liberty Financial boosted its crypto holdings after making large Ethereum (ETH) and Tron (TRX) purchases late on Friday. “DONALD TRUMP’S PROJECT WORLD LIBERTY FI BUYS AND […] The...",
       "currencies": [
@@ -927,110 +221,11 @@
       }
     },
     {
-      "title": "Polygon bears in control – How traders can navigate the market",
-      "link": "NULL",
-      "pubDate": "2025-01-26T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "POL",
-        "$1"
-      ]
-    },
-    {
-      "title": "Whale Moves Millions in AAVE to Binance Amid Soaring Profits",
-      "link": "NULL",
-      "pubDate": "2025-01-26T07:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Potential Zero Capital Gains Tax for U.S. Crypto Projects Raises Questions",
-      "link": "NULL",
-      "pubDate": "2025-01-26T04:33:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "AVAX",
-        "XLM",
-        "HBAR",
-        "XCH",
-        "S",
-        "X"
-      ]
-    },
-    {
-      "title": "Elon Musk is bringing the blockchain to his D.O.G.E department",
-      "link": "NULL",
-      "pubDate": "2025-01-26T03:55:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 26 January 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-01-26T03:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "JASMY price prediction – How altcoin’s latest falling wedge might play out",
-      "link": "NULL",
-      "pubDate": "2025-01-26T03:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JASMY",
-        "$1"
-      ]
-    },
-    {
-      "title": "Virtuals expands to Solana ecosystem, establishes strategic SOL reserve",
-      "link": "NULL",
-      "pubDate": "2025-01-26T02:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "VIRTUAL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
       "title": "XRP Rich List: Top 20 Wallets Control Over 50% Of Supply, But Who’s Number 1?",
       "link": "https://www.newsbtc.com/xrp-news/xrp-top-20-wallets-address/",
       "pubDate": "2025-01-26T01:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "XRP, the native cryptocurrency of the Ripple network, has seen its price grow massively in recent months, allowing it to overtake many other large-market cap cryptocurrencies. At the time of writing, XRP is the third-largest crypto by market cap, and current buying trends suggest it might stay there for a while. As of January 25, 2025, the altcoin has a total supply of 100 billion tokens,...",
       "currencies": [

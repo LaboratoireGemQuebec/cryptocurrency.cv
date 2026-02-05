@@ -1,26 +1,15 @@
 {
   "date": "2021-04-22",
-  "fetchedAt": "2026-02-05T07:45:51.807Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.458Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Here🥳#COCOS #CocosBCX #NFT",
-      "link": "NULL",
-      "pubDate": "2021-04-22T23:46:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
     {
       "title": "Bitcasino.io adds Cardano (ADA) token to its betting platform",
       "link": "https://www.cryptoninjas.net/2021/04/23/bitcasino-io-adds-cardano-ada-token-to-its-betting-platform/",
       "pubDate": "2021-04-22T23:40:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "altcoin",
       "description": "CryptoNinjas » Bitcasino.io adds Cardano (ADA) token to its betting platform Bitcoin-led casino operator, Bitcasino.io, today announced it has added Cardano’s ADA cryptocurrency as a payment method, allowing its holders to enjoy the casino’s wide range of games. ADA is the seventh cryptocurrency introduced to Bitcasino players, following TRON (TRX), Ethereum (ETH), Litecoin (LTC),...",
       "currencies": [
@@ -35,33 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why is dent constantly losing its value for the last few weeks to Other cryptos?..seems like a slow drain !!!",
-      "link": "NULL",
-      "pubDate": "2021-04-22T23:26:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
-      "title": "ETH staking on swissborg.",
-      "link": "NULL",
-      "pubDate": "2021-04-22T21:03:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "SEC Says Ripple Harassed It Over Court Documents",
       "link": "https://cryptobriefing.com/sec-says-ripple-harassed-it-over-court-documents/",
       "pubDate": "2021-04-22T20:48:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "regulation",
       "currencies": [
         "XRP"
@@ -73,22 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Now is the time to join us on @safenetworktech! “We are all now building Safe &amp; that’s just a fact. We have gone fr…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T20:07:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Altcoins rally as analyst warns Bitcoin is in the '$50K – $60K twilight zone'",
       "link": "https://cointelegraph.com/news/altcoins-rally-as-analyst-warns-bitcoin-is-in-the-50k-60k-twilight-zone",
       "pubDate": "2021-04-22T19:25:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Ether, MKR and SOL rally to new all-time highs, while Bitcoin's price is stuck in what one analyst says is a range dominated by bots.",
       "currencies": [
@@ -105,8 +61,8 @@
       "title": "Algorand officially pledges to become the greenest blockchain amid accelerated adoption",
       "link": "https://finbold.com/algorand-officially-pledges-to-become-the-greenest-blockchain-amid-accelerated-adoption/",
       "pubDate": "2021-04-22T19:03:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Environment-centered cryptocurrency platform Algorand (ALGO) has pledged to be the greenest blockchain in partnership with CO2 emissions transparency and traceability... Continue reading",
       "currencies": [
@@ -122,8 +78,8 @@
       "title": "Here’s everything you need to know about XRP’s chances of hitting $3",
       "link": "https://ambcrypto.com/heres-everything-you-need-to-know-about-xrps-chances-of-hitting-3/",
       "pubDate": "2021-04-22T19:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "XRP’s price hit a high of $1.91 on 14 April 2021 and the altcoin is now rallying towards $3. During the 2017 bull run, the price hit $3.14. At the current pace, the price is rallying versus the dropping trade volume and resisting the selling pressure. The perfect inverse correlation that has emerged suggested that […]",
       "currencies": [
@@ -136,22 +92,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Goodbye Dent community",
-      "link": "NULL",
-      "pubDate": "2021-04-22T18:02:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "Filecoin Price Could Double In Next 12-18 Months: Wedbush",
       "link": "https://decrypt.co/66830/filecoin-fil-price-double-cloud-software-potential",
       "pubDate": "2021-04-22T17:44:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Dan Ives of Wedbush Securities says Filecoin's storage network is the most promising innovation coming out of the crypto industry.",
       "currencies": [
@@ -164,22 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "At long last, let's take a first look at Nodem, the ultimate manager for #Blockchain nodes. Join the mailing list at Nodem.io for early access announcements.",
-      "link": "NULL",
-      "pubDate": "2021-04-22T17:40:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "It’s Dangerous To Be Short on Dogecoin, Says Galaxy Digital’s Mike Novogratz",
       "link": "https://dailyhodl.com/2021/04/22/its-dangerous-to-be-short-on-dogecoin-says-galaxy-digitals-mike-novogratz/",
       "pubDate": "2021-04-22T17:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Galaxy Digital CEO Mike Novogratz is not shorting Dogecoin (DOGE). The rise of Dogecoin over the course of the past two weeks has sent the meme coin sailing into the top ten crypto assets by market cap. Novogratz says he agrees with the narrative that DOGE’s meteoric rise is fueled by Robinhood traders and WallStreetBets. […]",
       "currencies": [
@@ -193,66 +127,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @H_Daskalov: Today we discussed the maturity of #AI and #blockchain start-ups in Central &amp; Eastern European ecosystems. I was happy to s…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T17:10:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EDU"
-      ]
-    },
-    {
-      "title": "Want to re-watch last week's Validator Launch AMA? Founder Jeff Galloway speaks about the #Validator launch, and a…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T16:35:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "RT @safenetworktech: We hope you’re ready because Fleming Testnet v4 is now live! We can’t wait to see you on the network. See here for det…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T15:48:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
-      "title": "With CoinMarketCap's request for additional exchange listings for GTN fulfilled (now also trading on LaToken), expe…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T15:44:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "An initial draft of our Mogwai #nftcollector card, still W.I.P. #BlockchainGaming",
-      "link": "NULL",
-      "pubDate": "2021-04-22T14:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MOG"
-      ]
-    },
-    {
       "title": "Ripple Open To Burning Nearly 50 Billion XRP Locked In Escrow – CEO Brad Garlinghouse",
       "link": "https://zycrypto.com/ripple-open-to-burning-nearly-50-billion-xrp-locked-in-escrow-ceo-brad-garlinghouse/",
       "pubDate": "2021-04-22T14:31:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Ripple has been in the news for some undesired reasons of late, especially due to the ongoing case pitting the company against the US SEC. However, that hasn’t stopped Ripple’s crypto, XRP, from blossoming, although it hasn’t gained by much compared to other top cryptos like Bitcoin and Ethereum. For years now, members of the […]",
       "currencies": [
@@ -269,8 +148,8 @@
       "title": "Ripple Price Analysis: XRP Bulls Defend a Vital Support But Can They Break Upward?",
       "link": "https://cryptopotato.com/ripple-price-analysis-xrp-bulls-defend-a-vital-support-but-can-they-break-upward/",
       "pubDate": "2021-04-22T14:25:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "XRP is down by a sharp 28% over the past week after clocking a 2021 high at $1.98. Against bitcoin, XRP is battling to climb back above the 2400 SAT.",
       "currencies": [
@@ -283,22 +162,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dear community! Head to the @AaveAave forum and express a vote of support for #EURS. Your opinion matters like neve…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T13:50:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Ripple Client TransferGo Boasts $3+ Billion in Global Money Flow in Partnerships with Visa and Mastercard",
       "link": "https://u.today/ripple-client-transfergo-boasts-3-billion-in-global-money-flow-in-partnerships-with-visa-and",
       "pubDate": "2021-04-22T13:49:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "RippleNet customer TransferGo has unlocked 95 new global markets this year in partnership with Visa and MasterCard giants",
       "currencies": [
@@ -311,22 +179,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Combining with IP, #NFT will Enter the New Era of Diversification @BinanceChain @BlockBeatsChina @dego_finance…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T13:23:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
       "title": "Up ⬆️ this if you think that Safemoon is coming backk",
       "link": "https://www.reddit.com/r/SafeMoon/comments/mw2h2t/up_this_if_you_think_that_safemoon_is_coming_backk/",
       "pubDate": "2021-04-22T13:02:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "general",
       "currencies": [
         "SAFEMOON"
@@ -338,23 +195,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Chiliz (CHZ) can now be bought from SwissBorg!",
-      "link": "NULL",
-      "pubDate": "2021-04-22T13:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ",
-        "CHSB"
-      ]
-    },
-    {
       "title": "Reef Finance’s Schedules Mainnet Release for May, Promises Polkadot Integration",
       "link": "https://cryptopotato.com/reef-finances-schedules-mainnet-release-for-may-promises-polkadot-integration/",
       "pubDate": "2021-04-22T13:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Based on the Substrate framework, Reef Chain will be launched in May. Reef Finance's product vowes to provide enhanced scalability and EVM-compability.",
       "currencies": [
@@ -370,8 +215,8 @@
       "title": "Polygon Targets Sustainable NFTS With Latest Integration",
       "link": "https://cryptobriefing.com/polygon-targets-sustainable-nfts-with-latest-integration/",
       "pubDate": "2021-04-22T12:41:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "nft",
       "currencies": [
         "ETH",
@@ -387,8 +232,8 @@
       "title": "177.6 Million XRP Moved by Ripple, Coinbase and Binance: Details",
       "link": "https://u.today/1776-million-xrp-moved-by-ripple-coinbase-and-binance-details",
       "pubDate": "2021-04-22T11:47:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "In the past 20 hours, Ripple and several major digital trading platforms have transferred an amount close to 178 million XRP",
       "currencies": [
@@ -401,23 +246,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Circulating supply is decreasing... less than 25%",
-      "link": "NULL",
-      "pubDate": "2021-04-22T11:10:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "21.2 Million US Adults Own Cryptocurrency – Gemini Survey",
       "link": "https://beincrypto.com/21-2-million-us-adults-own-cryptocurrency-gemini-survey/",
       "pubDate": "2021-04-22T10:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "Gemini has published a State of Crypto report for 2021, noting that over 50% of crypto-curious investors are women, and roughly 14% of the US population holds cryptocurrency.",
       "currencies": [
         "BTC",
@@ -434,8 +268,8 @@
       "title": "DOGE is ‘a retail phenomenon’, but the boom might not have legs, Galaxy Digital CEO declares",
       "link": "https://finbold.com/doge-is-a-retail-phenomenon-but-the-boom-might-not-have-legs-galaxy-digital-ceo-declares/",
       "pubDate": "2021-04-22T10:04:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Crypto investment firm Galaxy Digital CEO, ex-hedge fund manager, and billionaire Mike Novogratz has called for caution over dogecoin’s rise,... Continue reading",
       "currencies": [
@@ -448,33 +282,11 @@
       }
     },
     {
-      "title": "Plethori Partners With Decentralized Crowd-Funding Platform — QuiverX",
-      "link": "NULL",
-      "pubDate": "2021-04-22T10:01:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "DENT DENT DENT",
-      "link": "NULL",
-      "pubDate": "2021-04-22T09:04:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DENT"
-      ]
-    },
-    {
       "title": "220 Million+ IOTA Locked in Just 12 Hours Ahead of Chrysalis Launch",
       "link": "https://u.today/220-million-iota-locked-in-just-12-hours-ahead-of-chrysalis-launch",
       "pubDate": "2021-04-22T08:54:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "IOTA co-founder has tweeted that over 220 million coins has been locked in as IOTA users are preparing for the migration to Chrysalis network",
       "currencies": [
@@ -490,8 +302,8 @@
       "title": "Bitcoin dominance is about to drop below 50% for the first time in 3 years",
       "link": "https://cointelegraph.com/news/bitcoin-dominance-is-about-to-drop-below-50-for-the-first-time-in-3-years",
       "pubDate": "2021-04-22T08:45:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "A weakening Bitcoin presence could give altcoins the moonshot they have waited for for three years.",
       "currencies": [
@@ -509,8 +321,8 @@
       "title": "Avalanche VS Ethereum VS Cardano VS Polkadot",
       "link": "https://www.reddit.com/r/Avax/comments/mw08l5/avalanche_vs_ethereum_vs_cardano_vs_polkadot/",
       "pubDate": "2021-04-22T08:24:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Reddit",
+      "sourceKey": "reddit",
       "category": "ethereum",
       "currencies": [
         "ADA",
@@ -527,8 +339,8 @@
       "title": "Grayscale Adds $1 Billion In Crypto in 24 Hours, While LTC and BCH Premiums Skyrocket",
       "link": "https://u.today/grayscale-adds-1-billion-in-crypto-in-24-hours-while-ltc-and-bch-premiums-skyrocket",
       "pubDate": "2021-04-22T08:08:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "Largest Bitcoin absorber, Grayscale, has added another billion worth of digital assets in merely twenty-four hours, while premiums for LTC and BCH shares spike",
       "currencies": [
@@ -543,22 +355,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Time to load up",
-      "link": "NULL",
-      "pubDate": "2021-04-22T07:20:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHSB"
-      ]
-    },
-    {
       "title": "Chainlink and Several Low Cap Projects Poised To Go Parabolic, Says Crypto Trader Elliot Wainman",
       "link": "https://dailyhodl.com/2021/04/22/chainlink-and-several-low-cap-projects-poised-to-go-parabolic-says-crypto-trader-elliot-wainman/",
       "pubDate": "2021-04-22T07:04:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Popular crypto trader Elliot Wainman thinks Chainlink (LINK) and other, smaller-cap decentralized oracles are primed to explode in value. Wainman tells his 299,000 YouTube subscribers and 142,000 Twitter followers that LINK’s Bitcoin chart looks quite promising for the oracle network. He thinks a “full send” is coming to all low cap oracle projects. “If you […]",
       "currencies": [
@@ -574,8 +375,8 @@
       "title": "Charles Hoskinson hits back after Ethereum influencer calls Cardano a “scam”",
       "link": "https://cryptoslate.com/charles-hoskinson-hits-back-after-ethereum-influencer-calls-cardano-a-scam/",
       "pubDate": "2021-04-22T07:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "ethereum",
       "description": "In a tweet today, IOHK CEO Charles Hoskinson fired back in response to claims by David Hoffman that Cardano is a “scam.” He said extreme baseless views are a factor in crypto’s less than stellar reputation among no-coiners.",
       "currencies": [
@@ -590,22 +391,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @xfers: Our Co-founder &amp; CEO, @Tian_wei was on SeedlyFest last Saturday sharing insights into how Xfers has enabled access to digital as…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T05:22:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XSGD"
-      ]
-    },
-    {
       "title": "PancakeSwap Transactions Tops Ethereum But BSC Feels The Strain",
       "link": "https://cryptopotato.com/pancakeswap-transactions-tops-ethereum-but-bsc-feels-the-strain/",
       "pubDate": "2021-04-22T04:50:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "According to a report by data provider Dappradar, DeFi DEX PancakeSwap has surpassed Ethereum in terms of total transactions in a 24 hour period.",
       "currencies": [
@@ -617,50 +407,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "BlockBeats：Who will lead the #NFT together with Crypto Arts?⁦@BlockBeatsChina⁩",
-      "link": "NULL",
-      "pubDate": "2021-04-22T04:43:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "🥳Get ready to Team Up!Cocos-BCX Heroes #NFT Auctions will officially start",
-      "link": "NULL",
-      "pubDate": "2021-04-22T04:11:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "COCOS"
-      ]
-    },
-    {
-      "title": "#NFTs thrives, $ETH flies...",
-      "link": "NULL",
-      "pubDate": "2021-04-22T02:29:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "Today is the 2nd anniversary since we launched Paycoin service. We want to thank all of our community members for y…",
-      "link": "NULL",
-      "pubDate": "2021-04-22T01:25:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PCI"
-      ]
     }
   ]
 }

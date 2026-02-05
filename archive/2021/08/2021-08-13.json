@@ -1,60 +1,15 @@
 {
   "date": "2021-08-13",
-  "fetchedAt": "2026-02-05T07:45:51.482Z",
-  "articleCount": 35,
+  "fetchedAt": "2026-02-05T07:48:35.313Z",
+  "articleCount": 19,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @Freeos_dao: A bit shout out to EOS USA @ivote4_eos_usa , Proton NZ @protonnz, and Proton MT @proton_mt who have had our backs and suppo…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T23:35:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS",
-        "XPR"
-      ]
-    },
-    {
-      "title": "Holding SCR, which is a low supply cryptocurrency with multiple use cases and growing demand, is an investment oppo…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T21:37:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "There are enough liquid SCR coins available right now for 18,000 people to own and power up 1,000 of them. There is…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T21:31:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
-      "title": "RT @ZMiller_82: Top 2 NASCAR/ARCA Drivers From Denmark",
-      "link": "NULL",
-      "pubDate": "2021-08-13T21:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
     {
       "title": "Dogecoin Is Having Its Own Festival. And Dionne Warwick Is Headlining",
       "link": "https://decrypt.co/78507/dogecoin-dogepalooza-festival-dionne-warwick",
       "pubDate": "2021-08-13T21:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "The soul superstar is the latest celeb turned meme coin fan.",
       "currencies": [
@@ -70,8 +25,8 @@
       "title": "Polkadot (DOT) price rallies 100% and derivatives data points to more upside",
       "link": "https://cointelegraph.com/news/polkadot-dot-price-rallies-100-and-derivatives-data-points-to-more-upside",
       "pubDate": "2021-08-13T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "Strong fundamentals on the development side and derivatives data suggest that the DOT price could extend its 100% rally over the short-term.",
       "currencies": [
@@ -87,8 +42,8 @@
       "title": "$1.72M Staked Amid Community Testing for Maiar, Elrond Network’s New Decentralised Exchange",
       "link": "https://cryptopotato.com/1-72m-staked-amid-community-testing-for-maiar-elrond-networks-new-decentralised-exchange/",
       "pubDate": "2021-08-13T20:45:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "exchange",
       "description": "The Elrond Network will put to test its new decentralised exchange: Maiar, which will also work as an Automated Market Maker.",
       "currencies": [
@@ -104,8 +59,8 @@
       "title": "Polygon Acquires Layer 2 Blockchain Hermez for $250 Million",
       "link": "https://cryptobriefing.com/polygon-acquires-layer-2-blockchain-hermez-for-250-million/",
       "pubDate": "2021-08-13T20:26:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "layer2",
       "currencies": [
         "MATIC"
@@ -120,8 +75,8 @@
       "title": "“Technically Flawless” Litecoin Could Lead To “Biblical” Bullish Move",
       "link": "https://bitcoinist.com/technically-flawless-litecoin-could-lead-to-biblical-bullish-move/?utm_source=rss&utm_medium=rss&utm_campaign=technically-flawless-litecoin-could-lead-to-biblical-bullish-move",
       "pubDate": "2021-08-13T20:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Litecoin price is up nearly 10% in the last 24 hours, but the recovery might only have just begun. That is if a “technically flawless” chart pattern is valid, and resolves to the upside. The pattern has taken years to form, and it could result in a move of “biblical proportions.” Litecoin Forms Technically Flawless […]",
       "currencies": [
@@ -137,8 +92,8 @@
       "title": "Polygon acquires Hermez Network for $250M, will merge native tokens",
       "link": "https://cointelegraph.com/news/polygon-acquires-hermez-network-for-250m-will-merge-native-tokens",
       "pubDate": "2021-08-13T19:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "“We believe this is in a way a historical moment since this will be (to the best of our knowledge) the first full-blown merger of two blockchain networks,” said Polygon.",
       "currencies": [
@@ -151,51 +106,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Nakamoto Financial Releases RaiUSD (USDR) Stablecoin",
-      "link": "NULL",
-      "pubDate": "2021-08-13T19:11:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @ONEChampionship: Own the greatest moments in martial arts history. Pre-register for the official ONE NFTs now. @ThetaDrop #WeAreONE #ON…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T19:10:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "THETA",
-        "ONE",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "is back up and running, sorry for the downtime! #REPv2",
-      "link": "NULL",
-      "pubDate": "2021-08-13T18:53:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REP"
-      ]
-    },
-    {
       "title": "Ethereum, XRP and Cardano Lead Crypto Market’s $95 Billion Boost",
       "link": "https://decrypt.co/78494/ethereum-xrp-cardano-lead-crypto-market-95-billion-boost",
       "pubDate": "2021-08-13T18:45:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "ETH, XRP, and ADA aren't the only cryptocurrency assets doing well today.",
       "currencies": [
@@ -212,8 +127,8 @@
       "title": "Polygon acquires Hermez in $250 million deal that includes first-ever token ‘merger’",
       "link": "https://www.theblockcrypto.com/post/114479/polygon-hermez-merger-matic-hez-tokens-ethereum-projects?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-08-13T14:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "layer2",
       "description": "Ethereum scaling project Polygon has acquired Hermez Network for $250 million. The two projects are also merging their native tokens.",
       "currencies": [
@@ -227,33 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MaDz_Crypto: Why just HODL crypto when you can Stake #Safecoin and make revenue while Hodling. No minimum required! Think smart. Do res…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T13:26:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAFE"
-      ]
-    },
-    {
-      "title": "We will see you there, guys, it is going to be interesing! We have much to discuss with @SolvProtocol !",
-      "link": "NULL",
-      "pubDate": "2021-08-13T13:16:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "PROM"
-      ]
-    },
-    {
       "title": "VeChain Partners with Simplex to Enable Seamless On-Ramp for VET",
       "link": "https://u.today/vechain-partners-with-simplex-to-enable-seamless-on-ramp-for-vet",
       "pubDate": "2021-08-13T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "VeChain, a blockchain-based platform for real-world use cases, has partnered leading with crypto-to-fiat payment processor",
       "currencies": [
@@ -269,8 +162,8 @@
       "title": "Polygon ($MATIC): Coin Bureau Says Price ‘Could Easily’ Reach $5 by End of 2021",
       "link": "https://www.cryptoglobe.com/latest/2021/08/polygon-matic-coin-bureau-says-price-could-easily-reach-5-by-end-of-2021/",
       "pubDate": "2021-08-13T12:17:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "Recently, crypto influencer “Coin Bureau” (“@coinbureau” on Twitter) talked about Polygon ($MATIC), which is one of the few cryptoassets that he regrets “not buying sooner.” Polygon is “a protocol and a framework for building and connecting Ethereum-compatible blockchain networks.” In a video (titled “TOP Altcoin Picks 2021 Q3”) released on YouTube channel “Coin Bureau“, the show’s...",
       "currencies": [
@@ -287,8 +180,8 @@
       "title": "DOGE Daily Circulation and Volatility Plunges After Reaching $0.29",
       "link": "https://u.today/doge-daily-circulation-and-volatility-plunges-after-reaching-029",
       "pubDate": "2021-08-13T11:45:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "DOGE is showing strong price movements in recent days, but on-chain data suggests that it is not fundamentally supported",
       "currencies": [
@@ -300,22 +193,11 @@
       }
     },
     {
-      "title": "We miss the iOS DApp browser as much as you, so we've been working hard behind the scenes to come up with the best…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T11:27:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "ADA Becomes Top-3 Asset on CoinGecko, Surpassing BNB and USDT",
       "link": "https://u.today/ada-becomes-top-3-asset-on-coingecko-surpassing-bnb-and-usdt",
       "pubDate": "2021-08-13T11:13:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano's native crypto has become the third-largest asset, outpacing BNB and USDT",
       "currencies": [
@@ -333,8 +215,8 @@
       "title": "Scammers target Cardano’s Daedalus wallet to defraud ADA holders on Discord",
       "link": "https://finbold.com/scammers-target-cardanos-daedalus-wallet-to-defraud-ada-holders-on-discord/",
       "pubDate": "2021-08-13T11:03:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "A fake website allegedly belonging to the Daedalus crypto wallet is being marketed on the digital distribution platform Discord with... Continue reading",
       "currencies": [
@@ -349,8 +231,8 @@
       "title": "Cardano (ADA) Becomes Third Largest Cryptocurrency Overtaking Binance Coin And Tether",
       "link": "https://www.forbes.com/sites/ninabambysheva/2021/08/13/cardano-becomes-third-largest-cryptocurrency-overtaking-binance-coin-and-tether/",
       "pubDate": "2021-08-13T10:34:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "ethereum",
       "description": "Cardano (ADA) has become the world’s third-largest cryptocurrency by market capitalization, according to CoinGecko, after its price surged 12% over the past day to a new 12-week high.",
       "currencies": [
@@ -368,8 +250,8 @@
       "title": "Axie Infinity Token Up Over 60% Amid Coinbase Listing",
       "link": "https://decrypt.co/78449/axie-infinity-token-over-60-amid-coinbase-listing",
       "pubDate": "2021-08-13T10:17:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "exchange",
       "description": "Axie Infinity’s AXS is now listed on Coinbase, adding to what has been an incredibly bullish week for the cryptocurrency.",
       "currencies": [
@@ -381,22 +263,11 @@
       }
     },
     {
-      "title": "There has been a resurgence of interest in NFTs, driven by gaming and digital collectibles, but there's a lot mor…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T10:02:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LOOM"
-      ]
-    },
-    {
       "title": "Cardano Pumps Higher, XRP Rally, $100,000 Bitcoin, Crypto Country & Google Pay + Bitcoin",
       "link": "https://www.youtube.com/watch?v=fas7ryF-oX0",
       "pubDate": "2021-08-13T09:36:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "TheModernInvestor",
+      "sourceKey": "themoderninvestor",
       "category": "bitcoin",
       "description": "Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------- Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https",
       "currencies": [
@@ -411,22 +282,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Keep moving ..... From the dip",
-      "link": "NULL",
-      "pubDate": "2021-08-13T09:31:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BB"
-      ]
-    },
-    {
       "title": "Poly Network hacker returns remaining assets, offered US$500K white hat bounty",
       "link": "https://forkast.news/headlines/poly-network-hacker-return-remaining-assets/",
       "pubDate": "2021-08-13T06:11:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "general",
       "description": "Poly Network has confirmed that all its remaining stolen assets on Ethereum, worth around US$269 million, barring US$33 million worth of Tether that was frozen post-attack, have been returned to a multi-signature wallet controlled by itself and the hacker. Fast facts The hacker had returned more than 50% of the assets stolen on the Polygon […]",
       "currencies": [
@@ -440,44 +300,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @capital_spark: Looking forward to the game changer. @FormationFi",
-      "link": "NULL",
-      "pubDate": "2021-08-13T06:03:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "eCASH - Peer to Peer Electronic Cash",
-      "link": "NULL",
-      "pubDate": "2021-08-13T05:54:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
-      "title": "RT @intelliot: Enjoyed hearing this conversation. It’s not just centralized or decentralized. It’s federated. ⁦@metalpaysme⁩ ⁦@sultanmeghji…",
-      "link": "NULL",
-      "pubDate": "2021-08-13T04:37:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
       "title": "Chainlink launches data oracles on Arbitrum One's Ethereum scaling solution",
       "link": "https://cointelegraph.com/news/chainlink-launches-data-oracles-on-arbitrum-one-s-ethereum-scaling-solution",
       "pubDate": "2021-08-13T03:58:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Chainlink’s data oracles are now live on Arbitrum One, with the team also planning to soon launch its Proof of Reserve and Verifiable Random Function on the layer-two.",
       "currencies": [
@@ -491,22 +318,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SHGroup101: Recently, web3 has had a good increase, let’s take a look at which projects belong to web3，#web3 on #Coingecko",
-      "link": "NULL",
-      "pubDate": "2021-08-13T02:25:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
       "title": "XRP Address Activity and Network Growth Could Push Rally Further, Santiment Says",
       "link": "https://www.cryptoglobe.com/latest/2021/08/xrp-address-activity-and-network-growth-could-push-rally-further-santiment-says/",
       "pubDate": "2021-08-13T00:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "The price of XRP has surged past the $1 mark over the last 24-hour period after Ripple announced that GME Remittance, one of the largest non-bank remittance service providers in South Korea, joined RippleNet. Per analytics firm Santiment, XRP’s price could rally further. RippleNet, according to Ripple’s website, offers “connections to hundreds of financial institutions around […]",
       "currencies": [

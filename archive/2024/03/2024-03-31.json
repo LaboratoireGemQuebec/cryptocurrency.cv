@@ -1,84 +1,15 @@
 {
   "date": "2024-03-31",
-  "fetchedAt": "2026-02-05T07:45:53.358Z",
-  "articleCount": 23,
+  "fetchedAt": "2026-02-05T07:48:35.649Z",
+  "articleCount": 3,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Top 4 Cryptos To Watch That Could Hit $100 In 2024 Bullish Run.",
-      "link": "NULL",
-      "pubDate": "2024-03-31T21:56:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "OKB",
-        "COMP",
-        "INJ",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "StakeStone Launches Omnichain Carnival",
-      "link": "NULL",
-      "pubDate": "2024-03-31T19:51:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "New DeeStream (DST) Touts 100X Gain Prospects in a Turbulent Market As Insights Into Why Cronos (CRO) and Optimism (OP) Holders Join the Sensation",
-      "link": "NULL",
-      "pubDate": "2024-03-31T19:12:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "CRO",
-        "OP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – WIF, MNT, KCS, FTM",
-      "link": "NULL",
-      "pubDate": "2024-03-31T19:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR",
-        "KCS",
-        "FTM",
-        "MNT",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Solana, Jupiter price prediction for this week",
-      "link": "NULL",
-      "pubDate": "2024-03-31T17:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "JUP"
-      ]
-    },
     {
       "title": "Solana Surging Ahead Of Ethereum In This Particular Metric",
       "link": "https://bitcoinist.com/solana-surging-ahead-of-ethereum-in-this-metric/",
       "pubDate": "2024-03-31T17:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Recent market dynamics have seen Solana struggling to break above the $200 mark. A notable bearish factor among these market fundamentals is the recent reports of the estate of bankrupt cryptocurrency exchange FTX selling its $7.65 billion worth of Solana at a 68% discount to its current market price. Related Reading: FTX Founder Sam Bankman-Fried […]",
       "currencies": [
@@ -92,36 +23,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "AI & meme coins soar: SingularityNET & WEN lead with BlockDAG!",
-      "link": "NULL",
-      "pubDate": "2024-03-31T17:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Stablecoin Supply Soars to $150 Billion, Up $20 Billion Since January",
-      "link": "NULL",
-      "pubDate": "2024-03-31T16:08:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "FDUSD"
-      ]
-    },
-    {
       "title": "Solana Meme Coins Stir Debate: Should Racist Tokens Be Blocked?",
       "link": "https://dailycoin.com/solana-meme-coins-stir-debate-should-racist-tokens-be-blocked/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-31T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "A conversational debate commenced at the BUIDL Asia Summit in Seoul over Meme coins that feature offensive and racist language.",
       "currencies": [
@@ -133,161 +39,11 @@
       }
     },
     {
-      "title": "Crypto community comes for Jupiter over budget proposal",
-      "link": "NULL",
-      "pubDate": "2024-03-31T16:04:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Crypto Hiring: McKinsey exec joins Ondo Finance",
-      "link": "NULL",
-      "pubDate": "2024-03-31T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Investors Surge to Invest in Raboo (RABT) Since BTC Rallied to $73K! Exposing a Bullish Path for STX and TAO",
-      "link": "NULL",
-      "pubDate": "2024-03-31T15:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Stablecoin Market Swells With Growth in March, Led by Ethena’s USDE",
-      "link": "NULL",
-      "pubDate": "2024-03-31T14:09:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "DAI",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "Crypto Giants SingularityNET, Ocean Protocol, and Fetch.AI Merge in Multi-Billion Dollar Deal",
-      "link": "NULL",
-      "pubDate": "2024-03-31T13:15:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "$1.7 Billion Token Unlocks in April: Crypto Market on Edge",
-      "link": "NULL",
-      "pubDate": "2024-03-31T11:55:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "AXS",
-        "DYDX",
-        "STRK",
-        "APT",
-        "ARB",
-        "SUI",
-        "SEI"
-      ]
-    },
-    {
-      "title": "SOL, XRP, DOGE, 1000SATS Price Analysis for the New Week",
-      "link": "NULL",
-      "pubDate": "2024-03-31T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "SATS"
-      ]
-    },
-    {
-      "title": "Expert Warns Investors XRP Won’t Make Them Rich Amid Possibility Of Landmark July Ruling Being Overturned",
-      "link": "NULL",
-      "pubDate": "2024-03-31T11:19:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "FOX Business’ Charles Gasparino has analyzed the current legal standing of Ripple and XRP in the United States.",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 8
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "17 Projects Ready to Unlock Over $1.38 Billion Worth of Crypto in April 2024",
-      "link": "NULL",
-      "pubDate": "2024-03-31T10:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX",
-        "APT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BTC, ETH, CORE, ORDI Daily Price Analysis: March 31",
-      "link": "NULL",
-      "pubDate": "2024-03-31T08:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "CORE",
-        "ORDI"
-      ]
-    },
-    {
       "title": "Bitcoin Tapping Into $84,000,000,000,000 Market, BTC Adoption Now Overwhelming: Billionaire Mike Novogratz",
       "link": "https://dailyhodl.com/2024/03/31/bitcoin-tapping-into-84000000000000-market-btc-adoption-now-overwhelming-billionaire-mike-novogratz/",
       "pubDate": "2024-03-31T07:04:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "Galaxy Digital chief executive Mike Novogratz believes that Bitcoin now has access to an $84 trillion market following the approval of BTC spot market exchange-traded funds. Speaking at the Bitcoin Investor Day event in New York, the billionaire says BTC is witnessing a dramatic increase in adoption with the launch of the ETFs. He also […]",
       "currencies": [
@@ -298,47 +54,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Dogecoin (DOGE) Outpaces Cardano (ADA) on Crypto Ranking, Crypto Analysts Predict Parabolic Rally for Theta Network (THETA) and a New Altcoin",
-      "link": "NULL",
-      "pubDate": "2024-03-31T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "DOGE",
-        "THETA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BlockDAG’s presale soars as Solana and Stacks Trends",
-      "link": "NULL",
-      "pubDate": "2024-03-31T06:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "STX"
-      ]
-    },
-    {
-      "title": "CFTC’s KuCoin Case Threatens SEC's Authority, Commissioner Pham",
-      "link": "NULL",
-      "pubDate": "2024-03-31T03:41:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ]
     }
   ]
 }

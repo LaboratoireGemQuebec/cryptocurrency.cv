@@ -1,45 +1,15 @@
 {
   "date": "2024-02-19",
-  "fetchedAt": "2026-02-05T07:45:53.327Z",
-  "articleCount": 88,
+  "fetchedAt": "2026-02-05T07:48:35.642Z",
+  "articleCount": 11,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Finance Expert Predicts Bitcoin Will Touch $100,000 Soon, Here’s When",
-      "link": "NULL",
-      "pubDate": "2024-02-19T23:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "MV"
-      ]
-    },
-    {
-      "title": "Forbes Bought Land in The Sandbox Metaverse",
-      "link": "NULL",
-      "pubDate": "2024-02-19T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Forbes now owns real estate inside the Metaverse",
       "link": "https://www.cryptopolitan.com/forbes-owns-real-estate-inside-the-metaverse/",
       "pubDate": "2024-02-19T22:38:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "general",
       "description": "Forbes has staked its claim within the Metaverse, specifically setting up shop in The Sandbox. This venture is a full-blown cannonball, establishing a permanent residence that screams luxury, innovation, and a hefty dose of forward-thinking. The century-old business magazine is no stranger to leading the pack, and its latest move into The Sandbox metaverse is […]",
       "currencies": [
@@ -55,8 +25,8 @@
       "title": "Hedera (HBAR) Soars 50% To Mark New 20-Month High, Fuels Bullish Price Targets",
       "link": "https://www.newsbtc.com/news/hedera-hbar-soars-50-to-mark-new-20-month-high-fuels-bullish-price-targets/",
       "pubDate": "2024-02-19T22:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Hedera (HBAR), a decentralized public network known for its near real-time consensus and developer-friendly environment, has emerged as one of the top-performing altcoins in the cryptocurrency market. As the overall market experiences a resurgence of bullish sentiment, HBAR has demonstrated impressive growth, positioning itself as one of the leaders among the top 100 cryptocurrencies by...",
       "currencies": [
@@ -73,8 +43,8 @@
       "title": "XRP, Solana, Cardano, Shiba Inu Making Up for Lost Time as Big Whale Transaction Spikes Pop Up",
       "link": "https://zycrypto.com/xrp-solana-cardano-shiba-inu-making-up-for-lost-time-as-big-whale-transaction-spikes-pop-up/",
       "pubDate": "2024-02-19T21:42:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "As the crypto market continues to enjoy notable bullish momentum, altcoins are riding on this wave thanks to heightened whale transactions.",
       "currencies": [
@@ -92,22 +62,11 @@
       }
     },
     {
-      "title": "PIXEL launches with $441m market cap, Ronin gamers receive airdrop tokens",
-      "link": "NULL",
-      "pubDate": "2024-02-19T21:38:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
       "title": "Ethereum 2019 Correction Repeating? Analyst Warns Ethereum May See Larger Pullback",
       "link": "https://dailyhodl.com/2024/02/19/ethereum-2019-correction-repeating-analyst-warns-ethereum-may-see-larger-pullback/",
       "pubDate": "2024-02-19T21:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Closely followed analyst Benjamin Cowen says Ethereum may be in the midst of repeating a historical pattern that could bring ETH down to much lower levels. In a new strategy session, Cowen tells his 790,000 YouTube subscribers that in the last crypto bear market, Ethereum didn’t bottom out until canceling out a previous breakout from […]",
       "currencies": [
@@ -119,50 +78,11 @@
       }
     },
     {
-      "title": "Fantom (FTM) Co-Founder Andre Cronje Praised This Blockchain Gaming App",
-      "link": "NULL",
-      "pubDate": "2024-02-19T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "AVAX",
-        "AXS",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Gaming Altcoin Built on Ronin (RON) Explodes After Going Live on Crypto Exchange Binance",
-      "link": "NULL",
-      "pubDate": "2024-02-19T20:55:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
-      "title": "Binance to Discontinue Leveraged Token Trading and Subscription Services",
-      "link": "NULL",
-      "pubDate": "2024-02-19T20:22:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "NFT",
-        "ORDI"
-      ]
-    },
-    {
       "title": "Gaming Tokens Ride Bitcoin, Ethereum Boom to All-Time High Prices",
       "link": "https://decrypt.co/218089/gaming-tokens-bitcoin-ethereum-all-time-high-prices",
       "pubDate": "2024-02-19T20:06:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The tokens for Xai, Beam, Heroes of Mavia, and Parallel all popped to new peaks amid Bitcoin buzz and the PIXEL launch.",
       "currencies": [
@@ -177,82 +97,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Farming Game Pixels Token Lands in Binance’s Top 10 After Launch",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:45:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Terra Classic (LUNC) Community Plots 800M Token Burn",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:21:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Stacks's Price Increased More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:02:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Filecoin's Price Increased More Than 17% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:02:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Internet Computer Rises More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Fetch.AI (FET) Prints Strong Bullish Signal, Targets 500% Spike",
-      "link": "NULL",
-      "pubDate": "2024-02-19T19:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT",
-        "RNDR",
-        "FET",
-        "INJ",
-        "AGIX"
-      ]
-    },
-    {
       "title": "Forbes launches permanent metaverse presence featuring ‘luxurious pool,’ ‘elegant bar’",
       "link": "https://cointelegraph.com/news/forbes-launches-permanent-metaverse-presence-sandbox-web3",
       "pubDate": "2024-02-19T18:45:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The Hong Kong-owned magazine now owns virtual real-estate in the Sandbox Metaverse.",
       "currencies": [
@@ -265,152 +114,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Arweave’s AR token hits 18-month high amid rapid growth and innovation",
-      "link": "NULL",
-      "pubDate": "2024-02-19T18:39:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BAYC’s ApeCoin Finally Breaks Out: Here's Why It Expoded 24%",
-      "link": "NULL",
-      "pubDate": "2024-02-19T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "APE",
-        "ARB"
-      ]
-    },
-    {
-      "title": "INSANE Solana & Filecoin Move! Stacks STX To MOON!",
-      "link": "NULL",
-      "pubDate": "2024-02-19T18:15:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "FIL",
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin ETF inflows surge, threatening gold’s reign as store-of-value",
-      "link": "NULL",
-      "pubDate": "2024-02-19T18:01:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Bitcoin ETF inflows surge, threatening gold’s dominance. Divergence in fund flows: Bitcoin gains, gold loses. Bitcoin acts as a ‘risk-on’ investment and a safe-haven asset. In a seismic shift within the financial landscape, Bitcoin is rapidly gaining ground as a store-of-value asset, challenging its traditional counterpart, gold. Recent data reveals a substantial surge in spot […]",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 12,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Vitalik Buterin Praises Artificial Intelligence: AI Tokens Surge",
-      "link": "NULL",
-      "pubDate": "2024-02-19T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "GRT",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "'The Goal Is Number Go Up': Inside a DAO’s Radical Governance Experiment",
-      "link": "NULL",
-      "pubDate": "2024-02-19T17:46:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO",
-        "META"
-      ]
-    },
-    {
-      "title": "Pyth Network Staking Explodes With Over 72% of Circulating $PYTH Locked in the First Month",
-      "link": "NULL",
-      "pubDate": "2024-02-19T17:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Price analysis 2/19: SPX, DXY, BTC, ETH, BNB, SOL, XRP, ADA, AVAX, DOGE",
-      "link": "NULL",
-      "pubDate": "2024-02-19T17:35:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "AMP"
-      ]
-    },
-    {
-      "title": "Is It Too Late to Buy AI Coins? The Graph, Fetch.ai and Injective Blast Up and This Other Coin Could be Next",
-      "link": "NULL",
-      "pubDate": "2024-02-19T17:10:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GRT",
-        "FET",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Today February 19 – Worldcoin, The Graph, Arweave",
-      "link": "NULL",
-      "pubDate": "2024-02-19T17:06:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "GRT",
-        "AR"
-      ]
-    },
-    {
       "title": "Chiliz Leaps onto K League Popularity to Expand into Korea",
       "link": "https://dailycoin.com/chiliz-leaps-onto-k-league-popularity-to-expand-into-korea/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-02-19T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "general",
       "description": "Chiliz celebrates the increasing prominence of Korean football by announcing a collaboration with the K League to elevate fan engagement.",
       "currencies": [
@@ -426,8 +134,8 @@
       "title": "Ethereum Likely The Only Spot Crypto ETF To Be Approved After Bitcoin: Bernstein",
       "link": "https://cryptonews.com/news/ethereum-likely-the-only-spot-crypto-etf-to-be-approved-after-bitcoin-bernstein/",
       "pubDate": "2024-02-19T16:40:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "bitcoin",
       "description": "Wealth management firm Bernstein suggested Ethereum (ETH) may be the only digital asset after Bitcoin (BTC) to secure a spot ETF.",
       "currencies": [
@@ -441,365 +149,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "3 Key Reasons Why Graph (GRT) Price Surge Over 50% In a Week",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:32:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT"
-      ]
-    },
-    {
-      "title": "Binance Futures to List BRC-20 Token ORDI: Price Impact",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "FIL Rockets After Filecoin Integrates With Solana",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "VeChain and SEI Network Skyrocket 40%: Who Will Be the Next Crypto Winner?",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:10:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "VET",
-        "SEI"
-      ]
-    },
-    {
-      "title": "PIXEL Debuts to $441M Market Cap as Ronin Gamers Get Airdrop Tokens",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:08:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "RON"
-      ]
-    },
-    {
-      "title": "Is Bitcoin SV About to Crash? BSV Price Tumbles as New Bitcoin Project Secures $11 Million",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:07:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "Binance Welcomes PIXEL: Expanding Trading and Investment Opportunities",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:07:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "PIXEL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Worldcoin’s WLD Token Skyrockets 142%, Leading Crypto Market’s Week of Surges",
-      "link": "NULL",
-      "pubDate": "2024-02-19T16:05:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "STX",
-        "AR",
-        "FET",
-        "ASTR",
-        "BGB",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Reasons Behind the AI coins Rally  ​​",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLY",
-        "FET"
-      ]
-    },
-    {
-      "title": "3 Must-have Cryptos to Buy Before Bitcoin Halving",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:25:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Aave Moves To Launch $5M Quarterly Incentives Program",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "World of Women NFT Collection to Host Paris Gala Event",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:21:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Sideloading Scandal: Apple's App Store Breach Highlights iPhone Security Fears",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:15:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AMP"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Hedera Up More Than 15% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:03:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Investors Chase Profit On ORDI, Solana (SOL), And Rebel Satoshi (RBLZ) Presale",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SOL",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Ethereum Co-founder Backs AI: Don’t Miss the Green Wave in Big Data Tokens",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Solana and SEI surge as Rebel Satoshi gears up for DEX debut",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SOL",
-        "SEI"
-      ]
-    },
-    {
-      "title": "This Blockchain Gaming Platform Will Release a 20 Million Token Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-02-19T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
-      "title": "Best Crypto To Watch This Week",
-      "link": "NULL",
-      "pubDate": "2024-02-19T14:58:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "SEI"
-      ]
-    },
-    {
-      "title": "AI tokens jump 10% as Vitalik Buterin explains how AI can enhance security and efficiency on Ethereum",
-      "link": "NULL",
-      "pubDate": "2024-02-19T14:20:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "GRT",
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Sei (SEI) And VeChain (VET) investors grab Option2Trade (O2T) tokens before it reaches stage 3",
-      "link": "NULL",
-      "pubDate": "2024-02-19T14:05:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET",
-        "SEI"
-      ]
-    },
-    {
-      "title": "New Peaks: 2 Notable Cryptos Hit Historic Highs",
-      "link": "NULL",
-      "pubDate": "2024-02-19T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Binance Lists Pixels (PIXEL), Launching with USDT, BTC, BNB Pairs",
-      "link": "NULL",
-      "pubDate": "2024-02-19T13:49:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BNB",
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Binance Futures to Roll Out BRC-20 Token ORDI Perpetual Contracts with USDC-Margined Trades",
-      "link": "NULL",
-      "pubDate": "2024-02-19T13:26:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Speculative analyst deters from Dai (DAI) and Tron (TRX) short term and tips Kelexo (KLXO) lending presale",
-      "link": "NULL",
-      "pubDate": "2024-02-19T13:07:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TRX",
-        "DAI",
-        "T"
-      ]
-    },
-    {
-      "title": "The Graph (GRT) Inks 60% Rally As Network Demand Rises – Details",
-      "link": "NULL",
-      "pubDate": "2024-02-19T13:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "AAVE",
-        "GRT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "TRON’s Justin Sun Reveals Roadmap for Bitcoin L2 Integration; Whales Attention Shift to The Sandbox (SAND) and NuggetRush (NUGX)",
-      "link": "NULL",
-      "pubDate": "2024-02-19T13:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "SAND",
-        "JUP"
-      ]
-    },
-    {
       "title": "Worldcoin's Value Jumps Over Amid Crypto Market Rise",
       "link": "https://coinpaprika.com/news/worldcoin-s-value-jumps-over-20-amid-crypto-market-rise/",
       "pubDate": "2024-02-19T12:35:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "general",
       "description": "Worldcoin soars as Bitcoin leads market surge",
       "currencies": [
@@ -813,338 +167,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitget token hits new all-time high near $1",
-      "link": "NULL",
-      "pubDate": "2024-02-19T12:31:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BGB"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Market Analysis For February 19th: ETH, STX, WLD",
-      "link": "NULL",
-      "pubDate": "2024-02-19T12:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "STX"
-      ]
-    },
-    {
-      "title": "Binance to list ORDI perpetual contract: Boosting trading options",
-      "link": "NULL",
-      "pubDate": "2024-02-19T12:26:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 19 Feb: Bitcoin Pauses, Altcoins Soar",
-      "link": "NULL",
-      "pubDate": "2024-02-19T12:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEAR",
-        "GRT",
-        "STX",
-        "CHZ",
-        "FET",
-        "AGIX",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Bitget Welcomes PIXEL Token to its Trading Platform",
-      "link": "NULL",
-      "pubDate": "2024-02-19T11:47:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PIXEL"
-      ]
-    },
-    {
-      "title": "Uniswap and PancakeSwap rise while traders eye Everlodge post-listing",
-      "link": "NULL",
-      "pubDate": "2024-02-19T11:33:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "CAKE"
-      ]
-    },
-    {
-      "title": "Solana and Sei see gains as Pullix volume is on track to outpace both",
-      "link": "NULL",
-      "pubDate": "2024-02-19T11:15:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Best Cryptos to Invest in Ahead of the Bitcoin Halving – Helium (HNT), Arbitrum (ARB) and Everlodge (ELDG)",
-      "link": "NULL",
-      "pubDate": "2024-02-19T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HNT",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Memeinator and The Graph rally amid OpenAI’s Sora launch excitement",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:53:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT"
-      ]
-    },
-    {
-      "title": "Will Stablecoins Be the Trojan Horse for Crypto’s Mass Adoption?",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:44:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD",
-        "USTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Top AI Tokens GRT, NEAR, AGIX Drive AI Sector Rally Amid OpenAI Sora Hype",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:32:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NEAR",
-        "GRT",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Partners South Korea’s Football League for Fan Engagement",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:21:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "3 AI Stocks that Nvidia (NVDA) is Buying",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:15:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XNO"
-      ]
-    },
-    {
-      "title": "What Will Be My Portfolio If HBAR Price Hits $1 in 2024?",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "WLD Surges, LPT Whale Exits – What’s Next?",
-      "link": "NULL",
-      "pubDate": "2024-02-19T10:08:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LPT"
-      ]
-    },
-    {
-      "title": "Chiliz (CHZ) Price Jumps 15% As the Platform Seizes K-League Partnership",
-      "link": "NULL",
-      "pubDate": "2024-02-19T09:16:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CHZ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Sui blockchain surpasses competitors in TVL amidst a surge in inflows",
-      "link": "NULL",
-      "pubDate": "2024-02-19T09:14:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ADA",
-        "META",
-        "APT",
-        "SUI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Analyst Unveils Top AI Trend And Coins This Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL",
-        "RNDR",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Sports Blockchain Network Chiliz Announced It Has Established A Partnership With Another Sports Team!",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:50:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "AI Token Speculative Gold Rush Revived Amid Tech Stock Boom",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "KCS",
-        "GRT",
-        "RNDR",
-        "ADS"
-      ]
-    },
-    {
-      "title": "Binance Futures to launch ORDI perpetual contract",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:44:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Filecoin Solana Collaboration To Enhance Blockchain Capabilities",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:39:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "AI Tokens Rally as OpenAI’s Sora Brings Renewed Hope to the Sector",
-      "link": "NULL",
-      "pubDate": "2024-02-19T08:05:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "OCEAN",
-        "FET"
-      ]
-    },
-    {
-      "title": "Hbar Price : Hbar Smashed New ATH , Will The Rally Continue To $1 ?",
-      "link": "NULL",
-      "pubDate": "2024-02-19T07:54:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Sui Overtakes Aptos, Cardano in Value Locked; Sees $310M Inflow in 30 Days",
       "link": "https://www.coindesk.com/business/2024/02/19/sui-overtakes-aptos-cardano-in-value-locked-sees-310m-inflow-in-30-days?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-02-19T07:20:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "altcoin",
       "description": "Sui, the layer 1 blockchain built by a group of former Meta (META) employees, has experienced a cascade of inflows this month in a spike that has seen it overtake Cardano, Near and Aptos in terms of total value locked (TVL).",
       "currencies": [
@@ -1160,52 +187,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "24 Crypto Update, 18 Feb: Altcoins Drive Crypto Market Surge",
-      "link": "NULL",
-      "pubDate": "2024-02-19T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "MATIC",
-        "GRT",
-        "SC",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Ex-Ripple exec is now CEO of crypto intel firm Crystal Blockchain",
-      "link": "NULL",
-      "pubDate": "2024-02-19T05:01:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Experts Believe These 4 Coins Could Outperform Bitcoin and Other Popular Coins",
-      "link": "NULL",
-      "pubDate": "2024-02-19T03:53:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RNDR",
-        "JUP"
-      ]
-    },
-    {
       "title": "Worldcoin soars 140% in a week as wallet app hits 1M daily users",
       "link": "https://cointelegraph.com/news/worldcoin-price-soars-wallet-world-app-openai-sam-altman-sora",
       "pubDate": "2024-02-19T01:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "stablecoin",
       "description": "The price of Worldcoin’s WLD token has surged 141% in the past seven days as the firm notched a daily active user milestone.",
       "currencies": [
@@ -1217,19 +203,6 @@
         "negative": 9
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Analyst Says Next Leg up Incoming for Two Low-Cap Altcoins, Updates Outlook on Recently Launched Crypto Asset",
-      "link": "NULL",
-      "pubDate": "2024-02-19T01:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYM",
-        "MAVIA",
-        "NTRN"
-      ]
     }
   ]
 }

@@ -1,93 +1,15 @@
 {
   "date": "2024-03-13",
-  "fetchedAt": "2026-02-05T07:45:53.361Z",
-  "articleCount": 79,
+  "fetchedAt": "2026-02-05T07:48:35.650Z",
+  "articleCount": 17,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "House Panel Chairman Tells CFPB to “Go Back to the Drawing Board” Over Stringent Crypto Oversight Proposal",
-      "link": "NULL",
-      "pubDate": "2024-03-13T23:12:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Price Prediction: Are Whales Signalling a Possible Correction?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "LINK",
-        "STX"
-      ]
-    },
-    {
-      "title": "DeFi's New Dawn: Ethereum's Surge Sets Stage for Unprecedented Growth",
-      "link": "NULL",
-      "pubDate": "2024-03-13T22:27:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "UNI",
-        "AAVE",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) Price Targets $1 Amid Strong Holder Confidence",
-      "link": "NULL",
-      "pubDate": "2024-03-13T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Bitcoin Emoji Campaign Gets Backing from Industry Giants",
-      "link": "NULL",
-      "pubDate": "2024-03-13T21:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NEXO"
-      ]
-    },
-    {
-      "title": "Binance to Delist Multiple TrueUSD Trading Pairs – What’s Going On?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T21:12:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "TUSD",
-        "COMP"
-      ]
-    },
     {
       "title": "Zap Protocol (ZAP) Surges Over $0.01 Barrier, Bitcoin (BTC) and Shiba Inu (SHIB) Face Resistance",
       "link": "https://www.cryptointelligence.co.uk/zap-protocol-zap-surges-over-0-01-barrier-bitcoin-btc-and-shiba-inu-shib-face-resistance/",
       "pubDate": "2024-03-13T21:04:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "bitcoin",
       "description": "Zap Protocol’s ZAP token has breached the $0.01 mark after surging 42% in the last...",
       "currencies": [
@@ -101,33 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Pixels, Parallel, ApeCoin, and Other Gaming Projects Set to Unlock $250 Million in Tokens",
-      "link": "NULL",
-      "pubDate": "2024-03-13T21:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "4 Reasons to be Bullish on STX! #shorts",
-      "link": "NULL",
-      "pubDate": "2024-03-13T21:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
       "title": "XRP Price Explosion To Unfathomable Heights In The Offing As Uphold Exec Says Spot ETF Nigh",
       "link": "https://zycrypto.com/xrp-price-explosion-to-unfathomable-heights-in-the-offing-as-uphold-exec-says-spot-etf-nigh/",
       "pubDate": "2024-03-13T20:37:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "XRP’s fortunes could soon change with the likely arrival of spot exchange-traded funds (ETFs) amid increased development efforts in the coin’s ecosystem, according to Head of Research at Uphold Exchange Martin Hiesboeck.",
       "currencies": [
@@ -140,52 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin maintains price resilience despite increased miner selling",
-      "link": "NULL",
-      "pubDate": "2024-03-13T20:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Sphere Wif Hat? Solana Meme Coin Community Raises $690K to Send Dogwifhat to Las Vegas",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:49:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "On news of the Dogwifhat fundraiser’s success, WIF jumped 36% to set an all-time high and become the fourth-biggest meme coin in the world.",
-      "currencies": [
-        "SOL",
-        "WIF"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 1
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Aevo Airdrop Leaves Some Farmers Fuming as Token Debuts at $3B Valuation",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:35:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AEVO"
-      ]
-    },
-    {
       "title": "$0.001 Shiba Inu Price Eruption In Sight As SHIB Sees Influx Of New Users",
       "link": "https://zycrypto.com/0-001-shiba-inu-price-eruption-in-sight-as-shib-sees-influx-of-new-users/",
       "pubDate": "2024-03-13T19:29:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Per this analysis, new investors are continuously jumping on the SHIB bandwagon, given that the daily uptake has been nearly 20x what was witnessed in February.",
       "currencies": [
@@ -198,107 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BlockDAG’s $600M Goal: Keynote Explains it All! XRP and Theta Network Whales Shift Attention to BDAG",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:20:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "THETA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Cryptocurrency Injective Decreases More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Cryptocurrency LEO Token Up More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:02:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "MakerDAO Founder Confirms ‘Endgame’ Plan to Reform Decade-Old Protocol",
-      "link": "NULL",
-      "pubDate": "2024-03-13T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DAI",
-        "MKR",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Are Arbitrum (ARB) and Starknet (STRK) Set for Explosive Growth Post-Dencun Upgrade?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T18:17:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "STRK",
-        "ARB"
-      ]
-    },
-    {
-      "title": "XRP To Skyrockets To $1.33 Amidst April Rally: Analysts",
-      "link": "NULL",
-      "pubDate": "2024-03-13T18:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Ethereum’s Dencun upgrade goes live: how it impacts L2 gas fees",
-      "link": "NULL",
-      "pubDate": "2024-03-13T18:00:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Starknet to Harness Ethereum’s Dencun Upgrade for Major Fee Reductions and Enhanced Scalability",
       "link": "https://www.cryptointelligence.co.uk/starknet-to-harness-ethereums-dencun-upgrade-for-major-fee-reductions-and-enhanced-scalability/",
       "pubDate": "2024-03-13T17:33:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "ethereum",
       "description": "Starknet, a prominent Layer-2 scaling protocol, is set to enhance the benefits of reduced costs...",
       "currencies": [
@@ -311,49 +74,11 @@
       }
     },
     {
-      "title": "Ronin Hits All-Time High Price as Ethereum Gaming Network Hosts Free ‘Kaidro’ NFT Mint",
-      "link": "NULL",
-      "pubDate": "2024-03-13T17:20:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "NFT",
-        "RON"
-      ]
-    },
-    {
-      "title": "Cardano (ADA) Bulls Eye DeeStream (DST) Presale As Early March Surge Sees Unus Sed Leo (LEO) & Dogecoin (DOGE) Gains",
-      "link": "NULL",
-      "pubDate": "2024-03-13T17:16:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "DOGE",
-        "LEO"
-      ]
-    },
-    {
-      "title": "How Tether's USDT on Celo Drives Mainstream Crypto Adoption",
-      "link": "NULL",
-      "pubDate": "2024-03-13T17:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "CELO"
-      ]
-    },
-    {
       "title": "Ethereum Is Not Done: Crypto Analyst Sets New $5,000 Target",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-new-5000-target/",
       "pubDate": "2024-03-13T17:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Ethereum is currently looking to gain a strong footing above the $4,000 price level as bullish momentum continues to dominate. According to crypto analyst Ali Martinez, this bullish momentum could continue and Ethereum could as well reach $5,000 very soon. Ali Martinez made this known while citing data from IntoTheBlock, noting that the second biggest cryptocurrency still has room to run to...",
       "currencies": [
@@ -370,49 +95,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin's Record Rally To $73K Overshadows Death Cross Signals In Two Crypto Mining Stocks",
-      "link": "NULL",
-      "pubDate": "2024-03-13T16:51:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "HIVE"
-      ]
-    },
-    {
-      "title": "Debating Dencun: Will Ethereum's Big Update Help or Harm the Network?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T16:48:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "STRK",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
-      "title": "BlockDAG tokenomics explained: The future ready crypto network",
-      "link": "NULL",
-      "pubDate": "2024-03-13T16:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
       "title": "Avalanche’s COQ and Cardano’s SNEK Lead Other Meme Coins in Early Bull Run",
       "link": "https://coinedition.com/avalanches-coq-and-cardanos-snek-lead-other-meme-coins-in-early-bull-run/",
       "pubDate": "2024-03-13T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "trading",
       "description": "Coq Inu (COQ), a meme coin based on the Avalanche blockchain, has embarked on a significant rally since the final days of February 2024. The novel cryptocurrency bounced off support around $0.0000014311 on February 24, initiating a rally and achieving new heights. According to data from TradingView, COQ has broken multiple resistance levels in the […]",
       "currencies": [
@@ -425,64 +112,11 @@
       }
     },
     {
-      "title": "Algorand (ALGO) Price Soars 71%: What Does It Mean for These 16 Million Investors?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Cronos Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-03-13T15:02:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "Why MakerDAO’s Endgame is a ‘new’ MKR and DAI",
-      "link": "NULL",
-      "pubDate": "2024-03-13T14:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Ethereum Dencun upgrade goes live; Can ETH hit $5k?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T14:28:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "While Bitcoin (BTC) has been taking the bulk of the attention in the ongoing crypto market rally, Ethereum (ETH) has … Continue reading",
-      "currencies": [
-        "BTC",
-        "ETH"
-      ],
-      "votes": {
-        "positive": 10,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "The biggest Ethereum upgrade ever goes live",
       "link": "https://blockworks.co/news/ethereum-dencun-upgrade-mainnet",
       "pubDate": "2024-03-13T14:15:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "ethereum",
       "description": "The Dencun hard fork hits Ethereum mainnet, the most significant upgrade since the Merge",
       "currencies": [
@@ -495,51 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Announced the Listing of a New Altcoin in Futures! Price is on the Rise!",
-      "link": "NULL",
-      "pubDate": "2024-03-13T14:12:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "VANRY"
-      ]
-    },
-    {
-      "title": "Binance Lists TrueUSD Spot Trading Pairs Set for Delisting",
-      "link": "NULL",
-      "pubDate": "2024-03-13T14:10:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Fantom (FTM) and Avalanche (AVAX) Recovers in Value, and InsanityBets (IBET) Leaps Ahead of The Competition",
-      "link": "NULL",
-      "pubDate": "2024-03-13T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Ethereum Activates 'Dencun' Upgrade, in Landmark Move to Reduce Data Fees",
       "link": "https://www.coindesk.com/tech/2024/03/13/ethereum-activates-dencun-upgrade-in-landmark-move-to-reduce-data-fees?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-03-13T13:58:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "ethereum",
       "description": "A key element of the upgrade is to enable a new place for storing data on the blockchain – referred to as \"proto-danksharding,\" which gives room for a dedicated space that is separate from regular transactions, and at a lower cost.",
       "currencies": [
@@ -558,8 +152,8 @@
       "title": "Dencun Upgrade Goes Live, Ushering in New Era for Ethereum",
       "link": "https://decrypt.co/221345/dencun-upgrade-goes-live-ushering-in-new-era-for-ethereum",
       "pubDate": "2024-03-13T13:57:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "Developers say the upgrade will make transaction costs so low on layer-2 networks that gas fees might become a thing of the past.",
       "currencies": [
@@ -575,8 +169,8 @@
       "title": "Dencun upgrade goes live on Ethereum mainnet",
       "link": "https://cointelegraph.com/news/dencun-upgrade-live-ethereum-mainnet",
       "pubDate": "2024-03-13T13:55:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Dencun, the biggest upgrade since the Merge, has just gone live on the Ethereum network.",
       "currencies": [
@@ -589,44 +183,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Tops $73,000; Toncoin, THORChain Among Top Gainers",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:49:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "AAVE",
-        "RUNE",
-        "QNT",
-        "MINA",
-        "TON",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Filecoin (FIL) Fusion: Ripple (XRP) and Litecoin (LTC) Merge with Kelexo (KLXO) for Revolutionary Crypto Lending",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:47:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XRP",
-        "LTC",
-        "FIL"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Poised for Historic Surge: Analyst Predicts 822% Price Increase Amidst Bullish Momentum",
       "link": "https://www.cryptointelligence.co.uk/shiba-inu-shib-poised-for-historic-surge-analyst-predicts-822-price-increase-amidst-bullish-momentum/",
       "pubDate": "2024-03-13T13:45:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "trading",
       "description": "This month, Shiba Inu (SHIB) has seen a significant resurgence, capturing the attention of cryptocurrency...",
       "currencies": [
@@ -639,148 +200,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "CPI COMES IN, BTC HOLDS 72",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:28:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "FLOW",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bullish Surge: BNB & BGB Leading Resurgence of Centralized Exchanges in February 2024",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:26:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "BGB"
-      ]
-    },
-    {
-      "title": "Crypto News Today, 13 March: Will Ethereum Overtake Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AAVE",
-        "RUNE",
-        "QNT",
-        "TON",
-        "WIF"
-      ]
-    },
-    {
-      "title": "London Stock Exchange Accepting Crypto ETN Apps Positive Move, FCA Remains Out of Step?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:16:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETN"
-      ]
-    },
-    {
-      "title": "India plans faster stock settlements to slow down crypto migration",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:05:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "T"
-      ]
-    },
-    {
-      "title": "PancakeSwap Decentralized Exchange Unveils Version 4 to Make Trading More Efficient",
-      "link": "NULL",
-      "pubDate": "2024-03-13T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "MakerDAO Unveils ‘Endgame’ Project to Transform Lending Platform and Boost Dai Supply",
-      "link": "NULL",
-      "pubDate": "2024-03-13T12:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "This Altcoin Announced Its Collaboration With NVIDIA, Heralded the Announcement About Binance! Price Increased for the Second Time in One Day!",
-      "link": "NULL",
-      "pubDate": "2024-03-13T12:38:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "VANRY"
-      ]
-    },
-    {
-      "title": "Binance announces delisting of TrueUSD (TUSD) trading pairs",
-      "link": "NULL",
-      "pubDate": "2024-03-13T12:22:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Tokenized Real Estate Project PropyKeys Announces Public Launch",
-      "link": "NULL",
-      "pubDate": "2024-03-13T12:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PRO"
-      ]
-    },
-    {
-      "title": "Binance to delist several TrueUSD trading pairs",
-      "link": "NULL",
-      "pubDate": "2024-03-13T11:12:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TRX",
-        "TUSD",
-        "COMP"
-      ]
-    },
-    {
       "title": "Ethereum Set to Eclipse Bitcoin, CoinEx CEO Forecasts",
       "link": "https://coinpaprika.com/news/ethereum-set-to-eclipse-bitcoin-coinex-ceo-forecasts/",
       "pubDate": "2024-03-13T11:11:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "CoinEx CEO predicts Ethereum's rise over Bitcoin, citing its vibrant ecosystem",
       "currencies": [
@@ -794,22 +218,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Target Hospitality (TH) Reports $126.2 Million Revenue in Q4, Surpasses EPS Expectations",
-      "link": "NULL",
-      "pubDate": "2024-03-13T11:06:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
       "title": "Coinbase to Raise $1 Billion with Convertible Notes as Bitcoin Soars",
       "link": "https://coinpaprika.com/news/coinbase-to-raise-1-billion-with-convertible-notes-as-bitcoin-soars/",
       "pubDate": "2024-03-13T10:58:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Coinbase plans $1B convertible note offering amid Bitcoin's record highs",
       "currencies": [
@@ -822,127 +235,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tensor, Solana's Top NFT Marketplace, Introduces $TNSR Token, Airdrop Details Coming Soon",
-      "link": "NULL",
-      "pubDate": "2024-03-13T10:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SOL",
-        "NFT",
-        "TNSR"
-      ]
-    },
-    {
-      "title": "Solana's $145 Breakthrough and Key Ecosystem Projects",
-      "link": "NULL",
-      "pubDate": "2024-03-13T10:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "LINK",
-        "UNI",
-        "RAY",
-        "BONK",
-        "WIF",
-        "PYTH",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Crypto expert’s $1,000 altcoin portfolio",
-      "link": "NULL",
-      "pubDate": "2024-03-13T10:19:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "MANA",
-        "APE",
-        "SAND",
-        "ICP",
-        "AXS",
-        "IOTX",
-        "GLM",
-        "SKL",
-        "IMX",
-        "OCEAN",
-        "CTSI",
-        "PYR",
-        "ARB",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Bifrost Unveils One-Click Leverage Staking Solution for Polkadot Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-03-13T10:13:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "DOT",
-        "BFC"
-      ]
-    },
-    {
-      "title": "Creating a More Fair Ecosystem for Stakers and Validators With Bahamut Blockchain",
-      "link": "NULL",
-      "pubDate": "2024-03-13T10:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FTN"
-      ]
-    },
-    {
-      "title": "Bitcoin ETFs See Record $1 Billion Inflows, Pushing Price Over $73,500",
-      "link": "NULL",
-      "pubDate": "2024-03-13T09:10:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT",
-        "ONE"
-      ]
-    },
-    {
-      "title": "The BlackRock Bitcoin spot ETF exceeds 200,000 BTC",
-      "link": "NULL",
-      "pubDate": "2024-03-13T08:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "New absolute record for the daily trading volume on the stock exchange: almost 4 billion dollars.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 11,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "CoinEx CEO Haipo Yang: Why do I believe Ethereum will surpass Bitcoin",
       "link": "https://beincrypto.com/coinex-ceo-haipo-yang-why-do-i-believe-ethereum-will-surpass-bitcoin/",
       "pubDate": "2024-03-13T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "As the cryptocurrency market continues its impressive rally, BeInCrypto sat down with Haipo Yang, the driving force behind CoinEx, to explore the dynamics between Ethereum and Bitcoin. The founder of a globally recognized trading platform serving millions of users across the world uncovered his entrepreneurial journey and shared some thoughts on why ETH may soon take the lead in the...",
       "currencies": [
@@ -960,8 +257,8 @@
       "title": "Grayscale's Bitcoin Fund Faces Record Withdrawals",
       "link": "https://coinpaprika.com/news/grayscale-s-bitcoin-fund-faces-record-withdrawals/",
       "pubDate": "2024-03-13T07:34:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Grayscale's GBTC sees $10.6B outflow, marking a shift toward digital asset investments",
       "currencies": [
@@ -977,8 +274,8 @@
       "title": "Elon Musk Seems To Agree 'Scam Coins Are Getting Crazy' — It's Not About Crypto Though",
       "link": "https://www.benzinga.com/markets/cryptocurrency/24/03/37641783/elon-musk-seems-to-agree-scam-coins-are-getting-crazy-its-not-about-crypto-though?utm_campaign=partner_feed&utm_source=cryptopanic.com&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2024-03-13T07:29:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "Tesla CEO Elon Musk shared a post from an X user that made a satirical comparison of the U.S. Dollar to a “scam coin” on Tuesday. read more",
       "currencies": [
@@ -991,72 +288,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum’s Dencun Upgrade to Transform Ethereum Blockchain",
-      "link": "NULL",
-      "pubDate": "2024-03-13T07:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SAFE"
-      ]
-    },
-    {
-      "title": "Starknet to Reduce Transaction Fees as Ethereum’s Dencun Hard Fork Takes Place",
-      "link": "NULL",
-      "pubDate": "2024-03-13T06:29:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "STRK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto News: BTC Holds Firm at $72K Amid Toncoin Dual Rally",
-      "link": "NULL",
-      "pubDate": "2024-03-13T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "TON",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Skydrome: Navigating Defi Horizons on the Scroll Blockchain",
-      "link": "NULL",
-      "pubDate": "2024-03-13T05:27:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "NFT",
-        "AXL"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) and Zap Protocol (ZAP) Price Prediction – Should You Buy These Coins?",
       "link": "https://www.cryptointelligence.co.uk/shiba-inu-shib-and-zap-protocol-zap-price-prediction-should-you-buy-these-coins/",
       "pubDate": "2024-03-13T04:07:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "trading",
       "description": "Shiba Inu ($SHIB) has had a relatively modest week by its standards, posting a gain...",
       "currencies": [
@@ -1067,86 +303,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Cathie Wood's Ark Invest Keeps Dumping Coinbase Shares Amid Bitcoin, Crypto Buzz",
-      "link": "NULL",
-      "pubDate": "2024-03-13T03:57:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Drop Amid Hotter-Than-Expected CPI Data: Analyst Says The Next Key Level For King Crypto Is $83K",
-      "link": "NULL",
-      "pubDate": "2024-03-13T03:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "NEAR",
-        "INJ",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Faces Big Move – Can Bulls Send BTC To $75K?",
-      "link": "NULL",
-      "pubDate": "2024-03-13T03:04:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin price rollercoaster liquidates $360M from long and short sellers",
-      "link": "NULL",
-      "pubDate": "2024-03-13T02:02:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Today March 12 – Toncoin, NEAR Protocol, Injective",
-      "link": "NULL",
-      "pubDate": "2024-03-13T01:25:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "NEAR",
-        "INJ",
-        "TON"
-      ]
-    },
-    {
-      "title": "Crypto Strategist Issues Warning to XRP Holders, Says the Altcoin at Risk of Breaking Psychological Price Level",
-      "link": "NULL",
-      "pubDate": "2024-03-13T00:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "STX"
-      ]
     }
   ]
 }

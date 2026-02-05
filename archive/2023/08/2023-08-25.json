@@ -1,15 +1,15 @@
 {
   "date": "2023-08-25",
-  "fetchedAt": "2026-02-05T07:45:52.445Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.561Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
     {
       "title": "JPMorgan analyst says weakness in Bitcoin ‘appears to be at its end phase’",
       "link": "https://coinjournal.net/news/jpmorgan-analyst-view-on-bitcoin-price/",
       "pubDate": "2023-08-25T23:04:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "bitcoin",
       "description": "Nikolaos Panigirtzoglou is convinced that worst is behind us in Bitcoin. He agreed that there recently have been positive news in crypto market. Price of a Bitcoin has declined nearly 17% in less than two months. A JPMorgan analyst is convinced that the worst is behind us as far as the ongoing decline in the […]",
       "currencies": [
@@ -22,49 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "GAME REVIEW: Champions Arena from Gala Games",
-      "link": "NULL",
-      "pubDate": "2023-08-25T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Ethereum Influencer Takes Shot at Cardano DeFi, Calls It Zombie Chain",
-      "link": "NULL",
-      "pubDate": "2023-08-25T21:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ADA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "Neo Blockchain Founder Says 'Obscure Regulatory Landscape,' 'Lack of Mass Adoption' Are Major Deterrents For Web3 Developers",
-      "link": "NULL",
-      "pubDate": "2023-08-25T20:44:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
       "title": "Ripple’s XRP Whales Are Soaring Fast As Accumulation Accelerates — Is A Monster Bull Move Nigh?",
       "link": "https://zycrypto.com/ripples-xrp-whales-are-soaring-fast-as-accumulation-accelerates-is-a-monster-bull-move-nigh/",
       "pubDate": "2023-08-25T20:02:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The increased activity of these major XRP whales seems to be aiding the recent price recuperation after a prolonged bearish period due to its ongoing battle with the SEC.",
       "currencies": [
@@ -77,22 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency Lido DAO Falls More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-25T19:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
       "title": "Cardano Will Become World's Biggest Cryptocurrency, Hoskinson Says",
       "link": "https://u.today/cardano-will-become-worlds-biggest-cryptocurerncy-hoskinson-says",
       "pubDate": "2023-08-25T18:59:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Charles Hoskinson, CEO of IOG, predicted that Cardano (ADA) is set to eclipse market leaders Bitcoin and Ethereum",
       "currencies": [
@@ -107,200 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "As XRP, Litecoin and Shiba Inu Dips Continue, Here Are Some New Altcoins to Watch",
-      "link": "NULL",
-      "pubDate": "2023-08-25T18:28:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Optimism, Sui, and Astar show strong 7-day gains. Borroe Finance reaches $500k raised",
-      "link": "NULL",
-      "pubDate": "2023-08-25T18:16:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BTC",
-        "FLOW",
-        "OP"
-      ]
-    },
-    {
-      "title": "LUNC Community Declines USTC Repeg Funding: Here’s the Catch",
-      "link": "NULL",
-      "pubDate": "2023-08-25T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Judge denies stakeholders’ request for representation in Celsius bankruptcy case",
-      "link": "NULL",
-      "pubDate": "2023-08-25T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "DeFi Today: Uniswap Dominance, DYDX Rise And DeFi TVL At 2.5 Year Lows",
-      "link": "NULL",
-      "pubDate": "2023-08-25T17:34:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "AAVE",
-        "MKR",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "JUST IN: DWF Labs Proposes Collaboration with Yearn.Finance (YFI)",
-      "link": "NULL",
-      "pubDate": "2023-08-25T15:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "According to the last minute development, market maker company DWF Labs has offered a partnership with Yearn.Finance (YFI). Continue Reading: JUST IN: DWF Labs Proposes Collaboration with Yearn.Finance (YFI)",
-      "currencies": [
-        "MKR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Filecoin Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-08-25T15:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "The Aftermath: Fate of Cryptos Deemed Securities by the SEC",
-      "link": "NULL",
-      "pubDate": "2023-08-25T14:54:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "XRP",
-        "BUSD",
-        "SOL",
-        "MATIC",
-        "NEAR",
-        "ALGO",
-        "ATOM",
-        "FLOW",
-        "MANA",
-        "SAND",
-        "FIL",
-        "ICP",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Analyst Michaël van de Poppe Predicts Rally for Mid-Cap Altcoin That’s Exploded 484% This Year",
-      "link": "NULL",
-      "pubDate": "2023-08-25T14:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "How Far Can Bitcoin (BTC) Price Rise After the Next Halving?",
-      "link": "NULL",
-      "pubDate": "2023-08-25T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto Collapse: Prime Trust’s Fall From Grace and the Disappearing Wallet Mystery",
-      "link": "NULL",
-      "pubDate": "2023-08-25T14:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USTC"
-      ]
-    },
-    {
-      "title": "Celsius Token Holders Lose Bid to Hike CEL Valuation",
-      "link": "NULL",
-      "pubDate": "2023-08-25T13:51:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Tether Holds $3.3 Billion Liquidity Cushion In Shareholder Capital",
-      "link": "NULL",
-      "pubDate": "2023-08-25T13:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Default of Tokenized Loans on Centrifuge Puts MakerDAO’s Investment at Risk",
-      "link": "NULL",
-      "pubDate": "2023-08-25T12:53:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
       "title": "Trump Cards Soar on Mugshot Reveal & Twitter Return",
       "link": "https://dailycoin.com/trump-cards-soar-on-mugshot-reveal-twitter-return/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-25T12:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "general",
       "description": "Trump NFTs make a comeback as the ex-President reveals Georgia mugshot on Twitter.",
       "currencies": [
@@ -314,64 +76,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Vauld gets permission for board restructuring from the court",
-      "link": "NULL",
-      "pubDate": "2023-08-25T11:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Crypto Trader Calls One Blue-Chip Altcoin’s Price Action ‘Scary’, Updates Outlook on Bitcoin and THORChain",
-      "link": "NULL",
-      "pubDate": "2023-08-25T11:45:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ICP, AXS May Experience Price Breakouts in the Next Few Weeks",
-      "link": "NULL",
-      "pubDate": "2023-08-25T10:21:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ICP",
-        "AXS"
-      ]
-    },
-    {
-      "title": "SingularityNET Partners with Blockchain Firm VeChain to Fight Climate Change",
-      "link": "NULL",
-      "pubDate": "2023-08-25T09:35:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "VET"
-      ]
-    },
-    {
       "title": "Magnate Finance disappears with over $6 million in apparent ‘rug pull’",
       "link": "https://www.theblock.co/post/247375/magnate-finance-rug?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-08-25T09:13:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "description": "Magnate Finance, a lending project operating on Ethereum Layer 2 network Base, has seemingly made off with an estimated $6.4 million.",
       "currencies": [
@@ -387,8 +96,8 @@
       "title": "Whales Take Action in PEPE, whose Price Dropped Hard!",
       "link": "https://en.bitcoinsistemi.com/whales-take-action-in-pepe-whose-price-dropped-hard/",
       "pubDate": "2023-08-25T09:06:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "trading",
       "description": "While the price of PEPE fell after the news about it, whales turned the decline into an opportunity. The whale spent 320 Ethereum on PEPE. Continue Reading: Whales Take Action in PEPE, whose Price Dropped Hard!",
       "currencies": [
@@ -399,162 +108,6 @@
         "negative": 1
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "PEPE Price Registers Drop As Large Transfers Spook Markets",
-      "link": "NULL",
-      "pubDate": "2023-08-25T08:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Apecoin Weakens Grip In Last 30 Days – Should Investors Get Worried?",
-      "link": "NULL",
-      "pubDate": "2023-08-25T07:22:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO",
-        "APE"
-      ]
-    },
-    {
-      "title": "Exploring Obyte Use Cases (Part 2): Donations, Self-sovereign ID, and Investments",
-      "link": "NULL",
-      "pubDate": "2023-08-25T06:35:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW",
-        "GBYTE"
-      ]
-    },
-    {
-      "title": "Magnate Finance Pulls $6.5M Exit Scam on Base L2 Weeks After BALD Token Debacle",
-      "link": "NULL",
-      "pubDate": "2023-08-25T05:56:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Lido Set To Complete Final Token Unlock",
-      "link": "NULL",
-      "pubDate": "2023-08-25T05:01:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Algorand may instigate a buzz but will ALGO traders buy into the hype?",
-      "link": "NULL",
-      "pubDate": "2023-08-25T04:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Earl Sweatshirt Drops Surprise Album via Gala Music",
-      "link": "NULL",
-      "pubDate": "2023-08-25T04:02:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Analysis: Recovery Could Be Capped Near $210",
-      "link": "NULL",
-      "pubDate": "2023-08-25T03:48:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "VeChain and SingularityNET team up on AI to fight climate change",
-      "link": "NULL",
-      "pubDate": "2023-08-25T02:02:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "BTC, RUNE, QNT and XMR Price Predictions",
-      "link": "NULL",
-      "pubDate": "2023-08-25T01:30:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XMR",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Is ApeCoin losing its charm? Here’s a look at the token’s performance",
-      "link": "NULL",
-      "pubDate": "2023-08-25T01:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "CZ Breaks Silence, Refutes Binance’s Bitcoin Dumping Allegations To Safeguard BNB",
-      "link": "NULL",
-      "pubDate": "2023-08-25T01:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BNB",
-        "BUSD",
-        "SHIB",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "ETC rebounds – Is the recovery sustainable?",
-      "link": "NULL",
-      "pubDate": "2023-08-25T00:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
     }
   ]
 }

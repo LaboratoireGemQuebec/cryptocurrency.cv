@@ -1,66 +1,15 @@
 {
   "date": "2024-04-18",
-  "fetchedAt": "2026-02-05T07:45:53.295Z",
-  "articleCount": 85,
+  "fetchedAt": "2026-02-05T07:48:35.637Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Yuga Labs Sells IP Rights of Two NFT Games in Strategic Move – Here’s the Latest",
-      "link": "NULL",
-      "pubDate": "2024-04-18T23:17:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT",
-        "MTL"
-      ]
-    },
-    {
-      "title": "Chia Network Makes Progress Toward an IPO, CEO Says",
-      "link": "NULL",
-      "pubDate": "2024-04-18T23:01:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTT",
-        "XCH"
-      ]
-    },
-    {
-      "title": "Prominent Crypto User Thinks Trust Wallet is Out Of Synchronization",
-      "link": "NULL",
-      "pubDate": "2024-04-18T22:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "This Bitcoin Halving Is Different. But Is It 'Priced In'?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T20:38:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ORDI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
     {
       "title": "Cardano Foundation CEO Paves the Way for a New Era",
       "link": "https://www.cryptopolitan.com/cardano-ceo-paves-the-way-for-a-new-era/",
       "pubDate": "2024-04-18T20:32:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "Cardano CEO Frederik Gregard, a very important indicator, is announcing that the currency is ready for a transforming era of decentralized governance. Frederik Gregard, one of the most influential members in the Cardano community has expressed his overwhelmingly positive attitude for the approaching rollout of the provisional constitution. He gave detailed explanation about this document...",
       "currencies": [
@@ -73,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "CoreDAO Brings Native Staking To Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-04-18T20:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CORE"
-      ]
-    },
-    {
       "title": "$0.0001 SHIB Price Tsunami Looks Near as Shiba Inu’s Shibarium Sees Massive Transaction Spike",
       "link": "https://zycrypto.com/0-0001-shib-price-tsunami-looks-near-as-shiba-inus-shibarium-sees-massive-transaction-spike/",
       "pubDate": "2024-04-18T20:08:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Shibarium, the layer-2 solution for the Shiba Inu ecosystem, has witnessed an extraordinary surge in user engagement and transaction volume.",
       "currencies": [
@@ -101,90 +38,11 @@
       }
     },
     {
-      "title": "BlackRock ETF Closing in on Grayscale Market Share Despite Low Inflows",
-      "link": "NULL",
-      "pubDate": "2024-04-18T19:55:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "T"
-      ]
-    },
-    {
-      "title": "Report: Mango Markets Exploiter Convicted in Multi-Million Dollar Crypto Fraud Case",
-      "link": "NULL",
-      "pubDate": "2024-04-18T19:19:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Yuga Labs Burns Nearly $1 Million Worth of Ethereum Gaming NFTs—Here's Why",
-      "link": "NULL",
-      "pubDate": "2024-04-18T18:36:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MTL"
-      ]
-    },
-    {
-      "title": "BAYC Themed ApeCoin To Hit New Rock Bottom On ETH NFT Crash?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T18:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "APE"
-      ]
-    },
-    {
-      "title": "Dogecoin, Shiba Inu And Who Else? How Meme Coins Have Evolved Since The Last Bitcoin Halving",
-      "link": "NULL",
-      "pubDate": "2024-04-18T18:17:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "FLOKI",
-        "BRETT"
-      ]
-    },
-    {
-      "title": "XRP Bulls Roar: Analyst Foresees Explosive Surge With ‘God Candle’ On The Horizon",
-      "link": "NULL",
-      "pubDate": "2024-04-18T18:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "EVER"
-      ]
-    },
-    {
       "title": "Worldcoin Unveils World Chain: Here’s How It Will Work",
       "link": "https://dailycoin.com/worldcoin-unveils-world-chain-heres-how-it-will-work/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-04-18T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "general",
       "description": "Worldcoin launches World Chain, a blockchain with a human-focused approach, enhanced by World ID's Proof of Personhood.",
       "currencies": [
@@ -197,97 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Mango Markets exploiter found guilty after jury deliberations",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:27:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Mango Markets Exploiter Avi Eisenberg Found Guilty of Fraud and Manipulation",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:27:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Expert Says These 3 Coins Will Make Millionaires In 2024",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:22:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "ENA"
-      ]
-    },
-    {
-      "title": "The Road to Riches Looks Promising With These 3 Cryptocurrencies",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:16:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AVAX",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Enthusiasts Shift Funds to New Gambling ICO, Aiming for 1000% Returns",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "PlanB Projects Bitcoin’s Peak to Exceed $300,000 In 2025",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:09:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "BDAG Targets $50 by 2030, Outshining SHIB Rally and INJ Price Stability",
-      "link": "NULL",
-      "pubDate": "2024-04-18T17:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "INJ"
-      ]
-    },
-    {
       "title": "Cardano Secures Best Layer-1 Solution Award For 2024 As Traders Envision $1 ADA Price",
       "link": "https://zycrypto.com/cardano-secures-best-layer-1-solution-award-for-2024-as-traders-envision-1-ada-price/",
       "pubDate": "2024-04-18T16:53:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Cardano (ADA) has been crowned the Best Layer-1 Solution of 2024, reaffirming its position as a trailblazer in blockchain technology.",
       "currencies": [
@@ -303,8 +75,8 @@
       "title": "Cardano Foundation CEO: Cardano ($ADA) ‘Stands at the Verge of a New Era in Decentralized Governance’",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-04-18T16:44:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Earlier today, Frederik Gregaard, CEO of the Cardano Foundation, outlined the upcoming governance structure for Cardano, marking a pivotal moment in the evolution of this blockchain platform. The Cardano Foundation is a nonprofit organization based in Zug, Switzerland, that oversees and supervises the development of the Cardano blockchain ecosystem. Its primary roles include driving adoption,...",
       "currencies": [
@@ -316,63 +88,11 @@
       }
     },
     {
-      "title": "World Gold Council Sees Gold as Underowned, Forecasts Continued Rally",
-      "link": "NULL",
-      "pubDate": "2024-04-18T16:26:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Best Crypto to Buy Now April 18 – Injective, Gala, Akash Network",
-      "link": "NULL",
-      "pubDate": "2024-04-18T16:19:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "GALA",
-        "INJ",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Ronin Welcomes Ragnarok: Monster World In Historic Gaming Partnership",
-      "link": "NULL",
-      "pubDate": "2024-04-18T16:08:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "RON"
-      ]
-    },
-    {
-      "title": "Union Labs to Integrate with Polygon-backed AggLayer to Enhance Web3 Interoperability",
-      "link": "NULL",
-      "pubDate": "2024-04-18T16:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "ATOM",
-        "TIA"
-      ]
-    },
-    {
       "title": "Solana vs Ethereum again: ‘Small blocker argument’ returns",
       "link": "https://ambcrypto.com/solana-vs-ethereum-once-again-small-blocker-argument-returns/",
       "pubDate": "2024-04-18T16:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "ethereum",
       "description": "Does Ethereum's scalability call for a major architectural overhaul?",
       "currencies": [
@@ -385,45 +105,11 @@
       }
     },
     {
-      "title": "Bitcoin’s halving is a major spectacle — that’s the whole point",
-      "link": "NULL",
-      "pubDate": "2024-04-18T15:54:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OP"
-      ]
-    },
-    {
-      "title": "Injective and Jambo partner to bring mobile-based DeFi to millions in emerging markets",
-      "link": "NULL",
-      "pubDate": "2024-04-18T15:13:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Over 1,000 Builders, Partners, Investors and Enthusiasts Gather at Inaugural Global Event to Celebrate Sui",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:46:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI"
-      ]
-    },
-    {
       "title": "Cardano Foundation CEO Talks New Era for Cardano as ADA Evolves",
       "link": "https://u.today/cardano-foundation-ceo-talks-new-era-for-cardano-as-ada-evolves",
       "pubDate": "2024-04-18T14:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano Foundation CEO Frederik Gregaard makes profound remark that resonates with optimism",
       "currencies": [
@@ -435,131 +121,11 @@
       }
     },
     {
-      "title": "Crypto Company Valour Rolls Out First Short Spot Bitcoin ETP in Nordics",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:31:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "XRP",
-        "SOL",
-        "DOT",
-        "AVAX",
-        "UNI",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Sector Analysis: Fibonacci Support Boosts Atom, XLM; Scapesmania Ushers in Possible Bullish Era",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Neo adds two new core developers",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:10:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Historical Data Sparks Excitement: VeChain Price Poised For A Bullish Breakout?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SHIB",
-        "VET"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Rebel Satoshi momentum hits overdrive; SUI and BONK holders scramble for a piece of the pie",
-      "link": "NULL",
-      "pubDate": "2024-04-18T14:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SUI",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum Edge Lower Following Jobless Claims Data; Nervos Network Becomes Top Loser",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:52:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEAR",
-        "XMR",
-        "RUNE",
-        "STX",
-        "CKB",
-        "INJ",
-        "DYDX",
-        "CORE",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Aptos Labs collaborates with Microsoft, Brevan Howard and SK Telecom to bring global institutional finance on-chain with Aptos Ascend",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:47:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Q1 2024 Highlights: Bitcoin ETF, Ethereum Restaking, Solana Meme Coins",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "MKR",
-        "ARB",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
       "title": "Dogecoin (DOGE) Skyrockets in Trading Volume as Price Eyes Recovery",
       "link": "https://u.today/dogecoin-doge-skyrockets-in-trading-volume-as-price-eyes-recovery",
       "pubDate": "2024-04-18T13:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Signs of potential DOGE price recovery emerge, fueled by its strong community and increased trading activity",
       "currencies": [
@@ -571,22 +137,11 @@
       }
     },
     {
-      "title": "Popular Altcoin Announces A Series of Partnerships Including Microsoft, Price Moves!",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:17:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
       "title": "Is Polkadot (DOT) a Good Buy Following the Crash? This Trader Discusses",
       "link": "https://cryptopotato.com/is-polkadot-dot-a-good-buy-following-the-crash-this-trader-discusses/",
       "pubDate": "2024-04-18T13:11:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Polkadot's price recently crashed, but some traders think this might present a good opportunity.",
       "currencies": [
@@ -602,8 +157,8 @@
       "title": "Bitcoin up 800% Since Last Halving, But Here's What Happened to Gold Holders: Anthony Pompliano",
       "link": "https://u.today/bitcoin-up-800-since-last-halving-but-heres-what-happened-to-gold-holders-anthony-pompliano",
       "pubDate": "2024-04-18T13:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Bitcoin beating gold as store of value",
       "currencies": [
@@ -619,8 +174,8 @@
       "title": "‘Wolf Of Wall Street’ J. Belfort shares his crypto portfolio",
       "link": "https://finbold.com/wolf-of-wall-street-j-belfort-shares-his-crypto-portfolio/",
       "pubDate": "2024-04-18T13:05:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Jordan Belfort, famously known as “The Wolf of Wall Street“, is no stranger to the world of finance and investments. … Continue reading",
       "currencies": [
@@ -636,8 +191,8 @@
       "title": "Memecoin sector’s continued growth hinges on long-term utility",
       "link": "https://cointelegraph.com/news/memecoin-growth-price-utility",
       "pubDate": "2024-04-18T13:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Many memecoins have produced staggering returns since the start of 2024, but their lack of utility and the proliferation of scams have raised questions about their long-term stability.",
       "currencies": [
@@ -651,203 +206,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Halving Will Drive Price MUCH Higher",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Anthony Pompliano joins CNBC to talk bitcoin halving, gold, geopolitical impact, historical bitcoin halving price impacts, and macro economy. Pomp writes a daily letter to over 265,000+ investors about business, technology, and finance. He breaks down complex topics into easy-to-understand language while sharing opinions on various aspects of each industry. You can subscribe at https://pomp.substack.com/ View 10k+ open startup jobs: https://dreamstartupjob.com/ Enroll in my Crypto Academy: https",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Nym Technologies joins Liquid Federation to boost Bitcoin layer-2 privacy and security",
-      "link": "NULL",
-      "pubDate": "2024-04-18T13:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NYM"
-      ]
-    },
-    {
-      "title": "Aptos Strikes DeFi Partnership With Microsoft, Brevan Howard, SK Telecom",
-      "link": "NULL",
-      "pubDate": "2024-04-18T12:16:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Ondo Finance Brings Tokenized Treasuries to the Cosmos Ecosystem with Noble Integration",
-      "link": "NULL",
-      "pubDate": "2024-04-18T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Filecoin and Cardano Overshadowed by This Wild Prediction for $RBLZ: Could This Be the Biggest Rally of the Year?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Trader Says Bitcoin Could Surge by 35% if BTC Overcomes Critical Level, Updates Outlook on Ethereum and VeChain",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:45:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "VET"
-      ]
-    },
-    {
-      "title": "Genuine Parts Company (GPC) Reports Q1: $2.22 EPS (beat), $5.8 B in Revenue (Miss)",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:20:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Fetch.ai (FET) Analysis: Consolidation Ahead Amid Rising Bearishness",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Bullish On This Solana-Based Meme Coin Amid Market Downturn: 'This Will Prove To Be A Great Entry In Time'",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:01:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "NEAR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Privacy Token ZANO Now on Bitcoin.Com’s Verse DEX, Coming Soon to Bitcoin.com Wallet App",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ZANO",
-        "VERSE"
-      ]
-    },
-    {
-      "title": "Union Labs Plans Polygon-to-Cosmos Bridge with New AggLayer Integration",
-      "link": "NULL",
-      "pubDate": "2024-04-18T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Stacks (STX) and Microstrategy (MSTR) are excellent bitcoin (BTC) leverage plays",
-      "link": "NULL",
-      "pubDate": "2024-04-18T10:52:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Elevance Health (ELV) Beats EPS Expectations at $10.64 in Q1, Revenue Miss",
-      "link": "NULL",
-      "pubDate": "2024-04-18T10:26:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "UAE Pro League Embraces Web3 with Chiliz Partnership for Immersive Fan Experiences",
-      "link": "NULL",
-      "pubDate": "2024-04-18T10:17:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Pricing aggregators caused Pax Dollar to depeg",
-      "link": "NULL",
-      "pubDate": "2024-04-18T10:05:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDP"
-      ]
-    },
-    {
       "title": "Scam Alert: Cardano Founder Reveals Interaction With Fake 'Anatoly'",
       "link": "https://u.today/scam-alert-cardano-founder-reveals-interaction-with-fake-anatoly",
       "pubDate": "2024-04-18T10:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Between Charles Hoskinson and fake 'Anatoly,' here's how to deal with scammers",
       "currencies": [
@@ -859,48 +222,11 @@
       }
     },
     {
-      "title": "Release date confirmed for new augmented reality move-to-earn game, SpaceCatch",
-      "link": "NULL",
-      "pubDate": "2024-04-18T09:52:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AR"
-      ]
-    },
-    {
-      "title": "UAE Pro League Teams Up With Chiliz to Bring Web3 for Fans",
-      "link": "NULL",
-      "pubDate": "2024-04-18T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "1 Billion Dollar Bitcoin and Altcoin Move from Binance!",
-      "link": "NULL",
-      "pubDate": "2024-04-18T09:33:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "BNB",
-        "TUSD"
-      ]
-    },
-    {
       "title": "‘Ethereum Wins Big’ With New US Stablecoin Draft Bill: Expert",
       "link": "https://bitcoinist.com/ethereum-wins-big-new-us-stablecoin-draft-bill/",
       "pubDate": "2024-04-18T09:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "The introduction of a new draft bill aimed at regulating stablecoins in the United States has ignited a firestorm of debate within the cryptocurrency sector. This legislative development, while still in its formative stages, is positioned to significantly alter the operational landscape for digital currencies, particularly Ethereum and its associated stablecoins. A Big Win For […]",
       "currencies": [
@@ -913,22 +239,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "USDe Holders Should Monitor Ethena's Reserve Fund to Avoid Risk, CryptoQuant Warns",
-      "link": "NULL",
-      "pubDate": "2024-04-18T08:10:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
       "title": "Cardano’s price may surprise you after Bitcoin’s halving – Here’s how",
       "link": "https://ambcrypto.com/ahead-of-bitcoin-halving-ada-may-surprise-you-as-well-heres-how/",
       "pubDate": "2024-04-18T08:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "bitcoin",
       "description": "ADA was consolidating inside a bullish pattern, which hinted at a price uptick in the coming days.",
       "currencies": [
@@ -942,23 +257,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Listing News Continues to Come from Binance: 5 More New Altcoin Trading Pairs Listed!",
-      "link": "NULL",
-      "pubDate": "2024-04-18T07:59:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "APT"
-      ]
-    },
-    {
       "title": "XRP Case Could Head to Supreme Court as Ripple Battles SEC",
       "link": "https://u.today/ripple-lawsuit-might-make-it-to-supreme-court-former-sec-litigator",
       "pubDate": "2024-04-18T07:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "regulation",
       "description": "The lawsuits against Ripple and Coinbase could make it to the Supreme Court, according to a former SEC litigator",
       "currencies": [
@@ -969,211 +272,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Hackatao arrives on the Sandbox metaverse with the NFT game “HACK the TAO”",
-      "link": "NULL",
-      "pubDate": "2024-04-18T07:19:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SAND",
-        "TAO"
-      ]
-    },
-    {
-      "title": "2024 Coinstore Premiere Brand Conference Has Completed Successfully",
-      "link": "NULL",
-      "pubDate": "2024-04-18T07:19:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "ALGO",
-        "ICP",
-        "XDC",
-        "CFX",
-        "DAO",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Jamie Dimon’s AI Enthusiasm Fuels Rally: AI Cryptos Skyrocket – Theta Network, Raboo, Render",
-      "link": "NULL",
-      "pubDate": "2024-04-18T07:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "THETA",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Worldcoin Introduces World Chain Layer-2 Amidst Regulatory Spotlight",
-      "link": "NULL",
-      "pubDate": "2024-04-18T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "Binance Returns to India with $2 Billion Penalty",
-      "link": "NULL",
-      "pubDate": "2024-04-18T06:03:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "APE to $1? As Ethereum NFTs fall to Bitcoin, here is the impact",
-      "link": "NULL",
-      "pubDate": "2024-04-18T06:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "APE"
-      ]
-    },
-    {
-      "title": "Pi Coin Popularity In India Before Launching Mainnet",
-      "link": "NULL",
-      "pubDate": "2024-04-18T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today April 18: Bitcoin Holds Strong at $60K",
-      "link": "NULL",
-      "pubDate": "2024-04-18T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "CORE",
-        "BGB"
-      ]
-    },
-    {
-      "title": "EOS Price Analysis: Uptrend At Risk Below $0.85",
-      "link": "NULL",
-      "pubDate": "2024-04-18T05:08:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Bitcoin Price At Make-Or-Break Moment, Key Levels To Watch",
-      "link": "NULL",
-      "pubDate": "2024-04-18T03:27:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Solana price takes another tumble — Can SOL hold above $130?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T01:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "TRX",
-        "AVAX",
-        "WIF",
-        "JUP"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Magic Eden Surges to Top Spot in NFT Market, Records Stellar $756M Trading Volume in March",
-      "link": "NULL",
-      "pubDate": "2024-04-18T01:24:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Arbitrum Launches Fraud Proofs In Testnet: Why Is ARB Down?",
-      "link": "NULL",
-      "pubDate": "2024-04-18T01:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
-      "title": "Worldcoin Foundation Announces ‘World Chain’ for Enhanced Human-Centric Apps",
-      "link": "NULL",
-      "pubDate": "2024-04-18T00:46:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "OP"
-      ]
-    },
-    {
-      "title": "Top Analyst Says Solana-Based Memecoin Looking Good Amid Crypto Correction, Flips Bullish on One Ethereum Rival",
-      "link": "NULL",
-      "pubDate": "2024-04-18T00:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "NEAR",
-        "WIF"
-      ]
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "date": "2023-12-02",
-  "fetchedAt": "2026-02-05T07:45:52.038Z",
-  "articleCount": 76,
+  "fetchedAt": "2026-02-05T07:48:35.518Z",
+  "articleCount": 10,
   "source": "historical-import",
   "articles": [
     {
       "title": "Bitcoin Price Blasts Back Above $39K For First Time Since May 2022",
       "link": "https://bitcoinist.com/bitcoin-price-back-above-39k/",
       "pubDate": "2023-12-02T23:45:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Bitcoin price just breached above $39K for the first time in 2023, and the first time since May 2022. With the latest resistance taken, what’s next for the top cryptocurrency by market cap? Bitcoin Surpasses $39K As 2023 Rally Continues Bitcoin price action is heating up on a Saturday afternoon, breaking above local highs and […]",
       "currencies": [
@@ -22,47 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "As demand for NFT marketplace Blur soars, its native token plunges",
-      "link": "NULL",
-      "pubDate": "2023-12-02T23:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Bitcoin Surpasses $39K, Achieving 19-Month Peak in Saturday’s Crypto Market Surge",
-      "link": "NULL",
-      "pubDate": "2023-12-02T22:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Solana Founder Warns Against “ETH Killer” Narrative",
-      "link": "NULL",
-      "pubDate": "2023-12-02T21:57:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL"
-      ]
-    },
-    {
       "title": "Bitcoin Crosses $39,000 as ETF Excitement Rises",
       "link": "https://coinpaprika.com/news/bitcoin-crosses-39-000",
       "pubDate": "2023-12-02T21:55:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Bitcoin hits a new high since April 2022, crossing $39,000 amid anticipation of ETF approvals and global market influences.",
       "currencies": [
@@ -75,67 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Decred Journal — October 2023",
-      "link": "NULL",
-      "pubDate": "2023-12-02T21:40:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDC",
-        "WBTC",
-        "MATIC",
-        "XMR",
-        "MKR",
-        "RUNE",
-        "DCR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Cryptocurrency Exchange KuCoin Announces Investment in Surprise Altcoin Ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-12-02T20:43:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "What Is Polygon Matic: An Explainer",
-      "link": "NULL",
-      "pubDate": "2023-12-02T20:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Dogecoin Founder Explains Powerful Idea Behind New Coinbase Ad",
-      "link": "NULL",
-      "pubDate": "2023-12-02T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
       "title": "Over $100M in Liquidations as Bitcoin (BTC) Price Soars to $40K",
       "link": "https://cryptopotato.com/over-100m-in-liquidations-as-bitcoin-btc-price-soars-to-40k/",
       "pubDate": "2023-12-02T19:58:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "Chainlink also continues its run by jumping above $16.",
       "currencies": [
@@ -149,56 +57,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Chainlink (LINK) Adds 10%, Becomes Most Purchased Token",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "The Expected Airdrop Period Has Begun on the Solana (SOL) Network: Backlash from Users",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:46:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL"
-      ]
-    },
-    {
-      "title": "Do Kwon: What Happened To The Terra Luna Founder?",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:45:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "FDUSD Nears $1 Billion Cap — A Rapid 253% Surge in Supply Since August",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FDUSD"
-      ]
-    },
-    {
       "title": "Ripple locks 1 billion XRP: Here’s how the token reacted",
       "link": "https://eng.ambcrypto.com/ripple-locks-1-bln-xrp-heres-how-the-token-reacted",
       "pubDate": "2023-12-02T18:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Buyers are attempting to push XRP above $0.61. Liquidation can occur around $0.58 due to high liquidity concentration. In usual fashion, Ripple [XRP] has locked one billion XRP tokens, accor",
       "currencies": [
@@ -211,51 +74,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ChatGPT picks 3 altcoins for the next altseason",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:22:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOT"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Shiba Inu (SHIB) Community Targeted by New Sophisticated Scam",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Crypto Educator Explains Why He Expects XRP Price to Reach $50",
-      "link": "NULL",
-      "pubDate": "2023-12-02T18:02:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
       "title": "Gaming-Focused Ethereum (ETH) Sidechain Ronin Integrates Binance Pay To Enable Easier Wallet Funding",
       "link": "https://dailyhodl.com/2023/12/02/gaming-focused-ethereum-eth-sidechain-ronin-integrates-binance-pay-to-enable-easier-wallet-funding/",
       "pubDate": "2023-12-02T17:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A gaming-focused Ethereum (ETH) sidechain is integrating with Binance Pay as a means of making wallet funding easier for consumers. In a new blog post, Ethereum sidechain Ronin (RON) says that it is collaborating with the world’s largest crypto exchange by volume to make it easier to fund the Ronin crypto wallet. According to Ronin, […]",
       "currencies": [
@@ -270,26 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "XRP Price Set To Explode: Analyst Identifies Trigger For Next Parabolic Move",
-      "link": "NULL",
-      "pubDate": "2023-12-02T17:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "FLOW",
-        "GT"
-      ]
-    },
-    {
       "title": "Solana (SOL) Exceeds Ethereum L2s by Trading Volume, Data Says",
       "link": "https://u.today/solana-sol-exceeds-ethereum-l2s-by-trading-volume-data-says",
       "pubDate": "2023-12-02T17:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Solana (SOL), high-performance blockchain network, finally surpassed Polygon and Optimism by transactional volume",
       "currencies": [
@@ -303,36 +111,11 @@
       }
     },
     {
-      "title": "BTC, ETH and XRP Price Analysis for December 2",
-      "link": "NULL",
-      "pubDate": "2023-12-02T15:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "PEPE Price Prediction: Will Pepe Coin Dominate Dogecoin And Shiba Inu In 2024?",
-      "link": "NULL",
-      "pubDate": "2023-12-02T15:22:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "SHIB"
-      ]
-    },
-    {
       "title": "Bitcoin Set To Break $40,000 Barrier, Says Crypto Expert: 'It Looks Like It Is Just A Rising Floor'",
       "link": "https://www.benzinga.com/markets/cryptocurrency/23/12/36057998/bitcoin-set-to-break-40-000-barrier-says-crypto-expert-it-looks-like-it-is-just-a-rising-f?utm_campaign=partner_feed&utm_source=cryptopanic.com&utm_medium=partner_feed&utm_content=site",
       "pubDate": "2023-12-02T15:11:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Amid a recent surge of optimism within the cryptocurrency sector, pseudonymous crypto trader The Flow Horse has projected a significant rise in the value of Bitcoin (CRYPTO: BTC). read more",
       "currencies": [
@@ -346,108 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Top 5 Crypto Coins Under $1 To Watch In 2024",
-      "link": "NULL",
-      "pubDate": "2023-12-02T15:04:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Terra Classic (LUNC) Up 22% as Binance Burns 3.9 Billion Tokens",
-      "link": "NULL",
-      "pubDate": "2023-12-02T15:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "XRP Ledger (XRPL): Ripple CTO Marks 11th Anniversary",
-      "link": "NULL",
-      "pubDate": "2023-12-02T14:59:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "What Are Altcoins? Guide: How To Spot Altcoin Season And How To Buy",
-      "link": "NULL",
-      "pubDate": "2023-12-02T14:40:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "DOT",
-        "LTC",
-        "UNI",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Here's Dogecoin Founder's Take on Shocking FTX IRS Showdown",
-      "link": "NULL",
-      "pubDate": "2023-12-02T14:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "From 'Dogecoin Killer' Shiba Inu's Burn Rate Surge To Bitcoin's ETF Approval And Possible BTC Boom: Crypto Weekend Roundup",
-      "link": "NULL",
-      "pubDate": "2023-12-02T14:35:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOGE",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "BLUR’s Price Drops After Whale’s $894K Sale, LINK Climbs 6+%",
-      "link": "NULL",
-      "pubDate": "2023-12-02T14:34:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
       "title": "Here’s why Solana is stronger than ever; Is SOL a buy right now?",
       "link": "https://finbold.com/heres-why-solana-is-stronger-than-ever-is-sol-a-buy-right-now/",
       "pubDate": "2023-12-02T14:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Solana (SOL) has grown stronger in 2023 despite the regulatory crackdown that impacted the cryptocurrency market. With growing adoption and … Continued",
       "currencies": [
@@ -459,347 +145,11 @@
       }
     },
     {
-      "title": "Top 5 Cryptos Set For A Price Explosion This December – ADA, TIA, RUNE, LUNC, BTC",
-      "link": "NULL",
-      "pubDate": "2023-12-02T13:40:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SHIB",
-        "RUNE",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "FTX Moves to Sell-off 6.26M IMX Tokens After 119% Surge To $1.49",
-      "link": "NULL",
-      "pubDate": "2023-12-02T13:09:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IMX"
-      ]
-    },
-    {
-      "title": "Can XRP Price Reach $50? Crypto Analyst Predicts Massive Move",
-      "link": "NULL",
-      "pubDate": "2023-12-02T13:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP"
-      ]
-    },
-    {
-      "title": "Chainlink’s Market Cap Soars 143% As Whale Accumulates $50 Mln LINK, What’s Next?",
-      "link": "NULL",
-      "pubDate": "2023-12-02T12:59:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Terra Luna Classic v2.3.2 Upgrade Proposal Officially Passed, LUNC Price Shoots 25%",
-      "link": "NULL",
-      "pubDate": "2023-12-02T12:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Shiba Inu Soars As Record-Breaking SHIB Burns & Shibarium Transactions Fuel Optimism",
-      "link": "NULL",
-      "pubDate": "2023-12-02T12:44:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "XRP Climbs Above Support as Bulls Try to Reclaim Crucial Zone",
-      "link": "NULL",
-      "pubDate": "2023-12-02T12:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "David Schwartz marks 11 years at the helm of XRP Ledger",
-      "link": "NULL",
-      "pubDate": "2023-12-02T12:01:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Coinbase Adds DOGE, ADA, XLM Perpetual Futures Contracts, About to List MATIC, BCH Ones",
-      "link": "NULL",
-      "pubDate": "2023-12-02T11:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "XLM",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Analyst Expects Stacks (STX) To “Fly” If it Can Break $0.80",
-      "link": "NULL",
-      "pubDate": "2023-12-02T11:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "5 cryptocurrencies set to dominate in the next quarter",
-      "link": "NULL",
-      "pubDate": "2023-12-02T11:27:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Terra Classic Price Prediction: Will $LUNC Recovery Continue In December to Hit $0.0002?",
-      "link": "NULL",
-      "pubDate": "2023-12-02T11:21:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Atomicals Market Responds to Security Breach with User Compensation",
-      "link": "NULL",
-      "pubDate": "2023-12-02T11:09:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Coinbase Announces Polygon (MATIC) And Bitcoin Cash (BCH) Perpetuals",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:53:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Corruption In Ukraine: Crypto Worth $1.5 Million Confiscated From Former Gov’t Official",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:51:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ]
-    },
-    {
-      "title": "Ripple Returns 800 Million XRP to Escrow, Whale Buys Millions More",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Swell Enhances Cross-Chain Interoperability with Chainlink CCIP Integration",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:32:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Ripple CTO Celebrates 11th XRPL Launch Anniversary",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Whale Accumulates About $187,000,000 Worth of Bitcoin and Altcoins From Binance in Just Three Days: Lookonchain",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:15:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB"
-      ]
-    },
-    {
-      "title": "XRP Lawyers Call For Congressional Action On SEC And Gary Gensler",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:09:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Shiba Inu's Price Fluctuates As It Is Held In A Range Of $0.0000084",
-      "link": "NULL",
-      "pubDate": "2023-12-02T10:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Dogecoin Creator Billy Markus And Elon Musk Reacts To IRS $24 Bln Fine On FTX",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:53:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "OKX Steps into India’s Web3 Space, Polygon Co-Founder Appreciates",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Coinbase Has No Plans For a Base Token But Prepares to Integrate Solana Network",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:39:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Update: Litecoin’s Lull in Growth; Investors Eye VC Spectra’s Rapid Rise",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:31:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bitcoin A Tad Closer To $40,000 – Is $41K The Next Stop In A Few Days?",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "A Shiba Inu alternative with greater growth than XRP, Polygon and Cardano",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:26:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "SHIB",
-        "MATIC"
-      ]
-    },
-    {
       "title": "XRP Bulls Eye Crazy Momentum To $1.8 As Pundit Highlights Possibility Of XRP at $10,000 Price",
       "link": "https://zycrypto.com/xrp-bulls-eye-crazy-momentum-to-1-8-as-pundit-highlights-possibility-of-xrp-at-10000-price/",
       "pubDate": "2023-12-02T09:25:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "After climbing above the psychological price of $0.60, XRP has found the much-needed momentum to breach new year-end highs.",
       "currencies": [
@@ -811,163 +161,11 @@
       }
     },
     {
-      "title": "JUST IN: Coinbase Futures Says It Will List Two More Major Altcoins!",
-      "link": "NULL",
-      "pubDate": "2023-12-02T09:04:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MATIC",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "77.77 Billion SHIB Transferred by FTX Exchange, Here’s SHIB Price Reaction",
-      "link": "NULL",
-      "pubDate": "2023-12-02T08:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Best Crypto To Buy Now On December 2 – BEAM, LUNC, STX",
-      "link": "NULL",
-      "pubDate": "2023-12-02T08:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin (BTC) Touched $39K, Chainlink (LINK) Soars 7% Daily (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2023-12-02T08:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Coinbase CEO Brian Armstrong Makes an Exciting Solana (SOL) Announcement",
-      "link": "NULL",
-      "pubDate": "2023-12-02T07:39:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "We Neither Bank Justin Sun nor Finance Hamas — Circle Chief Strategy Officer",
-      "link": "NULL",
-      "pubDate": "2023-12-02T07:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "OKX Drives Web3 Evolution With Strategic Investments In India Partnering With Polygon",
-      "link": "NULL",
-      "pubDate": "2023-12-02T06:49:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Avalanche flips $20 to support and bulls have their next target in sight",
-      "link": "NULL",
-      "pubDate": "2023-12-02T06:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Coinbase (COIN) Up By 250% – Here’s Why It’s Outperforming BTC And ETH",
-      "link": "NULL",
-      "pubDate": "2023-12-02T05:44:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC"
-      ]
-    },
-    {
-      "title": "The first no-gas Ordinals marketplace goes live on Internet Computer (ICP)",
-      "link": "NULL",
-      "pubDate": "2023-12-02T05:39:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: Market Continues Rally As BTC, Pepe Coin, BEAM Rises",
-      "link": "NULL",
-      "pubDate": "2023-12-02T05:12:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Dogecoin Funded SpaceX ‘Doge-1’ Secures NTIA Approval for Moon Mission",
-      "link": "NULL",
-      "pubDate": "2023-12-02T04:38:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
       "title": "Cardano Founder Drops Hard Truths: ‘Bitcoin Was Heavily Centralized At The Start’",
       "link": "https://bitcoinist.com/cardano-founder-truths-bitcoin/",
       "pubDate": "2023-12-02T04:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "Cardano founder Charles Hoskinson has stirred the crypto community, revealing significant ‘truths’ about Bitcoin’s centralized origins and its regulatory perceptions in the United States. Hoskinson Unveils Bitcoin Truth Founder and CEO of Cardano, Charles Hoskinson has recently published a live video titled ‘On Bitcoin, Ethereum, and Cardano’ via his main X (formerly Twitter) account. In...",
       "currencies": [
@@ -978,40 +176,6 @@
         "positive": 4,
         "negative": 5
       }
-    },
-    {
-      "title": "Ripple’s CLO Says SEC Is Anything But Infallible — Advises ‘Don’t Be Intimidated When They Come Knocking’",
-      "link": "NULL",
-      "pubDate": "2023-12-02T01:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Upcoming Solana airdrops may have this effect on the network",
-      "link": "NULL",
-      "pubDate": "2023-12-02T00:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL"
-      ]
-    },
-    {
-      "title": "Shiba Inu Shatters Bearish Trendline as BNB Whale Shifts 32M",
-      "link": "NULL",
-      "pubDate": "2023-12-02T00:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "SHIB"
-      ]
     }
   ]
 }

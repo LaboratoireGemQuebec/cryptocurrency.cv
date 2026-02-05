@@ -1,15 +1,15 @@
 {
   "date": "2021-10-04",
-  "fetchedAt": "2026-02-05T07:45:51.849Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.472Z",
+  "articleCount": 27,
   "source": "historical-import",
   "articles": [
     {
       "title": "Forget Bitcoin, Ethereum, Cardano, BNB And XRP—The Price Of This Small Cryptocurrency Is Quietly Soaring",
       "link": "https://www.forbes.com/sites/billybambrough/2021/10/04/forget-bitcoin-ethereum-cardano-bnb-and-xrp-the-price-of-this-small-cryptocurrency-is-quietly-soaring/",
       "pubDate": "2021-10-04T23:45:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "As the price of bitcoin and other major cryptocurrencies flatlines, OMG, the native token of the ethereum-scaling OMG network, has soared to highs not seen since early 2018—up almost 150% since early September...",
       "currencies": [
@@ -23,33 +23,11 @@
       }
     },
     {
-      "title": "Hear, hear!",
-      "link": "NULL",
-      "pubDate": "2021-10-04T21:36:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @blockchainRI: Congratulations to Billy Sebel, a finalist for the 2021 Enterprise Blockchain Awards! Register for the free-to-watch virt…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T21:08:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
       "title": "After Avalanche and Polygon Binance-Backed OpenOcean Integrates Fantom",
       "link": "https://cryptopotato.com/after-avalanche-and-polygon-binance-backed-openocean-integrates-fantom/",
       "pubDate": "2021-10-04T19:56:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "exchange",
       "description": "OpenOcean has added Fantom to its lists of networks to provide better trading opportunities for users.",
       "currencies": [
@@ -64,22 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @CENNZnet: CENNZnet's gone carbon negative!  Our long-time partner @carbonclick are minting verified carbon credits on the CENNZnet bl…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T19:56:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
       "title": "DEXes vs CEXes: Are exchanges like Uniswap, dYdX falling short of expectations",
       "link": "https://ambcrypto.com/dexes-vs-cexes-are-exchanges-like-uniswap-dydx-falling-short-of-expectations/",
       "pubDate": "2021-10-04T19:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "defi",
       "description": "The “centralization-decentralization” debate has been going on since ages. Proponents and opponents end up clashing with each other’s opinions every other day. Both ecosystems come with their own pros and cons, and thus, there hasn’t been any compelling conclusion to date. Crypto was, in fact, born out of the aforementioned opinion discrepancies. Even though decentralization […]",
       "currencies": [
@@ -94,8 +61,8 @@
       "title": "Price analysis 10/4: BTC, ETH, BNB, ADA, SOL, XRP, DOT, DOGE, LUNA, UNI",
       "link": "https://cointelegraph.com/news/price-analysis-10-4-btc-eth-bnb-ada-sol-xrp-dot-doge-luna-uni",
       "pubDate": "2021-10-04T19:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin bulls have set their sights on $50,000 and this renewed push is also boosting large and small-cap altcoin prices.",
       "currencies": [
@@ -113,9 +80,9 @@
       "title": "AXS Reaches New All-Time High, Gaming Tokens Could Follow",
       "link": "https://beincrypto.com/axs-reaches-new-all-time-high-gaming-tokens-could-follow/",
       "pubDate": "2021-10-04T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "AXS reached a new all-time high price on October 4. If it continus to increase, the next resistance area would be at $169.",
       "currencies": [
         "AXS"
@@ -130,8 +97,8 @@
       "title": "Bitcoin moves past $49K as Facebook, Instagram and WhatsApp go down",
       "link": "https://cointelegraph.com/news/bitcoin-moves-past-48k-as-facebook-instagram-and-whatsapp-go-down",
       "pubDate": "2021-10-04T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "During the outage, many Crypto Twitter users called for the need for a decentralized social network built on blockchain.",
       "currencies": [
@@ -148,8 +115,8 @@
       "title": "BREAKING: Judge Allows XRP Holders to Assist Court in SEC vs. Ripple Case",
       "link": "https://u.today/breaking-judge-allows-xrp-holders-to-assist-court-in-sec-vs-ripple-case",
       "pubDate": "2021-10-04T17:38:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "XRP holders will be able to help the court as amici curiae, but they are not allowed to intervene in the lawsuit directly",
       "currencies": [
@@ -165,8 +132,8 @@
       "title": "Axie Infinity hits a new ATH at $155 while Bitcoin bulls aim for $50K",
       "link": "https://cointelegraph.com/news/axie-infinity-hits-a-new-ath-at-155-while-bitcoin-bulls-aim-for-49k",
       "pubDate": "2021-10-04T17:38:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "AXS, CVP and POLS lead altcoins higher while Bitcoin bulls search for a way to reclaim the $50,000 level.",
       "currencies": [
@@ -181,67 +148,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Thorg's released a new version - download and start mining!",
-      "link": "NULL",
-      "pubDate": "2021-10-04T17:16:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "RT @bengoertzel: Speech-to-speech machine translation has potential to help a lot w/ uplifting Africa economically and educationally, but w…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T16:08:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGIX"
-      ]
-    },
-    {
-      "title": "RT @veryHighLander: No strings attached, but TokeSpamDestroyer Mech gets its power from the SNX reactor, so TOKE whales please make sure th…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T16:01:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SNX",
-        "SUSD"
-      ]
-    },
-    {
-      "title": "Over 50,000 unique accounts have been created on the #Proton blockchain. ️",
-      "link": "NULL",
-      "pubDate": "2021-10-04T15:26:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XPR"
-      ]
-    },
-    {
-      "title": "Our first AMA is coming up tomorrow at 12 PM UTC! Join in to learn more about Beta Finance and have the opportunity…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T14:57:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BETA"
-      ]
-    },
-    {
       "title": "With prices around $2, and high returns, all Algorand, MATIC need is…",
       "link": "https://ambcrypto.com/with-prices-around-2-and-high-returns-all-algorand-matic-need-is/",
       "pubDate": "2021-10-04T14:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "After a month packed with high gains, higher dips, and a lot of market euphoria, a number of coins witnessed perplexing trajectories leaving participants dazed and confused. However, one thing was certain- the crypto market’s maturation and the strength of mid-cap alts to surprised everybody. While coins like Cardano, Solana, Terra, and AVAX made new […]",
       "currencies": [
@@ -259,8 +170,8 @@
       "title": "Losses of up to 490,000 COMP estimated, due to bug in Compound Finance upgrade",
       "link": "https://ambcrypto.com/losses-of-up-to-490000-comp-estimated-due-to-bug-in-compound-finance-upgrade/",
       "pubDate": "2021-10-04T14:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "defi",
       "description": "The recent bug-incident related to the Compound Finance upgrade resulted in a loss of over $80 million worth of COMP. In this regard, Compound Labs founder Robert Leshner had earlier said that the total COMP at risk was about 280,000 tokens at worst. But, he has updated on Twitter that the risk was in fact […]",
       "currencies": [
@@ -276,8 +187,8 @@
       "title": "BENQI Rolls Out $4M Second Phase of Avalanche Rush Program",
       "link": "https://cryptopotato.com/benqi-rolls-out-4m-second-phase-of-avalanche-rush-program/",
       "pubDate": "2021-10-04T14:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "The Avalanche-based liquidity market protocol has launched another $4 million worth of incentives in the ongoing Avalanche Rush program.",
       "currencies": [
@@ -290,88 +201,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @justinsuntron: On the Base Areas for Cryptoist Internationale",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:59:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @justinsuntron: At the same time, such Cryptoist Internationale can serve as a balancing force to empower these once “margins” so that t…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:59:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @justinsuntron: Just imagine what it would be like when we have a Cryptoist voting block in the UN General Assembly.",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:59:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @TRXSquad: Charts are painting a nice picture about #TRON #TRX. Do you see it?",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:39:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @TronixTrx: 1st October: #TRON burns more than 3,072,255 coins  with a net production ratio greater than zero 1,990,736 ️",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:39:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @TRXSquad: The total value locked on #Tron #TRX #TronNetwork is in an uptrend. Price will follow.",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:33:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "Hello everyone , thanks for the votes. Keep supporting  to the top",
-      "link": "NULL",
-      "pubDate": "2021-10-04T13:14:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
       "title": "Is Axie Infinity overheating? AXS price hits record high following 100% QTD rally",
       "link": "https://cointelegraph.com/news/is-axie-infinity-overheating-axs-price-hits-record-high-following-100-qtd-rally",
       "pubDate": "2021-10-04T13:13:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "The gaming token, which reached $150 in the early UTC hours of Monday, risks correcting below $90 as a key technical indicator identifies its overbought conditions.",
       "currencies": [
@@ -387,8 +221,8 @@
       "title": "Japan Strengthens Tax Requirements On Crypto Proceeds With A Stringent Attack On Cardano Traders",
       "link": "https://zycrypto.com/japan-strengthens-tax-requirements-on-crypto-proceeds-with-a-stringent-attack-on-cardano-traders/",
       "pubDate": "2021-10-04T12:44:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "According to a report by Japanese news outlet Nikkei, the National Tax Agency has intensified its clampdown on crypto tax defaulters in the region whom it specifically accuses of failing to pay about 1.4 billion Yen ($12,595,030) of Cardano (ADA). Japan accounts for the largest number of ADA traders in the world with 90% of […]",
       "currencies": [
@@ -401,22 +235,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @S_Maritan: Enterprise #Blockchain Corporate Leadership Award Finalist: Billy Sebell @XinfinUSA Head of Ecosystem Development, XinFin.…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T12:33:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
-    {
       "title": "Elon Musk's Shiba Inu Floki Picture Attracts Over 90,000 Tweets",
       "link": "https://u.today/elon-musks-shiba-inu-floki-picture-attracts-over-90000-tweets",
       "pubDate": "2021-10-04T11:53:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "The Shiba Inu Floki picture published by Elon Musk earlier today has garnered more than 90,000 tweets from around the crypto community",
       "currencies": [
@@ -432,8 +255,8 @@
       "title": "Shiba surges 20% in a week as whale buys more than 6 trillion SHIB",
       "link": "https://finbold.com/shiba-surges-20-in-a-week-as-whale-buys-more-than-6-trillion-shib/",
       "pubDate": "2021-10-04T11:33:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "The price of Shiba Inu (SHIB) has risen sharply in recent weeks due to the asset’s recent Coinbase listing, with... Continue reading",
       "currencies": [
@@ -446,22 +269,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What is the Grand Vision for eCash? @deadalnix explains how all the design decisions for #eCash are aligned with…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T11:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Polygon Users Overtake Ethereum Amid Crypto Gaming Mania",
       "link": "https://cryptobriefing.com/polygon-users-overtake-ethereum-amid-crypto-gaming-mania/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-10-04T10:29:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "currencies": [
         "ETH",
@@ -474,45 +286,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "On 8th Oct at 10:00 am GMT+8, #PUNDIX CEO &amp; Co-Founder @zibin will host an #AMA session to talk about the launch o…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T10:24:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "Dash is an open-source blockchain & cryptocurrency focused on offering a fast global payments network that is decen…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T10:16:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DASH",
-        "SNB"
-      ]
-    },
-    {
-      "title": "We're hosting a Reddit AMA on Wednesday: drop your questions here",
-      "link": "NULL",
-      "pubDate": "2021-10-04T10:01:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
       "title": "Axie Infinity Jumps to New All-Time High, Targets $200",
       "link": "https://cryptobriefing.com/axie-infinity-jumps-new-all-time-high-targets-200/?utm_source=main_feed&utm_medium=rss",
       "pubDate": "2021-10-04T09:50:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "currencies": [
         "AXS"
@@ -526,8 +304,8 @@
       "title": "Multiple Crypto Whales Grab Over $46 Million of SHIB Recently: SHIB Community",
       "link": "https://u.today/multiple-crypto-whales-grab-over-46-million-of-shib-recently-shib-community",
       "pubDate": "2021-10-04T09:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "SHIB community states that multiple crypto whales have been purchasing large amounts of Shiba Inu in the past 14 days",
       "currencies": [
@@ -543,8 +321,8 @@
       "title": "Cardano traders in Japan under scrutiny for potential tax evasion",
       "link": "https://ambcrypto.com/cardano-traders-on-japan-authorities-radar-for-potential-tax-evasion/",
       "pubDate": "2021-10-04T09:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Japan national authorities are clamping down on crypto investors who have been evading taxes. Local reports suggest that a large-scale tax audit on individuals found tax evasion to the tune of 1.4 billion yen or close to $12 million. It was reported that several profited from trading ADA at its surge. In this context, the […]",
       "currencies": [
@@ -557,34 +335,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Q3-2021 Non-HUNT Revenue Burning: 37,267 HUNT (worth $26,975.57) burned. #HUNT #HUNTToken",
-      "link": "NULL",
-      "pubDate": "2021-10-04T09:29:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
-      "title": "Upcoming airdrop for EPS stakers from a new protocol launching on Fantom",
-      "link": "NULL",
-      "pubDate": "2021-10-04T09:04:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM",
-        "EPS"
-      ]
-    },
-    {
       "title": "Crypto Trader Michaël van de Poppe Predicts Rallies for Chainlink and Tezos, Outlines Bottom Targets for Cardano and VeChain",
       "link": "https://dailyhodl.com/2021/10/04/crypto-trader-michael-van-de-poppe-predicts-rallies-for-chainlink-and-tezos-outlines-bottom-targets-for-cardano-and-vechain/",
       "pubDate": "2021-10-04T09:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Crypto strategist and trader Michaël van de Poppe says he’s expecting rallies for Chainlink and Tezos as he plots his bottom targets for Cardano and VeChain. In a strategy session, Van de Poppe tells his 132,000 YouTube subscribers that decentralized oracle network Chainlink (LINK) is mirroring its price action late last year when the coin […]",
       "currencies": [
@@ -602,8 +357,8 @@
       "title": "Dogecoin ($DOGE) as a Payment Method To Be Made Available to Millions of Consumers",
       "link": "https://www.cryptoglobe.com/latest/2021/10/dogecoin-doge-as-a-payment-method-to-be-made-available-to-millions-of-consumers/",
       "pubDate": "2021-10-04T08:56:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Verifone (NYSE: PAY), one of the world’s leading payment solution providers, has announced “the extension of BitPay’s blockchain payment technology to enable consumer cryptocurrency payments on Verifone’s in-store and eCommerce Cloud Services platforms in the United States.” This American multinational corporation, which was founded in 1981 and is headquartered in Coral Springs, Florida,...",
       "currencies": [
@@ -621,8 +376,8 @@
       "title": "Bitcoin Rejected at $49K After Charting a 4-Week High (Market Watch)",
       "link": "https://cryptopotato.com/bitcoin-rejected-at-49k-after-charting-a-4-week-high-market-watch/",
       "pubDate": "2021-10-04T08:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "While bitcoin failed at $49,000, AXS and XTZ have skyrocketed to new all-time high records above $150 and $9, respectively.",
       "currencies": [
@@ -637,22 +392,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Development of JasmyCoin Staking Service",
-      "link": "NULL",
-      "pubDate": "2021-10-04T08:18:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
       "title": "Almost $2B Staked in Axie Infinity: AXS Skyrockets 130% Weekly to a New ATH",
       "link": "https://cryptopotato.com/almost-2b-staked-in-axie-infinity-axs-skyrockets-130-weekly-to-a-new-ath/",
       "pubDate": "2021-10-04T07:22:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "There's almost $2 billion staked in Axie Infinity, while the AXS token explodes to yet another all-time high following a 130% weekly surge.",
       "currencies": [
@@ -668,8 +412,8 @@
       "title": "Dogecoin and Its Copycats Quickly Erase Elon Musk-Driven Gains",
       "link": "https://u.today/dogecoin-and-its-copycats-quickly-erase-elon-musk-driven-gains",
       "pubDate": "2021-10-04T05:24:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "This is the latest sign of Elon Musk’s diminishing influence on canine coins",
       "currencies": [
@@ -685,8 +429,8 @@
       "title": "Bug bites DeFi protocol Compound again",
       "link": "https://forkast.news/headlines/bug-bites-defi-protocol-compound-again/",
       "pubDate": "2021-10-04T05:23:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "defi",
       "description": "Technical woes continue to beset decentralized finance (DeFi) protocol Compound this week as a hack resulted in 202,472 COMP, or US$68 million at the time, being transferred from its reservoir to its Comptroller where the funds remain vulnerable to being drained by subsequent transactions. Fast facts Yearn.Finance developer Banteg tweeted about the hack late Sunday […]",
       "currencies": [
@@ -703,8 +447,8 @@
       "title": "TA: Ethereum Bulls In Control, Why ETH Could Rally Above $3,500",
       "link": "https://www.newsbtc.com/analysis/eth/ethereum-bulls-in-control-3500/",
       "pubDate": "2021-10-04T05:08:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Ethereum gained strength above $3,200 and $3,350 against the US Dollar. ETH price could start a fresh rally if it clears $3,450 and $3,500. Ethereum started a steady increase after it settled above the $3,200 level. The price is now trading above $3,300 and the 100 hourly simple moving average. There was a break below a key bullish trend line with support near $3,400 on the hourly chart of...",
       "currencies": [
@@ -718,22 +462,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Update blogs are coming out this week to bring the Scorum Community up to date on new development in progress, new…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T04:52:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SCR"
-      ]
-    },
-    {
       "title": "Compounding problems: $65M more COMP at risk as devs wait for time-locked bug fix",
       "link": "https://cointelegraph.com/news/compounding-problems-65m-more-comp-at-risk-as-devs-wait-for-time-locked-bug-fix",
       "pubDate": "2021-10-04T03:04:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "defi",
       "description": "While Compound’s developers submitted a fix for the protocol’s bug on Thursday, the update won’t take effect until a seven-day time-lock on code updates has passed.",
       "currencies": [
@@ -744,24 +477,6 @@
         "negative": 7
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "RT @AdamHODL: $THETA x $MTRG Probably nothing, keep scrolling. We all know accumulating undervalued L1’s and L2’s is a big brain play. Me…",
-      "link": "NULL",
-      "pubDate": "2021-10-04T00:54:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "MTRG",
-        "EMTRG",
-        "MTR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

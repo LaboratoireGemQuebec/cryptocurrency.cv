@@ -1,68 +1,15 @@
 {
   "date": "2023-11-21",
-  "fetchedAt": "2026-02-05T07:45:52.055Z",
-  "articleCount": 129,
+  "fetchedAt": "2026-02-05T07:48:35.522Z",
+  "articleCount": 21,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Circle Launches New ‘Bridged USDC Standard’ To Reduce Fragmentation Across Chains",
-      "link": "NULL",
-      "pubDate": "2023-11-21T23:01:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDC"
-      ]
-    },
-    {
-      "title": "Did JPMorgan Secretly Buy 7.5 Million XRP? Here’s What We Know",
-      "link": "NULL",
-      "pubDate": "2023-11-21T23:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ADA",
-        "XRP",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Binance has $3.9 billion in USDT on the move",
-      "link": "NULL",
-      "pubDate": "2023-11-21T22:24:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "TRX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "U.S. Justice Department seize $9 million in USDT – Why?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T22:16:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT"
-      ]
-    },
     {
       "title": "Analyst Predicts Chainlink Rally To $20 Based On This Pattern",
       "link": "https://www.newsbtc.com/chainlink-news/analyst-predicts-chainlink-rally-20-based-pattern/",
       "pubDate": "2023-11-21T22:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "An analyst has pointed out how Chainlink might be breaking out of a bull flag right now, which could suggest a rally toward $20. Chainlink Is Escaping Out Of A Bull Flag Pattern Currently In a new post on X, analyst Ali pointed out a breakout that may be forming in the LINK price chart. The relevant technical pattern here is the “bull flag,” which, as its name implies, looks like a flag on a...",
       "currencies": [
@@ -77,22 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BNB Price Tumbles 10% After Changpeng Zhao Steps Down as Binance CEO",
-      "link": "NULL",
-      "pubDate": "2023-11-21T21:26:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
       "title": "Conference Followed by the Entire Cryptocurrency World Has Begun: 4 Major US Government Officials Are Announcing Cryptocurrency Enforcements",
       "link": "https://en.bitcoinsistemi.com/conference-followed-by-the-entire-cryptocurrency-world-has-begun-4-major-us-government-officials-are-announcing-cryptocurrency-enforcements/",
       "pubDate": "2023-11-21T20:50:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "general",
       "description": "The big conference, where four important US government officials will make statements regarding cryptocurrency sanctions, has begun. Continue Reading: Conference Followed by the Entire Cryptocurrency World Has Begun: 4 Major US Government Officials Are Announcing Cryptocurrency Enforcements",
       "currencies": [
@@ -108,8 +44,8 @@
       "title": "Here’s Why We Might Never See Bitcoin Price Below $30,000 Again, According To Stastician Willy Woo",
       "link": "https://zycrypto.com/heres-why-we-might-never-see-bitcoin-price-below-30000-again-according-to-stastician-willy-woo/",
       "pubDate": "2023-11-21T20:47:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Three important events reveal that, if history is anything to go by, Bitcoin’s price shouldn’t go back below the $30,000 price line ever again.",
       "currencies": [
@@ -122,52 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Can PancakeSwap (CAKE) and Uniswap (UNI) Green Streak Escalate to Yearly Triumphs?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T20:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "CAKE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Fetch AI Breakout Confirmed: Analysts Reveal Bullish Targets For FET Price",
-      "link": "NULL",
-      "pubDate": "2023-11-21T20:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "FET"
-      ]
-    },
-    {
-      "title": "Binance Coin Price Prediction: Will $BNB Lose $200 Mark From CEO ‘CZ’ Resignation",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:51:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
       "title": "BNB price declines as Binance CEO plea deal will see him step down",
       "link": "https://www.theblock.co/post/264083/bnb-price-declines-as-binance-ceo-plea-deal-will-see-him-step-down?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-11-21T19:49:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "trading",
       "description": "The price of BNB fell on Tuesday after reports first emerged that Binance CEO Changpeng 'CZ' Zhao planed to step down as part of a plea deal.",
       "currencies": [
@@ -180,162 +75,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "BNB Rallies Following Reports of DOJ Seeking $4,000,000,000 Settlement With Binance: Report",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:41:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Binance CEO Zhao To Resign, Plead Guilty To Money Laundering As Part Of $4.3B Settlement; BNB Drops",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Kraken's SEC Drama: A Catalyst for GALA to Collapse?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "KuCoin expands portfolio with addition of Root network (ROOT) token",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:23:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "US Justice Department Seizes $9 Million in Tether in Major Scam Crackdown",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:18:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Changpeng ‘CZ’ Zhao to step down as Binance CEO as part of plea deal with DOJ",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:08:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Whale withdraws 96M USDT",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:05:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Polygon Down More Than 9% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "BNB Decreases More Than 6% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-21T19:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Chainlink Price Prediction: LINK In Danger Of Plunging To $10 But There’s A Twist",
-      "link": "NULL",
-      "pubDate": "2023-11-21T18:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Cardano, Solana, Polygon Called Securities In New SEC Lawsuit Against Crypto Exchange Kraken",
-      "link": "NULL",
-      "pubDate": "2023-11-21T18:40:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Crypto Market Reacts: Binance CEO Changpeng Zhao Steps Down",
-      "link": "NULL",
-      "pubDate": "2023-11-21T18:24:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ]
-    },
-    {
-      "title": "BNB price pops, then drops, following news of DOJ-Binance settlement",
-      "link": "NULL",
-      "pubDate": "2023-11-21T18:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "BNB Plunges as Crypto Market Reacts to Binance CEO Stunner",
       "link": "https://decrypt.co/206884/bnb-plunges-crypto-market-reacts-binance-ceo-stunner",
       "pubDate": "2023-11-21T18:14:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "trading",
       "description": "Binance and CEO Changpeng Zhao will reportedly plead guilty today amid a settlement with the U.S. DOJ. BNB quickly tumbled on the news.",
       "currencies": [
@@ -347,190 +91,11 @@
       }
     },
     {
-      "title": "Binance CEO Changpeng Zhao to resign as part of DOJ settlement: report",
-      "link": "NULL",
-      "pubDate": "2023-11-21T18:05:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ]
-    },
-    {
-      "title": "WSJ reports CZ stepping down as BNB token whipsaws with Binance near DOJ settlement deal",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:45:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "US Justice Department seizes 9M USDT amid $225M illicit funds frozen by Tether",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "SEC v. Kraken Puts ADA, MATIC, SOL Back in the Firing Line",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Is $3 a Distant Dream for NEAR Protocol (NEAR)? Analysts Offer Mixed Views",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:29:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Tether froze $225M but $70M slipped the net",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:02:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Tether Partnership Gone Wrong? Britannia Bank Hit With Lawsuit Over $1B Deposit",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Crypto Industry Goes Nuclear With Uranium-Linked Tokens",
-      "link": "NULL",
-      "pubDate": "2023-11-21T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "As Analysts Back Kaspa for Top Entry After 1,800% Rise, Could This Bitcoin Alternative Mirror KAS Success",
-      "link": "NULL",
-      "pubDate": "2023-11-21T16:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "KAS"
-      ]
-    },
-    {
-      "title": "Polygon (MATIC) in Danger of Losing 16% If This Pattern Holds True",
-      "link": "NULL",
-      "pubDate": "2023-11-21T16:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "DOJ seizes $9M worth of Tether linked to ‘pig butchering’ scam",
-      "link": "NULL",
-      "pubDate": "2023-11-21T16:16:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Circle launches 'bridged USDC standard' for deploying to new networks",
-      "link": "NULL",
-      "pubDate": "2023-11-21T16:02:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Analyst Sets $30,000 Floor For Bitcoin, But Can We Forget 2021’s Misfire?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T16:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "SOL",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Binance CEO Tops List of 2023 Most Popular Social Media Personalities in Crypto",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:55:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Node Software Upgrade: ZEN 4.1.1 is Available to Download",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:54:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
       "title": "Analysts Pick Top 3 Performing AI Tokens For Next Bull Cycle",
       "link": "https://coinedition.com/analysts-pick-top-3-performing-ai-tokens-for-next-bull-cycle/",
       "pubDate": "2023-11-21T15:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "trading",
       "description": "AJ noted that he was about to start accumulating AGIX tokens in his public portfolio. Armstrong thinks that GRT is a unique coin with a utility unmatched by any other project. Ben Armstrong, AJ, and Corey have revealed their favorite AI tokens for the next bull cycle. Three crypto analysts, Ben Armstrong, AJ, and Corey, […]",
       "currencies": [
@@ -543,56 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Rumors of a Possible Agreement between Binance and the US Department of Justice Affected the Price of BNB! What's the latest situation?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:48:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Short squeeze alert for November 21: Two cryptocurrencies with potential to skyrocket",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:39:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOGE",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Polygon (MATIC) Charge to $1 Hit by Shock SEC Lawsuit Naming",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Wintermute Asia Processes Its First Options Block Trade Through CME Group",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:34:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Abu Dhabi-based Bitcoin miner Phoenix Group raises $370 million in IPO",
       "link": "https://finbold.com/abu-dhabi-based-bitcoin-miner-phoenix-group-raises-370-million-in-ipo/",
       "pubDate": "2023-11-21T15:33:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Phoenix Group, a Bitcoin (BTC) mining and colocation service provider based in Abu Dhabi, has made a significant mark by … Continued",
       "currencies": [
@@ -608,8 +128,8 @@
       "title": "Milei's Presidency: Implications For Argentina, El Salvador, And Bitcoin Adoption",
       "link": "https://bitcoinmagazine.com/culture/mileis-presidency-implications-for-argentina-el-salvador-and-bitcoin-adoption",
       "pubDate": "2023-11-21T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "description": "Many are excited about the potential for a second Bitcoin President in Latin America, but there are reasons to be more skeptical and cautious before cheer leading.",
       "currencies": [
@@ -622,22 +142,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether Worth $9M Tied to 'Pig Butchering' Scams Is Seized by U.S. DOJ",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:15:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
       "title": "BREAKING! Cryptocurrency Announcement is Expected from the US Department of Justice! Bitcoin Reacted!",
       "link": "https://en.bitcoinsistemi.com/breaking-cryptocurrency-announcement-is-expected-from-the-us-department-of-justice-bitcoin-reacted/",
       "pubDate": "2023-11-21T15:14:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to Bloomberg, the US Department of Justice will announce cryptocurrency enforcement actions today. BTC dropped to $36.00. Continue Reading: BREAKING! Cryptocurrency Announcement is Expected from the US Department of Justice! Bitcoin Reacted!",
       "currencies": [
@@ -649,71 +158,11 @@
       }
     },
     {
-      "title": "ITEM Systems partners with Hobby Hangout for an interactive event in Melbourne",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Celsius entity to focus only on mining under proposed reorganization plan",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:03:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Tether Freezes A Staggering $225 Million In USDT – Details",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Chainlink Decreases More Than 7% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Transactions on Avalanche surge by 3,040% in November",
-      "link": "NULL",
-      "pubDate": "2023-11-21T15:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano Staking Valuation Hits $8.9 Billion – Will it Drive ADA Price to $0.50?",
       "link": "https://beincrypto.com/cardano-staking-valuation-drive-ada-price/",
       "pubDate": "2023-11-21T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "The Cardano (ADA) price attempted to reach $0.40 once again on Tuesday but saw it rejected. On-chain analysis explores how the recent shift in Cardano staking dynamics could accelerate the ADA price rally. ADA price looks set to break above the $0.40 area as the November altcoin market rally intensifies. Recent on-chain data readings show that rewards accruing to Cardano network...",
       "currencies": [
@@ -726,46 +175,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bullish Wave Sweeps Crypto Market: Fantom (FTM), Polygon (MATIC), and Meme Moguls (MGLS) Experience Soaring Growth",
-      "link": "NULL",
-      "pubDate": "2023-11-21T14:56:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "FTM"
-      ]
-    },
-    {
-      "title": "PancakeSwap proposes veCAKE launch to boost governance influence and liquidity",
-      "link": "NULL",
-      "pubDate": "2023-11-21T14:51:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
-      "title": "PassPay Joins Forces With EOS Network Foundation to Create New Financial Products",
-      "link": "NULL",
-      "pubDate": "2023-11-21T14:21:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
       "title": "Global Banks Are Betting Big On XRP, Report Shows",
       "link": "https://www.newsbtc.com/analysis/xrp/global-banks-xrp/",
       "pubDate": "2023-11-21T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "regulation",
       "description": "Global banks have begun actively integrating crypto assets into their financial operations, and XRP has been one of their top preferences. This news signifies a shift in the skepticism surrounding cryptocurrencies, revealing how some of the world’s leading banks seek to leverage XRP’s fundamental strengths as a cross-border payments system. BCBS Highlights XRP Dominance In The Banking Sector...",
       "currencies": [
@@ -784,93 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Lumoz to launch StableNet on Polygon and Celestia",
-      "link": "NULL",
-      "pubDate": "2023-11-21T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ETH",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Avalanche (AVAX) Received 10 Million Dollars Investment, This Altcoin Price Started to Rise!",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:48:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "LDO attracts institutional giants: What was the impact?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Tether billion-dollar deposit in UK bank sparks legal showdown: FT",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "AVAX Ecosystem to Get $10M Boost from Avalanche Accelerator Colony Lab",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Elon Musk's Controversial Remarks and Global Business Response",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "These 6 Altcoins Flip to Macro Bullish and May Soar Soon: Analyst",
       "link": "https://coinedition.com/these-6-altcoins-flip-to-macro-bullish-and-may-soar-soon-analyst/",
       "pubDate": "2023-11-21T13:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "trading",
       "description": "The renowned cryptocurrency trader and analyst Rekt Capital revealed in a YouTube video that several altcoins seem to be breaking out of a long-term “macro bearish” trend. In the analysis, he predicted that altcoins like Polkadot (DOT), Avalanche (AVAX), Stellar (XLM), Solana (SOL), as well as THORChain (RUNE), and Polygon (MATIC) may transition into new […]",
       "currencies": [
@@ -888,45 +220,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Pyth’s Blazing $77M Token Airdrop Cements Status as Chainlink Challenger",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:22:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Tether’s bank partner Britannia sued over $1B deposit: Report",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:14:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Tron’s JustLend Surpasses Aave As Largest Web3 Lending Market",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
       "title": "Cardano gears up for a massive move to this price",
       "link": "https://finbold.com/cardano-gears-up-for-a-massive-move-to-this-price/",
       "pubDate": "2023-11-21T13:12:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Even though Cardano (ADA) has been keeping up with the generally bearish sentiment in the wider cryptocurrency sector, analysis shows … Continued",
       "currencies": [
@@ -942,8 +240,8 @@
       "title": "Charles Hoskinson Invites Sam Altman to Do a Cardano (ADA) Partnerchain",
       "link": "https://cryptopotato.com/charles-hoskinson-invites-sam-altman-to-do-a-cardano-ada-partnerchain/",
       "pubDate": "2023-11-21T13:09:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "\"If you are interested in doing a decentralized LLM, then hit me up. Would be a fun Cardano Partnerchain,\" Hoskinson said to Altman.",
       "currencies": [
@@ -955,22 +253,11 @@
       }
     },
     {
-      "title": "Tether sent $1B to UK firm owned by prominent Conservative donor",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:08:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
       "title": "Chainlink eyes a bullish breakout; Can LINK reach $20?",
       "link": "https://finbold.com/chainlink-eyes-a-bullish-breakout-can-link-reach-20/",
       "pubDate": "2023-11-21T13:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Along with altcoins, Chainlink (LINK) experienced substantial gains in the past few weeks. Bitcoin’s (BTC) recent rise to the $38,000 … Continued",
       "currencies": [
@@ -983,89 +270,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BNB Rallies to 5-Month High Despite SEC Demanding $4 Billion Fine – Is $300 Next?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNB",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "KuCoin Lists Vertex’s DEX Token ‘VRTX’ on Its Spot Trading Platform",
-      "link": "NULL",
-      "pubDate": "2023-11-21T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Here’s Why Tether’s $1 Billion Deposit is Under Scrutiny: FT",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:53:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Fantom awards $1.7M to security researcher for averting $170M loss",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:49:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Crypto Market Sees Uptick on Prospects of Binance’s Resolution with DoJ",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:48:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Manta Exchange Secures Major Funding With Abcde Labs, Uob Venture Management, C² Ventures, and Ocular",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "Crypto exchange Kucoin gets on the payments bandwagon with Kucard",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:35:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "Shibarium hits 4 million transactions on the network",
       "link": "https://finbold.com/shibarium-hits-4-million-transactions-on-the-network/",
       "pubDate": "2023-11-21T12:35:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Since its inception on August 16, Shibarium, the layer 2 blockchain network developed by the creators of the Shiba Inu … Continued",
       "currencies": [
@@ -1078,66 +287,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Filecoin dips 10% in an uptrend- Should you buy FIL now?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Binance $3.9B USDT move gains community attention amid DOJ settlement claims",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:25:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "dYdX’s $9M hack: Risk management under scrutiny",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:10:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETHDYDX"
-      ]
-    },
-    {
-      "title": "Breaking: Tether’s $1 Billion Deposit in UK Firm Sparks High Court Dispute",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:08:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "7 Crypto Market Maker Companies To Watch Out For",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:08:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "11.4 Million ADA Wallet Votes for Governance: Cardano Foundation Backs Move",
       "link": "https://u.today/114-million-ada-wallet-votes-for-governance-cardano-foundation-backs-move",
       "pubDate": "2023-11-21T12:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano Foundation to support governance with vote from 11.4 million ADA wallet",
       "currencies": [
@@ -1149,104 +303,11 @@
       }
     },
     {
-      "title": "Grow Protocol Raises Over $15,000 in First Hours of ICO Start",
-      "link": "NULL",
-      "pubDate": "2023-11-21T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT"
-      ]
-    },
-    {
-      "title": "Crypto Fund Inflows Hit 2-Month Streak as ETP Volumes Soar",
-      "link": "NULL",
-      "pubDate": "2023-11-21T11:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Should Avalanche investors be worried about the upcoming token unlock?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T11:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Fantom Foundation awards $1.7M to researcher for uncovering potential $170M exploit",
-      "link": "NULL",
-      "pubDate": "2023-11-21T11:30:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Tether Freezes $225M In USDT Linked To Human Trafficking Group",
-      "link": "NULL",
-      "pubDate": "2023-11-21T11:20:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) Price Dip: Can Whales Propel It to $20?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T10:56:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Solana Captures Institutional Investors’ Attention, Inflows Rise To $135 Million",
-      "link": "NULL",
-      "pubDate": "2023-11-21T10:40:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "SHIB",
-        "MATIC",
-        "LTC",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "The next SHIB? 5 meme coins set for massive growth in 2024",
       "link": "https://finbold.com/the-next-shib-5-meme-coins-set-for-massive-growth-in-2024/",
       "pubDate": "2023-11-21T10:34:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Shiba Inu (SHIB), a prominent meme token in cryptocurrency, remains a focal point for investor interest. Bolstered by a vibrant … Continued",
       "currencies": [
@@ -1260,35 +321,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance Possible $4B Civil Settlement in US Ignites BNB and Bitcoin Bulls",
-      "link": "NULL",
-      "pubDate": "2023-11-21T10:21:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Weiss Crypto Upgrades Chainlink, LINK Second Only to Bitcoin",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:58:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK"
-      ]
-    },
-    {
       "title": "Avalanche gets the ‘Ordinals’ bump, sets new  transaction record",
       "link": "https://blockworks.co/news/avalanche-ordinals-asc20-transaction-record",
       "pubDate": "2023-11-21T09:51:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Blockworks",
+      "sourceKey": "blockworks",
       "category": "general",
       "description": "Avalanche has been inundated with transactions for inscriptions, similar to the Ordinals that already hit Bitcoin, Litecoin and Dogecoin",
       "currencies": [
@@ -1303,66 +340,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Fantom Foundation awards $1.7M bounty for preventing $170M drain",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:45:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Tether Deposits of $1B With UK Financial Firm Are at Center of High Court Battle: FT",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:31:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Tether freezes USDT: How romance scams played a part",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "dYdX founder blames v3 central components for ‘targeted attack,’ involves FBI",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:28:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETHDYDX"
-      ]
-    },
-    {
-      "title": "Will ApeCoin (APE) Price Find Support at $1.50 and Push Toward $2?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:23:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
       "title": "Solana falls 6% in a day; Huge crash to $30 incoming?",
       "link": "https://finbold.com/solana-falls-6-in-a-day-huge-crash-to-30-incoming/",
       "pubDate": "2023-11-21T09:13:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Even though many assets in the cryptocurrency sector have been recording advances in the past few weeks, Solana (SOL) has … Continued",
       "currencies": [
@@ -1375,139 +357,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "This Is Who Pushed ChainLink (LINK) Price to Sky",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:06:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "SEC Charges Kraken Again for Unregistered Securities Trading and Commingling User Funds",
-      "link": "NULL",
-      "pubDate": "2023-11-21T09:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ADA",
-        "SOL",
-        "MATIC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "As Bitcoin Cash and Maker Face Challenges, Rebel Satoshi Gains Traction Among New Investors",
-      "link": "NULL",
-      "pubDate": "2023-11-21T08:25:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "BNB Saw 5-Month Peak Amid Binance Settlement Reports, BTC Stopped at $38K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-11-21T08:23:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Chainlink’s (LINK) Alliance with Swift Leaves Room Open for $16",
-      "link": "NULL",
-      "pubDate": "2023-11-21T08:23:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "KuCoin Embraces Metaverse Momentum, Adds Support for ROOT Token",
-      "link": "NULL",
-      "pubDate": "2023-11-21T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Chainlink’s Active Addresses Surge by 220% as LINK Price Aims For Immense Upsurge",
-      "link": "NULL",
-      "pubDate": "2023-11-21T07:59:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Celsius to Transition to Mining-Only NewCo After SEC Feedback in Updated Bankruptcy Plan",
-      "link": "NULL",
-      "pubDate": "2023-11-21T07:55:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "CEL"
-      ]
-    },
-    {
-      "title": "Industry Analysts Foresee VC Spectra Surpassing Ethereum Classic in the Cryptocurrency Arena",
-      "link": "NULL",
-      "pubDate": "2023-11-21T07:49:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Whale Withdraws Another 96M USDT From Treasury: On-Chain Analysis",
-      "link": "NULL",
-      "pubDate": "2023-11-21T07:31:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
-      "title": "Crypto inflows show signs of recovery, but there is a problem",
-      "link": "NULL",
-      "pubDate": "2023-11-21T07:30:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
       "title": "BNB Rises as US Justice Department Demands $4 Billion from Binance",
       "link": "https://coinpaprika.com/news/us-justice-department-demands-4-billion",
       "pubDate": "2023-11-21T07:14:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "exchange",
       "description": "Binance faces a $4 billion demand from the US Justice Department, potentially leading to one of the largest crypto settlements.",
       "currencies": [
@@ -1518,151 +372,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Polygon Moves Above $0.80 On Rising Selling Pressure",
-      "link": "NULL",
-      "pubDate": "2023-11-21T06:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC"
-      ]
-    },
-    {
-      "title": "Tokens In SEC's CrossHairs Are Posting Double Digit Year-To-Date Returns",
-      "link": "NULL",
-      "pubDate": "2023-11-21T06:27:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Chainlink Whale Accumulation on the Rise, LINK Price Rally to Continue",
-      "link": "NULL",
-      "pubDate": "2023-11-21T06:12:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Why is Binance’s BNB and Bitcoin up today? Bulls be ready",
-      "link": "NULL",
-      "pubDate": "2023-11-21T05:36:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Render: Why $5 could be a feasible target for RNDR bulls",
-      "link": "NULL",
-      "pubDate": "2023-11-21T05:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: BTC & CAKE Surge As PEPE Coin Plummets",
-      "link": "NULL",
-      "pubDate": "2023-11-21T04:59:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CAKE"
-      ]
-    },
-    {
-      "title": "US Justice Department Seeks $4B From Binance to Settle Case, BNB Reacts",
-      "link": "NULL",
-      "pubDate": "2023-11-21T04:58:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "BNB Price Momentum Reignites – Why Bulls Could Aim For 15% Rally",
-      "link": "NULL",
-      "pubDate": "2023-11-21T04:52:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "BNB pops after report that DOJ wants $4B settlement with Binance",
-      "link": "NULL",
-      "pubDate": "2023-11-21T04:20:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Top Trader Predicts Imminent Rally for Solana (SOL) and Polygon (MATIC) – Here Are His Targets",
-      "link": "NULL",
-      "pubDate": "2023-11-21T01:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "AVAX Open Interest Climbs 10.4% To $224 Million, Is $30 Possible?",
-      "link": "NULL",
-      "pubDate": "2023-11-21T01:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Tether Freezes $225 Million in USDT After DOJ Investigation, Calling It ‘Largest-Ever Freeze of USDT’",
-      "link": "NULL",
-      "pubDate": "2023-11-21T00:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
     }
   ]
 }

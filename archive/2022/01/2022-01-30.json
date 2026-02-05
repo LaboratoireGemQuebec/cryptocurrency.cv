@@ -1,54 +1,15 @@
 {
   "date": "2022-01-30",
-  "fetchedAt": "2026-02-05T07:45:51.741Z",
-  "articleCount": 47,
+  "fetchedAt": "2026-02-05T07:48:35.411Z",
+  "articleCount": 21,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "How about all three are correct? NKN aspires to become the indispensable networking infrastructure for: Decentraliz…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T23:57:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "Daniel Larimer Introduces the Fractally DAO to Deliver EOS’ Original 2017 Vision",
-      "link": "NULL",
-      "pubDate": "2022-01-30T23:47:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "RT @Meter_IO: ️@Theta_Network x @Meter_IO️ Join @xiaohanzhu & #Theta Head of Strategy @wes_levitt for a special #AMA ahead of the $TDRO…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T22:41:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
     {
       "title": "$ADA: Cardano-Powered DEX ADAX Goes Live, Plans to Integrate COTI’s Djed Stablecoin",
       "link": "https://www.cryptoglobe.com/latest/2022/01/cardano-powered-dex-adax-goes-live-plans-to-integrate-cotis-djed-stablecoin/",
       "pubDate": "2022-01-30T22:35:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On Sunday (January 30), the team behind ADAX, “an automated liquidity protocol that facilitates trades within the Cardano ecosystem in a completely decentralized and non-custodial way”, announced that their DEX had gone live on the mainnet. On 17 November 2021, an “Ask Me Anything (AMA) event was held on the official ADAX reddit account, where […]",
       "currencies": [
@@ -61,33 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Congrats @synesis_one our darkpool Project on successful launch. Whitelist $SnS still open for $form holders! 12hr…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T21:43:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "What will be the price of CACA at the end of 2022 in your opinion? Try to be realistic!!",
-      "link": "NULL",
-      "pubDate": "2022-01-30T21:08:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
       "title": "Crypto Analyst Says Markets Flashing First Sign of Health, Predicts Rallies in Ethereum (ETH) and Competitor Terra (LUNA)",
       "link": "https://dailyhodl.com/2022/01/30/crypto-analyst-says-markets-flashing-first-sign-of-health-predicts-rallies-in-ethereum-eth-and-competitor-terra-luna/",
       "pubDate": "2022-01-30T21:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A popular crypto strategist and trader says the crypto markets are showing early signs of recovery while predicting surges for Ethereum (ETH) its rival Terra (LUNA). Pseudonymous crypto analyst Pentoshi tells his 500,000 Twitter followers that the ongoing bounce in the Bitcoin (BTC) dominance chart is a positive development for the digital asset market. “First […] The post Crypto Analyst Says Markets Flashing First Sign of Health, Predicts Rallies in Ethereum (ETH) and Competitor Terra (LUNA) ap",
       "currencies": [
@@ -101,23 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @CryptoWhale: 1000 likes and we will expand our @DigiWhales NFT’s to support $BSV @rarecandyio #BSV #NFT",
-      "link": "NULL",
-      "pubDate": "2022-01-30T20:07:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BSV",
-        "DCD"
-      ]
-    },
-    {
       "title": "Brushing Off Shiba Inu May Have Just Cost Robinhood Millions In Crypto Revenue",
       "link": "https://zycrypto.com/brushing-off-shiba-inu-may-have-just-cost-robinhood-millions-in-crypto-based-revenue/",
       "pubDate": "2022-01-30T19:47:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Robinhood posted a loss on its crypto revenue in Q4 of 2021, further exacerbating losses occasioned in the third quarter. According to a Thursday earnings report, the trading firm posted $48 million crypto income in Q4 of 2021, which is a 6% decline from the previous quarter, and a step further from a projected revenue […]",
       "currencies": [
@@ -133,8 +60,8 @@
       "title": "Top 5 cryptocurrencies to watch this week: BTC, LINK, HNT, FLOW, ONE",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-link-hnt-flow-one",
       "pubDate": "2022-01-30T19:39:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "BTC is attempting to form a bottom while LINK, HNT, FLOW and ONE are showing early signs of accumulation.",
       "currencies": [
@@ -149,33 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @davidgokhshtein: @hlopez_ I got to stop reading this before Hector turns me into a $BSV maxi.",
-      "link": "NULL",
-      "pubDate": "2022-01-30T19:38:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @LitoBunnySarah: Attention‼️‼️Get your bling bling bling #Blinu #Blinu #Blinu 100x your stacks boys and girls! I WENT ALLL INNNNN…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T19:19:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
       "title": "Breaking: ADAX’s DEX has Just Launched on Cardano",
       "link": "https://www.newsbtc.com/news/company/breaking-adaxs-dex-has-just-launched-on-cardano/",
       "pubDate": "2022-01-30T19:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "ADAX v1 is now live on Cardano. It now forms part of the network’s burgeoning DeFi ecosystem less than five months after the activation of smart contracting in late September 2021. ADAX Launches an Order Book DEX on Cardano Details on January 30 reveal that ADAX is a “core piece of infrastructure that’s critical to the long-term prosperity of the Cardano ecosystem.” The ramp introduces new...",
       "currencies": [
@@ -192,8 +97,8 @@
       "title": "Cardano DEX ADAX Goes Live as One of First Decentralized Exchanges on Network",
       "link": "https://u.today/cardano-dex-adax-goes-live-as-one-of-first-decentralized-exchanges-on-network",
       "pubDate": "2022-01-30T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano-based DEX ADAX goes live as one of the first decentralized exchanges on the network",
       "currencies": [
@@ -206,47 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tune in tomorrow at 12pm ET (5pm UTC) to hear @woozle__ chat with @crownyio CEO @QDagelet about his plans and predi…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T18:43:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ASD"
-      ]
-    },
-    {
-      "title": "XRP, Solana, ETC Price Analysis: 30 January",
-      "link": "NULL",
-      "pubDate": "2022-01-30T18:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "SOL",
-        "ETC"
-      ]
-    },
-    {
-      "title": "‼️‼️ BE AWARE, there is a SCAM clone group on Telegram with a large amount of members, they are claiming to be the…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T18:13:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CSPR"
-      ]
-    },
-    {
       "title": "New Latin American Country Will Adopt Bitcoin as Legal Tender Within 6 Months, Says Max Keiser",
       "link": "https://beincrypto.com/max-keiser-says-6-months-until-new-latin-american-country-adopts-bitcoin/",
       "pubDate": "2022-01-30T16:38:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "American broadcaster and film maker Max Keiser says that a new Latin American country will adopt Bitcoin as its official legal tender in early 2022.",
       "currencies": [
@@ -260,44 +129,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @RequestFinance: Listen to @LassuytChristop on the @accountantquits podcast about building a financial suite for cryptocurrencies with @…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T16:32:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REQ"
-      ]
-    },
-    {
-      "title": "ICYMI: Do you use fast sync with blockchain to distribute software, transfer large files, or sync large files? Comp…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T16:01:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STORJ"
-      ]
-    },
-    {
-      "title": "RT @VisscherJp: The much anticipated @Rizinfc_En fighting collection NFT market place powered by @IOST_Official blockchain technology, will…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T15:55:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "IOST"
-      ]
-    },
-    {
       "title": "$BTC: One Canadian Restaurant Is Expanding Across Ontario With the Help of Bitcoin",
       "link": "https://www.cryptoglobe.com/latest/2022/01/btc-one-canadian-restaurant-is-expanding-across-ontario-with-the-help-of-bitcoin/",
       "pubDate": "2022-01-30T15:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "London, Ontrio based Mediterranean cuisine restaurant chain Tahini’s is using its Bitcoin profits in order to expand to new locations across Ontario. According to a report by Toronto Star, Tahini’s is using Bitcoin profits in order to open new restaurants in Ontario, a stellar turn around for an enterprise that was on the verge of […]",
       "currencies": [
@@ -311,22 +147,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#XYO Co-Founder Markus Levin talks with @zempcapital about why the #decentralized #metaverse has greater potential…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T15:18:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "BTC, SOL, LUNA, DOGE and AVAX Price Analysis for January 30",
       "link": "https://u.today/btc-sol-luna-doge-and-avax-price-analysis-for-january-30",
       "pubDate": "2022-01-30T15:14:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Which coins can keep the rise going after a slight correction?",
       "currencies": [
@@ -343,8 +168,8 @@
       "title": "Bullish XRP Sentiments On Ripple’s Ability To Prevail In SEC Case Gains Momentum After $200M Shares Buyback",
       "link": "https://zycrypto.com/bullish-xrp-sentiments-on-ripples-ability-to-prevail-in-sec-case-gains-momentum-after-200m-shares-buyback/",
       "pubDate": "2022-01-30T14:50:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Key Takeaways Ripple buys back $200 million shares and sees its valuation reach $15 billion. Making the announcement, Brad Garlinghouse, CEO of Ripple, says that 2022 will be massive for the company. Market sentiment about the move remains mixed. Ripple, the crypto company behind XRP, recently bought back its shares from Tetragon Financial Group. The […]",
       "currencies": [
@@ -360,8 +185,8 @@
       "title": "Terra's Token Luna Plunges by 25% as Panic Around MIM Stablecoin Aggravates",
       "link": "https://u.today/terras-token-luna-plunges-by-25-as-panic-around-mim-stablecoin-aggravates",
       "pubDate": "2022-01-30T14:18:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "TIME, MIM and LUNA tokens and coins suffer from Wonderland drama",
       "currencies": [
@@ -374,22 +199,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Polymath's technology makes it possible for issuers to originate assets on the #blockchain without code. Issuers ca…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T14:05:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POLY"
-      ]
-    },
-    {
       "title": "Cardano Price Analysis: The Calm Before the Storm, ADA’s Breakout Imminent?",
       "link": "https://cryptopotato.com/cardano-price-analysis-the-calm-before-the-storm-adas-breakout-imminent/",
       "pubDate": "2022-01-30T13:44:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "Cardano (ADA) has been consolidating inside a tight range for a while, but it appears that a possible breakout is likely incoming over the next few days. Key Support levels: $1, $0.92 Key Resistance levels: $1.1, $1.2 ADA has been moving between the key support at $1 and the resistance at $1.1 over the past […]",
       "currencies": [
@@ -402,24 +216,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Shiba Inu, Chainlink, EOS Price Analysis: 30 January",
-      "link": "NULL",
-      "pubDate": "2022-01-30T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "LINK",
-        "EOS"
-      ]
-    },
-    {
       "title": "The Slump Is The Perfect Moment For Retail Traders To Gain Exposure To Cryptocurrency, Says Stash CEO With Reasons",
       "link": "https://zycrypto.com/the-slump-is-the-perfect-moment-for-retail-traders-to-gain-exposure-to-cryptocurrency-says-stash-ceo-with-reasons/",
       "pubDate": "2022-01-30T13:04:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "general",
       "description": "Stash CEO expressed his belief that it is a good time for retail traders to get into the market. Krieg has confidence in the long-term viability of the asset class. Altcoins like Ether, XRP, Cardano continue to falter. Stash has recently created an option for their users, retail traders, to gain exposure to crypto. The […]",
       "currencies": [
@@ -437,8 +238,8 @@
       "title": "Bitcoin and Ethereum Are in Early Adoption Days, Says Bloomberg Intelligence Analyst",
       "link": "https://u.today/bitcoin-and-ethereum-are-in-early-adoption-days-says-bloomberg-intelligence-analyst",
       "pubDate": "2022-01-30T11:57:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Bloomberg’s Mike McGlone is convinced that the prices of Bitcoin and Ethereum will most likely continue marching higher",
       "currencies": [
@@ -452,22 +253,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "the secret to the metaverse is ████████",
-      "link": "NULL",
-      "pubDate": "2022-01-30T10:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SCRT"
-      ]
-    },
-    {
       "title": "Will Ethereum (ETH) Really Flip Bitcoin (BTC)? Coin Bureau Looks at Possibility of ‘Flippening’ in Coming Months",
       "link": "https://dailyhodl.com/2022/01/30/will-ethereum-eth-really-flip-bitcoin-btc-coin-bureau-looks-at-possibility-of-flippening-in-coming-months/",
       "pubDate": "2022-01-30T10:15:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "The host of crypto channel Coin Bureau says the flippening, or the ousting of Bitcoin (BTC) as the top crypto asset by Ethereum (ETH), is an event that can possibly happen this year. In a new video, pseudonymous analyst Guy unveils to his 1.91 million YouTube subscribers the two factors that can decide whether the […] The post Will Ethereum (ETH) Really Flip Bitcoin (BTC)? Coin Bureau Looks at Possibility of ‘Flippening’ in Coming Months appeared first on The Daily Hodl.",
       "currencies": [
@@ -481,33 +271,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1/ Check out this @Yahoo news article for further insight into how Enzyme, @CelsiusXDeFi, @0xPolygon and @chainlink…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T10:15:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MLN"
-      ]
-    },
-    {
-      "title": "Congratulations to the 1,000 winners who have won the $STORE airdrop, to be released to the BEP-20 address you subm…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T10:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACH"
-      ]
-    },
-    {
       "title": "Elon Musk Believes Robinhood Wallets Are Huge Deal for Dogecoin",
       "link": "https://u.today/elon-musk-believes-robinhood-wallets-are-huge-deal-for-dogecoin",
       "pubDate": "2022-01-30T09:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Robinhood’s new feature will help Dogecoin holders embrace decentralization, according to co-founder Billy Markus",
       "currencies": [
@@ -520,33 +288,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "⏰‼️ Now you will never have to miss out on crucial on-chain events!The Open DeFi Notification app is available on…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T08:41:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
-      "title": "Our upcoming testnet is powered by vital technologies to ensure confidentiality in its transactions, settlement fin…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T07:44:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DUSK"
-      ]
-    },
-    {
       "title": "$ETH: Coinbase Evaluates Road Ahead for Ethereum in New Institutional Research Report",
       "link": "https://www.cryptoglobe.com/latest/2022/01/eth-coinbase-evaluates-road-ahead-for-ethereum-in-new-institutional-research-report/",
       "pubDate": "2022-01-30T07:19:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "A recent report by leading US-based crypto exchange Coinbase examines the outlook for Ethereum ($ETH) in the face of competition from rival layer 1 smart contract platforms such as Solana ($SOL), Avalanche ($AVAX) and Terra ($LUNA). According to a report (titled “Is ETH 2.0 the real ‘ETH Killer’?”) by David Duong, Coinbase’s Head of Institutional […]",
       "currencies": [
@@ -560,22 +306,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @_TBlockchain: @golemproject en 2022. ¡Hay mucho que hacer!",
-      "link": "NULL",
-      "pubDate": "2022-01-30T07:05:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
       "title": "$AVAX: Coin Bureau Explains Why It Is Bullish on Ethereum Rival Avalanche",
       "link": "https://www.cryptoglobe.com/latest/2022/01/avax-coin-bureau-explains-why-it-is-bullish-on-ethereum-rival-avalanche/",
       "pubDate": "2022-01-30T06:23:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Market analysis and crypto commentary show Coin Bureau says that one Ethereum competitor is poised to break into the top five by market capitalization. Speaking in a recent YouTube video, Coin Bureau’s host “Guy” said that $AVAX, the native token of smart contracts platform Avalanche has a chance to compete with $ETH and become a top […]",
       "currencies": [
@@ -592,8 +327,8 @@
       "title": "RT @JumpCryptoHQ: Decentralized finance requires decentralized money. As the $UST ecosystem matures, the on-chain market also needs to ad…",
       "link": "https://twitter.com/terra_money/status/1487668794638028801",
       "pubDate": "2022-01-30T06:07:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@terra_money",
+      "sourceKey": "terramoney",
       "category": "general",
       "currencies": [
         "NULL"
@@ -605,33 +340,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @degenNFTcollect: Should have 6x stacks of Chieftains ready to pump out some #TikiTix",
-      "link": "NULL",
-      "pubDate": "2022-01-30T05:25:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Day 4: $26M worth of CORE burned so far",
-      "link": "NULL",
-      "pubDate": "2022-01-30T04:36:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
       "title": "Will Crypto Mining Survive Another Government Crackdown?…",
       "link": "https://www.newsbtc.com/all/will-crypto-mining-survive-another-government-crackdown/",
       "pubDate": "2022-01-30T01:48:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "mining",
       "description": "Crypto mining has been an environmental issue that cant be over looked; World governments have tried to put a lid on it but still have an uphill battle as the popularity of crypto grows. Will crypto be mining be able to last if the technology still impacts the earth on high levels ? Or will it mold with the time and adapt with the land before governments continue to attack Crypto currency....",
       "currencies": [
@@ -647,8 +360,8 @@
       "title": "Please be aware the message below is highly misleading as the Algorand team has never been involved in this initia…",
       "link": "https://twitter.com/Algorand/status/1487588253486178304",
       "pubDate": "2022-01-30T00:47:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "ALGO"
@@ -658,17 +371,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "1/ We are thrilled to announce that @ideamarket_io will launch their token $IMO and plans to airdrop 250 Mask Netwo…",
-      "link": "NULL",
-      "pubDate": "2022-01-30T00:07:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MASK"
-      ]
     }
   ]
 }

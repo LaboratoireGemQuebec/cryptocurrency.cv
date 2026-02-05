@@ -1,60 +1,15 @@
 {
   "date": "2023-07-17",
-  "fetchedAt": "2026-02-05T07:45:52.154Z",
-  "articleCount": 68,
+  "fetchedAt": "2026-02-05T07:48:35.542Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Bearish Signal: BNB Open Interest Skyrockets To New Highs",
-      "link": "NULL",
-      "pubDate": "2023-07-17T23:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "MATIC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "SEC Chair Expresses Disappointment Over XRP Ruling, Vows To Persist In Enforcing Compliance",
-      "link": "NULL",
-      "pubDate": "2023-07-17T23:00:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "SEC Chair Gary Gensler Disappointed With Summary Judgment In Ripple Lawsuit",
-      "link": "NULL",
-      "pubDate": "2023-07-17T22:38:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
     {
       "title": "Judge orders Ripple, SEC to agree to possible settlement dates",
       "link": "https://coinjournal.net/news/judge-orders-ripple-sec-to-agree-to-possible-settlement-dates/",
       "pubDate": "2023-07-17T21:35:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinJournal",
+      "sourceKey": "coinjournal",
       "category": "regulation",
       "description": "US Judge Analisa Torres referred Ripple vs. SEC case to Magistrate Judge Sarah Netburn. Last week’s ruling was that XRP was not a security. The Ripple vs. SEC case continues but Judge Netburn has suggested both Ripple and SEC can agree to possible settlement conference dates if they believe it to be “productive” at this […]",
       "currencies": [
@@ -67,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Aave Launches GHO Stablecoin on Ethereum Mainnet",
-      "link": "NULL",
-      "pubDate": "2023-07-17T21:34:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
       "title": "British Giant Bank Barclays Analysts Discuss Ripple (XRP) Victory!",
       "link": "https://en.bitcoinsistemi.com/british-giant-bank-barclays-analysts-discuss-ripple-xrp-victory/",
       "pubDate": "2023-07-17T20:04:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "In their final note, Barclays analysts discussed the situation and its importance for Coinbase following the Ripple victory. Continue Reading: British Giant Bank Barclays Analysts Discuss Ripple (XRP) Victory!",
       "currencies": [
@@ -96,23 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Quant Analyst PlanB Targets $50,000 Bitcoin (BTC) – Here’s His Timeline",
-      "link": "NULL",
-      "pubDate": "2023-07-17T20:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
       "title": "Ripple’s major success in its court battle with the SEC: Law Decoded, July 10–17",
       "link": "https://cointelegraph.com/news/ripple-s-major-success-in-the-court-battle-with-the-sec-law-decoded-july-10-17",
       "pubDate": "2023-07-17T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Ripple Labs scored a partial victory in its lengthy legal battle with the United States Securities and Exchange Commission, which dates back to 2020.",
       "currencies": [
@@ -129,8 +60,8 @@
       "title": "Bitcoin Dips Below $30K to Lowest Since Late June as Altcoins Pare Gains From XRP Lawsuit",
       "link": "https://www.coindesk.com/markets/2023/07/17/bitcoin-dips-below-30k-to-lowest-since-late-june-as-altcoins-pare-gains-from-xrp-lawsuit/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-07-17T19:35:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "bitcoin",
       "description": "XRP, SOL and LDO lost more than 5% in the last 24 hours.",
       "currencies": [
@@ -146,56 +77,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Aave Launches GHO Stablecoin on Ethereum Network",
-      "link": "NULL",
-      "pubDate": "2023-07-17T19:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Algorand investors can breathe a sigh of relief as…",
-      "link": "NULL",
-      "pubDate": "2023-07-17T19:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Maker Down More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-17T19:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Aave Down More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-17T19:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
       "title": "Rocket Fuel For $10 XRP Price Looks Nigh Based On These Key Factors Amid Ripple Win In SEC Fight",
       "link": "https://zycrypto.com/rocket-fuel-for-10-xrp-price-looks-nigh-based-on-these-key-factors-amid-ripple-win-in-sec-fight/",
       "pubDate": "2023-07-17T18:17:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "One of the significant factors driving the excitement around XRP is the speculation surrounding Ripple's...",
       "currencies": [
@@ -208,23 +94,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Aave's Dollar-Pegged GHO Stablecoin Achieves $2.5M Market Cap within 48 Hours",
-      "link": "NULL",
-      "pubDate": "2023-07-17T17:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
       "title": "BREAKING: SEC Chairman Gary Gensler Speaks For The First Time About Ripple (XRP) Victory!",
       "link": "https://en.bitcoinsistemi.com/breaking-sec-chairman-gary-gensler-speaks-for-the-first-time-about-ripple-xrp-victory/",
       "pubDate": "2023-07-17T17:50:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "Crypto News: U.S. Securities and Exchange Commission (SEC) Chair Gary Gensler is set to speak on emerging technologies artificial intelligence and crypto market in an exclusive interview on Monday. This could be an interesting dialogue in the wake of the SEC’s recent setback in the form the Ripple Vs SEC lawsuit ruling by Judge Analisa",
       "currencies": [
@@ -237,50 +111,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "5 Trending Cryptos on Twitter and Dextools You Don't Want to Miss!",
-      "link": "NULL",
-      "pubDate": "2023-07-17T17:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "MIOTA",
-        "LDO"
-      ]
-    },
-    {
-      "title": "Justin Sun-advised Huobi controls 85% of ‘decentralized’ stUSDT",
-      "link": "NULL",
-      "pubDate": "2023-07-17T17:11:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "HT"
-      ]
-    },
-    {
-      "title": "MATIC, LINK, AAVE among $59M worth of altcoins moved by Celsius",
-      "link": "NULL",
-      "pubDate": "2023-07-17T17:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "AAVE"
-      ]
-    },
-    {
       "title": "Neon EVM launches to support Ethereum apps on Solana",
       "link": "https://www.theblock.co/post/239960/neon-labs-releases-evm-to-bring-support-for-ethereum-apps-on-solana?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-07-17T17:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Neon Labs has released its solution to let Ethereum native developers to start building applications on Solana.",
       "currencies": [
@@ -295,22 +130,11 @@
       }
     },
     {
-      "title": "Why This Whale Transaction Could Put An End To 1inch’s Double-Digit Rally",
-      "link": "NULL",
-      "pubDate": "2023-07-17T17:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "1INCH"
-      ]
-    },
-    {
       "title": "Ripple eyes US bank partnerships following SEC victory, as XRP volume surpasses Bitcoin",
       "link": "https://cryptoslate.com/ripple-eyes-us-bank-partnerships-following-sec-ruling-victory/",
       "pubDate": "2023-07-17T16:55:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "Ripple’s (XRP) general counsel, Stuart Alderoty, has voiced optimism that Ripple’s recent partial victory against the U.S. Securities and Exchange Commission (SEC) might encourage U.S. banks and other financial institutions to consider adopting XRP, according to a July 17 CNBC report. “I think we’re hopeful that this decision would give financial institution customers or potential […]",
       "currencies": [
@@ -325,139 +149,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "How Aave's GHO Stablecoin Differs from the Competition",
-      "link": "NULL",
-      "pubDate": "2023-07-17T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Hector Network Votes to Liquidate $16M Treasury Following Multichain, Fantom Losses",
-      "link": "NULL",
-      "pubDate": "2023-07-17T16:02:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Bitcoin SV is Going to Zero and yPredict AI Crypto Signals Platform Can Predict the Next Crypto to Explode – Time to Buy?",
-      "link": "NULL",
-      "pubDate": "2023-07-17T15:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Celsius Moves $59M of Altcoins in Possible Prelude to Converting Into BTC, ETH",
-      "link": "NULL",
-      "pubDate": "2023-07-17T15:10:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "CEL"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Lido DAO Decreases More Than 8% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-17T15:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Falls More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-07-17T15:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Today in Crypto: Gnosis Released Pay and Card Products, cLabs Proposes Migrating Celo to Layer 2 Built on Ethereum, Unstoppable Domains Adds ENS-based .eth Domains",
-      "link": "NULL",
-      "pubDate": "2023-07-17T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Stablecoin Exchange Deposits Remain Low, What Does It Mean For Bitcoin?",
-      "link": "NULL",
-      "pubDate": "2023-07-17T14:30:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – July 10 – July 16",
-      "link": "NULL",
-      "pubDate": "2023-07-17T14:26:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "1inch Price Up Over 50% in Past Week amid Altcoins’ Recovery and Heightened Trading Volume",
-      "link": "NULL",
-      "pubDate": "2023-07-17T14:10:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "1INCH"
-      ]
-    },
-    {
       "title": "While Inflows To Bitcoin Continue In Institutional Funds, Outputs In This Altcoin Have Reached The Top!",
       "link": "https://en.bitcoinsistemi.com/while-inflows-to-bitcoin-continue-in-institutional-funds-outputs-in-this-altcoin-have-reached-the-top/",
       "pubDate": "2023-07-17T14:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "Publishing its weekly cryptocurrency report, Coinshares said that there was $136 million inflows into Bitcoin and altcoins last week. Continue Reading: While Inflows To Bitcoin Continue In Institutional Funds, Outputs In This Altcoin Have Reached The Top!",
       "currencies": [
@@ -471,104 +167,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin Falls But Remains Above This Key Level; Compound, Lido DAO Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2023-07-17T13:45:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LDO"
-      ]
-    },
-    {
-      "title": "There Has Been Loaded Entry To Binance From The Rising Altcoin For Three Days! Investor Hunt?",
-      "link": "NULL",
-      "pubDate": "2023-07-17T13:31:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "1INCH"
-      ]
-    },
-    {
-      "title": "Celsius Is Selling, More Pain For BNB, LINK, And SNX?",
-      "link": "NULL",
-      "pubDate": "2023-07-17T13:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "XRP",
-        "LINK",
-        "SNX"
-      ]
-    },
-    {
-      "title": "FOX Journalist Mocks XRP, Unknowingly Endorses Fake Airdrop",
-      "link": "NULL",
-      "pubDate": "2023-07-17T13:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "BitDAO backed Mantle Network launches mainnet at EthCC",
-      "link": "NULL",
-      "pubDate": "2023-07-17T13:05:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BIT"
-      ]
-    },
-    {
-      "title": "Aave Companies Upgrades Web3 Social Media with Lens Protocol V2",
-      "link": "NULL",
-      "pubDate": "2023-07-17T12:51:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "NEAR APAC Showcases “Unlimited Future” at Vietnam's Premier Blockchain Conference",
-      "link": "NULL",
-      "pubDate": "2023-07-17T12:49:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "NEAR"
-      ]
-    },
-    {
       "title": "Ripple Confident US Banks Will Use XRP for Money Transfers",
       "link": "https://tokenist.com/ripple-confident-us-banks-will-use-xrp-for-money-transfers/?utm_source=rss&utm_medium=rss&utm_campaign=ripple-confident-us-banks-will-use-xrp-for-money-transfers",
       "pubDate": "2023-07-17T12:45:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Tokenist",
+      "sourceKey": "tokenist",
       "category": "regulation",
       "description": "Ripple believes US financial institutions will begin adopting XRP for cross-border transfers after the firm's partial win against the SEC last week.",
       "currencies": [
@@ -581,38 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Celsius Liquidates $25 Million In Altcoins After Court’s Approval To Move Funds",
-      "link": "NULL",
-      "pubDate": "2023-07-17T12:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "LINK",
-        "SNX"
-      ]
-    },
-    {
-      "title": "Elon Musk Confirms Twitter’s Negative Cash Flow amidst 50% Plunge in Ad Revenue",
-      "link": "NULL",
-      "pubDate": "2023-07-17T12:31:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
-    },
-    {
       "title": "Shiba Inu: Shibarium Surpasses Enormous Milestone as New SHIB Era Begins",
       "link": "https://u.today/shiba-inu-shibarium-surpasses-enormous-milestone-as-new-shib-era-begins",
       "pubDate": "2023-07-17T12:11:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shibarium soars to new heights as epic Shiba Inu (SHIB) era arrives",
       "currencies": [
@@ -628,8 +204,8 @@
       "title": "US Banks Are Expected To Turn To XRP After The Decision!",
       "link": "https://en.bitcoinsistemi.com/us-banks-are-expected-to-turn-to-xrp-after-the-decision/",
       "pubDate": "2023-07-17T12:02:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "Stu Alderoty, Ripple General Counsel, said that US banks and financial institutions will begin to adopt XRP for cross-border payments. Continue Reading: US Banks Are Expected To Turn To XRP After The Decision!",
       "currencies": [
@@ -646,8 +222,8 @@
       "title": "$5 Million Token Grant Will Fuel ‘Decentralized AI’ Development",
       "link": "https://decrypt.co/148808/icp-internet-computer-dfinity-grants-decentralized-ai-deai",
       "pubDate": "2023-07-17T12:01:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Projects can receive up to $100,000 in ICP tokens to build artificial intelligence tools using the Internet Computer Protocol.",
       "currencies": [
@@ -658,289 +234,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Fantom (FTM) Founder Andre Cronje Says Multichain Hack Was a ‘Big Blow’ to Ethereum Rival’s Ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-07-17T11:45:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "LDO, UNI, AAVE: 3 DeFi Coins Poised for Breakout Rallies",
-      "link": "NULL",
-      "pubDate": "2023-07-17T11:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Aave’s Dollar-Pegged GHO Stablecoin Hits $2.5M Market Cap After Just 2 Days",
-      "link": "NULL",
-      "pubDate": "2023-07-17T10:57:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "EU's Data Act Final Draft Still Contains Controversial Smart Contract Kill Switch",
-      "link": "NULL",
-      "pubDate": "2023-07-17T10:53:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "NEAR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "1inch Token Surges 58% as Daily Trading Volume Spikes to 20-Month High; Investor Moves $3.7M to Binance",
-      "link": "NULL",
-      "pubDate": "2023-07-17T10:03:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "1INCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "1inch Token Hits 3-Month High Amid Surge in South Korean Trading Volumes",
-      "link": "NULL",
-      "pubDate": "2023-07-17T10:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "1INCH"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Aave’s Lens Protocol V2 launches with focus on open standards, profile switching",
-      "link": "NULL",
-      "pubDate": "2023-07-17T09:54:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Are In A Horizontal Trend As Selling Pressure Continues",
-      "link": "NULL",
-      "pubDate": "2023-07-17T09:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "KCS",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Aave Companies Launch V2 Lens, Introducing 'Blocking' to Crypto Social App",
-      "link": "NULL",
-      "pubDate": "2023-07-17T09:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "$18 Billion Worth Of Bitcoin Accumulated At $30,200 – BTC Bull Run Incoming?",
-      "link": "NULL",
-      "pubDate": "2023-07-17T09:19:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "TUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Mainstream media blackout on introduction of new BRICS currency",
-      "link": "NULL",
-      "pubDate": "2023-07-17T09:08:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Quant Recovers But Fluctuates Between $95 And $110",
-      "link": "NULL",
-      "pubDate": "2023-07-17T08:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "1INCH Skyrockets 45% Daily, Bitcoin Stagnates Above $30K: Market Watch",
-      "link": "NULL",
-      "pubDate": "2023-07-17T08:43:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "1INCH"
-      ]
-    },
-    {
-      "title": "As DeFi wars intensify, MakerDAO loses its place to Aave",
-      "link": "NULL",
-      "pubDate": "2023-07-17T08:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "DAI",
-        "AAVE",
-        "MKR"
-      ]
-    },
-    {
-      "title": "AAVE bulls can seek re-entry here",
-      "link": "NULL",
-      "pubDate": "2023-07-17T06:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Fantom Can't Make Any Stablecoin Promises If Multichain Fails",
-      "link": "NULL",
-      "pubDate": "2023-07-17T06:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Aave Stablecoin GHO Launches to Mainnet on Ethereum",
-      "link": "NULL",
-      "pubDate": "2023-07-17T06:27:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Huobi: Token burns, price struggles, whale holdings and much more",
-      "link": "NULL",
-      "pubDate": "2023-07-17T04:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
-      "title": "Neo opens registration for APAC Hackathon Tokyo GAS Station on July 22nd – 23rd",
-      "link": "NULL",
-      "pubDate": "2023-07-17T03:23:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "COZ releases Neon wallet v2.18.0 featuring NeoNS support",
-      "link": "NULL",
-      "pubDate": "2023-07-17T02:46:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Aave Protocol launches stablecoin GHO on Ethereum mainnet, $2M minted",
-      "link": "NULL",
-      "pubDate": "2023-07-17T02:19:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Neo APAC Hackathon continues with NFT panel and Python workshop",
-      "link": "NULL",
-      "pubDate": "2023-07-17T02:04:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO"
-      ]
     }
   ]
 }

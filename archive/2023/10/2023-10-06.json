@@ -1,76 +1,15 @@
 {
   "date": "2023-10-06",
-  "fetchedAt": "2026-02-05T07:45:52.915Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.608Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "DENVER WALLS festival blends art and blockchain with innovative ITEM Systems NFI technology",
-      "link": "NULL",
-      "pubDate": "2023-10-06T23:13:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Solana Enhances Privacy Offerings As SOL’s Uptrend Persists With 4% Gains",
-      "link": "NULL",
-      "pubDate": "2023-10-06T23:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "LINK",
-        "GT"
-      ]
-    },
-    {
-      "title": "Tron Has More Daily Active Addresses Than Ethereum: What’s Supercharging Growth?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T23:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "USDT and DAI Resilient Against Shrinking Stablecoin Market",
-      "link": "NULL",
-      "pubDate": "2023-10-06T22:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "COZ and AxLabs unveil ITEM Systems, joint NFI-focused initiative",
-      "link": "NULL",
-      "pubDate": "2023-10-06T22:19:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
     {
       "title": "Shiba Inu ($SHIB) Could Soon Surge to 8-Month High, Says Crypto Analyst",
       "link": "https://www.cryptoglobe.com/latest/2023/10/shiba-inu-shib-could-soon-surge-to-8-month-high-says-crypto-analyst/",
       "pubDate": "2023-10-06T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "trading",
       "description": "A popular proponent of the meme-inspired cryptocurrency Shiba Inu ($SHIB) has recently suggested the cryptocurrency could soon surge to move to an 8-month high of around $0.0003, at a time in which the cryptocurrency market keeps trading sideways. According to a post from the analyst $SHIB Knight on the microblogging platform X (formerly known as […]",
       "currencies": [
@@ -83,22 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "ATOM shed 11.7% in four days — Here’s why the prognosis isn’t good for buyers",
-      "link": "NULL",
-      "pubDate": "2023-10-06T21:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
       "title": "Cardano Founder Celebrates Key Mithril Milestone, Makes New Prediction",
       "link": "https://coingape.com/cardano-founder-celebrates-key-mithril-milestone-makes-new-prediction/",
       "pubDate": "2023-10-06T19:43:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinGape",
+      "sourceKey": "coingape",
       "category": "altcoin",
       "description": "Charles Hoskinson, the founder of Cardano, recently celebrated significant milestones in the journey of the blockchain’s Mithril Protocol. In light of these milestones, Hoskinson made the bold prediction that 2024 will be the “Mithril age” on Cardano. The Mithril Milestone The Mithril team proudly announced that the protocol has been running without interruption since epoch",
       "currencies": [
@@ -111,45 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Former BitMEX CEO Arthur Hayes Announces His Favorite Altcoin! 80x Waiting!",
-      "link": "NULL",
-      "pubDate": "2023-10-06T18:57:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "FIL"
-      ]
-    },
-    {
-      "title": "LUNC Price to Hit $0.00007? Bear Trap Bolster Buyers for 12% Jump",
-      "link": "NULL",
-      "pubDate": "2023-10-06T18:53:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Polkadot Released Its Third Quarter Report! Record Levels Were Seen in These Areas!",
-      "link": "NULL",
-      "pubDate": "2023-10-06T18:13:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
       "title": "Solana: Can the recent price surge ease FUD around SOL",
       "link": "https://ambcrypto.com/solana-can-the-recent-price-surge-ease-fud-around-sol/",
       "pubDate": "2023-10-06T17:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Solana's soaring success is shrouded in uncertainty as massive amounts of SOL get unstaked while its resilience and positive indicators shine through the fog of doubt.",
       "currencies": [
@@ -161,156 +55,11 @@
       }
     },
     {
-      "title": "BCH, XLM, TRX, ETC All Record Notable Upticks in Their Liquidity",
-      "link": "NULL",
-      "pubDate": "2023-10-06T16:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "CRO",
-        "BCH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Polkadot: As demand remains strong, where will DOT head next",
-      "link": "NULL",
-      "pubDate": "2023-10-06T16:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Thorswap Halts Operations Amidst FTX Hacker’s Fund Movement; RUNE Drops 8.6%",
-      "link": "NULL",
-      "pubDate": "2023-10-06T16:30:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Biggest Movers: AVAX 7% Higher, TON Maintains Bullish Momentum on Friday",
-      "link": "NULL",
-      "pubDate": "2023-10-06T16:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AVAX",
-        "TON"
-      ]
-    },
-    {
-      "title": "Interest in WBTC surges- Will Bitcoin follow suit?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T15:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Polkadot (DOT) Hits Historic Highs in Staking, Other Metrics: Report",
-      "link": "NULL",
-      "pubDate": "2023-10-06T15:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Friend.tech sees soaring revenue; whales dive deep into Flow & InQubeta",
-      "link": "NULL",
-      "pubDate": "2023-10-06T15:21:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Bitcoin Whales Are Still in a ‘Risk-On Mode’, Says Quant Analyst Ki Young Ju – Here’s What He Means",
-      "link": "NULL",
-      "pubDate": "2023-10-06T14:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Expanding Your Portfolio? These Top Cryptos Offer Strategic Opportunities Not To Be Missed!",
-      "link": "NULL",
-      "pubDate": "2023-10-06T13:44:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bitcoin Falls Following Jobs Report; THORChain Becomes Top Loser",
-      "link": "NULL",
-      "pubDate": "2023-10-06T13:39:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Here’s why ThorChain’s 5-day volume hit the roof",
-      "link": "NULL",
-      "pubDate": "2023-10-06T13:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Hong Kong Officials Warn Investors to Stay Away from Retail Stablecoins since They Are Unregulated",
-      "link": "NULL",
-      "pubDate": "2023-10-06T13:09:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
       "title": "Machine learning algorithm sets DOGE price for October 31, 2023",
       "link": "https://finbold.com/machine-learning-algorithm-sets-doge-price-for-october-31-2023/",
       "pubDate": "2023-10-06T13:03:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As the larger part of the cryptocurrency market returns to sideways trading mode, Dogecoin (DOGE) is following the trend, and … Continued",
       "currencies": [
@@ -323,46 +72,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto Pioneer Arthur Hayes Shares These 3 Major Bull Market Predictions",
-      "link": "NULL",
-      "pubDate": "2023-10-06T12:45:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "FLOW",
-        "FIL"
-      ]
-    },
-    {
-      "title": "MyTonWallet Unveils Enhanced Version New Features and Security",
-      "link": "NULL",
-      "pubDate": "2023-10-06T12:40:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Developer Group Ending Support for Terra Luna Classic Ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-10-06T11:57:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Cardano Founder Debunks Hydra’s Alleged Scaling Issues",
       "link": "https://bitcoinist.com/cardano-founder-debunks-hydra-scaling-issues/",
       "pubDate": "2023-10-06T11:00:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Cardano founder Charles Hoskinson recently tackled rumors concerning Hydra’s scaling issues in a detailed video update. Hydra, an integral layer-2 scaling solution for the Cardano blockchain, seeks to ramp up the transaction processing ability of the network. It accomplishes this by permitting the opening of multiple heads or channels, facilitating off-chain transactions between participants....",
       "currencies": [
@@ -374,134 +88,11 @@
       }
     },
     {
-      "title": "RUNE Plummets 9% as Thorswap Freezes Operations Amid 'Potential Illicit Activity'",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:56:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Dogecoin leads pack of 20 new Altcoin Crypto Futures now available with PrimeXBT",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:51:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "DOGE",
-        "AVAX",
-        "ALGO",
-        "AXS"
-      ]
-    },
-    {
-      "title": "Ethereum Futures ETFs Falter Following Launch, Sparking Concerns For Bulls",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:46:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Green Signals for Cardano (ADA) Price as Staking Hits 2023 H2 Peak – Is $0.40 Next?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:42:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "RNDR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto wallet maker Ledger cuts 88 jobs amid market challenges",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: ADA, TON & TWT Shine Bright With 24H Gains",
-      "link": "NULL",
-      "pubDate": "2023-10-06T10:29:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "TWT",
-        "TON"
-      ]
-    },
-    {
-      "title": "Toncoin Jumps After '8-Figure' Investment by MEXC Ventures",
-      "link": "NULL",
-      "pubDate": "2023-10-06T09:31:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Crypto news: hardware wallet maker Ledger lays off 12% of staff",
-      "link": "NULL",
-      "pubDate": "2023-10-06T09:22:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "ThorChain Hits Record-Setting $355 Million Trading Volume in a Day",
-      "link": "NULL",
-      "pubDate": "2023-10-06T09:11:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "3 cryptocurrencies under $0.10 to buy next week",
       "link": "https://finbold.com/3-cryptos-under-0-10-buy-next-week/",
       "pubDate": "2023-10-06T09:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Although the majority of assets in the cryptocurrency market are back to trading in a sideways fashion, some of them … Continued",
       "currencies": [
@@ -514,45 +105,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Canadian Securities Regulator Provides Stablecoin Guidance: ‘May Constitute Securities’",
-      "link": "NULL",
-      "pubDate": "2023-10-06T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Chiliz: How this latest vision may have boosted CHZ whale movement",
-      "link": "NULL",
-      "pubDate": "2023-10-06T08:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Litecoin (LTC) Bulls and Bears Battle at $63 Support – Who Will Win?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T08:27:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
       "title": "Ripple v. SEC case update as of October 6, 2023",
       "link": "https://finbold.com/ripple-v-sec-case-update-as-of-october-6-2023/",
       "pubDate": "2023-10-06T08:04:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "As the cryptocurrency market is waiting for the official closure of the legal battle between the United States Securities and … Continued",
       "currencies": [
@@ -563,118 +120,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Wallet Maker Ledger Cuts Staff by 12%",
-      "link": "NULL",
-      "pubDate": "2023-10-06T08:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Litecoin Price Prediction: Investors Are Diversifying With Everlodge and Optimism",
-      "link": "NULL",
-      "pubDate": "2023-10-06T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bitcoin Stopped at $28K, Toncoin Explodes 9% Daily (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-10-06T07:28:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TON"
-      ]
-    },
-    {
-      "title": "Avalanche (AVAX) Bucks Market Trend, But What is Driving Momentum?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T06:53:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DOT",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Analysis: Recovery Could Be Capped Near $242",
-      "link": "NULL",
-      "pubDate": "2023-10-06T03:38:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Which way will Litecoin swing from the critical price zone?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T02:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 05 Oct: Crypto dips ahead of crucial jobs data",
-      "link": "NULL",
-      "pubDate": "2023-10-06T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LTC",
-        "HBAR",
-        "TWT",
-        "FRAX",
-        "FXS"
-      ]
-    },
-    {
-      "title": "Will EOS rise above its Q3 hurdles?",
-      "link": "NULL",
-      "pubDate": "2023-10-06T00:30:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "‘Keep an Eye’ on Bitcoin Cash (BCH), These Three Altcoins as One Key Metric Hits a Three-Month High: Santiment",
-      "link": "NULL",
-      "pubDate": "2023-10-06T00:00:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
     }
   ]
 }

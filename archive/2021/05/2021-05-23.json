@@ -1,15 +1,15 @@
 {
   "date": "2021-05-23",
-  "fetchedAt": "2026-02-05T07:45:51.764Z",
-  "articleCount": 23,
+  "fetchedAt": "2026-02-05T07:48:35.426Z",
+  "articleCount": 13,
   "source": "historical-import",
   "articles": [
     {
       "title": "China drags down crypto market: here’s what large traders are saying",
       "link": "https://www.theblockcrypto.com/post/105759/china-drags-down-crypto-market-heres-what-large-traders-are-saying?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-05-23T23:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "The crypto charts look brutal, but traders don’t think that we’ve reached the point of full capitulation. The price of bitcoin fell to $31,000 earlier Sunday after a volatile week that saw the price of the largest cryptocurrency whipsaw between $30,000 and $40,000. Elsewhere, cryptocurrencies ranging from ether to Solana to Cardano have clocked in […]",
       "currencies": [
@@ -24,51 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "VeChain, THETA, Tron Price Analysis: 23 May",
-      "link": "NULL",
-      "pubDate": "2021-05-23T22:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "VET",
-        "THETA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "#Techweek2021 is on and Centrality is hosting 5 events this week! We'll discuss #blockchain, #NFTs and even #BUIDL…",
-      "link": "NULL",
-      "pubDate": "2021-05-23T21:47:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CENNZ"
-      ]
-    },
-    {
-      "title": "Our first winner of our Creator Drive goes to @0x_NoFace! 🥳🥳",
-      "link": "NULL",
-      "pubDate": "2021-05-23T20:19:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALCH"
-      ]
-    },
-    {
       "title": "DeFi Tokens Including Uniswap, Chainlink, Aave Crushed By Crypto Crash",
       "link": "https://decrypt.co/71764/defi-tokens-uniswap-chainlink-aave-crushed-amid-broad-bitcoin-crypto-crash",
       "pubDate": "2021-05-23T20:10:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "defi",
       "description": "The top DeFi tokens couldn't escape the continued crypto market crash, tanking more on Sunday than BTC and ETH.",
       "currencies": [
@@ -86,8 +46,8 @@
       "title": "How Leveraged Positions Could Have Accelerated Ethereum’s Slump",
       "link": "https://bitcoinist.com/how-leveraged-positions-could-have-accelerated-ethereums-slump/?utm_source=rss&utm_medium=rss&utm_campaign=how-leveraged-positions-could-have-accelerated-ethereums-slump",
       "pubDate": "2021-05-23T19:59:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Ethereum has retraced to levels not seen since the beginning of 2021. The cryptocurrency records a 50% correction in the weekly chart and has fallen from an all-time high at around $4,000. At the time of writing, ETH trades at 1,927 with 22.9% losses in the weekly chart. The crash in ETH’s price was preceded […]",
       "currencies": [
@@ -99,51 +59,11 @@
       }
     },
     {
-      "title": "RT @gregoryklumov: Finally institutions starting to get it. Digital assets are a new member of liquid alternatives.",
-      "link": "NULL",
-      "pubDate": "2021-05-23T19:56:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "Supra arrives to Polygon! We created wBUSD, our new croschain fully colateralized (in BSC BUSD) stable coin! Send y…",
-      "link": "NULL",
-      "pubDate": "2021-05-23T19:22:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "SUPRA",
-        "FLP"
-      ]
-    },
-    {
-      "title": "Theta Network has lot of Opportunities for Passive Income : #⃣: #cryptonews…",
-      "link": "NULL",
-      "pubDate": "2021-05-23T19:01:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TCAT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "New Crypto Asset Blasts Into the Top 10, Hits Staggering $18,635,000,000 Market Cap",
       "link": "https://dailyhodl.com/2021/05/23/new-crypto-asset-blasts-into-the-top-10-hits-staggering-18635000000-market-cap/",
       "pubDate": "2021-05-23T15:10:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "A newly launched crypto asset is turning heads after torching its way into the top 10 with a multi-billion dollar surge in its market capitalization. Internet Computer (ICP) is a crypto project developed by Swiss-based nonprofit Dfinity. The project is touted as a blockchain that aims to replicate the speed, power, and scale of the […]",
       "currencies": [
@@ -159,8 +79,8 @@
       "title": "Ethereum Price Analysis: ETH Fighting Over $2000 After Crashing 55% In 11 Days",
       "link": "https://cryptopotato.com/ethereum-price-analysis-eth-fighting-over-2000-after-crashing-55-in-11-days/",
       "pubDate": "2021-05-23T14:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "ethereum",
       "description": "Ethereum is down by a steep 40% over the past week and over 55% since the ATH, currently struggling to maintain the $2K support area. Against bitcoin, ETH has broken below the 0.06 BTC critical support.",
       "currencies": [
@@ -177,8 +97,8 @@
       "title": "BTC, ETH, XRP and LTC Price Analysis for May 23",
       "link": "https://u.today/btc-eth-xrp-and-ltc-price-analysis-for-may-23",
       "pubDate": "2021-05-23T14:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Can one expect a reversal of the crypto market soon and a continued rise?",
       "currencies": [
@@ -194,8 +114,8 @@
       "title": "Ethereum Falls Below $2,000 Amid Latest Crypto Crash",
       "link": "https://decrypt.co/71744/ethereum-sinks-below-2000-amid-latest-crypto-crash",
       "pubDate": "2021-05-23T12:42:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "The price of Ethereum is firmly less than half of its all-time high.",
       "currencies": [
@@ -208,22 +128,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "More detailed official position is posted on MVL’s official website",
-      "link": "NULL",
-      "pubDate": "2021-05-23T12:33:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MVL"
-      ]
-    },
-    {
       "title": "Resilient DOGE Leapfrogs ADA and BNB to Take Fourth Place",
       "link": "https://beincrypto.com/resilient-doge-leapfrogs-ada-and-bnb-for-fourth-place/",
       "pubDate": "2021-05-23T11:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "altcoin",
       "description": "DOGE has overtaken both BNB and ADA for fourth place as bearish momentum triggers sell-offs across the market.",
       "currencies": [
@@ -239,8 +148,8 @@
       "title": "Crypto Market Cap Sinks Below $1.5T as BTC and ETH Continue to Crash",
       "link": "https://decrypt.co/71741/crypto-market-cap-sinks-below-1-5t-as-btc-and-eth-continue-to-crash",
       "pubDate": "2021-05-23T10:18:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "The crypto market continues to crash after news from Elon Musk and China depresses prices.",
       "currencies": [
@@ -256,8 +165,8 @@
       "title": "Ethereum Plunges Below $2,000 as Exchange Inflows Reach $445 Million in Minutes",
       "link": "https://u.today/ethereum-plunges-below-2000-as-exchange-inflows-reach-445-million-in-minutes",
       "pubDate": "2021-05-23T09:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "Ethereum has dipped below the $2,000 level after exchange inflows reached a 2021 peak",
       "currencies": [
@@ -273,8 +182,8 @@
       "title": "These Four Crypto Assets Gearing Up for New All-Time Highs, Says Top Analyst",
       "link": "https://dailyhodl.com/2021/05/23/these-four-crypto-assets-gearing-up-for-new-all-time-highs-says-top-analyst/",
       "pubDate": "2021-05-23T07:04:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "Seasoned crypto trader and analyst Smart Contracter is calling for new all-time highs (ATH) in four crypto assets in the nascent decentralized finance (DeFi) space. Amid a steep and broad crypto correction, Smart Contracter still appears bullish on lending and borrowing protocol Aave, automated market maker SushiSwap (SUSHI), and layer-2 Ethereum scaling network Polygon (MATIC). […]",
       "currencies": [
@@ -289,27 +198,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Whose wife",
-      "link": "NULL",
-      "pubDate": "2021-05-23T06:44:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "China’s bitcoin crackdown comment sparks USDT sell-off on OTC desks",
       "link": "https://www.theblockcrypto.com/post/105708/china-bitcoin-crackdown-usdt-otc?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2021-05-23T04:38:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "bitcoin",
       "description": "China's latest crackdown comments on bitcoin mining and trading have sparked some fear and uncertainty among local traders and miners.",
       "currencies": [
@@ -323,33 +216,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Hi #BTCST Community, kindly note that the Restorative Rebase for τDoge last night would affect you if you performed…",
-      "link": "NULL",
-      "pubDate": "2021-05-23T04:38:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTCST"
-      ]
-    },
-    {
-      "title": "RT @VoskCoin: Trust Wallet is the best multi coin wallet for decentralized finance and specifically it's incredibly useful for the Binance…",
-      "link": "NULL",
-      "pubDate": "2021-05-23T04:16:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Harmony constantly addresses the idea of blockchain interoperability. This article explains exactly why It matters…",
       "link": "https://twitter.com/harmonyprotocol/status/1396315026835845122",
       "pubDate": "2021-05-23T04:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "general",
       "currencies": [
         "ONE"

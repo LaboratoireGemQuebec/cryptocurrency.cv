@@ -1,148 +1,15 @@
 {
   "date": "2023-09-16",
-  "fetchedAt": "2026-02-05T07:45:52.395Z",
-  "articleCount": 27,
+  "fetchedAt": "2026-02-05T07:48:35.557Z",
+  "articleCount": 3,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Chen Zhuling – RockX – The Smart Economy Podcast: Episode 46",
-      "link": "NULL",
-      "pubDate": "2023-09-16T21:49:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "This Week in Coins: Steady Week for Bitcoin and Ethereum, Toncoin Balloons 23%",
-      "link": "NULL",
-      "pubDate": "2023-09-16T19:16:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM",
-        "TON"
-      ]
-    },
-    {
-      "title": "TON Surges 12% on Telegram Partnership: Will $2.25 Resistance Hold?",
-      "link": "NULL",
-      "pubDate": "2023-09-16T18:39:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Friend.tech Smashes Ethereum (ETH) in Daily Fees",
-      "link": "NULL",
-      "pubDate": "2023-09-16T17:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "DeFi economic activity drops 15% in August —VanEck",
-      "link": "NULL",
-      "pubDate": "2023-09-16T16:48:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Tron Founder Justin Sun's $815M TUSD Mint Raises Eyebrows",
-      "link": "NULL",
-      "pubDate": "2023-09-16T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "TRON Founder Justin Sun Sparks Concerns After $865 Million TUSD Minting",
-      "link": "NULL",
-      "pubDate": "2023-09-16T15:46:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TRX",
-        "TUSD",
-        "HT"
-      ]
-    },
-    {
-      "title": "Justin Sun Injects Fresh $815M Worth of TUSD Into Circulation",
-      "link": "NULL",
-      "pubDate": "2023-09-16T14:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "TUSD",
-        "HT"
-      ]
-    },
-    {
-      "title": "Telegram Unveils Crypto Wallet on TON Blockchain, Paving the Way for Web3 Integration",
-      "link": "NULL",
-      "pubDate": "2023-09-16T14:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ]
-    },
-    {
-      "title": "Glassnode Co-Founders Weigh In On Bitcoin (BTC) Path To $30,000",
-      "link": "NULL",
-      "pubDate": "2023-09-16T14:20:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Ethereum (ETH), BUSD Historic Dormant Movement Sparks Speculation",
-      "link": "NULL",
-      "pubDate": "2023-09-16T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "BUSD"
-      ]
-    },
     {
       "title": "Bear market ends here? Bitcoin is set for an explosive move, indicators suggest",
       "link": "https://finbold.com/bear-market-ends-here-bitcoin-is-set-for-an-explosive-move-indicators-suggest/",
       "pubDate": "2023-09-16T13:19:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) and the broader crypto market continue to grapple with prolonged bearish sentiments, leaving investors vigilant for potential factors … Continued",
       "currencies": [
@@ -155,34 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Biggest Movers: TON Surges 14% on Saturday, SHIB Hits 1-Week High",
-      "link": "NULL",
-      "pubDate": "2023-09-16T13:16:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "TON"
-      ]
-    },
-    {
-      "title": "Justin Sun Printed $815 Million TUSD and Transferred it to His Staking Platform",
-      "link": "NULL",
-      "pubDate": "2023-09-16T12:45:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TUSD"
-      ]
-    },
-    {
       "title": "Fake News Alert: BlackRock Is Not Shifting from Bitcoin to XRP",
       "link": "https://dailycoin.com/fake-news-alert-blackrock-is-not-shifting-from-bitcoin-to-xrp/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-09-16T12:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "bitcoin",
       "description": "Amidst swirling rumors, BlackRock's alleged digital currency strategy shift sparks intrigue, but a closer look reveals a lack of credibility.",
       "currencies": [
@@ -196,45 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What is Next for Render Token (RNDR) after Noteworthy 50% Price Surge?",
-      "link": "NULL",
-      "pubDate": "2023-09-16T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Prices Today: Bitcoin Reversal Sets Recovery Mode in Cardano, Toncoin",
-      "link": "NULL",
-      "pubDate": "2023-09-16T11:46:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TON"
-      ]
-    },
-    {
-      "title": "Investor Mark Cuban loses $870K in hot wallet hack",
-      "link": "NULL",
-      "pubDate": "2023-09-16T10:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDC"
-      ]
-    },
-    {
       "title": "Mark Cuban Recovers 3M USDC From Stolen Crypto Wallet on MetaMask",
       "link": "https://coinedition.com/mark-cuban-recovers-3m-usdc-from-stolen-crypto-wallet-on-metamask/",
       "pubDate": "2023-09-16T10:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "regulation",
       "description": "Data revealed that Mark Cuban recovered 3.049 million USDC from his stolen wallet. Cuban transferred the recovered USDC to an address on the Coinbase exchange. Mark Cuban’s wallet was reportedly stolen after being idle for 160 days. Data from Arkham Intelligence, a platform that uses artificial intelligence to sort on-chain data, revealed that Mark Cuban, […]",
       "currencies": [
@@ -245,110 +55,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Merge Is One: Here Are The Highlights So Far",
-      "link": "NULL",
-      "pubDate": "2023-09-16T09:56:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "LDO",
-        "TON"
-      ]
-    },
-    {
-      "title": "Crypto’s ‘Summer of Apathy’ Could Turn to ‘Winter of Discontent’, Says Meltem Demirors – Here’s What She Means",
-      "link": "NULL",
-      "pubDate": "2023-09-16T09:15:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
-      "title": "Toncoin Soars Above $2 Following 10% Daily Surge, Bitcoin Fails at $27K (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-09-16T08:40:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MKR",
-        "TON"
-      ]
-    },
-    {
-      "title": "Toncoin Shows Resiliency With 20% Climb – Will TON Hit $3 This Weekend?",
-      "link": "NULL",
-      "pubDate": "2023-09-16T08:17:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "DOGE",
-        "TON"
-      ]
-    },
-    {
-      "title": "Metamask adds Thorchain support but RUNE bulls could head this way…",
-      "link": "NULL",
-      "pubDate": "2023-09-16T05:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Ethereum Classic [ETC] nears key roadblock — Is a reversal likely?",
-      "link": "NULL",
-      "pubDate": "2023-09-16T04:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 15 Sep:BTC Hits Weekly High, Demonstrates Resilience",
-      "link": "NULL",
-      "pubDate": "2023-09-16T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "LTC",
-        "MIOTA",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Bitcoin Dominates Ethereum In Daily Active Addresses Despite Lagging In TX Count",
-      "link": "NULL",
-      "pubDate": "2023-09-16T01:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "APE"
-      ]
     }
   ]
 }

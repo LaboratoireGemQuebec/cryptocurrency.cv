@@ -1,48 +1,15 @@
 {
   "date": "2021-10-24",
-  "fetchedAt": "2026-02-05T07:45:51.468Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.305Z",
+  "articleCount": 23,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @thelonedarkwol2: @Adouble212 $Blast @BlastoiseInu. Insane chart today.",
-      "link": "NULL",
-      "pubDate": "2021-10-24T22:38:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BLAST"
-      ]
-    },
-    {
-      "title": "Stake $AMA and earn more with the high APY rates. The current pool closes, when 10 million tokens are staked.…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T22:24:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AMA"
-      ]
-    },
-    {
-      "title": "RT @APompliano: Satoshi taught an entire generation to think long term",
-      "link": "NULL",
-      "pubDate": "2021-10-24T22:22:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "AMA"
-      ]
-    },
     {
       "title": "Polygon Successfully Averts Catastrophic Loss Of Up To $850 Million",
       "link": "https://zycrypto.com/polygon-successfully-averts-catastrophic-loss-of-up-to-850-million/",
       "pubDate": "2021-10-24T22:21:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "layer2",
       "description": "Polygon has paid the highest bug bounty in DeFi history to a white hat hacker that exposed a dangerous vulnerability. The $2M was paid for drawing the attention of the network to a potential flaw that could have led to losses of up to $850M. DeFi has come under severe criticism regarding its security in […]",
       "currencies": [
@@ -55,22 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "anyone notice how BTC is a roller coaster up and down, but BSV has been staying stable? thats because their selling…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T21:47:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
       "title": "Blockstream CEO Adam Back Goes Against Meme Coins: A Low Res Gif of a Rock Has No Merit",
       "link": "https://cryptopotato.com/blockstream-ceo-adam-back-goes-against-meme-coins-a-low-res-gif-of-a-rock-has-no-merit/",
       "pubDate": "2021-10-24T21:06:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "In brewing vitriol between Bitcoiners and Shitcoiners on Twitter about memes, Adam Back described the popular and expensive EtherRock as “a low res gif” with no merit.",
       "currencies": [
@@ -84,22 +40,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @illbick: Shout out to @stormxio for sending me alllllll this badass merch for winning their #cashbacksupercharged giveaway  post your…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T20:51:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
       "title": "Solana Threatens To Flip Tether And Cardano After Soaring By An Impressive 30% In One Week",
       "link": "https://zycrypto.com/solana-threatens-to-flip-tether-and-cardano-after-soaring-by-an-impressive-30-in-one-week/",
       "pubDate": "2021-10-24T20:49:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "Solana has embarked on another splendid run that brings it within firing range of its all-time high. The asset managed this feat by climbing by a staggering 15% in under 24 hours. Tether and Cardano could be flipped by Solana if the fine form continues. Solana’s gains over the past 12 months have been nothing […]",
       "currencies": [
@@ -113,22 +58,11 @@
       }
     },
     {
-      "title": "RT @MintClubPro: +$5M TVL and +500 Smart Tokens generated via  on #BinanceSmartChain and $MINT price is  #MintC…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T20:35:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
       "title": "Top 5 cryptocurrencies to watch this week: BTC, SOL, AVAX, ALGO, AXS",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-sol-avax-algo-axs",
       "pubDate": "2021-10-24T20:17:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Traders are watching to see if BTC’s bounce of the 20-day moving average resumes the uptrend. Meanwhile, SOL, AVAX, ALGO and AXS are preparing for a move higher.",
       "currencies": [
@@ -144,33 +78,11 @@
       }
     },
     {
-      "title": "its so funny that altcoins are gonna explode right on target with the satoshi case going on and BSV is just gonna be $170-175",
-      "link": "NULL",
-      "pubDate": "2021-10-24T19:47:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BSV"
-      ]
-    },
-    {
-      "title": "RT @DanSimerman: Excited to be speaking at the #EFFORCE Summit on November 6th! Will spend the time talking industry 4.0, web3, and how in…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T18:34:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Surpasses Ether by Trading Volume Amid Explosive Rally",
       "link": "https://u.today/shiba-inu-shib-surpasses-ether-by-trading-volume-amid-explosive-rally",
       "pubDate": "2021-10-24T18:25:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "The “Dogecoin killer” is stealing Bitcoin’s thunder with an eye-popping rally",
       "currencies": [
@@ -182,23 +94,11 @@
       }
     },
     {
-      "title": "#NFTIKI IS LIVE! CHECK IT OUT HERE TIKI DASH COMING SOON! #NFTCommunity #NFT #NFTs…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T18:08:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DASH",
-        "TIKI"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Jumps 50% To ATH Amid Robinhood Rumors",
       "link": "https://www.newsbtc.com/shiba-inu/shiba-inu-shib-jumps-50-to-ath-amid-robinhood-rumors/",
       "pubDate": "2021-10-24T18:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Shiba Inu (SHIB), one of the most popular meme coins, soared to an all-time high for the first time since May 11. The meme coin reached new heights of $0.00004432 over the weekend. SHIB was up over 50% in just 24 hours, according to the pricing from CoinGecko. Related Reading | Shiba Inu Outranks Chainlink And Takes Place In Top 15 Crypto-Assets With a market cap of $21.4 billion, Shiba Inu is...",
       "currencies": [
@@ -214,8 +114,8 @@
       "title": "With Shiba Inu soaring right now, how likely is it to emerge a ‘DOGE-killer’",
       "link": "https://ambcrypto.com/with-shiba-inu-soaring-right-now-how-likely-is-it-to-emerge-a-doge-killer/",
       "pubDate": "2021-10-24T17:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Every dog has its day, but Shiba Inu, a coin which initially seemed to be numbered days in the market, was at the 12th rank by market cap. Shiba Inu was up 49% over the last 24 hours, while the rest of the crypto market looked mostly flat. As the asset flipped the DeFi leader […]",
       "currencies": [
@@ -231,8 +131,8 @@
       "title": "$17 MATIC? This Is The Best Case For Polygon To Pump 1000%",
       "link": "https://www.youtube.com/watch?v=4dVuDqK_hW8",
       "pubDate": "2021-10-24T17:18:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "FUDTV",
+      "sourceKey": "fudtv",
       "category": "trading",
       "description": "✅ Follow Krown on Twitter: https://twitter.com/KrownCryptoCave ✅ Follow Krown on YT: https://www.youtube.com/krownscryptocave ✅ Follow EllioTrades on Twitter: https://twitter.com/elliotrades 🚨FOR EXPERIENCED TRADERS ONLY🚨 💰 $3,500 BONUS ON BYBIT 👉 https://partner.bybit.com/b/elliokrown21 ► 3.5% Deposit bonus up to $3,500, e.g. if you deposit 100k, you get $3,500!!! From now until November 1st, 10 lucky winners who sign up and deposit under referral code \"elliokrown21\" (link above) will each ",
       "currencies": [
@@ -248,8 +148,8 @@
       "title": "Almost 900 Million SHIB Tokens Burned Today",
       "link": "https://u.today/almost-900-million-shib-tokens-burned-today",
       "pubDate": "2021-10-24T17:12:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "general",
       "description": "With a unique burning mechanism, SHIB is on the rise with 16% daily growth",
       "currencies": [
@@ -261,23 +161,11 @@
       }
     },
     {
-      "title": "We are excited to announce that we will be hosting the IDO for @everlensnft , the first NFT platform for Instagram…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T17:02:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
       "title": "Fear not, investor: Finding stability amid crypto market volatility",
       "link": "https://cointelegraph.com/news/fear-not-investor-finding-stability-amid-crypto-market-volatility",
       "pubDate": "2021-10-24T16:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "Volatility in the crypto markets is here to stay. Thus, understanding the utility, necessity and long-term viability of projects is crucial.",
       "currencies": [
@@ -290,23 +178,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @StarLaunchSOL: Registration is live, Commanders! Click the link below and follow the instructions to complete the KYC portion of our re…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T15:14:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHFL",
-        "CARDS"
-      ]
-    },
-    {
       "title": "Shiba Inu ($SHIB): Dazzling Performance Helps It Become 11th Most Valuable Crypto",
       "link": "https://www.cryptoglobe.com/latest/2021/10/shiba-inu-shib-dazzling-performance-helps-it-become-11th-most-valuable-crypto/",
       "pubDate": "2021-10-24T15:09:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "Shiba Token ($SHIB), the native token of meme-based Ethereum-powered 100% community-run crypto project Shiba Inu, has surged 50% in the past 24-hours to become the 11th most valueable cryptoasset (by market cap). Here is how Coinbase described the dog meme-based cryptocurrency in a blog post on June 15 when it announced that SHIB would be listed on Coinbase Pro, […]",
       "currencies": [
@@ -319,27 +195,11 @@
       }
     },
     {
-      "title": "Now with the freshly added option to store your #XRC20 tokens on Guarda #XinFin $XDC wallet, Guarda Wallet becomes…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T15:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Paris Hilton to Perform on the Metaverse",
       "link": "https://www.trustnodes.com/2021/10/24/paris-hilton-to-perform-on-the-metaverse",
       "pubDate": "2021-10-24T14:53:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Trustnodes",
+      "sourceKey": "trustnodes",
       "category": "general",
       "description": "The Decentraland Metaverse Festival has entered its final day with a performance by Paris Hilton and a secret guest to close it off at 12AM UTC, about midnight in London...",
       "currencies": [
@@ -354,8 +214,8 @@
       "title": "IOTA Launches Zero Fee Smart Contracts in New Beta",
       "link": "https://cryptopotato.com/iota-launches-zero-fee-smart-contracts-in-new-beta/",
       "pubDate": "2021-10-24T14:19:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "After taking their time, IOTA has launched a smart contract beta which reportedly circumvents other platforms' flaws.",
       "currencies": [
@@ -368,46 +228,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "IDX Offers Risk-managed Exposure to Bitcoin",
-      "link": "NULL",
-      "pubDate": "2021-10-24T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Just as Bitcoin slows down its engines, Glitzkoin GTN gets even bigger investor support. Moves towards $0.55 from $…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T12:50:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "Great to see $WOZX trending on @coingecko searches today! Happy to host all our new community members on November 6…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T12:29:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
       "title": "IOTA Steps Into Ethereum and Cardano’s Territory With Launch Of Beta Smart Contracts",
       "link": "https://zycrypto.com/iota-steps-into-ethereum-and-cardanos-territory-with-launch-of-beta-smart-contracts/",
       "pubDate": "2021-10-24T11:46:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "IOTA Foundation has launched, in beta testing, new feeless, easy to program, and scalable smart contracts for the IOTA blockchain. It is a breathtaking moment for the IOTA community because the blockchain had no support for smart contracts before, but also a potentially great alternative to Ethereum and Cardano smart contracts. The smart contracts can […]",
       "currencies": [
@@ -425,8 +250,8 @@
       "title": "Australia’s regulatory report inspired by Ripple’s ‘technology-agnostic’ principle",
       "link": "https://ambcrypto.com/australias-regulatory-report-inspired-by-ripples-technology-agnostic-principle/",
       "pubDate": "2021-10-24T11:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "America and Australia: while the former’s Securities and Exchange Commission [SEC] filed a lawsuit against the blockchain company Ripple, the latter country used Ripple’s insights in a government report. The Australian Senate’s “Select Committee on Australia as a Technology and Financial Centre” report looked at diverse aspects of fintech development in order to provide regulatory […]",
       "currencies": [
@@ -442,8 +267,8 @@
       "title": "SHIB hits an all-time high as $4.6 billion inflows into Shiba Inu in a day",
       "link": "https://finbold.com/shib-hits-an-all-time-high-as-over-4-5-billion-inflows-into-shiba-inu-in-a-day/",
       "pubDate": "2021-10-24T09:55:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "Meme cryptocurrency Shiba Inu has continued to surge in value gaining by almost 40% in the last 24 hours to... Continue reading",
       "currencies": [
@@ -456,29 +281,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Paediatric Nurse Turns Crypto Trading Hobby Into Main Job, Now Has Seven-Figure Income",
-      "link": "NULL",
-      "pubDate": "2021-10-24T09:34:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Elon Musk Denies That His Associate Is Affiliated with Dogecoin Foundation",
       "link": "https://u.today/elon-musk-denies-that-his-associate-is-affiliated-with-dogecoin-foundation",
       "pubDate": "2021-10-24T09:21:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Elon Musk associate Jared Birchall wasn’t involved in the restoration of the Dogecoin foundation, according to the centibillionaire",
       "currencies": [
@@ -494,8 +301,8 @@
       "title": "Shiba Inu surges over 45% in two days to reach an all-time high",
       "link": "https://cointelegraph.com/news/shiba-inu-surges-over-45-in-two-days-to-reach-an-all-time-high",
       "pubDate": "2021-10-24T07:59:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "The latest price jump of SHIB token is attributed to an ongoing bullish trend from Oct. 15, which was followed by a week-long support at roughly $0.00002796.",
       "currencies": [
@@ -512,8 +319,8 @@
       "title": "Shiba Inu (SHIB) Hits New All-Time High, Becomes Most Traded Cryptocurrency on Coinbase",
       "link": "https://u.today/shiba-inu-shib-hits-new-all-time-high-becomes-most-traded-cryptocurrency-on-coinbase",
       "pubDate": "2021-10-24T07:54:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Shiba Inu has soared more than 40% within two days, logging a new all-time high",
       "currencies": [
@@ -529,8 +336,8 @@
       "title": "Shiba Inu Soars 35% to New ATH: $1K Invested in SHIB on Jan-1 Worth Now $500 Million",
       "link": "https://cryptopotato.com/shiba-inu-soars-35-to-new-ath-1k-invested-in-shib-on-jan-1-worth-now-500-million/",
       "pubDate": "2021-10-24T07:21:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "The price of Shiba Inu (SHIB) surged by double-digits in the past 24 hours and tapped a new all-time high.",
       "currencies": [
@@ -546,8 +353,8 @@
       "title": "Shiba Inu (SHIB) Skyrockets Surpassing $0.000036",
       "link": "https://usethebitcoin.com/shiba-inu-shib-skyrockets-surpassing-0-000036/",
       "pubDate": "2021-10-24T06:58:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Usethebitcoin",
+      "sourceKey": "usethebitcoin",
       "category": "altcoin",
       "description": "Shiba Inu (SHIB) continues to surprise the entire crypto market as the virtual currency is getting closer to the top 10 largest digital assets. In the last 7 […]",
       "currencies": [
@@ -563,8 +370,8 @@
       "title": "Amazing! $SHIB reaches A NEW ALL TIME HIGH (ATH) !!!!",
       "link": "https://twitter.com/Shibtoken/status/1452164625831661576",
       "pubDate": "2021-10-24T06:46:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@shibtoken",
+      "sourceKey": "shibtoken",
       "category": "general",
       "currencies": [
         "SHIB"
@@ -575,22 +382,11 @@
       }
     },
     {
-      "title": "RT @trailblazers: Tonight's @stormxio X Factor of the Game: @CJMcCollum",
-      "link": "NULL",
-      "pubDate": "2021-10-24T05:27:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STMX"
-      ]
-    },
-    {
       "title": "Avalanche (AVAX) Founder: Stablecoin Adoption Will Mark The Success of the Crypto Industry",
       "link": "https://cryptopotato.com/avalanche-avax-founder-stablecoin-adoption-will-mark-the-success-of-the-crypto-industry/",
       "pubDate": "2021-10-24T01:21:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "stablecoin",
       "description": "The founder of Avalanche believes that DeFi and the crypto ecosystem will truly succeed if and when stablecoins lead the global marketcap.",
       "currencies": [
@@ -601,18 +397,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Hey @TwitterSupport. Let’s say we wanted to have a Twitter account owned and operated by its community - a @Twitter…",
-      "link": "NULL",
-      "pubDate": "2021-10-24T00:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEM",
-        "XYM"
-      ]
     }
   ]
 }

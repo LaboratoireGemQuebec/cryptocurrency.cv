@@ -1,102 +1,15 @@
 {
   "date": "2024-08-02",
-  "fetchedAt": "2026-02-05T07:45:53.468Z",
-  "articleCount": 131,
+  "fetchedAt": "2026-02-05T07:48:35.673Z",
+  "articleCount": 25,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "CFTC subpoenas Ben ‘BitBoy’ Armstrong’s former company in fraud investigation, asks about activity for tokens such as BEN",
-      "link": "NULL",
-      "pubDate": "2024-08-02T21:39:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "ARB Market Plummets 14%, But New Developments Could Reverse The Trend",
-      "link": "NULL",
-      "pubDate": "2024-08-02T21:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GRT",
-        "DAO",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bancor’s Arb Fast Lane: Now the 5th Largest Gas Consumer on Sei Network!",
-      "link": "NULL",
-      "pubDate": "2024-08-02T21:15:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BNT",
-        "DAO",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Kamala Harris Reps to Meet Crypto Industry Leaders on Monday",
-      "link": "NULL",
-      "pubDate": "2024-08-02T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "IQ"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, Dogecoin Dump: 'We Should Be Back In Line By October,' Says Expert",
-      "link": "NULL",
-      "pubDate": "2024-08-02T20:17:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "HNT",
-        "MKR",
-        "AR",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "5 Altcoins You Should Watch in August 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-02T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "XRP",
-        "SOL",
-        "LTC",
-        "LINK",
-        "FLOW",
-        "AXS",
-        "CFX",
-        "STRK"
-      ]
-    },
     {
       "title": "Large-Cap Ethereum Rival Forming a Bullish Pattern That Could See It Surge by up to 63%, Says Crypto Trader",
       "link": "https://dailyhodl.com/2024/08/02/large-cap-ethereum-rival-forming-a-bullish-pattern-that-could-see-it-surge-by-up-to-63-says-crypto-trader/",
       "pubDate": "2024-08-02T19:55:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "A closely followed crypto analyst says that one prominent Ethereum (ETH) competitor is gearing up to spark a rally. In a new strategy session, crypto trader Ali Martinez tells his 68,700 followers on the social media platform X that smart contract platform Solana (SOL) could be forming a bullish pattern on its four-hour chart that […]",
       "currencies": [
@@ -111,22 +24,11 @@
       }
     },
     {
-      "title": "Bonk Price Could Rally 90%: Market Accumulation Hints at Upcoming Surge",
-      "link": "NULL",
-      "pubDate": "2024-08-02T19:43:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
       "title": "Cardano $1 ADA Price Wave Gains Momentum as Key Indicator Turns Bullish",
       "link": "https://zycrypto.com/cardano-1-ada-price-wave-gains-momentum-as-key-indicator-turns-bullish/",
       "pubDate": "2024-08-02T19:42:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Cardano (ADA) continued to exhibit relative weakness on August 1, with the 10th largest cryptocurrency by market cap experiencing a minor dip in the past 24 hours. This decline, which followed a resistance level of $0.46 about two weeks ago, was exacerbated by low volatility and broader market concerns. Notably, the crypto sector faced heightened […]",
       "currencies": [
@@ -141,8 +43,8 @@
       "title": "SOL Blockchain Outperforms ETH in Trading Volume – Top 5 SOL Tokens Ready for 10x Profit",
       "link": "https://cryptodaily.co.uk/2024/08/sol-blockchain-outperforms-eth-in-trading-volume-top-5-sol-tokens-ready-for-10x-profit",
       "pubDate": "2024-08-02T19:21:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodaily",
+      "sourceKey": "cryptodaily",
       "category": "ethereum",
       "description": "Discover the top 5 Solana tokens poised for exponential growth. Learn about Jupiter (JUP), Dogwifhat (WIF), Render (RENDER), Pyth Network (PYTH), and Bonk (BONK) and their potential to deliver up to 10x profits in the upcoming bull rally.",
       "currencies": [
@@ -160,22 +62,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency Bittensor Falls More Than 6% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-02T19:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
       "title": "Solana at a major turning point: Can SOL hold on to its gains?",
       "link": "https://ambcrypto.com/solana-at-a-major-turning-point-can-sol-hold-on-to-its-gains/",
       "pubDate": "2024-08-02T19:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Solana is testing a key support level at $160. A move in either direction will be a turning point for SOL, here's how.",
       "currencies": [
@@ -188,46 +79,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Can Lido DAO Price Hit $2 After Launching Institutional-Grade Liquid Staking?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T18:49:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LDO",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Montenegro’s court rules Terra’s Do Kwon will go back to South Korea",
-      "link": "NULL",
-      "pubDate": "2024-08-02T18:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "David Plouffe, DC insider with deep crypto ties, to join VP Harris’ campaign team: reports",
-      "link": "NULL",
-      "pubDate": "2024-08-02T18:15:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE",
-        "GAL"
-      ]
-    },
-    {
       "title": "Important Cardano Update Related to the Network’s Security: Details",
       "link": "https://cryptopotato.com/important-cardano-update-related-to-the-networks-security-details/",
       "pubDate": "2024-08-02T18:10:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "regulation",
       "description": "\"The alpha v1 release is just the beginning of the journey,\" the team stated.",
       "currencies": [
@@ -239,185 +95,11 @@
       }
     },
     {
-      "title": "Terra Classic Price Set To Reach $0.0001 But LUNC May Flip Bearish After",
-      "link": "NULL",
-      "pubDate": "2024-08-02T18:00:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Coinbase Lists MEW, MEME On Futures During Memecoin Price Dip",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MEW",
-        "MEME"
-      ]
-    },
-    {
-      "title": "Meme Coins Bome and Raboo Outperform Cardano, Will the Triumph Continue Across August?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:27:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "BOME"
-      ]
-    },
-    {
-      "title": "Genesis completes bankruptcy restructuring, begins distributing $4 billion in crypto and cash",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:11:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PEOPLE",
-        "GAL"
-      ]
-    },
-    {
-      "title": "Instagram and Facebook veteran joins crypto VC Paradigm as CMO",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:04:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Solana’s Failed Transaction Clarified By Market Expert, Here’s What To Know",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:00:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "LUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Base TVL Up $11 Million After Coinbase Q2 Earnings",
-      "link": "NULL",
-      "pubDate": "2024-08-02T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "X Suspends Memecoin Creation Account Amid Growing Interest",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:56:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "IQ"
-      ]
-    },
-    {
-      "title": "Montenegro Court Greenlights Disgraced Terra Founder Do Kwon’s Extradition to South Korea, Turns Down US",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:55:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USTC"
-      ]
-    },
-    {
-      "title": "The BITCOIN Act of 2024",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:46:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GAL"
-      ]
-    },
-    {
-      "title": "ARK Turns to Ether Staking ETF 3iQ after Coinbase Dumps",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:44:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Brian Armstrong and Michael Saylor talk Trump, 2024 election on earnings calls",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:41:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Dogecoin, Bonk, Pepe Prices in Freefall as Investors Dump for New ICO",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "PEPE",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Is a Massive Bitcoin Sell-Off Approaching? Peter Schiff Claims MicroStrategy and BlackRock Will Sell Their BTC",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:32:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
       "title": "Why Cardano Hasn't Pumped in 2024 & How to Fix It: Max Maher",
       "link": "https://dailycoin.com/why-cardano-hasnt-pumped-in-2024-how-to-fix-it-max-maher/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-08-02T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "Influencer Max Maher uncovers why Cardano has lagged in 2024 and shares a straightforward fix to turn things around.",
       "currencies": [
@@ -430,56 +112,11 @@
       }
     },
     {
-      "title": "Fomo Hour 171 - The  Bitcoin Bounce",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:01:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "JUP"
-      ]
-    },
-    {
-      "title": "This Solana Meme Coin Skyrocketed 10,000% Despite the Broader Market Correction",
-      "link": "NULL",
-      "pubDate": "2024-08-02T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Genesis is moving $1.5 billion in bitcoin and ether, likely for creditor repayments",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:43:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "PEOPLE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano Goes Toe-To-Toe With Ethereum As Whales Scoop Up 120 Million ADA",
       "link": "https://www.newsbtc.com/news/cardano/cardano-ethereum-120-million-ada/",
       "pubDate": "2024-08-02T15:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Cardano (ADA) is currently competing with Ethereum in terms of large transaction volume. This is undoubtedly a positive development for the ADA ecosystem, especially since it indicates a wave of accumulation among the token’s large holders. Cardano Matches Ethereum In Large Transaction Volume Data from the market intelligence platform IntoTheBlock shows that Cardano is witnessing a similar...",
       "currencies": [
@@ -495,59 +132,11 @@
       }
     },
     {
-      "title": "Can Ethereum Classic Price Survive $800K Liquidations?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:24:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Coinbase Overseas Expands Meme Coin Offerings: Details",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SHIB",
-        "BONK",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Fantom rebrands to Sonic Labs, focusing on new high-speed blockchain",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Monero's Price Increased More Than 4% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:02:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
       "title": "Genesis moves $1.5 billion in BTC and ETH, Bitcoin dips 2.2% in hour",
       "link": "https://cryptobriefing.com/genesis-crypto-transfer-impact/",
       "pubDate": "2024-08-02T15:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "bitcoin",
       "description": "Genesis Trading moved over $1.5 billion in Bitcoin (BTC) and Ethereum (ETH) in the past hour, according to an X post by Arkham Intelligence. As a result, BTC fell 2.2% in the last hour, while ETH registered a 2.5% correction in the same period. The transactions amounted to 16,600 BTC and 166,300 ETH, and are likely to start the in-kind repayments to...",
       "currencies": [
@@ -560,82 +149,11 @@
       }
     },
     {
-      "title": "Cryptocurrency Litecoin Falls More Than 3% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-08-02T15:01:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "This Week in Crypto: SOL Removed from Security List, WazirX Recovery, and Nvidia’s Robots",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ADA",
-        "SOL",
-        "NEAR",
-        "FIL",
-        "FET"
-      ]
-    },
-    {
-      "title": "WazirX Hack: Exchange Refutes Security Lapse Allegations On $230M Exploit",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:44:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Crypto Markets Turn Red Despite BoE’s Interest Rate Cut and Donald Trump’s Reaffirmed BTC Support: This Week’s Crypto Recap",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:41:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "KAS"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto Trader Says Dogecoin Poised To ‘Do Pretty Well’ and Test Higher Levels – But There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "PEPE",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
       "title": "Solana Surpasses Ethereum in Monthly Trading Volume Amid Strong Price Rebound",
       "link": "https://zycrypto.com/solana-surpasses-ethereum-in-monthly-trading-volume-amid-strong-price-rebound/",
       "pubDate": "2024-08-02T14:25:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "In a notable development, Solana has overtaken Ethereum in monthly trading volume on decentralized exchanges (DEXs) for the first time.",
       "currencies": [
@@ -652,8 +170,8 @@
       "title": "PayPal and Portal Launch Global PYUSD Hackathon",
       "link": "https://www.altcoinbuzz.io/cryptocurrency-news/paypal-and-portal-launch-global-pyusd-hackathon/?__cf_chl_rt_tk=8bNfrgMPYrtmaOmMJ9nD_KPHJn0pjBVcqDLguTAYoJU-1747034301-1.0.1.1-aRxK5vJoKtLgzd3coRAaRF6qGaaTkccenBZqbBWnWGw",
       "pubDate": "2024-08-02T14:23:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Altcoinbuzz",
+      "sourceKey": "altcoinbuzz",
       "category": "general",
       "description": "This five-week buildathon invites developers and builders from around the world to showcase their skills and creativity. The hackathon offers participants the chance to win a share of over 40,000 PYUSD in prizes. Global PYUSD Hackathon to Drive Innovation in the Solana Ecosystem The registration period for the hackathon is from July 31st to August […]",
       "currencies": [
@@ -666,41 +184,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Tether Drives Stablecoin Growth to 2-Year High, Market Cap Reaches $164B",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:19:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT",
-        "USDC",
-        "DAI",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "Bonk, Solana's Answer To Shiba Inu, Could See 60% More Downside, Warns Trader: 'It's Going To Be Nasty'",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:16:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "BONK",
-        "FLOKI",
-        "BRETT"
-      ]
-    },
-    {
       "title": "Solana forms ‘bullish megaphone’; Analyst sets key SOL levels to watch",
       "link": "https://finbold.com/solana-forms-bullish-megaphone-analyst-sets-key-sol-levels-to-watch/",
       "pubDate": "2024-08-02T14:15:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Although Solana (SOL) and the general crypto market are witnessing a capital outflow, an analyst has pointed out that the … Continue reading",
       "currencies": [
@@ -715,8 +203,8 @@
       "title": "Cardano (ADA) Scores Stunning Reliability Milestone",
       "link": "https://u.today/cardano-ada-scores-stunning-reliability-milestone",
       "pubDate": "2024-08-02T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Cardano (ADA) community celebrates its 2,500th day without network outages",
       "currencies": [
@@ -731,8 +219,8 @@
       "title": "Cardano Volume Soars 31% as ADA Price Hits Key Support Level",
       "link": "https://www.coinspeaker.com/cardano-volume-soars-ada-price/",
       "pubDate": "2024-08-02T14:06:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "trading",
       "description": "Coinspeaker Cardano Volume Soars 31% as ADA Price Hits Key Support Level The critical question now is whether ADA will maintain its position above this support level or fall below it. Cardano Volume Soars 31% as ADA Price Hits Key Support Level",
       "currencies": [
@@ -744,97 +232,11 @@
       }
     },
     {
-      "title": "Worldcoin Under Fire Again: Unpacking The Latest Controversy",
-      "link": "NULL",
-      "pubDate": "2024-08-02T14:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ORBS"
-      ]
-    },
-    {
-      "title": "Coinbase 500 Index Planned for Upcoming Launch",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:57:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "AMP"
-      ]
-    },
-    {
-      "title": "Raydium’s RAY Token Drops 6% After Failed Meme Coin Launch Attempt",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:53:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "RAY"
-      ]
-    },
-    {
-      "title": "CoinDesk 20 Performance Update: Index Gains 1.2% With BCH and ETC Leading",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:51:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BCH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Cathie Wood’s ARK Invest Offloads ARKB and COIN Holdings",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Over 4,000 Meme Coins Launched Through New X-Based Platform",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "IQ"
-      ]
-    },
-    {
-      "title": "Privacy Coin Monero (XMR) Outperforms Market, Up 4%: $170 Soon?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:40:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XMR",
-        "ICP",
-        "ZEC"
-      ]
-    },
-    {
       "title": "Trading Volume On Cardano Records A Staggering 31% Increase In Volume",
       "link": "https://coinpedia.org/crypto-live-news/trading-volume-on-cardano-records-a-staggering-31-increase-in-volume/",
       "pubDate": "2024-08-02T13:34:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "altcoin",
       "description": "The post Trading Volume On Cardano Records A Staggering 31% Increase In Volume appeared first on Coinpedia Fintech News The trading volume of derivatives on Cardano (ADA) has skyrocketed recently, recording a staggering 31% increase in the last 24 hours. The data reveals a turnover of $457.71 million in Cardano perpetual futures during the period under review. The trading volume on the spot markets for Cardano has also soared – 20% in 24 hours, …",
       "currencies": [
@@ -849,8 +251,8 @@
       "title": "Solana surpassed Ethereum on DEX volumes in July",
       "link": "https://www.cryptopolitan.com/solana-surpassed-ethereum-dex-volumes/",
       "pubDate": "2024-08-02T13:23:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "Solana is showing a trend of growing DEX activity, mostly based on Raydium and meme tokens. Recently, Solana activity surpassed Ethereum’s DEX performance in terms of fees and active users.",
       "currencies": [
@@ -863,49 +265,11 @@
       }
     },
     {
-      "title": "HashKey OTC Secures Major Payment Institution License in Singapore",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:21:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Polkadot Price Analysis: Can DOT Stem Its Prolonged Decline?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:15:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Crypto Price Analysis 8-2 BTC, ETH, SOL, DOGE, BCH, RNDR, SEI",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:10:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "BCH",
-        "SEI"
-      ]
-    },
-    {
       "title": "Cryptocurrencies Price Prediction: Cardano, Shiba & Bitcoin – European Wrap 2 August",
       "link": "https://www.fxstreet.com/cryptocurrencies/news/cryptocurrencies-price-prediction-cardano-shiba-bitcoin-european-wrap-2-august-202408021300",
       "pubDate": "2024-08-02T13:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "FXStreet",
+      "sourceKey": "fxstreet",
       "category": "bitcoin",
       "description": "Cardano (ADA) developer Input Output Hong Kong (IOHK) dropped a video digesting the mid-July DDoS attack on the network with experts.",
       "currencies": [
@@ -918,136 +282,11 @@
       }
     },
     {
-      "title": "Bybit Listing Expands Crypto Offerings with 15 New Assets",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAIL",
-        "WELL",
-        "TAI",
-        "PIRATE",
-        "ZKF"
-      ]
-    },
-    {
-      "title": "The Big Three – Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) Or Could A Rising Star Poised Take the Throne?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 4,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Reduce Holdings and Harm Users: OKX Founder Cites Example of AEVO Tanking 90%",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:58:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AEVO"
-      ]
-    },
-    {
-      "title": "ARK buys $21M of 3iQ Ether staking ETF, dumps $14.6M in Coinbase",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:54:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Fantom Becomes Sonic Labs, Introducing New Focus on DApps and Governance",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:47:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "DAG"
-      ]
-    },
-    {
-      "title": "Injective Launches Altaris Upgrade on Mainnet",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:46:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "INJ"
-      ]
-    },
-    {
-      "title": "T-Mobile censors Solana DEX Jupiter from its DNS",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:36:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "T",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Whale Transfers $4.2 Million PEPE To Binance – Selling Pressure Ahead?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:30:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BCH",
-        "GRT",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "DeFi: Solana surpasses Ethereum in volumes",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:29:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "In their respective layer-1s in July, the overtaking occurred thanks to the DEX and memecoin.",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "DEFI"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Great News for CYBRO, ADA and XRP – Global Crypto Adoption is Finally on the Rise",
       "link": "https://coinpedia.org/sponsored/cybro-ada-xrp-global-crypto-adoption-finally-on-rise/",
       "pubDate": "2024-08-02T12:10:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpedia",
+      "sourceKey": "coinpedia",
       "category": "altcoin",
       "description": "The global crypto market shows promising signs of growth, with key players like CYBRO, ADA, and XRP poised for significant developments. These cryptocurrencies are attracting attention as adoption rates climb worldwide. This article delves into the factors driving their momentum and examines why these particular coins might be ready for a surge. Discover which digital …",
       "currencies": [
@@ -1060,98 +299,11 @@
       }
     },
     {
-      "title": "Whale Trader Banks Eye-Popping $16M Profit On Two Popular Meme Coins Not Named Dogecoin Or Shiba Inu",
-      "link": "NULL",
-      "pubDate": "2024-08-02T12:06:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ETH",
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Chevron (CVX) Reports Q2, $2.55 EPS Falls Short of Expectations",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:55:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CVX",
-        "EPS"
-      ]
-    },
-    {
-      "title": "Kujira Foundation's Tokens Stung by Its Own Leveraged Positions as Bets Backfire",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:52:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Aevo Token’s 90% Decline Sparks Critique From OKX Founder Star Xu",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:38:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Exxon Mobil (XOM) Reports Q2: Beats Forecast with $2.14 EPS, $9.2 B Revenue",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:38:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Ditobanx and ICP Hub Mexico Launch Initiative Promoting Cryptocurrency Use at Universities",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:20:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "Rollblock early investors gain 75% in July. Solana meme coins BONK and WIF lose steam.",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:15:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
       "title": "Cardano Skyrockets 31% in Volume as ADA Price Finds Vital Support",
       "link": "https://u.today/cardano-skyrockets-31-in-volume-as-ada-price-finds-vital-support",
       "pubDate": "2024-08-02T11:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano's ADA trading volume jumps 31%, finding key support that could trigger price rally",
       "currencies": [
@@ -1163,52 +315,11 @@
       }
     },
     {
-      "title": "Circle’s Euro Stablecoin EURC Now Live on Base – Here’s How You Can Get In!",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:01:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "EURC"
-      ]
-    },
-    {
-      "title": "Polygon Price Risks Plunge With 90 Million MATIC Tokens Selling At $0.5",
-      "link": "NULL",
-      "pubDate": "2024-08-02T11:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "Kaspa Shines as Top Coin, Pepe Rival Hits $6.8 Million Milestone",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:52:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KAS",
-        "PEPE"
-      ]
-    },
-    {
       "title": "Cardano community digests DDoS attack on the network, ADA hovers below $0.40",
       "link": "https://www.fxstreet.com/cryptocurrencies/news/cardano-community-digests-ddos-attack-on-the-network-ada-hovers-below-040-202408021051",
       "pubDate": "2024-08-02T10:51:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "FXStreet",
+      "sourceKey": "fxstreet",
       "category": "altcoin",
       "description": "Cardano (ADA) developer Input Output Hong Kong (IOHK) dropped a video digesting the mid-July DDoS attack on the network with experts.",
       "currencies": [
@@ -1220,60 +331,11 @@
       }
     },
     {
-      "title": "Injective Launches Altaris: Major Upgrade to Mainnet",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:51:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "August Top Crypto Picks For Huge Gains: Lido DAO, Jupiter and DTX Exchange",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:48:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LDO",
-        "DAO",
-        "JUP"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Listing Date Out with Major Crypto Exchanges",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Mt Gox Bitcoin Creditor Plans To File Lawsuit But There’s A Catch",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:40:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OP"
-      ]
-    },
-    {
       "title": "Solana Ecosystem Records High Performance from DApps",
       "link": "https://www.coinspeaker.com/solana-high-performance-dapps/",
       "pubDate": "2024-08-02T10:26:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "altcoin",
       "description": "Coinspeaker Solana Ecosystem Records High Performance from DApps While Jito barely comes close to Raydium in terms of generated fees, this DApp leads the Maximal Extractable Value (MEV) niche on Solana. Solana Ecosystem Records High Performance from DApps",
       "currencies": [
@@ -1287,62 +349,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Solana DEX Raydium Sees RAY Drop 5% After Twitter Meme Coin Misfire",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:19:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "RAY"
-      ]
-    },
-    {
-      "title": "Starknet Discord Hacked! Are You Compromised? Find out Here",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:17:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "STRK"
-      ]
-    },
-    {
-      "title": "Ethena Labs’ USDe launches as margin collateral on Bybit with 20% APR",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:10:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ARK Invest Sells $14.8M of Coinbase Shares Ahead Of Exchange’s Earnings Report",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:08:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Trouble ahead for XRP? Assessing Peter Brandt’s grim price prediction",
       "link": "https://ambcrypto.com/trouble-ahead-for-xrp-assessing-peter-brandts-grim-price-prediction/",
       "pubDate": "2024-08-02T10:00:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "trading",
       "description": "Peter Brandt has reported a bearish outlook on XRP as the asset falls from above $0.64 to $0.56.",
       "currencies": [
@@ -1355,213 +366,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "US Spot Ethereum ETFs Records Lowest Net Inflows Since Launch",
-      "link": "NULL",
-      "pubDate": "2024-08-02T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "Binance Futures Overhauls Pepe Coin, Solana & Other Crypto Leverage Tiers",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:52:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "PEPE",
-        "TAO"
-      ]
-    },
-    {
-      "title": "AIOZ Price Breakout Run Eyes A 2x Surge If Bitcoin Regains $68K",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:43:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FET",
-        "AIOZ",
-        "PHB"
-      ]
-    },
-    {
-      "title": "US Senator Says VP Harris Crypto Campaign Is ‘Burdened By What Has Been’",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Cardano (ADA) Price Reclaiming $0.40 Would Save $3 Billion Worth of Profits",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "description": "Cardano’s (ADA) price has largely noted whiplash since the early June crash. While there have been moments of recovery, the general trend has been bearish. To make this worse, nearly $3.3 billion worth of profits are on the line, but ADA investors’ optimism could save them. Cardano Investors Hope for Recovery Cardano’s price is exhibiting signs of further drawdown, with the...",
-      "currencies": [
-        "ADA",
-        "SOL"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 4
-      }
-    },
-    {
-      "title": "GRT Market Signals 12% Drop: Is A Turnaround Possible?",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:20:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UNI",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Bitflow integrates swap function into Leather Wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:17:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "ARK Invest Sold $14.8M of Coinbase Shares Thursday Ahead of the Exchange's Earnings Report",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Fantom Rebrands as Sonic Labs, Shifts Focus and Launches New Token",
-      "link": "NULL",
-      "pubDate": "2024-08-02T09:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Jupiter Price to Surpass $1.5 Amid $2 Billion Token Burn",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:36:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JUP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Volatility Index Soars Amid Geopolitical Tension",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:26:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDX"
-      ]
-    },
-    {
-      "title": "Top Memecoins For Massive Upside This Crypto Bull Run!",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:23:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "WIF",
-        "BOME"
-      ]
-    },
-    {
-      "title": "Sandbox Partners with LayerZero to Expand $SAND to Base, Polygon, and BNB",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:23:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BNB",
-        "MATIC",
-        "SAND"
-      ]
-    },
-    {
-      "title": "Notcoin Price Analysis: Is NOT Price Adding Up A Zero? Here’s What You Need to Know",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:14:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "ADA",
-        "TON",
-        "MNT",
-        "NOT"
-      ]
-    },
-    {
-      "title": "How Zoomex Exchange Is Revolutionizing Crypto Trading and Why You Should Care",
-      "link": "NULL",
-      "pubDate": "2024-08-02T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "USDT",
-        "CHZ"
-      ]
-    },
-    {
       "title": "Solana beats Ethereum in trading volume for the first time ever",
       "link": "https://www.cryptopolitan.com/solana-beats-ethereum-in-trading-volume/",
       "pubDate": "2024-08-02T07:18:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "Solana has beaten Ethereum in monthly DEX trading volume for the first time ever. In July, SOL hit a whopping $55.876 billion in trading volume, while Ethereum trailed behind with $53.868 billion. This is a big deal, especially considering Ethereum has always been the top dog in this space. But other chains are making waves […]",
       "currencies": [
@@ -1578,8 +387,8 @@
       "title": "Mt. Gox Nears End of Bitcoin Repayment",
       "link": "https://coinpaprika.com/news/mt-gox-nears-end-of-bitcoin-repayment/",
       "pubDate": "2024-08-02T06:59:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Mt. Gox is close to finishing its Bitcoin repayment plan after transferring $2 billion in BTC, significantly reducing its remaining debt to creditors.",
       "currencies": [
@@ -1592,59 +401,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Traders Rush To The Revenue Sharing Model of DTX Exchange (DTX) Amid Litecoin and Bitcoin Cash Prices Slip",
-      "link": "NULL",
-      "pubDate": "2024-08-02T06:53:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "BIS, Bank of England Introduce a New Tool to  Track Stablecoin Reserves",
-      "link": "NULL",
-      "pubDate": "2024-08-02T06:39:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "USDT",
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Ethereum ETF Starts The Month Of August With A Positive Inflow, Adds $26.7 Million!",
-      "link": "NULL",
-      "pubDate": "2024-08-02T06:26:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ETHW"
-      ]
-    },
-    {
-      "title": "Mog Coin (MOG) & dogwifhat (WIF) Prices Plunge Hard: Yet May Rebound Hard Quickly Once Bearish Heat Fades Off",
-      "link": "NULL",
-      "pubDate": "2024-08-02T06:22:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WIF",
-        "MOG"
-      ]
-    },
-    {
       "title": "Cardano's IOHK Launches Alpha v1 Partner Chains Toolkit",
       "link": "https://coinpaper.com/5026/cardano-s-iohk-launches-alpha-v1-partner-chains-toolkit",
       "pubDate": "2024-08-02T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaper",
+      "sourceKey": "coinpaper",
       "category": "altcoin",
       "description": "Cardano's developer IOHK has released the alpha v1 of its partner chains toolkit, enabling blockchain builders to enhance security and governance by leveraging Cardano's Stake Pool Operators (SPOs).",
       "currencies": [
@@ -1656,142 +417,11 @@
       }
     },
     {
-      "title": "BIP-02-08-2024: Tailstorm Subnet for Bitcoin (BTC)",
-      "link": "NULL",
-      "pubDate": "2024-08-02T05:59:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT",
-        "SOBTC"
-      ]
-    },
-    {
-      "title": "XRP Ledger Hosts OpenEden’s Tokenized Treasury Bills with Ripple’s $10 Million Investment",
-      "link": "NULL",
-      "pubDate": "2024-08-02T05:36:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T",
-        "ARB",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "98.6% of memecoins on pump.fun fail to even launch",
-      "link": "NULL",
-      "pubDate": "2024-08-02T05:34:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RAY"
-      ]
-    },
-    {
-      "title": "Jupiter Proposes Major Reduction in JUP Token Supply",
-      "link": "NULL",
-      "pubDate": "2024-08-02T05:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "Ghana Launches Centralized Online Foreign Exchange Trading Platform",
-      "link": "NULL",
-      "pubDate": "2024-08-02T04:05:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "FX"
-      ]
-    },
-    {
-      "title": "XRP Price Slides 10% Amid Rising On-Chain Activity And Whale Transactions; Key Supports In Focus",
-      "link": "NULL",
-      "pubDate": "2024-08-02T04:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "US Loses Out To South Korea Over Extradition Of Terraform Labs' Do Kwon",
-      "link": "NULL",
-      "pubDate": "2024-08-02T03:47:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Layer 2 Starknet Discord Server Has Been Hacked, Users Are Now Being Warned",
-      "link": "NULL",
-      "pubDate": "2024-08-02T03:27:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "STRK"
-      ]
-    },
-    {
-      "title": "GhostMarket adds support for Neo X to the cross-chain NFT marketplace",
-      "link": "NULL",
-      "pubDate": "2024-08-02T02:29:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "XRP Ledger (XRPL) Becomes Home to Tokenized U.S. Treasury Bills Thanks to Tokenization Platform OpenEden",
-      "link": "NULL",
-      "pubDate": "2024-08-02T00:39:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "T"
-      ]
-    },
-    {
-      "title": "Bitcoin fiat pair performance highlights economic and political challenges",
-      "link": "NULL",
-      "pubDate": "2024-08-02T00:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
       "title": "Solana on the Verge of a Breakout, Says Real Vision’s Jamie Coutts – Here’s His Outlook",
       "link": "https://dailyhodl.com/2024/08/01/solana-on-the-verge-of-a-breakout-says-real-visions-jamie-coutts-heres-his-outlook/",
       "pubDate": "2024-08-02T00:00:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "A closely followed crypto analyst believes that one Ethereum (ETH) competitor is gearing up for a massive breakout. Jamie Coutts, the chief crypto analyst at Real Vision, says that Solana (SOL) is printing a bullish pattern against Bitcoin (BTC) based on the simple moving average (SMA) crossover on the daily chart. “Solana’s relative strength is […]",
       "currencies": [

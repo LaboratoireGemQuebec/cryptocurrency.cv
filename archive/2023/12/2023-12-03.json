@@ -1,15 +1,15 @@
 {
   "date": "2023-12-03",
-  "fetchedAt": "2026-02-05T07:45:52.037Z",
-  "articleCount": 63,
+  "fetchedAt": "2026-02-05T07:48:35.518Z",
+  "articleCount": 14,
   "source": "historical-import",
   "articles": [
     {
       "title": "Bitcoin Hits $40,000 for First Time Since April 2022",
       "link": "https://decrypt.co/208439/bitcoin-hits-40000-first-time-since-april-2022-ethereum-tops-2200",
       "pubDate": "2023-12-03T22:39:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "Bitcoin is back above $40,000, continuing its recent rise amid anticipation over a potential spot ETF approval in the U.S. And ETH is up too.",
       "currencies": [
@@ -26,8 +26,8 @@
       "title": "Bitcoin Gearing Up To Soar As Indicator Signals Strong Momentum for BTC, According to Analyst Henrik Zeberg",
       "link": "https://dailyhodl.com/2023/12/03/bitcoin-gearing-up-to-soar-as-indicator-signals-strong-momentum-for-btc-according-to-analyst-henrik-zeberg/",
       "pubDate": "2023-12-03T20:55:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "bitcoin",
       "description": "A widely followed analyst says that Bitcoin (BTC) is setting the stage up to skyrocket as one key indicator points toward strong momentum for the king crypto asset. In a new thread, macroeconomist and crypto strategist Henrik Zeberg tells his 121,200 followers on the social media platform X that BTC’s weekly relative strength index (RSI) […] The post Bitcoin Gearing Up To Soar As Indicator Signals Strong Momentum for BTC, According to Analyst Henrik Zeberg appeared first on The Daily Hodl.",
       "currencies": [
@@ -43,87 +43,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Lido Achieves 9 Million Ethereum Milestone as Rocket Pool Surpasses 1 Million in Defi’s Booming Staking Sector",
-      "link": "NULL",
-      "pubDate": "2023-12-03T20:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
-      "title": "Dogecoin Price Rallies To 4-Month Highs – Can Bulls Take It Above $0.3?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T20:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "5 Open-source and Useful Apps You Can Support with Kivach — Episode III",
-      "link": "NULL",
-      "pubDate": "2023-12-03T20:11:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WBTC",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "This Week's Performance of the Top 10 Cryptocurrencies",
-      "link": "NULL",
-      "pubDate": "2023-12-03T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ADA",
-        "SOL",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Tesla’s Cybertruck Page Embeds Dogecoin Mentions, Prompting Payment Speculation",
-      "link": "NULL",
-      "pubDate": "2023-12-03T20:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Is HODLing DOGE a better option than other meme coins?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T19:30:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "DOGE"
-      ]
-    },
-    {
       "title": "Cardano Influencer ‘ADA Whale’ Shares His 10-Point Analysis on Crypto’s Evolution and Impact",
       "link": "https://www.cryptoglobe.com/latest/2023/12/cardano-influencer-ada-whale-shares-his-10-point-analysis-on-cryptos-evolution-and-impact/",
       "pubDate": "2023-12-03T19:20:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "On 3 December 2023, the pseudonymous Cardano influencer “ADA Whale” shared a detailed post on social media platform X, outlining their personal belief system about cryptocurrency in ten succinct points. 1. The Essence of Crypto as Currency: ADA Whale begins by stating that cryptocurrency was always about creating digital coins, which gain real value based […]",
       "currencies": [
@@ -135,74 +59,11 @@
       }
     },
     {
-      "title": "Crypto Headlines of The Week: Bitcoin ETF, Binance US, AI Sparks Optimism",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:48:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDC"
-      ]
-    },
-    {
-      "title": "Chainlink (LINK) in High Demand: Whales Buy $50 Million",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:40:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Value Locked in Defi Nears $50B With 34.40% Surge in 46 Days, Led by Top Protocols",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 03 Dec: Surges Amid Optimism and Regulatory Shifts",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "SOL",
-        "SHIB",
-        "LEO"
-      ]
-    },
-    {
-      "title": "How To Choose The Best Gaming Platform For Entertainment",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "IMX"
-      ]
-    },
-    {
       "title": "$ADA: Founder of Crypto Capital Venture Foresees Cardano’s First Ecosystem Bull Run, Drawing Parallels to Ethereum’s Growth",
       "link": "https://www.cryptoglobe.com/latest/2023/12/ada-founder-of-crypto-capital-venture-foresees-cardanos-first-ecosystem-bull-run-drawing-parallels-to-ethereums-growth/",
       "pubDate": "2023-12-03T18:08:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "Yesterday, Dan Gambardello, the founder of Crypto Capital Venture, shared his insights on social media platform X (formerly known as Twitter), focusing on the potential for a historic bull run in the Cardano ecosystem. His analysis draws a parallel between Cardano’s current state and Ethereum’s position before its significant bull run, suggesting a similar trajectory […]",
       "currencies": [
@@ -218,8 +79,8 @@
       "title": "Solana Founder Doesn’t Want Network To Be Called ‘Ethereum Killer’ – Here’s Why",
       "link": "https://bitcoinist.com/solana-founder-doesnt-want-network-to-be-called-ethereum-killer-heres-why/",
       "pubDate": "2023-12-03T18:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Solana’s creation was designed to work with all the functionalities of Ethereum and improve upon the issues that arose in the network’s early days. The blockchain has since grown in popularity in the past few years, with many crypto participants touting Solana as the one to dethrone Ethereum in the altcoin market. However, it seems […]",
       "currencies": [
@@ -234,84 +95,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "SHIB Price Analysis for December 3",
-      "link": "NULL",
-      "pubDate": "2023-12-03T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Shibarium Records 12 Million Transactions in 2 Days, Increasing Shiba Inu’s Burn Rate by 650%",
-      "link": "NULL",
-      "pubDate": "2023-12-03T17:56:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "What's behind SHIB, BONE's price pump?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T17:30:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Web3 Watch: Binance seems likely to retain its sports partnerships despite DOJ actions",
-      "link": "NULL",
-      "pubDate": "2023-12-03T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "SOL"
-      ]
-    },
-    {
-      "title": "Shiba Inu Price Prediction As Buyers End 3-Week Correction to Chase $0.00001",
-      "link": "NULL",
-      "pubDate": "2023-12-03T16:17:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Tether’s New CEO Charts Ambitious Company Growth Path",
-      "link": "NULL",
-      "pubDate": "2023-12-03T16:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT"
-      ]
-    },
-    {
       "title": "When Is The Next Crypto Bull Run?",
       "link": "https://www.newsbtc.com/crypto/when-is-the-next-crypto-bull-run/",
       "pubDate": "2023-12-03T16:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "The next crypto bull run, a highly anticipated event in the financial world, promises significant gains for investors according to many analysts and experts. This guide explores the dynamics of such crypto bull runs, their historical impact, and the potential triggers that could ignite the next bullrun. With a focus on Bitcoin’s influential role and expert insights into the possibilities for...",
       "currencies": [
@@ -328,182 +116,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Whales Give Chainlink Boost After Accumulating $50,000,000 More in LINK: Santiment",
-      "link": "NULL",
-      "pubDate": "2023-12-03T15:30:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "LINK"
-      ]
-    },
-    {
-      "title": "AVAX, GMX holders in profit - but there's more to the story",
-      "link": "NULL",
-      "pubDate": "2023-12-03T15:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "ETH Whale’s Purchase Ignites Speculation of $2.3K Target",
-      "link": "NULL",
-      "pubDate": "2023-12-03T15:13:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "Every Game on Ethereum Scaler Immutable in the Epic Games Store",
-      "link": "NULL",
-      "pubDate": "2023-12-03T15:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Shiba Inu Sets Fire to Over Half Billion SHIB, Weekly Burn Rate Up 961%",
-      "link": "NULL",
-      "pubDate": "2023-12-03T14:31:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "“A Cardano Explosion Is Setting Up,” According to Analyst",
-      "link": "NULL",
-      "pubDate": "2023-12-03T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ChatGPT thinks $8 is a realistic target for XRP in 2024",
-      "link": "NULL",
-      "pubDate": "2023-12-03T14:17:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "What are ChatGPT's odds for Cardano hitting $20 in 2024?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T14:08:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA"
-      ]
-    },
-    {
-      "title": "Bitcoin Triggers Over $110 Million in Liquidations After Bullish Breakout",
-      "link": "NULL",
-      "pubDate": "2023-12-03T14:05:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Terra Classic ($LUNC) Price Climbs 30%, Surpassing $1 Billion in MarketCap, What’s Next?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T13:51:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "DOGE Price Analysis for December 3",
-      "link": "NULL",
-      "pubDate": "2023-12-03T13:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Why ChatGPT's 2024 price prediction for SHIB might excite you",
-      "link": "NULL",
-      "pubDate": "2023-12-03T13:42:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Cardano Not Listed in Top of Chains More Decentralized Than Ethereum: Here's Why",
-      "link": "NULL",
-      "pubDate": "2023-12-03T13:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ADA"
-      ]
-    },
-    {
-      "title": "Top Trader Bullish on Two Bitcoin Ecosystem Altcoins, Including One ‘Obvious Long’",
-      "link": "NULL",
-      "pubDate": "2023-12-03T12:45:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW",
-        "STX"
-      ]
-    },
-    {
       "title": "Micheal Saylor Sees over $1.5 Billion Profit on his BTC Investments",
       "link": "https://coinpaprika.com/news/micheal-saylor-sees-over-1-5-billion",
       "pubDate": "2023-12-03T12:40:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Michael Saylor Sees Over $1.5 Billion Profit on His BTC Investments",
       "currencies": [
@@ -519,8 +136,8 @@
       "title": "XRP might rally 120% in 6 months if this correction scenario plays out",
       "link": "https://finbold.com/xrp-might-rally-120-in-6-months-if-this-correction-scenario-plays-out/",
       "pubDate": "2023-12-03T12:08:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "The value of XRP remains a focal point in the crypto space, fueled by expectations of an impending rally following … Continued",
       "currencies": [
@@ -533,38 +150,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BONE Price Up 12+% In 1 Week As Shibarium Transactions Surge",
-      "link": "NULL",
-      "pubDate": "2023-12-03T12:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB"
-      ]
-    },
-    {
-      "title": "This Cardano AI Token Soars 93% in 2 Days, but There's Catch",
-      "link": "NULL",
-      "pubDate": "2023-12-03T11:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bullish for Cardano (ADA)? Latest Development Report Shows Promising Network Data",
       "link": "https://cryptopotato.com/bullish-for-cardano-ada-latest-development-report-shows-promising-network-data/",
       "pubDate": "2023-12-03T11:34:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "trading",
       "description": "The report provides key statistics within Cardano network, including the launch of 150 projects and the ongoing development of 1,304 projects and 9.1 million native tokens created",
       "currencies": [
@@ -579,8 +169,8 @@
       "title": "Google Bard picks 5 cryptocurrencies to buy in December",
       "link": "https://finbold.com/chatgpt-picks-5-stocks-to-buy-for-december-2/",
       "pubDate": "2023-12-03T11:27:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "After Google released its advanced chatbot, which garnered attention for its artificial intelligence (AI) capabilities, the technology has rapidly showcased … Continued",
       "currencies": [
@@ -595,24 +185,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Highest Crypto Gainers of the Week; LUNC, IOTA, ORDI Price Analysis",
-      "link": "NULL",
-      "pubDate": "2023-12-03T11:25:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ORDI",
-        "IOTA"
-      ]
-    },
-    {
       "title": "Michael Saylor Nets $1.5B Bitcoin Profit Amid BTC $39k Rally",
       "link": "https://coinedition.com/michael-saylor-nets-1-5b-bitcoin-profit-amid-btc-39k-rally/",
       "pubDate": "2023-12-03T11:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "bitcoin",
       "description": "Data has shown that the renowned Bitcoin investor Michael Saylor, who doubles as the chairman of MicroStrategy, now sits on over a $1.5 billion profit in his Bitcoin investments. According to statistics from Saylortracker, a portal that tracks Saylor’s routine Bitcoin investments, the MicroStrategy chairman has invested $5,325400,000 to obtain 174,530 BTC since September 2020. […]",
       "currencies": [
@@ -625,111 +202,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Weekly Cryptocurrency Analysis: Altcoins Continue Their Upward Momentum After A Small Retracement",
-      "link": "NULL",
-      "pubDate": "2023-12-03T11:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "LINK Price Climbs Above $16 Again – What’s Behind The Latest Surge?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T10:50:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Redefining Finance: A Cryptocurrency Set to Surpass Terra Classic (LUNC) and Uniswap (UNI)",
-      "link": "NULL",
-      "pubDate": "2023-12-03T10:37:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "XRP Soaring 17% Could Be a Precursor to a Bullish Breakout",
-      "link": "NULL",
-      "pubDate": "2023-12-03T10:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Breakout Rallies in Sight for Ethereum (ETH) and Chainlink (LINK), According to Analyst – Here’s His Forecast",
-      "link": "NULL",
-      "pubDate": "2023-12-03T10:15:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Wormhole raises record $225M in fundraising; Filecoin (FIL) and InQubeta (QUBE) set sights on big leaps",
-      "link": "NULL",
-      "pubDate": "2023-12-03T10:03:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Dogecoin Enters The Overbought Zone And Targets The High Of $0.10",
-      "link": "NULL",
-      "pubDate": "2023-12-03T09:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "BTC Leads Other Top Cryptos in Relative Pullback From Yearly High",
-      "link": "NULL",
-      "pubDate": "2023-12-03T09:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Bitcoin Poised for Explosive Rally, Analyst Predicts Imminent Surge to $45,000",
       "link": "https://www.cryptoglobe.com/latest/2023/12/bitcoin-poised-for-explosive-rally-analyst-predict-imminent-surge-to-45000/",
       "pubDate": "2023-12-03T09:24:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "bitcoin",
       "description": "A prominent trader renowned for accurately predicting the peak of Bitcoin’s 2021 bull market has now projected a significant upswing for Bitcoin, suggesting that even the most steadfast bears might reconsider their stance. This analyst, known as Pentoshi, said on social platform X that the U.S. Securities and Exchange Commission (SEC) is close to deciding […]",
       "currencies": [
@@ -742,42 +219,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ripple v. SEC Lawsuit: Lawyer Questions SEC’s Ethics",
-      "link": "NULL",
-      "pubDate": "2023-12-03T08:50:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "Here Are Four Crypto Assets Poised For A Major Price Explosion – Analyst",
-      "link": "NULL",
-      "pubDate": "2023-12-03T08:49:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "LINK",
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "SEC Grapples With Judicial Criticism in Ripple Case: Inconsistencies Exposed",
       "link": "https://beincrypto.com/ripple-sec-lawsuit-inconsistencies/",
       "pubDate": "2023-12-03T08:47:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "Ripple’s Chief Legal Officer, Stuart Alderoty, has highlighted concerning trends in the US Securities and Exchange Commission’s (SEC) approach toward defending actions taken against cryptocurrency firms. Alderoty emphasized instances where different courts have criticized the regulatory body’s actions. Court Finds Inconsistencies in SEC vs. Ripple Lawsuit In the SEC case against...",
       "currencies": [
@@ -791,38 +237,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Why ATOM needs to make $10 a support level",
-      "link": "NULL",
-      "pubDate": "2023-12-03T07:30:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Silo Finance’s Response to Chainlink Price Feed Anomaly on Arbitrum",
-      "link": "NULL",
-      "pubDate": "2023-12-03T06:33:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
       "title": "Solana Founder Anatoly Yakovenko Advocates for Blockchain Harmony, Rejects “ETH Killer” Label",
       "link": "https://www.cryptopolitan.com/solana-founder-rejects-eth-killer-label/",
       "pubDate": "2023-12-03T06:03:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "ethereum",
       "description": "In a recent development that has caught the attention of the cryptocurrency community, Solana founder Anatoly Yakovenko has taken a firm stand against the divisive narrative that pits emerging blockchain protocols against Ethereum, often labelled as “ETH killers.” The term has been frequently used in the crypto space to describe newer blockchain technologies like Solana ... Read more",
       "currencies": [
@@ -832,44 +251,6 @@
         "positive": 5,
         "negative": 4
       }
-    },
-    {
-      "title": "Chainlink outperforms its peers once again - here's how",
-      "link": "NULL",
-      "pubDate": "2023-12-03T03:30:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Avalanche exhibits high network growth - Can it boost AVAX?",
-      "link": "NULL",
-      "pubDate": "2023-12-03T01:30:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Native Asset for Internet of Things Project Jumps by 31% This Week Amid Launch of $100,000,000 Ecosystem Foundation",
-      "link": "NULL",
-      "pubDate": "2023-12-03T01:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IOTA"
-      ]
     }
   ]
 }

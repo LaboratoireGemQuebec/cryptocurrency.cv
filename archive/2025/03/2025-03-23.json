@@ -1,134 +1,15 @@
 {
   "date": "2025-03-23",
-  "fetchedAt": "2026-02-05T07:45:53.698Z",
-  "articleCount": 74,
+  "fetchedAt": "2026-02-05T07:48:35.700Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Solana Adoption Soars To ATH, Implication For SOL Price",
-      "link": "NULL",
-      "pubDate": "2025-03-23T23:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "ATH"
-      ]
-    },
-    {
-      "title": "nDapp and GasBot updated with new features and enhancements",
-      "link": "NULL",
-      "pubDate": "2025-03-23T23:39:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "USDC Treasury Mints $250 Million on Solana Blockchain",
-      "link": "NULL",
-      "pubDate": "2025-03-23T23:33:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDC",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Breaking down BNB Chain’s latest jump: 5.6% TVL rise and $2.61B DEX surge",
-      "link": "NULL",
-      "pubDate": "2025-03-23T23:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Ripple USD (RLUSD) Stablecoin Hit Landmark Supply Milestone",
-      "link": "NULL",
-      "pubDate": "2025-03-23T22:38:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Chainlink Lead Top DeFi Projects—Does THIS Mean $13 is the Bottom?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T21:32:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "Circle Mints $250 Million USDC at Treasury, Totaling 249,973,750 USD on March 23, 2025",
-      "link": "NULL",
-      "pubDate": "2025-03-23T21:05:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Tron Considering Bitcoin Inspired Halving — Will TRX go Above $0.4 in the Next Bull Phase?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T21:05:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Curve [CRV] eyes $0.55 resistance: Why a 12% rise could be on the cards",
-      "link": "NULL",
-      "pubDate": "2025-03-23T21:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "Tron (TRX) Revival in View as TRX Goes Live on Solana",
-      "link": "NULL",
-      "pubDate": "2025-03-23T20:38:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "TRX"
-      ]
-    },
     {
       "title": "Michael Saylor hints at new Bitcoin purchase after $711M capital raise",
       "link": "https://www.cryptopolitan.com/michael-saylor-hints-at-new-bitcoin-purchase/",
       "pubDate": "2025-03-23T20:05:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "bitcoin",
       "description": "Strategy co-founder Michael Saylor has hinted at another Bitcoin (BTC) purchase on his Sunday X post.",
       "currencies": [
@@ -141,86 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is Chainlink [LINK] ready for a bullish breakout? Insights revealed",
-      "link": "NULL",
-      "pubDate": "2025-03-23T20:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LINK"
-      ]
-    },
-    {
-      "title": "German Regulator BaFin Blocks Ethena’s USDe Over MiCAR Violations",
-      "link": "NULL",
-      "pubDate": "2025-03-23T20:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA",
-        "IP"
-      ]
-    },
-    {
-      "title": "This Week in Crypto Games: Jurassic World in 'The Sandbox', Telegram Gets 'Not Games'",
-      "link": "NULL",
-      "pubDate": "2025-03-23T19:01:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – CAKE, HYPE, PI, JASMY",
-      "link": "NULL",
-      "pubDate": "2025-03-23T19:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CAKE",
-        "JASMY",
-        "PI",
-        "HYPE"
-      ]
-    },
-    {
-      "title": "Jupiter Launches $9.32 Million Buyback of JUP Tokens",
-      "link": "NULL",
-      "pubDate": "2025-03-23T18:59:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "DEX Platform Pancakeswap Dethrones Uniswap in Weekly Volume Race",
-      "link": "NULL",
-      "pubDate": "2025-03-23T18:45:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
       "title": "Solana Co-Founder Trashes L2s, Says L1s Are Faster and More Secure",
       "link": "https://u.today/solana-co-founder-trashes-l2s-says-l1s-are-faster-and-more-secure",
       "pubDate": "2025-03-23T18:12:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "There's no need to build L2s, according to Solana co-founder Anatoly Yakovenko",
       "currencies": [
@@ -236,8 +42,8 @@
       "title": "Binance CEO Richard Teng praises Trump’s crypto movement again, says he’s ‘fantastic’",
       "link": "https://www.cryptopolitan.com/binance-ceo-richard-teng-praises-trumps-crypto-movement-again-says-hes-fantastic/",
       "pubDate": "2025-03-23T18:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "exchange",
       "description": "Binance CEO Richard Teng called President Trump’s second term a “fantastic reset” for crypto on Tuesday during a live CNBC interview. He said the current U.S. political climate has changed completely compared to the last four years, and that Binance is now operating in a much friendlier environment for the industry. “It’s an extremely different […]",
       "currencies": [
@@ -253,8 +59,8 @@
       "title": "Solana’s momentum breaks down – Traders brace for major sell-off",
       "link": "https://ambcrypto.com/solanas-momentum-breaks-down-traders-brace-for-major-sell-off/",
       "pubDate": "2025-03-23T18:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "Can SOL climb back up to glory?",
       "currencies": [
@@ -267,41 +73,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bitcoin price recovery sets base for TON, AVAX, NEAR, OKB to rally",
-      "link": "NULL",
-      "pubDate": "2025-03-23T17:58:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "NEAR",
-        "OKB",
-        "TON"
-      ]
-    },
-    {
-      "title": "3 Altcoins to Buy This Weekend as Experts Predict Alt Season to Start Tomorrow",
-      "link": "NULL",
-      "pubDate": "2025-03-23T17:49:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "PI",
-        "S",
-        "W"
-      ]
-    },
-    {
       "title": "IMF Adds Bitcoin to Reserves, Tracks It as Digital Gold and Capital Asset",
       "link": "https://thedefiant.io/news/regulation/imf-adds-bitcoin-to-reserves-tracks-digital-gold-capital-asset-ecd3e704",
       "pubDate": "2025-03-23T17:35:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
       "category": "bitcoin",
       "description": "The International Monetary Fund (IMF) is reportedly making changes regarding Bitcoin, with sources claiming the organization is adding Bitcoin to its reserves and classifying it as 'Digital Gold",
       "currencies": [
@@ -314,41 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ethereum and TRON Investors Rethink Strategies Amid Lightchain AI’s Explosive Presale Growth",
-      "link": "NULL",
-      "pubDate": "2025-03-23T17:29:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "TRX"
-      ]
-    },
-    {
-      "title": "SUI passes TON in stablecoin transfers: Is a market rebound next?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T17:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "TON",
-        "SUI",
-        "$1"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano Outshines Visa In Daily Transaction Capacity Through Hydra Protocol",
       "link": "https://www.thecoinrepublic.com/2025/03/23/cardano-outshines-visa-in-daily-transaction-capacity-through-hydra-protocol/",
       "pubDate": "2025-03-23T16:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "Cardano founder Charles Hoskinson recently noted that IOHK’s plan is to push the network to become a pillar of economic, political and social systems. However, such a goal would require a very high transaction throughput. Fortunately, that may not be a concern for the Cardano blockchain thanks to its Hydra protocol.",
       "currencies": [
@@ -364,8 +110,8 @@
       "title": "Fidelity launches ‘OnChain’ Ethereum-tracked shares for Treasury money market fund",
       "link": "https://www.theblock.co/post/347637/fidelity-launches-onchain-ethereum-tracked-shares-for-treasury-money-market-fund?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-03-23T16:33:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Fidelity will maintain traditional book-entry records as the official ownership ledger, though the share transactions will also be recorded on Ethereum.",
       "currencies": [
@@ -378,75 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Chainlink Poised For Recovery If $13 Support Holds – Expert Sets Optimistic Targets",
-      "link": "NULL",
-      "pubDate": "2025-03-23T16:30:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ADA",
-        "LINK"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "As Binance Stalls Kaspa Listing, BlockDAG's AMA Reveals How This Viral Crypto is Set to Eclipse Kaspa's 10,000 TPS Lead",
-      "link": "NULL",
-      "pubDate": "2025-03-23T16:24:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Binance Listing for PI Coming Soon? FX Guys Presale’s Run Is Stealing All the Attention!",
-      "link": "NULL",
-      "pubDate": "2025-03-23T16:20:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FX",
-        "PI"
-      ]
-    },
-    {
-      "title": "BNB Drops Below 620 USDT with a 0.87% Decrease in 24 Hours",
-      "link": "NULL",
-      "pubDate": "2025-03-23T16:07:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "BNB"
-      ]
-    },
-    {
-      "title": "Analyst Predicts Dogecoin Price Rally To $20, Here’s When",
-      "link": "NULL",
-      "pubDate": "2025-03-23T16:02:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "MOVE"
-      ]
-    },
-    {
       "title": "Trump publicly endorses TRUMP coin on Truth Social, token jumps 10%",
       "link": "https://cryptobriefing.com/trump-token-endorsement-truth-social/",
       "pubDate": "2025-03-23T15:57:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "President Donald Trump has voiced strong support for the Official Trump ($TRUMP) token. In a Sunday post on Truth Social, he described the token as 'so cool' and hailed it as 'the greatest of them all. 'Trump's endorsement triggered a 10% surge in the $TRUMP token's price. CoinGecko data indicates it climbed from approximately $10",
       "currencies": [
@@ -460,100 +142,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Jed McCaleb’s Space Bet: Vast Haven-1 in Orbit",
-      "link": "NULL",
-      "pubDate": "2025-03-23T15:39:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "BlackRock BUIDL Fund's Ethereum Investments Surpass $1 Billion",
-      "link": "NULL",
-      "pubDate": "2025-03-23T15:33:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "AVAX",
-        "APT",
-        "ARB"
-      ]
-    },
-    {
-      "title": "One of These Top 10 Altcoins Is Not Like The Others (And It’s Toncoin)",
-      "link": "NULL",
-      "pubDate": "2025-03-23T15:25:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TON"
-      ]
-    },
-    {
-      "title": "SUI Poised For Price Rally? Ascending Channel Suggests Move Toward $2.50",
-      "link": "NULL",
-      "pubDate": "2025-03-23T15:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SUI",
-        "MOVE",
-        "ALI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Coin (BNB) Price Prediction for March 23",
-      "link": "NULL",
-      "pubDate": "2025-03-23T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "Litecoin Foundation Reports Record Hashrate and Upcoming ETFs in 2025",
-      "link": "NULL",
-      "pubDate": "2025-03-23T14:03:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bounce Finance Locks 23.5% of AUCTION Tokens",
-      "link": "NULL",
-      "pubDate": "2025-03-23T13:29:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AUCTION"
-      ]
-    },
-    {
       "title": "ETH may reclaim $2.2K ‘macro range’ amid growing whale accumulation",
       "link": "https://cointelegraph.com/news/eth-reclaim-2-2-k-macro-range-whale-accumulation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-03-23T13:28:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Ether needs to reclaim the “macro” range above the $2,200 mark to amass more upside momentum as crypto markets remain pressured by global macroeconomic concerns until at least the beginning of April. Ether (ETH) price is down over 51% during its three-month downtrend after it peaked above $4,100 on Dec. 16, 2024, TradingView data shows. ETH/USD, 1-day chart",
       "currencies": [
@@ -568,8 +161,8 @@
       "title": "Fidelity Joins Tokenized Asset Race with Ethereum-Based Treasury Fund",
       "link": "https://ecoinimist.com/2025/03/23/fidelity-joins-tokenized-fund-race/?utm_source=rss&utm_medium=rss&utm_campaign=fidelity-joins-tokenized-fund-race",
       "pubDate": "2025-03-23T13:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ecoinimist",
+      "sourceKey": "ecoinimist",
       "category": "ethereum",
       "description": "Fidelity Investments has filed to launch a blockchain-based share class of its money market fund on Ethereum, joining BlackRock and Franklin Templeton. <p>The post Fidelity Joins Tokenized Asset Race with Ethereum-Based Treasury Fund first appeared on Ecoinimist.</p>",
       "currencies": [
@@ -581,34 +174,11 @@
       }
     },
     {
-      "title": "Ethereum Faces Key Resistance: Will It Break Through or Fall Back to $1,700?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T13:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "Litecoin (LTC) Faces Death Cross Warning",
-      "link": "NULL",
-      "pubDate": "2025-03-23T12:38:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
       "title": "XRP ETF Approval Date Nears",
       "link": "https://voiceofcrypto.online/ampstories/web-stories/xrp-etf-approval-date-nears",
       "pubDate": "2025-03-23T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Voiceofcrypto",
+      "sourceKey": "voiceofcrypto",
       "category": "altcoin",
       "description": "The approval date for the XRP Exchange-Traded Fund (ETF) is rapidly approaching, signaling potential market developments and increased investor anticipation.",
       "currencies": [
@@ -620,23 +190,11 @@
       }
     },
     {
-      "title": "Ripple Co-Founder to Fund Commercial Space Station with XRP Sales",
-      "link": "NULL",
-      "pubDate": "2025-03-23T12:25:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
       "title": "Bitcoin needs weekly close above $85K to avoid correction to $76K: Analysts",
       "link": "https://cointelegraph.com/news/bitcoin-weekly-close-85k-correction-76k-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-03-23T12:20:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin analysts are closely watching the weekly close to assess the cryptocurrency’s price trajectory for the coming week, as both traditional and crypto markets remain directionless amid a mix of global trade war fears and easing inflation concerns. Bitcoin's (BTC) price may see more downside next week unless it manages to close the week above the $85,000 psychological mark, according to Ryan Lee, chief analyst at Bitget Research. “Bitcoin’s relief rally after the FOMC meeting and lower CPI re",
       "currencies": [
@@ -646,340 +204,6 @@
         "positive": 2,
         "negative": 1
       }
-    },
-    {
-      "title": "Social Security chief walks back shutdown threat after D.O.G.E ruling",
-      "link": "NULL",
-      "pubDate": "2025-03-23T12:00:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G",
-        "D"
-      ]
-    },
-    {
-      "title": "Jupiter Price Action Signals Breakdown—$0.41 Target In Play",
-      "link": "NULL",
-      "pubDate": "2025-03-23T12:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JUP",
-        "ALI"
-      ]
-    },
-    {
-      "title": "Congress fears Elon Musk’s D.O.G.E will push young talent away from federal jobs",
-      "link": "NULL",
-      "pubDate": "2025-03-23T11:45:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G",
-        "D",
-        "O"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "One Crypto Sector Shattering $220,000,000,000 Market Cap Could Spark Next Market Upswing, Says IntoTheBlock",
-      "link": "NULL",
-      "pubDate": "2025-03-23T11:45:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "TRON Surges 9% in a Week: Excitement Sparked Following Justin Sun X Post",
-      "link": "NULL",
-      "pubDate": "2025-03-23T11:40:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Investors Are Pouring Money Into This AI Coin—Could It Overtake Litecoin (LTC) in 2025?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T11:23:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Polygon (POL) Investor Forecasts 18,000% Surge for This $0.007 Altcoin by August 2025—Is It Possible?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T11:12:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "POL"
-      ]
-    },
-    {
-      "title": "Terra's LUNA Token Sees Continued Trading Despite Significant Price Drop",
-      "link": "NULL",
-      "pubDate": "2025-03-23T10:33:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LUNA"
-      ]
-    },
-    {
-      "title": "BNB Chain leads DEX volume this week to solidify its dominance in on-chain trading",
-      "link": "NULL",
-      "pubDate": "2025-03-23T10:20:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "SOL"
-      ]
-    },
-    {
-      "title": "Stellar Breakout Imminent? Analyst Predicts XLM Price Surge – Here's Why",
-      "link": "NULL",
-      "pubDate": "2025-03-23T10:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "BUSD Status Update Amidst Stablecoin Market Changes",
-      "link": "NULL",
-      "pubDate": "2025-03-23T09:59:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Investors Keep an Eye on Lightchain AI as Price Predictions Outpace SHIB and TRX",
-      "link": "NULL",
-      "pubDate": "2025-03-23T09:23:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Ethereum Altcoin Explodes 68% After Korea’s Second-Biggest Crypto Exchange Announces Trading Support",
-      "link": "NULL",
-      "pubDate": "2025-03-23T09:15:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ACX"
-      ]
-    },
-    {
-      "title": "Why Jupiter [JUP] could drop to $0.41: Analyzing price action",
-      "link": "NULL",
-      "pubDate": "2025-03-23T09:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JUP",
-        "$1"
-      ]
-    },
-    {
-      "title": "Bitcoin Stalls, Altcoins Move: This Week’s Top Gainers and Losers (Weekend Watch)",
-      "link": "NULL",
-      "pubDate": "2025-03-23T08:05:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TRX",
-        "TON",
-        "PI"
-      ]
-    },
-    {
-      "title": "Understanding Token Buybacks: A Growing Trend in Crypto Finance",
-      "link": "NULL",
-      "pubDate": "2025-03-23T08:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AAVE",
-        "DYDX"
-      ]
-    },
-    {
-      "title": "Ethena TVL Reaches Record High of $6.558 Billion",
-      "link": "NULL",
-      "pubDate": "2025-03-23T07:33:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin at a Crossroads: Is the Bull Run Still Alive?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T07:00:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "FLOKI reclaims key support, targets $0.00006450 – Can it happen?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T07:00:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOKI",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
-      "title": "Coinbase Creates Verified Pools, a Verified DeFi Built from Uniswap, with Noncustodial Wallet",
-      "link": "NULL",
-      "pubDate": "2025-03-23T06:56:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "Binance Coin [BNB] ready to rebound? Buying opportunity arises",
-      "link": "NULL",
-      "pubDate": "2025-03-23T06:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB"
-      ]
-    },
-    {
-      "title": "VIRTUAL leads AI token flows, but is price growth really fueling it?",
-      "link": "NULL",
-      "pubDate": "2025-03-23T05:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "VIRTUAL",
-        "$1"
-      ]
-    },
-    {
-      "title": "Wintermute Transfers 2.5 Million ORCA Tokens to Exchange Amid Price Drop",
-      "link": "NULL",
-      "pubDate": "2025-03-23T04:23:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ORCA"
-      ]
-    },
-    {
-      "title": "Analyst Predict XRP Price Could Hit $77 in This Bull Cycle, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2025-03-23T02:24:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "RLY",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "AUCTION’s price up by +140% in a week – Altcoin will hit a new ATH by…",
-      "link": "NULL",
-      "pubDate": "2025-03-23T02:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ATH",
-        "AUCTION",
-        "$1"
-      ]
-    },
-    {
-      "title": "Coinbase Aligns With Treasury to Fight Crypto Bad Actors Without Wrecking Privacy",
-      "link": "NULL",
-      "pubDate": "2025-03-23T00:30:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TRX",
-        "S"
-      ]
-    },
-    {
-      "title": "AUCTION Token Experiences Significant Decline",
-      "link": "NULL",
-      "pubDate": "2025-03-23T00:03:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "AUCTION"
-      ]
     }
   ]
 }

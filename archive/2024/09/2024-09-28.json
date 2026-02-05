@@ -1,47 +1,15 @@
 {
   "date": "2024-09-28",
-  "fetchedAt": "2026-02-05T07:45:53.662Z",
-  "articleCount": 52,
+  "fetchedAt": "2026-02-05T07:48:35.696Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Maker Price Heats Up, Soars 12% In A Week — Is $1,850 The Next Stop?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T22:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR",
-        "WIF"
-      ]
-    },
-    {
-      "title": "5 Best Crypto Traders to Follow in October 2024",
-      "link": "NULL",
-      "pubDate": "2024-09-28T22:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "NEAR",
-        "FTM",
-        "FET",
-        "PEPE",
-        "SUI",
-        "TAO",
-        "WIF"
-      ]
-    },
     {
       "title": "Analysts Says “SHIB Is on Fire”; Liken Potential 1,000% Shiba Inu Rally Just Like 2021",
       "link": "https://zycrypto.com/analysts-says-shib-is-on-fire-liken-potential-1000-shiba-inu-rally-just-like-2021/",
       "pubDate": "2024-09-28T21:45:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Shiba Inu (SHIB) emerged as the top gainer in a roundup of the top 10 crypto assets, with an impressive 36% gain over the past week.",
       "currencies": [
@@ -56,8 +24,8 @@
       "title": "Analyst Now Says XRP Will Surge To $1,000",
       "link": "https://franknez.com/analyst-now-says-xrp-will-surge-to-1000/?utm_source=rss&utm_medium=rss&utm_campaign=analyst-now-says-xrp-will-surge-to-1000",
       "pubDate": "2024-09-28T21:45:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "An analyst now says XRP will surge to $1,000 based on several factors, one of which includes institutions adopting the crypto.",
       "currencies": [
@@ -69,30 +37,11 @@
       }
     },
     {
-      "title": "3 Bullish Altcoins Predicted to Outperform Bitcoin in October 2024",
-      "link": "NULL",
-      "pubDate": "2024-09-28T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RUNE",
-        "FTM",
-        "STX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "BlackRock’s spot Ethereum ETF surpasses $1 billion in value for the first time",
       "link": "https://www.theblock.co/post/318584/blackrocks-spot-ethereum-etf-surpasses-1-billion-in-value-for-the-first-time?utm_source=rss&utm_medium=rss",
       "pubDate": "2024-09-28T19:38:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "Weekly inflows to US-based spot Ethereum funds were positive for only the second time since the funds launched.",
       "currencies": [
@@ -104,73 +53,11 @@
       }
     },
     {
-      "title": "U.S. SEC Settles With Solana-Based DEX Mango Markets for Nearly $700,000 Over Alleged Securities Violations",
-      "link": "NULL",
-      "pubDate": "2024-09-28T18:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "DAO",
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Notcoin Set For More Gains Following 13% Price Rally – Details",
-      "link": "NULL",
-      "pubDate": "2024-09-28T17:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT",
-        "ALI"
-      ]
-    },
-    {
-      "title": "$700 Million Up for Grabs as Notcoin (NOT) Price Edges Closer to Another 30% Hike",
-      "link": "NULL",
-      "pubDate": "2024-09-28T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Hackers Plunder $2,000,000 Worth of Crypto From Liquid Restaking Protocol Bedrock",
-      "link": "NULL",
-      "pubDate": "2024-09-28T16:55:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WBTC",
-        "UNI"
-      ]
-    },
-    {
-      "title": "XRP Bulls Take Over—Will Ripple’s Price Hit $0.75 After This Breakout?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T16:34:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "RLY"
-      ]
-    },
-    {
       "title": "iShares Ethereum ETF Reaches $1 Billion in Assets",
       "link": "https://coincu.com/284895-ishares-ethereum-etf-reaches-1-billion-in-assets/",
       "pubDate": "2024-09-28T15:52:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coincu",
+      "sourceKey": "coincu",
       "category": "ethereum",
       "description": "BlackRock’s iShares Ethereum ETF (ETHA) has exceeded $1 billion in assets, making it one of the top-performing ETFs in the U.S. within two months.",
       "currencies": [
@@ -186,8 +73,8 @@
       "title": "Cardano (ADA) Price Short Term Warning Flashed by This Indicator",
       "link": "https://u.today/cardano-ada-price-short-term-warning-flashed-by-this-indicator",
       "pubDate": "2024-09-28T15:42:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Cardano (ADA) price has gained momentum since past week",
       "currencies": [
@@ -199,95 +86,11 @@
       }
     },
     {
-      "title": "21 Million MOODENG Sale Leaves Trader with $297 Instead of $6.3 Million",
-      "link": "NULL",
-      "pubDate": "2024-09-28T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "BB",
-        "MOODENG"
-      ]
-    },
-    {
-      "title": "Last Chance: Mega Dice Ends Presale in 48 Hours, Over $1.9M Raised",
-      "link": "NULL",
-      "pubDate": "2024-09-28T14:47:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CET",
-        "00"
-      ]
-    },
-    {
-      "title": "Polkastarter Price Prediction 2024 – 2030: Will POLS Price Hit $1 This Year?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T14:03:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "POLS"
-      ]
-    },
-    {
-      "title": "XRP All Set To Reclaim $0.72: Smart Money Analyst",
-      "link": "NULL",
-      "pubDate": "2024-09-28T13:48:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Bitcoin targets $70K as stablecoin inflows and China stimulus boost rally",
-      "link": "NULL",
-      "pubDate": "2024-09-28T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "RLY"
-      ]
-    },
-    {
-      "title": "W-Coin Airdrop and Listing Date Coming Soon: Don't Miss Out!",
-      "link": "NULL",
-      "pubDate": "2024-09-28T12:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "W"
-      ]
-    },
-    {
-      "title": "Benzinga Bulls And Bears: Apple, Tesla, Novo Nordisk, Bitcoin — And Shiba Inu's Major Stablecoin Tease",
-      "link": "NULL",
-      "pubDate": "2024-09-28T12:42:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SHIB",
-        "META"
-      ]
-    },
-    {
       "title": "Crypto investor loses $32 million in common mistake – How to avoid it?",
       "link": "https://finbold.com/crypto-investor-loses-32-million-in-common-mistake-how-to-avoid-it/",
       "pubDate": "2024-09-28T12:30:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Someone lost (yet another) millions of dollars worth of funds to a phishing attack while using decentralized finance (DeFi). This … Continue reading",
       "currencies": [
@@ -299,398 +102,6 @@
         "negative": 1
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "Expert Investor Who HODLed Polygon (POL) from $0.029 to $2.90 Just bought a bag of Another token Priced Below $0.10",
-      "link": "NULL",
-      "pubDate": "2024-09-28T12:14:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "POL"
-      ]
-    },
-    {
-      "title": "Top 3 Dogecoin and Shiba Inu Rivals to 300x Your $250 into $50,000 in 6 Months",
-      "link": "NULL",
-      "pubDate": "2024-09-28T12:01:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "NEAR",
-        "FET"
-      ]
-    },
-    {
-      "title": "How is DePIN Revolutionizing the Crypto ecosystem and Decentralized Finance (DeFi)?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "FIL",
-        "HNT"
-      ]
-    },
-    {
-      "title": "Crypto Market Update: Hamster Kombat (HMSTR) Recent Developments, Shiba Inu Price Forecast for October, Rexas Finance’s (RXS) $15 Target in 2025",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:57:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SHIB",
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Digital Product Ideas TapSwap Why Trending on Google",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Crypto Trader Says One Low-Cap Altcoin Has ‘Way More Upside,’ Updates Outlook on Bitcoin and dogwifhat",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:45:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ZIL",
-        "WIF"
-      ]
-    },
-    {
-      "title": "PundiX Price Prediction 2024, 2025, 2030: Is PUNDIX A Good Investment?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:15:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PUNDIX"
-      ]
-    },
-    {
-      "title": "JASMY price prediction – What to expect over the weekend?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "JASMY"
-      ]
-    },
-    {
-      "title": "Could Robinhood and Revolut Find Stablecoin Success Where PayPal Stumbled?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T11:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "PYUSD"
-      ]
-    },
-    {
-      "title": "Top 5 Crypto Coins That Skyrocketed in the Last 24 Hours : Did you Invest?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T10:37:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "CKB"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Season 2 Airdrop Date: What to Expect in 2025",
-      "link": "NULL",
-      "pubDate": "2024-09-28T10:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "4 Altcoins That Could Hit New All-Time Highs in October",
-      "link": "NULL",
-      "pubDate": "2024-09-28T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "SOL",
-        "SUI",
-        "OM",
-        "RENDER",
-        "ZRO",
-        "00"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Hamster Kombat Disappointed the Whole CEO: $HMSTR Struggle",
-      "link": "NULL",
-      "pubDate": "2024-09-28T09:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Beware: Fake WalletConnect App Scams Users of $70,000",
-      "link": "NULL",
-      "pubDate": "2024-09-28T09:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Hamster Kombat Season 2 End Date: What to Expect in 2025",
-      "link": "NULL",
-      "pubDate": "2024-09-28T09:36:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Will Hamster Kombat Price Lose $0.6 Line Amid Community Backlash?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T09:16:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "$16 Bln FTX Repayments To Begin Next Week: Ready For BIGGEST BULL RUN EVER",
-      "link": "NULL",
-      "pubDate": "2024-09-28T08:58:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EVER"
-      ]
-    },
-    {
-      "title": "Analyst predicts Bitcoin and altcoin bull run as FOMO returns",
-      "link": "NULL",
-      "pubDate": "2024-09-28T08:11:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "SEI",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Moonbix Binance Listing Date: What Will Be The Listing Price",
-      "link": "NULL",
-      "pubDate": "2024-09-28T07:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDC",
-        "BNB",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "Render Token (RNDR) Price Momentum Slows as AI Coins Gain Market Share",
-      "link": "NULL",
-      "pubDate": "2024-09-28T07:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "FET",
-        "TAO",
-        "AKT"
-      ]
-    },
-    {
-      "title": "Assessing NOT’s price prospects after Notcoin bulls switched tactics",
-      "link": "NULL",
-      "pubDate": "2024-09-28T06:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "SEC Settles with Mango DAO Over Token Sale",
-      "link": "NULL",
-      "pubDate": "2024-09-28T05:57:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DAO",
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Earn $5,000 With A Drone TapSwap Why Trending on Google",
-      "link": "NULL",
-      "pubDate": "2024-09-28T05:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HMSTR"
-      ]
-    },
-    {
-      "title": "Bitcoin ETFs See $494M Inflow, ARK Tops with $203M",
-      "link": "NULL",
-      "pubDate": "2024-09-28T05:36:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Grayscale’s Bullish Forecast: The Top 20 Crypto To Watch In Q4",
-      "link": "NULL",
-      "pubDate": "2024-09-28T05:00:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "TRX",
-        "HNT",
-        "RUNE",
-        "CELO",
-        "UMA",
-        "MNT",
-        "SUI",
-        "OP",
-        "TAO"
-      ]
-    },
-    {
-      "title": "Mango Markets Settles SEC Charges for Unregistered MNGO Token Sales",
-      "link": "NULL",
-      "pubDate": "2024-09-28T05:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DAO",
-        "MNGO",
-        "G"
-      ]
-    },
-    {
-      "title": "Fantom: Can rising inflows push FTM to $0.86?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T04:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FTM"
-      ]
-    },
-    {
-      "title": "Why Wrapped Bitcoin on AAVE surged past $2B, explained",
-      "link": "NULL",
-      "pubDate": "2024-09-28T03:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "WBTC",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Mango DAO Settlement With SEC Finalized For $700,000 Fine",
-      "link": "NULL",
-      "pubDate": "2024-09-28T02:50:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DAO",
-        "MNGO"
-      ]
-    },
-    {
-      "title": "Stacks targets $2.4: Will STX surge another 20%?",
-      "link": "NULL",
-      "pubDate": "2024-09-28T01:00:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin Breaks $65K With $365 Million In Spot ETF Inflows Fueling The Rally",
-      "link": "NULL",
-      "pubDate": "2024-09-28T00:30:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
     }
   ]
 }

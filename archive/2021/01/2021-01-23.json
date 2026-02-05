@@ -1,48 +1,15 @@
 {
   "date": "2021-01-23",
-  "fetchedAt": "2026-02-05T07:45:52.010Z",
-  "articleCount": 7,
+  "fetchedAt": "2026-02-05T07:48:35.517Z",
+  "articleCount": 1,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @ThomasBertani: 1/N Busy week ahead for @pNetworkDeFi - I cannot wait to share with everyone our first series of releases for Q1 2021 …",
-      "link": "NULL",
-      "pubDate": "2021-01-23T18:58:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "PLTC"
-      ]
-    },
-    {
-      "title": "PT1 : The bounty program consists of rewarding 100,000 WOZX to our most active community members for Content Creati…",
-      "link": "NULL",
-      "pubDate": "2021-01-23T18:35:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "To all our new followers, welcome! we want to give a special shoutout to @davidstalane because during the past thre…",
-      "link": "NULL",
-      "pubDate": "2021-01-23T18:34:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
     {
       "title": "Chainlink Hits a New All-Time High of $25",
       "link": "https://decrypt.co/55152/chainlink-hits-a-new-all-time-high-of-25",
       "pubDate": "2021-01-23T17:54:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "2020's grizzliest bear still has some bite.",
       "currencies": [
@@ -53,39 +20,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "RT @btsfav: #DeFinitely 40 - AKA Stop what you're doing and check if you can claim free #StakeDAO tokens! #defi",
-      "link": "NULL",
-      "pubDate": "2021-01-23T13:53:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "STEEM"
-      ]
-    },
-    {
-      "title": "What is #financial_risk? A situation in which there is a risk of partial or full loss of #assets is referred to a…",
-      "link": "NULL",
-      "pubDate": "2021-01-23T10:52:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CCXX"
-      ]
-    },
-    {
-      "title": "RT @BrendanBlumer: @moore_chaney @JanetYellen #ProFi is absolutely the future. #EOS",
-      "link": "NULL",
-      "pubDate": "2021-01-23T05:18:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "CHEX"
-      ]
     }
   ]
 }

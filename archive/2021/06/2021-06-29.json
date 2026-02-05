@@ -1,38 +1,15 @@
 {
   "date": "2021-06-29",
-  "fetchedAt": "2026-02-05T07:45:51.513Z",
-  "articleCount": 46,
+  "fetchedAt": "2026-02-05T07:48:35.322Z",
+  "articleCount": 26,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @ThetaDrop: Hey THETA community! We need YOUR help to jump start our new ThetaDrop Instagram account. It would mean a lot to us if you…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T22:04:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
-      "title": "RT @Mr_Blockchain22: #Developers Did you know that the $XDC #protocol has been added to @gitcoin? You get funding and resources to build on…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T21:56:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XDC"
-      ]
-    },
     {
       "title": "Revolut enables Polkadot (DOT) trading for its 15 million users",
       "link": "https://finbold.com/revolut-enables-polkadot-dot-trading-for-its-15-million-users/",
       "pubDate": "2021-06-29T21:53:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "One of the most prominent UK challenger banks, Revolut, has added Polkadot (DOT) cryptocurrency trading to its app. The news was... Continue reading",
       "currencies": [
@@ -45,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Theta Wallet v3.0.1 released to enable TFuel staking at block height 10,968,061 on June 30",
-      "link": "NULL",
-      "pubDate": "2021-06-29T21:22:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Coinbase will pay users 4% interest on USDC holdings",
       "link": "https://cointelegraph.com/news/coinbase-will-pay-users-4-interest-on-usdc-holdings",
       "pubDate": "2021-06-29T21:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "exchange",
       "description": "The announced yields represent the exchange increasing interest for USDC holders by more than 2,500% since it was lowered significantly last June.",
       "currencies": [
@@ -77,8 +42,8 @@
       "title": "YouTuber Sent Dogecoin to Space In Elon Musk Tribute",
       "link": "https://cryptobriefing.com/youtuber-sent-dogecoin-to-space-in-elon-musk-tribute/",
       "pubDate": "2021-06-29T21:01:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "currencies": [
         "DOGE"
@@ -90,22 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @CreamdotFinance: We are excited to announce that C.R.E.A.M. Finance will be launching our money markets on @0xPolygon!",
-      "link": "NULL",
-      "pubDate": "2021-06-29T19:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
       "title": "Altcoins bag double-digit gains as Bitcoin price approaches $37,000",
       "link": "https://cointelegraph.com/news/altcoins-bag-double-digit-gains-as-bitcoin-price-approaches-37-000",
       "pubDate": "2021-06-29T18:58:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "MATIC, SUSHI and CAKE soar after Bitcoin bulls finally press the price above the $35,000 resistance.",
       "currencies": [
@@ -122,9 +76,9 @@
       "title": "BIC’s Video News Show: Top 5 Altcoins For July",
       "link": "https://beincrypto.com/bics-video-news-show-top-5-altcoins-for-july/",
       "pubDate": "2021-06-29T18:02:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
+      "category": "trading",
       "description": "In this episode of the BeInCrypto video news show, host Jessica Walker looks at our list of five top altcoins for the month of July. All five have one thing in common, they’ve all grown with double digits in the last week but the story behind each of them is different.",
       "currencies": [
         "SOL",
@@ -141,8 +95,8 @@
       "title": "SoftBank-Backed Travel Booking Platform Adds Dogecoin as Payment Option",
       "link": "https://u.today/softbank-backed-travel-booking-platform-adds-dogecoin-as-payment-option",
       "pubDate": "2021-06-29T17:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "regulation",
       "description": "GetYourGuide wants you to spend your Dogecoin holdings on globetrotting",
       "currencies": [
@@ -155,24 +109,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @binance: #Binance Will Support the @hiveblocks $HIVE, @Theta_Network $THETA and @Filecoin $FIL Network Upgrades & Hard Forks",
-      "link": "NULL",
-      "pubDate": "2021-06-29T17:56:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FIL",
-        "THETA",
-        "TFUEL"
-      ]
-    },
-    {
       "title": "Ethereum Classic, Dfinity’s ICP Lead Rising Crypto Market",
       "link": "https://decrypt.co/74807/ethereum-classic-icp-lead-rising-crypto-market",
       "pubDate": "2021-06-29T17:45:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "The entire cryptocurrency market is up nearly 5% over the last 24 hours, with Ethereum Classic and ICP posting sizable gains.",
       "currencies": [
@@ -187,22 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Our Co-CEOs, @LeBigzer and Nicolas, as well as @ramijames will be hosting a Twitter Spaces session at 1pm UTC tomor…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T17:29:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UOS"
-      ]
-    },
-    {
       "title": "Coinbase to Start Offering 4% Yield on USDC",
       "link": "https://cryptobriefing.com/coinbase-start-offering-4-yield-usdc/",
       "pubDate": "2021-06-29T16:46:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "defi",
       "currencies": [
         "USDC"
@@ -216,8 +146,8 @@
       "title": "THE BRIDGE HAS BEEN MADE! #SAFEMOON VIA @pNetworkDeFi",
       "link": "https://twitter.com/safemoon/status/1409910260660326407",
       "pubDate": "2021-06-29T16:22:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Twitter",
+      "sourceKey": "twitter",
       "category": "defi",
       "currencies": [
         "SAFEMOON"
@@ -232,8 +162,8 @@
       "title": "Ripple’s Lead Lawyer Tells How Big The SEC Battle Is And Why Coinbase Shouldn’t Be Comfortable Listing Dogecoin Over XRP",
       "link": "https://zycrypto.com/ripples-lead-lawyer-tells-how-big-the-sec-battle-is-and-why-coinbase-shouldnt-be-comfortable-listing-dogecoin-over-xrp/",
       "pubDate": "2021-06-29T15:41:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "regulation",
       "description": "After spending a significant part of his professional legal career crawling up the legal ranks and later offering legal services for traditional financial institutions, Ripple’s lead lawyer, Stuart Alderoty tells it all to Protocol, his exciting two years as a front line lawyer in the biggest legal battle rocking the crypto space. How Big Is […]",
       "currencies": [
@@ -250,8 +180,8 @@
       "title": "Elon Musk Wants Crypto Enthusiasts To Support New Dogecoin Change Proposal",
       "link": "https://dailyhodl.com/2021/06/29/elon-musk-wants-crypto-enthusiasts-to-support-new-dogecoin-change-proposal/",
       "pubDate": "2021-06-29T15:10:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "altcoin",
       "description": "Tesla CEO and the world’s second-richest person Elon Musk is backing a proposal that seeks to introduce a new fee structure and policy for Dogecoin (DOGE). The billionaire tells his 57.5 million Twitter followers that it is “important to support” the proposal put forth by core Dogecoin developer Patrick Lodder. The proposal titled “Fee Policy […]",
       "currencies": [
@@ -268,8 +198,8 @@
       "title": "Bitcoin (BTC) Attempts to Regain Key Support Area at $34,700",
       "link": "https://beincrypto.com/bitcoin-btc-attempts-to-regain-key-support-area-at-347000/",
       "pubDate": "2021-06-29T15:07:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) has again approached an important support area near $34,700. After revisiting the $30,000 level last weekend, the price is trying to resume the uptrend.",
       "currencies": [
@@ -282,92 +212,11 @@
       }
     },
     {
-      "title": "CoinMarketCap launches token swap feature that uses Uniswap",
-      "link": "NULL",
-      "pubDate": "2021-06-29T15:05:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Check new article with insights from STASIS CEO @gregoryklumov to know more about #stablecoin regulation.…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T14:44:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EURS"
-      ]
-    },
-    {
-      "title": "RT @WuBlockchain: According to Binance’s announcement, Binance will support the upgrade of the Bitcoin Cash ABC (BCHA) brand to eCash (XEC)…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T14:16:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH",
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "For all your cross chain $Form needs  erc &lt;&gt; bsc with no pain.",
-      "link": "NULL",
-      "pubDate": "2021-06-29T14:09:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FORM"
-      ]
-    },
-    {
-      "title": "RT @binance: #Binance Will Support the @Bitcoin_ABC $BCHA Rebrand to eCash $XEC & Redenomination Plan",
-      "link": "NULL",
-      "pubDate": "2021-06-29T14:06:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC",
-        "BCHA",
-        "BCHABC"
-      ]
-    },
-    {
-      "title": "1/ Reef Finance  welcomes the latest project to build on Reef, @relitefinance! Relite is a cross-chain protocol us…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T13:58:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "REEF"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Electric Car Designed by Tesla Competitor to Start Mining Bitcoin and Dogecoin Today",
       "link": "https://u.today/electric-car-designed-by-tesla-competitor-to-start-mining-bitcoin-and-dogecoin-today",
       "pubDate": "2021-06-29T13:43:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Spiritus will be the very first car in the world to mine cryptocurrencies",
       "currencies": [
@@ -381,22 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "1/  BandChain Phase 2 Proposal is here, the final step before the Mainnet upgrade! After months of development to…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T13:37:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAND"
-      ]
-    },
-    {
       "title": "Fetch.ai brings AI-powered tools to combat impermanent loss in AMMs and DEXs",
       "link": "https://www.cryptoninjas.net/2021/06/29/fetch-ai-brings-ai-powered-tools-to-combat-impermanent-loss-in-defi-amms-and-dexs/",
       "pubDate": "2021-06-29T13:28:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "exchange",
       "description": "Fetch.ai, a Cambridge-based artificial intelligence lab building an open-access decentralized machine learning network for smart infrastructure, announced today the launch of its DeFi Agents toolkit. Utilizing a user-friendly DeFi app, users will now, for the first time, be able to automatically withdraw liquidity from any Uniswap V2 and PancakeSwap pool based on predefined conditions. To...",
       "currencies": [
@@ -410,23 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin ABC 0.23.7 is now available! This second release compatible with the eCash rebrand comes with some networ…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T13:24:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XEC",
-        "BCHABC"
-      ]
-    },
-    {
       "title": "Bitcoin Consolidates Around $35,000, Other Cryptocurrencies Including Ether, Polkadot, XRP And Cardano Post Considerable Gains",
       "link": "https://www.forbes.com/sites/ninabambysheva/2021/06/29/bitcoin-consolidates-around-35000-other-cryptocurrencies-including-ether-polkadot-xrp-and-cardano-post-considerable-gains/",
       "pubDate": "2021-06-29T12:37:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forbes",
+      "sourceKey": "forbes",
       "category": "bitcoin",
       "description": "Despite the continued clampdowns on cryptocurrency exchanges and companies around the world, including the recent ban on Binance’s regulated operations in the U.K.,the market is on the rise, with 24-hour gains ranging from 3.5% to 13% for tokens in the top 10.",
       "currencies": [
@@ -441,22 +267,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Join our CEO @ErmanTjiputra for an #AMA session in the $AIOZ Telegram to discuss mainnet, webRTC, roadmap &amp; more!…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T12:22:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AIOZ"
-      ]
-    },
-    {
       "title": "Why is Polygon so Popular?",
       "link": "https://u.today/why-is-polygon-so-popular",
       "pubDate": "2021-06-29T12:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "layer2",
       "description": "These are the top reasons why Polygon has experienced enormous growth, with investors of the likes of Mark Cuban throwing their support behind the project",
       "currencies": [
@@ -469,24 +284,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "#Binance Will Support the @hiveblocks $HIVE, @Theta_Network $THETA and @Filecoin $FIL Network Upgrades & Hard Forks",
-      "link": "NULL",
-      "pubDate": "2021-06-29T11:11:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BNB",
-        "FIL",
-        "THETA"
-      ]
-    },
-    {
       "title": "Erik Voorhees Bets on Ethereum DEXs, THORChain",
       "link": "https://cryptobriefing.com/erik-voorhees-bets-ethereum-dexs-thorchain/",
       "pubDate": "2021-06-29T11:08:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "ethereum",
       "description": "Erik Voorhees, a prominent figure in the cryptocurrency space, is expressing strong support for decentralized exchanges (DEXs) on the Ethereum blockchain and THORChain. His endorsement highlights the growing importance of decentralized trading platforms in the crypto ecosystem, emphasizing their potential to offer more user control and security compared to traditional exchanges.",
       "currencies": [
@@ -503,8 +305,8 @@
       "title": "Bitcoin Cash ABC Rebrand to eCash (XEC) on July 1 to Be Supported by Binance",
       "link": "https://u.today/bitcoin-cash-abc-rebrand-to-ecash-xec-on-july-1-to-be-supported-by-binance",
       "pubDate": "2021-06-29T11:05:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Binance has announced that it will support the rebrand of Bitcoin Cash ABC to eCash (XEC) and its redenomination plan of 1 BCHA:1 million XEC",
       "currencies": [
@@ -516,22 +318,11 @@
       }
     },
     {
-      "title": "key fed officer for supervision Quarles sounds very bullish towards stablecoins, believing they can be regulated op…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T09:50:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XWC"
-      ]
-    },
-    {
       "title": "Ethereum’s institutional outflows hit record US$50M, CoinShares data says",
       "link": "https://forkast.news/coinshares-ethereum-bitcoin-june-28/?utm_source=rss&utm_medium=rss&utm_campaign=coinshares-ethereum-bitcoin-june-28",
       "pubDate": "2021-06-29T08:38:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "Ethereum is bearing the brunt of negative sentiment on crypto, with net outflows from institutional products related to the token hitting a record of US$50 million last week.",
       "currencies": [
@@ -546,22 +337,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @MintClubPro: Mint Club Pre-sign up finished with huge success! #MintClub #MINT #BinanceSmartChain",
-      "link": "NULL",
-      "pubDate": "2021-06-29T08:10:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "HUNT"
-      ]
-    },
-    {
       "title": "Compound Finance to Launch DeFi Treasury for Institutions",
       "link": "https://beincrypto.com/compound-finance-launch-defi-treasury-institutions/",
       "pubDate": "2021-06-29T06:32:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "defi",
       "description": "The Compound decentralized finance (DeFi) lending platform has announced a treasury product for businesses and institutions. The post Compound Finance to Launch DeFi Treasury for Institutions appeared first on BeInCrypto.",
       "currencies": [
@@ -577,8 +357,8 @@
       "title": "Institutional Demand for Bitcoin and Ethereum Runs Out of Steam on Grayscale: Analysis",
       "link": "https://cryptopotato.com/institutional-demand-for-bitcoin-and-ethereum-runs-out-of-steam/",
       "pubDate": "2021-06-29T06:08:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "bitcoin",
       "description": "The primary catalyst for the 2021 crypto market bull run appears to be running out of steam as institutional demand for Bitcoin-related investment products slows down.",
       "currencies": [
@@ -592,22 +372,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RT @climbingK: Korean pear on#TADAfresh! We have opened a connection of Korean product and its first batch is almost sold out! Team will br…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T05:23:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "MVL"
-      ]
-    },
-    {
       "title": "Institutions turn bearish on ETH as record $50M exits Ether investment products",
       "link": "https://cointelegraph.com/news/institutions-turn-bearish-on-eth-as-record-50m-exits-ether-investment-products",
       "pubDate": "2021-06-29T05:03:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Ether investment products have suffered record outflows this past week, while Bitcoin flows have begun to stabilize.",
       "currencies": [
@@ -620,22 +389,11 @@
       }
     },
     {
-      "title": "inSure #DeFi launches Liquidity Mining Program with +5% $SURE in Monthly Rewards! We continue incentivizing our loy…",
-      "link": "NULL",
-      "pubDate": "2021-06-29T04:29:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
       "title": "From Aave to Yearn: These Are DeFi's Blue-Chip Tokens",
       "link": "https://decrypt.co/74686/defi-blue-chip-tokens",
       "pubDate": "2021-06-29T03:26:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "defi",
       "description": "As the DeFi space grows, so do rug pulls and scams. Decrypt has identified the DeFi projects that have the best reputation and investor trust—for now.",
       "currencies": [
@@ -650,8 +408,8 @@
       "title": "TA: Bitcoin Stuck Near $35K, What Could Trigger A Strong Rally",
       "link": "https://www.newsbtc.com/analysis/btc/bitcoin-strong-rally-35k/",
       "pubDate": "2021-06-29T03:08:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Bitcoin price climbed higher and it settled above the $34,000 level against the US Dollar. BTC is likely to continue higher if it settles above $35,000 in the near term. Bitcoin started a fresh increase above the $33,500 and $34,000 resistance levels. The price is now trading nicely above $34,000 and the 100 hourly simple […]",
       "currencies": [
@@ -667,8 +425,8 @@
       "title": "Ankr’s StakeFi launches Avalanche (AVAX) Staking and Bonds",
       "link": "https://www.cryptoninjas.net/2021/06/29/ankrs-stakefi-launches-avalanche-avax-staking-and-bonds/",
       "pubDate": "2021-06-29T02:43:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoninjas",
+      "sourceKey": "cryptoninjas",
       "category": "general",
       "description": "Following the launch of ETH2 Internet Bonds a few months ago, StakeFi, Ankr’s Internet Bond launchpad, has announced the launch of the Avalanche Bond (aAVAXb), wrapped under an ERC-20 token. StakeFi will enable any user holding AVAX tokens on the Avalanche network to stake and receive the AVAX Internet Bond (aAVAXb) in exchange, either on […]",
       "currencies": [
@@ -683,8 +441,8 @@
       "title": "Dogecoin (DOGE) developer proposes 50x reduction in fees, wins Elon Musk approval",
       "link": "https://cryptoslate.com/dogecoin-doge-developer-proposes-50x-reduction-in-fees-wins-elon-musk-approval/",
       "pubDate": "2021-06-29T01:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "altcoin",
       "description": "Developer Ross Nichol is publicizing plans to reform the fee policy on controversial meme token Dogecoin.",
       "currencies": [

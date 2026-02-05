@@ -1,74 +1,15 @@
 {
   "date": "2024-08-25",
-  "fetchedAt": "2026-02-05T07:45:53.453Z",
-  "articleCount": 58,
+  "fetchedAt": "2026-02-05T07:48:35.668Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "These Telegram Coins Face Uncertain Future Amid Pavel Durov’s Detention",
-      "link": "NULL",
-      "pubDate": "2024-08-25T23:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Justin Sun will launch a DAO to aid Pavel Durov’s release, pledges $1M",
-      "link": "NULL",
-      "pubDate": "2024-08-25T22:22:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAO"
-      ]
-    },
-    {
-      "title": "Bitcoin Holds Steady as Mt. Gox Moves $800M in BTC to New Wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-25T21:42:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "No, Bank of Japan is NOT done hiking interest rates",
-      "link": "NULL",
-      "pubDate": "2024-08-25T21:14:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Shiba Inu to Explore Decentralized Governance with Upcoming DAO Launch",
-      "link": "NULL",
-      "pubDate": "2024-08-25T21:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ETH",
-        "SHIB",
-        "DAO"
-      ]
-    },
     {
       "title": "4 Cryptocurrencies to Watch Following Jerome Powell Jackson Hole Update",
       "link": "https://cryptopotato.com/4-cryptocurrencies-to-watch-following-jerome-powell-jackson-hole-update/",
       "pubDate": "2024-08-25T20:56:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Markets jump when the U.S. Fed Chair Jerome Powell breathes. He said it's time to pivot Fed policy at the Jackson Hole conference Friday. Here are 4 crypto prices to watch.",
       "currencies": [
@@ -87,8 +28,8 @@
       "title": "Toncoin Surges in Interest After Telegram CEO's Arrest",
       "link": "https://coinpaprika.com/news/toncoin-surges-in-interest-after-telegram-ceo-s-arrest/",
       "pubDate": "2024-08-25T20:36:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "trading",
       "description": "Toncoin's Open Interest hit a record high following the arrest of Telegram CEO Pavel Durov, causing significant market volatility and speculation.",
       "currencies": [
@@ -104,8 +45,8 @@
       "title": "Two Mining Pools Now Control 57% of Bitcoin's Hashrate",
       "link": "https://beincrypto.com/foundry-antpool-control-bitcoin-hashrate/",
       "pubDate": "2024-08-25T20:02:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Concerns are mounting within the crypto community about Bitcoin’s increasing centralization, which some fear could threaten the foundational principles of the world’s first digital asset. Recent data from BTC.com reveals that two mining pools — Foundry USA and AntPool — now control approximately 57% of Bitcoin’s total network hashrate. Foundry and AntPool Dominate Bitcoin Mining...",
       "currencies": [
@@ -118,324 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Bitcoin Remains On Top As Altcoin Season Fails To Gain Traction",
-      "link": "NULL",
-      "pubDate": "2024-08-25T20:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "LINK"
-      ]
-    },
-    {
-      "title": "CORE Is On The Brink Of Bullish Reversal Amid Improved Sentiments",
-      "link": "NULL",
-      "pubDate": "2024-08-25T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
-      "title": "Europe Crypto Roundup: Germany Welcomes New RWA Platform, French Police Catches Holograph Hackers, and More",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "SOL",
-        "DOT",
-        "TRX",
-        "KCS",
-        "MNT"
-      ]
-    },
-    {
-      "title": "Sony Block Solutions Labs Introduces Soneium, an Ethereum L2 Project",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:40:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "Polkadot Price Analysis: $DOT Gains 10%, Nears $5 Mark",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:32:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Dogwifhat Price Set to End 5-Month Correction Amid Whale Accumulation",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:23:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "WIF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "9 Out of 10 Top Coins Experience Significant Weekly Gains",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Crypto market’s weekly winners and losers – POPCAT, FET, HNT, and TON",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HNT",
-        "FET",
-        "TON"
-      ]
-    },
-    {
-      "title": "SEI Token Rises Steadily: Can It Reach $0.500 Mark This Month?",
-      "link": "NULL",
-      "pubDate": "2024-08-25T19:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SEI"
-      ]
-    },
-    {
-      "title": "637 #WBTC (40,669,062 USD) transferred from #Binance to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-25T18:42:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "637 #WBTC (40,669,062 USD) transferred from #Binance to unknown wallet",
-      "link": "NULL",
-      "pubDate": "2024-08-25T18:42:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WBTC"
-      ]
-    },
-    {
-      "title": "Pixelverse Daily Combo Code for 26 August 2024 by PixelTap",
-      "link": "NULL",
-      "pubDate": "2024-08-25T18:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "NOT"
-      ]
-    },
-    {
-      "title": "Avalanche Discord Compromised—Fake Token Scammers Strike Again",
-      "link": "NULL",
-      "pubDate": "2024-08-25T18:15:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "MATIC"
-      ]
-    },
-    {
-      "title": "8 Token Unlocks to Watch Next Week",
-      "link": "NULL",
-      "pubDate": "2024-08-25T18:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "1INCH",
-        "DYDX",
-        "AGIX",
-        "YGG",
-        "ARB",
-        "SUI",
-        "OP",
-        "ENA"
-      ]
-    },
-    {
-      "title": "MATIC, SUI, RENDER and TAO could soar if Bitcoin holds $64K",
-      "link": "NULL",
-      "pubDate": "2024-08-25T17:46:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "MATIC",
-        "SUI",
-        "TAO"
-      ]
-    },
-    {
-      "title": "NEAR: Network Upgrade Gives Token 23% Price Boost – Details",
-      "link": "NULL",
-      "pubDate": "2024-08-25T17:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "NEAR",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Simon’s Cat Locks $15M in Tokens for 420 Million Years Using FlokiFi Locker",
-      "link": "NULL",
-      "pubDate": "2024-08-25T16:59:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "BNB",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "BONK Turns Bullish: Is A Falling Wedge Breakout Imminent",
-      "link": "NULL",
-      "pubDate": "2024-08-25T16:27:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Injective surges by 18% in 7 Days:  Is a new ATH of $100 on the horizon?",
-      "link": "NULL",
-      "pubDate": "2024-08-25T16:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "Is Tron (TRX) Meme Coin Season Next After Solana Meme Hype?",
-      "link": "NULL",
-      "pubDate": "2024-08-25T15:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "TRX",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Dogwifhat over Dogecoin? 30% gain makes WIF top memecoin of the week",
-      "link": "NULL",
-      "pubDate": "2024-08-25T15:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "WIF"
-      ]
-    },
-    {
-      "title": "New Breakthroughs Propel Render Price Up 11% – Here’s What’s Happening",
-      "link": "NULL",
-      "pubDate": "2024-08-25T15:00:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ",
-        "OP"
-      ]
-    },
-    {
-      "title": "‘De-Anonymizing’ Firm Arkham Launches Bounty To Identify Owners of Wallets Associated With Fraudulent Altcoin Project",
-      "link": "NULL",
-      "pubDate": "2024-08-25T14:30:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARKM",
-        "MEME",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "Largest Dogwifhat Holder Buys More WIF Amid International Dog Day",
-      "link": "NULL",
-      "pubDate": "2024-08-25T14:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WIF"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "These Two Mining Companies Now Control Over 50% of Bitcoin Hashrate",
       "link": "https://beincrypto.com/foundry-antpool-control-bitcoin-hashrate/",
       "pubDate": "2024-08-25T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "Concerns are mounting within the crypto community about Bitcoin’s increasing centralization, which some fear could threaten the foundational principles of the world’s first digital asset. Recent data from BTC.com reveals that two mining pools — Foundry USA and AntPool — now control approximately 57% of Bitcoin’s total network hashrate. Foundry and AntPool Dominate Bitcoin Mining...",
       "currencies": [
@@ -448,41 +76,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Bullish XRP Analyst Eyes $7.50 If Crypto Breaks Resistance",
-      "link": "NULL",
-      "pubDate": "2024-08-25T13:00:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "DOGE",
-        "OP"
-      ]
-    },
-    {
-      "title": "Upcoming Token Unlocks For SUI, OP, ZETA, and Others",
-      "link": "NULL",
-      "pubDate": "2024-08-25T12:43:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "1INCH",
-        "DYDX",
-        "AGIX",
-        "YGG",
-        "SUI",
-        "OP",
-        "ENA"
-      ]
-    },
-    {
       "title": "'Only Bitcoin is Secure': Max Keiser Calls Out XRP and Cardano",
       "link": "https://u.today/only-bitcoin-is-secure-max-keiser-calls-out-xrp-and-cardano",
       "pubDate": "2024-08-25T12:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "bitcoin",
       "description": "Bitcoin bull Max Keiser slams XRP and Cardano in reaction to Pavel Durov's arrest",
       "currencies": [
@@ -497,49 +95,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Do Not Miss Out On 600x Profits From Mpeppe (MPEPE), Internet Computer (ICP) and Render (RENDER)",
-      "link": "NULL",
-      "pubDate": "2024-08-25T12:00:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Internet Computer And Mpeppe (MPEPE) Two Crypto That Keep on Giving.",
-      "link": "NULL",
-      "pubDate": "2024-08-25T12:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bonk rises 18%: Analyst says more gains are on the way!",
-      "link": "NULL",
-      "pubDate": "2024-08-25T12:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
       "title": "Cardano, Algorand Eyeing Potential Decentralized AI Partnership: Details",
       "link": "https://www.thecoinrepublic.com/2024/08/25/cardano-algorand-eyeing-potential-decentralized-ai-partnership-details/",
       "pubDate": "2024-08-25T11:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "altcoin",
       "description": "Cardano and Algorand may be close to cementing a sought-after partnership that might see a part of their chains merge. Since at least last year, Cardano Founder Charles Hoskinson has been sharing a proposal for Algorand to merge as partnerchain. The conversation took a new twist on X recently, with Gary Malouf, the Chief Technology […]",
       "currencies": [
@@ -552,53 +112,11 @@
       }
     },
     {
-      "title": "Dogecoin Rally: Over 70% Of Holders Enjoy Profit As Memecoin Climbs 9%",
-      "link": "NULL",
-      "pubDate": "2024-08-25T10:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "INJ",
-        "OP"
-      ]
-    },
-    {
-      "title": "Telegram Founder Pavel Durov Arrested in France, Expected to Face Court on Sunday",
-      "link": "NULL",
-      "pubDate": "2024-08-25T10:19:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "WazirX blames restructuring delays on external factors",
-      "link": "NULL",
-      "pubDate": "2024-08-25T09:02:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
       "title": "TON Plunges 20% on Reports of Telegram CEO Pavel Durov’s Arrest in France",
       "link": "https://dailycoin.com/ton-plunges-20-on-reports-of-telegram-ceo-pavel-durovs-arrest-in-france/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-08-25T08:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "trading",
       "description": "Toncoin (TON) witnesses a dramatic plunge on reports of the arrest of Telegram CEO Pavel Durov.",
       "currencies": [
@@ -614,8 +132,8 @@
       "title": "Which Will Perform Better in 2024: Ripple (XRP) or Cardano (ADA), 4 Arguments from ChatGPT",
       "link": "https://cryptopotato.com/which-will-perform-better-in-2024-ripple-xrp-or-cardano-ada-4-arguments-from-chatgpt/",
       "pubDate": "2024-08-25T08:44:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "altcoin",
       "description": "ADA or XRP, which will be the better performer in the rest of 2024?",
       "currencies": [
@@ -632,8 +150,8 @@
       "title": "SOL Set For ATH? Analyst Predicts It Will Happen This Year",
       "link": "https://bitcoinist.com/sol-set-for-ath-analyst-predicts-it-will-happen-this-year/",
       "pubDate": "2024-08-25T08:00:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "altcoin",
       "description": "Solana (SOL) is one of the strongest assets in the crypto market, currently navigating a consolidation phase following three weeks of aggressive volatility marked by significant ups and even more significant downs. Related Reading: Can Solana Reach $1,000 In 2025? Top Analyst Predicts Despite the recent turbulence, Solana’s resilience has kept it on the radar […]",
       "currencies": [
@@ -646,23 +164,11 @@
       }
     },
     {
-      "title": "Toncoin drops 18%, Notcoin down 21% following arrest of Telegram CEO Pavel Durov",
-      "link": "NULL",
-      "pubDate": "2024-08-25T07:56:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
       "title": "Cardano Founder Backs Trump: Can RFK Jr. Alliance Rally Crypto Voters?",
       "link": "https://www.thecoinrepublic.com/2024/08/25/cardano-founder-backs-trump-can-rfk-jr-alliance-rally-crypto-voters/",
       "pubDate": "2024-08-25T07:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "trading",
       "description": "Charles Hoskinson, the founder of Cardano, has recently expressed his support for an alliance between RFK Jr. and Donald Trump for the upcoming U.S. election. He also recently supported RFK Jr.’s speech and indicated a hardline approach toward pro-cryptocurrency policies should Trump become president. Endorsement Details and Strategic Implications Charles Hoskinson expressed his support on...",
       "currencies": [
@@ -674,25 +180,11 @@
       }
     },
     {
-      "title": "Impact of Pavel Durov's Arrest on DOGS Token Listing Price",
-      "link": "NULL",
-      "pubDate": "2024-08-25T07:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "BNB",
-        "KCS",
-        "FDUSD"
-      ]
-    },
-    {
       "title": "Cardano’s Chang Hard Fork Waits for Better Weather: IOG Postpones Launch to September 1",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-08-25T07:23:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "The Chang hard fork is a pivotal upgrade for Cardano, representing a major step toward realizing the network’s vision of complete decentralization and community-driven governance. This upgrade marks the beginning of the Voltaire era, a phase that will empower ADA holders with the ability to directly participate in the decision-making processes that shape the future […]",
       "currencies": [
@@ -704,23 +196,11 @@
       }
     },
     {
-      "title": "Toncoin (TON) Falls By 15% Following Telegram CEO’s Arrest",
-      "link": "NULL",
-      "pubDate": "2024-08-25T06:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TON",
-        "NOT"
-      ]
-    },
-    {
       "title": "Cardano CEO Proposes Partnership with Algorand for AI Innovations",
       "link": "https://cryptodnes.bg/en/cardano-ceo-proposes-partnership-with-algorand-for-ai-innovations/",
       "pubDate": "2024-08-25T05:30:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptodnes",
+      "sourceKey": "cryptodnes",
       "category": "altcoin",
       "description": "Charles Hoskinson, the creator of Cardano, recently praised Algorand’s blockchain and suggested a potential partnership to advance decentralized AI technology.",
       "currencies": [
@@ -731,85 +211,6 @@
         "positive": 7,
         "negative": 6
       }
-    },
-    {
-      "title": "Solana, Avalanche And Other Altcoins Are Hinting At Massive Upside Move; Stack Now!",
-      "link": "NULL",
-      "pubDate": "2024-08-25T05:29:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AVAX",
-        "SHIB"
-      ]
-    },
-    {
-      "title": "Here’s Why Dogecoin And Shiba Inu Whales Are Choosing ETFSwap (ETFS) Over BONK",
-      "link": "NULL",
-      "pubDate": "2024-08-25T05:08:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Cosmos Hub V19 Upgrade Is Now Launched To Boost Ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-08-25T04:34:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Polkadot ‘trails’ Ethereum on dev activity front, but DOT’s price action will…",
-      "link": "NULL",
-      "pubDate": "2024-08-25T02:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DOT",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Solana Major Breakout Looms As SOL Sets Sights On $164 Level",
-      "link": "NULL",
-      "pubDate": "2024-08-25T00:30:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "LUSD"
-      ]
-    },
-    {
-      "title": "Trader Says Memecoin That’s Up Over 27,000% in Under One Year Showing Massive Strength, Updates Outlook on SYN",
-      "link": "NULL",
-      "pubDate": "2024-08-25T00:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "PEPECOIN",
-        "SYN"
-      ]
     }
   ]
 }

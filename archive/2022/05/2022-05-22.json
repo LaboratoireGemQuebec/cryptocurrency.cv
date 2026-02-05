@@ -1,92 +1,15 @@
 {
   "date": "2022-05-22",
-  "fetchedAt": "2026-02-05T07:45:51.581Z",
-  "articleCount": 175,
+  "fetchedAt": "2026-02-05T07:48:35.348Z",
+  "articleCount": 27,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "RT @NVIDIACreators: When did you first start GPU rendering? 🤔",
-      "link": "NULL",
-      "pubDate": "2022-05-22T23:26:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR"
-      ]
-    },
-    {
-      "title": "RT @Etadelius: In the past months, I've been building Helicx Link: an app that aggregates all pricing data from @BalancedDAO and creates ch…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T23:02:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICX"
-      ]
-    },
-    {
-      "title": "Inability to pay fees?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:55:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "RT @data_nexus: I am ecstatic to formally announce that the i’s are all dotted and t’s are crossed. Data Nexus is now an indexer on @graphp…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GRT"
-      ]
-    },
-    {
-      "title": "Always do your due diligence, research and educate yourself. It makes you better in the #cryptospace.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:31:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ]
-    },
-    {
-      "title": "With a breakout on the cards for Axie Infinity [AXS] here’s what you should look out for",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:30:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "RT @mediaquery: Been experimenting with some advanced subgraph development on a local @graphprotocol node today. Amazing how it just works™…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:12:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GRT"
-      ]
-    },
     {
       "title": "Crypto Analyst Predicts Breakout for Polygon (MATIC), Says Zilliqa (ZIL) and One Low-Cap Altcoin Flashing Strength",
       "link": "https://dailyhodl.com/2022/05/22/crypto-analyst-predicts-breakout-for-polygon-matic-says-zilliqa-zil-and-one-low-cap-altcoin-flashing-strength/",
       "pubDate": "2022-05-22T22:05:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "layer2",
       "description": "A widely followed crypto strategist and trader is eyeing possible rallies for a trio of altcoins including Polygon (MATIC) and Zilliqa (ZIL). Crypto strategist Michaël van de Poppe tells his 602,900 Twitter followers that blockchain scaling solution Polygon is in a position for a breakout as long as it stays above its immediate support area. […]",
       "currencies": [
@@ -100,55 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What are the top Community Pages you can't wait to see on the new #LeoFinance Community Page feature?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T22:01:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "RT @TheTNetwork: Please help us improve the staking experience by doing this short survey",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:50:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KEEP"
-      ]
-    },
-    {
-      "title": "$XMR &gt; $BTC",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:36:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
-      "title": "27th we’re making a community buy in any amounts !",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:34:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
       "title": "BTC Reclaims $30,000 As Crypto Community Celebrates 12th Anniversary Of Bitcoin Pizza Day",
       "link": "https://zycrypto.com/btc-reclaims-30000-as-crypto-community-celebrates-12th-anniversary-of-bitcoin-pizza-day/",
       "pubDate": "2022-05-22T21:32:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "bitcoin",
       "description": "Every year on May 22, crypto communities around the world are united in remembering perhaps one of the oddest events in the history of Bitcoin.",
       "currencies": [
@@ -161,158 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "What do you think? Who wants to have a breathtaking week? I heard something about the 27th? Let's see what's in the Box! Beyond the Eternal!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Tether Combats Recent Dip With New Bullish Financial Report",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:12:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TRX"
-      ]
-    },
-    {
-      "title": "How Two Pizzas Changed The Course Of Bitcoin History (#Bitcoin Pizza Day)",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:10:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "RT @templedao: New Medium Post — Comprehensive Partnership with @feiprotocol",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:04:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FEI",
-        "TRIBE"
-      ]
-    },
-    {
-      "title": "Keep replying with answers! Will be choosing a winner tomorrow",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:03:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HUM"
-      ]
-    },
-    {
-      "title": "RT @shanvasion: HMU if you are hacking with @Livepeer @NFTBERLINteam and need a ticket to the main conference that starts on Wednesday! Li…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:01:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "LPT"
-      ]
-    },
-    {
-      "title": "so true",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "There is a ton of great projects across the Serum ecosystem, and we love hosting great events with these projects t…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T21:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SRM"
-      ]
-    },
-    {
-      "title": "#BitcoinPizzaDay is a great reminder that Bitcoin was used as a medium of exchange BEFORE anyone tried using it as…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:53:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "RT @DiviWallet: Fancy scoring some tickets to @FCBarcelona vs A-League All Stars in #Sydney this week?! We’ve got a pair of tickets to give…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:37:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
-      "title": "RT @SatoshiLite: In terms of fungibility and privacy, I believe MWEB gets you 90% there. For most people that's good enough. It's the diffe…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:20:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "In terms of fungibility and privacy, I believe MWEB gets you 90% there. For most people that's good enough. It's th…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:19:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "RT @Crypto_Potato: Privacy opt-ins via MimbleWimble Extension Block have finally arrived on Litecoin.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:14:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
       "title": "Top 5 cryptocurrencies to watch this week: BTC, BNB, XMR, ETC, MANA",
       "link": "https://cointelegraph.com/news/top-5-cryptocurrencies-to-watch-this-week-btc-bnb-xmr-etc-mana",
       "pubDate": "2022-05-22T20:09:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "BTC price continues to encounter selling pressure, but a brief rally or the start of consolidation could lead to sharp gains in BNB, XMR, ETC and MANA.",
       "currencies": [
@@ -329,80 +61,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Set a reminder for my upcoming Space! A look at all things music NFTs with a few special guests.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:07:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "AUDIO"
-      ]
-    },
-    {
-      "title": "RT @AdrianPapava: Sometimes you have to be the #BitcoinPizza guy. @FinanceLeo",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:04:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "RT @DexteriumExch: Dexterium V2 is now live! Check out our new, simple yet powerful, revamped #DEX.  Stay tuned for…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:01:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "So-Called ‘Pharma Bro’ Martin Shkreli Turns ‘Crypto Bro’ — ‘I Started Using Uniswap in Prison’",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "ALGO",
-        "FLOW"
-      ]
-    },
-    {
-      "title": "#Bitcoin will hit $_____ this week.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T20:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "MX"
-      ]
-    },
-    {
-      "title": "Watching my Elon and RVN battle it out on my portfolio for the top spot.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:50:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
       "title": "Do Kwon Isn’t Done Yet",
       "link": "https://decrypt.co/101129/do-kwon-isnt-done-yet",
       "pubDate": "2022-05-22T19:49:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "general",
       "description": "Terra’s collapse may have silenced some of the trash talking, but Do Kwon isn't going away—he insists he plans to rebuild.",
       "currencies": [
@@ -415,165 +78,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SupercietyHQ: @Dominnaann @beniaminmincu decentralizing organizations &amp; communities through DAOs will be the next big thing in the cryp…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:47:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPER"
-      ]
-    },
-    {
-      "title": "RT @WAX_io: @bc_brawlers  #GIVEAWAY: To celebrate the launch of the all-new Artifact rarity, @bc_brawlers is giving away 25 packs to the t…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:41:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAXP"
-      ]
-    },
-    {
-      "title": "Buy $Alpha, this is the $Alpha journal of how many times we told you to buy. 1M MC, Metaverse city in full developm…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:38:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "We've claimed our @VoxoDeus Heirlooms - exclusive Equipment NFTs to use in @TheSandboxGame with your Avatar - only…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:34:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Zilliqa [ZIL] might be headed an a downward trajectory but here’s the caveat",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:30:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZIL"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @LadyofCrypto1: I'll be speaking about fashion in the #Metaverse at the @VulcanForged $PYR conference live in Athens on Tue, Jun 14, 202…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:19:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "PYR"
-      ]
-    },
-    {
-      "title": "RT @Ergonauts1: I agree! NIPoPoWs allow for better interoperability between chains, make sidechains more efficient, allow light clients to…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:19:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "RT @veecon: Check out the Gaming Lounge presented by @gogalagames! The Gaming Lounge is located on Level + 2 on the East side of US Bank St…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Join me in my Space! #Bitcoincash",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:03:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BCH"
-      ]
-    },
-    {
-      "title": "About Collateralized ACA",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "Fidelity Lets Customers Fund Their 401Ks with Crypto, but Not Everyone’s Happy",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:00:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "DOGE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Missed last week’s Ask @Mashinsky Anything with @CryptoWendyO? Catch up",
-      "link": "NULL",
-      "pubDate": "2022-05-22T19:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "What’s his name?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T18:59:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
       "title": "SEC Just Announced It's Coming After 99% of Cryptocurrencies",
       "link": "https://www.youtube.com/watch?v=LPMZ1JDth0o",
       "pubDate": "2022-05-22T18:50:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoTips",
+      "sourceKey": "cryptotips",
       "category": "regulation",
       "description": "Sign Up Here for the CT Club! https://patreon.com/cryptotips Get My Free Newsletter: https://learningcrypto.com Join our Public Discord Channels Here: https://discord.gg/Hseq2nkeHr ((If you are a Patreon member, connect through Patreon to access exclusive channels as well)) Ledger hardware wallets 👉 https://shop.ledger.com/pages/ledger-nano-x?r=67ef Trezor hardware wallet with $25 voucher for Coinify 👉 https://shop.trezor.io/product/trezor-starter-pack?offer_id=114&aff_id=10937 10% Binance Dis",
       "currencies": [
@@ -588,8 +97,8 @@
       "title": "XRP Ledger To See Carbon Credit NFTs With Ripple’s New $100,000,000 Investment Fund",
       "link": "https://dailyhodl.com/2022/05/22/xrp-ledger-to-see-carbon-credit-nfts-with-ripples-new-100000000-investment-fund/",
       "pubDate": "2022-05-22T18:45:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "nft",
       "description": "Ripple Labs is announcing a $100 million investment fund that will see carbon credit non-fungible tokens (NFTs) come to the XRP Ledger. According to a new press release, Ripple’s new initiative aims to expedite carbon removal activities and technologies as well as help streamline carbon-focused fintech and crypto projects. “The funding will continue to support […]",
       "currencies": [
@@ -602,33 +111,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Like the tweet if you are celebrating #Bitcoin Pizza Day!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T18:32:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "MDX"
-      ]
-    },
-    {
-      "title": "Positive Vibes Fam",
-      "link": "NULL",
-      "pubDate": "2022-05-22T18:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
       "title": "Terra Gains 100% Amid ‘Insane Volatility’ As Analysts Remain Split On A Gigantic LUNA Recovery",
       "link": "https://zycrypto.com/terra-gains-100-amid-insane-volatility-as-analysts-remain-split-on-a-gigantic-luna-recovery/",
       "pubDate": "2022-05-22T18:23:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "general",
       "description": "After days of showing little to no effort in its performance post-price crash, LUNA is now seeing sparks of extreme volatility in its price performance.",
       "currencies": [
@@ -641,33 +128,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "It's risky enough to run an NFT project. Why risk getting your mint botted? Use Civic Pass bot protection. 🤖️",
-      "link": "NULL",
-      "pubDate": "2022-05-22T18:03:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CVC"
-      ]
-    },
-    {
-      "title": "Ever wanted to do something to promote #XYO? Check out the new brand guidelines and brand assets on our website!…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:50:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Highlights From Binance CEO’s Reddit AMA Session: $LUNA, $UST, $BNB, and $BUSD",
       "link": "https://www.cryptoglobe.com/latest/2022/05/highlights-from-binance-ceos-reddit-ama-session-luna-ust-bnb-and-busd/",
       "pubDate": "2022-05-22T17:49:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "exchange",
       "description": "On Saturday (May 21), Changpeng Zhao (aka “CZ”), Co-Founder and CEO of Binance, answered questions from the Reddit community during an “Ask Me Anything” (AMA) session hosted on the “/r/cryptocurrency” subreddit. Below, are some key highlights from this AMA session. $LUNA and $UST “Binance always has risk warnings to users in all of our announcements. […]",
       "currencies": [
@@ -683,8 +148,8 @@
       "title": "CZ Declines Suggestion to Take Over from Do Kwon as Head of Terra (LUNA) and Bail out UST in Recent Reddit AMA",
       "link": "https://en.ethereumworldnews.com/cz-declines-take-over-from-do-kwon-as-head-of-terra-luna-and-bail-out-ust-in-reddit-ama/",
       "pubDate": "2022-05-22T17:39:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: In a recent AMA, Binance CEO was asked whether he would consider taking over from Do Kwon at LUNA and bailing out UST. CZ responded by stating he was humbled by the request, but such a scenario was unlikely given that he is ‘pretty busy already.’ CZ also clarified that the exact details of a possible LUNA airdrop after the Terra hardfork would be worked out after an official consensus....",
       "currencies": [
@@ -697,126 +162,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Gauging XRP’s true potential to break beyond the chains of $0.4",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "John Nahas (@SJohn_Nahas) Vice President of Business Development at @avalabsofficial talks about Biggest use-case o…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LCX"
-      ]
-    },
-    {
-      "title": "Tell us what you have planned for your weekend good deed for your #community? As a #cryptocommunity we should alway…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:12:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ]
-    },
-    {
-      "title": "RT @camgeary: Dogecoin 2.0 is better than Dogecoin AND has a billboard in Times Square! Faster transactions, lower supply, deflationary, st…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:03:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "RT @camgeary: Dogecoin 2.0 at Times Square! #doge2 #doge #dogecoin #btc #BitMart #BSC #ETH #XRP #LUNA",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:03:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "RT @NEARProtocol: This week Davos is hosting the annual World Economic Forum and in support, the NEAR Community and @SweatEconomy have part…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:02:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Litecoin Activates MimbleWimble Extension Blocks (MWEB)",
-      "link": "NULL",
-      "pubDate": "2022-05-22T17:01:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "1/ That went well  #Permissionless2022 was a big success thanks to the efforts from the Moonbeam team &amp; support fr…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:52:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GLMR"
-      ]
-    },
-    {
-      "title": "RT @maplefinance: Tend to agree with @BanklessHQ",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:48:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "MPL"
-      ]
-    },
-    {
-      "title": "top 50 guild Praetorian Pandas is recruiting",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:39:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
       "title": "LUNA, UST Investors Can’t Catch a Break as Scammers Are Now Posting Fake Terra Community Proposals",
       "link": "https://en.ethereumworldnews.com/luna-ust-investors-cant-catch-a-break-scammers-posting-fake-terra-community-proposals/",
       "pubDate": "2022-05-22T16:36:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Summary: Malicious actors have been purchasing LUNA and posting fake proposals on Terra Station with phishing sites. Terra has also witnessed an increment in spam proposals as the ‘cheapness’ of LUNA makes it economically easier. The team at Terra has now added an allowlist for new proposals in the ecosystem. The Terra community continues to vote on proposal 1623 to fork the chain with 66.3% for...",
       "currencies": [
@@ -829,33 +179,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "We will stop the distribution of the WLof the Dialoger on May 24, 00.00 PST",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Tether and how it maintained ‘stability through multiple black swan events’",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "USDT"
-      ]
-    },
-    {
       "title": "Bitcoin And Retirement: U.S. House Bill To Include Crypto On 401(K) Plans",
       "link": "https://bitcoinist.com/u-s-bill-to-include-bitcoin-on-401k-plans/",
       "pubDate": "2022-05-22T16:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "bitcoin",
       "description": "United States Rep. Byron Donalds has initiated a bill to the U.S. House of Representatives seeking to incorporate Bitcoin into every American home’s 401(K) retirement plans. It’s a novel and bold move as the bill also significantly boosts the Financial Freedom Act of 2022, which was also set in motion this month. The bill by […]",
       "currencies": [
@@ -868,55 +196,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "In addition to setting up their #DAO, @KaddeXofficial is equipping every DAO participant with the necessary knowled…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "It’s not that much but it’s a honest work. Still down even it’s more than 50% down",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:28:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "gm to everyone esp. founder roomies",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:15:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MPL"
-      ]
-    },
-    {
-      "title": "Listen back to our conversation with Ralf Kubli from @Casper_Network one of blockchain’s fastest growing projects!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T16:11:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACH"
-      ]
-    },
-    {
       "title": "Nox Bitcoin To Refund UST At $1 To Their Customers",
       "link": "https://www.newsbtc.com/terra-luna/nox-bitcoin-to-refund-ust-at-1-to-their-customers/",
       "pubDate": "2022-05-22T16:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "bitcoin",
       "description": "Nox Bitcoin, a cryptocurrency exchange in Brazil, has taken the unprecedented step of using its own funds to refund customers for their TerraUSD coins at the full rate. Following local media’s report on May 20, the Nox Bitcoin exchange has refunded all UST holders at a $1 rate with Tether’s USDT. The report stated that the crypto brokerage firm paid 620,000 Reais ($127,000). The exchange paid...",
       "currencies": [
@@ -930,44 +214,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @mkuegi: I see many being scared that \"ppl are leaving @defichain\" cause the TVL is dropping. Lets look at the numbers and stop the FUD,…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:59:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "Yield Guild Brawlers (Looking for 2-3 members) ~~~~~~~~~~A top 50 Guild~~~~~~~~~~",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:58:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SPS"
-      ]
-    },
-    {
-      "title": "RT @YieldStationNet: KronosDao (@dao_kronos), a decentralized exchange and an automated market maker on Binance Smart Chain, is now live on…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:50:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Cardano's Sidechain Milkomeda Could Become Network's ZkRollup",
       "link": "https://u.today/cardanos-sidechain-milkomeda-could-become-networks-zkrollup",
       "pubDate": "2022-05-22T15:50:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Milkomeda successfully delivers cross-chain dApp performance on Cardano",
       "currencies": [
@@ -980,240 +231,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @MariaMinaricova: Come and meet us at the @FilFoundation Sanctuary at the #WEF22. Talking #blockchain #crypto as well as #Sustainability…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:43:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "everyone talks about the story of spending 10,000 bitcoin buying a pizza but never about earning 10,000 bitcoin selling a pizza",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:40:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FTT"
-      ]
-    },
-    {
-      "title": "Happy #Bitcoin Pizza Day!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:36:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "FTT"
-      ]
-    },
-    {
-      "title": "Kadena Tokenomics - Devil's Advocate Question",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:35:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KDA"
-      ]
-    },
-    {
-      "title": "What is Ether’s connection to #Ethereum?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LCX"
-      ]
-    },
-    {
-      "title": "RT @jellywallet: The first weeks have passed and Jellywallet has been tested extensively. While we are working on improvements, we publish…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:28:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DFI"
-      ]
-    },
-    {
-      "title": "RT @finguru6: Bear markets are no fun, right? But you can make it fun by acquiring some knowledge and a handful of skills. Read to know wha…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:24:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "The more you know.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:21:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BIT"
-      ]
-    },
-    {
-      "title": "RT @news_of_bsc: Attention @binance users! @VenusProtocol has been added to the app giving you access to decentralized borrowing and lendin…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:13:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "XVS",
-        "VAI"
-      ]
-    },
-    {
-      "title": "We're ready to release #LeoMobile V1 to IOS and Android App Stores. Help us design the App Store Display Layout and…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:10:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Former Fed Chair: Bitcoin’s Main Use Case Is ‘To Do Ransomware or Something Like That’",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:05:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 3,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "'Tis the season of rugging. Join us in a conversation with auditing firm @osec_io to discuss security practices as…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:02:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "WAVES"
-      ]
-    },
-    {
-      "title": "RT @BitcoinMagazine: TODAY: The first #Bitcoin ATM installed in Ecuador 🇪🇨",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:02:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "When cold storage ?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:02:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ACA"
-      ]
-    },
-    {
-      "title": "Make sure you get your slice today. Happy #BitcoinPizzaDay!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GLMR"
-      ]
-    },
-    {
-      "title": "Happy #BitcoinPizzaDay from our global team to our community worldwide",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:00:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HT",
-        "HBTC"
-      ]
-    },
-    {
-      "title": "In this commentary collection, 7 industry experts weigh in to give you a comprehensive look at the issues preventin…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T15:00:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "POLY"
-      ]
-    },
-    {
-      "title": "Ripple Price Analysis: XRP Fights to Reclaim Trendline Providing Support Since the March 20 Crash",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:54:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "DAI Emerges Strong Despite Terra’s Downfall",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:35:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "DAI"
-      ]
-    },
-    {
-      "title": "RT @c4ptainh0wdy: Happy #BitcoinPizzaDay! We're celebrating the right way over on @FinanceLeo by earning #crypto with our content. Stop giv…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:34:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
       "title": "Crypto is Worth Nothing and Based on Nothing, Says ECB President Lagarde",
       "link": "https://en.ethereumworldnews.com/crypto-is-worth-nothing-and-based-on-nothing-says-ecb-president-lagarde/",
       "pubDate": "2022-05-22T14:27:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "general",
       "description": "Quick take: European Central Bank President, Christine Lagarde, has said cryptocurrencies are worth nothing and based on nothing. She added that cryptocurrencies do not have an underlying asset to act as an anchor of safety. ECB President Lagarde said that a digital Euro would be a better store of value than cryptocurrencies. The EU Commission on a digital euro (CBDC) is still accepting...",
       "currencies": [
@@ -1226,111 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @zmanian: Interchain Security makes $ATOM an application platform where new applications can benefit the security of ATOM and ecosystem…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:18:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Things you can do today that you couldn't do in 2010: Buy pizza with your Visa Card …",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:13:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO"
-      ]
-    },
-    {
-      "title": "In this thought experiment, Celo's Jake Leraul looks at a hypothetical ‘conservation token’ built on the Celo block…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:08:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CELO",
-        "CUSD"
-      ]
-    },
-    {
-      "title": "RT @AtomicHub: Is @WAX_io your favourite blockchain? If so, why is it your favourite?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:01:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WAXP"
-      ]
-    },
-    {
-      "title": "Circle to Issue Weekly USDC Reserve Reports — Tether Publishes May 2022 Assurance Report",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "USDC",
-        "TRX",
-        "ALGO",
-        "EOS"
-      ]
-    },
-    {
-      "title": "I finally joined the club! Time to ride this one out.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T14:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Maintenance is complete. All Celsius products and services are operational.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:59:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "RT @raindylu: 3 years ago, I celebrated my 1st Bitcoin Pizza Day on my 2nd day with Ontology. I never thought I'd go this far with it, and…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:49:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ONT",
-        "ONG"
-      ]
-    },
-    {
       "title": "Restaurant software giant Lavu enables crypto payments in more than 65 countries",
       "link": "https://finbold.com/restaurant-software-giant-lavu-enables-crypto-payments-in-more-than-65-countries/",
       "pubDate": "2022-05-22T13:37:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Global restaurant software provider Lavu announced on May 19, that they’re now in cooperation with Verifone a global FinTech payment... Continue reading",
       "currencies": [
@@ -1343,66 +265,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Happy Bitcoin Pizza Day!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:28:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
-      "title": "RT @RenzoDGB: Download the #DigiCanvas software and create your own #PixelArts recorded on the #DigiByte blockchain! @DigiByteCoin @DGBAT_O…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:21:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "RT @RenzoDGB: Full presentation of #DigiCanvas a public canvas on top of #DigiByte blockchain! @DigiByteCoin @DGBAT_Official",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:21:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "RT @RenzoDGB: New project! A public canvas on top of the #DigiByte blockchain. Anyone can modify the pixels of this 256x256 image to create…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:21:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DGB"
-      ]
-    },
-    {
-      "title": "Good day everyone! The #EVM-Testnet Upgrade #governance proposal has passed! Thank you all for casting your votes…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:16:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FX"
-      ]
-    },
-    {
       "title": "MicroStrategy Won’t Backpedal on its Bitcoin Game Plan – CFO",
       "link": "https://en.ethereumworldnews.com/microstrategy-wont-backpedal-on-its-bitcoin-game-plan-cfo/",
       "pubDate": "2022-05-22T13:08:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "bitcoin",
       "description": "Quick take: MicroStrategy’s new Chief Financial Officer, Andrew Kang, has reiterated that the company will stick to its Bitcoin plan by not selling any BTC. Mr. Kang also adds that MicroStrategy investors are also aligned with the company’s Bitcoin strategy. MicroStrategy’s new CFO also forecasts possible regulation due to the recent volatility of the crypto markets. This past Wednesday,...",
       "currencies": [
@@ -1418,9 +285,9 @@
       "title": "Amid widespread weaknesses, how Monero [XMR] is managing to stay optimistic",
       "link": "https://ambcrypto.com/amid-widespread-weaknesses-how-monero-xmr-is-managing-to-stay-optimistic/",
       "pubDate": "2022-05-22T13:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
+      "category": "trading",
       "description": "You probably wonder why your friends HODLing Monero (XMR) have been suspiciously joyous in the last seven days. Well, you should know that the seven days were marked with significant growth for the XMR token. At the time of press, a bullish divergence was spotted on the price charts indicating that the bull run has […]",
       "currencies": [
         "XMR"
@@ -1432,56 +299,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Polaris Launchpad Demo Week Part One will start soon, join us on Youtube Live and see the project teams demonstrat…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Keep your eyes on @ElonTweetedBSC - It's a hyper-deflationary reward token offering 10% BUSD rewards. The ultimate…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:51:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "THIRTY THOUSAND US DOLLARS",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:51:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MNGO"
-      ]
-    },
-    {
-      "title": "🤔 Extreme Fear?!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:44:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "HBTC"
-      ]
-    },
-    {
       "title": "Hedge Fund Billionaire Bill Ackman: Terra Was ‘Crypto Version of a Pyramid Scheme’",
       "link": "https://www.cryptoglobe.com/latest/2022/05/hedge-fund-billionaire-bill-ackman-terra-was-crypto-version-of-a-pyramid-scheme/",
       "pubDate": "2022-05-22T12:33:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "general",
       "description": "Billionaire investor Bill Ackman says that the epic collapse of Terra ($LUNA) and algorithmic stablecoin TerraUAD ($UST) has exposed a crypto version of a pyramid scheme. In a series of tweets, Ackman shared his views on the price collapse of $UST, which was once thought to be pegged to the value of $1. Ackman said […]",
       "currencies": [
@@ -1494,22 +316,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "According to Citibank,the Metaverse🥽 economy will surpass $13 trillion in 2030. Undoubtedly, the virtual world wil…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:14:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
       "title": "USDTea story – how 99 cents priced AriZona iced tea became a satirical stablecoin",
       "link": "https://finbold.com/usdtea-story-how-99-cents-priced-arizona-iced-tea-became-a-satirical-stablecoin/",
       "pubDate": "2022-05-22T12:03:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Out of the ashes of the TerraUSD (UST) collapse ‘rises’ a new stablecoin backed by a can of AriZona Iced... Continue reading",
       "currencies": [
@@ -1525,8 +336,8 @@
       "title": "Cryptocurrency Is ‘Worthless,’ European Central Bank President Says",
       "link": "https://bitcoinist.com/crypto-is-worthless-ecb-president/",
       "pubDate": "2022-05-22T12:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "regulation",
       "description": "Christine Lagarde, president of the European Central Bank, has warned that cryptocurrencies are worthless and should be regulated. The ECB boss believes that regulating the sector will prevent people from gambling their life savings on cryptocurrencies. “My extremely modest opinion is that cryptocurrency is worthless. It is founded on nothing, and there are no underlying […]",
       "currencies": [
@@ -1538,154 +349,11 @@
       }
     },
     {
-      "title": "We were guests at FrenchMontana's residence to celebrate Radio Caca's 1 year anniversary!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:03:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RACA"
-      ]
-    },
-    {
-      "title": "RT @OT_Parachain: Join @origin_trail's founder @DrevZiga️next Tuesday at 10am CEST in @Davos for a panel on How any #blockchain use case c…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T12:01:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRAC"
-      ]
-    },
-    {
-      "title": "The special discussion live for #Bitcoin Pizza Day is in progress! Join now and listen to @justinsuntron’s talk on…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:42:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @DiviWallet: We are super excited to be activating in-stadia for @FCBarcelona‘s visit to #Sydney to take on @aleaguemen #AllStars this w…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:36:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DIVI"
-      ]
-    },
-    {
-      "title": "#USDD is on fire!  The USDD total supply on #JustLend has exceeded $500 Million!!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:34:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "Ethereum Virtual Machine a.k.a EVM is a specialized software that enables developers to create DApps. Its purpose i…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "RT @MariaMinaricova: Welcome to sunny Davos. @Fetch_ai together with team @LiquidChefsUK. Final preparations for the #WEF22.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:27:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "FET"
-      ]
-    },
-    {
-      "title": "RT @PlanetCapitan: Planeteers, let's help our @SupercietyHQ friends test their product. They are among those who are trying to build be…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:23:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUPER"
-      ]
-    },
-    {
-      "title": "Happy to announce that the @RadioShack Kickstarter has concluded and $RADIO will list on #MEXCGlobal at 12:00 on M…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:14:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MX"
-      ]
-    },
-    {
-      "title": "66 Coronation Crowns of Queen Elizabeth OR five flights with Space X’s Falcon 9 rocket OR four fighter jets OR the…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T11:02:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BEST"
-      ]
-    },
-    {
-      "title": "One is the carbon-negative blockchain of the future; the other is the carbon-negative blockchain of the future pron…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T10:17:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CELO"
-      ]
-    },
-    {
-      "title": "Free  to celebrate #BitcoinPizzaDay! Join the giveaway:",
-      "link": "NULL",
-      "pubDate": "2022-05-22T10:12:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HI"
-      ]
-    },
-    {
-      "title": "DOGE, SAND, and GALA Price Analysis: 22 May",
-      "link": "NULL",
-      "pubDate": "2022-05-22T10:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
       "title": "Elon Musk Hits Back at Dogecoin Co-Founder Who Called Him “Self-Absorbed Grifter\"",
       "link": "https://u.today/elon-musk-hits-back-at-dogecoin-co-founder-who-called-him-self-absorbed-grifter",
       "pubDate": "2022-05-22T09:59:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Jackson Palmer claims that Elon Musk is tweeting about crypto to boost ego with the help of people who think that he’s “Tony Stark or something”",
       "currencies": [
@@ -1701,8 +369,8 @@
       "title": "Terraform Labs Has Paid in Full its Taxes in South Korea, Says Do Kwon",
       "link": "https://cryptopotato.com/terraform-labs-has-paid-in-full-its-taxes-in-south-korea-says-do-kwon/",
       "pubDate": "2022-05-22T09:58:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoPotato",
+      "sourceKey": "cryptopotato",
       "category": "general",
       "description": "Terraform's Do Kwon refuted reports that the company owns nearly $80 million in taxes to the South Korean government.",
       "currencies": [
@@ -1715,33 +383,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @Mabelma951: Proud to announce the FIRST EVER Best of Harmony One Virtual Gallery! We have some amazing artist being showcased here from…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T09:31:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ]
-    },
-    {
-      "title": "RT @fubuloubu: alpha leak, to save gas... just use Vyper lmao",
-      "link": "NULL",
-      "pubDate": "2022-05-22T08:58:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
       "title": "Musk tweets his support for crypto over fiat currencies",
       "link": "https://www.theblockcrypto.com/linked/148213/musk-tweets-his-support-for-crypto-over-fiat-currencies?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-05-22T08:49:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Theblockcrypto",
+      "sourceKey": "theblockcrypto",
       "category": "general",
       "description": "Musk tweeted: “The true battle is between fiat & crypto. On balance, I support the latter.”",
       "currencies": [
@@ -1754,22 +400,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Just spend 0.0017 #BTC for two mouthwatering pizzas. #BitcoinPizzaDay couldnt be easier with #Wirex Card",
-      "link": "NULL",
-      "pubDate": "2022-05-22T08:45:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WXT"
-      ]
-    },
-    {
       "title": "SEC v. Ripple – Amici takes aim at Doody’s ‘reasonable’ XRP holders assertion",
       "link": "https://ambcrypto.com/sec-v-ripple-amici-takes-aim-at-doodys-reasonable-xrp-holders-assertion/",
       "pubDate": "2022-05-22T08:30:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "regulation",
       "description": "The lawsuit between American regulators (SEC) and the San Francisco-based fintech firm Ripple continues to see new developments. Ergo, it is perhaps no surprise that holders of XRP have grown impatient given the dynamics and volatility of the cryptocurrency space. Bearing this in mind, John E. Deaton, Counsel for ‘Amici Curiae,’ has filed a letter […]",
       "currencies": [
@@ -1782,55 +417,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "🤔ARE YOU ONE OF THE WINNERS?!🥳",
-      "link": "NULL",
-      "pubDate": "2022-05-22T08:14:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONE"
-      ]
-    },
-    {
-      "title": "RT @DeCoEducation: DeCo is not run by one person, there have been much sweat and tears shed by all the core members involved in this semest…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T08:11:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ERG"
-      ]
-    },
-    {
-      "title": "Happy #Bitcoin  Pizza Day everyone!",
-      "link": "NULL",
-      "pubDate": "2022-05-22T07:42:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "USDX"
-      ]
-    },
-    {
-      "title": "Thanks for the vote of confidence Vitalik.",
-      "link": "NULL",
-      "pubDate": "2022-05-22T07:33:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
       "title": "Here’s a Realistic Cardano (ADA) Forecast if Crypto Bear Market Continues, According to Analyst Benjamin Cowen",
       "link": "https://dailyhodl.com/2022/05/22/heres-a-realistic-cardano-ada-forecast-if-crypto-bear-market-continues-according-to-analyst-benjamin-cowen/",
       "pubDate": "2022-05-22T07:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "trading",
       "description": "Widely followed crypto analyst Benjamin Cowen is offering up some price targets for Cardano (ADA) should the bear market for digital assets intensify. In a new strategy session, Cowen tells his 743,000 YouTube subscribers that he’s looking at Cardano against Bitcoin (ADA/BTC) and says the pair is in the midst of a strong downtrend. According […]",
       "currencies": [
@@ -1843,45 +434,11 @@
       }
     },
     {
-      "title": "RT @bobrasX: Let’s hold our very first “Marketing Brainstorming Session with the community” on a video call — I’ll speak with the marketing…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T06:43:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOLO"
-      ]
-    },
-    {
-      "title": "I am still $GMT and $Fitfi Supporter and always will be. They brought the #M2E Revolution in #Crypto and are remark…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T06:24:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GMT"
-      ]
-    },
-    {
-      "title": "RT @usddio: #USDD",
-      "link": "NULL",
-      "pubDate": "2022-05-22T06:24:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "WTRX"
-      ]
-    },
-    {
       "title": "Ripple Pledges $100 Million to Help Save Earth From Climate Change",
       "link": "https://www.cryptoglobe.com/latest/2022/05/ripple-pledges-100-million-to-help-save-earth-from-climate-change/",
       "pubDate": "2022-05-22T06:18:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "altcoin",
       "description": "San Francisco-based FinTech firm Ripple has announced a $100 million commitment to “scale and strengthen” global carbon markets. According to Ripple’s press release, this funding will “accelerate carbon removal activity and help modernize carbon markets through investments in innovative carbon removal companies and climate-focused fintechs.” Also, Ripple will “build a portfolio of additive,...",
       "currencies": [
@@ -1894,60 +451,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The #xPolycub DAO in the Making",
-      "link": "NULL",
-      "pubDate": "2022-05-22T05:43:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "Do Kwon prepares to fight tax bill that jeopardises relaunch of #Terra $LUNA #LunaV2",
-      "link": "NULL",
-      "pubDate": "2022-05-22T05:41:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "RT @jameszhao2022: The real application of blockchain may not have appeared yet. Most of the current important applications require trusted…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T05:41:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEST"
-      ]
-    },
-    {
-      "title": "\"Some #blockchain systems are actively pushing to take their level of sustainability to the next level. One PoS blo…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T05:39:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QTUM"
-      ]
-    },
-    {
       "title": "Bitcoin stands apart from other crypto, and what that means for US public policy",
       "link": "https://cointelegraph.com/news/bitcoin-stands-apart-from-other-crypto-and-what-that-means-for-us-public-policy",
       "pubDate": "2022-05-22T05:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Not all cryptocurrencies are equal, and Bitcoin’s prior claim among decentralized digital assets makes it special.",
       "currencies": [
@@ -1957,193 +465,6 @@
         "positive": 1,
         "negative": 2
       }
-    },
-    {
-      "title": "Billy, where we goin boys?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T05:01:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "10 billion DogelonMars while you can before Binance listing. Not financial advise",
-      "link": "NULL",
-      "pubDate": "2022-05-22T04:33:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "What confuses you the most about the world of #crypto?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T04:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WRX"
-      ]
-    },
-    {
-      "title": "Happy #BitcoinPizzaDay  Twelve years ago, Laszlo Hanyecz paid 10,000 #Bitcoin (then worth around $41) to someone i…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T04:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "WXT"
-      ]
-    },
-    {
-      "title": "Don't miss out on your opportunity to earn free tokens and unique NFTs when you complete the various quizzes and t…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T04:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "CELR"
-      ]
-    },
-    {
-      "title": "Win your $USDD #CandyDrop! 🥳",
-      "link": "NULL",
-      "pubDate": "2022-05-22T03:58:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "pSPS-POLYCUB: Multi-Purpose Bridge with value accrual channels",
-      "link": "NULL",
-      "pubDate": "2022-05-22T03:51:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO"
-      ]
-    },
-    {
-      "title": "RT @HorizenClips: Dr @robviglione (#Horizen Co-founder &amp; Team lead) gives an update on the status of past partnerships and the direction H…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T03:11:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "The Sandbox Saturday Stream 5/21 - Video Games, Am I Right?",
-      "link": "NULL",
-      "pubDate": "2022-05-22T03:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SAND"
-      ]
-    },
-    {
-      "title": "Ratty Portrait, imagined by @ingrao_matteo , is the fourth NFT cover from @VanityFairIt series on #APENFTMktplace…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T02:51:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Here is a chance to showcase your creative talent!‍‍",
-      "link": "NULL",
-      "pubDate": "2022-05-22T02:35:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SXP"
-      ]
-    },
-    {
-      "title": "Progress Report. Reaper Financial has now Reaped over 300,000 $XRP in the last 6 months. These numbers are good, bu…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T01:57:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP"
-      ]
-    },
-    {
-      "title": "I need this baby to stay down for another week so I can add 4 more B to my bag",
-      "link": "NULL",
-      "pubDate": "2022-05-22T01:52:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Heads up I’m gonna post a STEPN code after this episode of catfish I’m watching with the lady friend",
-      "link": "NULL",
-      "pubDate": "2022-05-22T01:10:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "GMT"
-      ]
-    },
-    {
-      "title": "RT @bobrasX: @Blockchain730 @linqtoinc A partnership with @linqtoinc for securities tokenization can definitely be a success! Sologenic has…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T00:42:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOLO"
-      ]
-    },
-    {
-      "title": "RT @DavidVorick: Decentralized identity implies decentralized data. You aren't you unless you've got your social graph, your avatar, your c…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T00:14:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
-      "title": "Hey @elonmusk I think it’s time the $Alpha of the real world, partners up with the $Alpha of the metaverse. We have…",
-      "link": "NULL",
-      "pubDate": "2022-05-22T00:12:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALPHA"
-      ]
     }
   ]
 }

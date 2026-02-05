@@ -1,69 +1,15 @@
 {
   "date": "2023-08-19",
-  "fetchedAt": "2026-02-05T07:45:52.141Z",
-  "articleCount": 26,
+  "fetchedAt": "2026-02-05T07:48:35.538Z",
+  "articleCount": 6,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Why Hedera shows resilience in a declining market",
-      "link": "NULL",
-      "pubDate": "2023-08-19T20:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Hedera Price Analysis: Bullish Reversal From Support Sparks 24% Recovery Rally",
-      "link": "NULL",
-      "pubDate": "2023-08-19T20:01:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "SEC And South Korea Are Tag-Teaming Against Terraform Labs, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-08-19T20:00:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Blue-Chip NFTs lose luster as market cools",
-      "link": "NULL",
-      "pubDate": "2023-08-19T19:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MKR"
-      ]
-    },
     {
       "title": "Low Liquidity in Bitcoin: “Only 463 BTC Needed to Push Price Down 1 Percent”",
       "link": "https://en.bitcoinsistemi.com/low-liquidity-in-bitcoin-only-463-btc-needed-to-push-price-down-1-percent/",
       "pubDate": "2023-08-19T19:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "bitcoin",
       "description": "According to the data, it turned out that BTC was in a very low liquidity environment during the last sudden drop. Continue Reading: Low Liquidity in Bitcoin: “Only 463 BTC Needed to Push Price Down 1 Percent”",
       "currencies": [
@@ -76,22 +22,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "RUNE Price Skyrockets to 30-Day High with THORChain Swaps",
-      "link": "NULL",
-      "pubDate": "2023-08-19T17:16:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
       "title": "SEC’s Surprise Move: XRP Not a Security, But Legal Battle Persists",
       "link": "https://beincrypto.com/sec-ripple-xrp-security/",
       "pubDate": "2023-08-19T16:32:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "regulation",
       "description": "The U.S. Securities and Exchange Commission (SEC) admitted that the underlying assets in its case against Ripple and Terraform Labs do not necessarily constitute securities. However, it intends to appeal the judge’s ruling in its case against crypto payment company Ripple because it could affect its other litigations. In its motion for interlocutory appeal, the regulator noted...",
       "currencies": [
@@ -104,34 +39,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Apecoin retests range lows – will bulls prevail?",
-      "link": "NULL",
-      "pubDate": "2023-08-19T16:30:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Market Maker DWF Labs Moves a Large Amount of CRV Tokens to Binance: Here are the Details",
-      "link": "NULL",
-      "pubDate": "2023-08-19T15:39:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MKR",
-        "CRV"
-      ]
-    },
-    {
       "title": "XRP wiped $18 billion since positive SEC case ruling; What next?",
       "link": "https://finbold.com/xrp-wiped-18-billion-since-positive-sec-case-ruling-what-next/",
       "pubDate": "2023-08-19T14:39:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "The value of XRP received a significant boost following the ruling that the token is not a security in the … Continued",
       "currencies": [
@@ -144,35 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Terra Luna Classic Community Rejects USTC Repeg Team Proposal",
-      "link": "NULL",
-      "pubDate": "2023-08-19T13:47:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Solo Climber: The Lone Crypto Surging 11% In Top 100 Roster On A Weekend",
-      "link": "NULL",
-      "pubDate": "2023-08-19T10:55:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "LTC",
-        "INJ"
-      ]
-    },
-    {
       "title": "Shiba Inu: Shibarium Scales Operations by 1500% in Alliance with Alchemy",
       "link": "https://coinedition.com/shiba-inu-shibarium-scales-operations-by-1500-in-alliance-with-alchemy/",
       "pubDate": "2023-08-19T10:51:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "In a recent update, the Shiba Inu team informed the community about the progress the development team has made so far in scaling Shibarium. The Shiba Inu team shared the update with the Shiba Inu community via their official X account. Recall that Coin Edition reported Shibarium encountered severe technical issues just hours after launch. […]",
       "currencies": [
@@ -185,39 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Hedera (HBAR) Jumps 16%, Here's Key Reason Behind Rise",
-      "link": "NULL",
-      "pubDate": "2023-08-19T10:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "These 3 Promising Altcoins Could Yield Millionaires in 2023",
-      "link": "NULL",
-      "pubDate": "2023-08-19T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "XMR",
-        "FIL"
-      ]
-    },
-    {
       "title": "Litecoin Price Plunges To Sub-$70 Territory – What Traders Should Expect",
       "link": "https://www.newsbtc.com/news/litecoin-price-plunges-to-sub-70-territory-what-traders-should-expect/",
       "pubDate": "2023-08-19T08:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Litecoin (LTC), the altcoin often dubbed as “silver to Bitcoin’s gold,” has found itself caught in the downward spiral of the cryptocurrency market, mirroring the struggles of its larger counterpart. While LTC’s association with Bitcoin has long been a double-edged sword, the recent price crash is putting on the spotlight the intricate interplay between these digital assets. As Bitcoin (BTC)...",
       "currencies": [
@@ -234,8 +94,8 @@
       "title": "US SEC Officially Acknowledges XRP Is Non-Security in New Court Filing",
       "link": "https://coinedition.com/us-sec-officially-acknowledges-xrp-is-non-security-in-new-court-filing/",
       "pubDate": "2023-08-19T08:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "regulation",
       "description": "In a significant turn of events, the United States Securities and Exchange Commission (SEC) has publicly affirmed the nonsecurity status of digital assets, including XRP. This announcement comes as part of the regulatory body’s motion to appeal the Ripple victory ruling. The SEC stated in the newly filed motion: “The SEC does not seek appellate […]",
       "currencies": [
@@ -246,118 +106,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "BTC Slips Below $26K Again, LTC, SHIB, XRP Down 20% Weekly (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-08-19T08:08:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Crypto price predictions: Akash Network, THORChain, Bitcoin SV",
-      "link": "NULL",
-      "pubDate": "2023-08-19T05:41:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "What’s next after ETC smashes this critical support level",
-      "link": "NULL",
-      "pubDate": "2023-08-19T05:30:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ETC"
-      ]
-    },
-    {
-      "title": "RUNE rallies as the rest of the market crashes; is THORChain the reason?",
-      "link": "NULL",
-      "pubDate": "2023-08-19T04:30:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Spark Protocol Users Max Out $200M DAI Debt Ceiling",
-      "link": "NULL",
-      "pubDate": "2023-08-19T04:21:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI"
-      ]
-    },
-    {
-      "title": "THORChain Processes Record Volume After Introducing ‘Streaming Swaps’",
-      "link": "NULL",
-      "pubDate": "2023-08-19T03:17:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "NEAR Protocol’s latest update reveals this about the state of the network",
-      "link": "NULL",
-      "pubDate": "2023-08-19T00:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Injective (INJ) Price Soars By 10% Amid Crypto Crash",
-      "link": "NULL",
-      "pubDate": "2023-08-19T00:14:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Top Stablecoin Tether (USDT) Ends Support for Kusama (KSM), Bitcoin Cash (BCH) SLP and Omni Layer (OMNI) Chains",
-      "link": "NULL",
-      "pubDate": "2023-08-19T00:00:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "BCH",
-        "KSM"
-      ]
     }
   ]
 }

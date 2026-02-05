@@ -1,29 +1,15 @@
 {
   "date": "2025-02-19",
-  "fetchedAt": "2026-02-05T07:45:53.716Z",
-  "articleCount": 125,
+  "fetchedAt": "2026-02-05T07:48:35.704Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "The SEC May Be Stalling to Dismiss the XRP Lawsuit",
-      "link": "NULL",
-      "pubDate": "2025-02-19T23:27:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XRP",
-        "G",
-        "D",
-        "O"
-      ]
-    },
     {
       "title": "SEC acknowledges 21Shares’ proposal to permit staking on Ethereum ETF",
       "link": "https://www.theblock.co/post/342296/sec-acknowledges-21shares-proposal-to-permit-staking-on-ethereum-etf?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-02-19T23:21:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "ethereum",
       "description": "If staking were approved, the ETFs will be able to generate additional returns on their ETH holdings, which could potentially be passed on to investors.",
       "currencies": [
@@ -35,225 +21,11 @@
       }
     },
     {
-      "title": "Bitcoin Buying Pressure Wanes—Chart Reveals 60-Day Downtrend",
-      "link": "NULL",
-      "pubDate": "2025-02-19T23:00:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Brazil Approves World’s First Spot XRP ETF by Hashdex",
-      "link": "NULL",
-      "pubDate": "2025-02-19T22:14:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "B3",
-        "DEFI"
-      ]
-    },
-    {
-      "title": "Franklin Templeton Launches Tokenized U.S. Treasury Fund on Stellar Network in Luxembourg for European Investors",
-      "link": "NULL",
-      "pubDate": "2025-02-19T22:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "S"
-      ]
-    },
-    {
-      "title": "Solana ETF filings enter Federal Register, potential approval set for October",
-      "link": "NULL",
-      "pubDate": "2025-02-19T22:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "description": "The filings for spot Solana (SOL) exchange-traded funds (ETFs) from VanEck, 21shares, Bitwise, and Canary Capital were officially added to the Federal Register on Feb. 18. The US Securities and Exchange Commission (SEC) now has 240 days to approve or deny the filings. Additionally, the register for the Grayscale filing was added on Feb. 12, […] The post Solana ETF filings enter Federal...",
-      "currencies": [
-        "SOL"
-      ],
-      "votes": {
-        "positive": 5,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Coinbase Expands US Crypto Futures Market with CFTC-Regulated Solana Contracts",
-      "link": "NULL",
-      "pubDate": "2025-02-19T21:37:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Coinbase launches CFTC-regulated Solana (SOL) and Hedera (HBAR) futures contracts",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:55:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "Aptos Price Surges as Traders Fuel ‘Community Takeover’ With Memes",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:47:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT"
-      ]
-    },
-    {
-      "title": "Price analysis 2/19: BTC, ETH, XRP, SOL, BNB, DOGE, ADA, LINK, XLM, LTC",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "LINK",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Story (IP) Surges to Become a Top 10 AI Coin, Overtakes VIRTUAL",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "IP",
-        "MOVE",
-        "VIRTUAL",
-        "ADX"
-      ]
-    },
-    {
-      "title": "Traders of Solana-based LIBRA memecoin lost $251 million: Nansen",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:26:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "PEOPLE",
-        "LIBRA"
-      ]
-    },
-    {
-      "title": "Coinbase to list Bittensor’s TAO token tomorrow",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:21:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
-      "title": "BlockDAG vs Lightchain AI: Why BitLemons ($BLEM) is Outshining Both in the Race for Crypto Innovation",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:14:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAG"
-      ]
-    },
-    {
-      "title": "Bitcoin, Ethereum, XRP, Dogecoin Rebound: $92,000 Key Downside Support Until $97,000-$98,500 Is Reclaimed, Analysts Say",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:04:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "APT"
-      ]
-    },
-    {
-      "title": "Polkadot price prediction: Is $3.74 the key to DOT’s bullish reversal?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T20:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Why is Ethereum Price Up 3% Today?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:59:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RLY",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "Bittensor Surges Over 17% After Coinbase Listing Announcement",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TAO"
-      ]
-    },
-    {
       "title": "$6K Ethereum (ETH) price still possible, but 2 things must happen first — Analyst",
       "link": "https://cointelegraph.com/news/6-k-ethereum-price-still-possible-2-things-must-happen-first-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-02-19T19:21:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "ethereum",
       "description": "Historical data supports an explosive ETH price rally in 2025, but the first step in this journey could be swift return to cycle lows.",
       "currencies": [
@@ -268,8 +40,8 @@
       "title": "SEC seeks public comments for WisdomTree’s proposal for an XRP ETF",
       "link": "https://www.theblock.co/post/342239/sec-seeks-public-comments-for-wisdomtrees-proposal-for-an-xrp-etf?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-02-19T19:13:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "regulation",
       "description": "The U.S. SEC is looking for public comments to decide how to move forward with a proposal for an XRP exchange-traded fund.",
       "currencies": [
@@ -283,23 +55,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "ONDO and SUI Investors Move Into Coldware (COLD) To Gain Biggest Returns in Cryptocurrency",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:11:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SUI",
-        "ONDO"
-      ]
-    },
-    {
       "title": "Tether Sends $800,000,000 in USDT to Binance As Institutions Begin Onramping: Arkham",
       "link": "https://dailyhodl.com/2025/02/19/tether-sends-800000000-in-usdt-to-binance-as-institutions-begin-onramping-arkham/",
       "pubDate": "2025-02-19T19:05:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "ethereum",
       "description": "Tether, the largest stablecoin issuer in the world, has been spotted sending $800 million worth of its USDT to Binance, the biggest crypto exchange by volume. According to data from blockchain “de-anonymizing” firm Arkham, Tether sent two batches of 400 million USDT to Binance early on Wednesday. While the implications of the transfer are broad […] The post Tether Sends $800,000,000 in USDT to...",
       "currencies": [
@@ -313,157 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Can FXGuys ($FXG) Do What XRP & Stellar Couldn't? Traders Are Betting Big",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:04:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "DePIN io.net launches Co-Staking, allowing users to share block rewards",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:02:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "IO"
-      ]
-    },
-    {
-      "title": "President Trump’s economic agenda threatens D.O.G.E and US debt ceiling",
-      "link": "NULL",
-      "pubDate": "2025-02-19T19:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "G",
-        "D",
-        "O"
-      ]
-    },
-    {
-      "title": "The Daily: Binance.US restores fiat functionality, SEC considers Litecoin and XRP ETFs and more",
-      "link": "NULL",
-      "pubDate": "2025-02-19T18:56:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "XRP",
-        "LTC",
-        "PEOPLE",
-        "GAL",
-        "S"
-      ]
-    },
-    {
-      "title": "Ondo Finance Price Today: Here's Crypto Ondo Dropped 4.6% and New Tokenized Token Coldware Rallies 710%",
-      "link": "NULL",
-      "pubDate": "2025-02-19T18:53:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Binance.US restores USD access, aims for market resurgence amid SEC’s legal troubles",
-      "link": "NULL",
-      "pubDate": "2025-02-19T18:22:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ACH"
-      ]
-    },
-    {
-      "title": "Binance sued in Nigeria for $81 billion in economic losses and back taxes: reports",
-      "link": "NULL",
-      "pubDate": "2025-02-19T18:20:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "GAL"
-      ]
-    },
-    {
-      "title": "US Press Secretary Karoline Leavitt slams Democrats’ hypocrisy over D.O.G.E",
-      "link": "NULL",
-      "pubDate": "2025-02-19T18:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G",
-        "D",
-        "O"
-      ]
-    },
-    {
-      "title": "Crypto Magnate Barry Silbert Bets on Decentralized AI with New Venture",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:42:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "META"
-      ]
-    },
-    {
-      "title": "Binance US to resume USD services for eligible customers",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:40:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ACH"
-      ]
-    },
-    {
-      "title": "Why the drop in Bitcoin UTXOs, transactions, and fees is not bearish",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:32:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Qubetics Presale Races Past $13.3M—Next Best Crypto Presale to Join in February 2025 to Make Millionaires, Solana Battles Volatility, and Hedera Gains Momentum",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "HBAR"
-      ]
-    },
-    {
       "title": "World’s first XRP spot ETF to debut on Brazil’s leading stock exchange",
       "link": "https://cryptobriefing.com/worlds-first-xrp-spot-etf-brazil/",
       "pubDate": "2025-02-19T17:28:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Brazil's Securities and Exchange Commission (CVM) has approved the world's first exchange-traded fund that directly holds XRP, Ripple's native coin, from Hashdex, as shown in the database of the CVM and first reported by Portal do Bitcoin.The newly approved ETF, called \"the Hashdex NASDAQ XRP Index Fund,\" is expected to launch on Brazils main stock exchange B3. The fund's official launch date...",
       "currencies": [
@@ -477,50 +91,11 @@
       }
     },
     {
-      "title": "Ripple USD (RLUSD) Volume Explodes 33%, Here’s Possible Impact",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "RLUSD"
-      ]
-    },
-    {
-      "title": "Ondo & LTC Price Predictions Signal Growth While BlockDAG’s Keynote 3 Set to Surpass Apple and Tesla Events!",
-      "link": "NULL",
-      "pubDate": "2025-02-19T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "CZ to Donate BNB And Other Tokens to TST And Broccoli Victims",
-      "link": "NULL",
-      "pubDate": "2025-02-19T16:43:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "TST",
-        "MEME",
-        "LIBRA"
-      ]
-    },
-    {
       "title": "Coinbase launches CFTC-regulated SOL futures in US",
       "link": "https://cointelegraph.com/news/coinbase-launches-cftc-regulated-sol-futures-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "pubDate": "2025-02-19T16:35:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "Regulated futures markets are an important step toward an eventual Solana ETF.",
       "currencies": [
@@ -533,64 +108,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Qubetics Soars to $0.08073 with $13.2M Raised, XRP Breaks 6-Year Downtrend, Algorand Sets Sights on Future – The Next Big Cryptos to Invest in Now!",
-      "link": "NULL",
-      "pubDate": "2025-02-19T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "Litecoin flips AVAX, SUI, eyes $80 – What happens now?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T16:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "LTC",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Why These Altcoins Are Trending Today — February 19",
-      "link": "NULL",
-      "pubDate": "2025-02-19T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TAO",
-        "S",
-        "IP"
-      ]
-    },
-    {
-      "title": "Digital Assets Show Mixed Performance During Wednesday’s Trading Session",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:52:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "APT",
-        "S"
-      ]
-    },
-    {
       "title": "Cardano Hits Major Governance Milestone Post-Plomin Hard Fork",
       "link": "https://u.today/cardano-hits-major-governance-milestone-post-plomin-hard-fork",
       "pubDate": "2025-02-19T15:41:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "Milestone comes post-Plomin hard fork",
       "currencies": [
@@ -602,222 +124,11 @@
       }
     },
     {
-      "title": "Brazil launches first-ever XRP ETF",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:36:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "B3"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "This Analyst Called The Bitcoin Price Crash Early, Total Prediction Says More Pain Is Coming",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ALI",
-        "X"
-      ]
-    },
-    {
-      "title": "Arbitrum Diversifies Treasury with Tokenized Real-World Assets",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:24:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "DAO",
-        "ARB",
-        "RWA"
-      ]
-    },
-    {
-      "title": "Supra L1 Drives DeFi Forward with Automation & MEV Resistance",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:20:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SUPRA"
-      ]
-    },
-    {
-      "title": "XRP Rival XLM May See 88% Price Growth, Bollinger Bands Signal",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:16:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Binance.US restores USD deposits and withdrawals after two-year suspension",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:11:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ACH"
-      ]
-    },
-    {
-      "title": "Fluent Labs raises $8 million in funding led by Polychain Capital to build blended execution network",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:05:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "ATOM",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Lightning could strengthen bitcoin’s investment thesis, Fidelity Digital Assets says",
-      "link": "NULL",
-      "pubDate": "2025-02-19T15:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "PEOPLE"
-      ]
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 20 February 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Franklin Templeton Launches Tokenized U.S. Treasury Fund in Luxembourg",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:47:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "S"
-      ]
-    },
-    {
-      "title": "BONK’s future depends on $0.0000091 support – Will buyers step in?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:30:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BONK",
-        "MEME",
-        "$1"
-      ]
-    },
-    {
-      "title": "Berachain (BERA) Rallies 13%, Eyes Return to $15.20 All-Time High",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BERA"
-      ]
-    },
-    {
-      "title": "Binance.US Restarts USD Deposits After Nearly 2 Years",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:26:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "HBAR",
-        "ACH",
-        "SUI"
-      ]
-    },
-    {
-      "title": "LIBRA, Solana drama: Meteora co-founder resigns, Jupiter begins probe",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:23:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "JUP",
-        "LIBRA"
-      ]
-    },
-    {
-      "title": "Collapsed TerraUSD and LUNA Not Financial Investment Products: South Korea’s Supreme Court Rules",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:15:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNA"
-      ]
-    },
-    {
-      "title": "4 Ethereum Coins That Could Explode If ETH Price Hits $4,000",
-      "link": "NULL",
-      "pubDate": "2025-02-19T14:06:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "AAVE",
-        "PEPE"
-      ]
-    },
-    {
       "title": "Donald Trump turns pro-XRP, shares Ripple Labs reports on Truth Social",
       "link": "https://www.cryptopolitan.com/donald-trump-turns-pro-xrp-on-truth-social/",
       "pubDate": "2025-02-19T14:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "altcoin",
       "description": "US President Donald Trump shared two articles about XRP on Truth Social on Tuesday. The articles discussed Ripple CEO Brad Garlinghouse’s claims that the company has seen increased hiring and business opportunities in the US since Trump’s election victory in November. The articles, originally published by Coindesk and The Block in early January, reported that […]",
       "currencies": [
@@ -829,44 +140,11 @@
       }
     },
     {
-      "title": "Coinbase Publishes Bitcoin Reserves for cbBTC—Here’s What You Need to Know",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:51:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Is The 'Meme-Pocalypse' Here? Dogecoin, Shiba Inu, Pepe, Bonk Open Interest Craters Over 50%",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:50:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "BONK",
-        "WIF",
-        "FLOKI"
-      ]
-    },
-    {
       "title": "SEC Acknowledges Bitwise XRP ETF Filing—Approval Within Reach?",
       "link": "https://www.thecoinrepublic.com/2025/02/19/sec-acknowledges-bitwise-xrp-etf-filing-approval-within-reach/",
       "pubDate": "2025-02-19T13:49:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "regulation",
       "description": "The Securities and Exchange Commission (SEC) has formally acknowledged a filing for a spot XRP Exchange-Traded Fund (ETF) from Bitwise. This marks the start of the regulatory review process, which could take up to 90 days. The filing, submitted by Cboe BZX Exchange on February 6, 2025, aims to list the Bitwise XRP ETF as […] The post SEC Acknowledges Bitwise XRP ETF Filing—Approval Within...",
       "currencies": [
@@ -882,8 +160,8 @@
       "title": "Binance.US restores fiat deposits and withdrawals for the first time since 2023",
       "link": "https://www.theblock.co/post/341730/binance-us-restores-fiat-deposits-withdrawals?utm_source=rss&utm_medium=rss",
       "pubDate": "2025-02-19T13:45:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "exchange",
       "description": "Fiat functionality was paused in June 2023 after the SEC sued Binance.US, alleging violations of securities laws.",
       "currencies": [
@@ -898,72 +176,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Meteora Co-Founder Ben Chow Resigns Amid Meme Coin Scheme Allegations",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:17:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "JUP",
-        "X",
-        "LIBRA"
-      ]
-    },
-    {
-      "title": "DefiTuna Severs Ties with Kelsier Over $200M Meme Coin Scheme",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:15:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "MELANIA",
-        "X",
-        "DEFI",
-        "LIBRA",
-        "M3M3"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "DOGE, SHIB, PEPE, FLOKI, & Other Meme Coins Risk Falling, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:09:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Iranians ‘flocked’ to crypto amid geopolitical tensions in 2024 as exchange outflows surged 70% to $4.2 billion: Chainalysis",
-      "link": "NULL",
-      "pubDate": "2025-02-19T13:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GAL",
-        "S"
-      ]
-    },
-    {
       "title": "Cardano’s Charles Hoskinson Teams Up With Lawmakers On Crypto Rules",
       "link": "https://www.thecoinrepublic.com/2025/02/19/cardanos-charles-hoskinson-teams-up-with-lawmakers-on-crypto-rules/",
       "pubDate": "2025-02-19T12:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Thecoinrepublic",
+      "sourceKey": "thecoinrepublic",
       "category": "regulation",
       "description": "Cardano founder, Charles Hoskinson, is working closely with lawmakers and regulators to establish clear rules for crypto securities and commodities. He advises government entities on defining decentralization and ensuring proper regulations for the crypto industry. His efforts aim to influence key legislation, including the FIT21 bill, which seeks to classify digital assets accurately....",
       "currencies": [
@@ -975,100 +192,11 @@
       }
     },
     {
-      "title": "Binance to List KAITO: Here’s Everything You Need to Know",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:55:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "BNB",
-        "FDUSD",
-        "X",
-        "00"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "CZ wallet receives more than he donated towards LIBRA victims",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:40:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BNB",
-        "TST",
-        "X",
-        "LIBRA",
-        "BROCCOLI"
-      ]
-    },
-    {
-      "title": "Top 3 Cryptos to Buy as AVAX Price Turns Bearish",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:37:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "AVAX",
-        "MOVE"
-      ]
-    },
-    {
-      "title": "Cardano’s Charles Hoskinson sees AGI on the horizon in three to five years",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:36:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "AGI",
-        "X"
-      ]
-    },
-    {
-      "title": "Binance To Delist DOGS, FET, & These 2 Crypto, What Lies Ahead?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:34:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "FET",
-        "NOT",
-        "NEIRO",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Aptos’ future looks bullish – Is $34 on the cards for APT?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APT",
-        "$1"
-      ]
-    },
-    {
       "title": "Solana’s Market Woes Continue With A 32% Monthly Drop—Details",
       "link": "https://www.newsbtc.com/news/solanas-market-woes-continue-with-a-32-monthly-drop-details/",
       "pubDate": "2025-02-19T12:30:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Solana’s recent price behavior has sparked anxiety in the the digital currency market. The once-soaring blockchain has fallen significantly as a result of a widespread slump. Solana native token (SOL) has been down 32% in the last four weeks, trailing Bitcoin’s 10% decline and Ethereum’s 15% dip. As the network suffers with the fallout from a meme currency frenzy that left investors reeling, a...",
       "currencies": [
@@ -1087,143 +215,11 @@
       }
     },
     {
-      "title": "PAWS Faces Bans & App Shutdown: What’s Next for the TGE?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "KCS",
-        "X"
-      ]
-    },
-    {
-      "title": "Analog Devices, Inc. (ADI) Beats Expectations with Adj. EPS of $1.63 in Q1 2025",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:20:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS",
-        "ADP"
-      ]
-    },
-    {
-      "title": "Trimble Inc. Beats Market Expectations with $0.89 Non-GAAP EPS in Q4 FY2024",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:15:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Litecoin News: Why $LTC Is Up Today & Will It Reach $500 Soon?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Kaspa (KAS) Price Prediction February 2025, 2026, 2030, 2040 – 2050",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:56:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "KAS"
-      ]
-    },
-    {
-      "title": "Bonk (BONK) Price Prediction February 2025, 2026, 2030, 2040 – 2050",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:56:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONK"
-      ]
-    },
-    {
-      "title": "Uniswap Price Struggles To Breach $10 as V4 Adoption Trails V3",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:48:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI"
-      ]
-    },
-    {
-      "title": "$DOG to Launch on Slingshot in Solana on February 19th",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:13:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOG"
-      ]
-    },
-    {
-      "title": "Aptos Price Today Breaks $6! Can APT Price Surge to $9 Next?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:13:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "APT"
-      ]
-    },
-    {
-      "title": "Crypto com is making fake contests.",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:11:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CRO",
-        "IP",
-        "MCO"
-      ]
-    },
-    {
-      "title": "CZ Says Crypto Wallets Will Replace Exchanges for Everyday Users",
-      "link": "NULL",
-      "pubDate": "2025-02-19T11:11:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "CFTC-Regulated Solana Futures Contracts Approved - What Does This Mean for $SOL ETFs?",
       "link": "https://solanafloor.com/news/cftc-regulated-solana-futures-contracts-approved-sol-etfs",
       "pubDate": "2025-02-19T10:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Solanafloor",
+      "sourceKey": "solanafloor",
       "category": "regulation",
       "description": "Coinbase Derivatives LLC’s Solana Futures contracts mark a key step towards $SOL ETF approvals.",
       "currencies": [
@@ -1236,53 +232,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Crypto Price Analysis 2-19: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, DOGECOIN: DOGE, DOGWIFHAT: WIF, ARBITRUM: ARB, HEDERA: HBAR",
-      "link": "NULL",
-      "pubDate": "2025-02-19T10:36:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "HBAR",
-        "ARB",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Man Burns $1,300,000 Worth of Ethereum (ETH) With Cryptic Messages About ‘Brain-Computer Weapons’: Arkham",
-      "link": "NULL",
-      "pubDate": "2025-02-19T10:15:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "QNT",
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Binance’s CZ Compensates Victims of TST & BROCCOLI Meme Coin Crash",
-      "link": "NULL",
-      "pubDate": "2025-02-19T10:04:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TST",
-        "BROCCOLI"
-      ]
-    },
-    {
       "title": "Strategy Plans $2B Stock Sale to Buy More Bitcoin",
       "link": "https://coinpaprika.com/news/strategy-plans-2b-stock-sale-to-buy-more-bitcoin/",
       "pubDate": "2025-02-19T10:02:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "Strategy (formerly MicroStrategy) is issuing $2 billion in convertible notes to buy more Bitcoin, continuing its aggressive accumulation strategy.",
       "currencies": [
@@ -1295,33 +249,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Onyxcoin (XCN) Drops to Discounted Levels, But Risks of Further Decline Persist",
-      "link": "NULL",
-      "pubDate": "2025-02-19T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XCN"
-      ]
-    },
-    {
-      "title": "Galaxy Exec Denies Murad’s Secret SPX Token Sale",
-      "link": "NULL",
-      "pubDate": "2025-02-19T09:54:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SPX"
-      ]
-    },
-    {
       "title": "Uniswap CEO: Controversial Token Launches Are Intentional, Not Mistakes",
       "link": "https://coinpaprika.com/news/uniswap-ceo-controversial-token-launches-are-intentional-not-mistakes/",
       "pubDate": "2025-02-19T09:51:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "defi",
       "description": "Uniswap CEO Hayden Adams claims flawed token launches are intentional, not mistakes, sparking debate amid scandals over LIBRA, MELANIA, and TRUMP coins.",
       "currencies": [
@@ -1336,141 +268,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Wix Beats Q4 EPS Expectations, Seeks 12%-14% Growth in 2025",
-      "link": "NULL",
-      "pubDate": "2025-02-19T09:44:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Injective [INJ] drops 73% from ATH, but will THIS spark a rebound?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T09:00:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "INJ",
-        "ATH",
-        "$1"
-      ]
-    },
-    {
-      "title": "Will Solana Recover or Crash Deeper? Who’s To Blame for the Drop",
-      "link": "NULL",
-      "pubDate": "2025-02-19T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "TRUMP",
-        "MELANIA",
-        "LIBRA",
-        "CAR"
-      ]
-    },
-    {
-      "title": "Uniswap CEO Says Controversial Token Launches Are “by Design” Amid LIBRA Scandal",
-      "link": "NULL",
-      "pubDate": "2025-02-19T08:36:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "SOL",
-        "UNI",
-        "TRUMP",
-        "MELANIA",
-        "X"
-      ]
-    },
-    {
-      "title": "Satoshi Ramp Mainnet Enables BTC Cross-Chain to NEAR Network",
-      "link": "NULL",
-      "pubDate": "2025-02-19T08:23:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "NEAR"
-      ]
-    },
-    {
-      "title": "Galaxy Executive Dismisses Claims of Murad Selling SPX Tokens",
-      "link": "NULL",
-      "pubDate": "2025-02-19T07:54:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SPX",
-        "X"
-      ]
-    },
-    {
-      "title": "US Treasury Secretary Scott Bessent tells taxpayers their data is safe with Elon Musk’s D.O.G.E",
-      "link": "NULL",
-      "pubDate": "2025-02-19T07:05:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DOGE",
-        "G",
-        "O"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "World Liberty Financial Addresses Token Swap Rumors At Consensus Hong Kong 2025",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:46:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "TRX",
-        "LINK",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Coinbase Expands Crypto Futures Offerings with Solana and Hedera",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDC",
-        "SOL",
-        "DOGE",
-        "HBAR",
-        "S",
-        "EURC"
-      ]
-    },
-    {
       "title": "Coinbase Launches Proof of Reserves for cbBTC Bitcoin Wrapper",
       "link": "https://beincrypto.com/coinbase-reveals-cbtc-proof-of-reserve/",
       "pubDate": "2025-02-19T06:44:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "bitcoin",
       "description": "In response to mounting concerns over transparency, Coinbase has unveiled a Proof of Reserves (PoR) for its wrapped Bitcoin token, cbBTC. This move aims to assure users that each cbBTC is backed 1:1 by Bitcoin (BTC) held by the exchange. Coinbase Reveals cbBTC Proof of Reserves According to the PoR data, the Coinbase exchange holds a total reserve of 26,525.15 BTC, with a corresponding cbBTC...",
       "currencies": [
@@ -1486,251 +288,6 @@
         "positive": 1,
         "negative": 1
       }
-    },
-    {
-      "title": "Spell Wallet Daily Puzzle 19 February 2025: Earn Reward of 1 MANA",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:18:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "MANA",
-        "DOGS"
-      ]
-    },
-    {
-      "title": "Arbitrum DAO approves second RWA investment program worth $15m to increase stability",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:17:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "DAO",
-        "ARB",
-        "STEP"
-      ]
-    },
-    {
-      "title": "Solaxy Presale Crosses $21M as Experts Say it Could be the Next Crypto to Explode",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:13:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "PENGU"
-      ]
-    },
-    {
-      "title": "Maker Price Forecast: MKR generates highest daily revenue of $10 million",
-      "link": "NULL",
-      "pubDate": "2025-02-19T06:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Binance founder CZ To Help Victims of Test (TST) Token and BROCCOLI Meme Coin",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:53:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TST",
-        "BROCCOLI"
-      ]
-    },
-    {
-      "title": "Top 5 RWA Altcoins – Institutions are VERY Bullish on These",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:45:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ONDO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ZOO Crypto Listing Date Confirmed: Claim Your $ZOO Tokens Now",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Remittix’s Upward Trajectory Shows No Signs Of Slowing, Meanwhile Experts Discuss PEPE Price Prediction & Floki’s Future",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:39:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "PEPE",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "Arbitrum DAO Allocates 35 Million ARB to Stable Assets",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:14:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "DAO",
-        "ARB",
-        "STEP"
-      ]
-    },
-    {
-      "title": "Polygon Q4 Digest: Agglayer Testnet Launch Drives 30% Spike In POL Market Cap",
-      "link": "NULL",
-      "pubDate": "2025-02-19T05:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "MATIC",
-        "POL",
-        "IP",
-        "ZK"
-      ]
-    },
-    {
-      "title": "Jupiter [JUP]: The coin could further dip 39% if THIS happens",
-      "link": "NULL",
-      "pubDate": "2025-02-19T04:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP",
-        "$1"
-      ]
-    },
-    {
-      "title": "Coinbase exchange launches CFTC-regulated futures for Solana and Hedera",
-      "link": "NULL",
-      "pubDate": "2025-02-19T03:22:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "SOL",
-        "HBAR",
-        "S"
-      ]
-    },
-    {
-      "title": "US Senate confirms pro-crypto Howard Lutnick as Secretary of Commerce",
-      "link": "NULL",
-      "pubDate": "2025-02-19T03:15:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "PEOPLE",
-        "S"
-      ]
-    },
-    {
-      "title": "Is the US Congress powerless against Elon Musk’s D.O.G.E?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T03:07:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "G",
-        "O"
-      ]
-    },
-    {
-      "title": "ARKK’s Rally Signals Potential Bitcoin Upside Amid Diverging Correlation",
-      "link": "NULL",
-      "pubDate": "2025-02-19T02:54:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Remains Under Pressure—Can It Break Free?",
-      "link": "NULL",
-      "pubDate": "2025-02-19T02:49:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Drop Leads to Significant Liquidation",
-      "link": "NULL",
-      "pubDate": "2025-02-19T02:03:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
-      "title": "HBAR to fall 13% soon? THIS suggests growing volatility ahead",
-      "link": "NULL",
-      "pubDate": "2025-02-19T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ]
-    },
-    {
-      "title": "MicroStrategy Offers $2 Billion in Shares to Purchase More Bitcoin",
-      "link": "NULL",
-      "pubDate": "2025-02-19T00:35:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STRK",
-        "MSTR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
     }
   ]
 }

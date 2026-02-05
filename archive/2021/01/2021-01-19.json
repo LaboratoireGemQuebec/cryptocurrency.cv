@@ -1,108 +1,15 @@
 {
   "date": "2021-01-19",
-  "fetchedAt": "2026-02-05T07:45:51.986Z",
-  "articleCount": 15,
+  "fetchedAt": "2026-02-05T07:48:35.514Z",
+  "articleCount": 4,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Today ARK is excited to be partnering with Gala Games! Gala Games is redefining blockchain and gaming by putting power back into the hands of the players.",
-      "link": "NULL",
-      "pubDate": "2021-01-19T21:02:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Our first official Community Gathering will be streaming live at 3pm CET on our Official @YouTube channel. Make sur…",
-      "link": "NULL",
-      "pubDate": "2021-01-19T20:15:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "WOZX"
-      ]
-    },
-    {
-      "title": "We're happy to see us being featured in the review of the prominent #blockchain tools for background check verifica…",
-      "link": "NULL",
-      "pubDate": "2021-01-19T20:01:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EDU"
-      ]
-    },
-    {
-      "title": "Pro traders go short as overbought derivatives propel Ethereum’s new high",
-      "link": "NULL",
-      "pubDate": "2021-01-19T18:26:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 3
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "The USA is undergoing leadership changes that will impact the regulatory trajectory of digital assets #STO #ICO…",
-      "link": "NULL",
-      "pubDate": "2021-01-19T17:17:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CHEX"
-      ]
-    },
-    {
-      "title": "Hello there! ARKs Crypto Podcast in German finally found its way to the New Year!",
-      "link": "NULL",
-      "pubDate": "2021-01-19T16:40:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "RT @tyler: There are 380 million credit card accounts in the US. The @Gemini Credit Card can turn all these folks into Bitcoiners &amp; Etherea…",
-      "link": "NULL",
-      "pubDate": "2021-01-19T16:23:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "GUSD"
-      ]
-    },
-    {
-      "title": "Trade YOUcash (YOUC) on CoinBene",
-      "link": "NULL",
-      "pubDate": "2021-01-19T16:07:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "YOUC"
-      ]
-    },
     {
       "title": "Bluzelle’s February Mainnet Launch Will Make Room for Polkadot",
       "link": "https://cryptobriefing.com/bluzellea-february-mainnet-launch-will-make-room-polkadot/",
       "pubDate": "2021-01-19T15:20:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "The decentralized database Bluzelle has announced the launch of its mainnet on Feb. 3, 2021. With the mainnet, Bluzelle will also begin actively integrating with various Polkadot-based projects. Bluzelle to Tap Polkadot Upon Mainnet According to the team, the mainnet will allow dApps to safely secure data at a massive scale without depending on centralized servers. Bluzelle is...",
       "currencies": [
@@ -119,8 +26,8 @@
       "title": "Cardano has been added to Bitfinex Borrow! Users can now obtain a loan using their $ADA as collateral. Using Bitfi…",
       "link": "https://twitter.com/bitfinex/status/1351540928872394761",
       "pubDate": "2021-01-19T14:44:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "@bitfinex",
+      "sourceKey": "bitfinex",
       "category": "altcoin",
       "currencies": [
         "LEO"
@@ -135,8 +42,8 @@
       "title": "XRP Recovers to $0.30 on CoinMarketCap After 10% Rise",
       "link": "https://u.today/xrp-recovers-to-030-on-coinmarketcap-after-10-rise",
       "pubDate": "2021-01-19T09:59:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "altcoin",
       "description": "XRP has recovered to $0.30, showing a 10 percent rise on CoinMarketCap; meanwhile the SEC sued Ripple allegedly being aware of the negative consequences for XRP holders",
       "currencies": [
@@ -149,44 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": ".-. - -....- .. ..-. -....- -.-- --- ..- -....- -.-. .- -. -....- .-. . .- -.. -....- - .... .. ... -....- - .-- . . -",
-      "link": "NULL",
-      "pubDate": "2021-01-19T09:45:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HYN"
-      ]
-    },
-    {
-      "title": "RT @CobakOfficial: 한국어 미디엄: CBK, KFD (KFC Dollar) 채굴 풀 추가",
-      "link": "NULL",
-      "pubDate": "2021-01-19T02:45:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MBL"
-      ]
-    },
-    {
-      "title": "Top 30 Social Dapps Eco by 30d Volume 🥈 TomoChain $13.43K",
-      "link": "NULL",
-      "pubDate": "2021-01-19T02:04:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
       "title": "MIT professor Gary Gensler is chosen to lead US SEC",
       "link": "https://forkast.news/gary-gensler-appointed-us-sec-chair/?utm_source=rss&utm_medium=rss&utm_campaign=gary-gensler-appointed-us-sec-chair",
       "pubDate": "2021-01-19T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "regulation",
       "description": "President-elect Joe Biden has named the former CTFC chief to lead the SEC. What does this mean for Ripple and other crypto firms?",
       "currencies": [

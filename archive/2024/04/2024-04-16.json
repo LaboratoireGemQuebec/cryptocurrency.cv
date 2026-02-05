@@ -1,63 +1,15 @@
 {
   "date": "2024-04-16",
-  "fetchedAt": "2026-02-05T07:45:53.297Z",
-  "articleCount": 91,
+  "fetchedAt": "2026-02-05T07:48:35.638Z",
+  "articleCount": 12,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Funding rate turns negative as Bitcoin drops below $64k",
-      "link": "NULL",
-      "pubDate": "2024-04-16T22:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "CryptoQuant Reveals Two Key Metrics to Predict Ethena USDe’s Future",
-      "link": "NULL",
-      "pubDate": "2024-04-16T22:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Ethereum Gaming Network Xai Expands Staking Rewards",
-      "link": "NULL",
-      "pubDate": "2024-04-16T22:04:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARB",
-        "XAI"
-      ]
-    },
-    {
-      "title": "Trust Wallet Issues Warning About Zero-Day Exploit Targeting iOS Users",
-      "link": "NULL",
-      "pubDate": "2024-04-16T21:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
     {
       "title": "‘Cosmos is more than ever in the same conversation as many other projects’, says Binary Builders’ product lead",
       "link": "https://cryptobriefing.com/cosmos-same-conversation-other-projects/",
       "pubDate": "2024-04-16T21:23:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "general",
       "description": "The Ethereum layer-2 blockchain narrative could benefit the modularity work of projects built with the Cosmos software development kit (SDK), says Marko Baricevic, product lead of the Cosmos SDK at Binary Builders. As rollups use Cosmos SDK-based structures like Celestia for data availability, Cosmos might be propelled again into the limelight.Our approach has never been saying we are better,...",
       "currencies": [
@@ -72,24 +24,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Best Crypto to Buy Now April 16 – Celestia, Pepe, Fantom",
-      "link": "NULL",
-      "pubDate": "2024-04-16T21:12:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "PEPE",
-        "TIA"
-      ]
-    },
-    {
       "title": "Ripple’s XRP Price to $20? — Devs Unveil Super Bullish Proposal That Could Massively Advance XRPL",
       "link": "https://zycrypto.com/ripples-xrp-price-to-20-devs-unveil-super-bullish-proposal-that-could-massively-advance-xrpl/",
       "pubDate": "2024-04-16T21:08:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "RippleX devs have unveiled an ambitious proposal that could significantly expand the utility of the XRP Ledger (XRPL).",
       "currencies": [
@@ -101,22 +40,11 @@
       }
     },
     {
-      "title": "RWAs Are on the Rise: MANTRA CEO Discusses Their Future",
-      "link": "NULL",
-      "pubDate": "2024-04-16T21:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OM"
-      ]
-    },
-    {
       "title": "Hong Kong's Bitcoin and Ethereum ETFs Could Fetch $25 Billion—If China Plays Nice",
       "link": "https://decrypt.co/226634/hong-kong-bitcoin-ethereum-etfs-25-billion-china-plays-nice",
       "pubDate": "2024-04-16T21:04:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "bitcoin",
       "description": "A veteran crypto analyst expects Hong Kong's Bitcoin and Ethereum ETFs to begin trading this month—and they could have a sizable impact.",
       "currencies": [
@@ -130,129 +58,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cat-Themed Memecoin Surges 14.9% After Major Exchange Listing And Whale Frenzy",
-      "link": "NULL",
-      "pubDate": "2024-04-16T21:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOGE",
-        "WIF",
-        "ATH",
-        "MEW",
-        "MEME",
-        "00",
-        "OPEN"
-      ]
-    },
-    {
-      "title": "DeeStream's Streaming Solution Attracts Massive Interest from Injective & First Digital USD Holders Pre-Bitcoin Halving",
-      "link": "NULL",
-      "pubDate": "2024-04-16T20:42:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "INJ",
-        "FDUSD"
-      ]
-    },
-    {
-      "title": "As DeeStream's Presale Enters Stage 2, UNUS SED LEO & Aptos Investors Are Quick to Seize the Opportunity",
-      "link": "NULL",
-      "pubDate": "2024-04-16T20:32:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LEO",
-        "APT"
-      ]
-    },
-    {
-      "title": "Bitcoin Runes Arrive at the Halving—And Internet Computer Will Support Them",
-      "link": "NULL",
-      "pubDate": "2024-04-16T20:16:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "GameFi Blockchain Saga Unveils Crypto Airdrop",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "AVAX",
-        "MATIC",
-        "SAND"
-      ]
-    },
-    {
-      "title": "ApeCoin Nears All-Time Low as Bored Ape Ethereum NFT Prices Plummet",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:21:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "APE"
-      ]
-    },
-    {
-      "title": "Will the Crypto Market Bounce Back? Expert Says NEAR, TIA, TON, and BLP Are the First to Skyrocket",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:10:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "TON",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Iraq commitment to capture flare gas sparks crypto mining speculation",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:09:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "FLR"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Stellar's Price Increased More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:03:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
       "title": "Cardano Sees Massive Growth in Smart Contracts as ADA Bulls Target Triumph Over Ethereum",
       "link": "https://zycrypto.com/cardano-sees-massive-growth-in-smart-contracts-as-ada-bulls-target-triumph-over-ethereum/",
       "pubDate": "2024-04-16T19:03:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "ethereum",
       "description": "Cardano, known for its innovative blockchain platform, has been experiencing a remarkable surge in smart contracts, particularly within the Plutus V2 framework.",
       "currencies": [
@@ -266,406 +76,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cryptocurrency OKB Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2024-04-16T19:02:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
-      "title": "Tezos Ignites DeFi Innovation Amid Surging Interest From Venture Capitalists",
-      "link": "NULL",
-      "pubDate": "2024-04-16T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "XTZ"
-      ]
-    },
-    {
-      "title": "OKX’s Polygon-Based L2, X Layer, Hits Public Mainnet",
-      "link": "NULL",
-      "pubDate": "2024-04-16T18:01:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "MATIC",
-        "OKB"
-      ]
-    },
-    {
-      "title": "Ethereum Remains the Hot Topic Of Discussion Despite Increment in Short Positions",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:37:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Analyzing Filecoin (FIL): Will $5 Support Hold or Fold?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "SOL",
-        "FIL"
-      ]
-    },
-    {
-      "title": "Fetch.ai, SingularityNET, and Ocean Protocol’s planned $7.5 billion ASI token to launch in May",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:23:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ]
-    },
-    {
-      "title": "DeepMind CEO says Google to spend more than $100B on AGI despite hype",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:01:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AGI"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "No, ETH isn’t suddenly a security now",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "OP"
-      ]
-    },
-    {
-      "title": "Arkham Releases Top 5 Crypto Rich List – You Won’t Believe How Much Is Inaccessible",
-      "link": "NULL",
-      "pubDate": "2024-04-16T17:00:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "TRX",
-        "ARKM",
-        "UFC"
-      ]
-    },
-    {
-      "title": "Revealing the Crypto Rich List: Discover the Top 10 Wealthiest Crypto Individuals",
-      "link": "NULL",
-      "pubDate": "2024-04-16T16:35:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "'DePIN' Is Venture Capitalists' Latest Crypto Obsession. Can It Match the Hype?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T16:20:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "HNT"
-      ]
-    },
-    {
-      "title": "WOO unveils innovation hub focused on Bitcoin’s ecosystem",
-      "link": "NULL",
-      "pubDate": "2024-04-16T16:11:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Mainnet Node Software Upgrade: ZEN 5.0.2 is Available to Download",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:57:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Important Binance Announcement Affecting Some Altcoin Traders: Details",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:45:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "NEO",
-        "ARB"
-      ]
-    },
-    {
-      "title": "What the History of Linux Says About the Long Road to Decentralized Storage Adoption",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:45:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FIL",
-        "AR"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Quant Reaches Bearish Exhaustion As It Recovers Over $100",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:28:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "QNT"
-      ]
-    },
-    {
-      "title": "BlockDAG Attracts $17.6 Million in Presale, Pulls in Ethereum Classic Investors as Chainlink Faces Potential Downturn",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:21:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "LINK",
-        "ETC"
-      ]
-    },
-    {
-      "title": "Bitcoin Has Next Major Demand Zone At $56,000: Brace For Impact?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T15:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "AI tokens FET, AGIX, and OCEAN merger set to go live on May",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:40:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OCEAN",
-        "FET",
-        "AGIX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Hot new AI crypto Raboo makes ICO gains as The Graph and Fetch.ai struggle to maintain price",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:36:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GRT",
-        "FET"
-      ]
-    },
-    {
-      "title": "2 cryptocurrencies to reach $1 billion market cap in April",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:27:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CFX"
-      ]
-    },
-    {
-      "title": "Galactic Gains Await: The Stellar Three Cryptocurrencies You Can't Afford to Miss Right Now",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:16:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XLM",
-        "NEO",
-        "DAO",
-        "FLOKI"
-      ]
-    },
-    {
-      "title": "History of Crypto: Crippling inflation, rising debt, and the evolving crypto landscape",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Trust Wallet Warning: High-Risk Zero-Day iMessage Exploit Targeting iOS Users",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:04:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Arbitrum’s Massive $107 Million Token Unlock Threatens To Send Price Below $1",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "APE",
-        "AXS",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Condo Launches on Base Chain: World’s First RWA Meme Token with Innovative Treasury Strategy",
-      "link": "NULL",
-      "pubDate": "2024-04-16T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "UNI",
-        "DAO",
-        "FLOKI",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Finding the Next 1000X Crypto Game with Billion Dollar Founder | Stacks Podcast",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:47:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "Bitcoin Falls Below $63,000; Nervos Network, AIOZ Network Among Top Losers",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:40:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "NEO",
-        "IMX",
-        "CKB",
-        "CORE",
-        "BONK",
-        "WIF",
-        "TIA",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "OG Bitcoin L2 Stacks Is Getting a Major Overhaul",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:34:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "STX"
-      ]
-    },
-    {
-      "title": "Internet Computer (ICP) Integrates Threshold-Schnorr Signatures for Enhanced Bitcoin Operations",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:30:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
       "title": "Exploding Gold Sales at Pawnshops Offers Lesson for Bitcoin Bulls",
       "link": "https://www.coindesk.com/markets/2024/04/16/exploding-gold-sales-at-pawnshops-offers-lesson-for-bitcoin-bulls?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2024-04-16T13:15:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "bitcoin",
       "description": "As always, rising prices bring forth boosted supplies.",
       "currencies": [
@@ -678,72 +93,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "‘We Sold Everything Last Night’, Reveals Crypto Research Firm",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:00:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "CKB"
-      ]
-    },
-    {
-      "title": "ICP’s Schnorr integration ushers in Bitcoin DeFi era",
-      "link": "NULL",
-      "pubDate": "2024-04-16T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ICP"
-      ]
-    },
-    {
-      "title": "BLUR Unlock Schedule Continues: 34.42 Million Tokens Head to Distribution",
-      "link": "NULL",
-      "pubDate": "2024-04-16T12:37:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT",
-        "BLUR"
-      ]
-    },
-    {
-      "title": "Nebraskan Citizen Charged in $3.5 Million Cryptojacking Fraud",
-      "link": "NULL",
-      "pubDate": "2024-04-16T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "From Farming to Bribing: PancakeSwap Proposes New veCAKE Strategy to Bolster Liquidity, Governance",
-      "link": "NULL",
-      "pubDate": "2024-04-16T12:27:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CAKE"
-      ]
-    },
-    {
       "title": "Shiba Inu Price Prediction as Meme Coin Market Cap Sees First Decline Since March – This Hidden Coin is Bucking the Trend",
       "link": "https://cryptonews.com/news/shiba-inu-price-prediction-as-meme-coin-market-cap-sees-first-decline-since-march-this-hidden-coin-is-bucking-the-trend.htm?__cf_chl_rt_tk=1xlnGfdpHSxbCMnU5oP1e5sww07YEdIAPuKsQGIgkfw-1747118179-1.0.1.1-BqQJu_AbH_BOpl3y3Kr2gIf3KHHFpi9Xe5ZDcY12slQ",
       "pubDate": "2024-04-16T12:08:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "trading",
       "description": "The Shiba Inu price has dived by 8% today, with its price dropping to $0.0000216 as the wider crypto market loses 4.5% in the past 24 hours.",
       "currencies": [
@@ -759,8 +113,8 @@
       "title": "Why Elon Musk’s Recent Tweet Didn’t Move the Dogecoin Needle",
       "link": "https://coinedition.com/why-elon-musks-recent-tweet-didnt-move-the-dogecoin-needle/",
       "pubDate": "2024-04-16T11:58:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "altcoin",
       "description": "On Tuesday, Elon Musk, CEO of X, posted about Dogecoin on the foremost social media platform. However, the post did not have the characteristic impact of similar posts in the past. This time, Musk shared a still image of a Roman Emperor and a centurion, with both figures having distinct facial expressions. He depicted himself […]",
       "currencies": [
@@ -776,8 +130,8 @@
       "title": "DRDOGE Rallies 1,350%, Braces for Another 1,500% Surge Due to CEX Listing as it Challenges SHIB and DOGE",
       "link": "https://www.cryptointelligence.co.uk/drdoge-rallies-1350-braces-for-another-1500-surge-due-to-cex-listing-as-it-challenges-shib-and-doge/",
       "pubDate": "2024-04-16T11:57:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "trading",
       "description": "Doctor Doge (DRDOGE) is an exciting new memecoin that is set to challenge other dog-themed...",
       "currencies": [
@@ -794,8 +148,8 @@
       "title": "Shiba Inu Burn Rate Skyrockets 489% Amid SHIB Critical Price Test",
       "link": "https://u.today/shiba-inu-burn-rate-skyrockets-489-amid-shib-critical-price-test",
       "pubDate": "2024-04-16T11:33:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Significant jump in burn rate comes amid period of price volatility for SHIB",
       "currencies": [
@@ -808,167 +162,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Fantom (FTM) Price Correction: Is Now the Right Time to Buy for Future Gains?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USDT",
-        "FTM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bank of America Reports Q1: Net Income of $6.7 B, $0.83 Ajd. EPS, $25.8 B in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-04-16T11:09:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "PNC Financial (PNC) Reports $3.36 EPS in Q1, Revenue of $5.15 Billion",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:58:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Blue chip altcoins Render (RNDR) and Injective (INJ) down 50%+ - time to buy?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:47:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RNDR",
-        "INJ"
-      ]
-    },
-    {
-      "title": "Johnson & Johnson (JNJ) Reports Q1: $2.71 EPS, $21.38 B in Revenue",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:40:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EPS"
-      ]
-    },
-    {
-      "title": "Curve chief nearly liquidated for $150M in CRV in weekend crypto crash",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:39:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "CRV"
-      ]
-    },
-    {
-      "title": "BONK and FTM price predictions; investors expect exciting price discovery at RECQ token launch",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FTM",
-        "BONK"
-      ]
-    },
-    {
-      "title": "UK Finance announces new Regulated Liability Network with R3 and Quant",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:22:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "QNT",
-        "MOON"
-      ]
-    },
-    {
-      "title": "Binance Futures Introduces Up to 75% Leverage Perpetual Contracts on Arbitrum, Neo, Filecoin",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:10:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "USDC",
-        "FIL",
-        "NEO",
-        "ARB"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "While Fantom and Stellar face declines, NuggetRush surges ahead with exciting features",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XLM",
-        "FTM"
-      ]
-    },
-    {
-      "title": "Clone Protocol X AMA Session With BeInCrypto",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDC",
-        "SOL",
-        "DOGE",
-        "ARB",
-        "SUI",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Liquid Restaking Protocol Puffer Raises $18M, Led by Brevan Howard, Electric Capital",
-      "link": "NULL",
-      "pubDate": "2024-04-16T10:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ID"
-      ]
-    },
-    {
       "title": "XRP to Drop Below $0.5? Price's Unexpected Move",
       "link": "https://u.today/xrp-to-drop-below-05-prices-unexpected-move",
       "pubDate": "2024-04-16T09:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "XRP has lost substantial support level that might bring investors some trouble",
       "currencies": [
@@ -980,81 +178,11 @@
       }
     },
     {
-      "title": "Bitcoin Cash (BCH) Begins Correction Following 133% Price Surge – What’s Next?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XLM",
-        "BCH"
-      ]
-    },
-    {
-      "title": "OKX Debuts MEW and WIF USDT-Margined Perpetual Futures Trading",
-      "link": "NULL",
-      "pubDate": "2024-04-16T09:14:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDT",
-        "WIF",
-        "MEW"
-      ]
-    },
-    {
-      "title": "Cove Partners with Bazaar for COVE Token Auction to Decentralize and Bootstrap Protocol Liquidity",
-      "link": "NULL",
-      "pubDate": "2024-04-16T09:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "MATIC",
-        "YFI",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Santiment Draws Attention to Two Altcoins: \"As Prices Fall, Interest in These Altcoins Has Increased Greatly!\"",
-      "link": "NULL",
-      "pubDate": "2024-04-16T08:31:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "BEAM"
-      ]
-    },
-    {
-      "title": "Amidst The Market Several Altcoins Outperformed Bitcoin",
-      "link": "NULL",
-      "pubDate": "2024-04-16T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "DOGE",
-        "SHIB",
-        "STX",
-        "RNDR",
-        "MNT"
-      ]
-    },
-    {
       "title": "U.S. SEC's Silence Raises Doubts on Approval of Ethereum",
       "link": "https://coinpaprika.com/news/u-s-sec-s-silence-raises-doubts-on-approval-of-ethereum/",
       "pubDate": "2024-04-16T08:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "ethereum",
       "description": "SEC's silence casts doubt on Ethereum ETF approvals, worrying industry leaders",
       "currencies": [
@@ -1067,138 +195,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Trust Wallet releases advisory on zero-day exploit exposing iOS users",
-      "link": "NULL",
-      "pubDate": "2024-04-16T08:19:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Crypto Markets’ Recovery Halted as Bitcoin (BTC) Dumped Below $62K Again (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2024-04-16T08:02:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "OKB"
-      ]
-    },
-    {
-      "title": "Going Crypto: Major UK Banking Firms Test Tokenized Deposits",
-      "link": "NULL",
-      "pubDate": "2024-04-16T07:49:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "VET"
-      ]
-    },
-    {
-      "title": "Arkham’s top 5 doxed crypto hodlers own $3.5B, but 35% is untouchable",
-      "link": "NULL",
-      "pubDate": "2024-04-16T06:09:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARKM"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: Crypto Tumble as Selloffs Intensify",
-      "link": "NULL",
-      "pubDate": "2024-04-16T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "MATIC",
-        "LTC",
-        "CORE",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Nebraska Man Faces 50 Years for Multi-Million Dollar Cryptojacking Scheme",
-      "link": "NULL",
-      "pubDate": "2024-04-16T03:59:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LTC",
-        "XMR"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Restarts Decline, Can BTC Bulls Protect $60K?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T03:06:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Bitcoin ETFs Could Propel King Crypto Above Gold's Market Cap, Says Analyst: 'These Are Very Conservative Numbers'",
-      "link": "NULL",
-      "pubDate": "2024-04-16T02:38:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO"
-      ]
-    },
-    {
-      "title": "Bitcoin’s weekend dip shakes out short-term holders",
-      "link": "NULL",
-      "pubDate": "2024-04-16T01:30:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "Trust Wallet Advises Apple Users to Disable Imessage Amid Fears of Zero-Day Exploit",
-      "link": "NULL",
-      "pubDate": "2024-04-16T01:09:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "TWT"
-      ]
-    },
-    {
       "title": "Cardano’s hurdles: 3 ways long-term holders will shape ADA’s fate",
       "link": "https://ambcrypto.com/adas-hurdles-3-ways-long-term-holders-will-shape-cardanos-fate/",
       "pubDate": "2024-04-16T01:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "AMBCrypto",
+      "sourceKey": "ambcrypto",
       "category": "altcoin",
       "description": "ADA's next direction will depend on holders' decision to move their tokens or not.",
       "currencies": [
@@ -1208,31 +209,6 @@
         "positive": 4,
         "negative": 3
       }
-    },
-    {
-      "title": "Bitcoin Whales Showing Different Behavior From Past Cycles, But Why?",
-      "link": "NULL",
-      "pubDate": "2024-04-16T01:00:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DOGE",
-        "QNT",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "‘Disable iMessages’ ASAP to avoid crypto zero-day exploit: Trust Wallet",
-      "link": "NULL",
-      "pubDate": "2024-04-16T00:38:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
     }
   ]
 }

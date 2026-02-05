@@ -1,110 +1,15 @@
 {
   "date": "2023-10-05",
-  "fetchedAt": "2026-02-05T07:45:52.130Z",
-  "articleCount": 47,
+  "fetchedAt": "2026-02-05T07:48:35.533Z",
+  "articleCount": 8,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Important Update to 25 Trading Pairs on Binance",
-      "link": "NULL",
-      "pubDate": "2023-10-05T23:45:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Breakout Of The Decade: Roadmap Of Algorand (ALGO) To Reach $300",
-      "link": "NULL",
-      "pubDate": "2023-10-05T23:00:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "This Trader Thinks Bitcoin Is Undervalued Below $30,000: Time To Buy More BTC?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T23:00:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "XRP",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Tron’s Google integration may leave TRX traders anxious for this reason",
-      "link": "NULL",
-      "pubDate": "2023-10-05T22:30:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "New Release 5.7.0",
-      "link": "NULL",
-      "pubDate": "2023-10-05T21:42:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEC"
-      ]
-    },
-    {
-      "title": "Billionaire Crypto Tycoon Justin Sun Has $1.1 Billion Crypto: Here’s His Altcoin Portfolio",
-      "link": "NULL",
-      "pubDate": "2023-10-05T21:04:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "BREAKING: SEC Sues Dogecoin Bull Elon Musk, Seeks Testimony On Twitter Purchase",
-      "link": "NULL",
-      "pubDate": "2023-10-05T20:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE"
-      ]
-    },
-    {
-      "title": "Render (RNDR) Emerges as Top-Ranked CryptoAI Token Amid SocialFi Hype – More Price Gains Ahead?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T20:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RNDR"
-      ]
-    },
     {
       "title": "Ripple’s XRP Price At $10 Now As Nigh As Ever After Yet Another Landmark Win Against The SEC",
       "link": "https://zycrypto.com/ripples-xrp-price-at-10-now-as-nigh-as-ever-after-yet-another-landmark-win-against-the-sec/",
       "pubDate": "2023-10-05T19:38:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The U.S. Securities and Exchange Commission (SEC) has suffered another legal setback in its lawsuit against Ripple Labs, the company behind XRP...",
       "currencies": [
@@ -116,114 +21,11 @@
       }
     },
     {
-      "title": "Deadmau5-Backed Nitro Nation NFT Racing Game Hits iOS and Android",
-      "link": "NULL",
-      "pubDate": "2023-10-05T19:03:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Bitcoin Expert Exposes Alleged ‘Web of Deception’ By Tron’s Justin Sun",
-      "link": "NULL",
-      "pubDate": "2023-10-05T19:00:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TRX"
-      ]
-    },
-    {
-      "title": "FIL bulls forced to retreat from $3.45; can the bears force a defeat?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T18:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "FIL"
-      ]
-    },
-    {
-      "title": "Is Tron’s (TRX) Collaboration with Google a Good Sign for Bulls?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T18:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Bitcoin Sluggish After Sunday Surge—But Toncoin, Aave and Maker Make Gains",
-      "link": "NULL",
-      "pubDate": "2023-10-05T18:20:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "AAVE",
-        "MKR"
-      ]
-    },
-    {
-      "title": "New Software Release: EON 1.0.0 is Available to Download Now",
-      "link": "NULL",
-      "pubDate": "2023-10-05T17:15:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ZEN"
-      ]
-    },
-    {
-      "title": "Biggest Movers: TON, ADA Rebound From Recent Points of Support",
-      "link": "NULL",
-      "pubDate": "2023-10-05T15:30:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "ADA",
-        "TON"
-      ]
-    },
-    {
-      "title": "Use DOT to register Subsocial Usernames!",
-      "link": "NULL",
-      "pubDate": "2023-10-05T15:09:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Trust Wallet Token Surges 13% Following Cryptic Tease",
-      "link": "NULL",
-      "pubDate": "2023-10-05T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
       "title": "Bulls vs. Bears: Crypto analysts split on Bitcoin predictions",
       "link": "https://finbold.com/bulls-vs-bears-crypto-analysts-split-on-bitcoin-predictions/",
       "pubDate": "2023-10-05T14:55:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Bitcoin (BTC) stands at an intriguing crossroads, displaying resilience and sparking debates among crypto market analysts. With a current trading … Continued",
       "currencies": [
@@ -236,93 +38,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Avalanche and Everlodge Skyrocket, While Aave Faces Momentum Challenges",
-      "link": "NULL",
-      "pubDate": "2023-10-05T14:44:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AVAX",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Maker: Are buyers regaining control of MKR?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T14:30:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Analyst Says He’s ‘Extremely Bullish’ on Top-20 Ethereum-Based Altcoin in Coming Months – But There’s a Catch",
-      "link": "NULL",
-      "pubDate": "2023-10-05T14:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LINK",
-        "MKR"
-      ]
-    },
-    {
-      "title": "EOS Network Foundation Prepares to Launch Feature-Rich EOS EVM v6",
-      "link": "NULL",
-      "pubDate": "2023-10-05T14:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "EOS"
-      ]
-    },
-    {
-      "title": "Axie Infinity (AXS) Price Could Hit New 2-Year Low Following This Upcoming Event",
-      "link": "NULL",
-      "pubDate": "2023-10-05T13:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Bitcoin Rises Following Jobless Claims Report; Trust Wallet Token Emerges As Top Gainer",
-      "link": "NULL",
-      "pubDate": "2023-10-05T13:30:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "TWT"
-      ]
-    },
-    {
-      "title": "As Cronos and Aptos Continue to Slide, ChatGPT Predicts the Future for CRO, APT, QUBE & XRP",
-      "link": "NULL",
-      "pubDate": "2023-10-05T13:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "CRO"
-      ]
-    },
-    {
       "title": "Robert F. Kennedy vows to end of ‘White House war on Bitcoin’ if elected",
       "link": "https://finbold.com/robert-f-kennedy-vows-to-end-of-white-house-war-on-bitcoin-if-elected/",
       "pubDate": "2023-10-05T12:40:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Democrat presidential candidate Robert F. Kennedy Jr., who has gained prominence in the cryptocurrency sector thanks to his support for … Continued",
       "currencies": [
@@ -335,22 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Rivian Down 9% as EV Maker Announces $1.5B Convertible Bond Sale",
-      "link": "NULL",
-      "pubDate": "2023-10-05T12:22:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "Ethereum fees drop to lowest in a year; Price rebound in sight?",
       "link": "https://finbold.com/ethereum-fees-drop-to-lowest-in-a-year-price-rebound-in-sight/",
       "pubDate": "2023-10-05T11:23:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "As the largest part of the cryptocurrency market returns to trading sideways, Ethereum (ETH) is no exception, but price rebound … Continued The post Ethereum fees drop to lowest in a year; Price rebound in sight? appeared first on Finbold.",
       "currencies": [
@@ -366,8 +75,8 @@
       "title": "Institutional investors bet big on Ethereum despite bear market",
       "link": "https://finbold.com/institutional-investors-bet-big-on-ethereum-despite-bear-market/",
       "pubDate": "2023-10-05T11:20:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "ethereum",
       "description": "Despite going through an extended crypto bear market, the most recent approvals and launches of multiple Ether Futures ETFs have … Continued",
       "currencies": [
@@ -380,64 +89,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "TON Secures Massive Funding from MEXC to Boost Web3 on Telegram",
-      "link": "NULL",
-      "pubDate": "2023-10-05T11:07:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TON"
-      ]
-    },
-    {
-      "title": "MakerDAO stamps its spot as a money-making machine- At what cost?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T10:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DAI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Tradecurve Markets (TCRV)’s meteoric rise rivals Tron (TRX) and Avalanche (AVAX)",
-      "link": "NULL",
-      "pubDate": "2023-10-05T10:29:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "TRX",
-        "AVAX"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash (BCH) Price at Crossroads as Miners Move $60M – What’s Next?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T09:50:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
       "title": "Shiba Inu (SHIB) Bulls Show 485% Dominance on Buying Side: Reversal Imminent?",
       "link": "https://u.today/shiba-inu-shib-bulls-show-485-dominance-on-buying-side-reversal-imminent",
       "pubDate": "2023-10-05T09:26:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Shiba Inu bulls trying to pull rope to their side",
       "currencies": [
@@ -453,8 +109,8 @@
       "title": "Machine learning algorithm sets XRP price for October 31, 2023",
       "link": "https://finbold.com/machine-learning-algorithm-sets-xrp-price-for-october-31-2023/",
       "pubDate": "2023-10-05T09:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "In a pivotal turn of events for Ripple, the U.S. Securities and Exchange Commission (SEC) has faced a setback as its … Continued",
       "currencies": [
@@ -470,8 +126,8 @@
       "title": "Bitcoin to make ‘big move’ in the next 5-10 weeks; These are the targets",
       "link": "https://finbold.com/bitcoin-to-make-big-move-in-the-next-5-10-weeks-these-are-the-targets/",
       "pubDate": "2023-10-05T08:50:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Although Bitcoin (BTC) is largely back in the sideways trading action, much like the majority of assets in the cryptocurrency … Continued",
       "currencies": [
@@ -482,136 +138,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "TRON Price Stops At $0.90 As It Undergoes Bullish Exhaustion",
-      "link": "NULL",
-      "pubDate": "2023-10-05T08:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Trust Wallet Token (TWT) Clears 130-Day Resistance – Is $1 the Next Stop?",
-      "link": "NULL",
-      "pubDate": "2023-10-05T08:39:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TWT"
-      ]
-    },
-    {
-      "title": "Bitcoin Eyes $28K but These Alts Have Performed Better (Market Watch)",
-      "link": "NULL",
-      "pubDate": "2023-10-05T08:12:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TWT"
-      ]
-    },
-    {
-      "title": "FTX exploiter converts another $25M worth of ETH to BTC, total up to $100M",
-      "link": "NULL",
-      "pubDate": "2023-10-05T06:38:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Dominic Williams Unveils The Disruptive Impact of How the Internet Computer Is Reshaping Traditional Cloud Services at Swiss Blockchain Capital Day",
-      "link": "NULL",
-      "pubDate": "2023-10-05T06:32:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEAR",
-        "ICP"
-      ]
-    },
-    {
-      "title": "EOS Price Analysis: Risk of Downside Break Below $0.55",
-      "link": "NULL",
-      "pubDate": "2023-10-05T05:58:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Bitcoin Cash Price Won’t Go Down Quietly – Risk of Bounce Grows",
-      "link": "NULL",
-      "pubDate": "2023-10-05T05:43:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH"
-      ]
-    },
-    {
-      "title": "Bitcoin Spot ETF Approval Odds Increasing According to Analysts",
-      "link": "NULL",
-      "pubDate": "2023-10-05T05:03:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "FLOW"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Litecoin (LTC) Price Analysis: Bulls Protect Key Uptrend Support",
-      "link": "NULL",
-      "pubDate": "2023-10-05T03:28:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "LTC"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 04 Oct: Bitcoin rose, while Altcoins traded  mixed",
-      "link": "NULL",
-      "pubDate": "2023-10-05T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "MATIC",
-        "LTC",
-        "TWT",
-        "TON"
-      ]
     }
   ]
 }

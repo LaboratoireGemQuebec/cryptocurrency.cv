@@ -1,15 +1,15 @@
 {
   "date": "2023-10-02",
-  "fetchedAt": "2026-02-05T07:45:52.132Z",
-  "articleCount": 53,
+  "fetchedAt": "2026-02-05T07:48:35.534Z",
+  "articleCount": 15,
   "source": "historical-import",
   "articles": [
     {
       "title": "Crypto Expert Says XRP Price Will Surge 1100% To New All-Time High, Here’s When",
       "link": "https://bitcoinist.com/xrp-price-surge-1100-expert/",
       "pubDate": "2023-10-02T23:00:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "trading",
       "description": "Pseudonymous crypto analyst and expert Dark Defender is back with another bullish prediction for the XRP price. This time around, the crypto analyst is extending his forecast for the cryptocurrency with the price target sitting considerably higher than his previous prediction. Sending XRP Price To New $5.85 All-Time High In the most recent XRP price […]",
       "currencies": [
@@ -21,46 +21,11 @@
       }
     },
     {
-      "title": "Brace For Impact As $200 Million In Crypto Is Being Unlocked In October",
-      "link": "NULL",
-      "pubDate": "2023-10-02T23:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "FLOW",
-        "AXS"
-      ]
-    },
-    {
-      "title": "ApeCoin flashes bullish rebound signs but there’s more to the story",
-      "link": "NULL",
-      "pubDate": "2023-10-02T22:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "APE"
-      ]
-    },
-    {
-      "title": "Investors drop class-action lawsuit against Terraform Labs and Do Kwon",
-      "link": "NULL",
-      "pubDate": "2023-10-02T21:25:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
       "title": "Cardano Looking Incredibly Bullish As ADA Price Boost Proves Formidable Amid Solid Potential",
       "link": "https://zycrypto.com/cardano-looking-incredibly-bullish-as-ada-price-boost-proves-formidable-amid-solid-potential/",
       "pubDate": "2023-10-02T20:17:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "Cardano (ADA) has recently been at the forefront of discussions within the cryptocurrency market, particularly as it exhibits bullish solid signals as the fourth quarter starts.",
       "currencies": [
@@ -72,117 +37,11 @@
       }
     },
     {
-      "title": "Rumored 'Satoshi Nakamoto' Account Reactivates After 5 Years With Cryptic Message For Bitcoin, Crypto",
-      "link": "NULL",
-      "pubDate": "2023-10-02T19:42:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ]
-    },
-    {
-      "title": "Cryptocurrency Lido DAO Down More Than 5% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-10-02T19:00:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LDO"
-      ]
-    },
-    {
-      "title": "Price analysis 10/2: SPX, DXY, BTC, ETH, BNB, XRP, SOL, ADA, DOGE, TON",
-      "link": "NULL",
-      "pubDate": "2023-10-02T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "TON"
-      ]
-    },
-    {
-      "title": "Bitcoin MPI Forms Death Cross, End of The Rally?",
-      "link": "NULL",
-      "pubDate": "2023-10-02T18:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LINK",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Charting Bitcoin and Ethereum’s path in the new bull market",
-      "link": "NULL",
-      "pubDate": "2023-10-02T17:30:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Binance Torches 1B LUNC Amid Key USTC Burn Proposal Approval",
-      "link": "NULL",
-      "pubDate": "2023-10-02T16:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "MKR hits a year high of $1,600, what’s next?",
-      "link": "NULL",
-      "pubDate": "2023-10-02T16:30:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Tokens with Big Chains May Increase by 10X If Market Cycle is Validated",
-      "link": "NULL",
-      "pubDate": "2023-10-02T16:25:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "SOL",
-        "DOT",
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "VanEck Ethereum ETF Fund Goes Live, Now Trading",
       "link": "https://u.today/vaneck-ethereum-etf-fund-goes-live-now-trading",
       "pubDate": "2023-10-02T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "ethereum",
       "description": "First-ever exchange-traded funds based on Ethereum futures debut in remarkable victory for industry",
       "currencies": [
@@ -198,8 +57,8 @@
       "title": "Bitcoin, Solana products lead first crypto investment inflow since mid-August",
       "link": "https://cryptoslate.com/bitcoin-solana-investment-products-lead-first-crypto-inflow-since-mid-august/",
       "pubDate": "2023-10-02T15:50:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "bitcoin",
       "description": "Crypto investment products have recorded their first inflows since mid-August, as $21 million flowed into these products in the past week. CoinShares analyst James Butterfill said the inflows were a “reaction to a combination of positive price momentum, fears over US government debt prices and the recent quagmire over government funding.” However, he noted that […]",
       "currencies": [
@@ -214,36 +73,12 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Biggest Movers: BCH Races to 2-Month High, SOL Nears $25",
-      "link": "NULL",
-      "pubDate": "2023-10-02T15:49:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "BCH"
-      ]
-    },
-    {
-      "title": "FCA Fines Investment Firm $7.8 Million for Anti-Money Laundering Failures",
-      "link": "NULL",
-      "pubDate": "2023-10-02T15:21:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "FLOW"
-      ]
-    },
-    {
       "title": "Elon Musk Calls Fiat Currency A Scam",
       "link": "https://bitcoinmagazine.com/markets/elon-musk-calls-fiat-currency-a-scam",
       "pubDate": "2023-10-02T15:08:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
       "description": "Musk's comment adds fuel to the ongoing debate about the role of Bitcoin in challenging traditional financial systems.",
       "currencies": [
         "BTC"
@@ -255,105 +90,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Here’s How Much APT, OP, AXS, APE, and Sui Will be Unlocked in October",
-      "link": "NULL",
-      "pubDate": "2023-10-02T15:05:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "LINK, ARB, and ATOM Are the Top Altcoins To Watch Out For: Analyst",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:39:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LINK",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "XLM: A solid rebound at the range-low remains elusive",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:30:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XLM"
-      ]
-    },
-    {
-      "title": "These 3 Cryptos Could Drop to New Lows in October",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ALGO",
-        "APE",
-        "EOS"
-      ]
-    },
-    {
-      "title": "Promising Prospects for Tradecurve Markets (TCRV): Aave (AAVE) and Binance (BNB) Insiders Intrigued by Potential Growth",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:12:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
-      "title": "\"Hidden Under $1 Gems: Stacks (STX), Everlodge (ELDG), and Immutable (IMX) - Affordable Tokens with Strong Fundamentals!\"",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:00:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "STX"
-      ]
-    },
-    {
-      "title": "As Immutable and MultiverseX Contend With Market Conditions, These AI Altcoins Are On The Rise",
-      "link": "NULL",
-      "pubDate": "2023-10-02T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "EGLD",
-        "IMX"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – September 25 – October 1",
-      "link": "NULL",
-      "pubDate": "2023-10-02T13:38:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
       "title": "Crypto recession alert: Mike McGlone signals troubles ahead",
       "link": "https://finbold.com/crypto-recession-alert-mike-mcglone-signals-troubles-ahead/",
       "pubDate": "2023-10-02T13:26:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "general",
       "description": "Mike McGlone, Commodity Strategist at Bloomberg, highlighted on X (formerly Twitter) on October 2, 2023, the concerning trend in the … Continued",
       "currencies": [
@@ -366,51 +107,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Hexagon Remains Committed to LUNC Despite Proposal Setback",
-      "link": "NULL",
-      "pubDate": "2023-10-02T13:22:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Worldcoin (WLD) Explodes as Popularity Increases: Can These 3 Tokens Follow?",
-      "link": "NULL",
-      "pubDate": "2023-10-02T13:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Major Market Maker DWF Labs Invested in This Altcoin, The Price Rising!",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:59:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
       "title": "BREAKING! Ethereum Application from the New York Stock Exchange to the SEC!",
       "link": "https://en.bitcoinsistemi.com/breaking-ethereum-application-from-the-new-york-stock-exchange-to-the-sec/",
       "pubDate": "2023-10-02T12:40:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "Grayscale has filed to convert its Ethereum Trust fund into a spot Ethereum (ETH) ETF. Here are the Details... Continue Reading: BREAKING! Ethereum Application from the New York Stock Exchange to the SEC!",
       "currencies": [
@@ -423,33 +124,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RUNE’s gains become ThorChain’s loss as DEX lures hackers",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:30:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "RUNE"
-      ]
-    },
-    {
-      "title": "Rino Makes Enterprise Wallet Free",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR"
-      ]
-    },
-    {
       "title": "Is Bitcoin about to skyrocket 1,100%? Expert analysis",
       "link": "https://finbold.com/is-bitcoin-about-to-skyrocket-1100-expert-analysis/",
       "pubDate": "2023-10-02T12:20:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "The majority of assets in the cryptocurrency sector have started off the week on a very positive note, led by … Continued",
       "currencies": [
@@ -462,48 +141,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "This Crypto Exchange Reportedly Suffered a $13 Million Hack",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:04:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Cryptic Correspondence: Satoshi Nakamoto’s Secret Email Emerges From The Shadows",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "DAI"
-      ]
-    },
-    {
-      "title": "ChainArgos: Justin Sun’s JustLend doesn’t send ‘stables’ where advertised",
-      "link": "NULL",
-      "pubDate": "2023-10-02T12:00:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT"
-      ]
-    },
-    {
       "title": "BREAKING! VanEck Launched Ethereum Futures ETF!",
       "link": "https://en.bitcoinsistemi.com/breaking-vaneck-launches-ethereum-futures-etf/",
       "pubDate": "2023-10-02T11:10:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "ethereum",
       "description": "The news that investors and the market have been waiting for a long time has arrived and VanEck has launched the Ethereum futures ETF. Continue Reading: BREAKING! VanEck Launched Ethereum Futures ETF!",
       "currencies": [
@@ -519,8 +161,8 @@
       "title": "Machine learning algorithm predicts Bitcoin price for October 31, 2023",
       "link": "https://finbold.com/machine-learning-algorithm-predicts-bitcoin-price-for-october-31-2023/",
       "pubDate": "2023-10-02T10:37:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "In a decisive move, Bitcoin (BTC) transcended the $28,000 threshold on Monday, October 2, breaking free from its weeks-long consolidation … Continued",
       "currencies": [
@@ -536,8 +178,8 @@
       "title": "Solana rockets toward $25; What’s next for SOL price?",
       "link": "https://finbold.com/solana-rockets-toward-25-whats-next-for-sol-price/",
       "pubDate": "2023-10-02T10:22:01.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "As the cryptocurrency market continues to press on into the green zone, Solana (SOL) is no exception, pushing further and … Continued",
       "currencies": [
@@ -550,22 +192,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "XRP-Allied Flare (FLR) Offered as Reward as KuCoin Turns 6",
-      "link": "NULL",
-      "pubDate": "2023-10-02T10:20:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
       "title": "Solana Rebound Potential: Is $30 The Next Target?",
       "link": "https://www.newsbtc.com/news/solana-rebound-potential-is-30-the-next-target/",
       "pubDate": "2023-10-02T09:42:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "Solana (SOL) has been on an impressive winning streak, with its price chart resembling the formation of an inverted head and shoulders pattern, a bullish technical indicator signaling potential upward momentum. This surge in SOL’s value has grabbed the attention of crypto enthusiasts and traders alike. At the time of writing, SOL is trading at $24.39, according to CoinGecko. Over the past 24...",
       "currencies": [
@@ -580,38 +211,11 @@
       }
     },
     {
-      "title": "Polkadot NFTs lose popularity, but DOT is immune: Here’s why",
-      "link": "NULL",
-      "pubDate": "2023-10-02T09:30:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "THORChain (RUNE) Price Finally Moves Above $2, Reaches New Yearly High",
-      "link": "NULL",
-      "pubDate": "2023-10-02T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "‘Bitcoin to $40,000 reasonable’ in Q4, says crypto expert",
       "link": "https://finbold.com/bitcoin-to-40000-reasonable-in-q4-says-crypto-expert/",
       "pubDate": "2023-10-02T09:21:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "After weeks of trading within a narrow range, Bitcoin (BTC) surged above the $28,000 milestone on Monday, October 2, marking … Continued",
       "currencies": [
@@ -627,8 +231,8 @@
       "title": "R. Kiyosaki urges to ‘buy Bitcoin’ amid hyperinflation warnings",
       "link": "https://finbold.com/r-kiyosaki-urges-to-buy-bitcoin-amid-hyperinflation-warnings/",
       "pubDate": "2023-10-02T09:09:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Amid repeated predictions of an impending financial crisis, the author of the best-selling personal finance book ‘Rich Dad Poor Dad,’ … Continued",
       "currencies": [
@@ -641,37 +245,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Weekend Winners: These 3 Altcoins Led the Market in Price Increase",
-      "link": "NULL",
-      "pubDate": "2023-10-02T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "RNDR"
-      ]
-    },
-    {
-      "title": "Bitcoin Surges Over $28K, but Analyst Questions ETF Optimism Angle",
-      "link": "NULL",
-      "pubDate": "2023-10-02T08:17:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "DOGE",
-        "TRX"
-      ]
-    },
-    {
       "title": "Ripple v. SEC case update as of October 2, 2023",
       "link": "https://finbold.com/ripple-v-sec-case-update-as-of-october-2-2023/",
       "pubDate": "2023-10-02T08:03:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "regulation",
       "description": "As the cryptocurrency world is waiting for the official conclusion of the courtroom battle between the United States Securities and … Continued",
       "currencies": [
@@ -682,57 +260,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Skyrockets Past $28,000, Here’s Why",
-      "link": "NULL",
-      "pubDate": "2023-10-02T08:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Uniswap Soaring User Engagement: How It’s Transforming UNI Price?",
-      "link": "NULL",
-      "pubDate": "2023-10-02T06:41:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "MKR",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Stellar Lumen (XLM) Price Could Recover and Revisit $0.15",
-      "link": "NULL",
-      "pubDate": "2023-10-02T05:58:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Ethereum Classic reclaims $16: Will traders go long?",
-      "link": "NULL",
-      "pubDate": "2023-10-02T04:30:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ETC"
-      ]
     }
   ]
 }

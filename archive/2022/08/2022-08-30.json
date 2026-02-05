@@ -1,38 +1,15 @@
 {
   "date": "2022-08-30",
-  "fetchedAt": "2026-02-05T07:45:52.885Z",
-  "articleCount": 41,
+  "fetchedAt": "2026-02-05T07:48:35.604Z",
+  "articleCount": 5,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "About time for a ripe Monthly Update summarizing all important happenings in the BANANO $BAN ecosystem in July 2022",
-      "link": "NULL",
-      "pubDate": "2022-08-30T22:47:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "BAN"
-      ]
-    },
-    {
-      "title": "We're pleased to announce that Dr. Mark E. Deschaine, Associate Professor at the University of Mississippi, has now…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T22:30:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "TFUEL"
-      ]
-    },
     {
       "title": "Solana DEX OptiFi Accidentally Shuts Itself Down, Locks Up $661,000",
       "link": "https://cryptobriefing.com/solana-dex-optifi-accidentally-shuts-itself-down-locks-up-661000/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2022-08-30T20:58:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "altcoin",
       "description": "Decentralized options exchange OptiFi, a project on the Solana blockchain, has come to an unexpected halt after its development team accidentally shut down the mainnet and locked up funds during an attempted upgrade. OptiFi developers made an expensive blunder yesterday.OptiFis development team stated from their official Twitter account that they had accidentally permanently closed the OptiFi...",
       "currencies": [
@@ -46,44 +23,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "At NKN we are working on nMobile and D-Chat apps to support any wallet to any wallet messaging through our Universa…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T18:08:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NKN"
-      ]
-    },
-    {
-      "title": "RT @feindura: What a creative solution. Instead of using friends to recover your 🆙, you could also use different type of services that you…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T17:39:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NULL"
-      ]
-    },
-    {
-      "title": "Today, we're spotlighting @here. HERE Technologies is a global force in business and consumer access to geospatial…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T17:33:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XYO"
-      ]
-    },
-    {
       "title": "Crypto Lender Nexo allocates $50M to buyback its native token",
       "link": "https://cryptoslate.com/crypto-lender-nexo-allocates-50m-to-buyback-its-native-token/",
       "pubDate": "2022-08-30T16:59:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoSlate",
+      "sourceKey": "cryptoslate",
       "category": "general",
       "description": "Crypto lending platform Nexo has allocated $50 million to buy back its native NEXO token as part of an ongoing initiative designed to bolster the stability and profitability of its ecosystem.",
       "currencies": [
@@ -96,76 +40,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "+3.3 billion USDC and +499 million USDP held by the Maker Protocol are allocated in the PSM reserves. What is the…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T16:40:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "MKR",
-        "SAI"
-      ]
-    },
-    {
-      "title": "RT @HuobiGlobal: #Huobi × @usddio CandyDrop Recap 100,000 USDD total prize pool 12,075 lucky winners 126.81 USDD top prize #USDD #Ai…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T16:28:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "USDD"
-      ]
-    },
-    {
-      "title": "Do you know what was the first NFT ever minted?",
-      "link": "NULL",
-      "pubDate": "2022-08-30T16:15:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "Mt. Gox Creditors Debunk Rumours Of An Imminent Massive BTC Dump",
-      "link": "NULL",
-      "pubDate": "2022-08-30T15:46:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "description": "Several Mt. Gox creditors have dispelled rumours of a plan by the exchange to release a considerable stash of Bitcoins owed to creditors later this month, potentially leading to a massive dump on the cryptocurrency.",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 4
-      }
-    },
-    {
-      "title": "+3,3 billion USDC and +499 million USDP held by the Maker Protocol are allocated in the PSM reserves. What is the…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T15:17:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "DAI",
-        "MKR",
-        "SAI"
-      ]
-    },
-    {
       "title": "Crypto community sets Dogecoin price for September 30, 2022",
       "link": "https://finbold.com/crypto-community-sets-dogecoin-price-for-september-30-2022/",
       "pubDate": "2022-08-30T15:04:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee end-of-month... Continue reading",
       "currencies": [
@@ -177,110 +56,11 @@
       }
     },
     {
-      "title": "Tether Hits Back at WSJ After Damning Report",
-      "link": "NULL",
-      "pubDate": "2022-08-30T15:04:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "description": "Leading stablecoin issuer has played down accusations in recent report published by The Wall Street Journal",
-      "currencies": [
-        "USDT"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 1
-      }
-    },
-    {
-      "title": "RT @ethstatus: We've talked a lot of talk about Crypto Social. Here's what we've been working on. Coming early 2023.",
-      "link": "NULL",
-      "pubDate": "2022-08-30T14:55:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "As a fresh tale of conspiracy grips crypto, Ava Labs denies wrongdoing",
-      "link": "NULL",
-      "pubDate": "2022-08-30T14:03:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 2
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "RT @theDAOKING: @RAILGUN_Project on the @ZecHub Pod explaining a bit about why @waku_org (an @ethstatus project) is crucial to their produc…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T13:51:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SNT"
-      ]
-    },
-    {
-      "title": "️ Happy Tuesday Romans! Last weeks update: @KlayCellar, powered by DOMANI DAO, is now live on Klaytn testnet!…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T11:55:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "DEXTF"
-      ]
-    },
-    {
-      "title": "No Secret Pact to Sue AVAX Rivals, Lawyer Lied to Impress: CEO",
-      "link": "NULL",
-      "pubDate": "2022-08-30T11:34:24.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "AVAX"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Remembering the Failed Crypto Projects a16z Backed",
-      "link": "NULL",
-      "pubDate": "2022-08-30T11:16:37.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "description": "Andreessen Horowitz established itself as a crypto heavyweight by placing winning bets on industry mainstays like Uniswap, Solana, and Sky Mavis early on. The firm also launched a record-breaking $4.5 billion crypto fund in May 2022, highlighting its commitment to blockchain technology. But even Silicon Valley's top players make investment blunders from time to time. Here are some of the top...",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 7
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Argentine Province of Mendoza to Accept Stablecoins for Tax Payments",
       "link": "https://beincrypto.com/argentina-province-of-mendoza-to-accept-stablecoins-for-tax-payments/",
       "pubDate": "2022-08-30T11:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "stablecoin",
       "description": "The fifth most populous province of Argentina will now accept cryptocurrencies, especially stablecoins, for tax payments, according to the Mendoza Tax Administration (ATM).",
       "currencies": [
@@ -293,45 +73,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Social activity in the crypto sector has steadily increased, according to the crypto social intelligence analytics…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T10:40:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ABBC"
-      ]
-    },
-    {
-      "title": "One week after aelf explorer v1.2.0 is released, we have prepared a detailed guide for developers hoping to manage…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T10:15:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELF"
-      ]
-    },
-    {
-      "title": "#BitcoinSV is now officially available in #Japan! Huobi Japan has listed Bitcoin SV with the trading pair BSV/JPY.…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T10:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "HT",
-        "BSV"
-      ]
-    },
-    {
       "title": "AVAX Soars After Avalanche Founder Denies ‘Gangster Style’ Litigation Claims",
       "link": "https://cryptonews.com/news/avax-soars-after-avalanche-founder-denies-gangster-style-litigation-claims.htm",
       "pubDate": "2022-08-30T09:49:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "general",
       "description": "The price of Avalanche’s native token AVAX soared in the market today, after Emin Gün Sirer, Founder of Avalanche developer Ava Labs, called claims that he has used litigation to fool regulators and harm competitors “categorically false.”... Read More: AVAX Soars After Avalanche Founder Denies ‘Gangster Style’ Litigation Claims",
       "currencies": [
@@ -342,190 +88,6 @@
         "negative": 3
       },
       "sentiment": "bearish"
-    },
-    {
-      "title": "RT @weiweigeng: Unite is proud to announce kungfuverse, built on @RLYNetworkAssoc v2. Come join our community on discord for early access b…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T09:47:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "🤩The recap from #USDD and #Huobi's CandyDrop is out! Congratulations to all winners, and thank you to all users wh…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T09:25:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "#Huobi × @usddio CandyDrop Recap 100,000 USDD total prize pool 12,075 lucky winners 126.81 USDD top prize…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T09:00:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HT",
-        "HBTC",
-        "HPT"
-      ]
-    },
-    {
-      "title": "Remember to stay calm, we're here for long-term  #dohrnii #Bitcoin #crypto",
-      "link": "NULL",
-      "pubDate": "2022-08-30T08:53:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "DHN"
-      ]
-    },
-    {
-      "title": "️Whether you’re coding in the office or doing yoga at our retreat in Jastarnia, we’re all about balance. Our devel…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T08:14:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "GLM"
-      ]
-    },
-    {
-      "title": "Xbox Boss Phil Spencer Skeptical About Metaverse, Criticizes Play-to-Earn Models",
-      "link": "NULL",
-      "pubDate": "2022-08-30T08:00:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "1 Day Left for #SSV Listing Giveaway! 2,000 USDD for New Signups Deposit and Share 3,000 USDD Trade and…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T07:32:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD",
-        "ETHW",
-        "ETHS"
-      ]
-    },
-    {
-      "title": "#USDD Mining Pools with @CurveFinance are on FIRE $USDD / 3CRV and USDDFRAXBP have reached a total TVL of over…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T07:27:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "ICYMI, @chainlink conducted an amazing #Klaymakers22 workshop that included a step-by-step tutorial on how to integ…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T07:11:28.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "#ScarpaCoin is best Crypto Currency in future #cryptocurrency #defi #bitcoin #CMC",
-      "link": "NULL",
-      "pubDate": "2022-08-30T06:19:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "SC"
-      ]
-    },
-    {
-      "title": "@monsterra_p2e is a free-to-play-to-earn multi-chain inspired by the Axie Infinity game's pet world and the gamep…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T04:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AXS",
-        "RADAR"
-      ]
-    },
-    {
-      "title": "🤩 You'll always find #USDD at the TOP! We keep pushing to offer a stable, safe, and sustainable #StableCoin on t…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T03:30:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @justinsuntron: Wait.. is that? sneaky interns...",
-      "link": "NULL",
-      "pubDate": "2022-08-30T03:15:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @trondao: Is it #TimesSquare?",
-      "link": "NULL",
-      "pubDate": "2022-08-30T03:12:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDD"
-      ]
-    },
-    {
-      "title": "RT @DoraHacks: Introducing #Klaymakers22 Hackathon, a global BUIDLer fest for #Web3, #Metaverse and #DAO, presented by @klaytn_official and…",
-      "link": "NULL",
-      "pubDate": "2022-08-30T02:04:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
-    },
-    {
-      "title": "We'll be @token2049 as a Platinum Sponsor and David Shin, our head of Global Adoption will be a speaker! 🦾",
-      "link": "NULL",
-      "pubDate": "2022-08-30T01:48:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KLAY",
-        "WKLAY"
-      ]
     }
   ]
 }

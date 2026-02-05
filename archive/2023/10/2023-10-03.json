@@ -1,26 +1,15 @@
 {
   "date": "2023-10-03",
-  "fetchedAt": "2026-02-05T07:45:52.131Z",
-  "articleCount": 61,
+  "fetchedAt": "2026-02-05T07:48:35.534Z",
+  "articleCount": 16,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "DogeRift deprecating DOGEF token, converting to DOGER",
-      "link": "NULL",
-      "pubDate": "2023-10-03T23:53:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "NEO"
-      ]
-    },
     {
       "title": "Judge rejects SEC’s motion to file an appeal against Ripple ruling",
       "link": "https://cointelegraph.com/news/sec-motion-file-ripple-xrp-interlocutory-appeal-denied",
       "pubDate": "2023-10-03T23:28:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "regulation",
       "description": "District Court Judge Analisa Torres denied the SEC’s motion to file an appeal, claiming that the regulator did not show that there were substantial grounds for difference of opinion.",
       "currencies": [
@@ -33,23 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "XRP Price Historical Data Suggests Substantial Q4 Rally Possible",
-      "link": "NULL",
-      "pubDate": "2023-10-03T23:18:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "STX"
-      ]
-    },
-    {
       "title": "SEC’s Motion to Appeal Loss in Ripple Case Is Denied",
       "link": "https://www.coindesk.com/policy/2023/10/03/secs-motion-to-appeal-loss-in-ripple-case-is-denied/?utm_medium=referral&utm_source=rss&utm_campaign=headlines",
       "pubDate": "2023-10-03T23:13:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "regulation",
       "description": "SEC Chair Gary Gensler, left, and Ripple CEO Brad Garlinghouse are at the center of the U.S. dispute over the future of crypto oversight. (Kevin Dietsch/Getty and Scott Moore/Shutterstock/CoinDesk)",
       "currencies": [
@@ -65,8 +42,8 @@
       "title": "BREAKING: Judge Denies SEC’s Motion to Appeal Ripple (XRP) Decision",
       "link": "https://en.bitcoinsistemi.com/breaking-judge-denies-secs-motion-to-appeal-ripple-xrp-decision/",
       "pubDate": "2023-10-03T23:00:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Benzinga",
+      "sourceKey": "benzinga",
       "category": "regulation",
       "description": "According to breaking information, the judge in the Ripple case rejected the SEC's decision to appeal the recent Ripple victory. The decision was made by Judge Analisa Torres on October 3, 2023. The SEC's request for a postponement was also denied as moot. The hearing will begin at 9:00 on April 23, 2024. The court […] Continue Reading: BREAKING: Judge Denies SEC’s Motion to Appeal...",
       "currencies": [
@@ -79,25 +56,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Can Bitcoin Continue Its Run? These Factors Could Suggest So",
-      "link": "NULL",
-      "pubDate": "2023-10-03T22:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "ADA",
-        "GRT"
-      ]
-    },
-    {
       "title": "Cardano stablecoin project gambled away investors’ money before rug: Report",
       "link": "https://cointelegraph.com/news/cardano-stabledcoin-project-gambled-away-investors-money-before-rug",
       "pubDate": "2023-10-03T20:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Ardana claimed to be creating a stablecoin platform on Cardano, but new evidence suggests it may have lost investors’ money in bad crypto trades.",
       "currencies": [
@@ -110,22 +73,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Cryptocurrency Aave Falls More Than 5% In 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-10-03T19:01:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "AAVE"
-      ]
-    },
-    {
       "title": "Star Atlas Unlocks Tools to Help Game Devs Build on Solana",
       "link": "https://decrypt.co/199924/star-atlas-open-sources-game-development-tools-on-solana",
       "pubDate": "2023-10-03T19:01:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "ATMTA gives Solana developers and creators free access to build using its Star Atlas tools, starting with the SAGE Labs web game.",
       "currencies": [
@@ -137,61 +89,11 @@
       }
     },
     {
-      "title": "Breaking: Binance to Halt BUSD Borrowing and Staking Services by October 25th",
-      "link": "NULL",
-      "pubDate": "2023-10-03T18:08:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Binance continues to wind down BUSD by ending borrowing and staking support for the stablecoin",
-      "link": "NULL",
-      "pubDate": "2023-10-03T17:30:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
-      "title": "Alex Mashinsky’s jury trial scheduled for September 2024",
-      "link": "NULL",
-      "pubDate": "2023-10-03T17:29:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "Ecosystem developers bring Bitcoin to Cosmos network",
-      "link": "NULL",
-      "pubDate": "2023-10-03T17:18:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ATOM"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Cardano To Shed Its Gains? Profit-Taking Spikes To High Levels",
       "link": "https://www.newsbtc.com/news/cardano/cardano-shed-gains-profit-taking-spikes-high/",
       "pubDate": "2023-10-03T17:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "altcoin",
       "description": "On-chain data shows the profit-taking among Cardano investors has spiked to high levels, a sign that the asset may register a decline in the coming days. Cardano Has Observed High Profit-Taking After The Rally According to data from the on-chain analytics firm Santiment, AAVE, ADA, and CRV are among the altcoins that have recently observed the most extreme profit-taking. The relevant indicator here is the “ratio of daily on-chain transaction volume in profit to loss,” which, as its name suggests",
       "currencies": [
@@ -208,38 +110,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Crypto Whales Are Buying These 3 Altcoins for October Profits",
-      "link": "NULL",
-      "pubDate": "2023-10-03T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DAI",
-        "LINK",
-        "BCH",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Polkadot and Composable Announced As Diamond Sponsor at the Cosmoverse’23 Conference in Istanbul",
-      "link": "NULL",
-      "pubDate": "2023-10-03T16:46:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
       "title": "Cardano's Project Catalyst Sweeps Away Rigged Funding Claims",
       "link": "https://dailycoin.com/cardanos-project-catalyst-sweeps-away-rigged-funding-claims/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2023-10-03T16:35:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "Risk rating protocol Xerberus analyzed voting distributions to conclude whales did not manipulate voting.",
       "currencies": [
@@ -251,22 +126,11 @@
       }
     },
     {
-      "title": "Binance to cease BUSD lending services by October 25",
-      "link": "NULL",
-      "pubDate": "2023-10-03T16:28:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BUSD"
-      ]
-    },
-    {
       "title": "$0.001 SHIB Price Not In Doubt As Shiba Inu’s Strong Potential Is Spotlighted Amid Shibarium Boom",
       "link": "https://zycrypto.com/0-001-shib-price-not-in-doubt-as-shiba-inus-strong-potential-is-spotlighted-amid-shibarium-boom/",
       "pubDate": "2023-10-03T16:17:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "However, on a more positive note, Shiba Inu's Layer 2 network, Shibarium, has experienced rapid growth since its launch on August 28th. The network recently surpassed the...",
       "currencies": [
@@ -279,43 +143,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Shiba Inu (SHIB) and Other Coins Can Now Be Traded Against PayPal's PYUSD Stablecoin on Crypto.com",
-      "link": "NULL",
-      "pubDate": "2023-10-03T16:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SHIB",
-        "LTC",
-        "XLM",
-        "BCH"
-      ],
-      "votes": {
-        "positive": 2,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin SV (BSV) Notches 8% In The Last Day as Top Coins Bleed",
-      "link": "NULL",
-      "pubDate": "2023-10-03T16:00:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "BSV"
-      ]
-    },
-    {
       "title": "Optimism network launches testnet fault-proof system in pursuit of decentralization",
       "link": "https://cointelegraph.com/news/optimism-network-launches-testnet-fault-proof-system-pursuit-decentralization",
       "pubDate": "2023-10-03T16:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "layer2",
       "description": "OP Labs implemented its modular fault-proof system on the OP Goerli testnet.",
       "currencies": [
@@ -332,8 +164,8 @@
       "title": "VanEck Commits to Donating 10% of Profits from Ether ETF to Ethereum Core Developers",
       "link": "https://www.cryptointelligence.co.uk/vaneck-commits-to-donating-10-of-profits-from-ether-etf-to-ethereum-core-developers/",
       "pubDate": "2023-10-03T15:57:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "ethereum",
       "description": "Global asset manager VanEck has pledged to donate 10% of profits generated from its upcoming...",
       "currencies": [
@@ -346,63 +178,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Binance to shut down BUSD lending by October 25",
-      "link": "NULL",
-      "pubDate": "2023-10-03T15:45:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BUSD"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Why Did Bitcoin SV (BSV) Price Increase by 20% Yesterday?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BSV"
-      ]
-    },
-    {
-      "title": "Nomic bridge paves way for Bitcoin’s seamless entry into the Cosmos ecosystem",
-      "link": "NULL",
-      "pubDate": "2023-10-03T15:00:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ATOM"
-      ]
-    },
-    {
-      "title": "Wrapped Bitcoin Down More Than 3% Within 24 hours",
-      "link": "NULL",
-      "pubDate": "2023-10-03T15:00:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WBTC"
-      ]
-    },
-    {
       "title": "Cardano beats all crypto projects in September developer activity",
       "link": "https://finbold.com/cardano-beats-all-crypto-projects-in-september-developer-activity/",
       "pubDate": "2023-10-03T14:08:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "altcoin",
       "description": "September has been largely uneventful for the majority of assets in the cryptocurrency market, but for the development team at … Continued",
       "currencies": [
@@ -414,81 +194,11 @@
       }
     },
     {
-      "title": "Everlodge Presale Gains Momentum Amidst Surging Chainlink Wallet Activity, Litecoin Recovery Stalls",
-      "link": "NULL",
-      "pubDate": "2023-10-03T14:00:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC",
-        "LINK"
-      ]
-    },
-    {
-      "title": "Lido, Coinbase, and Rocket Pool Corner 89% of Ethereum’s Booming $20 Billion Liquid Staking Market",
-      "link": "NULL",
-      "pubDate": "2023-10-03T14:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RPL"
-      ]
-    },
-    {
-      "title": "Bitcoin News: Revival Of “Satoshi Nakamoto” Account Could Signal Slump In BTC Price?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T14:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DAI"
-      ]
-    },
-    {
-      "title": "NeoCast, NeoPay, Kooka, and Omniport win awards at Bangalore hackathon",
-      "link": "NULL",
-      "pubDate": "2023-10-03T13:48:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Dwf Labs Invests $7.5 Million in Airdao to Drive Ecosystem Growth",
-      "link": "NULL",
-      "pubDate": "2023-10-03T13:35:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MKR"
-      ]
-    },
-    {
-      "title": "Celsius Network aims to repay customers by year-end in restructuring move",
-      "link": "NULL",
-      "pubDate": "2023-10-03T13:30:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
       "title": "Solana Leaves Ethereum In The Dust As Institutional Inflows Rise",
       "link": "https://bitcoinist.com/solana-ethereum-institutional-inflows/",
       "pubDate": "2023-10-03T13:00:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bitcoinist",
+      "sourceKey": "bitcoinist",
       "category": "ethereum",
       "description": "Solana is making its mark once again as the majority of cryptocurrencies turn green in terms of their price movement, crypto investment products have finally seen a net inflow of capital for the first time in the past six weeks. According to the new CoinShares report, most of this inflow is attributed to Bitcoin, as […]",
       "currencies": [
@@ -502,70 +212,11 @@
       }
     },
     {
-      "title": "LUNC To Die Unless Something Significant Happens: Crypto Influencer",
-      "link": "NULL",
-      "pubDate": "2023-10-03T12:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Crypto Watchlist For October: Altcoins To Keep On Your Radar",
-      "link": "NULL",
-      "pubDate": "2023-10-03T12:00:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DAI",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Gala’s Price Continues to Rise and May Soon Overcome Resistance",
-      "link": "NULL",
-      "pubDate": "2023-10-03T11:52:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "GALA Price Indecision Could Be Determined With This Indicator – Will It Bounce or Drop?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T11:45:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "GALA"
-      ]
-    },
-    {
-      "title": "Assessing how SUI, DYDX will react to their upcoming token unlocks",
-      "link": "NULL",
-      "pubDate": "2023-10-03T11:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DYDX"
-      ]
-    },
-    {
       "title": "Machine learning algorithm sets SHIB price for October 31",
       "link": "https://finbold.com/machine-learning-algorithm-sets-shib-price-for-october-31/",
       "pubDate": "2023-10-03T11:24:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Since reaching a four-month peak in August, Shiba Inu (SHIB) has taken a sharp nosedive, pushing its 2023 losses to … Continued",
       "currencies": [
@@ -578,78 +229,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Maker (MKR) Network Activity Reclaims 2021 Bull Market Peak – More Price Gains Ahead?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T11:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DAI",
-        "MKR"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Litecoin Moves In A Fluctuation Range Of Over $65",
-      "link": "NULL",
-      "pubDate": "2023-10-03T10:53:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LTC"
-      ]
-    },
-    {
-      "title": "Bitcoin's 'Fake Pump Seems Over:' Crypto Analyst Capo Predicts Price Drop To $12K",
-      "link": "NULL",
-      "pubDate": "2023-10-03T10:22:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Rollbit Recorded $38M in September Betting Revenues, RLB Token Climbs",
-      "link": "NULL",
-      "pubDate": "2023-10-03T09:52:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "RLB"
-      ]
-    },
-    {
-      "title": "How You Can Support Key Open-Source Initiatives With Kivach",
-      "link": "NULL",
-      "pubDate": "2023-10-03T09:18:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XMR",
-        "FLOW"
-      ]
-    },
-    {
       "title": "AI forecasts Solana price for the end of 2023",
       "link": "https://finbold.com/ai-forecasts-solana-price-for-the-end-of-2023/",
       "pubDate": "2023-10-03T09:13:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "Despite opening the week on a bullish note, the majority of assets in the cryptocurrency sector are consolidating their earlier … Continued",
       "currencies": [
@@ -662,78 +246,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "Polkadot & Composable announced as Diamond Sponsor at the Cosmoverse’23 conference in Istanbul",
-      "link": "NULL",
-      "pubDate": "2023-10-03T09:13:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Bitcoin Buckles to $27.4K as Crypto Rally Fizzles on Macro Jitters",
-      "link": "NULL",
-      "pubDate": "2023-10-03T08:59:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "TRX"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today: BTC, SOL, CRV, PEPE All Record 24H Losses",
-      "link": "NULL",
-      "pubDate": "2023-10-03T08:55:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "CRV"
-      ]
-    },
-    {
-      "title": "Axie Infinity to release millions of tokens as prices continue to slide",
-      "link": "NULL",
-      "pubDate": "2023-10-03T08:30:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AXS"
-      ]
-    },
-    {
-      "title": "Crypto Daily Roundup, 03 Oct: Could October's Bull Run Boost Crypto?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T08:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "AVAX",
-        "ATOM",
-        "APE",
-        "AXS",
-        "IMX"
-      ]
-    },
-    {
       "title": "Bitcoin must stay above this level or ‘it’s goodnight to the bull’",
       "link": "https://finbold.com/bitcoin-must-stay-above-this-level-or-its-goodnight-to-the-bull/",
       "pubDate": "2023-10-03T08:18:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "bitcoin",
       "description": "Although Bitcoin (BTC), along with the rest of the cryptocurrency market, has opened the week on a very positive note, … Continued",
       "currencies": [
@@ -746,71 +263,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "5 Altcoins You Should Keep an Eye on in October",
-      "link": "NULL",
-      "pubDate": "2023-10-03T08:13:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "HBAR"
-      ]
-    },
-    {
-      "title": "$ATOM Tokenomics Changes To Be Central Discussion At Cosmoverse ‘23",
-      "link": "NULL",
-      "pubDate": "2023-10-03T07:19:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ATOM"
-      ]
-    },
-    {
-      "title": "DOT witnesses strong gains but this is why bulls may lose steam at $4.2",
-      "link": "NULL",
-      "pubDate": "2023-10-03T06:30:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOT"
-      ]
-    },
-    {
-      "title": "Celsius seeks court approval to start repaying customers by year-end",
-      "link": "NULL",
-      "pubDate": "2023-10-03T05:14:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CEL"
-      ]
-    },
-    {
-      "title": "24 Crypto Update, 02 Oct: Crypto Market Plunges as Bears Take Control",
-      "link": "NULL",
-      "pubDate": "2023-10-03T01:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "LTC",
-        "BSV"
-      ]
-    },
-    {
       "title": "Solana Extends Investment Streak to 27 Weeks of Inflows: CoinShares",
       "link": "https://decrypt.co/199860/solana-institutional-investors-27-weeks-of-inflows",
       "pubDate": "2023-10-03T01:10:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "altcoin",
       "description": "The one-time \"Ethereum killer\" remains the darling of institutional investors.",
       "currencies": [
@@ -820,29 +277,6 @@
         "positive": 4,
         "negative": 4
       }
-    },
-    {
-      "title": "Class-Action Lawsuit Against Terra and Do Kwon Voluntarily Dismissed",
-      "link": "NULL",
-      "pubDate": "2023-10-03T00:32:42.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin rockets past local resistances, but is this the start of a bull run?",
-      "link": "NULL",
-      "pubDate": "2023-10-03T00:30:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "FLOW"
-      ]
     }
   ]
 }

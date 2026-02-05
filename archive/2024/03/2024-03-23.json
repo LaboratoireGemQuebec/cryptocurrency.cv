@@ -1,28 +1,15 @@
 {
   "date": "2024-03-23",
-  "fetchedAt": "2026-02-05T07:45:53.392Z",
-  "articleCount": 33,
+  "fetchedAt": "2026-02-05T07:48:35.657Z",
+  "articleCount": 7,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Crypto Jobs on the Rise as Bitcoin Trades Near All-Time Highs",
-      "link": "NULL",
-      "pubDate": "2024-03-23T23:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "XLM"
-      ]
-    },
     {
       "title": "How XRP Ledger's New AMM Makes Crypto Trading Easier Than Ever",
       "link": "https://dailycoin.com/how-xrp-ledgers-new-amm-makes-crypto-trading-easier-than-ever/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-03-23T20:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "The XRP Ledger (XRPL) recently integrated Automated Market Makers (AMMs), a major step towards a more robust DeFi ecosystem.",
       "currencies": [
@@ -35,24 +22,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BakerySwap Finalizes Refunds for PUMP Presale: A Comprehensive Update",
-      "link": "NULL",
-      "pubDate": "2024-03-23T19:09:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BNB",
-        "CAKE",
-        "BAKE"
-      ]
-    },
-    {
       "title": "Ripple’s XRP Army Unveil Crazy Price Milestones As Whales Move Millions Of XRP",
       "link": "https://zycrypto.com/ripples-xrp-army-unveil-crazy-price-milestones-as-whales-move-millions-of-xrp/",
       "pubDate": "2024-03-23T17:44:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The cryptocurrency market witnessed significant activity in the XRP ecosystem as over 70 million XRP coins were transferred in four noteworthy transactions.",
       "currencies": [
@@ -67,8 +41,8 @@
       "title": "Hedera Hashgraph joins UK crypto asset business council, HBAR price sees minor impact",
       "link": "https://www.cryptopolitan.com/hedera-hashgraph-joins-uk-crypto-asset/",
       "pubDate": "2024-03-23T17:35:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptopolitan",
+      "sourceKey": "cryptopolitan",
       "category": "trading",
       "description": "In a strategic move aimed at bolstering its presence in the rapidly evolving cryptocurrency landscape, Hedera Hashgraph, the team behind the HBAR token, has announced its membership in the UK Cryptoasset Business Council (UKCBC). The decision comes from Hedera’s commitment to fostering innovation and advocating for well-crafted policies within the UK’s crypto ecosystem. Hedera’s entry […]",
       "currencies": [
@@ -81,86 +55,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "March Sees Nearly $1 Billion In Ethereum Netflow To Centralized Exchanges – What’s Happening?",
-      "link": "NULL",
-      "pubDate": "2024-03-23T17:30:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "DOGE",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Top NFT tokens with 100X returns in 2024 – Apecoin (APE), Fetch.ai (FET), NFT Finance (NFTFN)",
-      "link": "NULL",
-      "pubDate": "2024-03-23T17:28:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "BTC",
-        "APE",
-        "NFT",
-        "FET"
-      ]
-    },
-    {
-      "title": "Uniswap UNI) and Filecoin (FIL) Stakeholders See Pushd as the Catalyst for an Online Shopping Revolution",
-      "link": "NULL",
-      "pubDate": "2024-03-23T17:21:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "FIL"
-      ]
-    },
-    {
-      "title": "THORChain and Theta Network Users Embrace Fezoo, Betting on Its Success Against Established Trading Giants",
-      "link": "NULL",
-      "pubDate": "2024-03-23T17:08:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "THETA",
-        "RUNE"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Raffle Coin (RAFF) Presale Draws Crowds, Promising 100X Growth - A Must-See for Hedera (HBAR) and Injective (INJ) Investors!",
-      "link": "NULL",
-      "pubDate": "2024-03-23T17:04:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR",
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
       "title": "Claude Opus AI predicts SHIB price for the end of 2024",
       "link": "https://finbold.com/claude-opus-ai-predicts-shib-price-for-the-end-of-2024/",
       "pubDate": "2024-03-23T16:51:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Finbold",
+      "sourceKey": "finbold",
       "category": "trading",
       "description": "While the broader cryptocurrency market has witnessed short-term volatility, meme coin Shiba Inu (SHIB) has notably stood out by mainly … Continue reading",
       "currencies": [
@@ -173,23 +72,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "BlockDAG Mobile Mining and Limited Presale Alert for Batch 4 with 550M Coins Remaining, SUI and GRT Offer Promising Outlooks",
-      "link": "NULL",
-      "pubDate": "2024-03-23T16:26:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "mining",
-      "currencies": [
-        "GRT",
-        "SUI"
-      ]
-    },
-    {
       "title": "ADA to Reach $1? Cardano Sees Spike in Whale Transactions and Active Addresses",
       "link": "https://zycrypto.com/ada-to-reach-1-cardano-sees-spike-in-whale-transactions-and-active-addresses/",
       "pubDate": "2024-03-23T15:52:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "altcoin",
       "description": "Cardano (ADA) enthusiasts are eagerly eyeing the $1 mark as the cryptocurrency shows promising growth.",
       "currencies": [
@@ -201,28 +88,11 @@
       }
     },
     {
-      "title": "OKX Founder Could Be Under Investigation by US Authorities",
-      "link": "NULL",
-      "pubDate": "2024-03-23T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB",
-        "GALA"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
       "title": "Vitalik Buterin Doubles Grant for ENS, Fueling Growth and Innovation in Web3 Addresses",
       "link": "https://www.cryptointelligence.co.uk/vitalik-buterin-doubles-grant-for-ens-fueling-growth-and-innovation-in-web3-addresses/",
       "pubDate": "2024-03-23T14:30:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptointelligence",
+      "sourceKey": "cryptointelligence",
       "category": "ethereum",
       "description": "Nick Johnson, the brain behind Ethereum Name Service (ENS), embarked on this project with uncertain...",
       "currencies": [
@@ -236,107 +106,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Going Multichain with NFT Pulse",
-      "link": "NULL",
-      "pubDate": "2024-03-23T14:20:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT",
-        "ENS",
-        "RON"
-      ]
-    },
-    {
-      "title": "Why This Token Is Poised to Outperform AEVO in the Upcoming Bull Run",
-      "link": "NULL",
-      "pubDate": "2024-03-23T13:24:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "AEVO"
-      ]
-    },
-    {
-      "title": "Crypto News: TERRA Luna and Classic Outpace Crypto Giants",
-      "link": "NULL",
-      "pubDate": "2024-03-23T13:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "BCH",
-        "KCS",
-        "GALA",
-        "NFT",
-        "ENS",
-        "CFX",
-        "TON"
-      ]
-    },
-    {
-      "title": "Something's Cooking on Shibarium With BONE, SHIB Team Tweets",
-      "link": "NULL",
-      "pubDate": "2024-03-23T12:44:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SHIB",
-        "BONE"
-      ]
-    },
-    {
-      "title": "Hedera Forges Strategic Alliance with UK Cryptoasset Business Council",
-      "link": "NULL",
-      "pubDate": "2024-03-23T12:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "HBAR"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Ethereum Name Service Integrated in Google’s Search Engine",
-      "link": "NULL",
-      "pubDate": "2024-03-23T11:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENS"
-      ]
-    },
-    {
-      "title": "Tech Giant Google Integrates ENS Wallet Balance in Search Results",
-      "link": "NULL",
-      "pubDate": "2024-03-23T11:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ENS"
-      ]
-    },
-    {
       "title": "Ethereum Weathers the Storm: On-Chain Analysis by IntoTheBlock Suggests Resilience Amidst FUD",
       "link": "https://www.coindesk.com/",
       "pubDate": "2024-03-23T09:20:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Cryptoglobe",
+      "sourceKey": "cryptoglobe",
       "category": "ethereum",
       "description": "In the March 22nd issue of his firm’s “On-Chain Insights” newsletter, Lucas Outumuro, Head of Research at crypto analytics firm IntoTheBlock (ITB), dives into the recent criticism and scepticism surrounding Ethereum (ETH). He addresses concerns about ETH’s price performance and perceived regulatory threats, counterbalancing them with on-chain metrics that point to continued growth and bullish...",
       "currencies": [
@@ -347,141 +121,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "OKX Founder Dismisses Rumors About His Arrest in the United States",
-      "link": "NULL",
-      "pubDate": "2024-03-23T08:02:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "OKB"
-      ]
-    },
-    {
-      "title": "Do Kwon To Be Released From Prison But Remanded To Montenegro – Details",
-      "link": "NULL",
-      "pubDate": "2024-03-23T07:33:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Bitcoin ETF Netflows May Experience Rebound If This Price Is Attained, Analyst Explains",
-      "link": "NULL",
-      "pubDate": "2024-03-23T07:25:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "BlockDAG kicks off batch 4 presale: A 5000x ROI prospect",
-      "link": "NULL",
-      "pubDate": "2024-03-23T06:05:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
-    {
-      "title": "Crypto Prices Today March 23: Crypto Market Loses Its Steam",
-      "link": "NULL",
-      "pubDate": "2024-03-23T06:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "DOT",
-        "BCH",
-        "NFT",
-        "TON",
-        "FLOKI",
-        "TIA"
-      ]
-    },
-    {
-      "title": "Chainlink Dethrones Cardano as Leading Dev Platform",
-      "link": "NULL",
-      "pubDate": "2024-03-23T04:37:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ADA",
-        "LINK"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Solana Meme Coin Mania Breaks Records: DEX Volume Surges, Yet Failed Transactions Hit 72%",
-      "link": "NULL",
-      "pubDate": "2024-03-23T03:00:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "USDT",
-        "SOL",
-        "LUSD",
-        "BONK",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Cathie Wood Says Bitcoin Could Skyrocket To $3.8M By 2030 Thanks To 'Institutional Green Light'",
-      "link": "NULL",
-      "pubDate": "2024-03-23T02:18:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "WOO",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Solana CEO Anatoly Yakovenko denounces influx of racist and offensive memecoins",
-      "link": "NULL",
-      "pubDate": "2024-03-23T00:37:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL"
-      ]
-    },
-    {
-      "title": "Bitcoin Long-Term Holders & Price Top: Glassnode Reveals Pattern",
-      "link": "NULL",
-      "pubDate": "2024-03-23T00:30:29.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "BCH",
-        "GRT"
-      ]
     }
   ]
 }

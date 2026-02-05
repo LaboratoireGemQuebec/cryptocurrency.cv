@@ -1,70 +1,15 @@
 {
   "date": "2024-05-27",
-  "fetchedAt": "2026-02-05T07:45:53.262Z",
-  "articleCount": 121,
+  "fetchedAt": "2026-02-05T07:48:35.632Z",
+  "articleCount": 15,
   "source": "historical-import",
   "articles": [
-    {
-      "title": "Justin Sun Advocates Pro-Crypto President Amid Trump-Biden Tensions",
-      "link": "NULL",
-      "pubDate": "2024-05-27T23:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Is Solana Becoming The Preferred Choice For Ethereum Developers? SOL’s Uptrend Suggests A Shift",
-      "link": "NULL",
-      "pubDate": "2024-05-27T23:00:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "SOL",
-        "AAVE",
-        "QNT",
-        "RNDR",
-        "LUSD",
-        "PYTH"
-      ]
-    },
-    {
-      "title": "Bitcoin Vaults Past $70,000 As Argentina Explores Bitcoin Legal Tender Adoption After El Salvador’s Success",
-      "link": "NULL",
-      "pubDate": "2024-05-27T22:42:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "USDC",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Internet Computer (ICP) AI Demo To Feature Facial Recognition",
-      "link": "NULL",
-      "pubDate": "2024-05-27T22:31:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ICP"
-      ]
-    },
     {
       "title": "Chainlink Booms Amid Swift Payments Update, Ethereum ETF Rush",
       "link": "https://decrypt.co/232612/chainlink-link-up-10-percent-swift-consensus-ethereum-etf",
       "pubDate": "2024-05-27T22:31:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
       "category": "ethereum",
       "description": "It's been a quiet day for crypto markets—but Chainlink's LINK is rising on a raft of good news.",
       "currencies": [
@@ -78,36 +23,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Daddy Trump (DADTRUMP) to Rally 17,000% Ahead of KuCoin Listing, as Shiba Inu, Bonk and Dogecoin Lag",
-      "link": "NULL",
-      "pubDate": "2024-05-27T22:02:40.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "KCS",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Donald Trump’s Crypto Wallet Holds $10 Million in Assets",
-      "link": "NULL",
-      "pubDate": "2024-05-27T21:41:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ARKM"
-      ]
-    },
-    {
       "title": "Solana (SOL) price encounters resistance near $190 — Here is why",
       "link": "https://cointelegraph.com/news/solana-sol-price-encounters-resistance-near-190-here-is-why",
       "pubDate": "2024-05-27T21:24:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "trading",
       "description": "SOL price rallied 5% today, but on-chain data raises doubts about whether Solana can overcome the barrier at $190.",
       "currencies": [
@@ -122,163 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Dogecoin Poised For 700% Explosion To $1.17 Amid Recovery In Major Metrics",
-      "link": "NULL",
-      "pubDate": "2024-05-27T21:00:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "CORE"
-      ]
-    },
-    {
-      "title": "Bitcoin Vs. SPY Vs. Gold: If You Had $1,000 Invested In Each Of These Assets Last Memorial Day, Here's How Much You Would Have Now",
-      "link": "NULL",
-      "pubDate": "2024-05-27T20:10:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "META"
-      ]
-    },
-    {
-      "title": "Shibarium’s BONE Forms Bullish Divergence on Activity Uptick",
-      "link": "NULL",
-      "pubDate": "2024-05-27T20:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BONE"
-      ]
-    },
-    {
-      "title": "ETH/BTC Bounces From A 7-Year Support Trend Line: Ethereum To $4,900?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T19:30:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "ALGO"
-      ]
-    },
-    {
-      "title": "How To Trade The Ethereum Rally: 10x Research",
-      "link": "NULL",
-      "pubDate": "2024-05-27T19:18:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LDO",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "PEPE Coin Leapfrogs MATIC, LTC: More to Follow?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T19:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MATIC",
-        "LTC",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "HTX Historically Outranks Coinbase In This Key Metric",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:59:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "TRON Founder Justin Sun Pushes For Pro-Crypto President Amid Trump, Biden Tensions",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:55:35.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX",
-        "JOE"
-      ]
-    },
-    {
-      "title": "GCR’s Hack Possibly Tied to Solana’s CAT Coin Team, Onchain Sleuth Zachxbt Reports",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:55:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SOL",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Sei Launches First Parallelized EVM Blockchain",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:52:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "PYTH",
-        "SEI"
-      ]
-    },
-    {
-      "title": "Athena Protocol Gains Momentum with TVL Increase to $2.75 Billion, Ready for $1?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:48:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Aptos Surges Past Solana In Daily Transactions",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:44:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "SOL",
-        "APT"
-      ]
-    },
-    {
       "title": "Solana community votes to give validators all priority fees",
       "link": "https://cointelegraph.com/news/solana-community-votes-giving-validators-all-priority-fees",
       "pubDate": "2024-05-27T18:41:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "The Solana community has voted by a significant margin to give 100% of priority fees to network validators.",
       "currencies": [
@@ -291,128 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Balaji Srinivasan Criticizes Fed’s Unpredictable Monetary Policy, Praises Bitcoin’s Stability",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:41:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
-      "title": "Injective (INJ), Polygon (MATIC) and One Additional Ethereum-Based Altcoin Flashing Bullish Signals: Analyst",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:41:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ADA",
-        "MATIC",
-        "VET",
-        "INJ"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Donald Trump's Crypto Holding Now Exceeds $10 Million",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:37:58.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "NFT"
-      ]
-    },
-    {
-      "title": "Elon Musk’s xAI Secures $6 Billion To Compete With ChatGPT",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:34:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ELON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Crypto Community Urged to Back Pro-Crypto Presidential Candidates in Upcoming Election",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:34:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TRX"
-      ]
-    },
-    {
-      "title": "Top 4 Altcoins To Buy As Bitcoin Price Prepares For $100,000 Bull",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:22:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "TRAC",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Price analysis 5/27: SPX, DXY, BTC, ETH, BNB, SOL, XRP, TON, DOGE, ADA",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:09:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "BNB",
-        "ADA",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "AMP",
-        "TON"
-      ]
-    },
-    {
-      "title": "Did Aptos Really Surpass Solana in Daily Transactions?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T18:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "APT"
-      ]
-    },
-    {
       "title": "$5 XRP Price Moonshot Looms As Ripple CEO Casts Bold Vision for XRP’s Global Dominance",
       "link": "https://zycrypto.com/5-xrp-price-moonshot-looms-as-ripple-ceo-casts-bold-vision-for-xrps-global-dominance/",
       "pubDate": "2024-05-27T17:06:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "ZyCrypto",
+      "sourceKey": "zycrypto",
       "category": "trading",
       "description": "The Ripple community and other executives have displayed optimism about Ripple and the XRP ecosystem.",
       "currencies": [
@@ -424,168 +75,11 @@
       }
     },
     {
-      "title": "Taiko Unveils Mainnet on Ethereum, Featuring Vitalik Buterin’s Inaugural Block",
-      "link": "NULL",
-      "pubDate": "2024-05-27T17:06:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Retail activity dominates Bitcoin, overshadowing institutional moves",
-      "link": "NULL",
-      "pubDate": "2024-05-27T17:04:47.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ALPHA"
-      ]
-    },
-    {
-      "title": "AI Arms Race: China’s $47 Billion Semiconductor Fund, Musk’s xAI Secures Funding",
-      "link": "NULL",
-      "pubDate": "2024-05-27T17:03:05.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "XAI"
-      ]
-    },
-    {
-      "title": "DeFiance Capital Foresees ETH Soaring To $4,500 Pre-Ethereum ETF Trading",
-      "link": "NULL",
-      "pubDate": "2024-05-27T17:00:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Pyth Price Feeds and Entropy launch on Sei V2, enhancing scalability",
-      "link": "NULL",
-      "pubDate": "2024-05-27T17:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "PYTH",
-        "SEI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "ZachXBT reveals GCR account hack tied to Solana meme coin team",
-      "link": "NULL",
-      "pubDate": "2024-05-27T16:11:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Altcoin Season Soon? Quant Says This Ethereum Pattern Could Suggest So",
-      "link": "NULL",
-      "pubDate": "2024-05-27T16:00:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SHIB",
-        "GRT",
-        "QNT"
-      ]
-    },
-    {
-      "title": "Santiment Draws Attention to This Altcoin: \"Whales Have Intense Interest, The Rise May Continue!\"",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:43:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Ethena USDe Custodian Certificate Shows Skyrocketing Asset Value!",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:34:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ENA"
-      ]
-    },
-    {
-      "title": "Crypto Experts Pile Into New Solana Project – Could It Be the Next Big Thing?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:33:59.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "BONK",
-        "WIF",
-        "POPCAT",
-        "BOME"
-      ]
-    },
-    {
-      "title": "PEPE Market Cap Surpasses Uniswap and Litecoin: Polygon Could Be Next",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "MATIC",
-        "LTC",
-        "UNI",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Bots, airdrops push Ronin to No.2 blockchain for daily users — Not Pixels fans",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "RON"
-      ]
-    },
-    {
       "title": "ADA and BNB Price Prediction for May 27",
       "link": "https://u.today/ada-and-bnb-price-prediction-for-may-27",
       "pubDate": "2024-05-27T15:27:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "U.Today",
+      "sourceKey": "utoday",
       "category": "trading",
       "description": "Do Cardano (ADA) or Binance Coin (BNB) have enough strength for upward move?",
       "currencies": [
@@ -598,50 +92,11 @@
       }
     },
     {
-      "title": "Nomura Announces Partnership with GMO Internet Group to Launch Dollar and Yen Stablecoins in Japan",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:10:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Week of Wins in Crypto: PEPE Skyrockets 78%, Ethereum Up 27%",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:10:06.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "RLY",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "Ethereum price chart hints at $4K breakout to new all-time highs",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:08:38.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RLY"
-      ]
-    },
-    {
       "title": "Cardano's Top DEX Minswap Gunning for Binance Listing",
       "link": "https://dailycoin.com/cardanos-top-dex-minswap-gunning-for-binance-listing/?utm_source=cryptopanic&utm_medium=rss",
       "pubDate": "2024-05-27T15:05:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "DailyCoin",
+      "sourceKey": "dailycoin",
       "category": "altcoin",
       "description": "As Cardano fights to regain momentum, its leading DEX Minswap pursues Binance listing glory and preps for V2 launch.",
       "currencies": [
@@ -653,125 +108,11 @@
       }
     },
     {
-      "title": "Kickstarting The Bitcoin Bull Run: Expert Says $70,000 Is The Level To Beat",
-      "link": "NULL",
-      "pubDate": "2024-05-27T15:00:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "USDT",
-        "XRP",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "Injective (INJ) on Verge of Massive Rally, Predicts Analyst",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:58:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "INJ"
-      ]
-    },
-    {
-      "title": "LUNC Price Soars As Terra Luna Classic v3.0.1 Upgrade Proposal Officially Passed",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:57:13.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "USTC",
-        "LUNC"
-      ]
-    },
-    {
-      "title": "deBridge Wins LFG Launchpad Voting Round, to Launch $DBR Token on Jupiter Launchpad",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:48:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "JUP"
-      ]
-    },
-    {
-      "title": "DeFi Blue Chips: Which Tokens Doubled Their Volumes After Ethereum ETF Approval?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:44:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "AAVE",
-        "MKR"
-      ]
-    },
-    {
-      "title": "Crypto Whale Spends $24.7M On Ethereum-Based Altcoins Following SEC Approval",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:28:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "UNI",
-        "AAVE",
-        "LDO",
-        "ENS",
-        "FXS",
-        "WIF"
-      ]
-    },
-    {
-      "title": "Apu Community hits the jackpot by acquiring the ultra-rare domain APU.COM",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:05:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "APU"
-      ]
-    },
-    {
-      "title": "ONDO struggles to reach $2: Why $1.20 is a key level now",
-      "link": "NULL",
-      "pubDate": "2024-05-27T14:00:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Arbitrum Community Supports Proposal to Allocate 200M ARB to Web3 Game Development",
-      "link": "NULL",
-      "pubDate": "2024-05-27T13:39:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ARB"
-      ]
-    },
-    {
       "title": "Cristiano Ronaldo Teams Up with Binance for New NFT Collection Despite Ongoing Legal Battle",
       "link": "https://cryptonews.com/news/cristiano-ronaldo-teams-up-with-binance-for-new-nft-collection-despite-ongoing-legal-battle.htm?__cf_chl_rt_tk=_bvUTrZwGxPwldfCo29ulwqhk92HTvky_exVh3xYgZA-1747052122-1.0.1.1-0XM1q8SI2ii3WUHd6P0UNYu8ymk9VP_kWh0jXsd5OkY",
       "pubDate": "2024-05-27T13:20:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "nft",
       "description": "Renowned Portuguese footballer Cristiano Ronaldo has revealed his collaboration with Binance for the launch of his fourth NFT collection.",
       "currencies": [
@@ -784,58 +125,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Cristiano Ronaldo Set to Launch Fourth NFT Collection Amid Legal Challenges",
-      "link": "NULL",
-      "pubDate": "2024-05-27T13:07:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Elon Musk’s xAI leaps to $24 billion valuation with $6 billion funding round",
-      "link": "NULL",
-      "pubDate": "2024-05-27T13:06:27.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "Think you’re making the most of your liquidity? Think again.",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:58:18.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "UNI",
-        "BNT",
-        "DAO"
-      ]
-    },
-    {
-      "title": "Crypto Analyst Identifies Bullish Trends in INJ and MATIC with TD Sequential",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:57:45.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "MATIC",
-        "INJ"
-      ]
-    },
-    {
       "title": "Pepe (PEPE) Meme Coin Surpasses Polygon (MATIC) to Secure 19th Place in Market Cap",
       "link": "https://www.coinspeaker.com/pepe-meme-coin-surpasses-polygon/",
       "pubDate": "2024-05-27T12:53:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinSpeaker",
+      "sourceKey": "coinspeaker",
       "category": "regulation",
       "description": "Coinspeaker Pepe (PEPE) Meme Coin Surpasses Polygon (MATIC) to Secure 19th Place in Market Cap With PEPE still in price discovery mode, analysts are making bold predictions about its future trajectory Pepe (PEPE) Meme Coin Surpasses Polygon (MATIC) to Secure 19th Place in Market Cap",
       "currencies": [
@@ -851,8 +145,8 @@
       "title": "Uniswap Foundation Discloses Finances",
       "link": "https://coinpaprika.com/news/uniswap-foundation-discloses-finances/",
       "pubDate": "2024-05-27T12:53:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "defi",
       "description": "Uniswap Foundation reveals $41.41M in assets and plans for fund usage ahead of a crucial vote on activating protocol fees.",
       "currencies": [
@@ -865,36 +159,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Is It Too Late to Buy Jasmycoin? JASMY Price Soars as New AI Coin Raises $3 Million",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:36:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "The Latest Bull Run has Drawn Investors In, As Stellar, Raboo and Cardano Stand Out!",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:36:50.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ADA",
-        "XLM"
-      ]
-    },
-    {
       "title": "Ethereum (ETH) Set for Growth: Key Technical Indicators and On-Chain Insights",
       "link": "https://beincrypto.com/why-ethereum-eth-price-set-for-growth/",
       "pubDate": "2024-05-27T12:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "ethereum",
       "description": "Following Ethereum’s (ETH) recent ETF approval, the price has seen a steady incline. Is there more room for growth? BeInCrypto looks at how institutional interest and key market trends are shaping a bright future for ETH. Technical Outlook for Ethereum Ethereum (ETH) currently trades at $3,902, demonstrating robust bullish momentum. The price is well above the Ichimoku cloud and...",
       "currencies": [
@@ -908,272 +177,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Ripple (XRP) and Avalanche (AVAX) Investors Choose Algotech (ALGT) as Pre-Sale Enters Final Bonus Round",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:25:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "XRP",
-        "AVAX",
-        "FLR"
-      ]
-    },
-    {
-      "title": "Investors Target Ethereum Layer 2 Coins UNI, ARB, and LINK as BTC Price Consolidates",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:20:33.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "LINK",
-        "UNI",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Neo News: Week in Review – May 20 – May 26",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:17:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "NEO"
-      ]
-    },
-    {
-      "title": "Ripple CTO Addresses Curious Price Link Between XRP And XLM",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:00:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "KuCoin Lists Gaming-Focused Project MON Protocol (MON) with $28,000 Giveaway",
-      "link": "NULL",
-      "pubDate": "2024-05-27T12:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "KCS"
-      ]
-    },
-    {
-      "title": "Aptos Records 116 Million Daily Transactions Due to Tap-to-Earn Game Hype",
-      "link": "NULL",
-      "pubDate": "2024-05-27T11:48:44.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "stablecoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "TON",
-        "APT",
-        "SUI",
-        "NOT"
-      ]
-    },
-    {
-      "title": "Ether price could hit $4.5K before ETH ETF: DeFiance Capital founder",
-      "link": "NULL",
-      "pubDate": "2024-05-27T11:45:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "RLY"
-      ]
-    },
-    {
-      "title": "Crypto Underdog ENA Soars, Catching the Eye of BitMEX Co-Founder",
-      "link": "NULL",
-      "pubDate": "2024-05-27T11:32:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "ENA"
-      ]
-    },
-    {
-      "title": "Chainlink’s Cross-Chain Dominance Grows with 12 New Integrations",
-      "link": "NULL",
-      "pubDate": "2024-05-27T11:13:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "LINK",
-        "ARB"
-      ]
-    },
-    {
-      "title": "AI in Web3: Why Decentralize Artificial Intelligence",
-      "link": "NULL",
-      "pubDate": "2024-05-27T11:01:53.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "BNB",
-        "DAO",
-        "CGPT"
-      ]
-    },
-    {
-      "title": "4 Top Altcoins To Rally This Week",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:19:02.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "RLY"
-      ]
-    },
-    {
-      "title": "Crypto Week Ahead: Solana’s Big Fix, Ethereum Classic Halving, and More",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:17:14.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "ETC"
-      ]
-    },
-    {
-      "title": "“Spot Ether ETF Approval Will Favor BTC”, Michael Saylor",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "ARK"
-      ]
-    },
-    {
-      "title": "Arbitrum Community Backs 200M ARB Plan To Attract Web3 Game Builders",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:12:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "ARB"
-      ]
-    },
-    {
-      "title": "Trump Takes Center Stage: US Crypto Advocacy Gets A Powerful Voice",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:00:39.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "NFT",
-        "JOE"
-      ]
-    },
-    {
-      "title": "Algotech Presale Rallies Ahead Of Market Trend; Arbitrum And Shiba Inu Holders Make Shift To The High Returns Opportunity",
-      "link": "NULL",
-      "pubDate": "2024-05-27T10:00:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "BTC",
-        "SHIB",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Santa on Solana (SANTASOL) to Skyrocket 17,000% as KuCoin Listing Announced, While Shiba Inu and Dogecoin Lag",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:57:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Shiba Inu’s Shibarium Network Sees 50% Surge in On-Chain Activity: Price Impact",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:57:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "ETH",
-        "SHIB",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Elon Musk's xAI secures $6B in bid to rival ChatGPT by end of year",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:52:55.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ELON"
-      ],
-      "votes": {
-        "positive": 0,
-        "negative": 1
-      },
-      "sentiment": "bearish"
-    },
-    {
-      "title": "Scammers Target Crypto Influencers X Accounts to Promote Memecoin Related Info",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:46:16.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ORDI"
-      ]
-    },
-    {
       "title": "Chart Whisperer Spots Algorand Breakout: Get Ready For A 50% Rally",
       "link": "https://www.newsbtc.com/news/chart-whisperer-spots-algorand-breakout-get-ready-for-a-50-rally/",
       "pubDate": "2024-05-27T09:30:07.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "trading",
       "description": "Algorand (ALGO), the blockchain platform known for its speedy transactions and energy efficiency, has caught the eye of crypto analysts. Popular analyst ZAYK Charts identified a potential paradigm shift for ALGO, pointing to a price breakout on the 12-hour chart that could propel the token 40-50% higher. Related Reading: Avalanche Weathers The Storm – Can AVAX Hit $40 Again? Algorand: Breaking...",
       "currencies": [
@@ -1191,8 +199,8 @@
       "title": "VeChain Collaborates with Shanghai to Combat Climate Change with Blockchain",
       "link": "https://coinedition.com/vechain-collaborates-with-shanghai-to-combat-climate-change-with-blockchain/",
       "pubDate": "2024-05-27T09:30:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinedition",
+      "sourceKey": "coinedition",
       "category": "general",
       "description": "VeChain, a leading blockchain platform, has partnered with the Shanghai Environment Exchange to spearhead the development of innovative carbon emission management solutions. This collaboration aims to leverage blockchain technology to enhance transparency and traceability in carbon data, enabling governments, businesses, and individuals to make more informed decisions for a sustainable future....",
       "currencies": [
@@ -1205,49 +213,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "PEPE’s Latest All-Time High Makes it Bigger Than Litecoin, Polygon: Details",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:25:25.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "layer2",
-      "currencies": [
-        "SHIB",
-        "MATIC",
-        "LTC",
-        "PEPE"
-      ]
-    },
-    {
-      "title": "10,000 New Users Join Ethereum Layer-2 Arbitrum, ARB Price Eyes $2",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:23:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Bitcoin Price Poised for Surge, Analyst PlanB Predicts",
-      "link": "NULL",
-      "pubDate": "2024-05-27T09:10:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "GRT"
-      ]
-    },
-    {
       "title": "Swiss University Offers Bitcoin Business Course",
       "link": "https://bitcoinist.com/swiss-university-unveils-bitcoin-course/",
       "pubDate": "2024-05-27T09:08:43.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Coinpaprika",
+      "sourceKey": "coinpaprika",
       "category": "bitcoin",
       "description": "The hallowed halls of academia are embracing the digital age, with the Zurich University of Applied Sciences in Business Administration (HWZ) announcing a one-of-its-kind Bitcoin course. Launching in March 2025, this program promises to be the first of its kind in Europe, offering a comprehensive exploration of Bitcoin for business professionals. However, the hefty price […]",
       "currencies": [
@@ -1260,145 +230,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Coinbase Considers Adding Core",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:54:09.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "BTC",
-        "CORE"
-      ]
-    },
-    {
-      "title": "Ethereum Name Service (ENS) Becomes Top Weekly Gainer, Retests Resistance Levels",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:53:17.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ENS"
-      ]
-    },
-    {
-      "title": "Ethereum Meme Coins PEPE, MOG Hit Lifetime Highs on Ether ETF Filing Approvals",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:43:32.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "PEPE",
-        "MOG"
-      ]
-    },
-    {
-      "title": "Whale Withdraws $28.75M in Ethereum Ecosystem Tokens from Binance",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:40:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "UNI",
-        "AAVE"
-      ]
-    },
-    {
-      "title": "Bitcoin might get boring — But Ether may propel LINK, UNI, ARB prices higher",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:36:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "LINK",
-        "UNI",
-        "ARB"
-      ]
-    },
-    {
-      "title": "Elon Musk’s xAI Secures $6 Bln In Series B Funding, More Upgrades Loom",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:24:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ELON"
-      ]
-    },
-    {
-      "title": "New York Attorney General Vows to Go After Crypto Companies",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:21:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "USDT",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Turning $1,000 Into $35,000 With 3500% Crypto To Buy Breakout",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:17:41.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ADA",
-        "XRP",
-        "DOGE",
-        "SHIB",
-        "ALGO",
-        "LUNC",
-        "PEPE",
-        "ONDO"
-      ]
-    },
-    {
-      "title": "Ripple CTO Deciphers XRP and XLM Price Mystery",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:14:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "XRP",
-        "XLM"
-      ]
-    },
-    {
-      "title": "Optimism Post-ETF Approval Continues: Ethereum Soars to $3,900, Altcoins Rally",
-      "link": "NULL",
-      "pubDate": "2024-05-27T08:12:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "AAVE",
-        "ENS",
-        "PEPE"
-      ]
-    },
-    {
       "title": "L1 Blockchain Aptos Sets New Transaction Record, Surpassing Solana with 115.4M Daily Transactions",
       "link": "https://cryptonews.com/news/l1-blockchain-aptos-sets-new-transaction-record.htm",
       "pubDate": "2024-05-27T08:07:36.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CryptoNews",
+      "sourceKey": "cryptonews",
       "category": "altcoin",
       "description": "Aptos, a layer-1 blockchain platform developed by former Facebook employees, has set a new record in blockchain transactions. The post L1 Blockchain Aptos Sets New Transaction Record, Surpassing Solana with 115.4M Daily Transactions appeared first on Cryptonews.",
       "currencies": [
@@ -1412,205 +248,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "Red Hot Chiliz: Analyst Predicts 4x Your Money With Upcoming Breakout",
-      "link": "NULL",
-      "pubDate": "2024-05-27T07:29:56.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "AVAX",
-        "SHIB",
-        "CHZ"
-      ]
-    },
-    {
-      "title": "Ethereum Layer 2 TVL Sets a New All-Time High at $47 Billion",
-      "link": "NULL",
-      "pubDate": "2024-05-27T07:26:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "ETH",
-        "ARB",
-        "OP"
-      ]
-    },
-    {
-      "title": "Why Is the Market Up Today?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T07:21:19.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "Token Unlock Tsunami: Crypto Markets Ready for the Incoming Wave?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T07:16:11.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "1INCH",
-        "SUI"
-      ]
-    },
-    {
-      "title": "Jasmy Coin Price Explodes 800% in Volume; What’s Happening?",
-      "link": "NULL",
-      "pubDate": "2024-05-27T07:05:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "BTC",
-        "JASMY"
-      ]
-    },
-    {
-      "title": "Buterin Sucks (BUTSUCKS) Coin Will Skyrocket 14,000% Ahead of KuCoin Listing, as Shiba Inu, Bonk and Dogecoin Lag",
-      "link": "NULL",
-      "pubDate": "2024-05-27T06:44:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "KCS",
-        "BONK"
-      ]
-    },
-    {
-      "title": "Crypto News Today: Bitcoin Keeps Cool as Ethereum Takes Off",
-      "link": "NULL",
-      "pubDate": "2024-05-27T06:15:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "XRP",
-        "SOL",
-        "DOGE",
-        "LTC",
-        "UNI",
-        "AAVE",
-        "CORE",
-        "JASMY",
-        "PEPE",
-        "ORDI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 0
-      },
-      "sentiment": "bullish"
-    },
-    {
-      "title": "Binance Scores Another Goal: Cristiano Ronaldo Unveils Exclusive NFT Collection",
-      "link": "NULL",
-      "pubDate": "2024-05-27T06:14:54.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "nft",
-      "currencies": [
-        "NFT"
-      ]
-    },
-    {
-      "title": "Institutional Investors Warm Up to Bitcoin, Potentially Pushing Prices Beyond $400,000",
-      "link": "NULL",
-      "pubDate": "2024-05-27T05:46:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ARK"
-      ]
-    },
-    {
-      "title": "New Solana Memecoin RIP DOGEY (RIPDOGEY) to Skyrocket 18,000% Ahead of KuCoin Listing, While Shiba Inu and Dogecoin Struggle",
-      "link": "NULL",
-      "pubDate": "2024-05-27T05:30:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Hackers target crypto influencer X accounts, shill meme coins",
-      "link": "NULL",
-      "pubDate": "2024-05-27T05:22:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ORDI"
-      ]
-    },
-    {
-      "title": "What Is Ethereum Name Service And Why Has It Pipped BTC, ETH To Nearly Double In Value Over This Week",
-      "link": "NULL",
-      "pubDate": "2024-05-27T04:22:48.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "ETH",
-        "DOGE",
-        "ETC",
-        "ENS"
-      ]
-    },
-    {
-      "title": "Caitlyn Jenner’s JENNER Token Launch Sparks Major Debate in Crypto Community",
-      "link": "NULL",
-      "pubDate": "2024-05-27T04:16:22.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "ETH",
-        "SOL",
-        "ORDI"
-      ]
-    },
-    {
-      "title": "Buterin Sucks (BUTSUCKS) Will Surge 14,000% Ahead of KuCoin Listing, as Shiba Inu, Bonk and Dogecoin Lag",
-      "link": "NULL",
-      "pubDate": "2024-05-27T02:36:04.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "trading",
-      "currencies": [
-        "DOGE",
-        "SHIB",
-        "KCS",
-        "BONK"
-      ]
-    },
-    {
       "title": "Ethereum Price Sets Sights on New Peaks: Anticipating a Bullish Breakout",
       "link": "https://www.newsbtc.com/news/ethereum/ethereum-price-new-peaks-4k/",
       "pubDate": "2024-05-27T01:58:08.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "NewsBTC",
+      "sourceKey": "newsbtc",
       "category": "ethereum",
       "description": "Ethereum price is again moving higher above the $3,800 resistance. ETH is now consolidating near $3,850 and is eyeing an upside break above $4,000 in the near term. Ethereum started a fresh increase above the $3,750 resistance. The price is trading above $3,750 and the 100-hourly Simple Moving Average. There is a key bullish trend line forming with support at $3,780 on the hourly chart of...",
       "currencies": [
@@ -1623,45 +265,6 @@
         "negative": 0
       },
       "sentiment": "bullish"
-    },
-    {
-      "title": "Bitcoin Price Losing Steam: Market Momentum Slows Amid Trading Hesitation",
-      "link": "NULL",
-      "pubDate": "2024-05-27T01:17:12.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "USDT",
-        "TUSD"
-      ]
-    },
-    {
-      "title": "Solana Memecoin RIP DOGEY (RIPDOGEY) to Skyrocket 18,000% as KuCoin Listing Announced, While Shiba Inu and Dogecoin Struggle",
-      "link": "NULL",
-      "pubDate": "2024-05-27T00:24:03.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "altcoin",
-      "currencies": [
-        "SOL",
-        "DOGE",
-        "SHIB",
-        "KCS"
-      ]
-    },
-    {
-      "title": "Crypto Exchange Coinbase Adds Bitcoin Ecosystem Altcoin to Its Listing Roadmap",
-      "link": "NULL",
-      "pubDate": "2024-05-27T00:00:21.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "bitcoin",
-      "currencies": [
-        "BTC",
-        "CORE"
-      ]
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "date": "2021-02-24",
-  "fetchedAt": "2026-02-05T07:45:51.864Z",
-  "articleCount": 20,
+  "fetchedAt": "2026-02-05T07:48:35.479Z",
+  "articleCount": 9,
   "source": "historical-import",
   "articles": [
     {
       "title": "XRP Gears up for Volatility, Bulls Prime Buys",
       "link": "https://cryptobriefing.com/xrp-could-overcome-fud-rise-above-1-00-mark/",
       "pubDate": "2021-02-24T21:35:49.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Crypto Briefing",
+      "sourceKey": "cryptobriefing",
       "category": "trading",
       "description": "XRP is currently at risk of being deemed a security by the U.S. Securities and Exchange Commission. However, one of the most prominent technical analysts in the industry believes that it may provide an opportunity for speculators to profit. XRP Price Movement Ahead According to 40-year trading veteran Peter Brandt, XRP seems to have developed an inverse head-and-shoulders pattern...",
       "currencies": [
@@ -26,8 +26,8 @@
       "title": "Price analysis 2/24: BTC, ETH, BNB, DOT, ADA, XRP, LTC, LINK, BCH, XLM",
       "link": "https://cointelegraph.com/news/price-analysis-2-24-btc-eth-bnb-dot-ada-xrp-ltc-link-bch-xlm",
       "pubDate": "2021-02-24T20:14:34.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "bitcoin",
       "description": "Bitcoin price is attempting to flip the $50,000 level back to support, while many altcoins are capitalizing on BTC's consolidation by moving higher.",
       "currencies": [
@@ -42,22 +42,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "RT @SotRos25: Who wants to see $MAID on @FTX_Official? Maybe if we ask @SBF_Alameda nicely he’ll let us in  #dataprivacy #maidsafe",
-      "link": "NULL",
-      "pubDate": "2021-02-24T20:09:20.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "MAID"
-      ]
-    },
-    {
       "title": "Logan Paul Sells $3,500,000 in Crypto Art in Just 24 Hours Through Polkadot-Based Project",
       "link": "https://dailyhodl.com/2021/02/24/logan-paul-sells-3500000-in-crypto-art-in-just-24-hours-through-polkadot-based-project/",
       "pubDate": "2021-02-24T17:10:30.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "The Daily Hodl",
+      "sourceKey": "thedailyhodl",
       "category": "general",
       "description": "YouTube star Logan Paul just sold $3.5 million worth of crypto-backed digital art in less than 24 hours. Paul is collaborating with Bondly, a decentralized product in the Polkadot ecosystem, to create his own line of Pokemon-inspired non-fungible tokens (NFTs). NFTs feature identifying data in their smart contracts that make each one unique, which means […]",
       "currencies": [
@@ -70,61 +59,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "DeFi User Accidentally Pays $42k in Gas to Move Funds to Uniswap",
-      "link": "NULL",
-      "pubDate": "2021-02-24T17:00:31.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "defi",
-      "currencies": [
-        "ETH",
-        "USDC",
-        "UNI"
-      ],
-      "votes": {
-        "positive": 1,
-        "negative": 1
-      }
-    },
-    {
-      "title": "ARK is now available on LATOKEN Exchange, with $ARK / $USDT pairing.",
-      "link": "NULL",
-      "pubDate": "2021-02-24T17:00:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "exchange",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
-      "title": "Crypto laws are essential for the smooth and secure development of the crypto industry. With crypto payments gainin…",
-      "link": "NULL",
-      "pubDate": "2021-02-24T16:30:15.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "GTN"
-      ]
-    },
-    {
-      "title": "2021: The Year of Quppy and The Evolution of Bank As A Service (BAAS)",
-      "link": "NULL",
-      "pubDate": "2021-02-24T15:30:23.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "regulation",
-      "currencies": [
-        "ARK"
-      ]
-    },
-    {
       "title": "Chainlink rolls out OCR system upgrade, reducing gas costs tenfold",
       "link": "https://cointelegraph.com/news/chainlink-rolls-out-ocr-system-upgrade-reducing-gas-costs-tenfold",
       "pubDate": "2021-02-24T15:21:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "description": "The Off-Chain Reporting upgrade changes how oracles aggregate data, easing the burden on the blockchains.",
       "currencies": [
@@ -140,8 +79,8 @@
       "title": "NEO Bounces and Aims For Higher Prices",
       "link": "https://beincrypto.com/neo-bounces-and-aims-for-higher-prices/",
       "pubDate": "2021-02-24T15:10:10.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "BeInCrypto",
+      "sourceKey": "beincrypto",
       "category": "trading",
       "description": "NEO should continue increasing towards the long-term $77 resistance area and potentially move higher. Current Movement The weekly chart shows that despite the ongoing decline, NEO may create a very long lower wick, resulting in a relatively bullish candlestick before the weekly close. Technical indicators are also bullish, evident by the bullish cross in the … Continued",
       "currencies": [
@@ -157,8 +96,8 @@
       "title": "Chainlink achieves scalability breakthrough with its Off-Chain Reporting solution",
       "link": "https://bravenewcoin.com/insights/chainlink-achieves-scalability-breakthrough-with-its-off-chain-reporting",
       "pubDate": "2021-02-24T15:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Bravenewcoin",
+      "sourceKey": "bravenewcoin",
       "category": "altcoin",
       "description": "Chainlink has deployed its OCR solution to mainnet. Chainlink’s Sergey Nazarov says this will result in a 10x increase in the amount of real-world data that oracles can bring on-chain.",
       "currencies": [
@@ -171,33 +110,11 @@
       "sentiment": "bullish"
     },
     {
-      "title": "The CORE team's new project is called DELTA, and the limited staking window is open *now*. After launch, DELTA will…",
-      "link": "NULL",
-      "pubDate": "2021-02-24T14:05:26.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
-      "title": "RT @Delta_Token: The first 24 hours of Delta's Limited Staking Window",
-      "link": "NULL",
-      "pubDate": "2021-02-24T13:35:46.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "CORE"
-      ]
-    },
-    {
       "title": "Bitmex to list ADA, DOT, EOS, UNI, XLM and YFI Perpetual Contracts",
       "link": "https://en.ethereumworldnews.com/bitmex-to-list-ada-dot-eos-uni-xlm-and-yfi-perpetual-contracts/",
       "pubDate": "2021-02-24T11:29:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Ethereumworldnews",
+      "sourceKey": "ethereumworldnews",
       "category": "altcoin",
       "description": "In brief: Bitmex will list 6 new perpetual contracts in March of ADA, DOT, EOS, UNI, XLM and YFI The new contracts will be launched in batches with DOT and UNI going live on March 3rd Bitmex has fallen from being the top-ranked derivatives platform since the CFTC pursued charges against its top execs The new perpetual contracts and the Bitmex Mobile Apps, might attract new and old users back to...",
       "currencies": [
@@ -215,8 +132,8 @@
       "title": "Bitfinex, Tether banned in New York. No end yet to Ripple XRP’s SEC lawsuit woes. CBDC bridge for Asia and Middle East.",
       "link": "https://forkast.news/bitfinex-tether-new-york-ripple-xrp-sec-woes-central-bank-cbdc/?utm_source=rss&utm_medium=rss&utm_campaign=bitfinex-tether-new-york-ripple-xrp-sec-woes-central-bank-cbdc",
       "pubDate": "2021-02-24T11:03:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "Forkast",
+      "sourceKey": "forkast",
       "category": "ethereum",
       "description": "Other top blockchain and crypto news: Bill Gates on bitcoin. Nvidia protects gamers from crypto miners with separate CMP and GeForce RTX graphics cards.",
       "currencies": [
@@ -231,55 +148,11 @@
       "sentiment": "bearish"
     },
     {
-      "title": "My bright spot of the day.",
-      "link": "NULL",
-      "pubDate": "2021-02-24T07:28:52.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "TOMO"
-      ]
-    },
-    {
-      "title": "RT @novogratz: This is very positive for the crypto community.  Removing @Tether_to fud is a big positive.  Many Wall Street banks pay f…",
-      "link": "NULL",
-      "pubDate": "2021-02-24T06:33:51.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "ethereum",
-      "currencies": [
-        "SURE"
-      ]
-    },
-    {
-      "title": "RT @Brad_Laurie: Today, FYI, I had a very candid and transparent #crypto convo with @dleonard00, CEO of @HifiFinance. I was impressed by ho…",
-      "link": "NULL",
-      "pubDate": "2021-02-24T03:46:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "MFT"
-      ]
-    },
-    {
-      "title": "How to mine BCHABC",
-      "link": "NULL",
-      "pubDate": "2021-02-24T01:28:57.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
-      "category": "general",
-      "currencies": [
-        "XEC"
-      ]
-    },
-    {
       "title": "Solana (SOL), Cosmos (ATOM) buck the trend to hit new highs after protocol upgrades",
       "link": "https://cointelegraph.com/news/solana-sol-cosmos-atom-buck-the-trend-to-hit-new-highs-after-protocol-upgrades",
       "pubDate": "2021-02-24T01:00:00.000Z",
-      "source": "Historical",
-      "sourceKey": "historical",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "altcoin",
       "description": "Solana (SOL) and Cosmos (ATOM) each saw the price of their tokens surge after new interoperability upgrades were revealed.",
       "currencies": [
