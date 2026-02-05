@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { 
-  queryArchive, 
-  getArchiveIndex, 
-  getArchiveStats
-} from '@/lib/archive';
+import {
+  queryArchiveV2,
+  getArchiveV2Stats,
+  getArchiveV2Index,
+  getTrendingTickers,
+  getMarketHistory,
+  toNewsArticle,
+  EnrichedArticle
+} from '@/lib/archive-v2';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 
 export const runtime = 'edge';
@@ -11,15 +15,25 @@ export const runtime = 'edge';
 /**
  * GET /api/archive - Query historical news archive
  * 
+ * Access 662,000+ crypto news articles from 2017-2025.
+ * 
  * Query Parameters:
  * - start_date: Start date (YYYY-MM-DD)
  * - end_date: End date (YYYY-MM-DD)
  * - source: Filter by source name
+ * - ticker: Filter by cryptocurrency ticker (BTC, ETH, etc.)
  * - q: Search query
+ * - sentiment: Filter by sentiment (positive, negative, neutral)
+ * - tags: Filter by tags (comma-separated)
  * - limit: Max results (default 50, max 200)
  * - offset: Pagination offset
+ * - format: Response format (full, simple, minimal)
+ * - lang: Language code for translation
  * - stats: If "true", return archive statistics only
- * - index: If "true", return archive index only
+ * - index: If "true", return archive index (by-source, by-ticker, by-date)
+ * - trending: If "true", return trending tickers
+ * - hours: Hours for trending (default 24, max 72)
+ * - market: Get market history for month (YYYY-MM)
  */
 export async function GET(request: NextRequest) {
   try {
@@ -27,7 +41,7 @@ export async function GET(request: NextRequest) {
     
     // Check for stats-only request
     if (searchParams.get('stats') === 'true') {
-      const stats = await getArchiveStats();
+      const stats = await getArchiveV2Stats();
       
       if (!stats) {
         return NextResponse.json({
@@ -43,21 +57,48 @@ export async function GET(request: NextRequest) {
       });
     }
     
-    // Check for index-only request
+    // Check for index request
     if (searchParams.get('index') === 'true') {
-      const index = await getArchiveIndex();
+      const indexType = searchParams.get('type') as 'by-source' | 'by-ticker' | 'by-date' || 'by-date';
+      const index = await getArchiveV2Index(indexType);
       
       if (!index) {
         return NextResponse.json({
           success: false,
-          error: 'Archive not available',
-          message: 'Historical archive has not been initialized yet'
+          error: 'Archive index not available',
+          message: 'Archive index has not been built yet'
         }, { status: 404 });
       }
       
       return NextResponse.json({
         success: true,
+        indexType,
         index
+      });
+    }
+    
+    // Check for trending tickers request
+    if (searchParams.get('trending') === 'true') {
+      const hours = parseInt(searchParams.get('hours') || '24');
+      const trending = await getTrendingTickers(Math.min(hours, 72));
+      
+      return NextResponse.json({
+        success: true,
+        hours,
+        tickers: trending
+      });
+    }
+    
+    // Check for market history request
+    const marketMonth = searchParams.get('market');
+    if (marketMonth) {
+      const history = await getMarketHistory(marketMonth);
+      
+      return NextResponse.json({
+        success: true,
+        month: marketMonth,
+        data_points: history.length,
+        history
       });
     }
     
@@ -65,9 +106,14 @@ export async function GET(request: NextRequest) {
     const startDate = searchParams.get('start_date') || undefined;
     const endDate = searchParams.get('end_date') || undefined;
     const source = searchParams.get('source') || undefined;
+    const ticker = searchParams.get('ticker') || undefined;
     const search = searchParams.get('q') || undefined;
+    const sentiment = searchParams.get('sentiment') as 'positive' | 'negative' | 'neutral' | undefined;
+    const tagsParam = searchParams.get('tags');
+    const tags = tagsParam ? tagsParam.split(',').map(t => t.trim()) : undefined;
     const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 200);
     const offset = parseInt(searchParams.get('offset') || '0');
+    const format = searchParams.get('format') || 'full';
     const lang = searchParams.get('lang') || 'en';
     
     // Validate language parameter
@@ -97,39 +143,57 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
     
-    // Fetch archive index to get available date range
-    const archiveIndex = await getArchiveIndex();
-    
-    // Check if requested dates are outside available range
-    let warning: string | null = null;
-    if (archiveIndex && (startDate || endDate)) {
-      const { earliest, latest } = archiveIndex.dateRange;
-      if (startDate && endDate) {
-        // Both dates provided - check if range is entirely outside archive
-        if (endDate < earliest || startDate > latest) {
-          warning = `Requested date range (${startDate} to ${endDate}) is outside the available archive range (${earliest} to ${latest}). No data available for this period.`;
-        } else if (startDate < earliest || endDate > latest) {
-          warning = `Part of the requested date range is outside the available archive range (${earliest} to ${latest}).`;
-        }
-      } else if (startDate && startDate > latest) {
-        warning = `Start date ${startDate} is after the latest archived date (${latest}).`;
-      } else if (endDate && endDate < earliest) {
-        warning = `End date ${endDate} is before the earliest archived date (${earliest}).`;
-      }
+    // Validate sentiment
+    if (sentiment && !['positive', 'negative', 'neutral'].includes(sentiment)) {
+      return NextResponse.json({
+        success: false,
+        error: 'Invalid sentiment value',
+        message: 'Use positive, negative, or neutral'
+      }, { status: 400 });
     }
     
     // Query archive
-    const result = await queryArchive({
+    const result = await queryArchiveV2({
       startDate,
       endDate,
       source,
+      ticker,
       search,
+      sentiment,
+      tags,
       limit,
       offset
     });
     
+    // Format response based on requested format
+    let articles: unknown[];
+    
+    switch (format) {
+      case 'minimal':
+        // Just IDs and titles
+        articles = result.articles.map(a => ({
+          id: a.id,
+          title: a.title,
+          source: a.source,
+          first_seen: a.first_seen,
+          tickers: a.tickers,
+          sentiment: a.sentiment.label
+        }));
+        break;
+        
+      case 'simple':
+        // Backwards-compatible format
+        articles = result.articles.map(a => toNewsArticle(a));
+        break;
+        
+      case 'full':
+      default:
+        // Full enriched articles
+        articles = result.articles;
+        break;
+    }
+    
     // Translate articles if language is not English
-    let articles = result.articles;
     let translatedLang = 'en';
     
     if (lang !== 'en' && articles.length > 0) {
@@ -149,14 +213,16 @@ export async function GET(request: NextRequest) {
       pagination: result.pagination,
       lang: translatedLang,
       availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
-      ...(warning && { warning }),
-      archiveDateRange: archiveIndex?.dateRange || null,
       filters: {
         start_date: startDate || null,
         end_date: endDate || null,
         source: source || null,
-        search: search || null
+        ticker: ticker || null,
+        search: search || null,
+        sentiment: sentiment || null,
+        tags: tags || null
       },
+      format,
       articles
     });
     

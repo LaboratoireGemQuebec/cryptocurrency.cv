@@ -101,7 +101,7 @@ Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，
   - [GET /api/admin](#get-apiadmin)
 - [存档端点](#存档端点)
   - [GET /api/archive](#get-apiarchive)
-  - [GET /api/archive/v2](#get-apiarchivev2)
+  - [GET /api/archive/v2](#get-apiarchivev2) (重定向)
   - [GET /api/archive/status](#get-apiarchivestatus)
   - [GET /api/cron/archive](#get-apicronarchive)
   - [POST /api/archive/webhook](#post-apiarchivewebhook)
@@ -952,13 +952,13 @@ curl "https://news-crypto.vercel.app/api/archive/status"
 **示例 - 获取增强文章：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC&sentiment=positive&limit=20"
+curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&sentiment=positive&limit=20"
 ```
 
 **示例 - 获取热门ticker：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?trending=true&hours=24"
+curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
 ```
 
 **响应（热门ticker）：**
@@ -977,7 +977,7 @@ curl "https://news-crypto.vercel.app/api/archive/v2?trending=true&hours=24"
 **示例 - 获取归档统计数据：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
+curl "https://news-crypto.vercel.app/api/archive?stats=true"
 ```
 
 **响应（统计数据）：**

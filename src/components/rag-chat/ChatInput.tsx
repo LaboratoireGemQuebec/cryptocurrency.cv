@@ -9,6 +9,8 @@
 
 import { useState, useRef, useEffect, memo, useCallback } from 'react';
 
+const DRAFT_KEY = 'rag-chat-draft';
+
 interface ChatInputProps {
   onSend: (message: string) => void;
   onStop?: () => void;
@@ -34,6 +36,31 @@ function ChatInputComponent({
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
 
+  // Load saved draft on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedDraft = localStorage.getItem(DRAFT_KEY);
+      if (savedDraft) {
+        setInput(savedDraft);
+      }
+    }
+  }, []);
+
+  // Auto-save draft with debounce
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const saveTimer = setTimeout(() => {
+      if (input.trim()) {
+        localStorage.setItem(DRAFT_KEY, input);
+      } else {
+        localStorage.removeItem(DRAFT_KEY);
+      }
+    }, 500);
+    
+    return () => clearTimeout(saveTimer);
+  }, [input]);
+
   // Check for voice support
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,10 +73,12 @@ function ChatInputComponent({
         recognition.interimResults = true;
         recognition.lang = 'en-US';
         
-        recognition.onresult = (event) => {
-          const transcript = Array.from(event.results)
-            .map(result => result[0].transcript)
-            .join('');
+        recognition.onresult = (event: SpeechRecognitionEvent) => {
+          const results = event.results;
+          let transcript = '';
+          for (let i = 0; i < results.length; i++) {
+            transcript += results[i][0].transcript;
+          }
           setInput(transcript);
         };
         
@@ -91,6 +120,10 @@ function ChatInputComponent({
     if (trimmed && !isLoading && !disabled) {
       onSend(trimmed);
       setInput('');
+      // Clear the draft
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(DRAFT_KEY);
+      }
       if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
       }
@@ -236,6 +269,41 @@ function ChatInputComponent({
 
 // Add TypeScript declarations for Web Speech API
 declare global {
+  interface SpeechRecognitionEvent extends Event {
+    readonly results: SpeechRecognitionResultList;
+  }
+
+  interface SpeechRecognitionResultList {
+    readonly length: number;
+    item(index: number): SpeechRecognitionResult;
+    [index: number]: SpeechRecognitionResult;
+  }
+
+  interface SpeechRecognitionResult {
+    readonly length: number;
+    item(index: number): SpeechRecognitionAlternative;
+    [index: number]: SpeechRecognitionAlternative;
+    readonly isFinal: boolean;
+  }
+
+  interface SpeechRecognitionAlternative {
+    readonly transcript: string;
+    readonly confidence: number;
+  }
+
+  class SpeechRecognition extends EventTarget {
+    continuous: boolean;
+    interimResults: boolean;
+    lang: string;
+    onstart: ((this: SpeechRecognition, ev: Event) => any) | null;
+    onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null;
+    onend: ((this: SpeechRecognition, ev: Event) => any) | null;
+    onerror: ((this: SpeechRecognition, ev: Event) => any) | null;
+    start(): void;
+    stop(): void;
+    abort(): void;
+  }
+
   interface Window {
     SpeechRecognition: typeof SpeechRecognition;
     webkitSpeechRecognition: typeof SpeechRecognition;

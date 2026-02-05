@@ -607,9 +607,9 @@ class ArchiveAPI {
         return this.http.get('/api/archive', options);
     }
 
-    /** Query V2 archive */
+    /** Query archive with advanced filters (same as query, v2 now redirects here) */
     async queryV2(options: { start_date?: string; end_date?: string; source?: string; q?: string; sentiment?: string } = {}): Promise<any> {
-        return this.http.get('/api/archive/v2', options);
+        return this.http.get('/api/archive', options);
     }
 
     /** Get archive status */

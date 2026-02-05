@@ -516,10 +516,10 @@ export async function getArchive(options = {}) {
     return get("/api/archive", { date, start, end, source, ticker, search, limit, offset });
 }
 
-/** Query V2 archive with advanced filtering */
+/** Query archive with advanced filtering (v2 now redirects to main archive) */
 export async function getArchiveV2(options = {}) {
     const { start_date, end_date, source, ticker, q, sentiment, tags, limit, offset, format, lang } = options;
-    return get("/api/archive/v2", { start_date, end_date, source, ticker, q, sentiment, tags, limit, offset, format, lang });
+    return get("/api/archive", { start_date, end_date, source, ticker, q, sentiment, tags, limit, offset, format, lang });
 }
 
 /** Get archive health status */

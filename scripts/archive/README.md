@@ -414,32 +414,32 @@ Using the API:
 
 ```bash
 # Get articles mentioning BTC
-curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC"
+curl "https://news-crypto.vercel.app/api/archive?ticker=BTC"
 
 # Get positive sentiment articles
-curl "https://news-crypto.vercel.app/api/archive/v2?sentiment=positive"
+curl "https://news-crypto.vercel.app/api/archive?sentiment=positive"
 
 # Search by keyword
-curl "https://news-crypto.vercel.app/api/archive/v2?q=ETF"
+curl "https://news-crypto.vercel.app/api/archive?q=ETF"
 
 # Get trending tickers
-curl "https://news-crypto.vercel.app/api/archive/v2?trending=true"
+curl "https://news-crypto.vercel.app/api/archive?trending=true"
 
 # Get archive stats
-curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
+curl "https://news-crypto.vercel.app/api/archive?stats=true"
 ```
 
 Using the raw files:
 
 ```bash
 # Count articles
-wc -l archive/v2/articles/2026-01.jsonl
+wc -l archive/articles/2026-01.jsonl
 
 # Find BTC articles
-grep '"BTC"' archive/v2/articles/2026-01.jsonl | jq .title
+grep '"BTC"' archive/articles/2026-01.jsonl | jq .title
 
 # Get all negative sentiment articles
-jq -c 'select(.sentiment.label == "negative")' archive/v2/articles/2026-01.jsonl
+jq -c 'select(.sentiment.label == "negative")' archive/articles/2026-01.jsonl
 ```
 
 ---
@@ -588,8 +588,8 @@ Enrichment sources:
 
 6. **Commit & Deploy**:
    ```bash
-   git add archive/v2/
-   git commit -m "Update v2 archive with enriched data"
+   git add archive/
+   git commit -m "Update archive with enriched data"
    git push
    ```
 

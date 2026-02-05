@@ -17,7 +17,7 @@ const LOCALES = [
 ];
 
 const APP_DIR = path.join(process.cwd(), 'src/app');
-const ARCHIVE_DIR = path.join(process.cwd(), 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(process.cwd(), 'archive/articles');
 const TAGS_FILE = path.join(process.cwd(), 'src/lib/tags.ts');
 const BLOG_DIR = path.join(process.cwd(), 'content/blog');
 

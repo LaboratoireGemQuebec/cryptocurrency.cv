@@ -167,7 +167,7 @@ export interface ArchiveV2QueryOptions {
 // ============================================================================
 
 const GITHUB_BASE = 'https://raw.githubusercontent.com/nirholas/free-crypto-news/main/archive';
-const GITHUB_V2_BASE = `${GITHUB_BASE}/v2`;
+// Note: Files moved from archive/v2/* to archive/* - no longer need V2 prefix
 
 // ============================================================================
 // V2 ARCHIVE FUNCTIONS
@@ -178,7 +178,7 @@ const GITHUB_V2_BASE = `${GITHUB_BASE}/v2`;
  */
 export async function getArchiveV2Stats(): Promise<ArchiveV2Stats | null> {
   try {
-    const response = await fetch(`${GITHUB_V2_BASE}/meta/stats.json`, {
+    const response = await fetch(`${GITHUB_BASE}/meta/stats.json`, {
       next: { revalidate: 300 } // Cache for 5 minutes
     } as NextFetchRequestConfig);
     
@@ -194,7 +194,7 @@ export async function getArchiveV2Stats(): Promise<ArchiveV2Stats | null> {
  */
 export async function getArchiveV2Index(type: 'by-source' | 'by-ticker' | 'by-date'): Promise<Record<string, string[]> | null> {
   try {
-    const response = await fetch(`${GITHUB_V2_BASE}/index/${type}.json`, {
+    const response = await fetch(`${GITHUB_BASE}/indexes/${type}.json`, {
       next: { revalidate: 300 }
     } as NextFetchRequestConfig);
     
@@ -228,7 +228,7 @@ function parseJsonl(content: string): EnrichedArticle[] {
  */
 export async function getArchiveV2Month(yearMonth: string): Promise<EnrichedArticle[]> {
   try {
-    const response = await fetch(`${GITHUB_V2_BASE}/articles/${yearMonth}.jsonl`, {
+    const response = await fetch(`${GITHUB_BASE}/articles/${yearMonth}.jsonl`, {
       next: { revalidate: 3600 } // Cache for 1 hour
     } as NextFetchRequestConfig);
     
@@ -252,7 +252,7 @@ export async function getArchiveV2Snapshot(
 ): Promise<ArchiveSnapshot | null> {
   try {
     const response = await fetch(
-      `${GITHUB_V2_BASE}/snapshots/${year}/${month}/${day}/${hour}.json`,
+      `${GITHUB_BASE}/snapshots/${year}/${month}/${day}/${hour}.json`,
       { next: { revalidate: 3600 } } as NextFetchRequestConfig
     );
     
@@ -461,7 +461,7 @@ export async function getMarketHistory(yearMonth: string): Promise<Array<{
   fear_greed_index: number | null;
 }>> {
   try {
-    const response = await fetch(`${GITHUB_V2_BASE}/market/${yearMonth}.jsonl`, {
+    const response = await fetch(`${GITHUB_BASE}/market/${yearMonth}.jsonl`, {
       next: { revalidate: 3600 }
     } as NextFetchRequestConfig);
     

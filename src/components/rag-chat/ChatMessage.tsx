@@ -8,24 +8,36 @@
 'use client';
 
 import { useRef, useEffect, useState, memo } from 'react';
-import type { ChatMessage as ChatMessageType, Source } from './types';
+import type { ChatMessage as ChatMessageType, Source, ConfidenceScore } from './types';
+import { ConfidenceBadge } from './ConfidenceBadge';
 
 interface ChatMessageProps {
   message: ChatMessageType;
   onCitationClick?: (source: Source) => void;
   onFeedback?: (rating: 'positive' | 'negative') => void;
+  onRegenerate?: () => void;
+  onEdit?: (newContent: string) => void;
   showFeedback?: boolean;
+  showConfidence?: boolean;
+  isLastAssistant?: boolean;
 }
 
 function ChatMessageComponent({ 
   message, 
   onCitationClick, 
   onFeedback,
-  showFeedback = true 
+  onRegenerate,
+  onEdit,
+  showFeedback = true,
+  showConfidence = true,
+  isLastAssistant = false,
 }: ChatMessageProps) {
   const contentRef = useRef<HTMLDivElement>(null);
   const [copied, setCopied] = useState(false);
   const [feedbackGiven, setFeedbackGiven] = useState<'positive' | 'negative' | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editContent, setEditContent] = useState(message.content);
+  const editTextareaRef = useRef<HTMLTextAreaElement>(null);
 
   // Auto-scroll when streaming
   useEffect(() => {
@@ -33,6 +45,14 @@ function ChatMessageComponent({
       contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
   }, [message.content, message.isStreaming]);
+
+  // Focus edit textarea when editing
+  useEffect(() => {
+    if (isEditing && editTextareaRef.current) {
+      editTextareaRef.current.focus();
+      editTextareaRef.current.setSelectionRange(editContent.length, editContent.length);
+    }
+  }, [isEditing, editContent.length]);
 
   const copyToClipboard = async () => {
     try {
@@ -48,6 +68,32 @@ function ChatMessageComponent({
     if (feedbackGiven) return;
     setFeedbackGiven(rating);
     onFeedback?.(rating);
+  };
+
+  const handleStartEdit = () => {
+    setEditContent(message.content);
+    setIsEditing(true);
+  };
+
+  const handleCancelEdit = () => {
+    setIsEditing(false);
+    setEditContent(message.content);
+  };
+
+  const handleSaveEdit = () => {
+    if (editContent.trim() && editContent !== message.content) {
+      onEdit?.(editContent.trim());
+    }
+    setIsEditing(false);
+  };
+
+  const handleEditKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSaveEdit();
+    } else if (e.key === 'Escape') {
+      handleCancelEdit();
+    }
   };
 
   // Simple markdown parser
@@ -118,15 +164,23 @@ function ChatMessageComponent({
 
   const isUser = message.role === 'user';
   const parsedContent = parseMarkdown(message.content);
+  const confidence = message.metadata?.confidence;
 
   return (
-    <div className={`flex gap-4 ${isUser ? 'flex-row-reverse' : ''}`}>
+    <div 
+      className={`flex gap-4 ${isUser ? 'flex-row-reverse' : ''} group`}
+      role="article"
+      aria-label={`${isUser ? 'Your message' : 'AI response'}`}
+    >
       {/* Avatar */}
-      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-        isUser 
-          ? 'bg-blue-600 text-white' 
-          : 'bg-gradient-to-br from-purple-600 to-blue-600 text-white'
-      }`}>
+      <div 
+        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+          isUser 
+            ? 'bg-blue-600 text-white' 
+            : 'bg-gradient-to-br from-purple-600 to-blue-600 text-white'
+        }`}
+        aria-hidden="true"
+      >
         {isUser ? (
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
@@ -142,53 +196,99 @@ function ChatMessageComponent({
 
       {/* Message Content */}
       <div className={`flex-1 max-w-[85%] ${isUser ? 'text-right' : ''}`}>
-        <div className={`inline-block p-4 rounded-2xl ${
-          isUser
-            ? 'bg-blue-600 text-white rounded-br-md'
-            : 'bg-gray-800/60 border border-gray-700/50 rounded-bl-md'
-        }`}>
-          <div ref={contentRef} className="prose prose-invert prose-sm max-w-none">
-            {parsedContent.map((part, i) => {
-              if (typeof part === 'string') {
-                return (
-                  <div
-                    key={i}
-                    className="whitespace-pre-wrap break-words"
-                    dangerouslySetInnerHTML={{ __html: processInline(part) }}
-                  />
-                );
-              } else {
-                return (
-                  <div key={i} className="my-3 rounded-lg overflow-hidden bg-gray-900/80 border border-gray-700/50">
-                    <div className="flex items-center justify-between px-3 py-1.5 bg-gray-800/50 border-b border-gray-700/50">
-                      <span className="text-xs text-gray-400 font-mono">
-                        {part.language || 'code'}
-                      </span>
-                      <button
-                        onClick={() => navigator.clipboard.writeText(part.content)}
-                        className="text-xs text-gray-400 hover:text-white transition-colors"
-                      >
-                        Copy
-                      </button>
-                    </div>
-                    <pre className="p-3 overflow-x-auto text-sm">
-                      <code className="text-gray-300 font-mono">{part.content}</code>
-                    </pre>
-                  </div>
-                );
-              }
-            })}
-
-            {/* Streaming cursor */}
-            {message.isStreaming && (
-              <span className="inline-block w-2 h-4 bg-blue-500 animate-pulse ml-0.5" />
-            )}
+        {/* Edit mode for user messages */}
+        {isUser && isEditing ? (
+          <div className="inline-block w-full max-w-lg">
+            <textarea
+              ref={editTextareaRef}
+              value={editContent}
+              onChange={(e) => setEditContent(e.target.value)}
+              onKeyDown={handleEditKeyDown}
+              className="w-full p-3 bg-gray-800 border border-blue-500 rounded-xl text-white 
+                         resize-none focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              rows={3}
+              aria-label="Edit message"
+            />
+            <div className="flex justify-end gap-2 mt-2">
+              <button
+                onClick={handleCancelEdit}
+                className="px-3 py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSaveEdit}
+                className="px-3 py-1.5 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+              >
+                Save & Submit
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <>
+            {/* Confidence badge for assistant messages */}
+            {!isUser && showConfidence && confidence && (
+              <div className="mb-2">
+                <ConfidenceBadge confidence={confidence} size="sm" showDetails />
+              </div>
+            )}
 
-        {/* Message metadata and actions */}
+            <div className={`inline-block p-4 rounded-2xl ${
+              isUser
+                ? 'bg-blue-600 text-white rounded-br-md'
+                : 'bg-gray-800/60 border border-gray-700/50 rounded-bl-md'
+            }`}>
+              <div ref={contentRef} className="prose prose-invert prose-sm max-w-none">
+                {parsedContent.map((part, i) => {
+                  if (typeof part === 'string') {
+                    return (
+                      <div
+                        key={i}
+                        className="whitespace-pre-wrap break-words"
+                        dangerouslySetInnerHTML={{ __html: processInline(part) }}
+                      />
+                    );
+                  } else {
+                    return (
+                      <div key={i} className="my-3 rounded-lg overflow-hidden bg-gray-900/80 border border-gray-700/50">
+                        <div className="flex items-center justify-between px-3 py-1.5 bg-gray-800/50 border-b border-gray-700/50">
+                          <span className="text-xs text-gray-400 font-mono">
+                            {part.language || 'code'}
+                          </span>
+                          <button
+                            onClick={() => navigator.clipboard.writeText(part.content)}
+                            className="text-xs text-gray-400 hover:text-white transition-colors"
+                          >
+                            Copy
+                          </button>
+                        </div>
+                        <pre className="p-3 overflow-x-auto text-sm">
+                          <code className="text-gray-300 font-mono">{part.content}</code>
+                        </pre>
+                      </div>
+                    );
+                  }
+                })}
+
+                {/* Streaming cursor */}
+                {message.isStreaming && (
+                  <span className="inline-block w-2 h-4 bg-blue-500 animate-pulse ml-0.5" aria-label="Generating..." />
+                )}
+              </div>
+            </div>
+
+            {/* Edited indicator for user messages */}
+            {isUser && message.isEdited && (
+              <div className="text-xs text-gray-500 mt-1">
+                (edited)
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Message metadata and actions for assistant */}
         {!isUser && !message.isStreaming && (
-          <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
+          <div className="flex items-center flex-wrap gap-3 mt-2 text-xs text-gray-500">
             <span>
               {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
             </span>
@@ -204,6 +304,7 @@ function ChatMessageComponent({
               onClick={copyToClipboard}
               className="hover:text-gray-300 transition-colors"
               title="Copy to clipboard"
+              aria-label="Copy response"
             >
               {copied ? (
                 <svg className="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,6 +318,22 @@ function ChatMessageComponent({
               )}
             </button>
 
+            {/* Regenerate button - only show on last assistant message */}
+            {isLastAssistant && onRegenerate && (
+              <button
+                onClick={onRegenerate}
+                className="hover:text-blue-400 transition-colors flex items-center gap-1"
+                title="Regenerate response"
+                aria-label="Regenerate response"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                <span className="hidden sm:inline">Retry</span>
+              </button>
+            )}
+
             {/* Feedback buttons */}
             {showFeedback && onFeedback && (
               <div className="flex items-center gap-1 ml-2">
@@ -229,6 +346,8 @@ function ChatMessageComponent({
                   }`}
                   disabled={feedbackGiven !== null}
                   title="Helpful"
+                  aria-label="Mark as helpful"
+                  aria-pressed={feedbackGiven === 'positive'}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -244,6 +363,8 @@ function ChatMessageComponent({
                   }`}
                   disabled={feedbackGiven !== null}
                   title="Not helpful"
+                  aria-label="Mark as not helpful"
+                  aria-pressed={feedbackGiven === 'negative'}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -251,6 +372,29 @@ function ChatMessageComponent({
                   </svg>
                 </button>
               </div>
+            )}
+          </div>
+        )}
+
+        {/* User message actions */}
+        {isUser && !isEditing && (
+          <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity justify-end">
+            <span>
+              {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+            </span>
+            {onEdit && (
+              <button
+                onClick={handleStartEdit}
+                className="hover:text-blue-400 transition-colors flex items-center gap-1"
+                title="Edit message"
+                aria-label="Edit message"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+                <span className="hidden sm:inline">Edit</span>
+              </button>
             )}
           </div>
         )}

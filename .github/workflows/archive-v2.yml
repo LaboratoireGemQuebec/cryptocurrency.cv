@@ -72,7 +72,7 @@ jobs:
             # Get counts from the JSONL
             YEAR=$(date -u +%Y)
             MONTH=$(date -u +%m)
-            JSONL_FILE="archive/v2/articles/${YEAR}-${MONTH}.jsonl"
+            JSONL_FILE="archive/articles/${YEAR}-${MONTH}.jsonl"
             
             if [ -f "$JSONL_FILE" ]; then
               ARTICLE_COUNT=$(wc -l < "$JSONL_FILE" | tr -d ' ')

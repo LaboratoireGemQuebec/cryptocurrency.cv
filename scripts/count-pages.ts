@@ -18,7 +18,7 @@ const LOCALES = [
 ];
 
 const APP_DIR = path.join(process.cwd(), 'src/app');
-const ARCHIVE_DIR = path.join(process.cwd(), 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(process.cwd(), 'archive/articles');
 
 interface RouteInfo {
   path: string;
@@ -173,7 +173,7 @@ async function main() {
       route: '/article/[id]', 
       pagesPerLocale: articleCount, 
       totalPages: articleCount * LOCALES.length,
-      source: 'archive/v2/articles/'
+      source: 'archive/articles/'
     },
     // Blog pages
     { 

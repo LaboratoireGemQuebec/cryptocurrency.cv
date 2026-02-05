@@ -36,7 +36,7 @@ const crypto = require('crypto');
 // ============================================================================
 
 const WORKSPACE = '/workspaces/free-crypto-news';
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
 const CACHE_DIR = path.join(WORKSPACE, '.temp-import');
 const PROGRESS_FILE = path.join(CACHE_DIR, 'enrichment-progress.json');
 const URL_CACHE_FILE = path.join(CACHE_DIR, 'enrichment-url-cache.json');

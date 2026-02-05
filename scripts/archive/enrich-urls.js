@@ -26,7 +26,7 @@ const http = require('http');
 
 // Paths
 const WORKSPACE = '/workspaces/free-crypto-news';
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
 const ENRICHMENT_CACHE_PATH = path.join(WORKSPACE, '.temp-import/enrichment-cache.json');
 const ENRICHMENT_LOG_PATH = path.join(WORKSPACE, '.temp-import/enrichment-log.json');
 

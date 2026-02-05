@@ -22,8 +22,8 @@ const path = require('path');
 const crypto = require('crypto');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
-const INDEX_DIR = path.join(WORKSPACE, 'archive/v2/search');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
+const INDEX_DIR = path.join(WORKSPACE, 'archive/search');
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose') || args.includes('-v');

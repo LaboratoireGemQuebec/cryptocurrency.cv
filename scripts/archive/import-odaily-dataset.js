@@ -17,7 +17,7 @@ const crypto = require('crypto');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
 const CSV_PATH = path.join(WORKSPACE, '.temp-import/chinese/Odaily_news_2018Jan_2025Feb.csv');
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose') || args.includes('-v');

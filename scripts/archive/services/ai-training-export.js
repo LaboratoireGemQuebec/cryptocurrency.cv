@@ -20,8 +20,8 @@ const crypto = require('crypto');
 // CONFIGURATION
 // =============================================================================
 
-const ARCHIVE_DIR = path.join(__dirname, '../../archive/v2');
-const EXPORT_DIR = path.join(__dirname, '../../archive/v2/exports/training');
+const ARCHIVE_DIR = path.join(__dirname, '../../archive');
+const EXPORT_DIR = path.join(__dirname, '../../archive/exports/training');
 
 // =============================================================================
 // DATA GENERATORS

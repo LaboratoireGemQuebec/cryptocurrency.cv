@@ -17,7 +17,7 @@ const path = require('path');
 // CONFIGURATION
 // =============================================================================
 
-const ARCHIVE_DIR = path.join(__dirname, '../../archive/v2');
+const ARCHIVE_DIR = path.join(__dirname, '../../archive');
 const ANALYTICS_DIR = path.join(ARCHIVE_DIR, 'analytics');
 
 // Anomaly detection thresholds

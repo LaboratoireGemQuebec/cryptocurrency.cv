@@ -6,8 +6,8 @@ This tutorial covers all archive and export endpoints for accessing historical d
 
 | Endpoint | Description |
 |----------|-------------|
-| `/api/archive` | Query historical archive |
-| `/api/archive/v2` | Enhanced archive query |
+| `/api/archive` | Query historical archive (with enhanced features) |
+| `/api/archive/v2` | Redirect to /api/archive |
 | `/api/archive/status` | Archive status |
 | `/api/export` | Export news data |
 | `/api/export/formats` | Available export formats |
@@ -210,13 +210,13 @@ Use the enhanced V2 archive API with additional filtering options.
             params["category"] = category
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/archive/v2",
+            "https://news-crypto.vercel.app/api/archive",
             params=params
         )
         return response.json()
     
     # Query with sentiment filter
-    print("📚 Enhanced Archive Query (V2)")
+    print("📚 Enhanced Archive Query")
     print("=" * 70)
     
     # Bullish news from last week
@@ -290,12 +290,12 @@ Use the enhanced V2 archive API with additional filtering options.
         if (options.category) params.set('category', options.category);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/archive/v2?${params}`
+            `https://news-crypto.vercel.app/api/archive?${params}`
         );
         return response.json();
     }
     
-    console.log("📚 Enhanced Archive Query (V2)");
+    console.log("📚 Enhanced Archive Query");
     console.log("=".repeat(70));
     
     // Bullish news
@@ -330,16 +330,16 @@ Use the enhanced V2 archive API with additional filtering options.
 === "cURL"
     ```bash
     # Query with sentiment filter
-    curl "https://news-crypto.vercel.app/api/archive/v2?sentiment=bullish&limit=10" | jq
+    curl "https://news-crypto.vercel.app/api/archive?sentiment=bullish&limit=10" | jq
     
     # Search in archive
-    curl "https://news-crypto.vercel.app/api/archive/v2?q=ETF+approval&start_date=2024-01-01" | jq
+    curl "https://news-crypto.vercel.app/api/archive?q=ETF+approval&start_date=2024-01-01" | jq
     
     # Filter by category
-    curl "https://news-crypto.vercel.app/api/archive/v2?category=defi&limit=10" | jq
+    curl "https://news-crypto.vercel.app/api/archive?category=defi&limit=10" | jq
     
     # Combined filters
-    curl "https://news-crypto.vercel.app/api/archive/v2?source=coindesk&sentiment=bearish&start_date=2024-01-01&end_date=2024-01-31" | jq
+    curl "https://news-crypto.vercel.app/api/archive?source=coindesk&sentiment=bearish&start_date=2024-01-01&end_date=2024-01-31" | jq
     ```
 
 ---

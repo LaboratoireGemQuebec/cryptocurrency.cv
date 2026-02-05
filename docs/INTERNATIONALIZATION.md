@@ -435,7 +435,7 @@ curl "https://news-crypto.vercel.app/api/news?lang=ar"
 | `/api/search` | ✅ Full |
 | `/api/digest` | ✅ Full |
 | `/api/archive` | ✅ Full |
-| `/api/archive/v2` | ✅ Full |
+| `/api/archive/v2` | ✅ Redirect to /api/archive |
 
 ### Translation Requirements
 

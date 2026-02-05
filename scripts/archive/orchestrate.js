@@ -31,7 +31,7 @@ const { execSync, spawn } = require('child_process');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
 const SCRIPTS_DIR = path.join(WORKSPACE, 'scripts/archive');
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive');
 
 // Colors for terminal output
 const colors = {

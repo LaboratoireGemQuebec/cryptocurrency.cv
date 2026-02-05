@@ -16,7 +16,7 @@ const path = require('path');
 // CONFIGURATION
 // =============================================================================
 
-const DATA_DIR = path.join(__dirname, '../../archive/v2/meta');
+const DATA_DIR = path.join(__dirname, '../../archive/meta');
 const SOURCE_STATS_FILE = path.join(DATA_DIR, 'source-stats.json');
 
 // Scoring weights

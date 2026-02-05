@@ -172,7 +172,7 @@ function SourcePanelComponent({ sources, isOpen, onClose, onSourceClick }: Sourc
                       {/* Excerpt */}
                       <div className="pt-3">
                         <p className="text-sm text-gray-300 leading-relaxed line-clamp-6">
-                          {source.content}
+                          {source.content || source.snippet || 'No content available'}
                         </p>
                       </div>
 
@@ -214,7 +214,7 @@ function SourcePanelComponent({ sources, isOpen, onClose, onSourceClick }: Sourc
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            navigator.clipboard.writeText(source.content);
+                            navigator.clipboard.writeText(source.content || source.snippet || '');
                           }}
                           className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium 
                                      bg-gray-800 text-gray-400 rounded-lg hover:bg-gray-700 

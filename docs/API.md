@@ -107,7 +107,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/admin](#get-apiadmin)
 - [Archive Endpoints](#archive-endpoints)
   - [GET /api/archive](#get-apiarchive)
-  - [GET /api/archive/v2](#get-apiarchivev2)
+  - [GET /api/archive/v2](#get-apiarchivev2) (Redirect)
   - [GET /api/archive/status](#get-apiarchivestatus)
   - [GET /api/cron/archive](#get-apicronarchive)
   - [POST /api/archive/webhook](#post-apiarchivewebhook)
@@ -1914,7 +1914,17 @@ curl "https://news-crypto.vercel.app/api/archive/status"
 
 ### GET /api/archive/v2
 
-Query the enriched V2 archive with advanced filtering, sentiment analysis, and ticker tracking.
+> **Redirect:** This endpoint permanently redirects (308) to `/api/archive`. Use `/api/archive` for all new integrations.
+
+For backwards compatibility, all requests to `/api/archive/v2` are automatically redirected to the main `/api/archive` endpoint with full feature support.
+
+See [GET /api/archive](#get-apiarchive) for parameters and examples.
+
+---
+
+### GET /api/archive (Full Features)
+
+Query the enriched archive with advanced filtering, sentiment analysis, and ticker tracking.
 
 **Parameters:**
 
@@ -1939,13 +1949,13 @@ Query the enriched V2 archive with advanced filtering, sentiment analysis, and t
 **Example - Get enriched articles:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC&sentiment=positive&limit=20"
+curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&sentiment=positive&limit=20"
 ```
 
 **Example - Get trending tickers:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?trending=true&hours=24"
+curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
 ```
 
 **Response (trending):**
@@ -1964,7 +1974,7 @@ curl "https://news-crypto.vercel.app/api/archive/v2?trending=true&hours=24"
 **Example - Get archive stats:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
+curl "https://news-crypto.vercel.app/api/archive?stats=true"
 ```
 
 **Response (stats):**
@@ -2058,7 +2068,7 @@ curl -X POST "https://news-crypto.vercel.app/api/archive/webhook"
   },
   "github": {
     "success": true,
-    "message": "Committed 42 new articles to archive/v2/articles/2026-01.jsonl"
+    "message": "Committed 42 new articles to archive/articles/2026-01.jsonl"
   }
 }
 ```

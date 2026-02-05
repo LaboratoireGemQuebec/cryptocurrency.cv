@@ -168,7 +168,7 @@ async function commitToGitHub(
   const owner = 'nirholas';
   const repo = 'free-crypto-news';
   const [year, month] = date.split('-');
-  const filePath = `archive/v2/articles/${year}-${month}.jsonl`;
+  const filePath = `archive/articles/${year}-${month}.jsonl`;
 
   try {
     // Get current file (if exists)

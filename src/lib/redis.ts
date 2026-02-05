@@ -7,7 +7,7 @@
 import { newsCache, aiCache, translationCache, withCache as memoryWithCache } from './cache';
 
 // Redis client placeholder - initialized lazily
-let redisClient: any = null;
+let _redisClient: any = null;
 let redisAvailable = false;
 let initPromise: Promise<boolean> | null = null;
 
@@ -27,7 +27,7 @@ export async function initRedis(): Promise<boolean> {
       // Dynamic import to avoid bundling in edge runtime
       const { createClient } = await import('redis');
       
-      redisClient = createClient({
+      _redisClient = createClient({
         url: process.env.REDIS_URL,
         socket: {
           connectTimeout: 5000,
@@ -41,22 +41,22 @@ export async function initRedis(): Promise<boolean> {
         },
       });
 
-      redisClient.on('error', (err: Error) => {
+      _redisClient.on('error', (err: Error) => {
         console.error('[Redis] Error:', err.message);
         redisAvailable = false;
       });
 
-      redisClient.on('connect', () => {
+      _redisClient.on('connect', () => {
         console.log('[Redis] Connected');
         redisAvailable = true;
       });
 
-      redisClient.on('disconnect', () => {
+      _redisClient.on('disconnect', () => {
         console.log('[Redis] Disconnected');
         redisAvailable = false;
       });
 
-      await redisClient.connect();
+      await _redisClient.connect();
       redisAvailable = true;
       console.log('[Redis] Initialization successful');
       return true;
@@ -75,8 +75,8 @@ export async function initRedis(): Promise<boolean> {
  */
 export async function redisGet<T>(key: string): Promise<T | null> {
   try {
-    if (redisAvailable && redisClient?.isReady) {
-      const value = await redisClient.get(key);
+    if (redisAvailable && _redisClient?.isReady) {
+      const value = await _redisClient.get(key);
       if (value) {
         return JSON.parse(value) as T;
       }
@@ -103,8 +103,8 @@ export async function redisSet<T>(
   newsCache.set(key, value, ttlSeconds);
 
   try {
-    if (redisAvailable && redisClient?.isReady) {
-      await redisClient.setEx(key, ttlSeconds, serialized);
+    if (redisAvailable && _redisClient?.isReady) {
+      await _redisClient.setEx(key, ttlSeconds, serialized);
       return true;
     }
   } catch (error) {
@@ -115,14 +115,31 @@ export async function redisSet<T>(
 }
 
 /**
+ * Check if Redis is available
+ */
+export function isRedisAvailable(): boolean {
+  return redisAvailable && _redisClient?.isReady;
+}
+
+/**
+ * Get Redis client (for advanced operations)
+ */
+export function getRedisClient(): any {
+  return _redisClient;
+}
+
+// Alias for backward compatibility
+export { getRedisClient as redisClient };
+
+/**
  * Delete value from both caches
  */
 export async function redisDel(key: string): Promise<boolean> {
   newsCache.delete(key);
 
   try {
-    if (redisAvailable && redisClient?.isReady) {
-      await redisClient.del(key);
+    if (redisAvailable && _redisClient?.isReady) {
+      await _redisClient.del(key);
     }
   } catch (error) {
     console.error('[Redis] Del error:', error);
@@ -138,10 +155,10 @@ export async function redisDelPattern(pattern: string): Promise<number> {
   let count = 0;
 
   try {
-    if (redisAvailable && redisClient?.isReady) {
-      const keys = await redisClient.keys(pattern);
+    if (redisAvailable && _redisClient?.isReady) {
+      const keys = await _redisClient.keys(pattern);
       if (keys.length > 0) {
-        count = await redisClient.del(keys);
+        count = await _redisClient.del(keys);
       }
     }
   } catch (error) {
@@ -163,10 +180,10 @@ export async function getRedisStats(): Promise<{
 }> {
   const memoryCacheSize = newsCache.stats().size;
 
-  if (redisAvailable && redisClient?.isReady) {
+  if (redisAvailable && _redisClient?.isReady) {
     try {
-      const info = await redisClient.info('memory');
-      const dbSize = await redisClient.dbSize();
+      const info = await _redisClient.info('memory');
+      const dbSize = await _redisClient.dbSize();
       const memMatch = info.match(/used_memory_human:([^\r\n]+)/);
 
       return {

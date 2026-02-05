@@ -50,7 +50,7 @@ Build news aggregators, alerts, and feeds.
 |----------|-------------|-----------|
 | [News Feed Basics](news-basics.md) | Get started with the news API | `/api/news`, `/api/latest`, `/api/breaking` |
 | [Search & Filtering](search-filtering.md) | Advanced search techniques | `/api/search`, `/api/news/filter` |
-| [Archive & Export](archive-export.md) | Historical data and exports | `/api/archive`, `/api/export`, `/api/archive/v2` |
+| [Archive & Export](archive-export.md) | Historical data and exports | `/api/archive`, `/api/export` |
 | [International News](international-news.md) | Multi-language news from 75+ sources | `/api/news/international`, sources, languages |
 | [Article Extraction](article-extraction.md) | Full article content & AI detection | `/api/article/[slug]`, `/api/article/extract`, `/api/detect/ai-content` |
 

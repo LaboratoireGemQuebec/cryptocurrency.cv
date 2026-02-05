@@ -66,10 +66,43 @@ curl https://news-crypto.vercel.app/api/news
 | **API Key**       | ❌ None needed                  | Required     | Required |
 | **Rate Limit**    | Unlimited\*                     | 100-1000/day | Limited  |
 | **Sources**       | 130+ English + 75 International | 1            | Varies   |
+| **Historical**    | 📚 662,000+ articles (2017-2025) | Limited      | None     |
 | **International** | 🌏 KO, ZH, JA, ES + translation | No           | No       |
 | **Self-host**     | ✅ One click                    | No           | No       |
 | **PWA**           | ✅ Installable                  | No           | No       |
 | **MCP**           | ✅ Claude + ChatGPT             | No           | No       |
+
+---
+
+## 📚 Historical Archive
+
+Access **662,000+ crypto news articles** spanning 2017-2025 — the largest free crypto news dataset available!
+
+| Metric | Value |
+| ------ | ----- |
+| **Total Articles** | 662,047 |
+| **Date Range** | September 2017 - February 2025 |
+| **Languages** | English + Chinese |
+| **Unique Sources** | 100+ |
+| **Top Tickers** | BTC (81k), ETH (50k), USDT (19k), SOL (16k), XRP (13k) |
+| **Search Terms** | 79,512 indexed |
+
+**Data Sources:**
+- **CryptoPanic** — 346,031 articles from 200+ English sources
+- **Odaily 星球日报** — 316,016 Chinese crypto news articles
+
+```bash
+# Query historical archive
+curl "https://news-crypto.vercel.app/api/archive?date=2024-01"
+
+# Search by ticker
+curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&limit=100"
+
+# Full-text search
+curl "https://news-crypto.vercel.app/api/archive?q=bitcoin%20etf"
+```
+
+📁 Raw data available in [`/archive/`](archive/) — JSONL format by month.
 
 ---
 
@@ -554,7 +587,7 @@ curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/defi` | ✅ |
 | `/api/bitcoin` | ✅ |
 | `/api/archive` | ✅ |
-| `/api/archive/v2` | ✅ |
+| `/api/archive/v2` | ✅ (redirects to /api/archive) |
 | `/api/trending` | Trending topics with sentiment |
 | `/api/analyze` | News with topic classification |
 | `/api/stats` | Analytics & statistics |
@@ -3048,33 +3081,32 @@ We're building the most comprehensive open historical archive of crypto news. Ev
 | **Indexes**           | Fast lookups by source, ticker, date             |
 | **JSONL format**      | Streamable, append-friendly, grep-able           |
 
-## V2 API Endpoints
+## Archive API Endpoints
 
 ```bash
 # Get enriched articles with all metadata
-curl "https://news-crypto.vercel.app/api/archive/v2?limit=20"
+curl "https://news-crypto.vercel.app/api/archive?limit=20"
 
 # Filter by ticker
-curl "https://news-crypto.vercel.app/api/archive/v2?ticker=BTC"
+curl "https://news-crypto.vercel.app/api/archive?ticker=BTC"
 
 # Filter by sentiment
-curl "https://news-crypto.vercel.app/api/archive/v2?sentiment=positive"
+curl "https://news-crypto.vercel.app/api/archive?sentiment=positive"
 
 # Get archive statistics
-curl "https://news-crypto.vercel.app/api/archive/v2?stats=true"
+curl "https://news-crypto.vercel.app/api/archive?stats=true"
 
 # Get trending tickers (last 24h)
-curl "https://news-crypto.vercel.app/api/archive/v2?trending=true"
+curl "https://news-crypto.vercel.app/api/archive?trending=true"
 
 # Get market history for a month
-curl "https://news-crypto.vercel.app/api/archive/v2?market=2026-01"
+curl "https://news-crypto.vercel.app/api/archive?market=2026-01"
 ```
 
 ## Archive Directory Structure
 
 ```
 archive/
-  v2/
     articles/           # JSONL files, one per month
       2026-01.jsonl     # All articles from January 2026
     snapshots/          # Hourly trending state
@@ -3084,7 +3116,7 @@ archive/
         ...
     market/             # Price/sentiment history
       2026-01.jsonl     # Market data for January 2026
-    index/              # Fast lookups
+    indexes/            # Fast lookups
       by-source.json    # Article IDs grouped by source
       by-ticker.json    # Article IDs grouped by ticker
       by-date.json      # Article IDs grouped by date
@@ -3348,12 +3380,12 @@ Building the definitive open crypto intelligence platform.
 
 ---
 
-## 📂 Archive v2 Data Structure
+## 📂 Archive Data Structure
 
 The enhanced archive system captures comprehensive crypto intelligence:
 
 ```
-archive/v2/
+archive/
 ├── articles/              # JSONL, append-only articles
 │   └── 2026-01.jsonl     # ~50 new articles per hour
 ├── market/               # Full market snapshots
@@ -3377,7 +3409,7 @@ archive/v2/
 │   ├── sentiment-dataset.jsonl
 │   ├── embeddings-data.jsonl
 │   └── ner-training.jsonl
-├── index/                # Fast lookups
+├── indexes/              # Fast lookups
 │   ├── by-source.json
 │   ├── by-ticker.json
 │   └── by-date.json

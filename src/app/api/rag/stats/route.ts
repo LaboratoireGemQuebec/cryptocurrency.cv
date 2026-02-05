@@ -16,8 +16,8 @@ export async function GET() {
     const count = await vectorStore.count();
 
     return NextResponse.json({
-      totalDocuments: count,
       ...stats,
+      totalDocuments: count,
       embeddingModel: 'sentence-transformers/all-MiniLM-L6-v2',
       dimensions: 384,
     });

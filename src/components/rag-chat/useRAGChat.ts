@@ -14,8 +14,8 @@ import type {
   Source, 
   ConfidenceScore,
   SuggestedQuestion,
-  DEFAULT_CHAT_SETTINGS 
 } from './types';
+import { DEFAULT_CHAT_SETTINGS } from './types';
 
 interface UseRAGChatOptions {
   conversationId?: string;
@@ -36,9 +36,24 @@ interface RAGChatState {
     complexity?: string;
     documentsFound?: number;
   } | null;
+  settings: ChatSettings;
 }
 
 export function useRAGChat(options: UseRAGChatOptions = {}) {
+  // Load saved settings
+  const loadSettings = (): ChatSettings => {
+    if (typeof window === 'undefined') return DEFAULT_CHAT_SETTINGS;
+    try {
+      const saved = localStorage.getItem('rag-chat-settings');
+      if (saved) {
+        return { ...DEFAULT_CHAT_SETTINGS, ...JSON.parse(saved) };
+      }
+    } catch (e) {
+      console.error('Failed to load settings:', e);
+    }
+    return DEFAULT_CHAT_SETTINGS;
+  };
+
   const [state, setState] = useState<RAGChatState>({
     messages: [],
     isLoading: false,
@@ -47,6 +62,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     conversationId: options.conversationId || null,
     currentStep: null,
     processingInfo: null,
+    settings: loadSettings(),
   });
 
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -62,7 +78,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          setState(prev => ({
+          setState((prev: RAGChatState) => ({
             ...prev,
             messages: parsed.messages.map((m: ChatMessage) => ({
               ...m,
@@ -134,11 +150,11 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
       isStreaming: true,
     };
 
-    setState(prev => ({
+    setState((prev: RAGChatState) => ({
       ...prev,
       messages: [...prev.messages, userMessage, assistantMessage],
       isLoading: true,
-      isStreaming: true,
+      isStreaming: false, // Will be set to true when first token arrives
       error: null,
       currentStep: 'Starting...',
     }));
@@ -194,13 +210,13 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
               if (data.conversationId && data.timestamp) {
                 // start event
                 receivedConvId = data.conversationId;
-                setState(prev => ({ ...prev, conversationId: data.conversationId }));
+                setState((prev: RAGChatState) => ({ ...prev, conversationId: data.conversationId }));
               } else if (data.type && data.message) {
                 // step event
-                setState(prev => ({ ...prev, currentStep: data.message }));
+                setState((prev: RAGChatState) => ({ ...prev, currentStep: data.message }));
               } else if (data.original && data.intent) {
                 // query_info event
-                setState(prev => ({
+                setState((prev: RAGChatState) => ({
                   ...prev,
                   processingInfo: {
                     intent: data.intent,
@@ -209,7 +225,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
                 }));
               } else if (data.documentsFound !== undefined) {
                 // retrieval event
-                setState(prev => ({
+                setState((prev: RAGChatState) => ({
                   ...prev,
                   processingInfo: {
                     ...prev.processingInfo,
@@ -217,13 +233,14 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
                   },
                 }));
               } else if (data.content !== undefined) {
-                // token event
+                // token event - set isStreaming on first token
                 streamingMessageRef.current += data.content;
-                setState(prev => ({
+                setState((prev: RAGChatState) => ({
                   ...prev,
-                  messages: prev.messages.map((m, i) =>
+                  isStreaming: true, // Now actively streaming content
+                  messages: prev.messages.map((m: ChatMessage, i: number) =>
                     i === prev.messages.length - 1
-                      ? { ...m, content: streamingMessageRef.current }
+                      ? { ...m, content: streamingMessageRef.current, isStreaming: true }
                       : m
                   ),
                 }));
@@ -232,6 +249,15 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
                 finalSources = data.sources || [];
                 finalMetadata = {
                   sources: data.sources,
+                  confidence: data.confidence,
+                  suggestedQuestions: data.suggestions,
+                  relatedArticles: data.relatedArticles?.map((a: { id: string; title: string; source: string; url?: string; publishedAt?: string; relevanceScore?: number }) => ({
+                    id: a.id,
+                    title: a.title,
+                    source: a.source,
+                    url: a.url,
+                    similarity: a.relevanceScore || 0,
+                  })),
                   queryIntent: data.metadata?.queryIntent,
                   documentsSearched: data.metadata?.documentsSearched,
                   conversationId: data.metadata?.conversationId,
@@ -258,8 +284,8 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
         metadata: finalMetadata,
       };
 
-      setState(prev => {
-        const newMessages = prev.messages.map((m, i) =>
+      setState((prev: RAGChatState) => {
+        const newMessages = prev.messages.map((m: ChatMessage, i: number) =>
           i === prev.messages.length - 1 ? finalMessage : m
         );
         
@@ -287,9 +313,9 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
 
       const errorMessage = error instanceof Error ? error.message : 'An error occurred';
       
-      setState(prev => ({
+      setState((prev: RAGChatState) => ({
         ...prev,
-        messages: prev.messages.map((m, i) =>
+        messages: prev.messages.map((m: ChatMessage, i: number) =>
           i === prev.messages.length - 1
             ? { ...m, content: `Sorry, I encountered an error: ${errorMessage}`, isStreaming: false }
             : m
@@ -310,12 +336,12 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
       abortControllerRef.current.abort();
       abortControllerRef.current = null;
     }
-    setState(prev => ({
+    setState((prev: RAGChatState) => ({
       ...prev,
       isLoading: false,
       isStreaming: false,
       currentStep: null,
-      messages: prev.messages.map((m, i) =>
+      messages: prev.messages.map((m: ChatMessage, i: number) =>
         i === prev.messages.length - 1 && m.isStreaming
           ? { ...m, isStreaming: false, content: m.content || 'Response was stopped.' }
           : m
@@ -328,7 +354,8 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     if (state.conversationId) {
       localStorage.removeItem(`rag-conv-${state.conversationId}`);
     }
-    setState({
+    setState((prev) => ({
+      ...prev,
       messages: [],
       isLoading: false,
       isStreaming: false,
@@ -336,12 +363,13 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
       conversationId: null,
       currentStep: null,
       processingInfo: null,
-    });
+    }));
   }, [state.conversationId]);
 
   // Start new conversation
   const newConversation = useCallback(() => {
-    setState({
+    setState((prev) => ({
+      ...prev,
       messages: [],
       isLoading: false,
       isStreaming: false,
@@ -349,7 +377,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
       conversationId: null,
       currentStep: null,
       processingInfo: null,
-    });
+    }));
   }, []);
 
   // Load conversation by ID
@@ -358,7 +386,8 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        setState({
+        setState((prev) => ({
+          ...prev,
           messages: parsed.messages.map((m: ChatMessage) => ({
             ...m,
             timestamp: new Date(m.timestamp),
@@ -369,7 +398,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
           conversationId: convId,
           currentStep: null,
           processingInfo: null,
-        });
+        }));
       } catch (e) {
         console.error('Failed to load conversation:', e);
       }
@@ -412,6 +441,137 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     }
   }, [state.conversationId]);
 
+  // Regenerate last response
+  const regenerateResponse = useCallback(async () => {
+    const lastUserMessage = [...state.messages].reverse().find(m => m.role === 'user');
+    if (!lastUserMessage || state.isLoading) return;
+    
+    // Remove the last assistant message and regenerate
+    setState((prev: RAGChatState) => ({
+      ...prev,
+      messages: prev.messages.slice(0, -1).map((m: ChatMessage, i: number, arr: ChatMessage[]) => 
+        i === arr.length - 1 && m.role === 'user' 
+          ? { ...m, regenerationCount: (m.regenerationCount || 0) + 1 }
+          : m
+      ),
+    }));
+    
+    // Re-send the last user message
+    await sendMessage(lastUserMessage.content);
+  }, [state.messages, state.isLoading, sendMessage]);
+
+  // Edit a user message
+  const editMessage = useCallback(async (messageId: string, newContent: string) => {
+    const messageIndex = state.messages.findIndex((m: ChatMessage) => m.id === messageId);
+    if (messageIndex === -1 || state.isLoading) return;
+    
+    const message = state.messages[messageIndex];
+    if (message.role !== 'user') return;
+    
+    // Update the message and remove all subsequent messages
+    setState((prev: RAGChatState) => ({
+      ...prev,
+      messages: prev.messages.slice(0, messageIndex + 1).map((m: ChatMessage, i: number) =>
+        i === messageIndex
+          ? { 
+              ...m, 
+              content: newContent, 
+              isEdited: true, 
+              editedAt: new Date(),
+              originalContent: m.originalContent || m.content,
+            }
+          : m
+      ),
+    }));
+    
+    // Re-send the edited message
+    await sendMessage(newContent);
+  }, [state.messages, state.isLoading, sendMessage]);
+
+  // Export conversation to various formats
+  const exportConversation = useCallback((format: 'markdown' | 'json' | 'text' = 'markdown') => {
+    const conv = {
+      id: state.conversationId,
+      messages: state.messages,
+      exportedAt: new Date().toISOString(),
+    };
+    
+    let content: string;
+    let filename: string;
+    let mimeType: string;
+    
+    switch (format) {
+      case 'json':
+        content = JSON.stringify(conv, null, 2);
+        filename = `conversation-${state.conversationId || 'export'}.json`;
+        mimeType = 'application/json';
+        break;
+      case 'text':
+        content = state.messages.map((m: ChatMessage) => 
+          `[${m.role.toUpperCase()}] ${new Date(m.timestamp).toLocaleString()}\n${m.content}\n`
+        ).join('\n---\n\n');
+        filename = `conversation-${state.conversationId || 'export'}.txt`;
+        mimeType = 'text/plain';
+        break;
+      case 'markdown':
+      default:
+        content = `# Conversation Export\n\nExported: ${new Date().toLocaleString()}\n\n---\n\n` +
+          state.messages.map((m: ChatMessage) => {
+            const role = m.role === 'user' ? '**You**' : '**AI Assistant**';
+            const time = new Date(m.timestamp).toLocaleTimeString();
+            const sources = m.metadata?.sources?.length 
+              ? `\n\n*Sources: ${m.metadata.sources.map((s: Source) => s.title).join(', ')}*` 
+              : '';
+            return `### ${role} (${time})\n\n${m.content}${sources}`;
+          }).join('\n\n---\n\n');
+        filename = `conversation-${state.conversationId || 'export'}.md`;
+        mimeType = 'text/markdown';
+    }
+    
+    // Create and download file
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    return content;
+  }, [state.conversationId, state.messages]);
+
+  // Copy last response to clipboard
+  const copyLastResponse = useCallback(async () => {
+    const lastAssistant = [...state.messages].reverse().find(m => m.role === 'assistant');
+    if (lastAssistant) {
+      await navigator.clipboard.writeText(lastAssistant.content);
+      return true;
+    }
+    return false;
+  }, [state.messages]);
+
+  // Search within conversation
+  const searchMessages = useCallback((query: string) => {
+    if (!query.trim()) return state.messages;
+    const lowerQuery = query.toLowerCase();
+    return state.messages.filter((m: ChatMessage) => 
+      m.content.toLowerCase().includes(lowerQuery)
+    );
+  }, [state.messages]);
+
+  // Update settings
+  const updateSettings = useCallback((newSettings: ChatSettings) => {
+    setState((prev: RAGChatState) => ({ ...prev, settings: newSettings }));
+    // Persist to localStorage
+    try {
+      localStorage.setItem('rag-chat-settings', JSON.stringify(newSettings));
+    } catch (e) {
+      console.error('Failed to save settings:', e);
+    }
+  }, []);
+
   return {
     // State
     messages: state.messages,
@@ -421,6 +581,7 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     conversationId: state.conversationId,
     currentStep: state.currentStep,
     processingInfo: state.processingInfo,
+    settings: state.settings,
     
     // Actions
     sendMessage,
@@ -431,6 +592,12 @@ export function useRAGChat(options: UseRAGChatOptions = {}) {
     deleteConversation,
     getConversations,
     sendFeedback,
+    regenerateResponse,
+    editMessage,
+    exportConversation,
+    copyLastResponse,
+    searchMessages,
+    updateSettings,
   };
 }
 

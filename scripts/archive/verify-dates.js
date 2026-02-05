@@ -22,7 +22,7 @@ const https = require('https');
 
 // Paths
 const WORKSPACE = '/workspaces/free-crypto-news';
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
 const VERIFIED_CACHE_PATH = path.join(WORKSPACE, '.temp-import/verified-dates.json');
 
 // Parse CLI args

@@ -10,6 +10,10 @@ export interface ChatMessage {
   content: string;
   timestamp: Date;
   isStreaming?: boolean;
+  isEdited?: boolean;
+  editedAt?: Date;
+  originalContent?: string;
+  regenerationCount?: number;
   metadata?: MessageMetadata;
 }
 
@@ -35,11 +39,25 @@ export interface Source {
   publishedAt?: string | Date;
   score: number;
   snippet?: string;
+  content?: string;
+  metadata?: {
+    date?: string;
+    category?: string;
+    type?: string;
+    source?: string;
+    [key: string]: unknown;
+  };
 }
 
 export interface ConfidenceScore {
   overall: number;
   level: 'high' | 'medium' | 'low' | 'uncertain';
+  factors?: {
+    sourceQuality: number;
+    relevance: number;
+    recency: number;
+    consistency: number;
+  };
   dimensions?: {
     retrieval: number;
     generation: number;
@@ -52,8 +70,10 @@ export interface ConfidenceScore {
 }
 
 export interface SuggestedQuestion {
-  question: string;
-  type: 'expansion' | 'detail' | 'comparison' | 'impact' | 'timeline' | 'causal';
+  text: string;
+  question?: string; // alias for text
+  type?: 'expansion' | 'detail' | 'comparison' | 'impact' | 'timeline' | 'causal';
+  category?: 'market' | 'news' | 'analysis' | 'education' | 'general';
   relevance?: number;
 }
 
@@ -100,6 +120,10 @@ export interface ChatSettings {
   showSources: boolean;
   showSuggestions: boolean;
   showTimings: boolean;
+  showRelatedArticles: boolean;
+  enableVoiceInput: boolean;
+  autoScroll: boolean;
+  compactMode: boolean;
   theme: 'light' | 'dark' | 'system';
   fontSize: 'small' | 'medium' | 'large';
 }
@@ -110,19 +134,34 @@ export const DEFAULT_CHAT_SETTINGS: ChatSettings = {
   showSources: true,
   showSuggestions: true,
   showTimings: false,
-  theme: 'system',
+  showRelatedArticles: true,
+  enableVoiceInput: true,
+  autoScroll: true,
+  compactMode: false,
+  theme: 'dark',
   fontSize: 'medium',
 };
 
-export const SUGGESTED_QUERIES = [
-  "What's the latest news on Bitcoin ETFs?",
-  "Why is Ethereum moving today?",
-  "What regulatory news came out this week?",
-  "Summarize the crypto market sentiment",
-  "Which DeFi protocols are trending?",
-  "Any major hacks or exploits recently?",
-  "What's happening with Solana?",
-  "Bitcoin price analysis for this week",
+export const KEYBOARD_SHORTCUTS = [
+  { key: 'Cmd/Ctrl + K', action: 'Toggle chat modal', category: 'navigation' },
+  { key: 'Cmd/Ctrl + N', action: 'New conversation', category: 'navigation' },
+  { key: 'Cmd/Ctrl + /', action: 'Show keyboard shortcuts', category: 'navigation' },
+  { key: 'Enter', action: 'Send message', category: 'input' },
+  { key: 'Shift + Enter', action: 'New line', category: 'input' },
+  { key: 'Escape', action: 'Stop generation / Close modal', category: 'control' },
+  { key: 'Cmd/Ctrl + Shift + C', action: 'Copy last response', category: 'clipboard' },
+  { key: 'Cmd/Ctrl + Shift + E', action: 'Export conversation', category: 'clipboard' },
+] as const;
+
+export const SUGGESTED_QUERIES: SuggestedQuestion[] = [
+  { text: "What's the latest news on Bitcoin ETFs?", category: 'news' },
+  { text: "Why is Ethereum moving today?", category: 'market' },
+  { text: "What regulatory news came out this week?", category: 'news' },
+  { text: "Summarize the crypto market sentiment", category: 'analysis' },
+  { text: "Which DeFi protocols are trending?", category: 'market' },
+  { text: "Any major hacks or exploits recently?", category: 'news' },
+  { text: "What's happening with Solana?", category: 'market' },
+  { text: "Bitcoin price analysis for this week", category: 'analysis' },
 ];
 
 export const CONFIDENCE_COLORS = {

@@ -696,7 +696,7 @@ class ArchiveAPI:
             params["q"] = query
         if sentiment:
             params["sentiment"] = sentiment
-        return self.http.get("/api/archive/v2", params)
+        return self.http.get("/api/archive", params)
     
     def get_status(self) -> Dict[str, Any]:
         """Get archive status."""

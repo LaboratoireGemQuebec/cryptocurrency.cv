@@ -21,7 +21,7 @@ const fs = require('fs');
 const path = require('path');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
-const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/v2/articles');
+const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
 const REPORT_DIR = path.join(WORKSPACE, '.temp-import');
 
 const args = process.argv.slice(2);
