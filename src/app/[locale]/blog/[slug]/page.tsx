@@ -12,7 +12,11 @@ interface PageProps {
 }
 
 // Generate static paths for all blog posts
+// Skip during Vercel build to reduce deploy size - use ISR instead
 export async function generateStaticParams() {
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   const slugs = getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }

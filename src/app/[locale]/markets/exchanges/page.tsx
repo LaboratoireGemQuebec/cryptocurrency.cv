@@ -9,6 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatNumber } from '@/lib/market-data';
 import type { Metadata } from 'next';
+import { fetchCoinGecko } from '@/lib/coingecko';
 
 export const metadata: Metadata = {
   title: 'Cryptocurrency Exchanges - Free Crypto News',
@@ -31,18 +32,13 @@ interface Exchange {
   trade_volume_24h_btc_normalized: number;
 }
 
-// Fetch exchanges from CoinGecko
+// Fetch exchanges from CoinGecko (rate-limited)
 async function getExchanges(): Promise<Exchange[]> {
-  try {
-    const response = await fetch(
-      'https://api.coingecko.com/api/v3/exchanges?per_page=100',
-      { next: { revalidate: 300 } }
-    );
-    if (!response.ok) return [];
-    return response.json();
-  } catch {
-    return [];
-  }
+  const data = await fetchCoinGecko<Exchange[]>(
+    'https://api.coingecko.com/api/v3/exchanges?per_page=100',
+    { revalidate: 300 }
+  );
+  return data ?? [];
 }
 
 // Trust score color mapping

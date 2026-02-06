@@ -12,7 +12,6 @@ import {
   getRelatedArticles,
   toNewsArticle,
   generateArticleSlug,
-  getAllArchivedArticleIds,
   type EnrichedArticle 
 } from '@/lib/archive-v2';
 import type { Metadata } from 'next';
@@ -32,13 +31,13 @@ const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.
 export const dynamicParams = true;
 
 /**
- * Generate static params for recent articles only
- * Other articles are generated on-demand via ISR
+ * Skip static generation for article pages entirely.
+ * All article pages are generated on-demand via ISR.
+ * This avoids loading the massive archive during build and
+ * prevents the build output from exceeding Vercel's size limit.
  */
 export async function generateStaticParams() {
-  // Only pre-render a small subset; rest uses ISR
-  const articleIds = await getAllArchivedArticleIds();
-  return articleIds.slice(0, 100).map(id => ({ id }));
+  return [];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

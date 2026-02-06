@@ -11,7 +11,11 @@ interface PageProps {
 }
 
 // Generate static paths for all categories
+// Skip during Vercel build to reduce deploy size - use ISR instead
 export async function generateStaticParams() {
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(CATEGORIES).map((category) => ({ category }));
 }
 

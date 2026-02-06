@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { DominanceChart } from '@/components/DominanceChart';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { fetchCoinGecko } from '@/lib/coingecko';
 
 export const metadata: Metadata = {
   title: 'Market Dominance | Crypto Market Share',
@@ -15,16 +16,11 @@ export const metadata: Metadata = {
 };
 
 async function getCoins() {
-  try {
-    const res = await fetch(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
-      { next: { revalidate: 300 } }
-    );
-    if (res.ok) return res.json();
-  } catch (e) {
-    console.error('Failed to fetch coins:', e);
-  }
-  return [];
+  const data = await fetchCoinGecko(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
+    { revalidate: 300 }
+  );
+  return data ?? [];
 }
 
 type Props = {

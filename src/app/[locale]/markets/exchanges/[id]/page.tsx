@@ -11,6 +11,7 @@ import { formatNumber, formatPrice, getExchanges } from '@/lib/market-data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
+import { fetchCoinGecko } from '@/lib/coingecko';
 
 export const revalidate = 300;
 
@@ -75,16 +76,10 @@ interface ExchangePageProps {
 }
 
 async function getExchangeDetails(id: string): Promise<ExchangeDetails | null> {
-  try {
-    const response = await fetch(
-      `https://api.coingecko.com/api/v3/exchanges/${id}`,
-      { next: { revalidate: 300 } }
-    );
-    if (!response.ok) return null;
-    return response.json();
-  } catch {
-    return null;
-  }
+  return fetchCoinGecko<ExchangeDetails>(
+    `https://api.coingecko.com/api/v3/exchanges/${id}`,
+    { revalidate: 300 }
+  );
 }
 
 export async function generateMetadata({ params }: ExchangePageProps): Promise<Metadata> {

@@ -29,7 +29,11 @@ interface PageProps {
 }
 
 // Generate static params for all tags
+// Skip during Vercel build to reduce deploy size - use ISR instead
 export async function generateStaticParams() {
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   const tags = getAllTags();
   return tags.map(tag => ({
     slug: tag.slug,

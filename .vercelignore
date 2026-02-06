@@ -1,11 +1,6 @@
-# Exclude large archive data files from deployment
-# These are served from GitHub raw content instead
-archive/articles/
-archive/search/article-meta.json
-archive/search/title-index.json
-archive/indexes/by-date.json
-archive/indexes/by-ticker.json
-archive/indexes/by-source.json
+# Exclude entire archive directory from deployment (709MB+)
+# Data is served from GitHub raw content at runtime
+archive/
 
 # Development files
 .devcontainer/

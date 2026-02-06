@@ -162,8 +162,14 @@ export const metadata: Metadata = {
   },
 };
 
-// Generate static params for all locales
+// Generate static params for top locales only during build
+// Other locales are rendered on-demand via ISR to stay within Vercel's deploy size limit
+const SSG_LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'pt', 'ru', 'ar'] as const;
+
 export function generateStaticParams() {
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return SSG_LOCALES.map((locale) => ({ locale }));
+  }
   return locales.map((locale) => ({ locale }));
 }
 

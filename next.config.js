@@ -156,6 +156,18 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
   
+  // Exclude large directories from output file tracing (Vercel build size)
+  outputFileTracingExcludes: {
+    '*': [
+      './archive/**',
+      './docs/**',
+      './e2e/**',
+      './stories/**',
+      './scripts/**',
+      './playwright-report/**',
+    ],
+  },
+
   // Experimental features for better performance
   experimental: {
     // Enable optimized loading of CSS
