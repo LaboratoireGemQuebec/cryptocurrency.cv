@@ -9,6 +9,7 @@
  */
 
 import { db } from '@/lib/database';
+import { SITE_URL } from '@/lib/constants';
 
 // Database collection
 const SUBSCRIBERS_COLLECTION = 'newsletter_subscribers';
@@ -140,7 +141,7 @@ export async function subscribe(
  * Send verification email using configured provider
  */
 async function sendVerificationEmail(subscriber: Subscriber, token: string): Promise<void> {
-  const verifyUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv'}/api/newsletter?action=verify&token=${token}`;
+  const verifyUrl = `${SITE_URL}/api/newsletter?action=verify&token=${token}`;
   
   const html = `
 <!DOCTYPE html>

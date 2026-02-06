@@ -1,33 +1,33 @@
 /**
- * RAG Feedback API — User feedback collection
+ * Enhanced RAG Feedback API — Phase 4.1
  *
- * POST /api/rag/feedback
- * Collect user feedback (thumbs up/down) and optional category/comment
- * for a given RAG query response. Links feedback to trace via queryId.
+ * POST /api/rag/feedback         — Submit enhanced feedback
+ * GET  /api/rag/feedback          — Analytics summary + alerts + export
+ *   ?alerts=true                 — Active quality alerts
+ *   ?variant=<id>                — Variant-specific satisfaction
+ *   ?compare=a,b                 — Compare two A/B variants
+ *   ?export=true                 — Training data export
+ *
+ * Replaces the basic in-memory array with the full FeedbackStore.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { ragTracer, ragLogger } from '@/lib/rag/observability';
-import { FeedbackRequestSchema, formatValidationError } from '../schemas';
+import { ragLogger } from '@/lib/rag/observability';
+import { getFeedbackStore } from '@/lib/rag/feedback-system';
+import {
+  EnhancedFeedbackRequestSchema,
+  FeedbackRequestSchema,
+  formatValidationError,
+} from '../schemas';
 import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
 
 export const runtime = 'nodejs';
 
-// In-memory feedback store — swap for a database in production
-interface FeedbackEntry {
-  queryId: string;
-  rating: 'positive' | 'negative';
-  category?: string;
-  comment?: string;
-  ip: string;
-  timestamp: string;
-}
+const store = getFeedbackStore();
 
-const feedbackStore: FeedbackEntry[] = [];
-const MAX_FEEDBACK = 10_000;
+// ─── POST: Submit Feedback ────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-  // Rate limit
   const rateLimitResponse = applyRateLimit(request, 'feedback');
   if (rateLimitResponse) return rateLimitResponse;
 
@@ -35,49 +35,63 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     logRequest(request, 'feedback', body);
 
-    // Validate
-    const parsed = FeedbackRequestSchema.safeParse(body);
-    if (!parsed.success) {
-      return NextResponse.json(formatValidationError(parsed.error), { status: 400 });
+    // Try enhanced schema first, fallback to basic
+    let queryId: string;
+    let query = '';
+    let answer = '';
+    let rating: 'positive' | 'negative';
+    let category: 'accuracy' | 'relevance' | 'completeness' | 'timeliness' | 'other' | undefined;
+    let comment: string | undefined;
+    let sources: string[] | undefined;
+    let confidence: number | undefined;
+    let experimentVariantId: string | undefined;
+    let userId: string | undefined;
+
+    const enhanced = EnhancedFeedbackRequestSchema.safeParse(body);
+    if (enhanced.success) {
+      ({
+        queryId, query, answer, rating, category,
+        comment, sources, confidence, experimentVariantId, userId,
+      } = enhanced.data);
+    } else {
+      // Fallback to basic schema for backwards-compatibility
+      const basic = FeedbackRequestSchema.safeParse(body);
+      if (!basic.success) {
+        return NextResponse.json(formatValidationError(enhanced.error), { status: 400 });
+      }
+      ({ queryId, rating, category, comment } = basic.data);
     }
-
-    const { queryId, rating, category, comment } = parsed.data;
-
-    // Verify queryId exists in traces (optional — trace might have expired)
-    const trace = ragTracer.getTrace(queryId);
 
     const ip =
       request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
       request.headers.get('x-real-ip') ||
       'unknown';
 
-    const entry: FeedbackEntry = {
+    const id = store.addFeedback({
       queryId,
+      query,
+      answer,
       rating,
       category,
       comment,
+      sources,
+      confidence,
+      experimentVariantId,
+      userId,
       ip,
       timestamp: new Date().toISOString(),
-    };
+    });
 
-    feedbackStore.push(entry);
-
-    // Trim oldest entries
-    if (feedbackStore.length > MAX_FEEDBACK) {
-      feedbackStore.splice(0, feedbackStore.length - MAX_FEEDBACK);
-    }
-
-    // Log feedback for observability
     ragLogger.info(
       `Feedback: ${rating} for ${queryId}${category ? ` [${category}]` : ''}`,
       queryId,
-      { rating, category, comment: comment?.slice(0, 100) }
+      { rating, category, feedbackId: id }
     );
 
     const response = NextResponse.json({
       success: true,
+      feedbackId: id,
       queryId,
-      traceFound: !!trace,
     });
 
     return withRateLimitHeaders(response, request, 'feedback');
@@ -86,9 +100,8 @@ export async function POST(request: NextRequest) {
   }
 }
 
-/**
- * GET /api/rag/feedback — Retrieve feedback summary (admin)
- */
+// ─── GET: Analytics / Alerts / Export ─────────────────────────
+
 export async function GET(request: NextRequest) {
   const rateLimitResponse = applyRateLimit(request, 'metrics');
   if (rateLimitResponse) return rateLimitResponse;
@@ -96,31 +109,65 @@ export async function GET(request: NextRequest) {
   try {
     logRequest(request, 'feedback-stats');
 
-    const total = feedbackStore.length;
-    const positive = feedbackStore.filter((f) => f.rating === 'positive').length;
-    const negative = total - positive;
+    const { searchParams } = request.nextUrl;
 
-    const categoryCounts: Record<string, number> = {};
-    for (const entry of feedbackStore) {
-      if (entry.category) {
-        categoryCounts[entry.category] = (categoryCounts[entry.category] || 0) + 1;
+    // ?alerts=true — quality alerts
+    if (searchParams.get('alerts') === 'true') {
+      const allAlerts = searchParams.get('all') === 'true';
+      const alerts = allAlerts ? store.getAllAlerts() : store.getActiveAlerts();
+      const response = NextResponse.json({ alerts, count: alerts.length });
+      return withRateLimitHeaders(response, request, 'metrics');
+    }
+
+    // ?variant=<id> — variant-specific satisfaction
+    const variantId = searchParams.get('variant');
+    if (variantId) {
+      const satisfaction = store.getVariantSatisfaction(variantId);
+      const response = NextResponse.json(satisfaction);
+      return withRateLimitHeaders(response, request, 'metrics');
+    }
+
+    // ?compare=a,b — compare two variants
+    const compare = searchParams.get('compare');
+    if (compare) {
+      const [a, b] = compare.split(',');
+      if (a && b) {
+        const comparison = store.compareVariants(a.trim(), b.trim());
+        const response = NextResponse.json(comparison);
+        return withRateLimitHeaders(response, request, 'metrics');
       }
     }
 
-    const recent = feedbackStore.slice(-20).reverse().map((f) => ({
-      queryId: f.queryId,
-      rating: f.rating,
-      category: f.category,
-      timestamp: f.timestamp,
-    }));
+    // ?export=true — training data export
+    if (searchParams.get('export') === 'true') {
+      const includeNegatives = searchParams.get('includeNegatives') !== 'false';
+      const limit = parseInt(searchParams.get('limit') || '5000', 10);
+      const data = store.exportTrainingData({ includeNegatives, limit });
+      const response = NextResponse.json(data);
+      return withRateLimitHeaders(response, request, 'metrics');
+    }
+
+    // ?ack=<alertId> — acknowledge an alert
+    const ackId = searchParams.get('ack');
+    if (ackId) {
+      const acknowledged = store.acknowledgeAlert(ackId);
+      const response = NextResponse.json({ acknowledged });
+      return withRateLimitHeaders(response, request, 'metrics');
+    }
+
+    // Default: full analytics
+    const analytics = store.getAnalytics();
+    const recent = store.getRecentFeedback(20);
 
     const response = NextResponse.json({
-      total,
-      positive,
-      negative,
-      satisfactionRate: total > 0 ? positive / total : 0,
-      categoryCounts,
-      recent,
+      ...analytics,
+      recent: recent.map((f) => ({
+        id: f.id,
+        queryId: f.queryId,
+        rating: f.rating,
+        category: f.category,
+        timestamp: f.timestamp,
+      })),
     });
 
     return withRateLimitHeaders(response, request, 'metrics');

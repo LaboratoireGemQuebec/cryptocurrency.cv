@@ -13,6 +13,7 @@ import { NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const runtime = 'nodejs';
 export const revalidate = 0; // Always fresh
@@ -126,7 +127,7 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
   
   try {
     // Quick check to CoinGecko ping endpoint
-    const response = await fetch('https://api.coingecko.com/api/v3/ping', {
+    const response = await fetch(`${COINGECKO_BASE}/ping`, {
       method: 'GET',
       signal: AbortSignal.timeout(5000),
     });

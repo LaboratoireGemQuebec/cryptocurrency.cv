@@ -12,6 +12,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 import { fetchCoinGecko } from '@/lib/coingecko';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const revalidate = 300;
 
@@ -77,7 +78,7 @@ interface ExchangePageProps {
 
 async function getExchangeDetails(id: string): Promise<ExchangeDetails | null> {
   return fetchCoinGecko<ExchangeDetails>(
-    `https://api.coingecko.com/api/v3/exchanges/${id}`,
+    `${COINGECKO_BASE}/exchanges/${id}`,
     { revalidate: 300 }
   );
 }

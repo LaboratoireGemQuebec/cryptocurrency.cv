@@ -1,11 +1,10 @@
 import { NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/blog';
+import { SITE_URL } from '@/lib/constants';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-static';
 export const revalidate = 3600;
-
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 export async function GET() {
   const posts = getAllPosts();

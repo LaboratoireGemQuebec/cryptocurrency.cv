@@ -211,7 +211,7 @@ export function WhaleAlerts({
   return (
     <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 border-b border-neutral-200 dark:border-neutral-800">
         <div>
           <h3 className="text-lg font-semibold text-neutral-900 dark:text-white flex items-center gap-2">
             🐋 Whale Alerts
@@ -225,12 +225,12 @@ export function WhaleAlerts({
         </div>
 
         {/* Filter */}
-        <div className="flex gap-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg p-1">
+        <div className="flex gap-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg p-1 overflow-x-auto">
           {(['all', 'deposits', 'withdrawals', 'transfers'] as const).map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
+              className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize whitespace-nowrap ${
                 filter === f
                   ? 'bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white shadow-sm'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
@@ -244,9 +244,9 @@ export function WhaleAlerts({
 
       {/* Summary */}
       {data?.summary && (
-        <div className="grid grid-cols-4 gap-4 p-4 bg-neutral-50 dark:bg-neutral-800/50">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 p-4 bg-neutral-50 dark:bg-neutral-800/50">
           <div className="text-center">
-            <div className="text-lg font-bold text-neutral-900 dark:text-white">
+            <div className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">
               {data.summary.totalTransactions}
             </div>
             <div className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -254,7 +254,7 @@ export function WhaleAlerts({
             </div>
           </div>
           <div className="text-center">
-            <div className="text-lg font-bold text-neutral-900 dark:text-white">
+            <div className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">
               {formatUsd(data.summary.totalValueUsd)}
             </div>
             <div className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -262,7 +262,7 @@ export function WhaleAlerts({
             </div>
           </div>
           <div className="text-center">
-            <div className="text-lg font-bold text-red-600">
+            <div className="text-base sm:text-lg font-bold text-red-600">
               {data.summary.exchangeDeposits}
             </div>
             <div className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -270,7 +270,7 @@ export function WhaleAlerts({
             </div>
           </div>
           <div className="text-center">
-            <div className="text-lg font-bold text-green-600">
+            <div className="text-base sm:text-lg font-bold text-green-600">
               {data.summary.exchangeWithdrawals}
             </div>
             <div className="text-xs text-neutral-500 dark:text-neutral-400">

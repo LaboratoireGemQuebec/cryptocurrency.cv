@@ -5,10 +5,9 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const revalidate = 120;
-
-const COINGECKO_BASE = 'https://api.coingecko.com/api/v3';
 
 export async function GET(request: NextRequest) {
   const coins = request.nextUrl.searchParams.get('coins');

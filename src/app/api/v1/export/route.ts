@@ -12,6 +12,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/export';
 
@@ -45,7 +46,7 @@ export async function GET(request: NextRequest) {
 
     if (type === 'coins') {
       const response = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=false&price_change_percentage=24h,7d,30d`,
+        `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=false&price_change_percentage=24h,7d,30d`,
         {
           headers: {
             Accept: 'application/json',

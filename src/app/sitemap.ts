@@ -8,8 +8,7 @@
 import { MetadataRoute } from 'next';
 import { getAllSlugs, CATEGORIES } from '@/lib/blog';
 import { getAllTags } from '@/lib/tags';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 // Supported locales
 const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru', 'ar', 'it', 'nl', 'pl', 'tr', 'id', 'th', 'vi'];
@@ -75,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of locales) {
     for (const page of staticPages) {
       entries.push({
-        url: `${BASE_URL}/${locale}${page.path}`,
+        url: `${SITE_URL}/${locale}${page.path}`,
         lastModified: now,
         changeFrequency: page.changeFrequency,
         priority: page.priority,
@@ -85,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Add coin pages
     for (const coin of topCoins) {
       entries.push({
-        url: `${BASE_URL}/${locale}/coin/${coin}`,
+        url: `${SITE_URL}/${locale}/coin/${coin}`,
         lastModified: now,
         changeFrequency: 'hourly',
         priority: 0.7,
@@ -95,7 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Add API documentation (not localized)
   entries.push({
-    url: `${BASE_URL}/api/openapi.json`,
+    url: `${SITE_URL}/api/openapi.json`,
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.5,
@@ -106,7 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of locales) {
     // Blog index
     entries.push({
-      url: `${BASE_URL}/${locale}/blog`,
+      url: `${SITE_URL}/${locale}/blog`,
       lastModified: now,
       changeFrequency: 'daily',
       priority: 0.8,
@@ -115,7 +114,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Individual blog posts (high priority for SEO)
     for (const slug of blogSlugs) {
       entries.push({
-        url: `${BASE_URL}/${locale}/blog/${slug}`,
+        url: `${SITE_URL}/${locale}/blog/${slug}`,
         lastModified: now,
         changeFrequency: 'weekly',
         priority: 0.9,
@@ -125,7 +124,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Blog categories
     for (const category of Object.keys(CATEGORIES)) {
       entries.push({
-        url: `${BASE_URL}/${locale}/blog/category/${category}`,
+        url: `${SITE_URL}/${locale}/blog/category/${category}`,
         lastModified: now,
         changeFrequency: 'weekly',
         priority: 0.7,
@@ -135,7 +134,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   
   // Blog RSS feed
   entries.push({
-    url: `${BASE_URL}/blog/feed.xml`,
+    url: `${SITE_URL}/blog/feed.xml`,
     lastModified: now,
     changeFrequency: 'daily',
     priority: 0.6,
@@ -146,7 +145,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of locales) {
     // Tags index page
     entries.push({
-      url: `${BASE_URL}/${locale}/tags`,
+      url: `${SITE_URL}/${locale}/tags`,
       lastModified: now,
       changeFrequency: 'daily',
       priority: 0.8,
@@ -155,7 +154,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Individual tag pages (important for SEO)
     for (const tag of allTags) {
       entries.push({
-        url: `${BASE_URL}/${locale}/tags/${tag.slug}`,
+        url: `${SITE_URL}/${locale}/tags/${tag.slug}`,
         lastModified: now,
         changeFrequency: 'hourly',
         priority: Math.min(0.9, 0.6 + (tag.priority / 250)), // Higher priority tags get higher sitemap priority

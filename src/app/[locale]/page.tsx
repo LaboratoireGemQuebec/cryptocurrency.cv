@@ -17,7 +17,10 @@ import SourceSections from '@/components/SourceSections';
 import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { WebsiteStructuredData, OrganizationStructuredData, NewsListStructuredData } from '@/components/StructuredData';
 import WhaleAlerts from '@/components/WhaleAlerts';
-import LiquidationsFeed from '@/components/LiquidationsFeed';
+import { LiquidationsFeed } from '@/components/LiquidationsFeed';
+import { MarketSignals } from '@/components/MarketSignals';
+import { TrendingNarratives } from '@/components/TrendingNarratives';
+import { WhaleActivityFeed } from '@/components/WhaleActivityFeed';
 import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
@@ -89,6 +92,11 @@ export default async function Home({ params }: Props) {
           </section>
         )}
 
+        {/* Market Intelligence Signals */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Market signals">
+          <MarketSignals />
+        </section>
+
         {/* Categories Navigation with scroll indicators */}
         <nav 
           className="px-4 sm:px-6 lg:px-8 mb-8"
@@ -114,6 +122,11 @@ export default async function Home({ params }: Props) {
         {/* Trending Stories Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending Stories">
           <EditorsPicks articles={editorsPicks} />
+        </section>
+
+        {/* Trending Narratives */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending narratives">
+          <TrendingNarratives />
         </section>
 
         {/* Main Content Grid: Latest News + Sidebar */}
@@ -173,6 +186,11 @@ export default async function Home({ params }: Props) {
         {/* Market Overview Strip */}
         <section className="px-4 sm:px-6 lg:px-8 mt-12 mb-8">
           <HomeMarketStrip />
+        </section>
+
+        {/* Whale Activity Feed - Enhanced */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Whale activity">
+          <WhaleActivityFeed />
         </section>
 
         {/* Real-Time Activity: Whale Alerts + Liquidations */}

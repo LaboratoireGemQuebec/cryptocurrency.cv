@@ -6,8 +6,7 @@
  */
 
 import { NextResponse } from 'next/server';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 
@@ -23,11 +22,11 @@ export async function GET() {
     },
     api: {
       type: 'openapi',
-      url: `${BASE_URL}/api/openapi.json`,
+      url: `${SITE_URL}/api/openapi.json`,
     },
-    logo_url: `${BASE_URL}/icons/icon-512x512.png`,
+    logo_url: `${SITE_URL}/icons/icon-512x512.png`,
     contact_email: 'support@cryptocurrency.cv',
-    legal_info_url: `${BASE_URL}/legal`,
+    legal_info_url: `${SITE_URL}/legal`,
     
     // Extended metadata for AI discovery
     capabilities: [
@@ -67,13 +66,13 @@ export async function GET() {
     mcp: {
       available: true,
       package: '@anthropic-ai/mcp-server-crypto-news',
-      docs: `${BASE_URL}/docs/integrations/mcp`,
+      docs: `${SITE_URL}/docs/integrations/mcp`,
     },
     
     // LLMs.txt endpoints
     llms_txt: {
-      summary: `${BASE_URL}/llms.txt`,
-      full: `${BASE_URL}/llms-full.txt`,
+      summary: `${SITE_URL}/llms.txt`,
+      full: `${SITE_URL}/llms-full.txt`,
     },
   };
 

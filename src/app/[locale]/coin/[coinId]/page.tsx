@@ -23,6 +23,10 @@ import {
   type CommunityData,
 } from '@/lib/market-data';
 import CoinPageClient from './CoinPageClient';
+import { CoinArbitrageOpportunities } from '@/components/CoinArbitrageOpportunities';
+import { CoinFundingRates } from '@/components/CoinFundingRates';
+import { CoinSocialBuzz } from '@/components/CoinSocialBuzz';
+import { CoinNewsCorrelation } from '@/components/CoinNewsCorrelation';
 
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
@@ -324,8 +328,22 @@ export default async function CoinPage({ params, searchParams }: Props) {
             developerData={developerData}
             communityData={communityData}
             articles={articles}
-            initialTab={tab as 'overview' | 'markets' | 'historical' | 'news' | undefined}
+            initialTab={tab as 'overview' | 'markets' | 'historical' | 'news' | 'technical' | 'derivatives' | undefined}
           />
+
+          {/* Trading Intelligence Dashboard */}
+          <div className="px-4 sm:px-6 lg:px-8 pb-12">
+            <div className="flex items-center gap-3 mb-6 mt-8">
+              <div className="w-1 h-8 bg-brand-500 rounded-full" />
+              <h2 className="text-2xl font-bold text-white">Trading Intelligence</h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <CoinArbitrageOpportunities coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
+              <CoinFundingRates coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
+              <CoinSocialBuzz coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
+              <CoinNewsCorrelation coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
+            </div>
+          </div>
 
           <Footer />
         </div>

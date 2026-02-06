@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const revalidate = 300; // 5 minutes
 
@@ -10,7 +11,7 @@ export const revalidate = 300; // 5 minutes
  */
 export async function GET() {
   try {
-    const res = await fetch('https://api.coingecko.com/api/v3/exchange_rates', {
+    const res = await fetch(`${COINGECKO_BASE}/exchange_rates`, {
       next: { revalidate: 300 },
     });
 

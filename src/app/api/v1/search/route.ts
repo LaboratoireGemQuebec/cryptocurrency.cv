@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/search';
 
@@ -33,7 +34,7 @@ export async function GET(request: NextRequest) {
     logger.info('Searching cryptocurrencies', { query });
 
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/search?query=${encodeURIComponent(query)}`,
+      `${COINGECKO_BASE}/search?query=${encodeURIComponent(query)}`,
       {
         headers: {
           Accept: 'application/json',

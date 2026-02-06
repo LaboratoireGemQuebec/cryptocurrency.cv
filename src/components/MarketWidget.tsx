@@ -23,13 +23,10 @@ export default function MarketWidget({ className = '' }: { className?: string })
   useEffect(() => {
     const fetchGlobal = async () => {
       try {
-        const res = await fetch(
-          'https://api.coingecko.com/api/v3/global',
-          { cache: 'no-store' }
-        );
+        const res = await fetch('/api/global');
         if (!res.ok) throw new Error('Failed');
         const json = await res.json();
-        setData(json.data);
+        setData(json);
       } catch {
         // silent fail
       } finally {

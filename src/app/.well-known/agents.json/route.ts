@@ -6,8 +6,7 @@
  */
 
 import { NextResponse } from 'next/server';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 
@@ -16,15 +15,15 @@ export async function GET() {
     version: '1.0.0',
     name: 'Free Crypto News',
     description: 'Real-time cryptocurrency news and market intelligence API',
-    homepage: BASE_URL,
+    homepage: SITE_URL,
     
     // Discovery endpoints
     discovery: {
-      openapi: `${BASE_URL}/api/openapi.json`,
-      llms_txt: `${BASE_URL}/llms.txt`,
-      llms_full: `${BASE_URL}/llms-full.txt`,
-      ai_plugin: `${BASE_URL}/.well-known/ai-plugin.json`,
-      x402: `${BASE_URL}/.well-known/x402`,
+      openapi: `${SITE_URL}/api/openapi.json`,
+      llms_txt: `${SITE_URL}/llms.txt`,
+      llms_full: `${SITE_URL}/llms-full.txt`,
+      ai_plugin: `${SITE_URL}/.well-known/ai-plugin.json`,
+      x402: `${SITE_URL}/.well-known/x402`,
     },
     
     // Available skills/tools for agents
@@ -145,11 +144,11 @@ export async function GET() {
       },
       chatgpt: {
         available: true,
-        openapi: `${BASE_URL}/chatgpt/openapi.yaml`,
+        openapi: `${SITE_URL}/chatgpt/openapi.yaml`,
       },
       langchain: {
         available: true,
-        docs: `${BASE_URL}/docs/examples/langchain`,
+        docs: `${SITE_URL}/docs/examples/langchain`,
       },
     },
     

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 /** Dashboard component for price predictions and leaderboards */
 
@@ -109,7 +110,7 @@ export default function PredictionsDashboard() {
       // Fetch current prices
       try {
         const priceRes = await fetch(
-          'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,cardano,dogecoin&vs_currencies=usd'
+          `${COINGECKO_BASE}/simple/price?ids=bitcoin,ethereum,solana,ripple,cardano,dogecoin&vs_currencies=usd`
         );
         if (priceRes.ok) {
           const priceData = await priceRes.json();

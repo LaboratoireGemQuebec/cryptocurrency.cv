@@ -161,6 +161,70 @@ export const EvalRequestSchema = z.object({
 export type EvalRequest = z.infer<typeof EvalRequestSchema>;
 
 // ═══════════════════════════════════════════════════════════════
+// TIMELINE ENDPOINT (POST /api/rag/timeline)
+// ═══════════════════════════════════════════════════════════════
+
+export const TimelineRequestSchema = z.object({
+  topic: z.string().min(1, 'Topic is required').max(500, 'Topic too long'),
+  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Must be YYYY-MM-DD').optional(),
+  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Must be YYYY-MM-DD').optional(),
+  granularity: z.enum(['day', 'week', 'month']).default('week').optional(),
+  maxEvents: z.number().int().min(1).max(100).default(30).optional(),
+  minImportance: z.number().min(0).max(1).default(0.2).optional(),
+});
+
+export type TimelineRequest = z.infer<typeof TimelineRequestSchema>;
+
+// ═══════════════════════════════════════════════════════════════
+// PERSONALIZATION ENDPOINTS
+// ═══════════════════════════════════════════════════════════════
+
+export const UpdatePreferencesSchema = z.object({
+  userId: z.string().min(1, 'userId is required'),
+  preferences: z.object({
+    interests: z.array(z.string().max(100)).max(30).optional(),
+    sources: z.array(z.string().max(100)).max(20).optional(),
+    readingLevel: z.enum(['beginner', 'intermediate', 'expert']).optional(),
+    responseStyle: z.enum(['concise', 'detailed', 'technical', 'casual']).optional(),
+    languages: z.array(z.string().max(5)).max(10).optional(),
+    mutedTopics: z.array(z.string().max(100)).max(30).optional(),
+  }),
+});
+
+export type UpdatePreferencesRequest = z.infer<typeof UpdatePreferencesSchema>;
+
+export const UserIdSchema = z.object({
+  userId: z.string().min(1, 'userId is required'),
+});
+
+// ═══════════════════════════════════════════════════════════════
+// ENHANCED FEEDBACK ENDPOINT
+// ═══════════════════════════════════════════════════════════════
+
+export const EnhancedFeedbackRequestSchema = z.object({
+  queryId: z.string().min(1, 'queryId is required'),
+  query: z.string().min(1).max(2000),
+  answer: z.string().min(1).max(10000),
+  rating: z.enum(['positive', 'negative']),
+  category: z.enum(['accuracy', 'relevance', 'completeness', 'timeliness', 'other']).optional(),
+  comment: z.string().max(1000).optional(),
+  sources: z.array(z.string()).max(50).optional(),
+  confidence: z.number().min(0).max(1).optional(),
+  experimentVariantId: z.string().optional(),
+  userId: z.string().optional(),
+});
+
+export type EnhancedFeedbackRequest = z.infer<typeof EnhancedFeedbackRequestSchema>;
+
+export const TrainingExportSchema = z.object({
+  includeNegatives: z.boolean().default(true).optional(),
+  limit: z.number().int().min(1).max(10000).default(5000).optional(),
+  categories: z.array(z.enum(['accuracy', 'relevance', 'completeness', 'timeliness', 'other'])).optional(),
+});
+
+export type TrainingExportRequest = z.infer<typeof TrainingExportSchema>;
+
+// ═══════════════════════════════════════════════════════════════
 // ERROR RESPONSE
 // ═══════════════════════════════════════════════════════════════
 

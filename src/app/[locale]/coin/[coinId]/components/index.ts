@@ -13,5 +13,7 @@ export { default as DeveloperStats } from './DeveloperStats';
 export { default as MarketsTable } from './MarketsTable';
 export { default as HistoricalTable } from './HistoricalTable';
 export { default as CoinNews } from './CoinNews';
+export { default as TechnicalAnalysis } from './TechnicalAnalysis';
+export { default as DerivativesTab } from './DerivativesTab';
 
 export type { CoinTab } from './CoinTabs';

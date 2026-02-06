@@ -13,6 +13,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { validateQuery } from '@/lib/validation-middleware';
 import { v1CoinsQuerySchema } from '@/lib/schemas';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/coins';
 
@@ -37,7 +38,7 @@ export async function GET(request: NextRequest) {
     logger.info('Fetching coins data', { page, per_page, order });
 
     // Build CoinGecko API URL
-    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=${order}&per_page=${per_page}&page=${page}&sparkline=${sparklineBoolean}&price_change_percentage=24h,7d,30d`;
+    let url = `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=${order}&per_page=${per_page}&page=${page}&sparkline=${sparklineBoolean}&price_change_percentage=24h,7d,30d`;
 
     if (ids) {
       url += `&ids=${ids}`;

@@ -6,14 +6,13 @@
  */
 
 import { NextResponse } from 'next/server';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 
 export async function GET() {
   // Redirect to the actual x402 API endpoint
-  return NextResponse.redirect(`${BASE_URL}/api/.well-known/x402`, {
+  return NextResponse.redirect(`${SITE_URL}/api/.well-known/x402`, {
     status: 307, // Temporary redirect to allow caching
   });
 }

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest) {
   try {
     // Fetch from CoinGecko
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coins.join(',')}&order=market_cap_desc&sparkline=false&price_change_percentage=1h,24h,7d`,
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&ids=${coins.join(',')}&order=market_cap_desc&sparkline=false&price_change_percentage=1h,24h,7d`,
       { next: { revalidate: 60 } }
     );
 

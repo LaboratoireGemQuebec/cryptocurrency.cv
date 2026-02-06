@@ -6,8 +6,7 @@
  */
 
 import { MetadataRoute } from 'next';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -126,9 +125,9 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      `${BASE_URL}/sitemap.xml`,
-      `${BASE_URL}/news-sitemap.xml`,
+      `${SITE_URL}/sitemap.xml`,
+      `${SITE_URL}/news-sitemap.xml`,
     ],
-    host: BASE_URL,
+    host: SITE_URL,
   };
 }

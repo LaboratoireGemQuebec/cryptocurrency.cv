@@ -7,6 +7,7 @@
  */
 
 import { Metadata } from 'next';
+import { SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'System Status | Free Crypto News',
@@ -59,8 +60,7 @@ interface StatsResponse {
 
 async function getHealth(): Promise<HealthResponse | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cryptocurrency.cv';
-    const res = await fetch(`${baseUrl}/api/health`, {
+    const res = await fetch(`${SITE_URL}/api/health`, {
       cache: 'no-store',
     });
     if (!res.ok) return null;
@@ -72,8 +72,7 @@ async function getHealth(): Promise<HealthResponse | null> {
 
 async function getStats(): Promise<StatsResponse | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cryptocurrency.cv';
-    const res = await fetch(`${baseUrl}/api/stats`, {
+    const res = await fetch(`${SITE_URL}/api/stats`, {
       cache: 'no-store',
     });
     if (!res.ok) return null;

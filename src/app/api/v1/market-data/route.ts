@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/market-data';
 
@@ -27,14 +28,14 @@ export async function GET(request: NextRequest) {
 
     // Fetch global data and trending in parallel
     const [globalResponse, trendingResponse] = await Promise.all([
-      fetch('https://api.coingecko.com/api/v3/global', {
+      fetch(`${COINGECKO_BASE}/global`, {
         headers: {
           Accept: 'application/json',
           'User-Agent': 'CryptoDataAggregator/1.0',
         },
         next: { revalidate: 120 },
       }),
-      fetch('https://api.coingecko.com/api/v3/search/trending', {
+      fetch(`${COINGECKO_BASE}/search/trending`, {
         headers: {
           Accept: 'application/json',
           'User-Agent': 'CryptoDataAggregator/1.0',

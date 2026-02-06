@@ -5,6 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 interface WhaleTransaction {
   id: string;
@@ -128,7 +129,7 @@ async function fetchEthereumWhaleTransactions(
     
     // Get current ETH price
     const priceResponse = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+      `${COINGECKO_BASE}/simple/price?ids=ethereum&vs_currencies=usd`,
       { next: { revalidate: 60 } }
     );
     const priceData = await priceResponse.json();
@@ -244,7 +245,7 @@ async function fetchBitcoinWhaleTransactions(
   try {
     // Get current BTC price
     const priceResponse = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd',
+      `${COINGECKO_BASE}/simple/price?ids=bitcoin&vs_currencies=usd`,
       { next: { revalidate: 60 } }
     );
     const priceData = await priceResponse.json();

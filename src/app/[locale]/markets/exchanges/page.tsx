@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { formatNumber } from '@/lib/market-data';
 import type { Metadata } from 'next';
 import { fetchCoinGecko } from '@/lib/coingecko';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Cryptocurrency Exchanges - Free Crypto News',
@@ -35,7 +36,7 @@ interface Exchange {
 // Fetch exchanges from CoinGecko (rate-limited)
 async function getExchanges(): Promise<Exchange[]> {
   return (await fetchCoinGecko<Exchange[]>(
-    'https://api.coingecko.com/api/v3/exchanges?per_page=100',
+    `${COINGECKO_BASE}/exchanges?per_page=100`,
     { revalidate: 300 }
   )) ?? [];
 }

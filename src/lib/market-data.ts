@@ -14,12 +14,14 @@
  * rate limiting, fallback sources, and Edge Runtime compatibility.
  */
 
-const COINGECKO_BASE = 'https://api.coingecko.com/api/v3';
-const DEFILLAMA_BASE = 'https://api.llama.fi';
-const ALTERNATIVE_ME = 'https://api.alternative.me';
-const CRYPTOCOMPARE_BASE = 'https://min-api.cryptocompare.com/data';
-const BINANCE_BASE = 'https://api.binance.com/api/v3';
-const COINPAPRIKA_BASE = 'https://api.coinpaprika.com/v1';
+import {
+  COINGECKO_BASE,
+  DEFILLAMA_BASE,
+  ALTERNATIVE_ME_BASE,
+  CRYPTOCOMPARE_BASE,
+  BINANCE_BASE,
+  COINPAPRIKA_BASE,
+} from './constants';
 
 /**
  * Whether we are in a CI/build environment.
@@ -1317,7 +1319,7 @@ export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
   if (cached) return cached.data;
 
   try {
-    const response = await fetchWithTimeout(`${ALTERNATIVE_ME}/fng/`);
+    const response = await fetchWithTimeout(`${ALTERNATIVE_ME_BASE}/fng/`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch fear & greed index');

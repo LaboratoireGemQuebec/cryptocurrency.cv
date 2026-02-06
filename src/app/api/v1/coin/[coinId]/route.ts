@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/coin';
 
@@ -35,7 +36,7 @@ export async function GET(
     logger.info('Fetching coin data', { coinId });
 
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=false&sparkline=true`,
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=false&sparkline=true`,
       {
         headers: {
           Accept: 'application/json',

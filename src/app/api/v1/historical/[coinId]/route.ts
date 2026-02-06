@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/historical';
 
@@ -39,7 +40,7 @@ export async function GET(
 
     // Fetch market chart data
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=${interval === 'daily' ? 'daily' : ''}`,
+      `${COINGECKO_BASE}/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=${interval === 'daily' ? 'daily' : ''}`,
       {
         headers: {
           Accept: 'application/json',

@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/trending';
 
@@ -25,7 +26,7 @@ export async function GET(request: NextRequest) {
   try {
     logger.info('Fetching trending coins');
 
-    const response = await fetch('https://api.coingecko.com/api/v3/search/trending', {
+    const response = await fetch(`${COINGECKO_BASE}/search/trending`, {
       headers: {
         Accept: 'application/json',
         'User-Agent': 'CryptoDataAggregator/1.0',

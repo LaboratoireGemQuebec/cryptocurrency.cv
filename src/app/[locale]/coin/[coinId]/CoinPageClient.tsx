@@ -18,6 +18,8 @@ import {
   MarketsTable,
   HistoricalTable,
   CoinNews,
+  TechnicalAnalysis,
+  DerivativesTab,
   type CoinTab,
 } from './components';
 import { PriceChart } from '@/components/coin-charts';
@@ -263,6 +265,7 @@ export default function CoinPageClient({
           onTabChange={setActiveTab}
           hasMarkets={tickers.length > 0}
           hasHistorical={ohlcData.length > 0}
+          hasOhlc={ohlcData.length >= 15}
           marketsCount={tickers.length}
         />
       </div>
@@ -323,6 +326,15 @@ export default function CoinPageClient({
                 priceChange30d={priceData.change30d}
                 priceChange1y={priceData.change1y}
               />
+
+              {/* Technical Analysis Summary */}
+              {ohlcData.length >= 15 && (
+                <TechnicalAnalysis
+                  ohlcData={ohlcData}
+                  symbol={coinData.symbol}
+                  currentPrice={priceData.price}
+                />
+              )}
 
               {/* Two Column Layout: Info & Converter */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -388,6 +400,21 @@ export default function CoinPageClient({
               articles={articles}
               coinName={coinData.name}
               coinSymbol={coinData.symbol}
+            />
+          )}
+
+          {activeTab === 'technical' && (
+            <TechnicalAnalysis
+              ohlcData={ohlcData}
+              symbol={coinData.symbol}
+              currentPrice={priceData.price}
+            />
+          )}
+
+          {activeTab === 'derivatives' && (
+            <DerivativesTab
+              coinSymbol={coinData.symbol}
+              coinName={coinData.name}
             />
           )}
         </motion.div>

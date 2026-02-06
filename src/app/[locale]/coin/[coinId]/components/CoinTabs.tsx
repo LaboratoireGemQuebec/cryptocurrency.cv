@@ -8,13 +8,14 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-export type CoinTab = 'overview' | 'markets' | 'historical' | 'news';
+export type CoinTab = 'overview' | 'markets' | 'historical' | 'news' | 'technical' | 'derivatives';
 
 interface CoinTabsProps {
   activeTab: CoinTab;
   onTabChange: (tab: CoinTab) => void;
   hasMarkets?: boolean;
   hasHistorical?: boolean;
+  hasOhlc?: boolean;
   marketsCount?: number;
 }
 
@@ -47,6 +48,24 @@ const tabs: { id: CoinTab; label: string; icon: React.ReactNode }[] = [
     ),
   },
   {
+    id: 'technical',
+    label: 'Technical',
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+      </svg>
+    ),
+  },
+  {
+    id: 'derivatives',
+    label: 'Derivatives',
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+  },
+  {
     id: 'news',
     label: 'News',
     icon: (
@@ -62,6 +81,7 @@ export default function CoinTabs({
   onTabChange,
   hasMarkets = true,
   hasHistorical = true,
+  hasOhlc = true,
   marketsCount,
 }: CoinTabsProps) {
   const router = useRouter();
@@ -96,7 +116,8 @@ export default function CoinTabs({
         {tabs.map((tab) => {
           const isDisabled = 
             (tab.id === 'markets' && !hasMarkets) ||
-            (tab.id === 'historical' && !hasHistorical);
+            (tab.id === 'historical' && !hasHistorical) ||
+            (tab.id === 'technical' && !hasOhlc);
           const isActive = activeTab === tab.id;
 
           return (
@@ -139,7 +160,8 @@ export default function CoinTabs({
           {tabs.map((tab) => {
             const isDisabled = 
               (tab.id === 'markets' && !hasMarkets) ||
-              (tab.id === 'historical' && !hasHistorical);
+              (tab.id === 'historical' && !hasHistorical) ||
+              (tab.id === 'technical' && !hasOhlc);
             const isActive = activeTab === tab.id;
 
             return (

@@ -11,6 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/exchanges';
 
@@ -30,7 +31,7 @@ export async function GET(request: NextRequest) {
     logger.info('Fetching exchanges', { page, perPage });
 
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/exchanges?per_page=${perPage}&page=${page}`,
+      `${COINGECKO_BASE}/exchanges?per_page=${perPage}&page=${page}`,
       {
         headers: {
           Accept: 'application/json',

@@ -342,7 +342,7 @@ export function LiquidationsFeed() {
   return (
     <div className="space-y-6">
       {/* Connection Status */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           {liveMode ? (
             connected ? (
@@ -392,31 +392,31 @@ export function LiquidationsFeed() {
       )}
 
       {/* Stats Summary */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
-            <ArrowTrendingDownIcon className="w-4 h-4" />
-            Longs Liquidated
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <ArrowTrendingDownIcon className="w-4 h-4 flex-shrink-0" />
+            <span className="truncate">Longs Liquidated</span>
           </div>
-          <div className="text-xl font-bold text-slate-900 dark:text-white font-mono">
+          <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-mono">
             {formatAmount(stats.totalLongs)}
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
-            <ArrowTrendingUpIcon className="w-4 h-4" />
-            Shorts Liquidated
+        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <ArrowTrendingUpIcon className="w-4 h-4 flex-shrink-0" />
+            <span className="truncate">Shorts Liquidated</span>
           </div>
-          <div className="text-xl font-bold text-slate-900 dark:text-white font-mono">
+          <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-mono">
             {formatAmount(stats.totalShorts)}
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
-            <CurrencyDollarIcon className="w-4 h-4" />
-            Largest Liquidation
+        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <CurrencyDollarIcon className="w-4 h-4 flex-shrink-0" />
+            <span className="truncate">Largest Liquidation</span>
           </div>
-          <div className="text-xl font-bold text-slate-900 dark:text-white font-mono">
+          <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-mono">
             {stats.largestLiq ? formatAmount(stats.largestLiq.amount) : '-'}
           </div>
           {stats.largestLiq && (
@@ -425,9 +425,9 @@ export function LiquidationsFeed() {
             </div>
           )}
         </div>
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
-          <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Last Hour Volume</div>
-          <div className="text-xl font-bold text-slate-900 dark:text-white font-mono">
+        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+          <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">Last Hour Volume</div>
+          <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-mono">
             {formatAmount(stats.lastHourVolume)}
           </div>
           <div className="text-xs text-gray-500 dark:text-gray-400">
@@ -437,8 +437,8 @@ export function LiquidationsFeed() {
       </div>
 
       {/* Filters */}
-      <div className="flex flex-wrap items-center gap-4">
-        <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+        <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1 overflow-x-auto">
           {(['all', 'long', 'short'] as const).map((f) => (
             <button
               key={f}

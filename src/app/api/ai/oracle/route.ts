@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { COINGECKO_BASE, SITE_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 
@@ -111,7 +112,7 @@ async function fetchNews(query: string): Promise<NewsArticle[]> {
     );
     const searchQuery = searchTerms?.join(' ') || '';
     
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    const baseUrl = SITE_URL;
     const url = searchQuery 
       ? `${baseUrl}/api/news?limit=8&search=${encodeURIComponent(searchQuery)}`
       : `${baseUrl}/api/news?limit=8`;
@@ -146,7 +147,7 @@ async function fetchCoinPrices(coinIds: string[]): Promise<Map<string, CoinPrice
   
   try {
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinIds.join(',')}&order=market_cap_desc&sparkline=false&price_change_percentage=24h`,
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&ids=${coinIds.join(',')}&order=market_cap_desc&sparkline=false&price_change_percentage=24h`,
       { next: { revalidate: 60 } }
     );
     
@@ -207,7 +208,7 @@ async function fetchMovers(): Promise<{
 }> {
   try {
     const response = await fetch(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h',
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`,
       { next: { revalidate: 120 } }
     );
     
@@ -240,7 +241,7 @@ async function fetchMovers(): Promise<{
 // Fetch trending coins
 async function fetchTrending(): Promise<Array<{ name: string; symbol: string; rank: number }>> {
   try {
-    const response = await fetch('https://api.coingecko.com/api/v3/search/trending', { 
+    const response = await fetch(`${COINGECKO_BASE}/search/trending`, { 
       next: { revalidate: 300 } 
     });
     
@@ -262,7 +263,7 @@ async function fetchTrending(): Promise<Array<{ name: string; symbol: string; ra
 // Fetch global market data
 async function fetchGlobalMarket(): Promise<MarketData['globalMarket'] | null> {
   try {
-    const response = await fetch('https://api.coingecko.com/api/v3/global', { 
+    const response = await fetch(`${COINGECKO_BASE}/global`, { 
       next: { revalidate: 300 } 
     });
     

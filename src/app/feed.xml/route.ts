@@ -4,8 +4,7 @@
  */
 
 import { NextResponse } from 'next/server';
-
-const BASE_URL = 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 interface Article {
   title: string;
@@ -49,7 +48,7 @@ function generateArticleSlug(title: string, date?: string): string {
 export async function GET() {
   try {
     // Fetch latest news
-    const response = await fetch(`${BASE_URL}/api/news?limit=50`, {
+    const response = await fetch(`${SITE_URL}/api/news?limit=50`, {
       next: { revalidate: 300 }, // Cache for 5 minutes
     });
 
@@ -66,7 +65,7 @@ export async function GET() {
       .map((article) => {
         const articleSlug = generateArticleSlug(article.title, article.pubDate);
         const pubDate = new Date(article.pubDate).toUTCString();
-        const internalLink = `${BASE_URL}/article/${articleSlug}`;
+        const internalLink = `${SITE_URL}/article/${articleSlug}`;
 
         return `
     <item>
@@ -85,17 +84,17 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Free Crypto News</title>
-    <link>${BASE_URL}</link>
+    <link>${SITE_URL}</link>
     <description>Real-time cryptocurrency news from 130+ trusted sources. 100% FREE - No API keys required.</description>
     <language>en-us</language>
     <lastBuildDate>${now}</lastBuildDate>
     <pubDate>${now}</pubDate>
     <ttl>5</ttl>
-    <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${BASE_URL}/icons/icon-192x192.png</url>
+      <url>${SITE_URL}/icons/icon-192x192.png</url>
       <title>Free Crypto News</title>
-      <link>${BASE_URL}</link>
+      <link>${SITE_URL}</link>
       <width>192</width>
       <height>192</height>
     </image>
