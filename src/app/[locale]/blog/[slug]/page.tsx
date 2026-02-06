@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { getPostBySlug, getRelatedPosts, getAllSlugs, CATEGORIES, type BlogCategory } from '@/lib/blog';
 
 // Enable static generation
@@ -104,9 +106,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <article className="min-h-screen bg-gray-900">
-        {/* Header */}
-        <header className="bg-gradient-to-b from-gray-800 to-gray-900 py-12 px-4">
+      <div className="min-h-screen bg-slate-900">
+      <Header />
+      <article>
+        {/* Hero Header */}
+        <header className="bg-gradient-to-b from-gray-800 to-slate-900 py-12 px-4">
           <div className="max-w-3xl mx-auto">
             {/* Breadcrumbs */}
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
@@ -192,7 +196,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               prose-li:marker:text-blue-500
               prose-table:border-collapse
               prose-th:bg-gray-800 prose-th:text-white prose-th:p-3 prose-th:border prose-th:border-gray-700
-              prose-td:p-3 prose-td:border prose-td:border-gray-700"
+              prose-td:p-3 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
           
@@ -217,7 +221,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <h3 className="text-sm font-medium text-gray-500 mb-3">Share this article</h3>
             <div className="flex gap-3">
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' via cryptocurrency.cv')}&url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
@@ -225,7 +229,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 Twitter
               </a>
               <a
-                href={`https://t.me/share/url?url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}&text=${encodeURIComponent(post.title)}`}
+                href={`https://t.me/share/url?url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}&text=${encodeURIComponent(post.title + ' via cryptocurrency.cv')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
@@ -322,6 +326,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </section>
       </article>
+      <Footer />
+      </div>
     </>
   );
 }

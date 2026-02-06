@@ -139,7 +139,15 @@ export const translationCache = new MemoryCache(300); // Translation cache
 export const cache = new MemoryCache(500);          // General purpose cache (for binance.ts, derivatives.ts)
 
 /**
- * Cache wrapper for async functions
+ * In-flight promise map for request deduplication.
+ * When multiple callers request the same cache key simultaneously (e.g. cold start),
+ * they share a single in-flight fetch instead of all firing separate requests.
+ */
+const inFlightRequests = new Map<string, Promise<unknown>>();
+
+/**
+ * Cache wrapper for async functions with request deduplication.
+ * Concurrent callers for the same key share one fetch instead of duplicating work.
  */
 export async function withCache<T>(
   cache: MemoryCache,
@@ -152,11 +160,25 @@ export async function withCache<T>(
   if (cached !== null) {
     return cached;
   }
-  
-  // Fetch and cache
-  const data = await fetchFn();
-  cache.set(key, data, ttlSeconds);
-  return data;
+
+  // Deduplicate: if another caller is already fetching this key, reuse its promise
+  const existing = inFlightRequests.get(key);
+  if (existing) {
+    return existing as Promise<T>;
+  }
+
+  // Start fetch and register as in-flight
+  const fetchPromise = fetchFn()
+    .then((data) => {
+      cache.set(key, data, ttlSeconds);
+      return data;
+    })
+    .finally(() => {
+      inFlightRequests.delete(key);
+    });
+
+  inFlightRequests.set(key, fetchPromise);
+  return fetchPromise;
 }
 
 /**

@@ -26,6 +26,7 @@ import CoinPageClient from './CoinPageClient';
 
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
+export const revalidate = 300; // Revalidate coin pages every 5 minutes
 
 interface Props {
   params: Promise<{ coinId: string; locale: string }>;

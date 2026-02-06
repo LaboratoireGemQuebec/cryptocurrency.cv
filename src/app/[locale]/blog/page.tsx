@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { getAllPostsMeta, getFeaturedPosts, CATEGORIES, type BlogCategory } from '@/lib/blog';
 
 export const metadata: Metadata = {
@@ -23,7 +25,8 @@ export default function BlogPage() {
   const recentPosts = allPosts.filter(p => !p.featured).slice(0, 6);
   
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-slate-900">
+      <Header />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-900/50 to-gray-900 py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -132,6 +135,7 @@ export default function BlogPage() {
           </p>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

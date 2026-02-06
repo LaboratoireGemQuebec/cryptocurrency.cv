@@ -13,7 +13,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
     {
       name: 'Twitter',
       icon: '𝕏',
-      url: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+      url: `https://twitter.com/intent/tweet?text=${encodedTitle}%20via%20cryptocurrency.cv&url=${encodedUrl}`,
       color: 'hover:bg-black hover:text-white',
     },
     {
@@ -31,7 +31,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
     {
       name: 'Telegram',
       icon: '✈',
-      url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+      url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}%20via%20cryptocurrency.cv`,
       color: 'hover:bg-blue-500 hover:text-white',
     },
   ];

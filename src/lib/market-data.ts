@@ -36,26 +36,26 @@ const IS_BUILD = !!(process.env.VERCEL_ENV === 'production' && process.env.CI) |
  * Cache duration settings based on data volatility
  */
 export const CACHE_TTL = {
-  /** Live prices - 30 seconds */
-  prices: 30,
-  /** 24h historical data - 1 minute */
-  historical_1d: 60,
-  /** Weekly historical data - 5 minutes */
-  historical_7d: 300,
-  /** Monthly historical data - 15 minutes */
-  historical_30d: 900,
-  /** 90+ day historical data - 30 minutes */
-  historical_90d: 1800,
-  /** Exchange/ticker data - 2 minutes */
-  tickers: 120,
+  /** Live prices - 60 seconds */
+  prices: 60,
+  /** 24h historical data - 2 minutes */
+  historical_1d: 120,
+  /** Weekly historical data - 10 minutes */
+  historical_7d: 600,
+  /** Monthly historical data - 30 minutes */
+  historical_30d: 1800,
+  /** 90+ day historical data - 1 hour */
+  historical_90d: 3600,
+  /** Exchange/ticker data - 5 minutes */
+  tickers: 300,
   /** Static data (categories, coin list) - 1 hour */
   static: 3600,
-  /** Search results - 5 minutes */
-  search: 300,
-  /** Developer/community data - 30 minutes */
-  social: 1800,
-  /** Global data - 5 minutes */
-  global: 300,
+  /** Search results - 10 minutes */
+  search: 600,
+  /** Developer/community data - 1 hour */
+  social: 3600,
+  /** Coin details / global data - 10 minutes */
+  global: 600,
 };
 
 // =============================================================================
@@ -751,7 +751,7 @@ async function fetchWithTimeout(url: string, timeout = 10000, skipRateLimit = fa
         'Accept': 'application/json',
         'User-Agent': 'FreeCryptoNews/2.0',
       },
-      next: { revalidate: 60 }, // Next.js cache for 60 seconds
+      next: { revalidate: 120 }, // Next.js cache for 2 minutes
     });
     
     // Handle rate limiting from API

@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'radial-gradient(circle at 20% 20%, rgba(247, 147, 26, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)',
+            background: 'radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%)',
           }}
         />
         
@@ -59,15 +59,17 @@ export async function GET(request: NextRequest) {
               style={{
                 width: '48px',
                 height: '48px',
-                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                background: '#ffffff',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '24px',
+                fontSize: '28px',
+                fontWeight: 700,
+                color: '#000000',
               }}
             >
-              📰
+              ₿
             </div>
             <span style={{ color: '#f1f5f9', fontSize: '24px', fontWeight: 700 }}>
               Free Crypto News

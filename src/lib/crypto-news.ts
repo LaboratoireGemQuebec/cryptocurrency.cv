@@ -906,6 +906,21 @@ export interface SourceInfo {
 }
 
 /**
+ * Decode HTML entities in a string (e.g. &#39; → ', &amp; → &)
+ */
+function decodeHTMLEntities(text: string): string {
+  return text
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number(dec)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#039;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&'); // &amp; must be last
+}
+
+/**
  * Parse RSS XML to extract articles
  */
 function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, category: string): NewsArticle[] {
@@ -926,7 +941,7 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
     const descMatch = itemXml.match(descRegex);
     const pubDateMatch = itemXml.match(pubDateRegex);
     
-    const title = (titleMatch?.[1] || titleMatch?.[2] || '').trim();
+    const title = decodeHTMLEntities((titleMatch?.[1] || titleMatch?.[2] || '').trim());
     const link = (linkMatch?.[1] || linkMatch?.[2] || '').trim();
     const description = sanitizeDescription(descMatch?.[1] || descMatch?.[2] || '');
     const pubDateStr = pubDateMatch?.[1] || '';
@@ -1282,7 +1297,7 @@ const API_SOURCES: Record<string, ApiSource> = {
 async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
   const cacheKey = `api:${sourceKey}`;
   
-  return withCache(newsCache, cacheKey, 120, async () => { // 2 min cache for APIs
+  return withCache(newsCache, cacheKey, 300, async () => { // 5 min cache for APIs
     const source = API_SOURCES[sourceKey];
     if (!source) return [];
     
@@ -1296,7 +1311,7 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
           'User-Agent': 'FreeCryptoNews/1.0',
         },
         signal: controller.signal,
-        next: { revalidate: 120 },
+        next: { revalidate: 300 },
       });
       
       clearTimeout(timeoutId);
@@ -1341,7 +1356,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   
   const cacheKey = `feed:${sourceKey}`;
   
-  return withCache(newsCache, cacheKey, 60, async () => { // Reduced to 60s for fresher content
+  return withCache(newsCache, cacheKey, 300, async () => { // 5 min cache — RSS feeds don't change faster than this
     
     try {
       const controller = new AbortController();
@@ -1356,7 +1371,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
         signal: controller.signal,
         ...('skipCache' in source && 'skipCache' in source && source.skipCache
           ? { cache: 'no-store' as const }
-          : { next: { revalidate: 60 } }), // 60s revalidation for normal feeds
+          : { next: { revalidate: 300 } }), // 5 min revalidation for normal feeds
       };
       const response = await fetch(source.url, fetchOptions);
       
@@ -1998,6 +2013,85 @@ export async function getGlobalNews(
     sources: [...englishNews.sources, ...new Set(intlArticles.map(a => a.source))],
     fetchedAt: new Date().toISOString(),
     internationalCount: convertedIntlArticles.length,
+  };
+}
+
+/**
+ * Optimized homepage data loader.
+ * Fetches ALL sources ONCE and derives latest, breaking, and trending from the same dataset.
+ * This avoids 3× redundant fetches of 130+ RSS feeds on every page render.
+ */
+export async function getHomepageNews(options?: {
+  latestLimit?: number;
+  breakingLimit?: number;
+  trendingLimit?: number;
+}): Promise<{
+  latest: NewsResponse;
+  breaking: NewsResponse;
+  trending: NewsResponse;
+}> {
+  const latestLimit = Math.min(Math.max(1, options?.latestLimit ?? 50), 50);
+  const breakingLimit = Math.min(Math.max(1, options?.breakingLimit ?? 5), 20);
+  const trendingLimit = Math.min(Math.max(1, options?.trendingLimit ?? 10), 50);
+
+  const sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
+  const allArticles = await fetchMultipleSources(sourceKeys, true);
+
+  // --- Latest ---
+  const latestArticles = allArticles.slice(0, latestLimit);
+
+  // --- Breaking (last 2 hours) ---
+  const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
+  const breakingArticles = allArticles
+    .filter(a => a?.pubDate && new Date(a.pubDate) > twoHoursAgo)
+    .slice(0, breakingLimit);
+
+  // --- Trending (last 24 hours, scored) ---
+  const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  const recentArticles = allArticles.filter(a => a?.pubDate && new Date(a.pubDate) > oneDayAgo);
+
+  const scoredArticles = recentArticles
+    .map(article => ({ article, score: calculateTrendingScore(article) }))
+    .sort((a, b) => b.score - a.score);
+
+  const fintechSources = ['finextra', 'pymnts', 'fintech futures'];
+  const trendingArticles: NewsArticle[] = [];
+  const sourceCounts = new Map<string, number>();
+  let fintechCount = 0;
+
+  for (const item of scoredArticles) {
+    if (trendingArticles.length >= trendingLimit) break;
+    const sourceCount = sourceCounts.get(item.article.source) || 0;
+    const isFintech = fintechSources.some(s => item.article.source.toLowerCase().includes(s));
+    const maxForThisSource = isFintech ? 1 : 2;
+    const exceedsFintechLimit = isFintech && fintechCount >= 1;
+    if (sourceCount < maxForThisSource && !exceedsFintechLimit) {
+      trendingArticles.push(item.article);
+      sourceCounts.set(item.article.source, sourceCount + 1);
+      if (isFintech) fintechCount++;
+    }
+  }
+
+  const now = new Date().toISOString();
+  return {
+    latest: {
+      articles: latestArticles,
+      totalCount: allArticles.length,
+      sources: sourceKeys.map(k => RSS_SOURCES[k].name),
+      fetchedAt: now,
+    } as NewsResponse,
+    breaking: {
+      articles: breakingArticles,
+      totalCount: breakingArticles.length,
+      sources: [...new Set(breakingArticles.map(a => a.source))],
+      fetchedAt: now,
+    } as NewsResponse,
+    trending: {
+      articles: trendingArticles,
+      totalCount: trendingArticles.length,
+      sources: [...new Set(trendingArticles.map(a => a.source))],
+      fetchedAt: now,
+    } as NewsResponse,
   };
 }
 

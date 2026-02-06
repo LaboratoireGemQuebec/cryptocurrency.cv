@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { getPostsByCategory, CATEGORIES, type BlogCategory } from '@/lib/blog';
 
 export const dynamic = 'force-static';
@@ -48,7 +50,8 @@ export default async function CategoryPage({ params }: PageProps) {
   const posts = getPostsByCategory(category as BlogCategory);
   
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-slate-900">
+      <Header />
       {/* Header */}
       <header className="bg-gradient-to-b from-gray-800 to-gray-900 py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -143,6 +146,7 @@ export default async function CategoryPage({ params }: PageProps) {
             ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

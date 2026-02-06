@@ -10,16 +10,17 @@ import PriceTicker from '@/components/PriceTicker';
 import BreakingNewsBanner from '@/components/BreakingNewsBanner';
 import HeroArticle from '@/components/HeroArticle';
 import EditorsPicks from '@/components/EditorsPicks';
+import HomeMarketStrip from '@/components/HomeMarketStrip';
 import NewsCard from '@/components/NewsCard';
 import TrendingSidebar from '@/components/TrendingSidebar';
 import SourceSections from '@/components/SourceSections';
 import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { WebsiteStructuredData, OrganizationStructuredData, NewsListStructuredData } from '@/components/StructuredData';
-import { getLatestNews, getBreakingNews, getTrendingNews, getSourceCount } from '@/lib/crypto-news';
+import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
 
-export const revalidate = 60; // Revalidate every minute for fresher content
+export const revalidate = 120; // Revalidate every 2 minutes
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,11 +34,11 @@ export default async function Home({ params }: Props) {
   const tCommon = await getTranslations('common');
   const tNews = await getTranslations('news');
 
-  const [newsData, breakingData, trendingData] = await Promise.all([
-    getLatestNews(50), // Get more articles for the redesigned layout
-    getBreakingNews(5),
-    getTrendingNews(10), // Get top 10 trending articles
-  ]);
+  const { latest: newsData, breaking: breakingData, trending: trendingData } = await getHomepageNews({
+    latestLimit: 50,
+    breakingLimit: 5,
+    trendingLimit: 10,
+  });
 
   // Get dynamic source count
   const sourceCount = getSourceCount();
@@ -79,9 +80,14 @@ export default async function Home({ params }: Props) {
       {/* Main Content */}
       <main id="main-content" className="max-w-[1400px] mx-auto">
         
-        {/* Hero Section - Full Width Featured Article */}
+        {/* Market Overview Strip */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8">
+          <HomeMarketStrip />
+        </section>
+
+        {/* Hero Section - Compact Featured Article */}
         {heroArticle && (
-          <section className="px-0 md:px-4 sm:px-6 lg:px-8 mb-12">
+          <section className="px-4 sm:px-6 lg:px-8 mb-8">
             <HeroArticle article={heroArticle} />
           </section>
         )}
@@ -109,7 +115,7 @@ export default async function Home({ params }: Props) {
         </nav>
 
         {/* Trending Stories Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-12" aria-label="Trending Stories">
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending Stories">
           <EditorsPicks articles={editorsPicks} />
         </section>
 

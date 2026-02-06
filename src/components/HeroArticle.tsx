@@ -59,7 +59,7 @@ export default function HeroArticle({ article }: HeroArticleProps) {
         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-20" />
 
         {/* Content */}
-        <div className="relative px-6 py-16 md:px-12 md:py-20 lg:px-16 lg:py-24 min-h-[400px] md:min-h-[480px] flex flex-col justify-end">
+        <div className="relative px-6 py-10 md:px-12 md:py-12 lg:px-16 lg:py-14 min-h-[240px] md:min-h-[280px] flex flex-col justify-end">
           {/* Top badges */}
           <div className="absolute top-6 left-6 md:top-8 md:left-12 lg:left-16 flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 bg-brand-500 text-black text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow-lg">
@@ -75,7 +75,7 @@ export default function HeroArticle({ article }: HeroArticleProps) {
 
           {/* Main content */}
           <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight group-hover:text-brand-400 transition-colors duration-300 mb-4 md:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight group-hover:text-brand-400 transition-colors duration-300 mb-3 md:mb-4">
               {article.title}
             </h1>
             

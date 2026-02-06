@@ -9,8 +9,8 @@ import { SearchModal } from './SearchModal';
 import { CommandPalette } from './CommandPalette';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-// Lazy load PriceWidget
-const PriceWidget = lazy(() => import('./PriceWidget'));
+// Lazy load MarketWidget
+const MarketWidget = lazy(() => import('./MarketWidget'));
 
 // Navigation items with mega menu content - consolidated for better UX
 const navItems = [
@@ -566,11 +566,11 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-1 flex-shrink-0">
-            {/* Price Widget - Desktop only (2xl+ to avoid crowding nav) */}
+            {/* Market Widget - Desktop only (2xl+ to avoid crowding nav) */}
             <div className="hidden 2xl:flex items-center mr-2">
               <div className="w-px h-5 bg-gray-200 dark:bg-slate-700 mr-3" />
               <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />}>
-                <PriceWidget variant="compact" />
+                <MarketWidget />
               </Suspense>
             </div>
 
