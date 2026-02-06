@@ -45,13 +45,13 @@ const sourceDetails: Record<string, {
     description: 'Independent media covering blockchain and fintech',
     focus: ['News', 'Markets', 'Magazine'],
     emoji: '📡',
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-gray-400 to-gray-600',
   },
   bitcoinmagazine: {
     description: 'The oldest and most established Bitcoin publication',
     focus: ['Bitcoin', 'Lightning', 'Culture'],
     emoji: '₿',
-    color: 'from-orange-500 to-orange-600',
+    color: 'from-gray-500 to-gray-700',
   },
   blockworks: {
     description: 'Financial media for institutional crypto investors',
@@ -100,7 +100,7 @@ export default async function SourcesPage() {
               <p className="text-gray-500 dark:text-slate-400">RSS Feeds</p>
             </div>
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
-              <p className="text-4xl font-bold text-orange-600 dark:text-orange-400">0</p>
+              <p className="text-4xl font-bold text-gray-600 dark:text-gray-400">0</p>
               <p className="text-gray-500 dark:text-slate-400">API Keys Required</p>
             </div>
           </div>

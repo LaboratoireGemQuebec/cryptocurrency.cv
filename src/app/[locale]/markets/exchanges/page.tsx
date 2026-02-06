@@ -45,7 +45,7 @@ function getTrustScoreColor(score: number): string {
   if (score >= 9) return 'text-green-600 dark:text-green-400';
   if (score >= 7) return 'text-lime-600 dark:text-lime-400';
   if (score >= 5) return 'text-yellow-600 dark:text-yellow-400';
-  if (score >= 3) return 'text-orange-600 dark:text-orange-400';
+  if (score >= 3) return 'text-gray-500 dark:text-gray-400';
   return 'text-red-600 dark:text-red-400';
 }
 

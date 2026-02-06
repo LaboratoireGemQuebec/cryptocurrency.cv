@@ -121,25 +121,6 @@ export function SourceSectionSkeleton() {
 }
 
 /**
- * Price widget skeleton
- */
-export function PriceWidgetSkeleton() {
-  return (
-    <div className="flex items-center gap-4">
-      <div className="flex items-center gap-2">
-        <Skeleton className="w-6 h-6 rounded-full" />
-        <Skeleton className="w-20 h-4" />
-      </div>
-      <div className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
-      <div className="flex items-center gap-2">
-        <Skeleton className="w-6 h-6 rounded-full" />
-        <Skeleton className="w-20 h-4" />
-      </div>
-    </div>
-  );
-}
-
-/**
  * Search results skeleton
  */
 export function SearchResultsSkeleton({ count = 5 }: { count?: number }) {

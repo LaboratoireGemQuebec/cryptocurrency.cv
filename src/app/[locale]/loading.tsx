@@ -35,7 +35,7 @@ function HeroSkeleton() {
     <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 overflow-hidden">
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-4">
-          <Skeleton className="h-6 w-24 rounded-full bg-amber-500/20" />
+          <Skeleton className="h-6 w-24 rounded-full bg-gray-500/20" />
           <Skeleton className="h-6 w-20 rounded-full bg-slate-700" />
         </div>
         <Skeleton className="h-10 w-full mb-2 bg-slate-700" />
@@ -79,7 +79,7 @@ function SidebarSkeleton() {
       </div>
       
       {/* Newsletter Skeleton */}
-      <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-6">
+      <div className="bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl p-6">
         <Skeleton className="h-6 w-36 mb-2 bg-white/20" />
         <Skeleton className="h-4 w-full mb-4 bg-white/20" />
         <Skeleton className="h-10 w-full rounded-lg bg-white/20" />

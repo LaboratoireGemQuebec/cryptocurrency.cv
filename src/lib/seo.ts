@@ -81,7 +81,7 @@ export function generateSEOMetadata({
       title,
       description: truncatedDescription,
       images: [imageUrl],
-      creator: '@freecryptonews',
+      creator: '@cryptocurrencycv',
     },
     robots: noindex ? {
       index: false,

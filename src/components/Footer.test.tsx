@@ -26,12 +26,11 @@ vi.mock('next-intl', () => ({
 // Mock ThemeProvider
 vi.mock('./ThemeProvider', () => ({
   useTheme: () => ({
-    theme: 'light',
-    resolvedTheme: 'light',
+    theme: 'dark',
+    resolvedTheme: 'dark',
     setTheme: vi.fn(),
     toggleTheme: vi.fn(),
   }),
-  ThemeToggle: () => React.createElement('button', { 'data-testid': 'theme-toggle' }, 'Toggle'),
 }));
 
 import { render, screen } from '@testing-library/react';

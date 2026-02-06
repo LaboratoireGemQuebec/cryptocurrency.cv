@@ -154,7 +154,7 @@ function StatCard({ label, value, subValue, badge, progress, tooltipId }: StatCa
               initial={{ width: 0 }}
               animate={{ width: `${Math.min(100, progress)}%` }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
+              className="h-full bg-gradient-to-r from-gray-400 to-white rounded-full"
             />
           </div>
           <p className="text-xs text-gray-500 mt-1">{progress.toFixed(1)}% of max</p>
@@ -218,7 +218,7 @@ export default function MarketStats({
                 initial={{ width: 0 }}
                 animate={{ width: `${Math.min(100, circulatingPercent)}%` }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full"
+                className="h-full bg-gradient-to-r from-gray-400 to-white rounded-full"
               />
             </div>
             <p className="text-xs text-gray-500 mt-1">

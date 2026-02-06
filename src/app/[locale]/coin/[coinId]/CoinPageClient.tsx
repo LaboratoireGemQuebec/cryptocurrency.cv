@@ -352,7 +352,7 @@ export default function CoinPageClient({
                     </h3>
                     <button
                       onClick={() => setActiveTab('news')}
-                      className="text-sm text-amber-400 hover:text-amber-300 transition-colors"
+                      className="text-sm text-gray-300 hover:text-white transition-colors"
                     >
                       View all →
                     </button>
@@ -416,7 +416,7 @@ export default function CoinPageClient({
               <p className="text-gray-400 mb-4">
                 Get notified when {coinData.name} reaches your target price.
                 <span className="block mt-1 text-sm">
-                  Current price: <span className="text-amber-400 font-medium">${priceData.price.toLocaleString()}</span>
+                  Current price: <span className="text-white font-medium">${priceData.price.toLocaleString()}</span>
                 </span>
               </p>
               
@@ -472,7 +472,7 @@ export default function CoinPageClient({
                       value={alertPrice}
                       onChange={(e) => setAlertPrice(e.target.value)}
                       placeholder={priceData.price.toFixed(2)}
-                      className="w-full pl-8 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                      className="w-full pl-8 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors"
                     />
                   </div>
                   {alertPrice && !isNaN(parseFloat(alertPrice)) && (
@@ -497,7 +497,7 @@ export default function CoinPageClient({
                 <button
                   onClick={handleCreateAlert}
                   disabled={isCreatingAlert || !alertPrice}
-                  className="flex-1 px-4 py-2 bg-amber-500 text-gray-900 rounded-lg font-medium hover:bg-amber-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isCreatingAlert ? (
                     <>

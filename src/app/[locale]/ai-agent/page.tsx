@@ -71,10 +71,10 @@ export default async function AIAgentPage({ params }: Props) {
             <h3 className="font-bold">On-Chain Data</h3>
             <p className="text-sm text-purple-100">Exchange flows, whale movements, network activity</p>
           </div>
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-4 text-white">
+          <div className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-4 text-white">
             <div className="text-2xl mb-2">📈</div>
             <h3 className="font-bold">Derivatives</h3>
-            <p className="text-sm text-orange-100">Funding rates, open interest, liquidations</p>
+            <p className="text-sm text-gray-300">Funding rates, open interest, liquidations</p>
           </div>
         </div>
 

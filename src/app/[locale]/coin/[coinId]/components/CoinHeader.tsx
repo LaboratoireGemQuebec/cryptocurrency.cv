@@ -83,7 +83,7 @@ export default function CoinHeader({
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-2xl font-bold text-gray-900 ring-2 ring-gray-700">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center text-2xl font-bold text-gray-900 ring-2 ring-gray-700">
                 {coin.symbol.charAt(0).toUpperCase()}
               </div>
             )}
@@ -130,7 +130,7 @@ export default function CoinHeader({
             whileTap={{ scale: 0.95 }}
             className={`flex items-center gap-1.5 px-3 py-2 rounded-lg font-medium text-sm transition-colors ${
               isWatchlisted
-                ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                ? 'bg-white/20 text-white border border-white/30'
                 : 'bg-gray-800 text-gray-400 hover:text-white border border-gray-700 hover:border-gray-600'
             }`}
           >

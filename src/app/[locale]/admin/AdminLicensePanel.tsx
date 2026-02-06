@@ -90,7 +90,7 @@ export default function AdminLicensePanel() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-amber-500"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
       </div>
     );
   }
@@ -120,7 +120,7 @@ export default function AdminLicensePanel() {
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             className={`px-4 py-2 rounded-lg font-medium transition-all ${
               activeTab === tab.id
-                ? 'bg-amber-500 text-black'
+                ? 'bg-white text-black'
                 : 'text-gray-400 hover:text-white hover:bg-gray-700'
             }`}
           >
@@ -178,7 +178,7 @@ export default function AdminLicensePanel() {
                           tier.tier === 'enterprise'
                             ? 'bg-purple-500'
                             : tier.tier === 'pro'
-                              ? 'bg-amber-500'
+                              ? 'bg-white'
                               : 'bg-gray-500'
                         }`}
                         style={{ width: `${(tier.count / keys.totalKeys) * 100}%` }}
@@ -256,7 +256,7 @@ export default function AdminLicensePanel() {
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-semibold">All API Keys</h3>
-            <button className="bg-amber-500 hover:bg-amber-600 text-black px-4 py-2 rounded-lg font-medium transition-all">
+            <button className="bg-white hover:bg-gray-100 text-black px-4 py-2 rounded-lg font-medium transition-all">
               + Create Key
             </button>
           </div>
@@ -285,7 +285,7 @@ export default function AdminLicensePanel() {
                           key.tier === 'enterprise'
                             ? 'bg-purple-500/20 text-purple-400'
                             : key.tier === 'pro'
-                              ? 'bg-amber-500/20 text-amber-400'
+                              ? 'bg-white/20 text-white'
                               : 'bg-gray-500/20 text-gray-400'
                         }`}
                       >
@@ -454,7 +454,7 @@ function StatCard({
     blue: 'text-blue-400',
     purple: 'text-purple-400',
     green: 'text-green-400',
-    amber: 'text-amber-400',
+    amber: 'text-white',
   };
 
   return (

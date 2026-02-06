@@ -82,7 +82,7 @@ export async function GET(request: NextRequest) {
 
     enterprise: {
       message: 'For Enterprise tier, please contact sales',
-      email: 'enterprise@freecryptonews.org',
+      email: 'enterprise@cryptocurrency.cv',
     },
 
     request: {

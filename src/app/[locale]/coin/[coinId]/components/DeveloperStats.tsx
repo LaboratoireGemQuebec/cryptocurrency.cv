@@ -224,7 +224,7 @@ export default function DeveloperStats({
                     ? `${formatNumber(communityData!.reddit_accounts_active_48h)} active` 
                     : undefined
                   }
-                  color="text-orange-500"
+                  color="text-gray-400"
                 />
               )}
               {(communityData!.telegram_channel_user_count ?? 0) > 0 && (

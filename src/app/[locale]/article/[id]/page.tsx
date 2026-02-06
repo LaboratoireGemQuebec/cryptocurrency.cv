@@ -14,6 +14,7 @@ import {
   generateArticleSlug,
   type EnrichedArticle 
 } from '@/lib/archive-v2';
+import { getLatestNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -21,6 +22,12 @@ import { ArticleContent } from '@/components/ArticleContent';
 import { RelatedArticles } from '@/components/RelatedArticles';
 import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import ArticleShareCard from '@/components/ArticleShareCard';
+import { ArticleIntelligenceBadges } from '@/components/ArticleIntelligenceBadges';
+import ArticleReactions from '@/components/ArticleReactions';
+import BookmarkButton from '@/components/BookmarkButton';
+import TrendingNews from '@/components/sidebar/TrendingNews';
+import NewsletterSignup from '@/components/sidebar/NewsletterSignup';
+import { SentimentMeter, TickerCard } from './components';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -147,8 +154,20 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
   
-  const relatedArticles = await getRelatedArticles(article, 6);
+  // Fetch related articles + more from this source in parallel
+  const [relatedArticles, sourceNewsData] = await Promise.all([
+    getRelatedArticles(article, 6),
+    getLatestNews(5, article.source_key).catch(() => ({ articles: [] })),
+  ]);
   const sentiment = sentimentConfig[article.sentiment.label] || sentimentConfig.neutral;
+
+  // "More from this source" — exclude current article
+  const moreFromSource = sourceNewsData.articles
+    .filter(a => a.link !== article.link)
+    .slice(0, 4);
+
+  // Reading time estimate
+  const readingTime = article.meta?.word_count ? Math.max(1, Math.ceil(article.meta.word_count / 200)) : null;
   
   // Use SEO-friendly slug for URL, fallback to id if no slug
   const articleSlug = article.slug || generateArticleSlug(article.title, article.pub_date || article.first_seen);
@@ -214,8 +233,13 @@ export default async function ArticlePage({ params }: Props) {
                       </span>
                     )}
                     {article.meta.is_opinion && (
-                      <span className="text-sm px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-400">
+                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
                         💭 Opinion
+                      </span>
+                    )}
+                    {readingTime && (
+                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300">
+                        📖 {readingTime} min read{article.meta.word_count ? ` · ${article.meta.word_count.toLocaleString()} words` : ''}
                       </span>
                     )}
                   </div>
@@ -224,6 +248,26 @@ export default async function ArticlePage({ params }: Props) {
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-900 dark:text-white">
                     {article.title}
                   </h1>
+
+                  {/* Intelligence Badges (clickbait, AI-written, event type) */}
+                  <div className="mb-4">
+                    <ArticleIntelligenceBadges
+                      articleId={article.id}
+                      title={article.title}
+                      compact={false}
+                    />
+                  </div>
+
+                  {/* Sentiment Meter */}
+                  {article.sentiment && (
+                    <div className="mb-6 p-4 bg-gray-50 dark:bg-slate-700/50 rounded-xl">
+                      <SentimentMeter
+                        score={article.sentiment.score}
+                        label={article.sentiment.label}
+                        confidence={article.sentiment.confidence}
+                      />
+                    </div>
+                  )}
                   
                   {/* Description */}
                   {article.description && (
@@ -232,11 +276,22 @@ export default async function ArticlePage({ params }: Props) {
                     </p>
                   )}
                   
-                  {/* Date and source link */}
+                  {/* Date, source link, and bookmark */}
                   <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500 dark:text-slate-400 border-t border-gray-200 dark:border-slate-700 pt-4">
-                    <time dateTime={article.pub_date || article.first_seen}>
-                      📅 {formatDate(article.pub_date || article.first_seen)}
-                    </time>
+                    <div className="flex items-center gap-3">
+                      <time dateTime={article.pub_date || article.first_seen}>
+                        📅 {formatDate(article.pub_date || article.first_seen)}
+                      </time>
+                      <BookmarkButton
+                        article={{
+                          title: article.title,
+                          link: article.link,
+                          source: article.source,
+                          pubDate: article.pub_date || article.first_seen,
+                        }}
+                        size="sm"
+                      />
+                    </div>
                     <a 
                       href={article.link}
                       target="_blank"
@@ -257,19 +312,13 @@ export default async function ArticlePage({ params }: Props) {
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">📋 Article Details</h2>
                 
                 <div className="space-y-4">
-                  {/* Tickers */}
+                  {/* Tickers with live price cards */}
                   {article.tickers.length > 0 && (
                     <div>
                       <h3 className="text-sm font-medium text-gray-500 dark:text-slate-400 mb-2">Mentioned Tickers</h3>
                       <div className="flex flex-wrap gap-2">
                         {article.tickers.map(ticker => (
-                          <Link
-                            key={ticker}
-                            href={`/coin/${ticker.toLowerCase()}`}
-                            className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-400 rounded-full text-sm font-medium hover:bg-orange-200 dark:hover:bg-orange-900/50 transition"
-                          >
-                            ${ticker}
-                          </Link>
+                          <TickerCard key={ticker} ticker={ticker} />
                         ))}
                       </div>
                     </div>
@@ -345,6 +394,49 @@ export default async function ArticlePage({ params }: Props) {
                   )}
                 </div>
               </div>
+
+              {/* Article Reactions */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">💬 What do you think?</h2>
+                <ArticleReactions articleId={article.id} />
+              </div>
+
+              {/* More from This Source */}
+              {moreFromSource.length > 0 && (
+                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                  <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
+                    📰 More from {article.source}
+                  </h2>
+                  <div className="space-y-3">
+                    {moreFromSource.map((a, i) => (
+                      <Link
+                        key={i}
+                        href={`/article/${a.link ? encodeURIComponent(Buffer.from(a.link).toString('base64url').slice(0, 12)) : i}`}
+                        className="block p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition group"
+                      >
+                        <h3 className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition line-clamp-2 text-sm">
+                          {a.title}
+                        </h3>
+                        <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500 dark:text-slate-400">
+                          <span>{a.timeAgo || 'Recently'}</span>
+                          {a.category && (
+                            <>
+                              <span>·</span>
+                              <span className="capitalize">{a.category}</span>
+                            </>
+                          )}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href={`/source/${article.source_key}`}
+                    className="inline-block mt-4 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    View all from {article.source} →
+                  </Link>
+                </div>
+              )}
             </div>
             
             {/* Sidebar */}
@@ -370,9 +462,31 @@ export default async function ArticlePage({ params }: Props) {
                         <span className="font-bold text-gray-900 dark:text-white">{formatPrice(article.market_context.eth_price)}</span>
                       </div>
                     )}
-                    {article.market_context.fear_greed_index !== null && (
+                    {article.market_context.sol_price && (
+                      <div className="flex justify-between items-center p-3 bg-purple-50 dark:bg-purple-900/30 rounded-lg">
+                        <span className="font-medium text-gray-900 dark:text-white">◎ Solana</span>
+                        <span className="font-bold text-gray-900 dark:text-white">{formatPrice(article.market_context.sol_price)}</span>
+                      </div>
+                    )}
+                    {article.market_context.total_market_cap && (
                       <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
-                        <span className="font-medium text-gray-900 dark:text-white">Fear & Greed</span>
+                        <span className="font-medium text-gray-900 dark:text-white">📈 Total Market Cap</span>
+                        <span className="font-bold text-gray-900 dark:text-white">
+                          ${(article.market_context.total_market_cap / 1e12).toFixed(2)}T
+                        </span>
+                      </div>
+                    )}
+                    {article.market_context.btc_dominance && (
+                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                        <span className="font-medium text-gray-900 dark:text-white">👑 BTC Dominance</span>
+                        <span className="font-bold text-gray-900 dark:text-white">
+                          {article.market_context.btc_dominance.toFixed(1)}%
+                        </span>
+                      </div>
+                    )}
+                    {article.market_context.fear_greed_index != null && (
+                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                        <span className="font-medium text-gray-900 dark:text-white">😱 Fear & Greed</span>
                         <span className="font-bold text-gray-900 dark:text-white">{article.market_context.fear_greed_index}/100</span>
                       </div>
                     )}
@@ -404,6 +518,23 @@ export default async function ArticlePage({ params }: Props) {
                   </div>
                 </Link>
               </div>
+
+              {/* Trending News */}
+              {relatedArticles.length > 0 && (
+                <TrendingNews
+                  articles={relatedArticles.slice(0, 5).map(a => ({
+                    title: a.title,
+                    link: a.link,
+                    source: a.source,
+                    pubDate: a.pub_date || a.first_seen,
+                    timeAgo: '',
+                  }))}
+                  title="Trending Now"
+                />
+              )}
+
+              {/* Newsletter Signup */}
+              <NewsletterSignup />
             </div>
           </div>
         </main>

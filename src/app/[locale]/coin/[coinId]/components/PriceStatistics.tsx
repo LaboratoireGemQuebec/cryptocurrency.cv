@@ -81,7 +81,7 @@ function RangeBar({ low, high, current, label }: RangeBarProps) {
             style={{ width: '100%' }}
           />
           <motion.div
-            className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-amber-500 rounded-full shadow-lg"
+            className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-white rounded-full shadow-lg"
             initial={{ left: '50%' }}
             animate={{ left: `${position}%` }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -177,7 +177,7 @@ export default function PriceStatistics({
                   initial={{ width: 0 }}
                   animate={{ width: `${Math.min(100, (currentPrice / ath) * 100)}%` }}
                   transition={{ duration: 0.5, ease: 'easeOut' }}
-                  className="h-full bg-gradient-to-r from-amber-500 to-green-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-gray-400 to-white rounded-full"
                 />
               </div>
               <p className="text-xs text-gray-500 mt-1">

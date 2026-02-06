@@ -31,7 +31,7 @@ export default function CoinNotFound() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/markets"
-                className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold rounded-xl transition-colors"
+                className="px-6 py-3 bg-white hover:bg-gray-100 text-black font-semibold rounded-xl transition-colors"
               >
                 Browse All Coins
               </Link>

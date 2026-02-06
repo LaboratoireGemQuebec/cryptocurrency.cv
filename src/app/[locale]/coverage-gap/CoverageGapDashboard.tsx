@@ -107,7 +107,7 @@ export default function CoverageGapDashboard() {
   const getSeverityColor = (severity: CoverageGap['severity']) => {
     switch (severity) {
       case 'critical': return 'bg-red-500/10 text-red-400 border-red-500/30';
-      case 'high': return 'bg-orange-500/10 text-orange-400 border-orange-500/30';
+      case 'high': return 'bg-gray-500/10 text-gray-400 border-gray-500/30';
       case 'medium': return 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30';
       case 'low': return 'bg-blue-500/10 text-blue-400 border-blue-500/30';
     }
@@ -132,7 +132,7 @@ export default function CoverageGapDashboard() {
   if (loading) {
     return (
       <div className="min-h-[400px] flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500" />
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white" />
       </div>
     );
   }
@@ -144,7 +144,7 @@ export default function CoverageGapDashboard() {
           <p className="text-red-400 mb-4">{error}</p>
           <button
             onClick={fetchData}
-            className="px-4 py-2 bg-amber-600 rounded-lg hover:bg-amber-500 transition-colors"
+            className="px-4 py-2 bg-white rounded-lg hover:bg-gray-100 text-black transition-colors"
           >
             Try Again
           </button>
@@ -164,7 +164,7 @@ export default function CoverageGapDashboard() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeTab === tab
-                  ? 'bg-amber-600 text-white'
+                  ? 'bg-white text-black'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -180,7 +180,7 @@ export default function CoverageGapDashboard() {
               onClick={() => setPeriod(p)}
               className={`px-3 py-1 rounded text-sm transition-colors ${
                 period === p
-                  ? 'bg-amber-600 text-white'
+                  ? 'bg-white text-black'
                   : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
               }`}
             >
@@ -203,7 +203,7 @@ export default function CoverageGapDashboard() {
           </div>
           <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700">
             <p className="text-gray-400 text-sm">Coverage Gaps</p>
-            <p className="text-2xl font-bold text-amber-400">{report.gaps.length}</p>
+            <p className="text-2xl font-bold text-white">{report.gaps.length}</p>
           </div>
           <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700">
             <p className="text-gray-400 text-sm">Source Diversity</p>

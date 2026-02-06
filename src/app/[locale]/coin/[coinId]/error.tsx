@@ -56,7 +56,7 @@ export default function CoinPageError({ error, reset }: ErrorProps) {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             onClick={() => reset()}
-            className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold rounded-xl transition-colors"
+            className="px-6 py-3 bg-white hover:bg-gray-100 text-black font-semibold rounded-xl transition-colors"
           >
             Try again
           </button>
@@ -76,7 +76,7 @@ export default function CoinPageError({ error, reset }: ErrorProps) {
               href="https://github.com/nirholas/free-crypto-news/issues"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-500 hover:text-amber-400"
+              className="text-white hover:text-gray-300"
             >
               report an issue
             </a>

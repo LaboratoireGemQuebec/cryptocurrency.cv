@@ -195,14 +195,14 @@ export default function SavedPage() {
           )}
           
           {/* Info Box */}
-          <div className="mt-8 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
+          <div className="mt-8 bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
             <div className="flex items-start gap-3">
               <span className="text-xl">💡</span>
               <div>
-                <h3 className="font-semibold text-amber-800 dark:text-amber-300">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-300">
                   About Saved Articles
                 </h3>
-                <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">
+                <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
                   Your saved articles are stored locally in your browser. They won&apos;t sync across devices 
                   and will be lost if you clear your browser data. For permanent storage, we recommend 
                   using the external article links.

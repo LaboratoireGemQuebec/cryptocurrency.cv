@@ -1025,7 +1025,7 @@ const API_SOURCES: Record<string, ApiSource> = {
       }> };
       if (!response.Data) return [];
       return response.Data.slice(0, 20).map(item => ({
-        title: item.title,
+        title: decodeHTMLEntities(item.title),
         link: item.url,
         description: item.body?.slice(0, 200),
         pubDate: new Date(item.published_on * 1000).toISOString(),
@@ -1051,7 +1051,7 @@ const API_SOURCES: Record<string, ApiSource> = {
       }> };
       if (!response.status_updates) return [];
       return response.status_updates.slice(0, 10).map(item => ({
-        title: `${item.project?.name}: ${item.user_title || 'Update'}`,
+        title: decodeHTMLEntities(`${item.project?.name}: ${item.user_title || 'Update'}`),
         link: `https://www.coingecko.com`,
         description: item.description?.slice(0, 200),
         pubDate: new Date(item.created_at).toISOString(),
@@ -1077,7 +1077,7 @@ const API_SOURCES: Record<string, ApiSource> = {
       }>;
       if (!Array.isArray(events)) return [];
       return events.slice(0, 10).map(item => ({
-        title: item.name,
+        title: decodeHTMLEntities(item.name),
         link: item.link || 'https://coinpaprika.com',
         description: item.description?.slice(0, 200),
         pubDate: new Date(item.date).toISOString(),
@@ -1105,7 +1105,7 @@ const API_SOURCES: Record<string, ApiSource> = {
       }> };
       if (!response.data) return [];
       return response.data.slice(0, 20).map(item => ({
-        title: item.title,
+        title: decodeHTMLEntities(item.title),
         link: item.url,
         description: item.content?.slice(0, 200),
         pubDate: new Date(item.published_at).toISOString(),

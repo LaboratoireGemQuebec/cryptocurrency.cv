@@ -38,7 +38,7 @@ const exampleClaims = [
 const typeConfig = {
   factual: { color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400', icon: '📊' },
   logical: { color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400', icon: '🧠' },
-  contextual: { color: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400', icon: '🔍' },
+  contextual: { color: 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400', icon: '🔍' },
   alternative: { color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400', icon: '💡' },
 };
 
@@ -277,7 +277,7 @@ export default function CounterPage() {
                   <ul className="space-y-2">
                     {result.missingContext.map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-slate-300">
-                        <span className="text-orange-500">•</span>
+                        <span className="text-gray-400">•</span>
                         <span>{item}</span>
                       </li>
                     ))}

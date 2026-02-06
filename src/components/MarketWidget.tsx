@@ -89,7 +89,7 @@ export default function MarketWidget({ className = '' }: { className?: string })
       {/* BTC Dominance */}
       <div className="flex items-center gap-1.5">
         <span className="text-gray-400 text-xs">BTC Dom</span>
-        <span className="font-medium text-amber-400">
+        <span className="font-medium text-white">
           {btcDom.toFixed(1)}%
         </span>
       </div>

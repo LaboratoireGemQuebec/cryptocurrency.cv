@@ -107,7 +107,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
     <button
       onClick={() => handleSort(sortKeyName)}
       className={`flex items-center gap-1 text-xs font-medium uppercase tracking-wide transition-colors ${
-        sortKey === sortKeyName ? 'text-amber-400' : 'text-gray-500 hover:text-gray-300'
+        sortKey === sortKeyName ? 'text-white' : 'text-gray-500 hover:text-gray-300'
       }`}
     >
       {label}
@@ -166,7 +166,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
                 setSearchQuery(e.target.value);
                 setPage(1);
               }}
-              className="pl-9 pr-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-amber-500/50 w-full sm:w-64"
+              className="pl-9 pr-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400/50 w-full sm:w-64"
             />
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
                       href={ticker.trade_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-2 py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 text-xs font-medium rounded transition-colors"
+                      className="inline-flex items-center gap-1 px-2 py-1 bg-white/20 hover:bg-white/30 text-white text-xs font-medium rounded transition-colors"
                     >
                       Trade
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -338,7 +338,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
                     onClick={() => setPage(pageNum)}
                     className={`w-8 h-8 text-sm rounded-lg transition-colors ${
                       page === pageNum
-                        ? 'bg-amber-500 text-gray-900 font-medium'
+                        ? 'bg-white text-gray-900 font-medium'
                         : 'bg-gray-700 hover:bg-gray-600 text-white'
                     }`}
                   >

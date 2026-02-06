@@ -53,7 +53,7 @@ const CATEGORIES = [
     icon: '📦',
     description: 'Scaling solutions built on top of Layer 1 networks',
     examples: ['Polygon', 'Arbitrum', 'Optimism'],
-    color: 'from-orange-500 to-amber-500',
+    color: 'from-gray-500 to-gray-400',
   },
   {
     id: 'meme',
@@ -61,7 +61,7 @@ const CATEGORIES = [
     icon: '🐕',
     description: 'Community-driven tokens often inspired by memes',
     examples: ['Dogecoin', 'Shiba Inu', 'Pepe'],
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-gray-400 to-gray-500',
   },
   {
     id: 'ai',

@@ -30,10 +30,10 @@ export default function PricingContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 text-amber-500 rounded-full text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             x402 Protocol Enabled
           </span>
@@ -51,7 +51,7 @@ export default function PricingContent() {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-amber-500">{freeCount}+</div>
+              <div className="text-3xl font-bold text-white">{freeCount}+</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Free Endpoints</div>
             </div>
             <div className="text-center">
@@ -125,10 +125,10 @@ export default function PricingContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 ring-2 ring-amber-500 shadow-xl"
+          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 ring-2 ring-white shadow-xl"
         >
           <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-            <span className="bg-amber-500 text-black text-xs font-bold px-4 py-1 rounded-full">
+            <span className="bg-white text-black text-xs font-bold px-4 py-1 rounded-full">
               PAY AS YOU GO
             </span>
           </div>
@@ -169,7 +169,7 @@ export default function PricingContent() {
 
           <a
             href="/developers"
-            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-amber-500 hover:bg-amber-600 text-black"
+            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-white hover:bg-gray-100 text-black"
           >
             Get Your API Key
           </a>
@@ -262,7 +262,7 @@ export default function PricingContent() {
             onClick={() => setSelectedCategory(null)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedCategory === null
-                ? 'bg-amber-500 text-black'
+                ? 'bg-white text-black'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
@@ -276,7 +276,7 @@ export default function PricingContent() {
                 onClick={() => setSelectedCategory(key)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   selectedCategory === key
-                    ? 'bg-amber-500 text-black'
+                    ? 'bg-white text-black'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
@@ -295,10 +295,10 @@ export default function PricingContent() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.02 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-amber-500/50 transition-all"
+                className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-gray-400/50 transition-all"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <code className="text-sm font-mono text-amber-500 bg-amber-500/10 px-2 py-1 rounded">
+                  <code className="text-sm font-mono text-white bg-white/10 px-2 py-1 rounded">
                     {endpoint.method}
                   </code>
                   <span className="text-green-500 font-semibold">{endpoint.price}</span>
@@ -350,7 +350,7 @@ export default function PricingContent() {
           <div className="text-center mt-6">
             <a
               href="/developers#free-endpoints"
-              className="text-amber-500 hover:text-amber-400 font-medium"
+              className="text-gray-300 hover:text-white font-medium"
             >
               View all {FREE_ENDPOINTS.length} free endpoints →
             </a>
@@ -375,7 +375,7 @@ export default function PricingContent() {
                   Feature
                 </th>
                 <th className="text-center p-4 text-gray-900 dark:text-white font-semibold">Free</th>
-                <th className="text-center p-4 text-amber-500 font-semibold bg-amber-500/5">Pro</th>
+                <th className="text-center p-4 text-white font-semibold bg-white/5">Pro</th>
                 <th className="text-center p-4 text-gray-900 dark:text-white font-semibold">
                   Enterprise
                 </th>
@@ -396,7 +396,7 @@ export default function PricingContent() {
                   <td className="text-center p-4">
                     <FeatureValue value={item.free} />
                   </td>
-                  <td className="text-center p-4 bg-amber-500/5">
+                  <td className="text-center p-4 bg-white/5">
                     <FeatureValue value={item.pro} />
                   </td>
                   <td className="text-center p-4">
@@ -412,7 +412,7 @@ export default function PricingContent() {
           <div className="text-center mt-6">
             <button
               onClick={() => setShowAllFeatures(!showAllFeatures)}
-              className="text-amber-500 hover:text-amber-400 font-medium"
+              className="text-gray-300 hover:text-white font-medium"
             >
               {showAllFeatures
                 ? 'Show less'
@@ -458,7 +458,7 @@ export default function PricingContent() {
       </div>
 
       {/* CTA Section */}
-      <div className="text-center bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 rounded-3xl p-12 border border-amber-500/20">
+      <div className="text-center bg-gradient-to-r from-white/10 via-gray-400/10 to-gray-600/10 rounded-3xl p-12 border border-white/20">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
           Ready to Get Started?
         </h2>
@@ -468,7 +468,7 @@ export default function PricingContent() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="/developers"
-            className="bg-amber-500 hover:bg-amber-600 text-black px-8 py-3 rounded-xl font-semibold transition-all"
+            className="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-xl font-semibold transition-all"
           >
             Get Your API Key
           </a>

@@ -118,7 +118,7 @@ export default function GlobalStatsBar({ global, fearGreed }: GlobalStatsBarProp
                       fearGreedValue <= 25
                         ? 'bg-red-500'
                         : fearGreedValue <= 45
-                        ? 'bg-orange-500'
+                        ? 'bg-gray-500'
                         : fearGreedValue <= 55
                         ? 'bg-yellow-500'
                         : fearGreedValue <= 75

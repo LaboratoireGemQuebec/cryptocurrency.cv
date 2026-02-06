@@ -522,7 +522,7 @@ function UpgradeContent() {
                 team.
               </p>
               <a
-                href="mailto:enterprise@freecryptonews.org"
+                href="mailto:enterprise@cryptocurrency.cv"
                 className="inline-block px-6 py-2 border-2 border-black dark:border-white text-black dark:text-white rounded-lg font-medium hover:bg-neutral-100 dark:hover:bg-neutral-900"
               >
                 Contact Sales

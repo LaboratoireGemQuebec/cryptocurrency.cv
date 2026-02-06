@@ -1,20 +1,11 @@
 /**
- * @fileoverview Live Crypto Price Widget
+ * @fileoverview Live Crypto Price Widget (DEPRECATED)
  * 
- * Displays real-time BTC/ETH prices with change indicators.
- * Fetches from CoinGecko API with automatic refresh.
+ * This component has been replaced by MarketWidget.tsx in the header.
+ * Kept only for potential use in other pages. Consider removing entirely.
  * 
+ * @deprecated Use MarketWidget instead for header display
  * @module components/PriceWidget
- * 
- * @example
- * <PriceWidget />
- * 
- * @features
- * - Live BTC and ETH prices
- * - 24h change percentage with color coding
- * - Auto-refresh every 60 seconds
- * - Compact and full variants
- * - Loading skeleton state
  */
 'use client';
 

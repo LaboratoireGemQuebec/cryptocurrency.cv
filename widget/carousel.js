@@ -13,7 +13,7 @@
       --carousel-bg: #0a0a0a;
       --carousel-card-bg: #141414;
       --carousel-text: #fafafa;
-      --carousel-accent: #f7931a;
+      --carousel-accent: #ffffff;
       --carousel-muted: #a1a1a1;
       --carousel-border: #262626;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

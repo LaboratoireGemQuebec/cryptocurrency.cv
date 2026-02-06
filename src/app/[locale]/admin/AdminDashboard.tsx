@@ -285,7 +285,7 @@ export default function AdminDashboard() {
                 id="token"
                 value={token}
                 onChange={(e) => setToken(e.target.value)}
-                className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                 placeholder="Enter admin token"
                 required
               />
@@ -294,7 +294,7 @@ export default function AdminDashboard() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors disabled:opacity-50"
+              className="w-full py-3 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-colors disabled:opacity-50"
             >
               {loading ? 'Authenticating...' : 'Login'}
             </button>
@@ -308,7 +308,7 @@ export default function AdminDashboard() {
   if (loading && !data && !keyStats) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
       </div>
     );
   }
@@ -430,13 +430,13 @@ export default function AdminDashboard() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id as TabType)}
               className={`px-4 py-3 text-sm font-medium transition-colors relative ${
-                activeTab === tab.id ? 'text-amber-400' : 'text-neutral-400 hover:text-neutral-200'
+                activeTab === tab.id ? 'text-white' : 'text-neutral-400 hover:text-neutral-200'
               }`}
             >
               <span className="mr-2">{tab.icon}</span>
               {tab.label}
               {activeTab === tab.id && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500" />
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white" />
               )}
             </button>
           ))}
@@ -546,7 +546,7 @@ export default function AdminDashboard() {
                               {key.tier}
                             </span>
                           </td>
-                          <td className="py-3 text-right text-amber-400 font-medium">
+                          <td className="py-3 text-right text-white font-medium">
                             {formatNumber(key.usageToday)}
                           </td>
                           <td className="py-3 text-right">{formatNumber(key.usageMonth)}</td>
@@ -577,7 +577,7 @@ export default function AdminDashboard() {
                       setSearchQuery(e.target.value);
                       setCurrentPage(1);
                     }}
-                    className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
                   />
                 </div>
                 <select
@@ -586,7 +586,7 @@ export default function AdminDashboard() {
                     setTierFilter(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
                   <option value="">All Tiers</option>
                   <option value="free">Free</option>
@@ -599,7 +599,7 @@ export default function AdminDashboard() {
                     setStatusFilter(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
                   <option value="">All Status</option>
                   <option value="active">Active</option>
@@ -613,7 +613,7 @@ export default function AdminDashboard() {
                     setSortOrder(order as 'asc' | 'desc');
                     setCurrentPage(1);
                   }}
-                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
                 >
                   <option value="createdAt-desc">Newest First</option>
                   <option value="createdAt-asc">Oldest First</option>
@@ -674,7 +674,7 @@ export default function AdminDashboard() {
                             </td>
                             <td className="px-4 py-3 text-right">
                               <div>
-                                <span className="text-amber-400 font-medium">
+                                <span className="text-white font-medium">
                                   {formatNumber(key.usageToday)}
                                 </span>
                                 <span className="text-neutral-500">
@@ -785,7 +785,7 @@ export default function AdminDashboard() {
                     return (
                       <div key={i} className="flex-1 flex flex-col items-center">
                         <div
-                          className="w-full bg-amber-500/80 rounded-t transition-all hover:bg-amber-400"
+                          className="w-full bg-white/80 rounded-t transition-all hover:bg-gray-200"
                           style={{ height: `${Math.max(height, 2)}%` }}
                           title={`${item.hour}: ${item.calls} calls`}
                         />
@@ -807,7 +807,7 @@ export default function AdminDashboard() {
                       <span className="truncate flex-1 mr-4 font-mono text-sm">
                         {endpoint.endpoint}
                       </span>
-                      <span className="text-amber-400 font-semibold">{endpoint.calls}</span>
+                      <span className="text-white font-semibold">{endpoint.calls}</span>
                     </div>
                   ))}
                 </div>

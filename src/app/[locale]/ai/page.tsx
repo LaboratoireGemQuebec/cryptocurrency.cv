@@ -42,7 +42,7 @@ const aiFeatures = [
     description: 'Ask anything about crypto markets and get intelligent answers',
     icon: '🔮',
     href: '/ai/oracle',
-    gradient: 'from-orange-500 to-red-500',
+    gradient: 'from-gray-500 to-gray-700',
   },
 ];
 

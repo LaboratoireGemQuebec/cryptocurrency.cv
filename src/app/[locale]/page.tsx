@@ -103,7 +103,7 @@ export default async function Home({ params }: Props) {
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-amber-500 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
                   style={{ scrollSnapAlign: 'start' }}
                 >
                   <span aria-hidden="true">{cat.icon}</span>
@@ -134,7 +134,7 @@ export default async function Home({ params }: Props) {
                 </div>
                 <Link 
                   href="/read" 
-                  className="text-sm font-semibold text-brand-600 dark:text-amber-400 hover:text-brand-700 dark:hover:text-amber-300 transition-colors flex items-center gap-1"
+                  className="text-sm font-semibold text-brand-600 dark:text-gray-300 hover:text-brand-700 dark:hover:text-white transition-colors flex items-center gap-1"
                 >
                   {tCommon('viewAll')}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -102,7 +102,7 @@ export default function CoinConverter({
           <label className="block text-xs text-gray-500 mb-1.5">
             {name} ({symbolUpper})
           </label>
-          <div className="flex items-center bg-gray-900 rounded-xl border border-gray-700 focus-within:border-amber-500/50 transition-colors">
+          <div className="flex items-center bg-gray-900 rounded-xl border border-gray-700 focus-within:border-gray-400/50 transition-colors">
             {image && (
               <div className="pl-3">
                 <img src={image} alt={name} className="w-6 h-6 rounded-full" />
@@ -155,7 +155,7 @@ export default function CoinConverter({
           <label className="block text-xs text-gray-500 mb-1.5">
             US Dollar (USD)
           </label>
-          <div className="flex items-center bg-gray-900 rounded-xl border border-gray-700 focus-within:border-amber-500/50 transition-colors">
+          <div className="flex items-center bg-gray-900 rounded-xl border border-gray-700 focus-within:border-gray-400/50 transition-colors">
             <div className="pl-3">
               <span className="text-xl text-gray-400">$</span>
             </div>
@@ -197,7 +197,7 @@ export default function CoinConverter({
                 onClick={() => handleQuickAmount(amount)}
                 className={`flex-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   coinAmount === amount.toString()
-                    ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                    ? 'bg-white/20 text-white border border-white/30'
                     : 'bg-gray-700 text-gray-300 hover:bg-gray-600 border border-gray-600'
                 }`}
               >

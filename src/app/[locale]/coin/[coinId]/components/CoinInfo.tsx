@@ -258,7 +258,7 @@ export default function CoinInfo({ coin }: CoinInfoProps) {
           {hasMore && (
             <button
               onClick={() => setShowFullDescription(!showFullDescription)}
-              className="mt-3 text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
+              className="mt-3 text-gray-300 hover:text-white text-sm font-medium transition-colors"
             >
               {showFullDescription ? 'Show less' : 'Read more'}
             </button>

@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: 'Free Crypto News',
     description: '🆓 100% FREE crypto news API. No API keys. No rate limits.',
     images: ['/og-image.png'],
-    creator: '@freecryptonews',
+    creator: '@cryptocurrencycv',
   },
   robots: {
     index: true,

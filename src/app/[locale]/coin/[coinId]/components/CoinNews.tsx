@@ -93,7 +93,7 @@ function ArticleCard({ article }: { article: Article }) {
       <div className="p-4">
         {/* Source and date */}
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs text-amber-400 font-medium">
+          <span className="text-xs text-gray-300 font-medium">
             {article.source}
           </span>
           <span className="text-xs text-gray-500">
@@ -103,7 +103,7 @@ function ArticleCard({ article }: { article: Article }) {
 
         {/* Title */}
         <Link href={article.url} target="_blank" rel="noopener noreferrer">
-          <h3 className="text-sm font-medium text-white line-clamp-2 group-hover:text-amber-400 transition-colors mb-2">
+          <h3 className="text-sm font-medium text-white line-clamp-2 group-hover:text-white transition-colors mb-2">
             {article.title}
           </h3>
         </Link>
