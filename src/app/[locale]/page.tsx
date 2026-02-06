@@ -21,6 +21,10 @@ import { LiquidationsFeed } from '@/components/LiquidationsFeed';
 import { MarketSignals } from '@/components/MarketSignals';
 import { TrendingNarratives } from '@/components/TrendingNarratives';
 import { WhaleActivityFeed } from '@/components/WhaleActivityFeed';
+import { LiveNewsTicker } from '@/components/LiveNewsTicker';
+import { AskAboutThis } from '@/components/AskAboutThis';
+import { AIFlashBrief } from '@/components/AIFlashBrief';
+import { TrendingTopicsLive } from '@/components/TrendingTopicsLive';
 import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
@@ -71,6 +75,9 @@ export default async function Home({ params }: Props) {
         listName="Latest Crypto News"
       />
       
+      {/* Live News Ticker - SSE powered */}
+      <LiveNewsTicker />
+
       {/* Price Ticker - Full width */}
       <PriceTicker />
       
@@ -84,6 +91,11 @@ export default async function Home({ params }: Props) {
 
       {/* Main Content */}
       <main id="main-content" className="max-w-[1400px] mx-auto">
+
+        {/* AI Ask Bar */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-6">
+          <AskAboutThis context="crypto market news today" contextType="general" placeholder="Ask anything about crypto..." />
+        </section>
         
         {/* Hero Section - Compact Featured Article */}
         {heroArticle && (
@@ -91,6 +103,11 @@ export default async function Home({ params }: Props) {
             <HeroArticle article={heroArticle} />
           </section>
         )}
+
+        {/* AI Flash Briefing */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Flash briefing">
+          <AIFlashBrief />
+        </section>
 
         {/* Market Intelligence Signals */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Market signals">
@@ -118,6 +135,11 @@ export default async function Home({ params }: Props) {
             </div>
           </ScrollIndicator>
         </nav>
+
+        {/* Trending Topics - Live */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending topics">
+          <TrendingTopicsLive />
+        </section>
 
         {/* Trending Stories Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending Stories">

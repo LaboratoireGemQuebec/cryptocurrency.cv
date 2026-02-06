@@ -8,6 +8,7 @@ import { categories } from '@/lib/categories';
 import MarketStats from '@/components/MarketStats';
 import NewsCard from '@/components/NewsCard';
 import { NewsletterSignup } from '@/components/sidebar';
+import { PredictionPoll } from '@/components/PredictionPoll';
 
 interface Article {
   title: string;
@@ -64,6 +65,9 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
 
       {/* Market Stats */}
       <MarketStats />
+
+      {/* Community Prediction */}
+      <PredictionPoll />
 
       {/* Categories */}
       <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">

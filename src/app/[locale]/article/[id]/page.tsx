@@ -32,6 +32,9 @@ import { FactCheckPanel } from '@/components/FactCheckPanel';
 import { BullBearDebate } from '@/components/BullBearDebate';
 import { ArticleTimeline } from '@/components/ArticleTimeline';
 import { SentimentContext } from '@/components/SentimentContext';
+import { ArticleEngagement } from '@/components/ArticleEngagement';
+import { AskAboutThis } from '@/components/AskAboutThis';
+import { ClickbaitDetector } from '@/components/ClickbaitDetector';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -251,6 +254,7 @@ export default async function ArticlePage({ params }: Props) {
                   {/* Title */}
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-900 dark:text-white">
                     {article.title}
+                    <ClickbaitDetector title={article.title} source={article.source} />
                   </h1>
 
                   {/* Intelligence Badges (clickbait, AI-written, event type) */}
@@ -401,6 +405,16 @@ export default async function ArticlePage({ params }: Props) {
 
               {/* Deep Intelligence Panel */}
               <div className="space-y-6">
+                {/* AI Ask About This Article */}
+                <AskAboutThis
+                  context={article.title + ' - ' + (article.description || '')}
+                  contextType="article"
+                  placeholder="Ask AI about this article..."
+                />
+
+                {/* Community Engagement */}
+                <ArticleEngagement articleId={article.id} articleTitle={article.title} />
+
                 {/* Fact Check */}
                 <FactCheckPanel
                   articleUrl={article.link}

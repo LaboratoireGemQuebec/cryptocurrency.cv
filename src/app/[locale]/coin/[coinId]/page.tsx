@@ -27,6 +27,8 @@ import { CoinArbitrageOpportunities } from '@/components/CoinArbitrageOpportunit
 import { CoinFundingRates } from '@/components/CoinFundingRates';
 import { CoinSocialBuzz } from '@/components/CoinSocialBuzz';
 import { CoinNewsCorrelation } from '@/components/CoinNewsCorrelation';
+import { PredictionPoll } from '@/components/PredictionPoll';
+import { AskAboutThis } from '@/components/AskAboutThis';
 import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for coins not pre-rendered
@@ -341,6 +343,16 @@ export default async function CoinPage({ params, searchParams }: Props) {
               <CoinFundingRates coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
               <CoinSocialBuzz coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
               <CoinNewsCorrelation coinId={coinData.id} coinSymbol={coinData.symbol.toUpperCase()} />
+            </div>
+
+            {/* AI & Community Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+              <AskAboutThis
+                context={`${coinData.name} (${coinData.symbol.toUpperCase()}) cryptocurrency`}
+                contextType="coin"
+                placeholder={`Ask about ${coinData.name}...`}
+              />
+              <PredictionPoll coinId={coinData.id} />
             </div>
           </div>
 

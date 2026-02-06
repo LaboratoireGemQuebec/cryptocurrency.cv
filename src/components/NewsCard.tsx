@@ -43,6 +43,7 @@ import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
 import { useBookmarks } from './BookmarksProvider';
+import { ClickbaitDetector } from './ClickbaitDetector';
 
 interface Article {
   title: string;
@@ -268,6 +269,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           {/* Title */}
           <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-amber-400 transition-colors line-clamp-3 leading-snug mb-3 flex-grow">
             {article.title}
+            <ClickbaitDetector title={article.title} source={article.source} />
           </h3>
 
           {/* Description */}

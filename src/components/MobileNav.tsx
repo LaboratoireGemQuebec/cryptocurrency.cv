@@ -13,73 +13,73 @@ const SWIPE_VELOCITY_THRESHOLD = 0.3;
 
 // Navigation sections for mobile
 const mainNavItems = [
-  { href: '/', label: 'Home', icon: '🏠' },
-  { href: '/markets', label: 'Markets', icon: '📈' },
-  { href: '/markets/gainers', label: 'Top Gainers', icon: '📈' },
-  { href: '/markets/losers', label: 'Top Losers', icon: '📉' },
-  { href: '/defi', label: 'DeFi Dashboard', icon: '🏦' },
-  { href: '/trending', label: 'Trending', icon: '🔥' },
-  { href: '/movers', label: 'Top Movers', icon: '🚀' },
-  { href: '/sources', label: 'News Sources', icon: '📚' },
-  { href: '/topics', label: 'Topics', icon: '📂' },
-  { href: '/tags', label: 'Tags', icon: '🏷️' },
-  { href: '/search', label: 'Search', icon: '🔍' },
+  { href: '/', label: 'Home' },
+  { href: '/markets', label: 'Markets' },
+  { href: '/markets/gainers', label: 'Top Gainers' },
+  { href: '/markets/losers', label: 'Top Losers' },
+  { href: '/defi', label: 'DeFi Dashboard' },
+  { href: '/trending', label: 'Trending' },
+  { href: '/movers', label: 'Top Movers' },
+  { href: '/sources', label: 'News Sources' },
+  { href: '/topics', label: 'Topics' },
+  { href: '/tags', label: 'Tags' },
+  { href: '/search', label: 'Search' },
 ];
 
 const tradingItems = [
-  { href: '/orderbook', label: 'Order Book', icon: '📗' },
-  { href: '/whales', label: 'Whale Alerts', icon: '🐋' },
-  { href: '/liquidations', label: 'Liquidations', icon: '💥' },
-  { href: '/options', label: 'Options Flow', icon: '📈' },
-  { href: '/arbitrage', label: 'Arbitrage Scanner', icon: '🔄' },
-  { href: '/predictions', label: 'Predictions', icon: '🎯' },
-  { href: '/screener', label: 'Screener', icon: '🔍' },
-  { href: '/sentiment', label: 'Fear & Greed', icon: '😱' },
-  { href: '/backtest', label: 'Backtest', icon: '🧪' },
-  { href: '/onchain', label: 'On-chain Events', icon: '⛓️' },
+  { href: '/orderbook', label: 'Order Book' },
+  { href: '/whales', label: 'Whale Alerts' },
+  { href: '/liquidations', label: 'Liquidations' },
+  { href: '/options', label: 'Options Flow' },
+  { href: '/arbitrage', label: 'Arbitrage Scanner' },
+  { href: '/predictions', label: 'Predictions' },
+  { href: '/screener', label: 'Screener' },
+  { href: '/sentiment', label: 'Fear & Greed' },
+  { href: '/backtest', label: 'Backtest' },
+  { href: '/onchain', label: 'On-chain Events' },
 ];
 
 const analyticsItems = [
-  { href: '/analytics', label: 'Analytics Hub', icon: '📊' },
-  { href: '/analytics/headlines', label: 'Headline Tracker', icon: '📰' },
-  { href: '/protocol-health', label: 'Protocol Health', icon: '🏥' },
-  { href: '/coverage-gap', label: 'Coverage Gaps', icon: '🔎' },
-  { href: '/influencers', label: 'Influencer Tracker', icon: '👥' },
-  { href: '/narratives', label: 'Narratives', icon: '💬' },
-  { href: '/funding', label: 'Funding Rounds', icon: '💸' },
-  { href: '/portfolio', label: 'Portfolio Tracker', icon: '💼' },
-  { href: '/watchlist', label: 'Watchlist', icon: '👁️' },
-  { href: '/bookmarks', label: 'Bookmarks', icon: '🔖' },
-  { href: '/compare', label: 'Coin Compare', icon: '⚖️' },
+  { href: '/analytics', label: 'Analytics Hub' },
+  { href: '/analytics/headlines', label: 'Headline Tracker' },
+  { href: '/protocol-health', label: 'Protocol Health' },
+  { href: '/coverage-gap', label: 'Coverage Gaps' },
+  { href: '/influencers', label: 'Influencer Tracker' },
+  { href: '/narratives', label: 'Narratives' },
+  { href: '/funding', label: 'Funding Rounds' },
+  { href: '/portfolio', label: 'Portfolio Tracker' },
+  { href: '/watchlist', label: 'Watchlist' },
+  { href: '/bookmarks', label: 'Bookmarks' },
+  { href: '/compare', label: 'Coin Compare' },
 ];
 
 const aiItems = [
-  { href: '/ai', label: 'AI Hub', icon: '✨' },
-  { href: '/ai/oracle', label: 'The Oracle', icon: '🔮' },
-  { href: '/ai/brief', label: 'The Brief', icon: '📋' },
-  { href: '/ai/debate', label: 'The Debate', icon: '⚖️' },
-  { href: '/ai/counter', label: 'The Counter', icon: '🔍' },
-  { href: '/ai-agent', label: 'AI Market Agent', icon: '🤖' },
-  { href: '/digest', label: 'AI Digest', icon: '📰' },
-  { href: '/sentiment', label: 'Sentiment', icon: '🎯' },
-  { href: '/factcheck', label: 'Fact Check', icon: '✅' },
-  { href: '/clickbait', label: 'Clickbait Detector', icon: '⚠️' },
-  { href: '/entities', label: 'Entity Explorer', icon: '🔗' },
+  { href: '/ai', label: 'AI Hub' },
+  { href: '/ai/oracle', label: 'The Oracle' },
+  { href: '/ai/brief', label: 'The Brief' },
+  { href: '/ai/debate', label: 'The Debate' },
+  { href: '/ai/counter', label: 'The Counter' },
+  { href: '/ai-agent', label: 'AI Market Agent' },
+  { href: '/digest', label: 'AI Digest' },
+  { href: '/sentiment', label: 'Sentiment' },
+  { href: '/factcheck', label: 'Fact Check' },
+  { href: '/clickbait', label: 'Clickbait Detector' },
+  { href: '/entities', label: 'Entity Explorer' },
 ];
 
 const resourceLinks = [
-  { href: '/developers', label: 'API', icon: '🔌' },
-  { href: '/examples', label: 'API Docs', icon: '📚' },
-  { href: '/pricing', label: 'Pricing', icon: '💎' },
-  { href: '/pricing/upgrade', label: 'x402 Crypto Pay', icon: '💳' },
-  { href: '/billing', label: 'Billing', icon: '📊' },
-  { href: '/install', label: 'Install App', icon: '📲' },
-  { href: '/settings', label: 'Settings', icon: '⚙️' },
-  { href: '/about', label: 'About Us', icon: 'ℹ️' },
-  { href: '/read', label: 'Reading List', icon: '📖' },
-  { href: '/citations', label: 'Citations', icon: '📖' },
-  { href: '/claims', label: 'Claims Tracker', icon: '📋' },
-  { href: '/origins', label: 'Story Origins', icon: '🔍' },
+  { href: '/developers', label: 'API' },
+  { href: '/examples', label: 'API Docs' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/pricing/upgrade', label: 'x402 Crypto Pay' },
+  { href: '/billing', label: 'Billing' },
+  { href: '/install', label: 'Install App' },
+  { href: '/settings', label: 'Settings' },
+  { href: '/about', label: 'About Us' },
+  { href: '/read', label: 'Reading List' },
+  { href: '/citations', label: 'Citations' },
+  { href: '/claims', label: 'Claims Tracker' },
+  { href: '/origins', label: 'Story Origins' },
 ];
 
 export function MobileNav() {
@@ -327,10 +327,9 @@ export function MobileNav() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
-                  className="flex items-center gap-3 px-4 py-3.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  className="flex items-center px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                 >
-                  <span className="text-xl w-7 text-center" aria-hidden="true">{item.icon}</span>
-                  <span className="font-medium">{item.label}</span>
+                  <span className="text-[13px] font-medium">{item.label}</span>
                 </Link>
               ))}
             </div>
@@ -400,10 +399,9 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                   >
-                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
-                    <span className="font-medium">{item.label}</span>
+                    <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
                 ))}
               </div>
@@ -437,10 +435,9 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                   >
-                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
-                    <span className="font-medium">{item.label}</span>
+                    <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
                 ))}
               </div>
@@ -474,10 +471,9 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                   >
-                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
-                    <span className="font-medium">{item.label}</span>
+                    <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
                 ))}
               </div>
@@ -511,20 +507,18 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                   >
-                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
-                    <span className="font-medium">{item.label}</span>
+                    <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
                 ))}
                 <a
                   href="https://github.com/nirholas/free-crypto-news"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
                 >
-                  <span className="text-lg" aria-hidden="true">⭐</span>
-                  <span className="font-medium">GitHub</span>
+                  <span className="text-[13px] font-medium">GitHub</span>
                   <svg className="w-4 h-4 ml-auto text-gray-400 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>

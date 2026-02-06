@@ -17,43 +17,41 @@ const navItems = [
   { 
     label: 'Home', 
     href: '/',
-    icon: '🏠',
   },
   { 
     label: 'Markets', 
     href: '/markets',
-    icon: '📈',
     megaMenu: {
       sections: [
         {
           title: 'Market Data',
           links: [
-            { label: 'Market Overview', href: '/markets', icon: '📊' },
-            { label: 'Top Gainers', href: '/markets/gainers', icon: '📈' },
-            { label: 'Top Losers', href: '/markets/losers', icon: '📉' },
-            { label: 'Trending', href: '/trending', icon: '🔥' },
-            { label: 'Exchanges', href: '/markets/exchanges', icon: '🏛️' },
-            { label: 'Categories', href: '/markets/categories', icon: '🗂️' },
+            { label: 'Market Overview', href: '/markets' },
+            { label: 'Top Gainers', href: '/markets/gainers' },
+            { label: 'Top Losers', href: '/markets/losers' },
+            { label: 'Trending', href: '/trending' },
+            { label: 'Exchanges', href: '/markets/exchanges' },
+            { label: 'Categories', href: '/markets/categories' },
           ],
         },
         {
           title: 'Top Assets',
           links: [
-            { label: 'Bitcoin', href: '/category/bitcoin', icon: '₿' },
-            { label: 'Ethereum', href: '/category/ethereum', icon: 'Ξ' },
-            { label: 'NFTs', href: '/category/nft', icon: '🎨' },
-            { label: 'BTC Price', href: '/coin/bitcoin', icon: '💹' },
-            { label: 'ETH Price', href: '/coin/ethereum', icon: '💹' },
+            { label: 'Bitcoin', href: '/category/bitcoin' },
+            { label: 'Ethereum', href: '/category/ethereum' },
+            { label: 'NFTs', href: '/category/nft' },
+            { label: 'BTC Price', href: '/coin/bitcoin' },
+            { label: 'ETH Price', href: '/coin/ethereum' },
           ],
         },
         {
           title: 'Analysis',
           links: [
-            { label: 'Fear & Greed', href: '/sentiment', icon: '😱' },
-            { label: 'Screener', href: '/screener', icon: '🔍' },
-            { label: 'Heatmap', href: '/heatmap', icon: '🗺️' },
-            { label: 'Dominance', href: '/dominance', icon: '🥧' },
-            { label: 'Calculator', href: '/calculator', icon: '🧮' },
+            { label: 'Fear & Greed', href: '/sentiment' },
+            { label: 'Screener', href: '/screener' },
+            { label: 'Heatmap', href: '/heatmap' },
+            { label: 'Dominance', href: '/dominance' },
+            { label: 'Calculator', href: '/calculator' },
           ],
         },
       ],
@@ -61,47 +59,47 @@ const navItems = [
         title: 'Fear & Greed Index',
         description: 'Track market sentiment with real-time Fear & Greed data',
         href: '/sentiment',
+        icon: '→',
       },
     },
   },
   { 
     label: 'News', 
     href: '/',
-    icon: '📰',
     megaMenu: {
       sections: [
         {
           title: 'Categories',
           links: [
-            { label: 'Bitcoin News', href: '/category/bitcoin', icon: '₿' },
-            { label: 'Ethereum News', href: '/category/ethereum', icon: 'Ξ' },
-            { label: 'DeFi News', href: '/category/defi', icon: '🏦' },
-            { label: 'NFT News', href: '/category/nft', icon: '🎨' },
-            { label: 'Regulation', href: '/category/regulation', icon: '⚖️' },
+            { label: 'Bitcoin News', href: '/category/bitcoin' },
+            { label: 'Ethereum News', href: '/category/ethereum' },
+            { label: 'DeFi News', href: '/category/defi' },
+            { label: 'NFT News', href: '/category/nft' },
+            { label: 'Regulation', href: '/category/regulation' },
           ],
         },
         {
           title: 'Bitcoin',
           links: [
-            { label: 'Lightning Network', href: '/topic/lightning-network', icon: '⚡' },
-            { label: 'Mining', href: '/topic/mining', icon: '⛏️' },
-            { label: 'Bitcoin ETFs', href: '/topic/bitcoin-etf', icon: '📈' },
+            { label: 'Lightning Network', href: '/topic/lightning-network' },
+            { label: 'Mining', href: '/topic/mining' },
+            { label: 'Bitcoin ETFs', href: '/topic/bitcoin-etf' },
           ],
         },
         {
           title: 'Ethereum',
           links: [
-            { label: 'Layer 2s', href: '/topic/layer-2', icon: '🔗' },
-            { label: 'Staking', href: '/topic/staking', icon: '🥩' },
-            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
+            { label: 'Layer 2s', href: '/topic/layer-2' },
+            { label: 'Staking', href: '/topic/staking' },
+            { label: 'Gas Tracker', href: '/gas' },
           ],
         },
         {
           title: 'Regulatory',
           links: [
-            { label: 'SEC News', href: '/topic/sec', icon: '🏛️' },
-            { label: 'Global Policy', href: '/topic/crypto-policy', icon: '🌍' },
-            { label: 'Regulatory Dashboard', href: '/regulatory', icon: '📊' },
+            { label: 'SEC News', href: '/topic/sec' },
+            { label: 'Global Policy', href: '/topic/crypto-policy' },
+            { label: 'Regulatory Dashboard', href: '/regulatory' },
           ],
         },
       ],
@@ -109,31 +107,31 @@ const navItems = [
         title: 'Breaking News',
         description: 'Latest crypto news from 12+ sources',
         href: '/',
+        icon: '→',
       },
     },
   },
   { 
     label: 'DeFi', 
     href: '/defi',
-    icon: '🏦',
     megaMenu: {
       sections: [
         {
           title: 'DeFi Sectors',
           links: [
-            { label: 'Lending', href: '/category/defi?sector=lending', icon: '💰' },
-            { label: 'DEXs', href: '/category/defi?sector=dex', icon: '🔄' },
-            { label: 'Yield', href: '/category/defi?sector=yield', icon: '🌾' },
-            { label: 'By Chain', href: '/defi/chain/ethereum', icon: '⛓️' },
+            { label: 'Lending', href: '/category/defi?sector=lending' },
+            { label: 'DEXs', href: '/category/defi?sector=dex' },
+            { label: 'Yield', href: '/category/defi?sector=yield' },
+            { label: 'By Chain', href: '/defi/chain/ethereum' },
           ],
         },
         {
           title: 'Tools',
           links: [
-            { label: 'DeFi Dashboard', href: '/defi', icon: '📊' },
-            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
-            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
-            { label: 'Calculator', href: '/calculator', icon: '🧮' },
+            { label: 'DeFi Dashboard', href: '/defi' },
+            { label: 'Gas Tracker', href: '/gas' },
+            { label: 'Liquidations', href: '/liquidations' },
+            { label: 'Calculator', href: '/calculator' },
           ],
         },
       ],
@@ -141,34 +139,34 @@ const navItems = [
         title: 'DeFi Dashboard',
         description: 'Track TVL, yields, and protocol metrics',
         href: '/defi',
+        icon: '→',
       },
     },
   },
   { 
     label: 'AI', 
     href: '/ai/oracle',
-    icon: '✨',
     megaMenu: {
       sections: [
         {
           title: 'AI Products',
           links: [
-            { label: 'AI Hub', href: '/ai', icon: '✨' },
-            { label: 'The Oracle', href: '/ai/oracle', icon: '🔮' },
-            { label: 'The Brief', href: '/ai/brief', icon: '📋' },
-            { label: 'The Debate', href: '/ai/debate', icon: '⚖️' },
-            { label: 'The Counter', href: '/ai/counter', icon: '🔍' },
+            { label: 'AI Hub', href: '/ai' },
+            { label: 'The Oracle', href: '/ai/oracle' },
+            { label: 'The Brief', href: '/ai/brief' },
+            { label: 'The Debate', href: '/ai/debate' },
+            { label: 'The Counter', href: '/ai/counter' },
           ],
         },
         {
           title: 'Analysis',
           links: [
-            { label: 'Sentiment', href: '/sentiment', icon: '🎯' },
-            { label: 'AI Digest', href: '/digest', icon: '📰' },
-            { label: 'AI Market Agent', href: '/ai-agent', icon: '🤖' },
-            { label: 'Fact Check', href: '/factcheck', icon: '✅' },
-            { label: 'Clickbait Detector', href: '/clickbait', icon: '⚠️' },
-            { label: 'Entity Explorer', href: '/entities', icon: '🔗' },
+            { label: 'Sentiment', href: '/sentiment' },
+            { label: 'AI Digest', href: '/digest' },
+            { label: 'AI Market Agent', href: '/ai-agent' },
+            { label: 'Fact Check', href: '/factcheck' },
+            { label: 'Clickbait Detector', href: '/clickbait' },
+            { label: 'Entity Explorer', href: '/entities' },
           ],
         },
       ],
@@ -176,44 +174,44 @@ const navItems = [
         title: 'Ask The Oracle',
         description: 'Natural language queries over all crypto data',
         href: '/ai/oracle',
+        icon: '→',
       },
     },
   },
   {
     label: 'Tools',
     href: '/orderbook',
-    icon: '🛠️',
     megaMenu: {
       sections: [
         {
           title: 'Trading',
           links: [
-            { label: 'Order Book', href: '/orderbook', icon: '📗' },
-            { label: 'Whale Alerts', href: '/whales', icon: '🐋' },
-            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
-            { label: 'Options Flow', href: '/options', icon: '📈' },
-            { label: 'Arbitrage Scanner', href: '/arbitrage', icon: '🔄' },
+            { label: 'Order Book', href: '/orderbook' },
+            { label: 'Whale Alerts', href: '/whales' },
+            { label: 'Liquidations', href: '/liquidations' },
+            { label: 'Options Flow', href: '/options' },
+            { label: 'Arbitrage Scanner', href: '/arbitrage' },
           ],
         },
         {
           title: 'Analytics',
           links: [
-            { label: 'Analytics Hub', href: '/analytics', icon: '📊' },
-            { label: 'Headline Tracker', href: '/analytics/headlines', icon: '📰' },
-            { label: 'Protocol Health', href: '/protocol-health', icon: '🏥' },
-            { label: 'Coverage Gaps', href: '/coverage-gap', icon: '🔎' },
-            { label: 'Influencer Tracker', href: '/influencers', icon: '👥' },
-            { label: 'Narratives', href: '/narratives', icon: '💬' },
+            { label: 'Analytics Hub', href: '/analytics' },
+            { label: 'Headline Tracker', href: '/analytics/headlines' },
+            { label: 'Protocol Health', href: '/protocol-health' },
+            { label: 'Coverage Gaps', href: '/coverage-gap' },
+            { label: 'Influencer Tracker', href: '/influencers' },
+            { label: 'Narratives', href: '/narratives' },
           ],
         },
         {
           title: 'Portfolio',
           links: [
-            { label: 'Portfolio Tracker', href: '/portfolio', icon: '💼' },
-            { label: 'Watchlist', href: '/watchlist', icon: '👁️' },
-            { label: 'Saved Articles', href: '/saved', icon: '🔖' },
-            { label: 'Predictions', href: '/predictions', icon: '🎯' },
-            { label: 'Backtest', href: '/backtest', icon: '🧪' },
+            { label: 'Portfolio Tracker', href: '/portfolio' },
+            { label: 'Watchlist', href: '/watchlist' },
+            { label: 'Saved Articles', href: '/saved' },
+            { label: 'Predictions', href: '/predictions' },
+            { label: 'Backtest', href: '/backtest' },
           ],
         },
       ],
@@ -221,40 +219,40 @@ const navItems = [
         title: 'Trading Intelligence',
         description: 'Real-time order books, whale tracking, and arbitrage opportunities',
         href: '/orderbook',
+        icon: '→',
       },
     },
   },
   {
     label: 'Learn',
     href: '/blog',
-    icon: '📚',
     megaMenu: {
       sections: [
         {
           title: 'Guides',
           links: [
-            { label: 'Crypto Blog', href: '/blog', icon: '📝' },
-            { label: 'Bitcoin Guide', href: '/blog/what-is-bitcoin', icon: '₿' },
-            { label: 'Ethereum vs Bitcoin', href: '/blog/ethereum-vs-bitcoin', icon: '⚖️' },
-            { label: 'DeFi Guide', href: '/blog/defi-beginners-guide', icon: '🏦' },
-            { label: 'About Us', href: '/about', icon: 'ℹ️' },
+            { label: 'Crypto Blog', href: '/blog' },
+            { label: 'Bitcoin Guide', href: '/blog/what-is-bitcoin' },
+            { label: 'Ethereum vs Bitcoin', href: '/blog/ethereum-vs-bitcoin' },
+            { label: 'DeFi Guide', href: '/blog/defi-beginners-guide' },
+            { label: 'About Us', href: '/about' },
           ],
         },
         {
           title: 'Tutorials',
           links: [
-            { label: 'Technical Analysis', href: '/blog/how-to-read-crypto-charts', icon: '📈' },
-            { label: 'Security Guide', href: '/blog/crypto-security-guide', icon: '🔒' },
-            { label: 'Layer 2 Explained', href: '/blog/layer-2-explained', icon: '🔗' },
+            { label: 'Technical Analysis', href: '/blog/how-to-read-crypto-charts' },
+            { label: 'Security Guide', href: '/blog/crypto-security-guide' },
+            { label: 'Layer 2 Explained', href: '/blog/layer-2-explained' },
           ],
         },
         {
           title: 'Research Tools',
           links: [
-            { label: 'Citations', href: '/citations', icon: '📖' },
-            { label: 'Claims Tracker', href: '/claims', icon: '📋' },
-            { label: 'Story Origins', href: '/origins', icon: '🔍' },
-            { label: 'Funding Rounds', href: '/funding', icon: '💸' },
+            { label: 'Citations', href: '/citations' },
+            { label: 'Claims Tracker', href: '/claims' },
+            { label: 'Story Origins', href: '/origins' },
+            { label: 'Funding Rounds', href: '/funding' },
           ],
         },
       ],
@@ -262,29 +260,29 @@ const navItems = [
         title: 'Crypto Education',
         description: 'Free guides and tutorials for beginners and experts',
         href: '/blog',
+        icon: '→',
       },
     },
   },
   {
     label: 'API',
     href: '/developers',
-    icon: '🔌',
     megaMenu: {
       sections: [
         {
           title: 'API & Tools',
           links: [
-            { label: 'Developer Portal', href: '/developers', icon: '👨‍💻' },
-            { label: 'API Documentation', href: '/examples', icon: '📚' },
-            { label: 'News Sources', href: '/sources', icon: '📰' },
+            { label: 'Developer Portal', href: '/developers' },
+            { label: 'API Documentation', href: '/examples' },
+            { label: 'News Sources', href: '/sources' },
           ],
         },
         {
           title: 'Account',
           links: [
-            { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
-            { label: 'Settings', href: '/settings', icon: '⚙️' },
-            { label: 'Install App', href: '/install', icon: '📲' },
+            { label: 'Billing Dashboard', href: '/billing' },
+            { label: 'Settings', href: '/settings' },
+            { label: 'Install App', href: '/install' },
           ],
         },
       ],
@@ -292,28 +290,28 @@ const navItems = [
         title: 'Free Crypto News API',
         description: 'Access real-time crypto news, market data, and AI analysis via REST API',
         href: '/developers',
+        icon: '→',
       },
     },
   },
   {
     label: 'Pricing',
     href: '/pricing',
-    icon: '💎',
     megaMenu: {
       sections: [
         {
           title: 'Plans',
           links: [
-            { label: 'Free Tier', href: '/pricing', icon: '🆓' },
-            { label: 'Pro Plan', href: '/pricing#pro', icon: '⭐' },
-            { label: 'Enterprise', href: '/pricing#enterprise', icon: '🏢' },
+            { label: 'Free Tier', href: '/pricing' },
+            { label: 'Pro Plan', href: '/pricing#pro' },
+            { label: 'Enterprise', href: '/pricing#enterprise' },
           ],
         },
         {
           title: 'Payment',
           links: [
-            { label: 'x402 Crypto Pay', href: '/pricing/upgrade', icon: '💳' },
-            { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
+            { label: 'x402 Crypto Pay', href: '/pricing/upgrade' },
+            { label: 'Billing Dashboard', href: '/billing' },
           ],
         },
       ],
@@ -321,6 +319,7 @@ const navItems = [
         title: 'x402 Crypto Payments',
         description: 'Pay for API access with USDC on Base network. Instant upgrades, no credit card needed.',
         href: '/pricing/upgrade',
+        icon: '→',
       },
     },
   },
@@ -343,34 +342,31 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
       <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-slate-800 border-l border-t border-gray-200 dark:border-slate-700" />
       
       <div 
-        className={`relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-2xl overflow-hidden ${
+        className={`relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 shadow-xl overflow-hidden ${
           hasMultipleSections ? 'min-w-[480px]' : 'min-w-[320px]'
         }`}
         style={{
-          animation: 'menuFadeIn 200ms ease-out forwards',
+          animation: 'menuFadeIn 150ms ease-out forwards',
         }}
       >
         <div className="flex">
           {/* Links Section */}
-          <div className={`${hasMultipleSections ? 'flex-1 p-4' : 'p-4'}`}>
-            <div className={hasMultipleSections ? 'grid grid-cols-2 gap-4' : ''}>
+          <div className={`${hasMultipleSections ? 'flex-1 p-3' : 'p-3'}`}>
+            <div className={hasMultipleSections ? 'grid grid-cols-2 gap-3' : ''}>
               {item.megaMenu.sections.map((section, idx) => (
                 <div key={idx}>
-                  <h3 className="text-[11px] font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-2 px-2">
+                  <h3 className="text-[10px] font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-widest mb-1.5 px-2">
                     {section.title}
                   </h3>
-                  <ul className="space-y-0.5">
+                  <ul className="space-y-px">
                     {section.links.map((link, linkIdx) => (
                       <li key={linkIdx}>
                         <Link
                           href={link.href}
-                          className="flex items-center gap-2.5 px-2 py-2 text-gray-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 rounded-lg transition-all duration-150 group"
+                          className="flex items-center px-2 py-1.5 text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors duration-100"
                           role="menuitem"
                         >
-                          <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 dark:bg-slate-700 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/30 group-hover:scale-105 transition-all duration-150 text-base">
-                            {link.icon}
-                          </span>
-                          <span className="font-medium text-sm">{link.label}</span>
+                          <span className="text-[13px] font-medium">{link.label}</span>
                         </Link>
                       </li>
                     ))}
@@ -381,25 +377,22 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
           </div>
 
           {/* Featured Card - Right side */}
-          <div className="w-48 bg-gradient-to-br from-brand-500 to-brand-600 dark:from-brand-600 dark:to-brand-700 p-4 flex flex-col justify-between">
+          <div className="w-44 bg-gray-900 dark:bg-slate-900 p-4 flex flex-col justify-between border-l border-gray-200 dark:border-slate-700">
             <div>
-              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
-                <span className="text-xl text-white">{item.icon}</span>
-              </div>
               <h4 className="font-semibold text-white text-sm mb-1">
                 {item.megaMenu.featured.title}
               </h4>
-              <p className="text-white/80 text-xs leading-relaxed">
+              <p className="text-gray-400 text-xs leading-relaxed">
                 {item.megaMenu.featured.description}
               </p>
             </div>
             <Link
               href={item.megaMenu.featured.href}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-white/90 transition-colors mt-3 group"
+              className="inline-flex items-center gap-1 text-xs font-medium text-gray-300 hover:text-white transition-colors mt-3 group"
               role="menuitem"
             >
               Explore
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -504,16 +497,16 @@ export default function Header() {
           <div className="flex items-center flex-shrink-0">
             <Link 
               href="/" 
-              className="text-xl font-bold flex items-center gap-2.5 focus-ring rounded-lg px-2 py-1 -mx-2"
+              className="text-xl font-bold flex items-center gap-2 focus-ring px-1 py-1 -mx-1"
             >
-              <span 
-                className={`transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-2xl'}`} 
-                aria-hidden="true"
-              >
-                📰
+              <span className="hidden sm:inline text-gray-900 dark:text-white font-bold tracking-tight">
+                FCN
               </span>
-              <span className="hidden sm:inline bg-gradient-to-r from-brand-600 to-brand-500 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
-                Crypto News
+              <span className="sm:hidden text-gray-900 dark:text-white font-bold tracking-tight">
+                FCN
+              </span>
+              <span className="hidden md:inline text-[11px] font-medium text-gray-400 dark:text-slate-500 ml-1 border-l border-gray-200 dark:border-slate-700 pl-2">
+                Free Crypto News
               </span>
             </Link>
           </div>
@@ -533,17 +526,16 @@ export default function Header() {
               >
                 <Link 
                   href={item.href}
-                  className={`flex items-center gap-1 px-2 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus-ring whitespace-nowrap ${
+                  className={`flex items-center gap-1 px-2.5 py-1.5 text-[13px] font-medium transition-colors duration-100 focus-ring whitespace-nowrap ${
                     activeMenu === item.label
-                      ? 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30'
-                      : 'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800'
+                      ? 'text-gray-900 dark:text-white'
+                      : 'text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                   role="menuitem"
                   aria-haspopup={item.megaMenu ? 'true' : undefined}
                   aria-expanded={item.megaMenu ? activeMenu === item.label : undefined}
                   onKeyDown={(e) => handleNavKeyDown(e, item)}
                 >
-                  <span className="hidden 2xl:inline" aria-hidden="true">{item.icon}</span>
                   <span>{item.label}</span>
                   {item.megaMenu && (
                     <svg 
@@ -600,7 +592,7 @@ export default function Header() {
               href="https://github.com/nirholas/free-crypto-news"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-2 ml-1 px-4 py-2 bg-gray-900 dark:bg-slate-700 text-white rounded-full hover:bg-gray-800 dark:hover:bg-slate-600 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-medium focus-ring"
+              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-slate-700 text-white text-[13px] font-medium hover:bg-gray-800 dark:hover:bg-slate-600 active:scale-[0.98] transition-all duration-100 focus-ring"
               aria-label="View on GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
