@@ -122,9 +122,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// Revalidate every 60 seconds
-export const revalidate = 60;
-
 // Define coin data interface for type safety
 interface CoinData {
   id: string;
