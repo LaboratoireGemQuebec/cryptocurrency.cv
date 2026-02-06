@@ -34,11 +34,10 @@ interface Exchange {
 
 // Fetch exchanges from CoinGecko (rate-limited)
 async function getExchanges(): Promise<Exchange[]> {
-  const data = await fetchCoinGecko<Exchange[]>(
+  return (await fetchCoinGecko<Exchange[]>(
     'https://api.coingecko.com/api/v3/exchanges?per_page=100',
     { revalidate: 300 }
-  );
-  return data ?? [];
+  )) ?? [];
 }
 
 // Trust score color mapping

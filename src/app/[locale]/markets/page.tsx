@@ -3,6 +3,9 @@
  * Comprehensive markets dashboard for browsing, filtering, and discovering cryptocurrencies
  */
 
+// Render dynamically to avoid CoinGecko rate limits during SSG build
+export const dynamic = 'force-dynamic';
+
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

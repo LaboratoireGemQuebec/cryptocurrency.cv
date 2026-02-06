@@ -125,7 +125,6 @@ export async function fetchCoinGecko<T = unknown>(
           Accept: 'application/json',
           'User-Agent': 'FreeCryptoNews/2.0',
         },
-        // @ts-expect-error -- Next.js extends RequestInit with `next`
         next: { revalidate },
       });
 

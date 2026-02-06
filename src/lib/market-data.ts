@@ -21,6 +21,13 @@ const CRYPTOCOMPARE_BASE = 'https://min-api.cryptocompare.com/data';
 const BINANCE_BASE = 'https://api.binance.com/api/v3';
 const COINPAPRIKA_BASE = 'https://api.coinpaprika.com/v1';
 
+/**
+ * Whether we are in a CI/build environment.
+ * When true, all external API calls return empty/fallback data immediately
+ * to prevent rate limiting during static page generation.
+ */
+const IS_BUILD = !!(process.env.VERCEL_ENV === 'production' && process.env.CI) || !!process.env.NEXT_PHASE?.includes('build');
+
 // =============================================================================
 // CACHE TTL CONFIGURATION (in seconds)
 // =============================================================================
@@ -839,6 +846,9 @@ async function fetchAndCache<T>(
  * @returns Simple price data for BTC, ETH, and SOL
  */
 export async function getSimplePrices(): Promise<SimplePrices> {
+  if (IS_BUILD) {
+    return { bitcoin: { usd: 0, usd_24h_change: 0 }, ethereum: { usd: 0, usd_24h_change: 0 }, solana: { usd: 0, usd_24h_change: 0 } };
+  }
   const cacheKey = 'simple-prices';
   const cached = getCached<SimplePrices>(cacheKey);
   if (cached) return cached.data;
@@ -1039,6 +1049,7 @@ export async function getRealTimePrice(symbol: string): Promise<{ price: number;
  * @returns Array of top coins sorted by market cap
  */
 export async function getTopCoins(limit = 50): Promise<TokenPrice[]> {
+  if (IS_BUILD) return [];
   const cacheKey = `top-coins-${limit}`;
   const cached = getCached<TokenPrice[]>(cacheKey);
   if (cached) return cached.data;
@@ -1112,6 +1123,7 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
  * @returns Array of trending coins
  */
 export async function getTrending(): Promise<TrendingCoin[]> {
+  if (IS_BUILD) return [];
   const cacheKey = 'trending';
   const cached = getCached<TrendingCoin[]>(cacheKey);
   if (cached) return cached.data;
@@ -1138,6 +1150,7 @@ export async function getTrending(): Promise<TrendingCoin[]> {
  * @returns Global cryptocurrency market statistics
  */
 export async function getGlobalMarketData(): Promise<GlobalMarketData | null> {
+  if (IS_BUILD) return null;
   const cacheKey = 'global';
   const cached = getCached<GlobalMarketData>(cacheKey);
   if (cached) return cached.data;
@@ -1298,6 +1311,7 @@ async function getCoinDetailsFallback(coinId: string): Promise<Record<string, un
  * @returns Current fear and greed index data
  */
 export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
+  if (IS_BUILD) return null;
   const cacheKey = 'fear-greed';
   const cached = getCached<FearGreedIndex>(cacheKey);
   if (cached) return cached.data;
@@ -1331,6 +1345,7 @@ export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
  * @returns Array of protocols sorted by TVL
  */
 export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
+  if (IS_BUILD) return [];
   const cacheKey = `protocols-${limit}`;
   const cached = getCached<ProtocolTVL[]>(cacheKey);
   if (cached) return cached.data;
@@ -1438,6 +1453,7 @@ export async function getChainBySlug(slug: string): Promise<ChainTVL | null> {
  * @returns Array of chains sorted by TVL
  */
 export async function getTopChains(limit = 20): Promise<ChainTVL[]> {
+  if (IS_BUILD) return [];
   const cacheKey = `chains-${limit}`;
   const cached = getCached<ChainTVL[]>(cacheKey);
   if (cached) return cached.data;

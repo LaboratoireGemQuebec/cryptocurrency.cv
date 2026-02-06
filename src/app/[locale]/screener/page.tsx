@@ -5,6 +5,24 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 
+interface Coin {
+  id: string;
+  symbol: string;
+  name: string;
+  image: string;
+  current_price: number;
+  market_cap: number;
+  market_cap_rank: number;
+  total_volume: number;
+  price_change_percentage_24h: number;
+  price_change_percentage_7d_in_currency?: number;
+  price_change_percentage_30d_in_currency?: number;
+  ath: number;
+  ath_change_percentage: number;
+  circulating_supply: number;
+  total_supply: number | null;
+}
+
 export const metadata: Metadata = {
   title: 'Crypto Screener | Filter & Discover Coins',
   description:
@@ -16,8 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
-async function getCoins() {
-  const data = await fetchCoinGecko(
+async function getCoins(): Promise<Coin[]> {
+  const data = await fetchCoinGecko<Coin[]>(
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=24h,7d,30d',
     { revalidate: 120 }
   );

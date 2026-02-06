@@ -5,6 +5,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 
+interface Coin {
+  id: string;
+  symbol: string;
+  name: string;
+  market_cap: number;
+}
+
 export const metadata: Metadata = {
   title: 'Market Dominance | Crypto Market Share',
   description:
@@ -15,12 +22,12 @@ export const metadata: Metadata = {
   },
 };
 
-async function getCoins() {
-  const data = await fetchCoinGecko(
+async function getCoins(): Promise<Coin[]> {
+  const data = await fetchCoinGecko<Coin[]>(
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
     { revalidate: 300 }
   );
-  return data ?? [];
+  return Array.isArray(data) ? data : [];
 }
 
 type Props = {
