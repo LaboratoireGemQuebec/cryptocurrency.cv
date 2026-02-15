@@ -1533,9 +1533,13 @@ async function fetchMultipleSources(sourceKeys: SourceKey[], includeApiSources: 
     return true;
   });
   
-  return deduped.sort((a, b) => 
-    new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
-  );
+  const now = Date.now();
+  return deduped
+    // Exclude future-dated articles (scheduled events, upcoming webinars, etc.)
+    .filter(a => new Date(a.pubDate).getTime() <= now)
+    .sort((a, b) => 
+      new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+    );
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1670,8 +1674,11 @@ export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> 
   
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
   
+  const now = new Date();
   const recentArticles = allArticles.filter(article => 
-    article && article.pubDate && new Date(article.pubDate) > twoHoursAgo
+    article && article.pubDate &&
+    new Date(article.pubDate) > twoHoursAgo &&
+    new Date(article.pubDate) <= now // exclude future-dated articles
   );
   
   return {
@@ -1694,8 +1701,11 @@ export async function getTrendingNews(limit: number = 10): Promise<NewsResponse>
   
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
   
+  const now = new Date();
   const recentArticles = allArticles.filter(article => 
-    article && article.pubDate && new Date(article.pubDate) > oneDayAgo
+    article && article.pubDate &&
+    new Date(article.pubDate) > oneDayAgo &&
+    new Date(article.pubDate) <= now // exclude future-dated articles
   );
   
   // Score and sort by trending score
