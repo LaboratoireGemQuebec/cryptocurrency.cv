@@ -103,29 +103,112 @@ export default async function Home({ params }: Props) {
       {/* Main Content */}
       <main id="main-content" className="max-w-[1400px] mx-auto">
 
-        {/* Hero Section - CoinDesk-style split layout */}
+        {/* 1. Hero Section - CoinDesk-style split layout */}
         {heroArticle && (
           <section className="px-4 sm:px-6 lg:px-8 mb-8">
             <HeroArticle article={heroArticle} sidebarArticles={heroSidebarArticles} />
           </section>
         )}
 
-        {/* Market Overview - CoinDesk-style ranked table (moved higher) */}
+        {/* 2. Market Overview - CoinDesk-style ranked table */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8">
           <HomeMarketStrip />
         </section>
 
-        {/* AI Flash Briefing */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Flash briefing">
-          <AIFlashBrief />
+        {/* 3. Latest News - standalone section (extracted from 3-col layout) */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-labelledby="latest-heading">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-1 h-8 bg-brand-500 rounded-full" />
+              <h2 id="latest-heading" className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                {t('latestNews')}
+              </h2>
+            </div>
+            <Link 
+              href="/read" 
+              className="text-sm font-semibold text-brand-600 dark:text-gray-300 hover:text-brand-700 dark:hover:text-white transition-colors flex items-center gap-1"
+            >
+              {tCommon('viewAll')}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* News Grid - responsive 2-3 columns */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {latestNews.map((article) => (
+              <NewsCard 
+                key={article.link} 
+                article={article}
+                showDescription={true}
+              />
+            ))}
+          </div>
+
+          {/* Load More */}
+          <div className="mt-8 text-center">
+            <Link
+              href="/read"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-slate-600 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              {tCommon('showMore')}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </Link>
+          </div>
         </section>
 
-        {/* Market Intelligence Signals */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Market signals">
-          <MarketSignals />
+        {/* 4. Featured Stories with sidebars */}
+        <div className="px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="grid lg:grid-cols-[320px_1fr_380px] gap-8 xl:gap-10">
+            {/* Left Column: CoinDesk-style Latest News Timeline */}
+            <div className="hidden lg:block">
+              <LatestNewsFeed articles={timelineFeedArticles} maxArticles={15} />
+            </div>
+
+            {/* Center Column: Featured Stories with Topic Tabs */}
+            <section aria-label="Featured Stories">
+              <FeaturedStoryTabs articles={featuredArticles} maxArticles={6} />
+            </section>
+
+            {/* Right Column: Trending Sidebar */}
+            <TrendingSidebar trendingArticles={trendingArticles} />
+          </div>
+        </div>
+
+        {/* 5. Most Read - CoinDesk-inspired numbered section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Most read articles">
+          <MostRead articles={trendingData.articles} maxArticles={7} />
         </section>
 
-        {/* Categories Navigation with scroll indicators */}
+        {/* 6. Source Sections */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="News by source">
+          <SourceSections 
+            articles={sourceArticles} 
+            maxSources={3}
+            articlesPerSource={4}
+          />
+        </section>
+
+        {/* 7. Live Market Activity: Whale Alerts + Liquidations */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Real-time market activity">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-8 bg-brand-500 rounded-full" />
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Live Market Activity</h2>
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
+            </span>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-6">
+            <WhaleAlerts />
+            <LiquidationsFeed />
+          </div>
+        </section>
+
+        {/* 8. Categories Navigation with scroll indicators */}
         <nav 
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="News categories"
@@ -147,123 +230,39 @@ export default async function Home({ params }: Props) {
           </ScrollIndicator>
         </nav>
 
-        {/* Trending Topics - Live */}
+        {/* 9. AI Flash Briefing */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Flash briefing">
+          <AIFlashBrief />
+        </section>
+
+        {/* 10. Market Intelligence Signals */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Market signals">
+          <MarketSignals />
+        </section>
+
+        {/* 11. Trending Topics - Live */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending topics">
           <TrendingTopicsLive />
         </section>
 
-        {/* CoinDesk-style Featured Stories with Topic Tabs */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Featured Stories">
-          <FeaturedStoryTabs articles={featuredArticles} maxArticles={6} />
-        </section>
-
-        {/* Google News-style Multi-Source Clusters */}
+        {/* 12. Google News-style Multi-Source Clusters */}
         {newsClusters.length > 0 && (
           <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Story clusters">
             <NewsCluster clusters={newsClusters} maxClusters={4} />
           </section>
         )}
 
-        {/* Trending Narratives */}
+        {/* 13. Trending Narratives */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending narratives">
           <TrendingNarratives />
         </section>
 
-        {/* Main Content: CoinDesk-style 3-column layout */}
-        <div className="px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[320px_1fr_380px] gap-8 xl:gap-10">
-            
-            {/* Left Column: CoinDesk-style Latest News Timeline */}
-            <div className="hidden lg:block">
-              <LatestNewsFeed articles={timelineFeedArticles} maxArticles={15} />
-            </div>
-
-            {/* Center Column: Latest News Cards */}
-            <section aria-labelledby="latest-heading">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-1 h-8 bg-brand-500 rounded-full" />
-                  <h2 id="latest-heading" className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                    {t('latestNews')}
-                  </h2>
-                </div>
-                <Link 
-                  href="/read" 
-                  className="text-sm font-semibold text-brand-600 dark:text-gray-300 hover:text-brand-700 dark:hover:text-white transition-colors flex items-center gap-1"
-                >
-                  {tCommon('viewAll')}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* News Grid - 2 columns in the center column */}
-              <div className="grid sm:grid-cols-2 gap-6">
-                {latestNews.map((article) => (
-                  <NewsCard 
-                    key={article.link} 
-                    article={article}
-                    showDescription={true}
-                  />
-                ))}
-              </div>
-
-              {/* Load More */}
-              <div className="mt-8 text-center">
-                <Link
-                  href="/read"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-slate-700 text-white rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-slate-600 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
-                >
-                  {tCommon('showMore')}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </Link>
-              </div>
-            </section>
-
-            {/* Right Column: Sidebar */}
-            <TrendingSidebar trendingArticles={trendingArticles} />
-          </div>
-        </div>
-
-        {/* Most Read - CoinDesk-inspired numbered section */}
-        <section className="px-4 sm:px-6 lg:px-8 mt-12 mb-8" aria-label="Most read articles">
-          <MostRead articles={trendingData.articles} maxArticles={7} />
-        </section>
-
-        {/* Whale Activity Feed - Enhanced */}
+        {/* 14. Whale Activity Feed - Enhanced */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Whale activity">
           <WhaleActivityFeed />
         </section>
 
-        {/* Real-Time Activity: Whale Alerts + Liquidations */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Real-time market activity">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-8 bg-brand-500 rounded-full" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Live Market Activity</h2>
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
-            </span>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-6">
-            <WhaleAlerts />
-            <LiquidationsFeed />
-          </div>
-        </section>
-
-        {/* Source Sections */}
-        <section className="px-4 sm:px-6 lg:px-8 mt-12" aria-label="News by source">
-          <SourceSections 
-            articles={sourceArticles} 
-            maxSources={3}
-            articlesPerSource={4}
-          />
-        </section>
-
-        {/* Bottom CTA Section */}
+        {/* 15. Bottom CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 py-16 mt-8" aria-label="Developer resources">
           <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl overflow-hidden relative">
             {/* Decorative elements */}
