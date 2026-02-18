@@ -2217,15 +2217,34 @@ export async function getHomepageNews(options?: {
   // --- Latest ---
   const latestArticles = allArticles.slice(0, latestLimit);
 
+  // Filter out feed metadata items that aren't real news
+  const isActualNews = (a: NewsArticle): boolean => {
+    const title = a.title || '';
+    // Skip mempool/blockchain status items
+    if (title.startsWith('₿') || title.startsWith('⚡')) return false;
+    // Skip pure ticker/trading pair items (e.g., "SOL-USDT", "BTCUSD")
+    if (/^[A-Z]{2,10}[-/][A-Z]{2,10}$/i.test(title.trim())) return false;
+    // Skip items that are just price/fee data
+    if (/^\s*₿.*sat\/vB/i.test(title)) return false;
+    // Skip blockchain network status items
+    if (/Bitcoin Network:.*hashrate|EH\/s/i.test(title)) return false;
+    // Must have at least 5 words to be a real headline
+    if (title.split(/\s+/).length < 5) return false;
+    return true;
+  };
+
   // --- Breaking (last 2 hours) ---
   const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
   const breakingArticles = allArticles
     .filter(a => a?.pubDate && new Date(a.pubDate) > twoHoursAgo)
+    .filter(isActualNews)
     .slice(0, breakingLimit);
 
   // --- Trending (last 24 hours, scored) ---
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
-  const recentArticles = allArticles.filter(a => a?.pubDate && new Date(a.pubDate) > oneDayAgo);
+  const recentArticles = allArticles
+    .filter(a => a?.pubDate && new Date(a.pubDate) > oneDayAgo)
+    .filter(isActualNews);
 
   const scoredArticles = recentArticles
     .map(article => ({ article, score: calculateTrendingScore(article) }))
