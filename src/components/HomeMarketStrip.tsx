@@ -5,6 +5,7 @@
  */
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { getTopCoins } from '@/lib/market-data';
 
 // Fallback data so the table never appears empty when CoinGecko fails
@@ -128,13 +129,12 @@ export default async function HomeMarketStrip() {
                 {/* Coin info */}
                 <div className="flex items-center gap-2.5 min-w-0">
                   {coin.image ? (
-                    <img
+                    <Image
                       src={coin.image}
                       alt={coin.name}
                       width={28}
                       height={28}
-                      className="w-7 h-7 rounded-full flex-shrink-0"
-                      loading="lazy"
+                      className="rounded-full flex-shrink-0"
                     />
                   ) : (
                     <span className="w-7 h-7 flex items-center justify-center text-xs font-bold text-gray-500 bg-gray-100 dark:bg-slate-700 rounded-full flex-shrink-0">

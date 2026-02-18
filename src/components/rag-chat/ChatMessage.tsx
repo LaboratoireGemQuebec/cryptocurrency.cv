@@ -10,6 +10,7 @@
 import { useRef, useEffect, useState, memo } from 'react';
 import type { ChatMessage as ChatMessageType, Source, ConfidenceScore } from './types';
 import { ConfidenceBadge } from './ConfidenceBadge';
+import { sanitizeHTML } from '@/lib/sanitize-dom';
 
 interface ChatMessageProps {
   message: ChatMessageType;
@@ -245,7 +246,7 @@ function ChatMessageComponent({
                       <div
                         key={i}
                         className="whitespace-pre-wrap break-words"
-                        dangerouslySetInnerHTML={{ __html: processInline(part) }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeHTML(processInline(part)) }}
                       />
                     );
                   } else {

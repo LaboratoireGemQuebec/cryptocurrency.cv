@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -149,7 +150,7 @@ export function HoldingsTable({
                   <td className="px-6 py-4">
                     <Link href={`/coin/${holding.coinId}`} className="flex items-center gap-3 group">
                       {holding.image ? (
-                        <img src={holding.image} alt={holding.coinName} className="w-10 h-10 rounded-full" />
+                        <Image src={holding.image} alt={holding.coinName} width={40} height={40} className="rounded-full" />
                       ) : (
                         <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center text-sm font-bold text-gray-600 dark:text-gray-300">
                           {holding.coinSymbol.slice(0, 2).toUpperCase()}

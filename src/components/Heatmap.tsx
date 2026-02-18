@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 
 interface Coin {
@@ -231,10 +232,12 @@ export function Heatmap({ coins }: HeatmapProps) {
                 className="flex flex-col items-center justify-center w-full h-full"
                 style={{ transform: `scale(${relativeSize})` }}
               >
-                <img
+                <Image
                   src={coin.image}
                   alt={coin.name}
-                  className="w-6 h-6 rounded-full mb-0.5 opacity-90"
+                  width={24}
+                  height={24}
+                  className="rounded-full mb-0.5 opacity-90"
                 />
                 <span className={`text-xs font-bold uppercase ${textColor}`}>{coin.symbol}</span>
                 <span className={`text-[10px] font-mono ${textColor} opacity-90`}>

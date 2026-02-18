@@ -39,6 +39,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
@@ -194,11 +195,12 @@ export default function NewsCard({ article, variant = 'default', showDescription
           {/* Horizontal thumbnail */}
           {article.imageUrl && (
             <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-700 flex-shrink-0 self-center">
-              <img
+              <Image
                 src={article.imageUrl}
                 alt=""
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                fill
+                sizes="96px"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
                 onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
               />
             </div>
@@ -269,11 +271,12 @@ export default function NewsCard({ article, variant = 'default', showDescription
         {/* Article thumbnail */}
         {article.imageUrl && (
           <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 dark:bg-slate-700">
-            <img
+            <Image
               src={article.imageUrl}
               alt=""
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
               onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
             />
           </div>

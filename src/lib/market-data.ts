@@ -1096,7 +1096,26 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
     const data = await response.json();
     
     // Transform CoinPaprika format to our TokenPrice format
-    return data.map((coin: any) => ({
+    interface CoinPaprikaCoin {
+      id: string;
+      symbol: string;
+      name: string;
+      rank: number;
+      circulating_supply: number;
+      total_supply: number | null;
+      max_supply: number | null;
+      quotes?: {
+        USD?: {
+          price: number;
+          market_cap: number;
+          volume_24h: number;
+          percent_change_24h: number;
+          percent_change_7d: number;
+        };
+      };
+    }
+
+    return data.map((coin: CoinPaprikaCoin) => ({
       id: coin.id,
       symbol: coin.symbol.toLowerCase(),
       name: coin.name,
@@ -1104,7 +1123,7 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
       market_cap: coin.quotes?.USD?.market_cap || 0,
       market_cap_rank: coin.rank,
       total_volume: coin.quotes?.USD?.volume_24h || 0,
-      price_change_24h: coin.quotes?.USD?.price || 0 * (coin.quotes?.USD?.percent_change_24h || 0) / 100,
+      price_change_24h: (coin.quotes?.USD?.price || 0) * ((coin.quotes?.USD?.percent_change_24h || 0) / 100),
       price_change_percentage_24h: coin.quotes?.USD?.percent_change_24h || 0,
       price_change_percentage_7d_in_currency: coin.quotes?.USD?.percent_change_7d || 0,
       circulating_supply: coin.circulating_supply || 0,

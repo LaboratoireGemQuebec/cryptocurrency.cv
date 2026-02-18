@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getPostBySlug, getRelatedPosts, getAllSlugs, CATEGORIES, type BlogCategory } from '@/lib/blog';
+import { sanitizeHTML } from '@/lib/sanitize-dom';
 
 // Enable static generation
 export const dynamic = 'force-static';
@@ -197,7 +198,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               prose-table:border-collapse
               prose-th:bg-gray-800 prose-th:text-white prose-th:p-3 prose-th:border prose-th:border-gray-700
               prose-td:p-3 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHTML(htmlContent) }}
           />
           
           {/* Tags */}

@@ -8,6 +8,7 @@
 
 import { memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import type { ChatMessage } from './types';
+import { sanitizeHighlight } from '@/lib/sanitize-dom';
 
 // Debounce hook for search performance
 function useDebounce<T>(value: T, delay: number): T {
@@ -254,7 +255,7 @@ function MessageSearchComponent({ messages, onResultClick, onClose }: MessageSea
               
               <div 
                 className="text-sm text-gray-300 line-clamp-2"
-                dangerouslySetInnerHTML={{ __html: highlightText(result.preview, query) }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHighlight(highlightText(result.preview, query)) }}
               />
             </button>
           ))

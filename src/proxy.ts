@@ -4,6 +4,8 @@
  * Handles:
  * - Internationalization (locale detection and routing)
  * - Rate limiting for free tier API endpoints
+ * - Bot detection and blocking
+ * - Admin route authentication
  * - Request size validation
  * - Security headers
  * - Request ID generation
@@ -58,6 +60,10 @@ const EXEMPT_PATTERNS = [
 
 const MAX_BODY_SIZE = 10 * 1024 * 1024;
 const RATE_LIMIT = { requests: 100, windowMs: 3600000 };
+
+// Known bad bot user-agent patterns (Googlebot intentionally excluded for SEO)
+const BLOCKED_BOTS = /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\//i;
+const BOT_ALLOWLIST = ['Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'facebookexternalhit'];
 
 // =============================================================================
 // IN-MEMORY RATE LIMIT (Edge-compatible)
@@ -125,6 +131,26 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
     'X-Request-ID': requestId,
     ...SECURITY_HEADERS,
   };
+
+  // Block known bad bots from API (allow search engine crawlers)
+  const ua = request.headers.get('user-agent') || '';
+  if (BLOCKED_BOTS.test(ua) && !BOT_ALLOWLIST.some((allowed) => ua.includes(allowed))) {
+    return NextResponse.json(
+      { error: 'Forbidden', code: 'BOT_BLOCKED', requestId },
+      { status: 403, headers }
+    );
+  }
+
+  // Protect admin routes with bearer token
+  if (pathname.startsWith('/api/admin') || pathname.startsWith('/admin')) {
+    const token = request.headers.get('Authorization')?.replace('Bearer ', '');
+    if (!process.env.ADMIN_TOKEN || token !== process.env.ADMIN_TOKEN) {
+      return NextResponse.json(
+        { error: 'Unauthorized', code: 'ADMIN_AUTH_REQUIRED', requestId },
+        { status: 401, headers }
+      );
+    }
+  }
 
   if (matchesPattern(pathname, EXEMPT_PATTERNS)) {
     const res = NextResponse.next();

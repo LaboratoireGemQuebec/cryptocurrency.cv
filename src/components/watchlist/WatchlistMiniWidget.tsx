@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Star, ChevronRight, TrendingUp, TrendingDown, AlertCircle } from 'lucide-react';
 import { useWatchlist } from './WatchlistProvider';
 
@@ -136,7 +137,7 @@ export function WatchlistMiniWidget({
           >
             <div className="flex items-center gap-3">
               {coin.image ? (
-                <img src={coin.image} alt={coin.name} className="w-6 h-6 rounded-full" />
+                <Image src={coin.image} alt={coin.name} width={24} height={24} className="rounded-full" />
               ) : (
                 <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-600" />
               )}

@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { sanitizeHTML } from '@/lib/sanitize-dom';
 import { searchNews } from '@/lib/crypto-news';
 import {
   getCoinDetails,
@@ -269,7 +270,7 @@ export default async function CoinPage({ params, searchParams }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: coinData.name,
-    description: coinData.description?.en?.replace(/<[^>]*>/g, '').slice(0, 200),
+    description: sanitizeHTML(coinData.description?.en || '').slice(0, 200),
     image: coinData.image?.large,
     brand: {
       '@type': 'Brand',

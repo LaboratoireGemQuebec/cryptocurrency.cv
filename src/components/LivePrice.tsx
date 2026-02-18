@@ -8,6 +8,7 @@
  */
 
 import { useLivePrices, formatLivePrice } from '@/lib/price-websocket';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 interface LivePriceProps {
@@ -125,7 +126,7 @@ export function LivePriceCard({
   return (
     <div className="flex items-center justify-between p-4 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-gray-700">
       <div className="flex items-center gap-3">
-        {image && <img src={image} alt={name} className="w-8 h-8 rounded-full" />}
+        {image && <Image src={image} alt={name} width={32} height={32} className="rounded-full" />}
         <div>
           <div className="font-medium">{name}</div>
           <div className="text-sm text-gray-500">{symbol.toUpperCase()}</div>

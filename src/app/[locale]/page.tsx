@@ -28,7 +28,7 @@ import { LiveNewsTicker } from '@/components/LiveNewsTicker';
 import { AskAboutThis } from '@/components/AskAboutThis';
 import { AIFlashBrief } from '@/components/AIFlashBrief';
 import { TrendingTopicsLive } from '@/components/TrendingTopicsLive';
-import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
+import { getHomepageNews, getSourceCount, type NewsResponse } from '@/lib/crypto-news';
 import { clusterSimilarArticles } from '@/lib/ai-intelligence';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
@@ -47,11 +47,25 @@ export default async function Home({ params }: Props) {
   const tCommon = await getTranslations('common');
   const tNews = await getTranslations('news');
 
-  const { latest: newsData, breaking: breakingData, trending: trendingData } = await getHomepageNews({
-    latestLimit: 50,
-    breakingLimit: 5,
-    trendingLimit: 10,
-  });
+  const emptyFeed: NewsResponse = { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
+  let newsData: NewsResponse;
+  let breakingData: NewsResponse;
+  let trendingData: NewsResponse;
+  try {
+    const result = await getHomepageNews({
+      latestLimit: 50,
+      breakingLimit: 5,
+      trendingLimit: 10,
+    });
+    newsData = result.latest;
+    breakingData = result.breaking;
+    trendingData = result.trending;
+  } catch (error) {
+    console.error('[Homepage] Failed to fetch news data:', error);
+    newsData = emptyFeed;
+    breakingData = emptyFeed;
+    trendingData = emptyFeed;
+  }
 
   // Get dynamic source count
   const sourceCount = getSourceCount();
@@ -62,7 +76,12 @@ export default async function Home({ params }: Props) {
   const featuredArticles = newsData.articles.slice(0, 20); // CoinDesk-style tabbed featured stories
   
   // Cluster similar articles for Google News-style multi-source view
-  const newsClusters = clusterSimilarArticles(newsData.articles.slice(0, 30));
+  let newsClusters: ReturnType<typeof clusterSimilarArticles> = [];
+  try {
+    newsClusters = clusterSimilarArticles(newsData.articles.slice(0, 30));
+  } catch (error) {
+    console.error('[Homepage] Failed to cluster articles:', error);
+  }
   
   // Deduplicate: exclude trending articles from latest news to avoid showing same content
   const trendingLinks = new Set(trendingData.articles.map(a => a.link));

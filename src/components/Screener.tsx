@@ -10,6 +10,7 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import { ExportButton, exportMarketData } from './ExportData';
 
 interface Coin {
@@ -470,7 +471,7 @@ export function Screener({ coins }: { coins: Coin[] }) {
                 </td>
                 <td className="px-4 py-3">
                   <a href={`/coin/${coin.id}`} className="flex items-center gap-3 hover:opacity-80">
-                    <img src={coin.image} alt={coin.name} className="w-6 h-6 rounded-full" />
+                    <Image src={coin.image} alt={coin.name} width={24} height={24} className="rounded-full" />
                     <div>
                       <div className="font-medium text-slate-900 dark:text-white">
                         {coin.name}

@@ -113,11 +113,8 @@ const nextConfig = {
         source: '/api/:path*',
         headers: [
           {
-            // TODO: Restrict to production domain (e.g. 'https://freecryptonews.com')
-            // instead of wildcard '*' to prevent unauthorized cross-origin requests.
-            // Keeping '*' for now until the canonical production domain is confirmed.
             key: 'Access-Control-Allow-Origin',
-            value: '*',
+            value: 'https://cryptocurrency.cv',
           },
           {
             key: 'Access-Control-Allow-Methods',
@@ -152,23 +149,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.coingecko.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'coin-images.coingecko.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'static.coingecko.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.defillama.com',
+        hostname: '**', // RSS article images + API icons from any domain
       },
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],

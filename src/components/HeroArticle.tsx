@@ -7,6 +7,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
@@ -158,11 +159,13 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
         }`}>
           {/* Background image */}
           {article.imageUrl && (
-            <img 
-              src={article.imageUrl} 
+            <Image
+              src={article.imageUrl}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+              className="object-cover"
+              priority
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           )}

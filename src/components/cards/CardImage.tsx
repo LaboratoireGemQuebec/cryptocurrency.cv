@@ -6,6 +6,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { getSourceGradient } from './cardUtils';
 
 interface CardImageProps {
@@ -65,13 +66,14 @@ export default function CardImage({
 
       {/* Actual image with lazy loading */}
       {src && !hasError && (
-        <img
+        <Image
           src={src}
           alt={alt}
-          loading="lazy"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
           onLoad={() => setIsLoaded(true)}
           onError={() => setHasError(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+          className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         />

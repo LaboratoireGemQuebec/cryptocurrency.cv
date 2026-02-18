@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProtocolImageProps {
   src: string;
@@ -10,29 +11,10 @@ interface ProtocolImageProps {
 
 /**
  * Protocol Image with error handling
- * Attaches error handler via ref after mount to avoid RSC serialization issues
+ * Uses next/image onError for fallback display
  */
 export default function ProtocolImage({ src, alt, className = '' }: ProtocolImageProps) {
-  const imgRef = useRef<HTMLImageElement>(null);
   const [showFallback, setShowFallback] = useState(false);
-
-  useEffect(() => {
-    const img = imgRef.current;
-    if (!img) return;
-
-    const handleError = () => {
-      setShowFallback(true);
-    };
-
-    // Check if image already failed to load (can happen if cached as broken)
-    if (img.complete && img.naturalWidth === 0) {
-      setShowFallback(true);
-      return;
-    }
-
-    img.addEventListener('error', handleError);
-    return () => img.removeEventListener('error', handleError);
-  }, [src]);
 
   if (!src || showFallback) {
     return (
@@ -49,13 +31,13 @@ export default function ProtocolImage({ src, alt, className = '' }: ProtocolImag
   }
 
   return (
-    <img
-      ref={imgRef}
+    <Image
       src={src}
       alt={alt}
+      width={40}
+      height={40}
       className={className}
-      loading="lazy"
-      decoding="async"
+      onError={() => setShowFallback(true)}
     />
   );
 }

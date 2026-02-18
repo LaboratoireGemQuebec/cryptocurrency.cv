@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import {
   ArrowTrendingUpIcon,
   ChatBubbleLeftRightIcon,
@@ -309,10 +310,12 @@ export function SocialBuzz() {
               className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
             >
               <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
-              <img 
+              <Image 
                 src={coin.small || coin.thumb} 
                 alt={coin.name} 
-                className="w-10 h-10 rounded-full bg-gray-100 dark:bg-slate-700" 
+                width={40}
+                height={40}
+                className="rounded-full bg-gray-100 dark:bg-slate-700" 
               />
               <div className="flex-1 min-w-0">
                 <div className="font-medium text-slate-900 dark:text-white truncate">
@@ -370,10 +373,12 @@ export function SocialBuzz() {
                 className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <img 
+                  <Image 
                     src={coin.small || coin.thumb} 
                     alt={coin.name} 
-                    className="w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-700" 
+                    width={32}
+                    height={32}
+                    className="rounded-full bg-gray-100 dark:bg-slate-700" 
                   />
                   <div>
                     <div className="font-medium text-slate-900 dark:text-white">{coin.name}</div>
@@ -446,10 +451,12 @@ export function SocialBuzz() {
                 className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
               >
                 <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
-                <img 
+                <Image 
                   src={nft.thumb} 
                   alt={nft.name} 
-                  className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-slate-700" 
+                  width={40}
+                  height={40}
+                  className="rounded-lg bg-gray-100 dark:bg-slate-700" 
                 />
                 <div className="flex-1 min-w-0">
                   <div className="font-medium text-slate-900 dark:text-white truncate">
@@ -558,7 +565,7 @@ export function SocialBuzzWidget() {
           className="flex items-center gap-2 p-2 rounded hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
         >
           <span className="text-xs text-gray-400 w-4">{i + 1}</span>
-          <img src={coin.thumb} alt={coin.name} className="w-5 h-5 rounded-full" />
+          <Image src={coin.thumb} alt={coin.name} width={20} height={20} className="rounded-full" />
           <span className="text-sm text-slate-900 dark:text-white truncate flex-1">{coin.name}</span>
           <span className="text-xs text-gray-500 uppercase">{coin.symbol}</span>
         </a>

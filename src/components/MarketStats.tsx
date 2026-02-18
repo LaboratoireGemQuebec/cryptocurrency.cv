@@ -5,6 +5,7 @@
 
 import { getMarketOverview, formatNumber, formatPercent, getFearGreedColor, getFearGreedBgColor } from '@/lib/market-data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function MarketStats() {
   const market = await getMarketOverview();
@@ -166,10 +167,12 @@ export default async function MarketStats() {
                     role="listitem"
                   >
                     {index === 0 && <span className="text-gray-400" aria-hidden="true">👑</span>}
-                    <img 
+                    <Image 
                       src={coin.thumb} 
                       alt="" 
-                      className="w-4 h-4 rounded-full" 
+                      width={16}
+                      height={16}
+                      className="rounded-full" 
                       aria-hidden="true"
                     />
                     <span>{coin.symbol.toUpperCase()}</span>

@@ -1805,6 +1805,9 @@ export async function getLatestNews(
   
   let articles = await fetchMultipleSources(sourceKeys, includeApiSources);
   
+  // Filter out feed metadata items that aren't real news
+  articles = articles.filter(isActualNews);
+  
   // Apply date filtering
   if (options?.from || options?.to) {
     articles = filterByDateRange(articles, options.from, options.to);
@@ -2234,6 +2237,33 @@ export async function getGlobalNews(
 }
 
 /**
+ * Filter out feed metadata items that aren't real news articles.
+ * Removes mempool spam, raw ticker pairs, hashrate data, price alerts, and extremely short titles.
+ */
+function isActualNews(a: NewsArticle): boolean {
+  const title = (a.title || '').trim();
+  // Skip mempool/blockchain status items (₿ / ⚡ prefix)
+  if (title.startsWith('₿') || title.startsWith('⚡')) return false;
+  // Skip pure ticker/trading pair items (e.g., "SOL-USDT", "BTCUSD")
+  if (/^[A-Z]{2,10}[-/][A-Z]{2,10}$/i.test(title)) return false;
+  // Skip items that are just price/fee data (sat/vB)
+  if (/^\s*₿.*sat\/vB/i.test(title)) return false;
+  // Skip blockchain network status items (hashrate / EH/s)
+  if (/Bitcoin Network:.*hashrate|EH\/s/i.test(title)) return false;
+  // Skip live stream / price alert spam
+  if (/^🔴\s*LIVE\b/i.test(title)) return false;
+  // Skip titles that are only a price number (e.g., "$67,432.10")
+  if (/^\$[\d,.]+$/.test(title)) return false;
+  // Skip pure percentage moves (e.g., "+5.2%", "-12.3%")
+  if (/^[+-]?\d+(\.\d+)?%$/.test(title)) return false;
+  // Skip block height announcements (e.g., "Block 840000")
+  if (/^Block\s+\d+$/i.test(title)) return false;
+  // Must have at least 5 words to be a real headline
+  if (title.split(/\s+/).length < 5) return false;
+  return true;
+}
+
+/**
  * Optimized homepage data loader.
  * Fetches ALL sources ONCE and derives latest, breaking, and trending from the same dataset.
  * This avoids 3× redundant fetches of 130+ RSS feeds on every page render.
@@ -2254,24 +2284,8 @@ export async function getHomepageNews(options?: {
   const sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   const allArticles = await fetchMultipleSources(sourceKeys, true);
 
-  // --- Latest ---
-  const latestArticles = allArticles.slice(0, latestLimit);
-
-  // Filter out feed metadata items that aren't real news
-  const isActualNews = (a: NewsArticle): boolean => {
-    const title = a.title || '';
-    // Skip mempool/blockchain status items
-    if (title.startsWith('₿') || title.startsWith('⚡')) return false;
-    // Skip pure ticker/trading pair items (e.g., "SOL-USDT", "BTCUSD")
-    if (/^[A-Z]{2,10}[-/][A-Z]{2,10}$/i.test(title.trim())) return false;
-    // Skip items that are just price/fee data
-    if (/^\s*₿.*sat\/vB/i.test(title)) return false;
-    // Skip blockchain network status items
-    if (/Bitcoin Network:.*hashrate|EH\/s/i.test(title)) return false;
-    // Must have at least 5 words to be a real headline
-    if (title.split(/\s+/).length < 5) return false;
-    return true;
-  };
+  // --- Latest (filtered to remove spam/metadata items) ---
+  const latestArticles = allArticles.filter(isActualNews).slice(0, latestLimit);
 
   // --- Breaking (last 2 hours) ---
   const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
