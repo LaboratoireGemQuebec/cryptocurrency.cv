@@ -1,7 +1,7 @@
 /// <reference lib="webworker" />
 
 // Service Worker for Free Crypto News PWA
-// Version: 1.0.0
+// Version: 2.0.0
 
 const CACHE_VERSION = 'v2';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
