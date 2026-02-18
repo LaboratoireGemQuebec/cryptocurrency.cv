@@ -1234,7 +1234,12 @@ async function getCoinDetailsFallback(coinId: string): Promise<Record<string, un
       'usd-coin': 'usdc-usd-coin',
     };
     
-    const paprikaId = paprikaIdMap[coinId] || `${coinId.split('-')[0]}-${coinId}`;
+    const paprikaId = paprikaIdMap[coinId];
+    
+    // If no known mapping, don't attempt CoinPaprika (bad IDs always 404)
+    if (!paprikaId) {
+      return null;
+    }
     
     // Fetch coin info and ticker in parallel
     const [coinResponse, tickerResponse] = await Promise.all([

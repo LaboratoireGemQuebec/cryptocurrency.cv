@@ -192,17 +192,33 @@ export default async function CoinPage({ params, searchParams }: Props) {
     notFound();
   }
 
+  // Validate coinId format - prevent injection
+  if (!/^[a-z0-9-]+$/i.test(coinId) || coinId.length > 100) {
+    notFound();
+  }
+
   const meta = coinMeta[coinId];
 
-  // Fetch all data in parallel for performance
-  const [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
-    getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
-    getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
-    getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
-    getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),
-    getCoinCommunityData(coinId).catch(() => null as CommunityData | null),
-    searchNews(meta?.keywords?.join(',') || coinId, 30).catch(() => ({ articles: [] })),
-  ]);
+  let coinData: CoinData | null = null;
+  let tickersData: { name: string; tickers: Ticker[] } = { name: coinId, tickers: [] };
+  let ohlcData: OHLCData[] = [];
+  let developerData: DeveloperData | null = null;
+  let communityData: CommunityData | null = null;
+  let newsData: { articles: any[] } = { articles: [] };
+
+  try {
+    [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
+      getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
+      getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
+      getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
+      getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),
+      getCoinCommunityData(coinId).catch(() => null as CommunityData | null),
+      searchNews(meta?.keywords?.join(',') || coinId, 30).catch(() => ({ articles: [] })),
+    ]);
+  } catch {
+    // If Promise.all itself throws, gracefully show not-found
+    notFound();
+  }
 
   if (!coinData) {
     notFound();
