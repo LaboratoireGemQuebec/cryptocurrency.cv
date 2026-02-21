@@ -164,7 +164,7 @@ describe('GET /api/news', () => {
       data: {
         limit: 20,
         source: undefined,
-        category: 'bitcoin',
+        category: 'bitcoin' as const,
         from: undefined,
         to: undefined,
         page: 1,
