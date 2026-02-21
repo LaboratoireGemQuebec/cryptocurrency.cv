@@ -20,3 +20,4 @@ free-crypto-news is built with TypeScript. See the README for full documentation
 - Test changes before submitting PRs
 - Update documentation when adding features
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines
+
