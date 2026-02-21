@@ -3841,3 +3841,4 @@ curl -X POST https://modelcontextprotocol.name/mcp/free-crypto-news \
 - **All 27 MCP servers** — See the full catalog at [modelcontextprotocol.name](https://modelcontextprotocol.name)
 
 > Powered by [modelcontextprotocol.name](https://modelcontextprotocol.name) — the open MCP HTTP gateway
+
