@@ -24,18 +24,18 @@ import {
   Cell,
 } from 'recharts';
 
-// Color palette for charts
+// Color palette for charts — only green, red, black, white, and grays
 const COLORS = {
-  primary: '#f59e0b',
-  secondary: '#3b82f6',
+  primary: '#9ca3af',
+  secondary: '#6b7280',
   success: '#10b981',
   danger: '#ef4444',
-  warning: '#f59e0b',
-  info: '#06b6d4',
+  warning: '#9ca3af',
+  info: '#6b7280',
   gray: '#6b7280',
 };
 
-const PIE_COLORS = ['#f59e0b', '#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
+const PIE_COLORS = ['#10b981', '#ef4444', '#000000', '#ffffff', '#374151', '#6b7280', '#9ca3af', '#d1d5db'];
 
 interface ChartProps {
   data: Record<string, unknown>[];
@@ -312,7 +312,7 @@ export function Sparkline({
   data,
   width = 100,
   height = 30,
-  color = COLORS.primary,
+  color,
   className,
 }: SparklineProps) {
   const chartData = data.map((value, index) => ({ index, value }));

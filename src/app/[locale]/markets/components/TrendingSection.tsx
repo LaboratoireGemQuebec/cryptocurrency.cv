@@ -51,7 +51,7 @@ function TrendingRow({ coin, rank }: { coin: TrendingCoin; rank: number }) {
   return (
     <Link
       href={`/coin/${coin.id}`}
-      className="flex items-center justify-between hover:bg-white/5 rounded-lg px-2 py-2 -mx-2 transition-colors group"
+      className="flex items-center justify-between card-hover rounded-lg px-2 py-2 -mx-2 transition-colors group"
     >
       <div className="flex items-center gap-2 min-w-0">
         <span className="text-xs text-white/30 w-4 shrink-0">{rank}</span>

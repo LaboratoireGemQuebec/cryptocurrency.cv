@@ -146,7 +146,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
       <article className="group" data-article>
         <Link 
           href={`/article/${articleSlug}`}
-          className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+          className="flex items-start gap-4 p-4 rounded-xl card-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
         >
           {priority && (
             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
@@ -174,7 +174,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
       <article className="group" data-article>
         <Link 
           href={`/article/${articleSlug}`}
-          className="flex gap-5 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg dark:hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
+          className="flex gap-5 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 card-hover transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
         >
           {/* Left accent */}
           <div className={`w-1 self-stretch ${style.bg} rounded-full flex-shrink-0`} />
@@ -269,7 +269,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
 
       <Link 
         href={`/article/${articleSlug}`}
-        className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-200 dark:hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+        className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden card-hover hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
         {/* Article thumbnail - always shown with gradient fallback */}
         <div className="relative aspect-[16/9] overflow-hidden">

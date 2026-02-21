@@ -242,7 +242,7 @@ export function TierDistribution({ free, pro, enterprise }: TierDistributionProp
           cy="60"
           r={radius}
           fill="none"
-          stroke="#3b82f6"
+          stroke="#111827"
           strokeWidth="16"
           strokeDasharray={`${proLength} ${circumference}`}
           strokeDashoffset={-freeLength}
@@ -253,7 +253,7 @@ export function TierDistribution({ free, pro, enterprise }: TierDistributionProp
           cy="60"
           r={radius}
           fill="none"
-          stroke="#a855f7"
+          stroke="#6b7280"
           strokeWidth="16"
           strokeDasharray={`${enterpriseLength} ${circumference}`}
           strokeDashoffset={-(freeLength + proLength)}
@@ -288,13 +288,13 @@ export function TierDistribution({ free, pro, enterprise }: TierDistributionProp
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-blue-500" />
+          <div className="w-3 h-3 rounded-full bg-gray-900" />
           <span className="text-sm">
             Pro: {pro} ({proPercent.toFixed(0)}%)
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-purple-500" />
+          <div className="w-3 h-3 rounded-full bg-gray-500" />
           <span className="text-sm">
             Enterprise: {enterprise} ({enterprisePercent.toFixed(0)}%)
           </span>

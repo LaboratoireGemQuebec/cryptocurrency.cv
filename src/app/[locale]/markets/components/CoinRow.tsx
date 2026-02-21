@@ -42,9 +42,7 @@ function ChangeCell({ value }: { value: number | undefined | null }) {
   const positive = value >= 0;
   return (
     <span
-      className={`inline-flex items-center gap-0.5 font-medium tabular-nums ${
-        positive ? 'text-emerald-400' : 'text-red-400'
-      }`}
+      className="inline-flex items-center gap-0.5 font-medium tabular-nums text-white/70"
     >
       {positive ? '▲' : '▼'} {Math.abs(value).toFixed(2)}%
     </span>
@@ -141,7 +139,7 @@ export default function CoinRow({
                 )}
               </div>
               <div className="min-w-0">
-                <span className="font-semibold text-white group-hover:text-blue-400 transition-colors truncate block">
+                <span className="font-semibold text-white group-hover:text-white/70 transition-colors truncate block">
                   {coin.name}
                 </span>
                 <span className="text-white/30 text-xs uppercase tracking-wide">

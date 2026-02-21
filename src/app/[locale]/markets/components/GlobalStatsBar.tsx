@@ -48,7 +48,7 @@ export default function GlobalStatsBar({ global, fearGreed }: GlobalStatsBarProp
           <span className="px-3 flex items-center gap-1.5">
             Market Cap: <span className="font-semibold text-white">${formatNumber(global.total_market_cap?.usd)}</span>
             {mcapChange != null && (
-              <span className={`font-medium ${mcapChange >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+              <span className="font-medium text-white/70">
                 {mcapChange >= 0 ? '▲' : '▼'} {Math.abs(mcapChange).toFixed(1)}%
               </span>
             )}

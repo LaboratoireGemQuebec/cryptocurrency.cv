@@ -209,8 +209,8 @@ function ComparePageContent() {
     return result;
   }, [coinData, selectedCoins]);
 
-  // Colors for different coins
-  const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+  // Colors for different coins — only green, red, black, white, and gray
+  const colors = ['#10b981', '#ef4444', '#111827', '#6b7280', '#d1d5db'];
 
   const t = useTranslations('common');
   return (
