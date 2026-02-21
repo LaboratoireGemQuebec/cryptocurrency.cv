@@ -3,8 +3,7 @@ import dynamic from 'next/dynamic';
 import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 const ArbitrageDashboard = dynamic(
-  () => import('@/components/ArbitrageDashboard').then(m => ({ default: m.ArbitrageDashboard })),
-  { ssr: false }
+  () => import('@/components/ArbitrageDashboard').then(m => ({ default: m.ArbitrageDashboard }))
 );
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

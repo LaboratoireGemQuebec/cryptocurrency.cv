@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
 const WhaleAlertsDashboard = dynamic(
-  () => import('@/components/WhaleAlertsDashboard').then(m => ({ default: m.WhaleAlertsDashboard })),
-  { ssr: false }
+  () => import('@/components/WhaleAlertsDashboard').then(m => ({ default: m.WhaleAlertsDashboard }))
 );
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

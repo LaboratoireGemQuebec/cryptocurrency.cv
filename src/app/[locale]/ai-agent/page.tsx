@@ -5,8 +5,7 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 const AIMarketAgentDashboard = dynamic(
-  () => import('@/components/AIMarketAgentDashboard').then(m => ({ default: m.AIMarketAgentDashboard })),
-  { ssr: false }
+  () => import('@/components/AIMarketAgentDashboard').then(m => ({ default: m.AIMarketAgentDashboard }))
 );
 
 export function generateMetadata(): Metadata {

@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
 const OrderBookDashboard = dynamic(
-  () => import('@/components/OrderBookDashboard').then(m => ({ default: m.OrderBookDashboard })),
-  { ssr: false }
+  () => import('@/components/OrderBookDashboard').then(m => ({ default: m.OrderBookDashboard }))
 );
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

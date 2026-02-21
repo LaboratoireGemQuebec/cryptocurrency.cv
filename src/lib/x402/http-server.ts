@@ -170,32 +170,35 @@ export function extractApiKeyFromRequest(request: Request): string | null {
 /**
  * Register analytics hooks for payment tracking
  * These run after payment verification/settlement for monitoring
+ * Skip during build time to avoid triggering x402 facilitator calls
  */
-x402Server.onAfterVerify(async (ctx) => {
-  if (ctx.result.isValid) {
-    // Payment verified successfully
-    if (!IS_PRODUCTION) {
-      console.log('[x402] Payment verified:', {
-        network: ctx.requirements.network,
-        amount: ctx.requirements.amount,
-        asset: ctx.requirements.asset,
-        resource: ctx.paymentPayload.resource,
-      });
+if (typeof window === 'undefined' && !IS_BUILD_TIME) {
+  x402Server.onAfterVerify(async (ctx) => {
+    if (ctx.result.isValid) {
+      // Payment verified successfully
+      if (!IS_PRODUCTION) {
+        console.log('[x402] Payment verified:', {
+          network: ctx.requirements.network,
+          amount: ctx.requirements.amount,
+          asset: ctx.requirements.asset,
+          resource: ctx.paymentPayload.resource,
+        });
+      }
     }
-  }
-});
+  });
 
-x402Server.onAfterSettle(async (ctx) => {
-  if (ctx.result.success) {
-    // Payment settled successfully
-    if (!IS_PRODUCTION) {
-      console.log('[x402] Payment settled:', {
-        network: ctx.result.network,
-        transaction: ctx.result.transaction,
-      });
+  x402Server.onAfterSettle(async (ctx) => {
+    if (ctx.result.success) {
+      // Payment settled successfully
+      if (!IS_PRODUCTION) {
+        console.log('[x402] Payment settled:', {
+          network: ctx.result.network,
+          transaction: ctx.result.transaction,
+        });
+      }
     }
-  }
-});
+  });
+}
 
 // =============================================================================
 // CONFIGURATION VALIDATION
