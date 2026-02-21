@@ -14,3 +14,4 @@ archive/articles/*.jsonl export-ignore
 
 # Solidity
 *.sol text eol=lf
+
