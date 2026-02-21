@@ -70,13 +70,19 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
 
       {/* LEFT: Market Cap + Volume + F&G */}
       <div className="flex flex-col gap-3">
-        <div className="bg-black border border-white/10 rounded-xl p-4 flex-1">
-          <div className="flex items-start justify-between gap-3">
+        <div className="relative bg-black border border-white/10 rounded-xl p-4 flex-1 overflow-hidden">
+          {/* Dreamscape blue glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 rounded-xl"
+            style={{ background: 'radial-gradient(ellipse at 110% 140%, rgba(90,159,212,0.18) 0%, rgba(90,159,212,0.06) 40%, transparent 70%)' }}
+          />
+          <div className="relative flex items-start justify-between gap-3">
             <div className="min-w-0 flex-1">
               <p className="text-[22px] font-bold text-white leading-none">{fmtBig(mcap)}</p>
               <div className="flex items-center gap-2 mt-1.5">
                 <span className="text-xs text-white/50">Market Cap</span>
-                {mounted && <span className="text-xs font-semibold text-white/70">{mcapChange >= 0 ? '▲' : '▼'} {Math.abs(mcapChange).toFixed(2)}%</span>}
+                {mounted && <span className={`text-xs font-semibold ${mcapChange >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{mcapChange >= 0 ? '▲' : '▼'} {Math.abs(mcapChange).toFixed(2)}%</span>}
               </div>
               {mounted && btcDom > 0 && (
                 <div className="flex items-center gap-3 mt-2 text-[11px] text-white/40">
@@ -132,7 +138,7 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
               </div>
               <div className="text-right shrink-0 ml-2">
                 {coin.price != null && <p className="text-sm font-semibold text-white">{formatPrice(coin.price)}</p>}
-                {coin.change != null && <p className={`text-xs font-semibold ${(coin.change ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{(coin.change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(coin.change ?? 0).toFixed(2)}%</p>}
+                {coin.change != null && <p className="text-xs font-semibold text-white/70">{(coin.change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(coin.change ?? 0).toFixed(2)}%</p>}
               </div>
             </Link>
           ))}
@@ -176,7 +182,7 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
                 </div>
                 <div className="text-right shrink-0 ml-2">
                   <p className="text-sm font-semibold text-white">{formatPrice(coin.current_price)}</p>
-                  <p className={`text-xs font-semibold ${(coin.price_change_percentage_24h ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>▲ {(coin.price_change_percentage_24h ?? 0).toFixed(2)}%</p>
+                  <p className="text-xs font-semibold text-white/70">▲ {(coin.price_change_percentage_24h ?? 0).toFixed(2)}%</p>
                 </div>
               </Link>
             ))

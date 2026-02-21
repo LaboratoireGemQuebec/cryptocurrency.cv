@@ -358,7 +358,13 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
           <AnomalyAlertsBanner maxAlerts={2} className="mb-4" />
 
           {/* Page Header */}
-          <div className="mb-5">
+          <div className="relative mb-5">
+            {/* Dreamscape blue haze behind header */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-6 -z-10"
+              style={{ background: 'radial-gradient(ellipse at 0% 50%, rgba(90,159,212,0.08) 0%, transparent 65%)' }}
+            />
             <h1 className="text-2xl md:text-3xl font-bold text-white">
               Cryptocurrency Prices by Market Cap
             </h1>
