@@ -1,22 +1,11 @@
 /** @type {import('lint-staged').Config} */
 module.exports = {
-  // TypeScript and JavaScript files
+  // TypeScript and JavaScript — lint and auto-fix
   '*.{ts,tsx,js,jsx}': [
-    'eslint --fix',
-    'prettier --write',
+    'npx eslint --fix',
   ],
-  
-  // Style files
-  '*.{css,scss}': [
-    'prettier --write',
-  ],
-  
-  // JSON, YAML, Markdown
-  '*.{json,yaml,yml,md}': [
-    'prettier --write',
-  ],
-  
-  // Type checking for TypeScript files
+
+  // Type checking for TypeScript files (run after lint fix)
   '*.{ts,tsx}': () => 'tsc --noEmit',
 };
 
