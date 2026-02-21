@@ -223,7 +223,12 @@ export default async function CoinPage({ params, searchParams }: Props) {
 
   try {
     [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
-      getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
+      // Cap the entire 3-API fallback chain at 20 s to stay within maxDuration
+      withTimeout(
+        getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
+        20000,
+        null,
+      ),
       getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
       getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
       getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),

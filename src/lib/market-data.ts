@@ -1279,6 +1279,7 @@ export async function getCoinDetails(coinId: string) {
   try {
     const response = await fetchWithTimeout(
       `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&community_data=false&developer_data=false`,
+      5000, // 5 s — leaves budget for CoinPaprika + CoinCap fallbacks within maxDuration
     );
 
     if (!response.ok) {
@@ -1454,8 +1455,8 @@ async function getCoinDetailsFallback(
 
     // Fetch coin info and ticker in parallel
     const [coinResponse, tickerResponse] = await Promise.all([
-      fetchWithTimeout(`${COINPAPRIKA_BASE}/coins/${paprikaId}`),
-      fetchWithTimeout(`${COINPAPRIKA_BASE}/tickers/${paprikaId}`),
+      fetchWithTimeout(`${COINPAPRIKA_BASE}/coins/${paprikaId}`, 5000, true),
+      fetchWithTimeout(`${COINPAPRIKA_BASE}/tickers/${paprikaId}`, 5000, true),
     ]);
 
     if (!coinResponse.ok || !tickerResponse.ok) {
