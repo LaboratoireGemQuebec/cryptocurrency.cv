@@ -5,10 +5,7 @@
 
 import Link from 'next/link';
 import { categories } from '@/lib/categories';
-import MarketStats from '@/components/MarketStats';
 import NewsCard from '@/components/NewsCard';
-import { NewsletterSignup } from '@/components/sidebar';
-import { PredictionPoll } from '@/components/PredictionPoll';
 
 interface Article {
   title: string;
@@ -63,12 +60,6 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
         </div>
       </div>
 
-      {/* Market Stats */}
-      <MarketStats />
-
-      {/* Community Prediction */}
-      <PredictionPoll />
-
       {/* Categories */}
       <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
         <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/50">
@@ -99,42 +90,7 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
         </div>
       </div>
 
-      {/* API Promo */}
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-6 text-white shadow-xl overflow-hidden relative">
-        <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-500/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-purple-500/20 rounded-full blur-2xl" />
-        
-        <div className="relative">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-2xl">🚀</span>
-            <h3 className="font-bold text-lg">Free API</h3>
-          </div>
-          <p className="text-gray-300 text-sm mb-4">
-            No API keys required. No rate limits. Build your own crypto news app.
-          </p>
-          <div className="flex flex-col gap-2">
-            <Link 
-              href="/about" 
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-black rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Learn More
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link 
-              href="/examples" 
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white/10 text-white rounded-lg text-sm font-semibold hover:bg-white/20 transition-colors"
-            >
-              <span>💻</span>
-              Code Examples
-            </Link>
-          </div>
-        </div>
-      </div>
 
-      {/* Newsletter Signup - using new sidebar component */}
-      <NewsletterSignup />
     </aside>
   );
 }
