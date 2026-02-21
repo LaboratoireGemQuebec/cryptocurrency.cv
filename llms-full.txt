@@ -1,19 +1,444 @@
-# free-crypto-news
+# free-crypto-news — Full LLM Reference
 
-> Free crypto news API - real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. No API key required. RSS/Atom feeds, JSON REST API, historical archive with market context, embeddable widgets, ChatGPT plugin, Claude MCP server, SDKs (Python, TypeScript, Go, React, PHP). AI/LLM ready. Vibe coding friendly. Open source.
+> Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required. REST JSON, RSS/Atom, WebSocket, AI analysis, historical archive. Open source (MIT). https://cryptocurrency.cv
+
+This document is the complete inline reference intended for AI assistants and LLMs. It contains full API documentation, usage examples, response schemas, and integration guides with no external links required.
+
+---
 
 ## Overview
 
-free-crypto-news is an open-source project by nirholas. Free crypto news API - real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. No API key required. RSS/Atom feeds, JSON REST API, historical archive with market context, embeddable widgets, ChatGPT plugin, Claude MCP server, SDKs (Python, TypeScript, Go, React, PHP). AI/LLM ready. Vibe coding friendly. Open source.
+**Base URL:** `https://cryptocurrency.cv`
+**Authentication:** None required (all endpoints are public)
+**Rate limiting:** Fair-use policy, no hard limits for reasonable use
+**CORS:** Open (`Access-Control-Allow-Origin: *`)
+**Format:** JSON (default), RSS, Atom, plain text where noted
+**License:** MIT — free to use, modify, and redistribute
 
-## Repository
+The project aggregates cryptocurrency news and data from 130+ sources including:
+CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, BeInCrypto, NewsBTC, CryptoSlate, Messari, Delphi Digital, Bankless, The Defiant, Unchained, Pomp Letters, and 115+ more.
 
-- URL: https://github.com/nirholas/free-crypto-news
-- Language: TypeScript
-- License: MIT
-- Author: nirholas
+---
 
-## Contributing
+## Core News Endpoints
 
-Contributions are welcome. See CONTRIBUTING.md for guidelines.
+### GET /api/news
+Returns latest cryptocurrency news from all sources.
 
+**Parameters:**
+- `limit` (integer, 1–100, default 20) — number of articles
+- `source` (string) — filter by source key (e.g., `coindesk`, `decrypt`, `theblock`)
+- `page` (integer, default 1) — pagination
+- `category` (string) — filter by category: `bitcoin`, `defi`, `ethereum`, `altcoin`, `nft`, `regulation`, `general`
+- `lang` (string) — filter by language code (e.g., `en`, `es`, `zh`)
+
+**Example request:**
+```
+GET https://cryptocurrency.cv/api/news?limit=5&source=coindesk
+```
+
+**Example response:**
+```json
+{
+  "articles": [
+    {
+      "id": "coindesk-1234567890",
+      "title": "Bitcoin Hits New All-Time High",
+      "link": "https://coindesk.com/...",
+      "description": "Bitcoin surged past $100k today as institutional demand...",
+      "pubDate": "2026-02-21T10:30:00Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "bitcoin",
+      "timeAgo": "2h ago",
+      "sentiment": "bullish",
+      "tags": ["bitcoin", "price", "ath"]
+    }
+  ],
+  "totalCount": 1,
+  "sources": ["coindesk"],
+  "fetchedAt": "2026-02-21T12:00:00Z",
+  "cached": false
+}
+```
+
+---
+
+### GET /api/search
+Full-text search across all aggregated news articles.
+
+**Parameters:**
+- `q` (string, required) — comma-separated keywords or phrase
+- `limit` (integer, default 10) — max results
+- `from` (ISO date) — earliest publish date filter
+- `to` (ISO date) — latest publish date filter
+- `source` (string) — filter by source
+
+**Example request:**
+```
+GET https://cryptocurrency.cv/api/search?q=ethereum+ETF&limit=5
+```
+
+---
+
+### GET /api/bitcoin
+Bitcoin-specific news (Lightning Network, miners, halving, etc.).
+
+**Parameters:** `limit`, `page` (same as /api/news)
+
+---
+
+### GET /api/defi
+DeFi news: yield farming, DEXs, lending protocols, TVL changes, hacks.
+
+**Parameters:** `limit`, `page`
+
+---
+
+### GET /api/breaking
+Breaking news from the last 2 hours.
+
+**Parameters:** `limit` (default 5)
+
+---
+
+### GET /api/trending
+Trending topics and keywords across all sources.
+
+**Example response:**
+```json
+{
+  "trending": [
+    { "keyword": "Bitcoin ETF", "count": 47, "change": "+23%", "sentiment": "bullish" },
+    { "keyword": "Ethereum staking", "count": 31, "change": "+8%", "sentiment": "neutral" }
+  ],
+  "generatedAt": "2026-02-21T12:00:00Z"
+}
+```
+
+---
+
+### GET /api/sources
+All 130+ news sources with status and metadata.
+
+**Example response:**
+```json
+{
+  "sources": [
+    {
+      "key": "coindesk",
+      "name": "CoinDesk",
+      "url": "https://coindesk.com",
+      "rss": "https://coindesk.com/arc/outboundfeeds/rss/",
+      "category": "general",
+      "language": "en",
+      "status": "active",
+      "articlesPerDay": 45
+    }
+  ],
+  "totalActive": 127,
+  "totalSources": 134
+}
+```
+
+---
+
+## AI & Intelligence Endpoints
+
+### GET /api/ai
+AI analysis of cryptocurrency news and content.
+
+**Query parameters (GET):**
+- `action` — `status` (default): returns available actions and AI provider info
+
+**POST /api/ai** — analyze content:
+```json
+{
+  "action": "summarize" | "sentiment" | "facts" | "factcheck" | "questions" | "categorize" | "translate",
+  "title": "Article title",
+  "content": "Article body text...",
+  "options": {
+    "length": "short" | "medium" | "long",
+    "targetLanguage": "es"
+  }
+}
+```
+
+---
+
+### GET /api/sentiment
+Market sentiment analysis aggregated from all news sources.
+
+**Parameters:**
+- `asset` (string) — filter by asset: `BTC`, `ETH`, `SOL`, `BNB`, etc.
+- `period` (string) — `1h`, `24h`, `7d`, `30d`
+
+**Example response:**
+```json
+{
+  "overall": "bullish",
+  "score": 0.72,
+  "breakdown": {
+    "bullish": 65,
+    "neutral": 20,
+    "bearish": 15
+  },
+  "assets": {
+    "BTC": { "sentiment": "bullish", "score": 0.81, "articleCount": 142 },
+    "ETH": { "sentiment": "neutral", "score": 0.51, "articleCount": 89 }
+  }
+}
+```
+
+---
+
+### GET /api/fear-greed
+Crypto Fear & Greed Index.
+
+**Example response:**
+```json
+{
+  "value": 72,
+  "classification": "Greed",
+  "timestamp": "2026-02-21T00:00:00Z",
+  "previousValue": 68,
+  "change": "+4"
+}
+```
+
+---
+
+### GET /api/predictions
+AI-generated market predictions based on news analysis.
+
+---
+
+### GET /api/ai/narratives
+Emerging market narratives detected from news patterns.
+
+---
+
+### GET /api/ai/research
+Deep research on a crypto topic (aggregates and synthesizes multiple sources).
+
+**Parameters:**
+- `q` (string, required) — research question or topic
+
+---
+
+### GET /api/ask
+Natural language Q&A about crypto news.
+
+**Parameters:**
+- `q` (string, required) — natural language question
+
+**Example:**
+```
+GET https://cryptocurrency.cv/api/ask?q=What+happened+to+Bitcoin+this+week
+```
+
+---
+
+### GET /api/rag
+Retrieval-Augmented Generation over the news archive.
+
+---
+
+## Market Data Endpoints
+
+### GET /api/market
+Crypto market overview with prices and news context.
+
+**Parameters:**
+- `coins` (string) — comma-separated coin symbols: `BTC,ETH,SOL`
+
+---
+
+### GET /api/market/coins
+Full coin list with prices, market caps, 24h changes.
+
+---
+
+### GET /api/exchange-rates
+Cryptocurrency exchange rates.
+
+---
+
+### GET /api/global
+Global crypto market statistics (total market cap, dominance, etc.).
+
+---
+
+## Feed & Streaming Endpoints
+
+### GET /api/rss
+RSS 2.0 feed of latest news.
+
+**Parameters:** `limit`, `source`, `category`
+
+---
+
+### GET /api/atom
+Atom 1.0 feed of latest news.
+
+---
+
+### GET /api/sse
+Server-Sent Events stream for real-time news updates.
+
+**Usage (JavaScript):**
+```javascript
+const es = new EventSource('https://cryptocurrency.cv/api/sse');
+es.onmessage = (e) => {
+  const article = JSON.parse(e.data);
+  console.log(article.title);
+};
+```
+
+---
+
+## Archive & Historical Endpoints
+
+### GET /api/archive
+Historical news archive by date.
+
+**Parameters:**
+- `date` (string, YYYY-MM-DD) — specific date
+- `year` (integer) — filter by year (2021–present)
+- `month` (integer) — filter by month
+
+Archive structure: articles go back to 2021 with full metadata and market context snapshots.
+
+---
+
+## Integration Protocols
+
+### MCP Server (Claude)
+The Model Context Protocol server allows Claude to query real-time crypto news directly.
+
+**Setup in Claude:**
+```json
+{
+  "mcpServers": {
+    "free-crypto-news": {
+      "command": "node",
+      "args": ["/path/to/free-crypto-news/mcp/index.js"]
+    }
+  }
+}
+```
+
+**Available MCP tools:**
+- `get_latest_news` — fetch latest crypto news
+- `search_news` — search by keyword
+- `get_sentiment` — market sentiment
+- `get_trending` — trending topics
+- `get_bitcoin_news` — Bitcoin-specific news
+- `get_defi_news` — DeFi news
+
+### ChatGPT Plugin
+OpenAI plugin manifest available at: `https://cryptocurrency.cv/.well-known/ai-plugin.json`
+OpenAPI spec: `https://cryptocurrency.cv/api/openapi.json`
+
+---
+
+## SDKs
+
+### TypeScript / JavaScript
+```typescript
+import { CryptoNewsClient } from 'free-crypto-news';
+
+const client = new CryptoNewsClient();
+const news = await client.getLatestNews({ limit: 10 });
+const btcNews = await client.getBitcoinNews();
+const sentiment = await client.getSentiment('BTC');
+```
+
+### React Hook
+```tsx
+import { useCryptoNews } from 'free-crypto-news/react';
+
+function NewsWidget() {
+  const { articles, loading } = useCryptoNews({ limit: 10 });
+  return <ul>{articles.map(a => <li key={a.id}>{a.title}</li>)}</ul>;
+}
+```
+
+### Python
+```python
+from free_crypto_news import CryptoNewsClient
+
+client = CryptoNewsClient()
+news = client.get_latest_news(limit=10)
+btc = client.get_bitcoin_news()
+```
+
+### cURL (direct API)
+```bash
+# Latest news
+curl https://cryptocurrency.cv/api/news
+
+# Search
+curl "https://cryptocurrency.cv/api/search?q=bitcoin+ETF&limit=5"
+
+# Sentiment
+curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
+
+# Fear & Greed
+curl https://cryptocurrency.cv/api/fear-greed
+
+# Breaking news
+curl https://cryptocurrency.cv/api/breaking
+```
+
+---
+
+## Common Use Cases for AI Assistants
+
+1. **"What's happening in crypto right now?"**
+   → `GET /api/breaking` then `GET /api/sentiment`
+
+2. **"What's the latest Bitcoin news?"**
+   → `GET /api/bitcoin?limit=10`
+
+3. **"Search for DeFi hack news"**
+   → `GET /api/search?q=defi+hack&limit=10`
+
+4. **"Is Bitcoin sentiment bullish or bearish?"**
+   → `GET /api/sentiment?asset=BTC`
+
+5. **"What are the trending topics in crypto?"**
+   → `GET /api/trending`
+
+6. **"Get me crypto market overview"**
+   → `GET /api/market` + `GET /api/fear-greed`
+
+---
+
+## Response Common Fields
+
+All news endpoints return articles with these fields:
+- `id` (string) — unique article identifier
+- `title` (string) — article headline
+- `link` (string, URL) — canonical article URL
+- `description` (string) — article summary (up to 500 chars)
+- `pubDate` (ISO 8601) — publication timestamp
+- `source` (string) — human-readable source name
+- `sourceKey` (string) — machine-readable source identifier
+- `category` (enum) — `general`, `bitcoin`, `defi`, `ethereum`, `nft`, `regulation`, `altcoin`
+- `timeAgo` (string) — human-readable recency ("2h ago", "just now")
+- `sentiment` (string, optional) — `bullish`, `bearish`, `neutral`
+- `tags` (string[]) — extracted topic tags
+
+---
+
+## Project Information
+
+- **GitHub:** https://github.com/nirholas/free-crypto-news
+- **Live site:** https://cryptocurrency.cv
+- **Author:** nirholas (https://github.com/nirholas)
+- **Language:** TypeScript (Next.js 14)
+- **License:** MIT
+- **Last updated:** February 2026
+- **Version:** See CHANGELOG.md
+- **Contributing:** See CONTRIBUTING.md
