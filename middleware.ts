@@ -11,13 +11,13 @@
  *
  * @see https://x402.org
  */
-import { paymentMiddleware } from '@x402/next';
+import { paymentProxy } from '@x402/next';
 
 const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
   '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
 
-export default paymentMiddleware(RECEIVE_ADDRESS, {
+export default paymentProxy(RECEIVE_ADDRESS, {
   // Standard premium endpoints — $0.001 USDC per call
   '/api/premium/:path*': {
     price: '$0.001',
