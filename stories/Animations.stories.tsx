@@ -113,3 +113,4 @@ export const AllAnimations: Story = {
     </div>
   ),
 };
+
