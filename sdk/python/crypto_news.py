@@ -158,49 +158,96 @@ class CryptoNews:
         self,
         coins: Optional[Dict[str, str]] = None,
         limit: int = 30,
+        min_articles: int = 5,
+        min_confidence: float = 20.0,
     ) -> Dict[str, Dict]:
         """
-        Calculate per-coin sentiment percentages from recent news headlines.
+        Calculate per-coin sentiment with confidence weighting and trade filtering.
 
-        Uses this project's free API instead of an external web search service.
+        Implements the weight logic from the original TODO: signals backed by too
+        few articles, or with too small a margin between bullish/bearish, are
+        suppressed via ``tradeable=False`` and a low ``confidence`` score.
+
+        Uses this project's free API — no external search or sentiment key needed.
         Inspired by CyberPunkMetalHead/cryptocurrency-news-analysis.
 
         Args:
-            coins: Dict mapping trading pair → search keyword,
-                   e.g. {"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"}.
-                   Defaults to the module-level COIN_PAIRS.
-            limit: Max articles to fetch per coin (default 30).
+            coins:          Dict mapping trading pair → search keyword.
+                            Defaults to the module-level ``COIN_PAIRS``.
+            limit:          Max articles to fetch per coin (default 30).
+            min_articles:   Minimum number of articles required before a signal
+                            is considered actionable (default 5).  A single
+                            bullish headline will NOT produce ``tradeable=True``.
+            min_confidence: Minimum confidence score (0–100) for ``tradeable``
+                            to be set to ``True`` (default 20.0).
 
         Returns:
             Dict keyed by trading pair symbol::
 
                 {
                   "BTCUSD": {
-                    "keyword":   "Bitcoin",
-                    "articles":  25,
-                    "pos":  64.0,   # % bullish
-                    "mid":  20.0,   # % neutral
-                    "neg":  16.0,   # % bearish
-                    "signal": "bullish"   # dominant label
+                    "keyword":    "Bitcoin",
+                    "articles":   25,
+                    "pos":        64.0,    # % bullish titles
+                    "mid":        20.0,    # % neutral titles
+                    "neg":        16.0,    # % bearish titles
+                    "score":      0.54,    # weighted score −1.0 (bear) → +1.0 (bull)
+                    "signal":     "bullish",
+                    "confidence": 43.2,    # 0–100; penalised by low volume & thin margin
+                    "tradeable":  True,    # False when evidence is too thin to act on
                   },
                   ...
                 }
 
+        Confidence formula
+        ------------------
+        Two independent factors are multiplied together:
+
+        * **Volume weight** – scales from 0 → 1 as article count approaches
+          ``min_articles``, capped at 1.0 above that threshold.  This directly
+          resolves the original TODO: a single-article signal can never exceed
+          ``1/min_articles`` on this axis alone.
+
+        * **Margin weight** – the percentage-point gap between the dominant
+          sentiment bucket and the nearest rival, normalised to 0–1.
+          A 50 % vs 49 % split produces near-zero margin weight.
+
+        ``confidence = volume_weight × margin_weight × 100``
+
+        The weighted ``score`` uses graded sentiment values
+        (``very_bullish=+1``, ``bullish=+0.5``, ``neutral=0``,
+        ``bearish=−0.5``, ``very_bearish=−1``) so strong signals outweigh mild
+        ones and the result is normalised to the −1 … +1 range.
+
         Example::
 
             news = CryptoNews()
-            report = news.get_coin_sentiment({"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"})
+            report = news.get_coin_sentiment(
+                {"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"},
+                min_articles=5,
+                min_confidence=20.0,
+            )
             for pair, data in report.items():
-                print(pair, data["signal"], f"pos={data['pos']:.0f}%")
+                if data["tradeable"]:
+                    print(f"TRADE  {pair}: {data['signal']}  conf={data['confidence']:.1f}")
+                else:
+                    print(f"SKIP   {pair}: insufficient evidence ({data['articles']} articles)")
         """
         if coins is None:
             coins = COIN_PAIRS
 
-        results: Dict[str, Dict] = {}
-
-        # Sentiment label buckets (matches /api/analyze response)
+        # Graded weights: very_bullish → +1, bullish → +0.5, neutral → 0, etc.
+        _SCORE_MAP: Dict[str, float] = {
+            "very_bullish": +1.0,
+            "bullish":      +0.5,
+            "neutral":       0.0,
+            "bearish":      -0.5,
+            "very_bearish": -1.0,
+        }
         _BULLISH = {"very_bullish", "bullish"}
         _BEARISH = {"very_bearish", "bearish"}
+
+        results: Dict[str, Dict] = {}
 
         for pair, keyword in coins.items():
             try:
@@ -210,15 +257,14 @@ class CryptoNews:
 
                 if total == 0:
                     results[pair] = {
-                        "keyword": keyword,
-                        "articles": 0,
-                        "pos": 0.0,
-                        "mid": 0.0,
-                        "neg": 0.0,
-                        "signal": "neutral",
+                        "keyword": keyword, "articles": 0,
+                        "pos": 0.0, "mid": 0.0, "neg": 0.0,
+                        "score": 0.0, "signal": "neutral",
+                        "confidence": 0.0, "tradeable": False,
                     }
                     continue
 
+                # --- Count buckets ---
                 pos = sum(1 for a in articles if a.get("sentiment") in _BULLISH)
                 neg = sum(1 for a in articles if a.get("sentiment") in _BEARISH)
                 mid = total - pos - neg
@@ -227,20 +273,42 @@ class CryptoNews:
                 mid_pct = mid * 100 / total
                 neg_pct = neg * 100 / total
 
-                if pos_pct >= neg_pct and pos_pct >= mid_pct:
-                    signal = "bullish"
-                elif neg_pct > pos_pct and neg_pct > mid_pct:
-                    signal = "bearish"
-                else:
-                    signal = "neutral"
+                # --- Dominant signal ---
+                pcts = {"bullish": pos_pct, "neutral": mid_pct, "bearish": neg_pct}
+                signal = max(pcts, key=lambda k: pcts[k])
+
+                # --- Weighted score (−1 … +1) ---
+                raw_score = sum(
+                    _SCORE_MAP.get(a.get("sentiment", "neutral"), 0.0)
+                    for a in articles
+                )
+                score = round(raw_score / total, 4)
+
+                # --- Confidence weighting ---
+                # 1. Volume weight: 0 → 1 as article count grows toward min_articles
+                volume_weight = min(total / max(min_articles, 1), 1.0)
+
+                # 2. Margin weight: how decisive is the dominant bucket?
+                dominant_pct = pcts[signal]
+                second_pct   = sorted(pcts.values())[-2]          # second-highest
+                margin_weight = max(dominant_pct - second_pct, 0.0) / 100.0
+
+                confidence = round(volume_weight * margin_weight * 100, 1)
+
+                # --- Tradeable gate ---
+                # Suppresses signals with thin evidence or a razor-thin margin.
+                tradeable = (total >= min_articles) and (confidence >= min_confidence)
 
                 results[pair] = {
-                    "keyword":  keyword,
-                    "articles": total,
-                    "pos":      round(pos_pct, 1),
-                    "mid":      round(mid_pct, 1),
-                    "neg":      round(neg_pct, 1),
-                    "signal":   signal,
+                    "keyword":    keyword,
+                    "articles":   total,
+                    "pos":        round(pos_pct, 1),
+                    "mid":        round(mid_pct, 1),
+                    "neg":        round(neg_pct, 1),
+                    "score":      score,
+                    "signal":     signal,
+                    "confidence": confidence,
+                    "tradeable":  tradeable,
                 }
 
             except Exception as e:
@@ -248,8 +316,9 @@ class CryptoNews:
                     "keyword":  keyword,
                     "articles": 0,
                     "pos": 0.0, "mid": 0.0, "neg": 0.0,
-                    "signal":   "error",
-                    "error":    str(e),
+                    "score": 0.0, "signal": "error",
+                    "confidence": 0.0, "tradeable": False,
+                    "error": str(e),
                 }
 
         return results
@@ -272,19 +341,27 @@ def get_trending_topics(limit: int = 10) -> List[Dict]:
 def get_coin_sentiment(
     coins: Optional[Dict[str, str]] = None,
     limit: int = 30,
+    min_articles: int = 5,
+    min_confidence: float = 20.0,
 ) -> Dict[str, Dict]:
     """
-    Calculate per-coin sentiment percentages from recent news.
+    Calculate per-coin sentiment with confidence weighting and trade filtering.
     No external API key required.
 
     Args:
-        coins: Dict of {trading_pair: keyword}. Defaults to COIN_PAIRS.
-        limit: Articles per coin (default 30).
+        coins:          Dict of {trading_pair: keyword}. Defaults to COIN_PAIRS.
+        limit:          Articles per coin (default 30).
+        min_articles:   Minimum articles before a signal is tradeable (default 5).
+        min_confidence: Minimum confidence score (0-100) for tradeable=True (default 20).
 
     Returns:
-        {"BTCUSD": {"pos": 64.0, "mid": 20.0, "neg": 16.0, "signal": "bullish", ...}}
+        {"BTCUSD": {"pos": 64.0, "mid": 20.0, "neg": 16.0,
+                    "signal": "bullish", "confidence": 43.2, "tradeable": True, ...}}
     """
-    return CryptoNews().get_coin_sentiment(coins=coins, limit=limit)
+    return CryptoNews().get_coin_sentiment(
+        coins=coins, limit=limit,
+        min_articles=min_articles, min_confidence=min_confidence,
+    )
 
 
 if __name__ == "__main__":
@@ -303,16 +380,22 @@ if __name__ == "__main__":
         print(f"{emoji} {topic['topic']}: {topic['count']} mentions")
 
     print("\n\n🎯 Coin Sentiment (top 5 pairs)\n" + "=" * 50)
+    print(f"  {'Pair':<10} {'Keyword':<20} {'Signal':<10} {'Pos':>6} {'Mid':>6} {'Neg':>6} {'Score':>7} {'Conf':>6} {'Arts':>5}  Trade?")
+    print("  " + "-" * 90)
     sentiment = news.get_coin_sentiment(
         coins=dict(list(COIN_PAIRS.items())[:5]),
         limit=15,
+        min_articles=5,
+        min_confidence=20.0,
     )
     for pair, data in sentiment.items():
         if data.get("articles", 0) == 0:
+            print(f"  {pair:<10} {data['keyword']:<20}  (no articles fetched)")
             continue
         arrow = "🟢" if data["signal"] == "bullish" else "🔴" if data["signal"] == "bearish" else "⚪"
+        trade_flag = "✅ YES" if data["tradeable"] else "🚫 NO "
         print(
-            f"{arrow} {pair:10s} {data['keyword']:20s}"
-            f"  pos={data['pos']:5.1f}%  mid={data['mid']:5.1f}%  neg={data['neg']:5.1f}%"
-            f"  ({data['articles']} articles)"
+            f"  {pair:<10} {data['keyword']:<20} {arrow} {data['signal']:<8}"
+            f"  {data['pos']:5.1f}%  {data['mid']:5.1f}%  {data['neg']:5.1f}%"
+            f"  {data['score']:+.3f}  {data['confidence']:5.1f}  {data['articles']:4d}   {trade_flag}"
         )
