@@ -7,6 +7,12 @@ export const revalidate = 300;
 const VALID_PROTOCOLS = ['uniswap', 'aave', 'curve'] as const;
 type ValidProtocol = (typeof VALID_PROTOCOLS)[number];
 
+const PROTOCOL_MAP: Record<ValidProtocol, 'uniswapV3' | 'aaveV3' | 'curveFinance'> = {
+  uniswap: 'uniswapV3',
+  aave: 'aaveV3',
+  curve: 'curveFinance',
+};
+
 /**
  * GET /api/onchain/protocol/[protocol]
  * Returns aggregated data for a specific DeFi protocol
@@ -30,7 +36,7 @@ export async function GET(
   }
 
   try {
-    const data = await getProtocolData(normalizedProtocol as ValidProtocol);
+    const data = await getProtocolData(PROTOCOL_MAP[normalizedProtocol as ValidProtocol]);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

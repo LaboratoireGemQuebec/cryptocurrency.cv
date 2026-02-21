@@ -20,9 +20,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   }
 
   try {
-    const { score, signals, summary } = await getOnChainHealthAssessment(asset);
+    const { overallScore, signals, summary } = await getOnChainHealthAssessment(asset);
     return NextResponse.json(
-      { asset, score, signals, summary },
+      { asset, score: overallScore, signals, summary },
       {
         headers: {
           'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

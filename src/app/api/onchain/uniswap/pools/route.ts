@@ -17,7 +17,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const minLiquidity = minLiquidityParam ? parseFloat(minLiquidityParam) : undefined;
 
   try {
-    const data = await getUniswapPools({ limit, orderBy, orderDirection, minLiquidity });
+    const data = await getUniswapPools('ethereum', { first: limit, orderBy });
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

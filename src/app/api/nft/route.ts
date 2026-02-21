@@ -12,7 +12,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const [market, trending] = await Promise.all([
       getNFTMarketOverview(),
-      getTrendingCollections({ limit: 5 }),
+      getTrendingCollections('24h', 5),
     ]);
     return NextResponse.json(
       { market, trending },

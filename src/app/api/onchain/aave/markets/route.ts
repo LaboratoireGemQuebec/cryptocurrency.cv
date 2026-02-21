@@ -13,7 +13,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
 
   try {
-    const data = await getAaveMarkets({ limit });
+    const data = await getAaveMarkets();
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

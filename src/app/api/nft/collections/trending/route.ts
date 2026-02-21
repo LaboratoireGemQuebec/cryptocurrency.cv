@@ -16,7 +16,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const sortBy = searchParams.get('sort_by') || undefined;
 
   try {
-    const data = await getTrendingCollections({ limit, chain, category, sortBy });
+    const data = await getTrendingCollections('24h', limit);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

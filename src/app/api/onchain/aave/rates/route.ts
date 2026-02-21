@@ -10,10 +10,10 @@ export const revalidate = 300;
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
-  const reserve = searchParams.get('reserve') || undefined;
+  const chain = (searchParams.get('chain') || 'ethereum') as keyof typeof import('@/lib/apis/thegraph') extends never ? string : 'ethereum' | 'arbitrum' | 'optimism' | 'polygon';
 
   try {
-    const data = await getAaveLendingRates(reserve);
+    const data = await getAaveLendingRates(chain as 'ethereum' | 'arbitrum' | 'optimism' | 'polygon');
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

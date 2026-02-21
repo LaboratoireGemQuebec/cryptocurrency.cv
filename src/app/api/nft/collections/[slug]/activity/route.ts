@@ -22,7 +22,7 @@ export async function GET(
   const eventType = searchParams.get('event_type') || undefined;
 
   try {
-    const data = await getCollectionActivity(slug, { limit, eventType });
+    const data = await getCollectionActivity(slug, limit);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',

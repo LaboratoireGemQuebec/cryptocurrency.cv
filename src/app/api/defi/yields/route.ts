@@ -26,7 +26,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     if (type === 'all') {
       data = await getAllPools();
     } else {
-      data = await getTopYields({ limit, chain, project, stable, minTvl, minApy, maxApy });
+      data = await getTopYields({ limit, chain, project, stablecoin: stable, minTvl });
     }
 
     return NextResponse.json(data, {
