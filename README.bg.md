@@ -149,3 +149,4 @@ npm run dev
 ## 📄 Лиценз
 
 MIT © [nirholas](https://github.com/nirholas)
+
