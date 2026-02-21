@@ -15,13 +15,15 @@ import {
   getTrending,
   getGlobalMarketData,
   getFearGreedIndex,
+  formatNumber,
+  formatPercent,
   type TokenPrice,
 } from '@/lib/market-data';
 import type { Metadata } from 'next';
 
 // Components
 import GlobalStatsBar from './components/GlobalStatsBar';
-import TrendingSection from './components/TrendingSection';
+import MarketOverviewCards from './components/MarketOverviewCards';
 import CategoryTabs from './components/CategoryTabs';
 import SearchAndFilters from './components/SearchAndFilters';
 import CoinsTable from './components/CoinsTable';
@@ -344,30 +346,43 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
   const totalMarketCap = global?.total_market_cap?.usd;
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      <div className="max-w-7xl mx-auto">
-        <Header />
+    <div className="min-h-screen bg-white dark:bg-gray-950">
+      <Header />
 
-        {/* Global Stats Bar */}
-        <GlobalStatsBar global={global} fearGreed={fearGreed} />
+      {/* Global Stats Bar — compact top ticker */}
+      <GlobalStatsBar global={global} fearGreed={fearGreed} />
 
-        <main className="px-4 py-6">
+      <div className="max-w-[1400px] mx-auto">
+        <main className="px-4 py-5">
           {/* Market Anomaly Alerts */}
-          <AnomalyAlertsBanner maxAlerts={2} className="mb-6" />
-          
+          <AnomalyAlertsBanner maxAlerts={2} className="mb-4" />
+
           {/* Page Header */}
-          <div className="mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              📊 Cryptocurrency Markets
+          <div className="mb-5">
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+              Cryptocurrency Prices by Market Cap
             </h1>
-            <p className="text-gray-600 dark:text-gray-400">
-              Live prices, charts, and market data for {totalCount.toLocaleString()} cryptocurrencies
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              The global cryptocurrency market cap today is{' '}
+              <span className="font-semibold text-gray-700 dark:text-gray-200">
+                ${formatNumber(global?.total_market_cap?.usd)}
+              </span>
+              , a{' '}
+              <span className={`font-semibold ${(global?.market_cap_change_percentage_24h_usd ?? 0) >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                {formatPercent(global?.market_cap_change_percentage_24h_usd)}
+              </span>{' '}
+              change in the last 24 hours.
             </p>
           </div>
 
-          {/* Trending Section */}
-          <Suspense fallback={<TrendingSectionSkeleton />}>
-            <TrendingSection trending={trending} coins={allCoins} />
+          {/* Market Overview Cards — market cap, volume, trending, gainers */}
+          <Suspense fallback={<MarketOverviewSkeleton />}>
+            <MarketOverviewCards
+              global={global}
+              fearGreed={fearGreed}
+              trending={trending}
+              coins={allCoins}
+            />
           </Suspense>
 
           {/* Category Tabs */}
@@ -401,7 +416,7 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
           </Suspense>
 
           {/* Data Attribution */}
-          <div className="mt-8 text-center text-gray-500 dark:text-gray-400 text-sm">
+          <div className="mt-8 text-center text-gray-400 dark:text-gray-500 text-xs">
             <p>
               Market data provided by{' '}
               <a
@@ -412,7 +427,7 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
               >
                 CoinGecko
               </a>
-              {' • '}
+              {' · '}
               Updates every minute
             </p>
           </div>
@@ -425,28 +440,35 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
 }
 
 // Skeleton Components for Suspense
-function TrendingSectionSkeleton() {
+function MarketOverviewSkeleton() {
   return (
-    <div className="grid md:grid-cols-2 gap-4 mb-6">
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-        <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-3 animate-pulse" />
-        <div className="flex gap-2">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div
-              key={i}
-              className="h-10 w-24 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse"
-            />
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+      <div className="space-y-4">
+        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 h-28 animate-pulse" />
+        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 h-28 animate-pulse" />
+        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-4 h-24 animate-pulse" />
+      </div>
+      <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 animate-pulse">
+        <div className="h-5 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+        <div className="space-y-4">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="flex items-center gap-3">
+              <div className="w-7 h-7 bg-gray-200 dark:bg-gray-700 rounded-full" />
+              <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded" />
+              <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded ml-auto" />
+            </div>
           ))}
         </div>
       </div>
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
-        <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-3 animate-pulse" />
-        <div className="space-y-2">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div
-              key={i}
-              className="h-8 bg-gray-100 dark:bg-gray-700 rounded animate-pulse"
-            />
+      <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 animate-pulse">
+        <div className="h-5 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+        <div className="space-y-4">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="flex items-center gap-3">
+              <div className="w-7 h-7 bg-gray-200 dark:bg-gray-700 rounded-full" />
+              <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded" />
+              <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded ml-auto" />
+            </div>
           ))}
         </div>
       </div>

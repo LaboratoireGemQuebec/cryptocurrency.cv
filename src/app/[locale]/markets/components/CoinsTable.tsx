@@ -58,13 +58,13 @@ export default function CoinsTable({
 
   if (coins.length === 0) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="bg-black rounded-xl border border-white/10 overflow-hidden">
         <div className="p-8 text-center">
           <div className="text-4xl mb-4">🔍</div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-lg font-semibold text-white mb-2">
             No coins found
           </h3>
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-white/50">
             Try adjusting your filters or search query
           </p>
         </div>
@@ -73,11 +73,11 @@ export default function CoinsTable({
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-black rounded-xl border border-white/10 overflow-hidden shadow-sm">
       {/* Table toolbar */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
-        <span className="text-sm text-gray-500 dark:text-gray-400">
-          {totalCount.toLocaleString()} cryptocurrencies
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/10 bg-white/[0.02]">
+        <span className="text-xs text-white/50 font-medium">
+          Showing <span className="font-semibold text-white/70">{totalCount.toLocaleString()}</span> cryptocurrencies
         </span>
         <ColumnCustomizer
           activeColumns={activeColumnIds}
@@ -88,7 +88,7 @@ export default function CoinsTable({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 sticky top-0 z-10">
+            <tr className="border-b border-white/10 bg-white/[0.02] sticky top-0 z-10">
               {activeColumns.map((col) => {
                 if (col.sortField && COLUMN_MAP.has(col.id)) {
                   return (
@@ -108,14 +108,14 @@ export default function CoinsTable({
                     key={col.id}
                     className={`${
                       col.align === 'left' ? 'text-left' : 'text-right'
-                    } text-gray-500 dark:text-gray-400 text-sm font-medium p-4 whitespace-nowrap`}
+                    } text-white/40 text-xs font-semibold uppercase tracking-wide p-4 pr-3 whitespace-nowrap`}
                   >
                     {col.label}
                   </th>
                 );
               })}
               {showWatchlist && (
-                <th className="text-center text-gray-500 dark:text-gray-400 text-sm font-medium p-4 w-12">
+                <th className="text-center text-white/40 text-sm font-medium p-4 w-12">
                   <span className="sr-only">Watchlist</span>
                 </th>
               )}

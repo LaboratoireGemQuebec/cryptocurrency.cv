@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Sparkline Cell Component
+ * Sparkline Cell Component — pure black & white
  * Mini chart for displaying 7-day price history in table cells
  */
 
@@ -36,14 +36,13 @@ export default function SparklineCell({
     return `M ${points.join(' L ')}`;
   }, [data, width, height]);
 
-  const isPositive = change >= 0;
-  const strokeColor = isPositive ? '#22c55e' : '#ef4444';
+  const strokeColor = '#ffffff';
   const gradientId = `gradient-${Math.random().toString(36).slice(2)}`;
 
   if (!data || data.length < 2) {
     return (
       <div 
-        className="bg-gray-100 dark:bg-gray-700 rounded animate-pulse"
+        className="bg-white/5 rounded animate-pulse"
         style={{ width, height }}
       />
     );
@@ -53,7 +52,7 @@ export default function SparklineCell({
     <svg width={width} height={height} className="flex-shrink-0">
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor={strokeColor} stopOpacity="0.3" />
+          <stop offset="0%" stopColor={strokeColor} stopOpacity="0.15" />
           <stop offset="100%" stopColor={strokeColor} stopOpacity="0" />
         </linearGradient>
       </defs>
@@ -70,6 +69,7 @@ export default function SparklineCell({
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeOpacity="0.5"
       />
     </svg>
   );

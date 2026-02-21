@@ -10,6 +10,155 @@
    ============================================ */
 
 @theme {
+  /* ============================================
+     PURE BLACK & WHITE — override every Tailwind
+     color scale so bg-*, text-* and border-* only
+     produce #000000 or #ffffff. Dark shades (600+)
+     → black (backgrounds), light shades (≤500)
+     → white (text / light elements).
+  ============================================ */
+
+  /* Reset all built-in Tailwind color variables */
+  --color-*: initial;
+
+  /* Named foundation colors */
+  --color-transparent: transparent;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-current: currentColor;
+
+  /* --- slate --- */
+  --color-slate-50: #ffffff; --color-slate-100: #ffffff; --color-slate-200: #ffffff;
+  --color-slate-300: #ffffff; --color-slate-400: #ffffff; --color-slate-500: #ffffff;
+  --color-slate-600: #000000; --color-slate-700: #000000; --color-slate-800: #000000;
+  --color-slate-900: #000000; --color-slate-950: #000000;
+
+  /* --- gray --- */
+  --color-gray-50: #ffffff; --color-gray-100: #ffffff; --color-gray-200: #ffffff;
+  --color-gray-300: #ffffff; --color-gray-400: #ffffff; --color-gray-500: #ffffff;
+  --color-gray-600: #000000; --color-gray-700: #000000; --color-gray-800: #000000;
+  --color-gray-900: #000000; --color-gray-950: #000000;
+
+  /* --- zinc --- */
+  --color-zinc-50: #ffffff; --color-zinc-100: #ffffff; --color-zinc-200: #ffffff;
+  --color-zinc-300: #ffffff; --color-zinc-400: #ffffff; --color-zinc-500: #ffffff;
+  --color-zinc-600: #000000; --color-zinc-700: #000000; --color-zinc-800: #000000;
+  --color-zinc-900: #000000; --color-zinc-950: #000000;
+
+  /* --- neutral --- */
+  --color-neutral-50: #ffffff; --color-neutral-100: #ffffff; --color-neutral-200: #ffffff;
+  --color-neutral-300: #ffffff; --color-neutral-400: #ffffff; --color-neutral-500: #ffffff;
+  --color-neutral-600: #000000; --color-neutral-700: #000000; --color-neutral-800: #000000;
+  --color-neutral-900: #000000; --color-neutral-950: #000000;
+
+  /* --- stone --- */
+  --color-stone-50: #ffffff; --color-stone-100: #ffffff; --color-stone-200: #ffffff;
+  --color-stone-300: #ffffff; --color-stone-400: #ffffff; --color-stone-500: #ffffff;
+  --color-stone-600: #000000; --color-stone-700: #000000; --color-stone-800: #000000;
+  --color-stone-900: #000000; --color-stone-950: #000000;
+
+  /* --- red --- */
+  --color-red-50: #ffffff; --color-red-100: #ffffff; --color-red-200: #ffffff;
+  --color-red-300: #ffffff; --color-red-400: #ffffff; --color-red-500: #ffffff;
+  --color-red-600: #000000; --color-red-700: #000000; --color-red-800: #000000;
+  --color-red-900: #000000; --color-red-950: #000000;
+
+  /* --- orange --- */
+  --color-orange-50: #ffffff; --color-orange-100: #ffffff; --color-orange-200: #ffffff;
+  --color-orange-300: #ffffff; --color-orange-400: #ffffff; --color-orange-500: #ffffff;
+  --color-orange-600: #000000; --color-orange-700: #000000; --color-orange-800: #000000;
+  --color-orange-900: #000000; --color-orange-950: #000000;
+
+  /* --- amber --- */
+  --color-amber-50: #ffffff; --color-amber-100: #ffffff; --color-amber-200: #ffffff;
+  --color-amber-300: #ffffff; --color-amber-400: #ffffff; --color-amber-500: #ffffff;
+  --color-amber-600: #000000; --color-amber-700: #000000; --color-amber-800: #000000;
+  --color-amber-900: #000000; --color-amber-950: #000000;
+
+  /* --- yellow --- */
+  --color-yellow-50: #ffffff; --color-yellow-100: #ffffff; --color-yellow-200: #ffffff;
+  --color-yellow-300: #ffffff; --color-yellow-400: #ffffff; --color-yellow-500: #ffffff;
+  --color-yellow-600: #000000; --color-yellow-700: #000000; --color-yellow-800: #000000;
+  --color-yellow-900: #000000; --color-yellow-950: #000000;
+
+  /* --- lime --- */
+  --color-lime-50: #ffffff; --color-lime-100: #ffffff; --color-lime-200: #ffffff;
+  --color-lime-300: #ffffff; --color-lime-400: #ffffff; --color-lime-500: #ffffff;
+  --color-lime-600: #000000; --color-lime-700: #000000; --color-lime-800: #000000;
+  --color-lime-900: #000000; --color-lime-950: #000000;
+
+  /* --- green --- */
+  --color-green-50: #ffffff; --color-green-100: #ffffff; --color-green-200: #ffffff;
+  --color-green-300: #ffffff; --color-green-400: #ffffff; --color-green-500: #ffffff;
+  --color-green-600: #000000; --color-green-700: #000000; --color-green-800: #000000;
+  --color-green-900: #000000; --color-green-950: #000000;
+
+  /* --- emerald --- */
+  --color-emerald-50: #ffffff; --color-emerald-100: #ffffff; --color-emerald-200: #ffffff;
+  --color-emerald-300: #ffffff; --color-emerald-400: #ffffff; --color-emerald-500: #ffffff;
+  --color-emerald-600: #000000; --color-emerald-700: #000000; --color-emerald-800: #000000;
+  --color-emerald-900: #000000; --color-emerald-950: #000000;
+
+  /* --- teal --- */
+  --color-teal-50: #ffffff; --color-teal-100: #ffffff; --color-teal-200: #ffffff;
+  --color-teal-300: #ffffff; --color-teal-400: #ffffff; --color-teal-500: #ffffff;
+  --color-teal-600: #000000; --color-teal-700: #000000; --color-teal-800: #000000;
+  --color-teal-900: #000000; --color-teal-950: #000000;
+
+  /* --- cyan --- */
+  --color-cyan-50: #ffffff; --color-cyan-100: #ffffff; --color-cyan-200: #ffffff;
+  --color-cyan-300: #ffffff; --color-cyan-400: #ffffff; --color-cyan-500: #ffffff;
+  --color-cyan-600: #000000; --color-cyan-700: #000000; --color-cyan-800: #000000;
+  --color-cyan-900: #000000; --color-cyan-950: #000000;
+
+  /* --- sky --- */
+  --color-sky-50: #ffffff; --color-sky-100: #ffffff; --color-sky-200: #ffffff;
+  --color-sky-300: #ffffff; --color-sky-400: #ffffff; --color-sky-500: #ffffff;
+  --color-sky-600: #000000; --color-sky-700: #000000; --color-sky-800: #000000;
+  --color-sky-900: #000000; --color-sky-950: #000000;
+
+  /* --- blue --- */
+  --color-blue-50: #ffffff; --color-blue-100: #ffffff; --color-blue-200: #ffffff;
+  --color-blue-300: #ffffff; --color-blue-400: #ffffff; --color-blue-500: #ffffff;
+  --color-blue-600: #000000; --color-blue-700: #000000; --color-blue-800: #000000;
+  --color-blue-900: #000000; --color-blue-950: #000000;
+
+  /* --- indigo --- */
+  --color-indigo-50: #ffffff; --color-indigo-100: #ffffff; --color-indigo-200: #ffffff;
+  --color-indigo-300: #ffffff; --color-indigo-400: #ffffff; --color-indigo-500: #ffffff;
+  --color-indigo-600: #000000; --color-indigo-700: #000000; --color-indigo-800: #000000;
+  --color-indigo-900: #000000; --color-indigo-950: #000000;
+
+  /* --- violet --- */
+  --color-violet-50: #ffffff; --color-violet-100: #ffffff; --color-violet-200: #ffffff;
+  --color-violet-300: #ffffff; --color-violet-400: #ffffff; --color-violet-500: #ffffff;
+  --color-violet-600: #000000; --color-violet-700: #000000; --color-violet-800: #000000;
+  --color-violet-900: #000000; --color-violet-950: #000000;
+
+  /* --- purple --- */
+  --color-purple-50: #ffffff; --color-purple-100: #ffffff; --color-purple-200: #ffffff;
+  --color-purple-300: #ffffff; --color-purple-400: #ffffff; --color-purple-500: #ffffff;
+  --color-purple-600: #000000; --color-purple-700: #000000; --color-purple-800: #000000;
+  --color-purple-900: #000000; --color-purple-950: #000000;
+
+  /* --- fuchsia --- */
+  --color-fuchsia-50: #ffffff; --color-fuchsia-100: #ffffff; --color-fuchsia-200: #ffffff;
+  --color-fuchsia-300: #ffffff; --color-fuchsia-400: #ffffff; --color-fuchsia-500: #ffffff;
+  --color-fuchsia-600: #000000; --color-fuchsia-700: #000000; --color-fuchsia-800: #000000;
+  --color-fuchsia-900: #000000; --color-fuchsia-950: #000000;
+
+  /* --- pink --- */
+  --color-pink-50: #ffffff; --color-pink-100: #ffffff; --color-pink-200: #ffffff;
+  --color-pink-300: #ffffff; --color-pink-400: #ffffff; --color-pink-500: #ffffff;
+  --color-pink-600: #000000; --color-pink-700: #000000; --color-pink-800: #000000;
+  --color-pink-900: #000000; --color-pink-950: #000000;
+
+  /* --- rose --- */
+  --color-rose-50: #ffffff; --color-rose-100: #ffffff; --color-rose-200: #ffffff;
+  --color-rose-300: #ffffff; --color-rose-400: #ffffff; --color-rose-500: #ffffff;
+  --color-rose-600: #000000; --color-rose-700: #000000; --color-rose-800: #000000;
+  --color-rose-900: #000000; --color-rose-950: #000000;
+
   /* Sharpen all border radii globally — affects 95+ component files */
   --radius-xs: 2px;
   --radius-sm: 3px;
@@ -41,31 +190,31 @@
 
 /* CSS Custom Properties */
 :root {
-  /* Brand Colors - Monochrome */
-  --color-brand-50: #fafafa;
-  --color-brand-100: #f5f5f5;
-  --color-brand-200: #e5e5e5;
-  --color-brand-300: #d4d4d4;
-  --color-brand-400: #a3a3a3;
-  --color-brand-500: #737373;
-  --color-brand-600: #525252;
-  --color-brand-700: #404040;
-  --color-brand-800: #262626;
-  --color-brand-900: #171717;
-  
-  /* Semantic Colors - WCAG AAA compliant */
-  --color-success: #065f46;       /* 8.22:1 on white - AAA compliant (emerald-800) */
-  --color-success-light: #10b981; /* For large text/icons only */
-  --color-danger: #991b1b;        /* 8.49:1 on white - AAA compliant (red-800) */
-  --color-danger-light: #ef4444;  /* For large text/icons only */
-  --color-warning: #78350f;       /* 10.16:1 on white - AAA compliant (amber-900) */
-  --color-warning-light: #f59e0b; /* For large text/icons only */
-  
-  /* Text Colors - WCAG AAA compliant */
-  --color-text-primary: #111827;   /* gray-900: 15.95:1 */
-  --color-text-secondary: #374151; /* gray-700: 10.31:1 */
-  --color-text-muted: #4b5563;     /* gray-600: 7.56:1 - AAA */
-  --color-text-placeholder: #4b5563; /* gray-600: 7.56:1 - upgraded from gray-500 to AAA */
+  /* Brand Colors - Pure Black & White */
+  --color-brand-50: #ffffff;
+  --color-brand-100: #ffffff;
+  --color-brand-200: #ffffff;
+  --color-brand-300: #ffffff;
+  --color-brand-400: #ffffff;
+  --color-brand-500: #ffffff;
+  --color-brand-600: #000000;
+  --color-brand-700: #000000;
+  --color-brand-800: #000000;
+  --color-brand-900: #000000;
+
+  /* Semantic Colors */
+  --color-success: #ffffff;
+  --color-success-light: #ffffff;
+  --color-danger: #ffffff;
+  --color-danger-light: #ffffff;
+  --color-warning: #ffffff;
+  --color-warning-light: #ffffff;
+
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-text-placeholder: #ffffff;
   
   /* Spacing Scale */
   --space-1: 0.25rem;
@@ -107,48 +256,36 @@
   --card-transition-duration: 300ms;
   --card-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Source Colors - CoinDesk */
-  --source-coindesk-primary: #3b82f6;
-  --source-coindesk-secondary: #6366f1;
-  --source-coindesk-glow: rgba(59, 130, 246, 0.3);
-  
-  /* Source Colors - CoinTelegraph */
-  --source-cointelegraph-primary: #f97316;
-  --source-cointelegraph-secondary: #ef4444;
-  --source-cointelegraph-glow: rgba(249, 115, 22, 0.3);
-  
-  /* Source Colors - Decrypt */
-  --source-decrypt-primary: #10b981;
-  --source-decrypt-secondary: #14b8a6;
-  --source-decrypt-glow: rgba(16, 185, 129, 0.3);
-  
-  /* Source Colors - The Block */
-  --source-theblock-primary: #a855f7;
-  --source-theblock-secondary: #8b5cf6;
-  --source-theblock-glow: rgba(168, 85, 247, 0.3);
-  
-  /* Source Colors - Bitcoin Magazine */
-  --source-btcmag-primary: #f59e0b;
-  --source-btcmag-secondary: #eab308;
-  --source-btcmag-glow: rgba(245, 158, 11, 0.3);
-  
-  /* Source Colors - CryptoNews */
-  --source-cryptonews-primary: #22c55e;
-  --source-cryptonews-secondary: #10b981;
-  --source-cryptonews-glow: rgba(34, 197, 94, 0.3);
-  
-  /* Source Colors - Bitcoinist */
-  --source-bitcoinist-primary: #f43f5e;
-  --source-bitcoinist-secondary: #e11d48;
-  --source-bitcoinist-glow: rgba(244, 63, 94, 0.3);
-  
-  /* Sentiment Colors */
-  --sentiment-bullish-bg: rgba(16, 185, 129, 0.1);
-  --sentiment-bullish-text: #10b981;
-  --sentiment-bearish-bg: rgba(239, 68, 68, 0.1);
-  --sentiment-bearish-text: #ef4444;
-  --sentiment-neutral-bg: rgba(107, 114, 128, 0.1);
-  --sentiment-neutral-text: #6b7280;
+  /* Source Colors - all white */
+  --source-coindesk-primary: #ffffff;
+  --source-coindesk-secondary: #ffffff;
+  --source-coindesk-glow: rgba(255, 255, 255, 0.1);
+  --source-cointelegraph-primary: #ffffff;
+  --source-cointelegraph-secondary: #ffffff;
+  --source-cointelegraph-glow: rgba(255, 255, 255, 0.1);
+  --source-decrypt-primary: #ffffff;
+  --source-decrypt-secondary: #ffffff;
+  --source-decrypt-glow: rgba(255, 255, 255, 0.1);
+  --source-theblock-primary: #ffffff;
+  --source-theblock-secondary: #ffffff;
+  --source-theblock-glow: rgba(255, 255, 255, 0.1);
+  --source-btcmag-primary: #ffffff;
+  --source-btcmag-secondary: #ffffff;
+  --source-btcmag-glow: rgba(255, 255, 255, 0.1);
+  --source-cryptonews-primary: #ffffff;
+  --source-cryptonews-secondary: #ffffff;
+  --source-cryptonews-glow: rgba(255, 255, 255, 0.1);
+  --source-bitcoinist-primary: #ffffff;
+  --source-bitcoinist-secondary: #ffffff;
+  --source-bitcoinist-glow: rgba(255, 255, 255, 0.1);
+
+  /* Sentiment Colors - white on black */
+  --sentiment-bullish-bg: rgba(255, 255, 255, 0.08);
+  --sentiment-bullish-text: #ffffff;
+  --sentiment-bearish-bg: rgba(255, 255, 255, 0.08);
+  --sentiment-bearish-text: #ffffff;
+  --sentiment-neutral-bg: rgba(255, 255, 255, 0.08);
+  --sentiment-neutral-text: #ffffff;
   
   /* Card Hover Effects - Subtle, professional */
   --card-hover-scale: 1;
@@ -157,15 +294,15 @@
   
   /* Reading Progress */
   --progress-height: 3px;
-  --progress-bg: rgba(59, 130, 246, 0.2);
-  --progress-fill: #3b82f6;
+  --progress-bg: rgba(255, 255, 255, 0.2);
+  --progress-fill: #ffffff;
 }
 
 /* Dark mode card overrides */
 .dark {
-  --card-hover-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-  --progress-bg: rgba(138, 180, 248, 0.2);
-  --progress-fill: #8ab4f8;
+  --card-hover-shadow: 0 4px 16px -4px rgb(255 255 255 / 0.1);
+  --progress-bg: rgba(255, 255, 255, 0.2);
+  --progress-fill: #ffffff;
 }
 
 /* ============================================
@@ -568,38 +705,38 @@ body {
    Class-based dark mode for ThemeProvider
    ============================================ */
 
-/* Dark Mode CSS Variables — Google News palette */
+/* Dark Mode CSS Variables — Pure Black & White */
 .dark {
-  /* Background Colors */
-  --color-bg-primary: #202124;
-  --color-bg-secondary: #292a2d;
-  --color-bg-tertiary: #303134;
-  --color-bg-elevated: #292a2d;
-  
-  /* Text Colors */
-  --color-text-primary: #e8eaed;
-  --color-text-secondary: #bdc1c6;
-  --color-text-muted: #9aa0a6;
-  --color-text-placeholder: #80868b;
-  
-  /* Border Colors */
-  --color-border: #3c4043;
-  --color-border-light: #5f6368;
-  
-  /* Shadows - deeper for dark mode */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
-  
-  /* Semantic Colors - Dark Mode */
-  --color-success: #10b981;
-  --color-success-light: #34d399;
-  --color-danger: #f87171;
-  --color-danger-light: #fca5a5;
-  --color-warning: #fbbf24;
-  --color-warning-light: #fcd34d;
-  
+  /* Background Colors → black */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #000000;
+  --color-bg-tertiary: #000000;
+  --color-bg-elevated: #000000;
+
+  /* Text Colors → white */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-text-placeholder: #ffffff;
+
+  /* Border Colors → white */
+  --color-border: #ffffff;
+  --color-border-light: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(255 255 255 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(255 255 255 / 0.08), 0 2px 4px -2px rgb(255 255 255 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(255 255 255 / 0.08), 0 4px 6px -4px rgb(255 255 255 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(255 255 255 / 0.08), 0 8px 10px -6px rgb(255 255 255 / 0.05);
+
+  /* Semantic Colors */
+  --color-success: #ffffff;
+  --color-success-light: #ffffff;
+  --color-danger: #ffffff;
+  --color-danger-light: #ffffff;
+  --color-warning: #ffffff;
+  --color-warning-light: #ffffff;
+
   color-scheme: dark;
 }
 
@@ -1210,5 +1347,239 @@ body.modal-open {
     outline: 2px solid var(--color-brand-500);
     outline-offset: 2px;
   }
+}
+
+/* ============================================
+   PURE BLACK & WHITE THEME
+   Only #000000 (background) and #ffffff (text/ui)
+   ============================================ */
+
+:root,
+html,
+html.dark,
+.dark {
+  /* Brand palette → pure black/white */
+  --color-brand-50: #ffffff;
+  --color-brand-100: #ffffff;
+  --color-brand-200: #ffffff;
+  --color-brand-300: #ffffff;
+  --color-brand-400: #ffffff;
+  --color-brand-500: #ffffff;
+  --color-brand-600: #ffffff;
+  --color-brand-700: #ffffff;
+  --color-brand-800: #000000;
+  --color-brand-900: #000000;
+
+  /* Backgrounds → black */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #000000;
+  --color-bg-tertiary: #000000;
+  --color-bg-elevated: #000000;
+
+  /* Text → white */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-text-placeholder: #ffffff;
+
+  /* Borders → white */
+  --color-border: #ffffff;
+  --color-border-light: #ffffff;
+
+  /* Semantic colors → white text on black */
+  --color-success: #ffffff;
+  --color-success-light: #ffffff;
+  --color-danger: #ffffff;
+  --color-danger-light: #ffffff;
+  --color-warning: #ffffff;
+  --color-warning-light: #ffffff;
+
+  /* Source colors */
+  --source-coindesk-primary: #ffffff;
+  --source-coindesk-secondary: #ffffff;
+  --source-coindesk-glow: rgba(255, 255, 255, 0.1);
+  --source-cointelegraph-primary: #ffffff;
+  --source-cointelegraph-secondary: #ffffff;
+  --source-cointelegraph-glow: rgba(255, 255, 255, 0.1);
+  --source-decrypt-primary: #ffffff;
+  --source-decrypt-secondary: #ffffff;
+  --source-decrypt-glow: rgba(255, 255, 255, 0.1);
+  --source-theblock-primary: #ffffff;
+  --source-theblock-secondary: #ffffff;
+  --source-theblock-glow: rgba(255, 255, 255, 0.1);
+  --source-btcmag-primary: #ffffff;
+  --source-btcmag-secondary: #ffffff;
+  --source-btcmag-glow: rgba(255, 255, 255, 0.1);
+  --source-cryptonews-primary: #ffffff;
+  --source-cryptonews-secondary: #ffffff;
+  --source-cryptonews-glow: rgba(255, 255, 255, 0.1);
+  --source-bitcoinist-primary: #ffffff;
+  --source-bitcoinist-secondary: #ffffff;
+  --source-bitcoinist-glow: rgba(255, 255, 255, 0.1);
+
+  /* Sentiment → white */
+  --sentiment-bullish-bg: rgba(255, 255, 255, 0.1);
+  --sentiment-bullish-text: #ffffff;
+  --sentiment-bearish-bg: rgba(255, 255, 255, 0.1);
+  --sentiment-bearish-text: #ffffff;
+  --sentiment-neutral-bg: rgba(255, 255, 255, 0.1);
+  --sentiment-neutral-text: #ffffff;
+
+  /* Progress bar */
+  --progress-bg: rgba(255, 255, 255, 0.2);
+  --progress-fill: #ffffff;
+
+  color-scheme: dark;
+}
+
+/* Force black background and white text everywhere */
+html,
+body,
+.dark body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Skeleton → black/white */
+.skeleton,
+.dark .skeleton,
+.mobile-skeleton,
+.dark .mobile-skeleton {
+  background: linear-gradient(90deg, #000000 25%, #111111 50%, #000000 75%);
+  background-size: 200% 100%;
+}
+
+/* Glass effects → black */
+.glass,
+.dark .glass,
+.glass-panel {
+  background: rgba(0, 0, 0, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text → plain white */
+.gradient-text,
+.dark .gradient-text {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #ffffff;
+  background-clip: unset;
+  color: #ffffff;
+}
+
+/* Scrollbar → black/white */
+::-webkit-scrollbar-track,
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+/* Price colors → white */
+.price-up,
+.dark .price-up,
+.price-down,
+.dark .price-down {
+  color: #ffffff;
+}
+
+/* Live dot → white */
+.live-dot {
+  background-color: #ffffff;
+}
+
+@keyframes live-pulse-bw {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
+  }
+}
+
+.live-dot {
+  animation: live-pulse-bw 2s ease-in-out infinite;
+}
+
+/* Connection status → white on black */
+.connection-status--connected,
+.connection-status--connecting,
+.connection-status--disconnected,
+.connection-status--error {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Bottom nav / sheet → black */
+.bottom-nav,
+.dark .bottom-nav,
+.bottom-sheet,
+.dark .bottom-sheet {
+  background: #000000;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bottom-sheet-handle,
+.dark .bottom-sheet-handle {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Sticky header → black */
+.sticky-header-mobile,
+.dark .sticky-header-mobile {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Focus ring → white */
+:focus-visible,
+.dark :focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Offline indicator → black/white */
+.offline-indicator {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/* Price flash animations → white pulse */
+@keyframes price-flash-bw {
+  0%, 100% { background-color: rgba(255, 255, 255, 0); }
+  25% { background-color: rgba(255, 255, 255, 0.15); }
+}
+
+@keyframes text-flash-bw {
+  0%, 100% { color: #ffffff; }
+  25% { color: rgba(255, 255, 255, 0.5); }
+}
+
+.price-flash-up,
+.price-flash-down {
+  animation: price-flash-bw 0.5s ease-out;
+}
+
+.text-flash-up,
+.text-flash-down {
+  animation: text-flash-bw 0.75s ease-out;
+}
+
+/* Images and media → black and white */
+img,
+video,
+canvas {
+  filter: grayscale(100%);
 }
 

@@ -4,6 +4,7 @@
  */
 
 export { default as GlobalStatsBar } from './GlobalStatsBar';
+export { default as MarketOverviewCards } from './MarketOverviewCards';
 export { default as TrendingSection } from './TrendingSection';
 export { default as CategoryTabs } from './CategoryTabs';
 export { default as SearchAndFilters } from './SearchAndFilters';

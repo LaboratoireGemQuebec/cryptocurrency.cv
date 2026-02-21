@@ -38,10 +38,9 @@ function formatSmallPrice(val: number | undefined | null): string {
 }
 
 function ChangeCell({ value }: { value: number | undefined | null }) {
-  if (value == null) return <span className="text-gray-400 dark:text-gray-600">—</span>;
-  const positive = value >= 0;
+  if (value == null) return <span className="text-white/30">—</span>;
   return (
-    <span className={positive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}>
+    <span className="text-white/70">
       {formatPercent(value)}
     </span>
   );
@@ -116,7 +115,7 @@ export default function CoinRow({
       // ── Pinned ──────────────────────────────────────────────────────────
       case 'rank':
         return (
-          <td key="rank" className="p-4 text-gray-500 dark:text-gray-400 text-sm">
+          <td key="rank" className="p-4 text-white/50 text-sm">
             {coin.market_cap_rank}
           </td>
         );
@@ -137,10 +136,10 @@ export default function CoinRow({
                 )}
               </div>
               <div>
-                <span className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <span className="font-medium text-white group-hover:text-white/80 transition-colors">
                   {coin.name}
                 </span>
-                <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">
+                <span className="text-white/40 text-sm ml-2">
                   {coin.symbol.toUpperCase()}
                 </span>
               </div>
@@ -151,49 +150,49 @@ export default function CoinRow({
       // ── Price ────────────────────────────────────────────────────────────
       case 'price':
         return (
-          <td key="price" className="p-4 text-right font-medium text-gray-900 dark:text-white whitespace-nowrap">
+          <td key="price" className="p-4 text-right font-medium text-white whitespace-nowrap">
             {formatPrice(coin.current_price)}
           </td>
         );
 
       case 'price_btc':
         return (
-          <td key="price_btc" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap text-sm">
+          <td key="price_btc" className="p-4 text-right text-white/60 whitespace-nowrap text-sm">
             {priceBtc != null ? formatSmallPrice(priceBtc) : '—'}
           </td>
         );
 
       case 'price_eth':
         return (
-          <td key="price_eth" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap text-sm">
+          <td key="price_eth" className="p-4 text-right text-white/60 whitespace-nowrap text-sm">
             {priceEth != null ? formatSmallPrice(priceEth) : '—'}
           </td>
         );
 
       case 'ath':
         return (
-          <td key="ath" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="ath" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.ath ? formatPrice(coin.ath) : '—'}
           </td>
         );
 
       case 'atl':
         return (
-          <td key="atl" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="atl" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.atl ? formatPrice(coin.atl) : '—'}
           </td>
         );
 
       case 'high_24h':
         return (
-          <td key="high_24h" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="high_24h" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.high_24h ? formatPrice(coin.high_24h) : '—'}
           </td>
         );
 
       case 'low_24h':
         return (
-          <td key="low_24h" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="low_24h" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.low_24h ? formatPrice(coin.low_24h) : '—'}
           </td>
         );
@@ -293,14 +292,14 @@ export default function CoinRow({
       // ── Market Cap ────────────────────────────────────────────────────────
       case 'market_cap':
         return (
-          <td key="market_cap" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="market_cap" className="p-4 text-right text-white/60 whitespace-nowrap">
             ${formatNumber(coin.market_cap)}
           </td>
         );
 
       case 'fdv':
         return (
-          <td key="fdv" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="fdv" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.fully_diluted_valuation
               ? `$${formatNumber(coin.fully_diluted_valuation)}`
               : '—'}
@@ -310,14 +309,14 @@ export default function CoinRow({
       // ── Volume ────────────────────────────────────────────────────────────
       case 'volume_24h':
         return (
-          <td key="volume_24h" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="volume_24h" className="p-4 text-right text-white/60 whitespace-nowrap">
             ${formatNumber(coin.total_volume)}
           </td>
         );
 
       case 'volume_market_cap':
         return (
-          <td key="volume_market_cap" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="volume_market_cap" className="p-4 text-right text-white/60 whitespace-nowrap">
             {volumeMcap != null ? (volumeMcap * 100).toFixed(2) + '%' : '—'}
           </td>
         );
@@ -327,18 +326,18 @@ export default function CoinRow({
         return (
           <td key="circulating_supply" className="p-4 text-right">
             <div className="flex flex-col items-end">
-              <span className="text-gray-700 dark:text-gray-300 whitespace-nowrap">
+              <span className="text-white/60 whitespace-nowrap">
                 {formatNumber(coin.circulating_supply)} {coin.symbol.toUpperCase()}
               </span>
               {supplyPercentage !== null && (
                 <div className="w-full max-w-[80px] mt-1">
-                  <div className="h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-blue-500 rounded-full"
+                      className="h-full bg-white/50 rounded-full"
                       style={{ width: `${Math.min(supplyPercentage, 100)}%` }}
                     />
                   </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                  <span className="text-xs text-white/40">
                     {supplyPercentage.toFixed(0)}%
                   </span>
                 </div>
@@ -349,7 +348,7 @@ export default function CoinRow({
 
       case 'total_supply':
         return (
-          <td key="total_supply" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="total_supply" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.total_supply != null
               ? `${formatNumber(coin.total_supply)} ${coin.symbol.toUpperCase()}`
               : '∞'}
@@ -358,7 +357,7 @@ export default function CoinRow({
 
       case 'max_supply':
         return (
-          <td key="max_supply" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="max_supply" className="p-4 text-right text-white/60 whitespace-nowrap">
             {coin.max_supply != null
               ? `${formatNumber(coin.max_supply)} ${coin.symbol.toUpperCase()}`
               : '∞'}
@@ -375,7 +374,7 @@ export default function CoinRow({
                 change={coin.price_change_percentage_7d_in_currency || 0}
               />
             ) : (
-              <div className="w-[100px] h-[32px] bg-gray-100 dark:bg-gray-700 rounded" />
+              <div className="w-[100px] h-[32px] bg-white/5 rounded" />
             )}
           </td>
         );
@@ -383,7 +382,7 @@ export default function CoinRow({
       // ── Others ────────────────────────────────────────────────────────────
       case 'dominance':
         return (
-          <td key="dominance" className="p-4 text-right text-gray-700 dark:text-gray-300 whitespace-nowrap">
+          <td key="dominance" className="p-4 text-right text-white/60 whitespace-nowrap">
             {dominancePct != null ? dominancePct.toFixed(2) + '%' : '—'}
           </td>
         );
@@ -394,7 +393,7 @@ export default function CoinRow({
   }
 
   return (
-    <tr className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer">
       {activeColumns.map((colId) => renderCell(colId))}
 
       {/* Watchlist star */}
@@ -404,8 +403,8 @@ export default function CoinRow({
             onClick={handleWatchlistToggle}
             className={`transition-colors ${
               isWatchlisted
-                ? 'text-yellow-500 dark:text-yellow-400 hover:text-yellow-600'
-                : 'text-gray-300 dark:text-gray-600 hover:text-yellow-500 dark:hover:text-yellow-400'
+                ? 'text-white hover:text-white/70'
+                : 'text-white/20 hover:text-white/60'
             }`}
             title={isWatchlisted ? 'Remove from watchlist' : 'Add to watchlist'}
           >

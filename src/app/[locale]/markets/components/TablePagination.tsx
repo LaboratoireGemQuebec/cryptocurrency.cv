@@ -67,12 +67,12 @@ export default function TablePagination({
 
   const t = useTranslations('common');
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 border-t border-gray-200 dark:border-gray-700">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 border-t border-white/10">
       {/* Items info */}
-      <div className="text-sm text-gray-500 dark:text-gray-400">
-        Showing <span className="font-medium text-gray-900 dark:text-white">{startItem}</span> to{' '}
-        <span className="font-medium text-gray-900 dark:text-white">{endItem}</span> of{' '}
-        <span className="font-medium text-gray-900 dark:text-white">{totalItems}</span> results
+      <div className="text-sm text-white/50">
+        Showing <span className="font-medium text-white">{startItem}</span> to{' '}
+        <span className="font-medium text-white">{endItem}</span> of{' '}
+        <span className="font-medium text-white">{totalItems}</span> results
       </div>
 
       {/* Pagination controls */}
@@ -81,7 +81,7 @@ export default function TablePagination({
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/70 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -95,7 +95,7 @@ export default function TablePagination({
             page === '...' ? (
               <span
                 key={`ellipsis-${index}`}
-                className="px-3 py-2 text-sm text-gray-500 dark:text-gray-400"
+                className="px-3 py-2 text-sm text-white/40"
               >
                 ...
               </span>
@@ -105,8 +105,8 @@ export default function TablePagination({
                 onClick={() => goToPage(page as number)}
                 className={`min-w-[40px] px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === page
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ? 'bg-white text-black'
+                    : 'text-white/70 bg-white/5 border border-white/10 hover:bg-white/10'
                 }`}
               >
                 {page}
@@ -116,7 +116,7 @@ export default function TablePagination({
         </div>
 
         {/* Mobile page indicator */}
-        <div className="sm:hidden px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
+        <div className="sm:hidden px-3 py-2 text-sm text-white/70">
           Page {currentPage} of {totalPages}
         </div>
 
@@ -124,7 +124,7 @@ export default function TablePagination({
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/70 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <span className="hidden sm:inline">{t('next')}</span>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function TablePagination({
 
       {/* Quick jump to page */}
       <div className="hidden lg:flex items-center gap-2">
-        <span className="text-sm text-gray-500 dark:text-gray-400">Go to:</span>
+        <span className="text-sm text-white/50">Go to:</span>
         <input
           type="number"
           min={1}
@@ -149,7 +149,7 @@ export default function TablePagination({
               }
             }
           }}
-          className="w-16 px-2 py-1.5 text-sm text-center border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-16 px-2 py-1.5 text-sm text-center border border-white/10 rounded-lg bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-white/20"
         />
       </div>
     </div>

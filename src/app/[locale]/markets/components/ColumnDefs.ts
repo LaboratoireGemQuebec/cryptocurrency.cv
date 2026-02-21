@@ -141,7 +141,7 @@ export const ALL_COLUMNS: ColumnDef[] = [
     group: 'price_change',
     groupLabel: 'Price Change',
     sortField: 'price_change_percentage_1h_in_currency',
-    defaultVisible: false,
+    defaultVisible: true,
   },
   {
     id: 'change_24h',
@@ -262,7 +262,7 @@ export const ALL_COLUMNS: ColumnDef[] = [
     group: 'supply',
     groupLabel: 'Supply',
     sortField: 'circulating_supply',
-    defaultVisible: true,
+    defaultVisible: false,
   },
   {
     id: 'total_supply',
