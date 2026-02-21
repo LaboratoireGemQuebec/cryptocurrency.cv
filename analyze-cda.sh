@@ -19,3 +19,4 @@ cat /tmp/cda-source/src/app/calculator/page.tsx 2>/dev/null || echo "File not fo
 echo ""
 echo "=== MARKET LIB ==="
 cat /tmp/cda-source/src/lib/market.ts 2>/dev/null || echo "File not found"
+
