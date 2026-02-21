@@ -104,3 +104,4 @@ To use widgets with a self-hosted API:
 ## No API Key Required!
 
 100% free - just embed and go!
+
