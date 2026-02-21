@@ -79,12 +79,24 @@ export interface TokenPrice {
   total_volume: number;
   price_change_24h: number;
   price_change_percentage_24h: number;
+  price_change_percentage_1h_in_currency?: number;
   price_change_percentage_7d_in_currency?: number;
+  price_change_percentage_30d_in_currency?: number;
+  price_change_percentage_60d_in_currency?: number;
+  price_change_percentage_90d_in_currency?: number;
+  price_change_percentage_200d_in_currency?: number;
+  high_24h?: number;
+  low_24h?: number;
+  fully_diluted_valuation?: number | null;
   circulating_supply: number;
   total_supply: number | null;
   max_supply: number | null;
   ath: number;
   ath_change_percentage: number;
+  ath_date?: string;
+  atl?: number;
+  atl_change_percentage?: number;
+  atl_date?: string;
   last_updated: string;
   image?: string;
   sparkline_in_7d?: { price: number[] };
@@ -1115,7 +1127,7 @@ export async function getTopCoins(limit = 50): Promise<TokenPrice[]> {
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=true&price_change_percentage=7d`,
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=true&price_change_percentage=1h%2C7d%2C30d%2C60d%2C90d`,
     );
 
     if (!response.ok) {

@@ -1,6 +1,6 @@
 import '../globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Roboto, JetBrains_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -22,9 +22,10 @@ import { ToastProvider } from '@/components/Toast';
 import { AlternateLinks } from '@/components/AlternateLinks';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
   display: 'swap',
 });
 
@@ -211,7 +212,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const dir = isRtlLocale(locale as Locale) ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang={locale} dir={dir} suppressHydrationWarning className={`${roboto.variable} ${jetbrainsMono.variable}`}>
       <head>
         {/* Theme Script - prevents flash of wrong theme */}
         <ThemeScript />

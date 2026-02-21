@@ -8,10 +8,13 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { getSourceGradient } from './cardUtils';
 import { getNatureUnsplashFallback } from '@/lib/unsplash-fallback';
+
+/** Milliseconds before a slow-loading image is replaced with the nature fallback */
+const LOAD_TIMEOUT_MS = 8000;
 
 interface CardImageProps {
   src?: string;
@@ -32,15 +35,41 @@ export default function CardImage({
   showSourceInitial = true,
   size = 'md'
 }: CardImageProps) {
-  const unsplashSrc = getNatureUnsplashFallback(src ? source : (source + '_nature'));
+  const unsplashSrc = getNatureUnsplashFallback(source);
   const [imgSrc, setImgSrc] = useState<string | undefined>(src || unsplashSrc);
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const gradient = getSourceGradient(source);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Start a timeout whenever we're waiting on a new image src
+  useEffect(() => {
+    if (!imgSrc || isLoaded || hasError) return;
+
+    timeoutRef.current = setTimeout(() => {
+      // Image took too long — fall through to nature fallback
+      if (imgSrc !== unsplashSrc) {
+        setImgSrc(unsplashSrc);
+        setIsLoaded(false);
+      } else {
+        setHasError(true);
+      }
+    }, LOAD_TIMEOUT_MS);
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [imgSrc, isLoaded, hasError, unsplashSrc]);
+
+  const handleLoad = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsLoaded(true);
+  };
 
   const handleError = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     if (imgSrc !== unsplashSrc) {
-      // First failure: try the Unsplash fallback
+      // First failure: try the Unsplash nature fallback
       setImgSrc(unsplashSrc);
       setIsLoaded(false);
     } else {
@@ -88,7 +117,7 @@ export default function CardImage({
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-          onLoad={() => setIsLoaded(true)}
+          onLoad={handleLoad}
           onError={handleError}
           className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'

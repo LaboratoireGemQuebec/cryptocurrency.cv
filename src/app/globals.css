@@ -31,7 +31,7 @@
   --shadow-2xl: 0 16px 40px -8px rgb(0 0 0 / 0.25);
 
   /* Professional font stack with monospace for data — variables injected by next/font/google */
-  --font-sans: var(--font-inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif);
+  --font-sans: var(--font-roboto, 'Google Sans', Roboto, system-ui, -apple-system, sans-serif);
   --font-mono: var(--font-jetbrains-mono, 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace);
 }
 
@@ -164,7 +164,8 @@
 /* Dark mode card overrides */
 .dark {
   --card-hover-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-  --progress-bg: rgba(59, 130, 246, 0.3);
+  --progress-bg: rgba(138, 180, 248, 0.2);
+  --progress-fill: #8ab4f8;
 }
 
 /* ============================================
@@ -567,23 +568,23 @@ body {
    Class-based dark mode for ThemeProvider
    ============================================ */
 
-/* Dark Mode CSS Variables */
+/* Dark Mode CSS Variables — Google News palette */
 .dark {
   /* Background Colors */
-  --color-bg-primary: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-bg-tertiary: #334155;
-  --color-bg-elevated: #1e293b;
+  --color-bg-primary: #202124;
+  --color-bg-secondary: #292a2d;
+  --color-bg-tertiary: #303134;
+  --color-bg-elevated: #292a2d;
   
-  /* Text Colors - Dark Mode WCAG compliant */
-  --color-text-primary: #f1f5f9;     /* slate-100: 14.72:1 on dark */
-  --color-text-secondary: #cbd5e1;   /* slate-300: 10.31:1 on dark */
-  --color-text-muted: #94a3b8;       /* slate-400: 6.12:1 on dark */
-  --color-text-placeholder: #64748b; /* slate-500: 4.56:1 on dark */
+  /* Text Colors */
+  --color-text-primary: #e8eaed;
+  --color-text-secondary: #bdc1c6;
+  --color-text-muted: #9aa0a6;
+  --color-text-placeholder: #80868b;
   
   /* Border Colors */
-  --color-border: #334155;
-  --color-border-light: #475569;
+  --color-border: #3c4043;
+  --color-border-light: #5f6368;
   
   /* Shadows - deeper for dark mode */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
@@ -610,27 +611,27 @@ body {
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #292a2d;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #5f6368;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #80868b;
 }
 
 /* Dark mode skeleton loading */
 .dark .skeleton {
-  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background: linear-gradient(90deg, #292a2d 25%, #303134 50%, #292a2d 75%);
   background-size: 200% 100%;
 }
 
 /* Dark mode glass effect */
 .dark .glass {
-  background: rgba(15, 23, 42, 0.85);
-  border-color: rgba(148, 163, 184, 0.08);
+  background: rgba(32, 33, 36, 0.88);
+  border-color: rgba(95, 99, 104, 0.2);
 }
 
 /* Dark mode gradient text */
