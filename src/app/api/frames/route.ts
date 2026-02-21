@@ -205,7 +205,9 @@ export async function POST(request: NextRequest) {
       if (stateHeader) {
         state = JSON.parse(Buffer.from(stateHeader, 'base64').toString());
       }
-    } catch {}
+    } catch {
+      // Invalid or malformed fc-frame-state header — fall back to default state
+    }
     
     // Handle home frame buttons
     if (state.frame === 'home') {

@@ -515,7 +515,6 @@ export async function getAnalytics(
   const limiter = getRateLimiter(tier, requestsPerDay);
   if (!limiter) return null;
 
-  // Note: Analytics require Upstash paid plan
-  // This is a placeholder for when analytics are available
+  // Analytics require Upstash paid plan — return null until available
   return null;
 }

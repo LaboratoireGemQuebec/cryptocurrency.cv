@@ -304,7 +304,7 @@ function processIncomingMessage(raw: Record<string, unknown>): SocialMessage {
   // Detect sentiment
   const sentiment = detectSentiment(content);
 
-  // Check if influencer (placeholder logic)
+  // Check if influencer: verified account or follower count above threshold
   const isInfluencer = (raw.followerCount as number) > 10000 || (raw.isVerified as boolean);
 
   return {

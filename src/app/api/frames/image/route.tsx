@@ -16,7 +16,9 @@ export async function GET(request: NextRequest) {
   let data: any = {};
   try {
     data = JSON.parse(decodeURIComponent(searchParams.get('data') || '{}'));
-  } catch {}
+  } catch {
+    // Invalid or malformed `data` query param — fall back to empty object
+  }
   
   // News image
   if (type === 'news') {

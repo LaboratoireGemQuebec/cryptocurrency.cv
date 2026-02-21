@@ -199,7 +199,9 @@ async function commitToGitHub(
           try {
             const article = JSON.parse(line);
             if (article.id) existingIds.add(article.id);
-          } catch {}
+          } catch {
+            // Malformed JSONL line in existing archive file — skip and continue
+          }
         }
       }
     }
