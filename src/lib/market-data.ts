@@ -1308,7 +1308,7 @@ async function getCoinDetailsFallback(
       "usd-coin": "usdc-usd-coin",
       ripple: "xrp-xrp",
       solana: "sol-solana",
-      staked-ether: "steth-lido-staked-ether",
+      "staked-ether": "steth-lido-staked-ether",
       dogecoin: "doge-dogecoin",
       "the-open-network": "ton-the-open-network",
       toncoin: "ton-the-open-network",
@@ -1526,51 +1526,30 @@ async function getCoinDetailsFallback(
 
 /**
  * Fallback: Get coin details from CoinCap API (api.coincap.io)
- * Completely free, no API key required, accepts CoinGecko-compatible IDs.
- * Works for any coin — not limited to a pre-built ID map.
- * @param coinId - Coin ID (CoinCap uses the same IDs as CoinGecko for most coins)
- * @returns Coin details in CoinGecko-compatible format, or null on failure
+ * Completely free, no API key required. Works for ANY coin.
+ *
+ * Strategy:
+ *   1. Direct /assets/{coinId} lookup  (works for most CoinGecko IDs)
+ *   2. If that 404s → search /assets?search={stripped-id} and pick best match
+ *      e.g. "avalanche-2" → searches "avalanche", "wrapped-bitcoin" → "wrapped bitcoin"
  */
 async function getCoinDetailsCoinCap(
   coinId: string,
 ): Promise<Record<string, unknown> | null> {
-  try {
-    const response = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets/${coinId}`,
-      10000,
-      true, // skip rate-limit tracking — CoinCap has its own generous free tier
-    );
-
-    if (!response.ok) {
-      console.error(
-        `CoinCap fallback failed for ${coinId}: ${response.status}`,
-      );
-      return null;
-    }
-
-    const json = await response.json();
-    const d = json.data;
-    if (!d) return null;
-
-    const price = parseFloat(d.priceUsd) || 0;
-    const changePercent24h = parseFloat(d.changePercent24Hr) || 0;
-    const marketCap = parseFloat(d.marketCapUsd) || 0;
-    const volume24h = parseFloat(d.volumeUsd24Hr) || 0;
-    const supply = parseFloat(d.supply) || 0;
-    const maxSupply = d.maxSupply ? parseFloat(d.maxSupply) : null;
-
-    // CoinCap provides a logo CDN at assets.coincap.io
+  // Shared helper: build CoinGecko-compatible object from a CoinCap asset blob
+  const buildResult = (d: Record<string, unknown>): Record<string, unknown> => {
+    const price = parseFloat(d.priceUsd as string) || 0;
+    const changePercent24h = parseFloat(d.changePercent24Hr as string) || 0;
+    const marketCap = parseFloat(d.marketCapUsd as string) || 0;
+    const volume24h = parseFloat(d.volumeUsd24Hr as string) || 0;
+    const supply = parseFloat(d.supply as string) || 0;
+    const maxSupply = d.maxSupply ? parseFloat(d.maxSupply as string) : null;
     const logoUrl = `https://assets.coincap.io/assets/icons/${(d.symbol as string).toLowerCase()}@2x.png`;
-
-    const result: Record<string, unknown> = {
+    return {
       id: coinId,
       symbol: (d.symbol as string).toLowerCase(),
       name: d.name,
-      image: {
-        large: logoUrl,
-        small: logoUrl,
-        thumb: logoUrl,
-      },
+      image: { large: logoUrl, small: logoUrl, thumb: logoUrl },
       market_cap_rank: d.rank ? parseInt(d.rank as string, 10) : null,
       categories: [],
       description: { en: "" },
@@ -1590,7 +1569,6 @@ async function getCoinDetailsCoinCap(
         price_change_percentage_1y: 0,
         market_cap: { usd: marketCap },
         total_volume: { usd: volume24h },
-        // Estimate high/low from 24h change since CoinCap doesn't provide them
         high_24h: { usd: price * (1 + Math.abs(changePercent24h) / 100) },
         low_24h: { usd: price * (1 - Math.abs(changePercent24h) / 100) },
         ath: { usd: price },
@@ -1606,7 +1584,54 @@ async function getCoinDetailsCoinCap(
       },
       last_updated: new Date().toISOString(),
     };
+  };
 
+  try {
+    // --- Step 1: Direct lookup by CoinGecko ID (works for ~90% of coins) ---
+    const directRes = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets/${coinId}`,
+      10000,
+      true,
+    );
+
+    if (directRes.ok) {
+      const json = await directRes.json();
+      if (json.data) {
+        const result = buildResult(json.data as Record<string, unknown>);
+        setCache(`coin-${coinId}`, result, CACHE_TTL.global);
+        return result;
+      }
+    }
+
+    // --- Step 2: Search fallback for any ID that didn't match directly ---
+    // "avalanche-2" → "avalanche"  |  "wrapped-bitcoin" → "wrapped bitcoin"
+    const searchQuery = coinId
+      .replace(/-\d+$/, "")   // strip trailing version suffix (-2, -3 …)
+      .replace(/-/g, " ")     // hyphens → spaces for CoinCap search
+      .trim();
+
+    const searchRes = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets?search=${encodeURIComponent(searchQuery)}&limit=5`,
+      10000,
+      true,
+    );
+
+    if (!searchRes.ok) return null;
+
+    const searchJson = await searchRes.json();
+    const assets: Record<string, unknown>[] = searchJson.data ?? [];
+    if (!assets.length) return null;
+
+    // Pick the closest match: exact ID/name win; otherwise take highest-ranked result
+    const normalised = coinId.replace(/-\d+$/, "").replace(/-/g, "").toLowerCase();
+    const best =
+      assets.find(
+        (a) =>
+          (a.id as string).replace(/-/g, "").toLowerCase() === normalised ||
+          (a.name as string).replace(/\s+/g, "").toLowerCase() === normalised,
+      ) ?? assets[0];
+
+    const result = buildResult(best);
     setCache(`coin-${coinId}`, result, CACHE_TTL.global);
     return result;
   } catch (error) {
