@@ -866,3 +866,4 @@ Before going to production:
 - [ ] Document any custom configuration
 - [ ] Set `X402_PAYMENT_ADDRESS` for micropayments
 - [ ] Test x402 payment flow end-to-end
+
