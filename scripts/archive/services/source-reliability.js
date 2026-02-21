@@ -27,12 +27,16 @@ const SCORING_WEIGHTS = {
   original_reporting: 0.2    // Original vs aggregation
 };
 
-// Source categories
+// Source categories — mirrors the canonical tier definitions in src/lib/source-tiers.ts.
+// Keep in sync with that file when adding or re-tiering sources.
 const SOURCE_CATEGORIES = {
-  'tier1': ['reuters', 'bloomberg', 'wsj', 'ft'],
-  'crypto_native': ['coindesk', 'cointelegraph', 'the block', 'decrypt', 'blockworks'],
-  'aggregators': ['cryptopanic', 'cryptonews', 'ambcrypto'],
-  'social': ['twitter', 'reddit', 'telegram']
+  tier1:    ['reuters', 'bloomberg', 'wsj', 'ft', 'cnbc', 'forbes', 'yahoofinance'],
+  tier2:    ['coindesk', 'theblock', 'blockworks', 'decrypt', 'unchained', 'defiant', 'dlnews'],
+  tier3:    ['cointelegraph', 'bitcoinmagazine', 'bankless', 'cryptoslate', 'bitcoinist', 'beincrypto', 'newsbtc'],
+  tier4:    ['cryptonews', 'ambcrypto', 'cryptopotato'],
+  research: ['messari', 'delphi', 'paradigm', 'a16z'],
+  fintech:  ['finextra', 'pymnts', 'fintechfutures'],
+  social:   ['twitter', 'reddit', 'telegram'],
 };
 
 // =============================================================================

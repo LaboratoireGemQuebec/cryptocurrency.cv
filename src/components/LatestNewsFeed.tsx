@@ -10,6 +10,7 @@
 'use client';
 
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
@@ -93,6 +94,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
   const displayArticles = articles.slice(0, maxArticles);
   const dayGroups = groupByDay(displayArticles);
 
+  const t = useTranslations('common');
   return (
     <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
       {/* Header */}
@@ -108,7 +110,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
             href="/read"
             className="text-xs font-semibold text-brand-600 dark:text-amber-400 hover:text-brand-700 dark:hover:text-amber-300 transition-colors flex items-center gap-1"
           >
-            View all
+            {t('common.viewAll')}
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

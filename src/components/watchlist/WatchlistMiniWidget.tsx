@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Star, ChevronRight, TrendingUp, TrendingDown, AlertCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useWatchlist } from './WatchlistProvider';
 
 interface WatchlistCoin {
@@ -27,6 +28,7 @@ export function WatchlistMiniWidget({
   className = '' 
 }: WatchlistMiniWidgetProps) {
   const { watchlist, isLoaded, removeFromWatchlist } = useWatchlist();
+  const t = useTranslations('common');
   
   // Filter coins data to only show watchlisted coins
   const watchlistedCoins = coins.filter(coin => watchlist.includes(coin.id));
@@ -88,7 +90,7 @@ export function WatchlistMiniWidget({
             href="/watchlist"
             className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
           >
-            View all <ChevronRight className="w-4 h-4" />
+            {t('common.viewAll')} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
         <div className="space-y-2">
@@ -124,7 +126,7 @@ export function WatchlistMiniWidget({
           href="/watchlist"
           className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
         >
-          View all <ChevronRight className="w-4 h-4" />
+          {t('common.viewAll')} <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
 

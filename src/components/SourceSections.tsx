@@ -4,6 +4,7 @@
  */
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import NewsCard from '@/components/NewsCard';
 
 interface Article {
@@ -53,6 +54,7 @@ export default function SourceSections({
 
   if (sortedSources.length === 0) return null;
 
+  const t = useTranslations('common');
   return (
     <section className="py-12 border-t border-gray-100 dark:border-slate-800">
       <div className="space-y-12">
@@ -75,7 +77,7 @@ export default function SourceSections({
                   href={`/source/${info.slug}`}
                   className="text-sm font-semibold text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1"
                 >
-                  View all
+                  {t('common.viewAll')}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

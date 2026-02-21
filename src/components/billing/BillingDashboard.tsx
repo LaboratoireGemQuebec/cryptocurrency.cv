@@ -12,6 +12,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import {
   ChartBarIcon,
   CreditCardIcon,
@@ -269,6 +270,7 @@ export default function BillingDashboard() {
   };
 
   if (isLoading) {
+    const t = useTranslations('common');
     return (
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="animate-pulse space-y-8">
@@ -375,7 +377,7 @@ export default function BillingDashboard() {
             onClick={handleRefresh}
             className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
           >
-            Refresh
+            {t('common.refresh')}
           </button>
         </div>
       </div>

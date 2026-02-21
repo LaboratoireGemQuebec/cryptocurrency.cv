@@ -5,6 +5,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import type { Ticker } from '@/lib/market-data';
 
@@ -127,6 +128,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
     </button>
   );
 
+  const t = useTranslations('common');
   return (
     <div className="bg-gray-800/50 rounded-2xl border border-gray-700/50 overflow-hidden">
       {/* Header */}
@@ -316,7 +318,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
               disabled={page === 1}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              Previous
+              {t('common.previous')}
             </button>
             
             <div className="flex items-center gap-1">
@@ -353,7 +355,7 @@ export default function MarketsTable({ tickers, coinSymbol }: MarketsTableProps)
               disabled={page === totalPages}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              Next
+              {t('common.next')}
             </button>
           </div>
         </div>

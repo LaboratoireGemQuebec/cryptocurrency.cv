@@ -5,6 +5,7 @@
 'use client';
 
 import { useState, useMemo, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import type { OHLCData } from '@/lib/market-data';
 
@@ -71,6 +72,7 @@ export default function HistoricalTable({
 
   // Calculate daily change
   const getChange = useCallback((data: OHLCData) => {
+    const t = useTranslations('common');
     return ((data.close - data.open) / data.open) * 100;
   }, []);
 
@@ -163,7 +165,7 @@ export default function HistoricalTable({
                 Low
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500">
-                Close
+                {t('common.close')}
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500">
                 Change
@@ -283,14 +285,14 @@ export default function HistoricalTable({
               disabled={page === 1}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              Previous
+              {t('common.previous')}
             </button>
             <button
               onClick={() => setPage(Math.min(totalPages, page + 1))}
               disabled={page === totalPages}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              Next
+              {t('common.next')}
             </button>
           </div>
         </div>

@@ -7,6 +7,7 @@
 'use client';
 
 import { memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import type { ChatMessage } from './types';
 import { sanitizeHighlight } from '@/lib/sanitize-dom';
 
@@ -16,6 +17,7 @@ function useDebounce<T>(value: T, delay: number): T {
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedValue(value), delay);
+    const t = useTranslations('common');
     return () => clearTimeout(timer);
   }, [value, delay]);
 
@@ -310,7 +312,7 @@ function MessageSearchComponent({ messages, onResultClick, onClose }: MessageSea
         </span>
         <span className="flex items-center gap-1">
           <kbd className="px-1.5 py-0.5 bg-gray-800 rounded text-gray-400">Esc</kbd>
-          <span>Close</span>
+          <span>{t('common.close')}</span>
         </span>
       </div>
     </div>

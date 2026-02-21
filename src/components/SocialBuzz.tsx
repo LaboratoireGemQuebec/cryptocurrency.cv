@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import {
   ArrowTrendingUpIcon,
@@ -196,6 +197,7 @@ export function SocialBuzz() {
     
     // Refresh every 5 minutes
     const interval = setInterval(fetchData, 5 * 60 * 1000);
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [fetchData]);
 
@@ -248,7 +250,7 @@ export function SocialBuzz() {
           className="flex items-center gap-1 hover:text-slate-900 dark:hover:text-white"
         >
           <ArrowPathIcon className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-          Refresh
+          {t('common.refresh')}
         </button>
       </div>
 

@@ -39,12 +39,12 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
 import { useBookmarks } from './BookmarksProvider';
 import { ClickbaitDetector } from './ClickbaitDetector';
+import CardImage from './cards/CardImage';
 
 interface Article {
   title: string;
@@ -77,6 +77,7 @@ const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-
 
 export default function NewsCard({ article, variant = 'default', showDescription = true, priority }: NewsCardProps) {
   const t = useTranslations('news');
+  const tCommon = useTranslations('common');
   const articleSlug = generateArticleSlug(article.title, article.pubDate);
   const style = sourceColors[article.source] || defaultStyle;
   const readingTime = estimateReadingTime(article.title, article.description);
@@ -192,19 +193,16 @@ export default function NewsCard({ article, variant = 'default', showDescription
             )}
           </div>
 
-          {/* Horizontal thumbnail */}
-          {article.imageUrl && (
-            <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-700 flex-shrink-0 self-center">
-              <Image
-                src={article.imageUrl}
-                alt=""
-                fill
-                sizes="96px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
-              />
-            </div>
-          )}
+          {/* Horizontal thumbnail - always shown with gradient fallback */}
+          <div className="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 self-center">
+            <CardImage
+              src={article.imageUrl}
+              alt={article.title}
+              source={article.source}
+              size="sm"
+              className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
 
           <svg 
             className="w-5 h-5 text-gray-300 dark:text-slate-600 group-hover:text-brand-500 dark:group-hover:text-amber-400 group-hover:translate-x-1 transition-all flex-shrink-0 self-center"
@@ -229,7 +227,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           onClick={handleShare}
           className="relative p-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full shadow-md border border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-800 transition-all"
           aria-label="Share article"
-          title="Share"
+          title={tCommon('share')}
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -268,19 +266,15 @@ export default function NewsCard({ article, variant = 'default', showDescription
         href={`/article/${articleSlug}`}
         className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-200 dark:hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
-        {/* Article thumbnail */}
-        {article.imageUrl && (
-          <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 dark:bg-slate-700">
-            <Image
-              src={article.imageUrl}
-              alt=""
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-              onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
-            />
-          </div>
-        )}
+        {/* Article thumbnail - always shown with gradient fallback */}
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <CardImage
+            src={article.imageUrl}
+            alt={article.title}
+            source={article.source}
+            className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
         <div className="p-5 h-full flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between mb-3">

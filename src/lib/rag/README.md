@@ -297,12 +297,13 @@ const reranked = await rerankResults(query, searchResults, {
 });
 ```
 
-Source credibility tiers:
-- **Tier 1** (1.0): Reuters, Bloomberg, WSJ, Financial Times
-- **Tier 2** (0.9): CoinDesk, The Block, Decrypt, CoinTelegraph
-- **Tier 3** (0.8): BeInCrypto, NewsBTC, Bitcoinist
-- **Tier 4** (0.7): Generic crypto sources
-- **Default** (0.6): Unknown sources
+Source credibility tiers (see canonical values in `src/lib/source-tiers.ts`):
+- **Tier 1** (0.88–0.98): Bloomberg, Reuters, WSJ, Financial Times, CNBC
+- **Tier 2** (0.86–0.95): CoinDesk, The Block, Blockworks, Decrypt, The Defiant
+- **Tier 3** (0.68–0.82): CoinTelegraph, Bitcoin Magazine, Bitcoinist, NewsBTC
+- **Tier 4** (0.60–0.68): Aggregators & volume sources
+- **Research** (0.90–0.94): Messari, Paradigm, a16z, Delphi Digital
+- **Default** (0.60): Unknown sources
 
 ### Conversation Memory
 

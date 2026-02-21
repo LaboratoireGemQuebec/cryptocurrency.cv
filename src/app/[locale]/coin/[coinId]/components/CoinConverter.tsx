@@ -5,6 +5,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 interface CoinConverterProps {
@@ -90,6 +91,7 @@ export default function CoinConverter({
     setTimeout(() => setCopied(null), 2000);
   }, [coinAmount, usdAmount]);
 
+  const t = useTranslations('common');
   return (
     <div className="bg-gray-800/50 rounded-2xl border border-gray-700/50 p-6">
       <h3 className="text-lg font-semibold text-white mb-4">
@@ -120,7 +122,7 @@ export default function CoinConverter({
               <button
                 onClick={() => handleCopy('coin')}
                 className="p-1 text-gray-500 hover:text-gray-300 transition-colors"
-                title="Copy"
+                title={t('common.copy')}
               >
                 {copied === 'coin' ? (
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -171,7 +173,7 @@ export default function CoinConverter({
               <button
                 onClick={() => handleCopy('usd')}
                 className="p-1 text-gray-500 hover:text-gray-300 transition-colors"
-                title="Copy"
+                title={t('common.copy')}
               >
                 {copied === 'usd' ? (
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

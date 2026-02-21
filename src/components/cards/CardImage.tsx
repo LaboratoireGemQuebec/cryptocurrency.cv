@@ -1,6 +1,9 @@
 /**
  * CardImage Component
- * Handles image display with lazy loading, gradient fallback, and loading states
+ * Handles image display with lazy loading, Unsplash fallback, and gradient fallback.
+ *
+ * Fallback chain:
+ *   1. Article's own imageUrl  →  2. Unsplash (curated crypto photo)  →  3. Source gradient
  */
 
 'use client';
@@ -8,6 +11,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { getSourceGradient } from './cardUtils';
+import { getUnsplashFallback } from '@/lib/unsplash-fallback';
 
 interface CardImageProps {
   src?: string;
@@ -28,9 +32,22 @@ export default function CardImage({
   showSourceInitial = true,
   size = 'md'
 }: CardImageProps) {
+  const unsplashSrc = getUnsplashFallback(source);
+  const [imgSrc, setImgSrc] = useState<string | undefined>(src || unsplashSrc);
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const gradient = getSourceGradient(source);
+
+  const handleError = () => {
+    if (imgSrc !== unsplashSrc) {
+      // First failure: try the Unsplash fallback
+      setImgSrc(unsplashSrc);
+      setIsLoaded(false);
+    } else {
+      // Second failure: give up and show the gradient
+      setHasError(true);
+    }
+  };
 
   const initialSizes = {
     sm: 'text-xl',
@@ -38,14 +55,14 @@ export default function CardImage({
     lg: 'text-4xl',
   };
 
-  const showGradientFallback = !src || hasError || !isLoaded;
+  const showGradientFallback = !imgSrc || hasError || !isLoaded;
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Gradient background (always present as base/fallback) */}
       <div 
         className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-opacity duration-300 ${
-          isLoaded && src && !hasError ? 'opacity-0' : 'opacity-100'
+          isLoaded && imgSrc && !hasError ? 'opacity-0' : 'opacity-100'
         }`}
         aria-hidden="true"
       >
@@ -65,14 +82,14 @@ export default function CardImage({
       </div>
 
       {/* Actual image with lazy loading */}
-      {src && !hasError && (
+      {imgSrc && !hasError && (
         <Image
-          src={src}
+          src={imgSrc}
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
           onLoad={() => setIsLoaded(true)}
-          onError={() => setHasError(true)}
+          onError={handleError}
           className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
@@ -80,7 +97,7 @@ export default function CardImage({
       )}
 
       {/* Loading shimmer overlay */}
-      {src && !isLoaded && !hasError && (
+      {imgSrc && !isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
       )}
     </div>

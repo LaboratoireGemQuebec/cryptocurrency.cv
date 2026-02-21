@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface FundingRate {
   symbol: string;
@@ -40,6 +41,7 @@ export function FundingRates({
   useEffect(() => {
     fetchFundingRates();
     const interval = setInterval(fetchFundingRates, 60000); // Update every minute
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, []);
 
@@ -242,7 +244,7 @@ export function FundingRates({
                 Annual {sortBy === 'annualized' && (sortDir === 'desc' ? '↓' : '↑')}
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
-                Next
+                {t('common.next')}
               </th>
               {showOpenInterest && (
                 <th className="px-4 py-3 text-right text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">

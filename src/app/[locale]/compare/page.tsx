@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, Suspense } from 'react';
+import { useTranslations } from 'next-intl';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -211,6 +212,7 @@ function ComparePageContent() {
   // Colors for different coins
   const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
 
+  const t = useTranslations('common');
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -230,7 +232,7 @@ function ComparePageContent() {
             <button
               onClick={fetchCoinData}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
-              title="Refresh"
+              title={t('common.refresh')}
             >
               <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
@@ -239,7 +241,7 @@ function ComparePageContent() {
               className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 font-medium transition-colors"
             >
               <Share2 className="w-4 h-4" />
-              <span className="hidden sm:inline">Share</span>
+              <span className="hidden sm:inline">{t('common.share')}</span>
             </button>
           </div>
         </div>

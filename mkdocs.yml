@@ -161,16 +161,22 @@ nav:
     - Premium API: PREMIUM.md
     - x402 Payments: X402.md
     - Well-Known Endpoints: WELL-KNOWN.md
+    - API Reference (中文): API.zh-CN.md
   
   - AI & Agents:
     - Agents & Skills: AGENTS.md
     - AI Features: AI-FEATURES.md
+    - RAG System: RAG.md
+    - RAG Roadmap: RAG-ROADMAP.md
     - MCP Server: integrations/mcp.md
     - ChatGPT Plugin: integrations/chatgpt.md
+    - Copilot Extension: integrations/copilot-extension.md
   
   - Guides:
     - User Guide: USER-GUIDE.md
     - Developer Guide: DEVELOPER-GUIDE.md
+    - Advanced Features: ADVANCED-FEATURES.md
+    - API Examples: EXAMPLES.md
     - News Sources: SOURCES.md
     - SEO Guide: SEO.md
     - Admin Dashboard: ADMIN.md
@@ -199,6 +205,7 @@ nav:
     - Raycast: integrations/raycast.md
     - Widgets: integrations/widgets.md
     - CLI: integrations/cli.md
+    - Terminal Dashboard: integrations/terminal.md
     - Postman: integrations/postman.md
     - Mobile App: integrations/mobile.md
     - Web3 & Blockchain: integrations/web3.md
@@ -212,6 +219,11 @@ nav:
     - Slack Bot: examples/slack.md
     - Telegram Bot: examples/telegram.md
     - LangChain: examples/langchain.md
+    - AI Agents: examples/agents.md
+    - AI Platforms: examples/ai-platforms.md
+    - C# / .NET: examples/csharp.md
+    - Kotlin / Android: examples/kotlin.md
+    - Swift / iOS: examples/swift.md
   
   - Tutorials:
     - Overview: tutorials/index.md

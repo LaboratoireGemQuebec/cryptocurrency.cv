@@ -1,5 +1,31 @@
 #!/usr/bin/env node
 const pa11y = require('pa11y');
+const { execSync } = require('child_process');
+
+/**
+ * Ensure Chrome system dependencies are installed (required in headless Linux envs).
+ */
+function ensureChromeDeps() {
+  if (process.platform !== 'linux') return;
+  try {
+    execSync('ldconfig -p | grep libatk-1.0', { stdio: 'pipe' });
+  } catch {
+    console.log('📦 Installing Chrome system dependencies...');
+    try {
+      execSync(
+        'apt-get install -y --no-install-recommends ' +
+          'libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 ' +
+          'libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 ' +
+          'libxrandr2 libgbm1 libasound2 2>/dev/null',
+        { stdio: 'inherit' }
+      );
+    } catch (e) {
+      console.warn('⚠️  Could not auto-install Chrome deps:', e.message);
+    }
+  }
+}
+
+ensureChromeDeps();
 
 // Use local URL for dev, production for CI
 const BASE_URL = process.env.BASE_URL || process.argv[2] || 'http://localhost:3000';
@@ -28,7 +54,14 @@ async function runAudit() {
       console.log(`\nTesting: ${path}`);
       const results = await pa11y(url, {
         chromeLaunchConfig: {
-          args: ['--no-sandbox', '--disable-setuid-sandbox']
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-software-rasterizer',
+            '--disable-extensions',
+          ],
         },
         standard: 'WCAG2AA',
         timeout: 30000,

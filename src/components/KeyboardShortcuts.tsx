@@ -57,6 +57,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, createContext, useContext, ReactNode } from 'react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 
@@ -229,6 +230,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
+    const t = useTranslations('common');
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
@@ -286,7 +288,7 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
           <button
             onClick={onClose}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            aria-label="Close"
+            aria-label={t('common.close')}
           >
             <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

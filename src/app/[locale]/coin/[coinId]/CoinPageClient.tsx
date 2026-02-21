@@ -5,6 +5,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   CoinHeader,
@@ -211,6 +212,7 @@ export default function CoinPageClient({
     }
   }, [alertPrice, alertDirection, coinData, priceData.price]);
 
+  const t = useTranslations('common');
   return (
     <main className="px-4 py-6 sm:py-8">
       {/* Header Section */}
@@ -519,7 +521,7 @@ export default function CoinPageClient({
                   disabled={isCreatingAlert}
                   className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors disabled:opacity-50"
                 >
-                  Cancel
+                  {t('common.cancel')}
                 </button>
                 <button
                   onClick={handleCreateAlert}

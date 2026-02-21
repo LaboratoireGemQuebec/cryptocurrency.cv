@@ -6,9 +6,11 @@
  */
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { generateArticleSlug } from '@/lib/archive-v2';
+import { getUnsplashFallback } from '@/lib/unsplash-fallback';
 
 interface Article {
   title: string;
@@ -45,6 +47,9 @@ const sourceColors: Record<string, string> = {
 };
 
 export default function HeroArticle({ article, sidebarArticles = [] }: HeroArticleProps) {
+  const unsplashSrc = getUnsplashFallback(article.source);
+  const [heroImgSrc, setHeroImgSrc] = useState<string>(article.imageUrl || unsplashSrc);
+  const [heroImgError, setHeroImgError] = useState(false);
   const articleSlug = generateArticleSlug(article.title, article.pubDate);
   const sourceColor = sourceColors[article.source] || 'text-gray-600 dark:text-gray-400';
 
@@ -154,19 +159,23 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
         href={`/article/${articleSlug}`}
         className="group block"
       >
-        <div className={`relative h-full rounded-xl overflow-hidden flex flex-col justify-end min-h-[320px] lg:min-h-[420px] ${
-          article.imageUrl ? 'bg-gray-950' : 'bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900'
-        }`}>
-          {/* Background image */}
-          {article.imageUrl && (
+        <div className={`relative h-full rounded-xl overflow-hidden flex flex-col justify-end min-h-[320px] lg:min-h-[420px] ${!heroImgError ? 'bg-gray-950' : 'bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900'}`}>
+          {/* Background image — tries article image → Unsplash → gradient */}
+          {!heroImgError && (
             <Image
-              src={article.imageUrl}
+              src={heroImgSrc}
               alt=""
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
               className="object-cover"
               priority
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+              onError={() => {
+                if (heroImgSrc !== unsplashSrc) {
+                  setHeroImgSrc(unsplashSrc);
+                } else {
+                  setHeroImgError(true);
+                }
+              }}
             />
           )}
           {/* Gradient overlay */}

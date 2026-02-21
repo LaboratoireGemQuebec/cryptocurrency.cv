@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import {
   Wallet,
@@ -102,6 +103,7 @@ export default function PortfolioPage() {
   useEffect(() => {
     if (!isLoaded) return;
     const interval = setInterval(fetchPrices, 60000);
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [isLoaded, fetchPrices]);
 
@@ -223,7 +225,7 @@ export default function PortfolioPage() {
                   onClick={() => setShowImportModal(false)}
                   className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
                 >
-                  Cancel
+                  {t('common.cancel')}
                 </button>
                 <button
                   onClick={handleImport}
@@ -259,7 +261,7 @@ export default function PortfolioPage() {
             <button
               onClick={fetchPrices}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
-              title="Refresh"
+              title={t('common.refresh')}
             >
               <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
@@ -358,7 +360,7 @@ export default function PortfolioPage() {
                   onClick={() => setShowImportModal(false)}
                   className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
                 >
-                  Cancel
+                  {t('common.cancel')}
                 </button>
                 <button
                   onClick={handleImport}

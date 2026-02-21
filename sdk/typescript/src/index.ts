@@ -17,6 +17,34 @@
 // TYPE DEFINITIONS
 // ═══════════════════════════════════════════════════════════════
 
+/** 7-dimension tone/emotion analysis of an article */
+export interface ArticleTone {
+  /** Anger score 0–1 */
+  anger: number;
+  /** Fear score 0–1 */
+  fear: number;
+  /** Joy score 0–1 */
+  joy: number;
+  /** Sadness score 0–1 */
+  sadness: number;
+  /** Analytical writing style score 0–1 */
+  analytical: number;
+  /** Confident writing style score 0–1 */
+  confident: number;
+  /** Tentative/uncertain writing style score 0–1 */
+  tentative: number;
+}
+
+/** Price movement observed within 1 hour of article publication */
+export interface PriceImpact {
+  /** Percentage change (positive = up, negative = down) */
+  percentage: number | null;
+  /** Overall impact direction */
+  direction: 'positive' | 'negative' | 'neutral' | null;
+  /** Raw impact score */
+  score: number | null;
+}
+
 export interface NewsArticle {
   /** Article headline */
   title: string;
@@ -34,6 +62,22 @@ export interface NewsArticle {
   category: string;
   /** Human-readable time ago string */
   timeAgo: string;
+  /** Article author when available */
+  author?: string;
+  /** Source domain (e.g. 'cointelegraph.com') */
+  domain?: string;
+  /** Thumbnail image URL */
+  image?: string;
+  /**
+   * Price impact within 1 hour of publication.
+   * Inspired by executium/trending-historical-cryptocurrency-news (MIT)
+   */
+  price_impact?: PriceImpact;
+  /**
+   * 7-dimension tone analysis.
+   * Inspired by executium/trending-historical-cryptocurrency-news (MIT)
+   */
+  tone?: ArticleTone;
 }
 
 export interface NewsResponse {

@@ -5,6 +5,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -55,6 +56,7 @@ export default function CoinHeader({
   const imageUrl = coin.image?.large || coin.image?.small || coin.image?.thumb;
   const displayCategories = coin.categories?.slice(0, 3) || [];
 
+  const t = useTranslations('common');
   return (
     <div className="space-y-4">
       {/* Breadcrumb */}
@@ -183,7 +185,7 @@ export default function CoinHeader({
                   d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
                 />
               </svg>
-              <span className="hidden sm:inline">Share</span>
+              <span className="hidden sm:inline">{t('common.share')}</span>
             </button>
 
             {/* Copied tooltip */}

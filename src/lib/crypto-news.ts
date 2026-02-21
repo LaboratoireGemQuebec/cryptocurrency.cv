@@ -30,6 +30,10 @@
  */
 
 import sanitizeHtml from 'sanitize-html';
+import {
+  SOURCE_REPUTATION_SCORES,
+  isFintechSource,
+} from './source-tiers';
 
 // RSS Feed URLs for crypto news sources (130+ sources)
 const RSS_SOURCES = {
@@ -1031,6 +1035,50 @@ const RSS_SOURCES = {
 
 type SourceKey = keyof typeof RSS_SOURCES;
 
+/**
+ * Sources shown on the homepage feed.
+ * Only high-signal sources are included — general-volume outlets,
+ * fintech, macro commentary, quant, and international sources are
+ * excluded so the homepage stays focused and credible.
+ */
+const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
+  // Tier 1 — Major crypto news
+  'coindesk', 'theblock', 'decrypt', 'cointelegraph', 'bitcoinmagazine', 'blockworks', 'defiant',
+
+  // Tier 2 — Established crypto
+  'bitcoinist', 'cryptoslate', 'newsbtc', 'cryptonews', 'cryptopotato',
+
+  // Research & Analysis
+  'messari', 'thedefireport', 'glassnode', 'delphi_digital', 'paradigm_research', 'a16z_crypto', 'theblockresearch',
+
+  // Security
+  'slowmist', 'certik_blog', 'openzeppelin_blog', 'trailofbits', 'samczsun', 'immunefi_blog',
+
+  // Ethereum
+  'etherscan',
+
+  // Alt L1s
+  'near_blog', 'cosmos_blog', 'avalanche_blog', 'sui_blog', 'aptos_blog', 'cardano_blog', 'polkadot_blog',
+
+  // Stablecoins
+  'circle_blog', 'tether_news',
+
+  // Institutional / VC
+  'galaxy_research', 'pantera_capital', 'multicoin_capital', 'placeholder_vc', 'variant_fund', 'dragonfly_research',
+
+  // ETF / Asset Managers
+  'grayscale_insights', 'bitwise_research', 'vaneck_blog', 'coinshares_research', 'ark_invest', 'twentyone_shares', 'wisdomtree_blog',
+
+  // Mainstream — selected
+  'bloomberg_crypto', 'forbes_crypto',
+
+  // Developer Tools
+  'alchemy_blog', 'chainlink_blog', 'infura_blog', 'thegraph_blog', 'hardhat_blog', 'foundry_blog',
+
+  // Exchange Blogs
+  'coinbase_blog', 'binance_blog',
+]);
+
 export interface NewsArticle {
   title: string;
   link: string;
@@ -1596,45 +1644,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   });
 }
 
-/**
- * Source reputation scores (0-100)
- * Higher scores = more reputable/mainstream sources
- */
-const SOURCE_REPUTATION_SCORES: Record<string, number> = {
-  // Tier 1: Mainstream US sources (95-100)
-  'Bloomberg Crypto': 100,
-  'Reuters Crypto': 100,
-  'CNBC Crypto': 95,
-  'Forbes Crypto': 95,
-  'Yahoo Finance Crypto': 90,
-  'WSJ Crypto': 100,
-  
-  // Tier 2: Major crypto-native US sources (85-90)
-  'CoinDesk': 90,
-  'The Block': 88,
-  'Blockworks': 85,
-  'Decrypt': 85,
-  
-  // Tier 3: Established crypto sources (75-80)
-  'CoinTelegraph': 80,
-  'Bitcoin Magazine': 78,
-  'CryptoSlate': 75,
-  'The Defiant': 75,
-  
-  // Tier 4: Specialized/niche sources (60-70)
-  'Messari': 70,
-  'Bankless': 68,
-  'Unchained Crypto': 65,
-  'DL News': 65,
-  
-  // Fintech sources (deprioritized - 30-40)
-  'Finextra': 35,
-  'PYMNTS Crypto': 35,
-  'Fintech Futures': 30,
-  
-  // Default score for other sources
-  'default': 50,
-};
+// SOURCE_REPUTATION_SCORES is now defined in src/lib/source-tiers.ts (imported above).
 
 /**
  * Crypto relevance keywords for content scoring
@@ -1669,9 +1679,7 @@ function calculateTrendingScore(article: NewsArticle): number {
   const relevanceScore = Math.min(100, keywordMatches * 15); // 15 points per keyword, max 100
   
   // Strong penalty for fintech/payments-only content that lacks crypto keywords
-  const isFintech = ['finextra', 'pymnts', 'fintech'].some(term => 
-    article.source.toLowerCase().includes(term)
-  );
+  const isFintech = isFintechSource(article.source);
   // If it's fintech AND has no crypto keywords, apply heavy penalty
   const hasCryptoRelevance = keywordMatches >= 2;
   const fintechPenalty = isFintech ? (hasCryptoRelevance ? 0.6 : 0.25) : 1.0;
@@ -1917,9 +1925,6 @@ export async function getTrendingNews(limit: number = 10): Promise<NewsResponse>
   
   scoredArticles.sort((a, b) => b.score - a.score);
   
-  // Fintech sources (lower quality for crypto news)
-  const fintechSources = ['finextra', 'pymnts', 'fintech futures'];
-  
   // Ensure source diversity: stricter limits on low-quality sources
   const trendingArticles: NewsArticle[] = [];
   const sourceCounts = new Map<string, number>();
@@ -1929,7 +1934,7 @@ export async function getTrendingNews(limit: number = 10): Promise<NewsResponse>
     if (trendingArticles.length >= normalizedLimit) break;
     
     const sourceCount = sourceCounts.get(item.article.source) || 0;
-    const isFintech = fintechSources.some(s => item.article.source.toLowerCase().includes(s));
+    const isFintech = isFintechSource(item.article.source);
     
     // Fintech sources: max 1 article total across all fintech sources
     // Regular sources: max 2 articles per source
@@ -2281,7 +2286,7 @@ export async function getHomepageNews(options?: {
   const breakingLimit = Math.min(Math.max(1, options?.breakingLimit ?? 5), 20);
   const trendingLimit = Math.min(Math.max(1, options?.trendingLimit ?? 10), 50);
 
-  const sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
+  const sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(k => HOMEPAGE_SOURCE_KEYS.has(k));
   const allArticles = await fetchMultipleSources(sourceKeys, true);
 
   // --- Latest (filtered to remove spam/metadata items) ---
@@ -2304,7 +2309,6 @@ export async function getHomepageNews(options?: {
     .map(article => ({ article, score: calculateTrendingScore(article) }))
     .sort((a, b) => b.score - a.score);
 
-  const fintechSources = ['finextra', 'pymnts', 'fintech futures'];
   const trendingArticles: NewsArticle[] = [];
   const sourceCounts = new Map<string, number>();
   let fintechCount = 0;
@@ -2312,7 +2316,7 @@ export async function getHomepageNews(options?: {
   for (const item of scoredArticles) {
     if (trendingArticles.length >= trendingLimit) break;
     const sourceCount = sourceCounts.get(item.article.source) || 0;
-    const isFintech = fintechSources.some(s => item.article.source.toLowerCase().includes(s));
+    const isFintech = isFintechSource(item.article.source);
     const maxForThisSource = isFintech ? 1 : 2;
     const exceedsFintechLimit = isFintech && fintechCount >= 1;
     if (sourceCount < maxForThisSource && !exceedsFintechLimit) {

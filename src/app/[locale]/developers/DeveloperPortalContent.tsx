@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
@@ -227,6 +228,7 @@ export default function DeveloperPortalContent() {
     }
   };
 
+  const t = useTranslations('common');
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
       {/* Hero Section */}
@@ -931,7 +933,7 @@ function APIKeysSection({
                 onClick={() => setShowKeyModal(false)}
                 className="flex-1 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-medium transition-colors"
               >
-                Cancel
+                {t('common.cancel')}
               </button>
               <button
                 onClick={createApiKey}

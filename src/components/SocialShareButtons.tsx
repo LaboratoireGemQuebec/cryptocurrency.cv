@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface SocialShareButtonsProps {
   url: string;
@@ -129,6 +130,7 @@ export function SocialShareButtons({
 
   const platforms: Platform[] = ['twitter', 'telegram', 'reddit', 'linkedin', 'whatsapp', 'copy'];
 
+  const t = useTranslations('common');
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       {platforms.map((platform) => {
@@ -160,7 +162,7 @@ export function SocialShareButtons({
       
       {showLabels && (
         <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-          Share
+          {t('common.share')}
         </span>
       )}
       

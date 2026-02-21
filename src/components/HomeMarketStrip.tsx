@@ -5,6 +5,7 @@
  */
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { getTopCoins } from '@/lib/market-data';
 
@@ -68,6 +69,7 @@ export default async function HomeMarketStrip() {
 
   const isFallback = coins === (FALLBACK_COINS as any);
 
+  const t = useTranslations('common');
   return (
     <section className="mb-8" aria-label="Crypto Market Overview">
       <div className="flex items-center justify-between mb-5">
@@ -83,7 +85,7 @@ export default async function HomeMarketStrip() {
           href="/markets"
           className="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors flex items-center gap-1"
         >
-          View all
+          {t('common.viewAll')}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

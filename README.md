@@ -425,48 +425,35 @@ npm run pwa:icons
 
 ## Sources
 
-We aggregate from **130+ trusted English outlets** across 21 categories:
+We aggregate from **130+ English outlets + 76 international sources** across 21 categories. Source quality is defined in a single canonical tier system (`src/lib/source-tiers.ts`) used consistently across the feed, RAG re-ranker, and archive reliability tracker.
 
-### 📰 Tier 1 News Outlets
+### Source Tiers
 
-- 🟠 **CoinDesk** — General crypto news
-- 🔵 **The Block** — Institutional & research
-- 🟢 **Decrypt** — Web3 & culture
-- 🟡 **CoinTelegraph** — Global crypto news
-- 🟤 **Bitcoin Magazine** — Bitcoin maximalist
-- 🟣 **Blockworks** — DeFi & institutions
-- 🔴 **The Defiant** — DeFi native
+| Tier | Credibility | Reputation | Examples |
+|------|-------------|------------|----------|
+| **Tier 1** — Mainstream / institutional | 0.88–0.98 | 90–100 | Bloomberg, Reuters, WSJ, FT, CNBC, Forbes |
+| **Tier 2** — Premium crypto-native | 0.86–0.95 | 65–90 | CoinDesk, The Block, Blockworks, Decrypt, The Defiant |
+| **Tier 3** — Established crypto news | 0.68–0.82 | 60–80 | CoinTelegraph, Bitcoin Magazine, Bitcoinist |
+| **Tier 4** — Aggregators & volume | 0.60–0.68 | 50–60 | Crypto.news, AMBCrypto, CryptoPotato |
+| **Research** — Institutional & VC | 0.90–0.94 | 70–72 | Messari, Delphi, Paradigm, a16z |
+| **Fintech** — Payments (deprioritized) | 0.40–0.50 | 30–35 | Finextra, PYMNTS, Fintech Futures |
 
-### 🏦 Institutional Research
+### 🏠 Homepage Feed (curated high-signal sources)
 
-- **Galaxy Digital** — Institutional-grade research
-- **Grayscale** — Market reports
-- **CoinShares** — Weekly fund flows
-- **Pantera Capital** — Blockchain letters
-- **Multicoin Capital** — Investment thesis
-- **ARK Invest** — Innovation research
+The homepage fetches only from a curated subset focused on quality and signal-to-noise:
 
-### 📊 On-Chain Analytics
+- **Tier 1 & 2 — Major crypto news**: CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, Bitcoinist, CryptoSlate, NewsBTC
+- **Research & Analysis**: Messari, Glassnode, Delphi Digital, Paradigm, a16z, The Block Research
+- **Security**: CertiK, OpenZeppelin, Trail of Bits, Immunefi, samczsun, SlowMist
+- **Ethereum & Alt L1s**: Etherscan Blog, NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot
+- **Stablecoins**: Circle Blog, Tether News
+- **Institutional / VC**: Galaxy Digital, Pantera, Multicoin, Placeholder, Variant, Dragonfly
+- **ETF / Asset Managers**: Grayscale, Bitwise, VanEck, CoinShares, ARK, 21Shares, WisdomTree
+- **Developer Tools**: Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry
+- **Exchange Blogs**: Coinbase, Binance
+- **Mainstream (selected)**: Bloomberg Crypto, Forbes Crypto
 
-- **Glassnode** — On-chain metrics
-- **Messari** — Protocol research
-- **Kaiko** — Market microstructure
-- **CryptoQuant** — Exchange flows
-- **Coin Metrics** — Network data
-
-### 🎯 Macro & Quant
-
-- **Lyn Alden** — Macro analysis
-- **AQR Insights** — Quantitative research
-- **Two Sigma** — Data science
-- **Deribit Insights** — Options/derivatives
-
-### 💼 Traditional Finance
-
-- **Bloomberg Crypto** — Mainstream coverage
-- **Reuters Crypto** — Wire service
-- **Goldman Sachs** — Bank research
-- **Finextra** — Fintech news
+All other endpoints (`/api/news`, `/api/search`, category filters, etc.) query the full source list.
 
 ---
 

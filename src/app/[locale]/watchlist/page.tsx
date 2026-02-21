@@ -95,6 +95,7 @@ export default function WatchlistPage() {
     if (!isLoaded) return;
 
     const interval = setInterval(fetchCoinData, 60000); // Refresh every minute
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [isLoaded, fetchCoinData]);
 
@@ -343,7 +344,7 @@ export default function WatchlistPage() {
             <button
               onClick={() => fetchCoinData()}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
-              title="Refresh"
+              title={t('common.refresh')}
             >
               <RefreshCw
                 className={`w-5 h-5 ${isLoading ? "animate-spin" : ""}`}

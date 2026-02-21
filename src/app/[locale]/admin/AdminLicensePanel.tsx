@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface APIKeyStats {
   totalKeys: number;
@@ -81,6 +82,7 @@ export default function AdminLicensePanel() {
     
     // Refresh every 30 seconds
     const interval = setInterval(fetchData, 30000);
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, []);
 
@@ -302,7 +304,7 @@ export default function AdminLicensePanel() {
                       {key.usageToday.toLocaleString()}
                     </td>
                     <td className="p-4 text-right">
-                      <button className="text-gray-400 hover:text-white mr-2">Edit</button>
+                      <button className="text-gray-400 hover:text-white mr-2">{t('common.edit')}</button>
                       <button className="text-red-400 hover:text-red-300">Revoke</button>
                     </td>
                   </tr>

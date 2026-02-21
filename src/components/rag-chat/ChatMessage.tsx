@@ -8,6 +8,7 @@
 'use client';
 
 import { useRef, useEffect, useState, memo } from 'react';
+import { useTranslations } from 'next-intl';
 import type { ChatMessage as ChatMessageType, Source, ConfidenceScore } from './types';
 import { ConfidenceBadge } from './ConfidenceBadge';
 import { sanitizeHTML } from '@/lib/sanitize-dom';
@@ -160,6 +161,7 @@ function ChatMessageComponent({
 
     const el = contentRef.current;
     el?.addEventListener('click', handleClick);
+    const t = useTranslations('common');
     return () => el?.removeEventListener('click', handleClick);
   }, [message.metadata?.sources, onCitationClick]);
 
@@ -215,7 +217,7 @@ function ChatMessageComponent({
                 onClick={handleCancelEdit}
                 className="px-3 py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
               >
-                Cancel
+                {t('common.cancel')}
               </button>
               <button
                 onClick={handleSaveEdit}
@@ -260,7 +262,7 @@ function ChatMessageComponent({
                             onClick={() => navigator.clipboard.writeText(part.content)}
                             className="text-xs text-gray-400 hover:text-white transition-colors"
                           >
-                            Copy
+                            {t('common.copy')}
                           </button>
                         </div>
                         <pre className="p-3 overflow-x-auto text-sm">
@@ -394,7 +396,7 @@ function ChatMessageComponent({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
-                <span className="hidden sm:inline">Edit</span>
+                <span className="hidden sm:inline">{t('common.edit')}</span>
               </button>
             )}
           </div>

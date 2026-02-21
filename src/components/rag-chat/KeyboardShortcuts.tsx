@@ -7,6 +7,7 @@
 'use client';
 
 import { memo, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { KEYBOARD_SHORTCUTS } from './types';
 
 interface KeyboardShortcutsProps {
@@ -23,6 +24,7 @@ function KeyboardShortcutsComponent({ isOpen, onClose }: KeyboardShortcutsProps)
       }
     };
     window.addEventListener('keydown', handleKeyDown);
+    const t = useTranslations('common');
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
@@ -70,7 +72,7 @@ function KeyboardShortcutsComponent({ isOpen, onClose }: KeyboardShortcutsProps)
             <button
               onClick={onClose}
               className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
-              aria-label="Close"
+              aria-label={t('common.close')}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

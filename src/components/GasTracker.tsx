@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import { FireIcon, ClockIcon, BoltIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 
 interface GasPrice {
@@ -239,6 +240,7 @@ export function GasTracker() {
     
     // Refresh every 15 seconds for live gas prices
     const interval = setInterval(() => fetchData(false), 15000);
+    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [fetchData]);
 
@@ -289,7 +291,7 @@ export function GasTracker() {
           className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors disabled:opacity-50"
         >
           <ArrowPathIcon className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-          Refresh
+          {t('common.refresh')}
         </button>
       </div>
 

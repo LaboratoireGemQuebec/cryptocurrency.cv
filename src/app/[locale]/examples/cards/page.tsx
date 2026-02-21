@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import {
@@ -150,6 +151,7 @@ export default function CardsShowcasePage() {
     { id: 'skeletons', label: 'Skeletons', icon: '💀' },
   ];
 
+  const t = useTranslations('common');
   return (
     <div className="min-h-screen flex flex-col bg-slate-950">
       <Header />
@@ -219,7 +221,7 @@ export default function CardsShowcasePage() {
                   }
                   className="w-4 h-4 rounded border-slate-600 bg-slate-800 text-brand-500 focus:ring-brand-500"
                 />
-                Share
+                {t('common.share')}
               </label>
               <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
                 <input

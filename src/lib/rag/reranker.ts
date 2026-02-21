@@ -12,6 +12,13 @@
 
 import { callGroq } from '../groq';
 import type { SearchResult, NewsDocument } from './types';
+import {
+  SOURCE_CREDIBILITY,
+  getSourceCredibility,
+} from '../source-tiers';
+
+// Re-export so existing importers (e.g. rag/index.ts) keep working
+export { SOURCE_CREDIBILITY, getSourceCredibility };
 
 // ═══════════════════════════════════════════════════════════════
 // TIME DECAY
@@ -51,58 +58,8 @@ export function applyTimeDecay(
   }).sort((a, b) => b.score - a.score);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// SOURCE CREDIBILITY
-// ═══════════════════════════════════════════════════════════════
-
-/**
- * Source credibility scores (0-1)
- * Based on historical accuracy and journalistic standards
- */
-export const SOURCE_CREDIBILITY: Record<string, number> = {
-  // Tier 1: Established news organizations
-  coindesk: 0.95,
-  theblock: 0.93,
-  bloomberg: 0.98,
-  reuters: 0.98,
-  wsj: 0.97,
-  
-  // Tier 2: Quality crypto media
-  decrypt: 0.88,
-  blockworks: 0.90,
-  defiant: 0.87,
-  dlnews: 0.86,
-  unchained: 0.88,
-  
-  // Tier 3: General crypto news
-  cointelegraph: 0.78,
-  bitcoinmagazine: 0.82,
-  cryptoslate: 0.75,
-  bitcoinist: 0.72,
-  newsbtc: 0.70,
-  
-  // Tier 4: Aggregators & others
-  cryptonews: 0.68,
-  cryptopotato: 0.65,
-  beincrypto: 0.70,
-  ambcrypto: 0.65,
-  
-  // Research & institutional
-  messari: 0.92,
-  delphi: 0.90,
-  paradigm: 0.94,
-  a16z: 0.93,
-  
-  // Default for unknown sources
-  default: 0.60,
-};
-
-/**
- * Get credibility score for a source
- */
-export function getSourceCredibility(sourceKey: string): number {
-  return SOURCE_CREDIBILITY[sourceKey.toLowerCase()] || SOURCE_CREDIBILITY.default;
-}
+// SOURCE_CREDIBILITY and getSourceCredibility are now defined in
+// src/lib/source-tiers.ts and re-exported above.
 
 /**
  * Apply source credibility weighting
