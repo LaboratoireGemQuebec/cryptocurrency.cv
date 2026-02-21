@@ -160,6 +160,7 @@ export interface MarketOverview {
 }
 
 export interface SimplePrices {
+  [key: string]: { usd: number; usd_24h_change: number };
   bitcoin: { usd: number; usd_24h_change: number };
   ethereum: { usd: number; usd_24h_change: number };
   solana: { usd: number; usd_24h_change: number };
@@ -779,7 +780,7 @@ async function fetchWithTimeout(
       signal: controller.signal,
       headers,
       next: { revalidate: 120 }, // Next.js cache for 2 minutes
-    });
+    } as RequestInit & { next?: { revalidate?: number } });
 
     // Handle rate limiting from API
     if (response.status === 429) {
@@ -1753,6 +1754,7 @@ async function searchCoinsCoinCapFallback(
       id: asset.id,
       name: asset.name,
       symbol: asset.symbol,
+      api_symbol: asset.symbol,
       market_cap_rank: parseInt(asset.rank, 10) || 9999,
       thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
       large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
