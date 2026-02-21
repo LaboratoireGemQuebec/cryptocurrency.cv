@@ -106,6 +106,16 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock fetch
 global.fetch = vi.fn();
 
+// Mock scrollBy and scrollTo — jsdom does not implement layout-based scrolling
+if (typeof Element !== 'undefined') {
+  Element.prototype.scrollBy = vi.fn();
+  Element.prototype.scrollTo = vi.fn();
+}
+if (typeof window !== 'undefined') {
+  window.scrollBy = vi.fn() as unknown as typeof window.scrollBy;
+  window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
+}
+
 // Reset mocks between tests
 beforeEach(() => {
   vi.clearAllMocks();

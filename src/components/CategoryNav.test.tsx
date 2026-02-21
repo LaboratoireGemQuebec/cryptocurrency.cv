@@ -54,22 +54,22 @@ describe('CategoryNav', () => {
     expect(screen.getByText('Analysis')).toBeInTheDocument();
   });
 
-  it('"All News" link points to /', () => {
+  it('"All News" tab points to /', () => {
     render(<CategoryNav />);
-    const allNewsLink = screen.getByRole('link', { name: /All News/ });
-    expect(allNewsLink.getAttribute('href')).toBe('/');
+    const allNewsTab = screen.getByRole('tab', { name: /All News/ });
+    expect(allNewsTab.getAttribute('href')).toBe('/');
   });
 
-  it('Bitcoin link points to /category/bitcoin', () => {
+  it('Bitcoin tab points to /category/bitcoin', () => {
     render(<CategoryNav />);
-    const bitcoinLink = screen.getByRole('link', { name: /Bitcoin/ });
-    expect(bitcoinLink.getAttribute('href')).toBe('/category/bitcoin');
+    const bitcoinTab = screen.getByRole('tab', { name: /Bitcoin/ });
+    expect(bitcoinTab.getAttribute('href')).toBe('/category/bitcoin');
   });
 
-  it('DeFi link points to /category/defi', () => {
+  it('DeFi tab points to /category/defi', () => {
     render(<CategoryNav />);
-    const defiLink = screen.getByRole('link', { name: /DeFi/ });
-    expect(defiLink.getAttribute('href')).toBe('/category/defi');
+    const defiTab = screen.getByRole('tab', { name: /DeFi/ });
+    expect(defiTab.getAttribute('href')).toBe('/category/defi');
   });
 
   it('marks "All News" as active when activeCategory is empty (default)', () => {
