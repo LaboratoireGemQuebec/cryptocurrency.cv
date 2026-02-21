@@ -113,3 +113,4 @@ client := cryptonews.NewClientWithURL("https://your-instance.com")
 ## License
 
 MIT
+
