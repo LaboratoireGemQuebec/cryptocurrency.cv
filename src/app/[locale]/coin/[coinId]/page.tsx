@@ -31,6 +31,7 @@ import { CoinNewsCorrelation } from '@/components/CoinNewsCorrelation';
 import { PredictionPoll } from '@/components/PredictionPoll';
 import { AskAboutThis } from '@/components/AskAboutThis';
 import { SITE_URL } from '@/lib/constants';
+import { CoinStickyHeader } from '@/components/CoinStickyHeader';
 
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
@@ -293,6 +294,13 @@ export default async function CoinPage({ params, searchParams }: Props) {
       />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950">
+        <CoinStickyHeader
+          name={coinData.name}
+          symbol={coinData.symbol.toUpperCase()}
+          price={price}
+          priceChange24h={change24h}
+          imageUrl={coinData.image?.large}
+        />
         <div className="max-w-7xl mx-auto">
           <Header />
 
