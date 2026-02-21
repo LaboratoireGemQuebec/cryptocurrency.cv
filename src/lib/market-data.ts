@@ -43,26 +43,26 @@ const IS_BUILD =
  * Cache duration settings based on data volatility
  */
 export const CACHE_TTL = {
-  /** Live prices - 60 seconds */
-  prices: 60,
-  /** 24h historical data - 2 minutes */
-  historical_1d: 120,
-  /** Weekly historical data - 10 minutes */
-  historical_7d: 600,
-  /** Monthly historical data - 30 minutes */
-  historical_30d: 1800,
-  /** 90+ day historical data - 1 hour */
-  historical_90d: 3600,
-  /** Exchange/ticker data - 5 minutes */
-  tickers: 300,
-  /** Static data (categories, coin list) - 1 hour */
-  static: 3600,
-  /** Search results - 10 minutes */
-  search: 600,
-  /** Developer/community data - 1 hour */
-  social: 3600,
-  /** Coin details / global data - 10 minutes */
-  global: 600,
+  /** Live prices - 2 minutes (was 60s) */
+  prices: 120,
+  /** 24h historical data - 5 minutes */
+  historical_1d: 300,
+  /** Weekly historical data - 20 minutes */
+  historical_7d: 1200,
+  /** Monthly historical data - 1 hour */
+  historical_30d: 3600,
+  /** 90+ day historical data - 4 hours */
+  historical_90d: 14400,
+  /** Exchange/ticker data - 10 minutes */
+  tickers: 600,
+  /** Static data (categories, coin list) - 6 hours */
+  static: 21600,
+  /** Search results - 30 minutes */
+  search: 1800,
+  /** Developer/community data - 6 hours */
+  social: 21600,
+  /** Coin details / global data - 30 minutes (was 10min) */
+  global: 1800,
 };
 
 // =============================================================================
@@ -621,15 +621,12 @@ function getCached<T>(key: string): { data: T; isStale: boolean } | null {
   }
 
   const now = Date.now();
-  const isExpired = now - cached.timestamp > cached.ttl * 1000;
-  const isStale = now - cached.timestamp > cached.staleTimestamp * 1000;
+  const age = now - cached.timestamp;
+  const isStale = age > cached.staleTimestamp * 1000;
 
-  // If completely expired (past stale window), return null
-  if (isExpired && now - cached.timestamp > cached.ttl * 2 * 1000) {
-    cache.delete(key);
-    return null;
-  }
-
+  // NEVER hard-delete cache entries — serve stale data forever on errors.
+  // Background refresh handles keeping data fresh when APIs are healthy.
+  // Only mark as stale; callers decide whether to trigger a refresh.
   return { data: cached.data, isStale };
 }
 
@@ -850,9 +847,14 @@ async function fetchAndCache<T>(
     setCache(cacheKey, data, ttl);
     return data;
   } catch (error) {
-    // If we have cached stale data, return it on error
+    // Always serve stale cache on error — never show an error page.
+    // Since getCached never hard-deletes, this will work even if the entry
+    // is hours/days old. Stale data beats a broken page.
     const cached = getCached<T>(cacheKey);
     if (cached) {
+      console.warn(
+        `[cache] serving stale data for ${cacheKey} due to fetch error`,
+      );
       return cached.data;
     }
 
@@ -1354,7 +1356,7 @@ async function getCoinDetailsFallback(
       injective: "inj-injective-protocol",
       "fetch-ai": "fet-fetch-ai",
       "artificial-superintelligence-alliance": "fet-fetch-ai",
-      "okb": "okb-okb",
+      okb: "okb-okb",
       sui: "sui-sui",
       celestia: "tia-celestia",
       "sei-network": "sei-sei-network",
@@ -1374,7 +1376,7 @@ async function getCoinDetailsFallback(
       "floki-inu": "floki-floki-inu",
       floki: "floki-floki-inu",
       bonk: "bonk-bonk",
-      "dogwifhat": "wif-dogwifhat",
+      dogwifhat: "wif-dogwifhat",
       wif: "wif-dogwifhat",
       gala: "gala-gala",
       "axie-infinity": "axs-axie-infinity",
@@ -1411,12 +1413,12 @@ async function getCoinDetailsFallback(
       "ocean-protocol": "ocean-ocean-protocol",
       decred: "dcr-decred",
       ontology: "ont-ontology",
-      "enjincoin": "enj-enjincoin",
-      "storj": "storj-storj",
+      enjincoin: "enj-enjincoin",
+      storj: "storj-storj",
       "blur-token": "blur-blur",
       blur: "blur-blur",
       "mask-network": "mask-mask-network",
-      "gmx": "gmx-gmx",
+      gmx: "gmx-gmx",
       raydium: "ray-raydium",
       "jito-governance-token": "jto-jito",
       jito: "jto-jito",
@@ -1425,9 +1427,9 @@ async function getCoinDetailsFallback(
       "pax-gold": "paxg-pax-gold",
       frax: "frax-frax",
       "bitcoin-gold": "btg-bitcoin-gold",
-      "waves": "waves-waves",
-      "nano": "nano-nano",
-      "digibyte": "dgb-digibyte",
+      waves: "waves-waves",
+      nano: "nano-nano",
+      digibyte: "dgb-digibyte",
       wax: "waxp-wax",
     };
 
@@ -1606,8 +1608,8 @@ async function getCoinDetailsCoinCap(
     // --- Step 2: Search fallback for any ID that didn't match directly ---
     // "avalanche-2" → "avalanche"  |  "wrapped-bitcoin" → "wrapped bitcoin"
     const searchQuery = coinId
-      .replace(/-\d+$/, "")   // strip trailing version suffix (-2, -3 …)
-      .replace(/-/g, " ")     // hyphens → spaces for CoinCap search
+      .replace(/-\d+$/, "") // strip trailing version suffix (-2, -3 …)
+      .replace(/-/g, " ") // hyphens → spaces for CoinCap search
       .trim();
 
     const searchRes = await fetchWithTimeout(
@@ -1623,7 +1625,10 @@ async function getCoinDetailsCoinCap(
     if (!assets.length) return null;
 
     // Pick the closest match: exact ID/name win; otherwise take highest-ranked result
-    const normalised = coinId.replace(/-\d+$/, "").replace(/-/g, "").toLowerCase();
+    const normalised = coinId
+      .replace(/-\d+$/, "")
+      .replace(/-/g, "")
+      .toLowerCase();
     const best =
       assets.find(
         (a) =>

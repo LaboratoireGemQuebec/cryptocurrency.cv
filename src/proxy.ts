@@ -1,15 +1,22 @@
 /**
  * Combined Proxy for Next.js 16+
- * 
+ *
  * Handles:
  * - Internationalization (locale detection and routing)
- * - Rate limiting for free tier API endpoints
+ * - SperaxOS origin detection — unlimited access, priority routing
+ * - Rate limiting for all other callers (60 req/hour per IP)
  * - Bot detection and blocking
  * - Admin route authentication
  * - Request size validation
  * - Security headers
  * - Request ID generation
- * 
+ *
+ * SperaxOS trusted origins (UNLIMITED — no rate limit):
+ *   https://sperax.live
+ *   https://speraxos.vercel.app
+ *   https://beta.sperax.chat
+ *   https://sperax.chat
+ *
  * @note Next.js 16 uses "proxy.ts" instead of "middleware.ts"
  * @see https://nextjs.org/docs/messages/middleware-to-proxy
  */
@@ -25,6 +32,52 @@ import { routing } from './i18n/navigation';
 const intlMiddleware = createMiddleware(routing);
 
 // =============================================================================
+// SPERAXOS — trusted origins get UNLIMITED access and priority routing
+// =============================================================================
+
+const SPERAXOS_ORIGINS = new Set([
+  'https://sperax.live',
+  'https://www.sperax.live',
+  'https://speraxos.vercel.app',
+  'https://beta.sperax.chat',
+  'https://sperax.chat',
+  'https://www.sperax.chat',
+]);
+
+/**
+ * Returns true if the request originates from a SperaxOS property.
+ * Checks Origin header first (set on cross-origin XHR/fetch),
+ * then Referer (set on navigations), and a custom token header for
+ * server-to-server calls (set SPERAXOS_API_SECRET env var).
+ */
+function isSperaxOSRequest(request: NextRequest): boolean {
+  const origin = request.headers.get('origin') ?? '';
+  if (origin && SPERAXOS_ORIGINS.has(origin)) return true;
+
+  const referer = request.headers.get('referer') ?? '';
+  if (referer) {
+    try {
+      const refOrigin = new URL(referer).origin;
+      if (SPERAXOS_ORIGINS.has(refOrigin)) return true;
+    } catch {
+      // malformed referer — ignore
+    }
+  }
+
+  // Server-to-server: custom header with shared secret
+  const speraxToken = request.headers.get('x-speraxos-token') ?? '';
+  if (
+    speraxToken &&
+    process.env.SPERAXOS_API_SECRET &&
+    speraxToken === process.env.SPERAXOS_API_SECRET
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+// =============================================================================
 // API CONFIGURATION
 // =============================================================================
 
@@ -34,6 +87,10 @@ const FREE_TIER_PATTERNS = [
   /^\/api\/sources/,
   /^\/api\/market\/coins$/,
   /^\/api\/market\/search/,
+  /^\/api\/market\/coin/,
+  /^\/api\/market\/global/,
+  /^\/api\/market\/trending/,
+  /^\/api\/market\/historical/,
   /^\/api\/trending/,
   /^\/api\/fear-greed/,
   /^\/api\/bitcoin/,
@@ -59,9 +116,11 @@ const EXEMPT_PATTERNS = [
 ];
 
 const MAX_BODY_SIZE = 10 * 1024 * 1024;
-const RATE_LIMIT = { requests: 100, windowMs: 3600000 };
 
-// Known bad bot user-agent patterns (Googlebot intentionally excluded for SEO)
+// Public rate limit: 60 requests per hour per IP
+const PUBLIC_RATE_LIMIT = { requests: 60, windowMs: 3_600_000 };
+
+// Known bad bot patterns (Googlebot intentionally excluded for SEO)
 const BLOCKED_BOTS = /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\//i;
 const BOT_ALLOWLIST = ['Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'facebookexternalhit'];
 
@@ -71,21 +130,21 @@ const BOT_ALLOWLIST = ['Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'facebook
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 
-function checkRateLimitInMemory(key: string): { allowed: boolean; remaining: number; resetAt: number } {
+function checkRateLimit(key: string): { allowed: boolean; remaining: number; resetAt: number } {
   const now = Date.now();
   const entry = rateLimitMap.get(key);
-  
+
   if (!entry || now >= entry.resetAt) {
-    rateLimitMap.set(key, { count: 1, resetAt: now + RATE_LIMIT.windowMs });
-    return { allowed: true, remaining: RATE_LIMIT.requests - 1, resetAt: now + RATE_LIMIT.windowMs };
+    rateLimitMap.set(key, { count: 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs });
+    return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs };
   }
-  
-  if (entry.count >= RATE_LIMIT.requests) {
+
+  if (entry.count >= PUBLIC_RATE_LIMIT.requests) {
     return { allowed: false, remaining: 0, resetAt: entry.resetAt };
   }
-  
+
   entry.count++;
-  return { allowed: true, remaining: RATE_LIMIT.requests - entry.count, resetAt: entry.resetAt };
+  return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - entry.count, resetAt: entry.resetAt };
 }
 
 // =============================================================================
@@ -112,9 +171,11 @@ function generateRequestId(): string {
 }
 
 function getClientIp(request: NextRequest): string {
-  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-         request.headers.get('x-real-ip') ||
-         'unknown';
+  return (
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    request.headers.get('x-real-ip') ||
+    'unknown'
+  );
 }
 
 // =============================================================================
@@ -125,12 +186,19 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
   const start = Date.now();
   const pathname = request.nextUrl.pathname;
   const requestId = generateRequestId();
+  const speraxos = isSperaxOSRequest(request);
 
-  // Create response headers
   const headers: Record<string, string> = {
     'X-Request-ID': requestId,
     ...SECURITY_HEADERS,
   };
+
+  // Tag SperaxOS requests so downstream API routes can prioritise them
+  if (speraxos) {
+    headers['X-Priority'] = 'speraxos';
+    headers['X-SperaxOS'] = '1';
+    headers['Vary'] = 'Origin';
+  }
 
   // Block known bad bots from API (allow search engine crawlers)
   const ua = request.headers.get('user-agent') || '';
@@ -170,12 +238,18 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
     }
   }
 
-  // Rate limiting for free tier
-  if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
+  // ─── Rate limiting ─────────────────────────────────────────────────────────
+  // SperaxOS: UNLIMITED — skip entirely, set informational headers only.
+  // Everyone else: 60 requests / hour per IP.
+  // ──────────────────────────────────────────────────────────────────────────
+  if (speraxos) {
+    headers['X-RateLimit-Limit'] = 'unlimited';
+    headers['X-RateLimit-Remaining'] = 'unlimited';
+  } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
     const clientIp = getClientIp(request);
-    const rl = checkRateLimitInMemory(`${clientIp}:${pathname}`);
-    
-    headers['X-RateLimit-Limit'] = RATE_LIMIT.requests.toString();
+    const rl = checkRateLimit(`${clientIp}:${pathname}`);
+
+    headers['X-RateLimit-Limit'] = PUBLIC_RATE_LIMIT.requests.toString();
     headers['X-RateLimit-Remaining'] = rl.remaining.toString();
     headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
 
@@ -200,12 +274,12 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
 
 export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  
+
   // API routes: rate limiting + security headers
   if (pathname.startsWith('/api/')) {
     return handleApiRequest(request);
   }
-  
+
   // All other routes: i18n
   return intlMiddleware(request);
 }
