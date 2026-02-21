@@ -271,3 +271,4 @@ When adding new features:
 1. Use conventional commits
 2. Update CHANGELOG.md in the same PR
 3. Run `node scripts/analyze-commits.js --check` before pushing
+
