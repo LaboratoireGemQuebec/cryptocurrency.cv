@@ -158,3 +158,4 @@ MIT License - viz [LICENSE](LICENSE) pro detaily.
 <p align="center">
   Vytvořeno s ❤️ pro krypto komunitu
 </p>
+
