@@ -3,7 +3,7 @@
  * Handles image display with lazy loading, Unsplash fallback, and gradient fallback.
  *
  * Fallback chain:
- *   1. Article's own imageUrl  →  2. Unsplash (curated crypto photo)  →  3. Source gradient
+ *   1. Article's own imageUrl  →  2. Unsplash nature photo  →  3. Source gradient
  */
 
 'use client';
@@ -11,7 +11,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { getSourceGradient } from './cardUtils';
-import { getUnsplashFallback } from '@/lib/unsplash-fallback';
+import { getNatureUnsplashFallback } from '@/lib/unsplash-fallback';
 
 interface CardImageProps {
   src?: string;
@@ -32,7 +32,7 @@ export default function CardImage({
   showSourceInitial = true,
   size = 'md'
 }: CardImageProps) {
-  const unsplashSrc = getUnsplashFallback(source);
+  const unsplashSrc = getNatureUnsplashFallback(src ? source : (source + '_nature'));
   const [imgSrc, setImgSrc] = useState<string | undefined>(src || unsplashSrc);
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);

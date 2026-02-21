@@ -32,6 +32,35 @@ const CRYPTO_PHOTOS = [
 ];
 
 /**
+ * Curated pool of top nature / landscape photos from Unsplash.
+ * Used as a visually appealing fallback when an article has no image.
+ *
+ * Attribution: photos sourced from Unsplash (https://unsplash.com)
+ */
+const NATURE_PHOTOS = [
+  '1426604966848-d7adac402bff', // Misty mountain range
+  '1505118380757-91f5f5632de0', // Tropical waterfall
+  '1441974231531-c6227db76b6e', // Sunlit forest path
+  '1500534314209-a25ddb2bd429', // Ocean waves at sunset
+  '1469474968028-56623f02e42e', // Rolling green hills
+  '1447752875215-b2761acb3c5d', // Autumn forest
+  '1518020382113-a7e8fc38eac9', // Snow-capped peaks
+  '1507003211169-0a1dd7228f2d', // Desert sand dunes
+  '1490750967868-88df5691cc7' , // Cherry blossom trees
+  '1465146344425-f00d5f5c8f07', // Wildflower meadow
+  '1501854140801-50d01698950b', // Northern lights aurora
+  '1540390769625-2fc3f8b1d50c', // Tropical beach paradise
+  '1475924156734-496f6cac6ec1', // Mountain lake reflection
+  '1510797215324-721bb9dbd060', // Autumn river
+  '1519681393784-d120267933ba', // Starry mountain night
+  '1502472584811-0a2f2feb8968', // Coastal sea cliffs
+  '1508739773434-c26b3d09e071', // Rolling lavender fields
+  '1511497584788-876760111969', // Dense bamboo forest
+  '1504701954957-2010ec3bcec1', // Iceberg glaciers
+  '1532274402911-5a369e4c4bb5', // Sunset over field
+];
+
+/**
  * Returns a deterministic Unsplash fallback URL for a given seed string
  * (typically article source name or title fragment).
  */
@@ -43,5 +72,19 @@ export function getUnsplashFallback(seed: string, width = 800, height = 450): st
     hash = hash >>> 0; // keep unsigned 32-bit
   }
   const id = CRYPTO_PHOTOS[hash % CRYPTO_PHOTOS.length];
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=70`;
+}
+
+/**
+ * Returns a deterministic top-nature Unsplash image URL for a given seed string.
+ * Used as the primary Unsplash fallback when an article has no image of its own.
+ */
+export function getNatureUnsplashFallback(seed: string, width = 800, height = 450): string {
+  let hash = 5381;
+  for (let i = 0; i < seed.length; i++) {
+    hash = (hash * 33) ^ seed.charCodeAt(i);
+    hash = hash >>> 0;
+  }
+  const id = NATURE_PHOTOS[hash % NATURE_PHOTOS.length];
   return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=70`;
 }
