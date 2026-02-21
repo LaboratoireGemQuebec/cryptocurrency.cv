@@ -21,9 +21,9 @@
  * @see https://nextjs.org/docs/messages/middleware-to-proxy
  */
 
-import { NextRequest, NextResponse } from 'next/server';
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/navigation';
+import { NextRequest, NextResponse } from "next/server";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/navigation";
 
 // =============================================================================
 // INTERNATIONALIZATION
@@ -36,12 +36,12 @@ const intlMiddleware = createMiddleware(routing);
 // =============================================================================
 
 const SPERAXOS_ORIGINS = new Set([
-  'https://sperax.live',
-  'https://www.sperax.live',
-  'https://speraxos.vercel.app',
-  'https://beta.sperax.chat',
-  'https://sperax.chat',
-  'https://www.sperax.chat',
+  "https://sperax.live",
+  "https://www.sperax.live",
+  "https://speraxos.vercel.app",
+  "https://beta.sperax.chat",
+  "https://sperax.chat",
+  "https://www.sperax.chat",
 ]);
 
 /**
@@ -51,10 +51,10 @@ const SPERAXOS_ORIGINS = new Set([
  * server-to-server calls (set SPERAXOS_API_SECRET env var).
  */
 function isSperaxOSRequest(request: NextRequest): boolean {
-  const origin = request.headers.get('origin') ?? '';
+  const origin = request.headers.get("origin") ?? "";
   if (origin && SPERAXOS_ORIGINS.has(origin)) return true;
 
-  const referer = request.headers.get('referer') ?? '';
+  const referer = request.headers.get("referer") ?? "";
   if (referer) {
     try {
       const refOrigin = new URL(referer).origin;
@@ -65,7 +65,7 @@ function isSperaxOSRequest(request: NextRequest): boolean {
   }
 
   // Server-to-server: custom header with shared secret
-  const speraxToken = request.headers.get('x-speraxos-token') ?? '';
+  const speraxToken = request.headers.get("x-speraxos-token") ?? "";
   if (
     speraxToken &&
     process.env.SPERAXOS_API_SECRET &&
@@ -121,8 +121,15 @@ const MAX_BODY_SIZE = 10 * 1024 * 1024;
 const PUBLIC_RATE_LIMIT = { requests: 60, windowMs: 3_600_000 };
 
 // Known bad bot patterns (Googlebot intentionally excluded for SEO)
-const BLOCKED_BOTS = /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\//i;
-const BOT_ALLOWLIST = ['Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'facebookexternalhit'];
+const BLOCKED_BOTS =
+  /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\//i;
+const BOT_ALLOWLIST = [
+  "Googlebot",
+  "Bingbot",
+  "Slurp",
+  "DuckDuckBot",
+  "facebookexternalhit",
+];
 
 // =============================================================================
 // IN-MEMORY RATE LIMIT (Edge-compatible)
@@ -130,13 +137,24 @@ const BOT_ALLOWLIST = ['Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'facebook
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 
-function checkRateLimit(key: string): { allowed: boolean; remaining: number; resetAt: number } {
+function checkRateLimit(key: string): {
+  allowed: boolean;
+  remaining: number;
+  resetAt: number;
+} {
   const now = Date.now();
   const entry = rateLimitMap.get(key);
 
   if (!entry || now >= entry.resetAt) {
-    rateLimitMap.set(key, { count: 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs });
-    return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs };
+    rateLimitMap.set(key, {
+      count: 1,
+      resetAt: now + PUBLIC_RATE_LIMIT.windowMs,
+    });
+    return {
+      allowed: true,
+      remaining: PUBLIC_RATE_LIMIT.requests - 1,
+      resetAt: now + PUBLIC_RATE_LIMIT.windowMs,
+    };
   }
 
   if (entry.count >= PUBLIC_RATE_LIMIT.requests) {
@@ -144,7 +162,11 @@ function checkRateLimit(key: string): { allowed: boolean; remaining: number; res
   }
 
   entry.count++;
-  return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - entry.count, resetAt: entry.resetAt };
+  return {
+    allowed: true,
+    remaining: PUBLIC_RATE_LIMIT.requests - entry.count,
+    resetAt: entry.resetAt,
+  };
 }
 
 // =============================================================================
@@ -152,10 +174,10 @@ function checkRateLimit(key: string): { allowed: boolean; remaining: number; res
 // =============================================================================
 
 const SECURITY_HEADERS: Record<string, string> = {
-  'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY',
-  'X-XSS-Protection': '1; mode=block',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "X-XSS-Protection": "1; mode=block",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
 };
 
 // =============================================================================
@@ -172,9 +194,9 @@ function generateRequestId(): string {
 
 function getClientIp(request: NextRequest): string {
   return (
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.headers.get('x-real-ip') ||
-    'unknown'
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown"
   );
 }
 
@@ -189,33 +211,36 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
   const speraxos = isSperaxOSRequest(request);
 
   const headers: Record<string, string> = {
-    'X-Request-ID': requestId,
+    "X-Request-ID": requestId,
     ...SECURITY_HEADERS,
   };
 
   // Tag SperaxOS requests so downstream API routes can prioritise them
   if (speraxos) {
-    headers['X-Priority'] = 'speraxos';
-    headers['X-SperaxOS'] = '1';
-    headers['Vary'] = 'Origin';
+    headers["X-Priority"] = "speraxos";
+    headers["X-SperaxOS"] = "1";
+    headers["Vary"] = "Origin";
   }
 
   // Block known bad bots from API (allow search engine crawlers)
-  const ua = request.headers.get('user-agent') || '';
-  if (BLOCKED_BOTS.test(ua) && !BOT_ALLOWLIST.some((allowed) => ua.includes(allowed))) {
+  const ua = request.headers.get("user-agent") || "";
+  if (
+    BLOCKED_BOTS.test(ua) &&
+    !BOT_ALLOWLIST.some((allowed) => ua.includes(allowed))
+  ) {
     return NextResponse.json(
-      { error: 'Forbidden', code: 'BOT_BLOCKED', requestId },
-      { status: 403, headers }
+      { error: "Forbidden", code: "BOT_BLOCKED", requestId },
+      { status: 403, headers },
     );
   }
 
   // Protect admin routes with bearer token
-  if (pathname.startsWith('/api/admin') || pathname.startsWith('/admin')) {
-    const token = request.headers.get('Authorization')?.replace('Bearer ', '');
+  if (pathname.startsWith("/api/admin") || pathname.startsWith("/admin")) {
+    const token = request.headers.get("Authorization")?.replace("Bearer ", "");
     if (!process.env.ADMIN_TOKEN || token !== process.env.ADMIN_TOKEN) {
       return NextResponse.json(
-        { error: 'Unauthorized', code: 'ADMIN_AUTH_REQUIRED', requestId },
-        { status: 401, headers }
+        { error: "Unauthorized", code: "ADMIN_AUTH_REQUIRED", requestId },
+        { status: 401, headers },
       );
     }
   }
@@ -223,17 +248,21 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
   if (matchesPattern(pathname, EXEMPT_PATTERNS)) {
     const res = NextResponse.next();
     Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
-    res.headers.set('X-Response-Time', `${Date.now() - start}ms`);
+    res.headers.set("X-Response-Time", `${Date.now() - start}ms`);
     return res;
   }
 
   // Size validation
-  if (['POST', 'PUT', 'PATCH'].includes(request.method)) {
-    const len = request.headers.get('content-length');
+  if (["POST", "PUT", "PATCH"].includes(request.method)) {
+    const len = request.headers.get("content-length");
     if (len && parseInt(len, 10) > MAX_BODY_SIZE) {
       return NextResponse.json(
-        { error: 'Request Entity Too Large', code: 'REQUEST_TOO_LARGE', requestId },
-        { status: 413, headers }
+        {
+          error: "Request Entity Too Large",
+          code: "REQUEST_TOO_LARGE",
+          requestId,
+        },
+        { status: 413, headers },
       );
     }
   }
@@ -243,28 +272,36 @@ async function handleApiRequest(request: NextRequest): Promise<NextResponse> {
   // Everyone else: 60 requests / hour per IP.
   // ──────────────────────────────────────────────────────────────────────────
   if (speraxos) {
-    headers['X-RateLimit-Limit'] = 'unlimited';
-    headers['X-RateLimit-Remaining'] = 'unlimited';
+    headers["X-RateLimit-Limit"] = "unlimited";
+    headers["X-RateLimit-Remaining"] = "unlimited";
   } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
     const clientIp = getClientIp(request);
     const rl = checkRateLimit(`${clientIp}:${pathname}`);
 
-    headers['X-RateLimit-Limit'] = PUBLIC_RATE_LIMIT.requests.toString();
-    headers['X-RateLimit-Remaining'] = rl.remaining.toString();
-    headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
+    headers["X-RateLimit-Limit"] = PUBLIC_RATE_LIMIT.requests.toString();
+    headers["X-RateLimit-Remaining"] = rl.remaining.toString();
+    headers["X-RateLimit-Reset"] = new Date(rl.resetAt).toISOString();
 
     if (!rl.allowed) {
       const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
       return NextResponse.json(
-        { error: 'Rate Limit Exceeded', code: 'RATE_LIMIT_EXCEEDED', retryAfter: retry, requestId },
-        { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } }
+        {
+          error: "Rate Limit Exceeded",
+          code: "RATE_LIMIT_EXCEEDED",
+          retryAfter: retry,
+          requestId,
+        },
+        {
+          status: 429,
+          headers: { ...headers, "Retry-After": retry.toString() },
+        },
       );
     }
   }
 
   const res = NextResponse.next();
   Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
-  res.headers.set('X-Response-Time', `${Date.now() - start}ms`);
+  res.headers.set("X-Response-Time", `${Date.now() - start}ms`);
   return res;
 }
 
@@ -276,7 +313,7 @@ export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // API routes: rate limiting + security headers
-  if (pathname.startsWith('/api/')) {
+  if (pathname.startsWith("/api/")) {
     return handleApiRequest(request);
   }
 
@@ -286,8 +323,8 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/api/:path*',
-    '/',
-    '/((?!_next|_vercel|feed\\.xml|.*\\.(?:ico|png|jpg|jpeg|gif|svg|xml|json|txt|js|css|woff|woff2|webp|avif)).*)',
+    "/api/:path*",
+    "/",
+    "/((?!_next|_vercel|feed\\.xml|.*\\.(?:ico|png|jpg|jpeg|gif|svg|xml|json|txt|js|css|woff|woff2|webp|avif)).*)",
   ],
 };
