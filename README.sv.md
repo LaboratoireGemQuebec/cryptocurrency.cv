@@ -158,3 +158,4 @@ MIT-licens - se [LICENSE](LICENSE) för detaljer.
 <p align="center">
   Gjord med ❤️ för kryptgemenskapen
 </p>
+
