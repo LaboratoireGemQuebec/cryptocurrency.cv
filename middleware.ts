@@ -11,22 +11,27 @@
  *
  * @see https://x402.org
  */
-import { paymentProxy } from '@x402/next';
+import { paymentProxyFromConfig } from '@x402/next';
+import type { RouteConfig } from '@x402/next';
 
 const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
   '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
 
-export default paymentProxy(RECEIVE_ADDRESS, {
-  // Standard premium endpoints — $0.001 USDC per call
+// Standard premium endpoints — $0.001 USDC per call
+const routes: Record<string, RouteConfig> = {
   '/api/premium/:path*': {
-    price: '$0.001',
-    network: 'base',
-    config: {
-      description: 'Free Crypto News Premium API — pay per request in USDC on Base',
+    accepts: {
+      scheme: 'exact',
+      payTo: RECEIVE_ADDRESS,
+      price: '$0.001',
+      network: 'base' as never, // eip155:8453 alias
     },
+    description: 'Free Crypto News Premium API — pay per request in USDC on Base',
   },
-});
+};
+
+export default paymentProxyFromConfig(routes);
 
 export const config = {
   matcher: ['/api/premium/:path*'],
