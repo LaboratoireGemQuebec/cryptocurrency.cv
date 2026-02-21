@@ -147,7 +147,16 @@ export default async function Home({ params }: Props) {
           </section>
         )}
 
-        {/* 2. Market Overview - CoinDesk-style ranked table */}
+        {/* 2. AI Ask Bar */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-6">
+          <AskAboutThis
+            context="crypto market news today"
+            contextType="general"
+            placeholder="Ask anything about crypto..."
+          />
+        </section>
+
+        {/* 3. Market Overview - CoinDesk-style ranked table */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8">
           <HomeMarketStrip />
         </section>
