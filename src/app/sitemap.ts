@@ -16,6 +16,7 @@ const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru
 // Static pages with their update frequencies
 const staticPages = [
   { path: '', changeFrequency: 'always' as const, priority: 1.0 },
+  // Core market pages
   { path: '/markets', changeFrequency: 'hourly' as const, priority: 0.9 },
   { path: '/trending', changeFrequency: 'hourly' as const, priority: 0.9 },
   { path: '/movers', changeFrequency: 'hourly' as const, priority: 0.8 },
@@ -25,12 +26,37 @@ const staticPages = [
   { path: '/gas', changeFrequency: 'always' as const, priority: 0.7 },
   { path: '/funding', changeFrequency: 'hourly' as const, priority: 0.8 },
   { path: '/liquidations', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/whales', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/onchain', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/options', changeFrequency: 'hourly' as const, priority: 0.7 },
+  { path: '/orderbook', changeFrequency: 'always' as const, priority: 0.6 },
+  { path: '/fear-greed', changeFrequency: 'hourly' as const, priority: 0.9 },
+  { path: '/signals', changeFrequency: 'hourly' as const, priority: 0.8 },
+  // Analytics & research tools
   { path: '/screener', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/calculator', changeFrequency: 'monthly' as const, priority: 0.5 },
   { path: '/dominance', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/correlation', changeFrequency: 'daily' as const, priority: 0.6 },
   { path: '/charts', changeFrequency: 'daily' as const, priority: 0.6 },
+  { path: '/analytics', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/compare', changeFrequency: 'daily' as const, priority: 0.6 },
+  { path: '/arbitrage', changeFrequency: 'hourly' as const, priority: 0.7 },
+  // News & content
   { path: '/buzz', changeFrequency: 'hourly' as const, priority: 0.7 },
+  { path: '/digest', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/narratives', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/topics', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/sources', changeFrequency: 'weekly' as const, priority: 0.6 },
+  // AI & analysis features
+  { path: '/entities', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/factcheck', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/predictions', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/influencers', changeFrequency: 'daily' as const, priority: 0.6 },
+  { path: '/coverage-gap', changeFrequency: 'daily' as const, priority: 0.6 },
+  { path: '/ai/oracle', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/ai/brief', changeFrequency: 'hourly' as const, priority: 0.7 },
+  { path: '/ai/debate', changeFrequency: 'daily' as const, priority: 0.6 },
+  { path: '/ai/counter', changeFrequency: 'daily' as const, priority: 0.6 },
   // Category pages
   { path: '/category/bitcoin', changeFrequency: 'hourly' as const, priority: 0.9 },
   { path: '/category/ethereum', changeFrequency: 'hourly' as const, priority: 0.9 },
@@ -38,19 +64,17 @@ const staticPages = [
   { path: '/category/nft', changeFrequency: 'hourly' as const, priority: 0.7 },
   { path: '/category/regulation', changeFrequency: 'daily' as const, priority: 0.8 },
   { path: '/category/technology', changeFrequency: 'daily' as const, priority: 0.7 },
-  // AI Features
-  { path: '/ai/oracle', changeFrequency: 'hourly' as const, priority: 0.8 },
-  { path: '/ai/brief', changeFrequency: 'hourly' as const, priority: 0.7 },
-  { path: '/ai/debate', changeFrequency: 'daily' as const, priority: 0.6 },
-  { path: '/ai/counter', changeFrequency: 'daily' as const, priority: 0.6 },
-  // Premium features
+  // User features
   { path: '/portfolio', changeFrequency: 'daily' as const, priority: 0.7 },
-  { path: '/alerts', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/watchlist', changeFrequency: 'daily' as const, priority: 0.7 },
+  // Regulatory & compliance
   { path: '/regulatory', changeFrequency: 'daily' as const, priority: 0.8 },
-  { path: '/unlocks', changeFrequency: 'daily' as const, priority: 0.8 },
-  { path: '/smart-money', changeFrequency: 'hourly' as const, priority: 0.8 },
-  { path: '/exchange-flows', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/protocol-health', changeFrequency: 'daily' as const, priority: 0.7 },
+  // Info pages
+  { path: '/about', changeFrequency: 'monthly' as const, priority: 0.5 },
+  { path: '/pricing', changeFrequency: 'monthly' as const, priority: 0.6 },
+  { path: '/status', changeFrequency: 'hourly' as const, priority: 0.5 },
+  { path: '/origins', changeFrequency: 'monthly' as const, priority: 0.5 },
   // Docs & Developer
   { path: '/developers', changeFrequency: 'weekly' as const, priority: 0.6 },
   { path: '/developers/api', changeFrequency: 'weekly' as const, priority: 0.7 },
@@ -92,14 +116,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Add API documentation (not localized)
-  entries.push({
-    url: `${SITE_URL}/api/openapi.json`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.5,
-  });
-
   // Add blog pages for each locale
   const blogSlugs = getAllSlugs();
   for (const locale of locales) {
@@ -132,14 +148,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
   
-  // Blog RSS feed
-  entries.push({
-    url: `${SITE_URL}/blog/feed.xml`,
-    lastModified: now,
-    changeFrequency: 'daily',
-    priority: 0.6,
-  });
-
   // Add tag pages for SEO
   const allTags = getAllTags();
   for (const locale of locales) {
@@ -157,7 +165,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${SITE_URL}/${locale}/tags/${tag.slug}`,
         lastModified: now,
         changeFrequency: 'hourly',
-        priority: Math.min(0.9, 0.6 + (tag.priority / 250)), // Higher priority tags get higher sitemap priority
+        priority: Math.round(Math.min(0.9, 0.6 + (tag.priority / 250)) * 1000) / 1000, // Higher priority tags get higher sitemap priority
       });
     }
   }

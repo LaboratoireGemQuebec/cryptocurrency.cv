@@ -4,8 +4,17 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Trending Topics - Free Crypto News',
-  description: 'See what\'s trending in crypto news right now. Real-time analysis of the hottest topics.',
+  title: 'Trending Crypto Topics - Free Crypto News',
+  description: "See what's trending in crypto news right now. Real-time analysis of the hottest topics, coins, and stories in cryptocurrency.",
+  keywords: ['trending crypto', 'trending crypto news', 'hot crypto topics', 'crypto trends', 'bitcoin trending', 'ethereum trending'],
+  openGraph: {
+    title: 'Trending Crypto Topics - Free Crypto News',
+    description: "Real-time trending topics, coins, and stories in cryptocurrency. Updated every hour.",
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/trending',
+  },
 };
 
 // Force dynamic rendering to avoid self-referential API call during build

@@ -4,8 +4,17 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Daily Digest - Free Crypto News',
-  description: 'AI-powered daily crypto news digest. Get caught up on everything that matters.',
+  title: 'Daily Crypto Digest - Free Crypto News',
+  description: 'AI-powered daily crypto news digest. Get the most important cryptocurrency stories summarized and delivered daily. Never miss what matters.',
+  keywords: ['crypto digest', 'daily crypto summary', 'crypto news digest', 'bitcoin digest', 'cryptocurrency daily briefing', 'ai crypto summary'],
+  openGraph: {
+    title: 'Daily Crypto Digest - AI-Powered News Summary',
+    description: 'Get the most important cryptocurrency stories summarized daily by AI. Free.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/digest',
+  },
 };
 
 // Force dynamic rendering to avoid self-referential API call during build

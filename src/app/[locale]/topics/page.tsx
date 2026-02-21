@@ -9,8 +9,17 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Topics',
-  description: 'Browse all crypto news topics - Bitcoin ETF, DeFi, NFTs, Regulation, and more.',
+  title: 'Crypto News Topics | Browse by Subject',
+  description: 'Browse all cryptocurrency news topics - Bitcoin ETF, DeFi, NFTs, Regulation, Layer 2, and more. Find the crypto stories that matter to you.',
+  keywords: ['crypto topics', 'cryptocurrency news topics', 'bitcoin etf', 'defi news', 'nft news', 'crypto regulation', 'layer 2'],
+  openGraph: {
+    title: 'Crypto News Topics | Browse by Subject',
+    description: 'Browse all crypto news topics - Bitcoin ETF, DeFi, NFTs, Regulation, and more.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/topics',
+  },
 };
 
 const topics = [

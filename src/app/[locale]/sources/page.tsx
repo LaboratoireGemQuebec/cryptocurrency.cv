@@ -10,8 +10,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'News Sources',
-  description: 'Browse all crypto news sources aggregated by Free Crypto News. Trusted sources including CoinDesk, The Block, Decrypt, and more.',
+  title: 'Crypto News Sources | 200+ Trusted Publishers',
+  description: 'Browse all 200+ crypto news sources aggregated by Free Crypto News. Trusted publishers including CoinDesk, The Block, Decrypt, Cointelegraph, and more.',
+  keywords: ['crypto news sources', 'coindesk', 'cointelegraph', 'the block', 'decrypt', 'crypto publishers', 'news aggregator sources'],
+  openGraph: {
+    title: 'Crypto News Sources | 200+ Trusted Publishers',
+    description: 'Browse 200+ crypto news sources including CoinDesk, The Block, Decrypt, and more.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/sources',
+  },
 };
 
 export const revalidate = 300;

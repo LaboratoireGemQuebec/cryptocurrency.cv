@@ -18,8 +18,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'DeFi Dashboard',
-  description: 'Live DeFi data - Protocol TVL rankings, chain analytics, yield opportunities, and DeFi news.',
+  title: 'DeFi Dashboard | TVL, Yields & Protocol Data',
+  description: 'Live DeFi data - Protocol TVL rankings, chain analytics, yield opportunities, and DeFi news. Track the top DeFi protocols in real-time.',
+  keywords: ['defi', 'defi dashboard', 'total value locked', 'tvl', 'defi protocols', 'yield farming', 'decentralized finance'],
+  openGraph: {
+    title: 'DeFi Dashboard | TVL, Yields & Protocol Data',
+    description: 'Live DeFi data - Protocol TVL rankings, chain analytics, and yield opportunities.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/defi',
+  },
 };
 
 export const revalidate = 60; // Revalidate every minute

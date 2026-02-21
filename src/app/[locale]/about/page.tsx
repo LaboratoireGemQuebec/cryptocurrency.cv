@@ -6,7 +6,16 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About - Free Crypto News',
-  description: 'Learn about Free Crypto News - 100% free crypto news API aggregating from 130+ sources.',
+  description: 'Learn about Free Crypto News - 100% free crypto news API aggregating real-time news from 200+ trusted sources. No API keys required.',
+  keywords: ['free crypto news', 'crypto news api', 'about', 'cryptocurrency news aggregator'],
+  openGraph: {
+    title: 'About Free Crypto News',
+    description: 'Learn about the 100% free crypto news API aggregating from 200+ sources. No keys. No limits.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 // Featured sources - highlighting key sources from 130+ total

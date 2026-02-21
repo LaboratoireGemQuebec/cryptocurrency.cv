@@ -72,6 +72,10 @@ export function ArticleStructuredData({ article, url }: ArticleStructuredDataPro
         name: person,
       })),
     ],
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.article-description'],
+    },
   };
 
   return (
@@ -159,6 +163,8 @@ export function OrganizationStructuredData() {
     description: '100% free crypto news API aggregating news from CoinDesk, The Block, Decrypt, and more.',
     sameAs: [
       'https://github.com/nirholas/free-crypto-news',
+      'https://twitter.com/cryptocurrencycv',
+      'https://x.com/cryptocurrencycv',
     ],
     contactPoint: {
       '@type': 'ContactPoint',

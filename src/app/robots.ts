@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',         // Admin pages
           '/_next/',         // Next.js internals
           '/private/',       // Any private pages
-          '/*.json$',        // JSON files (except sitemap)
+          '/*.json',         // JSON files (except sitemap)
         ],
       },
       // OpenAI bots

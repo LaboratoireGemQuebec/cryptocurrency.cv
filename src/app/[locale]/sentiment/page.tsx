@@ -5,7 +5,16 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Market Sentiment - Free Crypto News',
-  description: 'AI-powered crypto market sentiment analysis. Understand the mood of the market.',
+  description: 'AI-powered crypto market sentiment analysis. Understand the mood of the market with real-time sentiment scores across Bitcoin, Ethereum, and 100+ altcoins.',
+  keywords: ['crypto sentiment', 'market sentiment', 'bitcoin sentiment', 'ethereum sentiment', 'crypto mood', 'bullish bearish', 'sentiment analysis'],
+  openGraph: {
+    title: 'Crypto Market Sentiment Analysis',
+    description: 'AI-powered market sentiment analysis across Bitcoin, Ethereum, and 100+ cryptocurrencies.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/sentiment',
+  },
 };
 
 // Force dynamic rendering to avoid self-referential API call during build

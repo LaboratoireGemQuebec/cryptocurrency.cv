@@ -287,23 +287,71 @@ Already configured in layout:
 
 ### Tools
 
-1. **Google Search Console** - Monitor indexing, errors
-2. **Google PageSpeed Insights** - Core Web Vitals
-3. **Rich Results Test** - Validate structured data
-4. **Mobile-Friendly Test** - Mobile usability
+1. **[Google Search Console](https://search.google.com/search-console)** - Monitor indexing, crawl errors, keyword rankings
+2. **[Google PageSpeed Insights](https://pagespeed.web.dev/)** - Core Web Vitals (LCP, CLS, INP)
+3. **[Rich Results Test](https://search.google.com/test/rich-results)** - Validate JSON-LD structured data
+4. **[Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)** - Mobile usability
+5. **[Ahrefs Webmaster Tools](https://ahrefs.com/webmaster-tools)** (free tier) - Backlinks, broken pages
+6. **[Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/)** - Full site crawl for missing metadata/broken links
 
 ### Validation Commands
 
 ```bash
-# Validate structured data
-curl https://cryptocurrency.cv/en | grep -o '<script type="application/ld+json">[^<]*'
+# Check structured data is present
+curl -s https://cryptocurrency.cv/en | grep -c 'application/ld+json'
 
-# Check sitemap
-curl https://cryptocurrency.cv/sitemap.xml
+# Check sitemap is accessible and valid
+curl -sI https://cryptocurrency.cv/sitemap.xml | grep -E "HTTP|Content-Type"
+curl -s https://cryptocurrency.cv/sitemap.xml | head -20
 
 # Check robots.txt
-curl https://cryptocurrency.cv/robots.txt
+curl -s https://cryptocurrency.cv/robots.txt
+
+# Check news sitemap
+curl -sI https://cryptocurrency.cv/news-sitemap.xml | grep -E "HTTP|Content-Type"
+
+# Check a page's canonical URL
+curl -s https://cryptocurrency.cv/en/fear-greed | grep 'rel="canonical"'
+
+# Count sitemap entries
+curl -s https://cryptocurrency.cv/sitemap.xml | grep -c '<loc>'
 ```
+
+### Monthly SEO Audit Checklist
+
+Run these checks every month:
+
+1. **Search Console** - Review Coverage report for indexing errors or excluded pages
+2. **PageSpeed Insights** - Run on homepage, a coin page, and an article page
+3. **Rich Results Test** - Validate structured data on homepage, article page, coin page
+4. **Sitemap** - Verify no 404s by fetching and spot-checking 10 random URLs
+5. **Robots.txt** - Confirm AI bots can reach API endpoints
+6. **Core Web Vitals** - Check the `WebVitals` component data in analytics
+
+---
+
+## 2026 Audit Findings & Fixes
+
+Audit conducted February 2026. Issues found and resolved:
+
+| Issue | Severity | Status |
+|-------|----------|--------|
+| Sitemap included 4 non-existent pages (`/alerts`, `/unlocks`, `/smart-money`, `/exchange-flows`) → 404s | High | ✅ Fixed |
+| 22+ real pages (fear-greed, onchain, whales, etc.) missing from sitemap | High | ✅ Fixed |
+| `robots.ts` used `/*.json$` — the `$` is not a regex anchor in robots.txt format | Medium | ✅ Fixed |
+| Layout default `alternates.canonical: '/'` applied to all pages, overriding page-level canonicals | Medium | ✅ Fixed |
+| Layout default description had emoji wasting 2 characters | Low | ✅ Fixed |
+| `OrganizationStructuredData.sameAs` only listed GitHub | Low | ✅ Fixed |
+| `about`, `defi`, `sources`, `topics`, `trending`, `sentiment`, `digest` had weak metadata (no OG tags, generic titles) | Medium | ✅ Fixed |
+| ~30 pages use `export const metadata` (static) — valid but not dynamic | Info | Acceptable |
+| `compare` and `watchlist` pages are `'use client'` — can't use `generateMetadata` | Info | By design |
+
+### Remaining SEO gaps
+
+- **Individual source pages** (`/source/[source]`) not in sitemap
+- **Category index page** (`/category`) not in sitemap — only specific categories are listed
+- `compare` and `watchlist` are client components; their metadata is set only at the static layout level
+- `booking`, `install`, `offline`, `saved`, `settings`, `share` pages intentionally excluded (user-specific or utility pages)
 
 ---
 
@@ -311,13 +359,16 @@ curl https://cryptocurrency.cv/robots.txt
 
 When creating new pages, ensure:
 
-- [ ] `generateMetadata` function with unique title/description
+- [ ] `export const metadata: Metadata = {...}` with unique title + description (or `generateMetadata` for dynamic pages)
+- [ ] Title under 60 characters, includes primary keyword
+- [ ] Description 120–160 characters, human-readable call to action
+- [ ] `openGraph` block with title + description (at minimum)
+- [ ] `keywords` array with 5–10 relevant terms
+- [ ] `alternates.canonical` set to the canonical path
 - [ ] Proper heading hierarchy (single H1, logical H2-H6)
-- [ ] Structured data if applicable
+- [ ] Structured data if applicable (use components from `StructuredData.tsx`)
 - [ ] Alt text on all images
-- [ ] Internal links to related content
-- [ ] Added to sitemap (if significant)
-- [ ] Canonical URL set
+- [ ] Added to `sitemap.ts` `staticPages` array (if publicly indexable)
 - [ ] Mobile responsive design
 
 ---
@@ -325,10 +376,12 @@ When creating new pages, ensure:
 ## Future Improvements
 
 1. ~~**Google News Sitemap**~~ ✅ Implemented
-2. ~~**Canonical URLs**~~ ✅ Implemented on article and coin pages
+2. ~~**Canonical URLs**~~ ✅ Implemented project-wide
 3. ~~**Image Optimization**~~ ✅ WebP/AVIF formats configured
 4. ~~**Core Web Vitals Monitoring**~~ ✅ Implemented
-5. **Google News Publisher Center** - Submit for Google News inclusion
-6. **AMP Pages** - For news articles (optional)
-7. **Video SEO** - If adding video content
-8. **Local SEO** - If targeting specific regions
+5. ~~**Sitemap ghost pages removed**~~ ✅ Cleaned up February 2026
+6. **Individual source pages** — add `/source/[source]` canonical and sitemap entries
+7. **Dynamic OG images** — extend dynamic OG image generation (currently on markets page) to coin and article pages
+8. **Google News Publisher Center** — submit for Google News inclusion
+9. **hreflang in page-level metadata** — use `getAlternateLanguages()` from `AlternateLinks.tsx` on high-traffic pages
+10. **AMP Pages** — for news articles (optional)

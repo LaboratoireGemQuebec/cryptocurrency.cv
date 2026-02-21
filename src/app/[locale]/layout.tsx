@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     default: 'Free Crypto News',
     template: '%s | Free Crypto News',
   },
-  description: '🆓 100% FREE crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation.',
+  description: '100% FREE crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources.',
   keywords: ['crypto', 'cryptocurrency', 'bitcoin', 'ethereum', 'news', 'API', 'free', 'blockchain', 'defi', 'trading'],
   authors: [{ name: 'Free Crypto News' }],
   creator: 'Free Crypto News',
@@ -48,11 +48,16 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://cryptocurrency.cv'),
   alternates: {
-    canonical: '/',
+    types: {
+      'application/rss+xml': [
+        { url: '/api/rss', title: 'Free Crypto News RSS Feed' },
+        { url: '/blog/feed.xml', title: 'Free Crypto News Blog' },
+      ],
+    },
   },
   openGraph: {
     title: 'Free Crypto News',
-    description: '🆓 100% FREE crypto news API. No API keys. No rate limits.',
+    description: '100% FREE crypto news API. No API keys. No rate limits. Real-time news from 200+ sources.',
     url: 'https://cryptocurrency.cv',
     siteName: 'Free Crypto News',
     type: 'website',
@@ -69,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free Crypto News',
-    description: '🆓 100% FREE crypto news API. No API keys. No rate limits.',
+    description: '100% FREE crypto news API. No API keys. No rate limits. Real-time news from 200+ sources.',
     images: ['/og-image.png'],
     creator: '@cryptocurrencycv',
   },

@@ -4,122 +4,7 @@
  */
 
 import { aiCache, withCache } from './cache';
-
-// Provider types
-type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter';
-
-interface AIConfig {
-  provider: AIProvider;
-  model: string;
-  apiKey: string;
-  baseUrl?: string;
-}
-
-// Get AI configuration from environment
-function getAIConfig(): AIConfig {
-  // Priority: OpenAI > Anthropic > Groq > OpenRouter
-  if (process.env.OPENAI_API_KEY) {
-    return {
-      provider: 'openai',
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      apiKey: process.env.OPENAI_API_KEY,
-    };
-  }
-
-  if (process.env.ANTHROPIC_API_KEY) {
-    return {
-      provider: 'anthropic',
-      model: process.env.ANTHROPIC_MODEL || 'claude-3-haiku-20240307',
-      apiKey: process.env.ANTHROPIC_API_KEY,
-    };
-  }
-
-  if (process.env.GROQ_API_KEY) {
-    return {
-      provider: 'groq',
-      model: process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
-      apiKey: process.env.GROQ_API_KEY,
-      baseUrl: 'https://api.groq.com/openai/v1',
-    };
-  }
-
-  if (process.env.OPENROUTER_API_KEY) {
-    return {
-      provider: 'openrouter',
-      model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3-8b-instruct',
-      apiKey: process.env.OPENROUTER_API_KEY,
-      baseUrl: 'https://openrouter.ai/api/v1',
-    };
-  }
-
-  throw new Error('No AI provider configured. Set OPENAI_API_KEY, ANTHROPIC_API_KEY, GROQ_API_KEY, or OPENROUTER_API_KEY');
-}
-
-// Generic AI completion request
-async function aiComplete(
-  systemPrompt: string,
-  userPrompt: string,
-  options?: { maxTokens?: number; temperature?: number }
-): Promise<string> {
-  const config = getAIConfig();
-  const { maxTokens = 500, temperature = 0.3 } = options || {};
-
-  if (config.provider === 'anthropic') {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': config.apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: config.model,
-        max_tokens: maxTokens,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: userPrompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Anthropic API error: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.content[0].text;
-  }
-
-  // OpenAI-compatible API (OpenAI, Groq, OpenRouter)
-  const baseUrl = config.baseUrl || 'https://api.openai.com/v1';
-  
-  const response = await fetch(`${baseUrl}/chat/completions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${config.apiKey}`,
-      ...(config.provider === 'openrouter' && {
-        'HTTP-Referer': process.env.VERCEL_URL || 'https://cryptocurrency.cv',
-        'X-Title': 'Crypto News AI',
-      }),
-    },
-    body: JSON.stringify({
-      model: config.model,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt },
-      ],
-      max_tokens: maxTokens,
-      temperature,
-    }),
-  });
-
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`AI API error: ${response.status} - ${error}`);
-  }
-
-  const data = await response.json();
-  return data.choices[0].message.content;
-}
+import { aiComplete, getAIConfigOrNull } from './ai-provider';
 
 /**
  * Summarize an article
@@ -432,10 +317,7 @@ export function isAIConfigured(): boolean {
  * Get current AI provider info
  */
 export function getAIProviderInfo(): { provider: string; model: string } | null {
-  try {
-    const config = getAIConfig();
-    return { provider: config.provider, model: config.model };
-  } catch {
-    return null;
-  }
+  const config = getAIConfigOrNull();
+  if (!config) return null;
+  return { provider: config.provider, model: config.model };
 }
