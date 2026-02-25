@@ -6,6 +6,8 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getPipelineFearGreed } from '@/lib/data-pipeline';
+import { registry } from '@/lib/providers/registry';
+import type { FearGreedIndex } from '@/lib/providers/adapters/fear-greed';
 
 interface FearGreedData {
   value: number;
@@ -62,7 +64,34 @@ export async function GET(request: NextRequest) {
       } catch { /* pipeline miss — fetch upstream */ }
     }
 
-    // Fetch current and historical data from Alternative.me API
+    // Provider framework: circuit breakers, caching, fallback between Alternative.me + CoinStats
+    try {
+      const result = await registry.fetch<FearGreedIndex>('fear-greed', { limit: Math.min(days, 365) });
+      const fgData = result.data;
+
+      const current: FearGreedData = {
+        value: fgData.value,
+        valueClassification: getClassification(fgData.value),
+        timestamp: new Date(fgData.timestamp).getTime(),
+        timeUntilUpdate: 'Unknown',
+      };
+
+      const trend = calculateTrend([current]);
+      const breakdown = await calculateBreakdown();
+
+      return NextResponse.json({
+        current,
+        historical: [current],
+        trend,
+        breakdown,
+        lastUpdated: fgData.lastUpdated,
+        _provider: result.lineage.provider,
+        _confidence: result.lineage.confidence,
+        _cached: result.cached,
+      });
+    } catch { /* provider chain miss — fall through to direct fetch */ }
+
+    // Fallback: direct API call (legacy path — kept for resilience)
     const [currentResponse, historicalResponse] = await Promise.all([
       fetch('https://api.alternative.me/fng/', { next: { revalidate: 300 } }),
       fetch(`https://api.alternative.me/fng/?limit=${Math.min(days, 365)}`, {

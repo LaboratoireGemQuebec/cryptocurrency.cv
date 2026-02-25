@@ -1,10 +1,11 @@
 /**
  * Derivatives Chain — Provider chain for derivatives market data
  *
- * | Provider      | Priority | Weight | Rate Limit    | Coverage              |
- * |---------------|----------|--------|---------------|-----------------------|
- * | Hyperliquid   | 1        | 0.40   | 120/min (free)| 100+ perp markets     |
- * | CoinGlass     | 2        | 0.35   | 30/min (key)  | 10+ exchange aggregate|
+ * | Provider             | Priority | Weight | Rate Limit      | Coverage              |
+ * |----------------------|----------|--------|-----------------|-----------------------|
+ * | Hyperliquid          | 1        | 0.40   | 120/min (free)  | 100+ perp markets     |
+ * | CoinGlass            | 2        | 0.35   | 30/min (key)    | 10+ exchange aggregate|
+ * | Binance Liquidations | 1        | 0.45   | 300/min (free)  | $50B+ daily volume    |
  *
  * Default strategy: `fallback` (Hyperliquid → CoinGlass)
  *
@@ -18,6 +19,7 @@ import { ProviderChain } from '../../provider-chain';
 import type { OpenInterest, LiquidationSummary } from './types';
 import { hyperliquidAdapter } from './hyperliquid.adapter';
 import { coinglassAdapter } from './coinglass.adapter';
+import { binanceLiquidationsAdapter } from './binance-liquidations.adapter';
 
 export type { OpenInterest, LiquidationSummary, Liquidation, ExchangeOI } from './types';
 
@@ -62,3 +64,31 @@ export const derivativesConsensusChain = createDerivativesChain({
   strategy: 'consensus',
   cacheTtlSeconds: 15,
 });
+
+// =============================================================================
+// LIQUIDATIONS CHAIN
+// =============================================================================
+
+export interface LiquidationsChainOptions {
+  strategy?: ResolutionStrategy;
+  cacheTtlSeconds?: number;
+  staleWhileError?: boolean;
+}
+
+export function createLiquidationsChain(
+  options: LiquidationsChainOptions = {},
+): ProviderChain<LiquidationSummary[]> {
+  const {
+    strategy = 'fallback',
+    cacheTtlSeconds = 15,
+    staleWhileError = true,
+  } = options;
+
+  const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
+  const chain = new ProviderChain<LiquidationSummary[]>('liquidations', config);
+  chain.addProvider(binanceLiquidationsAdapter);
+  return chain;
+}
+
+/** Default liquidations chain */
+export const liquidationsChain = createLiquidationsChain();

@@ -25,8 +25,9 @@
  * | tvl             | tvlChain               | DefiLlama                        |
  * | defi-yields     | defiYieldsChain        | DefiLlama Yields                  |
  * | derivatives     | derivativesChain       | Hyperliquid → CoinGlass           |
+ * | liquidations    | liquidationsChain      | Binance Futures                   |
  * | on-chain        | onChainChain           | Blockchain.info → Etherscan       |
- * | social-metrics  | socialChain            | LunarCrush                        |
+ * | social-metrics  | socialChain            | LunarCrush → Santiment → CryptoPanic |
  * | stablecoin-flows| stablecoinFlowsChain   | DefiLlama Stablecoins            |
  *
  * @module providers/setup
@@ -42,7 +43,7 @@ import { fundingRateChain } from './adapters/funding-rate';
 import { gasChain } from './adapters/gas';
 import { tvlChain } from './adapters/tvl';
 import { defiYieldsChain } from './adapters/defi';
-import { derivativesChain } from './adapters/derivatives';
+import { derivativesChain, liquidationsChain } from './adapters/derivatives';
 import { onChainChain, whaleAlertChain } from './adapters/on-chain';
 import { socialChain } from './adapters/social';
 import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
@@ -88,9 +89,14 @@ registry.register('defi-yields', defiYieldsChain, {
   description: 'Yield and APY data from DefiLlama Yields',
 });
 
-// Derivatives (Open Interest, Liquidations)
+// Derivatives (Open Interest)
 registry.register('derivatives', derivativesChain, {
-  description: 'Open interest and liquidation data from Hyperliquid and CoinGlass',
+  description: 'Open interest data from Hyperliquid and CoinGlass',
+});
+
+// Liquidations
+registry.register('liquidations', liquidationsChain, {
+  description: 'Real-time liquidation data from Binance Futures',
 });
 
 // On-chain Metrics
@@ -100,7 +106,7 @@ registry.register('on-chain', onChainChain, {
 
 // Social Metrics
 registry.register('social-metrics', socialChain, {
-  description: 'Social intelligence from LunarCrush (Galaxy Score, sentiment, social volume)',
+  description: 'Social intelligence from LunarCrush, Santiment, and CryptoPanic',
 });
 
 // Stablecoin Flows
@@ -115,7 +121,7 @@ registry.register('ohlcv', ohlcvChain, {
 
 // Order Book Depth
 registry.register('order-book', orderBookChain, {
-  description: 'Real-time order book depth from Binance',
+  description: 'Real-time order book depth from Binance and Coinbase',
 });
 
 // Whale Alerts
@@ -130,7 +136,7 @@ registry.register('whale-alerts', whaleAlertChain, {
 export { registry };
 
 /** Number of registered categories */
-export const registeredCategories = 14;
+export const registeredCategories = 15;
 
 /** List all registered categories */
 export function listRegisteredCategories() {
@@ -143,6 +149,7 @@ export function listRegisteredCategories() {
     'tvl',
     'defi-yields',
     'derivatives',
+    'liquidations',
     'on-chain',
     'social-metrics',
     'stablecoin-flows',

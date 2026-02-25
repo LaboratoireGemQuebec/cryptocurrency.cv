@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server';
 import { getPipelineFundingRates } from '@/lib/data-pipeline';
+import { registry } from '@/lib/providers/registry';
+import type { FundingRate } from '@/lib/providers/adapters/funding-rate';
 
 /**
  * Funding Rates API Proxy
  *
- * Serves pipeline-cached funding rates first, then falls back to
- * proxying requests to the Binance Futures premiumIndex endpoint.
+ * Serves pipeline-cached funding rates first, then uses the provider framework
+ * (broadcast across Binance, Bybit, OKX with circuit breakers), then falls
+ * back to direct Binance Futures premiumIndex endpoint.
  */
 export async function GET() {
   try {
-    // Pipeline cache-first: serve pre-fetched funding rates
+    // Layer 1: Pipeline cache-first
     try {
       const pipelineData = await getPipelineFundingRates();
       if (pipelineData && Array.isArray(pipelineData) && pipelineData.length > 0) {
@@ -21,8 +24,23 @@ export async function GET() {
           },
         });
       }
-    } catch { /* pipeline miss — fetch upstream */ }
+    } catch { /* pipeline miss — try provider chain */ }
 
+    // Layer 2: Provider framework (broadcast across Binance, Bybit, OKX)
+    try {
+      const result = await registry.fetch<FundingRate[]>('funding-rate');
+      return NextResponse.json(result.data, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+          'Access-Control-Allow-Origin': '*',
+          'X-Cache': 'PROVIDER',
+          'X-Provider': result.lineage.provider,
+          'X-Confidence': String(result.lineage.confidence),
+        },
+      });
+    } catch { /* provider chain miss — fall through to direct call */ }
+
+    // Layer 3: Direct Binance fallback (legacy)
     const response = await fetch('https://fapi.binance.com/fapi/v1/premiumIndex', {
       next: { revalidate: 30 },
     });
@@ -40,6 +58,7 @@ export async function GET() {
       headers: {
         'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
         'Access-Control-Allow-Origin': '*',
+        'X-Cache': 'DIRECT',
       },
     });
   } catch (error) {

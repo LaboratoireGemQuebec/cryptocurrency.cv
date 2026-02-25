@@ -465,7 +465,9 @@ export type DataCategory =
   | 'liquidations'
   | 'derivatives'
   | 'whale-alerts'
-  | 'stablecoin-flows';
+  | 'stablecoin-flows'
+  | 'nft-market'
+  | 'gaming-data';
 
 /**
  * Registry entry for a provider chain.

@@ -1,0 +1,66 @@
+/**
+ * Gas Fees Chain — Integration Tests
+ */
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { createGasChain } from '../adapters/gas';
+import { registry } from '../registry';
+
+const mockFetch = vi.fn();
+vi.stubGlobal('fetch', mockFetch);
+
+beforeEach(() => {
+  mockFetch.mockReset();
+});
+
+describe('GasChain', () => {
+  it('fetches gas prices from Etherscan (primary)', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        status: '1',
+        result: {
+          LastBlock: '18500000',
+          SafeGasPrice: '20',
+          ProposeGasPrice: '30',
+          FastGasPrice: '50',
+          suggestBaseFee: '18.5',
+          gasUsedRatio: '0.5,0.6,0.7',
+        },
+      }),
+    });
+
+    const chain = createGasChain({ cacheTtlSeconds: 0, includeBlocknative: false });
+    const result = await chain.fetch({});
+
+    expect(result.data).toBeDefined();
+    expect(result.lineage.provider).toContain('etherscan');
+  });
+
+  it('falls back to Blocknative when Etherscan fails', async () => {
+    // Etherscan fails
+    mockFetch.mockRejectedValueOnce(new Error('Etherscan down'));
+    // Blocknative succeeds
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        blockPrices: [{
+          baseFeePerGas: 25,
+          estimatedPrices: [
+            { confidence: 99, price: 50, maxPriorityFeePerGas: 2, maxFeePerGas: 52 },
+            { confidence: 90, price: 35, maxPriorityFeePerGas: 1.5, maxFeePerGas: 36.5 },
+            { confidence: 70, price: 25, maxPriorityFeePerGas: 1, maxFeePerGas: 26 },
+          ],
+        }],
+      }),
+    });
+
+    const chain = createGasChain({ cacheTtlSeconds: 0, includeBlocknative: true });
+    const result = await chain.fetch({});
+
+    expect(result.data).toBeDefined();
+  });
+
+  it('registry resolves gas-fees category', () => {
+    expect(registry.has('gas-fees')).toBe(true);
+  });
+});

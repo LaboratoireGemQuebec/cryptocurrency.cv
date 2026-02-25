@@ -1,0 +1,113 @@
+/**
+ * Provider Registry Initialization
+ *
+ * Centralized registration of all provider chains into the global registry.
+ * Call `initProviders()` once at application startup to wire everything.
+ *
+ * Only enables adapters for chains that have at least one provider.
+ * Logs active providers to stdout for startup diagnostics.
+ *
+ * @module providers/registry-init
+ */
+
+import { registry } from './registry';
+import type { DataCategory } from './types';
+
+// Category chain imports
+import { marketPriceChain } from './adapters/market-price';
+import { fundingRateChain } from './adapters/funding-rate';
+import { onChainChain, whaleAlertChain } from './adapters/on-chain';
+import { socialChain } from './adapters/social';
+import { gasChain } from './adapters/gas';
+import { fearGreedChain } from './adapters/fear-greed';
+import { dexChain } from './adapters/dex';
+import { derivativesChain } from './adapters/derivatives';
+import { ohlcvChain } from './adapters/ohlcv';
+import { orderBookChain } from './adapters/order-book';
+import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
+import { tvlChain } from './adapters/tvl';
+import { defiYieldsChain } from './adapters/defi-yields';
+
+// ---------------------------------------------------------------------------
+// Chain map: DataCategory → pre-wired ProviderChain
+// ---------------------------------------------------------------------------
+
+ 
+const CHAINS: Array<{ category: DataCategory; chain: any; label: string }> = [
+  { category: 'market-price', chain: marketPriceChain, label: 'Market Prices' },
+  { category: 'funding-rate', chain: fundingRateChain, label: 'Funding Rates' },
+  { category: 'on-chain', chain: onChainChain, label: 'On-Chain Metrics' },
+  { category: 'whale-alerts', chain: whaleAlertChain, label: 'Whale Alerts' },
+  { category: 'social-metrics', chain: socialChain, label: 'Social Metrics' },
+  { category: 'gas-fees', chain: gasChain, label: 'Gas Fees' },
+  { category: 'fear-greed', chain: fearGreedChain, label: 'Fear & Greed' },
+  { category: 'dex', chain: dexChain, label: 'DEX Pairs' },
+  { category: 'derivatives', chain: derivativesChain, label: 'Derivatives' },
+  { category: 'ohlcv', chain: ohlcvChain, label: 'OHLCV' },
+  { category: 'order-book', chain: orderBookChain, label: 'Order Book' },
+  { category: 'stablecoin-flows', chain: stablecoinFlowsChain, label: 'Stablecoin Flows' },
+  { category: 'tvl', chain: tvlChain, label: 'TVL' },
+  { category: 'defi-yields', chain: defiYieldsChain, label: 'DeFi Yields' },
+];
+
+// ---------------------------------------------------------------------------
+// Initialization
+// ---------------------------------------------------------------------------
+
+let _initialized = false;
+
+/**
+ * Register all provider chains with the global registry.
+ *
+ * Safe to call multiple times — subsequent calls are no-ops.
+ */
+export function initProviders(): void {
+  if (_initialized) return;
+  _initialized = true;
+
+  const registered: string[] = [];
+
+  for (const { category, chain, label } of CHAINS) {
+    try {
+      registry.register(category, chain);
+      registered.push(label);
+    } catch (err) {
+       
+      console.warn(`[providers] Failed to register "${label}":`, err);
+    }
+  }
+
+   
+  console.log(
+    `[providers] Initialized ${registered.length}/${CHAINS.length} chains: ${registered.join(', ')}`,
+  );
+}
+
+/**
+ * Check whether providers have been initialized.
+ */
+export function isProvidersInitialized(): boolean {
+  return _initialized;
+}
+
+/**
+ * Get a summary of all registered provider chains and their health.
+ */
+export async function getProvidersSummary(): Promise<ProviderSummary[]> {
+  const overview = registry.statusOverview();
+  return overview.map((entry) => ({
+    category: entry.category,
+    name: entry.name,
+    status: entry.status,
+    providerCount: entry.providers,
+    available: entry.available,
+  }));
+}
+
+export interface ProviderSummary {
+  category: string;
+  name: string;
+  status: string;
+  providerCount: number;
+  available: boolean;
+}

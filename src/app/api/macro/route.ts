@@ -1,0 +1,36 @@
+/**
+ * GET /api/macro
+ *
+ * Returns macro/tradfi indicators (DXY, VIX, S&P 500, NASDAQ, Gold, Oil,
+ * Treasury yields, Fed Funds rate) plus a composite risk-appetite score.
+ *
+ * Uses the macro provider chain (FRED + Alpha Vantage + Twelve Data).
+ */
+
+import { NextResponse } from 'next/server';
+import { macroChain } from '@/lib/providers/adapters/macro';
+
+export const revalidate = 300;
+
+export async function GET() {
+  try {
+    const result = await macroChain.fetch({});
+
+    return NextResponse.json({
+      ...result.data,
+      _lineage: result.lineage,
+      _cached: result.cached,
+      _latencyMs: result.latencyMs,
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+      },
+    });
+  } catch (error) {
+    console.error('[Macro] Fetch error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch macro data', message: error instanceof Error ? error.message : 'Unknown' },
+      { status: 502 },
+    );
+  }
+}

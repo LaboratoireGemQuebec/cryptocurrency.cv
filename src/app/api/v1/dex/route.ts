@@ -142,7 +142,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('DEX fetch failed', { error: String(error) });
-    throw new ApiError('Failed to fetch DEX data', 502, 'DEX_FETCH_FAILED');
+    return ApiError.internal('Failed to fetch DEX data');
   }
 }
 

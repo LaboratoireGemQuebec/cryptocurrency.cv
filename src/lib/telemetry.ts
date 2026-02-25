@@ -159,15 +159,11 @@ export async function initTelemetry(): Promise<void> {
 
   try {
     // Dynamic imports to avoid bundling OTel in Edge/client builds
-    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { NodeSDK } = await import('@opentelemetry/sdk-node');
     const { Resource } = await import('@opentelemetry/resources');
     const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } = await import('@opentelemetry/semantic-conventions');
-    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { OTLPTraceExporter } = await import('@opentelemetry/exporter-trace-otlp-http');
-    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { OTLPMetricExporter } = await import('@opentelemetry/exporter-metrics-otlp-http');
-    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics');
     const otelApi = await import('@opentelemetry/api');
 
@@ -175,7 +171,7 @@ export async function initTelemetry(): Promise<void> {
       [ATTR_SERVICE_NAME]: process.env.OTEL_SERVICE_NAME || 'free-crypto-news',
       [ATTR_SERVICE_VERSION]: process.env.npm_package_version || '2.0.0',
       'deployment.environment': process.env.NODE_ENV || 'development',
-    });
+    }) as any;
 
     const traceExporter = new OTLPTraceExporter({
       url: otlpEndpoint ? `${otlpEndpoint}/v1/traces` : undefined,
