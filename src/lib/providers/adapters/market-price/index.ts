@@ -67,8 +67,8 @@ export interface MarketPriceChainOptions {
   strategy?: ResolutionStrategy;
   /** Cache TTL in seconds. Default: 30 */
   cacheTtlSeconds?: number;
-  /** Stale tolerance in seconds. Default: 120 */
-  staleTtlSeconds?: number;
+  /** Whether to serve stale cache on total failure. Default: true */
+  staleWhileError?: boolean;
   /** Maximum deviation between providers before flagging anomaly. Default: 0.03 (3%) */
   maxDeviation?: number;
   /** Whether to include Binance adapter. Default: true */
@@ -93,7 +93,7 @@ export function createMarketPriceChain(
   const {
     strategy = 'fallback',
     cacheTtlSeconds = 30,
-    staleTtlSeconds = 120,
+    staleWhileError = true,
     maxDeviation = 0.03,
     includeBinance = true,
     includeCoinCap = true,
@@ -102,6 +102,7 @@ export function createMarketPriceChain(
   const config: Partial<ProviderChainConfig> = {
     strategy,
     cacheTtlSeconds,
+    staleWhileError,
     maxDeviation,
   };
 
