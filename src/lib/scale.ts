@@ -199,7 +199,6 @@ export class FetchPool {
     try {
       return await fetch(url, {
         ...init,
-        // @ts-expect-error -- Node.js keepalive option
         keepalive: true,
       });
     } finally {

@@ -1015,6 +1015,258 @@ const RSS_SOURCES = {
     url: 'https://www.aljazeera.com/xml/rss/all.xml',
     category: 'geopolitical',
   },
+
+  // =========================================================================
+  // ADDITIONAL SOURCES — Scaling to 200+
+  // =========================================================================
+
+  // Exchange Blogs
+  kraken_blog: {
+    name: 'Kraken Blog',
+    url: 'https://blog.kraken.com/feed/',
+    category: 'institutional',
+  },
+  okx_blog: {
+    name: 'OKX Blog',
+    url: 'https://www.okx.com/academy/en/feed',
+    category: 'institutional',
+  },
+  bybit_blog: {
+    name: 'Bybit Blog',
+    url: 'https://blog.bybit.com/feed/',
+    category: 'institutional',
+  },
+  bitfinex_blog: {
+    name: 'Bitfinex Blog',
+    url: 'https://blog.bitfinex.com/feed/',
+    category: 'institutional',
+  },
+  gemini_blog: {
+    name: 'Gemini Blog',
+    url: 'https://www.gemini.com/blog/feed',
+    category: 'institutional',
+  },
+
+  // DeFi Protocols
+  lido_blog: {
+    name: 'Lido Blog',
+    url: 'https://blog.lido.fi/rss/',
+    category: 'defi',
+  },
+  curve_blog: {
+    name: 'Curve Blog',
+    url: 'https://news.curve.fi/rss/',
+    category: 'defi',
+  },
+  eigenlayer_blog: {
+    name: 'EigenLayer Blog',
+    url: 'https://www.blog.eigenlayer.xyz/rss/',
+    category: 'defi',
+  },
+  pendle_blog: {
+    name: 'Pendle Blog',
+    url: 'https://medium.com/feed/pendle',
+    category: 'defi',
+  },
+  ethena_blog: {
+    name: 'Ethena Blog',
+    url: 'https://mirror.xyz/ethena/feed/atom',
+    category: 'defi',
+  },
+
+  // Layer 2 & Rollups
+  scroll_blog: {
+    name: 'Scroll Blog',
+    url: 'https://scroll.io/blog/feed',
+    category: 'layer2',
+  },
+  linea_blog: {
+    name: 'Linea Blog',
+    url: 'https://linea.mirror.xyz/feed/atom',
+    category: 'layer2',
+  },
+  mantle_blog: {
+    name: 'Mantle Blog',
+    url: 'https://www.mantle.xyz/blog/feed',
+    category: 'layer2',
+  },
+  blast_blog: {
+    name: 'Blast Blog',
+    url: 'https://mirror.xyz/blastofficial.eth/feed/atom',
+    category: 'layer2',
+  },
+
+  // Alt L1 Ecosystem Extended
+  ton_blog: {
+    name: 'TON Blog',
+    url: 'https://blog.ton.org/rss.xml',
+    category: 'altl1',
+  },
+  sei_blog: {
+    name: 'Sei Blog',
+    url: 'https://blog.sei.io/rss/',
+    category: 'altl1',
+  },
+  injective_blog: {
+    name: 'Injective Blog',
+    url: 'https://blog.injective.com/feed/',
+    category: 'altl1',
+  },
+  monad_blog: {
+    name: 'Monad Blog',
+    url: 'https://www.monad.xyz/blog/feed',
+    category: 'altl1',
+  },
+  celestia_blog: {
+    name: 'Celestia Blog',
+    url: 'https://blog.celestia.org/rss/',
+    category: 'altl1',
+  },
+
+  // Bitcoin Ecosystem Extended
+  bisq_blog: {
+    name: 'Bisq Blog',
+    url: 'https://bisq.network/blog/feed.xml',
+    category: 'bitcoin',
+  },
+  rgb_blog: {
+    name: 'RGB Blog',
+    url: 'https://rgb.tech/blog/feed',
+    category: 'bitcoin',
+  },
+  nostr_blog: {
+    name: 'Nostr Protocol',
+    url: 'https://nostr.com/feed.xml',
+    category: 'bitcoin',
+  },
+
+  // Privacy & ZK
+  zcash_blog: {
+    name: 'Zcash Blog',
+    url: 'https://electriccoin.co/blog/feed/',
+    category: 'security',
+  },
+  aztec_blog: {
+    name: 'Aztec Blog',
+    url: 'https://medium.com/feed/aztec-protocol',
+    category: 'layer2',
+  },
+
+  // RWA (Real World Assets)
+  maple_finance: {
+    name: 'Maple Finance Blog',
+    url: 'https://maple.finance/blog/rss.xml',
+    category: 'defi',
+  },
+  centrifuge_blog: {
+    name: 'Centrifuge Blog',
+    url: 'https://medium.com/feed/centrifuge',
+    category: 'defi',
+  },
+  ondo_finance: {
+    name: 'Ondo Finance Blog',
+    url: 'https://blog.ondo.finance/rss/',
+    category: 'defi',
+  },
+
+  // AI x Crypto
+  fetch_ai_blog: {
+    name: 'Fetch.ai Blog',
+    url: 'https://fetch.ai/blog/feed',
+    category: 'altl1',
+  },
+  ocean_protocol: {
+    name: 'Ocean Protocol Blog',
+    url: 'https://blog.oceanprotocol.com/feed',
+    category: 'altl1',
+  },
+  render_blog: {
+    name: 'Render Network Blog',
+    url: 'https://medium.com/feed/render-token',
+    category: 'altl1',
+  },
+
+  // Oracles & Infrastructure
+  pyth_blog: {
+    name: 'Pyth Network Blog',
+    url: 'https://pyth.network/blog/feed',
+    category: 'developer',
+  },
+  api3_blog: {
+    name: 'API3 Blog',
+    url: 'https://medium.com/feed/api3',
+    category: 'developer',
+  },
+
+  // Governance & DAOs
+  snapshot_blog: {
+    name: 'Snapshot Blog',
+    url: 'https://snapshot.mirror.xyz/feed/atom',
+    category: 'defi',
+  },
+  tally_blog: {
+    name: 'Tally Blog',
+    url: 'https://blog.tally.xyz/feed',
+    category: 'defi',
+  },
+
+  // Security Extended
+  chainalysis_blog: {
+    name: 'Chainalysis Blog',
+    url: 'https://www.chainalysis.com/blog/feed/',
+    category: 'security',
+  },
+  elliptic_blog: {
+    name: 'Elliptic Blog',
+    url: 'https://www.elliptic.co/blog/rss.xml',
+    category: 'security',
+  },
+  hacken_blog: {
+    name: 'Hacken Blog',
+    url: 'https://hacken.io/blog/feed/',
+    category: 'security',
+  },
+
+  // Payments & Stablecoins Extended
+  stripe_crypto: {
+    name: 'Stripe Blog (Crypto)',
+    url: 'https://stripe.com/blog/feed.rss',
+    category: 'fintech',
+  },
+  paypal_newsroom: {
+    name: 'PayPal Newsroom',
+    url: 'https://newsroom.paypal-corp.com/feed',
+    category: 'fintech',
+  },
+
+  // Derivatives Extended
+  coinglass_blog: {
+    name: 'CoinGlass Blog',
+    url: 'https://www.coinglass.com/blog/feed',
+    category: 'derivatives',
+  },
+
+  // Podcasts (show notes via RSS)
+  unchained_podcast: {
+    name: 'Unchained Podcast',
+    url: 'https://feeds.simplecast.com/JGE3yC0V',
+    category: 'journalism',
+  },
+  what_bitcoin_did: {
+    name: 'What Bitcoin Did',
+    url: 'https://feeds.simplecast.com/dsMGZxro',
+    category: 'bitcoin',
+  },
+  bankless_podcast: {
+    name: 'Bankless Podcast',
+    url: 'https://feeds.simplecast.com/lKmQdc05',
+    category: 'defi',
+  },
+  epicenter_podcast: {
+    name: 'Epicenter Podcast',
+    url: 'https://feeds.simplecast.com/0E5u4F_4',
+    category: 'general',
+  },
 } as const;
 
 type SourceKey = keyof typeof RSS_SOURCES;

@@ -52,91 +52,58 @@ import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
 // =============================================================================
 
 // Market data
-registry.register('market-price', {
-  category: 'market-price',
-  name: 'Market Prices',
+registry.register('market-price', marketPriceChain, {
   description: 'Real-time crypto prices from CoinGecko, CoinCap, Binance',
-  chain: marketPriceChain,
 });
 
 // DEX data
-registry.register('dex', {
-  category: 'dex',
-  name: 'DEX Pairs',
+registry.register('dex', dexChain, {
   description: 'DEX pair data from DexScreener and GeckoTerminal',
-  chain: dexChain,
 });
 
 // Fear & Greed Index
-registry.register('fear-greed', {
-  category: 'fear-greed',
-  name: 'Fear & Greed Index',
+registry.register('fear-greed', fearGreedChain, {
   description: 'Crypto market sentiment from Alternative.me and CoinStats',
-  chain: fearGreedChain,
 });
 
 // Funding Rates
-registry.register('funding-rate', {
-  category: 'funding-rate',
-  name: 'Funding Rates',
+registry.register('funding-rate', fundingRateChain, {
   description: 'Perpetual funding rates from Binance, Bybit, OKX',
-  chain: fundingRateChain,
 });
 
 // Gas Fees
-registry.register('gas-fees', {
-  category: 'gas-fees',
-  name: 'Gas Fees',
+registry.register('gas-fees', gasChain, {
   description: 'Ethereum gas prices from Etherscan and Blocknative',
-  chain: gasChain,
 });
 
 // TVL
-registry.register('tvl', {
-  category: 'tvl',
-  name: 'Total Value Locked',
+registry.register('tvl', tvlChain, {
   description: 'DeFi protocol TVL from DefiLlama',
-  chain: tvlChain,
 });
 
 // DeFi Yields
-registry.register('defi-yields', {
-  category: 'defi-yields',
-  name: 'DeFi Yields',
+registry.register('defi-yields', defiYieldsChain, {
   description: 'Yield and APY data from DefiLlama Yields',
-  chain: defiYieldsChain,
 });
 
 // Derivatives (Open Interest, Liquidations)
-registry.register('derivatives', {
-  category: 'derivatives',
-  name: 'Derivatives',
+registry.register('derivatives', derivativesChain, {
   description: 'Open interest and liquidation data from Hyperliquid and CoinGlass',
-  chain: derivativesChain,
 });
 
 // On-chain Metrics
-registry.register('on-chain', {
-  category: 'on-chain',
-  name: 'On-Chain Metrics',
+registry.register('on-chain', onChainChain, {
   description: 'Bitcoin and Ethereum on-chain data from Blockchain.info, Mempool.space, Etherscan',
-  chain: onChainChain,
 });
 
 // Social Metrics
-registry.register('social-metrics', {
-  category: 'social-metrics',
-  name: 'Social Metrics',
+registry.register('social-metrics', socialChain, {
   description: 'Social intelligence from LunarCrush (Galaxy Score, sentiment, social volume)',
-  chain: socialChain,
 });
 
 // Stablecoin Flows
-registry.register('stablecoin-flows', {
-  category: 'stablecoin-flows',
-  name: 'Stablecoin Flows',
+registry.register('stablecoin-flows', stablecoinFlowsChain, {
   description: 'Stablecoin supply and chain distribution from DefiLlama',
-  chain: stablecoinFlowsChain,
 });
 
 // =============================================================================
