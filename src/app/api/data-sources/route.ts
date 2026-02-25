@@ -6,7 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { listDataSources, listDataSourcesByCategory, healthCheckAll, type DataSourceCategory } from '@/lib/data-sources';
+import { listDataSources, listDataSourcesByCategory, healthCheckAll, type DataSourceCategory } from '@/lib/data-sources/index';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     // Health check endpoint
     if (action === 'health') {
       const health = await healthCheckAll();
-      const healthy = health.filter((h) => h.ok).length;
+      const healthy = health.filter((h: { ok: boolean }) => h.ok).length;
       return NextResponse.json({
         status: 'ok',
         totalSources: health.length,
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     // Default: list all
     const sources = listDataSources();
     const byCategory = CATEGORIES.reduce((acc, cat) => {
-      const catSources = sources.filter((s) => s.category === cat);
+      const catSources = sources.filter((s: { category: string }) => s.category === cat);
       if (catSources.length > 0) acc[cat] = catSources.length;
       return acc;
     }, {} as Record<string, number>);

@@ -123,7 +123,7 @@ export interface L2Data {
  * Get TVL for all protocols, ranked by size
  */
 export async function getProtocolsTVL(limit = 100): Promise<ProtocolTVL[]> {
-  const data = await defillama.fetch<any[]>('/protocols');
+  const data = await defillama.fetch('/protocols') as any[];
   return data
     .slice(0, limit)
     .map((p) => ({
@@ -143,8 +143,8 @@ export async function getProtocolsTVL(limit = 100): Promise<ProtocolTVL[]> {
  * Get TVL by chain
  */
 export async function getChainsTVL(): Promise<ChainTVL[]> {
-  const data = await defillama.fetch<any[]>('/v2/chains');
-  return data.map((c) => ({
+  const data = await defillama.fetch('/v2/chains') as any[];
+  return data.map((c: any) => ({
     name: c.name,
     tvl: c.tvl || 0,
     tokenSymbol: c.tokenSymbol,
@@ -172,7 +172,7 @@ export async function getChainDetail(chain: string): Promise<any> {
  * Get total TVL of all DeFi
  */
 export async function getGlobalTVL(): Promise<{ tvl: number; date: number }[]> {
-  return defillama.fetch('/v2/historicalChainTvl');
+  return defillama.fetch('/v2/historicalChainTvl') as Promise<{ tvl: number; date: number }[]>;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -191,7 +191,7 @@ export async function getYieldPools(options?: {
   maxApy?: number;
   limit?: number;
 }): Promise<YieldPool[]> {
-  const response = await defillamaYields.fetch<{ status: string; data: any[] }>('/pools');
+  const response = await defillamaYields.fetch('/pools') as { status: string; data: any[] };
   let pools = response.data || [];
 
   if (options?.chain) {
@@ -238,11 +238,11 @@ export async function getYieldPools(options?: {
  * Get all stablecoins with circulation data
  */
 export async function getStablecoins(): Promise<StablecoinData[]> {
-  const data = await defillamaStablecoins.fetch<{
+  const data = await defillamaStablecoins.fetch('/stablecoins?includePrices=true') as {
     peggedAssets: any[];
-  }>('/stablecoins?includePrices=true');
+  };
 
-  return (data.peggedAssets || []).map((s) => ({
+  return (data.peggedAssets || []).map((s: any) => ({
     id: s.id,
     name: s.name,
     symbol: s.symbol,
@@ -263,7 +263,7 @@ export async function getStablecoinCharts(
   const endpoint = stablecoinId
     ? `/stablecoincharts/all?stablecoin=${stablecoinId}`
     : '/stablecoincharts/all';
-  return defillamaStablecoins.fetch(endpoint);
+  return defillamaStablecoins.fetch(endpoint) as Promise<{ date: number; totalCirculatingUSD: number }[]>;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -274,8 +274,8 @@ export async function getStablecoinCharts(
  * Get bridge volumes
  */
 export async function getBridges(): Promise<BridgeVolume[]> {
-  const data = await defillamaBridges.fetch<{ bridges: any[] }>('/bridges?includeChains=true');
-  return (data.bridges || []).map((b) => ({
+  const data = await defillamaBridges.fetch('/bridges?includeChains=true') as { bridges: any[] };
+  return (data.bridges || []).map((b: any) => ({
     id: b.id,
     name: b.name,
     displayName: b.displayName,
@@ -295,8 +295,8 @@ export async function getBridges(): Promise<BridgeVolume[]> {
  * Get protocol fees and revenue rankings
  */
 export async function getProtocolFees(limit = 50): Promise<ProtocolRevenue[]> {
-  const data = await defillamaFees.fetch<{ protocols: any[] }>('/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true');
-  return (data.protocols || []).slice(0, limit).map((p) => ({
+  const data = await defillamaFees.fetch('/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: any[] };
+  return (data.protocols || []).slice(0, limit).map((p: any) => ({
     name: p.name,
     slug: p.slug || p.module,
     totalFees24h: p.total24h || 0,
@@ -314,8 +314,8 @@ export async function getProtocolFees(limit = 50): Promise<ProtocolRevenue[]> {
  * Get DEX volume rankings
  */
 export async function getDEXVolumes(limit = 50): Promise<any[]> {
-  const data = await defillamaVolumes.fetch<{ protocols: any[] }>('/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true');
-  return (data.protocols || []).slice(0, limit).map((p) => ({
+  const data = await defillamaVolumes.fetch('/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: any[] };
+  return (data.protocols || []).slice(0, limit).map((p: any) => ({
     name: p.name,
     slug: p.slug || p.module,
     volume24h: p.total24h || 0,
@@ -335,7 +335,7 @@ export async function getDEXVolumes(limit = 50): Promise<any[]> {
  * Search pairs by token name or symbol
  */
 export async function searchDEXPairs(query: string): Promise<DEXPair[]> {
-  const data = await dexscreener.fetch<{ pairs: any[] }>(`/dex/search/?q=${encodeURIComponent(query)}`);
+  const data = await dexscreener.fetch(`/dex/search/?q=${encodeURIComponent(query)}`) as { pairs: any[] };
   return (data.pairs || []).map(normalizeDexPair);
 }
 
@@ -343,7 +343,7 @@ export async function searchDEXPairs(query: string): Promise<DEXPair[]> {
  * Get pair data by chain and pair address
  */
 export async function getDEXPairByAddress(chain: string, pairAddress: string): Promise<DEXPair | null> {
-  const data = await dexscreener.fetch<{ pairs: any[] }>(`/dex/pairs/${chain}/${pairAddress}`);
+  const data = await dexscreener.fetch(`/dex/pairs/${chain}/${pairAddress}`) as { pairs: any[] };
   if (!data.pairs?.length) return null;
   return normalizeDexPair(data.pairs[0]);
 }
@@ -352,7 +352,7 @@ export async function getDEXPairByAddress(chain: string, pairAddress: string): P
  * Get token info from multiple DEX sources
  */
 export async function getTokenDEXData(tokenAddress: string): Promise<DEXPair[]> {
-  const data = await dexscreener.fetch<{ pairs: any[] }>(`/dex/tokens/${tokenAddress}`);
+  const data = await dexscreener.fetch(`/dex/tokens/${tokenAddress}`) as { pairs: any[] };
   return (data.pairs || []).map(normalizeDexPair);
 }
 
@@ -382,7 +382,7 @@ export async function getTrendingPools(network?: string): Promise<any[]> {
   const endpoint = network
     ? `/networks/${network}/trending_pools`
     : '/networks/trending_pools';
-  const data = await geckoterminal.fetch<{ data: any[] }>(endpoint);
+  const data = await geckoterminal.fetch(endpoint) as { data: any[] };
   return (data.data || []).map((p: any) => ({
     id: p.id,
     ...p.attributes,
@@ -396,7 +396,7 @@ export async function getNewPools(network?: string): Promise<any[]> {
   const endpoint = network
     ? `/networks/${network}/new_pools`
     : '/networks/new_pools';
-  const data = await geckoterminal.fetch<{ data: any[] }>(endpoint);
+  const data = await geckoterminal.fetch(endpoint) as { data: any[] };
   return (data.data || []).map((p: any) => ({
     id: p.id,
     ...p.attributes,
@@ -412,7 +412,7 @@ export async function getNewPools(network?: string): Promise<any[]> {
  */
 export async function getL2ScalingData(): Promise<L2Data[]> {
   try {
-    const data = await l2beat.fetch<{ data: { projects: any[] } }>('/scaling/summary');
+    const data = await l2beat.fetch('/scaling/summary') as { data: { projects: any[] } };
     return (data.data?.projects || []).map((p: any) => ({
       name: p.name,
       tvl: p.tvl?.canonical || 0,

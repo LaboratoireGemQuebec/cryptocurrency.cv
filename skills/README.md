@@ -13,6 +13,10 @@ Each skill is a self-contained folder with a `SKILL.md` that teaches AI agents (
 | [coin-research](./coin-research/) | Full research brief on any coin using news + market data | Intermediate |
 | [rug-pull-news-check](./rug-pull-news-check/) | Assess project credibility using news-layer signals | Beginner |
 | [historical-trend-analysis](./historical-trend-analysis/) | Mine the archive for patterns, cycle positioning, and historical parallels | Advanced |
+| [scale-to-1m](./scale-to-1m/) | 10-prompt playbook to scale infrastructure for 1M+ concurrent users | Advanced |
+| [add-data-sources](./add-data-sources/) | 20-prompt playbook to integrate 70+ crypto data sources across 25 categories | Advanced |
+
+Also see [SCALING-PROMPTS.md](./SCALING-PROMPTS.md) for the master scaling reference.
 
 ## Using in Claude Code
 

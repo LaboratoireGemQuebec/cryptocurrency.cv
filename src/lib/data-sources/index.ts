@@ -51,7 +51,7 @@ export type DataSourceCategory =
 
 export interface DataSourceAdapter<T = unknown> {
   readonly config: DataSourceConfig;
-  fetch(endpoint: string, params?: Record<string, string>): Promise<T>;
+  fetch<R = T>(endpoint: string, params?: Record<string, string>): Promise<R>;
   healthCheck(): Promise<{ ok: boolean; latencyMs: number }>;
 }
 
