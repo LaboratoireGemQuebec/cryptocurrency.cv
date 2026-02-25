@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 import { isKvConfigured, ApiKeyData } from '@/lib/api-keys';
 import { requireAdminAuth } from '@/lib/admin-auth';
+import { API_TIERS } from '@/lib/x402/pricing';
 
 export const runtime = 'nodejs';
 
@@ -34,6 +35,61 @@ async function getAllApiKeys(): Promise<ApiKeyData[]> {
   } catch (error) {
     console.error('Failed to fetch API keys:', error);
     return [];
+  }
+}
+
+/**
+ * Get live usage counts from KV for a given key ID
+ */
+async function getKeyUsageFromKV(keyId: string): Promise<{
+  today: number;
+  month: number;
+  allTime: number;
+}> {
+  try {
+    const now = new Date();
+    const today = now.toISOString().split('T')[0];
+    const month = today.substring(0, 7);
+
+    const [todayCount, monthCount, allTimeCount] = await Promise.all([
+      kv.get<number>(`usage:${keyId}:${today}`),
+      kv.get<number>(`usage:${keyId}:${month}`),
+      kv.get<number>(`usage:${keyId}:total`),
+    ]);
+
+    return {
+      today: todayCount ?? 0,
+      month: monthCount ?? 0,
+      allTime: allTimeCount ?? 0,
+    };
+  } catch {
+    return { today: 0, month: 0, allTime: 0 };
+  }
+}
+
+/**
+ * Get global platform stats from KV
+ */
+async function getGlobalStats(): Promise<{
+  requestsToday: number;
+  requestsThisMonth: number;
+}> {
+  try {
+    const now = new Date();
+    const today = now.toISOString().split('T')[0];
+    const month = today.substring(0, 7);
+
+    const [todayCount, monthCount] = await Promise.all([
+      kv.get<number>(`stats:requests:${today}`),
+      kv.get<number>(`stats:requests:${month}`),
+    ]);
+
+    return {
+      requestsToday: todayCount ?? 0,
+      requestsThisMonth: monthCount ?? 0,
+    };
+  } catch {
+    return { requestsToday: 0, requestsThisMonth: 0 };
   }
 }
 
@@ -119,21 +175,47 @@ export async function GET(request: NextRequest) {
     const offset = (page - 1) * limit;
     const paginatedKeys = keys.slice(offset, offset + limit);
 
-    // Return sanitized key data (no hashed keys exposed)
-    const sanitizedKeys = paginatedKeys.map((k) => ({
-      id: k.id,
-      keyPrefix: k.keyPrefix,
-      name: k.name,
-      email: k.email,
-      tier: k.tier,
-      permissions: k.permissions,
-      rateLimit: k.rateLimit,
-      usageToday: k.usageToday || 0,
-      usageMonth: k.usageMonth || 0,
-      createdAt: k.createdAt,
-      lastUsedAt: k.lastUsedAt,
-      active: k.active,
-    }));
+    // Return sanitized key data with live usage (no hashed keys exposed)
+    const sanitizedKeysPromises = paginatedKeys.map(async (k) => {
+      const liveUsage = await getKeyUsageFromKV(k.id);
+      return {
+        id: k.id,
+        keyPrefix: k.keyPrefix,
+        name: k.name,
+        email: k.email,
+        tier: k.tier,
+        permissions: k.permissions,
+        rateLimit: k.rateLimit,
+        usageToday: liveUsage.today || k.usageToday || 0,
+        usageMonth: liveUsage.month || k.usageMonth || 0,
+        usageAllTime: liveUsage.allTime,
+        createdAt: k.createdAt,
+        lastUsedAt: k.lastUsedAt,
+        expiresAt: k.expiresAt,
+        active: k.active,
+      };
+    });
+    const sanitizedKeys = await Promise.all(sanitizedKeysPromises);
+
+    // Calculate revenue estimates
+    const tierPrices: Record<string, number> = {};
+    for (const [id, cfg] of Object.entries(API_TIERS)) {
+      tierPrices[id] = (cfg as any).price ?? 0;
+    }
+
+    const allKeys = keys; // full unfiltered list for revenue calc
+    const totalByTier = {
+      free: allKeys.filter((k) => k.tier === 'free' && k.active).length,
+      pro: allKeys.filter((k) => k.tier === 'pro' && k.active).length,
+      enterprise: allKeys.filter((k) => k.tier === 'enterprise' && k.active).length,
+    };
+
+    const mrr = // Monthly Recurring Revenue
+      totalByTier.pro * (tierPrices.pro ?? 29) +
+      totalByTier.enterprise * (tierPrices.enterprise ?? 99);
+
+    // Global platform stats
+    const globalStats = await getGlobalStats();
 
     return NextResponse.json({
       keys: sanitizedKeys,
@@ -151,6 +233,24 @@ export async function GET(request: NextRequest) {
         status: status || null,
         sortBy,
         sortOrder: sortOrder === 1 ? 'asc' : 'desc',
+      },
+      summary: {
+        totalKeys: allKeys.length,
+        activeKeys: allKeys.filter((k) => k.active).length,
+        byTier: totalByTier,
+      },
+      revenue: {
+        mrr,
+        arr: mrr * 12,
+        currency: 'USD',
+        breakdown: {
+          pro: { count: totalByTier.pro, pricePerMonth: tierPrices.pro ?? 29, total: totalByTier.pro * (tierPrices.pro ?? 29) },
+          enterprise: { count: totalByTier.enterprise, pricePerMonth: tierPrices.enterprise ?? 99, total: totalByTier.enterprise * (tierPrices.enterprise ?? 99) },
+        },
+      },
+      platform: {
+        requestsToday: globalStats.requestsToday,
+        requestsThisMonth: globalStats.requestsThisMonth,
       },
     });
   } catch (error) {

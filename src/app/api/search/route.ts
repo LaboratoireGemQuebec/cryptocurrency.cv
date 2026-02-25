@@ -5,6 +5,7 @@ import { validateQuery } from '@/lib/validation-middleware';
 import { searchQuerySchema } from '@/lib/schemas';
 import { ApiError } from '@/lib/api-error';
 import { generateEmbedding, cosineSimilarity } from '@/lib/embeddings';
+import { isDbAvailable, pgFullTextSearch } from '@/lib/db/queries';
 
 export const runtime = 'edge';
 
@@ -140,6 +141,57 @@ export async function GET(request: NextRequest) {
         );
       }
       // Fall through to keyword search if KV/API unavailable
+    } catch {
+      // Non-fatal — fall through to keyword search
+    }
+  }
+
+  // --- Postgres full-text search (if DATABASE_URL is configured) ---
+  if (isDbAvailable()) {
+    try {
+      const pgResult = await pgFullTextSearch(sanitizedQuery, { limit });
+      if (pgResult.total > 0) {
+        let pgArticles: unknown[] = pgResult.results.map((r) => ({
+          title: r.title,
+          link: r.link,
+          description: r.description,
+          pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
+          source: r.source,
+          sourceKey: r.sourceKey,
+          tickers: r.tickers,
+          tags: r.tags,
+          sentiment: r.sentimentLabel,
+          relevance: r.rank,
+        }));
+        let pgLang = 'en';
+
+        if (lang !== 'en' && pgArticles.length > 0) {
+          try {
+            pgArticles = await translateArticles(pgArticles as any, lang);
+            pgLang = lang;
+          } catch {
+            // continue with original articles
+          }
+        }
+
+        return NextResponse.json(
+          {
+            query: sanitizedQuery,
+            total: pgResult.total,
+            search_type: 'fulltext',
+            articles: pgArticles,
+            lang: pgLang,
+            availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+          },
+          {
+            headers: {
+              'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+              'Access-Control-Allow-Origin': '*',
+            },
+          }
+        );
+      }
+      // Fall through to keyword search if no FTS results
     } catch {
       // Non-fatal — fall through to keyword search
     }

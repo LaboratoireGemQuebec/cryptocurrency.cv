@@ -54,14 +54,17 @@ export async function GET() {
       id,
       name: tier.name,
       requestsPerDay: tier.requestsPerDay === -1 ? 'Unlimited' : tier.requestsPerDay,
+      requestsPerMinute: tier.requestsPerMinute,
       features: tier.features,
     })),
 
     notes: [
-      'Free tier: 100 requests/day',
+      'Free tier: 1,000 requests/day, 3 results per response, no AI endpoints',
+      'Pro tier: 50,000 requests/day, full results, AI access — $29/mo',
+      'Enterprise: 500,000 requests/day, priority routing, SLA — $99/mo',
       'Maximum 3 keys per email',
       'Keep your API key secret',
-      'Upgrade to Pro for 10,000 requests/day',
+      'Upgrade via /api/keys/upgrade with x402 USDC payment on Base',
     ],
 
     configured: isKvConfigured(),
@@ -140,14 +143,30 @@ export async function POST(request: NextRequest) {
       details: {
         id: result.data.id,
         tier: result.data.tier,
+        email: result.data.email,
         rateLimit: `${result.data.rateLimit} requests/day`,
+        maxResultsPerResponse: result.data.tier === 'free' ? 3 : 'unlimited',
         permissions: result.data.permissions,
+        createdAt: result.data.createdAt,
+      },
+
+      limits: {
+        requestsPerDay: result.data.rateLimit,
+        maxResults: result.data.tier === 'free' ? 3 : null,
+        aiAccess: result.data.tier !== 'free',
+        webhookSupport: result.data.tier !== 'free',
       },
 
       usage: {
         header: 'X-API-Key: ' + result.key,
         queryParam: '?api_key=' + result.key,
         example: `curl -H "X-API-Key: ${result.key}" https://your-domain.com/api/v1/coins`,
+      },
+
+      endpoints: {
+        usage: '/api/keys/usage',
+        rotate: '/api/keys/rotate',
+        upgrade: '/api/keys/upgrade',
       },
 
       docs: '/docs/api',

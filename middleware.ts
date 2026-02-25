@@ -152,6 +152,8 @@ const EXEMPT_PATTERNS = [
   /^\/api\/sse/,
   /^\/api\/ws/,
   /^\/api\/internal/,   // internal snapshot writer — same-origin only
+  /^\/api\/register$/,  // API key registration — must be free
+  /^\/api\/keys\//,     // Key management (usage, rotate, upgrade) — auth via key itself
 ];
 
 const MAX_BODY_SIZE = 10 * 1024 * 1024;
@@ -630,9 +632,11 @@ export default async function middleware(request: NextRequest) {
   //   • EXEMPT_PATTERNS  (health, cron, webhooks, admin, sse, ws)
   //   • FREE_TIER_PATTERNS  (/api/news, /api/prices, /api/batch — rate-limited, degraded)
   //   • Trusted Sperax origins  (bypass entirely)
+  //   • Requests with a valid API key (they already paid via subscription)
   if (
     pathname.startsWith('/api/') &&
     !speraxos &&
+    !resolvedKeyId &&
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
     !matchesPattern(pathname, FREE_TIER_PATTERNS)
   ) {
@@ -650,10 +654,26 @@ export default async function middleware(request: NextRequest) {
   // For free-tier paths, forward X-Free-Tier: 1 so route handlers can degrade results.
   // Also forward X-API-Client: 1 for programmatic consumers so handlers can optimise
   // their response format (e.g. skip HTML-friendly wrappers, enable bulk fields).
-  const isFreeTierRequest = !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS);
+  const isFreeTierRequest = !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS) && !resolvedKeyId;
   const requestHeaders = new Headers(request.headers);
   if (isFreeTierRequest) requestHeaders.set('x-free-tier', '1');
   if (apiClient) requestHeaders.set('x-api-client', '1');
+
+  // Forward tier metadata to route handlers
+  if (resolvedTier) {
+    requestHeaders.set('x-key-tier', resolvedTier);
+    requestHeaders.set('x-key-id', resolvedKeyId || '');
+    // Free tier: cap results at 3 per response
+    if (resolvedTier === 'free') {
+      requestHeaders.set('x-free-tier', '1');
+      requestHeaders.set('x-tier-max-results', FREE_TIER_MAX_RESULTS.toString());
+    }
+    // Enterprise: priority routing + dedicated cache
+    if (resolvedTier === 'enterprise') {
+      requestHeaders.set('x-priority', 'enterprise');
+      headers['X-Priority'] = 'enterprise';
+    }
+  }
 
   const res = NextResponse.next({ request: { headers: requestHeaders } });
   Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
@@ -661,11 +681,20 @@ export default async function middleware(request: NextRequest) {
 
   // Default Cache-Control for API responses that don't set their own.
   // Enables CDN / NGINX proxy_cache to absorb repeat traffic.
+  // Enterprise tier gets a dedicated cache with longer TTL.
   if (pathname.startsWith('/api/') && !res.headers.has('Cache-Control')) {
-    res.headers.set(
-      'Cache-Control',
-      'public, s-maxage=60, stale-while-revalidate=300',
-    );
+    if (resolvedTier === 'enterprise') {
+      res.headers.set(
+        'Cache-Control',
+        'private, s-maxage=30, stale-while-revalidate=120',
+      );
+      res.headers.set('X-Cache-Tier', 'enterprise');
+    } else {
+      res.headers.set(
+        'Cache-Control',
+        'public, s-maxage=60, stale-while-revalidate=300',
+      );
+    }
   }
 
   // Tell downstream CDN caches to vary on the tier marker so API consumers

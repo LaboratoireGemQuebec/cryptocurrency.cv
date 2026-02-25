@@ -77,6 +77,34 @@ export { tokenterminal };
 import * as dune from './dune';
 export { dune };
 
+// Solana Deep Data - Helius (Free tier: 100k req/day)
+import * as helius from './helius';
+export { helius };
+
+// Solana DeFi & Parsing - Shyft (Free tier: 1M calls/mo)
+import * as shyft from './shyft';
+export { shyft };
+
+// Sui L1 Blockchain - Public RPC (Free, no key required)
+import * as sui from './sui';
+export { sui };
+
+// Aptos L1 Blockchain - Public REST API (Free, no key required)
+import * as aptos from './aptos';
+export { aptos };
+
+// On-Chain Intelligence - Arkham Intelligence (Paid)
+import * as arkham from './arkham';
+export { arkham };
+
+// Smart Money Analytics - Nansen (Paid)
+import * as nansen from './nansen';
+export { nansen };
+
+// DEX Aggregation & Prices - 1inch (Paid)
+import * as oneinch from './oneinch';
+export { oneinch };
+
 // Cross-Chain Bridges - DefiLlama Bridges (Free)
 import * as bridges from './bridges';
 export { bridges };
@@ -115,6 +143,10 @@ export const API_STATUS = {
   dexes: { status: 'free', rateLimit: 'generous', cost: '$0' },
   tokenunlocks: { status: 'freemium', rateLimit: 'varies', cost: '$0+' },
   rated: { status: 'free', rateLimit: 'moderate', cost: '$0' },
+  helius: { status: 'freemium', rateLimit: '100k req/day', cost: '$0-$49/mo' },
+  shyft: { status: 'freemium', rateLimit: '100 req/min', cost: '$0-$49/mo' },
+  sui: { status: 'free', rateLimit: 'moderate', cost: '$0' },
+  aptos: { status: 'free', rateLimit: 'moderate', cost: '$0' },
   
   // Paid APIs
   coinmarketcap: { status: 'paid', rateLimit: '30 calls/min', cost: '$29-299/mo' },
@@ -122,6 +154,9 @@ export const API_STATUS = {
   glassnode: { status: 'paid', rateLimit: 'varies', cost: '$29-799/mo' },
   cryptoquant: { status: 'paid', rateLimit: 'varies', cost: '$49/mo' },
   thegraph: { status: 'paid', rateLimit: 'unlimited', cost: 'pay per query' },
+  arkham: { status: 'paid', rateLimit: 'varies', cost: 'paid' },
+  nansen: { status: 'paid', rateLimit: 'varies', cost: 'paid' },
+  oneinch: { status: 'paid', rateLimit: 'varies', cost: 'paid' },
 } as const;
 
 export type ApiProvider = keyof typeof API_STATUS;
@@ -140,6 +175,8 @@ export type ApiProvider = keyof typeof API_STATUS;
  * - DefiLlama Bridges: No key required
  * - DefiLlama DEXs: No key required
  * - Rated Network: No key required
+ * - Sui: No key required (fullnode.mainnet.sui.io)
+ * - Aptos: No key required (fullnode.mainnet.aptoslabs.com/v1)
  * 
  * FREEMIUM APIs (free tier with limits):
  * - MESSARI_API_KEY: Messari Research
@@ -152,6 +189,12 @@ export type ApiProvider = keyof typeof API_STATUS;
  * - TOKENTERMINAL_API_KEY: Token Terminal protocol revenue
  * - DUNE_API_KEY: Dune Analytics on-chain SQL
  * - TOKEN_UNLOCKS_API_KEY: Token Unlocks vesting/unlock schedules
+ * - HELIUS_API_KEY: Helius Solana RPC & DAS (100k req/day free)
+ * - SHYFT_API_KEY: Shyft Solana DeFi & parsing (1M calls/mo free)
+ * 
+ * FREE APIs (alt L1s, no key required):
+ * - Sui: Public fullnode RPC (fullnode.mainnet.sui.io)
+ * - Aptos: Public REST API (fullnode.mainnet.aptoslabs.com/v1)
  * 
  * PAID APIs:
  * - COINMARKETCAP_API_KEY: CoinMarketCap Pro
@@ -159,6 +202,10 @@ export type ApiProvider = keyof typeof API_STATUS;
  * - GLASSNODE_API_KEY: Glassnode Analytics
  * - CRYPTOQUANT_API_KEY: CryptoQuant
  * - THEGRAPH_API_KEY: The Graph Protocol
+ * - ARKHAM_API_KEY: Arkham Intelligence on-chain intelligence
+ * - NANSEN_API_KEY: Nansen smart money analytics
+ * - ONEINCH_API_KEY: 1inch DEX aggregation & prices
+ * - TOKEN_TERMINAL_API_KEY: Token Terminal protocol revenue (alt: TOKENTERMINAL_API_KEY)
  * 
  * LEGACY APIs (in /src/lib/):
  * - binance.ts, coincap.ts, coinpaprika.ts, groq.ts, external-apis.ts

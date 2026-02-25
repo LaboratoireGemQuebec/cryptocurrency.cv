@@ -9,6 +9,13 @@ import {
   EnrichedArticle
 } from '@/lib/archive-v2';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import {
+  isDbAvailable,
+  pgQueryArchive,
+  pgGetArchiveStats,
+  pgGetTrendingTickers,
+  pgGetMarketHistory,
+} from '@/lib/db/queries';
 
 export const runtime = 'edge';
 
@@ -41,7 +48,10 @@ export async function GET(request: NextRequest) {
     
     // Check for stats-only request
     if (searchParams.get('stats') === 'true') {
-      const stats = await getArchiveV2Stats();
+      // Prefer Postgres stats, fall back to JSON archive
+      const stats = isDbAvailable()
+        ? await pgGetArchiveStats() ?? await getArchiveV2Stats()
+        : await getArchiveV2Stats();
       
       if (!stats) {
         return NextResponse.json({
@@ -80,7 +90,9 @@ export async function GET(request: NextRequest) {
     // Check for trending tickers request
     if (searchParams.get('trending') === 'true') {
       const hours = parseInt(searchParams.get('hours') || '24');
-      const trending = await getTrendingTickers(Math.min(hours, 72));
+      const trending = isDbAvailable()
+        ? await pgGetTrendingTickers(Math.min(hours, 72))
+        : await getTrendingTickers(Math.min(hours, 72));
       
       return NextResponse.json({
         success: true,
@@ -92,7 +104,9 @@ export async function GET(request: NextRequest) {
     // Check for market history request
     const marketMonth = searchParams.get('market');
     if (marketMonth) {
-      const history = await getMarketHistory(marketMonth);
+      const history = isDbAvailable()
+        ? await pgGetMarketHistory(marketMonth)
+        : await getMarketHistory(marketMonth);
       
       return NextResponse.json({
         success: true,
@@ -152,18 +166,30 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
     
-    // Query archive
-    const result = await queryArchiveV2({
-      startDate,
-      endDate,
-      source,
-      ticker,
-      search,
-      sentiment,
-      tags,
-      limit,
-      offset
-    });
+    // Query archive — prefer Postgres, fall back to JSON/GitHub
+    const result = isDbAvailable()
+      ? await pgQueryArchive({
+          startDate,
+          endDate,
+          source,
+          ticker,
+          search,
+          sentiment,
+          tags,
+          limit,
+          offset
+        })
+      : await queryArchiveV2({
+          startDate,
+          endDate,
+          source,
+          ticker,
+          search,
+          sentiment,
+          tags,
+          limit,
+          offset
+        });
     
     // Format response based on requested format
     let articles: unknown[];
