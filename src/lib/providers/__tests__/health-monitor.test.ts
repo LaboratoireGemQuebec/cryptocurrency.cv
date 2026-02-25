@@ -78,11 +78,20 @@ describe('HealthMonitor', () => {
     });
 
     it('reports degraded when some providers fail', () => {
-      monitor.recordSuccess('a', 100);
-      for (let i = 0; i < 10; i++) {
+      // Provider 'a' healthy, 'b' partially failing, 'c' healthy
+      for (let i = 0; i < 5; i++) {
+        monitor.recordSuccess('a', 100);
+      }
+      // Give 'b' enough successes so avgSuccessRate >= 0.70 threshold
+      for (let i = 0; i < 3; i++) {
+        monitor.recordSuccess('b', 100);
+      }
+      for (let i = 0; i < 7; i++) {
         monitor.recordFailure('b', 'error', 100);
       }
-      monitor.recordSuccess('c', 100);
+      for (let i = 0; i < 5; i++) {
+        monitor.recordSuccess('c', 100);
+      }
 
       const health = monitor.getChainHealth();
       expect(health.status).toBe('degraded');

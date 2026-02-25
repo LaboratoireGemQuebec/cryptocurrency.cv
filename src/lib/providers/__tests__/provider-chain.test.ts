@@ -35,7 +35,7 @@ function createMockProvider<T>(
   const {
     priority = 1,
     weight = 1.0,
-    latency = 10,
+    latency = 0,
     shouldFail = false,
     failMessage = `${name} failed`,
   } = opts;
@@ -48,7 +48,7 @@ function createMockProvider<T>(
     capabilities: ['test'],
 
     async fetch(_params: FetchParams): Promise<T> {
-      await new Promise(resolve => setTimeout(resolve, latency));
+      if (latency > 0) await new Promise(resolve => setTimeout(resolve, latency));
       if (shouldFail) throw new Error(failMessage);
       return data;
     },
@@ -82,9 +82,7 @@ describe('ProviderChain', () => {
       chain.addProvider(createMockProvider('primary', 'primary-data', { priority: 1 }));
       chain.addProvider(createMockProvider('secondary', 'secondary-data', { priority: 2 }));
 
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      const result = await promise;
+      const result = await chain.fetch({});
 
       expect(result.data).toBe('primary-data');
       expect(result.lineage.provider).toBe('primary');
@@ -98,9 +96,7 @@ describe('ProviderChain', () => {
       }));
       chain.addProvider(createMockProvider('secondary', 'secondary-data', { priority: 2 }));
 
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      const result = await promise;
+      const result = await chain.fetch({});
 
       expect(result.data).toBe('secondary-data');
       expect(result.lineage.provider).toBe('secondary');
@@ -111,10 +107,7 @@ describe('ProviderChain', () => {
       chain.addProvider(createMockProvider('a', 'a', { priority: 1, shouldFail: true }));
       chain.addProvider(createMockProvider('b', 'b', { priority: 2, shouldFail: true }));
 
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-
-      await expect(promise).rejects.toThrow(AllProvidersFailedError);
+      await expect(chain.fetch({})).rejects.toThrow(AllProvidersFailedError);
     });
   });
 
@@ -164,9 +157,7 @@ describe('ProviderChain', () => {
       chain.addProvider(countingProvider);
 
       // First call — hits provider
-      const promise1 = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      const result1 = await promise1;
+      const result1 = await chain.fetch({});
       expect(result1.cached).toBe(false);
       expect(callCount).toBe(1);
 
@@ -199,20 +190,16 @@ describe('ProviderChain', () => {
       chain.addProvider(toggleProvider);
 
       // First call — populate cache
-      const promise1 = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      await promise1;
+      await chain.fetch({});
 
       // Expire the cache TTL
-      vi.advanceTimersByTime(2000);
+      vi.setSystemTime(Date.now() + 2000);
 
       // Provider goes down
       shouldFail = true;
 
       // Should still get stale data
-      const promise2 = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      const result2 = await promise2;
+      const result2 = await chain.fetch({});
       expect(result2.data).toBe('fresh-data');
       expect(result2.cached).toBe(true);
     });
@@ -226,9 +213,7 @@ describe('ProviderChain', () => {
       const events: unknown[] = [];
       chain.on(e => events.push(e));
 
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      await promise;
+      await chain.fetch({});
 
       const successEvent = events.find((e: any) => e.type === 'fetch:success');
       expect(successEvent).toBeDefined();
@@ -244,9 +229,7 @@ describe('ProviderChain', () => {
       const events: unknown[] = [];
       chain.on(e => events.push(e));
 
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      await promise.catch(() => {});
+      await chain.fetch({}).catch(() => {});
 
       const failEvent = events.find((e: any) => e.type === 'fetch:failure');
       expect(failEvent).toBeDefined();
@@ -275,9 +258,7 @@ describe('ProviderChain', () => {
       expect(chain.providerCount).toBe(3);
 
       // Verify sorting by checking that 'high' (priority 1) is tried first
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      const result = await promise;
+      const result = await chain.fetch({});
       expect(result.lineage.provider).toBe('high');
     });
   });
@@ -288,9 +269,7 @@ describe('ProviderChain', () => {
       chain.addProvider(createMockProvider('api', 'data'));
 
       // Make a successful call to populate health data
-      const promise = chain.fetch({});
-      vi.advanceTimersByTime(100);
-      await promise;
+      await chain.fetch({});
 
       const health = chain.getHealth();
       expect(health).toBeDefined();

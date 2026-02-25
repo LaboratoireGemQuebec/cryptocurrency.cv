@@ -212,8 +212,11 @@ export class CircuitBreaker {
       this._lastOpenedAt = Date.now();
       this._halfOpenSuccesses = 0;
       this._probeInFlight = false;
-      // Exponential backoff: double the reset timeout on repeated failures
-      this._backoffMultiplier = Math.min(this._backoffMultiplier * 2, 16);
+      // Exponential backoff: only increase on re-trip (HALF_OPEN → OPEN),
+      // not on the initial trip (CLOSED → OPEN)
+      if (from === 'HALF_OPEN') {
+        this._backoffMultiplier = Math.min(this._backoffMultiplier * 2, 16);
+      }
     }
 
     if (to === 'CLOSED') {

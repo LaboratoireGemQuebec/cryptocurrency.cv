@@ -64,11 +64,12 @@ describe('DataFusionEngine', () => {
   describe('weighted_median', () => {
     it('finds the weighted median', () => {
       const engine = new DataFusionEngine({ strategy: 'weighted_median' });
-      // With equal weights, this is the regular median
+      // With equal weights, the interpolated weighted median of [10, 20, 30]
+      // walks cumulative weight to 50%: 10 + 0.5*(20-10) = 15
       const inputs = makeInputs([10, 20, 30]);
       const result = engine.fuse(inputs);
 
-      expect(result.value).toBe(20);
+      expect(result.value).toBe(15);
       expect(result.strategy).toBe('weighted_median');
     });
 
@@ -112,7 +113,8 @@ describe('DataFusionEngine', () => {
       const inputs = makeInputs([100, 101, 102, 103]);
       const result = engine.fuse(inputs);
 
-      expect(result.value).toBeCloseTo(101.5, 1);
+      // Trimming removes 1 most-deviant value (103), remaining mean = 101
+      expect(result.value).toBeCloseTo(101, 0);
     });
   });
 

@@ -123,8 +123,8 @@ describe('CircuitBreaker', () => {
     await cb.execute(fail).catch(() => {});
     expect(cb.state).toBe('OPEN');
 
-    // Advance past reset timeout
-    vi.advanceTimersByTime(101);
+    // Advance Date.now() past reset timeout
+    vi.setSystemTime(Date.now() + 101);
 
     expect(cb.state).toBe('HALF_OPEN');
   });
@@ -141,7 +141,7 @@ describe('CircuitBreaker', () => {
     await cb.execute(fail).catch(() => {});
 
     // Wait → HALF_OPEN
-    vi.advanceTimersByTime(101);
+    vi.setSystemTime(Date.now() + 101);
     expect(cb.state).toBe('HALF_OPEN');
 
     // Successful probe → CLOSED
@@ -161,7 +161,7 @@ describe('CircuitBreaker', () => {
     await cb.execute(fail).catch(() => {});
 
     // Wait → HALF_OPEN
-    vi.advanceTimersByTime(101);
+    vi.setSystemTime(Date.now() + 101);
 
     // Failed probe → OPEN again
     await expect(cb.execute(fail)).rejects.toThrow('boom');
@@ -178,17 +178,19 @@ describe('CircuitBreaker', () => {
 
     // Trip → OPEN → wait → HALF_OPEN
     await cb.execute(fail).catch(() => {});
-    vi.advanceTimersByTime(101);
+    vi.setSystemTime(Date.now() + 101);
+    expect(cb.state).toBe('HALF_OPEN');
 
     // Start a slow probe that doesn't resolve yet
-    const slowProbe = new Promise(resolve => setTimeout(resolve, 1000));
+    let resolveProbe: () => void;
+    const slowProbe = new Promise<string>(resolve => { resolveProbe = () => resolve('ok'); });
     const probePromise = cb.execute(() => slowProbe);
 
     // Second call during half-open should be rejected
     await expect(cb.execute(succeed)).rejects.toThrow(CircuitOpenError);
 
     // Resolve the first probe
-    vi.advanceTimersByTime(1001);
+    resolveProbe!();
     await probePromise;
   });
 
@@ -243,24 +245,26 @@ describe('CircuitBreaker', () => {
         resetTimeoutMs: 100,
       });
 
-      // First trip
+      // First trip (CLOSED → OPEN): backoff stays at 1x
       await cb.execute(fail).catch(() => {});
       expect(cb.state).toBe('OPEN');
+      expect(cb.metrics().backoffMultiplier).toBe(1);
 
-      // Wait for first reset timeout (100ms)
-      vi.advanceTimersByTime(101);
+      // Wait for first reset timeout (100ms * 1 = 100ms)
+      vi.setSystemTime(Date.now() + 101);
       expect(cb.state).toBe('HALF_OPEN');
 
-      // Fail the probe → back to OPEN with doubled timeout (200ms)
+      // Fail the probe → HALF_OPEN → OPEN: backoff doubles to 2x
       await cb.execute(fail).catch(() => {});
       expect(cb.state).toBe('OPEN');
+      expect(cb.metrics().backoffMultiplier).toBe(2);
 
-      // 100ms is NOT enough anymore (backoff doubled to 200ms)
-      vi.advanceTimersByTime(101);
+      // 100ms is NOT enough (effective timeout = 100 * 2 = 200ms)
+      vi.setSystemTime(Date.now() + 101);
       expect(cb.state).toBe('OPEN');
 
-      // 200ms total should work
-      vi.advanceTimersByTime(100);
+      // 200ms from OPEN should work
+      vi.setSystemTime(Date.now() + 100);
       expect(cb.state).toBe('HALF_OPEN');
     });
   });
