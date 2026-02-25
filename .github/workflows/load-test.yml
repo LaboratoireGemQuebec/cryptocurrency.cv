@@ -1,0 +1,43 @@
+name: Load Test
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # Weekly Monday 3am UTC
+  workflow_dispatch:
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Start app
+        run: npm run build && npm start &
+        env:
+          REDIS_URL: redis://localhost:6379
+      - name: Wait for app
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3000/api/health && break
+            sleep 2
+          done
+      - uses: grafana/k6-action@v0.3.1
+        with:
+          filename: scripts/load-tests/baseline.js
+          flags: --out json=results.json
+          cloud: false
+        env:
+          BASE_URL: http://localhost:3000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: load-test-results
+          path: results.json
