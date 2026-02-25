@@ -84,6 +84,10 @@ export function getHttpServer(): x402HTTPResourceServer {
 // For backwards compatibility - lazy getter
 export const httpServer = new Proxy({} as x402HTTPResourceServer, {
   get(_, prop) {
+    if (IS_BUILD_TIME) {
+      // Return no-op stubs during build to prevent RouteConfigurationError
+      return typeof prop === 'string' ? (() => undefined) : undefined;
+    }
     return (getHttpServer() as unknown as Record<string | symbol, unknown>)[prop];
   },
 });

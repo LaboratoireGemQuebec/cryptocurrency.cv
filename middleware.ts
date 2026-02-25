@@ -56,14 +56,23 @@ const apiRoutes: Record<string, RouteConfig> = {
   },
 };
 
-const x402 = paymentProxyFromConfig(
-  apiRoutes,
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  false, // syncFacilitatorOnStart: false — avoids blocking cold starts
-);
+// Lazy-init to avoid RouteConfigurationError during Next.js build (the
+// @x402/next SDK validates route schemes eagerly in the constructor, but
+// the "exact" EVM scheme is only available at request time).
+let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
+function getX402Proxy() {
+  if (!_x402) {
+    _x402 = paymentProxyFromConfig(
+      apiRoutes,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      false, // syncFacilitatorOnStart: false — avoids blocking cold starts
+    );
+  }
+  return _x402;
+}
 
 // =============================================================================
 // SPERAXOS — trusted origins get UNLIMITED access and priority routing
@@ -300,7 +309,7 @@ export default async function middleware(request: NextRequest) {
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
     !matchesPattern(pathname, FREE_TIER_PATTERNS)
   ) {
-    const paymentResponse = await x402(request);
+    const paymentResponse = await getX402Proxy()(request);
     // NextResponse.next() sets x-middleware-next:1 internally — that means payment verified.
     // Any other response (402, 400, etc.) is returned directly to the client.
     const verified = paymentResponse.headers.get('x-middleware-next') === '1';

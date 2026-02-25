@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: 'Browse cryptocurrency exchanges ranked by 24h trading volume and trust score.',
 };
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 300; // 5 minutes
 
 // Exchange data type

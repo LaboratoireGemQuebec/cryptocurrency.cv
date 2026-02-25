@@ -18,6 +18,8 @@ interface Coin {
   price_change_percentage_7d_in_currency?: number;
 }
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Market Heatmap | Crypto Overview',
   description:

@@ -24,6 +24,8 @@ interface Coin {
   total_supply: number | null;
 }
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Crypto Screener | Filter & Discover Coins',
   description:
