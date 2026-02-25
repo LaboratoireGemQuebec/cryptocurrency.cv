@@ -5,6 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { getPipelineFearGreed } from '@/lib/data-pipeline';
 
 interface FearGreedData {
   value: number;
@@ -47,6 +48,19 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const days = parseInt(searchParams.get('days') || '30');
+
+    // Pipeline cache-first: serve pre-fetched data if available
+    if (days <= 30) {
+      try {
+        const pipelineData = await getPipelineFearGreed();
+        if (pipelineData?.current) {
+          return NextResponse.json({
+            ...pipelineData,
+            _cache: 'pipeline',
+          });
+        }
+      } catch { /* pipeline miss — fetch upstream */ }
+    }
 
     // Fetch current and historical data from Alternative.me API
     const [currentResponse, historicalResponse] = await Promise.all([

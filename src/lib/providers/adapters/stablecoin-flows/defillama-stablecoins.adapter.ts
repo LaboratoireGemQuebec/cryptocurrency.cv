@@ -40,11 +40,13 @@ export const defillamaStablecoinsAdapter: DataProvider<StablecoinFlow[]> = {
     const now = new Date().toISOString();
 
     let results: StablecoinFlow[] = assets.map((a, i) => {
-      const totalCirc = a.circulating?.peggedUSD ?? a.circulating?.peggedEUR ?? 0;
+      const circUsd = a.circulating?.peggedUSD;
+      const circEur = a.circulating?.peggedEUR;
+      const totalCirc = (typeof circUsd === 'number' ? circUsd : 0) || (typeof circEur === 'number' ? circEur : 0);
       const chains = a.chainCirculating
         ? Object.entries(a.chainCirculating).map(([chain, data]) => ({
             chain,
-            amount: (data as Record<string, number>)?.current?.peggedUSD ?? 0,
+            amount: data?.current?.peggedUSD ?? 0,
           }))
         : [];
 
@@ -102,6 +104,6 @@ interface LlamaPegged {
   symbol: string;
   pegType: string;
   price: number;
-  circulating: Record<string, number>;
-  chainCirculating?: Record<string, unknown>;
+  circulating: Record<string, number | Record<string, unknown>>;
+  chainCirculating?: Record<string, Record<string, Record<string, number>>>;
 }

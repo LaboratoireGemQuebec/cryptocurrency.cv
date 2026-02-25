@@ -1,7 +1,8 @@
 /**
- * Standalone WebSocket Server v2.0
+ * Standalone WebSocket Server v3.0 — Horizontally Scalable
  * 
  * Deploy to Railway, Render, or any Node.js host for full WebSocket support.
+ * Designed for 1M+ concurrent connections across multiple instances.
  * 
  * Features:
  * - Real-time news broadcasting
@@ -14,13 +15,17 @@
  * - Rate limiting protection
  * - Connection health monitoring
  * - Graceful backpressure handling
+ * - Redis pub/sub for cross-instance broadcasting
+ * - Redis-backed global connection & channel subscriber counting
+ * - Graceful shutdown with 30s connection drain
+ * - Leader election for upstream polling
  * 
  * Usage:
  *   npm install ws
  *   node ws-server.js
  * 
  * Or with environment:
- *   PORT=8080 node ws-server.js
+ *   PORT=8080 REDIS_URL=redis://... node ws-server.js
  */
 
 const WebSocket = require('ws');
@@ -30,6 +35,13 @@ const http = require('http');
 let redisPub = null;   // publish instance
 let redisSub = null;   // subscribe instance
 const REDIS_CHANNEL = 'ws:broadcast';
+
+// Redis keys for cross-instance observability
+const REDIS_KEY_TOTAL_CONNS = 'ws:connections:total';
+const REDIS_KEY_INSTANCE_CONNS = (id) => `ws:connections:${id}`;
+const REDIS_KEY_CHANNEL_SUBS = (ch) => `ws:channel:${ch}:subscribers`;
+const REDIS_KEY_STREAM_SUBS = (stream) => `ws:stream:${stream}:subscribers`;
+const INSTANCE_CONN_TTL = 120; // seconds — auto-expire if instance crashes without cleanup
 
 async function initRedis() {
   const url = process.env.REDIS_URL || process.env.REDIS_PRIVATE_URL;
@@ -63,12 +75,126 @@ async function initRedis() {
       }
     });
 
+    // Initialize this instance's connection counter with TTL (auto-expire on crash)
+    await redisPub.set(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), '0', { EX: INSTANCE_CONN_TTL });
+
     console.log('[redis] Pub/Sub connected — cross-instance broadcasting enabled');
   } catch (err) {
     console.error('[redis] Init failed, falling back to single-process:', err.message);
     redisPub = null;
     redisSub = null;
   }
+}
+
+// ---------------------------------------------------------------------------
+// Redis connection & channel counters
+// ---------------------------------------------------------------------------
+
+/** Increment global + instance connection counters in Redis. */
+async function redisTrackConnect() {
+  if (!redisPub) return;
+  try {
+    await Promise.all([
+      redisPub.incr(REDIS_KEY_TOTAL_CONNS),
+      redisPub.incr(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID)),
+      // Refresh TTL so the per-instance key stays alive while we're running
+      redisPub.expire(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), INSTANCE_CONN_TTL),
+    ]);
+  } catch (err) {
+    console.error('[redis] Track connect error:', err.message);
+  }
+}
+
+/** Decrement global + instance connection counters in Redis. */
+async function redisTrackDisconnect() {
+  if (!redisPub) return;
+  try {
+    await Promise.all([
+      redisPub.decr(REDIS_KEY_TOTAL_CONNS),
+      redisPub.decr(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID)),
+    ]);
+  } catch (err) {
+    console.error('[redis] Track disconnect error:', err.message);
+  }
+}
+
+/** Increment per-channel subscriber count in Redis. */
+async function redisTrackChannelJoin(channelId) {
+  if (!redisPub) return;
+  try {
+    await redisPub.incr(REDIS_KEY_CHANNEL_SUBS(channelId));
+  } catch (err) {
+    console.error('[redis] Track channel join error:', err.message);
+  }
+}
+
+/** Decrement per-channel subscriber count in Redis. */
+async function redisTrackChannelLeave(channelId) {
+  if (!redisPub) return;
+  try {
+    await redisPub.decr(REDIS_KEY_CHANNEL_SUBS(channelId));
+  } catch (err) {
+    console.error('[redis] Track channel leave error:', err.message);
+  }
+}
+
+/** Increment per-stream subscriber count in Redis (prices, whales, sentiment). */
+async function redisTrackStreamSubscribe(stream) {
+  if (!redisPub) return;
+  try {
+    await redisPub.incr(REDIS_KEY_STREAM_SUBS(stream));
+  } catch (err) {
+    console.error('[redis] Track stream subscribe error:', err.message);
+  }
+}
+
+/** Decrement per-stream subscriber count in Redis. */
+async function redisTrackStreamUnsubscribe(stream) {
+  if (!redisPub) return;
+  try {
+    await redisPub.decr(REDIS_KEY_STREAM_SUBS(stream));
+  } catch (err) {
+    console.error('[redis] Track stream unsubscribe error:', err.message);
+  }
+}
+
+/** Fetch cross-instance global stats from Redis. Returns null if Redis unavailable. */
+async function redisGetGlobalStats() {
+  if (!redisPub) return null;
+  try {
+    const pipeline = redisPub.multi();
+    pipeline.get(REDIS_KEY_TOTAL_CONNS);
+    for (const ch of Object.keys(CHANNELS)) {
+      pipeline.get(REDIS_KEY_CHANNEL_SUBS(ch));
+    }
+    for (const stream of ['prices', 'whales', 'sentiment']) {
+      pipeline.get(REDIS_KEY_STREAM_SUBS(stream));
+    }
+    const results = await pipeline.exec();
+
+    let idx = 0;
+    const totalConnections = parseInt(results[idx++] || '0', 10);
+    const channelSubs = {};
+    for (const ch of Object.keys(CHANNELS)) {
+      channelSubs[ch] = Math.max(0, parseInt(results[idx++] || '0', 10));
+    }
+    const streamSubs = {};
+    for (const stream of ['prices', 'whales', 'sentiment']) {
+      streamSubs[stream] = Math.max(0, parseInt(results[idx++] || '0', 10));
+    }
+    return { totalConnections: Math.max(0, totalConnections), channelSubs, streamSubs };
+  } catch (err) {
+    console.error('[redis] Global stats error:', err.message);
+    return null;
+  }
+}
+
+/** Periodically refresh the per-instance key TTL so it doesn't expire while we're alive. */
+function startInstanceHeartbeat() {
+  if (!redisPub) return;
+  setInterval(() => {
+    redisPub.expire(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), INSTANCE_CONN_TTL).catch(() => {});
+  }, (INSTANCE_CONN_TTL / 2) * 1000);
 }
 
 /**
@@ -188,13 +314,17 @@ const MAX_PAYLOAD = 64 * 1024; // 64 KB max message size from clients
 // Client management
 const clients = new Map();
 
+// Shutdown state
+let isShuttingDown = false;
+const DRAIN_TIMEOUT_MS = 30000; // 30s drain window for graceful shutdown
+
 // Market data cache
 let priceCache = {};
 let sentimentCache = null;
 let whaleCache = [];
 
 // Create HTTP server for health checks
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   
@@ -205,14 +335,16 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+    const globalStats = await redisGetGlobalStats();
+    res.writeHead(isShuttingDown ? 503 : 200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
-      status: 'ok',
-      version: '2.0.0',
+      status: isShuttingDown ? 'draining' : 'ok',
+      version: '3.0.0',
       instanceId: INSTANCE_ID,
       isLeader,
       redis: redisPub ? 'connected' : 'unavailable',
       clients: clients.size,
+      globalClients: globalStats?.totalConnections ?? clients.size,
       maxClients: MAX_CONNECTIONS,
       uptime: process.uptime(),
       features: ['news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment', 'channels'],
@@ -221,8 +353,9 @@ const server = http.createServer((req, res) => {
   }
   
   if (req.url === '/stats') {
+    const stats = await getStats();
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(getStats()));
+    res.end(JSON.stringify(stats));
     return;
   }
   
@@ -239,7 +372,7 @@ const server = http.createServer((req, res) => {
   }
   
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end(`Free Crypto News WebSocket Server v2.0
+  res.end(`Free Crypto News WebSocket Server v3.0
 
 Connect via ws://${req.headers.host}
 
@@ -279,6 +412,12 @@ function generateClientId() {
 
 // Handle new connection
 wss.on('connection', (ws, req) => {
+  // Reject during shutdown
+  if (isShuttingDown) {
+    ws.close(1001, 'Server shutting down');
+    return;
+  }
+
   // Enforce connection cap
   if (clients.size >= MAX_CONNECTIONS) {
     ws.close(1013, 'Server at capacity');
@@ -308,6 +447,9 @@ wss.on('connection', (ws, req) => {
     lastMessageReset: Date.now(),
   });
 
+  // Track connection in Redis
+  redisTrackConnect();
+
   console.log(`[${new Date().toISOString()}] Client connected: ${clientId} from ${ip} (total: ${clients.size})`);
 
   // Send welcome message with available features
@@ -315,7 +457,7 @@ wss.on('connection', (ws, req) => {
     type: WS_MSG_TYPES.CONNECTED,
     payload: {
       clientId,
-      message: 'Connected to Free Crypto News WebSocket v2.0',
+      message: 'Connected to Free Crypto News WebSocket v3.0',
       serverTime: new Date().toISOString(),
       features: ['news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment', 'channels'],
       availableChannels: Object.keys(CHANNELS),
@@ -358,13 +500,35 @@ wss.on('connection', (ws, req) => {
   // Handle close
   ws.on('close', (code, reason) => {
     console.log(`[${new Date().toISOString()}] Client disconnected: ${clientId} (code: ${code})`);
+    const client = clients.get(clientId);
+    if (client) {
+      // Decrement Redis channel counters for all channels this client was in
+      for (const ch of client.channels) {
+        redisTrackChannelLeave(ch);
+      }
+      // Decrement Redis stream counters
+      if (client.streamPrices) redisTrackStreamUnsubscribe('prices');
+      if (client.streamWhales) redisTrackStreamUnsubscribe('whales');
+      if (client.streamSentiment) redisTrackStreamUnsubscribe('sentiment');
+    }
     clients.delete(clientId);
+    redisTrackDisconnect();
   });
 
   // Handle errors
   ws.on('error', (error) => {
     console.error(`Client ${clientId} error:`, error.message);
+    const client = clients.get(clientId);
+    if (client) {
+      for (const ch of client.channels) {
+        redisTrackChannelLeave(ch);
+      }
+      if (client.streamPrices) redisTrackStreamUnsubscribe('prices');
+      if (client.streamWhales) redisTrackStreamUnsubscribe('whales');
+      if (client.streamSentiment) redisTrackStreamUnsubscribe('sentiment');
+    }
     clients.delete(clientId);
+    redisTrackDisconnect();
   });
 });
 
@@ -404,12 +568,16 @@ function handleMessage(clientId, message) {
     case WS_MSG_TYPES.LEAVE_CHANNEL:
       handleLeaveChannel(clientId, message.payload);
       break;
-    case 'stream_prices':
+    case 'stream_prices': {
+      const wasEnabled = client.streamPrices;
       client.streamPrices = message.payload?.enabled !== false;
       client.ws.send(JSON.stringify({
         type: 'prices_stream',
         payload: { enabled: client.streamPrices, interval: '10s' },
       }));
+      // Track in Redis
+      if (client.streamPrices && !wasEnabled) redisTrackStreamSubscribe('prices');
+      if (!client.streamPrices && wasEnabled) redisTrackStreamUnsubscribe('prices');
       // Send current prices immediately
       if (client.streamPrices && Object.keys(priceCache).length > 0) {
         client.ws.send(JSON.stringify({
@@ -419,19 +587,27 @@ function handleMessage(clientId, message) {
         }));
       }
       break;
-    case 'stream_whales':
+    }
+    case 'stream_whales': {
+      const wasEnabled = client.streamWhales;
       client.streamWhales = message.payload?.enabled !== false;
       client.ws.send(JSON.stringify({
         type: 'whales_stream',
         payload: { enabled: client.streamWhales, interval: '60s' },
       }));
+      if (client.streamWhales && !wasEnabled) redisTrackStreamSubscribe('whales');
+      if (!client.streamWhales && wasEnabled) redisTrackStreamUnsubscribe('whales');
       break;
-    case 'stream_sentiment':
+    }
+    case 'stream_sentiment': {
+      const wasEnabled = client.streamSentiment;
       client.streamSentiment = message.payload?.enabled !== false;
       client.ws.send(JSON.stringify({
         type: 'sentiment_stream',
         payload: { enabled: client.streamSentiment, interval: '5m' },
       }));
+      if (client.streamSentiment && !wasEnabled) redisTrackStreamSubscribe('sentiment');
+      if (!client.streamSentiment && wasEnabled) redisTrackStreamUnsubscribe('sentiment');
       // Send current sentiment immediately
       if (client.streamSentiment && sentimentCache) {
         client.ws.send(JSON.stringify({
@@ -441,6 +617,7 @@ function handleMessage(clientId, message) {
         }));
       }
       break;
+    }
     default:
       console.log(`Unknown message type: ${message.type}`);
   }
@@ -570,6 +747,7 @@ function handleJoinChannel(clientId, payload) {
   }
 
   client.channels.add(channelId);
+  redisTrackChannelJoin(channelId);
 
   client.ws.send(JSON.stringify({
     type: WS_MSG_TYPES.CHANNEL_JOINED,
@@ -592,9 +770,15 @@ function handleLeaveChannel(clientId, payload) {
   const channelId = payload?.channel;
   
   if (channelId) {
-    client.channels.delete(channelId);
+    if (client.channels.has(channelId)) {
+      client.channels.delete(channelId);
+      redisTrackChannelLeave(channelId);
+    }
   } else {
-    // Leave all channels
+    // Leave all channels — decrement each in Redis
+    for (const ch of client.channels) {
+      redisTrackChannelLeave(ch);
+    }
     client.channels.clear();
   }
 
@@ -818,8 +1002,8 @@ function localBroadcastSentiment(payload) {
   });
 }
 
-// Get server stats
-function getStats() {
+// Get server stats (includes cross-instance Redis stats when available)
+async function getStats() {
   let activeConnections = 0;
   let alertSubscribers = 0;
   let priceSubscribers = 0;
@@ -851,9 +1035,34 @@ function getStats() {
     }
   });
 
+  // Cross-instance stats from Redis
+  const globalStats = await redisGetGlobalStats();
+
   return {
-    version: '2.0.0',
-    totalConnections: clients.size,
+    version: '3.0.0',
+    instanceId: INSTANCE_ID,
+    isLeader,
+    redis: redisPub ? 'connected' : 'unavailable',
+    // Local (this instance)
+    local: {
+      totalConnections: clients.size,
+      activeConnections,
+      subscribers: {
+        alerts: alertSubscribers,
+        prices: priceSubscribers,
+        whales: whaleSubscribers,
+        sentiment: sentimentSubscribers,
+      },
+      channels: channelStats,
+    },
+    // Global (across all instances, via Redis)
+    global: globalStats ? {
+      totalConnections: globalStats.totalConnections,
+      channels: globalStats.channelSubs,
+      streams: globalStats.streamSubs,
+    } : null,
+    // Legacy flat fields for backward compatibility
+    totalConnections: globalStats?.totalConnections ?? clients.size,
     activeConnections,
     subscribers: {
       alerts: alertSubscribers,
@@ -861,7 +1070,7 @@ function getStats() {
       whales: whaleSubscribers,
       sentiment: sentimentSubscribers,
     },
-    channels: channelStats,
+    channels: globalStats?.channelSubs ?? channelStats,
     subscriptions,
     cache: {
       prices: Object.keys(priceCache).length,
@@ -1026,7 +1235,7 @@ async function evaluateAndBroadcastAlerts() {
 server.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║     Free Crypto News WebSocket Server v2.0                       ║
+║     Free Crypto News WebSocket Server v3.0                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  WebSocket: ws://localhost:${PORT}                                  ║
 ║  Health:    http://localhost:${PORT}/health                         ║
@@ -1050,6 +1259,7 @@ server.listen(PORT, () => {
   // Initialize Redis pub/sub for horizontal scaling (non-blocking)
   initRedis().then(async () => {
     await tryAcquireLeadership();
+    startInstanceHeartbeat();
     console.log(`[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready (leader: ${isLeader})`);
   });
 
@@ -1076,21 +1286,75 @@ server.listen(PORT, () => {
   setInterval(cleanupStale, 60000);
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('Shutting down...');
-  wss.clients.forEach((client) => {
-    client.close(1001, 'Server shutting down');
+// =============================================================================
+// GRACEFUL SHUTDOWN — 30s drain window
+// =============================================================================
+
+async function gracefulShutdown(signal) {
+  if (isShuttingDown) return; // Prevent double-shutdown
+  isShuttingDown = true;
+  console.log(`[${new Date().toISOString()}] ${signal} received — starting graceful shutdown (${DRAIN_TIMEOUT_MS / 1000}s drain)`);
+
+  // 1. Stop accepting new HTTP & WS connections
+  server.close(() => {
+    console.log(`[${new Date().toISOString()}] HTTP server closed — no new connections`);
   });
-  // Release leadership and clean up Redis connections
-  const cleanup = [];
-  if (redisPub && isLeader) cleanup.push(redisPub.del(LEADER_KEY).catch(() => {}));
-  if (redisPub) cleanup.push(redisPub.quit().catch(() => {}));
-  if (redisSub) cleanup.push(redisSub.quit().catch(() => {}));
-  Promise.allSettled(cleanup).then(() => {
-    server.close(() => {
-      process.exit(0);
+
+  // 2. Release leadership immediately so another instance takes over polling
+  if (redisPub && isLeader) {
+    await redisPub.del(LEADER_KEY).catch(() => {});
+    isLeader = false;
+    console.log(`[${new Date().toISOString()}] Leadership released`);
+  }
+
+  // 3. Send close frame to all connected clients (code 1001 = going away)
+  const clientCount = clients.size;
+  console.log(`[${new Date().toISOString()}] Draining ${clientCount} connections...`);
+  wss.clients.forEach((ws) => {
+    try {
+      ws.close(1001, 'Server shutting down');
+    } catch { /* ignore already-closed sockets */ }
+  });
+
+  // 4. Wait for connections to drain (up to DRAIN_TIMEOUT_MS)
+  const drainStart = Date.now();
+  await new Promise((resolve) => {
+    const checkDrained = setInterval(() => {
+      if (clients.size === 0 || Date.now() - drainStart >= DRAIN_TIMEOUT_MS) {
+        clearInterval(checkDrained);
+        resolve();
+      }
+    }, 500);
+  });
+
+  // 5. Force-terminate any remaining connections
+  if (clients.size > 0) {
+    console.log(`[${new Date().toISOString()}] Force-closing ${clients.size} remaining connections`);
+    wss.clients.forEach((ws) => {
+      try { ws.terminate(); } catch { /* noop */ }
     });
-  });
-});
+  }
+
+  // 6. Clean up Redis counters and connections
+  if (redisPub) {
+    try {
+      const localCount = clientCount; // snapshot from before drain
+      await Promise.allSettled([
+        // Remove this instance's counter and adjust global total
+        redisPub.del(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID)),
+        redisPub.decrBy(REDIS_KEY_TOTAL_CONNS, Math.max(0, localCount)).catch(() => {}),
+      ]);
+    } catch { /* best effort */ }
+    await Promise.allSettled([
+      redisPub.quit().catch(() => {}),
+      redisSub.quit().catch(() => {}),
+    ]);
+  }
+
+  console.log(`[${new Date().toISOString()}] Shutdown complete — exiting`);
+  process.exit(0);
+}
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 

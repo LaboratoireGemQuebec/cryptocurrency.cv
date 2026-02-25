@@ -151,13 +151,13 @@ function createAdapter<T = unknown>(config: DataSourceConfig): DataSourceAdapter
   return {
     config,
 
-    async fetch(endpoint: string, params?: Record<string, string>): Promise<T> {
+    async fetch<R = T>(endpoint: string, params?: Record<string, string>): Promise<R> {
       const cacheKey = `ds:${config.name}:${endpoint}:${JSON.stringify(params || {})}`;
-      const cached = cache.get<T>(cacheKey);
+      const cached = cache.get<R>(cacheKey);
       if (cached) return cached;
 
       const url = buildUrl(config.baseUrl, endpoint, params);
-      const result = await safeFetch<T>(url, {
+      const result = await safeFetch<R>(url, {
         apiKey,
         timeout: 15000,
         retries: 2,
@@ -717,7 +717,6 @@ export const ALL_DATA_SOURCES = {
   bybit,
   okx,
   hyperliquid,
-  coinglass: coinglass,
   // DEX / DeFi
   dexscreener,
   defined,

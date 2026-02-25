@@ -195,6 +195,7 @@ export async function getLatestResults<T = DuneTableRow>(
 
 /**
  * Get the status/results of a specific execution.
+ * @alias getQueryResults
  */
 export async function getExecutionResult<T = DuneTableRow>(
   executionId: string,
@@ -346,3 +347,8 @@ export async function getBridgeVolumes(): Promise<
     txCount: r.tx_count || 0,
   }));
 }
+
+/**
+ * Alias for getExecutionResult — get query results by execution ID.
+ */
+export const getQueryResults = getExecutionResult;

@@ -41,8 +41,8 @@ export const geckoTerminalAdapter: DataProvider<DexPair[]> = {
     const limit = Math.min(params.limit ?? 20, 20); // max page size = 20
 
     let url: string;
-    if (params.query) {
-      url = `${GT_BASE}/search/pools?query=${encodeURIComponent(params.query)}&page=1`;
+    if (params.extra?.query) {
+      url = `${GT_BASE}/search/pools?query=${encodeURIComponent(String(params.extra.query))}&page=1`;
     } else {
       url = `${GT_BASE}/networks/${network}/trending_pools?page=1`;
     }

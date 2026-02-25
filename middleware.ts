@@ -197,6 +197,43 @@ function isApiClient(request: NextRequest): boolean {
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
 
+// ============================================================================
+// API KEY TIER RATE LIMITS (from pricing.ts single source of truth)
+// ============================================================================
+
+/**
+ * Tier rate limits applied when a valid API key is present.
+ * These override the default public/api-client limits.
+ *
+ *   free:       1,000 req/day, 3 results per response, no AI endpoints
+ *   pro:       50,000 req/day, full results, AI access, webhook support
+ *   enterprise: 500,000 req/day, priority routing, dedicated cache, SLA
+ *
+ * The canonical source is API_TIERS in src/lib/x402/pricing.ts.
+ * We duplicate the numbers here to avoid importing heavy modules
+ * in the Edge middleware (keeps cold starts fast).
+ */
+const TIER_LIMITS: Record<string, { daily: number; perMinute: number }> = {
+  free:       { daily: 1_000,   perMinute: 20 },
+  pro:        { daily: 50_000,  perMinute: 500 },
+  enterprise: { daily: 500_000, perMinute: 2_000 },
+};
+
+/** Endpoints that require pro or enterprise tier (AI, premium) */
+const AI_ENDPOINT_PATTERNS = [
+  /^\/api\/premium\/ai\//,
+  /^\/api\/v1\/ai\//,
+  /^\/api\/premium\/whales\//,
+  /^\/api\/premium\/smart-money/,
+  /^\/api\/premium\/stream\//,
+  /^\/api\/premium\/ws\//,
+  /^\/api\/premium\/export\//,
+  /^\/api\/premium\/analytics\//,
+];
+
+/** Max results a free-tier key may receive (route handlers check x-tier-max-results) */
+const FREE_TIER_MAX_RESULTS = 3;
+
 /**
  * Build either an Upstash-backed or ephemeral (in-memory) rate limiter.
  * Lazy-initialised on first request so that the build step never talks to Redis.
@@ -271,6 +308,65 @@ async function checkRateLimit(
   } catch {
     // If Redis is down, fail-open to avoid a total outage
     return { allowed: true, remaining: limit.requests, resetAt: Date.now() + limit.windowMs, limit: limit.requests };
+  }
+}
+
+// =============================================================================
+// TIER-SPECIFIC RATE LIMITER (for authenticated API keys)
+// =============================================================================
+
+const _tierLimiters = new Map<string, Ratelimit>();
+
+function getTierRateLimiter(tier: string, dailyLimit: number): Ratelimit {
+  const cacheKey = `tier:${tier}:${dailyLimit}`;
+  const existing = _tierLimiters.get(cacheKey);
+  if (existing) return existing;
+
+  const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  let limiter: Ratelimit;
+  if (url && token) {
+    limiter = new Ratelimit({
+      redis: new Redis({ url, token }),
+      limiter: Ratelimit.slidingWindow(dailyLimit, '1 d'),
+      prefix: `mw:tier:${tier}`,
+      analytics: true,
+      enableProtection: true,
+    });
+  } else {
+    // Dev fallback
+    const ephemeralStore = new Map();
+    limiter = new Ratelimit({
+      redis: {
+        sadd: async () => 1 as any,
+        eval: async () => [dailyLimit, Math.floor(Date.now() / 1000) + 86400] as any,
+        evalsha: async () => [dailyLimit, Math.floor(Date.now() / 1000) + 86400] as any,
+        scriptLoad: async () => '' as any,
+      } as unknown as InstanceType<typeof Redis>,
+      limiter: Ratelimit.slidingWindow(dailyLimit, '1 d'),
+      prefix: `mw:tier:${tier}`,
+      ephemeralCache: ephemeralStore,
+    });
+  }
+
+  _tierLimiters.set(cacheKey, limiter);
+  return limiter;
+}
+
+async function checkTierRateLimit(
+  keyId: string,
+  dailyLimit: number,
+): Promise<{ allowed: boolean; remaining: number; resetAt: number }> {
+  // Determine tier name from the limit
+  const tierName = dailyLimit >= 500_000 ? 'enterprise' : dailyLimit >= 50_000 ? 'pro' : 'free';
+  try {
+    const limiter = getTierRateLimiter(tierName, dailyLimit);
+    const { success, remaining, reset } = await limiter.limit(keyId);
+    return { allowed: success, remaining, resetAt: reset };
+  } catch {
+    // Fail-open
+    return { allowed: true, remaining: dailyLimit, resetAt: Date.now() + 86400000 };
   }
 }
 
@@ -360,6 +456,86 @@ export default async function middleware(request: NextRequest) {
   // Compute once — reused in rate-limiting tier selection AND request-header forwarding below.
   const apiClient = isApiClient(request);
 
+  // ── API Key tier detection ────────────────────────────────────────────────
+  // If the caller presents a valid cda_* API key, we resolve their tier and
+  // apply the appropriate rate limit instead of the default public/api limit.
+  // Key validation is lightweight (SHA-256 + single KV GET at the edge).
+  const apiKeyRaw = request.headers.get('x-api-key')
+    || request.headers.get('authorization')?.replace(/^Bearer\s+/i, '') || null;
+
+  let resolvedTier: 'free' | 'pro' | 'enterprise' | null = null;
+  let resolvedKeyId: string | null = null;
+
+  if (apiKeyRaw && apiKeyRaw.startsWith('cda_')) {
+    // Determine tier from prefix without going to KV — fast path
+    if (apiKeyRaw.startsWith('cda_ent_')) resolvedTier = 'enterprise';
+    else if (apiKeyRaw.startsWith('cda_pro_')) resolvedTier = 'pro';
+    else resolvedTier = 'free';
+
+    // We'll do a lightweight KV lookup to validate + get keyId
+    // We use the Redis client directly (already initialized for rate limiting)
+    // If KV is unavailable, trust the prefix but mark it unverified.
+    try {
+      const msgBuffer = new TextEncoder().encode(apiKeyRaw);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashHex = Array.from(new Uint8Array(hashBuffer))
+        .map((b) => b.toString(16).padStart(2, '0'))
+        .join('');
+
+      const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
+      const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+
+      if (url && token) {
+        const redis = new Redis({ url, token });
+        const keyData = await redis.get<{
+          id: string;
+          tier: 'free' | 'pro' | 'enterprise';
+          active: boolean;
+          email: string;
+        }>(`apikey:${hashHex}`);
+
+        if (keyData && keyData.active) {
+          resolvedTier = keyData.tier;
+          resolvedKeyId = keyData.id;
+        } else if (keyData && !keyData.active) {
+          // Revoked key
+          return NextResponse.json(
+            { error: 'API key revoked', code: 'KEY_REVOKED', requestId },
+            { status: 401, headers },
+          );
+        }
+        // If keyData is null, key not found — fallback to anonymous
+        if (!keyData) {
+          resolvedTier = null;
+        }
+      }
+    } catch {
+      // KV lookup failed — trust the prefix tier but mark unverified
+      // This is the fail-open approach
+    }
+  }
+
+  // ── AI endpoint gating ─────────────────────────────────────────────────
+  // Free-tier keys cannot access AI/premium endpoints
+  if (
+    resolvedTier === 'free' &&
+    matchesPattern(pathname, AI_ENDPOINT_PATTERNS) &&
+    !speraxos
+  ) {
+    return NextResponse.json(
+      {
+        error: 'Upgrade required',
+        code: 'TIER_INSUFFICIENT',
+        message: 'AI and premium endpoints require a Pro or Enterprise API key',
+        currentTier: 'free',
+        requiredTier: 'pro',
+        upgrade: '/api/keys/upgrade',
+        requestId,
+      },
+      { status: 403, headers },
+    );
+  }
+
   // Exempt patterns — skip rate limiting / size check
   if (!matchesPattern(pathname, EXEMPT_PATTERNS)) {
     // Size validation
@@ -373,12 +549,66 @@ export default async function middleware(request: NextRequest) {
       }
     }
 
-    // Rate limiting — SperaxOS is unlimited; free-tier paths are limited.
-    // API consumers (identified by Accept/UA/key) get a higher quota.
+    // ── Tier-aware rate limiting ──────────────────────────────────────────
     if (speraxos) {
       headers['X-RateLimit-Limit'] = 'unlimited';
       headers['X-RateLimit-Remaining'] = 'unlimited';
+    } else if (resolvedTier && resolvedKeyId) {
+      // Authenticated API key — apply tier-specific rate limit
+      const tierLimit = TIER_LIMITS[resolvedTier] ?? TIER_LIMITS.free;
+      const rl = await checkTierRateLimit(resolvedKeyId, tierLimit.daily);
+      headers['X-RateLimit-Limit'] = tierLimit.daily.toString();
+      headers['X-RateLimit-Remaining'] = rl.remaining.toString();
+      headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
+      headers['X-RateLimit-Tier'] = resolvedTier;
+      headers['X-Key-Tier'] = resolvedTier;
+
+      if (!rl.allowed) {
+        const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
+        return NextResponse.json(
+          {
+            error: 'Rate Limit Exceeded',
+            code: 'RATE_LIMIT_EXCEEDED',
+            tier: resolvedTier,
+            limit: tierLimit.daily,
+            retryAfter: retry,
+            upgrade: resolvedTier === 'free'
+              ? 'Upgrade to Pro for 50,000 req/day at /api/keys/upgrade'
+              : resolvedTier === 'pro'
+                ? 'Upgrade to Enterprise for 500,000 req/day'
+                : undefined,
+            requestId,
+          },
+          { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
+        );
+      }
+
+      // ── Usage tracking ──────────────────────────────────────────────────
+      // Increment daily counter in KV (non-blocking, fire-and-forget)
+      try {
+        const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
+        const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+        if (url && token) {
+          const redis = new Redis({ url, token });
+          const today = new Date().toISOString().split('T')[0];
+          const month = today.substring(0, 7);
+          // Fire-and-forget pipeline: daily, monthly, total
+          const pipe = redis.pipeline();
+          pipe.incr(`usage:${resolvedKeyId}:${today}`);
+          pipe.expire(`usage:${resolvedKeyId}:${today}`, 172800); // 48h
+          pipe.incr(`usage:${resolvedKeyId}:${month}`);
+          pipe.expire(`usage:${resolvedKeyId}:${month}`, 3024000); // 35d
+          pipe.incr(`usage:${resolvedKeyId}:total`);
+          // Track global revenue counters for admin dashboard
+          pipe.incr(`stats:requests:${today}`);
+          pipe.incr(`stats:requests:${month}`);
+          pipe.exec().catch(() => {}); // fire-and-forget
+        }
+      } catch {
+        // Usage tracking failure is non-fatal
+      }
     } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
+      // No API key — anonymous IP-based rate limit for free-tier paths
       const tier = apiClient ? 'api' : 'public';
       const rl = await checkRateLimit(`${getClientIp(request)}:${pathname}`, tier);
       headers['X-RateLimit-Limit'] = rl.limit.toString();

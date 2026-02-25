@@ -43,9 +43,11 @@ import { gasChain } from './adapters/gas';
 import { tvlChain } from './adapters/tvl';
 import { defiYieldsChain } from './adapters/defi';
 import { derivativesChain } from './adapters/derivatives';
-import { onChainChain } from './adapters/on-chain';
+import { onChainChain, whaleAlertChain } from './adapters/on-chain';
 import { socialChain } from './adapters/social';
 import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
+import { ohlcvChain } from './adapters/ohlcv';
+import { orderBookChain } from './adapters/order-book';
 
 // =============================================================================
 // REGISTER ALL CHAINS
@@ -106,6 +108,21 @@ registry.register('stablecoin-flows', stablecoinFlowsChain, {
   description: 'Stablecoin supply and chain distribution from DefiLlama',
 });
 
+// OHLCV (Candlestick Data)
+registry.register('ohlcv', ohlcvChain, {
+  description: 'Historical candlestick data from Binance and CryptoCompare',
+});
+
+// Order Book Depth
+registry.register('order-book', orderBookChain, {
+  description: 'Real-time order book depth from Binance',
+});
+
+// Whale Alerts
+registry.register('whale-alerts', whaleAlertChain, {
+  description: 'Large transaction alerts from Whale Alert API',
+});
+
 // =============================================================================
 // CONVENIENCE: Export registry for re-import
 // =============================================================================
@@ -113,7 +130,7 @@ registry.register('stablecoin-flows', stablecoinFlowsChain, {
 export { registry };
 
 /** Number of registered categories */
-export const registeredCategories = 11;
+export const registeredCategories = 14;
 
 /** List all registered categories */
 export function listRegisteredCategories() {
@@ -129,5 +146,8 @@ export function listRegisteredCategories() {
     'on-chain',
     'social-metrics',
     'stablecoin-flows',
+    'ohlcv',
+    'order-book',
+    'whale-alerts',
   ] as const;
 }

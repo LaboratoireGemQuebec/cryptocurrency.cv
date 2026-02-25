@@ -45,18 +45,18 @@ export const defillamaYieldsAdapter: DataProvider<YieldPool[]> = {
     }
 
     // Filter by project
-    if (params.project) {
-      const project = params.project.toLowerCase();
+    if (params.extra?.project) {
+      const project = String(params.extra.project).toLowerCase();
       pools = pools.filter(p => p.project?.toLowerCase() === project);
     }
 
     // Filter by stablecoin only
-    if (params.stablecoin) {
+    if (params.extra?.stablecoin) {
       pools = pools.filter(p => p.stablecoin === true);
     }
 
     // Filter minimum TVL (default 100k for quality)
-    const minTvl = params.minTvl ?? 100_000;
+    const minTvl = (params.extra?.minTvl as number) ?? 100_000;
     pools = pools.filter(p => (p.tvlUsd ?? 0) >= minTvl);
 
     // Sort by APY descending
@@ -123,6 +123,5 @@ function normalize(raw: LlamaPool): YieldPool {
     ilRisk: raw.ilRisk ?? 'no',
     predictedClass: raw.predictedClass ?? null,
     url: raw.url ?? '',
-    timestamp: new Date().toISOString(),
   };
 }

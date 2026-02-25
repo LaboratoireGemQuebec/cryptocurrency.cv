@@ -556,6 +556,170 @@ export async function getKeyById(keyId: string): Promise<ApiKeyData | null> {
 // ============================================================================
 
 /**
+ * Rotate an API key — generate a new key, invalidate the old one
+ */
+export async function rotateApiKey(
+  keyId: string,
+  email: string
+): Promise<{ key: string; data: ApiKeyData } | { error: string }> {
+  if (!isKvConfigured()) {
+    return { error: 'API key storage not configured' };
+  }
+
+  try {
+    // Look up the old key
+    const oldHashedKey = await kv.get<string>(`${KV_PREFIX.key}id:${keyId}`);
+    if (!oldHashedKey) {
+      return { error: 'Key not found' };
+    }
+
+    const oldKeyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${oldHashedKey}`);
+    if (!oldKeyData) {
+      return { error: 'Key data not found' };
+    }
+
+    if (oldKeyData.email !== email) {
+      return { error: 'Email mismatch — unauthorized' };
+    }
+
+    if (!oldKeyData.active) {
+      return { error: 'Key is already revoked' };
+    }
+
+    // Generate new key with the same tier
+    const newRawKey = generateApiKey(oldKeyData.tier);
+    const newHashedKey = await hashApiKey(newRawKey);
+
+    const newKeyData: ApiKeyData = {
+      ...oldKeyData,
+      key: newHashedKey,
+      keyPrefix: newRawKey.substring(0, 12),
+      metadata: {
+        ...oldKeyData.metadata,
+        rotatedAt: new Date().toISOString(),
+        rotatedFrom: keyId,
+      },
+    };
+
+    // Invalidate old key
+    await kv.set(`${KV_PREFIX.key}${oldHashedKey}`, {
+      ...oldKeyData,
+      active: false,
+      metadata: {
+        ...oldKeyData.metadata,
+        revokedAt: new Date().toISOString(),
+        revokedReason: 'rotated',
+        rotatedTo: newRawKey.substring(0, 12),
+      },
+    });
+
+    // Store new key
+    await kv.set(`${KV_PREFIX.key}${newHashedKey}`, newKeyData);
+
+    // Update the keyId -> hash mapping to point to the new hash
+    await kv.set(`${KV_PREFIX.key}id:${keyId}`, newHashedKey);
+
+    return { key: newRawKey, data: newKeyData };
+  } catch (error) {
+    console.error('Failed to rotate API key:', error);
+    return { error: 'Failed to rotate API key. Please try again.' };
+  }
+}
+
+// ============================================================================
+// Usage Tracking
+// ============================================================================
+
+/**
+ * Increment daily usage counter for an API key.
+ * Called on every request that passes validation.
+ */
+export async function incrementUsage(keyId: string): Promise<void> {
+  if (!isKvConfigured()) return;
+
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const month = today.substring(0, 7); // YYYY-MM
+  const dailyKey = `${KV_PREFIX.usage}${keyId}:${today}`;
+  const monthlyKey = `${KV_PREFIX.usage}${keyId}:${month}`;
+  const allTimeKey = `${KV_PREFIX.usage}${keyId}:total`;
+
+  try {
+    // Atomic increments — pipeline for performance
+    const pipeline = kv.pipeline();
+    pipeline.incr(dailyKey);
+    pipeline.incr(monthlyKey);
+    pipeline.incr(allTimeKey);
+    // Set TTL on daily key (48 hours) and monthly key (35 days)
+    pipeline.expire(dailyKey, 172800);
+    pipeline.expire(monthlyKey, 3024000);
+    await pipeline.exec();
+  } catch (error) {
+    // Non-fatal — don't block request if usage tracking fails
+    console.error('[API Keys] Failed to increment usage:', error);
+  }
+}
+
+/**
+ * Get detailed usage statistics for an API key
+ */
+export async function getUsageStats(keyId: string): Promise<{
+  today: number;
+  month: number;
+  allTime: number;
+  daily: Record<string, number>;
+  resetAt: string;
+} | null> {
+  if (!isKvConfigured()) return null;
+
+  try {
+    const now = new Date();
+    const today = now.toISOString().split('T')[0];
+    const month = today.substring(0, 7);
+
+    // Get current counters
+    const [todayCount, monthCount, allTimeCount] = await Promise.all([
+      kv.get<number>(`${KV_PREFIX.usage}${keyId}:${today}`),
+      kv.get<number>(`${KV_PREFIX.usage}${keyId}:${month}`),
+      kv.get<number>(`${KV_PREFIX.usage}${keyId}:total`),
+    ]);
+
+    // Get last 7 days of daily usage
+    const daily: Record<string, number> = {};
+    const dayPromises: Promise<[string, number | null]>[] = [];
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(now);
+      d.setUTCDate(d.getUTCDate() - i);
+      const dateStr = d.toISOString().split('T')[0];
+      dayPromises.push(
+        kv.get<number>(`${KV_PREFIX.usage}${keyId}:${dateStr}`).then(
+          (v) => [dateStr, v] as [string, number | null]
+        )
+      );
+    }
+    const dayResults = await Promise.all(dayPromises);
+    for (const [dateStr, count] of dayResults) {
+      daily[dateStr] = count ?? 0;
+    }
+
+    // Calculate next midnight UTC
+    const tomorrow = new Date(now);
+    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+    tomorrow.setUTCHours(0, 0, 0, 0);
+
+    return {
+      today: todayCount ?? 0,
+      month: monthCount ?? 0,
+      allTime: allTimeCount ?? 0,
+      daily,
+      resetAt: tomorrow.toISOString(),
+    };
+  } catch (error) {
+    console.error('[API Keys] Failed to get usage stats:', error);
+    return null;
+  }
+}
+
+/**
  * Upgrade an API key to a new tier
  */
 export async function upgradeKeyTier(

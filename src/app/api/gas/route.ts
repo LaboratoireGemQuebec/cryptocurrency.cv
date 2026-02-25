@@ -1,16 +1,31 @@
 import { NextResponse } from 'next/server';
+import { getPipelineGas } from '@/lib/data-pipeline';
 
-export const runtime = 'edge';
 export const revalidate = 30;
 
 /**
  * GET /api/gas
  * 
  * Get current Ethereum gas prices
- * Uses Etherscan API (free tier)
+ * Uses pipeline cache first, then Etherscan API (free tier)
  */
 export async function GET() {
   try {
+    // Pipeline cache-first: serve pre-fetched gas data
+    try {
+      const pipelineData = await getPipelineGas();
+      if (pipelineData) {
+        return NextResponse.json({
+          ...pipelineData,
+          _cache: 'pipeline',
+        }, {
+          headers: {
+            'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30',
+          },
+        });
+      }
+    } catch { /* pipeline miss — fetch upstream */ }
+
     // Try Etherscan API
     const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
     const etherscanUrl = `https://api.etherscan.io/api?module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;

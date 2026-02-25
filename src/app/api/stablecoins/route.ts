@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getStablecoins } from '@/lib/apis/defillama';
 
 export const runtime = 'edge';
 
@@ -43,14 +44,9 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    const response = await fetch('https://stablecoins.llama.fi/stablecoins?includePrices=true');
-    if (!response.ok) {
-      return NextResponse.json({ error: `API error: ${response.status}` }, { status: 502, headers: CORS_HEADERS });
-    }
-
-    const json = await response.json();
-    const assets = (json?.peggedAssets ?? []).slice(0, limit).map((a: Record<string, unknown>, i: number) => {
-      const circ = a.circulating as Record<string, number> ?? {};
+    const stablecoins = await getStablecoins();
+    const assets = stablecoins.slice(0, limit).map((a, i) => {
+      const circ = a.circulating ?? {};
       return {
         rank: i + 1,
         name: a.name,
@@ -58,7 +54,7 @@ export async function GET(request: NextRequest) {
         pegType: a.pegType,
         circulatingUsd: circ.peggedUSD ?? circ.peggedEUR ?? 0,
         price: a.price,
-        chains: a.chains,
+        chains: Object.keys(a.circulating),
       };
     });
 

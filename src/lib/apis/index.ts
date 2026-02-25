@@ -77,6 +77,22 @@ export { tokenterminal };
 import * as dune from './dune';
 export { dune };
 
+// Cross-Chain Bridges - DefiLlama Bridges (Free)
+import * as bridges from './bridges';
+export { bridges };
+
+// DEX Volumes - DefiLlama DEXs (Free)
+import * as dexes from './dexes';
+export { dexes };
+
+// Token Unlocks - Token Unlocks API (requires TOKEN_UNLOCKS_API_KEY)
+import * as tokenunlocks from './tokenunlocks';
+export { tokenunlocks };
+
+// Ethereum Validators - Rated Network (Free)
+import * as rated from './rated';
+export { rated };
+
 // =============================================================================
 // API Configuration & Status
 // =============================================================================
@@ -95,6 +111,10 @@ export const API_STATUS = {
   birdeye: { status: 'freemium', rateLimit: '100 calls/min', cost: '$0-$49/mo' },
   tokenterminal: { status: 'freemium', rateLimit: '5 calls/min', cost: '$0-$325/mo' },
   dune: { status: 'freemium', rateLimit: '2500 credits/mo', cost: '$0-$349/mo' },
+  bridges: { status: 'free', rateLimit: 'generous', cost: '$0' },
+  dexes: { status: 'free', rateLimit: 'generous', cost: '$0' },
+  tokenunlocks: { status: 'freemium', rateLimit: 'varies', cost: '$0+' },
+  rated: { status: 'free', rateLimit: 'moderate', cost: '$0' },
   
   // Paid APIs
   coinmarketcap: { status: 'paid', rateLimit: '30 calls/min', cost: '$29-299/mo' },
@@ -117,6 +137,9 @@ export type ApiProvider = keyof typeof API_STATUS;
  * - DefiLlama: No key required
  * - L2Beat: No key required
  * - GeckoTerminal: No key required
+ * - DefiLlama Bridges: No key required
+ * - DefiLlama DEXs: No key required
+ * - Rated Network: No key required
  * 
  * FREEMIUM APIs (free tier with limits):
  * - MESSARI_API_KEY: Messari Research
@@ -128,6 +151,7 @@ export type ApiProvider = keyof typeof API_STATUS;
  * - BIRDEYE_API_KEY: Birdeye Solana & multi-chain DeFi
  * - TOKENTERMINAL_API_KEY: Token Terminal protocol revenue
  * - DUNE_API_KEY: Dune Analytics on-chain SQL
+ * - TOKEN_UNLOCKS_API_KEY: Token Unlocks vesting/unlock schedules
  * 
  * PAID APIs:
  * - COINMARKETCAP_API_KEY: CoinMarketCap Pro

@@ -63,9 +63,9 @@ export const dexscreenerAdapter: DataProvider<DexPair[]> = {
   async fetch(params: FetchParams): Promise<DexPair[]> {
     let url: string;
 
-    if (params.query) {
+    if (params.extra?.query) {
       // Search by token name/symbol
-      url = `${DEXSCREENER_BASE}/search?q=${encodeURIComponent(params.query)}`;
+      url = `${DEXSCREENER_BASE}/search?q=${encodeURIComponent(String(params.extra.query))}`;
     } else if (params.coinIds && params.coinIds.length > 0) {
       // Search by token addresses (comma-separated)
       url = `${DEXSCREENER_BASE}/tokens/${params.coinIds.join(',')}`;

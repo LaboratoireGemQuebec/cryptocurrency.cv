@@ -16,6 +16,7 @@ import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { staleCache, cache, generateCacheKey } from '@/lib/cache';
 import { getPricesFallback } from '@/lib/fallback';
+import { getPipelinePrices } from '@/lib/data-pipeline';
 
 export const revalidate = 120;
 
@@ -41,6 +42,33 @@ export async function GET(request: NextRequest) {
   }
 
   const cacheKey = generateCacheKey('prices', { coins: coinIds.join(',') });
+
+  // 0. Pipeline cache (Redis / memory — populated by background data pipeline)
+  try {
+    const pipelineData = await getPipelinePrices();
+    if (pipelineData) {
+      // Extract only the requested coins from the bulk pipeline cache
+      const filtered: Record<string, unknown> = {};
+      let hits = 0;
+      for (const id of coinIds) {
+        if (pipelineData[id]) {
+          filtered[id] = pipelineData[id];
+          hits++;
+        }
+      }
+      if (hits === coinIds.length) {
+        return NextResponse.json(
+          isFreeTier ? { ...filtered, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : filtered,
+          {
+            headers: {
+              'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+              'X-Cache': 'PIPELINE',
+            },
+          },
+        );
+      }
+    }
+  } catch { /* pipeline miss — fall through */ }
 
   // 1. Short-lived in-memory cache
   const cached = cache.get<Record<string, unknown>>(cacheKey);

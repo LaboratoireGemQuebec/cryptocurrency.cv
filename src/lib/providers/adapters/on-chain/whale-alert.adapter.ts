@@ -45,7 +45,7 @@ export const whaleAlertAdapter: DataProvider<WhaleAlert[]> = {
     }
 
     const limit = params.limit ?? 20;
-    const minValue = params.minValue ?? 500000;
+    const minValue = (params.extra?.minValue as number) ?? 500000;
     const start = Math.floor((Date.now() - 3_600_000) / 1000);
 
     const url = `${API_BASE}/transactions?api_key=${WHALE_ALERT_KEY}&min_value=${minValue}&start=${start}&limit=${limit}`;

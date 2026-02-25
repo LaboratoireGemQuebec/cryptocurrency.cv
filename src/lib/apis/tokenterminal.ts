@@ -10,8 +10,16 @@
  * @module lib/apis/tokenterminal
  */
 
+import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { marketCache, CACHE_TTL, apiCacheKey } from '@/lib/distributed-cache';
+
 const BASE_URL = 'https://api.tokenterminal.com/v2';
-const API_KEY = process.env.TOKENTERMINAL_API_KEY || '';
+const API_KEY = process.env.TOKEN_TERMINAL_API_KEY || process.env.TOKENTERMINAL_API_KEY || '';
+
+const breaker = CircuitBreaker.for('tokenterminal', {
+  failureThreshold: 5,
+  cooldownMs: 30_000,
+});
 
 // =============================================================================
 // Types
@@ -100,11 +108,11 @@ export interface ProtocolSummary {
  */
 async function ttFetch<T>(path: string): Promise<T | null> {
   if (!API_KEY) {
-    console.warn('TokenTerminal: TOKENTERMINAL_API_KEY not set — skipping');
+    console.warn('TokenTerminal: TOKEN_TERMINAL_API_KEY not set — skipping');
     return null;
   }
 
-  try {
+  return breaker.call(async () => {
     const res = await fetch(`${BASE_URL}${path}`, {
       headers: {
         accept: 'application/json',
@@ -114,15 +122,11 @@ async function ttFetch<T>(path: string): Promise<T | null> {
     });
 
     if (!res.ok) {
-      console.error(`TokenTerminal API error ${res.status}: ${path}`);
-      return null;
+      throw new Error(`TokenTerminal API error ${res.status}: ${path}`);
     }
 
     return await res.json();
-  } catch (err) {
-    console.error('TokenTerminal API request failed:', err);
-    return null;
-  }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -130,9 +134,22 @@ async function ttFetch<T>(path: string): Promise<T | null> {
 // ---------------------------------------------------------------------------
 
 /**
- * Get all projects with latest financial metrics.
+ * Get all projects with latest financial metrics (alias: getProtocolMetrics).
  */
 export async function getProtocols(): Promise<ProtocolMetrics[]> {
+  const cacheKey = apiCacheKey('tt:protocols', {});
+
+  return marketCache.getOrSet(
+    cacheKey,
+    () => fetchProtocolsRaw(),
+    { ttl: 300, staleTtl: 120 }, // 5min analytics
+  );
+}
+
+/** Alias for getProtocols — matches the requested API surface. */
+export const getProtocolMetrics = getProtocols;
+
+async function fetchProtocolsRaw(): Promise<ProtocolMetrics[]> {
   const data = await ttFetch<
     Array<{
       project_id: string;
@@ -344,4 +361,71 @@ export async function getProtocolSummary(): Promise<ProtocolSummary> {
     sectors: sectors.slice(0, 10),
     timestamp: new Date().toISOString(),
   };
+}
+
+// ---------------------------------------------------------------------------
+// Revenue & P/E Helpers (requested API surface)
+// ---------------------------------------------------------------------------
+
+/**
+ * Get revenue metrics for a specific protocol.
+ */
+export async function getProtocolRevenue(
+  protocol: string,
+): Promise<Pick<
+  ProtocolMetrics,
+  | 'projectId'
+  | 'name'
+  | 'revenue24h'
+  | 'revenue7d'
+  | 'revenue30d'
+  | 'revenueAnnualized'
+  | 'fees24h'
+  | 'fees7d'
+  | 'fees30d'
+  | 'feesAnnualized'
+  | 'timestamp'
+> | null> {
+  const p = await getProtocol(protocol);
+  if (!p) return null;
+  return {
+    projectId: p.projectId,
+    name: p.name,
+    revenue24h: p.revenue24h,
+    revenue7d: p.revenue7d,
+    revenue30d: p.revenue30d,
+    revenueAnnualized: p.revenueAnnualized,
+    fees24h: p.fees24h,
+    fees7d: p.fees7d,
+    fees30d: p.fees30d,
+    feesAnnualized: p.feesAnnualized,
+    timestamp: p.timestamp,
+  };
+}
+
+/**
+ * Get protocols ranked by P/E ratio (lowest first = most efficiently valued).
+ */
+export async function getProtocolPE(
+  limit: number = 20,
+): Promise<Array<Pick<
+  ProtocolMetrics,
+  'projectId' | 'name' | 'symbol' | 'peRatio' | 'psRatio' | 'earningsAnnualized' | 'marketCap' | 'price' | 'timestamp'
+>>> {
+  const protocols = await getProtocols();
+  return protocols
+    .filter((p) => p.peRatio !== null && p.peRatio > 0 && p.earningsAnnualized > 0)
+    .sort((a, b) => (a.peRatio || Infinity) - (b.peRatio || Infinity))
+    .slice(0, limit)
+    .map((p) => ({
+      projectId: p.projectId,
+      name: p.name,
+      symbol: p.symbol,
+      peRatio: p.peRatio,
+      psRatio: p.psRatio,
+      earningsAnnualized: p.earningsAnnualized,
+      marketCap: p.marketCap,
+      price: p.price,
+      timestamp: p.timestamp,
+    }));
 }

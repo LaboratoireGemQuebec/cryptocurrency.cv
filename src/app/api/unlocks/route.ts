@@ -1,21 +1,75 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  getUpcomingUnlocks,
+  getTokenUnlockSchedule,
+  getUnlockCalendar,
+} from '@/lib/apis/tokenunlocks';
 
 export const runtime = 'edge';
 export const revalidate = 3600; // 1 hour
 
 /**
  * GET /api/unlocks
- * 
- * Get upcoming token unlock schedules
- * Large unlocks can create selling pressure
+ *
+ * Get upcoming token unlock schedules.
+ * Uses Token Unlocks API when TOKEN_UNLOCKS_API_KEY is set,
+ * otherwise falls back to DefiLlama unlocks data.
+ *
+ * Query params:
+ *   ?project=arbitrum  — get full unlock schedule for a project
+ *   ?calendar=true     — return calendar view of upcoming unlocks
+ *   ?limit=10          — number of results (default 10, max 50)
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 50);
+  const project = searchParams.get('project');
+  const calendar = searchParams.get('calendar') === 'true';
+
+  const headers = {
+    'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
+    'Access-Control-Allow-Origin': '*',
+  };
 
   try {
-    // Token Unlocks API (if available)
-    // For now, use DeFiLlama unlocks data
+    // Project-specific schedule
+    if (project) {
+      const schedule = await getTokenUnlockSchedule(project);
+      if (schedule) {
+        return NextResponse.json(
+          { ...schedule, source: 'tokenunlocks', timestamp: new Date().toISOString() },
+          { headers },
+        );
+      }
+      return NextResponse.json(
+        { error: `No unlock schedule found for project: ${project}` },
+        { status: 404 },
+      );
+    }
+
+    // Calendar view
+    if (calendar) {
+      const cal = await getUnlockCalendar();
+      if (cal.length) {
+        return NextResponse.json(
+          { count: cal.length, calendar: cal, source: 'tokenunlocks', timestamp: new Date().toISOString() },
+          { headers },
+        );
+      }
+    }
+
+    // Try Token Unlocks API first
+    const tokenUnlocks = await getUpcomingUnlocks();
+    if (tokenUnlocks.length) {
+      return NextResponse.json({
+        count: Math.min(tokenUnlocks.length, limit),
+        unlocks: tokenUnlocks.slice(0, limit),
+        timestamp: new Date().toISOString(),
+        source: 'tokenunlocks',
+      }, { headers });
+    }
+
+    // Fallback: DefiLlama unlocks data
     
     const response = await fetch('https://api.llama.fi/unlocks', {
       next: { revalidate: 3600 },

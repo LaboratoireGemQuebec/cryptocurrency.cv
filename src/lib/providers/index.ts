@@ -205,6 +205,28 @@ export {
   type StablecoinFlow,
 } from './adapters/stablecoin-flows';
 
+// OHLCV — Candlestick Data (Binance → CryptoCompare)
+export {
+  ohlcvChain,
+  createOHLCVChain,
+  type OHLCVData,
+  type OHLCVCandle,
+  type CandleInterval,
+} from './adapters/ohlcv';
+
+// Order Book Depth (Binance)
+export {
+  orderBookChain,
+  createOrderBookChain,
+  type OrderBookData,
+  type OrderBookLevel,
+} from './adapters/order-book';
+
+// Whale Alerts (from on-chain module)
+export {
+  whaleAlertChain,
+} from './adapters/on-chain';
+
 // =============================================================================
 // REGISTRY SETUP — Import to wire all chains into global registry
 // =============================================================================
