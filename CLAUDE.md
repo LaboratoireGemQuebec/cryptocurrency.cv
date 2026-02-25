@@ -2,6 +2,17 @@
 
 > Free crypto news API - real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. No API key required. RSS/Atom feeds, JSON REST API, historical archive with market context, embeddable widgets, ChatGPT plugin, Claude MCP server, SDKs (Python, TypeScript, Go, React, PHP). AI/LLM ready. Vibe coding friendly. Open source.
 
+### Git Identity & Commits
+
+- **Always commit and push as `nirholas`** — every commit must use this identity
+- Before committing, ensure Git is configured:
+  ```bash
+  git config user.name "nirholas"
+  git config user.email "22895867+nirholas@users.noreply.github.com"
+  ```
+- After making changes, **always commit and push** to the remote — do not leave uncommitted work
+- Use clear, descriptive commit messages
+
 ### Terminal Management
 
 - **Always use background terminals** (`isBackground: true`) for every command so a terminal ID is returned

@@ -6,6 +6,17 @@
 
 free-crypto-news is built with TypeScript. See the README for full documentation.
 
+### Git Identity & Commits
+
+- **Always commit and push as `nirholas`** — every commit must use this identity
+- Before committing, ensure Git is configured:
+  ```bash
+  git config user.name "nirholas"
+  git config user.email "22895867+nirholas@users.noreply.github.com"
+  ```
+- After making changes, **always commit and push** to the remote — do not leave uncommitted work
+- Use clear, descriptive commit messages
+
 ### Terminal Management
 
 - **Always use background terminals** (`isBackground: true`) for every command so a terminal ID is returned
