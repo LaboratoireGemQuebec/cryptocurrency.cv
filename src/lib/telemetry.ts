@@ -173,8 +173,9 @@ export async function initTelemetry(): Promise<void> {
     // Dynamic imports to avoid bundling OTel in Edge/client builds
     const { NodeSDK } = await import('@opentelemetry/sdk-node');
      
-    const resourcesModule: any = await import('@opentelemetry/resources');
-    const Resource = resourcesModule.Resource ?? resourcesModule.default?.Resource;
+    const resourcesModule = await import('@opentelemetry/resources') as any;
+     
+    const Resource = (resourcesModule as any).Resource ?? (resourcesModule as any).default?.Resource;
     const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } = await import('@opentelemetry/semantic-conventions');
     const { OTLPTraceExporter } = await import('@opentelemetry/exporter-trace-otlp-http');
     const { OTLPMetricExporter } = await import('@opentelemetry/exporter-metrics-otlp-http');
