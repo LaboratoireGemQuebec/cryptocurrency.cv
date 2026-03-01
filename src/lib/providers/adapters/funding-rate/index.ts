@@ -1,4 +1,14 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
+/**
  * Funding Rate Chain — Pre-wired provider chain for funding rate data
  *
  * Aggregates funding rates from the top 3 perpetual futures exchanges:

@@ -1,4 +1,14 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
+/**
  * Source Page - News from a specific publisher
  */
 
@@ -8,7 +18,7 @@ import Posts from '@/components/Posts';
 import { getLatestNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for sources not pre-rendered
 export const dynamicParams = true;
@@ -908,7 +918,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
   const canonical = `${SITE_URL}/en/source/${source}`;
   
   return {

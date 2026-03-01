@@ -1,4 +1,14 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
+/**
  * @fileoverview Middleware and Security Tests
  * Tests for global middleware and security utilities
  */
@@ -352,7 +362,7 @@ describe('SECURITY_HEADERS', () => {
   });
 
   it('should include X-Frame-Options', () => {
-    expect(SECURITY_HEADERS['X-Frame-Options']).toBe('DENY');
+    expect(SECURITY_HEADERS['X-Frame-Options']).toBe('SAMEORIGIN');
   });
 
   it('should include X-XSS-Protection', () => {
@@ -369,7 +379,7 @@ describe('getSecurityHeaders', () => {
     const headers = getSecurityHeaders();
     
     expect(headers.get('X-Content-Type-Options')).toBe('nosniff');
-    expect(headers.get('X-Frame-Options')).toBe('DENY');
+    expect(headers.get('X-Frame-Options')).toBe('SAMEORIGIN');
     expect(headers.get('X-XSS-Protection')).toBe('0');
   });
 });

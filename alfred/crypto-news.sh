@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Copyright 2024-2026 nirholas. All rights reserved.
+# SPDX-License-Identifier: SEE LICENSE IN LICENSE
+# https://github.com/nirholas/free-crypto-news
+#
+# This file is part of free-crypto-news.
+# Unauthorized copying, modification, or distribution is strictly prohibited.
+# For licensing inquiries: nirholas@users.noreply.github.com
+
+
 # Free Crypto News Alfred Workflow
 # Usage: ./crypto-news.sh [command] [args]
 

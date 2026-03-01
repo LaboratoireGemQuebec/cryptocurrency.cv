@@ -1,3 +1,13 @@
+/**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,13 +18,13 @@ import { generateSEOMetadata } from '@/lib/seo';
 export function generateMetadata(): Metadata {
   return generateSEOMetadata({
     title: 'About Free Crypto News',
-    description: 'Free crypto news API aggregating real-time headlines from 200+ trusted sources. No API key required. Open source and community-driven.',
+    description: 'Free crypto news API aggregating real-time headlines from 300+ trusted sources. No API key required. Open source and community-driven.',
     path: '/about',
     tags: ['about', 'crypto news API', 'free API', 'cryptocurrency news aggregator', 'open source'],
   });
 }
 
-// Featured sources - highlighting key sources from 200+ total
+// Featured sources - highlighting key sources from 300+ total
 const sources = [
   { name: 'CoinDesk', url: 'https://coindesk.com', description: 'Leading crypto news and analysis', category: 'Crypto-Native' },
   { name: 'The Block', url: 'https://theblock.co', description: 'Institutional-grade crypto research', category: 'Crypto-Native' },
@@ -34,17 +44,17 @@ const sources = [
 ];
 
 const sourceCategories = [
-  { name: 'Crypto-Native', count: 37, description: 'CoinDesk, The Block, Decrypt, WatcherGuru, and more' },
-  { name: 'Mainstream', count: 20, description: 'Bloomberg, Reuters, CNBC, TechCrunch, Wired' },
-  { name: 'DeFi', count: 19, description: 'The Defiant, dYdX, GMX, Jupiter, and protocol feeds' },
-  { name: 'Research', count: 15, description: 'Messari, Delphi Digital, Nansen, Dune, Artemis' },
-  { name: 'Layer 2', count: 10, description: 'Optimism, Arbitrum, Base, zkSync, Scroll' },
-  { name: 'Bitcoin', count: 8, description: 'Bitcoin Magazine, Stacker News, Lightning Labs' },
-  { name: 'Solana', count: 5, description: 'Helius, Phantom, Jupiter, Marinade, Jito' },
+  { name: 'Crypto-Native', count: 44, description: 'CoinDesk, The Block, Decrypt, WatcherGuru, and more' },
+  { name: 'Mainstream', count: 26, description: 'Bloomberg, Reuters, CNBC, Guardian, Fortune, Axios, BBC' },
+  { name: 'DeFi', count: 31, description: 'The Defiant, dYdX, GMX, Jupiter, Balancer, and protocol feeds' },
+  { name: 'Research', count: 18, description: 'Messari, Delphi Digital, Nansen, Dune, Artemis, Santiment' },
+  { name: 'Layer 2', count: 11, description: 'Optimism, Arbitrum, Base, zkSync, Scroll, Polygon zkEVM' },
+  { name: 'Bitcoin', count: 11, description: 'Bitcoin Magazine, Stacker News, Lightning Labs, Optech' },
+  { name: 'Solana', count: 13, description: 'Helius, Phantom, Jupiter, Marinade, Jito, Metaplex, Squads' },
   { name: 'Exchanges', count: 25, description: 'Binance, Coinbase, Kraken, CoinMarketCap, CoinGecko' },
-  { name: 'AI x Crypto', count: 5, description: 'Bittensor, Akash, Fetch.ai, Render, Ritual' },
-  { name: 'Policy', count: 6, description: 'Coin Center, SEC, CFTC, Federal Reserve' },
-  { name: 'More', count: 50, description: 'VCs, podcasts, protocols, analytics, security' },
+  { name: 'Geopolitical', count: 15, description: 'SEC, Fed, BIS, IMF, ECB, Coin Center, Atlantic Council' },
+  { name: 'Security', count: 13, description: 'SlowMist, CertiK, OpenZeppelin, samczsun, Immunefi' },
+  { name: 'More', count: 100, description: 'VCs, ETFs, NFTs, gaming, social, derivatives, RWA, mining, macro' },
 ];
 
 const features = [
@@ -76,7 +86,7 @@ export default async function AboutPage({ params }: Props) {
             <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">About Free Crypto News</h1>
             <p className="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">
               The only 100% free crypto news aggregator API. No API keys required.
-              No rate limits. Just pure, real-time crypto news from 200+ sources.
+              No rate limits. Just pure, real-time crypto news from 300+ sources.
             </p>
           </div>
 
@@ -96,7 +106,7 @@ export default async function AboutPage({ params }: Props) {
 
           {/* Sources */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">200+ Sources</h2>
+            <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">300+ Sources</h2>
             <p className="text-center text-gray-600 dark:text-slate-400 mb-8">
               News aggregated from across the crypto ecosystem
             </p>

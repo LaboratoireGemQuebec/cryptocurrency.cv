@@ -1,4 +1,14 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
+/**
  * HomePricesTable - Full-featured cryptocurrency price table for the homepage
  * Supports customizable columns: price, price change, market cap, volume, supply, charts, and more
  * Column preferences are persisted to localStorage

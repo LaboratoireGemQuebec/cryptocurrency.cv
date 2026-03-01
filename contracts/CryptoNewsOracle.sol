@@ -1,3 +1,10 @@
+// SPDX-License-Identifier: SEE LICENSE IN LICENSE
+// Copyright 2024-2026 nirholas. All rights reserved.
+// https://github.com/nirholas/free-crypto-news
+//
+// This file is part of free-crypto-news.
+// Unauthorized copying, modification, or distribution is strictly prohibited.
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 

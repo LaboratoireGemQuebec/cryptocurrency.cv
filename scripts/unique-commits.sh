@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+
+# Copyright 2024-2026 nirholas. All rights reserved.
+# SPDX-License-Identifier: SEE LICENSE IN LICENSE
+# https://github.com/nirholas/free-crypto-news
+#
+# This file is part of free-crypto-news.
+# Unauthorized copying, modification, or distribution is strictly prohibited.
+# For licensing inquiries: nirholas@users.noreply.github.com
+
 # Adds a newline to each file and commits with a unique emoji+description message
 # so every entry in the GitHub UI file listing shows a distinct, descriptive commit.
 set -e

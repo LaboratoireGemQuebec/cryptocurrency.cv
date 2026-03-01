@@ -1,3 +1,10 @@
+-- Copyright 2024-2026 nirholas. All rights reserved.
+-- SPDX-License-Identifier: SEE LICENSE IN LICENSE
+-- https://github.com/nirholas/free-crypto-news
+--
+-- This file is part of free-crypto-news.
+-- Unauthorized copying, modification, or distribution is strictly prohibited.
+
 -- free-crypto-news: initial Postgres migration
 -- Mirrors the JSON archive into relational tables with full-text search.
 

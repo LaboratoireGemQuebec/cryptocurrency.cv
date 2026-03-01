@@ -1,3 +1,10 @@
+-- Copyright 2024-2026 nirholas. All rights reserved.
+-- SPDX-License-Identifier: SEE LICENSE IN LICENSE
+-- https://github.com/nirholas/free-crypto-news
+--
+-- This file is part of free-crypto-news.
+-- Unauthorized copying, modification, or distribution is strictly prohibited.
+
 -- Migration: Add derivatives, stablecoin, gas fees, and news tables
 -- Created: 2026-02-25
 

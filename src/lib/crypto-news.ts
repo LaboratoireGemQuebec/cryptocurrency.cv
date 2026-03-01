@@ -1,4 +1,14 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ *
+ * This file is part of free-crypto-news.
+ * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * For licensing inquiries: nirholas@users.noreply.github.com
+ */
+
+/**
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
@@ -2379,29 +2389,9 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — GEOPOLITICAL & REGULATION (rebuilding from 9 disabled)
   // =========================================================================
-  bis_speeches: {
-    name: 'BIS Speeches',
-    url: 'https://www.bis.org/doclist/cbspeeches.rss',
-    category: 'geopolitical',
-  },
-  imf_blog: {
-    name: 'IMF Blog',
-    url: 'https://www.imf.org/en/Blogs/rss',
-    category: 'geopolitical',
-  },
-  ecb_press: {
-    name: 'ECB Press',
-    url: 'https://www.ecb.europa.eu/rss/press.html',
-    category: 'geopolitical',
-  },
   treasury_press: {
     name: 'US Treasury Press',
     url: 'https://home.treasury.gov/system/files/136/rss-press-releases.xml',
-    category: 'geopolitical',
-  },
-  boe_speeches: {
-    name: 'Bank of England Speeches',
-    url: 'https://www.bankofengland.co.uk/rss/speeches',
     category: 'geopolitical',
   },
   atlantic_council_crypto: {
@@ -2413,11 +2403,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — ON-CHAIN ANALYTICS (5→10+)
   // =========================================================================
-  santiment_blog: {
-    name: 'Santiment Blog',
-    url: 'https://santiment.net/blog/feed/',
-    category: 'onchain',
-  },
   messari_research: {
     name: 'Messari Protocol Services',
     url: 'https://messari.io/research/feed',
@@ -2445,16 +2430,6 @@ const RSS_SOURCES = {
   nifty_gateway_blog: {
     name: 'Nifty Gateway Blog',
     url: 'https://medium.com/feed/nifty-gateway',
-    category: 'nft',
-  },
-  superrare_blog: {
-    name: 'SuperRare Blog',
-    url: 'https://superrare.com/magazine/feed/',
-    category: 'nft',
-  },
-  artblocks_blog: {
-    name: 'Art Blocks Blog',
-    url: 'https://medium.com/feed/the-link-art-blocks',
     category: 'nft',
   },
   mirror_xyz_blog: {
@@ -2490,16 +2465,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — SOCIAL & COMMUNITY PLATFORMS
   // =========================================================================
-  farcaster_blog: {
-    name: 'Farcaster Blog',
-    url: 'https://www.farcaster.xyz/blog/feed',
-    category: 'social',
-  },
-  lens_blog: {
-    name: 'Lens Protocol Blog',
-    url: 'https://lens.xyz/blog/feed',
-    category: 'social',
-  },
   steemit_crypto: {
     name: 'Steemit Crypto',
     url: 'https://steemit.com/created/cryptocurrency.rss',
@@ -2538,19 +2503,9 @@ const RSS_SOURCES = {
     url: 'https://minaprotocol.com/blog/feed',
     category: 'security',
   },
-  polygon_zkevm_blog: {
-    name: 'Polygon zkEVM Blog',
-    url: 'https://polygon.technology/blog/tag/zkevm/feed',
-    category: 'layer2',
-  },
   noir_blog: {
     name: 'Noir Lang Blog',
     url: 'https://blog.noir-lang.org/feed',
-    category: 'developer',
-  },
-  risc_zero_blog: {
-    name: 'RISC Zero Blog',
-    url: 'https://www.risczero.com/blog/rss.xml',
     category: 'developer',
   },
 
@@ -2600,11 +2555,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — ETF / ASSET MGMT EXPANDED
   // =========================================================================
-  fidelity_digital: {
-    name: 'Fidelity Digital Assets',
-    url: 'https://www.fidelitydigitalassets.com/research/feed',
-    category: 'etf',
-  },
   hashdex_research: {
     name: 'Hashdex Research',
     url: 'https://hashdex.com/en/research/feed',
@@ -2619,11 +2569,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — ASIA-PACIFIC EXPANDED
   // =========================================================================
-  blocktempo: {
-    name: 'BlockTempo (EN)',
-    url: 'https://www.blocktempo.com/feed/',
-    category: 'asia',
-  },
   coinpost_en: {
     name: 'CoinPost (EN)',
     url: 'https://coinpost.jp/?feed=rss2',
@@ -2667,11 +2612,6 @@ const RSS_SOURCES = {
     url: 'https://research.lido.fi/latest.rss',
     category: 'ethereum',
   },
-  safe_blog: {
-    name: 'Safe Blog',
-    url: 'https://safe.mirror.xyz/feed/atom',
-    category: 'ethereum',
-  },
   ens_blog: {
     name: 'ENS Blog',
     url: 'https://blog.ens.domains/feed',
@@ -2708,11 +2648,6 @@ const RSS_SOURCES = {
   makerdao_gov: {
     name: 'MakerDAO Governance',
     url: 'https://forum.makerdao.com/latest.rss',
-    category: 'stablecoin',
-  },
-  frax_blog: {
-    name: 'Frax Finance Blog',
-    url: 'https://medium.com/feed/frax-finance',
     category: 'stablecoin',
   },
 
@@ -3101,7 +3036,6 @@ const API_SOURCES: Record<string, ApiSource> = {
       const events = data as Array<{
         name: string;
         description: string;
-        date: string;
         link: string;
       }>;
       if (!Array.isArray(events)) return [];
