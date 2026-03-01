@@ -8,7 +8,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getExportJob } from '@/lib/data-export';
+import { getExportJob, deleteExportJob } from '@/lib/data-export';
 
 export const runtime = 'edge';
 
@@ -102,8 +102,16 @@ export async function DELETE(
       );
     }
 
-    // In production, we would remove from storage
-    // For now, just acknowledge the request
+    // Remove the job from storage
+    const deleted = deleteExportJob(jobId);
+
+    if (!deleted) {
+      return NextResponse.json(
+        { error: 'Failed to delete export job', jobId },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       success: true,
       message: `Job ${jobId} deleted`,

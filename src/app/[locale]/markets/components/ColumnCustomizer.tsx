@@ -144,7 +144,11 @@ export default function ColumnCustomizer({
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            role="button"
+            tabIndex={-1}
+            aria-label="Close modal"
             onClick={closeModal}
+            onKeyDown={(e) => { if (e.key === 'Escape' || e.key === 'Enter') closeModal(); }}
           />
 
           {/* Modal panel */}

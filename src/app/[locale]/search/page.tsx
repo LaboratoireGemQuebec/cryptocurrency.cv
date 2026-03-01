@@ -10,7 +10,7 @@ import { WebsiteStructuredData, BreadcrumbStructuredData } from "@/components/St
 export const metadata: Metadata = {
   title: "Search - Free Crypto News",
   description:
-    "Search crypto news from 130+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.",
+    "Search crypto news from 200+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.",
 };
 
 type Props = {

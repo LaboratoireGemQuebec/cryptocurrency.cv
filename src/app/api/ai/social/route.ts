@@ -18,7 +18,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { callGroq, isGroqConfigured } from '@/lib/groq';
+import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { parseGroqJson } from '@/lib/groq';
 
 export const runtime = 'edge';
 
@@ -82,18 +83,12 @@ async function generateSocialContent(
   const articleContext = `Title: ${title}\n\nContent:\n${content.slice(0, 2500)}`;
   const sourceNote = sourceUrl ? `\nSource URL: ${sourceUrl}` : '';
 
-  const response = await callGroq(
-    [
-      {
-        role: 'system',
-        content: `You are a crypto media expert who writes viral, engaging social media content.
+  const systemPrompt = `You are a crypto media expert who writes viral, engaging social media content.
 You write Twitter threads that are punchy, factual, and share-worthy.
 You write LinkedIn posts that are professional yet accessible.
-Never use excessive emoji. Be specific with numbers and facts.`,
-      },
-      {
-        role: 'user',
-        content: `Create social media content for this crypto article:
+Never use excessive emoji. Be specific with numbers and facts.`;
+
+  const userPrompt = `Create social media content for this crypto article:
 
 ${articleContext}${sourceNote}
 
@@ -102,13 +97,11 @@ Return ONLY valid JSON with these fields:
 - "linkedin": a 200-300 word LinkedIn post. Professional tone. Start with a hook. Include 3 key insights as bullet points. End with a question to drive engagement.
 - "hashtags": array of 5-7 relevant hashtags WITHOUT the # symbol (e.g. ["Bitcoin", "Crypto", "DeFi"])
 
-Important: each tweet in the "thread" array should be self-contained and flow naturally when read in sequence.`,
-      },
-    ],
-    { maxTokens: 2000, temperature: 0.5, jsonMode: true }
-  );
+Important: each tweet in the "thread" array should be self-contained and flow naturally when read in sequence.`;
 
-  const data = JSON.parse(response.content.trim());
+  const raw = await aiComplete(systemPrompt, userPrompt, { maxTokens: 2000, temperature: 0.5, jsonMode: true }, true);
+
+  const data = parseGroqJson<Record<string, unknown>>(raw);
 
   const rawThread: string[] = data.thread || [];
 
@@ -134,9 +127,9 @@ Important: each tweet in the "thread" array should be self-contained and flow na
 // ──────────────────────────────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-  if (!isGroqConfigured()) {
+  if (!isAIConfigured()) {
     return NextResponse.json(
-      { error: 'GROQ_API_KEY is required for social content generation' },
+      { error: 'AI features not configured. Set GROQ_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY.' },
       { status: 503 }
     );
   }
@@ -170,17 +163,31 @@ export async function POST(request: NextRequest) {
   // Use title as fallback content if content is empty
   if (!content) content = title;
 
-  const output = await generateSocialContent(title, content, body.url);
+  try {
+    const output = await generateSocialContent(title, content, body.url);
 
-  return NextResponse.json({
-    success: true,
-    ...output,
-    meta: {
-      tweetCount: output.thread.length,
-      linkedinLength: output.linkedin.length,
-      allTweetsValid: output.charCounts.every(c => c <= 280),
-    },
-  });
+    return NextResponse.json({
+      success: true,
+      ...output,
+      meta: {
+        tweetCount: output.thread.length,
+        linkedinLength: output.linkedin.length,
+        allTweetsValid: output.charCounts.every(c => c <= 280),
+      },
+    });
+  } catch (error) {
+    console.error('Social content generation error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return NextResponse.json(
+        { error: 'AI service temporarily unavailable. All providers failed authentication.' },
+        { status: 503 }
+      );
+    }
+    return NextResponse.json(
+      { error: 'Failed to generate social content', details: String(error) },
+      { status: 500 }
+    );
+  }
 }
 
 export async function GET() {
@@ -193,7 +200,7 @@ export async function GET() {
       content: 'string (optional) — article body/description',
     },
     notes: 'Provide either url, or title+content, or all three',
-    requires: ['GROQ_API_KEY'],
+    requires: ['GROQ_API_KEY or OPENAI_API_KEY or ANTHROPIC_API_KEY'],
     example: {
       url: 'https://cryptocurrency.cv/en/article/abc123',
       title: 'Bitcoin Hits New All-Time High',

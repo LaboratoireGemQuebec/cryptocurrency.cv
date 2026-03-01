@@ -19,6 +19,11 @@
  */
 
 import { cache } from '@/lib/cache';
+import { getLatestNews } from '@/lib/crypto-news';
+import { enrichArticlesBatch } from '@/lib/article-enrichment';
+import { getMarketOverview } from '@/lib/market-data';
+import { analyzeSentiment } from '@/lib/ai-services';
+import { performHealthCheck } from '@/lib/health-check';
 
 // ═══════════════════════════════════════════════════════════════
 // JOB QUEUE TYPES
@@ -92,6 +97,8 @@ class JobQueue {
   private processedCount = 0;
   private errorCount = 0;
   private totalProcessingTime = 0;
+  private throughputWindow: number[] = []; // timestamps of completed jobs
+  private readonly THROUGHPUT_WINDOW_MS = 60_000; // 1 minute window
 
   constructor(config: Partial<JobQueueConfig> = {}) {
     this.config = { ...DEFAULT_CONFIG, ...config };
@@ -186,7 +193,7 @@ class JobQueue {
       failed: this.errorCount,
       dead: 0,
       avgProcessingTimeMs: this.processedCount > 0 ? this.totalProcessingTime / this.processedCount : 0,
-      throughputPerMinute: 0, // Would need time-windowed counter
+      throughputPerMinute: this.calculateThroughput(),
       errorRate: this.processedCount > 0 ? this.errorCount / this.processedCount : 0,
     };
   }
@@ -208,6 +215,14 @@ class JobQueue {
   getJobs(type: string, status?: JobStatus): Job[] {
     const queue = this.queues.get(type) || [];
     return status ? queue.filter((j) => j.status === status) : queue;
+  }
+
+  private calculateThroughput(): number {
+    const now = Date.now();
+    const cutoff = now - this.THROUGHPUT_WINDOW_MS;
+    // Prune old entries
+    this.throughputWindow = this.throughputWindow.filter(ts => ts > cutoff);
+    return this.throughputWindow.length;
   }
 
   private async processLoop(): Promise<void> {
@@ -251,6 +266,7 @@ class JobQueue {
       job.result = result;
       this.processedCount++;
       this.totalProcessingTime += (job.completedAt - job.startedAt);
+      this.throughputWindow.push(job.completedAt);
     } catch (error) {
       job.error = error instanceof Error ? error.message : String(error);
 
@@ -296,8 +312,26 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     schedule: '*/5 * * * *', // Every 5 minutes
     rateLimit: { requests: 50, windowMs: 60_000 },
     handler: async (job) => {
-      // Placeholder — would call RSS fetch logic
-      return { feedUrl: job.payload, articlesFound: 0 };
+      const category = (job.payload as { category?: string })?.category;
+      const limit = (job.payload as { limit?: number })?.limit || 20;
+      try {
+        const result = await getLatestNews({ limit, category });
+        const articlesFound = result.articles.length;
+        // Cache the fetched articles for downstream consumers
+        if (articlesFound > 0) {
+          await cache.set(`worker:rss:latest:${category || 'all'}`, result.articles, 300);
+        }
+        return {
+          category: category || 'all',
+          articlesFound,
+          sources: result.sources,
+          fetchedAt: result.fetchedAt,
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[rss-fetcher] Failed to fetch feeds:`, message);
+        throw new Error(`RSS fetch failed: ${message}`);
+      }
     },
   },
   {
@@ -306,8 +340,32 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     concurrency: 3,
     rateLimit: { requests: 20, windowMs: 60_000 },
     handler: async (job) => {
-      // Placeholder — would call AI enrichment
-      return { articleId: (job.payload as any)?.id, enriched: true };
+      const payload = job.payload as { articles?: Array<{ url: string; title: string; description?: string; source?: string }> };
+      const articles = payload?.articles || [];
+      if (articles.length === 0) {
+        return { enriched: 0, skipped: true, reason: 'No articles provided' };
+      }
+      try {
+        const enrichments = await enrichArticlesBatch(articles);
+        const enrichedCount = enrichments.size;
+        // Cache enrichment results for quick lookup
+        for (const [url, enrichment] of enrichments) {
+          await cache.set(`enrichment:${url}`, enrichment, 86400); // 24h TTL
+        }
+        return {
+          enriched: enrichedCount,
+          total: articles.length,
+          sentimentBreakdown: {
+            bullish: Array.from(enrichments.values()).filter(e => e.sentiment === 'bullish').length,
+            bearish: Array.from(enrichments.values()).filter(e => e.sentiment === 'bearish').length,
+            neutral: Array.from(enrichments.values()).filter(e => e.sentiment === 'neutral').length,
+          },
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[article-enricher] Failed:`, message);
+        throw new Error(`Enrichment failed: ${message}`);
+      }
     },
   },
   {
@@ -317,7 +375,25 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     schedule: '* * * * *', // Every minute
     rateLimit: { requests: 30, windowMs: 60_000 },
     handler: async (job) => {
-      return { source: (job.payload as any)?.source, fetched: true };
+      const source = (job.payload as { source?: string })?.source || 'coingecko';
+      try {
+        const marketData = await getMarketOverview();
+        // Cache market overview for API consumers
+        await cache.set('worker:market:overview', marketData, 60);
+        return {
+          source,
+          fetched: true,
+          totalMarketCap: marketData.totalMarketCap,
+          btcDominance: marketData.btcDominance,
+          totalVolume: marketData.totalVolume24h,
+          topMoversCount: marketData.topGainers?.length || 0,
+          timestamp: Date.now(),
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[market-data-fetcher] Failed:`, message);
+        throw new Error(`Market data fetch failed: ${message}`);
+      }
     },
   },
   {
@@ -326,7 +402,33 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     concurrency: 1,
     schedule: '0 * * * *', // Every hour
     handler: async (job) => {
-      return { archived: true };
+      const payload = job.payload as { since?: string; category?: string } | undefined;
+      const since = payload?.since || new Date(Date.now() - 3600_000).toISOString(); // Default: last hour
+      try {
+        // Fetch recent articles to archive
+        const result = await getLatestNews({ limit: 100, category: payload?.category });
+        const articlesToArchive = result.articles.filter(
+          (a) => new Date(a.pubDate) >= new Date(since)
+        );
+        // Store archive state in cache
+        const archiveKey = `archive:batch:${new Date().toISOString().slice(0, 13)}`;
+        await cache.set(archiveKey, {
+          count: articlesToArchive.length,
+          sources: [...new Set(articlesToArchive.map(a => a.source))],
+          archivedAt: new Date().toISOString(),
+        }, 86400);
+        return {
+          archived: true,
+          articleCount: articlesToArchive.length,
+          sourceCount: new Set(articlesToArchive.map(a => a.source)).size,
+          since,
+          archivedAt: new Date().toISOString(),
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[archive-worker] Failed:`, message);
+        throw new Error(`Archive failed: ${message}`);
+      }
     },
   },
   {
@@ -335,7 +437,29 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     concurrency: 2,
     rateLimit: { requests: 10, windowMs: 60_000 },
     handler: async (job) => {
-      return { articleId: (job.payload as any)?.id, sentiment: 'neutral' };
+      const payload = job.payload as { text?: string; title?: string; articleId?: string };
+      const text = payload?.text || payload?.title || '';
+      if (!text) {
+        return { articleId: payload?.articleId, sentiment: 'neutral', score: 0, skipped: true };
+      }
+      try {
+        const result = await analyzeSentiment(text);
+        // Cache sentiment result if articleId provided
+        if (payload?.articleId) {
+          await cache.set(`sentiment:${payload.articleId}`, result, 3600);
+        }
+        return {
+          articleId: payload?.articleId,
+          sentiment: result.label,
+          score: result.score,
+          confidence: result.confidence,
+          analyzedAt: new Date().toISOString(),
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[sentiment-analyzer] Failed:`, message);
+        throw new Error(`Sentiment analysis failed: ${message}`);
+      }
     },
   },
   {
@@ -344,7 +468,34 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     concurrency: 1,
     schedule: '*/10 * * * *', // Every 10 minutes
     handler: async () => {
-      return { checked: true, timestamp: Date.now() };
+      try {
+        const health = await performHealthCheck(true);
+        // Cache health status for dashboard consumers
+        await cache.set('worker:health:latest', {
+          status: health.status,
+          checks: health.checks.map(c => ({
+            name: c.name,
+            status: c.status,
+            responseTime: c.responseTime,
+            error: c.error,
+          })),
+          summary: health.summary,
+          timestamp: Date.now(),
+        }, 600);
+        return {
+          checked: true,
+          overallStatus: health.status,
+          healthy: health.summary.healthy,
+          degraded: health.summary.degraded,
+          unhealthy: health.summary.unhealthy,
+          totalChecks: health.summary.total,
+          timestamp: Date.now(),
+        };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[data-source-health] Failed:`, message);
+        throw new Error(`Health check failed: ${message}`);
+      }
     },
   },
 ];

@@ -22,6 +22,8 @@ const SOURCES = [
   { name: 'CryptoSlate', slug: 'cryptoslate' },
   { name: 'BeInCrypto', slug: 'beincrypto' },
   { name: 'CryptoPotato', slug: 'cryptopotato' },
+  { name: 'Watcher Guru', slug: 'watcherguru' },
+  { name: 'Cryptopolitan', slug: 'cryptopolitan' },
 ];
 
 export function SourceComparison() {

@@ -97,8 +97,11 @@ async function fetchWhaleTransactions(
     try {
       const now = Math.floor(Date.now() / 1000);
       const response = await fetch(
-        `https://api.whale-alert.io/v1/transactions?api_key=${apiKey}&min_value=${minThreshold}&start=${now - 86400}`,
-        { next: { revalidate: 60 } }
+        `https://api.whale-alert.io/v1/transactions?min_value=${minThreshold}&start=${now - 86400}`,
+        {
+          headers: { 'X-WA-API-KEY': apiKey },
+          next: { revalidate: 60 },
+        }
       );
       
       if (response.ok) {
@@ -353,7 +356,7 @@ async function handler(
   } catch (error) {
     console.error('Error in whale alerts route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch whale data', message: String(error) },
+      { error: 'Failed to fetch whale data', message: 'An internal error occurred. Please try again later.' },
       { status: 500 }
     );
   }

@@ -122,8 +122,14 @@ function SignalRow({
     <div
       ref={ref}
       className="relative flex items-center justify-between"
+      role={explanation ? 'button' : undefined}
+      tabIndex={explanation ? 0 : undefined}
+      aria-label={explanation ? `Show AI explanation for ${sig.ticker}` : undefined}
       onMouseEnter={() => explanation && setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onFocus={() => explanation && setOpen(true)}
+      onBlur={() => setOpen(false)}
+      onKeyDown={(e) => { if (explanation && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setOpen(v => !v); } }}
     >
       <div className="flex items-center gap-2">
         <span className="font-bold text-sm text-gray-900 dark:text-white">{sig.ticker}</span>

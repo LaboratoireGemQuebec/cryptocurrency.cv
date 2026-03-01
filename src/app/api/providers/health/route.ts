@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import { isAdminAuthorized } from '@/lib/admin-auth';
+import type { NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
@@ -18,13 +20,9 @@ const CORS_HEADERS = {
  *
  * Requires admin key: X-Admin-Key header or ?admin_key= query param
  */
-export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const adminKey =
-    request.headers.get('X-Admin-Key') ??
-    url.searchParams.get('admin_key');
-
-  if (adminKey !== process.env.ADMIN_API_KEY) {
+export async function GET(request: NextRequest) {
+  // Require admin authentication (header only — no query param for security)
+  if (!isAdminAuthorized(request)) {
     return NextResponse.json(
       { error: 'Unauthorized — admin key required' },
       { status: 401, headers: CORS_HEADERS },

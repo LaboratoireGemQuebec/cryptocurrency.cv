@@ -18,6 +18,27 @@ const eventQueue: AnalyticsEvent[] = [];
 // Whether to send analytics (respects Do Not Track)
 let analyticsEnabled = true;
 
+// ---- Server-side metrics accumulator ----
+interface APIMetrics {
+  totalRequests: number;
+  totalErrors: number;       // statusCode >= 400
+  totalResponseTime: number; // cumulative ms
+  uniqueUserAgents: Set<string>;
+  startTime: number;         // epoch ms when first request was tracked
+  endpointCounts: Map<string, number>;
+  statusCounts: Map<number, number>;
+}
+
+const apiMetrics: APIMetrics = {
+  totalRequests: 0,
+  totalErrors: 0,
+  totalResponseTime: 0,
+  uniqueUserAgents: new Set(),
+  startTime: Date.now(),
+  endpointCounts: new Map(),
+  statusCounts: new Map(),
+};
+
 /**
  * Initialize analytics
  */

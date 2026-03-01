@@ -76,6 +76,22 @@ vi.mock('@/lib/logger', () => ({
   }),
 }));
 
+vi.mock('@/lib/article-enrichment', () => ({
+  getBulkEnrichment: vi.fn(async () => new Map()),
+}));
+
+vi.mock('@/lib/cache', () => ({
+  staleCache: { get: vi.fn(() => null), set: vi.fn() },
+  generateCacheKey: vi.fn(() => 'test-cache-key'),
+}));
+
+vi.mock('@/lib/fallback', () => ({
+  getNewsFallback: vi.fn(async () => ({
+    level: 'emergency',
+    data: { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() },
+  })),
+}));
+
 import { GET } from './route';
 
 // ---------------------------------------------------------------------------
@@ -210,17 +226,18 @@ describe('GET /api/news', () => {
     expect(body.articles).toHaveLength(0);
   });
 
-  it('returns 500 when getLatestNews throws', async () => {
+  it('returns 200 with fallback when getLatestNews throws (stale-on-error)', async () => {
     mockGetLatestNews.mockRejectedValueOnce(new Error('Index file not found'));
 
     const response = await GET(makeRequest());
-    expect(response.status).toBe(500);
+    // Route uses stale-on-error pattern: catches errors and serves fallback data
+    expect(response.status).toBe(200);
   });
 
   it('returns 400 when query validation fails', async () => {
     mockValidateQuery.mockReturnValueOnce({
       success: false,
-      data: new Response(JSON.stringify({ error: 'invalid params' }), {
+      error: new Response(JSON.stringify({ error: 'invalid params' }), {
         status: 400,
       }),
     } as any);

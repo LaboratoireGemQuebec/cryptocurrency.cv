@@ -13,8 +13,8 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -78,7 +78,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const limit = Math.min(parseInt(searchParams.get('limit') || '40'), 80);
   const emerging = searchParams.get('emerging') === 'true';
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     logger.info('Fetching narrative analysis', { limit, emerging });
@@ -104,7 +104,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptGroqJson<NarrativesResponse>(
+    const result = await promptAIJson<NarrativesResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 4000, temperature: 0.4 }
@@ -149,12 +149,15 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
         headers: {
           'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
           'Access-Control-Allow-Origin': '*',
-          'X-Data-Source': 'Groq AI',
+          'X-Data-Source': 'AI',
         },
       }
     );
   } catch (error) {
     logger.error('Failed to analyze narratives', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return ApiError.internal('Failed to analyze narratives', error);
   }
 }

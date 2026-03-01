@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { isAdminAuthorized } from '@/lib/admin-auth';
 import { toPrometheusText } from '@/lib/observability/metrics';
 
 export const runtime = 'edge';
@@ -11,13 +13,9 @@ export const runtime = 'edge';
  * Returns metrics in Prometheus text format for scraping.
  * Admin key required.
  */
-export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const adminKey =
-    request.headers.get('X-Admin-Key') ??
-    url.searchParams.get('admin_key');
-
-  if (adminKey !== process.env.ADMIN_API_KEY) {
+export async function GET(request: NextRequest) {
+  // Require admin authentication (header only — no query param for security)
+  if (!isAdminAuthorized(request)) {
     return new NextResponse('Unauthorized', { status: 401 });
   }
 

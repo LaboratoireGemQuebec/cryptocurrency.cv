@@ -300,7 +300,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json(
       {
         error: 'Export failed',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     );
@@ -334,6 +333,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       compress?: boolean;
     };
 
+    // Cap limit to prevent abuse (10K max, same as GET)
+    const cappedLimit = Math.min(limit, 10_000);
+
     // Validate
     if (!SCHEMAS[type]) {
       return NextResponse.json(
@@ -348,7 +350,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       dateFrom,
       dateTo,
       symbols,
-      limit,
+      limit: cappedLimit,
       compress,
       schema: SCHEMAS[type],
     });

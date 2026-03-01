@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get('type') || undefined; // Filter by entity type
   const minMentions = parseInt(searchParams.get('min_mentions') || '1');
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -64,7 +64,7 @@ export async function GET(request: NextRequest) {
 
 ${articlesText}`;
 
-    const result = await promptGroqJson<EntitiesResponse>(
+    const result = await promptAIJson<EntitiesResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 3000 }
@@ -109,6 +109,9 @@ ${articlesText}`;
     );
   } catch (error) {
     console.error('Entity extraction error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to extract entities', details: String(error) },
       { status: 500 }

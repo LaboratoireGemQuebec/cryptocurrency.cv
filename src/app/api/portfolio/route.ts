@@ -321,7 +321,7 @@ export async function GET(request: NextRequest) {
     },
     dataSources: {
       prices: 'DexScreener + CoinGecko',
-      news: 'Aggregated from 130+ sources',
+      news: 'Aggregated from 200+ sources',
     },
     fetchedAt: new Date().toISOString(),
   });

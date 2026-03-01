@@ -16,7 +16,8 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { callGroq, isGroqConfigured } from '@/lib/groq';
+import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { parseGroqJson } from '@/lib/groq';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -113,16 +114,9 @@ async function clusterTopics(
 ): Promise<Array<{ topic: string; headline_indices: number[]; keywords: string[] }>> {
   const list = headlines.map((h, i) => `${i}: ${h}`).join('\n');
 
-  const response = await callGroq(
-    [
-      {
-        role: 'system',
-        content:
-          'You are a crypto news editor. Identify the most newsworthy recurring themes in a list of headlines.',
-      },
-      {
-        role: 'user',
-        content: `Below are ${headlines.length} crypto news headlines from the past week. 
+  const response = await aiComplete(
+    'You are a crypto news editor. Identify the most newsworthy recurring themes in a list of headlines.',
+    `Below are ${headlines.length} crypto news headlines from the past week. 
 Group them into exactly ${numTopics} distinct topic clusters.
 
 For each cluster return:
@@ -134,12 +128,11 @@ Return ONLY a valid JSON array of ${numTopics} objects. No markdown.
 
 Headlines:
 ${list}`,
-      },
-    ],
-    { maxTokens: 2048, temperature: 0.2, jsonMode: true }
+    { maxTokens: 2048, temperature: 0.2, jsonMode: true },
+    true
   );
 
-  const parsed = JSON.parse(response.content.trim());
+  const parsed = JSON.parse(response.trim());
   return Array.isArray(parsed) ? parsed : parsed.clusters || parsed.topics || [];
 }
 
@@ -225,9 +218,9 @@ generated: true
 // ──────────────────────────────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-  if (!isGroqConfigured()) {
+  if (!isAIConfigured()) {
     return NextResponse.json(
-      { error: 'GROQ_API_KEY is required for blog generation' },
+      { error: 'AI features not configured. Set GROQ_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY.' },
       { status: 503 }
     );
   }
@@ -239,65 +232,79 @@ export async function POST(request: NextRequest) {
 
   const postDate = today();
 
-  // Fetch recent news
-  const { articles } = await getLatestNews(200);
-  const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
-  const recent = articles.filter(a => new Date(a.pubDate) >= cutoff);
+  try {
+    // Fetch recent news
+    const { articles } = await getLatestNews(200);
+    const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+    const recent = articles.filter(a => new Date(a.pubDate) >= cutoff);
 
-  if (recent.length < 5) {
-    return NextResponse.json(
-      { error: 'Not enough recent articles to generate posts', count: recent.length },
-      { status: 422 }
-    );
-  }
-
-  const headlines = recent.map(a => a.title);
-
-  // Cluster into topics
-  const clusters = await clusterTopics(headlines, numTopics);
-
-  // Generate a post for each cluster
-  const posts: GeneratedPost[] = [];
-  const commitResults: Array<{ file: string; result: { success: boolean; message: string } }> = [];
-
-  for (const cluster of clusters.slice(0, numTopics)) {
-    const clusterHeadlines = (cluster.headline_indices || [])
-      .map((i: number) => headlines[i])
-      .filter(Boolean)
-      .slice(0, 20);
-
-    const post = await generatePost(
-      cluster.topic,
-      clusterHeadlines,
-      cluster.keywords || [],
-      postDate
-    );
-    posts.push(post);
-
-    if (shouldCommit) {
-      const result = await commitFileToGitHub(
-        `content/blog/${post.filename}`,
-        post.full,
-        `📝 AI blog post: ${post.topic} — ${postDate}`
+    if (recent.length < 5) {
+      return NextResponse.json(
+        { error: 'Not enough recent articles to generate posts', count: recent.length },
+        { status: 422 }
       );
-      commitResults.push({ file: post.filename, result });
     }
-  }
 
-  return NextResponse.json({
-    success: true,
-    generated: posts.length,
-    date: postDate,
-    articlesAnalysed: recent.length,
-    posts: posts.map(p => ({
-      filename: p.filename,
-      topic: p.topic,
-      articleCount: p.articleCount,
-      preview: p.full.slice(0, 400) + '…',
-      content: p.full,
-    })),
-    ...(shouldCommit ? { commits: commitResults } : {}),
-  });
+    const headlines = recent.map(a => a.title);
+
+    // Cluster into topics
+    const clusters = await clusterTopics(headlines, numTopics);
+
+    // Generate a post for each cluster
+    const posts: GeneratedPost[] = [];
+    const commitResults: Array<{ file: string; result: { success: boolean; message: string } }> = [];
+
+    for (const cluster of clusters.slice(0, numTopics)) {
+      const clusterHeadlines = (cluster.headline_indices || [])
+        .map((i: number) => headlines[i])
+        .filter(Boolean)
+        .slice(0, 20);
+
+      const post = await generatePost(
+        cluster.topic,
+        clusterHeadlines,
+        cluster.keywords || [],
+        postDate
+      );
+      posts.push(post);
+
+      if (shouldCommit) {
+        const result = await commitFileToGitHub(
+          `content/blog/${post.filename}`,
+          post.full,
+          `📝 AI blog post: ${post.topic} — ${postDate}`
+        );
+        commitResults.push({ file: post.filename, result });
+      }
+    }
+
+    return NextResponse.json({
+      success: true,
+      generated: posts.length,
+      date: postDate,
+      articlesAnalysed: recent.length,
+      posts: posts.map(p => ({
+        filename: p.filename,
+        topic: p.topic,
+        articleCount: p.articleCount,
+        preview: p.full.slice(0, 400) + '…',
+        content: p.full,
+      })),
+      ...(shouldCommit ? { commits: commitResults } : {}),
+    });
+  } catch (error) {
+    console.error('Blog generation error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return NextResponse.json(
+        { error: 'AI service temporarily unavailable. All providers failed authentication.' },
+        { status: 503 }
+      );
+    }
+    return NextResponse.json(
+      { error: 'Failed to generate blog posts', details: String(error) },
+      { status: 500 }
+    );
+  }
 }
 
 export async function GET() {
@@ -309,7 +316,7 @@ export async function GET() {
       days: 'Look-back window in days (default 7, max 30)',
       commit: 'Pass commit=true to commit posts to GitHub (requires GITHUB_TOKEN)',
     },
-    requires: ['GROQ_API_KEY'],
+    requires: ['GROQ_API_KEY or OPENAI_API_KEY or ANTHROPIC_API_KEY'],
     optional: ['GITHUB_TOKEN (for auto-commit to content/blog/)'],
     example: 'POST /api/ai/blog-generator?topics=3&days=7&commit=true',
   });

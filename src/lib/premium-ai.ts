@@ -92,6 +92,54 @@ function getSignalFromChange(change: number): 'buy' | 'sell' | 'hold' {
   return 'hold';
 }
 
+/**
+ * Calculate social sentiment from news articles and market data.
+ * Uses source diversity, article volume, and community engagement signals
+ * to derive a social sentiment score between -1 (very bearish) and 1 (very bullish).
+ */
+function calculateSocialSentiment(
+  newsArticles: Array<{ title: string; sentiment: 'positive' | 'negative' | 'neutral'; source: string }>,
+  coinData: Record<string, unknown>
+): number {
+  if (newsArticles.length === 0) return 0;
+
+  // Factor 1: News sentiment momentum (how much coverage, and what direction)
+  const positiveCount = newsArticles.filter(a => a.sentiment === 'positive').length;
+  const negativeCount = newsArticles.filter(a => a.sentiment === 'negative').length;
+  const totalArticles = newsArticles.length;
+  const sentimentRatio = (positiveCount - negativeCount) / totalArticles;
+
+  // Factor 2: Source diversity — more sources discussing = more social buzz
+  const uniqueSources = new Set(newsArticles.map(a => a.source)).size;
+  const diversityFactor = Math.min(uniqueSources / 5, 1); // Normalize, cap at 5 sources
+
+  // Factor 3: Market data community signals (market cap rank as a social proxy)
+  const marketData = coinData as { market_data?: { market_cap_rank?: number } };
+  const rank = marketData?.market_data?.market_cap_rank || 100;
+  // Top-ranked coins have more social engagement
+  const rankFactor = Math.max(0, 1 - (rank / 100)) * 0.3;
+
+  // Factor 4: Title engagement signals
+  const engagementWords = ['breaking', 'exclusive', 'massive', 'huge', 'record', 'milestone', 'major'];
+  const fearWords = ['warning', 'caution', 'risk', 'danger', 'critical', 'emergency'];
+  let engagementScore = 0;
+  for (const article of newsArticles) {
+    const titleLower = article.title.toLowerCase();
+    for (const word of engagementWords) {
+      if (titleLower.includes(word)) engagementScore += 0.1;
+    }
+    for (const word of fearWords) {
+      if (titleLower.includes(word)) engagementScore -= 0.1;
+    }
+  }
+  engagementScore = Math.max(-0.3, Math.min(0.3, engagementScore));
+
+  // Combine factors with weights
+  const socialScore = (sentimentRatio * 0.4) + (diversityFactor * 0.2) + rankFactor + engagementScore;
+
+  return Math.max(-1, Math.min(1, socialScore));
+}
+
 // =============================================================================
 // PREMIUM AI HANDLERS
 // =============================================================================
@@ -174,7 +222,7 @@ export async function analyzeSentiment(request: NextRequest): Promise<NextRespon
       confidence,
       factors: {
         news: Math.max(-1, Math.min(1, newsSentiment)),
-        social: 0, // Would require social API
+        social: calculateSocialSentiment(newsArticles, coinData),
         technical: Math.max(-1, Math.min(1, technicalScore)),
       },
       summary: `${coinData.name} shows ${getSentimentFromChange(overallScore * 10)} sentiment based on recent price action (${change24h > 0 ? '+' : ''}${change24h.toFixed(2)}% 24h) and news coverage.`,

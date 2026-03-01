@@ -4,6 +4,9 @@
  * across ai-brief, ai-counter, ai-debate, ai-enhanced, claim-extractor, event-classifier.
  */
 
+import { parseGroqJson } from './groq';
+import { aiCache, generateCacheKey, withCache } from './cache';
+
 export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter' | 'gemini';
 
 /**
@@ -540,4 +543,73 @@ export async function aiCompleteWithRetry(
     }
   }
   throw lastError;
+}
+
+// Cache TTLs (in seconds)
+const AI_CACHE_TTL: Record<string, number> = {
+  summarize: 60,
+  sentiment: 60,
+  entities: 120,
+  digest: 120,
+  narratives: 120,
+  default: 60,
+};
+
+/**
+ * Simple string hash for cache keys (matches groq.ts implementation)
+ */
+function simpleHash(str: string): string {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return Math.abs(hash).toString(36);
+}
+
+/**
+ * JSON prompt helper — returns parsed JSON using the multi-provider fallback chain.
+ * Drop-in replacement for `promptGroqJson` with automatic provider failover on auth errors.
+ */
+export async function promptAIJson<T>(
+  systemPrompt: string,
+  userPrompt: string,
+  options: AICompleteOptions = {},
+  preferGroq = true
+): Promise<T> {
+  const raw = await aiComplete(
+    systemPrompt + '\n\nAlways respond with valid JSON only, no markdown.',
+    userPrompt,
+    { ...options, jsonMode: true },
+    preferGroq
+  );
+  return parseGroqJson<T>(raw);
+}
+
+/**
+ * Cached JSON prompt helper — caches responses for efficiency.
+ * Drop-in replacement for `promptGroqJsonCached` with automatic provider failover.
+ */
+export async function promptAIJsonCached<T>(
+  cachePrefix: string,
+  systemPrompt: string,
+  userPrompt: string,
+  options: AICompleteOptions = {},
+  preferGroq = true
+): Promise<T> {
+  const promptHash = simpleHash(systemPrompt + userPrompt);
+  const cacheKey = generateCacheKey(cachePrefix, { hash: promptHash });
+  const ttl = AI_CACHE_TTL[cachePrefix] || AI_CACHE_TTL.default;
+
+  return withCache(aiCache, cacheKey, ttl, async () => {
+    return promptAIJson<T>(systemPrompt, userPrompt, options, preferGroq);
+  });
+}
+
+/**
+ * Check if any AI provider is configured (Groq, OpenAI, Anthropic, Gemini, or OpenRouter).
+ */
+export function isAIConfigured(): boolean {
+  return getAIConfigOrNull() !== null;
 }

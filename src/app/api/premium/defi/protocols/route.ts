@@ -180,7 +180,7 @@ async function handler(
   } catch (error) {
     console.error('Error in premium DeFi protocols route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch DeFi protocol data', message: String(error) },
+      { error: 'Failed to fetch DeFi protocol data', message: 'An internal error occurred. Please try again later.' },
       { status: 500 }
     );
   }

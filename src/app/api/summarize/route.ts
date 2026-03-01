@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJsonCached, isGroqConfigured } from '@/lib/groq';
+import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
@@ -39,10 +39,10 @@ export async function GET(request: NextRequest) {
   const source = searchParams.get('source') || undefined;
   const style = searchParams.get('style') || 'brief'; // brief, detailed, bullet
 
-  if (!isGroqConfigured()) {
+  if (!isAIConfigured()) {
     return errorResponse(
       'AI features not configured',
-      'Set GROQ_API_KEY environment variable. Get a free key at https://console.groq.com/keys',
+      'Set GROQ_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY environment variable.',
       503
     );
   }
@@ -74,7 +74,7 @@ Summarize these ${articlesToSummarize.length} crypto news articles:
 
 ${JSON.stringify(articlesToSummarize, null, 2)}`;
 
-    const result = await promptGroqJsonCached<SummaryResponse>(
+    const result = await promptAIJsonCached<SummaryResponse>(
       'summarize',
       SYSTEM_PROMPT,
       userPrompt,
@@ -102,6 +102,13 @@ ${JSON.stringify(articlesToSummarize, null, 2)}`;
   } catch (error) {
     const logger = createRequestLogger(request);
     logger.error('Summarization error', { error });
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return errorResponse(
+        'AI service temporarily unavailable',
+        'All configured AI providers failed authentication. Please check API keys.',
+        503
+      );
+    }
     return ApiError.internal('Failed to summarize articles', error);
   }
 }

@@ -147,8 +147,10 @@ export async function hashApiKey(key: string): Promise<string> {
 }
 
 /**
- * Synchronous hash for validation (simple hash for lookups)
- * Note: Uses a simple non-crypto hash for sync operations
+ * Synchronous hash for non-security purposes only (e.g. cache keys, logging).
+ * WARNING: This is a trivial 32-bit hash — do NOT use for authentication,
+ * authorization, or any security-sensitive operation. Use hashApiKey() (SHA-256) instead.
+ * @deprecated Prefer hashApiKey() for all new code.
  */
 export function hashApiKeySync(key: string): string {
   // Simple deterministic hash for sync operations

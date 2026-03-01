@@ -217,7 +217,7 @@ export function generateOpenAPISpec(): OpenAPISpec {
       '/api/search': {
         get: {
           summary: 'Search crypto news',
-          description: 'Full-text search across all aggregated news articles from 130+ sources. Returns articles matching keyword(s).',
+          description: 'Full-text search across all aggregated news articles from 200+ sources. Returns articles matching keyword(s).',
           tags: ['News'],
           parameters: [
             {
@@ -299,7 +299,7 @@ export function generateOpenAPISpec(): OpenAPISpec {
       '/api/sources': {
         get: {
           summary: 'List all news sources',
-          description: 'Returns all 130+ aggregated news sources with their status, category, and metadata.',
+          description: 'Returns all 200+ aggregated news sources with their status, category, and metadata.',
           tags: ['News'],
           responses: {
             '200': {

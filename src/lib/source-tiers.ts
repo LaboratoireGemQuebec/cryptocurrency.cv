@@ -48,6 +48,8 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   cnbc:           { tier: 'tier1', displayName: 'CNBC Crypto',         credibility: 0.93, reputation: 95  },
   forbes:         { tier: 'tier1', displayName: 'Forbes Crypto',       credibility: 0.90, reputation: 95  },
   yahoofinance:   { tier: 'tier1', displayName: 'Yahoo Finance Crypto', credibility: 0.88, reputation: 90 },
+  techcrunch:     { tier: 'tier1', displayName: 'TechCrunch Crypto',  credibility: 0.90, reputation: 92 },
+  wired:          { tier: 'tier1', displayName: 'Wired Crypto',       credibility: 0.88, reputation: 88 },
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 2 — Premium crypto-native outlets
@@ -77,6 +79,11 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   cryptonews:     { tier: 'tier4', displayName: 'Crypto.news',         credibility: 0.68, reputation: 58 },
   ambcrypto:      { tier: 'tier4', displayName: 'AMBCrypto',           credibility: 0.65, reputation: 55 },
   cryptopotato:   { tier: 'tier4', displayName: 'CryptoPotato',        credibility: 0.65, reputation: 55 },
+  watcherguru:    { tier: 'tier4', displayName: 'Watcher Guru',        credibility: 0.62, reputation: 52 },
+  cryptopolitan:  { tier: 'tier4', displayName: 'Cryptopolitan',       credibility: 0.62, reputation: 52 },
+  coinedition:    { tier: 'tier4', displayName: 'CoinEdition',         credibility: 0.60, reputation: 50 },
+  bitcoinworld:   { tier: 'tier4', displayName: 'BitcoinWorld',        credibility: 0.60, reputation: 50 },
+  invezz:         { tier: 'tier4', displayName: 'Invezz Crypto',       credibility: 0.60, reputation: 50 },
 
   // ═══════════════════════════════════════════════════════════════
   // Research — Institutional research & investor publications
@@ -85,6 +92,11 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   delphi:         { tier: 'research', displayName: 'Delphi Digital',   credibility: 0.90, reputation: 70 },
   paradigm:       { tier: 'research', displayName: 'Paradigm',         credibility: 0.94, reputation: 72 },
   a16z:           { tier: 'research', displayName: 'a16z Crypto',      credibility: 0.93, reputation: 72 },
+  nansen:         { tier: 'research', displayName: 'Nansen',           credibility: 0.90, reputation: 70 },
+  dune:           { tier: 'research', displayName: 'Dune Analytics',   credibility: 0.88, reputation: 68 },
+  artemis:        { tier: 'research', displayName: 'Artemis',          credibility: 0.88, reputation: 68 },
+  coinmarketcap:  { tier: 'research', displayName: 'CoinMarketCap',   credibility: 0.85, reputation: 70 },
+  coingecko:      { tier: 'research', displayName: 'CoinGecko',        credibility: 0.85, reputation: 70 },
 
   // ═══════════════════════════════════════════════════════════════
   // Fintech — Payments/fintech outlets (deprioritized for crypto)
@@ -92,6 +104,25 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   finextra:       { tier: 'fintech', displayName: 'Finextra',          credibility: 0.50, reputation: 35 },
   pymnts:         { tier: 'fintech', displayName: 'PYMNTS Crypto',     credibility: 0.45, reputation: 35 },
   fintechfutures: { tier: 'fintech', displayName: 'Fintech Futures',   credibility: 0.40, reputation: 30 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 3 — Notable new sources
+  // ═══════════════════════════════════════════════════════════════
+  protos:         { tier: 'tier3', displayName: 'Protos',              credibility: 0.75, reputation: 68 },
+  dailyhodl:      { tier: 'tier3', displayName: 'The Daily Hodl',      credibility: 0.72, reputation: 65 },
+  u_today:        { tier: 'tier3', displayName: 'U.Today',             credibility: 0.70, reputation: 62 },
+  watcherguru:    { tier: 'tier3', displayName: 'Watcher Guru',        credibility: 0.68, reputation: 60 },
+  cryptopolitan:  { tier: 'tier3', displayName: 'Cryptopolitan',       credibility: 0.68, reputation: 60 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 4 — Volume / aggregator new sources
+  // ═══════════════════════════════════════════════════════════════
+  coingape:       { tier: 'tier4', displayName: 'CoinGape',            credibility: 0.65, reputation: 55 },
+  coinpedia:      { tier: 'tier4', displayName: 'CoinPedia',           credibility: 0.62, reputation: 52 },
+  blockonomi:     { tier: 'tier4', displayName: 'Blockonomi',          credibility: 0.65, reputation: 55 },
+  zycrypto:       { tier: 'tier4', displayName: 'ZyCrypto',            credibility: 0.62, reputation: 52 },
+  dailycoin:      { tier: 'tier4', displayName: 'DailyCoin',           credibility: 0.62, reputation: 52 },
+  thecoinrepublic: { tier: 'tier4', displayName: 'The Coin Republic',  credibility: 0.60, reputation: 50 },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -44,9 +44,12 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+              // Use 'strict-dynamic' with 'unsafe-inline' as a fallback for older browsers.
+              // Browsers that support 'strict-dynamic' will ignore 'unsafe-inline'.
+              // TODO: Migrate to nonce-based CSP for full protection.
+              "script-src 'self' 'unsafe-inline' 'strict-dynamic' https://www.googletagmanager.com https://www.google-analytics.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "img-src 'self' data: blob: https: http:",
+              "img-src 'self' data: blob: https:",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https: wss:",
               "media-src 'self' https:",
@@ -220,6 +223,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        // SECURITY NOTE: wildcard hostname allows any HTTPS image to be proxied
+        // via /_next/image. This is intentional for RSS article images from many
+        // domains, but means our server can be used as an image proxy. Next.js
+        // limits output dimensions and applies its own security checks.
         hostname: '**', // RSS article images + API icons from any domain
       },
     ],

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroq, callGroqStream, isGroqConfigured } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { ApiError } from '@/lib/api-error';
 
 export const runtime = 'edge';
 
@@ -63,21 +64,9 @@ export async function GET(request: NextRequest) {
   const question = searchParams.get('q');
   const wantStream = searchParams.get('stream') === 'true';
 
-  if (!question) {
-    return NextResponse.json(
-      { 
-        error: 'Missing question',
-        usage: 'GET /api/ask?q=What is happening with Bitcoin today?',
-        stream: 'Add &stream=true to receive a Server-Sent Events stream',
-        examples: [
-          '/api/ask?q=What is the latest Bitcoin news?',
-          '/api/ask?q=Are there any DeFi hacks reported?',
-          '/api/ask?q=What did the SEC announce?',
-          '/api/ask?q=Summarize today\'s top crypto stories',
-          '/api/ask?q=What is happening with Bitcoin today?&stream=true',
-        ],
-      },
-      { status: 400 }
+  if (!question || question.length > 2000) {
+    return ApiError.badRequest(
+      !question ? 'Missing question' : 'Question too long (max 2000 characters)',
     );
   }
 
@@ -113,10 +102,7 @@ export async function GET(request: NextRequest) {
     );
   } catch (error) {
     console.error('Ask GET error:', error);
-    return NextResponse.json(
-      { error: 'Failed to answer question', details: String(error) },
-      { status: 500 }
-    );
+    return ApiError.internal('Failed to answer question');
   }
 }
 
@@ -126,10 +112,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { question, context, stream: wantStream = false } = body;
 
-    if (!question) {
-      return NextResponse.json(
-        { error: 'Missing question in request body' },
-        { status: 400 }
+    if (!question || (typeof question === 'string' && question.length > 2000)) {
+      return ApiError.badRequest(
+        !question ? 'Missing question in request body' : 'Question too long (max 2000 characters)',
       );
     }
 
@@ -160,9 +145,6 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Ask POST error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process request', details: String(error) },
-      { status: 500 }
-    );
+    return ApiError.internal('Failed to process request');
   }
 }

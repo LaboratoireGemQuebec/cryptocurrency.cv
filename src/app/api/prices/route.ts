@@ -7,7 +7,7 @@
  *   1. Short-lived in-memory cache (60 s)
  *   2. CoinGecko via fetchCoinGecko (which already has CoinCap/CoinPaprika fallbacks)
  *   3. Stale cache (last-known-good, up to 1 hour old)
- *   4. Disk fallback (public/fallback/prices.json — survives restarts + deploys)
+ *   4. Snapshot fallback via KV / /tmp (persisted by /api/internal/snapshot)
  *   5. Emergency hardcoded data (always available)
  */
 
@@ -95,7 +95,7 @@ export async function GET(request: NextRequest) {
     cache.set(cacheKey, data as Record<string, unknown>, 60);
     staleCache.set(cacheKey, data as Record<string, unknown>, 3600);
 
-    // Fire-and-forget: persist to disk so fallback survives restarts/deploys
+    // Fire-and-forget: persist snapshot to KV / /tmp so fallback survives restarts
     try {
       fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
         method: 'POST',
@@ -128,7 +128,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // 4. Disk fallback → emergency (never returns an error)
+  // 4. Snapshot fallback → emergency (never returns an error)
   const fallback = await getPricesFallback(request.nextUrl.origin);
   const fallbackData = fallback.data;
   return NextResponse.json(

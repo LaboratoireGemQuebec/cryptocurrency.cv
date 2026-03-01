@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   });
 }
 
-// Featured sources - highlighting key sources from 130+ total
+// Featured sources - highlighting key sources from 200+ total
 const sources = [
   { name: 'CoinDesk', url: 'https://coindesk.com', description: 'Leading crypto news and analysis', category: 'Crypto-Native' },
   { name: 'The Block', url: 'https://theblock.co', description: 'Institutional-grade crypto research', category: 'Crypto-Native' },
@@ -25,20 +25,26 @@ const sources = [
   { name: 'Bitcoin Magazine', url: 'https://bitcoinmagazine.com', description: 'Original Bitcoin publication', category: 'Bitcoin' },
   { name: 'Blockworks', url: 'https://blockworks.co', description: 'Financial news meets crypto', category: 'Crypto-Native' },
   { name: 'The Defiant', url: 'https://thedefiant.io', description: 'DeFi-focused news and analysis', category: 'DeFi' },
+  { name: 'TechCrunch', url: 'https://techcrunch.com', description: 'Tech news with crypto coverage', category: 'Mainstream' },
   { name: 'CNBC', url: 'https://cnbc.com', description: 'Business and financial news', category: 'Mainstream' },
   { name: 'Forbes', url: 'https://forbes.com', description: 'Business news and insights', category: 'Mainstream' },
   { name: 'Messari', url: 'https://messari.io', description: 'Crypto research and data', category: 'Research' },
+  { name: 'Nansen', url: 'https://nansen.ai', description: 'On-chain analytics platform', category: 'Research' },
+  { name: 'Coin Center', url: 'https://coincenter.org', description: 'Crypto policy and regulation', category: 'Policy' },
 ];
 
 const sourceCategories = [
-  { name: 'Crypto-Native', count: 25, description: 'CoinDesk, The Block, Decrypt, and more' },
-  { name: 'Mainstream', count: 10, description: 'Bloomberg, Reuters, CNBC, Forbes' },
-  { name: 'DeFi', count: 15, description: 'The Defiant, DeFi Pulse, and protocol feeds' },
-  { name: 'Research', count: 12, description: 'Messari, Delphi Digital, Glassnode' },
-  { name: 'Layer 2', count: 10, description: 'Optimism, Arbitrum, Base, zkSync' },
-  { name: 'Bitcoin', count: 8, description: 'Bitcoin Magazine, Stacker News' },
-  { name: 'Exchanges', count: 20, description: 'Binance, Coinbase, Kraken blogs' },
-  { name: 'More', count: 30, description: 'VCs, podcasts, protocols, regulators' },
+  { name: 'Crypto-Native', count: 37, description: 'CoinDesk, The Block, Decrypt, WatcherGuru, and more' },
+  { name: 'Mainstream', count: 20, description: 'Bloomberg, Reuters, CNBC, TechCrunch, Wired' },
+  { name: 'DeFi', count: 19, description: 'The Defiant, dYdX, GMX, Jupiter, and protocol feeds' },
+  { name: 'Research', count: 15, description: 'Messari, Delphi Digital, Nansen, Dune, Artemis' },
+  { name: 'Layer 2', count: 10, description: 'Optimism, Arbitrum, Base, zkSync, Scroll' },
+  { name: 'Bitcoin', count: 8, description: 'Bitcoin Magazine, Stacker News, Lightning Labs' },
+  { name: 'Solana', count: 5, description: 'Helius, Phantom, Jupiter, Marinade, Jito' },
+  { name: 'Exchanges', count: 25, description: 'Binance, Coinbase, Kraken, CoinMarketCap, CoinGecko' },
+  { name: 'AI x Crypto', count: 5, description: 'Bittensor, Akash, Fetch.ai, Render, Ritual' },
+  { name: 'Policy', count: 6, description: 'Coin Center, SEC, CFTC, Federal Reserve' },
+  { name: 'More', count: 50, description: 'VCs, podcasts, protocols, analytics, security' },
 ];
 
 const features = [
@@ -70,7 +76,7 @@ export default async function AboutPage({ params }: Props) {
             <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">About Free Crypto News</h1>
             <p className="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">
               The only 100% free crypto news aggregator API. No API keys required.
-              No rate limits. Just pure, real-time crypto news from 130+ sources.
+              No rate limits. Just pure, real-time crypto news from 200+ sources.
             </p>
           </div>
 
@@ -90,7 +96,7 @@ export default async function AboutPage({ params }: Props) {
 
           {/* Sources */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">130+ Sources</h2>
+            <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">200+ Sources</h2>
             <p className="text-center text-gray-600 dark:text-slate-400 mb-8">
               News aggregated from across the crypto ecosystem
             </p>

@@ -261,7 +261,7 @@ async function handler(
   } catch (error) {
     console.error('Error in custom alerts route:', error);
     return NextResponse.json(
-      { error: 'Alert creation failed', message: String(error) },
+      { error: 'Alert creation failed', message: 'An internal error occurred. Please try again later.' },
       { status: 500 }
     );
   }

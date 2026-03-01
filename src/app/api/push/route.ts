@@ -66,12 +66,18 @@ interface PushNotificationPayload {
  * GET /api/push - Get VAPID public key for Web Push subscription
  */
 export async function GET() {
-  // In production, generate these with web-push library:
-  // const vapidKeys = webpush.generateVAPIDKeys();
-  // Store private key securely, expose only public key
+  const VAPID_PUBLIC_KEY = process.env.VAPID_PUBLIC_KEY;
+
+  if (!VAPID_PUBLIC_KEY) {
+    return NextResponse.json({
+      success: false,
+      error: 'Push notifications not configured',
+      message: 'Set VAPID_PUBLIC_KEY environment variable to enable push notifications',
+    }, { status: 503 });
+  }
   
-  const VAPID_PUBLIC_KEY = process.env.VAPID_PUBLIC_KEY || 'YOUR_VAPID_PUBLIC_KEY_HERE';
-  
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
+
   return NextResponse.json({
     success: true,
     publicKey: VAPID_PUBLIC_KEY,
@@ -108,7 +114,7 @@ async function subscribeToPush() {
     applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
   });
   
-  await fetch('https://cryptocurrency.cv/api/push', {
+  await fetch('${baseUrl}/api/push', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -324,11 +330,12 @@ function createNotificationPayload(article: {
   source: string;
   link: string;
 }): PushNotificationPayload {
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
   return {
     title: `📰 ${article.source}`,
     body: article.title,
-    icon: 'https://cryptocurrency.cv/icon.png',
-    badge: 'https://cryptocurrency.cv/badge.png',
+    icon: `${siteUrl}/icon.png`,
+    badge: `${siteUrl}/badge.png`,
     url: article.link,
     tag: 'crypto-news'
   };

@@ -11,6 +11,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import type { APIErrorResponse } from './schemas';
+import { logger } from '@/lib/logger';
 
 // ═══════════════════════════════════════════════════════════════
 // RATE LIMITING
@@ -213,7 +214,7 @@ export function logRequest(
   const ip = getClientIP(request);
   const ua = request.headers.get('user-agent')?.slice(0, 100) || 'unknown';
 
-  console.log(
+  logger.info(
     `[RAG API] ${route.toUpperCase()} | IP: ${ip} | UA: ${ua}${
       body?.query ? ` | Query: "${String(body.query).slice(0, 80)}"` : ''
     }`

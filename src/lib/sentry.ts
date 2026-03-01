@@ -20,6 +20,8 @@
 // Note: This file provides a lightweight wrapper for Sentry.
 // For full Sentry integration in Next.js, run: npx @sentry/wizard@latest -i nextjs
 
+import { logger } from '@/lib/logger';
+
 // =============================================================================
 // TYPES
 // =============================================================================
@@ -114,18 +116,16 @@ class SentryEdge {
    */
   captureMessage(message: string, level: SentryBreadcrumb['level'] = 'info'): string | null {
     if (!this.enabled || !this.dsn) {
-      console.log(`[Sentry] Would capture message (${level}):`, message);
+      logger.debug(`[Sentry] Would capture message (${level}): ${message}`);
       return null;
     }
 
     const eventId = this.generateEventId();
     
-    console.log('[Sentry] Captured message:', {
+    logger.debug('[Sentry] Captured message', {
       eventId,
       message,
       level,
-      user: this.user,
-      tags: this.tags,
       environment: SENTRY_ENVIRONMENT,
     });
 
@@ -248,14 +248,11 @@ class SentryTransaction {
     if (!this.enabled) return;
 
     const duration = Date.now() - this.startTime;
-    console.log('[Sentry] Transaction finished:', {
+    logger.debug('[Sentry] Transaction finished', {
       name: this.name,
       op: this.op,
       duration,
-      spans: this.spans.map(s => ({
-        name: s.name,
-        duration: (s.endTime || Date.now()) - s.startTime,
-      })),
+      spanCount: this.spans.length,
     });
   }
 

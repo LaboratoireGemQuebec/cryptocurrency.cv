@@ -211,6 +211,23 @@ interface RateLimitOffender {
 
 const offenderMap = new Map<string, RateLimitOffender>();
 
+// In-memory rate-limit fallback when Redis/Upstash is unavailable
+interface FallbackEntry { count: number; resetAt: number; }
+const inMemoryFallbackMap = new Map<string, FallbackEntry>();
+
+// Prune stale fallback entries periodically
+const FALLBACK_PRUNE_INTERVAL = 300_000;
+let lastFallbackPrune = Date.now();
+function pruneFallbackEntries(now: number) {
+  if (now - lastFallbackPrune < FALLBACK_PRUNE_INTERVAL) return;
+  lastFallbackPrune = now;
+  for (const [k, v] of inMemoryFallbackMap) {
+    if (v.resetAt <= now) inMemoryFallbackMap.delete(k);
+  }
+}
+/** Maximum entries in offenderMap to prevent memory exhaustion under DDoS */
+const MAX_OFFENDER_MAP_SIZE = 10_000;
+
 /** Prune stale entries every 5 minutes to avoid unbounded memory growth. */
 const OFFENDER_PRUNE_INTERVAL = 300_000;
 let lastOffenderPrune = Date.now();
@@ -218,6 +235,7 @@ let lastOffenderPrune = Date.now();
 function pruneOffenders(now: number) {
   if (now - lastOffenderPrune < OFFENDER_PRUNE_INTERVAL) return;
   lastOffenderPrune = now;
+  pruneFallbackEntries(now);
   for (const [ip, entry] of offenderMap) {
     // Remove entries whose block has expired and have no recent hits
     const recentHits = entry.hits.filter((t) => now - t < REPEAT_429_WINDOW_MS);
@@ -233,6 +251,11 @@ function record429(ip: string): boolean {
   pruneOffenders(now);
   let entry = offenderMap.get(ip);
   if (!entry) {
+    // Evict oldest entry if map is at capacity to prevent memory exhaustion
+    if (offenderMap.size >= MAX_OFFENDER_MAP_SIZE) {
+      const firstKey = offenderMap.keys().next().value;
+      if (firstKey) offenderMap.delete(firstKey);
+    }
     entry = { hits: [] };
     offenderMap.set(ip, entry);
   }
@@ -388,8 +411,23 @@ async function checkRateLimit(
     const { success, remaining, reset } = await limiter.limit(key);
     return { allowed: success, remaining, resetAt: reset, limit: limit.requests };
   } catch {
-    // If Redis is down, fail-open to avoid a total outage
-    return { allowed: true, remaining: limit.requests, resetAt: Date.now() + limit.windowMs, limit: limit.requests };
+    // If Redis is down, apply a conservative in-memory fallback
+    // instead of blindly allowing all traffic (which would disable rate limiting entirely).
+    // We limit to 50% of the configured quota to be safe during Redis outages.
+    const fallbackLimit = Math.max(1, Math.floor(limit.requests * 0.5));
+    const now = Date.now();
+    const windowKey = `fallback:${key}`;
+    const entry = inMemoryFallbackMap.get(windowKey);
+    if (!entry || entry.resetAt <= now) {
+      // New window
+      inMemoryFallbackMap.set(windowKey, { count: 1, resetAt: now + limit.windowMs });
+      return { allowed: true, remaining: fallbackLimit - 1, resetAt: now + limit.windowMs, limit: fallbackLimit };
+    }
+    entry.count++;
+    if (entry.count > fallbackLimit) {
+      return { allowed: false, remaining: 0, resetAt: entry.resetAt, limit: fallbackLimit };
+    }
+    return { allowed: true, remaining: fallbackLimit - entry.count, resetAt: entry.resetAt, limit: fallbackLimit };
   }
 }
 
@@ -447,8 +485,21 @@ async function checkTierRateLimit(
     const { success, remaining, reset } = await limiter.limit(keyId);
     return { allowed: success, remaining, resetAt: reset };
   } catch {
-    // Fail-open
-    return { allowed: true, remaining: dailyLimit, resetAt: Date.now() + 86400000 };
+    // Conservative fallback when Redis is down — use in-memory tracking
+    // at 50% of the configured limit to prevent abuse during outages.
+    const fallbackLimit = Math.max(1, Math.floor(dailyLimit * 0.5));
+    const now = Date.now();
+    const windowKey = `tier-fallback:${keyId}`;
+    const entry = inMemoryFallbackMap.get(windowKey);
+    if (!entry || entry.resetAt <= now) {
+      inMemoryFallbackMap.set(windowKey, { count: 1, resetAt: now + 86400000 });
+      return { allowed: true, remaining: fallbackLimit - 1, resetAt: now + 86400000 };
+    }
+    entry.count++;
+    if (entry.count > fallbackLimit) {
+      return { allowed: false, remaining: 0, resetAt: entry.resetAt };
+    }
+    return { allowed: true, remaining: fallbackLimit - entry.count, resetAt: entry.resetAt };
   }
 }
 
@@ -463,6 +514,8 @@ const SECURITY_HEADERS: Record<string, string> = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'X-Permitted-Cross-Domain-Policies': 'none',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+  // HSTS — enforce HTTPS for 2 years with preload (mirrors next.config.js)
+  'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
   // Prevent browsers from caching authenticated API responses on shared caches
   'Pragma': 'no-cache',
 };
@@ -585,7 +638,7 @@ export default async function middleware(request: NextRequest) {
   if (blockedUntil) {
     const retryEsc = Math.ceil((blockedUntil - Date.now()) / 1000);
     return NextResponse.json(
-      {
+      {/^Bearer\s+/i
         error: 'Forbidden',
         code: 'REPEAT_RATE_LIMIT_ABUSE',
         message: 'Too many rate-limited requests. You are temporarily blocked.',
@@ -676,8 +729,10 @@ export default async function middleware(request: NextRequest) {
         }
       }
     } catch {
-      // KV lookup failed — trust the prefix tier but mark unverified
-      // This is the fail-open approach
+      // KV lookup failed — do NOT trust the prefix. Downgrade to free tier
+      // to prevent privilege escalation when Redis is unavailable.
+      resolvedTier = 'free';
+      resolvedKeyId = null;
     }
   }
 

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { registry } from '@/lib/providers/registry';
 import type { OnChainMetric } from '@/lib/providers/adapters/on-chain';
+import { ApiError } from '@/lib/api-error';
+import { BLOCKCHAIN_INFO_BASE, MEMPOOL_BASE } from '@/lib/constants';
 
 export const runtime = 'edge';
 
@@ -76,8 +78,8 @@ export async function GET(request: NextRequest) {
     // Bitcoin data (Blockchain.info + Mempool.space)
     if (!chain || chain === 'btc' || chain === 'bitcoin') {
       const [bcResponse, mempoolResponse] = await Promise.allSettled([
-        fetch('https://api.blockchain.info/stats'),
-        fetch('https://mempool.space/api/v1/fees/recommended'),
+        fetch(`${BLOCKCHAIN_INFO_BASE}/stats`),
+        fetch(`${MEMPOOL_BASE}/v1/fees/recommended`),
       ]);
 
       if (bcResponse.status === 'fulfilled' && bcResponse.value.ok) {
@@ -158,10 +160,8 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to fetch on-chain data', message: String(error) },
-      { status: 500, headers: CORS_HEADERS },
-    );
+    console.error('On-chain API error:', error);
+    return ApiError.internal('Failed to fetch on-chain data');
   }
 }
 

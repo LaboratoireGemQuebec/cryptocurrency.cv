@@ -4,6 +4,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { createGasChain } from '../adapters/gas';
 import { registry } from '../registry';
+import '../setup';
 
 const mockFetch = vi.fn();
 vi.stubGlobal('fetch', mockFetch);

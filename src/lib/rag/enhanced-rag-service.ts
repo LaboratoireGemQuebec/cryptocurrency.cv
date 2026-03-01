@@ -18,6 +18,7 @@ import { hybridSearch, HybridSearchOptions } from './hybrid-search';
 import { generateEmbedding } from './embedding-service';
 import { extractCurrencies } from './currency-extractor';
 import { extractDateRange } from './date-range-extractor';
+import { logger } from '@/lib/logger';
 import { processQuery, generateHypotheticalDocument } from './query-processor';
 import { rerankResults } from './reranker';
 import { contextualizeQuery, conversationMemory, generateContextualResponse } from './conversation-memory';
@@ -112,10 +113,10 @@ export class EnhancedRAGService {
         const stats = await redisVectorStore.getStats();
         if (stats.totalDocuments > 0) {
           this.useRedis = true;
-          console.log('RAG: Using Redis vector store');
+          logger.info('RAG: Using Redis vector store');
         }
       } catch {
-        console.warn('RAG: Redis not available, using file store');
+        logger.warn('RAG: Redis not available, using file store');
       }
     }
     

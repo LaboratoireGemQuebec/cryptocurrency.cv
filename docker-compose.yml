@@ -15,6 +15,17 @@ services:
       app:
         condition: service_healthy
     restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE  # Required to bind port 80
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/nginx-health"]
       interval: 10s
@@ -44,6 +55,14 @@ services:
           cpus: '0.25'
           memory: 128M
     restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
       interval: 30s
@@ -73,7 +92,18 @@ services:
         --tcp-backlog 511
         --timeout 0
         --tcp-keepalive 300
+        --rename-command FLUSHALL ""
+        --rename-command FLUSHDB ""
+        --rename-command DEBUG ""
+        --rename-command CONFIG ""
     restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s

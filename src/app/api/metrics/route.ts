@@ -11,6 +11,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { ApiError } from '@/lib/api-error';
+import { isAdminAuthorized } from '@/lib/admin-auth';
 import { getMetrics, getAllEndpointMetrics, type AggregatedMetrics } from '@/lib/api-metrics';
 
 export const runtime = 'edge';
@@ -34,11 +35,8 @@ interface MetricsResponse extends AggregatedMetrics {
  * - include_endpoints: true/false (default: false) - include per-endpoint breakdown
  */
 export async function GET(request: NextRequest) {
-  // Require admin authentication
-  const adminKey = request.headers.get('X-Admin-Key') || 
-                   request.nextUrl.searchParams.get('admin_key');
-  
-  if (adminKey !== process.env.ADMIN_API_KEY) {
+  // Require admin authentication (header only — no query param for security)
+  if (!isAdminAuthorized(request)) {
     return ApiError.unauthorized('Admin authentication required');
   }
 

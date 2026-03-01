@@ -16,6 +16,16 @@ import {
   AlertCircle,
   Share2,
 } from 'lucide-react';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip as RechartsTooltip,
+  ResponsiveContainer,
+  ReferenceLine,
+} from 'recharts';
 import { getTopCoins, getHistoricalPrices, TokenPrice } from '@/lib/market-data';
 import { useToast } from '@/components/Toast';
 
@@ -359,7 +369,7 @@ function ComparePageContent() {
           </div>
         )}
 
-        {/* Chart Placeholder */}
+        {/* Normalized Price Chart */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Normalized Price Chart
@@ -373,53 +383,80 @@ function ComparePageContent() {
               <RefreshCw className="w-8 h-8 text-gray-400 animate-spin" />
             </div>
           ) : normalizedData.length > 0 ? (
-            <div className="h-80 flex items-center justify-center bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-              {/* Simple visual representation */}
-              <div className="text-center">
-                <p className="text-gray-500 dark:text-gray-400 mb-4">
-                  Chart data loaded for {selectedCoins.length} coin{selectedCoins.length !== 1 ? 's' : ''}
-                </p>
-                <div className="flex justify-center gap-4">
-                  {selectedCoins.map((coinId, index) => {
-                    const coin = coinData.get(coinId);
-                    if (!coin?.historicalPrices) return null;
-                    const firstPrice = coin.historicalPrices[0]?.[1] || 0;
-                    const lastPrice = coin.historicalPrices[coin.historicalPrices.length - 1]?.[1] || 0;
-                    const change = firstPrice > 0 ? ((lastPrice - firstPrice) / firstPrice) * 100 : 0;
-                    
-                    return (
-                      <div key={coinId} className="text-center">
-                        <div 
-                          className="w-3 h-20 mx-auto rounded-full"
-                          style={{ 
-                            backgroundColor: colors[index % colors.length],
-                            opacity: 0.7,
-                          }}
-                        />
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                          {coin.symbol.toUpperCase()}
-                        </p>
-                        <p className={`text-xs font-medium ${
-                          change >= 0 ? 'text-green-600' : 'text-red-600'
-                        }`}>
-                          {change >= 0 ? '+' : ''}{change.toFixed(1)}%
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            <div className="h-80">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={normalizedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.3} />
+                  <XAxis
+                    dataKey="timestamp"
+                    tickFormatter={(ts: number) => {
+                      const d = new Date(ts);
+                      if (timeRange === '24h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                      if (timeRange === '7d') return d.toLocaleDateString([], { weekday: 'short' });
+                      return d.toLocaleDateString([], { month: 'short', day: 'numeric' });
+                    }}
+                    stroke="#6b7280"
+                    fontSize={11}
+                    tickLine={false}
+                    axisLine={false}
+                    minTickGap={40}
+                  />
+                  <YAxis
+                    stroke="#6b7280"
+                    fontSize={11}
+                    tickLine={false}
+                    axisLine={false}
+                    tickFormatter={(v: number) => v.toFixed(0)}
+                    domain={['dataMin - 5', 'dataMax + 5']}
+                  />
+                  <RechartsTooltip
+                    contentStyle={{
+                      backgroundColor: '#1f2937',
+                      border: '1px solid #374151',
+                      borderRadius: '0.5rem',
+                      padding: '8px 12px',
+                    }}
+                    labelFormatter={(ts: number) => new Date(ts).toLocaleDateString([], {
+                      year: 'numeric', month: 'short', day: 'numeric',
+                      ...(timeRange === '24h' ? { hour: '2-digit', minute: '2-digit' } : {}),
+                    })}
+                    formatter={(value: number, name: string) => {
+                      const coin = coinData.get(name);
+                      const symbol = coin?.symbol?.toUpperCase() || name;
+                      return [`${value.toFixed(2)}`, symbol];
+                    }}
+                    labelStyle={{ color: '#9ca3af', fontSize: 12 }}
+                    itemStyle={{ fontSize: 12 }}
+                  />
+                  <ReferenceLine y={100} stroke="#6b7280" strokeDasharray="6 4" opacity={0.5} />
+                  {selectedCoins.map((coinId, index) => (
+                    <Line
+                      key={coinId}
+                      type="monotone"
+                      dataKey={coinId}
+                      stroke={colors[index % colors.length]}
+                      strokeWidth={2}
+                      dot={false}
+                      activeDot={{ r: 4, strokeWidth: 0 }}
+                      connectNulls
+                    />
+                  ))}
+                </LineChart>
+              </ResponsiveContainer>
             </div>
           ) : (
             <div className="h-80 flex items-center justify-center text-gray-500 dark:text-gray-400">
-              No data available
+              Select coins above to compare performance
             </div>
           )}
           
-          {/* Legend */}
+          {/* Legend with performance summary */}
           <div className="flex flex-wrap gap-4 mt-4">
             {selectedCoins.map((coinId, index) => {
               const coin = coinData.get(coinId);
+              const firstNorm = normalizedData[0]?.[coinId] as number | undefined;
+              const lastNorm = normalizedData[normalizedData.length - 1]?.[coinId] as number | undefined;
+              const change = firstNorm && lastNorm ? lastNorm - firstNorm : 0;
               return (
                 <div key={coinId} className="flex items-center gap-2">
                   <div 
@@ -429,6 +466,13 @@ function ComparePageContent() {
                   <span className="text-sm text-gray-600 dark:text-gray-300">
                     {coin?.name || coinId}
                   </span>
+                  {normalizedData.length > 0 && (
+                    <span className={`text-xs font-medium ${
+                      change >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+                    }`}>
+                      {change >= 0 ? '+' : ''}{change.toFixed(1)}%
+                    </span>
+                  )}
                 </div>
               );
             })}

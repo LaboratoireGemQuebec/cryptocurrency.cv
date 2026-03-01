@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
   const type = searchParams.get('type') as 'factual' | 'prediction' | 'opinion' | 'quote' | undefined;
   const confidence = searchParams.get('confidence') as 'verified' | 'likely' | 'unverified' | 'disputed' | undefined;
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptGroqJson<FactCheckResponse>(
+    const result = await promptAIJson<FactCheckResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 4000, temperature: 0.2 }
@@ -122,6 +122,9 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
     );
   } catch (error) {
     console.error('Fact check error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to fact-check articles', details: String(error) },
       { status: 500 }

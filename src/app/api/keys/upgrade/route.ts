@@ -36,7 +36,7 @@ import { API_TIERS } from '@/lib/x402/pricing';
 
 export const runtime = 'nodejs';
 
-const TIER_ORDER = ['free', 'pro', 'enterprise'] as const;
+const TIER_ORDER: readonly string[] = ['free', 'pro', 'enterprise'];
 
 /**
  * GET /api/keys/upgrade — Show upgrade options and pricing
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
     features: config.features,
     permissions: config.permissions,
     current: id === currentTier,
-    available: TIER_ORDER.indexOf(id as any) > TIER_ORDER.indexOf(currentTier as any),
+    available: TIER_ORDER.indexOf(id) > TIER_ORDER.indexOf(currentTier),
   }));
 
   return NextResponse.json({
@@ -137,8 +137,8 @@ export async function POST(request: NextRequest) {
   }
 
   // Check that this is an upgrade, not a downgrade
-  const currentIdx = TIER_ORDER.indexOf(keyData.tier as any);
-  const targetIdx = TIER_ORDER.indexOf(targetTier as any);
+  const currentIdx = TIER_ORDER.indexOf(keyData.tier);
+  const targetIdx = TIER_ORDER.indexOf(targetTier);
 
   if (targetIdx <= currentIdx) {
     return NextResponse.json(
@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
 
   // Calculate price
   const tierConfig = API_TIERS[targetTier];
-  const price = (tierConfig as any).price * months;
+  const price = tierConfig.price * months;
 
   // Check for x402 payment header
   const paymentHeader = request.headers.get('x-402-payment') || request.headers.get('402-receipt');

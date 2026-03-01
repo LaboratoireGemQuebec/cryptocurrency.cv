@@ -62,7 +62,7 @@ export async function resolveFeed(
         articles: data.articles,
         meta: {
           title: 'Free Crypto News - All Sources',
-          description: 'Crypto news aggregated from 130+ top sources - 100% FREE',
+          description: 'Crypto news aggregated from 200+ top sources - 100% FREE',
           feedUrl: `${BASE_URL}${path}`,
         },
       };

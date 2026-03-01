@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJsonCached, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 600; // 10 minute cache
@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
   const platform = searchParams.get('platform');
   const sortBy = searchParams.get('sort') || 'credibility'; // credibility, accuracy, mentions
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -107,7 +107,7 @@ ${articlesText}
 
 For each influencer, analyze their credibility and provide scores.`;
 
-    const result = await promptGroqJsonCached<InfluencerResponse>(
+    const result = await promptAIJsonCached<InfluencerResponse>(
       'influencers',
       SYSTEM_PROMPT,
       userPrompt,
@@ -199,6 +199,9 @@ For each influencer, analyze their credibility and provide scores.`;
     });
   } catch (error) {
     console.error('Influencer analysis error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to analyze influencers' },
       { status: 500 }

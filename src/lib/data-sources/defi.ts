@@ -116,6 +116,129 @@ export interface L2Data {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// RAW API RESPONSE TYPES (external API shapes)
+// ═══════════════════════════════════════════════════════════════
+
+/** DeFiLlama /protocols item */
+interface RawProtocol {
+  name: string;
+  slug: string;
+  tvl: number;
+  change_1h?: number;
+  change_1d?: number;
+  change_7d?: number;
+  chains?: string[];
+  category?: string;
+  mcap?: number;
+}
+
+/** DeFiLlama /v2/chains item */
+interface RawChain {
+  name: string;
+  tvl: number;
+  tokenSymbol?: string;
+  change_1d?: number;
+  change_7d?: number;
+  protocols?: number;
+}
+
+/** DeFiLlama /pools item */
+interface RawYieldPool {
+  pool: string;
+  chain: string;
+  project: string;
+  symbol: string;
+  tvlUsd?: number;
+  apyBase?: number;
+  apyReward?: number;
+  apy?: number;
+  stablecoin?: boolean;
+  ilRisk?: string;
+  exposure?: string;
+}
+
+/** DeFiLlama stablecoin asset */
+interface RawStablecoin {
+  id: string;
+  name: string;
+  symbol: string;
+  pegType?: string;
+  circulating?: { peggedUSD?: number };
+  price?: number;
+  chains?: string[];
+  chainCirculating?: Record<string, number>;
+}
+
+/** DeFiLlama bridge */
+interface RawBridge {
+  id: number;
+  name: string;
+  displayName: string;
+  volumePrevDay?: number;
+  volumePrev2Day?: number;
+  volumePrevWeek?: number;
+  volumePrevMonth?: number;
+  chains?: string[];
+}
+
+/** DeFiLlama fees/revenue protocol */
+interface RawFeeProtocol {
+  name: string;
+  slug?: string;
+  module?: string;
+  total24h?: number;
+  totalRevenue24h?: number;
+  total7d?: number;
+  totalRevenue7d?: number;
+  total30d?: number;
+  totalRevenue30d?: number;
+  category?: string;
+  chains?: string[];
+}
+
+/** DeFiLlama DEX volume protocol */
+interface RawDEXVolumeProtocol {
+  name: string;
+  slug?: string;
+  module?: string;
+  total24h?: number;
+  total7d?: number;
+  total30d?: number;
+  change_1d?: number;
+  change_7d?: number;
+  chains?: string[];
+}
+
+/** DexScreener pair */
+interface RawDexPair {
+  chainId: string;
+  dexId: string;
+  pairAddress: string;
+  baseToken?: { address: string; name: string; symbol: string };
+  quoteToken?: { address: string; name: string; symbol: string };
+  priceUsd?: string;
+  volume?: { h24?: number };
+  liquidity?: { usd?: number };
+  fdv?: number;
+  priceChange?: { h24?: number };
+}
+
+/** GeckoTerminal pool */
+interface RawGeckoPool {
+  id: string;
+  attributes: Record<string, unknown>;
+}
+
+/** L2Beat scaling project */
+interface RawL2Project {
+  name: string;
+  tvl?: { canonical?: number; change7d?: number };
+  risks?: { category: string; value: string }[];
+  stage?: string;
+  technology?: string;
+}
+
+// ═══════════════════════════════════════════════════════════════
 // DEFILLAMA — TVL
 // ═══════════════════════════════════════════════════════════════
 

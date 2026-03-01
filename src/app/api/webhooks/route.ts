@@ -53,6 +53,15 @@ async function deleteWebhook(id: string): Promise<boolean> {
 // POST - Register a webhook
 export async function POST(request: NextRequest) {
   try {
+    // Require API key authentication for webhook registration
+    const apiKey = request.headers.get('X-API-Key') || request.headers.get('Authorization')?.replace(/^Bearer\s+/i, '');
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'API key required to register webhooks' },
+        { status: 401, headers: { 'Access-Control-Allow-Origin': '*' } }
+      );
+    }
+
     const body = await request.json();
     const { url, secret, events = ['breaking'] } = body;
     
@@ -69,6 +78,15 @@ export async function POST(request: NextRequest) {
     } catch {
       return NextResponse.json(
         { error: 'Invalid webhook URL' },
+        { status: 400 }
+      );
+    }
+
+    // Validate event types against allowed list
+    const validEvents = ['breaking', 'all'];
+    if (!Array.isArray(events) || !events.every((e: string) => validEvents.includes(e))) {
+      return NextResponse.json(
+        { error: `Invalid event type. Allowed: ${validEvents.join(', ')}` },
         { status: 400 }
       );
     }
@@ -100,9 +118,9 @@ export async function POST(request: NextRequest) {
       status: 201,
       headers: { 'Access-Control-Allow-Origin': '*' },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
-      { error: 'Failed to register webhook', message: String(error) },
+      { error: 'Failed to register webhook' },
       { status: 500 }
     );
   }

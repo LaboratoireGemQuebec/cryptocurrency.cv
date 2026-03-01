@@ -16,12 +16,34 @@ const CORS_HEADERS = {
  * GET /api/geckoterminal?type=new                 — newly deployed pools
  * GET /api/geckoterminal?network=eth&dex=uniswap_v3 — top pools on a specific DEX
  */
+/** Sanitize user-supplied path segment — allow only [a-zA-Z0-9_-] */
+function sanitizeSlug(value: string): string | null {
+  if (!value || value.length > 64) return null;
+  return /^[a-zA-Z0-9_-]+$/.test(value) ? value : null;
+}
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const network = searchParams.get('network') ?? 'eth';
+    const rawNetwork = searchParams.get('network') ?? 'eth';
     const type = searchParams.get('type') ?? 'trending';
-    const dex = searchParams.get('dex');
+    const rawDex = searchParams.get('dex');
+
+    const network = sanitizeSlug(rawNetwork);
+    if (!network) {
+      return NextResponse.json(
+        { error: 'Invalid network parameter' },
+        { status: 400, headers: CORS_HEADERS },
+      );
+    }
+
+    const dex = rawDex ? sanitizeSlug(rawDex) : null;
+    if (rawDex && !dex) {
+      return NextResponse.json(
+        { error: 'Invalid dex parameter' },
+        { status: 400, headers: CORS_HEADERS },
+      );
+    }
 
     let url: string;
 

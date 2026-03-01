@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJsonCached, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minute cache
@@ -97,7 +97,7 @@ export async function GET(request: NextRequest) {
   const minValue = parseFloat(searchParams.get('min_value') || '0');
   const minConfidence = parseInt(searchParams.get('min_confidence') || '50');
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -119,7 +119,7 @@ ${articlesText}
 
 For each article, list any on-chain events it references.`;
 
-    const result = await promptGroqJsonCached<OnChainAnalysisResponse>(
+    const result = await promptAIJsonCached<OnChainAnalysisResponse>(
       'onchain-events',
       SYSTEM_PROMPT,
       userPrompt,
@@ -219,6 +219,9 @@ For each article, list any on-chain events it references.`;
     });
   } catch (error) {
     console.error('On-chain event linking error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to link on-chain events' },
       { status: 500 }

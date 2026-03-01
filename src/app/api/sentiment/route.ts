@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
   const asset = searchParams.get('asset')?.toUpperCase(); // Filter by asset (BTC, ETH, etc.)
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -92,7 +92,7 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptGroqJson<SentimentResponse>(
+    const result = await promptAIJson<SentimentResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 4000, temperature: 0.3 }
@@ -142,6 +142,9 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
     );
   } catch (error) {
     console.error('Sentiment analysis error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to analyze sentiment', details: String(error) },
       { status: 500 }

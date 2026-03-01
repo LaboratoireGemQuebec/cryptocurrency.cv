@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 30);
   const threshold = parseInt(searchParams.get('threshold') || '0'); // Only return above this score
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -67,7 +67,7 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(headlines, null, 2)}`;
 
-    const result = await promptGroqJson<ClickbaitResponse>(
+    const result = await promptAIJson<ClickbaitResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 3000, temperature: 0.3 }
@@ -114,6 +114,10 @@ ${JSON.stringify(headlines, null, 2)}`;
     );
   } catch (error) {
     console.error('Clickbait analysis error:', error);
+
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
 
     // Stale-on-error: serve last-known-good data
     const staleCacheKey = generateCacheKey('clickbait', { limit, threshold });

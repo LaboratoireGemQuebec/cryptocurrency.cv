@@ -101,9 +101,11 @@ async function countKeys(): Promise<number> {
 function generateAPIKey(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const prefix = 'cda_'; // crypto data API
+  const randomBytes = new Uint8Array(32);
+  crypto.getRandomValues(randomBytes);
   let key = prefix;
   for (let i = 0; i < 32; i++) {
-    key += chars.charAt(Math.floor(Math.random() * chars.length));
+    key += chars.charAt(randomBytes[i] % chars.length);
   }
   return key;
 }

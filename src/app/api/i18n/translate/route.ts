@@ -19,7 +19,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { callGroq, isGroqConfigured, parseGroqJson } from '@/lib/groq';
+import { aiComplete, isAIConfigured, AIAuthError, promptAIJson } from '@/lib/ai-provider';
 
 const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
@@ -63,11 +63,11 @@ interface TranslateResponse {
 export async function POST(request: NextRequest): Promise<NextResponse<TranslateResponse>> {
   try {
     // Check Groq is configured
-    if (!isGroqConfigured()) {
+    if (!isAIConfigured()) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Translation service not configured. Set GROQ_API_KEY environment variable.',
+          error: 'Translation service not configured. Set GROQ_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY.',
           locale: '',
           model: '',
         },
@@ -118,19 +118,18 @@ Rules:
 - Output ONLY the translated text, nothing else
 ${context ? `\nContext: This is a ${context}` : ''}`;
 
-      const response = await callGroq(
-        [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: text },
-        ],
-        { temperature: 0.2, maxTokens: 1024 }
+      const response = await aiComplete(
+        systemPrompt,
+        text,
+        { temperature: 0.2, maxTokens: 1024 },
+        true
       );
 
       return NextResponse.json({
         success: true,
-        translation: response.content.trim(),
+        translation: response.trim(),
         locale: targetLocale,
-        model: 'llama-3.3-70b-versatile',
+        model: 'auto',
       });
     }
 
@@ -146,21 +145,18 @@ CRITICAL RULES:
 4. Keep technical terms like "DeFi", "NFT", "API" unchanged
 5. Output ONLY valid JSON, no explanations`;
 
-      const response = await callGroq(
-        [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: JSON.stringify(texts, null, 2) },
-        ],
-        { temperature: 0.2, maxTokens: 4096, jsonMode: true }
+      const translations = await promptAIJson<Record<string, string>>(
+        systemPrompt,
+        JSON.stringify(texts, null, 2),
+        { temperature: 0.2, maxTokens: 4096 },
+        true
       );
-
-      const translations = parseGroqJson<Record<string, string>>(response.content);
 
       return NextResponse.json({
         success: true,
         translations,
         locale: targetLocale,
-        model: 'llama-3.3-70b-versatile',
+        model: 'auto',
       });
     }
 
@@ -176,6 +172,17 @@ CRITICAL RULES:
 
   } catch (error) {
     console.error('Translation error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'AI service temporarily unavailable. All providers failed authentication.',
+          locale: '',
+          model: '',
+        },
+        { status: 503 }
+      );
+    }
     return NextResponse.json(
       {
         success: false,

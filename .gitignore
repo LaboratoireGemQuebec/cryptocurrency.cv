@@ -66,3 +66,22 @@ enrichment-*.json
 playwright-report/
 test-results/
 
+# ═══════════════════════════════════════════════════════════════
+# Security — prevent accidental secret commits
+# ═══════════════════════════════════════════════════════════════
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+*.secret
+.secrets/
+secrets/
+*.credentials
+service-account*.json
+firebase-adminsdk*.json
+gcloud-*.json
+

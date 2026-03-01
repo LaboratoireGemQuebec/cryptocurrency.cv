@@ -18,10 +18,13 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import type { NewsDocument, NewsMetadata, SearchFilter, SearchResult, VectorStoreStats } from './types';
+import { logger } from '@/lib/logger';
 import { cosineSimilarity, dotProduct, normalizeVector } from './embedding-service';
 
 // Store path
-const STORE_PATH = process.env.RAG_STORE_PATH || '.data/rag-store';
+// On Vercel serverless, only /tmp is writable. Use /tmp when VERCEL env is set.
+const STORE_PATH = process.env.RAG_STORE_PATH
+  || (process.env.VERCEL ? '/tmp/rag-store' : '.data/rag-store');
 
 interface VectorStoreData {
   version: number;
@@ -72,7 +75,7 @@ class VectorStore {
     this.embeddingModel = parsed.metadata.embeddingModel;
     this.isLoaded = true;
     
-    console.log(`Loaded ${this.documents.size} documents from vector store`);
+    logger.info(`[VectorStore] Loaded ${this.documents.size} documents`);
   }
 
   /**
@@ -94,7 +97,7 @@ class VectorStore {
     const filePath = path.join(STORE_PATH, 'documents.json');
     await fs.writeFile(filePath, JSON.stringify(data, null, 2));
     
-    console.log(`Saved ${this.documents.size} documents to vector store`);
+    logger.info(`[VectorStore] Saved ${this.documents.size} documents`);
   }
 
   /**
@@ -120,7 +123,7 @@ class VectorStore {
     
     for (const doc of documents) {
       if (!doc.embedding || doc.embedding.length === 0) {
-        console.warn(`Skipping document ${doc.id} - no embedding`);
+        console.warn(`[VectorStore] Skipping document ${doc.id} — no embedding`);
         continue;
       }
       doc.embedding = normalizeVector(doc.embedding);

@@ -225,8 +225,9 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
                   hint="Filter out low-relevance results"
                 />
                 <div>
-                  <label className="block text-xs text-slate-500 mb-1">Result Count</label>
+                  <label htmlFor="vector-search-topk" className="block text-xs text-slate-500 mb-1">Result Count</label>
                   <input
+                    id="vector-search-topk"
                     type="number"
                     value={topK}
                     onChange={(e) => setTopK(Math.min(100, Math.max(1, parseInt(e.target.value) || 10)))}

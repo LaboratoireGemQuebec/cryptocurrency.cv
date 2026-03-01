@@ -2,32 +2,33 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 200+ major English crypto sources across 26 categories:
- * - General: 37 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, WatcherGuru, Cryptopolitan, etc.)
- * - DeFi: 19 sources (The Defiant, Bankless, Uniswap, Aave, dYdX, GMX, Jupiter, Morpho, etc.)
+ * Aggregates news from 260+ major English crypto sources across 26 categories:
+ * - General: 44 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, WatcherGuru, Cryptopolitan, BlockTempo, etc.)
+ * - DeFi: 31 sources (The Defiant, Bankless, Uniswap, Aave, dYdX, GMX, Jupiter, Balancer, Frax, Liquity, SushiSwap, etc.)
  * - Mainstream: 20 sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, TechCrunch, Wired, etc.)
  * - Research: 8 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, etc.)
- * - Institutional: 13 sources (Galaxy Digital, Pantera, CoinMarketCap, CoinGecko, Bitget, KuCoin, etc.)
- * - Geopolitical: 11 sources (BBC, Reuters, AP, Federal Reserve, SEC, CFTC, Coin Center, etc.)
- * - Layer 2: 7 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, etc.)
+ * - Institutional: 17 sources (Galaxy Digital, Pantera, CoinMarketCap, CoinGecko, Fireblocks, HashKey, Polychain, etc.)
+ * - Geopolitical: 13 sources (BBC, Reuters, AP, Federal Reserve, SEC, CFTC, Coin Center, TRM Labs, etc.)
+ * - Layer 2: 10 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, Scroll, Espresso, etc.)
  * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
- * - Alt L1: 10 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, TON, Bittensor, Akash, etc.)
+ * - Alt L1: 16 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, TON, Bittensor, Akash, Osmosis, Stride, etc.)
  * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, etc.)
- * - Security: 6 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi)
- * - Developer: 8 sources (Alchemy, Chainlink, Infura, The Graph, Wormhole, LayerZero, etc.)
- * - Bitcoin: 6 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Stacker News)
- * - Solana: 5 sources (Solana News, Helius, Phantom, Marinade, Jito)
+ * - Security: 11 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi, Ledger, Trezor, Safe, etc.)
+ * - Developer: 10 sources (Alchemy, Chainlink, Infura, The Graph, Wormhole, LayerZero, MetaMask, Biconomy, etc.)
+ * - Bitcoin: 11 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Bitcoin Optech, River, Swan, Casa, etc.)
+ * - Solana: 10 sources (Solana News, Helius, Phantom, Marinade, Jito, Orca, Raydium, Tensor, Drift, Solflare)
  * - On-Chain: 7 sources (Glassnode, IntoTheBlock, Coin Metrics, Nansen, Dune, Artemis, etc.)
+ * - Ethereum: 7 sources (Week in Ethereum, Etherscan, Daily Gwei, Rocket Pool, SSV Network, Flashbots)
  * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
  * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
- * - Ethereum: 4 sources (Week in Ethereum, Etherscan, Daily Gwei)
+ * - Gaming: 5 sources (PlayToEarn, Yield Guild Games, Immutable, Ronin, Gala Games)
  * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
  * - Macro: 3 sources (Lyn Alden, Alhambra Partners, Macro Voices)
  * - Journalism: 3 sources (Unchained, DL News, Protos)
  * - Fintech: 3 sources (Finextra, PYMNTS, Fintech Futures)
  * - Stablecoin: 2 sources (Circle, Tether)
  * - TradFi: 2 sources (Goldman Sachs, BNY Mellon)
- * - Other: Gaming, Derivatives, Asia
+ * - Other: Derivatives, Asia, Podcasts
  */
 
 import sanitizeHtml from 'sanitize-html';
@@ -36,7 +37,7 @@ import {
   isFintechSource,
 } from './source-tiers';
 
-// RSS Feed URLs for crypto news sources (200+ sources)
+// RSS Feed URLs for crypto news sources (350+ sources)
 const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // TIER 1: Major News Outlets
@@ -1499,6 +1500,714 @@ const RSS_SOURCES = {
     url: 'https://www.artemis.xyz/blog/feed',
     category: 'onchain',
   },
+
+  // =========================================================================
+  // GENERAL CRYPTO NEWS — Extended Coverage
+  // =========================================================================
+  cryptopress: {
+    name: 'Crypto.Press',
+    url: 'https://crypto.press/feed/',
+    category: 'general',
+  },
+  cryptoslam: {
+    name: 'CryptoSlam Blog',
+    url: 'https://www.cryptoslam.io/blog/feed/',
+    category: 'general',
+  },
+  coinpaprika_blog: {
+    name: 'CoinPaprika Blog',
+    url: 'https://coinpaprika.com/blog/feed/',
+    category: 'general',
+  },
+  thecoinrepublic: {
+    name: 'The Coin Republic',
+    url: 'https://www.thecoinrepublic.com/feed/',
+    category: 'general',
+  },
+  bitdegree_news: {
+    name: 'BitDegree News',
+    url: 'https://www.bitdegree.org/crypto/news/feed',
+    category: 'general',
+  },
+  cryptotvplus: {
+    name: 'CryptoTvPlus',
+    url: 'https://cryptotvplus.com/feed/',
+    category: 'general',
+  },
+  blocktempo: {
+    name: 'BlockTempo',
+    url: 'https://www.blocktempo.com/feed/',
+    category: 'general',
+  },
+
+  // =========================================================================
+  // DEFI PROTOCOLS — Extended
+  // =========================================================================
+  balancer_blog: {
+    name: 'Balancer Blog',
+    url: 'https://medium.com/feed/balancer-protocol',
+    category: 'defi',
+  },
+  frax_blog: {
+    name: 'Frax Finance Blog',
+    url: 'https://medium.com/feed/frax-finance',
+    category: 'defi',
+  },
+  convex_blog: {
+    name: 'Convex Finance Blog',
+    url: 'https://medium.com/feed/convex-finance',
+    category: 'defi',
+  },
+  radiant_blog: {
+    name: 'Radiant Capital Blog',
+    url: 'https://medium.com/feed/@radiantcapital',
+    category: 'defi',
+  },
+  instadapp_blog: {
+    name: 'Instadapp Blog',
+    url: 'https://blog.instadapp.io/rss/',
+    category: 'defi',
+  },
+  sommelier_blog: {
+    name: 'Sommelier Finance Blog',
+    url: 'https://medium.com/feed/sommelier-finance',
+    category: 'defi',
+  },
+  liquity_blog: {
+    name: 'Liquity Blog',
+    url: 'https://www.liquity.org/blog/feed',
+    category: 'defi',
+  },
+  sushi_blog: {
+    name: 'SushiSwap Blog',
+    url: 'https://medium.com/feed/sushiswap-org',
+    category: 'defi',
+  },
+
+  // =========================================================================
+  // GAMEFI & METAVERSE
+  // =========================================================================
+  gamingguild_blog: {
+    name: 'Yield Guild Games Blog',
+    url: 'https://medium.com/feed/yield-guild-games',
+    category: 'gaming',
+  },
+  immutable_blog: {
+    name: 'Immutable Blog',
+    url: 'https://www.immutable.com/blog/feed',
+    category: 'gaming',
+  },
+  ronin_blog: {
+    name: 'Ronin Blog',
+    url: 'https://roninchain.com/blog/feed',
+    category: 'gaming',
+  },
+  gala_blog: {
+    name: 'Gala Games Blog',
+    url: 'https://blog.gala.games/feed',
+    category: 'gaming',
+  },
+
+  // =========================================================================
+  // PRIVACY & ZERO KNOWLEDGE — Extended
+  // =========================================================================
+  risc_zero_blog: {
+    name: 'RISC Zero Blog',
+    url: 'https://www.risczero.com/blog/feed',
+    category: 'security',
+  },
+  espresso_blog: {
+    name: 'Espresso Systems Blog',
+    url: 'https://medium.com/feed/espresso-systems',
+    category: 'layer2',
+  },
+  polygon_zkevm_blog: {
+    name: 'Polygon zkEVM Blog',
+    url: 'https://polygon.technology/blog/polygon-zkevm/feed',
+    category: 'layer2',
+  },
+
+  // =========================================================================
+  // SOLANA ECOSYSTEM — Extended
+  // =========================================================================
+  orca_blog: {
+    name: 'Orca Blog',
+    url: 'https://medium.com/feed/orca-so',
+    category: 'solana',
+  },
+  raydium_blog: {
+    name: 'Raydium Blog',
+    url: 'https://medium.com/feed/@raydium',
+    category: 'solana',
+  },
+  tensor_blog: {
+    name: 'Tensor Blog',
+    url: 'https://medium.com/feed/@tensor_hq',
+    category: 'solana',
+  },
+  drift_blog: {
+    name: 'Drift Protocol Blog',
+    url: 'https://medium.com/feed/drift-protocol',
+    category: 'solana',
+  },
+  solflare_blog: {
+    name: 'Solflare Blog',
+    url: 'https://medium.com/feed/solflare',
+    category: 'solana',
+  },
+
+  // =========================================================================
+  // BITCOIN ECOSYSTEM — Extended
+  // =========================================================================
+  ordinals_blog: {
+    name: 'Ordinals Blog',
+    url: 'https://ordinalsbot.com/blog/feed',
+    category: 'bitcoin',
+  },
+  bitcoinops: {
+    name: 'Bitcoin Optech',
+    url: 'https://bitcoinops.org/feed.xml',
+    category: 'bitcoin',
+  },
+  river_blog: {
+    name: 'River Financial Blog',
+    url: 'https://river.com/learn/feed/',
+    category: 'bitcoin',
+  },
+  swan_blog: {
+    name: 'Swan Bitcoin Blog',
+    url: 'https://www.swanbitcoin.com/feed/',
+    category: 'bitcoin',
+  },
+  casa_blog: {
+    name: 'Casa Blog',
+    url: 'https://blog.keys.casa/rss/',
+    category: 'bitcoin',
+  },
+
+  // =========================================================================
+  // REGULATION & COMPLIANCE
+  // =========================================================================
+  elliptic_compliance: {
+    name: 'Elliptic Compliance Blog',
+    url: 'https://www.elliptic.co/blog/category/compliance/rss.xml',
+    category: 'geopolitical',
+  },
+  trminsights: {
+    name: 'TRM Labs Insights',
+    url: 'https://www.trmlabs.com/insights/feed',
+    category: 'geopolitical',
+  },
+  fireblocks_blog: {
+    name: 'Fireblocks Blog',
+    url: 'https://www.fireblocks.com/blog/feed/',
+    category: 'institutional',
+  },
+
+  // =========================================================================
+  // VENTURE & INSTITUTIONAL — Extended
+  // =========================================================================
+  hashkey_capital: {
+    name: 'HashKey Capital Blog',
+    url: 'https://medium.com/feed/hashkey-capital',
+    category: 'institutional',
+  },
+  polychain_blog: {
+    name: 'Polychain Capital Blog',
+    url: 'https://medium.com/feed/@polychain',
+    category: 'institutional',
+  },
+  electric_capital: {
+    name: 'Electric Capital Blog',
+    url: 'https://medium.com/feed/electric-capital',
+    category: 'institutional',
+  },
+  framework_blog: {
+    name: 'Framework Ventures Blog',
+    url: 'https://medium.com/feed/framework-ventures',
+    category: 'institutional',
+  },
+
+  // =========================================================================
+  // INFRASTRUCTURE & WALLETS
+  // =========================================================================
+  metamask_blog: {
+    name: 'MetaMask Blog',
+    url: 'https://metamask.io/news/feed',
+    category: 'developer',
+  },
+  ledger_blog: {
+    name: 'Ledger Blog',
+    url: 'https://www.ledger.com/blog/feed',
+    category: 'security',
+  },
+  trezor_blog: {
+    name: 'Trezor Blog',
+    url: 'https://blog.trezor.io/feed',
+    category: 'security',
+  },
+  safe_blog: {
+    name: 'Safe (Gnosis Safe) Blog',
+    url: 'https://safe.global/blog/feed',
+    category: 'security',
+  },
+  biconomy_blog: {
+    name: 'Biconomy Blog',
+    url: 'https://medium.com/feed/biconomy',
+    category: 'developer',
+  },
+
+  // =========================================================================
+  // RESTAKING & LIQUID STAKING
+  // =========================================================================
+  rocketpool_blog: {
+    name: 'Rocket Pool Blog',
+    url: 'https://medium.com/feed/rocket-pool',
+    category: 'ethereum',
+  },
+  ssv_network_blog: {
+    name: 'SSV Network Blog',
+    url: 'https://medium.com/feed/ssv-network',
+    category: 'ethereum',
+  },
+  etherfi_blog: {
+    name: 'ether.fi Blog',
+    url: 'https://medium.com/feed/@ether.fi',
+    category: 'defi',
+  },
+  kelpdao_blog: {
+    name: 'Kelp DAO Blog',
+    url: 'https://medium.com/feed/@kelp_dao',
+    category: 'defi',
+  },
+
+  // =========================================================================
+  // BRIDGES & MEV
+  // =========================================================================
+  across_blog: {
+    name: 'Across Protocol Blog',
+    url: 'https://medium.com/feed/across-protocol',
+    category: 'defi',
+  },
+  flashbots_blog: {
+    name: 'Flashbots Blog',
+    url: 'https://writings.flashbots.net/feed',
+    category: 'ethereum',
+  },
+
+  // =========================================================================
+  // COSMOS ECOSYSTEM
+  // =========================================================================
+  osmosis_blog: {
+    name: 'Osmosis Blog',
+    url: 'https://medium.com/feed/osmosis',
+    category: 'altl1',
+  },
+  dydx_chain_blog: {
+    name: 'dYdX Chain Blog',
+    url: 'https://www.dydx.foundation/blog/feed',
+    category: 'altl1',
+  },
+  stride_blog: {
+    name: 'Stride Blog',
+    url: 'https://medium.com/feed/@stride_zone',
+    category: 'altl1',
+  },
+
+  // =========================================================================
+  // DERIVATIVES & PERPS — Expanding Coverage
+  // =========================================================================
+  hyperliquid_blog: {
+    name: 'Hyperliquid Blog',
+    url: 'https://medium.com/feed/@hyperliquid',
+    category: 'derivatives',
+  },
+  vertex_blog: {
+    name: 'Vertex Protocol Blog',
+    url: 'https://medium.com/feed/vertex-protocol',
+    category: 'derivatives',
+  },
+  aevo_blog: {
+    name: 'Aevo Blog',
+    url: 'https://medium.com/feed/@aevo-exchange',
+    category: 'derivatives',
+  },
+  kwenta_blog: {
+    name: 'Kwenta Blog',
+    url: 'https://mirror.xyz/kwenta.eth/feed/atom',
+    category: 'derivatives',
+  },
+  lyra_blog: {
+    name: 'Lyra Finance Blog',
+    url: 'https://medium.com/feed/lyra-finance',
+    category: 'derivatives',
+  },
+  gains_network_blog: {
+    name: 'gTrade Blog',
+    url: 'https://medium.com/feed/gains-network',
+    category: 'derivatives',
+  },
+
+  // =========================================================================
+  // STABLECOINS & PAYMENTS — Expanding Coverage
+  // =========================================================================
+  ethena_blog: {
+    name: 'Ethena Labs Blog',
+    url: 'https://mirror.xyz/ethena.eth/feed/atom',
+    category: 'stablecoin',
+  },
+  mountain_protocol: {
+    name: 'Mountain Protocol Blog',
+    url: 'https://medium.com/feed/@mountainprotocol',
+    category: 'stablecoin',
+  },
+  paypal_crypto: {
+    name: 'PayPal Crypto Newsroom',
+    url: 'https://newsroom.paypal-corp.com/feed',
+    category: 'stablecoin',
+  },
+  first_digital: {
+    name: 'First Digital Labs Blog',
+    url: 'https://medium.com/feed/@firstdigitallabs',
+    category: 'stablecoin',
+  },
+
+  // =========================================================================
+  // ASIA-PACIFIC — Expanding Coverage
+  // =========================================================================
+  cryptotimes_india: {
+    name: 'The Crypto Times India',
+    url: 'https://www.cryptotimes.io/feed/',
+    category: 'asia',
+  },
+  chaindebrief: {
+    name: 'Chain Debrief',
+    url: 'https://chaindebrief.com/feed/',
+    category: 'asia',
+  },
+  blockhead_tech: {
+    name: 'Blockhead',
+    url: 'https://blockhead.co/feed/',
+    category: 'asia',
+  },
+  tokenpost_en: {
+    name: 'TokenPost EN',
+    url: 'https://tokenpost.com/rss/feed/',
+    category: 'asia',
+  },
+  bitpinas: {
+    name: 'BitPinas',
+    url: 'https://bitpinas.com/feed/',
+    category: 'asia',
+  },
+  coinlive: {
+    name: 'Coinlive',
+    url: 'https://www.coinlive.com/feed',
+    category: 'asia',
+  },
+
+  // =========================================================================
+  // TRADFI & INSTITUTIONAL — Expanding Coverage
+  // =========================================================================
+  jpmorgan_insights: {
+    name: 'JPMorgan Insights',
+    url: 'https://www.jpmorgan.com/insights/feed',
+    category: 'tradfi',
+  },
+  citi_blog: {
+    name: 'Citi GPS',
+    url: 'https://www.citigroup.com/global/insights/feed',
+    category: 'tradfi',
+  },
+  fidelity_digital: {
+    name: 'Fidelity Digital Assets',
+    url: 'https://www.fidelitydigitalassets.com/research/feed',
+    category: 'tradfi',
+  },
+  standard_chartered_crypto: {
+    name: 'Standard Chartered Crypto',
+    url: 'https://www.sc.com/en/feature/crypto-insights/feed/',
+    category: 'tradfi',
+  },
+
+  // =========================================================================
+  // MACRO & CENTRAL BANKS — Expanding Coverage
+  // =========================================================================
+  federal_reserve_notes: {
+    name: 'Federal Reserve FEDS Notes',
+    url: 'https://www.federalreserve.gov/feeds/feds_notes.xml',
+    category: 'macro',
+  },
+  bis_speeches: {
+    name: 'BIS Speeches',
+    url: 'https://www.bis.org/doclist/cbspeeches.rss',
+    category: 'macro',
+  },
+  ecb_press: {
+    name: 'ECB Press Releases',
+    url: 'https://www.ecb.europa.eu/rss/press.html',
+    category: 'macro',
+  },
+  imf_blog: {
+    name: 'IMF Blog',
+    url: 'https://www.imf.org/en/Blogs/rss',
+    category: 'macro',
+  },
+  boe_speeches: {
+    name: 'Bank of England Speeches',
+    url: 'https://www.bankofengland.co.uk/rss/speeches',
+    category: 'macro',
+  },
+
+  // =========================================================================
+  // MINING & ENERGY — Expanding Coverage
+  // =========================================================================
+  theminermag: {
+    name: 'The Miner Mag',
+    url: 'https://www.theminermag.com/feed/',
+    category: 'mining',
+  },
+  luxor_blog: {
+    name: 'Luxor Mining Blog',
+    url: 'https://luxor.tech/blog/feed',
+    category: 'mining',
+  },
+  foundation_mining: {
+    name: 'Foundation Mining',
+    url: 'https://foundationmining.com/blog/feed/',
+    category: 'mining',
+  },
+
+  // =========================================================================
+  // CRYPTO JOURNALISM & NEWSLETTERS — Expanding Coverage
+  // =========================================================================
+  milkroad: {
+    name: 'Milk Road',
+    url: 'https://www.milkroad.com/feed/',
+    category: 'journalism',
+  },
+  defiprime: {
+    name: 'DeFi Prime',
+    url: 'https://defiprime.com/feed.xml',
+    category: 'journalism',
+  },
+  thedefiedge: {
+    name: 'The DeFi Edge',
+    url: 'https://thedefiedge.substack.com/feed',
+    category: 'journalism',
+  },
+  tokenomicsdao: {
+    name: 'Tokenomics DAO',
+    url: 'https://tokenomicsdao.substack.com/feed',
+    category: 'journalism',
+  },
+  cryptoweekly: {
+    name: 'Crypto Weekly',
+    url: 'https://cryptoweekly.co/feed/',
+    category: 'journalism',
+  },
+  metaversal: {
+    name: 'Metaversal',
+    url: 'https://metaversal.banklesshq.com/feed',
+    category: 'journalism',
+  },
+
+  // =========================================================================
+  // NFT & DIGITAL ART — Expanding Coverage
+  // =========================================================================
+  artblocks_blog: {
+    name: 'Art Blocks Blog',
+    url: 'https://medium.com/feed/the-art-blocks-blog',
+    category: 'nft',
+  },
+  superrare_blog: {
+    name: 'SuperRare Blog',
+    url: 'https://medium.com/feed/superrare',
+    category: 'nft',
+  },
+  opensea_blog: {
+    name: 'OpenSea Blog',
+    url: 'https://opensea.io/blog/feed',
+    category: 'nft',
+  },
+  blur_blog: {
+    name: 'Blur Blog',
+    url: 'https://mirror.xyz/blurdao.eth/feed/atom',
+    category: 'nft',
+  },
+  zora_blog: {
+    name: 'Zora Blog',
+    url: 'https://zora.co/blog/feed',
+    category: 'nft',
+  },
+  foundation_blog: {
+    name: 'Foundation Blog',
+    url: 'https://foundation.app/blog/feed',
+    category: 'nft',
+  },
+
+  // =========================================================================
+  // TRADING & MARKET ANALYSIS — Expanding Coverage
+  // =========================================================================
+  santiment_blog: {
+    name: 'Santiment Blog',
+    url: 'https://santiment.net/blog/feed/',
+    category: 'trading',
+  },
+  kaiko_research: {
+    name: 'Kaiko Research',
+    url: 'https://www.kaiko.com/research/feed',
+    category: 'trading',
+  },
+  ccdata_research: {
+    name: 'CCData Research',
+    url: 'https://ccdata.io/blog/feed',
+    category: 'trading',
+  },
+  coinalyze_blog: {
+    name: 'Coinalyze Blog',
+    url: 'https://coinalyze.net/blog/feed/',
+    category: 'trading',
+  },
+  material_indicators: {
+    name: 'Material Indicators Blog',
+    url: 'https://materialindicators.substack.com/feed',
+    category: 'trading',
+  },
+
+  // =========================================================================
+  // PREDICTION MARKETS
+  // =========================================================================
+  polymarket_blog: {
+    name: 'Polymarket Blog',
+    url: 'https://mirror.xyz/polymarket.eth/feed/atom',
+    category: 'defi',
+  },
+
+  // =========================================================================
+  // SOCIALFI & DECENTRALIZED SOCIAL
+  // =========================================================================
+  lens_blog: {
+    name: 'Lens Protocol Blog',
+    url: 'https://lens.xyz/blog/feed',
+    category: 'social',
+  },
+  farcaster_blog: {
+    name: 'Farcaster Blog',
+    url: 'https://www.farcaster.xyz/blog/feed',
+    category: 'social',
+  },
+
+  // =========================================================================
+  // ADDITIONAL PODCASTS
+  // =========================================================================
+  bell_curve_podcast: {
+    name: 'Bell Curve Podcast',
+    url: 'https://feeds.simplecast.com/ePJmCHr3',
+    category: 'defi',
+  },
+  the_chopping_block: {
+    name: 'The Chopping Block',
+    url: 'https://feeds.simplecast.com/2LYbgm7h',
+    category: 'general',
+  },
+  empire_podcast: {
+    name: 'Empire Podcast',
+    url: 'https://feeds.simplecast.com/lKRGWp6K',
+    category: 'general',
+  },
+  lightspeed_podcast: {
+    name: 'Lightspeed Podcast',
+    url: 'https://feeds.simplecast.com/V3RQUAFM',
+    category: 'solana',
+  },
+  on_the_margin_podcast: {
+    name: 'On The Margin',
+    url: 'https://feeds.simplecast.com/I1bKBJmR',
+    category: 'trading',
+  },
+  zero_knowledge_podcast: {
+    name: 'Zero Knowledge Podcast',
+    url: 'https://feeds.simplecast.com/BBRRTZZP',
+    category: 'developer',
+  },
+  into_the_bytecode: {
+    name: 'Into the Bytecode',
+    url: 'https://feeds.simplecast.com/wN3UNzZa',
+    category: 'ethereum',
+  },
+
+  // =========================================================================
+  // ETHEREUM ECOSYSTEM — Expanding Coverage
+  // =========================================================================
+  ef_blog: {
+    name: 'Ethereum Foundation Blog',
+    url: 'https://blog.ethereum.org/feed.xml',
+    category: 'ethereum',
+  },
+  ethereum_cat_herders: {
+    name: 'Ethereum Cat Herders',
+    url: 'https://medium.com/feed/ethereum-cat-herders',
+    category: 'ethereum',
+  },
+  nethermind_blog: {
+    name: 'Nethermind Blog',
+    url: 'https://www.nethermind.io/blog/feed',
+    category: 'ethereum',
+  },
+
+  // =========================================================================
+  // BITCOIN ECOSYSTEM — Expanding Coverage
+  // =========================================================================
+  bitcoinops: {
+    name: 'Bitcoin Optech',
+    url: 'https://bitcoinops.org/feed.xml',
+    category: 'bitcoin',
+  },
+  mempool_space: {
+    name: 'Mempool.space Blog',
+    url: 'https://mempool.space/blog/feed',
+    category: 'bitcoin',
+  },
+  swan_blog: {
+    name: 'Swan Bitcoin Blog',
+    url: 'https://www.swanbitcoin.com/feed/',
+    category: 'bitcoin',
+  },
+  unchained_capital: {
+    name: 'Unchained Capital Blog',
+    url: 'https://unchained.com/blog/feed/',
+    category: 'bitcoin',
+  },
+  blockstream_blog: {
+    name: 'Blockstream Blog',
+    url: 'https://blog.blockstream.com/feed/',
+    category: 'bitcoin',
+  },
+
+  // =========================================================================
+  // RESEARCH & ON-CHAIN — Expanding Coverage
+  // =========================================================================
+  token_terminal_blog: {
+    name: 'Token Terminal Blog',
+    url: 'https://tokenterminal.com/blog/feed',
+    category: 'research',
+  },
+  cryptorank_blog: {
+    name: 'CryptoRank Blog',
+    url: 'https://cryptorank.io/blog/feed',
+    category: 'research',
+  },
+  flipside_blog: {
+    name: 'Flipside Crypto Blog',
+    url: 'https://flipsidecrypto.xyz/blog/feed',
+    category: 'onchain',
+  },
+  debank_blog: {
+    name: 'DeBank Blog',
+    url: 'https://medium.com/feed/@DeBank_',
+    category: 'onchain',
+  },
 } as const;
 
 type SourceKey = keyof typeof RSS_SOURCES;
@@ -1545,6 +2254,36 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
 
   // Exchange Blogs
   'coinbase_blog', 'binance_blog',
+
+  // Crypto Media — High Volume
+  'watcherguru', 'cryptopolitan', 'coinedition',
+
+  // DeFi Protocols
+  'dydx_blog', 'synthetix_blog', 'jupiter_blog',
+
+  // Solana Ecosystem
+  'helius_blog', 'jito_blog',
+
+  // Policy & Regulation
+  'coincenter', 'cftc_press',
+
+  // On-chain Analytics
+  'nansen_blog', 'artemis_blog',
+
+  // Derivatives
+  'deribit_insights', 'hyperliquid_blog',
+
+  // Bitcoin Extended
+  'bitcoinops', 'blockstream_blog',
+
+  // Ethereum Extended
+  'ef_blog', 'flashbots_blog',
+
+  // Gaming
+  'immutable_blog',
+
+  // Journalism
+  'milkroad',
 ]);
 
 export interface NewsArticle {

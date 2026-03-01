@@ -169,10 +169,10 @@ export async function verifySignature(
 // ============================================================================
 
 /**
- * Generate unique ID
+ * Generate unique ID using cryptographically secure random values
  */
 function generateId(): string {
-  return `wh_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `wh_${crypto.randomUUID()}`;
 }
 
 /**

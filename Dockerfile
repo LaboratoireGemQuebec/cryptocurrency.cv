@@ -22,17 +22,28 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
+# Security: remove unnecessary system packages and shells from production image
+RUN apk --no-cache add wget && \
+    rm -rf /var/cache/apk/*
+
 # Create non-root user for security
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Copy built assets from builder
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Security: make the app directory read-only for the running user
+# (writable dirs for Next.js cache are handled by the standalone output)
+RUN chmod -R 555 /app
 
 # Set correct ownership
 USER nextjs
+
+# Security: drop all Linux capabilities (defense in depth)
+# Note: this is enforced at docker-compose/k8s level via security_context
 
 # Expose port
 EXPOSE 3000

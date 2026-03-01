@@ -133,7 +133,7 @@ export interface ProtocolRiskScore {
   lastUpdated: string;
   factors: {
     smartContractRisk: RiskFactor;
-    centralzationRisk: RiskFactor;
+    centralizationRisk: RiskFactor;
     oracleRisk: RiskFactor;
     governanceRisk: RiskFactor;
     economicRisk: RiskFactor;
@@ -662,6 +662,327 @@ function calculateEconomicRisk(protocol: Protocol, tvl: TVLData): RiskFactor {
   };
 }
 
+/**
+ * Calculate governance risk based on decentralization, participation, and proposal activity.
+ * This is distinct from centralizationRisk — it focuses on active governance health.
+ */
+function calculateGovernanceRiskFactor(protocol: Protocol, governance: GovernanceMetrics | null): RiskFactor {
+  let score = 50; // default moderate if no governance data
+  const details: string[] = [];
+  const sources: string[] = [];
+
+  if (!governance) {
+    return {
+      name: 'Governance Risk',
+      score: 40,
+      weight: 0.08,
+      details: 'No governance data available — centralization risk unknown',
+      severity: 'medium',
+      sources: [],
+    };
+  }
+
+  // Voter participation
+  if (governance.averageVoterParticipation > 20) {
+    score += 15;
+    details.push(`${governance.averageVoterParticipation.toFixed(1)}% avg voter participation`);
+  } else if (governance.averageVoterParticipation > 5) {
+    score += 5;
+    details.push(`Low voter participation (${governance.averageVoterParticipation.toFixed(1)}%)`);
+  } else if (governance.averageVoterParticipation > 0) {
+    score -= 10;
+    details.push(`Very low voter participation (${governance.averageVoterParticipation.toFixed(1)}%)`);
+  }
+
+  // Holder distribution
+  if (governance.topHolderConcentration > 0) {
+    if (governance.topHolderConcentration > 60) {
+      score -= 20;
+      details.push(`Top-10 holders control ${governance.topHolderConcentration.toFixed(0)}% of supply`);
+    } else if (governance.topHolderConcentration > 40) {
+      score -= 10;
+      details.push(`Moderate holder concentration (${governance.topHolderConcentration.toFixed(0)}%)`);
+    } else {
+      score += 10;
+      details.push('Well-distributed token supply');
+    }
+  }
+
+  // Proposal activity
+  if (governance.proposalCount > 20) {
+    score += 10;
+    details.push(`Active governance (${governance.proposalCount} proposals)`);
+  } else if (governance.proposalCount > 5) {
+    score += 5;
+  } else if (governance.proposalCount === 0) {
+    score -= 10;
+    details.push('No governance proposals on record');
+  }
+
+  // Timelock
+  if (governance.timelockDuration > 48) {
+    score += 10;
+    details.push(`${governance.timelockDuration}h timelock`);
+  } else if (governance.timelockDuration > 0) {
+    score += 5;
+  } else {
+    score -= 5;
+    details.push('No timelock on governance actions');
+  }
+
+  // Multisig check
+  if (governance.multisigDetails) {
+    const { signers, threshold } = governance.multisigDetails;
+    if (threshold > 1 && signers >= 3) {
+      score += 10;
+      details.push(`${threshold}/${signers} multisig`);
+    }
+  }
+
+  // Treasury size
+  if (governance.treasuryValue > 10_000_000) {
+    score += 5;
+    details.push(`$${(governance.treasuryValue / 1e6).toFixed(0)}M treasury`);
+    sources.push('treasury');
+  }
+
+  score = Math.max(0, Math.min(100, score));
+
+  return {
+    name: 'Governance Risk',
+    score,
+    weight: 0.08,
+    details: details.join('; ') || 'Governance health assessment',
+    severity: score >= 70 ? 'low' : score >= 50 ? 'medium' : score >= 30 ? 'high' : 'critical',
+    sources,
+  };
+}
+
+/**
+ * Calculate operational risk based on protocol maturity, incident response history,
+ * team responsiveness, and overall operational practices.
+ */
+function calculateOperationalRiskFactor(
+  protocol: Protocol,
+  incidents: SecurityIncident[],
+  audits: AuditReport[],
+  team: TeamInfo | null,
+  governance: GovernanceMetrics | null
+): RiskFactor {
+  let score = 70; // Start with moderate baseline
+  const details: string[] = [];
+  const sources: string[] = [];
+
+  // Protocol maturity (age-based)
+  const protocolAgeMs = Date.now() - new Date(protocol.launchDate).getTime();
+  const protocolAgeYears = protocolAgeMs / (365.25 * 24 * 3600 * 1000);
+
+  if (protocolAgeYears >= 3) {
+    score += 15;
+    details.push(`${protocolAgeYears.toFixed(1)}y operational track record`);
+  } else if (protocolAgeYears >= 1) {
+    score += 5;
+    details.push(`${protocolAgeYears.toFixed(1)}y track record`);
+  } else if (protocolAgeYears < 0.5) {
+    score -= 15;
+    details.push('Protocol less than 6 months old');
+  } else {
+    score -= 5;
+    details.push('Protocol less than 1 year old');
+  }
+
+  // Recent incidents (last 6 months)
+  const sixMonthsAgo = Date.now() - 180 * 24 * 3600 * 1000;
+  const recentIncidents = incidents.filter(i => new Date(i.date).getTime() > sixMonthsAgo);
+  if (recentIncidents.length === 0) {
+    score += 10;
+    details.push('No incidents in last 6 months');
+  } else {
+    const penalty = Math.min(30, recentIncidents.length * 12);
+    score -= penalty;
+    details.push(`${recentIncidents.length} incident(s) in last 6 months`);
+    sources.push(...recentIncidents.map(i => i.type));
+  }
+
+  // Incident response quality — how much was recovered?
+  if (incidents.length > 0) {
+    const totalLost = incidents.reduce((sum, i) => sum + i.lossUsd, 0);
+    const totalRecovered = incidents.reduce((sum, i) => sum + i.recoveredUsd, 0);
+    if (totalLost > 0) {
+      const recoveryRate = totalRecovered / totalLost;
+      if (recoveryRate > 0.5) {
+        score += 5;
+        details.push(`${(recoveryRate * 100).toFixed(0)}% funds recovery rate`);
+      } else if (recoveryRate < 0.1 && totalLost > 1_000_000) {
+        score -= 10;
+        details.push('Poor historical fund recovery');
+      }
+    }
+  }
+
+  // Team presence indicates operational maturity
+  if (team) {
+    if (team.isDoxxed && team.teamSize >= 5) {
+      score += 10;
+      details.push(`Doxxed team of ${team.teamSize}`);
+    } else if (team.isDoxxed) {
+      score += 5;
+    }
+
+    // GitHub activity shows ongoing development
+    if (team.githubActivity) {
+      if (team.githubActivity.commits30d > 50) {
+        score += 5;
+        details.push('Active development');
+      } else if (team.githubActivity.commits30d === 0) {
+        score -= 5;
+        details.push('No recent development activity');
+      }
+    }
+  } else {
+    score -= 10;
+    details.push('Team info unavailable');
+  }
+
+  // Audit cadence (regular audits = better operations)
+  if (audits.length >= 3) {
+    score += 5;
+  } else if (audits.length === 0) {
+    score -= 10;
+  }
+
+  // Governance presence adds operational safeguards
+  if (governance && governance.timelockDuration > 0) {
+    score += 5;
+  }
+
+  score = Math.max(0, Math.min(100, score));
+
+  return {
+    name: 'Operational Risk',
+    score,
+    weight: 0.05,
+    details: details.join('; ') || 'Standard operational practices',
+    severity: score >= 70 ? 'low' : score >= 40 ? 'medium' : score >= 20 ? 'high' : 'critical',
+    sources,
+  };
+}
+
+/**
+ * Calculate audit status factor based on number, quality, recency, and coverage of audits,
+ * as well as the resolution status of findings.
+ */
+function calculateAuditStatusFactor(audits: AuditReport[], incidents: SecurityIncident[]): RiskFactor {
+  const details: string[] = [];
+  const sources: string[] = [];
+
+  if (audits.length === 0) {
+    // No audits is a major red flag
+    const hasExploits = incidents.some(i => i.type === 'exploit' || i.type === 'reentrancy' || i.type === 'access-control');
+    return {
+      name: 'Audit Status',
+      score: hasExploits ? 5 : 20,
+      weight: 0.05,
+      details: hasExploits
+        ? 'No audits and protocol has been exploited — critical risk'
+        : 'No audits on record — high risk',
+      severity: 'critical',
+      sources: [],
+    };
+  }
+
+  let score = 50; // Base: having at least one audit
+
+  // Auditor quality
+  const hasTier1 = audits.some(a => a.auditorReputation === 'tier1');
+  const hasTier2 = audits.some(a => a.auditorReputation === 'tier2');
+  if (hasTier1) {
+    score += 20;
+    const tier1Names = audits.filter(a => a.auditorReputation === 'tier1').map(a => a.auditor);
+    details.push(`Tier-1 auditor(s): ${tier1Names.join(', ')}`);
+    sources.push(...tier1Names);
+  } else if (hasTier2) {
+    score += 10;
+    const tier2Names = audits.filter(a => a.auditorReputation === 'tier2').map(a => a.auditor);
+    details.push(`Tier-2 auditor(s): ${tier2Names.join(', ')}`);
+    sources.push(...tier2Names);
+  } else {
+    details.push('No top-tier auditor used');
+    sources.push(...audits.map(a => a.auditor));
+  }
+
+  // Multiple audits (independent review diversity)
+  if (audits.length >= 3) {
+    score += 10;
+    details.push(`${audits.length} independent audits`);
+  } else if (audits.length >= 2) {
+    score += 5;
+    details.push(`${audits.length} audits`);
+  } else {
+    details.push('Single audit only');
+  }
+
+  // Recency of audits
+  const now = Date.now();
+  const newestDate = audits.reduce<number>((newest, a) => {
+    const ts = new Date(a.date).getTime();
+    return ts > newest ? ts : newest;
+  }, 0);
+  const ageMonths = (now - newestDate) / (30 * 24 * 3600 * 1000);
+
+  if (ageMonths <= 6) {
+    score += 10;
+    details.push(`Latest audit: ${Math.round(ageMonths)} month(s) ago`);
+  } else if (ageMonths <= 12) {
+    score += 5;
+    details.push(`Latest audit: ${Math.round(ageMonths)} months ago`);
+  } else if (ageMonths > 24) {
+    score -= 10;
+    details.push(`Stale audit: ${Math.round(ageMonths)} months ago — needs refresh`);
+  } else {
+    details.push(`Latest audit: ${Math.round(ageMonths)} months ago`);
+  }
+
+  // Finding resolution
+  const allFindings = audits.flatMap(a => a.findings || []);
+  const criticalOpen = allFindings.filter(f => (f.severity === 'critical' || f.severity === 'high') && f.status === 'open');
+  if (criticalOpen.length > 0) {
+    score -= 15;
+    details.push(`${criticalOpen.length} unresolved critical/high finding(s)`);
+  }
+
+  const resolvedRatio = allFindings.length > 0
+    ? allFindings.filter(f => f.status === 'resolved').length / allFindings.length
+    : 1;
+  if (resolvedRatio >= 0.9 && allFindings.length > 0) {
+    score += 5;
+  } else if (resolvedRatio < 0.5 && allFindings.length > 0) {
+    score -= 5;
+    details.push(`Only ${(resolvedRatio * 100).toFixed(0)}% of findings resolved`);
+  }
+
+  // Post-audit exploit check
+  const postAuditExploits = incidents.filter(i =>
+    new Date(i.date).getTime() > newestDate &&
+    (i.type === 'exploit' || i.type === 'reentrancy' || i.type === 'access-control')
+  );
+  if (postAuditExploits.length > 0) {
+    score -= 15;
+    details.push(`${postAuditExploits.length} exploit(s) occurred after latest audit`);
+  }
+
+  score = Math.max(0, Math.min(100, score));
+
+  return {
+    name: 'Audit Status',
+    score,
+    weight: 0.05,
+    details: details.join('; '),
+    severity: score >= 70 ? 'low' : score >= 40 ? 'medium' : score >= 20 ? 'high' : 'critical',
+    sources,
+  };
+}
+
 function scoreToGrade(score: number): ProtocolRiskScore['grade'] {
   if (score >= 95) return 'A+';
   if (score >= 90) return 'A';
@@ -688,35 +1009,17 @@ export function calculateRiskScore(
   const smartContractRisk = calculateSmartContractRisk(audits, incidents);
   const centralizationRisk = calculateCentralizationRisk(governance);
   const oracleRisk = calculateOracleRisk(protocol);
-  const governanceRisk = calculateCentralizationRisk(governance); // Same logic for now
+  const governanceRisk = calculateGovernanceRiskFactor(protocol, governance);
   const economicRisk = calculateEconomicRisk(protocol, tvl);
   const teamVerification = calculateTeamRisk(team);
   const insuranceCoverage = calculateInsuranceScore(insurance, tvl);
   const trackRecord = calculateTrackRecordScore(protocol, incidents, tvl);
-
-  // Placeholder for operational risk
-  const operationalRisk: RiskFactor = {
-    name: 'Operational Risk',
-    score: 75,
-    weight: 0.05,
-    details: 'Standard operational practices',
-    severity: 'low',
-    sources: [],
-  };
-
-  // Placeholder for audit status factor
-  const auditStatus: RiskFactor = {
-    name: 'Audit Status',
-    score: audits.length > 0 ? 80 : 30,
-    weight: 0.05,
-    details: audits.length > 0 ? `${audits.length} audit(s) on file` : 'No audits',
-    severity: audits.length > 0 ? 'low' : 'high',
-    sources: audits.map(a => a.auditor),
-  };
+  const operationalRisk = calculateOperationalRiskFactor(protocol, incidents, audits, team, governance);
+  const auditStatus = calculateAuditStatusFactor(audits, incidents);
 
   const factors = {
     smartContractRisk,
-    centralzationRisk: centralizationRisk,
+    centralizationRisk: centralizationRisk,
     oracleRisk,
     governanceRisk,
     economicRisk,

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { promptGroq } from '@/lib/groq';
+import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 interface Relationship {
   subject: string;
@@ -9,6 +10,8 @@ interface Relationship {
 }
 
 export async function POST(request: NextRequest) {
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
+
   try {
     const { text } = await request.json();
     
@@ -23,7 +26,7 @@ Text: ${text}
 
 Return ONLY valid JSON array like: [{"subject":"Bitcoin","predicate":"surpassed","object":"$100K","confidence":0.95}]`;
 
-    const response = await promptGroq(systemPrompt, userPrompt);
+    const response = await aiComplete(systemPrompt, userPrompt, {}, true);
     
     // Parse JSON from response
     let relationships: Relationship[] = [];
@@ -43,6 +46,9 @@ Return ONLY valid JSON array like: [{"subject":"Bitcoin","predicate":"surpassed"
     });
   } catch (error) {
     console.error('Relationship extraction error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json({ error: 'Extraction failed' }, { status: 500 });
   }
 }

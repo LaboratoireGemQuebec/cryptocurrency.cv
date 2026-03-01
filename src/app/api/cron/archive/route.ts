@@ -28,6 +28,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -250,7 +251,7 @@ export async function GET(request: NextRequest) {
 
   try {
     // Fetch current news
-    console.log('📰 Fetching news for archive...');
+    logger.info('Fetching news for archive...');
     const newsResponse = await getLatestNews(50);
     const articles = newsResponse.articles;
 
@@ -282,11 +283,11 @@ export async function GET(request: NextRequest) {
       articles: result.entries.slice(0, 100),
     };
 
-    console.log(`✅ Archived ${result.archived} articles in ${archiveResponse.duration}ms`);
+    logger.info(`Archived ${result.archived} articles in ${archiveResponse.duration}ms`);
 
     return NextResponse.json(archiveResponse);
   } catch (error) {
-    console.error('Archive cron failed:', error);
+    logger.error('Archive cron failed', error instanceof Error ? error : undefined);
 
     return NextResponse.json(
       {

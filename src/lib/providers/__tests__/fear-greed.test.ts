@@ -7,6 +7,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { createFearGreedChain } from '../adapters/fear-greed';
 import { registry } from '../registry';
+import '../setup';
 
 // Mock global fetch for deterministic tests
 const mockFetch = vi.fn();

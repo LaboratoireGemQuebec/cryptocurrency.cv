@@ -1,0 +1,32 @@
+{
+  "name": "free-crypto-news",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [3000, 6006],
+  "portsAttributes": {
+    "3000": { "label": "Next.js Dev", "onAutoForward": "notify" },
+    "6006": { "label": "Storybook", "onAutoForward": "silent" }
+  },
+  "postCreateCommand": "pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "stylelint.vscode-stylelint",
+        "ms-playwright.playwright",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.preferences.importModuleSpecifier": "non-relative"
+      }
+    }
+  },
+  "remoteUser": "node"
+}

@@ -157,7 +157,7 @@ function recordError(name: SourceName, error: unknown): void {
   h.circuitState = pipelineBreakers[name].getState();
 }
 
-// ─── Top 20 RSS Feed URLs for pipeline pre-fetching ────────────────────────
+// ─── Top 30 RSS Feed URLs for pipeline pre-fetching ────────────────────────
 
 const TOP_RSS_FEEDS = [
   'https://www.coindesk.com/arc/outboundfeeds/rss/',
@@ -180,6 +180,17 @@ const TOP_RSS_FEEDS = [
   'https://www.cnbc.com/id/100727362/device/rss/rss.html',
   'https://finance.yahoo.com/rss/cryptocurrency',
   'https://l2beat.com/blog/rss.xml',
+  // New high-signal sources
+  'https://watcher.guru/news/feed',
+  'https://www.cryptopolitan.com/feed/',
+  'https://coinedition.com/feed/',
+  'https://techcrunch.com/category/cryptocurrency/feed/',
+  'https://www.coincenter.org/feed/',
+  'https://dydx.exchange/blog/feed',
+  'https://www.helius.dev/blog/feed',
+  'https://blog.coinmarketcap.com/feed/',
+  'https://blog.coingecko.com/feed/',
+  'https://cryptoslate.com/feed/',
 ];
 
 // ─── Default Coins for Price Pipeline ──────────────────────────────────────

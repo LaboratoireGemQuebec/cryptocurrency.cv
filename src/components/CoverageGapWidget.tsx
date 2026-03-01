@@ -185,7 +185,7 @@ export default function CoverageGapWidget({
       </div>
 
       {/* Gap cards */}
-      <ul className="divide-y divide-zinc-100 dark:divide-zinc-800" role="list">
+      <ul className="divide-y divide-zinc-100 dark:divide-zinc-800">
         {gaps.map((gap) => {
           const age = daysSince(gap.detectedAt);
           const severityClass =

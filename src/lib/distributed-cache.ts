@@ -332,9 +332,26 @@ export class DistributedCache {
     try {
       // Memory cleanup
       count = await this.memory.deleteByPrefix(fullPrefix);
-      
-      // KV cleanup would require scanning - not implemented for performance
-      // In production, use Redis SCAN or Vercel KV patterns
+
+      // KV cleanup via prefix-based key scanning
+      if (this.kv) {
+        try {
+          // Use Redis SCAN pattern for efficient prefix-based deletion
+          // Vercel KV supports the keys() method with pattern matching
+          const kvKeys = await this.kv.keys(`${fullPrefix}*`);
+          if (kvKeys && kvKeys.length > 0) {
+            // Delete in batches of 100 to avoid overwhelming KV
+            const batchSize = 100;
+            for (let i = 0; i < kvKeys.length; i += batchSize) {
+              const batch = kvKeys.slice(i, i + batchSize);
+              await Promise.all(batch.map(k => this.kv!.del(k)));
+            }
+            count += kvKeys.length;
+          }
+        } catch (kvError) {
+          console.warn('[DistributedCache] KV prefix cleanup failed, memory cleanup still applied:', kvError);
+        }
+      }
     } catch (error) {
       console.error('[DistributedCache] DeleteByPrefix error:', error);
     }

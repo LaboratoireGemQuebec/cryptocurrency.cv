@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJsonCached, isGroqConfigured } from '@/lib/groq';
+import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 
 export const runtime = 'edge';
@@ -71,10 +71,10 @@ export async function GET(request: NextRequest) {
   const actionFilter = searchParams.get('action') || undefined;
   const sentiment = searchParams.get('sentiment') || undefined;
 
-  if (!isGroqConfigured()) {
+  if (!isAIConfigured()) {
     return errorResponse(
       'AI features not configured',
-      'Set GROQ_API_KEY environment variable. Get a free key at https://console.groq.com/keys',
+      'Set GROQ_API_KEY, OPENAI_API_KEY, or ANTHROPIC_API_KEY environment variable.',
       503
     );
   }
@@ -97,7 +97,7 @@ ${articlesText}
 
 For each relationship found, include the article title and number it came from.`;
 
-    const result = await promptGroqJsonCached<RelationshipResponse>(
+    const result = await promptAIJsonCached<RelationshipResponse>(
       'relationships',
       SYSTEM_PROMPT,
       userPrompt,
@@ -174,6 +174,13 @@ For each relationship found, include the article title and number it came from.`
     });
   } catch (error) {
     console.error('Relationship extraction error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return errorResponse(
+        'AI service temporarily unavailable',
+        'All configured AI providers failed authentication. Please check API keys.',
+        503
+      );
+    }
     return errorResponse('Failed to extract relationships', String(error));
   }
 }

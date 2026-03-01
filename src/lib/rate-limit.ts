@@ -76,6 +76,8 @@ interface RateLimitEntry {
 
 // In-memory store (resets on server restart)
 const rateLimitStore = new Map<string, RateLimitEntry>();
+/** Maximum entries to prevent unbounded memory growth */
+const MAX_RATE_LIMIT_STORE_SIZE = 50_000;
 
 // Configuration
 const RATE_LIMIT_CONFIG = {
@@ -135,9 +137,19 @@ export function checkRateLimitByRequest(request: NextRequest): RateLimitResult {
   const clientIP = getClientIP(request);
   const now = Date.now();
   
-  // Periodic cleanup (every 100 requests)
+  // Periodic cleanup (every 100 requests on average)
   if (Math.random() < 0.01) {
     cleanupExpiredEntries();
+  }
+
+  // Evict oldest entries if store is at capacity to prevent memory exhaustion
+  if (rateLimitStore.size >= MAX_RATE_LIMIT_STORE_SIZE) {
+    cleanupExpiredEntries();
+    // If still at capacity after cleanup, evict oldest entries
+    if (rateLimitStore.size >= MAX_RATE_LIMIT_STORE_SIZE) {
+      const keysToDelete = Array.from(rateLimitStore.keys()).slice(0, Math.floor(MAX_RATE_LIMIT_STORE_SIZE * 0.1));
+      for (const k of keysToDelete) rateLimitStore.delete(k);
+    }
   }
   
   let entry = rateLimitStore.get(clientIP);

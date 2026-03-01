@@ -4,6 +4,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { createFundingRateChain } from '../adapters/funding-rate';
 import { registry } from '../registry';
+import '../setup';
 
 const mockFetch = vi.fn();
 vi.stubGlobal('fetch', mockFetch);
@@ -31,6 +32,9 @@ describe('FundingRateChain', () => {
       includeBinance: true,
       includeBybit: false,
       includeOkx: false,
+      includeDydx: false,
+      includeHyperliquid: false,
+      includeCoinglass: false,
     });
     const result = await chain.fetch({});
 
@@ -69,6 +73,9 @@ describe('FundingRateChain', () => {
       includeBinance: true,
       includeBybit: true,
       includeOkx: false,
+      includeDydx: false,
+      includeHyperliquid: false,
+      includeCoinglass: false,
     });
     const result = await chain.fetch({});
 
@@ -101,6 +108,9 @@ describe('FundingRateChain', () => {
       includeBinance: false,
       includeBybit: true,
       includeOkx: false,
+      includeDydx: false,
+      includeHyperliquid: false,
+      includeCoinglass: false,
     });
     const result = await chain.fetch({});
     const rate = result.data[0];

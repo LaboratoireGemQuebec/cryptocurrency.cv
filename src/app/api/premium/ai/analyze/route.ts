@@ -17,7 +17,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getCoinDetails, getHistoricalPrices, getFearGreedIndex } from '@/lib/market-data';
-import { callGroq, parseGroqJson, isGroqConfigured, type GroqMessage } from '@/lib/groq';
+import { callGroq, isGroqConfigured } from '@/lib/groq';
 
 export const runtime = 'nodejs';
 
@@ -202,8 +202,8 @@ Response format:
   "opportunities": ["...", "..."]
 }`;
 
-  if (!isGroqConfigured) {
-    // Return default analysis if Groq not configured
+  if (!isAIConfigured()) {
+    // Return default analysis if no AI provider is configured
     return {
       summary: `${coinName} analysis based on technical and sentiment indicators. The market shows ${technical?.trend || 'mixed'} conditions with ${sentiment?.overallSentiment || 'neutral'} sentiment.`,
       keyPoints: [
@@ -225,24 +225,14 @@ Response format:
   }
 
   try {
-    const response = await callGroq(
-      [
-        {
-          role: 'system',
-          content: 'You are a cryptocurrency analyst. Respond only with valid JSON.',
-        },
-        { role: 'user', content: prompt },
-      ],
-      {
-        model: 'llama-3.3-70b-versatile',
-        temperature: 0.3,
-        maxTokens: 1000,
-        jsonMode: true,
-      }
+    const raw = await aiComplete(
+      'You are a cryptocurrency analyst. Respond only with valid JSON.',
+      prompt,
+      { maxTokens: 1000, temperature: 0.3, jsonMode: true },
+      true
     );
 
-    const content = response.content || '{}';
-    const parsed = JSON.parse(content);
+    const parsed = parseGroqJson<Record<string, unknown>>(raw);
 
     return {
       summary: parsed.summary || 'Analysis unavailable',

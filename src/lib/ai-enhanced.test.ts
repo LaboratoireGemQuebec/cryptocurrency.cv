@@ -59,7 +59,7 @@ describe('AI Enhanced Utilities', () => {
       process.env.OPENAI_API_KEY = 'test-key';
       const info = getAIProviderInfo();
       expect(info?.provider).toBe('openai');
-      expect(info?.model).toBe('gpt-4o-mini');
+      expect(info?.model).toBe('gpt-4o');
     });
 
     it('returns custom model when set', () => {
@@ -110,7 +110,7 @@ describe('AI Enhanced Utilities', () => {
       await summarizeArticle('Title', 'Content', { length: 'short' });
 
       const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
-      expect(callBody.messages[1].content).toContain('1-2 sentences');
+      expect(callBody.messages[1].content).toContain('2-3 crisp sentences');
     });
   });
 

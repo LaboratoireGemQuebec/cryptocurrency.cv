@@ -30,6 +30,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { notifyIndexNow } from '@/lib/indexnow';
 import { callGroq, isGroqConfigured } from '@/lib/groq';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -238,9 +239,9 @@ ${articleList}`;
       });
     }
 
-    console.log(`[AI Enrichment] Enriched ${result.size}/${batch.length} articles`);
+    logger.info(`[AI Enrichment] Enriched ${result.size}/${batch.length} articles`);
   } catch (err) {
-    console.warn('[AI Enrichment] Batch enrichment failed (non-fatal):', err);
+    logger.warn('[AI Enrichment] Batch enrichment failed (non-fatal)', err instanceof Error ? err : undefined);
   }
 
   return result;
@@ -378,7 +379,7 @@ export async function POST(request: NextRequest) {
 
   try {
     // Fetch news
-    console.log('📰 Fetching news...');
+    logger.info('Fetching news...');
     const newsResponse = await getLatestNews(50);
     const rawArticles = newsResponse.articles;
 
@@ -400,7 +401,7 @@ export async function POST(request: NextRequest) {
         const enrichment = enrichments.get(a.id);
         return enrichment ? { ...a, ...enrichment } : a;
       });
-      console.log(`[Webhook] AI-enriched ${enrichments.size}/${articles.length} articles`);
+      logger.info(`[Webhook] AI-enriched ${enrichments.size}/${articles.length} articles`);
     }
 
     // Try to commit to GitHub

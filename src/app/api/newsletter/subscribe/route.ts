@@ -8,6 +8,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'edge';
 
@@ -232,13 +233,13 @@ export async function POST(request: NextRequest) {
           }
         }
       } catch (error) {
-        console.error('Mailchimp subscription error:', error);
+        logger.error('Mailchimp subscription error', error instanceof Error ? error : undefined);
       }
     }
     
     // If no external service is configured, log and accept the subscription
     // In production, you might want to store this in a database
-    console.log(`Newsletter subscription: ${normalizedEmail}`);
+    logger.info(`Newsletter subscription: ${normalizedEmail}`);
     
     return NextResponse.json({
       success: true,
@@ -247,7 +248,7 @@ export async function POST(request: NextRequest) {
     } as SubscriptionResponse);
     
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    logger.error('Newsletter subscription error', error instanceof Error ? error : undefined);
     return NextResponse.json(
       {
         success: false,

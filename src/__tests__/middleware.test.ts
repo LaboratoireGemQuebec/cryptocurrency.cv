@@ -377,7 +377,7 @@ describe('SECURITY_HEADERS', () => {
   });
 
   it('should include X-XSS-Protection', () => {
-    expect(SECURITY_HEADERS['X-XSS-Protection']).toBe('1; mode=block');
+    expect(SECURITY_HEADERS['X-XSS-Protection']).toBe('0');
   });
 
   it('should include Referrer-Policy', () => {
@@ -391,7 +391,7 @@ describe('getSecurityHeaders', () => {
     
     expect(headers.get('X-Content-Type-Options')).toBe('nosniff');
     expect(headers.get('X-Frame-Options')).toBe('DENY');
-    expect(headers.get('X-XSS-Protection')).toBe('1; mode=block');
+    expect(headers.get('X-XSS-Protection')).toBe('0');
   });
 });
 

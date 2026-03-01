@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { PWAProvider } from '@/components/PWAProvider';
 
 import { UpdatePrompt } from '@/components/UpdatePrompt';
@@ -226,6 +227,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://assets.coingecko.com" />
+        <link rel="dns-prefetch" href="https://coin-images.coingecko.com" />
+        <link rel="dns-prefetch" href="https://api.llama.fi" />
         
         {/* PWA splash screens for iOS */}
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-dark.png" media="(prefers-color-scheme: dark)" />
@@ -262,6 +266,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         {/* Vercel Analytics - privacy-friendly, no-cookie tracking */}
         <Analytics />
         <SpeedInsights />
+        {/* Google Analytics 4 — free, works on any host. Set NEXT_PUBLIC_GA_ID to enable. */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

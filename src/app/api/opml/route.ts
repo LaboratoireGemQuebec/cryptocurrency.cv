@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 export const runtime = 'edge';
 
 const RSS_SOURCES = [
+  // Tier 1 — Major Crypto News
   { name: 'CoinDesk', url: 'https://www.coindesk.com/arc/outboundfeeds/rss/', htmlUrl: 'https://coindesk.com', category: 'Crypto News' },
   { name: 'The Block', url: 'https://www.theblock.co/rss.xml', htmlUrl: 'https://theblock.co', category: 'Crypto News' },
   { name: 'Decrypt', url: 'https://decrypt.co/feed', htmlUrl: 'https://decrypt.co', category: 'Crypto News' },
@@ -10,6 +11,41 @@ const RSS_SOURCES = [
   { name: 'Bitcoin Magazine', url: 'https://bitcoinmagazine.com/.rss/full/', htmlUrl: 'https://bitcoinmagazine.com', category: 'Bitcoin' },
   { name: 'Blockworks', url: 'https://blockworks.co/feed', htmlUrl: 'https://blockworks.co', category: 'Crypto News' },
   { name: 'The Defiant', url: 'https://thedefiant.io/feed', htmlUrl: 'https://thedefiant.io', category: 'DeFi' },
+  // Tier 2 — Established Crypto
+  { name: 'Watcher Guru', url: 'https://watcher.guru/news/feed', htmlUrl: 'https://watcher.guru', category: 'Crypto News' },
+  { name: 'Cryptopolitan', url: 'https://www.cryptopolitan.com/feed/', htmlUrl: 'https://cryptopolitan.com', category: 'Crypto News' },
+  { name: 'CoinEdition', url: 'https://coinedition.com/feed/', htmlUrl: 'https://coinedition.com', category: 'Crypto News' },
+  { name: 'The Daily Hodl', url: 'https://dailyhodl.com/feed/', htmlUrl: 'https://dailyhodl.com', category: 'Crypto News' },
+  { name: 'CryptoSlate', url: 'https://cryptoslate.com/feed/', htmlUrl: 'https://cryptoslate.com', category: 'Crypto News' },
+  { name: 'U.Today', url: 'https://u.today/rss', htmlUrl: 'https://u.today', category: 'Crypto News' },
+  { name: 'BeInCrypto', url: 'https://beincrypto.com/feed/', htmlUrl: 'https://beincrypto.com', category: 'Crypto News' },
+  { name: 'DL News', url: 'https://www.dlnews.com/feed/', htmlUrl: 'https://dlnews.com', category: 'Crypto News' },
+  { name: 'Protos', url: 'https://protos.com/feed/', htmlUrl: 'https://protos.com', category: 'Crypto News' },
+  // Mainstream
+  { name: 'TechCrunch Crypto', url: 'https://techcrunch.com/category/cryptocurrency/feed/', htmlUrl: 'https://techcrunch.com', category: 'Mainstream' },
+  { name: 'Bloomberg Crypto', url: 'https://www.bloomberg.com/crypto/feed', htmlUrl: 'https://bloomberg.com', category: 'Mainstream' },
+  { name: 'Forbes Crypto', url: 'https://www.forbes.com/crypto-blockchain/feed/', htmlUrl: 'https://forbes.com', category: 'Mainstream' },
+  // Research & Data
+  { name: 'CoinMarketCap Blog', url: 'https://blog.coinmarketcap.com/feed/', htmlUrl: 'https://coinmarketcap.com', category: 'Research' },
+  { name: 'CoinGecko Blog', url: 'https://blog.coingecko.com/feed/', htmlUrl: 'https://coingecko.com', category: 'Research' },
+  { name: 'Glassnode Insights', url: 'https://insights.glassnode.com/rss/', htmlUrl: 'https://glassnode.com', category: 'Research' },
+  { name: 'Nansen Blog', url: 'https://www.nansen.ai/research/feed', htmlUrl: 'https://nansen.ai', category: 'Research' },
+  { name: 'Messari', url: 'https://messari.io/rss', htmlUrl: 'https://messari.io', category: 'Research' },
+  // Bitcoin
+  { name: 'Bitcoin Optech', url: 'https://bitcoinops.org/feed.xml', htmlUrl: 'https://bitcoinops.org', category: 'Bitcoin' },
+  { name: 'Stacker News', url: 'https://stacker.news/rss', htmlUrl: 'https://stacker.news', category: 'Bitcoin' },
+  // DeFi
+  { name: 'Rekt News', url: 'https://rekt.news/rss.xml', htmlUrl: 'https://rekt.news', category: 'DeFi' },
+  { name: 'Uniswap Blog', url: 'https://uniswap.org/blog/feed.xml', htmlUrl: 'https://uniswap.org', category: 'DeFi' },
+  // Solana
+  { name: 'Helius Blog', url: 'https://www.helius.dev/blog/feed', htmlUrl: 'https://helius.dev', category: 'Solana' },
+  { name: 'Solana News', url: 'https://solana.com/news/rss.xml', htmlUrl: 'https://solana.com', category: 'Solana' },
+  // Security
+  { name: 'Chainalysis Blog', url: 'https://www.chainalysis.com/blog/feed/', htmlUrl: 'https://chainalysis.com', category: 'Security' },
+  { name: 'Ledger Blog', url: 'https://www.ledger.com/blog/feed', htmlUrl: 'https://ledger.com', category: 'Security' },
+  // Policy
+  { name: 'Coin Center', url: 'https://www.coincenter.org/feed/', htmlUrl: 'https://coincenter.org', category: 'Policy' },
+  { name: 'SEC Press Releases', url: 'https://www.sec.gov/news/pressreleases.rss', htmlUrl: 'https://sec.gov', category: 'Policy' },
 ];
 
 function escapeXml(str: string): string {

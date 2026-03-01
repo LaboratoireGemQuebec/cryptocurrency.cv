@@ -110,7 +110,7 @@ export async function GET(request: NextRequest) {
     const staleCacheKey = generateCacheKey('news', { limit, source, category, page, per_page, lang });
     staleCache.set(staleCacheKey, responseData, 3600); // 1 hour stale window
 
-    // Fire-and-forget: persist to disk so fallback survives restarts/deploys
+    // Fire-and-forget: persist snapshot to KV / /tmp so fallback survives restarts
     try {
       fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
         method: 'POST',
@@ -140,8 +140,8 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Disk fallback → emergency hardcoded data (never returns an error)
-    logger.info('Stale cache empty — falling back to disk/emergency archive');
+    // Snapshot fallback → emergency hardcoded data (never returns an error)
+    logger.info('Stale cache empty — falling back to snapshot/emergency archive');
     const fallback = await getNewsFallback(request.nextUrl.origin);
     return jsonResponse(
       withTiming({ ...fallback.data, _fallbackLevel: fallback.level }, startTime),

@@ -64,7 +64,8 @@ async function handler(
   try {
     logger.info('Processing premium coins request');
     const searchParams = request.nextUrl.searchParams;
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 500);
+    const parsedLimit = parseInt(searchParams.get('limit') || '100', 10);
+    const limit = Math.min(Number.isNaN(parsedLimit) ? 100 : parsedLimit, 500);
     const includeDetails = searchParams.get('details') === 'true';
 
     // Fetch base coin data with higher limit

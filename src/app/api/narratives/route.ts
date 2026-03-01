@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -56,7 +56,7 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '40'), 80);
   const emerging = searchParams.get('emerging') === 'true';
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptGroqJson<NarrativesResponse>(
+    const result = await promptAIJson<NarrativesResponse>(
       SYSTEM_PROMPT,
       userPrompt,
       { maxTokens: 4000, temperature: 0.4 }
@@ -125,6 +125,9 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
     );
   } catch (error) {
     console.error('Narrative analysis error:', error);
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return aiAuthErrorResponse((error as Error).message);
+    }
     return NextResponse.json(
       { error: 'Failed to analyze narratives', details: String(error) },
       { status: 500 }

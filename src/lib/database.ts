@@ -107,7 +107,9 @@ class MemoryBackend {
   }
 
   async keys(pattern: string): Promise<string[]> {
-    const regex = new RegExp('^' + pattern.replace(/\*/g, '.*') + '$');
+    // Escape regex special chars (except *) to prevent ReDoS from user-controlled patterns
+    const escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*');
+    const regex = new RegExp('^' + escaped + '$');
     const result: string[] = [];
     
     for (const [key, entry] of this.store.entries()) {
@@ -274,9 +276,10 @@ class FileBackend extends MemoryBackend {
   private filePath: string;
   private saveDebounce: ReturnType<typeof setTimeout> | null = null;
 
-  constructor(filePath = '.data/database.json') {
+  constructor(filePath?: string) {
     super();
-    this.filePath = filePath;
+    // On Vercel serverless, only /tmp is writable
+    this.filePath = filePath ?? (process.env.VERCEL ? '/tmp/database.json' : '.data/database.json');
     this.loadFromFile();
   }
 
@@ -294,7 +297,16 @@ class FileBackend extends MemoryBackend {
       const parsed = JSON.parse(data);
       
       for (const [key, entry] of Object.entries(parsed)) {
-        await this.set(key, (entry as { value: string }).value);
+        const typedEntry = entry as { value: string; expiresAt?: number };
+        // Restore TTL: skip entries that have already expired
+        if (typedEntry.expiresAt && Date.now() > typedEntry.expiresAt) {
+          continue;
+        }
+        // Compute remaining TTL in seconds (if expiresAt was persisted)
+        const remainingTtl = typedEntry.expiresAt
+          ? Math.max(1, Math.floor((typedEntry.expiresAt - Date.now()) / 1000))
+          : undefined;
+        await this.set(key, typedEntry.value, remainingTtl);
       }
     } catch {
       // File doesn't exist yet, that's fine

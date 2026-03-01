@@ -297,8 +297,12 @@ export default async function Home({ params }: Props) {
             </span>
           </div>
           <div className="grid lg:grid-cols-2 gap-6">
-            <WhaleAlerts />
-            <LiquidationsFeed />
+            <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-64 animate-pulse" />}>
+              <WhaleAlerts />
+            </Suspense>
+            <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-64 animate-pulse" />}>
+              <LiquidationsFeed />
+            </Suspense>
           </div>
         </section>
 
@@ -328,7 +332,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Flash briefing"
         >
-          <AIFlashBrief />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+            <AIFlashBrief />
+          </Suspense>
         </section>
 
         {/* 9b. AI Topic Digest */}
@@ -336,7 +342,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="AI topic digest"
         >
-          <AITopicDigest />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+            <AITopicDigest />
+          </Suspense>
         </section>
 
         {/* 10. Market Intelligence Signals */}
@@ -344,7 +352,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Market signals"
         >
-          <MarketSignals />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+            <MarketSignals />
+          </Suspense>
         </section>
 
         {/* 11. Trending Topics - Live */}
@@ -352,7 +362,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Trending topics"
         >
-          <TrendingTopicsLive />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-32 animate-pulse" />}>
+            <TrendingTopicsLive />
+          </Suspense>
         </section>
 
         {/* 12. Google News-style Multi-Source Clusters */}
@@ -370,7 +382,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Trending narratives"
         >
-          <TrendingNarratives />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+            <TrendingNarratives />
+          </Suspense>
         </section>
 
         {/* 14. Whale Activity Feed - Enhanced */}
@@ -378,7 +392,9 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Whale activity"
         >
-          <WhaleActivityFeed />
+          <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+            <WhaleActivityFeed />
+          </Suspense>
         </section>
 
         {/* 15. Sidebar Widgets Grid — all sidebar cards displayed at the bottom in a responsive grid */}

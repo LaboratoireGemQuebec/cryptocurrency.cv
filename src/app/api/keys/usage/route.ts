@@ -24,6 +24,7 @@ import {
   API_KEY_TIERS,
   isKvConfigured,
 } from '@/lib/api-keys';
+import { API_TIERS } from '@/lib/x402/pricing';
 
 export const runtime = 'nodejs';
 
@@ -98,7 +99,7 @@ export async function GET(request: NextRequest) {
 
         tier: {
           name: tierConfig.name,
-          price: tierConfig.requestsPerDay === 1000 ? 'Free' : `$${(API_KEY_TIERS[keyData.tier] as any).price ?? 0}/mo`,
+          price: API_TIERS[keyData.tier]?.priceDisplay ?? 'Free',
           features: tierConfig.features,
           permissions: keyData.permissions,
         },
@@ -107,12 +108,12 @@ export async function GET(request: NextRequest) {
           ? {
               message: 'Upgrade to Pro for 50,000 requests/day and AI access',
               endpoint: '/api/keys/upgrade',
-              tiers: Object.entries(API_KEY_TIERS)
+              tiers: Object.entries(API_TIERS)
                 .filter(([id]) => id !== 'free')
                 .map(([id, t]) => ({
                   id,
                   name: t.name,
-                  price: (t as Record<string, unknown>).priceDisplay as string ?? `${t.requestsPerDay} req/day`,
+                  price: t.priceDisplay,
                   requestsPerDay: t.requestsPerDay,
                 })),
             }

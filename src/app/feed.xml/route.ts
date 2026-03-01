@@ -85,7 +85,7 @@ export async function GET() {
   <channel>
     <title>Free Crypto News</title>
     <link>${SITE_URL}</link>
-    <description>Real-time cryptocurrency news from 130+ trusted sources. 100% FREE - No API keys required.</description>
+    <description>Real-time cryptocurrency news from 200+ trusted sources. 100% FREE - No API keys required.</description>
     <language>en-us</language>
     <lastBuildDate>${now}</lastBuildDate>
     <pubDate>${now}</pubDate>
