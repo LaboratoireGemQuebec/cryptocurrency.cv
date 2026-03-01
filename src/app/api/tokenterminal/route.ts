@@ -17,7 +17,7 @@ import {
   getProtocolMetrics,
 } from '@/lib/apis/tokenterminal';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 /**

@@ -17,6 +17,8 @@ import { SearchFilters } from "@/components/SearchFilters";
 import { generateSEOMetadata } from '@/lib/seo';
 import { WebsiteStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = generateSEOMetadata({
   title: 'Search Crypto News',
   description: 'Search crypto news from 200+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.',

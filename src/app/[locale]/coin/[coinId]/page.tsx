@@ -46,6 +46,7 @@ import { CoinStickyHeader } from '@/components/CoinStickyHeader';
 
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
+export const dynamic = 'force-dynamic';
 export const revalidate = 300; // Revalidate coin pages every 5 minutes
 // Allow up to 30 s for the first cold-start render (ISR caches it after that)
 export const maxDuration = 30;

@@ -11,6 +11,8 @@
 import { redirect } from 'next/navigation';
 import { generateSEOMetadata } from '@/lib/seo';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = generateSEOMetadata({
   title: 'Share',
   description: 'Share crypto news articles with your network.',

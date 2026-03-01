@@ -25,6 +25,8 @@ import Link from 'next/link';
 import { RegulatoryDashboard } from './RegulatoryDashboardClient';
 import { generateSEOMetadata } from '@/lib/seo';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = generateSEOMetadata({
   title: 'Regulatory Intelligence | Crypto Compliance Tracker',
   description: 'Real-time cryptocurrency regulatory intelligence. Track SEC, CFTC, EU MiCA, FCA enforcement actions, compliance deadlines, and global regulatory developments.',

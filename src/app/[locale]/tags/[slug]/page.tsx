@@ -35,6 +35,8 @@ import { SITE_URL } from '@/lib/constants';
 
 const ARTICLES_PER_PAGE = 20;
 
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
   searchParams: Promise<{ page?: string }>;
