@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import {
   Mail,
   CheckCircle,
@@ -8,7 +8,6 @@ import {
   Zap,
   Shield,
   Clock,
-  Users,
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -34,14 +33,6 @@ export default function NewsletterCTA() {
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
-  const [subscriberCount, setSubscriberCount] = useState<number | null>(null);
-
-  // Fetch subscriber count (simulated from localStorage for demo)
-  useEffect(() => {
-    const stored = localStorage.getItem("fcn:newsletter-count");
-    const count = stored ? parseInt(stored, 10) : 12_847;
-    setSubscriberCount(count);
-  }, []);
 
   const toggleTag = (id: string) => {
     setSelectedTags((prev) => {
@@ -71,13 +62,6 @@ export default function NewsletterCTA() {
         setStatus("success");
         setMessage("Welcome aboard! Check your inbox for confirmation.");
         setEmail("");
-
-        // Increment local counter
-        if (subscriberCount !== null) {
-          const newCount = subscriberCount + 1;
-          setSubscriberCount(newCount);
-          localStorage.setItem("fcn:newsletter-count", String(newCount));
-        }
       } else {
         const data = await res.json().catch(() => ({}));
         setStatus("error");
@@ -127,13 +111,7 @@ export default function NewsletterCTA() {
                   </h2>
 
                   <p className="text-white/75 text-sm md:text-base mb-5 max-w-md">
-                    Join{" "}
-                    {subscriberCount !== null && (
-                      <span className="font-semibold text-white">
-                        {subscriberCount.toLocaleString()}+
-                      </span>
-                    )}{" "}
-                    readers getting daily market insights, breaking news alerts, and expert analysis.
+                    Get daily market insights, breaking news alerts, and expert analysis delivered to your inbox.
                   </p>
 
                   {/* Perks */}
@@ -150,14 +128,18 @@ export default function NewsletterCTA() {
                   </div>
                 </div>
 
-                {/* Right: Subscriber badge (desktop) */}
-                {subscriberCount !== null && (
-                  <div className="hidden md:flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-xl p-5">
-                    <Users className="h-8 w-8 text-white/60 mb-2" />
-                    <span className="text-3xl font-bold text-white">{subscriberCount.toLocaleString()}</span>
-                    <span className="text-xs text-white/50 mt-1">Subscribers</span>
-                  </div>
-                )}
+                {/* Right: Feature highlights (desktop) */}
+                <div className="hidden md:flex flex-col gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-5">
+                  {PERKS.map((perk) => {
+                    const Icon = perk.icon;
+                    return (
+                      <span key={perk.text} className="flex items-center gap-2 text-sm text-white/80">
+                        <Icon className="h-4 w-4 text-white/60" />
+                        {perk.text}
+                      </span>
+                    );
+                  })}
+                </div>
               </div>
 
               {status === "success" ? (

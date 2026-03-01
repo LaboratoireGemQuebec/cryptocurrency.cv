@@ -130,7 +130,7 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
               {article.title}
             </h3>
             <span className="text-xs text-[var(--color-text-tertiary)]">
-              {article.source} · {article.timeAgo}
+              <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
             </span>
           </div>
         </article>
@@ -199,7 +199,7 @@ export function CategorySection({
                   </p>
                 )}
                 <span className="text-xs text-[var(--color-text-tertiary)]">
-                  {lead.source} · {lead.timeAgo}
+                  <Link href={`/source/${lead.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{lead.source}</Link> · {lead.timeAgo}
                 </span>
               </article>
             </Link>
@@ -235,7 +235,7 @@ export function CategorySection({
                         {article.title}
                       </h4>
                       <span className="text-xs text-[var(--color-text-tertiary)]">
-                        {article.source} · {article.timeAgo}
+                        <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
                       </span>
                     </div>
                   </article>
@@ -337,7 +337,7 @@ export function OpinionSection({ articles }: { articles: NewsArticle[] }) {
                     </p>
                   )}
                   <span className="text-xs text-[var(--color-text-tertiary)]">
-                    {article.source} · {article.timeAgo}
+                    <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
                   </span>
                 </article>
               </Link>

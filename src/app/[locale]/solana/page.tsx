@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import PriceChart from "@/components/PriceChart";
 import { NewsCardCompact } from "@/components/NewsCard";
 import { generateSEOMetadata } from "@/lib/seo";
@@ -461,6 +462,11 @@ export default async function SolanaPage({ params }: Props) {
           </div>
         </section>
       </main>
+      <PageShareSection
+        title="Solana (SOL) — Price, News & Ecosystem"
+        description="Live Solana price, TPS stats, ecosystem overview, and latest SOL news."
+        url={`https://cryptocurrency.cv/${locale}/solana`}
+      />
       <Footer />
     </>
   );

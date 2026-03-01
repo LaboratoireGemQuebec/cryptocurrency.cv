@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import PriceChart from "@/components/PriceChart";
 import { NewsCardCompact } from "@/components/NewsCard";
 import { generateSEOMetadata } from "@/lib/seo";
@@ -449,6 +450,11 @@ export default async function EthereumPage({ params }: Props) {
           </section>
         )}
       </main>
+      <PageShareSection
+        title="Ethereum (ETH) — Price, News & Analysis"
+        description="Live Ethereum price, gas tracker, staking stats, and latest ETH news."
+        url={`https://cryptocurrency.cv/${locale}/ethereum`}
+      />
       <Footer />
     </>
   );

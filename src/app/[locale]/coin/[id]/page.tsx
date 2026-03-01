@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
 import type { NewsArticle } from "@/lib/crypto-news";
+import PageShareSection from "@/components/PageShareSection";
 
 export const revalidate = 60;
 
@@ -348,6 +349,11 @@ export default async function CoinPage({ params }: Props) {
           </p>
         )}
       </main>
+      <PageShareSection
+        title={`${coin.name} (${coin.symbol?.toUpperCase()}) Price & News`}
+        description={`Live ${coin.name} price, charts, and latest news on Crypto Vision.`}
+        url={`https://cryptocurrency.cv/${locale}/coin/${id}`}
+      />
       <Footer />
     </>
   );

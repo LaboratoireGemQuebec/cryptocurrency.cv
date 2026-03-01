@@ -28,8 +28,13 @@ export function OrganizationStructuredData() {
     logo: "https://cryptocurrency.cv/icons/icon-512x512.png",
     sameAs: [
       "https://github.com/nirholas/free-crypto-news",
-      "https://twitter.com/cryptocurrencycv",
+      "https://x.com/nichxbt",
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "support@cryptocurrency.cv",
+      contactType: "customer support",
+    },
   };
   return (
     <script

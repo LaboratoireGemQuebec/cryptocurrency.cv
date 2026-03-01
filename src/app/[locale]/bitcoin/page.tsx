@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import PriceChart from "@/components/PriceChart";
 import { NewsCardCompact } from "@/components/NewsCard";
 import { generateSEOMetadata } from "@/lib/seo";
@@ -399,6 +400,11 @@ export default async function BitcoinPage({ params }: Props) {
           </div>
         </section>
       </main>
+      <PageShareSection
+        title="Bitcoin (BTC) — Price, News & Analysis"
+        description="Live Bitcoin price, halving countdown, network stats, and latest BTC news."
+        url={`https://cryptocurrency.cv/${locale}/bitcoin`}
+      />
       <Footer />
     </>
   );

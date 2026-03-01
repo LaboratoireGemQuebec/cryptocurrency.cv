@@ -33,10 +33,20 @@ function ArticleImage({
   );
 }
 
-function SourceMeta({ source, timeAgo }: { source: string; timeAgo: string }) {
+function SourceMeta({ source, sourceKey, timeAgo }: { source: string; sourceKey?: string; timeAgo: string }) {
   return (
     <span className="text-xs text-[var(--color-text-tertiary)]">
-      {source} &middot; {timeAgo}
+      {sourceKey ? (
+        <Link
+          href={`/source/${sourceKey}`}
+          className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+        >
+          {source}
+        </Link>
+      ) : (
+        source
+      )}
+      {" "}&middot; {timeAgo}
     </span>
   );
 }
@@ -73,7 +83,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
               {article.description}
             </p>
           )}
-          <SourceMeta source={article.source} timeAgo={article.timeAgo} />
+          <SourceMeta source={article.source} sourceKey={article.sourceKey} timeAgo={article.timeAgo} />
         </div>
       </article>
     </Link>
@@ -113,7 +123,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
               {article.description}
             </p>
           )}
-          <SourceMeta source={article.source} timeAgo={article.timeAgo} />
+          <SourceMeta source={article.source} sourceKey={article.sourceKey} timeAgo={article.timeAgo} />
         </div>
       </article>
     </Link>
@@ -148,7 +158,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
           <h3 className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
             {article.title}
           </h3>
-          <SourceMeta source={article.source} timeAgo={article.timeAgo} />
+          <SourceMeta source={article.source} sourceKey={article.sourceKey} timeAgo={article.timeAgo} />
         </div>
       </article>
     </Link>
@@ -184,7 +194,7 @@ export function NewsCardHeadline({
           <h3 className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
             {article.title}
           </h3>
-          <SourceMeta source={article.source} timeAgo={article.timeAgo} />
+          <SourceMeta source={article.source} sourceKey={article.sourceKey} timeAgo={article.timeAgo} />
         </div>
       </article>
     </Link>

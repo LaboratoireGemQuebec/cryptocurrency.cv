@@ -93,7 +93,8 @@ export function generateSEOMetadata({
       title,
       description: truncatedDescription,
       images: [imageUrl],
-      creator: '@cryptocurrencycv',
+      site: '@nichxbt',
+      creator: '@nichxbt',
     },
     robots: noindex ? {
       index: false,
@@ -134,12 +135,20 @@ export function generateArticleMetadata({
   category?: string;
   tags?: string[];
 }): Metadata {
+  // Build dynamic OG image URL when no explicit image is provided
+  const dynamicImage = image || (() => {
+    const ogParams = new URLSearchParams({ title });
+    if (category) ogParams.set('tags', category);
+    if (tags.length > 0) ogParams.set('tags', [...tags, category].filter(Boolean).slice(0, 3).join(','));
+    return `${BASE_URL}/api/og?${ogParams.toString()}`;
+  })();
+
   return generateSEOMetadata({
     title: `${title} | Crypto Vision News`,
     description,
     path: `/blog/${slug}`,
     locale,
-    image,
+    image: dynamicImage,
     type: 'article',
     publishedTime,
     modifiedTime: modifiedTime || publishedTime,
@@ -149,7 +158,7 @@ export function generateArticleMetadata({
 }
 
 /**
- * Generate coin page metadata
+ * Generate coin page metadata with dynamic OG image
  */
 export function generateCoinMetadata({
   name,
@@ -169,11 +178,21 @@ export function generateCoinMetadata({
     ? ` (${priceChange >= 0 ? '+' : ''}${priceChange.toFixed(2)}%)`
     : '';
   
+  // Dynamic OG image for coin pages
+  const ogParams = new URLSearchParams({
+    name,
+    symbol,
+    ...(price ? { price: `$${price.toLocaleString()}` } : {}),
+    ...(priceChange != null ? { change: priceChange.toFixed(2) } : {}),
+  });
+  const dynamicImage = `${BASE_URL}/api/og/coin?${ogParams.toString()}`;
+  
   return generateSEOMetadata({
     title: `${name} (${symbol.toUpperCase()}) Price${priceStr}${changeStr}`,
     description: `Get the latest ${name} (${symbol.toUpperCase()}) price, news, charts, and market data. Real-time updates from Crypto Vision News.`,
     path: `/coin/${name.toLowerCase().replace(/\s+/g, '-')}`,
     locale,
+    image: dynamicImage,
     tags: [name, symbol, 'cryptocurrency', 'crypto', 'price', 'news', 'market data'],
   });
 }

@@ -401,6 +401,17 @@ export default function MarketsSnapshot() {
                 );
               })}
         </div>
+
+        {/* Data attribution */}
+        <div className="mt-4 flex items-center justify-between text-[10px] text-[var(--color-text-tertiary)]">
+          <span>Market data via CoinGecko API. Prices update every 30s.</span>
+          {lastUpdated && (
+            <span className="flex items-center gap-1">
+              <RefreshCw className="h-2.5 w-2.5" />
+              {lastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
+            </span>
+          )}
+        </div>
       </div>
     </section>
   );

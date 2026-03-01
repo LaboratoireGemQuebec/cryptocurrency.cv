@@ -177,18 +177,19 @@ export default async function ArticlePage({ params }: Props) {
 
             {/* Byline — editorial style */}
             <div className="flex items-center gap-3 pt-4 border-t border-[var(--color-border)]">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-bold text-sm shrink-0">
+              <Link
+                href={`/source/${article.source_key}`}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-bold text-sm shrink-0 hover:bg-[var(--color-accent)]/20 transition-colors"
+              >
                 {article.source.charAt(0).toUpperCase()}
-              </div>
+              </Link>
               <div className="flex flex-col">
-                <a
-                  href={article.canonical_link || article.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={`/source/${article.source_key}`}
                   className="font-semibold text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors"
                 >
                   {article.source}
-                </a>
+                </Link>
                 <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
                   <time dateTime={pubDate}>
                     {new Date(pubDate).toLocaleDateString("en-US", {
