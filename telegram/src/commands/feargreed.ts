@@ -82,7 +82,7 @@ export async function fearGreedCommand(ctx: Context): Promise<void> {
       }
     }
 
-    lines.push('', '<i>Data via Alternative.me · cryptocurrency.cv</i>');
+    lines.push('', '<i>Data via cryptocurrency.cv</i>');
 
     await ctx.reply(lines.join('\n'), {
       parse_mode: 'HTML',

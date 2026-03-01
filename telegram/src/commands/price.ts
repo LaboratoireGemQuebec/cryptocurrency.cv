@@ -85,7 +85,7 @@ export async function priceCommand(ctx: Context): Promise<void> {
       );
     }
 
-    lines.push('', '<i>Data via CoinGecko · cryptocurrency.cv</i>');
+    lines.push('', '<i>Data via cryptocurrency.cv</i>');
 
     await ctx.reply(lines.join('\n'), {
       parse_mode: 'HTML',
