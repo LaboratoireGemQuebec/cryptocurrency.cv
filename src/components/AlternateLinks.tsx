@@ -15,13 +15,3 @@ export function getAlternateLanguages(path: string): {
   }
   return { languages };
 }
-
-export function AlternateLinks({
-  currentLocale,
-  currentPath,
-}: {
-  currentLocale: string;
-  currentPath: string;
-}) {
-  return null;
-}

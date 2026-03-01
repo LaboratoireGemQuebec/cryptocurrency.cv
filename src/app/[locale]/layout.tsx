@@ -23,7 +23,8 @@ import { WatchlistProvider } from "@/components/watchlist";
 import { AlertsProvider } from "@/components/alerts";
 import { PortfolioProvider } from "@/components/portfolio";
 import { SettingsProvider } from "@/components/SettingsProvider";
-import { AlternateLinks } from "@/components/AlternateLinks";
+import NavigationProgress from "@/components/NavigationProgress";
+
 import { ClientOnly } from "@/components/ClientOnly";
 import { locales, isRtlLocale, type Locale } from "@/i18n/config";
 
@@ -123,6 +124,8 @@ export const metadata: Metadata = {
     description:
       "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
     images: ["/og-image.png"],
+    site: "@nichxbt",
+    creator: "@nichxbt",
   },
   robots: {
     index: true,
@@ -204,7 +207,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <head>
         <ThemeScript nonce={nonce} />
-        <AlternateLinks currentLocale={locale} currentPath="" />
+
         <link rel="preconnect" href="https://api.coingecko.com" />
         <link rel="dns-prefetch" href="https://api.coingecko.com" />
         <link
@@ -227,7 +230,10 @@ export default async function LocaleLayout({ children, params }: Props) {
                       <AlertsProvider>
                         <PortfolioProvider>
                           <BookmarksProvider>
-                            <PWAProvider>{children}</PWAProvider>
+                            <PWAProvider>
+                              <NavigationProgress />
+                              {children}
+                            </PWAProvider>
                           </BookmarksProvider>
                         </PortfolioProvider>
                       </AlertsProvider>

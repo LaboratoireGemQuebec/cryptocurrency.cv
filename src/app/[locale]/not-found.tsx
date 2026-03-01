@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import { Link } from "@/i18n/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: '404 — Page Not Found',
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

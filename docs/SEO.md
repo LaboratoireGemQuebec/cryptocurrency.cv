@@ -48,15 +48,13 @@ Implemented schemas:
 
 | Schema | Component | Usage |
 |--------|-----------|-------|
-| WebSite | `WebsiteStructuredData` | Homepage |
+| WebSite | `WebsiteStructuredData` | Homepage (includes SearchAction for sitelinks) |
 | Organization | `OrganizationStructuredData` | Homepage |
 | NewsArticle | `ArticleStructuredData` | Article pages |
 | ItemList | `NewsListStructuredData` | News feeds |
-| BreadcrumbList | `BreadcrumbStructuredData` | Navigation |
-| FAQPage | `FAQStructuredData` | Documentation |
-| SoftwareApplication | `APIStructuredData` | Developer pages |
-| FinancialProduct | `CryptoAssetStructuredData` | Coin pages |
-| VideoObject | `VideoStructuredData` | Video embeds |
+| BreadcrumbList | `BreadcrumbStructuredData` | Navigation pages |
+| FAQPage | `FAQStructuredData` | Documentation / FAQ |
+| SoftwareApplication | `SoftwareApplicationStructuredData` | Developer / API pages |
 
 ### ✅ Meta Tags
 
@@ -74,8 +72,8 @@ Configured metadata:
 
 **File:** `src/components/AlternateLinks.tsx`
 
-- **hreflang tags** for all 18 locales
-- **x-default** fallback to English
+- **`getAlternateLanguages()`** utility generates hreflang URLs for all locales
+- Used by `generateSEOMetadata()` in `src/lib/seo.ts` to set `alternates.languages`
 - **Proper locale mapping** (zh-CN → zh-Hans)
 
 ---
@@ -84,9 +82,18 @@ Configured metadata:
 
 ### Core Web Vitals Monitoring
 
-**File:** `src/components/WebVitals.tsx`
+**Tool:** `@vercel/speed-insights`
 
-Measures and reports:
+Automatic Core Web Vitals reporting via Vercel Speed Insights, integrated in the locale layout:
+
+```tsx
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+// In layout body
+<SpeedInsights />
+```
+
+Measures:
 
 - **LCP** - Largest Contentful Paint (target: < 2.5s)
 - **FID** - First Input Delay (target: < 100ms)
@@ -95,34 +102,29 @@ Measures and reports:
 - **TTFB** - Time to First Byte
 - **INP** - Interaction to Next Paint
 
-```tsx
-// Add to layout.tsx
-import { WebVitals } from '@/components/WebVitals';
+### Optimized Image Component
 
-// In your component
-<WebVitals />
-```
-
-### Resource Hints
-
-**File:** `src/components/ResourceHints.tsx`
-
-Provides:
-
-- **Preconnect** - Establish early connections
-- **DNS Prefetch** - Resolve DNS for future navigations
-- **Preload** - Fetch critical resources early
-
-### SEO Image Component
-
-**File:** `src/components/SEOImage.tsx`
+**File:** `src/components/OptimizedImage.tsx`
 
 Features:
 
-- Enforced alt text (required prop)
+- WebP/AVIF format support via Next.js Image optimization
+- Enforced alt text
 - Fallback image on load failure
-- Proper lazy loading
-- Caption and credit support
+- Lazy loading by default, `priority` prop for above-fold images
+- Aspect ratio enforcement to prevent CLS
+
+### Dynamic OG Images
+
+**Files:**
+- `src/app/[locale]/opengraph-image.tsx` — Homepage / locale pages
+- `src/app/[locale]/article/[id]/opengraph-image.tsx` — Article pages (headline, sentiment, tags)
+- `src/app/[locale]/coin/[id]/opengraph-image.tsx` — Coin pages (live price, 24h change)
+- `src/app/api/og/route.tsx` — General-purpose OG image API
+- `src/app/api/og/coin/route.tsx` — Coin OG image API
+- `src/app/api/og/market/route.tsx` — Market OG image API
+
+Next.js file-convention `opengraph-image.tsx` files automatically generate unique 1200×630 social share images per page. Article pages show the headline with sentiment indicator, coin pages show live prices with green/red change indicators.
 
 ---
 
@@ -191,17 +193,17 @@ description: 'Bitcoin cryptocurrency page with information about Bitcoin.'
 
 ### 3. Images
 
-Use the `SEOImage` component:
+Use the `OptimizedImage` component:
 
 ```tsx
-import { SEOImage, generateCryptoAltText, IMAGE_SIZES } from '@/components/SEOImage';
+import OptimizedImage from '@/components/OptimizedImage';
 
-<SEOImage
+<OptimizedImage
   src={coin.image}
-  alt={generateCryptoAltText({ type: 'logo', name: 'Bitcoin', symbol: 'BTC' })}
+  alt="Bitcoin (BTC) cryptocurrency logo"
   width={64}
   height={64}
-  sizes={IMAGE_SIZES.thumbnail}
+  priority={false}
 />
 ```
 
@@ -326,7 +328,7 @@ Run these checks every month:
 3. **Rich Results Test** - Validate structured data on homepage, article page, coin page
 4. **Sitemap** - Verify no 404s by fetching and spot-checking 10 random URLs
 5. **Robots.txt** - Confirm AI bots can reach API endpoints
-6. **Core Web Vitals** - Check the `WebVitals` component data in analytics
+6. **Core Web Vitals** - Check Vercel Speed Insights dashboard
 
 ---
 
@@ -381,7 +383,7 @@ When creating new pages, ensure:
 4. ~~**Core Web Vitals Monitoring**~~ ✅ Implemented
 5. ~~**Sitemap ghost pages removed**~~ ✅ Cleaned up February 2026
 6. **Individual source pages** — add `/source/[source]` canonical and sitemap entries
-7. **Dynamic OG images** — extend dynamic OG image generation (currently on markets page) to coin and article pages
+7. ~~**Dynamic OG images**~~ ✅ Implemented — file-convention `opengraph-image.tsx` for homepage, article, and coin pages
 8. **Google News Publisher Center** — submit for Google News inclusion
 9. **hreflang in page-level metadata** — use `getAlternateLanguages()` from `AlternateLinks.tsx` on high-traffic pages
 10. **AMP Pages** — for news articles (optional)

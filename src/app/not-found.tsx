@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '404 — Page Not Found | Crypto Vision News',
+  robots: { index: false, follow: false },
+};
+
 export default function RootNotFound() {
   return (
     <html lang="en">
