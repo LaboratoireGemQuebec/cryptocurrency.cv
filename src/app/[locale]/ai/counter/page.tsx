@@ -13,6 +13,8 @@ import { setRequestLocale } from 'next-intl/server';
 import CounterClient from './CounterClient';
 import { generateSEOMetadata } from '@/lib/seo';
 
+export const dynamic = 'force-dynamic';
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
