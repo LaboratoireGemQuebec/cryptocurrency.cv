@@ -148,6 +148,85 @@ export interface RegulatoryUpdate {
   publishedAt: string;
 }
 
+export interface DefiYield {
+  pool: string;
+  project: string;
+  chain: string;
+  tvlUsd: number;
+  apy: number;
+  apyBase?: number;
+  apyReward?: number;
+  stablecoin: boolean;
+}
+
+export interface StablecoinData {
+  symbol: string;
+  name: string;
+  price: number;
+  marketCap: number;
+  pegDeviation: number;
+  chains: string[];
+  issuer: string;
+}
+
+export interface ProtocolHealth {
+  protocol: string;
+  healthScore: number;
+  tvl: number;
+  riskLevel: 'low' | 'medium' | 'high' | 'critical';
+  audited: boolean;
+  lastAudit?: string;
+}
+
+export interface MacroIndicator {
+  name: string;
+  value: number;
+  previousValue: number;
+  change: number;
+  timestamp: string;
+}
+
+export interface Prediction {
+  asset: string;
+  currentPrice: number;
+  predictedPrice: number;
+  timeframe: string;
+  confidence: number;
+  direction: 'bullish' | 'bearish' | 'neutral';
+}
+
+export interface L2Project {
+  name: string;
+  tvl: number;
+  type: 'optimistic' | 'zk' | 'validium';
+  tps: number;
+  riskLevel: string;
+}
+
+export interface BitcoinStats {
+  blockHeight: number;
+  hashrate: number;
+  difficulty: number;
+  mempoolSize: number;
+  avgFee: number;
+  nextHalving?: string;
+}
+
+export interface NFTMarketData {
+  totalVolume24h: number;
+  totalSales24h: number;
+  averagePrice: number;
+  topCollections: { name: string; volume: number; floorPrice: number }[];
+}
+
+export interface FundingRate {
+  exchange: string;
+  pair: string;
+  rate: number;
+  nextFunding: string;
+  predicted?: number;
+}
+
 export interface APIResponse<T> {
   success: boolean;
   data: T;
@@ -487,6 +566,237 @@ export class CryptoNewsClient {
     isRugPull: boolean;
   }>> {
     return this.request(`/api/blockchain/security/rugcheck?address=${address}&chain=${chain}`);
+  }
+
+  // ===========================================================================
+  // BITCOIN EXTENDED ENDPOINTS
+  // ===========================================================================
+
+  async getBitcoinStats(): Promise<APIResponse<BitcoinStats>> {
+    return this.request('/api/bitcoin/stats');
+  }
+
+  async getBitcoinDifficulty(): Promise<APIResponse<{ difficulty: number; nextAdjustment: string; estimatedChange: number }>> {
+    return this.request('/api/bitcoin/difficulty');
+  }
+
+  async getBitcoinBlocks(limit = 10): Promise<APIResponse<{ hash: string; height: number; timestamp: string; txCount: number; size: number }[]>> {
+    return this.request(`/api/bitcoin/blocks?limit=${limit}`);
+  }
+
+  async getBitcoinBlockHeight(): Promise<APIResponse<{ height: number }>> {
+    return this.request('/api/bitcoin/block-height');
+  }
+
+  async getBitcoinMempool(): Promise<APIResponse<{ size: number; bytes: number; feeRate: number }>> {
+    return this.request('/api/bitcoin/mempool/info');
+  }
+
+  async getBitcoinMempoolFees(): Promise<APIResponse<{ fastest: number; halfHour: number; hour: number; economy: number }>> {
+    return this.request('/api/bitcoin/mempool/fees');
+  }
+
+  // ===========================================================================
+  // DEFI ENDPOINTS
+  // ===========================================================================
+
+  async getDefiSummary(): Promise<APIResponse<{ totalTvl: number; totalVolume24h: number; topProtocols: DeFiTVL[] }>> {
+    return this.request('/api/defi/summary');
+  }
+
+  async getProtocolHealth(protocol?: string): Promise<APIResponse<ProtocolHealth[]>> {
+    return this.request(`/api/defi/protocol-health${protocol ? `?protocol=${protocol}` : ''}`);
+  }
+
+  async getDefiYields(params: {
+    chain?: string;
+    project?: string;
+    stablecoin?: boolean;
+  } = {}): Promise<APIResponse<DefiYield[]>> {
+    const query = new URLSearchParams(params as Record<string, string>);
+    return this.request(`/api/defi/yields?${query}`);
+  }
+
+  async getYieldStats(): Promise<APIResponse<{ median: number; mean: number; count: number }>> {
+    return this.request('/api/defi/yields/stats');
+  }
+
+  async getYieldsByChain(): Promise<APIResponse<{ chain: string; totalTvl: number; avgApy: number }[]>> {
+    return this.request('/api/defi/yields/chains');
+  }
+
+  async getStablecoins(): Promise<APIResponse<StablecoinData[]>> {
+    return this.request('/api/stablecoins');
+  }
+
+  async getStablecoin(symbol: string): Promise<APIResponse<StablecoinData>> {
+    return this.request(`/api/stablecoins/${symbol}`);
+  }
+
+  async getStablecoinDepeg(): Promise<APIResponse<{ symbol: string; price: number; deviation: number }[]>> {
+    return this.request('/api/stablecoins/depeg');
+  }
+
+  async getStablecoinDominance(): Promise<APIResponse<{ symbol: string; marketShare: number }[]>> {
+    return this.request('/api/stablecoins/dominance');
+  }
+
+  async getDexVolumes(): Promise<APIResponse<{ dex: string; volume24h: number; chain: string }[]>> {
+    return this.request('/api/defi/dex-volumes');
+  }
+
+  // ===========================================================================
+  // L2 ENDPOINTS
+  // ===========================================================================
+
+  async getL2Projects(): Promise<APIResponse<L2Project[]>> {
+    return this.request('/api/l2/projects');
+  }
+
+  async getL2Activity(): Promise<APIResponse<{ project: string; tps: number; transactions24h: number }[]>> {
+    return this.request('/api/l2/activity');
+  }
+
+  async getL2Risk(): Promise<APIResponse<{ project: string; riskScore: number; factors: string[] }[]>> {
+    return this.request('/api/l2/risk');
+  }
+
+  // ===========================================================================
+  // SOLANA ENDPOINTS
+  // ===========================================================================
+
+  async getSolanaTokens(limit = 50): Promise<APIResponse<{ symbol: string; name: string; price: number; volume24h: number }[]>> {
+    return this.request(`/api/solana/tokens?limit=${limit}`);
+  }
+
+  async getSolanaDefi(): Promise<APIResponse<{ protocol: string; tvl: number; apy: number }[]>> {
+    return this.request('/api/solana/defi');
+  }
+
+  async getSolanaNfts(limit = 20): Promise<APIResponse<{ collection: string; floorPrice: number; volume24h: number }[]>> {
+    return this.request(`/api/solana/nfts?limit=${limit}`);
+  }
+
+  // ===========================================================================
+  // NFT EXTENDED ENDPOINTS
+  // ===========================================================================
+
+  async getNftMarket(): Promise<APIResponse<NFTMarketData>> {
+    return this.request('/api/nft/market');
+  }
+
+  async getNftRecentSales(limit = 20): Promise<APIResponse<{ collection: string; tokenId: string; price: number; timestamp: string }[]>> {
+    return this.request(`/api/nft/sales/recent?limit=${limit}`);
+  }
+
+  async getNftTrending(): Promise<APIResponse<{ collection: string; volume24h: number; floorPrice: number; change24h: number }[]>> {
+    return this.request('/api/nft/collections/trending');
+  }
+
+  // ===========================================================================
+  // MACRO & ECONOMIC ENDPOINTS
+  // ===========================================================================
+
+  async getMacro(): Promise<APIResponse<MacroIndicator[]>> {
+    return this.request('/api/macro');
+  }
+
+  async getMacroIndicators(indicator?: string): Promise<APIResponse<MacroIndicator[]>> {
+    return this.request(`/api/macro/indicators${indicator ? `?indicator=${indicator}` : ''}`);
+  }
+
+  async getFedData(): Promise<APIResponse<{ rate: number; nextMeeting: string; statement: string }>> {
+    return this.request('/api/macro/fed');
+  }
+
+  async getDXY(): Promise<APIResponse<{ value: number; change24h: number }>> {
+    return this.request('/api/macro/dxy');
+  }
+
+  async getMacroCorrelations(asset = 'BTC'): Promise<APIResponse<{ asset: string; correlation: number }[]>> {
+    return this.request(`/api/macro/correlations?asset=${asset}`);
+  }
+
+  async getRiskAppetite(): Promise<APIResponse<{ index: number; label: string }>> {
+    return this.request('/api/macro/risk-appetite');
+  }
+
+  async getExchangeRates(): Promise<APIResponse<Record<string, number>>> {
+    return this.request('/api/exchange-rates');
+  }
+
+  async convertCurrency(from: string, to: string, amount: number): Promise<APIResponse<{ result: number; rate: number }>> {
+    return this.request(`/api/exchange-rates/convert?from=${from}&to=${to}&amount=${amount}`);
+  }
+
+  async getGlobalData(): Promise<APIResponse<{ totalMarketCap: number; totalVolume24h: number; btcDominance: number }>> {
+    return this.request('/api/global');
+  }
+
+  async getPredictions(asset?: string): Promise<APIResponse<Prediction[]>> {
+    return this.request(`/api/predictions${asset ? `?asset=${asset}` : ''}`);
+  }
+
+  async getTokenUnlocks(): Promise<APIResponse<{ token: string; amount: number; date: string; valueUsd: number }[]>> {
+    return this.request('/api/token-unlocks');
+  }
+
+  // ===========================================================================
+  // EXTENDED TRADING ENDPOINTS
+  // ===========================================================================
+
+  async getFundingDashboard(): Promise<APIResponse<FundingRate[]>> {
+    return this.request('/api/funding/dashboard');
+  }
+
+  async getFundingHistory(symbol: string): Promise<APIResponse<{ rate: number; timestamp: string }[]>> {
+    return this.request(`/api/funding/history/${symbol}`);
+  }
+
+  async getDerivativesOpportunities(): Promise<APIResponse<{ type: string; description: string; potentialReturn: number }[]>> {
+    return this.request('/api/derivatives/opportunities');
+  }
+
+  async getWhaleAlertsContext(minValue = 5000000): Promise<APIResponse<WhaleAlert[]>> {
+    return this.request(`/api/whale-alerts/context?min_value=${minValue}`);
+  }
+
+  async backtest(strategy: string, asset = 'BTC', period = '90d'): Promise<APIResponse<{ returns: number; maxDrawdown: number; sharpeRatio: number }>> {
+    return this.request(`/api/backtest?strategy=${strategy}&asset=${asset}&period=${period}`);
+  }
+
+  // ===========================================================================
+  // EXTENDED AI ENDPOINTS
+  // ===========================================================================
+
+  async getFlashBriefing(): Promise<APIResponse<{ briefing: string; highlights: string[] }>> {
+    return this.request('/api/ai/flash-briefing');
+  }
+
+  async getOracle(asset = 'BTC'): Promise<APIResponse<{ prediction: string; confidence: number; reasoning: string }>> {
+    return this.request(`/api/ai/oracle?asset=${asset}`);
+  }
+
+  async getCounterArguments(thesis: string): Promise<APIResponse<{ arguments: string[] }>> {
+    return this.request('/api/ai/counter', {
+      method: 'POST',
+      body: JSON.stringify({ thesis }),
+    });
+  }
+
+  async aiResearch(topic: string): Promise<APIResponse<{ report: string; sources: string[] }>> {
+    return this.request(`/api/ai/research?topic=${encodeURIComponent(topic)}`);
+  }
+
+  async aiExplain(topic: string): Promise<APIResponse<{ explanation: string }>> {
+    return this.request(`/api/ai/explain?topic=${encodeURIComponent(topic)}`);
+  }
+
+  async detectAIContent(text: string): Promise<APIResponse<{ isAI: boolean; probability: number }>> {
+    return this.request('/api/detect/ai-content', {
+      method: 'POST',
+      body: JSON.stringify({ text }),
+    });
   }
 
   // ===========================================================================

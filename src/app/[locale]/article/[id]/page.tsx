@@ -168,26 +168,39 @@ export default async function ArticlePage({ params }: Props) {
               {article.title}
             </h1>
 
-            {/* Source, date & reading time */}
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--color-text-tertiary)]">
-              <a
-                href={article.canonical_link || article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[var(--color-accent)] hover:underline"
-              >
-                {article.source}
-              </a>
-              <span>·</span>
-              <time dateTime={pubDate}>
-                {new Date(pubDate).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>
-              <span>·</span>
-              <span>{readingTime} min read</span>
+            {/* Description / deck */}
+            {article.description && article.description.length <= 200 && (
+              <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-5 font-serif italic">
+                {article.description}
+              </p>
+            )}
+
+            {/* Byline — editorial style */}
+            <div className="flex items-center gap-3 pt-4 border-t border-[var(--color-border)]">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-bold text-sm shrink-0">
+                {article.source.charAt(0).toUpperCase()}
+              </div>
+              <div className="flex flex-col">
+                <a
+                  href={article.canonical_link || article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors"
+                >
+                  {article.source}
+                </a>
+                <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                  <time dateTime={pubDate}>
+                    {new Date(pubDate).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <span>·</span>
+                  <span>{readingTime} min read</span>
+                </div>
+              </div>
             </div>
           </header>
 
@@ -367,16 +380,16 @@ export default async function ArticlePage({ params }: Props) {
           )}
 
           {/* Metadata footer */}
-          <p className="mt-6 text-xs text-[var(--color-text-tertiary)]">
-            First seen: {new Date(article.first_seen).toLocaleString()} · ID: {article.id}
+          <p className="mt-6 text-xs text-[var(--color-text-tertiary)] italic">
+            Originally published by {article.source} · First indexed: {new Date(article.first_seen).toLocaleString()}
           </p>
         </article>
 
         {/* ── Related Articles ── */}
         {relatedArticles.length > 0 && (
-          <section className="mt-12 pt-8 border-t border-[var(--color-border)]">
+          <section className="mt-12 pt-8 border-t-2 border-[var(--color-text-primary)]">
             <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
-              Related Articles
+              More on This Story
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedArticles.map((related) => (

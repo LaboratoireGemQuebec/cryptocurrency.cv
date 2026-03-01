@@ -14,13 +14,14 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Trading & Charts — Crypto Vision News",
+    title: "Trading & Charts — TradingView Charts — Crypto Vision News",
     description:
-      "Advanced cryptocurrency charts with candlestick views, AI-powered chart analysis, live order book depth, and real-time trading signals.",
+      "Advanced cryptocurrency charts powered by TradingView with candlestick views, AI-powered chart analysis, crypto heatmap, live order book depth, and real-time trading signals.",
     path: "/trading",
     locale,
     tags: [
       "crypto trading",
+      "tradingview charts",
       "candlestick chart",
       "chart analysis",
       "order book",
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "technical analysis",
       "bitcoin chart",
       "ethereum chart",
+      "crypto heatmap",
     ],
   });
 }

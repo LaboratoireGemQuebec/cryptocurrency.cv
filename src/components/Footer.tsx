@@ -173,18 +173,18 @@ export default function Footer() {
       <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]" role="contentinfo">
         <FooterStructuredData />
 
-        <div className="container-main py-12">
+        <div className="container-main py-14">
           {/* Trending Topics Bar */}
-          <nav className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4" aria-label="Trending topics">
+          <nav className="mb-12 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-card)]" aria-label="Trending topics">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="mr-1 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
-                <TrendingUp className="h-3 w-3" /> Trending:
+              <span className="mr-2 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--color-text-tertiary)]">
+                <TrendingUp className="h-3.5 w-3.5" /> Trending
               </span>
               {TRENDING_TOPICS.map((topic) => (
                 <Link
                   key={topic.label}
                   href={topic.href}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1 text-xs text-[var(--color-text-secondary)] transition-all hover:border-[#3b82f6]/40 hover:bg-[#3b82f6]/10 hover:text-[#3b82f6]"
+                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-secondary)] transition-all duration-200 hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent)]/8 hover:text-[var(--color-accent)]"
                 >
                   {topic.label}
                 </Link>
@@ -196,9 +196,9 @@ export default function Footer() {
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
               <Link href="/" className="text-xl font-bold tracking-tight" aria-label="Crypto Vision home">
-                <span className="text-[#3b82f6]">C</span>V
+                <span className="text-[var(--color-accent)]">C</span>V
               </Link>
-              <p className="mt-3 max-w-xs text-sm text-[var(--color-text-secondary)]">
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 Free, real-time crypto news aggregation from 300+ sources. No
                 API keys required.
               </p>
@@ -244,7 +244,7 @@ export default function Footer() {
           </div>
 
           {/* Download App + Language */}
-          <div className="mt-10 flex flex-col items-start justify-between gap-6 border-t border-[var(--color-border)] pt-6 sm:flex-row sm:items-center">
+          <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[var(--color-border)] pt-8 sm:flex-row sm:items-center">
             {/* Download App */}
             <div>
               <p className="mb-2 text-xs font-semibold text-[var(--color-text-primary)] flex items-center gap-1">
@@ -279,8 +279,8 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 sm:flex-row">
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row">
+            <p className="text-xs text-[var(--color-text-tertiary)] tracking-wide">
               &copy; {new Date().getFullYear()} Crypto Vision. Open source under
               MIT license.
             </p>

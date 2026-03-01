@@ -55,21 +55,21 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
         rel="noopener noreferrer"
         className="block"
       >
-        <article className="grid gap-5 md:grid-cols-2 md:gap-8 items-center">
+        <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
         <ArticleImage
           src={article.imageUrl}
           alt={article.title}
-          className="aspect-[16/10] w-full"
+          className="aspect-[16/10] w-full shadow-lg rounded-xl"
         />
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           <Badge variant={categoryToBadgeVariant(article.category)}>
             {article.category}
           </Badge>
-          <h2 className="font-serif text-2xl md:text-3xl font-bold leading-tight tracking-tight group-hover:text-[var(--color-accent)] transition-colors">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.15] tracking-tight group-hover:text-[var(--color-accent)] transition-colors duration-200">
             {article.title}
           </h2>
           {article.description && (
-            <p className="text-[var(--color-text-secondary)] text-sm md:text-base line-clamp-3">
+            <p className="text-[var(--color-text-secondary)] text-sm md:text-base leading-relaxed line-clamp-3">
               {article.description}
             </p>
           )}
@@ -176,7 +176,7 @@ export function NewsCardHeadline({
     >
       <article className="flex gap-3 items-baseline">
         {typeof index === "number" && (
-          <span className="text-2xl font-bold text-[var(--color-text-tertiary)] tabular-nums shrink-0">
+          <span className="text-2xl font-bold font-serif text-[var(--color-accent)]/30 tabular-nums shrink-0 leading-none">
             {String(index + 1).padStart(2, "0")}
           </span>
         )}

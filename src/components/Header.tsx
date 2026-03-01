@@ -312,6 +312,7 @@ const NAV_ITEMS = [
     href: "/markets",
     children: [
       { label: "Overview", href: "/markets" },
+      { label: "Trading & Charts", href: "/trading" },
       { label: "Fear & Greed", href: "/fear-greed" },
       { label: "Heatmap", href: "/heatmap" },
       { label: "Screener", href: "/screener" },

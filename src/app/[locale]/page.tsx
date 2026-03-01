@@ -27,6 +27,14 @@ import {
   OrganizationStructuredData,
   NewsListStructuredData,
 } from "@/components/StructuredData";
+import {
+  DateHeader,
+  EditorsPicks,
+  CategorySection,
+  MostRead,
+  OpinionSection,
+  SectionHeader,
+} from "@/components/EditorialSection";
 import { Badge } from "@/components/ui/Badge";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { TrendingTopicsWidget } from "@/components/TrendingTopics";
@@ -53,18 +61,18 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Crypto Vision News — Free Real-Time Crypto News API",
+    title: "Crypto Vision News — Breaking Crypto News, Analysis & Market Intelligence",
     description:
-      "100% free crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources covering Bitcoin, Ethereum, DeFi, Solana & altcoins.",
+      "Breaking cryptocurrency news and in-depth analysis from 300+ sources. Coverage of Bitcoin, Ethereum, DeFi, regulation, and market movements — updated every minute.",
     path: "",
     locale,
     tags: [
       "crypto news",
       "cryptocurrency",
-      "bitcoin",
-      "ethereum",
+      "bitcoin news",
+      "ethereum news",
       "defi",
-      "news aggregator",
+      "market analysis",
     ],
   });
 }
@@ -75,7 +83,7 @@ export default async function HomePage({ params }: Props) {
 
   let data: { latest: NewsResponse; breaking: NewsResponse; trending: NewsResponse } | null = null;
   try {
-    data = await getHomepageNews({ latestLimit: 20, trendingLimit: 10 });
+    data = await getHomepageNews({ latestLimit: 50, trendingLimit: 10 });
   } catch {
     // Render empty state on failure
   }
@@ -87,6 +95,40 @@ export default async function HomePage({ params }: Props) {
   const latestFeed = articles.slice(5, 20);
   const trending = data?.trending?.articles ?? [];
   const sourceCount = getSourceCount();
+
+  // ── Partition articles by category for editorial sections ──
+  const usedLinks = new Set(articles.slice(0, 5).map((a) => a.link));
+  const remainingArticles = articles.filter((a) => !usedLinks.has(a.link));
+
+  const marketsArticles = remainingArticles.filter((a) => {
+    const text = `${a.title} ${a.description || ""} ${a.category}`.toLowerCase();
+    return ["trading", "markets"].includes(a.category) ||
+      ["market", "price", "rally", "crash", "etf", "futures", "bull", "bear"].some((k) => text.includes(k));
+  }).slice(0, 4);
+
+  const defiArticles = remainingArticles.filter((a) => {
+    const text = `${a.title} ${a.description || ""} ${a.category}`.toLowerCase();
+    return a.category === "defi" ||
+      ["defi", "yield", "lending", "dex", "tvl", "staking", "aave", "uniswap"].some((k) => text.includes(k));
+  }).slice(0, 4);
+
+  const regulationArticles = remainingArticles.filter((a) => {
+    const text = `${a.title} ${a.description || ""} ${a.category}`.toLowerCase();
+    return a.category === "regulation" ||
+      ["regulation", "sec", "cftc", "lawsuit", "legal", "compliance", "policy", "congress"].some((k) => text.includes(k));
+  }).slice(0, 4);
+
+  // Analysis/opinion — from research, macro, journalism sources
+  const analysisKeywords = ["analysis", "opinion", "insight", "outlook", "forecast", "research", "review", "deep dive", "commentary"];
+  const analysisSources = ["messari", "delphi", "nansen", "lyn alden", "paradigm", "a16z", "galaxy", "pantera"];
+  const opinionArticles = remainingArticles.filter((a) => {
+    const text = `${a.title} ${a.description || ""} ${a.source}`.toLowerCase();
+    return analysisKeywords.some((k) => text.includes(k)) ||
+      analysisSources.some((k) => text.includes(k));
+  }).slice(0, 3);
+
+  // Editor's picks — highest quality trending articles
+  const editorsPicks = trending.slice(0, 3);
 
   return (
     <>
@@ -100,6 +142,9 @@ export default async function HomePage({ params }: Props) {
       <BreakingNewsBanner
         articles={breaking.map((a) => ({ title: a.title, link: a.link }))}
       />
+
+      {/* ── Date Header (newspaper-style) ── */}
+      <DateHeader />
 
       <main id="main-content" className="min-h-screen">
         {/* ── Hero section ── */}
@@ -126,6 +171,7 @@ export default async function HomePage({ params }: Props) {
         {topGrid.length > 0 && (
           <section className="border-b border-[var(--color-border)]">
             <div className="container-main py-8 lg:py-10">
+              <SectionHeader title="Top Stories" />
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {topGrid.map((article) => (
                   <NewsCard key={article.link} article={article} />
@@ -134,6 +180,9 @@ export default async function HomePage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* ── Editor's Picks ── */}
+        <EditorsPicks articles={editorsPicks} />
 
         {/* ── Markets Snapshot ── */}
         <Suspense
@@ -155,6 +204,33 @@ export default async function HomePage({ params }: Props) {
         >
           <MarketsSnapshot />
         </Suspense>
+
+        {/* ── Markets & Trading Section ── */}
+        <CategorySection
+          title="Markets & Trading"
+          href="/category/trading"
+          icon="📈"
+          articles={marketsArticles}
+        />
+
+        {/* ── DeFi Section ── */}
+        <CategorySection
+          title="DeFi & Web3"
+          href="/category/defi"
+          icon="🏦"
+          articles={defiArticles}
+        />
+
+        {/* ── Analysis & Opinion ── */}
+        <OpinionSection articles={opinionArticles} />
+
+        {/* ── Regulation & Policy Section ── */}
+        <CategorySection
+          title="Regulation & Policy"
+          href="/category/regulation"
+          icon="⚖️"
+          articles={regulationArticles}
+        />
 
         {/* ── Top Movers (Gainers / Losers) ── */}
         <Suspense
@@ -187,44 +263,20 @@ export default async function HomePage({ params }: Props) {
         <section className="container-main py-8 lg:py-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
             {/* Smart feed (replaces static list with auto-refresh + modes) */}
-            <SmartFeed initialArticles={latestFeed} />
+            <div>
+              <SectionHeader title="Latest News" />
+              <SmartFeed initialArticles={latestFeed} />
+            </div>
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              {/* Trending */}
-              <div>
-                <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)]">
-                  Trending
-                </h3>
-                {/* Horizontal scroll on mobile, vertical list on lg+ */}
-                <div className="flex gap-4 overflow-x-auto pb-2 lg:flex-col lg:overflow-x-visible lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0">
-                  {trending.length > 0 ? (
-                    trending.slice(0, 8).map((article, i) => (
-                      <div
-                        key={article.link}
-                        className="min-w-[200px] shrink-0 lg:min-w-0 lg:shrink lg:pb-4 lg:border-b border-[var(--color-border)] lg:last:border-b-0"
-                      >
-                        <NewsCardHeadline article={article} index={i} />
-                      </div>
-                    ))
-                  ) : (
-                    Array.from({ length: 5 }).map((_, i) => (
-                      <div key={i} className="flex gap-3 pb-4 border-b border-[var(--color-border)]">
-                        <Skeleton className="h-8 w-8" />
-                        <div className="flex-1 space-y-2">
-                          <Skeleton className="h-4 w-full" />
-                          <Skeleton className="h-3 w-24" />
-                        </div>
-                      </div>
-                    ))
-                  )}
-                </div>
-              </div>
+              {/* Most Read */}
+              <MostRead articles={trending} />
 
               {/* Categories */}
               <div>
                 <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)]">
-                  Categories
+                  Sections
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {categories.map((cat) => (
@@ -250,35 +302,29 @@ export default async function HomePage({ params }: Props) {
                 <LiveActivityFeed maxItems={5} compact />
               </Suspense>
 
-              {/* Stats */}
+              {/* About — editorial-focused */}
               <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">
-                <h3 className="text-base font-bold font-serif mb-4">
-                  About FCN
+                <h3 className="text-base font-bold font-serif mb-3">
+                  About Crypto Vision
                 </h3>
-                <dl className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <dt className="text-[var(--color-text-secondary)]">Sources</dt>
-                    <dd className="font-semibold">{sourceCount}+</dd>
-                  </div>
-                  <div className="flex justify-between">
-                    <dt className="text-[var(--color-text-secondary)]">API Key</dt>
-                    <dd className="font-semibold text-green-600">Not required</dd>
-                  </div>
-                  <div className="flex justify-between">
-                    <dt className="text-[var(--color-text-secondary)]">Rate Limits</dt>
-                    <dd className="font-semibold text-green-600">None</dd>
-                  </div>
-                  <div className="flex justify-between">
-                    <dt className="text-[var(--color-text-secondary)]">License</dt>
-                    <dd className="font-semibold">MIT</dd>
-                  </div>
-                </dl>
-                <Link
-                  href="/developers"
-                  className="mt-4 block text-center text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
-                >
-                  View API Docs →
-                </Link>
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                  Real-time crypto news aggregated from {sourceCount}+ trusted sources.
+                  Covering Bitcoin, Ethereum, DeFi, regulation, and emerging markets — updated every minute.
+                </p>
+                <div className="flex gap-3">
+                  <Link
+                    href="/about"
+                    className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+                  >
+                    About us →
+                  </Link>
+                  <Link
+                    href="/sources"
+                    className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+                  >
+                    Our sources →
+                  </Link>
+                </div>
               </div>
 
               {/* Trending Coins */}
