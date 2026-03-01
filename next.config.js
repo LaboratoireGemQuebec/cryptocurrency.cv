@@ -215,6 +215,14 @@ const nextConfig = {
           source: '/llms-full.txt',
           destination: '/api/llms-full.txt',
         },
+        {
+          source: '/.well-known/agents.json',
+          destination: '/api/well-known/agents',
+        },
+        {
+          source: '/.well-known/ai-plugin.json',
+          destination: '/api/well-known/ai-plugin',
+        },
       ],
       afterFiles: [],
       fallback: [],

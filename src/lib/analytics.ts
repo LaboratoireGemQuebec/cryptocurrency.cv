@@ -369,10 +369,9 @@ export function getDashboardStats(): Record<string, number | string> {
 /**
  * Get system health (server-side, Node.js only)
  *
- * Re-exported from system-health.ts for backward compatibility.
- * Prefer importing directly from '@/lib/system-health' in Node.js routes.
+ * MOVED to '@/lib/system-health' to avoid pulling Node.js APIs into Edge routes.
+ * Import directly from '@/lib/system-health' instead.
  */
-export { getSystemHealth } from './system-health';
 
 // Flush queue when back online
 if (typeof window !== 'undefined') {

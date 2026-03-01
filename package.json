@@ -129,6 +129,7 @@
     "swagger-ui-react": "^5.32.0",
     "swr": "^2.4.1",
     "web-vitals": "^5.1.0",
+    "ws": "^8.19.0",
     "zod": "^4.3.6",
     "zod-to-json-schema": "^3.25.1"
   },
@@ -154,6 +155,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/sanitize-html": "^2.16.0",
+    "@types/ws": "^8.18.1",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
     "@typescript-eslint/scope-manager": "^8.56.1",
