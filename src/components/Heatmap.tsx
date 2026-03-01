@@ -132,14 +132,14 @@ export function Heatmap({ coins }: HeatmapProps) {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           {/* Timeframe Toggle */}
-          <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1">
+          <div className="inline-flex rounded-lg border border-gray-300 dark:border-neutral-800 p-1">
             {(['24h', '7d'] as TimeFrame[]).map((tf) => (
               <button
                 key={tf}
                 onClick={() => setTimeframe(tf)}
                 className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
                   timeframe === tf
-                    ? 'bg-black dark:bg-white text-white dark:text-slate-900'
+                    ? 'bg-black dark:bg-white text-white dark:text-white'
                     : 'text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
@@ -149,12 +149,12 @@ export function Heatmap({ coins }: HeatmapProps) {
           </div>
 
           {/* Sort Toggle */}
-          <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1">
+          <div className="inline-flex rounded-lg border border-gray-300 dark:border-neutral-800 p-1">
             <button
               onClick={() => setSortBy('market_cap')}
               className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 sortBy === 'market_cap'
-                  ? 'bg-black dark:bg-white text-white dark:text-slate-900'
+                  ? 'bg-black dark:bg-white text-white dark:text-white'
                   : 'text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -164,7 +164,7 @@ export function Heatmap({ coins }: HeatmapProps) {
               onClick={() => setSortBy('change')}
               className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 sortBy === 'change'
-                  ? 'bg-black dark:bg-white text-white dark:text-slate-900'
+                  ? 'bg-black dark:bg-white text-white dark:text-white'
                   : 'text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -177,7 +177,7 @@ export function Heatmap({ coins }: HeatmapProps) {
             value={showTop}
             onChange={(e) => setShowTop(Number(e.target.value))}
             aria-label="Number of coins to display"
-            className="px-3 py-2 text-sm border border-gray-300 dark:border-slate-700 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white"
+            className="px-3 py-2 text-sm border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white"
           >
             <option value={25}>Top 25</option>
             <option value={50}>Top 50</option>
@@ -272,7 +272,7 @@ export function Heatmap({ coins }: HeatmapProps) {
       </div>
 
       {/* Market Mood Summary */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200 dark:border-slate-700">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200 dark:border-neutral-800">
         <div className="text-center">
           <div className="text-sm text-gray-500 dark:text-gray-400">Biggest Gainer</div>
           <div className="text-lg font-bold text-slate-900 dark:text-white">

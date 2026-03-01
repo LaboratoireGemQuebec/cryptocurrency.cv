@@ -190,7 +190,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
   };
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm">
       {/* Header */}
       <div className={`px-5 py-4 bg-gradient-to-r ${formatConfig[format].color} bg-opacity-10`}>
         <div className="flex items-center justify-between">
@@ -207,7 +207,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
       </div>
 
       {/* Format Selector */}
-      <div className="px-4 py-3 border-b border-gray-100 dark:border-slate-700 flex gap-2 overflow-x-auto">
+      <div className="px-4 py-3 border-b border-gray-100 dark:border-neutral-800 flex gap-2 overflow-x-auto">
         {(Object.entries(formatConfig) as [PodcastFormat, typeof formatConfig[PodcastFormat]][]).map(
           ([key, cfg]) => (
             <button
@@ -361,7 +361,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
                     className={`p-3 rounded-lg border transition-all ${
                       i === activeSegment
                         ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-300 dark:border-indigo-700'
-                        : 'bg-gray-50 dark:bg-black/30 border-gray-100 dark:border-slate-600/30'
+                        : 'bg-gray-50 dark:bg-black/30 border-gray-100 dark:border-neutral-800/30'
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-1">
@@ -394,7 +394,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/30">
+      <div className="px-4 py-2 border-t border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/30">
         <span className="text-[10px] text-gray-400">
           ⚠️ AI-generated content. Not financial advice. Powered by multi-provider AI + Google Cloud TTS.
         </span>

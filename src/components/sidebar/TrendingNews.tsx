@@ -49,7 +49,7 @@ export default function TrendingNews({
   const trendingArticles = articles.slice(0, 5);
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-neutral-800 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">
@@ -104,7 +104,7 @@ export default function TrendingNews({
                   <span className="text-xs text-gray-500 dark:text-gray-400 truncate">
                     {article.source}
                   </span>
-                  <span className="text-gray-300 dark:text-gray-600" aria-hidden="true">•</span>
+                  <span className="text-gray-300 dark:text-gray-400" aria-hidden="true">•</span>
                   <time 
                     className="text-xs text-gray-500 dark:text-gray-400"
                     dateTime={article.pubDate}
@@ -121,7 +121,7 @@ export default function TrendingNews({
       {/* See All Link */}
       <Link
         href="/trending"
-        className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-center gap-2 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors focus-ring rounded-lg py-2 -mx-2"
+        className="mt-4 pt-4 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-center gap-2 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors focus-ring rounded-lg py-2 -mx-2"
       >
         See all trending
         <svg 

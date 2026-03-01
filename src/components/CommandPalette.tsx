@@ -183,9 +183,9 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       />
       
       {/* Palette */}
-      <div className="relative w-full max-w-xl mx-4 bg-white dark:bg-black rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-slate-700 animate-fade-in-up">
+      <div className="relative w-full max-w-xl mx-4 bg-white dark:bg-black rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-neutral-800 animate-fade-in-up">
         {/* Search Input */}
-        <div className="flex items-center gap-3 px-4 py-4 border-b border-gray-100 dark:border-slate-800">
+        <div className="flex items-center gap-3 px-4 py-4 border-b border-gray-100 dark:border-neutral-800">
           <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
@@ -200,7 +200,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
             autoComplete="off"
             spellCheck={false}
           />
-          <kbd className="hidden sm:inline-flex px-2 py-1 text-xs font-medium text-gray-400 bg-gray-100 dark:bg-black rounded border border-gray-200 dark:border-slate-700">
+          <kbd className="hidden sm:inline-flex px-2 py-1 text-xs font-medium text-gray-400 bg-gray-100 dark:bg-black rounded border border-gray-200 dark:border-neutral-800">
             ESC
           </kbd>
         </div>
@@ -262,15 +262,15 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
         </div>
 
         {/* Footer */}
-        <div className="px-4 py-3 border-t border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-black/50">
+        <div className="px-4 py-3 border-t border-gray-100 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
           <div className="flex items-center justify-between text-xs text-gray-500 dark:text-slate-400">
             <div className="flex items-center gap-3">
               <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 bg-white dark:bg-black rounded border border-gray-200 dark:border-slate-600">↑↓</kbd>
+                <kbd className="px-1.5 py-0.5 bg-white dark:bg-black rounded border border-gray-200 dark:border-neutral-800">↑↓</kbd>
                 navigate
               </span>
               <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 bg-white dark:bg-black rounded border border-gray-200 dark:border-slate-600">↵</kbd>
+                <kbd className="px-1.5 py-0.5 bg-white dark:bg-black rounded border border-gray-200 dark:border-neutral-800">↵</kbd>
                 select
               </span>
             </div>

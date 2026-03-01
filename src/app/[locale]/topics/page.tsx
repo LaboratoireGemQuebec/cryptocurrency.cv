@@ -79,7 +79,7 @@ export default function TopicsPage() {
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-slate-600 transition group"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-slate-600 transition group"
                 >
                   <span className="text-4xl block mb-3">{cat.emoji}</span>
                   <h3 className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{cat.title}</h3>
@@ -97,7 +97,7 @@ export default function TopicsPage() {
                 <Link
                   key={topic.slug}
                   href={`/topic/${topic.slug}`}
-                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg hover:border-gray-300 dark:hover:border-slate-600 transition group flex items-start gap-4"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 hover:shadow-lg hover:border-gray-300 dark:hover:border-slate-600 transition group flex items-start gap-4"
                 >
                   <span className="text-3xl">{topic.emoji}</span>
                   <div>
@@ -110,7 +110,7 @@ export default function TopicsPage() {
           </div>
 
           {/* Search CTA */}
-          <div className="mt-12 text-center bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-8">
+          <div className="mt-12 text-center bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-8">
             <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Can&apos;t find what you&apos;re looking for?</h3>
             <p className="text-gray-600 dark:text-slate-400 mb-4">Use our search to find any crypto topic.</p>
             <Link

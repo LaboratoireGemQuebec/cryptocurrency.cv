@@ -163,7 +163,7 @@ function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargePro
     'bg-white dark:bg-black',
     'shadow-xl hover:shadow-2xl',
     style.glow,
-    'dark:shadow-none dark:border dark:border-gray-800 dark:hover:border-gray-600',
+    'dark:shadow-none dark:border dark:border-neutral-800 dark:hover:border-gray-600',
     'transform transition-all duration-500 ease-out',
     'hover:-translate-y-2 hover:scale-[1.01]',
     'focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-gray-950',
@@ -247,7 +247,7 @@ function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargePro
               </p>
             )}
           </div>
-          <div className="flex items-center justify-between pt-5 border-t border-gray-100 dark:border-gray-800 mt-4">
+          <div className="flex items-center justify-between pt-5 border-t border-gray-100 dark:border-neutral-800 mt-4">
             <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
               <time className="flex items-center gap-1.5" dateTime={article.pubDate}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -34,7 +34,7 @@ function DashboardSkeleton() {
       <div className="h-10 bg-gray-200 dark:bg-black rounded-lg w-1/3" />
       
       {/* Tabs skeleton */}
-      <div className="flex gap-4 border-b border-gray-200 dark:border-slate-700 pb-3">
+      <div className="flex gap-4 border-b border-gray-200 dark:border-neutral-800 pb-3">
         <div className="h-6 w-32 bg-gray-200 dark:bg-black rounded" />
         <div className="h-6 w-32 bg-gray-200 dark:bg-black rounded" />
       </div>
@@ -119,7 +119,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Risk Score Methodology */}
-      <section className="py-8 bg-white dark:bg-black border-b border-gray-200 dark:border-slate-700">
+      <section className="py-8 bg-white dark:bg-black border-b border-gray-200 dark:border-neutral-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-center text-sm">
             <div>
@@ -153,7 +153,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Methodology Section */}
-      <section className="bg-white dark:bg-black border-t border-gray-200 dark:border-slate-700">
+      <section className="bg-white dark:bg-black border-t border-gray-200 dark:border-neutral-800">
         <div className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Risk Scoring Methodology
@@ -248,7 +248,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Disclaimer */}
-      <section className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-slate-800">
+      <section className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-neutral-800">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-3xl mx-auto text-center text-sm text-gray-500 dark:text-slate-400">
             <p className="mb-2">

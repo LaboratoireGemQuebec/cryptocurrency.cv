@@ -115,7 +115,7 @@ function EmptyState({ message }: { message: string }) {
 
 function PlatformBadge({ platform }: { platform: string }) {
   const config: Record<string, { icon: string; color: string; label: string }> = {
-    twitter: { icon: '𝕏', color: 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900', label: 'Twitter/X' },
+    twitter: { icon: '𝕏', color: 'bg-neutral-900 text-white dark:bg-white dark:text-white', label: 'Twitter/X' },
     discord: { icon: '💬', color: 'bg-indigo-500 text-white', label: 'Discord' },
     telegram: { icon: '✈️', color: 'bg-blue-500 text-white', label: 'Telegram' },
     youtube: { icon: '▶️', color: 'bg-red-500 text-white', label: 'YouTube' },
@@ -416,7 +416,7 @@ export function InfluencerLeaderboard({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-              className="px-3 py-1.5 bg-white dark:bg-black border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-3 py-1.5 bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               <option value="reliability">Reliability Score</option>
               <option value="accuracy">Accuracy Rate</option>
@@ -443,7 +443,7 @@ export function InfluencerLeaderboard({
             {sortedInfluencers.map((influencer, index) => (
               <div
                 key={influencer.id}
-                className="border border-neutral-200 dark:border-neutral-700 rounded-lg overflow-hidden"
+                className="border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden"
               >
                 {/* Main Row */}
                 <div 
@@ -513,7 +513,7 @@ export function InfluencerLeaderboard({
 
                 {/* Expanded Details */}
                 {expandedId === influencer.id && (
-                  <div className="p-4 bg-neutral-50 dark:bg-black/30 border-t border-neutral-200 dark:border-neutral-700">
+                  <div className="p-4 bg-neutral-50 dark:bg-black/30 border-t border-neutral-200 dark:border-neutral-800">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* Performance Metrics */}
                       <div>

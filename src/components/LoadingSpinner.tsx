@@ -70,7 +70,7 @@ export default function LoadingSpinner({
         <div
           className={`
             ${sizeClasses[size]}
-            border-2 border-gray-200 dark:border-gray-700
+            border-2 border-gray-200 dark:border-neutral-800
             border-t-brand-500
             rounded-full
             animate-spin
@@ -196,7 +196,7 @@ export default function LoadingSpinner({
 export function PageLoader({ text, subtitle }: { text?: string; subtitle?: string }) {
   return (
     <div className="fixed inset-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white dark:bg-black shadow-2xl border border-gray-200 dark:border-gray-800">
+      <div className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white dark:bg-black shadow-2xl border border-gray-200 dark:border-neutral-800">
         <LoadingSpinner size="xl" variant="brand" />
         <div className="text-center">
           <p className="text-lg font-semibold text-gray-900 dark:text-white">{text}</p>
@@ -210,7 +210,7 @@ export function PageLoader({ text, subtitle }: { text?: string; subtitle?: strin
 // Skeleton loader for cards
 export function CardSkeleton() {
   return (
-    <div className="bg-white dark:bg-black rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-neutral-800">
       {/* Image placeholder */}
       <div className="h-[200px] bg-gradient-to-br from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-700 animate-pulse motion-reduce:animate-none" />
       {/* Content placeholder */}

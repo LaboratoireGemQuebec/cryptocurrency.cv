@@ -116,7 +116,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${
               activeTab === tab.id
-                ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-md'
+                ? 'bg-gray-900 dark:bg-white text-white dark:text-white shadow-md'
                 : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-400 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
@@ -132,7 +132,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
           href={`/article/${heroSlug}`}
           className="group block"
         >
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden h-full hover:shadow-xl dark:hover:shadow-2xl hover:border-gray-300 dark:hover:border-slate-500 transition-all duration-300">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden h-full hover:shadow-xl dark:hover:shadow-2xl hover:border-gray-300 dark:hover:border-slate-500 transition-all duration-300">
             {/* Featured hero image */}
             <div className="relative aspect-[16/9] overflow-hidden">
               <CardImage
@@ -178,8 +178,8 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
         </Link>
 
         {/* Article List */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
-          <div className="divide-y divide-gray-100 dark:divide-slate-700">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden">
+          <div className="divide-y divide-gray-100 dark:divide-neutral-800">
             {rest.map((article, i) => {
               const slug = generateArticleSlug(article.title, article.pubDate);
               const color = sourceColors[article.source] || 'bg-gray-600';
@@ -205,7 +205,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                       <span className="text-xs font-semibold text-gray-500 dark:text-slate-400">
                         {article.source}
                       </span>
-                      <span className="text-gray-300 dark:text-slate-600">·</span>
+                      <span className="text-gray-300 dark:text-gray-400">·</span>
                       <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
                         {article.timeAgo}
                       </time>

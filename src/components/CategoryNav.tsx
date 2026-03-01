@@ -76,7 +76,7 @@ export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {
 
   return (
     <nav 
-      className="border-b border-gray-100 dark:border-slate-800 bg-white/95 dark:bg-black/95 backdrop-blur-sm sticky top-[64px] z-30"
+      className="border-b border-gray-100 dark:border-neutral-800 bg-white/95 dark:bg-black/95 backdrop-blur-sm sticky top-[64px] z-30"
       aria-label="News categories"
     >
       <div className="max-w-7xl mx-auto px-4 relative">

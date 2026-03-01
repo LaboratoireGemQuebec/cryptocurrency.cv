@@ -48,7 +48,7 @@ export function WatchlistMiniWidget({
   
   if (!isLoaded) {
     return (
-      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 ${className}`}>
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-5 h-5 text-yellow-500" />
           <h3 className="font-semibold text-gray-900 dark:text-white">Watchlist</h3>
@@ -64,13 +64,13 @@ export function WatchlistMiniWidget({
 
   if (watchlist.length === 0) {
     return (
-      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 ${className}`}>
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-5 h-5 text-yellow-500" />
           <h3 className="font-semibold text-gray-900 dark:text-white">Watchlist</h3>
         </div>
         <div className="text-center py-6">
-          <Star className="w-10 h-10 text-gray-300 dark:text-gray-600 mx-auto mb-2" />
+          <Star className="w-10 h-10 text-gray-300 dark:text-gray-400 mx-auto mb-2" />
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
             Your watchlist is empty
           </p>
@@ -88,7 +88,7 @@ export function WatchlistMiniWidget({
   // If we have watchlist but no coin data available
   if (displayCoins.length === 0 && watchlist.length > 0) {
     return (
-      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 ${className}`}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
@@ -124,7 +124,7 @@ export function WatchlistMiniWidget({
   }
 
   return (
-    <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+    <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 ${className}`}>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />

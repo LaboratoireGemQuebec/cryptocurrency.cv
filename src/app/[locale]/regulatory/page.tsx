@@ -93,7 +93,7 @@ export default async function RegulatoryPage({ params, searchParams }: PageProps
       </section>
 
       {/* Navigation Tabs */}
-      <section className="bg-white dark:bg-black border-b border-gray-200 dark:border-slate-700 sticky top-0 z-10">
+      <section className="bg-white dark:bg-black border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4">
           <nav className="flex items-center gap-1 overflow-x-auto py-2">
             {[
@@ -127,7 +127,7 @@ export default async function RegulatoryPage({ params, searchParams }: PageProps
       </section>
 
       {/* Info Section */}
-      <section className="bg-white dark:bg-black border-t border-gray-200 dark:border-slate-700 py-12 px-4">
+      <section className="bg-white dark:bg-black border-t border-gray-200 dark:border-neutral-800 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Understanding Crypto Regulation
@@ -209,7 +209,7 @@ curl "https://api.example.com/api/regulatory?action=analyze&title=SEC%20charges%
             </Link>
             <Link
               href="/pricing"
-              className="px-4 py-2 border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
+              className="px-4 py-2 border border-gray-300 dark:border-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
             >
               Pricing
             </Link>
@@ -285,7 +285,7 @@ function InfoCard({
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-black rounded-lg p-6 border border-gray-200 dark:border-slate-700">
+    <div className="bg-gray-50 dark:bg-black rounded-lg p-6 border border-gray-200 dark:border-neutral-800">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className="text-2xl">{icon}</span>

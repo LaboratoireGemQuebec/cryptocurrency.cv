@@ -135,7 +135,7 @@ export default async function ProtocolPage({ params }: Props) {
           </nav>
 
           {/* Protocol Header */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               {/* Logo & Name */}
               <div className="flex items-center gap-4">
@@ -194,7 +194,7 @@ export default async function ProtocolPage({ params }: Props) {
             )}
 
             {/* Links */}
-            <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t border-gray-200 dark:border-slate-700">
+            <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t border-gray-200 dark:border-neutral-800">
               {protocol.url && (
                 <a
                   href={protocol.url}
@@ -232,7 +232,7 @@ export default async function ProtocolPage({ params }: Props) {
             <div className="lg:col-span-2 space-y-8">
               {/* Chain Distribution */}
               {protocol.chains && protocol.chains.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">⛓️ Chain Distribution</h2>
                   <div className="flex flex-wrap gap-2">
                     {protocol.chains.map(chain => (
@@ -250,7 +250,7 @@ export default async function ProtocolPage({ params }: Props) {
 
               {/* Market Data */}
               {(protocol.mcap || protocol.fdv) && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">💰 Market Data</h2>
                   <div className="grid grid-cols-2 gap-4">
                     {protocol.mcap && (
@@ -282,7 +282,7 @@ export default async function ProtocolPage({ params }: Props) {
             <div className="space-y-6">
               {/* Audits */}
               {protocol.audit_links && protocol.audit_links.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">🔒 Security Audits</h2>
                   <div className="space-y-2">
                     {protocol.audit_links.map((audit, idx) => (
@@ -302,12 +302,12 @@ export default async function ProtocolPage({ params }: Props) {
 
               {/* Similar Protocols */}
               {similarProtocols.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-                  <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+                  <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
                     <h2 className="font-bold text-lg text-gray-900 dark:text-white">Similar Protocols</h2>
                     <p className="text-sm text-gray-500 dark:text-slate-400">Other {protocol.category} protocols</p>
                   </div>
-                  <div className="divide-y divide-gray-200 dark:divide-slate-700">
+                  <div className="divide-y divide-gray-200 dark:divide-neutral-800">
                     {similarProtocols.map((p) => (
                       <Link 
                         key={p.id} 
@@ -332,7 +332,7 @@ export default async function ProtocolPage({ params }: Props) {
               )}
 
               {/* Quick Actions */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">📊 Quick Links</h3>
                 <div className="space-y-2">
                   <Link href="/defi" className="block text-blue-600 dark:text-blue-400 hover:underline">

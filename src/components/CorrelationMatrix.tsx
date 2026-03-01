@@ -237,7 +237,7 @@ export function CorrelationMatrix() {
     return (
       <div className="space-y-6">
         <div className="flex justify-center">
-          <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1 opacity-50">
+          <div className="inline-flex rounded-lg border border-gray-300 dark:border-neutral-800 p-1 opacity-50">
             {(['7', '30', '90'] as const).map((tf) => (
               <button key={tf} disabled className="px-4 py-1.5 text-sm font-medium rounded-md text-gray-400">
                 {tf}D
@@ -270,7 +270,7 @@ export function CorrelationMatrix() {
         <p className="text-gray-500 dark:text-gray-400 mb-4">{error}</p>
         <button
           onClick={fetchAllData}
-          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg hover:opacity-90 transition-opacity"
+          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-white rounded-lg hover:opacity-90 transition-opacity"
         >
           Try Again
         </button>
@@ -290,14 +290,14 @@ export function CorrelationMatrix() {
     <div className="space-y-6">
       {/* Timeframe Toggle */}
       <div className="flex justify-center">
-        <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1">
+        <div className="inline-flex rounded-lg border border-gray-300 dark:border-neutral-800 p-1">
           {(['7', '30', '90'] as const).map((tf) => (
             <button
               key={tf}
               onClick={() => setTimeframe(tf)}
               className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 timeframe === tf
-                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-white'
                   : 'text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -324,13 +324,13 @@ export function CorrelationMatrix() {
 
       {/* Insights */}
       <div className="grid md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Average Correlation</div>
           <div className="text-2xl font-bold text-slate-900 dark:text-white">
             {stats.avgCorrelation.toFixed(2)}
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Highly Correlated</div>
           <div className="text-sm text-slate-900 dark:text-white">
             {stats.highlyCorrelated.length > 0 
@@ -339,7 +339,7 @@ export function CorrelationMatrix() {
             }
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Least Correlated</div>
           <div className="text-sm text-slate-900 dark:text-white">
             {stats.inversePairs.length > 0 

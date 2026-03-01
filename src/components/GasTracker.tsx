@@ -276,7 +276,7 @@ export function GasTracker() {
         <p className="text-gray-500 dark:text-gray-400 mb-4">{error}</p>
         <button
           onClick={handleRefresh}
-          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg hover:opacity-90 transition-opacity"
+          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-white rounded-lg hover:opacity-90 transition-opacity"
         >
           Try Again
         </button>
@@ -321,26 +321,26 @@ export function GasTracker() {
               className={`p-5 rounded-xl border transition-all ${
                 priority === 'instant'
                   ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white'
-                  : 'bg-white dark:bg-black border-gray-200 dark:border-slate-700'
+                  : 'bg-white dark:bg-black border-gray-200 dark:border-neutral-800'
               }`}
             >
               <div className="flex items-center gap-2 mb-3">
                 <Icon
-                  className={`w-5 h-5 ${priority === 'instant' ? 'text-white dark:text-slate-900' : 'text-gray-600 dark:text-gray-400'}`}
+                  className={`w-5 h-5 ${priority === 'instant' ? 'text-white dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}
                 />
                 <span
-                  className={`text-sm font-medium ${priority === 'instant' ? 'text-white dark:text-slate-900' : 'text-gray-600 dark:text-gray-400'}`}
+                  className={`text-sm font-medium ${priority === 'instant' ? 'text-white dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}
                 >
                   {info.label}
                 </span>
               </div>
               <div
-                className={`text-3xl font-bold font-mono ${priority === 'instant' ? 'text-white dark:text-slate-900' : 'text-slate-900 dark:text-white'}`}
+                className={`text-3xl font-bold font-mono ${priority === 'instant' ? 'text-white dark:text-white' : 'text-slate-900 dark:text-white'}`}
               >
                 {gwei}
               </div>
               <div
-                className={`text-sm ${priority === 'instant' ? 'text-gray-300 dark:text-gray-600' : 'text-gray-500 dark:text-gray-400'}`}
+                className={`text-sm ${priority === 'instant' ? 'text-gray-300 dark:text-gray-400' : 'text-gray-500 dark:text-gray-400'}`}
               >
                 gwei
               </div>
@@ -357,7 +357,7 @@ export function GasTracker() {
       </div>
 
       {/* Transaction Type Selector */}
-      <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+      <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
         <h3 className="text-sm font-medium text-slate-900 dark:text-white mb-4">
           Estimate costs for:
         </h3>
@@ -368,7 +368,7 @@ export function GasTracker() {
               onClick={() => setSelectedTx(id as keyof typeof TX_GAS_LIMITS)}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors text-left ${
                 selectedTx === id
-                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-white'
                   : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >

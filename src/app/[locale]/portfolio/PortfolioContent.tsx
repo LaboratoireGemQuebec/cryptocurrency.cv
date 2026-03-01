@@ -191,8 +191,8 @@ export default function PortfolioPage() {
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Portfolio</h1>
           </div>
 
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
-            <PieChart className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-12 text-center">
+            <PieChart className="w-16 h-16 text-gray-300 dark:text-gray-400 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Start tracking your portfolio
             </h2>
@@ -229,7 +229,7 @@ export default function PortfolioPage() {
                 value={importText}
                 onChange={e => setImportText(e.target.value)}
                 placeholder="Paste your portfolio JSON here..."
-                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="flex justify-end gap-3 mt-4">
                 <button
@@ -364,7 +364,7 @@ export default function PortfolioPage() {
                 value={importText}
                 onChange={e => setImportText(e.target.value)}
                 placeholder="Paste your portfolio JSON here..."
-                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="flex justify-end gap-3 mt-4">
                 <button

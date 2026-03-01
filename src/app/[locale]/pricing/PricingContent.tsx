@@ -88,7 +88,7 @@ export default function PricingContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-white dark:bg-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700"
+          className="relative bg-white dark:bg-black rounded-2xl p-8 border border-gray-200 dark:border-neutral-800"
         >
           <div className="mb-6">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Free</h3>
@@ -306,7 +306,7 @@ export default function PricingContent() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.02 }}
-                className="bg-white dark:bg-black rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-gray-400/50 transition-all"
+                className="bg-white dark:bg-black rounded-xl p-5 border border-gray-200 dark:border-neutral-800 hover:border-gray-400/50 transition-all"
               >
                 <div className="flex items-start justify-between mb-3">
                   <code className="text-sm font-mono text-white bg-white/10 px-2 py-1 rounded">
@@ -379,9 +379,9 @@ export default function PricingContent() {
         </p>
 
         <div className="overflow-x-auto">
-          <table className="w-full bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700">
+          <table className="w-full bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800">
             <thead>
-              <tr className="border-b border-gray-200 dark:border-gray-700">
+              <tr className="border-b border-gray-200 dark:border-neutral-800">
                 <th className="text-left p-4 text-gray-900 dark:text-white font-semibold">
                   Feature
                 </th>
@@ -396,7 +396,7 @@ export default function PricingContent() {
               {FEATURE_COMPARISON.slice(0, showAllFeatures ? undefined : 8).map((item, i) => (
                 <tr
                   key={i}
-                  className="border-b border-gray-100 dark:border-gray-700/50 last:border-0"
+                  className="border-b border-gray-100 dark:border-neutral-800/50 last:border-0"
                 >
                   <td className="p-4">
                     <div className="font-medium text-gray-900 dark:text-white">{item.feature}</div>
@@ -511,7 +511,7 @@ function FeatureValue({ value }: { value: boolean | string }) {
   if (value === false) {
     return (
       <svg
-        className="w-5 h-5 text-gray-300 dark:text-gray-600 mx-auto"
+        className="w-5 h-5 text-gray-300 dark:text-gray-400 mx-auto"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -525,7 +525,7 @@ function FeatureValue({ value }: { value: boolean | string }) {
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   return (
-    <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
       <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{question}</h3>
       <p className="text-sm text-gray-600 dark:text-gray-400">{answer}</p>
     </div>

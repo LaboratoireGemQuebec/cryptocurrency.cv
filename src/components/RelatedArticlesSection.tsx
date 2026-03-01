@@ -71,7 +71,7 @@ export default function RelatedArticlesSection({
             <Link
               key={article.link}
               href={`/article/${articleId}`}
-              className="group block p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-gray-700 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg transition-all"
+              className="group block p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-neutral-800 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg transition-all"
             >
               <div className="flex items-center gap-2 mb-2">
                 <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${sourceColor}`}>

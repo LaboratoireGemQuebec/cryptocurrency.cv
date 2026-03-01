@@ -755,7 +755,7 @@ export async function getUniswapMultichain(): Promise<
   );
 
   return results
-    .filter((r): r is PromiseFulfilledResult<{ chain: string; tvl: number; poolCount: number; topPools: UniswapPool[] }> =>
+    .filter((r): r is PromiseFulfilledResult<{ chain: keyof typeof SUBGRAPHS.uniswapV3; tvl: number; poolCount: number; topPools: UniswapPool[] }> =>
       r.status === 'fulfilled'
     )
     .map(r => r.value);

@@ -47,7 +47,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
           { label: 'Upcoming', value: airdrops.filter(a => a.status === 'upcoming').length, emoji: '⏳' },
           { label: 'Verified', value: airdrops.filter(a => a.verified).length, emoji: '✅' },
         ].map(stat => (
-          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
             <span className="text-2xl">{stat.emoji}</span>
             <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{stat.value}</p>
             <p className="text-xs text-gray-500 dark:text-slate-400">{stat.label}</p>
@@ -63,8 +63,8 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
             onClick={() => setStatusFilter(status)}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${
               statusFilter === status
-                ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
+                ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
+                : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-neutral-800 hover:bg-gray-100'
             }`}
           >
             {status === 'all' ? 'All' : statusConfig[status].label}
@@ -80,7 +80,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
           return (
             <div
               key={airdrop.id}
-              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition ${
+              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 hover:shadow-lg transition ${
                 airdrop.status === 'ended' ? 'opacity-60' : ''
               }`}
             >

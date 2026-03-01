@@ -203,7 +203,7 @@ export default async function TopicPage({ params }: Props) {
                   >
                     {topicInfo[related]?.title || related}
                   </Link>
-                  {index < info.relatedTopics.length - 1 && <span className="text-gray-400 dark:text-slate-600"> • </span>}
+                  {index < info.relatedTopics.length - 1 && <span className="text-gray-400 dark:text-gray-400"> • </span>}
                 </span>
               ))}
             </div>
@@ -213,7 +213,7 @@ export default async function TopicPage({ params }: Props) {
           {data.articles.length > 0 ? (
             <Posts articles={data.articles} />
           ) : (
-            <div className="text-center py-12 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700">
+            <div className="text-center py-12 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800">
               <span className="text-5xl mb-4 block">🔍</span>
               <p className="text-gray-500 dark:text-slate-400 mb-2">No articles found for this topic.</p>
               <p className="text-sm text-gray-500 dark:text-slate-400">

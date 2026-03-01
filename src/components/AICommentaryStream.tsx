@@ -207,9 +207,9 @@ export function AICommentaryStream({
   };
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-gray-100 dark:border-slate-700 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 dark:from-indigo-500/20 dark:via-purple-500/20 dark:to-pink-500/20">
+      <div className="px-4 py-3 border-b border-gray-100 dark:border-neutral-800 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 dark:from-indigo-500/20 dark:via-purple-500/20 dark:to-pink-500/20">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className={`flex items-center gap-1.5 ${isStreaming ? 'animate-pulse' : ''}`}>
@@ -229,7 +229,7 @@ export function AICommentaryStream({
             <select
               value={tone}
               onChange={e => setTone(e.target.value as CommentaryTone)}
-              className="text-xs bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-slate-600 rounded-lg px-2 py-1 text-gray-700 dark:text-gray-300"
+              className="text-xs bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-neutral-800 rounded-lg px-2 py-1 text-gray-700 dark:text-gray-300"
             >
               {Object.entries(toneLabels).map(([key, { label, emoji }]) => (
                 <option key={key} value={key}>
@@ -255,7 +255,7 @@ export function AICommentaryStream({
 
       {/* Market Snapshot Bar */}
       {showSnapshot && snapshot && (
-        <div className="px-4 py-2 bg-gray-50/50 dark:bg-black/30 border-b border-gray-100 dark:border-slate-700/50 flex items-center gap-4 overflow-x-auto text-xs">
+        <div className="px-4 py-2 bg-gray-50/50 dark:bg-black/30 border-b border-gray-100 dark:border-neutral-800/50 flex items-center gap-4 overflow-x-auto text-xs">
           <span className="font-mono font-semibold text-gray-800 dark:text-gray-200">
             BTC ${snapshot.btcPrice.toLocaleString()}
             <span className={snapshot.btcChange24h >= 0 ? 'text-emerald-500 ml-1' : 'text-red-500 ml-1'}>
@@ -299,7 +299,7 @@ export function AICommentaryStream({
           </div>
         )}
 
-        <div className="divide-y divide-gray-100 dark:divide-slate-700/50">
+        <div className="divide-y divide-gray-100 dark:divide-neutral-800/50">
           {events.map(event => {
             const style = urgencyStyles[event.urgency];
             return (
@@ -362,7 +362,7 @@ export function AICommentaryStream({
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/30 flex items-center justify-between">
+      <div className="px-4 py-2 border-t border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/30 flex items-center justify-between">
         <span className="text-[10px] text-gray-400 dark:text-gray-500">
           ⚠️ AI-generated commentary. Not financial advice.
         </span>

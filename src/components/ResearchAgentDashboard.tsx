@@ -169,9 +169,9 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
   };
 
   return (
-    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-neutral-800/50 ${className}`}>
       {/* ── Header ── */}
-      <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
+      <div className="p-6 border-b border-slate-200 dark:border-neutral-800/50">
         <div className="flex items-center gap-3 mb-4">
           <div className="p-2 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 text-white">
             <Brain className="w-6 h-6" />
@@ -192,7 +192,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && startResearch()}
               placeholder="Ask anything about crypto… e.g., 'What's the impact of spot ETH ETFs on DeFi?'"
-              className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500/50 transition-all"
+              className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-black border border-slate-200 dark:border-neutral-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500/50 transition-all"
             />
           </div>
           <button
@@ -255,7 +255,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
 
           {/* Synthesis */}
           {report.synthesis && (
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-800/30 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-800/30 rounded-xl p-5 border border-slate-200 dark:border-neutral-800/50">
               <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                 <Brain className="w-4 h-4" />
                 Synthesized Answer
@@ -326,7 +326,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
 
           {/* Confidence + Duration */}
           {report.status === 'complete' && (
-            <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-slate-700/50">
+            <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-neutral-800/50">
               {report.confidenceScore !== undefined && (
                 <span className="flex items-center gap-1">
                   Confidence: <ConfidenceBadge score={report.confidenceScore} />
@@ -349,7 +349,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
 
       {/* ── History ── */}
       {history.length > 1 && (
-        <div className="p-6 border-t border-slate-200 dark:border-slate-700/50">
+        <div className="p-6 border-t border-slate-200 dark:border-neutral-800/50">
           <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
             Recent Research
           </h3>
@@ -358,7 +358,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
               <button
                 key={r.id}
                 onClick={() => { setReport(r); setQuery(r.query); }}
-                className="w-full text-left p-3 rounded-lg bg-slate-50 dark:bg-black/50 hover:bg-slate-100 dark:hover:bg-neutral-900 border border-slate-200 dark:border-slate-700/50 transition-colors"
+                className="w-full text-left p-3 rounded-lg bg-slate-50 dark:bg-black/50 hover:bg-slate-100 dark:hover:bg-neutral-900 border border-slate-200 dark:border-neutral-800/50 transition-colors"
               >
                 <div className="text-sm font-medium text-slate-700 dark:text-slate-300 truncate">{r.query}</div>
                 <div className="text-xs text-slate-400 mt-1 flex items-center gap-2">
@@ -436,7 +436,7 @@ function AgentCard({
   const colorClass = ROLE_COLORS[agent.role] || 'bg-slate-500/20 text-slate-400 border-slate-500/30';
 
   return (
-    <div className="rounded-lg border border-slate-200 dark:border-slate-700/50 overflow-hidden">
+    <div className="rounded-lg border border-slate-200 dark:border-neutral-800/50 overflow-hidden">
       <button
         onClick={onToggle}
         className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-neutral-900/50 transition-colors"
@@ -457,10 +457,10 @@ function AgentCard({
         <span className="text-xs text-slate-400">{agent.durationMs}ms</span>
       </button>
       {expanded && (
-        <div className="px-10 pb-3 text-sm text-slate-600 dark:text-slate-400 whitespace-pre-wrap border-t border-slate-100 dark:border-slate-800 pt-3">
+        <div className="px-10 pb-3 text-sm text-slate-600 dark:text-slate-400 whitespace-pre-wrap border-t border-slate-100 dark:border-neutral-800 pt-3">
           {agent.finding}
           {agent.sources.length > 0 && (
-            <div className="mt-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+            <div className="mt-2 pt-2 border-t border-slate-100 dark:border-neutral-800">
               <span className="text-xs text-slate-400 font-medium">Sources:</span>
               <div className="flex flex-wrap gap-1 mt-1">
                 {agent.sources.map((src, i) => (

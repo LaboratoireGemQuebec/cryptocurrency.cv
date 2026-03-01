@@ -138,7 +138,7 @@ async function getArticlesForTag(tag: Tag): Promise<NewsArticle[]> {
 function ArticleCard({ article, locale }: { article: NewsArticle; locale: string }) {
   const localizedDescription = getLocalizedDescription(article, locale);
   return (
-    <article className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg hover:border-primary/50 transition-all duration-200">
+    <article className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 hover:shadow-lg hover:border-primary/50 transition-all duration-200">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <a
@@ -171,7 +171,7 @@ function RelatedTagsSection({ tags }: { tags: Tag[] }) {
   if (tags.length === 0) return null;
   
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
       <h3 className="font-bold text-gray-900 dark:text-white mb-4">Related Tags</h3>
       <div className="flex flex-wrap gap-2">
         {tags.map(tag => (
@@ -200,7 +200,7 @@ function TagInfo({ tag }: { tag: Tag }) {
   };
   
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
       <h3 className="font-bold text-gray-900 dark:text-white mb-4">About This Tag</h3>
       <p className="text-gray-600 dark:text-slate-400 text-sm mb-4">
         {tag.description}
@@ -309,7 +309,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
                   )}
                 </div>
               ) : (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-12 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-12 text-center">
                   <div className="text-4xl mb-4">📭</div>
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     No articles found
@@ -333,7 +333,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
               <RelatedTagsSection tags={relatedTags} />
               
               {/* All Tags Link */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">Explore More</h3>
                 <div className="space-y-3">
                   <Link
@@ -363,7 +363,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
           </div>
           
           {/* SEO Content Footer */}
-          <section className="mt-12 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-8">
+          <section className="mt-12 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-8">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               About {tag.name} News
             </h2>

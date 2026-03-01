@@ -21,7 +21,7 @@ function Skeleton({ className = '' }: { className?: string }) {
 
 function NewsCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-5">
       <div className="flex items-center justify-between mb-3">
         <Skeleton className="h-6 w-20 rounded-full" />
         <Skeleton className="h-4 w-16" />
@@ -31,7 +31,7 @@ function NewsCardSkeleton() {
       <Skeleton className="h-5 w-3/5 mb-4" />
       <Skeleton className="h-4 w-full mb-2" />
       <Skeleton className="h-4 w-2/3 mb-4" />
-      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-slate-700">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-neutral-800">
         <Skeleton className="h-4 w-20" />
         <Skeleton className="h-4 w-16" />
       </div>

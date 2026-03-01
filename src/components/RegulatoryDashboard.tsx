@@ -279,7 +279,7 @@ function GlobalRiskRadar({ summary }: { summary: RegulatoryIntelligenceSummary |
   const riskValue = riskLevelValue[summary.globalRiskLevel] || 50;
 
   return (
-    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-neutral-800">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">🌐 Global Regulatory Risk</h3>
         <RiskLevelBadge level={summary.globalRiskLevel} />
@@ -318,7 +318,7 @@ function GlobalRiskRadar({ summary }: { summary: RegulatoryIntelligenceSummary |
       </div>
 
       {/* Market Impact */}
-      <div className="border-t border-gray-200 dark:border-slate-700 pt-4">
+      <div className="border-t border-gray-200 dark:border-neutral-800 pt-4">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-gray-600 dark:text-gray-400">Market Impact:</span>
           <div className="flex items-center gap-4">
@@ -345,14 +345,14 @@ function JurisdictionRiskMap({ jurisdictions }: { jurisdictions: JurisdictionPro
   }, [jurisdictions]);
 
   return (
-    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-neutral-800">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">🗺️ Jurisdiction Risk Map</h3>
       
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {sortedJurisdictions.slice(0, 12).map((jurisdiction) => (
           <div 
             key={jurisdiction.jurisdiction}
-            className="p-3 rounded-lg border border-gray-200 dark:border-slate-700 hover:border-blue-500 transition-colors cursor-pointer"
+            className="p-3 rounded-lg border border-gray-200 dark:border-neutral-800 hover:border-blue-500 transition-colors cursor-pointer"
           >
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xl">{jurisdiction.flag}</span>
@@ -389,7 +389,7 @@ function DeadlinesTimeline({ deadlines }: { deadlines: ComplianceDeadline[] }) {
   }, [deadlines]);
 
   return (
-    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-neutral-800">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">⏰ Compliance Deadlines</h3>
       
       <div className="space-y-4">
@@ -457,7 +457,7 @@ function EventCard({ event }: { event: RegulatoryEvent }) {
       className={`p-4 rounded-lg border ${
         event.isBreaking 
           ? 'border-red-500 bg-red-50 dark:bg-red-900/10' 
-          : 'border-gray-200 dark:border-slate-700 bg-white dark:bg-black'
+          : 'border-gray-200 dark:border-neutral-800 bg-white dark:bg-black'
       } cursor-pointer hover:shadow-md transition-shadow`}
       onClick={() => setExpanded(!expanded)}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setExpanded(!expanded); }}
@@ -521,7 +521,7 @@ function EventFeed({ events }: { events: RegulatoryEvent[] }) {
   }, [events, filter]);
 
   return (
-    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-neutral-800">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">📰 Regulatory Events</h3>
         <div className="flex items-center gap-2">
@@ -559,7 +559,7 @@ function EventFeed({ events }: { events: RegulatoryEvent[] }) {
  */
 function TrendingTopics({ topics }: { topics: { topic: string; mentions: number; sentiment: string }[] }) {
   return (
-    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-neutral-800">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">🔥 Trending Topics</h3>
       
       <div className="space-y-2">

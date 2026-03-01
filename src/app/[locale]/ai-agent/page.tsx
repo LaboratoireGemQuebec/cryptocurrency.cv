@@ -76,7 +76,7 @@ export default async function AIAgentPage({ params }: Props) {
         </div>
 
         {/* How It Works */}
-        <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6 mb-8">
+        <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <span>⚡</span> How It Works
           </h2>

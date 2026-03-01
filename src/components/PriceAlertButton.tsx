@@ -75,14 +75,14 @@ export function PriceAlertButton({
         🔔 {hasAlert ? "Alert set" : "Set alert"}
       </button>
       {open && (
-        <div className="absolute top-full mt-2 left-0 z-20 w-64 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl shadow-xl p-4">
+        <div className="absolute top-full mt-2 left-0 z-20 w-64 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl shadow-xl p-4">
           <p className="text-xs text-gray-500 dark:text-slate-400 mb-3">
             Current: ${currentPrice.toLocaleString()}
           </p>
           <select
             value={direction}
             onChange={(e) => setDirection(e.target.value as "above" | "below")}
-            className="w-full mb-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
+            className="w-full mb-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-neutral-800 text-sm text-gray-900 dark:text-white"
           >
             <option value="above">Alert when price goes above</option>
             <option value="below">Alert when price goes below</option>
@@ -92,12 +92,12 @@ export function PriceAlertButton({
             value={target}
             onChange={(e) => setTarget(e.target.value)}
             placeholder={`e.g. ${(currentPrice * 1.1).toFixed(2)}`}
-            className="w-full mb-3 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
+            className="w-full mb-3 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-neutral-800 text-sm text-gray-900 dark:text-white"
           />
           <div className="flex gap-2">
             <button
               onClick={save}
-              className="flex-1 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-semibold"
+              className="flex-1 py-2 bg-gray-900 dark:bg-white text-white dark:text-white rounded-lg text-sm font-semibold"
             >
               {saved ? "✓ Saved!" : "Save"}
             </button>

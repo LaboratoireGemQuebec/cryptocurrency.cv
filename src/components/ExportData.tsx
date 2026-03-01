@@ -94,7 +94,7 @@ export function ExportButton({ getData, label = 'Export', className = '' }: Expo
       <button
         onClick={() => setOpen(!open)}
         disabled={exporting}
-        className={`flex items-center gap-2 px-3 py-2 text-sm font-medium border border-gray-300 dark:border-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-black transition-colors disabled:opacity-50 ${className}`}
+        className={`flex items-center gap-2 px-3 py-2 text-sm font-medium border border-gray-300 dark:border-neutral-800 rounded-lg hover:bg-gray-100 dark:hover:bg-black transition-colors disabled:opacity-50 ${className}`}
       >
         <ArrowDownTrayIcon className="w-4 h-4" />
         {exporting ? 'Exporting...' : label}
@@ -103,7 +103,7 @@ export function ExportButton({ getData, label = 'Export', className = '' }: Expo
       {open && (
         <>
           <div role="presentation" className="fixed inset-0 z-40" onClick={() => setOpen(false)} onKeyDown={() => setOpen(false)} />
-          <div className="absolute right-0 top-full mt-1 z-50 w-40 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg py-1">
+          <div className="absolute right-0 top-full mt-1 z-50 w-40 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg shadow-lg py-1">
             <button
               onClick={() => handleExport('csv')}
               className="w-full flex items-center gap-3 px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-black transition-colors"

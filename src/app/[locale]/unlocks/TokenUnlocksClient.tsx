@@ -69,7 +69,7 @@ export function TokenUnlocksClient({ unlocks }: { unlocks: TokenUnlock[] }) {
           { label: 'High Impact', value: unlocks.filter(u => u.impact === 'high').length, emoji: '🔴' },
           { label: 'Next 30 Days', value: unlocks.filter(u => { const d = daysUntil(u.unlockDate); return d >= 0 && d <= 30; }).length, emoji: '📅' },
         ].map(stat => (
-          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
             <span className="text-2xl">{stat.emoji}</span>
             <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{stat.value}</p>
             <p className="text-xs text-gray-500 dark:text-slate-400">{stat.label}</p>
@@ -85,8 +85,8 @@ export function TokenUnlocksClient({ unlocks }: { unlocks: TokenUnlock[] }) {
             onClick={() => setImpactFilter(impact)}
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${
               impactFilter === impact
-                ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
+                ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
+                : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-neutral-800 hover:bg-gray-100'
             }`}
           >
             {impact === 'all' ? 'All Impact' : impactConfig[impact].label}
@@ -97,7 +97,7 @@ export function TokenUnlocksClient({ unlocks }: { unlocks: TokenUnlock[] }) {
           <select
             value={sortBy}
             onChange={e => setSortBy(e.target.value as 'date' | 'value' | 'percent')}
-            className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
+            className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
           >
             <option value="date">Date (soonest)</option>
             <option value="value">Value (highest)</option>
@@ -115,7 +115,7 @@ export function TokenUnlocksClient({ unlocks }: { unlocks: TokenUnlock[] }) {
           return (
             <div
               key={unlock.id}
-              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 border-l-4 ${imp.border} hover:shadow-lg transition ${isPast ? 'opacity-50' : ''}`}
+              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 border-l-4 ${imp.border} hover:shadow-lg transition ${isPast ? 'opacity-50' : ''}`}
             >
               <div className="flex items-start justify-between gap-4 mb-3">
                 <div>

@@ -94,7 +94,7 @@ export function Pagination({
           </svg>
         </Link>
       ) : (
-        <span className="px-3 py-2 text-gray-300 dark:text-slate-600 cursor-not-allowed">
+        <span className="px-3 py-2 text-gray-300 dark:text-gray-400 cursor-not-allowed">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
@@ -146,7 +146,7 @@ export function Pagination({
           </svg>
         </Link>
       ) : (
-        <span className="px-3 py-2 text-gray-300 dark:text-slate-600 cursor-not-allowed">
+        <span className="px-3 py-2 text-gray-300 dark:text-gray-400 cursor-not-allowed">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

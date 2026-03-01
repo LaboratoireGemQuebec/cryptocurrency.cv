@@ -281,7 +281,7 @@ function TrendsView({
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead>
-          <tr className="text-left text-sm text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">
+          <tr className="text-left text-sm text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
             <th className="pb-3 font-medium">#</th>
             <th className="pb-3 font-medium">Asset</th>
             <th className="pb-3 font-medium text-right">Mentions</th>
@@ -389,7 +389,7 @@ function MetricsView({
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="text-left text-sm text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">
+              <tr className="text-left text-sm text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="pb-3 font-medium">Asset</th>
                 <th className="pb-3 font-medium text-right">Price</th>
                 <th 
@@ -530,7 +530,7 @@ function MessagesView({
       {messages.map((message) => (
         <div 
           key={message.id}
-          className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-700"
+          className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-800"
         >
           <div className="flex items-start justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -586,7 +586,7 @@ function NarrativesView({ narratives, loading }: { narratives: NarrativeItem[]; 
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="animate-pulse p-4 bg-neutral-50 dark:bg-black/50 rounded-xl border border-neutral-200 dark:border-neutral-700">
+          <div key={i} className="animate-pulse p-4 bg-neutral-50 dark:bg-black/50 rounded-xl border border-neutral-200 dark:border-neutral-800">
             <div className="h-5 bg-neutral-200 dark:bg-black rounded w-1/3 mb-3" />
             <div className="h-3 bg-neutral-200 dark:bg-black rounded w-2/3 mb-2" />
             <div className="h-3 bg-neutral-200 dark:bg-black rounded w-1/2" />
@@ -616,7 +616,7 @@ function NarrativesView({ narratives, loading }: { narratives: NarrativeItem[]; 
             ? 'border-green-200 dark:border-green-800/50'
             : isFading
             ? 'border-amber-200 dark:border-amber-800/50'
-            : 'border-neutral-200 dark:border-neutral-700';
+            : 'border-neutral-200 dark:border-neutral-800';
           const pillBg = isRising
             ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
             : isFading

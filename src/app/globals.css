@@ -94,34 +94,60 @@
 
   /* =============================================
      FORCE BLACK BACKGROUNDS
-     Override all dark-mode background color tokens
-     to pure black for a uniform dark appearance.
+     Override ALL color palette tokens used for
+     backgrounds to pure black (#000). This ensures
+     every bg-*, dark:bg-*, and paired light/dark
+     class resolves to black in dark mode.
      ============================================= */
 
-  /* Slate palette */
+  /* Slate palette — all shades */
   --color-slate-50: #000000;
   --color-slate-100: #000000;
+  --color-slate-200: #000000;
+  --color-slate-300: #000000;
+  --color-slate-400: #000000;
+  --color-slate-500: #000000;
+  --color-slate-600: #000000;
+  --color-slate-700: #000000;
   --color-slate-800: #000000;
   --color-slate-900: #000000;
   --color-slate-950: #000000;
 
-  /* Gray palette */
+  /* Gray palette — all shades */
   --color-gray-50: #000000;
   --color-gray-100: #000000;
+  --color-gray-200: #000000;
+  --color-gray-300: #000000;
+  --color-gray-400: #000000;
+  --color-gray-500: #000000;
+  --color-gray-600: #000000;
+  --color-gray-700: #000000;
   --color-gray-800: #000000;
   --color-gray-900: #000000;
   --color-gray-950: #000000;
 
-  /* Neutral palette */
+  /* Neutral palette — all shades */
   --color-neutral-50: #000000;
   --color-neutral-100: #000000;
+  --color-neutral-200: #000000;
+  --color-neutral-300: #000000;
+  --color-neutral-400: #000000;
+  --color-neutral-500: #000000;
+  --color-neutral-600: #000000;
+  --color-neutral-700: #000000;
   --color-neutral-800: #000000;
   --color-neutral-900: #000000;
   --color-neutral-950: #000000;
 
-  /* Zinc palette */
+  /* Zinc palette — all shades */
   --color-zinc-50: #000000;
   --color-zinc-100: #000000;
+  --color-zinc-200: #000000;
+  --color-zinc-300: #000000;
+  --color-zinc-400: #000000;
+  --color-zinc-500: #000000;
+  --color-zinc-600: #000000;
+  --color-zinc-700: #000000;
   --color-zinc-800: #000000;
   --color-zinc-900: #000000;
   --color-zinc-950: #000000;

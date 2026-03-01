@@ -108,7 +108,7 @@ export function ScrollIndicator({
       {showArrows && (
         <button
           onClick={() => scroll('left')}
-          className={`absolute left-2 top-1/2 -translate-y-1/2 z-20 ${arrowSizeClasses[arrowSize]} rounded-full bg-white dark:bg-black shadow-lg border border-gray-200 dark:border-slate-700 flex items-center justify-center text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-all duration-150 ${
+          className={`absolute left-2 top-1/2 -translate-y-1/2 z-20 ${arrowSizeClasses[arrowSize]} rounded-full bg-white dark:bg-black shadow-lg border border-gray-200 dark:border-neutral-800 flex items-center justify-center text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-all duration-150 ${
             canScrollLeft ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
           }`}
           aria-label="Scroll left"
@@ -123,7 +123,7 @@ export function ScrollIndicator({
       {showArrows && (
         <button
           onClick={() => scroll('right')}
-          className={`absolute right-2 top-1/2 -translate-y-1/2 z-20 ${arrowSizeClasses[arrowSize]} rounded-full bg-white dark:bg-black shadow-lg border border-gray-200 dark:border-slate-700 flex items-center justify-center text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-all duration-150 ${
+          className={`absolute right-2 top-1/2 -translate-y-1/2 z-20 ${arrowSizeClasses[arrowSize]} rounded-full bg-white dark:bg-black shadow-lg border border-gray-200 dark:border-neutral-800 flex items-center justify-center text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-all duration-150 ${
             canScrollRight ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
           }`}
           aria-label="Scroll right"

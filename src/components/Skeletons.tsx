@@ -36,7 +36,7 @@ export function Skeleton({ className = '' }: SkeletonProps) {
  */
 export function ArticleCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-700 p-5 h-full">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-5 h-full">
       <div className="flex items-center justify-between mb-3">
         <Skeleton className="h-6 w-20 rounded-full" />
         <Skeleton className="h-4 w-16" />
@@ -45,7 +45,7 @@ export function ArticleCardSkeleton() {
       <Skeleton className="h-5 w-3/4 mb-4" />
       <Skeleton className="h-4 w-full mb-2" />
       <Skeleton className="h-4 w-2/3 mb-4" />
-      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-neutral-800">
         <Skeleton className="h-4 w-24" />
         <Skeleton className="h-4 w-16" />
       </div>
@@ -163,7 +163,7 @@ export function ArticlePageSkeleton() {
       <Skeleton className="h-12 w-full mb-2" />
       <Skeleton className="h-12 w-3/4 mb-6" />
       
-      <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200 dark:border-neutral-800">
         <Skeleton className="w-12 h-12 rounded-full" />
         <div>
           <Skeleton className="h-4 w-32 mb-1" />

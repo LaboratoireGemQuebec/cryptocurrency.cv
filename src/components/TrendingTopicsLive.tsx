@@ -82,7 +82,7 @@ export function TrendingTopicsLive() {
     bullish: 'border-green-300 dark:border-green-600',
     negative: 'border-red-300 dark:border-red-600',
     bearish: 'border-red-300 dark:border-red-600',
-    neutral: 'border-gray-200 dark:border-slate-600',
+    neutral: 'border-gray-200 dark:border-neutral-800',
   };
 
   return (

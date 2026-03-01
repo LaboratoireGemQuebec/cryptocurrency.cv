@@ -348,7 +348,7 @@ export function MarketHeatmap({
 
         {/* Tooltip */}
         {hoveredCoin && (
-          <div className="absolute top-4 right-4 bg-white dark:bg-black rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-700 p-4 z-10 min-w-[200px]">
+          <div className="absolute top-4 right-4 bg-white dark:bg-black rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-800 p-4 z-10 min-w-[200px]">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-bold text-neutral-900 dark:text-white">
                 {hoveredCoin.symbol}

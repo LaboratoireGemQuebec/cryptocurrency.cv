@@ -164,7 +164,7 @@ const OpportunityCard: React.FC<{ opportunity: TradingOpportunity }> = ({ opport
   };
   
   return (
-    <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
+    <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className={`px-2 py-1 rounded text-xs font-bold text-white uppercase ${typeColors[opportunity.type]}`}>
@@ -451,7 +451,7 @@ export function AIMarketAgentDashboard() {
       {activeTab === 'overview' && (
         <div className="space-y-6">
           {/* Market Narrative */}
-          <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+          <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <span>📝</span> Market Narrative
             </h3>
@@ -461,7 +461,7 @@ export function AIMarketAgentDashboard() {
           </div>
           
           {/* Sector Rotation */}
-          <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+          <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <span>🔄</span> Sector Rotation
             </h3>
@@ -493,7 +493,7 @@ export function AIMarketAgentDashboard() {
           
           {/* Upcoming Catalysts */}
           {intelligence.upcomingCatalysts.length > 0 && (
-            <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+            <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                 <span>📅</span> Upcoming Catalysts
               </h3>
@@ -587,7 +587,7 @@ export function AIMarketAgentDashboard() {
           
           {/* Correlation Anomalies */}
           {intelligence.correlationAnomalies.length > 0 && (
-            <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+            <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 🔗 Correlation Anomalies
               </h3>
@@ -618,9 +618,9 @@ export function AIMarketAgentDashboard() {
       )}
       
       {activeTab === 'chat' && (
-        <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden">
+        <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl overflow-hidden">
           {/* Chat Header */}
-          <div className="border-b border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-750">
+          <div className="border-b border-gray-200 dark:border-neutral-800 p-4 bg-gray-50 dark:bg-slate-750">
             <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
               <span>💬</span> Ask the AI Agent
             </h3>
@@ -631,7 +631,7 @@ export function AIMarketAgentDashboard() {
           
           {/* Quick Questions */}
           {chatMessages.length === 0 && (
-            <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+            <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
               <div className="text-sm text-gray-600 dark:text-slate-400 mb-2">Quick questions:</div>
               <div className="flex flex-wrap gap-2">
                 {quickQuestions.map(q => (
@@ -698,7 +698,7 @@ export function AIMarketAgentDashboard() {
           </div>
           
           {/* Chat Input */}
-          <div className="border-t border-gray-200 dark:border-slate-700 p-4">
+          <div className="border-t border-gray-200 dark:border-neutral-800 p-4">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -706,7 +706,7 @@ export function AIMarketAgentDashboard() {
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                 placeholder="Ask about markets, signals, opportunities..."
-                className="flex-1 px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-xl bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="flex-1 px-4 py-2 border border-gray-300 dark:border-neutral-800 rounded-xl bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 disabled={chatLoading}
               />
               <button

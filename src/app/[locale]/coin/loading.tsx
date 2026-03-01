@@ -34,7 +34,7 @@ export default function Loading() {
         </div>
 
         {/* Chart area */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 mb-8">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 mb-8">
           <div className="flex gap-2 mb-4">
             {['1H', '1D', '1W', '1M', '1Y'].map((label) => (
               <Skeleton key={label} className="h-8 w-14 rounded-lg" />
@@ -46,7 +46,7 @@ export default function Loading() {
         {/* Info grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-4">
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-4">
               <Skeleton className="h-4 w-24 mb-2" />
               <Skeleton className="h-6 w-32" />
             </div>
@@ -57,7 +57,7 @@ export default function Loading() {
         <Skeleton className="h-8 w-48 mb-4" />
         <div className="grid md:grid-cols-2 gap-4">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-5">
               <Skeleton className="h-5 w-full mb-2" />
               <Skeleton className="h-4 w-3/4 mb-2" />
               <Skeleton className="h-4 w-1/2" />

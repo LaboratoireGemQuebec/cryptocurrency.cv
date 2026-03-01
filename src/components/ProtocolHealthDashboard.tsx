@@ -212,7 +212,7 @@ function RiskGaugeMeter({ score, grade }: { score: number; grade: string }) {
     <div className="relative w-48 h-24 mx-auto">
       {/* Background arc */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="w-48 h-48 rounded-full border-[16px] border-gray-200 dark:border-slate-700" 
+        <div className="w-48 h-48 rounded-full border-[16px] border-gray-200 dark:border-neutral-800" 
              style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }} />
       </div>
       
@@ -233,7 +233,7 @@ function RiskGaugeMeter({ score, grade }: { score: number; grade: string }) {
       </div>
       
       {/* Center cover */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-white dark:bg-black rounded-full border-4 border-gray-200 dark:border-slate-600" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-white dark:bg-black rounded-full border-4 border-gray-200 dark:border-neutral-800" />
       
       {/* Score display */}
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-center">
@@ -278,7 +278,7 @@ function ProtocolCard({ protocol, onClick }: { protocol: ProtocolRanking; onClic
       tabIndex={0}
       onClick={onClick}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onClick(); }}
-      className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all cursor-pointer"
+      className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all cursor-pointer"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
@@ -328,7 +328,7 @@ function ProtocolCard({ protocol, onClick }: { protocol: ProtocolRanking; onClic
 
 function IncidentCard({ incident }: { incident: SecurityIncident }) {
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
       <div className="flex items-start justify-between mb-2">
         <div>
           <h3 className="font-semibold text-gray-900 dark:text-white capitalize">
@@ -430,7 +430,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
       {/* Main Stats Grid */}
       <div className="grid md:grid-cols-3 gap-6">
         {/* Risk Score */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">Safety Score</h3>
           <RiskGaugeMeter score={health.riskScore.overall} grade={health.riskScore.grade} />
           <div className="mt-8 space-y-1">
@@ -441,7 +441,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
         </div>
 
         {/* TVL & Stats */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">TVL & Performance</h3>
           <div className="text-center mb-4">
             <div className="text-3xl font-bold text-gray-900 dark:text-white">{formatUsd(health.tvl.current)}</div>
@@ -482,7 +482,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
         {/* Audits & Team */}
         <div className="space-y-4">
           {/* Audits */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Security Audits</h3>
             {health.audits.length === 0 ? (
               <p className="text-sm text-red-500">⚠️ No audits on file</p>
@@ -512,7 +512,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
           </div>
 
           {/* Insurance */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Insurance Coverage</h3>
             {!health.insurance ? (
               <p className="text-sm text-yellow-600 dark:text-yellow-400">⚠️ No insurance coverage</p>
@@ -535,7 +535,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
 
           {/* Team */}
           {health.team && (
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Team</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center justify-between">
@@ -602,12 +602,12 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
 
       {/* Incidents */}
       {health.incidents.length > 0 && (
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Security Incidents History</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-left text-gray-500 dark:text-slate-400 border-b dark:border-slate-700">
+                <tr className="text-left text-gray-500 dark:text-slate-400 border-b dark:border-neutral-800">
                   <th className="pb-2">Date</th>
                   <th className="pb-2">Type</th>
                   <th className="pb-2">Severity</th>
@@ -618,7 +618,7 @@ function ProtocolDetailView({ health, onBack }: { health: ProtocolHealth; onBack
               </thead>
               <tbody>
                 {health.incidents.map((incident, i) => (
-                  <tr key={i} className="border-b dark:border-slate-700">
+                  <tr key={i} className="border-b dark:border-neutral-800">
                     <td className="py-2">{formatDate(incident.date)}</td>
                     <td className="py-2 capitalize">{incident.type.replace(/-/g, ' ')}</td>
                     <td className="py-2">
@@ -766,7 +766,7 @@ export function ProtocolHealthDashboard() {
   return (
     <div className="space-y-6">
       {/* Tabs */}
-      <div className="flex items-center gap-4 border-b border-gray-200 dark:border-slate-700">
+      <div className="flex items-center gap-4 border-b border-gray-200 dark:border-neutral-800">
         <button
           onClick={() => setActiveTab('rankings')}
           className={`pb-3 px-1 text-sm font-medium border-b-2 transition-colors ${
@@ -799,13 +799,13 @@ export function ProtocolHealthDashboard() {
                 placeholder="Search protocols..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="w-full px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
               />
             </div>
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg text-gray-900 dark:text-white"
+              className="px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg text-gray-900 dark:text-white"
             >
               {categories.map(cat => (
                 <option key={cat.id} value={cat.id}>{cat.name}</option>
@@ -815,23 +815,23 @@ export function ProtocolHealthDashboard() {
 
           {/* Stats Summary */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
               <div className="text-2xl font-bold text-gray-900 dark:text-white">{rankings.length}</div>
               <div className="text-sm text-gray-500 dark:text-slate-400">Protocols Tracked</div>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
               <div className="text-2xl font-bold text-green-500">
                 {rankings.filter(r => r.riskGrade.startsWith('A') || r.riskGrade.startsWith('B')).length}
               </div>
               <div className="text-sm text-gray-500 dark:text-slate-400">Safe (A/B Grade)</div>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
               <div className="text-2xl font-bold text-yellow-500">
                 {rankings.filter(r => r.riskGrade.startsWith('C')).length}
               </div>
               <div className="text-sm text-gray-500 dark:text-slate-400">Moderate Risk (C)</div>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
               <div className="text-2xl font-bold text-red-500">
                 {rankings.filter(r => r.riskGrade === 'D' || r.riskGrade === 'F').length}
               </div>

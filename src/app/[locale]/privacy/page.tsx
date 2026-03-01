@@ -108,24 +108,24 @@ export default async function PrivacyPage({ params }: Props) {
               <div className="overflow-x-auto mt-4">
                 <table className="min-w-full text-sm">
                   <thead>
-                    <tr className="border-b border-gray-200 dark:border-slate-700">
+                    <tr className="border-b border-gray-200 dark:border-neutral-800">
                       <th className="text-left py-2 px-4 font-semibold text-gray-900 dark:text-white">Name</th>
                       <th className="text-left py-2 px-4 font-semibold text-gray-900 dark:text-white">Purpose</th>
                       <th className="text-left py-2 px-4 font-semibold text-gray-900 dark:text-white">Duration</th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-700 dark:text-slate-300">
-                    <tr className="border-b border-gray-100 dark:border-slate-800">
+                    <tr className="border-b border-gray-100 dark:border-neutral-800">
                       <td className="py-2 px-4 font-mono text-xs">__csrf</td>
                       <td className="py-2 px-4">CSRF protection token</td>
                       <td className="py-2 px-4">Session</td>
                     </tr>
-                    <tr className="border-b border-gray-100 dark:border-slate-800">
+                    <tr className="border-b border-gray-100 dark:border-neutral-800">
                       <td className="py-2 px-4 font-mono text-xs">theme</td>
                       <td className="py-2 px-4">Dark/light mode preference</td>
                       <td className="py-2 px-4">1 year</td>
                     </tr>
-                    <tr className="border-b border-gray-100 dark:border-slate-800">
+                    <tr className="border-b border-gray-100 dark:border-neutral-800">
                       <td className="py-2 px-4 font-mono text-xs">locale</td>
                       <td className="py-2 px-4">Language preference</td>
                       <td className="py-2 px-4">1 year</td>

@@ -17,7 +17,7 @@ import { Skeleton } from '@/components/Skeletons';
 
 export function ArticleCardLargeSkeleton() {
   return (
-    <div className="h-[400px] flex bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
+    <div className="h-[400px] flex bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-neutral-800 overflow-hidden">
       {/* Image placeholder */}
       <div className="w-[40%] flex-shrink-0">
         <Skeleton className="h-full w-full" />
@@ -36,7 +36,7 @@ export function ArticleCardLargeSkeleton() {
           </div>
         </div>
         
-        <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-gray-800">
+        <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-neutral-800">
           <Skeleton className="h-6 w-20 rounded-full" />
           <Skeleton className="h-4 w-16 rounded" />
           <Skeleton className="h-4 w-20 rounded" />
@@ -48,7 +48,7 @@ export function ArticleCardLargeSkeleton() {
 
 export function ArticleCardMediumSkeleton() {
   return (
-    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-neutral-800 overflow-hidden">
       {/* Image placeholder */}
       <Skeleton className="h-[200px] w-full" />
       
@@ -58,7 +58,7 @@ export function ArticleCardMediumSkeleton() {
         <Skeleton className="h-5 w-full rounded" />
         <Skeleton className="h-5 w-2/3 rounded" />
         
-        <div className="flex items-center gap-2 pt-3 border-t border-gray-100 dark:border-gray-800">
+        <div className="flex items-center gap-2 pt-3 border-t border-gray-100 dark:border-neutral-800">
           <Skeleton className="h-5 w-16 rounded-full" />
           <Skeleton className="h-4 w-20 rounded" />
         </div>
@@ -90,7 +90,7 @@ export function ArticleCardSmallSkeleton({ showRank = false }: { showRank?: bool
 
 export function ArticleCardListSkeleton() {
   return (
-    <div className="flex gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800">
+    <div className="flex gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-neutral-800">
       {/* Image */}
       <Skeleton className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-lg" />
       

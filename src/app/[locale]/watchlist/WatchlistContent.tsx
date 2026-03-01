@@ -268,8 +268,8 @@ export default function WatchlistPage() {
             </h1>
           </div>
 
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
-            <Star className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-12 text-center">
+            <Star className="w-16 h-16 text-gray-300 dark:text-gray-400 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Your watchlist is empty
             </h2>
@@ -395,7 +395,7 @@ export default function WatchlistPage() {
               placeholder="Search watchlist..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
+              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
             />
             {searchQuery && (
               <button
@@ -424,11 +424,11 @@ export default function WatchlistPage() {
         </div>
 
         {/* Table */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-700">
+                <tr className="border-b border-gray-200 dark:border-neutral-800">
                   <th className="px-4 py-4 text-left">
                     <input
                       type="checkbox"
@@ -437,7 +437,7 @@ export default function WatchlistPage() {
                         filteredCoins.length > 0
                       }
                       onChange={handleSelectAll}
-                      className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500"
+                      className="rounded border-gray-300 dark:border-neutral-800 text-blue-600 focus:ring-blue-500"
                     />
                   </th>
                   <th className="px-2 py-4 text-left w-8"></th>
@@ -493,7 +493,7 @@ export default function WatchlistPage() {
                 {filteredCoins.map((coin, index) => (
                   <tr
                     key={coin.id}
-                    className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors ${
+                    className={`border-b border-gray-100 dark:border-neutral-800/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors ${
                       draggedItem === coin.id ? "opacity-50" : ""
                     }`}
                     draggable
@@ -506,7 +506,7 @@ export default function WatchlistPage() {
                         type="checkbox"
                         checked={selectedCoins.has(coin.id)}
                         onChange={() => handleSelectCoin(coin.id)}
-                        className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500"
+                        className="rounded border-gray-300 dark:border-neutral-800 text-blue-600 focus:ring-blue-500"
                       />
                     </td>
                     <td className="px-2 py-4">
@@ -618,7 +618,7 @@ export default function WatchlistPage() {
           {/* No results */}
           {filteredCoins.length === 0 && searchQuery && (
             <div className="p-12 text-center">
-              <Search className="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+              <Search className="w-12 h-12 text-gray-300 dark:text-gray-400 mx-auto mb-4" />
               <p className="text-gray-500 dark:text-gray-400">
                 No coins found matching &quot;{searchQuery}&quot;
               </p>

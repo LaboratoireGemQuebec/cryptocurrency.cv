@@ -138,7 +138,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
             <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
@@ -154,7 +154,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-xl">📊</span>
           <h3 className="font-bold text-gray-900 dark:text-white">Funding Rates</h3>
@@ -177,7 +177,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
   const sc = data ? sentimentColors[data.sentiment] : sentimentColors.neutral;
 
   return (
-    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -239,7 +239,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
       )}
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-neutral-800">
         <p className="text-xs text-gray-500 dark:text-slate-400">
           Positive rates = longs pay shorts (bullish market). Refreshes every 60s.
         </p>

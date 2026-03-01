@@ -91,7 +91,7 @@ export function OracleChat() {
         </p>
       </div>
 
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 min-h-[500px] flex flex-col">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 min-h-[500px] flex flex-col">
         {/* Messages */}
         <div className="flex-1 p-6 overflow-y-auto space-y-4">
           {messages.length === 0 && (
@@ -121,7 +121,7 @@ export function OracleChat() {
               <div
                 className={`max-w-[80%] rounded-2xl px-4 py-3 ${
                   msg.role === 'user'
-                    ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                    ? 'bg-gray-900 dark:bg-white text-white dark:text-white'
                     : 'bg-gray-100 dark:bg-black text-gray-900 dark:text-white'
                 }`}
               >
@@ -146,7 +146,7 @@ export function OracleChat() {
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200 dark:border-slate-700">
+        <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200 dark:border-neutral-800">
           <div className="flex gap-3">
             <input
               type="text"
@@ -159,7 +159,7 @@ export function OracleChat() {
             <button
               type="submit"
               disabled={loading || !input.trim()}
-              className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-medium hover:opacity-90 disabled:opacity-50 transition-opacity"
+              className="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-white rounded-xl font-medium hover:opacity-90 disabled:opacity-50 transition-opacity"
             >
               Ask
             </button>

@@ -94,7 +94,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
             <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
@@ -111,7 +111,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">🔍</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Fact Check</h2>
@@ -135,7 +135,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (!data || data.claims.length === 0) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">🔍</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Fact Check</h2>
@@ -151,7 +151,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
     : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400';
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -177,7 +177,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
           return (
             <div
               key={index}
-              className="border border-gray-100 dark:border-slate-700 rounded-xl overflow-hidden"
+              className="border border-gray-100 dark:border-neutral-800 rounded-xl overflow-hidden"
             >
               <button
                 onClick={() => toggleClaim(index)}
@@ -214,7 +214,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
               </button>
 
               {isExpanded && (
-                <div className="px-4 pb-4 border-t border-gray-100 dark:border-slate-700">
+                <div className="px-4 pb-4 border-t border-gray-100 dark:border-neutral-800">
                   <div className="mt-3 p-3 bg-gray-50 dark:bg-black/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-1">
                       Verification Notes
@@ -236,7 +236,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between">
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 Powered by AI · {new Date(data.checkedAt).toLocaleTimeString()}
         </span>

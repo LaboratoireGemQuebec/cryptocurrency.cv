@@ -66,19 +66,19 @@ export default async function DefiPage() {
 
           {/* Stats Overview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Total DeFi TVL</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">${formatNumber(totalTVL)}</p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Top Protocols</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">{protocols.length}+</p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Active Chains</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">{chains.length}+</p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Chain TVL</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">${formatNumber(totalChainTVL)}</p>
             </div>
@@ -88,8 +88,8 @@ export default async function DefiPage() {
           <div className="grid lg:grid-cols-3 gap-6">
             {/* Protocols Table (2/3) */}
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-                <div className="p-4 border-b border-gray-200 dark:border-slate-700 flex items-center justify-between">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+                <div className="p-4 border-b border-gray-200 dark:border-neutral-800 flex items-center justify-between">
                   <div>
                     <h2 className="font-bold text-lg text-gray-900 dark:text-white">🏆 Top DeFi Protocols</h2>
                     <p className="text-sm text-gray-500 dark:text-slate-400">Ranked by Total Value Locked</p>
@@ -98,7 +98,7 @@ export default async function DefiPage() {
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
-                      <tr className="border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-black text-sm">
+                      <tr className="border-b border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-black text-sm">
                         <th className="text-left text-gray-500 dark:text-slate-400 font-medium p-4">#</th>
                         <th className="text-left text-gray-500 dark:text-slate-400 font-medium p-4">Protocol</th>
                         <th className="text-right text-gray-500 dark:text-slate-400 font-medium p-4">TVL</th>
@@ -109,7 +109,7 @@ export default async function DefiPage() {
                     </thead>
                     <tbody>
                       {protocols.map((protocol, index) => (
-                        <tr key={protocol.id} className="border-b border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition">
+                        <tr key={protocol.id} className="border-b border-gray-200 dark:border-neutral-800 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition">
                           <td className="p-4 text-gray-500 dark:text-slate-400">{index + 1}</td>
                           <td className="p-4">
                             <Link href={`/defi/protocol/${protocol.slug || protocol.id}`} className="flex items-center gap-3 hover:opacity-80 transition">
@@ -152,12 +152,12 @@ export default async function DefiPage() {
             {/* Sidebar (1/3) */}
             <div className="space-y-6">
               {/* Chains TVL */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-                <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+                <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white">⛓️ Chain TVL</h2>
                   <p className="text-sm text-gray-500 dark:text-slate-400">Total Value Locked by blockchain</p>
                 </div>
-                <div className="divide-y divide-gray-200 dark:divide-slate-700">
+                <div className="divide-y divide-gray-200 dark:divide-neutral-800">
                   {chains.slice(0, 10).map((chain, index) => (
                     <Link 
                       key={chain.name} 
@@ -180,7 +180,7 @@ export default async function DefiPage() {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
                 <h3 className="font-bold mb-3 text-gray-900 dark:text-white">📊 Quick Links</h3>
                 <div className="space-y-2">
                   <Link href="/category/defi" className="block text-blue-600 dark:text-blue-400 hover:underline">

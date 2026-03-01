@@ -496,9 +496,9 @@ export function TaxReportGenerator() {
   const hasTaxableEvents = report.events.length > 0;
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="p-6 border-b border-gray-200 dark:border-neutral-800">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
             <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -517,7 +517,7 @@ export function TaxReportGenerator() {
       </div>
 
       {/* Configuration */}
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
+      <div className="p-6 border-b border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label htmlFor="tax-year-gen" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tax Year</label>
@@ -525,7 +525,7 @@ export function TaxReportGenerator() {
               id="tax-year-gen"
               value={taxYear}
               onChange={(e) => setTaxYear(e.target.value as TaxYear)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white"
             >
               <option value="2024">2024</option>
               <option value="2025">2025</option>
@@ -538,7 +538,7 @@ export function TaxReportGenerator() {
               id="cost-method-gen"
               value={costMethod}
               onChange={(e) => setCostMethod(e.target.value as TaxMethod)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white"
             >
               <option value="fifo">FIFO (First In, First Out)</option>
               <option value="lifo">LIFO (Last In, First Out)</option>
@@ -556,7 +556,7 @@ export function TaxReportGenerator() {
       </div>
 
       {/* Summary Cards */}
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="p-6 border-b border-gray-200 dark:border-neutral-800">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4">
             <p className="text-xs font-medium text-gray-500 uppercase">Short-Term Net</p>
@@ -600,7 +600,7 @@ export function TaxReportGenerator() {
                 <th className="px-4 py-3 text-center text-xs font-semibold text-gray-600 uppercase">Term</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
               {report.events.map((event) => (
                 <tr key={event.id} className="hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                   <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">{formatDate(event.date)}</td>
@@ -630,7 +630,7 @@ export function TaxReportGenerator() {
 
       {/* Export Actions */}
       <div className="p-4 bg-gray-50 dark:bg-black/50 border-t flex gap-3 justify-end">
-        <button onClick={exportCSV} disabled={!hasTaxableEvents} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 hover:bg-gray-100 disabled:opacity-50 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium">
+        <button onClick={exportCSV} disabled={!hasTaxableEvents} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 hover:bg-gray-100 disabled:opacity-50 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium">
           Export CSV
         </button>
         <button onClick={exportJSON} disabled={!hasTaxableEvents} className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white rounded-lg text-sm font-medium">

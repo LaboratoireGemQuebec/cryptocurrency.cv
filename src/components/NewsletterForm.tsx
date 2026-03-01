@@ -105,7 +105,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
-          className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-sm"
+          className="flex-1 px-3 py-2 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-sm"
           disabled={status === 'loading' || status === 'success'}
         />
         <button
@@ -122,7 +122,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
 
   // Card variant (default)
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-gray-100 dark:bg-black rounded-lg">
           <Mail className="w-6 h-6 text-gray-600 dark:text-gray-300" />
@@ -146,7 +146,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
               value={email}
               onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
               placeholder="Enter your email address"
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black focus:ring-2 focus:ring-gray-500 focus:border-transparent"
               disabled={status === 'loading'}
             />
           </div>

@@ -50,7 +50,7 @@ export default async function BillingPage({ params }: Props) {
         </div>
 
         {/* How it works */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-green-500" />
             How x402 works
@@ -76,7 +76,7 @@ export default async function BillingPage({ params }: Props) {
         </div>
 
         {/* Pricing */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Pricing
           </h2>
@@ -93,7 +93,7 @@ export default async function BillingPage({ params }: Props) {
         </div>
 
         {/* Code sample */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <Code2 className="w-5 h-5 text-blue-500" />
             Quick start (TypeScript)

@@ -123,9 +123,9 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
   }, [fetchForecast]);
 
   return (
-    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-neutral-800/50 ${className}`}>
       {/* ── Header ── */}
-      <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
+      <div className="p-6 border-b border-slate-200 dark:border-neutral-800/50">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
@@ -164,7 +164,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
             type="text"
             value={asset}
             onChange={(e) => setAsset(e.target.value.toUpperCase())}
-            className="w-20 px-3 py-1.5 rounded-lg text-sm bg-slate-100 dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center uppercase"
+            className="w-20 px-3 py-1.5 rounded-lg text-sm bg-slate-100 dark:bg-black border border-slate-200 dark:border-neutral-800 text-slate-900 dark:text-white text-center uppercase"
             placeholder="Other"
           />
         </div>
@@ -250,7 +250,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
                   {forecast.narratives.map((n, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 text-xs rounded-full bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
+                      className="px-2.5 py-1 text-xs rounded-full bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-neutral-800"
                     >
                       {n}
                     </span>
@@ -260,7 +260,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
             )}
 
             {/* Generated At */}
-            <div className="text-xs text-slate-400 flex items-center gap-1 pt-2 border-t border-slate-200 dark:border-slate-700/50">
+            <div className="text-xs text-slate-400 flex items-center gap-1 pt-2 border-t border-slate-200 dark:border-neutral-800/50">
               <Clock className="w-3 h-3" />
               Generated {new Date(forecast.generatedAt).toLocaleString()}
             </div>
@@ -286,7 +286,7 @@ function CompositeSignalCard({ forecast }: { forecast: ForecastResult }) {
     <div className={`rounded-xl p-5 ${dirConfig.bg} border ${
       composite.direction === 'bullish' ? 'border-emerald-200 dark:border-emerald-500/20' :
       composite.direction === 'bearish' ? 'border-red-200 dark:border-red-500/20' :
-      'border-slate-200 dark:border-slate-500/20'
+      'border-slate-200 dark:border-neutral-800/20'
     }`}>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
@@ -346,7 +346,7 @@ function ModelSignalCard({
   const meta = MODEL_NAMES[model.model] || { label: model.model, description: '', color: 'from-slate-500 to-slate-600' };
 
   return (
-    <div className="rounded-lg border border-slate-200 dark:border-slate-700/50 overflow-hidden">
+    <div className="rounded-lg border border-slate-200 dark:border-neutral-800/50 overflow-hidden">
       <button
         onClick={onToggle}
         className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-neutral-900/50 transition-colors"
@@ -370,7 +370,7 @@ function ModelSignalCard({
         </span>
       </button>
       {expanded && model.rationale && (
-        <div className="px-12 pb-3 text-sm text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3">
+        <div className="px-12 pb-3 text-sm text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-neutral-800 pt-3">
           {model.rationale}
           <div className="mt-2 flex gap-4 text-xs">
             <span>Confidence: {Math.round(model.confidence * 100)}%</span>

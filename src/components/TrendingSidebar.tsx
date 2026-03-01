@@ -38,8 +38,8 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
   return (
     <aside className="space-y-8 lg:sticky lg:top-4">
       {/* Trending Stories */}
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
-        <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm dark:shadow-lg">
+        <div className="px-5 py-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-400 opacity-75"></span>
@@ -48,7 +48,7 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
             <h3 className="font-bold text-gray-900 dark:text-white">Trending Now</h3>
           </div>
         </div>
-        <div className="divide-y divide-gray-50 dark:divide-slate-700">
+        <div className="divide-y divide-gray-50 dark:divide-neutral-800">
           {topTrending.map((article, index) => (
             <NewsCard
               key={article.link}
@@ -58,7 +58,7 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
             />
           ))}
         </div>
-        <div className="px-5 py-3 border-t border-gray-100 dark:border-slate-700">
+        <div className="px-5 py-3 border-t border-gray-100 dark:border-neutral-800">
           <Link 
             href="/trending" 
             className="text-sm font-semibold text-brand-600 dark:text-amber-400 hover:text-brand-700 dark:hover:text-amber-300 transition-colors flex items-center justify-center gap-1"
@@ -75,8 +75,8 @@ export default function TrendingSidebar({ trendingArticles }: TrendingSidebarPro
       <PredictionPoll />
 
       {/* Categories */}
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
-        <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm dark:shadow-lg">
+        <div className="px-5 py-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
           <h3 className="font-bold text-gray-900 dark:text-white">
             <span className="mr-2">📁</span>
             Categories

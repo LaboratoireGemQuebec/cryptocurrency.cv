@@ -77,7 +77,7 @@ export function BackToTop({
       className={`
         fixed z-40 p-3 rounded-full shadow-lg
         bg-white dark:bg-black 
-        border border-gray-200 dark:border-slate-700
+        border border-gray-200 dark:border-neutral-800
         text-gray-600 dark:text-slate-300
         hover:bg-gray-50 dark:hover:bg-neutral-900
         hover:text-brand-600 dark:hover:text-brand-400

@@ -80,7 +80,7 @@ export function LanguageSelector({
       <div ref={dropdownRef} className={`relative ${className}`}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
+          className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
           aria-label="Select language"
         >
           <span className="font-medium">{localeNames[locale]}</span>
@@ -95,15 +95,15 @@ export function LanguageSelector({
         </button>
 
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-80 max-h-96 overflow-auto bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl z-50">
+          <div className="absolute right-0 mt-2 w-80 max-h-96 overflow-auto bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg shadow-xl z-50">
             {showSearch && (
-              <div className="sticky top-0 p-2 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700">
+              <div className="sticky top-0 p-2 bg-white dark:bg-black border-b border-gray-200 dark:border-neutral-800">
                 <input
                   type="text"
                   placeholder="Search languages..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-neutral-800 rounded-md bg-gray-50 dark:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             )}
@@ -158,7 +158,7 @@ export function LanguageSelector({
               )}
             </div>
 
-            <div className="sticky bottom-0 p-2 bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-gray-700 text-center text-xs text-gray-500">
+            <div className="sticky bottom-0 p-2 bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-neutral-800 text-center text-xs text-gray-500">
               {locales.length} languages available
             </div>
           </div>
@@ -182,7 +182,7 @@ export function LanguageSelector({
         {isOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div className="w-full max-w-lg max-h-[80vh] m-4 bg-white dark:bg-black rounded-xl shadow-2xl overflow-hidden">
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-neutral-800">
                 <h2 className="text-lg font-semibold">Select Language</h2>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -195,13 +195,13 @@ export function LanguageSelector({
               </div>
 
               {showSearch && (
-                <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+                <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
                   <input
                     type="text"
                     placeholder="Search languages..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full px-4 py-3 text-base border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 text-base border border-gray-200 dark:border-neutral-800 rounded-lg bg-gray-50 dark:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               )}
@@ -224,7 +224,7 @@ export function LanguageSelector({
                 </div>
               </div>
 
-              <div className="p-4 bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500">
+              <div className="p-4 bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-neutral-800 text-center text-sm text-gray-500">
                 {locales.length} languages • {filteredLocales.length} shown
               </div>
             </div>

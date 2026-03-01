@@ -99,7 +99,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
           return (
             <div
               key={primary.link}
-              className="group bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow duration-200"
+              className="group bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-neutral-800 overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
               {/* Primary article image */}
               <div className="relative aspect-[2/1] overflow-hidden">
@@ -117,7 +117,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
                   <span className={`text-xs font-bold uppercase tracking-wider ${primarySource.textColor}`}>
                     {primary.source}
                   </span>
-                  <span className="text-gray-300 dark:text-slate-600">·</span>
+                  <span className="text-gray-300 dark:text-gray-400">·</span>
                   <time className="text-xs text-gray-500 dark:text-slate-400">{primary.timeAgo || ''}</time>
                 </div>
 
@@ -148,7 +148,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
 
               {/* Perspectives */}
               {perspectives.length > 0 && (
-                <div className="border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50 divide-y divide-gray-100 dark:divide-slate-700/50">
+                <div className="border-t border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50 divide-y divide-gray-100 dark:divide-neutral-800/50">
                   {perspectives.map((article) => {
                     const slug = generateArticleSlug(article.title, article.pubDate);
                     const srcInfo = sourceIcons[article.source] || defaultSource;

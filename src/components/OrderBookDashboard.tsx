@@ -175,7 +175,7 @@ export function OrderBookDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="animate-pulse space-y-4">
             <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-2 gap-4">
@@ -316,8 +316,8 @@ export function OrderBookDashboard() {
       {/* Main Order Book */}
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Bids */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-          <div className="p-4 border-b border-gray-200 dark:border-slate-700 flex justify-between items-center">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+          <div className="p-4 border-b border-gray-200 dark:border-neutral-800 flex justify-between items-center">
             <div>
               <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">
                 📈 Bids (Buy Orders)
@@ -382,8 +382,8 @@ export function OrderBookDashboard() {
         </div>
 
         {/* Asks */}
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-          <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+          <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
             <h3 className="text-lg font-semibold text-red-600 dark:text-red-400">
               📉 Asks (Sell Orders)
             </h3>
@@ -438,8 +438,8 @@ export function OrderBookDashboard() {
       </div>
 
       {/* Exchange Breakdown */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-        <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+        <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             🏦 Exchange Breakdown
           </h3>
@@ -462,7 +462,7 @@ export function OrderBookDashboard() {
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
               {aggregatedBook.exchangeBreakdown.map((ex) => (
                 <tr key={ex.exchange} className="hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                   <td className="px-4 py-3 text-sm font-medium text-gray-900 dark:text-white capitalize">
@@ -506,7 +506,7 @@ export function OrderBookDashboard() {
 
       {/* Slippage Estimates */}
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             📊 Buy Slippage Estimates
           </h3>
@@ -545,7 +545,7 @@ export function OrderBookDashboard() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             📊 Sell Slippage Estimates
           </h3>
@@ -586,7 +586,7 @@ export function OrderBookDashboard() {
       </div>
 
       {/* Liquidity Depth */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           💧 Liquidity Depth Analysis
         </h3>

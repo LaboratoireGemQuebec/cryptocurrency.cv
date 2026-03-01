@@ -103,14 +103,14 @@ export function WhaleActivityFeed() {
   if (loading) {
     return (
       <section className="mb-12" aria-label="Whale Activity">
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm overflow-hidden">
-          <div className="p-5 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm overflow-hidden">
+          <div className="p-5 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
             <div className="animate-pulse flex items-center gap-3">
               <div className="h-6 w-48 bg-gray-200 dark:bg-black rounded" />
               <div className="ml-auto h-5 w-24 bg-gray-200 dark:bg-black rounded" />
             </div>
           </div>
-          <div className="divide-y divide-gray-50 dark:divide-slate-700">
+          <div className="divide-y divide-gray-50 dark:divide-neutral-800">
             {[1, 2, 3, 4].map(i => (
               <div key={i} className="p-4 animate-pulse">
                 <div className="flex items-center gap-3">
@@ -130,9 +130,9 @@ export function WhaleActivityFeed() {
 
   return (
     <section className="mb-12" aria-label="Whale Activity">
-      <div className={`bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm overflow-hidden transition-opacity duration-500 ${fadeIn ? 'opacity-90' : 'opacity-100'}`}>
+      <div className={`bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm overflow-hidden transition-opacity duration-500 ${fadeIn ? 'opacity-90' : 'opacity-100'}`}>
         {/* Header */}
-        <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+        <div className="px-5 py-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-xl">🐋</span>
@@ -150,7 +150,7 @@ export function WhaleActivityFeed() {
         </div>
 
         {/* Feed */}
-        <div className="divide-y divide-gray-50 dark:divide-slate-700">
+        <div className="divide-y divide-gray-50 dark:divide-neutral-800">
           {data.alerts.slice(0, 8).map((tx) => {
             const type = typeConfig[tx.transactionType] || typeConfig.unknown;
             const sigStyle = significanceStyle[tx.significance] || '';
@@ -175,7 +175,7 @@ export function WhaleActivityFeed() {
         </div>
 
         {/* Footer */}
-        <div className="px-5 py-3 border-t border-gray-100 dark:border-slate-700">
+        <div className="px-5 py-3 border-t border-gray-100 dark:border-neutral-800">
           <Link
             href="/whales"
             className="text-sm font-semibold text-brand-600 dark:text-amber-400 hover:text-brand-700 dark:hover:text-amber-300 transition-colors flex items-center justify-center gap-1"

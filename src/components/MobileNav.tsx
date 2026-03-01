@@ -309,7 +309,7 @@ export function MobileNav() {
         {/* Swipe indicator bar */}
         <div className="absolute top-1/2 left-2 -translate-y-1/2 w-1 h-16 bg-gray-300 dark:bg-black rounded-full opacity-50" aria-hidden="true" />
         {/* Menu Header */}
-        <div className="sticky top-0 bg-white dark:bg-black border-b border-gray-100 dark:border-slate-800 px-5 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white dark:bg-black border-b border-gray-100 dark:border-neutral-800 px-5 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-2.5">
             <span className="text-xl" aria-hidden="true">📰</span>
             <span className="font-bold text-lg bg-gradient-to-r from-brand-600 to-brand-500 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent">
@@ -540,7 +540,7 @@ export function MobileNav() {
         </nav>
 
         {/* Footer CTA */}
-        <div className="sticky bottom-0 bg-white dark:bg-black border-t border-gray-100 dark:border-slate-800 p-4">
+        <div className="sticky bottom-0 bg-white dark:bg-black border-t border-gray-100 dark:border-neutral-800 p-4">
           <div className="flex items-center justify-between mb-4">
             <LanguageSwitcher />
           </div>

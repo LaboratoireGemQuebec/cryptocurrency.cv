@@ -60,21 +60,21 @@ export default async function MoversPage() {
 
           {/* Market Sentiment */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Gainers (24h)</p>
               <p className="text-2xl font-bold text-green-600 dark:text-green-400">{totalGainers}</p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Losers (24h)</p>
               <p className="text-2xl font-bold text-red-600 dark:text-red-400">{totalLosers}</p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Avg Change</p>
               <p className={`text-2xl font-bold ${avgChange >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                 {formatPercent(avgChange)}
               </p>
             </div>
-            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Sentiment</p>
               <p className={`text-2xl font-bold ${totalGainers > totalLosers ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                 {totalGainers > totalLosers ? 'Bullish 🐂' : 'Bearish 🐻'}
@@ -85,8 +85,8 @@ export default async function MoversPage() {
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Top Gainers */}
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-              <div className="p-4 border-b border-gray-200 dark:border-slate-700 bg-green-50 dark:bg-green-900/20">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+              <div className="p-4 border-b border-gray-200 dark:border-neutral-800 bg-green-50 dark:bg-green-900/20">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🚀</span>
                   <div>
@@ -95,7 +95,7 @@ export default async function MoversPage() {
                   </div>
                 </div>
               </div>
-              <div className="divide-y divide-gray-200 dark:divide-slate-700 max-h-[600px] overflow-y-auto">
+              <div className="divide-y divide-gray-200 dark:divide-neutral-800 max-h-[600px] overflow-y-auto">
                 {gainers.map((coin, index) => (
                   <Link
                     key={coin.id}
@@ -128,8 +128,8 @@ export default async function MoversPage() {
             </div>
 
             {/* Top Losers */}
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-              <div className="p-4 border-b border-gray-200 dark:border-slate-700 bg-red-50 dark:bg-red-900/20">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+              <div className="p-4 border-b border-gray-200 dark:border-neutral-800 bg-red-50 dark:bg-red-900/20">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">📉</span>
                   <div>
@@ -138,7 +138,7 @@ export default async function MoversPage() {
                   </div>
                 </div>
               </div>
-              <div className="divide-y divide-gray-200 dark:divide-slate-700 max-h-[600px] overflow-y-auto">
+              <div className="divide-y divide-gray-200 dark:divide-neutral-800 max-h-[600px] overflow-y-auto">
                 {losers.map((coin, index) => (
                   <Link
                     key={coin.id}
@@ -181,7 +181,7 @@ export default async function MoversPage() {
             </Link>
             <Link 
               href="/category/markets" 
-              className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-neutral-900 transition"
+              className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 text-gray-700 dark:text-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-neutral-900 transition"
             >
               Market News
             </Link>

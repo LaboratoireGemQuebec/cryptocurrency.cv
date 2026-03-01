@@ -154,7 +154,7 @@ export function SocialShareButtons({
             onClick={() => handleShare(platform)}
             className={`
               ${sizeClasses[size]}
-              ${variant === 'default' ? config.color : 'bg-transparent border border-gray-300 dark:border-gray-600'}
+              ${variant === 'default' ? config.color : 'bg-transparent border border-gray-300 dark:border-neutral-800'}
               ${config.hoverColor}
               rounded-full flex items-center justify-center
               text-white transition-all duration-200
@@ -200,7 +200,7 @@ export function FloatingShareBar({
 
   return (
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-      <div className="flex flex-col gap-2 p-2 bg-white dark:bg-black rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700">
+      <div className="flex flex-col gap-2 p-2 bg-white dark:bg-black rounded-2xl shadow-lg border border-gray-200 dark:border-neutral-800">
         <SocialShareButtons
           url={url}
           title={title}
@@ -223,7 +223,7 @@ export function InlineShareBar({
   title: string;
 }) {
   return (
-    <div className="flex items-center justify-center gap-4 py-6 border-t border-b border-gray-200 dark:border-slate-700 my-8">
+    <div className="flex items-center justify-center gap-4 py-6 border-t border-b border-gray-200 dark:border-neutral-800 my-8">
       <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
         Share this article:
       </span>

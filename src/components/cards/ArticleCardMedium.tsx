@@ -155,7 +155,7 @@ function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumP
           flex flex-col h-full rounded-2xl overflow-hidden
           bg-white dark:bg-black
           shadow-lg hover:shadow-2xl ${style.glow}
-          dark:shadow-none dark:border dark:border-gray-800 dark:hover:border-gray-600
+          dark:shadow-none dark:border dark:border-neutral-800 dark:hover:border-gray-600
           transform transition-all duration-300 ease-out
           hover:-translate-y-2 hover:scale-[1.02]
           focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950
@@ -243,7 +243,7 @@ function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumP
           </h3>
 
           {/* Meta Footer */}
-          <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100 dark:border-gray-800">
+          <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100 dark:border-neutral-800">
             <div className="flex items-center gap-2">
               {/* Source Pill with gradient */}
               <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${style.badge} ${style.badgeText} backdrop-blur-sm shadow-sm`}>

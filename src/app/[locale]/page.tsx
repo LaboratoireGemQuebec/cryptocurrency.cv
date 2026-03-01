@@ -323,7 +323,7 @@ export default async function Home({ params }: Props) {
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-black border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
                   style={{ scrollSnapAlign: "start" }}
                 >
                   <span aria-hidden="true">{cat.icon}</span>
@@ -341,7 +341,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Flash briefing"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-48 animate-pulse" />}>
             <AIFlashBrief />
           </Suspense>
         </section>
@@ -351,7 +351,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="AI topic digest"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-48 animate-pulse" />}>
             <AITopicDigest />
           </Suspense>
         </section>
@@ -361,7 +361,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Market signals"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-48 animate-pulse" />}>
             <MarketSignals />
           </Suspense>
         </section>
@@ -371,7 +371,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Trending topics"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-32 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-32 animate-pulse" />}>
             <TrendingTopicsLive />
           </Suspense>
         </section>
@@ -391,7 +391,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Trending narratives"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-48 animate-pulse" />}>
             <TrendingNarratives />
           </Suspense>
         </section>
@@ -401,7 +401,7 @@ export default async function Home({ params }: Props) {
           className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="Whale activity"
         >
-          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-48 animate-pulse" />}>
+          <Suspense fallback={<div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 h-48 animate-pulse" />}>
             <WhaleActivityFeed />
           </Suspense>
         </section>
@@ -429,8 +429,8 @@ export default async function Home({ params }: Props) {
             </div>
 
             {/* Categories */}
-            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
-              <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm dark:shadow-lg">
+              <div className="px-5 py-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
                 <h3 className="font-bold text-gray-900 dark:text-white">
                   <span className="mr-2">📁</span>Categories
                 </h3>

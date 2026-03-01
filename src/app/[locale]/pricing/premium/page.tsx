@@ -183,7 +183,7 @@ export default function PremiumPricingPage() {
                 className={`rounded-xl p-8 ${
                   pass.popular
                     ? 'bg-blue-600 text-white ring-4 ring-blue-300 dark:ring-blue-800'
-                    : 'bg-white dark:bg-black border border-gray-200 dark:border-gray-700'
+                    : 'bg-white dark:bg-black border border-gray-200 dark:border-neutral-800'
                 }`}
               >
                 {pass.popular && <div className="text-sm font-semibold mb-2">MOST POPULAR</div>}
@@ -286,7 +286,7 @@ export default function PremiumPricingPage() {
                   <th className="px-6 py-4 text-left dark:text-white">Model</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+              <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
                 <tr>
                   <td className="px-6 py-4 font-semibold text-blue-600">Free Crypto News</td>
                   <td className="px-6 py-4 dark:text-white">From $0.01</td>

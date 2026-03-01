@@ -121,7 +121,7 @@ export default function CounterClient() {
           </div>
 
           {/* Input Form */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
             <div className="mb-4">
               <label htmlFor="claim-input" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Enter a claim to challenge
@@ -132,7 +132,7 @@ export default function CounterClient() {
                 onChange={(e) => setClaim(e.target.value)}
                 placeholder="e.g., Bitcoin will reach $1 million by 2030"
                 rows={3}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function CounterClient() {
                 onChange={(e) => setContext(e.target.value)}
                 placeholder="Add any relevant context, source, or background information..."
                 rows={2}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               />
             </div>
 
@@ -207,7 +207,7 @@ export default function CounterClient() {
               </div>
 
               {/* Overall Assessment */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-2xl">🎯</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Overall Assessment</h3>
@@ -225,7 +225,7 @@ export default function CounterClient() {
               </div>
 
               {/* Counter Arguments */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⚔️ Counter Arguments</h3>
                 <div className="space-y-4">
                   {result.counterArguments.map((arg, i) => (
@@ -270,7 +270,7 @@ export default function CounterClient() {
 
               {/* Alternative Interpretations */}
               {result.alternativeInterpretations?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💡 Alternative Interpretations</h3>
                   <ul className="space-y-2">
                     {result.alternativeInterpretations.map((item, i) => (
@@ -285,7 +285,7 @@ export default function CounterClient() {
 
               {/* Missing Context */}
               {result.missingContext?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">❓ Missing Context</h3>
                   <ul className="space-y-2">
                     {result.missingContext.map((item, i) => (

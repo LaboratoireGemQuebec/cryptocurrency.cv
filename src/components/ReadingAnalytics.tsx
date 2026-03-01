@@ -40,7 +40,7 @@ function StatCard({ icon: Icon, label, value, subtext }: {
   subtext?: string;
 }) {
   return (
-    <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-neutral-800">
       <div className="flex items-center gap-3">
         <div className="p-2 bg-gray-100 dark:bg-black/30 rounded-lg">
           <Icon className="w-5 h-5 text-gray-600" />
@@ -171,7 +171,7 @@ export function ReadingAnalytics() {
 
       {/* Reading History Chart */}
       {stats.readingHistory.length > 0 && (
-        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
           <h3 className="text-sm font-medium text-gray-500 mb-4 flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             Reading Activity (Last 7 Days)
@@ -200,7 +200,7 @@ export function ReadingAnalytics() {
 
       {/* Categories Breakdown */}
       {Object.keys(stats.categoriesRead).length > 0 && (
-        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
           <h3 className="text-sm font-medium text-gray-500 mb-4 flex items-center gap-2">
             <BookOpen className="w-4 h-4" />
             Categories
@@ -234,7 +234,7 @@ export function ReadingAnalytics() {
 
       {/* Recent Articles */}
       {stats.recentArticles.length > 0 && (
-        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
           <h3 className="text-sm font-medium text-gray-500 mb-4">Recently Read</h3>
           <div className="space-y-3">
             {stats.recentArticles.slice(0, 5).map((article, i) => (
@@ -254,7 +254,7 @@ export function ReadingAnalytics() {
       )}
 
       {stats.totalArticles === 0 && (
-        <div className="text-center py-8 text-gray-500 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700">
+        <div className="text-center py-8 text-gray-500 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800">
           <BookOpen className="w-12 h-12 mx-auto mb-3 opacity-30" />
           <p>Start reading articles to see your stats!</p>
           <p className="text-sm">Your reading history is stored locally and never shared.</p>

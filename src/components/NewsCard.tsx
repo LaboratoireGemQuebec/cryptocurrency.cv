@@ -184,7 +184,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
       <article className="group" data-article>
         <Link 
           href={`/article/${articleSlug}`}
-          className="flex gap-5 p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 card-hover transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
+          className="flex gap-5 p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-neutral-800 card-hover transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
         >
           {/* Left accent */}
           <div className={`w-1 self-stretch ${style.bg} rounded-full flex-shrink-0`} />
@@ -220,7 +220,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           </div>
 
           <svg 
-            className="w-5 h-5 text-gray-300 dark:text-slate-600 group-hover:text-brand-500 dark:group-hover:text-amber-400 group-hover:translate-x-1 transition-all flex-shrink-0 self-center"
+            className="w-5 h-5 text-gray-300 dark:text-gray-400 group-hover:text-brand-500 dark:group-hover:text-amber-400 group-hover:translate-x-1 transition-all flex-shrink-0 self-center"
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -240,7 +240,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
         {/* Share button */}
         <button
           onClick={handleShare}
-          className="relative p-2 bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full shadow-md border border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900 transition-all"
+          className="relative p-2 bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full shadow-md border border-gray-200/50 dark:border-neutral-800/50 text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900 transition-all"
           aria-label="Share article"
           title={tCommon('share')}
         >
@@ -260,7 +260,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           className={`p-2 rounded-full shadow-md border backdrop-blur-sm transition-all ${
             bookmarked
               ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-600 text-amber-600 dark:text-amber-400'
-              : 'bg-white/90 dark:bg-black/90 border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900'
+              : 'bg-white/90 dark:bg-black/90 border-gray-200/50 dark:border-neutral-800/50 text-gray-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900'
           }`}
           aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark article'}
           title={bookmarked ? 'Bookmarked' : 'Bookmark'}
@@ -279,7 +279,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
 
       <Link 
         href={`/article/${articleSlug}`}
-        className="block h-full bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden card-hover hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+        className="block h-full bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden card-hover hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
         {/* Article thumbnail - always shown with gradient fallback */}
         <div className="relative aspect-[16/9] overflow-hidden">
@@ -318,7 +318,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           )}
 
           {/* Footer */}
-          <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-slate-700 mt-auto">
+          <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-neutral-800 mt-auto">
             <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
               {article.timeAgo}
             </time>

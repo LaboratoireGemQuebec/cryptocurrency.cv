@@ -182,7 +182,7 @@ export function ChartSkeleton({ height = 400 }: { height?: number }) {
 export function ChartError({ error, onRetry }: { error: string; onRetry?: () => void }) {
   return (
     <div className="flex flex-col items-center justify-center h-64 bg-gray-50 dark:bg-black/50 rounded-xl">
-      <svg className="w-12 h-12 text-gray-300 dark:text-slate-600 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-12 h-12 text-gray-300 dark:text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
       </svg>
       <p className="text-gray-500 dark:text-slate-400 text-sm mb-3">{error}</p>
@@ -205,7 +205,7 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
   const date = new Date(data.timestamp);
 
   return (
-    <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl shadow-xl p-3 min-w-[140px]">
+    <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl shadow-xl p-3 min-w-[140px]">
       <div className="text-xs text-gray-500 dark:text-slate-400 mb-1">
         {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
         {' '}
@@ -268,7 +268,7 @@ export function PriceChart({ data, height = 300, type = 'area', showGrid = true 
           </linearGradient>
         </defs>
         {showGrid && (
-          <CartesianGrid strokeDasharray="3 3" stroke="currentColor" className="text-gray-200 dark:text-slate-700" opacity={0.5} vertical={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="currentColor" className="text-gray-200 dark:text-white" opacity={0.5} vertical={false} />
         )}
         <XAxis
           dataKey="timestamp"
@@ -437,9 +437,9 @@ export function CoinChart({
   }, [data]);
 
   return (
-    <div className={`bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-800 overflow-hidden ${className}`}>
+    <div className={`bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="p-4 border-b border-gray-100 dark:border-slate-800">
+      <div className="p-4 border-b border-gray-100 dark:border-neutral-800">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             {coinName && (
@@ -482,7 +482,7 @@ export function CoinChart({
 
       {/* Footer */}
       {stats && !isLoading && !error && (
-        <div className="px-4 py-3 bg-gray-50 dark:bg-black/50 border-t border-gray-100 dark:border-slate-800">
+        <div className="px-4 py-3 bg-gray-50 dark:bg-black/50 border-t border-gray-100 dark:border-neutral-800">
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-gray-500 dark:text-slate-400">
             <div className="flex items-center gap-4">
               <span><span className="font-medium">H:</span> {formatPrice(stats.high)}</span>

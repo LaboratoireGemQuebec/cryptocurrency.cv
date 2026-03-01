@@ -79,7 +79,7 @@ export function HoldingsTable({
 
   if (isLoading) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
         <div className="animate-pulse p-4 space-y-4">
           {[1, 2, 3, 4].map(i => (
             <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded" />
@@ -94,11 +94,11 @@ export function HoldingsTable({
   }
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-700">
+            <tr className="border-b border-gray-200 dark:border-neutral-800">
               <th className="px-6 py-4 text-left text-sm font-semibold text-gray-500 dark:text-gray-400">
                 Asset
               </th>
@@ -156,7 +156,7 @@ export function HoldingsTable({
             {sortedHoldings.map(holding => (
               <React.Fragment key={holding.coinId}>
                 <tr 
-                  className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors"
+                  className="border-b border-gray-100 dark:border-neutral-800/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors"
                 >
                   <td className="px-6 py-4">
                     <Link href={`/coin/${holding.coinId}`} className="flex items-center gap-3 group">
@@ -283,7 +283,7 @@ export function HoldingsTable({
                             {holding.transactions.slice().reverse().map(tx => (
                               <div 
                                 key={tx.id}
-                                className="flex items-center justify-between p-3 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-gray-700"
+                                className="flex items-center justify-between p-3 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-neutral-800"
                               >
                                 <div className="flex items-center gap-3">
                                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ${

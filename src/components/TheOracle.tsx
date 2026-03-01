@@ -175,7 +175,7 @@ export function TheOracle() {
 
               {/* Sources */}
               {message.sources && message.sources.length > 0 && (
-                <div className="mt-3 pt-3 border-t border-neutral-200/50 dark:border-neutral-700/50">
+                <div className="mt-3 pt-3 border-t border-neutral-200/50 dark:border-neutral-800/50">
                   <p className="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-2">
                     Sources:
                   </p>

@@ -61,7 +61,7 @@ export default function ArticleShareCard({ title, url }: ArticleShareCardProps) 
   };
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
       <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">📤 Share</h2>
       
       <div className="flex flex-wrap gap-2">

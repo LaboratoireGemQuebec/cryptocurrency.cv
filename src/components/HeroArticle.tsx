@@ -77,8 +77,8 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
   return (
     <div className="grid lg:grid-cols-[340px_1fr] gap-6">
       {/* Left: Latest Crypto News sidebar list - CoinDesk style */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden">
-        <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100 dark:border-slate-700">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-neutral-800 overflow-hidden">
+        <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100 dark:border-neutral-800">
           <svg className="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
           </svg>
@@ -92,7 +92,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
           </Link>
         </div>
 
-        <div className="divide-y divide-gray-50 dark:divide-slate-700/50">
+        <div className="divide-y divide-gray-50 dark:divide-neutral-800/50">
           {/* Today label */}
           <div className="px-5 py-2 bg-gray-50/50 dark:bg-black/80">
             <span className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Today</span>
@@ -198,7 +198,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
               <span className="text-xs font-bold uppercase tracking-wider text-brand-400">
                 Top Story
               </span>
-              <span className="text-gray-600 dark:text-slate-600">·</span>
+              <span className="text-gray-600 dark:text-gray-400">·</span>
               <span className={`text-xs font-semibold ${sourceColor}`}>
                 {article.source}
               </span>

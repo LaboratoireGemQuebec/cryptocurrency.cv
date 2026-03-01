@@ -163,7 +163,7 @@ function SignalRow({
       <span className="text-xs text-gray-500 dark:text-slate-400">{sig.confidence}%</span>
 
       {open && explanation && (
-        <div className="absolute z-20 bottom-full left-0 mb-2 w-64 max-w-xs rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-slate-600 shadow-xl p-3 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
+        <div className="absolute z-20 bottom-full left-0 mb-2 w-64 max-w-xs rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 shadow-xl p-3 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
           <span className="inline-flex items-center gap-1 text-brand-500 font-semibold mb-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15z" /><path fillRule="evenodd" d="M10 5a5 5 0 100 10A5 5 0 0010 5zm-3 5a3 3 0 116 0 3 3 0 01-6 0z" clipRule="evenodd" /></svg>
             AI insight
@@ -242,7 +242,7 @@ export function MarketSignals() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[1, 2, 3].map(i => (
-            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 animate-pulse">
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 animate-pulse">
               <div className="h-5 w-32 bg-gray-200 dark:bg-black rounded mb-4" />
               <div className="h-28 bg-gray-100 dark:bg-black/50 rounded-xl" />
             </div>
@@ -265,7 +265,7 @@ export function MarketSignals() {
         {/* Fear & Greed */}
         <Link
           href="/fear-greed"
-          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Fear & Greed Index</h3>
           {data.fearGreed ? (
@@ -278,7 +278,7 @@ export function MarketSignals() {
         {/* Trading Signals */}
         <Link
           href="/signals"
-          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Trading Signals</h3>
           {data.signals.length > 0 ? (
@@ -300,7 +300,7 @@ export function MarketSignals() {
         {/* Liquidations */}
         <Link
           href="/liquidations"
-          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Liquidations (24h)</h3>
           {data.liquidations ? (
@@ -319,7 +319,7 @@ export function MarketSignals() {
                 </div>
               </div>
               {data.topLiquidation && (
-                <div className="text-xs text-gray-500 dark:text-slate-400 pt-1 border-t border-gray-100 dark:border-slate-700">
+                <div className="text-xs text-gray-500 dark:text-slate-400 pt-1 border-t border-gray-100 dark:border-neutral-800">
                   Largest: {data.topLiquidation.symbol} {data.topLiquidation.side} {formatUsd(data.topLiquidation.amount)}
                 </div>
               )}
@@ -332,7 +332,7 @@ export function MarketSignals() {
 
       {/* AI Narrative */}
       {narrativeLoading && (
-        <div className="mt-5 rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-black p-5 animate-pulse">
+        <div className="mt-5 rounded-2xl border border-gray-100 dark:border-neutral-800 bg-white dark:bg-black p-5 animate-pulse">
           <div className="h-4 w-20 bg-gray-200 dark:bg-black rounded mb-3" />
           <div className="space-y-2">
             <div className="h-3 bg-gray-100 dark:bg-black/60 rounded w-full" />

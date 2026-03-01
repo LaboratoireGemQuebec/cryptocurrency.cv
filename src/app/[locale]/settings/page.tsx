@@ -189,7 +189,7 @@ export default function SettingsPage() {
 
         <div className="space-y-6">
           {/* Theme (dark mode only) */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               {t('appearance')}
             </h2>
@@ -201,7 +201,7 @@ export default function SettingsPage() {
                 <p className="text-sm text-gray-500 dark:text-gray-400">Dark mode is always enabled.</p>
               </div>
 
-              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-neutral-800">
                 <div>
                   <p className="font-medium text-gray-900 dark:text-white">Compact View</p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -221,7 +221,7 @@ export default function SettingsPage() {
               </div>
 
               {/* Language Selection */}
-              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-neutral-800">
                 <div className="flex items-center gap-3">
                   <Languages className="w-5 h-5 text-gray-500" />
                   <div>
@@ -237,7 +237,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Currency & Display */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Display Preferences
             </h2>
@@ -254,7 +254,7 @@ export default function SettingsPage() {
                       className={`flex flex-col items-center gap-1 p-3 rounded-xl border-2 transition-all ${
                         preferences.currency === value
                           ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
+                          : 'border-gray-200 dark:border-neutral-800 hover:border-gray-300'
                       }`}
                     >
                       <span className="text-lg">{symbol}</span>
@@ -276,7 +276,7 @@ export default function SettingsPage() {
                       className={`flex items-center justify-center gap-2 p-3 rounded-xl border-2 transition-all ${
                         preferences.priceChangePeriod === period
                           ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
+                          : 'border-gray-200 dark:border-neutral-800 hover:border-gray-300'
                       }`}
                     >
                       <Clock className="w-4 h-4" />
@@ -301,7 +301,7 @@ export default function SettingsPage() {
                       className={`flex items-center justify-center gap-2 p-3 rounded-xl border-2 transition-all ${
                         preferences.defaultChartType === value
                           ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
+                          : 'border-gray-200 dark:border-neutral-800 hover:border-gray-300'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
@@ -323,7 +323,7 @@ export default function SettingsPage() {
                       className={`p-3 rounded-xl border-2 transition-all font-medium ${
                         preferences.defaultTimeRange === range
                           ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 text-gray-700 dark:text-gray-300'
+                          : 'border-gray-200 dark:border-neutral-800 hover:border-gray-300 text-gray-700 dark:text-gray-300'
                       }`}
                     >
                       {range}
@@ -335,7 +335,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Notifications */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Notifications
             </h2>
@@ -371,7 +371,7 @@ export default function SettingsPage() {
                 )}
               </div>
 
-              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-neutral-800">
                 <div className="flex items-center gap-3">
                   {preferences.soundEffects ? (
                     <Volume2 className="w-5 h-5 text-gray-500" />
@@ -400,7 +400,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Data Management */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Data Management
             </h2>
@@ -438,7 +438,7 @@ export default function SettingsPage() {
           </div>
 
           {/* About */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               About
             </h2>

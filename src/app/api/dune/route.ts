@@ -18,6 +18,12 @@ import {
   getStablecoinSupply,
   getL2TransactionComparison,
   getBridgeVolumes,
+  getTopNFTCollections,
+  getDailyActiveAddresses,
+  getMEVActivity,
+  getUniswapV3Analytics,
+  getAirdropTracker,
+  getDuneDashboard,
   POPULAR_QUERIES,
 } from '@/lib/apis/dune';
 
@@ -68,11 +74,29 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         case 'bridges':
           data = await getBridgeVolumes();
           break;
+        case 'nftCollections':
+          data = await getTopNFTCollections();
+          break;
+        case 'activeAddresses':
+          data = await getDailyActiveAddresses();
+          break;
+        case 'mev':
+          data = await getMEVActivity();
+          break;
+        case 'uniswapV3':
+          data = await getUniswapV3Analytics();
+          break;
+        case 'airdrops':
+          data = await getAirdropTracker();
+          break;
+        case 'dashboard':
+          data = await getDuneDashboard();
+          break;
         default:
           return NextResponse.json(
             {
               error: `Unknown query: ${query}`,
-              available: ['dexVolume', 'ethGas', 'stablecoins', 'l2Txs', 'bridges'],
+              available: ['dexVolume', 'ethGas', 'stablecoins', 'l2Txs', 'bridges', 'nftCollections', 'activeAddresses', 'mev', 'uniswapV3', 'airdrops', 'dashboard'],
             },
             { status: 400 },
           );

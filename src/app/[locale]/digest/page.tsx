@@ -117,7 +117,7 @@ export default async function DigestPage() {
               </div>
 
               {/* Market Sentiment */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
                   📊 Market Sentiment
                 </h3>
@@ -131,7 +131,7 @@ export default async function DigestPage() {
 
               {/* Must Read */}
               {digest.mustRead?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">⭐ Must Read</h3>
                   <div className="space-y-4">
                     {digest.mustRead.map((article, i) => (
@@ -154,7 +154,7 @@ export default async function DigestPage() {
                 <div className="space-y-4">
                   <h3 className="font-bold text-lg text-gray-900 dark:text-white">📰 News by Topic</h3>
                   {digest.sections.map((section, i) => (
-                    <div key={i} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                    <div key={i} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                       <h4 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{section.title}</h4>
                       <p className="text-gray-700 dark:text-slate-300 mb-4">{section.summary}</p>
                       {section.articles?.length > 0 && (
@@ -174,14 +174,14 @@ export default async function DigestPage() {
 
               {/* Trending Tickers */}
               {digest.tickers?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">💰 Most Mentioned</h3>
                   <div className="flex flex-wrap gap-3">
                     {digest.tickers.map((ticker) => (
                       <Link
                         key={ticker.symbol}
                         href={`/search?q=${ticker.symbol}`}
-                        className={`px-4 py-2 rounded-full border dark:border-slate-600 flex items-center gap-2 hover:shadow-md transition ${sentimentColors[ticker.sentiment] || 'bg-gray-100 dark:bg-black'}`}
+                        className={`px-4 py-2 rounded-full border dark:border-neutral-800 flex items-center gap-2 hover:shadow-md transition ${sentimentColors[ticker.sentiment] || 'bg-gray-100 dark:bg-black'}`}
                       >
                         <span className="font-bold text-gray-900 dark:text-white">{ticker.symbol}</span>
                         <span className="text-sm opacity-75 text-gray-600 dark:text-slate-400">{ticker.mentions}x</span>

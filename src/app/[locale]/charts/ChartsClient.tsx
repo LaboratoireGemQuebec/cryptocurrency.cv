@@ -70,7 +70,7 @@ export default function ChartsClient() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Ticker Tape */}
-      <div className="border-b border-gray-200 dark:border-gray-800">
+      <div className="border-b border-gray-200 dark:border-neutral-800">
         <TradingViewTicker 
           symbols={POPULAR_PAIRS.map(p => ({ proName: p.symbol, title: p.name }))}
           theme={theme} 
@@ -92,7 +92,7 @@ export default function ChartsClient() {
         </div>
 
         {/* Controls */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-4 mb-6">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Pair Selection */}
             <div className="flex-1">
@@ -170,7 +170,7 @@ export default function ChartsClient() {
         </div>
 
         {/* Main Chart */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-4 mb-6">
           <div className="flex items-center gap-2 mb-4">
             <BarChart3 className="w-5 h-5 text-gray-500" />
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -199,7 +199,7 @@ export default function ChartsClient() {
               <button
                 key={pair.symbol}
                 onClick={() => setSelectedPair(pair)}
-                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-3 cursor-pointer hover:border-blue-500 transition-colors text-left w-full"
+                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-3 cursor-pointer hover:border-blue-500 transition-colors text-left w-full"
               >
                 <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                   {pair.name}

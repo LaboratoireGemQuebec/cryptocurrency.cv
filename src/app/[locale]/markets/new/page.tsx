@@ -84,7 +84,7 @@ export default async function NewCoinsPage() {
               <Link
                 key={coin.id}
                 href={`/coin/${coin.id}`}
-                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
+                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="relative w-10 h-10">
@@ -107,7 +107,7 @@ export default async function NewCoinsPage() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-neutral-800">
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {formatPrice(coin.current_price)}
                   </span>

@@ -268,7 +268,7 @@ function ComparePageContent() {
         </div>
 
         {/* Coin Selector */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-4 mb-6">
           <div className="flex flex-wrap items-center gap-3">
             {selectedCoins.map((coinId, index) => {
               const coin = getCoinInfo(coinId);
@@ -301,15 +301,15 @@ function ComparePageContent() {
               <div className="relative">
                 <button
                   onClick={() => setShowCoinSelector(!showCoinSelector)}
-                  className="flex items-center gap-2 px-3 py-2 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl hover:border-gray-400 dark:hover:border-gray-500 text-gray-500 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2 border-2 border-dashed border-gray-300 dark:border-neutral-800 rounded-xl hover:border-gray-400 dark:hover:border-gray-500 text-gray-500 transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   Add coin
                 </button>
 
                 {showCoinSelector && (
-                  <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-10">
-                    <div className="p-3 border-b border-gray-200 dark:border-gray-700">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xl z-10">
+                    <div className="p-3 border-b border-gray-200 dark:border-neutral-800">
                       <div className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                         <input
@@ -317,7 +317,7 @@ function ComparePageContent() {
                           value={searchQuery}
                           onChange={e => setSearchQuery(e.target.value)}
                           placeholder="Search coins..."
-                          className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-black text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -381,7 +381,7 @@ function ComparePageContent() {
         )}
 
         {/* Normalized Price Chart */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Normalized Price Chart
           </h2>
@@ -491,11 +491,11 @@ function ComparePageContent() {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-700">
+                <tr className="border-b border-gray-200 dark:border-neutral-800">
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-500 dark:text-gray-400">
                     Metric
                   </th>
@@ -515,7 +515,7 @@ function ComparePageContent() {
               </thead>
               <tbody>
                 {/* Price */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Price</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -531,7 +531,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* Market Cap */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">Market Cap</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -547,7 +547,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* 24h Change */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">24h Change</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -566,7 +566,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* 7d Change */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">7d Change</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -584,7 +584,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* ATH */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">All-Time High</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -600,7 +600,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* From ATH */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">From ATH</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);
@@ -616,7 +616,7 @@ function ComparePageContent() {
                 </tr>
 
                 {/* Volume */}
-                <tr className="border-b border-gray-100 dark:border-gray-700/50">
+                <tr className="border-b border-gray-100 dark:border-neutral-800/50">
                   <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300">24h Volume</td>
                   {selectedCoins.map(coinId => {
                     const coin = coinData.get(coinId);

@@ -121,7 +121,7 @@ export default function HeadlinesPage() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 mb-6">
             <div className="flex flex-wrap gap-4 items-center">
               <div className="flex items-center gap-2">
                 <label htmlFor="time-range" className="text-sm text-gray-600 dark:text-slate-400">Time range:</label>
@@ -129,7 +129,7 @@ export default function HeadlinesPage() {
                   id="time-range"
                   value={hours}
                   onChange={(e) => setHours(Number(e.target.value))}
-                  className="px-3 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white text-sm"
+                  className="px-3 py-2 rounded-lg border border-gray-300 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white text-sm"
                 >
                   <option value={6}>Last 6 hours</option>
                   <option value={12}>Last 12 hours</option>
@@ -145,7 +145,7 @@ export default function HeadlinesPage() {
                   type="checkbox"
                   checked={changesOnly}
                   onChange={(e) => setChangesOnly(e.target.checked)}
-                  className="w-4 h-4 rounded border-gray-300 dark:border-slate-600 text-blue-600 focus:ring-blue-500"
+                  className="w-4 h-4 rounded border-gray-300 dark:border-neutral-800 text-blue-600 focus:ring-blue-500"
                 />
                 <span className="text-sm text-gray-700 dark:text-slate-300">Show only changed headlines</span>
               </label>
@@ -180,19 +180,19 @@ export default function HeadlinesPage() {
             <div className="space-y-6">
               {/* Stats Overview */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
                   <div className="text-3xl font-bold text-gray-900 dark:text-white">{data.stats.totalTracked}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">Articles Tracked</div>
                 </div>
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
                   <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">{data.stats.withChanges}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">With Changes</div>
                 </div>
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
                   <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{data.recentChanges.length}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">Recent Mutations</div>
                 </div>
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
                   <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
                     {data.stats.avgChangesPerArticle.toFixed(2)}
                   </div>
@@ -202,7 +202,7 @@ export default function HeadlinesPage() {
 
               {/* Recent Changes */}
               {data.recentChanges.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🔄 Recent Headline Changes</h2>
                   <div className="space-y-4">
                     {data.recentChanges.slice(0, 10).map((change, i) => (
@@ -228,14 +228,14 @@ export default function HeadlinesPage() {
 
               {/* Articles with Changes */}
               {data.tracked.filter(t => t.totalChanges > 0).length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Headline Evolution History</h2>
                   <div className="space-y-6">
                     {data.tracked
                       .filter(t => t.totalChanges > 0)
                       .slice(0, 10)
                       .map((article) => (
-                        <div key={article.articleId} className="border-b border-gray-200 dark:border-slate-700 pb-4 last:border-0 last:pb-0">
+                        <div key={article.articleId} className="border-b border-gray-200 dark:border-neutral-800 pb-4 last:border-0 last:pb-0">
                           <div className="flex items-start justify-between gap-4 mb-2">
                             <div className="flex-1">
                               <Link
@@ -260,7 +260,7 @@ export default function HeadlinesPage() {
                               <span className="font-medium">Original:</span> {article.originalTitle}
                             </div>
                             {article.changes.map((change, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm pl-4 border-l-2 border-gray-200 dark:border-slate-600">
+                              <div key={idx} className="flex items-center gap-2 text-sm pl-4 border-l-2 border-gray-200 dark:border-neutral-800">
                                 <span className={`px-2 py-0.5 rounded text-xs font-medium ${changeTypeColors[change.changeType]}`}>
                                   {change.changeType}
                                 </span>

@@ -146,7 +146,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
             <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
@@ -162,7 +162,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">📊</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Sentiment Context</h2>
@@ -184,7 +184,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
   // If no data at all, show a minimal card
   if (!marketData && !socialData) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">📊</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Sentiment Context</h2>
@@ -203,7 +203,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
   const hasDivergence = marketData && !isSentimentSimilar(articleSentiment, marketData.overall);
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center gap-3">
@@ -272,7 +272,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
         {/* Divergence Alert */}
         {hasDivergence && (
-          <div className="p-4 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-600/50 rounded-xl">
+          <div className="p-4 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-neutral-800/50 rounded-xl">
             <div className="flex items-start gap-2">
               <span className="text-lg">⚠️</span>
               <div>
@@ -291,7 +291,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-neutral-800 flex items-center justify-between">
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 Powered by AI sentiment analysis
         </span>

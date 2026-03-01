@@ -71,11 +71,11 @@ export default async function TrendingPage() {
                 <Link
                   key={coin.id}
                   href={`/coin/${coin.id}`}
-                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl font-bold text-gray-300 dark:text-gray-600">
+                      <span className="text-2xl font-bold text-gray-300 dark:text-gray-400">
                         #{index + 1}
                       </span>
                       <div className="relative w-10 h-10">
@@ -103,7 +103,7 @@ export default async function TrendingPage() {
                     </p>
                   </div>
                   {details && (
-                    <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <div className="mt-4 pt-4 border-t border-gray-100 dark:border-neutral-800">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400 text-sm">24h Change</span>
                         <span

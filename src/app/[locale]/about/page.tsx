@@ -95,7 +95,7 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Why Free Crypto News?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature) => (
-                <div key={feature.title} className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:shadow-lg transition">
+                <div key={feature.title} className="p-6 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:shadow-lg transition">
                   <div className="text-4xl mb-3">{feature.icon}</div>
                   <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
                   <p className="text-gray-600 dark:text-slate-400">{feature.description}</p>
@@ -131,7 +131,7 @@ export default async function AboutPage({ params }: Props) {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md transition group"
+                  className="p-5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md transition group"
                 >
                   <div className="flex justify-between items-start">
                     <h3 className="font-bold text-lg mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-gray-900 dark:text-white">{source.name}</h3>
@@ -199,7 +199,7 @@ export default async function AboutPage({ params }: Props) {
                     <th className="px-4 py-3 font-semibold text-gray-900 dark:text-white">Description</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
+                <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
                   <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/news</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Latest news from all sources</td></tr>
                   <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/search?q=</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Search news by keywords</td></tr>
                   <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/bitcoin</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Bitcoin-specific news</td></tr>

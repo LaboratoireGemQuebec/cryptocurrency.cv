@@ -53,7 +53,7 @@ export default function SentimentMeter({ score, label, confidence }: SentimentMe
       <div className="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-red-500 via-yellow-400 to-green-500">
         {/* Marker */}
         <div
-          className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white dark:border-slate-900 ${markerColor} shadow-lg transition-all duration-500`}
+          className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white dark:border-neutral-800 ${markerColor} shadow-lg transition-all duration-500`}
           style={{ left: `calc(${percentage}% - 10px)` }}
         />
       </div>

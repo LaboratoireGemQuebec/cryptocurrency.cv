@@ -136,7 +136,7 @@ export function EntityRelationships({
           onClick={() => setSelectedType(null)}
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
             selectedType === null
-              ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
+              ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-black dark:text-gray-300 dark:hover:bg-neutral-900'
           }`}
         >
@@ -150,7 +150,7 @@ export function EntityRelationships({
               onClick={() => setSelectedType(type)}
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 selectedType === type
-                  ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
+                  ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-black dark:text-gray-300 dark:hover:bg-neutral-900'
               }`}
             >
@@ -169,7 +169,7 @@ export function EntityRelationships({
           return (
             <div
               key={rel.id}
-              className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black hover:shadow-md transition-shadow"
+              className="p-4 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:shadow-md transition-shadow"
             >
               <div className="flex items-start justify-between mb-2">
                 <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${config.color}`}>

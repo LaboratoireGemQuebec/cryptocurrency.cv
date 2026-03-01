@@ -389,7 +389,7 @@ export default async function ArticlePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
               {/* Article Header */}
-              <article className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+              <article className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
                 <div className="p-6 md:p-8">
                   {/* Meta row */}
                   <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -460,7 +460,7 @@ export default async function ArticlePage({ params }: Props) {
                   )}
 
                   {/* Date, source link, and bookmark */}
-                  <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500 dark:text-slate-400 border-t border-gray-200 dark:border-slate-700 pt-4">
+                  <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500 dark:text-slate-400 border-t border-gray-200 dark:border-neutral-800 pt-4">
                     <div className="flex items-center gap-3">
                       <time dateTime={article.pub_date || article.first_seen}>
                         📅 {formatDate(article.pub_date || article.first_seen)}
@@ -491,7 +491,7 @@ export default async function ArticlePage({ params }: Props) {
               <ArticleContent article={article} />
 
               {/* Entities & Tags */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   📋 Article Details
                 </h2>
@@ -630,7 +630,7 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Article Reactions */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   💬 What do you think?
                 </h2>
@@ -648,7 +648,7 @@ export default async function ArticlePage({ params }: Props) {
 
               {/* More from This Source */}
               {moreFromSource.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                     📰 More from {article.source}
                   </h2>
@@ -688,7 +688,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="space-y-6">
               {/* Market Context */}
               {article.market_context && (
-                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                     📊 Market Context
                   </h2>
@@ -774,7 +774,7 @@ export default async function ArticlePage({ params }: Props) {
               <ArticleShareCard title={article.title} url={articleUrl} />
 
               {/* Source Info */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   📰 Source
                 </h2>

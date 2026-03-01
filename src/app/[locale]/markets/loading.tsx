@@ -27,7 +27,7 @@ export default function MarketsLoading() {
         <Header />
 
         {/* Global Stats Bar Skeleton */}
-        <div className="bg-gray-50 dark:bg-black border-b border-gray-200 dark:border-gray-800">
+        <div className="bg-gray-50 dark:bg-black border-b border-gray-200 dark:border-neutral-800">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center gap-4 py-3 overflow-hidden">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -50,7 +50,7 @@ export default function MarketsLoading() {
           {/* Trending Section Skeleton */}
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             {/* Trending Card */}
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
               <div className="flex items-center justify-between mb-3">
                 <Skeleton className="h-6 w-32" />
                 <Skeleton className="h-4 w-20" />
@@ -62,7 +62,7 @@ export default function MarketsLoading() {
               </div>
             </div>
             {/* Gainers/Losers Card */}
-            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
               <div className="flex items-center justify-between mb-3">
                 <Skeleton className="h-6 w-32" />
                 <Skeleton className="h-8 w-36 rounded-lg" />
@@ -105,9 +105,9 @@ export default function MarketsLoading() {
           </div>
 
           {/* Coins Table Skeleton */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
             {/* Table Header */}
-            <div className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-gray-700">
+            <div className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-neutral-800">
               <div className="flex items-center p-4 gap-4">
                 <Skeleton className="h-4 w-6" />
                 <Skeleton className="h-4 w-16" />
@@ -122,7 +122,7 @@ export default function MarketsLoading() {
             </div>
             
             {/* Table Rows */}
-            <div className="divide-y divide-gray-100 dark:divide-gray-800">
+            <div className="divide-y divide-gray-100 dark:divide-neutral-800">
               {Array.from({ length: 20 }).map((_, i) => (
                 <div key={i} className="flex items-center p-4 gap-4">
                   <Skeleton className="h-4 w-6" />
@@ -146,7 +146,7 @@ export default function MarketsLoading() {
             </div>
 
             {/* Pagination Skeleton */}
-            <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-neutral-800">
               <Skeleton className="h-4 w-48" />
               <div className="flex items-center gap-1">
                 <Skeleton className="h-10 w-20 rounded-lg" />

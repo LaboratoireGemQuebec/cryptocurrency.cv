@@ -176,7 +176,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
   return (
     <div className="space-y-8">
       {/* Converter */}
-      <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+      <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
           <ArrowsRightLeftIcon className="w-5 h-5" />
           Crypto Converter
@@ -193,13 +193,13 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
                 type="number"
                 value={fromAmount}
                 onChange={(e) => setFromAmount(e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white text-lg font-mono"
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white text-lg font-mono"
                 placeholder="0.00"
               />
               <select
                 value={fromCoin}
                 onChange={(e) => setFromCoin(e.target.value)}
-                className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-medium"
+                className="px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-medium"
               >
                 {coinList.map((coin) => (
                   <option key={coin.id} value={coin.id}>
@@ -213,7 +213,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
           {/* Swap Button */}
           <button
             onClick={swapCoins}
-            className="p-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-black transition-colors"
+            className="p-3 rounded-full border border-gray-300 dark:border-neutral-800 hover:bg-gray-100 dark:hover:bg-black transition-colors"
             aria-label="Swap currencies"
           >
             <ArrowsRightLeftIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
@@ -227,13 +227,13 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
                 type="text"
                 value={toAmount}
                 readOnly
-                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-black text-slate-900 dark:text-white text-lg font-mono"
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-gray-50 dark:bg-black text-slate-900 dark:text-white text-lg font-mono"
                 placeholder="0.00"
               />
               <select
                 value={toCoin}
                 onChange={(e) => setToCoin(e.target.value)}
-                className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-medium"
+                className="px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-medium"
               >
                 {coinList.map((coin) => (
                   <option key={coin.id} value={coin.id}>
@@ -253,7 +253,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
       </div>
 
       {/* Profit Calculator */}
-      <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+      <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
           <CalculatorIcon className="w-5 h-5" />
           Profit Calculator
@@ -269,7 +269,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
               type="number"
               value={buyPrice}
               onChange={(e) => setBuyPrice(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
               placeholder="40000"
             />
           </div>
@@ -282,7 +282,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
               type="number"
               value={sellPrice}
               onChange={(e) => setSellPrice(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
               placeholder="50000"
             />
           </div>
@@ -295,7 +295,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
               type="number"
               value={investment}
               onChange={(e) => setInvestment(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white font-mono"
               placeholder="1000"
             />
           </div>

@@ -102,11 +102,11 @@ export default async function ExchangesPage() {
           </div>
 
           {/* Exchanges Table */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-gray-700">
+                  <tr className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-neutral-800">
                     <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">#</th>
                     <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Exchange</th>
                     <th className="text-center text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Trust Score</th>
@@ -121,7 +121,7 @@ export default async function ExchangesPage() {
                   {exchanges.map((exchange) => (
                     <tr
                       key={exchange.id}
-                      className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
+                      className="border-b border-gray-100 dark:border-neutral-800 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
                     >
                       <td className="p-4 text-gray-500 dark:text-gray-400">
                         {exchange.trust_score_rank}

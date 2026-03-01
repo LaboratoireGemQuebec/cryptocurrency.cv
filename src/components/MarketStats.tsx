@@ -23,7 +23,7 @@ export default async function MarketStats() {
   const fearGreedValue = market.fearGreed ? Number(market.fearGreed.value) : 50;
 
   return (
-    <div className="relative overflow-hidden bg-white dark:bg-black/80 rounded-2xl shadow-card dark:shadow-xl dark:border dark:border-slate-700/50 backdrop-blur-sm">
+    <div className="relative overflow-hidden bg-white dark:bg-black/80 rounded-2xl shadow-card dark:shadow-xl dark:border dark:border-neutral-800/50 backdrop-blur-sm">
       {/* Animated gradient background */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]"
@@ -58,7 +58,7 @@ export default async function MarketStats() {
 
         <div className="space-y-4">
           {/* Market Cap - Premium card style */}
-          <div className="bg-gradient-to-br from-gray-50 to-white dark:from-slate-800/80 dark:to-slate-800/50 rounded-xl p-4 border border-gray-100 dark:border-slate-700/50">
+          <div className="bg-gradient-to-br from-gray-50 to-white dark:from-slate-800/80 dark:to-slate-800/50 rounded-xl p-4 border border-gray-100 dark:border-neutral-800/50">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">Total Market Cap</span>
@@ -100,13 +100,13 @@ export default async function MarketStats() {
 
           {/* Volume & BTC Dominance */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-neutral-800/50">
               <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">24h Volume</span>
               <div className="text-lg font-bold text-gray-900 dark:text-white mt-1">
                 ${formatNumber(market.global.total_volume?.usd)}
               </div>
             </div>
-            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-neutral-800/50">
               <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">BTC Dom.</span>
               <div className="text-lg font-bold text-gray-900 dark:text-white mt-1 flex items-baseline gap-1">
                 {market.global.market_cap_percentage?.btc?.toFixed(1)}
@@ -117,7 +117,7 @@ export default async function MarketStats() {
 
           {/* Fear & Greed - Premium gauge style */}
           {market.fearGreed && (
-            <div className="bg-gradient-to-br from-gray-50 to-white dark:from-slate-800/80 dark:to-slate-800/50 rounded-xl p-4 border border-gray-100 dark:border-slate-700/50">
+            <div className="bg-gradient-to-br from-gray-50 to-white dark:from-slate-800/80 dark:to-slate-800/50 rounded-xl p-4 border border-gray-100 dark:border-neutral-800/50">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">Fear & Greed Index</span>
                 <span className={`text-2xl font-black ${getFearGreedColor(fearGreedValue)}`}>
@@ -170,8 +170,8 @@ export default async function MarketStats() {
                     key={coin.id}
                     className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:scale-105 active:scale-95 cursor-default ${
                       index === 0 
-                        ? 'bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800/40 dark:to-gray-700/40 text-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-600/50'
-                        : 'bg-gray-100 dark:bg-black/50 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 border border-gray-200 dark:border-slate-600/50'
+                        ? 'bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800/40 dark:to-gray-700/40 text-gray-800 dark:text-gray-300 border border-gray-200 dark:border-neutral-800/50'
+                        : 'bg-gray-100 dark:bg-black/50 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 border border-gray-200 dark:border-neutral-800/50'
                     }`}
                     role="listitem"
                   >

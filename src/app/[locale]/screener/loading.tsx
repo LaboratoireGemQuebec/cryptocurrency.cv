@@ -28,16 +28,16 @@ export default function Loading() {
         </div>
 
         {/* Data table */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden">
           {/* Table header */}
-          <div className="grid grid-cols-7 gap-4 p-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-black/50">
+          <div className="grid grid-cols-7 gap-4 p-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
             {['#', 'Name', 'Price', '24h', '7d', 'Market Cap', 'Volume'].map((col) => (
               <Skeleton key={col} className="h-4 w-16" />
             ))}
           </div>
           {/* Table rows */}
           {[...Array(15)].map((_, i) => (
-            <div key={i} className="grid grid-cols-7 gap-4 p-4 border-b border-gray-50 dark:border-slate-700/50">
+            <div key={i} className="grid grid-cols-7 gap-4 p-4 border-b border-gray-50 dark:border-neutral-800/50">
               <Skeleton className="h-4 w-6" />
               <div className="flex items-center gap-2">
                 <Skeleton className="h-8 w-8 rounded-full" />

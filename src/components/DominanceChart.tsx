@@ -140,12 +140,12 @@ export function DominanceChart({ coins }: { coins: Coin[] }) {
     <div className="space-y-6">
       {/* Mode Toggle */}
       <div className="flex justify-center">
-        <div className="inline-flex rounded-lg border border-gray-300 dark:border-slate-700 p-1">
+        <div className="inline-flex rounded-lg border border-gray-300 dark:border-neutral-800 p-1">
           <button
             onClick={() => setDisplayMode('donut')}
             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
               displayMode === 'donut'
-                ? 'bg-black dark:bg-white text-white dark:text-slate-900'
+                ? 'bg-black dark:bg-white text-white dark:text-white'
                 : 'text-gray-600 dark:text-gray-400'
             }`}
           >
@@ -155,7 +155,7 @@ export function DominanceChart({ coins }: { coins: Coin[] }) {
             onClick={() => setDisplayMode('bar')}
             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
               displayMode === 'bar'
-                ? 'bg-black dark:bg-white text-white dark:text-slate-900'
+                ? 'bg-black dark:bg-white text-white dark:text-white'
                 : 'text-gray-600 dark:text-gray-400'
             }`}
           >

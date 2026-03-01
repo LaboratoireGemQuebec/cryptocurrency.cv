@@ -86,7 +86,7 @@ export function LanguageSwitcher({ variant = 'dropdown', className = '' }: Langu
           id="language-select"
           value={locale}
           onChange={(e) => handleChange(e.target.value)}
-          className="appearance-none bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 transition-colors cursor-pointer"
+          className="appearance-none bg-transparent border border-gray-300 dark:border-neutral-800 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 transition-colors cursor-pointer"
         >
           {locales.map((loc) => (
             <option key={loc} value={loc} className="bg-white dark:bg-black">

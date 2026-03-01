@@ -75,7 +75,7 @@ export function AlertsList({
   if (filteredAlerts.length === 0) {
     return (
       <div className={`text-center py-8 ${className}`}>
-        <Bell className="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto mb-3" />
+        <Bell className="w-12 h-12 text-gray-300 dark:text-gray-400 mx-auto mb-3" />
         <p className="text-gray-500 dark:text-gray-400 mb-1">No alerts set</p>
         <p className="text-sm text-gray-400 dark:text-gray-500">
           Create alerts to get notified when prices change
@@ -195,7 +195,7 @@ function AlertItem({ alert, onRemove, onReactivate }: AlertItemProps) {
       className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
         alert.triggered
           ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800'
-          : 'bg-gray-50 dark:bg-black border-gray-200 dark:border-gray-700'
+          : 'bg-gray-50 dark:bg-black border-gray-200 dark:border-neutral-800'
       }`}
     >
       <div className={`p-2 rounded-lg ${

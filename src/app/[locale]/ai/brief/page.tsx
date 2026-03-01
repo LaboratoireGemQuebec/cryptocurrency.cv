@@ -139,7 +139,7 @@ export default async function BriefPage() {
               </div>
 
               {/* Market Overview */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
                   📊 Market Overview
                 </h3>
@@ -179,7 +179,7 @@ export default async function BriefPage() {
 
               {/* Top Stories */}
               {brief.topStories?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">🔥 Top Stories</h3>
                   <div className="space-y-4">
                     {brief.topStories.map((story, i) => (
@@ -216,7 +216,7 @@ export default async function BriefPage() {
 
               {/* Sectors in Focus */}
               {brief.sectorsInFocus?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">🎯 Sectors in Focus</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {brief.sectorsInFocus.map((sector, i) => (
@@ -236,7 +236,7 @@ export default async function BriefPage() {
 
               {/* Upcoming Events */}
               {brief.upcomingEvents?.length > 0 && (
-                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">📅 Upcoming Events</h3>
                   <div className="space-y-3">
                     {brief.upcomingEvents.map((event, i) => (

@@ -115,7 +115,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
             onClick={() => setIsOpen(false)}
             onKeyDown={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-20 animate-fadeIn">
+          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg border border-gray-200 dark:border-neutral-800 py-2 z-20 animate-fadeIn">
             {shareLinks.map((link) => (
               <a
                 key={link.name}
@@ -130,7 +130,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               </a>
             ))}
             
-            <div className="border-t border-gray-200 dark:border-gray-700 my-2" />
+            <div className="border-t border-gray-200 dark:border-neutral-800 my-2" />
             
             <button
               onClick={copyToClipboard}

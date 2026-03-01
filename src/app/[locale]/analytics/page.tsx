@@ -151,7 +151,7 @@ export default function AnalyticsPage() {
                 <Link
                   key={feature.title}
                   href={feature.href}
-                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 transition-all group"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 transition-all group"
                 >
                   <div className="flex items-start gap-4">
                     <span className="text-4xl">{feature.icon}</span>
@@ -182,7 +182,7 @@ export default function AnalyticsPage() {
               {comingSoonFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="bg-gray-100 dark:bg-black/50 rounded-xl border border-gray-200 dark:border-slate-700 p-4 opacity-60"
+                  className="bg-gray-100 dark:bg-black/50 rounded-xl border border-gray-200 dark:border-neutral-800 p-4 opacity-60"
                 >
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">{feature.icon}</span>

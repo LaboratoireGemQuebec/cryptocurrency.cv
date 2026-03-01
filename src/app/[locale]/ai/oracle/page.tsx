@@ -141,7 +141,7 @@ export default function OraclePage() {
                 <button
                   key={idx}
                   onClick={() => handleExampleClick(example.text)}
-                  className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors text-left"
+                  className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors text-left"
                 >
                   <example.icon className="w-5 h-5 text-purple-500 dark:text-purple-400 flex-shrink-0" />
                   <span className="text-sm text-gray-700 dark:text-slate-300">{example.text}</span>
@@ -169,7 +169,7 @@ export default function OraclePage() {
                 
                 {/* Sources */}
                 {message.sources && message.sources.length > 0 && (
-                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-slate-700">
+                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-neutral-800">
                     <p className="text-xs font-medium text-gray-500 dark:text-slate-400 mb-2">Sources:</p>
                     <div className="space-y-1">
                       {message.sources.map((source, sIdx) => (
@@ -217,7 +217,7 @@ export default function OraclePage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about crypto news, prices, trends..."
-              className="w-full px-5 py-4 pr-14 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent shadow-lg"
+              className="w-full px-5 py-4 pr-14 rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent shadow-lg"
               disabled={isLoading}
             />
             <button

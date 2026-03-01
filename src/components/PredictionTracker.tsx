@@ -70,7 +70,7 @@ function Sparkline({ data, width = 120, height = 24 }: SparklineProps) {
         const cx = n === 1 ? width / 2 : padding + (i / (n - 1)) * innerW;
         if (v === null) {
           return (
-            <circle key={i} cx={cx} cy={cy} r={dotR} fill="currentColor" className="text-gray-300 dark:text-gray-600" />
+            <circle key={i} cx={cx} cy={cy} r={dotR} fill="currentColor" className="text-gray-300 dark:text-gray-400" />
           );
         }
         return (
@@ -127,7 +127,7 @@ function PredictionRow({ prediction, latestResult, accuracy }: RowData) {
   const accuracyPct = accuracy?.accuracy_pct ?? 0;
 
   return (
-    <tr className={`border-b border-gray-100 dark:border-gray-800 ${rowBg} transition-colors`}>
+    <tr className={`border-b border-gray-100 dark:border-neutral-800 ${rowBg} transition-colors`}>
       {/* Coin */}
       <td className="py-3 px-4 font-semibold text-sm whitespace-nowrap">
         <div className="flex items-center gap-2">
@@ -273,7 +273,7 @@ export default function PredictionTracker() {
 
   if (!latest || latest.predictions.length === 0) {
     return (
-      <div className="text-sm text-gray-500 dark:text-gray-400 p-4 bg-gray-50 dark:bg-black rounded border border-gray-200 dark:border-gray-700">
+      <div className="text-sm text-gray-500 dark:text-gray-400 p-4 bg-gray-50 dark:bg-black rounded border border-gray-200 dark:border-neutral-800">
         <p className="font-medium mb-1">No AI predictions yet.</p>
         <p>The daily cron job will populate predictions at midnight UTC.</p>
         <p className="mt-2 text-xs text-gray-400">
@@ -301,7 +301,7 @@ export default function PredictionTracker() {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-neutral-800 shadow-sm">
         <table className="w-full text-left">
           <thead>
             <tr className="bg-gray-50 dark:bg-black/60 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">

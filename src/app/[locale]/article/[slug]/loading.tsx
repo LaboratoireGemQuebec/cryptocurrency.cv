@@ -73,7 +73,7 @@ export default function ArticleLoading() {
         </div>
 
         {/* Share buttons skeleton */}
-        <div className="flex items-center gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-slate-700">
+        <div className="flex items-center gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-neutral-800">
           <Skeleton className="h-10 w-10 rounded-full" />
           <Skeleton className="h-10 w-10 rounded-full" />
           <Skeleton className="h-10 w-10 rounded-full" />

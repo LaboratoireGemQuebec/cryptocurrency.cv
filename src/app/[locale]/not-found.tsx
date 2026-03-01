@@ -27,7 +27,7 @@ export default function NotFound() {
         className="min-h-[60vh] flex flex-col items-center justify-center px-4 py-16"
       >
         <div className="text-center max-w-md">
-          <h1 className="text-8xl font-black text-gray-200 dark:text-slate-800 mb-4">
+          <h1 className="text-8xl font-black text-gray-200 dark:text-white mb-4">
             404
           </h1>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">

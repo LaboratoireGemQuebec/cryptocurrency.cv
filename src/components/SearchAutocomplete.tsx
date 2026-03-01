@@ -175,7 +175,7 @@ export default function SearchAutocomplete({
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
             data-search-input
-            className="w-full pl-10 pr-4 py-2.5 bg-gray-100 dark:bg-black border border-transparent rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+            className="w-full pl-10 pr-4 py-2.5 bg-gray-100 dark:bg-black border border-transparent rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
           />
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             {isLoading ? (
@@ -203,7 +203,7 @@ export default function SearchAutocomplete({
       {isOpen && results.length > 0 && (
         <div
           ref={dropdownRef}
-          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden z-50"
+          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-neutral-800 overflow-hidden z-50"
         >
           <div className="py-2">
             {results.map((result, index) => (
@@ -234,7 +234,7 @@ export default function SearchAutocomplete({
           </div>
           
           {/* View all results */}
-          <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
+          <div className="px-4 py-3 border-t border-gray-100 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
             <Link
               href={`/search?q=${encodeURIComponent(query)}`}
               onClick={() => setIsOpen(false)}
@@ -253,7 +253,7 @@ export default function SearchAutocomplete({
       {isOpen && query.length >= 2 && results.length === 0 && !isLoading && (
         <div
           ref={dropdownRef}
-          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden z-50"
+          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-neutral-800 overflow-hidden z-50"
         >
           <div className="px-4 py-6 text-center">
             <p className="text-gray-500 dark:text-gray-400">No results found for &quot;{query}&quot;</p>

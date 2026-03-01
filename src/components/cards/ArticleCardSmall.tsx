@@ -169,7 +169,7 @@ function ArticleCardSmall({
                 <span className={`w-1.5 h-1.5 rounded-full ${accent.solid}`} aria-hidden="true" />
               )}
               <span className="font-medium truncate">{article.source}</span>
-              <span className="text-gray-300 dark:text-gray-600" aria-hidden="true">•</span>
+              <span className="text-gray-300 dark:text-gray-400" aria-hidden="true">•</span>
               <time dateTime={article.pubDate} className="flex items-center gap-1">
                 <svg className="w-3 h-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

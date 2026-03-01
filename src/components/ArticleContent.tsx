@@ -74,7 +74,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
   };
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <button
         onClick={fetchContent}
@@ -107,7 +107,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
       
       {/* Content */}
       {expanded && content && (
-        <div className="border-t border-gray-200 dark:border-slate-700 p-6 space-y-6">
+        <div className="border-t border-gray-200 dark:border-neutral-800 p-6 space-y-6">
           {/* Summary */}
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
@@ -166,7 +166,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
           )}
           
           {/* Read full article CTA */}
-          <div className="pt-4 border-t border-gray-200 dark:border-slate-700">
+          <div className="pt-4 border-t border-gray-200 dark:border-neutral-800">
             <a
               href={article.link}
               target="_blank"
@@ -187,7 +187,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
       
       {/* Error */}
       {error && (
-        <div className="border-t border-gray-200 dark:border-slate-700 p-6">
+        <div className="border-t border-gray-200 dark:border-neutral-800 p-6">
           <div className="flex items-center gap-3 p-4 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-xl">
             <span>⚠️</span>
             <div>

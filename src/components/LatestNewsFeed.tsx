@@ -111,9 +111,9 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
 
   const t = useTranslations('common');
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 overflow-hidden shadow-sm dark:shadow-lg">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
+      <div className="px-5 py-4 border-b border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-black/50">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-brand-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,14 +138,14 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
         {dayGroups.map(group => (
           <div key={group.label}>
             {/* Day Header */}
-            <div className="px-5 py-2 bg-gray-50/80 dark:bg-black/30 border-b border-gray-100 dark:border-slate-700/50 sticky top-0 z-10">
+            <div className="px-5 py-2 bg-gray-50/80 dark:bg-black/30 border-b border-gray-100 dark:border-neutral-800/50 sticky top-0 z-10">
               <span className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
                 {group.label}
               </span>
             </div>
 
             {/* Articles in this day */}
-            <div className="divide-y divide-gray-50 dark:divide-slate-700/50">
+            <div className="divide-y divide-gray-50 dark:divide-neutral-800/50">
               {group.articles.map(article => {
                 const sentiment = detectSentiment(article.title);
                 const config = sentimentConfig[sentiment];

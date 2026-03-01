@@ -116,7 +116,7 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
   const dominantPct = dominant && total > 0 ? Math.round((reactions[dominant.key] / total) * 100) : 0;
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-5 space-y-4">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-5 space-y-4">
       {/* Dominant reaction summary */}
       {dominant && total > 0 && (
         <div className="flex items-center gap-2 text-sm">
@@ -139,8 +139,8 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
               myReaction === key
                 ? activeColor
                 : myReaction !== null
-                ? 'border-gray-200 dark:border-slate-600 text-gray-500 dark:text-slate-400 cursor-default'
-                : `border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 ${color} cursor-pointer active:scale-95`
+                ? 'border-gray-200 dark:border-neutral-800 text-gray-500 dark:text-slate-400 cursor-default'
+                : `border-gray-200 dark:border-neutral-800 text-gray-700 dark:text-slate-300 ${color} cursor-pointer active:scale-95`
             } ${animating === key ? 'scale-110' : ''}`}
           >
             <span className={animating === key ? 'animate-bounce' : ''}>{emoji}</span>
@@ -151,7 +151,7 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
       </div>
 
       {/* Share row */}
-      <div className="flex items-center gap-2 pt-2 border-t border-gray-100 dark:border-slate-700">
+      <div className="flex items-center gap-2 pt-2 border-t border-gray-100 dark:border-neutral-800">
         <span className="text-xs text-gray-500 dark:text-slate-400 mr-1">Share:</span>
         <button
           onClick={handleCopyLink}

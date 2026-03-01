@@ -25,7 +25,7 @@ export default function NotFound() {
       <div className="text-center max-w-lg">
         {/* Animated 404 */}
         <div className="relative mb-6">
-          <h1 className="text-[10rem] font-black leading-none text-gray-100 dark:text-slate-800/60 select-none">
+          <h1 className="text-[10rem] font-black leading-none text-gray-100 dark:text-white/60 select-none">
             404
           </h1>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function NotFound() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-slate-500 hover:shadow-md transition-all text-center"
+                className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 hover:border-brand-300 dark:hover:border-slate-500 hover:shadow-md transition-all text-center"
               >
                 <span className="text-xl">{link.icon}</span>
                 <span className="text-xs font-medium text-gray-600 dark:text-slate-400">

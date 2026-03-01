@@ -40,7 +40,7 @@ export default function SearchLoading() {
         {/* Results Skeleton */}
         <div className="space-y-4">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 p-5">
+            <div key={i} className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-neutral-800 p-5">
               <div className="flex gap-4">
                 <Skeleton className="w-1 h-16 rounded-full" />
                 <div className="flex-1">

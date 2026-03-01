@@ -213,7 +213,7 @@ export function PriceAlerts() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
           <div className="bg-white dark:bg-black rounded-xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-hidden">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-neutral-800">
               <div className="flex items-center gap-2">
                 <Bell className="w-5 h-5 text-amber-500" />
                 <h2 className="text-lg font-semibold">Price Alerts</h2>
@@ -236,7 +236,7 @@ export function PriceAlerts() {
                   <select
                     value={selectedCoin.id}
                     onChange={(e) => setSelectedCoin(COINS.find(c => c.id === e.target.value) || COINS[0])}
-                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg text-sm"
                   >
                     {COINS.map(coin => (
                       <option key={coin.id} value={coin.id}>
@@ -248,7 +248,7 @@ export function PriceAlerts() {
                   <select
                     value={direction}
                     onChange={(e) => setDirection(e.target.value as 'above' | 'below')}
-                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg text-sm"
                   >
                     <option value="above">Goes above</option>
                     <option value="below">Goes below</option>
@@ -263,7 +263,7 @@ export function PriceAlerts() {
                       value={targetPrice}
                       onChange={(e) => setTargetPrice(e.target.value)}
                       placeholder="Target price"
-                      className="w-full pl-7 pr-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                      className="w-full pl-7 pr-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg text-sm"
                     />
                   </div>
                   <button

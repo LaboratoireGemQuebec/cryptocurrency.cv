@@ -233,7 +233,7 @@ export function WhaleAlertsDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="animate-pulse space-y-4">
             <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-4 gap-4">
@@ -427,8 +427,8 @@ export function WhaleAlertsDashboard() {
       )}
 
       {/* Alerts List */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-        <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+        <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             🐋 Recent Whale Transactions
           </h3>
@@ -437,7 +437,7 @@ export function WhaleAlertsDashboard() {
           </p>
         </div>
 
-        <div className="divide-y divide-gray-200 dark:divide-slate-700 max-h-[600px] overflow-y-auto">
+        <div className="divide-y divide-gray-200 dark:divide-neutral-800 max-h-[600px] overflow-y-auto">
           {filteredAlerts.length === 0 ? (
             <div className="p-8 text-center text-gray-500 dark:text-slate-400">
               No transactions match your current filters
@@ -512,7 +512,7 @@ export function WhaleAlertsDashboard() {
                       className={`mt-1 w-6 h-6 rounded-full text-xs font-bold border transition-colors flex items-center justify-center ${
                         expandedContext === alert.id
                           ? 'bg-cyan-500 border-cyan-500 text-white'
-                          : 'border-gray-300 dark:border-slate-600 text-gray-500 dark:text-slate-400 hover:border-cyan-500 hover:text-cyan-500'
+                          : 'border-gray-300 dark:border-neutral-800 text-gray-500 dark:text-slate-400 hover:border-cyan-500 hover:text-cyan-500'
                       }`}
                     >
                       ?

@@ -28,7 +28,7 @@ export default function Loading() {
         </div>
 
         {/* Main chart */}
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 mb-8">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
             <Skeleton className="h-6 w-40" />
             <div className="flex gap-2">
@@ -43,7 +43,7 @@ export default function Loading() {
         {/* Secondary charts grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6">
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-neutral-800 p-6">
               <Skeleton className="h-6 w-36 mb-4" />
               <Skeleton className="h-48 w-full rounded-xl" />
             </div>

@@ -214,12 +214,12 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Empty state
   if (holdings.length === 0) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-8">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Portfolio Performance
         </h3>
         <div className="flex flex-col items-center justify-center h-48 text-gray-500 dark:text-slate-400">
-          <svg className="w-12 h-12 mb-3 text-gray-300 dark:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-12 h-12 mb-3 text-gray-300 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
           </svg>
           <p className="text-sm">Add holdings to track performance</p>
@@ -231,7 +231,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Loading state
   if (isLoading && chartData.length === 0) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-8">
         <div className="flex items-center justify-between mb-6">
           <div className="h-6 w-40 bg-gray-200 dark:bg-black rounded animate-pulse" />
           <div className="h-8 w-56 bg-gray-200 dark:bg-black rounded animate-pulse" />
@@ -244,7 +244,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Insufficient data state
   if (chartData.length < 2) {
     return (
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-8">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Portfolio Performance
         </h3>
@@ -270,7 +270,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   }
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
@@ -380,7 +380,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
                     y2={y}
                     stroke="currentColor"
                     strokeOpacity="0.1"
-                    className="text-gray-400 dark:text-slate-600"
+                    className="text-gray-400 dark:text-gray-400"
                   />
                   <text
                     x={`${(padding.left / 10) - 1}%`}

@@ -134,7 +134,7 @@ export default async function SentimentPage() {
           {data ? (
             <div className="space-y-8">
               {/* Overall Sentiment Card */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="text-center">
                     <h2 className="text-lg text-gray-500 dark:text-slate-400 mb-4">Market Sentiment Score</h2>
@@ -173,7 +173,7 @@ export default async function SentimentPage() {
                   {data.articles?.map((article, i) => (
                     <div 
                       key={i} 
-                      className={`bg-white dark:bg-black rounded-xl border p-5 ${sentimentColors[article.sentiment]?.border || 'border-gray-200 dark:border-slate-700'}`}
+                      className={`bg-white dark:bg-black rounded-xl border p-5 ${sentimentColors[article.sentiment]?.border || 'border-gray-200 dark:border-neutral-800'}`}
                     >
                       <div className="flex items-start justify-between gap-4 mb-3">
                         <div className="flex-1">

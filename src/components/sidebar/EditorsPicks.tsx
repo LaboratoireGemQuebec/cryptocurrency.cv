@@ -67,7 +67,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
   const picks = getVariedArticles(articles, 3);
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-neutral-800 p-6">
       {/* Header */}
       <div className="flex items-center gap-2 mb-5">
         <span className="text-xl" aria-hidden="true">🔥</span>
@@ -138,7 +138,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-100 dark:border-gray-800 mt-4 pt-4">
+      <div className="border-t border-gray-100 dark:border-neutral-800 mt-4 pt-4">
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
           Curated by our editorial team
         </p>

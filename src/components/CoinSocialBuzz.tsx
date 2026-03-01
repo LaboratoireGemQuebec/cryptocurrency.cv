@@ -115,7 +115,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
             <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
@@ -132,7 +132,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-xl">🔥</span>
           <h3 className="font-bold text-gray-900 dark:text-white">Social Buzz</h3>
@@ -156,7 +156,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
   const sentimentEmojis = { positive: '😊', negative: '😟', neutral: '😐' } as const;
 
   return (
-    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -230,7 +230,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
       )}
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-neutral-800">
         <p className="text-xs text-gray-500 dark:text-slate-400">
           Social data aggregated from X, Reddit, Telegram. Refreshes every 2 min.
         </p>

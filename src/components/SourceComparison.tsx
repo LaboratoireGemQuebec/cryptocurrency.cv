@@ -176,11 +176,11 @@ export function SourceComparison() {
       </div>
 
       {/* Table */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
+              <tr className="border-b border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
                 <th className="text-left px-4 py-3 text-sm font-medium text-gray-500">Source</th>
                 <th 
                   className="text-right px-4 py-3 text-sm font-medium text-gray-500 cursor-pointer hover:text-gray-700"
@@ -217,7 +217,7 @@ export function SourceComparison() {
               {sortedSources.map((source, index) => (
                 <tr 
                   key={source.slug}
-                  className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 ${
+                  className={`border-b border-gray-100 dark:border-neutral-800/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 ${
                     index === 0 ? 'bg-amber-50 dark:bg-amber-900/10' : ''
                   }`}
                 >
@@ -274,7 +274,7 @@ export function SourceComparison() {
       </div>
 
       {/* Visual Comparison */}
-      <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-neutral-800">
         <h3 className="text-sm font-medium text-gray-500 mb-4">24h Article Volume</h3>
         <div className="space-y-3">
           {sortedSources.map((source) => {

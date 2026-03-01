@@ -88,8 +88,8 @@ export function WatchlistExport({ onClose }: WatchlistExportProps) {
   };
 
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg overflow-hidden">
-      <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 shadow-lg overflow-hidden">
+      <div className="px-4 py-3 border-b border-gray-200 dark:border-neutral-800 flex items-center justify-between">
         <h3 className="font-semibold text-gray-900 dark:text-white">Export / Import Watchlist</h3>
         {onClose && (
           <button
@@ -128,7 +128,7 @@ export function WatchlistExport({ onClose }: WatchlistExportProps) {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-gray-700" />
+        <div className="border-t border-gray-200 dark:border-neutral-800" />
 
         {/* Import Section */}
         <div>

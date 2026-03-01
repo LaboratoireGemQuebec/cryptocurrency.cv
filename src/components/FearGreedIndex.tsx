@@ -163,7 +163,7 @@ export function FearGreedIndex({
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="16"
-                className="text-neutral-200 dark:text-neutral-700"
+                className="text-neutral-200 dark:text-white"
                 strokeDasharray={`${Math.PI * 160 * 0.75} ${Math.PI * 160 * 0.25}`}
               />
               {/* Value arc */}

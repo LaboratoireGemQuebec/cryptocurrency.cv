@@ -112,7 +112,7 @@ export default function DebateClient() {
           </div>
 
           {/* Topic Input */}
-          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6 mb-6">
             <label htmlFor="debate-topic" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
               Enter a topic to debate
             </label>
@@ -124,7 +124,7 @@ export default function DebateClient() {
                 onChange={(e) => setTopic(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && generateDebate(topic)}
                 placeholder="e.g., Will Bitcoin reach $200k in 2026?"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button
                 onClick={() => generateDebate(topic)}
@@ -249,7 +249,7 @@ export default function DebateClient() {
               </div>
 
               {/* Neutral Analysis */}
-              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-2xl">⚖️</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Neutral Analysis</h3>

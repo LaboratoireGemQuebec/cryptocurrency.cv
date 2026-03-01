@@ -53,7 +53,7 @@ export function PriceAlertButton({
     return (
       <button
         disabled
-        className={`${sizeClasses[size]} rounded-lg text-gray-300 dark:text-gray-600 ${className}`}
+        className={`${sizeClasses[size]} rounded-lg text-gray-300 dark:text-gray-400 ${className}`}
         aria-label="Loading alerts"
       >
         <Bell className={`${iconSizes[size]} animate-pulse`} />

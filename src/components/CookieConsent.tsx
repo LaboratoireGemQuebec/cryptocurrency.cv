@@ -55,7 +55,7 @@ export function CookieConsent() {
       aria-label="Cookie consent"
       aria-describedby="cookie-consent-description"
     >
-      <div className="max-w-4xl mx-auto bg-gray-900 dark:bg-black border border-gray-700 dark:border-slate-600 rounded-2xl shadow-2xl p-6 md:flex md:items-center md:gap-6">
+      <div className="max-w-4xl mx-auto bg-gray-900 dark:bg-black border border-gray-700 dark:border-neutral-800 rounded-2xl shadow-2xl p-6 md:flex md:items-center md:gap-6">
         <div className="flex-1 mb-4 md:mb-0">
           <p id="cookie-consent-description" className="text-sm text-gray-300 leading-relaxed">
             <span className="font-semibold text-white">🍪 We value your privacy.</span>{' '}

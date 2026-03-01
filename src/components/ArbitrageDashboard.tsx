@@ -195,7 +195,7 @@ export function ArbitrageDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="animate-pulse space-y-4">
             <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-4 gap-4">
@@ -376,7 +376,7 @@ export function ArbitrageDashboard() {
       )}
 
       {/* Exchange Stats */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🏦 Exchange Performance
         </h3>
@@ -404,8 +404,8 @@ export function ArbitrageDashboard() {
       </div>
 
       {/* Opportunities Table */}
-      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-        <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+        <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             📈 Arbitrage Opportunities
           </h3>
@@ -435,7 +435,7 @@ export function ArbitrageDashboard() {
                 <th className="px-4 py-3 text-center text-gray-500 dark:text-slate-400">Score</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
               {opportunities.length === 0 ? (
                 <tr>
                   <td colSpan={8} className="px-4 py-8 text-center text-gray-500 dark:text-slate-400">
@@ -506,8 +506,8 @@ export function ArbitrageDashboard() {
 
       {/* Triangular Arbitrage */}
       {showTriangular && triangular.length > 0 && (
-        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-          <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+          <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               🔺 Triangular Arbitrage
             </h3>
@@ -515,7 +515,7 @@ export function ArbitrageDashboard() {
               {triangular.length} triangular opportunities found
             </p>
           </div>
-          <div className="divide-y divide-gray-200 dark:divide-slate-700">
+          <div className="divide-y divide-gray-200 dark:divide-neutral-800">
             {triangular.slice(0, 10).map((tri) => (
               <div key={tri.id} className="p-4 hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                 <div className="flex items-center justify-between">

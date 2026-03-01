@@ -96,7 +96,7 @@ export function RelatedByMention({
   if (related.length === 0) return null;
 
   return (
-    <div className="mt-8 pt-8 border-t border-gray-200 dark:border-slate-700">
+    <div className="mt-8 pt-8 border-t border-gray-200 dark:border-neutral-800">
       <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-4">
         Related Stories
       </h3>

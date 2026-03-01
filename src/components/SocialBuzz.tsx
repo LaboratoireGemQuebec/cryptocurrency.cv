@@ -212,7 +212,7 @@ export function SocialBuzz() {
   }, [fetchData]);
 
   const getSentimentColor = (upPct: number): string => {
-    if (upPct >= 70) return 'bg-slate-900 dark:bg-white text-white dark:text-slate-900';
+    if (upPct >= 70) return 'bg-slate-900 dark:bg-white text-white dark:text-white';
     if (upPct >= 50) return 'bg-slate-500 text-white';
     return 'bg-slate-300 dark:bg-black text-slate-700 dark:text-slate-200';
   };
@@ -240,7 +240,7 @@ export function SocialBuzz() {
         <p className="text-gray-500 dark:text-gray-400 mb-4">{error}</p>
         <button
           onClick={fetchData}
-          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg hover:opacity-90 transition-opacity"
+          className="px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-white rounded-lg hover:opacity-90 transition-opacity"
         >
           Try Again
         </button>
@@ -266,7 +266,7 @@ export function SocialBuzz() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 border-b border-gray-200 dark:border-slate-700 overflow-x-auto">
+      <div className="flex gap-1 border-b border-gray-200 dark:border-neutral-800 overflow-x-auto">
         <button
           onClick={() => setTab('trending')}
           className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
@@ -320,7 +320,7 @@ export function SocialBuzz() {
             <a
               key={coin.id}
               href={`/coin/${coin.id}`}
-              className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
+              className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
             >
               <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
               <Image 
@@ -383,7 +383,7 @@ export function SocialBuzz() {
             return (
               <div
                 key={coin.id}
-                className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Image 
@@ -461,7 +461,7 @@ export function SocialBuzz() {
             trendingNFTs.map((nft, index) => (
               <div
                 key={nft.id}
-                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg"
               >
                 <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
                 <Image 
@@ -503,7 +503,7 @@ export function SocialBuzz() {
             trendingCategories.map((category, index) => (
               <div
                 key={category.id}
-                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg"
               >
                 <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
                 <div className="flex-1 min-w-0">

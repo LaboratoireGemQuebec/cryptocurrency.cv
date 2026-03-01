@@ -351,10 +351,10 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
       aria-label={`${item.label} submenu`}
     >
       {/* Arrow pointer */}
-      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-black border-l border-t border-gray-200 dark:border-slate-700" />
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-black border-l border-t border-gray-200 dark:border-neutral-800" />
       
       <div 
-        className={`relative bg-white dark:bg-black border border-gray-200 dark:border-slate-700 shadow-xl overflow-hidden ${
+        className={`relative bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 shadow-xl overflow-hidden ${
           hasMultipleSections ? 'min-w-[480px]' : 'min-w-[320px]'
         }`}
         style={{
@@ -389,7 +389,7 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
           </div>
 
           {/* Featured Card - Right side */}
-          <div className="w-44 bg-gray-900 dark:bg-black p-4 flex flex-col justify-between border-l border-gray-200 dark:border-slate-700">
+          <div className="w-44 bg-gray-900 dark:bg-black p-4 flex flex-col justify-between border-l border-gray-200 dark:border-neutral-800">
             <div>
               <h4 className="font-semibold text-white text-sm mb-1">
                 {item.megaMenu.featured.title}
@@ -495,7 +495,7 @@ export default function Header() {
 
       <header 
         ref={headerRef}
-        className={`sticky top-0 z-40 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-all duration-300 w-full max-w-full ${
+        className={`sticky top-0 z-40 bg-white dark:bg-black border-b border-gray-200 dark:border-neutral-800 transition-all duration-300 w-full max-w-full ${
           isScrolled ? 'shadow-sm' : ''
         }`}
         style={{
@@ -603,7 +603,7 @@ export default function Header() {
               href="https://github.com/nirholas/free-crypto-news"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[13px] font-bold hover:bg-gray-700 dark:hover:bg-neutral-900 active:scale-[0.98] transition-all duration-100 focus-ring rounded-sm"
+              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-white text-[13px] font-bold hover:bg-gray-700 dark:hover:bg-neutral-900 active:scale-[0.98] transition-all duration-100 focus-ring rounded-sm"
               aria-label="Star on GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

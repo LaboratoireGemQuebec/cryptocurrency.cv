@@ -118,7 +118,7 @@ export default function CoverageGapWidget({
   if (loading) {
     return (
       <div
-        className={`rounded-xl border border-zinc-200 dark:border-zinc-700 p-4 ${className}`}
+        className={`rounded-xl border border-zinc-200 dark:border-neutral-800 p-4 ${className}`}
         aria-busy="true"
         aria-label="Loading coverage gaps"
       >
@@ -157,7 +157,7 @@ export default function CoverageGapWidget({
   if (gaps.length === 0) {
     return (
       <div
-        className={`rounded-xl border border-zinc-200 dark:border-zinc-700 p-4 ${className}`}
+        className={`rounded-xl border border-zinc-200 dark:border-neutral-800 p-4 ${className}`}
       >
         <div className="flex items-center gap-2 mb-2">
           <span className="text-lg" aria-hidden="true">✅</span>
@@ -178,11 +178,11 @@ export default function CoverageGapWidget({
 
   return (
     <section
-      className={`rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-black ${className}`}
+      className={`rounded-xl border border-zinc-200 dark:border-neutral-800 bg-white dark:bg-black ${className}`}
       aria-label="Coverage gap analysis"
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-zinc-100 dark:border-zinc-800">
+      <div className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-zinc-100 dark:border-neutral-800">
         <div className="flex items-center gap-2">
           <span className="text-lg" aria-hidden="true">📉</span>
           <h2 className="text-sm font-semibold text-zinc-700 dark:text-zinc-200 uppercase tracking-wide">
@@ -237,7 +237,7 @@ export default function CoverageGapWidget({
       </ul>
 
       {/* Footer link */}
-      <div className="px-4 py-2 border-t border-zinc-100 dark:border-zinc-800">
+      <div className="px-4 py-2 border-t border-zinc-100 dark:border-neutral-800">
         <a
           href="/api/coverage-gap?action=report"
           target="_blank"

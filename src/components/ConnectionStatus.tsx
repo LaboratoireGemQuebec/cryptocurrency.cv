@@ -170,7 +170,7 @@ function FloatingIndicator({
         flex items-center gap-3 px-4 py-2 
         rounded-lg shadow-lg border
         ${config.bgColor}
-        border-gray-200 dark:border-gray-700
+        border-gray-200 dark:border-neutral-800
         transition-all duration-300
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
       `}

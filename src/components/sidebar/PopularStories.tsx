@@ -122,7 +122,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-neutral-800 p-6">
       {/* Header with Filter */}
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">

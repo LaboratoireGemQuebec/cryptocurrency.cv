@@ -76,6 +76,11 @@ export async function GET(request: NextRequest) {
           transactions: '/api/solana/transactions?address=<wallet>',
           defi: '/api/solana/defi?address=<wallet>',
           assets: '/api/solana/assets?address=<wallet>',
+          collections: '/api/solana/collections?groupKey=collection&groupValue=<addr>',
+          search: '/api/solana/search?owner=<wallet>&compressed=true',
+          tokens: '/api/solana/tokens?owner=<wallet>',
+          wallet: '/api/solana/wallet?address=<wallet>',
+          priorityFees: '/api/solana/priority-fees?accounts=<addr1>,<addr2>',
         },
         relatedChains: {
           sui: '/api/sui',

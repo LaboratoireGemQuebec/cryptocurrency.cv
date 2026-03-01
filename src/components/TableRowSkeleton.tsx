@@ -29,7 +29,7 @@ export function TableRowSkeleton({ index = 0, showWatchlist = false }: TableRowS
   const baseDelay = index * 50; // Stagger each row
 
   return (
-    <tr className="border-b border-gray-100 dark:border-gray-800">
+    <tr className="border-b border-gray-100 dark:border-neutral-800">
       {/* Rank */}
       <td className="p-4">
         <Skeleton className="w-6 h-4" delay={baseDelay} />
@@ -104,11 +104,11 @@ interface CoinsTableSkeletonProps {
  */
 export function CoinsTableSkeleton({ rows = 10, showWatchlist = false }: CoinsTableSkeletonProps) {
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
+            <tr className="border-b border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-black/50">
               <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4 w-12">#</th>
               <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Coin</th>
               <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Price</th>
@@ -134,7 +134,7 @@ export function CoinsTableSkeleton({ rows = 10, showWatchlist = false }: CoinsTa
       </div>
 
       {/* Pagination skeleton */}
-      <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between p-4 border-t border-gray-200 dark:border-neutral-800">
         <Skeleton className="w-32 h-4" delay={rows * 50 + 50} />
         <div className="flex items-center gap-2">
           <Skeleton className="w-20 h-8 rounded" delay={rows * 50 + 100} />

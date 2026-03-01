@@ -61,7 +61,7 @@ export function SearchFilters() {
           <button
             key={opt.value}
             onClick={() => update("date", opt.value)}
-            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("date", opt.value) ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900"}`}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("date", opt.value) ? "bg-gray-900 dark:bg-white text-white dark:text-white" : "bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900"}`}
           >
             {opt.label}
           </button>

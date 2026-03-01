@@ -70,7 +70,7 @@ export default async function PredictionsPage({ params }: Props) {
         </section>
 
         {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-gray-800 mb-8" />
+        <div className="border-t border-gray-200 dark:border-neutral-800 mb-8" />
 
         {/* User Predictions Leaderboard */}
         <div className="mb-4">

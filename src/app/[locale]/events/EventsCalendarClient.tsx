@@ -73,8 +73,8 @@ export function EventsCalendarClient({ events }: { events: CryptoEvent[] }) {
           onClick={() => setFilter('all')}
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${
             filter === 'all'
-              ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-              : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-neutral-900'
+              ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
+              : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-900'
           }`}
         >
           All Events
@@ -87,8 +87,8 @@ export function EventsCalendarClient({ events }: { events: CryptoEvent[] }) {
               onClick={() => setFilter(cat as EventCategory)}
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition inline-flex items-center gap-1.5 ${
                 filter === cat
-                  ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                  : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-neutral-900'
+                  ? 'bg-gray-900 text-white dark:bg-white dark:text-white'
+                  : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-900'
               }`}
             >
               <span>{cfg.emoji}</span> {cfg.label}
@@ -101,11 +101,11 @@ export function EventsCalendarClient({ events }: { events: CryptoEvent[] }) {
               type="checkbox"
               checked={showPast}
               onChange={() => setShowPast(!showPast)}
-              className="rounded border-gray-300 dark:border-slate-600 text-amber-500 focus:ring-amber-500"
+              className="rounded border-gray-300 dark:border-neutral-800 text-amber-500 focus:ring-amber-500"
             />
             Show past
           </label>
-          <div className="flex bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
+          <div className="flex bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-lg overflow-hidden">
             <button
               onClick={() => setView('list')}
               className={`px-3 py-1.5 text-sm ${view === 'list' ? 'bg-gray-100 dark:bg-black font-medium' : ''}`}
@@ -130,7 +130,7 @@ export function EventsCalendarClient({ events }: { events: CryptoEvent[] }) {
           { label: 'This Month', value: events.filter(e => { const d = new Date(e.date); const now = new Date(); return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear(); }).length, emoji: '📆' },
           { label: 'Conferences', value: events.filter(e => e.category === 'conference').length, emoji: '🎤' },
         ].map(stat => (
-          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
             <span className="text-2xl">{stat.emoji}</span>
             <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{stat.value}</p>
             <p className="text-xs text-gray-500 dark:text-slate-400">{stat.label}</p>
@@ -154,7 +154,7 @@ export function EventsCalendarClient({ events }: { events: CryptoEvent[] }) {
             return (
               <div
                 key={event.id}
-                className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 border-l-4 ${importanceColors[event.importance]} ${isPast ? 'opacity-60' : ''} hover:shadow-lg transition`}
+                className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 border-l-4 ${importanceColors[event.importance]} ${isPast ? 'opacity-60' : ''} hover:shadow-lg transition`}
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex-1">

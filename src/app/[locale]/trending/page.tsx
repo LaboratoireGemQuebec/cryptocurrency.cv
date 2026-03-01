@@ -76,11 +76,11 @@ export default async function TrendingPage() {
               {data.trending.map((topic, index) => (
                 <div
                   key={topic.topic}
-                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg dark:hover:shadow-xl transition"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 hover:shadow-lg dark:hover:shadow-xl transition"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl font-bold text-gray-300 dark:text-slate-600">#{index + 1}</span>
+                      <span className="text-2xl font-bold text-gray-300 dark:text-gray-400">#{index + 1}</span>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">{topic.topic}</h3>
                     </div>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${sentimentConfig[topic.sentiment].bg} ${sentimentConfig[topic.sentiment].color}`}>
@@ -121,7 +121,7 @@ export default async function TrendingPage() {
           )}
 
           {/* Sentiment Legend */}
-          <div className="mt-8 p-4 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700">
+          <div className="mt-8 p-4 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800">
             <h4 className="font-medium mb-3 text-gray-900 dark:text-white">Understanding Sentiment</h4>
             <div className="flex flex-wrap gap-4 text-sm text-gray-700 dark:text-slate-300">
               <div className="flex items-center gap-2">

@@ -66,7 +66,7 @@ export default function SourceSections({
 
   const t = useTranslations('common');
   return (
-    <section className="py-12 border-t border-gray-100 dark:border-slate-800">
+    <section className="py-12 border-t border-gray-100 dark:border-neutral-800">
       <div className="space-y-12">
         {sortedSources.map(([source, sourceArticles]) => {
           const info = sourceInfo[source] || { slug: source.toLowerCase().replace(/\s+/g, ''), color: 'text-gray-600', darkColor: 'dark:text-gray-400', bgGradient: 'from-gray-600' };

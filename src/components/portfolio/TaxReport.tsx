@@ -227,7 +227,7 @@ export function TaxReport() {
   return (
     <div className="space-y-6">
       {/* Controls */}
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
         <div className="flex items-center gap-3 mb-4">
           <Calculator className="w-6 h-6 text-blue-500" />
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Tax Report Generator</h2>
@@ -243,7 +243,7 @@ export function TaxReport() {
               id="tax-year"
               value={taxYear}
               onChange={(e) => setTaxYear(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white"
             >
               {TAX_YEAR_OPTIONS.map((opt) => (
                 <option key={opt.value} value={opt.value}>
@@ -268,7 +268,7 @@ export function TaxReport() {
               id="cost-basis-method"
               value={costBasisMethod}
               onChange={(e) => setCostBasisMethod(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white"
             >
               {COST_BASIS_METHODS.map((method) => (
                 <option key={method.value} value={method.value}>
@@ -287,7 +287,7 @@ export function TaxReport() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-2">
             <TrendingUp className="w-5 h-5 text-green-500" />
             <span className="text-sm">Short-Term Gains</span>
@@ -298,7 +298,7 @@ export function TaxReport() {
           <p className="text-xs text-gray-500 mt-1">Held &lt; 1 year (ordinary income rates)</p>
         </div>
 
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-2">
             <TrendingUp className="w-5 h-5 text-blue-500" />
             <span className="text-sm">Long-Term Gains</span>
@@ -309,7 +309,7 @@ export function TaxReport() {
           <p className="text-xs text-gray-500 mt-1">Held ≥ 1 year (preferential rates)</p>
         </div>
 
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-2">
             <DollarSign className="w-5 h-5" />
             <span className="text-sm">Net Gain/Loss</span>
@@ -320,7 +320,7 @@ export function TaxReport() {
           <p className="text-xs text-gray-500 mt-1">{summary.taxableEvents} taxable events</p>
         </div>
 
-        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-2">
             <TrendingDown className="w-5 h-5 text-red-500" />
             <span className="text-sm">Total Losses</span>
@@ -333,8 +333,8 @@ export function TaxReport() {
       </div>
 
       {/* Taxable Events Table */}
-      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-        <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-neutral-800">
           <div className="flex items-center gap-2">
             <FileText className="w-5 h-5 text-gray-500" />
             <h3 className="font-semibold text-gray-900 dark:text-white">Taxable Events</h3>
@@ -351,7 +351,7 @@ export function TaxReport() {
 
         {taxableEvents.length === 0 ? (
           <div className="p-12 text-center">
-            <Calendar className="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+            <Calendar className="w-12 h-12 text-gray-300 dark:text-gray-400 mx-auto mb-4" />
             <p className="text-gray-500 dark:text-gray-400">
               No taxable events found for {taxYear}
             </p>
@@ -373,7 +373,7 @@ export function TaxReport() {
                   <th className="px-4 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Term</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+              <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
                 {taxableEvents.map((event) => (
                   <tr key={event.id} className="hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                     <td className="px-4 py-3 text-sm text-gray-900 dark:text-white whitespace-nowrap">

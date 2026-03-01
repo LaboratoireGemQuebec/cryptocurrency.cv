@@ -67,9 +67,9 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
   const showClear = history.length > 0 || !!streamText;
 
   return (
-    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 shadow-sm overflow-hidden">
       {/* Input bar */}
-      <form onSubmit={handleSubmit} className="flex items-center gap-2 p-3 border-b border-gray-100 dark:border-slate-700">
+      <form onSubmit={handleSubmit} className="flex items-center gap-2 p-3 border-b border-gray-100 dark:border-neutral-800">
         <span className="text-lg flex-shrink-0">❓</span>
         <input
           ref={inputRef}
@@ -77,7 +77,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder={placeholder || 'Ask AI a question...'}
-          className="flex-1 bg-transparent text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 outline-none"
+          className="flex-1 bg-transparent text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 outline-none"
           disabled={loading}
         />
         <button
@@ -112,7 +112,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
 
       {/* Live streaming answer for current question */}
       {(isStreaming || (done && !!streamText && !history[0])) && (
-        <div className="p-4 border-b border-gray-100 dark:border-slate-700">
+        <div className="p-4 border-b border-gray-100 dark:border-neutral-800">
           <div className="flex items-start gap-2 mb-2">
             <span className="text-xs font-bold text-brand-600 dark:text-amber-400 mt-0.5">Q:</span>
             <p className="text-sm font-medium text-gray-900 dark:text-white">
@@ -131,7 +131,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
 
       {/* Archived Q&A history */}
       {history.length > 0 && (
-        <div className="divide-y divide-gray-100 dark:divide-slate-700">
+        <div className="divide-y divide-gray-100 dark:divide-neutral-800">
           {history.map((entry, i) => (
             <div key={i} className={`p-4 ${i > 0 ? 'opacity-60' : ''}`}>
               <div className="flex items-start gap-2 mb-2">

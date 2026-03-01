@@ -50,13 +50,13 @@ export function GlossaryClient({ terms }: { terms: GlossaryTerm[] }) {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search terms..."
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
           />
         </div>
         <select
           value={selectedCategory}
           onChange={e => setSelectedCategory(e.target.value)}
-          className="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-amber-500"
+          className="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-amber-500"
         >
           <option value="all">All Categories</option>
           {categories.map(cat => (
@@ -74,7 +74,7 @@ export function GlossaryClient({ terms }: { terms: GlossaryTerm[] }) {
             className={`w-8 h-8 flex items-center justify-center rounded text-sm font-medium transition ${
               letters.includes(letter)
                 ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-800/40'
-                : 'bg-gray-100 dark:bg-black text-gray-300 dark:text-slate-600 cursor-default'
+                : 'bg-gray-100 dark:bg-black text-gray-300 dark:text-gray-400 cursor-default'
             }`}
           >
             {letter}
@@ -88,14 +88,14 @@ export function GlossaryClient({ terms }: { terms: GlossaryTerm[] }) {
       {/* Terms grouped by letter */}
       {letters.map(letter => (
         <div key={letter} id={`letter-${letter}`} className="mb-8">
-          <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-3 border-b border-gray-200 dark:border-slate-700 pb-2">
+          <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-3 border-b border-gray-200 dark:border-neutral-800 pb-2">
             {letter}
           </h2>
           <div className="space-y-3">
             {filtered
               .filter(t => t.term[0].toUpperCase() === letter)
               .map(term => (
-                <div key={term.term} className="bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-slate-700 p-4">
+                <div key={term.term} className="bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-neutral-800 p-4">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <h3 className="font-bold text-gray-900 dark:text-white">{term.term}</h3>

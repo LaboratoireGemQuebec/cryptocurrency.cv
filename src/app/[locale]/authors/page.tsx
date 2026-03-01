@@ -188,7 +188,7 @@ export default async function AuthorsPage({ params }: Props) {
             { label: 'Featured', value: featured.length, emoji: '⭐' },
             { label: 'Total Articles', value: AUTHORS.reduce((s, a) => s + a.articleCount, 0).toLocaleString(), emoji: '📝' },
           ].map(stat => (
-            <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+            <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 text-center">
               <span className="text-2xl">{stat.emoji}</span>
               <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{stat.value}</p>
               <p className="text-xs text-gray-500 dark:text-slate-400">{stat.label}</p>
@@ -200,7 +200,7 @@ export default async function AuthorsPage({ params }: Props) {
         <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⭐ Featured Journalists</h2>
         <div className="grid md:grid-cols-2 gap-4 mb-10">
           {featured.map(author => (
-            <div key={author.id} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition">
+            <div key={author.id} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-5 hover:shadow-lg transition">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-xl font-bold text-white shrink-0">
                   {author.name.split(' ').map(n => n[0]).join('')}
@@ -234,7 +234,7 @@ export default async function AuthorsPage({ params }: Props) {
         <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">All Journalists</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {others.map(author => (
-            <div key={author.id} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 hover:shadow-lg transition">
+            <div key={author.id} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-neutral-800 p-4 hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center text-sm font-bold text-white shrink-0">
                   {author.name.split(' ').map(n => n[0]).join('')}

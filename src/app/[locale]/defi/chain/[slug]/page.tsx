@@ -136,7 +136,7 @@ export default async function ChainPage({ params }: Props) {
           </nav>
 
           {/* Chain Header */}
-          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -171,14 +171,14 @@ export default async function ChainPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Protocols on Chain (2/3) */}
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-                <div className="p-4 border-b border-gray-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 overflow-hidden">
+                <div className="p-4 border-b border-gray-200 dark:border-neutral-800">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white">🏆 Top Protocols on {chain.name}</h2>
                   <p className="text-sm text-gray-500 dark:text-slate-400">Ranked by TVL on this chain</p>
                 </div>
                 
                 {chainProtocols.length > 0 ? (
-                  <div className="divide-y divide-gray-200 dark:divide-slate-700">
+                  <div className="divide-y divide-gray-200 dark:divide-neutral-800">
                     {chainProtocols.map((protocol, index) => (
                       <Link 
                         key={protocol.id} 
@@ -222,7 +222,7 @@ export default async function ChainPage({ params }: Props) {
             {/* Sidebar (1/3) */}
             <div className="space-y-6">
               {/* Chain Info */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">ℹ️ Chain Info</h3>
                 <dl className="space-y-3 text-sm">
                   <div className="flex justify-between">
@@ -249,7 +249,7 @@ export default async function ChainPage({ params }: Props) {
               </div>
 
               {/* External Links */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">🔗 External Links</h3>
                 <div className="space-y-2">
                   <a
@@ -274,7 +274,7 @@ export default async function ChainPage({ params }: Props) {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">📊 Quick Links</h3>
                 <div className="space-y-2">
                   <Link href="/defi" className="block text-blue-600 dark:text-blue-400 hover:underline">
