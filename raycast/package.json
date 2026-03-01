@@ -5,10 +5,7 @@
   "description": "Real-time crypto news, prices, gas fees, Fear & Greed Index and portfolio tracker from cryptocurrency.cv",
   "icon": "extension-icon.png",
   "author": "free-crypto-news",
-  "categories": [
-    "News",
-    "Finance"
-  ],
+  "categories": ["News", "Finance"],
   "license": "SEE LICENSE IN LICENSE",
   "commands": [
     {
