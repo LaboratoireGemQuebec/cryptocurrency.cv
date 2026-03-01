@@ -304,17 +304,17 @@ async function fetchOKXPrices(): Promise<ExchangePrice[]> {
 
 async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
   const cacheKey = 'arb:kraken:prices';
-  const cached = cache{
-      console.warn(`Kraken price API returned ${response.status}`);
-      return cache.get<ExchangePrice[]>('arb:kraken:stale') ?? [];
-    }
+  const cached = cache.get<ExchangePrice[]>(cacheKey);
   if (cached) return cached;
 
   try {
     // Kraken uses different symbol format
     const krakenPairs = ['XXBTZUSD', 'XETHZUSD', 'SOLUSD', 'XXRPZUSD', 'XDGUSD'];
     const response = await fetch(`https://api.kraken.com/0/public/Ticker?pair=${krakenPairs.join(',')}`);
-    if (!response.ok) throw new Error(`Kraken API error: ${response.status}`);
+    if (!response.ok) {
+      console.warn(`Kraken price API returned ${response.status}`);
+      return cache.get<ExchangePrice[]>('arb:kraken:stale') ?? [];
+    }
     
     const result = await response.json();
     const data = result.result || {};
@@ -346,25 +346,22 @@ async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
         bidSize: parseFloat(t.b[1]),
         askPrice: parseFloat(t.a[0]),
         askSize: parseFloat(t.a[1]),
+        lastPrice: parseFloat(t.c[0]),
+        volume24h: parseFloat(t.v[1]),
+        timestamp: now,
+      };
+    });
+
+    cache.set(cacheKey, prices, 5);
     cache.set('arb:kraken:stale', prices, 3600);
     return prices;
   } catch (error) {
     console.warn('Kraken price fetch failed:', error instanceof Error ? error.message : error);
-    return cache.get<ExchangePrice[]>('arb:kraken:stale') ??
-    });
-
-    cache.set(cacheKey, prices, 5);
-    return prices;
-  } catch (error) {
-    console.error('Kraken price fetch error:', error);
-    return [];
+    return cache.get<ExchangePrice[]>('arb:kraken:stale') ?? [];
   }
 }
 
-async function fetchKu{
-      console.warn(`KuCoin price API returned ${response.status}`);
-      return cache.get<ExchangePrice[]>('arb:kucoin:stale') ?? [];
-    }
+async function fetchKuCoinPrices(): Promise<ExchangePrice[]> {
   const cacheKey = 'arb:kucoin:prices';
   const cached = cache.get<ExchangePrice[]>(cacheKey);
   if (cached) return cached;
@@ -393,18 +390,18 @@ async function fetchKu{
         bidPrice: parseFloat(t.buy),
         bidSize: 0,
         askPrice: parseFloat(t.sell),
+        askSize: 0,
+        lastPrice: parseFloat(t.last),
+        volume24h: parseFloat(t.vol),
+        timestamp: now,
+      }));
+
+    cache.set(cacheKey, prices, 5);
     cache.set('arb:kucoin:stale', prices, 3600);
     return prices;
   } catch (error) {
     console.warn('KuCoin price fetch failed:', error instanceof Error ? error.message : error);
-    return cache.get<ExchangePrice[]>('arb:kucoin:stale') ??mestamp: now,
-      }));
-
-    cache.set(cacheKey, prices, 5);
-    return prices;
-  } catch (error) {
-    console.error('KuCoin price fetch error:', error);
-    return [];
+    return cache.get<ExchangePrice[]>('arb:kucoin:stale') ?? [];
   }
 }
 

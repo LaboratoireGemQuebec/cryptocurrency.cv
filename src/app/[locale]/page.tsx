@@ -62,18 +62,18 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  let data: NewsResponse | null = null;
+  let data: { latest: NewsResponse; breaking: NewsResponse; trending: NewsResponse } | null = null;
   try {
-    data = await getHomepageNews({ limit: 30 });
+    data = await getHomepageNews({ latestLimit: 20, trendingLimit: 10 });
   } catch {
     // Render empty state on failure
   }
 
-  const articles = data?.articles ?? [];
+  const articles = data?.latest?.articles ?? [];
   const featured = articles[0] ?? null;
   const topGrid = articles.slice(1, 5);
   const latestFeed = articles.slice(5, 20);
-  const trending = articles.slice(20, 30);
+  const trending = data?.trending?.articles ?? [];
   const sourceCount = getSourceCount();
 
   return (
