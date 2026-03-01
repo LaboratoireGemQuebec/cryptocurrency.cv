@@ -1,25 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FactcheckDashboard from '@/app/[locale]/factcheck/FactcheckDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Fact Check | Crypto Claim Verification',
-  description:
-    'AI-powered fact-checking of crypto news claims. Verify predictions, statements, and market claims.',
-  openGraph: {
-    title: 'Fact Check | Crypto Claim Verification',
-    description: 'Verify crypto news claims with AI-powered analysis.',
-  },
-  keywords: [
-    'crypto fact check',
-    'claim verification',
-    'crypto misinformation',
-    'prediction verification',
-    'news verification',
-  ],
-};
+  description: 'AI-powered fact-checking of crypto news claims. Verify predictions, statements, and market claims.',
+  path: '/factcheck',
+  tags: ['crypto fact check', 'claim verification', 'crypto misinformation', 'prediction verification', 'news verification'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

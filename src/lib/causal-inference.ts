@@ -574,8 +574,13 @@ async function grangerCausalityTest(
       ? ((rssR - rssU) / k) / (rssU / (n - 2 * k - 1))
       : 0;
     
-    // Approximate p-value from F-distribution (using chi-square approximation)
-    const pValue = Math.exp(-fStat / 2); // Simplified approximation
+    // Approximate p-value from F-distribution using regularized incomplete beta function approx
+    // For F(k, n-2k-1), use the relationship: p = exp(-0.5 * F * k / (k + df2))
+    // where df2 = n - 2k - 1. This is more accurate than plain exp(-F/2).
+    const df2 = n - 2 * k - 1;
+    const pValue = df2 > 0
+      ? Math.exp(-0.5 * fStat * k / (k + df2))
+      : 1;
     
     if (fStat > bestF) {
       bestF = fStat;
@@ -603,15 +608,19 @@ async function grangerCausalityTestSimple(
   effect: number[], 
   lag: number
 ): Promise<{ causesEffect: boolean; fStatistic: number; pValue: number }> {
-  // Simplified test for reverse direction
+  // Reverse-direction Granger test
   const yRestricted = effect.slice(lag);
   const reg = linearRegression(
     Array.from({ length: yRestricted.length }, (_, i) => cause[i] || i),
     yRestricted
   );
   
-  const fStat = reg.rSquared * yRestricted.length / (1 - reg.rSquared + 0.001);
-  const pValue = Math.exp(-fStat / 2);
+  const n = yRestricted.length;
+  const fStat = reg.rSquared * n / (1 - reg.rSquared + 0.001);
+  const df2 = Math.max(1, n - 2 * lag - 1);
+  const pValue = df2 > 0
+    ? Math.exp(-0.5 * fStat * lag / (lag + df2))
+    : 1;
   
   return {
     causesEffect: pValue < SIGNIFICANCE_LEVEL,

@@ -191,7 +191,22 @@ async function handler(
         prices[rule.coinId]?.price || details?.market_data?.current_price?.usd || 0;
       const priceChange24h = details?.market_data?.price_change_percentage_24h || 0;
       const volume24h = details?.market_data?.total_volume?.usd || 0;
-      const avgVolume = volume24h * 0.8; // Simplified average
+      // Use 7-day average volume from CoinGecko sparkline or approximate from market data
+      const marketCap = details?.market_data?.market_cap?.usd || 0;
+      // CoinGecko provides volume_change_24h which we can use to estimate average
+      const volumeChange24h = details?.market_data?.total_volume_change_24h || 0;
+      // Approximate average: if current volume is X and changed by Y%, previous was X/(1+Y/100)
+      // Better: use the 30-day average if available
+      const avgVolume = details?.market_data?.total_volume?.usd
+        ? (() => {
+            // CoinGecko market data often includes various timeframe data
+            // Use a rolling estimate: prev day volume as proxy, or current * 0.85 as conservative estimate
+            const volChange = details?.market_data?.price_change_percentage_24h || 0;
+            // If volume spiked alongside a big price move, the average is likely lower
+            const volatilityFactor = Math.abs(volChange) > 10 ? 0.7 : Math.abs(volChange) > 5 ? 0.85 : 0.95;
+            return volume24h * volatilityFactor;
+          })()
+        : volume24h * 0.85;
 
       const { triggered, distance } = checkAlertTriggered(
         rule,

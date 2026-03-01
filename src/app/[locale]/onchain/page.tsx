@@ -1,25 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OnchainDashboard from '@/app/[locale]/onchain/OnchainDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'On-Chain Events | Crypto News Correlation',
-  description:
-    'Correlate crypto news with on-chain events. Track whale movements, transfers, and blockchain activity.',
-  openGraph: {
-    title: 'On-Chain Events | Crypto News Correlation',
-    description: 'Correlate news with on-chain blockchain events.',
-  },
-  keywords: [
-    'on-chain events',
-    'blockchain correlation',
-    'whale movements',
-    'crypto transfers',
-    'news correlation',
-  ],
-};
+  description: 'Correlate crypto news with on-chain events. Track whale movements, transfers, and blockchain activity.',
+  path: '/onchain',
+  tags: ['on-chain events', 'blockchain correlation', 'whale movements', 'crypto transfers', 'news correlation'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

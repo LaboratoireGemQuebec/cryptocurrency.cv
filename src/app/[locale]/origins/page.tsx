@@ -1,25 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OriginsDashboard from './OriginsDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Origins | Find Original Crypto News Sources',
-  description:
-    'Discover original sources for crypto news. Track how stories propagate and find primary sources.',
-  openGraph: {
-    title: 'Origins | Find Original Crypto News Sources',
-    description: 'Find original sources for crypto news.',
-  },
-  keywords: [
-    'original source',
-    'crypto news source',
-    'primary source',
-    'news propagation',
-    'source tracking',
-  ],
-};
+  description: 'Discover original sources for crypto news. Track how stories propagate and find primary sources.',
+  path: '/origins',
+  tags: ['original source', 'crypto news source', 'primary source', 'news propagation', 'source tracking'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

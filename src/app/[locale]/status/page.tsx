@@ -6,13 +6,14 @@
  * there are any issues affecting the service.
  */
 
-import { type Metadata } from 'next';
-import { SITE_URL } from '@/lib/constants';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'System Status | Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'System Status',
   description: 'Real-time status of Free Crypto News API services, endpoints, and news sources.',
-};
+  path: '/status',
+  tags: ['system status', 'API status', 'service health', 'uptime'],
+});
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

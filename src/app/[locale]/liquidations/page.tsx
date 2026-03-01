@@ -1,18 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { LiquidationsFeed } from './LiquidationsFeedClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Liquidations | Live Futures Liquidation Feed',
-  description:
-    'Real-time cryptocurrency futures liquidations across major exchanges. Track longs and shorts getting liquidated.',
-  openGraph: {
-    title: 'Liquidations | Live Futures Liquidation Feed',
-    description: 'Real-time cryptocurrency futures liquidations across major exchanges.',
-  },
-};
+  description: 'Real-time cryptocurrency futures liquidations across major exchanges. Track longs and shorts getting liquidated.',
+  path: '/liquidations',
+  tags: ['liquidations', 'futures liquidation', 'bitcoin liquidation', 'longs shorts', 'crypto futures'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

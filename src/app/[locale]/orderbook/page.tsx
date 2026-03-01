@@ -1,29 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { OrderBookDashboard } from './OrderBookDashboardClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Order Book | Multi-Exchange Liquidity Aggregator',
-  description:
-    'Real-time aggregated order book across Binance, Bybit, OKX, Kraken, KuCoin, and Coinbase. Analyze depth, slippage, and arbitrage opportunities.',
-  openGraph: {
-    title: 'Order Book | Multi-Exchange Liquidity Aggregator',
-    description:
-      'Real-time aggregated order book with liquidity analysis and slippage estimation.',
-  },
-  keywords: [
-    'order book',
-    'crypto liquidity',
-    'aggregated depth',
-    'slippage calculator',
-    'binance depth',
-    'bybit depth',
-    'crypto arbitrage',
-    'market depth',
-  ],
-};
+  description: 'Real-time aggregated order book across Binance, Bybit, OKX, Kraken, KuCoin, and Coinbase. Analyze depth, slippage, and arbitrage opportunities.',
+  path: '/orderbook',
+  tags: ['order book', 'crypto liquidity', 'aggregated depth', 'slippage calculator', 'market depth', 'crypto arbitrage'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

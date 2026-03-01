@@ -4,14 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SearchPageContent } from "@/components/SearchPageContent";
 import { SearchFilters } from "@/components/SearchFilters";
-import type { Metadata } from "next";
+import { generateSEOMetadata } from '@/lib/seo';
 import { WebsiteStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 
-export const metadata: Metadata = {
-  title: "Search - Free Crypto News",
-  description:
-    "Search crypto news from 200+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.",
-};
+export const metadata = generateSEOMetadata({
+  title: 'Search Crypto News',
+  description: 'Search crypto news from 200+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.',
+  path: '/search',
+  tags: ['crypto search', 'news search', 'bitcoin news', 'ethereum news', 'crypto articles'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -6,13 +6,15 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getTopCoins, formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Top Gainers & Losers',
+export const metadata = generateSEOMetadata({
+  title: 'Top Gainers & Losers — Crypto Price Movers',
   description: 'Real-time crypto price movers. See which coins are pumping and dumping in the last 24 hours.',
-};
+  path: '/movers',
+  tags: ['gainers losers', 'price movers', 'crypto pumps', 'crypto dumps', 'market movers'],
+});
 
 export const revalidate = 60;
 

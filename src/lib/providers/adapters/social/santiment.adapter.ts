@@ -110,7 +110,7 @@ export const santimentAdapter: DataProvider<SocialMetric[]> = {
     const from = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString();
 
     const results = await Promise.allSettled(
-      symbols.map(async (symbol): Promise<SocialMetric> => {
+      symbols.map(async (symbol): Promise<SocialMetric & { _rawVolume: number }> => {
         const slug = getSlug(symbol);
         const body = buildQuery(slug, from, to);
 
@@ -158,13 +158,23 @@ export const santimentAdapter: DataProvider<SocialMetric[]> = {
           contributors: Math.round(activeAddresses),
           source: 'santiment',
           timestamp: to,
+          _rawVolume: socialVolume,
         };
       }),
     );
 
-    return results
-      .filter((r): r is PromiseFulfilledResult<SocialMetric> => r.status === 'fulfilled')
-      .map((r) => r.value);
+    // Calculate total volume across all successful results for dominance ratio
+    const fulfilled = results
+      .filter((r): r is PromiseFulfilledResult<SocialMetric & { _rawVolume: number }> => r.status === 'fulfilled');
+    const totalSocialVolume = fulfilled.reduce((sum, r) => sum + r.value._rawVolume, 0);
+
+    return fulfilled.map((r) => {
+      const { _rawVolume, ...metric } = r.value;
+      metric.socialDominance = totalSocialVolume > 0
+        ? Math.round((_rawVolume / totalSocialVolume) * 10000) / 100
+        : 0;
+      return metric;
+    });
   },
 
   async healthCheck(): Promise<boolean> {

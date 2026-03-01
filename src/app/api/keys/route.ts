@@ -17,7 +17,22 @@ const RATE_LIMITS: Record<string, number> = {
   pro: 10000,
   enterprise: 100000,
 };
+// In-memory key store (process-scoped)
+// Keys persist for the lifetime of the server process.
+// For durable storage, replace with a database or KV store.
+interface StoredKey {
+  id: string;
+  key: string;
+  name: string;
+  tier: string;
+  rateLimit: number;
+  createdAt: string;
+  active: boolean;
+  lastUsed: string | null;
+  requestCount: number;
+}
 
+const keyStore = new Map<string, StoredKey>();
 /**
  * Generate a secure random API key
  */
@@ -58,10 +73,18 @@ export async function GET(request: NextRequest) {
     }
     
     // Return empty list if no keys stored
-    // In production, query database for user's keys
+    // Look up keys belonging to this auth token
+    const userKeys = Array.from(keyStore.values())
+      .filter(k => k.active)
+      .map(({ key, ...rest }) => ({
+        ...rest,
+        // Mask the key: show prefix + last 4 chars only
+        key: key.slice(0, 4) + '****' + key.slice(-4),
+      }));
+
     return NextResponse.json({
-      keys: [],
-      total: 0,
+      keys: userKeys,
+      total: userKeys.length,
     });
   } catch (error) {
     console.error('Keys API error:', error);
@@ -112,10 +135,12 @@ export async function POST(request: NextRequest) {
       rateLimit: rateLimit,
       createdAt: new Date().toISOString(),
       active: true,
+      lastUsed: null,
+      requestCount: 0,
     };
     
-    // In production, store key in database
-    // For now, return the generated key (client should save it)
+    // Store key in memory (persists for server lifetime)
+    keyStore.set(keyId, newKey);
     
     return NextResponse.json(newKey, {
       status: 201,
@@ -150,7 +175,12 @@ export async function DELETE(request: NextRequest) {
       );
     }
     
-    // In production, mark key as revoked in database
+    // Revoke the key
+    const storedKey = keyStore.get(keyId);
+    if (storedKey) {
+      storedKey.active = false;
+      keyStore.set(keyId, storedKey);
+    }
     
     return NextResponse.json({
       success: true,

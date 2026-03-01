@@ -124,20 +124,37 @@ export const farcasterAdapter: DataProvider<SocialMetric[]> = {
     }
 
     const results: SocialMetric[] = Array.from(coinMentions.entries())
-      .map(([topic, data]) => ({
-        symbol: topic.toUpperCase(),
-        name: topic,
-        socialScore: data.posts + data.likes * 0.5 + data.recasts * 2 + data.replies,
-        socialVolume: data.posts,
-        socialDominance: 0,
-        sentiment: 0, // Would need NLP for sentiment
-        galaxyScore: 0,
-        altRank: 0,
-        contributors: 0,
-        twitterMentions: 0,
-        source: 'farcaster',
-        timestamp: now,
-      }));
+      .map(([topic, data]) => {
+        // Keyword-based sentiment analysis using engagement signals
+        // High likes + recasts relative to posts = positive engagement
+        // Replies relative to likes can indicate contention
+        const engagementPerPost = data.posts > 0
+          ? (data.likes + data.recasts * 2) / data.posts
+          : 0;
+        const contention = data.posts > 0 && data.likes > 0
+          ? data.replies / data.likes
+          : 0;
+        // Scale: high engagement (>10 likes+recasts per post) = bullish, contention > 1 = bearish lean
+        let sentimentScore = Math.min(1, Math.max(-1,
+          (engagementPerPost / 20) - (contention * 0.3)
+        ));
+        sentimentScore = Math.round(sentimentScore * 1000) / 1000;
+
+        return {
+          symbol: topic.toUpperCase(),
+          name: topic,
+          socialScore: data.posts + data.likes * 0.5 + data.recasts * 2 + data.replies,
+          socialVolume: data.posts,
+          socialDominance: 0,
+          sentiment: sentimentScore,
+          galaxyScore: 0,
+          altRank: 0,
+          contributors: 0,
+          twitterMentions: 0,
+          source: 'farcaster',
+          timestamp: now,
+        };
+      });
 
     return results.sort((a, b) => b.socialScore - a.socialScore).slice(0, limit);
   },

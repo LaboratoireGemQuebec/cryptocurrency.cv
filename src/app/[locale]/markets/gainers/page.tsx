@@ -8,12 +8,14 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { getTopCoins } from '@/lib/market-data';
 import MarketMoversTable from '../components/MarketMoversTable';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Top Gainers - Crypto Markets - Free Crypto News',
-  description: 'Cryptocurrencies with the highest price gains in the last 24 hours.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Top Gainers — Biggest Crypto Price Increases Today',
+  description: 'Cryptocurrencies with the highest price gains in the last 24 hours. Updated in real time.',
+  path: '/markets/gainers',
+  tags: ['top gainers', 'crypto gainers', 'price increase', 'pumping coins', 'best performing crypto'],
+});
 
 export const revalidate = 60;
 

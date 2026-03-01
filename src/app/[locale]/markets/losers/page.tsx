@@ -8,12 +8,14 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { getTopCoins } from '@/lib/market-data';
 import MarketMoversTable from '../components/MarketMoversTable';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Top Losers - Crypto Markets - Free Crypto News',
-  description: 'Cryptocurrencies with the highest price losses in the last 24 hours.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Top Losers — Biggest Crypto Price Drops Today',
+  description: 'Cryptocurrencies with the highest price losses in the last 24 hours. Updated in real time.',
+  path: '/markets/losers',
+  tags: ['top losers', 'crypto losers', 'price drop', 'dumping coins', 'worst performing crypto'],
+});
 
 export const revalidate = 60;
 

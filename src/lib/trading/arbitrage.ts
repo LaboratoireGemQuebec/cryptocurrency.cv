@@ -136,6 +136,18 @@ async function fetchBinancePrices(): Promise<SpotPrice[]> {
       throw new Error(`Binance API error: ${response.status}`);
     }
     
+    // Also fetch 24h volume data
+    const volResponse = await fetch('https://api.binance.com/api/v3/ticker/24hr');
+    const volMap = new Map<string, number>();
+    if (volResponse.ok) {
+      const volData = await volResponse.json();
+      for (const v of volData) {
+        if (typeof v.symbol === 'string' && v.symbol.endsWith('USDT')) {
+          volMap.set(v.symbol.replace('USDT', ''), parseFloat(v.quoteVolume) || 0);
+        }
+      }
+    }
+
     const data = await response.json();
     const prices: SpotPrice[] = [];
     
@@ -158,7 +170,7 @@ async function fetchBinancePrices(): Promise<SpotPrice[]> {
         bid,
         ask,
         spread: (spread / price) * 100,
-        volume24h: 0, // Would need separate API call
+        volume24h: volMap.get(baseSymbol) || 0,
         timestamp: new Date(),
       });
     }

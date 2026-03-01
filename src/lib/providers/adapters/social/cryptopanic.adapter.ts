@@ -99,6 +99,9 @@ export const cryptoPanicAdapter: DataProvider<SocialMetric[]> = {
       }
     }
 
+    // Calculate total mentions across all currencies for dominance metric
+    const totalMentions = Array.from(currencyMap.values()).reduce((s, c) => s + c.mentions, 0);
+
     // Convert to SocialMetric format
     const results: SocialMetric[] = Array.from(currencyMap.values())
       .map((c): SocialMetric => {

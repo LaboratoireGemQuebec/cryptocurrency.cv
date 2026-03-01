@@ -8,14 +8,16 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatNumber } from '@/lib/market-data';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 
-export const metadata: Metadata = {
-  title: 'Cryptocurrency Exchanges - Free Crypto News',
-  description: 'Browse cryptocurrency exchanges ranked by 24h trading volume and trust score.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Cryptocurrency Exchanges — Volume & Trust Rankings',
+  description: 'Browse cryptocurrency exchanges ranked by 24h trading volume and trust score. Compare Binance, Coinbase, Kraken, and more.',
+  path: '/markets/exchanges',
+  tags: ['crypto exchanges', 'exchange ranking', 'trading volume', 'trust score', 'binance', 'coinbase'],
+});
 
 export const dynamic = 'force-dynamic';
 

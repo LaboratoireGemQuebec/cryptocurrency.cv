@@ -1,45 +1,17 @@
 import { Suspense } from 'react';
-import type { Metadata } from 'next';
 import { ProtocolHealthDashboard } from './ProtocolHealthDashboardClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
 // =============================================================================
 // Metadata
 // =============================================================================
 
-export const metadata: Metadata = {
-  title: 'Protocol Health & DeFi Risk Analysis | Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'Protocol Health & DeFi Risk Analysis',
   description: 'Enterprise-grade DeFi protocol risk scoring and security analysis. Monitor TVL, audits, security incidents, and team verification for 100+ protocols.',
-  keywords: [
-    'DeFi risk',
-    'protocol safety',
-    'smart contract audit',
-    'TVL monitoring',
-    'DeFi security',
-    'protocol health',
-    'crypto risk analysis',
-    'DeFi insurance',
-    'hack tracker',
-    'exploit monitor',
-  ],
-  openGraph: {
-    title: 'Protocol Health & DeFi Risk Analysis',
-    description: 'Monitor and analyze DeFi protocol risks with our comprehensive scoring system.',
-    type: 'website',
-    images: [
-      {
-        url: '/og/protocol-health.png',
-        width: 1200,
-        height: 630,
-        alt: 'Protocol Health Dashboard',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Protocol Health & DeFi Risk Analysis',
-    description: 'Enterprise-grade DeFi protocol risk scoring and security analysis.',
-  },
-};
+  path: '/protocol-health',
+  tags: ['DeFi risk', 'protocol safety', 'smart contract audit', 'TVL monitoring', 'DeFi security', 'protocol health', 'hack tracker'],
+});
 
 // =============================================================================
 // Loading Component

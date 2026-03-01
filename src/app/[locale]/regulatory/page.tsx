@@ -11,38 +11,16 @@
  * @module app/[locale]/regulatory
  */
 
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { RegulatoryDashboard } from './RegulatoryDashboardClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Regulatory Intelligence | Crypto Compliance Tracker',
-  description:
-    'Real-time cryptocurrency regulatory intelligence. Track SEC, CFTC, EU MiCA, FCA enforcement actions, compliance deadlines, and global regulatory developments affecting crypto markets.',
-  openGraph: {
-    title: 'Regulatory Intelligence | Crypto Compliance Tracker',
-    description:
-      'Monitor global crypto regulations in real-time. Track enforcement actions, compliance deadlines, and regulatory developments from SEC, CFTC, EU MiCA, FCA, and more.',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Crypto Regulatory Intelligence',
-    description: 'Real-time monitoring of global crypto regulations and compliance requirements.',
-  },
-  keywords: [
-    'crypto regulation',
-    'SEC crypto',
-    'CFTC cryptocurrency',
-    'MiCA regulation',
-    'FCA crypto',
-    'cryptocurrency compliance',
-    'regulatory tracker',
-    'crypto enforcement',
-    'compliance deadlines',
-    'regulatory intelligence',
-  ],
-};
+  description: 'Real-time cryptocurrency regulatory intelligence. Track SEC, CFTC, EU MiCA, FCA enforcement actions, compliance deadlines, and global regulatory developments.',
+  path: '/regulatory',
+  tags: ['crypto regulation', 'SEC crypto', 'CFTC cryptocurrency', 'MiCA regulation', 'FCA crypto', 'cryptocurrency compliance', 'regulatory tracker'],
+});
 
 interface PageProps {
   params: Promise<{ locale: string }>;

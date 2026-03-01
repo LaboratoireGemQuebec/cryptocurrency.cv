@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { Screener } from './ScreenerClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,16 +26,12 @@ interface Coin {
   total_supply: number | null;
 }
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Crypto Screener | Filter & Discover Coins',
-  description:
-    'Filter cryptocurrencies by market cap, price, volume, 24h change, and distance from all-time high. Find the coins that match your criteria.',
-  openGraph: {
-    title: 'Crypto Screener | Filter & Discover Coins',
-    description:
-      'Filter cryptocurrencies by market cap, price, volume, 24h change, and distance from all-time high.',
-  },
-};
+  description: 'Filter cryptocurrencies by market cap, price, volume, 24h change, and distance from all-time high. Find the coins that match your criteria.',
+  path: '/screener',
+  tags: ['crypto screener', 'coin filter', 'market cap filter', 'crypto scanner', 'coin discovery'],
+});
 
 async function getCoins(): Promise<Coin[]> {
   const data = await fetchCoinGecko<Coin[]>(

@@ -8,12 +8,14 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getTrending, getTopCoins, formatPercent } from '@/lib/market-data';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Trending Cryptocurrencies - Free Crypto News',
-  description: 'Discover the most searched and trending cryptocurrencies right now.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Trending Cryptocurrencies — Most Searched Coins',
+  description: 'Discover the most searched and trending cryptocurrencies right now. See what the crypto community is watching.',
+  path: '/markets/trending',
+  tags: ['trending crypto', 'most searched coins', 'popular cryptocurrency', 'crypto trends'],
+});
 
 export const revalidate = 60;
 

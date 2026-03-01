@@ -344,7 +344,7 @@ export class DistributedCache {
             const batchSize = 100;
             for (let i = 0; i < kvKeys.length; i += batchSize) {
               const batch = kvKeys.slice(i, i + batchSize);
-              await Promise.all(batch.map(k => db.del(k)));
+              await Promise.all(batch.map(k => db.delete(k)));
             }
             count += kvKeys.length;
           }

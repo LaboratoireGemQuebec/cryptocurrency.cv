@@ -1,31 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { OptionsFlowDashboard } from './OptionsFlowDashboardClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Options Flow | Crypto Options Trading Intelligence',
-  description:
-    'Real-time crypto options flow tracking, volatility surface, max pain analysis, and gamma exposure. Track unusual activity on Deribit, OKX, and Bybit.',
-  openGraph: {
-    title: 'Options Flow | Crypto Options Trading Intelligence',
-    description:
-      'Real-time crypto options flow tracking with volatility surface and Greeks analysis.',
-  },
-  keywords: [
-    'crypto options',
-    'options flow',
-    'deribit',
-    'bitcoin options',
-    'ethereum options',
-    'max pain',
-    'gamma exposure',
-    'volatility surface',
-    'implied volatility',
-    'options greeks',
-  ],
-};
+  description: 'Real-time crypto options flow tracking, volatility surface, max pain analysis, and gamma exposure. Track unusual activity on Deribit, OKX, and Bybit.',
+  path: '/options',
+  tags: ['crypto options', 'options flow', 'deribit', 'bitcoin options', 'ethereum options', 'max pain', 'gamma exposure', 'volatility surface', 'implied volatility'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

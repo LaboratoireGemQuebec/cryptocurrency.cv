@@ -902,11 +902,19 @@ export class AIMarketAgent {
       const price2 = priceData.find(p => p.symbol === asset2);
       
       if (price1 && price2) {
-        // Simplified correlation from price changes
-        const sameDirection = (price1.change24h > 0) === (price2.change24h > 0);
-        const actual = sameDirection ? 
-          1 - Math.abs(price1.change24h - price2.change24h) / 20 :
-          -1 + Math.abs(price1.change24h + price2.change24h) / 20;
+        // Estimate instantaneous correlation using price returns and spread
+n        // Use change magnitudes and direction alignment for a more robust estimate
+        const r1 = price1.change24h / 100;
+        const r2 = price2.change24h / 100;
+        const sameDirection = (r1 > 0) === (r2 > 0);
+        
+        // Correlation proxy: combine direction agreement with magnitude similarity
+        // When returns go the same way with similar magnitude → high positive correlation
+        // When returns go opposite ways → negative correlation
+        const magnitudeSimilarity = 1 - Math.min(1, Math.abs(r1 - r2) / (Math.abs(r1) + Math.abs(r2) + 0.001));
+        const actual = sameDirection
+          ? magnitudeSimilarity * 0.95  // Cap at 0.95 since single-day observation
+          : -magnitudeSimilarity * 0.95;
         
         const divergence = Math.abs(expected - actual);
         
@@ -1135,31 +1143,7 @@ export class AIMarketAgent {
     return levels;
   }
 
-  private async fetchUpcomingCatalysts(): Promise<Catalyst[]> {
-    // In production, integrate with event calendars
-    return [
-      {
-        id: 'cat-1',
-        title: 'FOMC Meeting',
-        expectedDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-        assets: ['BTC', 'ETH'],
-        potentialImpact: 'high',
-        direction: 'neutral',
-        type: 'macro',
-        description: 'Federal Reserve interest rate decision - high volatility expected',
-      },
-      {
-        id: 'cat-2',
-        title: 'Ethereum Dencun Upgrade Anniversary',
-        expectedDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
-        assets: ['ETH', 'ARB', 'OP', 'MATIC'],
-        potentialImpact: 'medium',
-        direction: 'bullish',
-        type: 'upgrade',
-        description: 'One year since EIP-4844 - narrative catalyst for L2 ecosystem',
-      },
-    ];
-  }
+  private async fetchUpcomingCatalysts(): Promise<Catalyst[]> {\n    const catalysts: Catalyst[] = [];\n\n    // Fetch real macro economic events from public calendars\n    try {\n      // Use FRED API or similar for FOMC dates\n      const fomcRes = await fetch(\n        'https://www.federalreserve.gov/json/ne-press.json',\n        { signal: AbortSignal.timeout(5000), next: { revalidate: 86400 } }\n      );\n      if (fomcRes.ok) {\n        const fomcData = await fomcRes.json();\n        const now = Date.now();\n        const futureEvents = (fomcData || []).filter((e: { d: string; t: string }) => {\n          const eventDate = new Date(e.d).getTime();\n          return eventDate > now && eventDate < now + 90 * 24 * 60 * 60 * 1000;\n        }).slice(0, 3);\n\n        for (const event of futureEvents) {\n          catalysts.push({\n            id: `macro-${event.d}`,\n            title: event.t || 'FOMC / Fed Event',\n            expectedDate: new Date(event.d),\n            assets: ['BTC', 'ETH'],\n            potentialImpact: 'high',\n            direction: 'neutral',\n            type: 'macro',\n            description: `Federal Reserve event: ${event.t || 'policy announcement'} — high volatility expected`,\n          });\n        }\n      }\n    } catch { /* Fed calendar unavailable */ }\n\n    // Fetch upcoming crypto events from CoinGecko events or CoinMarketCal\n    try {\n      const eventsRes = await fetch(\n        'https://api.coingecko.com/api/v3/events',\n        { signal: AbortSignal.timeout(5000), next: { revalidate: 3600 } }\n      );\n      if (eventsRes.ok) {\n        const eventsData = await eventsRes.json();\n        const events = (eventsData?.data || []).slice(0, 5);\n        for (const event of events) {\n          catalysts.push({\n            id: `crypto-event-${event.title?.replace(/\\s+/g, '-')?.toLowerCase() || Date.now()}`,\n            title: event.title || 'Crypto Event',\n            expectedDate: new Date(event.start_date || Date.now() + 7 * 24 * 3600 * 1000),\n            assets: (event.coins || []).map((c: { symbol: string }) => c.symbol?.toUpperCase()).filter(Boolean).slice(0, 5),\n            potentialImpact: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'high'\n              : event.type === 'airdrop' || event.type === 'token-burn' ? 'medium'\n              : 'low',\n            direction: event.type === 'airdrop' || event.type === 'mainnet-launch' ? 'bullish' : 'neutral',\n            type: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'upgrade'\n              : event.type === 'conference' ? 'macro'\n              : 'other',\n            description: event.description || `${event.title} — ${event.type || 'upcoming crypto event'}`,\n          });\n        }\n      }\n    } catch { /* CoinGecko events unavailable */ }\n\n    // If we couldn't fetch any real events, provide a minimal structural placeholder\n    if (catalysts.length === 0) {\n      // Use deterministic dates based on known recurring events\n      // FOMC meetings happen ~8 times/year on predictable dates\n      const nextWednesday = new Date();\n      nextWednesday.setDate(nextWednesday.getDate() + ((3 - nextWednesday.getDay() + 7) % 7 || 7));\n      catalysts.push({\n        id: 'cat-fomc-next',\n        title: 'Next FOMC Meeting (estimated)',\n        expectedDate: nextWednesday,\n        assets: ['BTC', 'ETH'],\n        potentialImpact: 'high',\n        direction: 'neutral',\n        type: 'macro',\n        description: 'Estimated next Federal Reserve activity — verify against official FOMC calendar',\n      });\n    }\n\n    return catalysts;\n  }
 
   private identifyDominantNarrative(
     signals: MarketSignal[],

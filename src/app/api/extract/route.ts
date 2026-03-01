@@ -142,9 +142,54 @@ async function extractArticle(url: string): Promise<ExtractionResult> {
 async function extractWithMercury(
   url: string
 ): Promise<Omit<ExtractionResult, 'method' | 'extractedAt'>> {
-  // Mercury is a popular extraction library
-  // In production, you'd run mercury-parser or use a hosted service
-  throw new Error('Mercury parser not configured');
+  // Use the same HTML extraction approach as Readability but with
+  // Mercury-style content scoring heuristics
+  const response = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; FCN-Bot/1.0; +https://cryptocurrency.cv)',
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
+  const html = await response.text();
+
+  // Extract metadata
+  const title = extractMeta(html, 'og:title') || extractTag(html, 'title') || '';
+  const description = extractMeta(html, 'og:description') || extractMeta(html, 'description') || '';
+  const author = extractMeta(html, 'author') || extractMeta(html, 'article:author');
+  const publishedTime = extractMeta(html, 'article:published_time') || extractMeta(html, 'datePublished');
+  const siteName = extractMeta(html, 'og:site_name');
+
+  // Extract content using main content extraction (Mercury-style scoring)
+  const content = extractMainContent(html);
+  const textContent = stripHtml(content);
+  const wordCount = textContent.split(/\s+/).filter(Boolean).length;
+  const images = extractImages(html, url);
+  const links = extractLinks(html, url);
+
+  if (wordCount < 50) {
+    throw new Error('Mercury-style extraction yielded insufficient content');
+  }
+
+  return {
+    url,
+    title,
+    content,
+    textContent,
+    excerpt: description || textContent.slice(0, 200) + '...',
+    author,
+    publishedTime,
+    siteName,
+    wordCount,
+    readingTime: Math.ceil(wordCount / 200),
+    images,
+    links,
+    success: true,
+  };
 }
 
 /**

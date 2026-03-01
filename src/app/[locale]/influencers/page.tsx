@@ -1,28 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import InfluencersDashboard from './InfluencersDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Influencer Reliability | Crypto Influencer Tracking',
-  description:
-    'Track crypto influencer predictions and trading calls. See accuracy scores and reliability ratings.',
-  openGraph: {
-    title: 'Influencer Reliability | Crypto Influencer Tracking',
-    description:
-      'Track crypto influencer predictions and see who actually gets it right.',
-  },
-  keywords: [
-    'crypto influencers',
-    'influencer tracking',
-    'prediction accuracy',
-    'trading calls',
-    'crypto twitter',
-    'influencer reliability',
-    'call tracking',
-  ],
-};
+  description: 'Track crypto influencer predictions and trading calls. See accuracy scores and reliability ratings.',
+  path: '/influencers',
+  tags: ['crypto influencers', 'influencer tracking', 'prediction accuracy', 'trading calls', 'crypto twitter', 'influencer reliability'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

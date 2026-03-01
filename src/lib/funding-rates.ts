@@ -153,8 +153,23 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
 
     const premiumData: BinancePremiumIndex[] = await premiumResponse.json();
     
-    // Fetch open interest for top symbols
+    // Fetch open interest and 24h volume for top symbols
     const oiMap = new Map<string, number>();
+    const volMap = new Map<string, number>();
+
+    // Fetch 24h ticker data for volume (single API call for all symbols)
+    try {
+      const tickerRes = await fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/ticker/24hr`);
+      if (tickerRes.ok) {
+        const tickers = await tickerRes.json();
+        for (const t of tickers) {
+          if (t.symbol && t.quoteVolume) {
+            volMap.set(t.symbol, parseFloat(t.quoteVolume) || 0);
+          }
+        }
+      }
+    } catch { /* volume fetch failed — will use 0 */ }
+
     const oiPromises = STANDARD_SYMBOLS.slice(0, 20).map(async (symbol) => {
       try {
         const res = await fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=${symbol}`);
@@ -188,7 +203,7 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
           nextFundingTime: p.nextFundingTime,
           timeUntilFunding: Math.max(0, p.nextFundingTime - now),
           openInterest: oiMap.get(p.symbol) || 0,
-          volume24h: 0, // Would need separate call
+          volume24h: volMap.get(p.symbol) || 0,
           fundingInterval: FUNDING_INTERVALS.binance,
           lastUpdated: now,
         };

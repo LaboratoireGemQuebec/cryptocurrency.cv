@@ -507,7 +507,17 @@ export async function getMarketIntelligence(): Promise<MarketIntelligence> {
       btcDominance,
       ethDominance,
       altcoinSeason,
-      fearGreedScore: 50, // Would need separate API call
+      fearGreedScore: await (async () => {
+        // Fetch from Alternative.me Fear & Greed Index API
+        try {
+          const fgRes = await fetch('https://api.alternative.me/fng/?limit=1');
+          if (fgRes.ok) {
+            const fgData = await fgRes.json();
+            return parseInt(fgData?.data?.[0]?.value || '50', 10);
+          }
+        } catch { /* fear/greed API unavailable */ }
+        return 50; // Neutral fallback
+      })(),
     },
     latestResearch: latestNews,
     timestamp: new Date().toISOString(),

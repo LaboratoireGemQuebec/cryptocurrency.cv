@@ -1,26 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import NarrativesDashboard from './NarrativesDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Market Narratives | Crypto Narrative Tracking',
-  description:
-    'Track emerging crypto market narratives and themes. Identify trending stories before they go mainstream.',
-  openGraph: {
-    title: 'Market Narratives | Crypto Narrative Tracking',
-    description: 'Track emerging crypto market narratives and themes.',
-  },
-  keywords: [
-    'crypto narratives',
-    'market narratives',
-    'crypto themes',
-    'trending narratives',
-    'narrative trading',
-    'crypto trends',
-  ],
-};
+  description: 'Track emerging crypto market narratives and themes. Identify trending stories before they go mainstream.',
+  path: '/narratives',
+  tags: ['crypto narratives', 'market narratives', 'crypto themes', 'trending narratives', 'narrative trading', 'crypto trends'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

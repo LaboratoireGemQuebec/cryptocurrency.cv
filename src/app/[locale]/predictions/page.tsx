@@ -1,29 +1,16 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PredictionsDashboard from './PredictionsDashboard';
 import PredictionTracker from '@/components/PredictionTracker';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Price Predictions | Crypto Prediction Market',
-  description:
-    'Make crypto price predictions and compete on the leaderboard. Track your accuracy score and see top predictors.',
-  openGraph: {
-    title: 'Price Predictions | Crypto Prediction Market',
-    description:
-      'Make crypto price predictions and compete on the leaderboard.',
-  },
-  keywords: [
-    'crypto predictions',
-    'price predictions',
-    'bitcoin predictions',
-    'ethereum predictions',
-    'crypto leaderboard',
-    'prediction market',
-    'accuracy score',
-  ],
-};
+  description: 'Make crypto price predictions and compete on the leaderboard. Track your accuracy score and see top predictors.',
+  path: '/predictions',
+  tags: ['crypto predictions', 'price predictions', 'bitcoin predictions', 'ethereum predictions', 'prediction market', 'accuracy score'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

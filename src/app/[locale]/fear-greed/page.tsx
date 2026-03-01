@@ -1,26 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FearGreedDashboard from './FearGreedDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Crypto Fear & Greed Index | Market Sentiment',
-  description:
-    'Real-time Crypto Fear & Greed Index with historical analysis. Track market sentiment and identify potential market tops and bottoms.',
-  openGraph: {
-    title: 'Crypto Fear & Greed Index | Market Sentiment',
-    description: 'Real-time market sentiment with trend analysis.',
-  },
-  keywords: [
-    'fear and greed index',
-    'crypto sentiment',
-    'market sentiment',
-    'bitcoin fear greed',
-    'crypto emotions',
-    'market psychology',
-  ],
-};
+  description: 'Real-time Crypto Fear & Greed Index with historical analysis. Track market sentiment and identify potential market tops and bottoms.',
+  path: '/fear-greed',
+  tags: ['fear and greed index', 'crypto sentiment', 'market sentiment', 'bitcoin fear greed', 'crypto emotions', 'market psychology'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

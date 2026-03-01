@@ -8,12 +8,14 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getTopCoins, formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Newly Listed Coins - Crypto Markets - Free Crypto News',
-  description: 'Discover newly listed cryptocurrencies and recent additions to the market.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Newly Listed Coins — Recent Cryptocurrency Launches',
+  description: 'Discover newly listed cryptocurrencies and recent additions to the market. Track new coin launches and early opportunities.',
+  path: '/markets/new',
+  tags: ['new coins', 'newly listed crypto', 'new listings', 'crypto launches', 'new cryptocurrency'],
+});
 
 export const revalidate = 60;
 

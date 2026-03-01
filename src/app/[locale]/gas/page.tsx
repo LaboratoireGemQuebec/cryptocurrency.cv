@@ -1,18 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { GasTracker } from '@/components/GasTracker';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Gas Tracker | Ethereum Gas Prices',
-  description:
-    'Live Ethereum gas prices and transaction cost estimator. Track gas fees for ETH transfers, swaps, and smart contract interactions.',
-  openGraph: {
-    title: 'Gas Tracker | Ethereum Gas Prices',
-    description: 'Live Ethereum gas prices and transaction cost estimator.',
-  },
-};
+  description: 'Live Ethereum gas prices and transaction cost estimator. Track gas fees for ETH transfers, swaps, and smart contract interactions.',
+  path: '/gas',
+  tags: ['ethereum gas', 'gas tracker', 'gas prices', 'ETH fees', 'gwei', 'transaction cost'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

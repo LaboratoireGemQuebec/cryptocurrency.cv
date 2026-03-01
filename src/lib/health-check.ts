@@ -218,6 +218,7 @@ async function checkDatabase(): Promise<HealthCheck> {
     // Attempt a lightweight query to verify connectivity
     // Use dynamic import to avoid bundling pg in edge runtime
     try {
+      // @ts-ignore - @vercel/postgres is optional, caught at runtime
       const { sql } = await import('@vercel/postgres');
       const result = await sql`SELECT 1 as health_check`;
       

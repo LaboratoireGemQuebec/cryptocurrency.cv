@@ -6,12 +6,14 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Cryptocurrency Categories - Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'Cryptocurrency Categories',
   description: 'Browse cryptocurrencies by category: DeFi, NFT, Gaming, Layer 1, Layer 2, Meme coins, and more.',
-};
+  path: '/markets/categories',
+  tags: ['crypto categories', 'DeFi', 'NFT', 'gaming crypto', 'layer 1', 'layer 2', 'meme coins'],
+});
 
 // Category definitions with descriptions
 const CATEGORIES = [

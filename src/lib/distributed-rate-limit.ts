@@ -330,8 +330,10 @@ export function getRequestTier(request: NextRequest): RateLimitTier {
 
   // API key indicates at least free tier
   if (apiKey) {
-    // In production, look up the key to get actual tier
-    // For now, default to free
+    // Determine tier from API key prefix convention:
+    // cda_pro_... = pro tier, cda_ent_... = enterprise, cda_... = free
+    if (apiKey.startsWith('cda_ent_')) return 'enterprise';
+    if (apiKey.startsWith('cda_pro_')) return 'pro';
     return 'free';
   }
 

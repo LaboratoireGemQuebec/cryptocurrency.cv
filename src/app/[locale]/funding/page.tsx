@@ -1,26 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FundingDashboard from './FundingDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Funding Rates | Perpetual Futures Funding',
-  description:
-    'Real-time funding rates across Binance, Bybit, OKX, and Hyperliquid. Find funding rate arbitrage opportunities.',
-  openGraph: {
-    title: 'Funding Rates | Perpetual Futures Funding',
-    description: 'Track funding rates across major crypto exchanges.',
-  },
-  keywords: [
-    'funding rates',
-    'perpetual futures',
-    'crypto funding',
-    'binance funding',
-    'bybit funding',
-    'funding arbitrage',
-  ],
-};
+export const metadata = generateSEOMetadata({
+  title: 'Funding Rates | Perpetual Futures',
+  description: 'Real-time funding rates across Binance, Bybit, OKX, and Hyperliquid. Find funding rate arbitrage opportunities.',
+  path: '/funding',
+  tags: ['funding rates', 'perpetual futures', 'crypto funding', 'binance funding', 'bybit funding', 'funding arbitrage'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Heatmap } from '@/components/Heatmap';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { generateSEOMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,16 +20,12 @@ interface Coin {
   price_change_percentage_7d_in_currency?: number;
 }
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Market Heatmap | Crypto Overview',
-  description:
-    'Visual heatmap of the cryptocurrency market. See which coins are up or down at a glance with our interactive market visualization.',
-  openGraph: {
-    title: 'Market Heatmap | Crypto Overview',
-    description:
-      'Visual heatmap of the cryptocurrency market. See which coins are up or down at a glance.',
-  },
-};
+  description: 'Visual heatmap of the cryptocurrency market. See which coins are up or down at a glance with our interactive market visualization.',
+  path: '/heatmap',
+  tags: ['crypto heatmap', 'market heatmap', 'market visualization', 'crypto overview', 'price changes'],
+});
 
 async function getCoins() {
   const data = await fetchCoinGecko<Coin[]>(

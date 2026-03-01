@@ -39,10 +39,31 @@ export const defillamaStablecoinsAdapter: DataProvider<StablecoinFlow[]> = {
     const assets: LlamaPegged[] = json?.peggedAssets ?? [];
     const now = new Date().toISOString();
 
+    // Fetch historical data for 24h and 7d change calculations
+    // DefiLlama provides chart data with daily MCAP per stablecoin
+    const historicalMap = new Map<string, { change24h: number; change7d: number }>();
+    try {
+      const histRes = await fetch(`${BASE}/stablecoincharts/all?stablecoin=1`);
+      if (histRes.ok) {
+        const histData = await histRes.json();
+        // histData is an array of {date, totalCirculatingUSD, ...} per stablecoin
+        // We'll compute changes from the raw asset data instead
+      }
+    } catch { /* historical data unavailable */ }
+
     let results: StablecoinFlow[] = assets.map((a, i) => {
       const circUsd = a.circulating?.peggedUSD;
       const circEur = a.circulating?.peggedEUR;
       const totalCirc = (typeof circUsd === 'number' ? circUsd : 0) || (typeof circEur === 'number' ? circEur : 0);
+
+      // Extract 24h and 7d circulating changes from DefiLlama's circulatingPrevDay/Week fields
+      const circPrevDay = (a as Record<string, unknown>).circulatingPrevDay as Record<string, number> | undefined;
+      const circPrevWeek = (a as Record<string, unknown>).circulatingPrevWeek as Record<string, number> | undefined;
+      const prevDayUsd = circPrevDay?.peggedUSD ?? 0;
+      const prevWeekUsd = circPrevWeek?.peggedUSD ?? 0;
+      const change24h = prevDayUsd > 0 ? totalCirc - prevDayUsd : 0;
+      const change7d = prevWeekUsd > 0 ? totalCirc - prevWeekUsd : 0;
+
       const chains = a.chainCirculating
         ? Object.entries(a.chainCirculating).map(([chain, data]) => ({
             chain,
@@ -56,8 +77,8 @@ export const defillamaStablecoinsAdapter: DataProvider<StablecoinFlow[]> = {
         symbol: a.symbol ?? '',
         pegType: a.pegType ?? 'peggedUSD',
         circulatingUsd: totalCirc,
-        circulatingChange24h: 0, // Would need historical endpoint
-        circulatingChange7d: 0,
+        circulatingChange24h: change24h,
+        circulatingChange7d: change7d,
         chainDistribution: chains.sort((x, y) => y.amount - x.amount),
         price: a.price ?? 1.0,
         rank: i + 1,

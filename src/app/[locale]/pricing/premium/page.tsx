@@ -1,11 +1,13 @@
-import { type Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { Newspaper, BarChart3, Brain, Check, Zap, Bell } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Premium API Pricing | Free Crypto News',
-  description: 'Pay-per-use crypto news and AI analysis API with x402 micropayments. No subscription required.',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Premium API Pricing — x402 Micropayments',
+  description: 'Pay-per-use crypto news and AI analysis API with x402 micropayments in USDC. No subscription required.',
+  path: '/pricing/premium',
+  tags: ['premium API', 'x402', 'micropayments', 'USDC', 'crypto API pricing'],
+});
 
 const aiEndpoints = [
   {

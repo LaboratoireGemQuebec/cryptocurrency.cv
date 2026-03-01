@@ -108,10 +108,10 @@ export default function Footer() {
               {[
                 { href: '/markets', icon: '📈', label: 'Markets' },
                 { href: '/defi', icon: '🏦', label: 'DeFi Dashboard' },
-                { href: '/orderbook', icon: '📗', label: 'Order Book' },
-                { href: '/whales', icon: '🐋', label: 'Whale Alerts' },
-                { href: '/portfolio', icon: '💼', label: 'Portfolio' },
-                { href: '/ai/oracle', icon: '🔮', label: 'AI Oracle' },
+                { href: '/events', icon: '📅', label: 'Events Calendar' },
+                { href: '/exchanges', icon: '🏛️', label: 'Exchange Reviews' },
+                { href: '/airdrops', icon: '🪂', label: 'Airdrops' },
+                { href: '/unlocks', icon: '🔓', label: 'Token Unlocks' },
               ].map((item) => (
                 <li key={item.href}>
                   <Link 
@@ -160,12 +160,13 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-400">
             <Link href="/status" className="hover:text-white transition-colors">🟢 Status</Link>
             <Link href="/sources" className="hover:text-white transition-colors">📚 Sources</Link>
-            <Link href="/topics" className="hover:text-white transition-colors">🏷️ Topics</Link>
+            <Link href="/learn" className="hover:text-white transition-colors">🎓 Learn</Link>
+            <Link href="/learn/glossary" className="hover:text-white transition-colors">📖 Glossary</Link>
+            <Link href="/videos" className="hover:text-white transition-colors">🎬 Videos</Link>
+            <Link href="/authors" className="hover:text-white transition-colors">✍️ Authors</Link>
+            <Link href="/press" className="hover:text-white transition-colors">📰 Press</Link>
             <Link href="/trending" className="hover:text-white transition-colors">🔥 Trending</Link>
-            <Link href="/markets/gainers" className="hover:text-white transition-colors">📈 Gainers</Link>
-            <Link href="/markets/losers" className="hover:text-white transition-colors">📉 Losers</Link>
             <Link href="/sentiment" className="hover:text-white transition-colors">😱 Fear & Greed</Link>
-            <Link href="/arbitrage" className="hover:text-white transition-colors">🔄 Arbitrage</Link>
             <Link href="/predictions" className="hover:text-white transition-colors">🎯 Predictions</Link>
             <Link href="/watchlist" className="hover:text-white transition-colors">👁️ Watchlist</Link>
             <Link href="/settings" className="hover:text-white transition-colors">⚙️ Settings</Link>

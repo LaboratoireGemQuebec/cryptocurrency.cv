@@ -323,7 +323,25 @@ export function getChannelStats(channelId: string): ChannelStats | null {
     topMentionedCoins,
     sentimentBreakdown: sentimentCounts,
     peakActivityHour: parseInt(peakActivityHour, 10),
-    averageResponseTime: 0, // Would need thread analysis
+    averageResponseTime: (() => {
+      // Calculate average response time from message timestamps
+      // Messages are in chronological order; measure gaps between consecutive messages
+      if (channelMessages.length < 2) return 0;
+      const sorted = [...channelMessages].sort(
+        (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
+      );
+      let totalGap = 0;
+      let gapCount = 0;
+      for (let i = 1; i < sorted.length; i++) {
+        const gap = new Date(sorted[i].timestamp).getTime() - new Date(sorted[i - 1].timestamp).getTime();
+        // Only count gaps < 1 hour as "responses" (longer gaps are likely new conversations)
+        if (gap > 0 && gap < 3600000) {
+          totalGap += gap;
+          gapCount++;
+        }
+      }
+      return gapCount > 0 ? Math.round(totalGap / gapCount / 1000) : 0; // seconds
+    })(),
   };
 }
 

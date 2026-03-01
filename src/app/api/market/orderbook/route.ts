@@ -27,7 +27,7 @@ const DEFAULT_EXCHANGES: Exchange[] = ['binance', 'coinbase', 'kraken', 'okx', '
 export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
-  const rateLimitResult = checkRateLimitByRequest(request);
+  const rateLimitResult = await checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }
@@ -190,7 +190,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
-  const rateLimitResult = checkRateLimitByRequest(request);
+  const rateLimitResult = await checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }

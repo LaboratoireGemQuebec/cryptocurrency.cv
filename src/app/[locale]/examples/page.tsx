@@ -1,12 +1,14 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ExamplesContent } from '@/components/ExamplesContent';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Code Examples - Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'Code Examples — Free Crypto News API Integration',
   description: 'Ready-to-use code examples for integrating Free Crypto News API with Discord, Slack, Telegram, LangChain, and more.',
-};
+  path: '/examples',
+  tags: ['code examples', 'API integration', 'discord bot', 'telegram bot', 'langchain', 'crypto API'],
+});
 
 // Example code stored as constants
 const examples = [

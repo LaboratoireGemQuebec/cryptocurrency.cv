@@ -3,12 +3,14 @@ import Footer from '@/components/Footer';
 import { ReaderContent } from '@/components/ReaderContent';
 import { BreadcrumbStructuredData, NewsListStructuredData } from '@/components/StructuredData';
 import { getLatestNews } from '@/lib/crypto-news';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Full Reader - Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'Full Reader — Crypto News with AI Summaries',
   description: 'Read full crypto news articles from 200+ sources with AI-powered summaries and analysis.',
-};
+  path: '/read',
+  tags: ['crypto reader', 'news reader', 'AI summaries', 'full articles', 'crypto news'],
+});
 
 export const revalidate = 300; // Revalidate every 5 minutes
 
