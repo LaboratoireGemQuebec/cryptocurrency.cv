@@ -50,15 +50,21 @@ const isEdgeRuntime: boolean = (() => {
 // Undici Agent (Node.js only — lazy-initialised)
 // ---------------------------------------------------------------------------
 
-type UndiciAgent = import('undici').Agent;
+// Minimal interface for undici's Agent — avoids requiring the `undici` npm
+// package at type-check time (Node.js bundles undici but doesn't ship a
+// top-level @types entry).
+interface UndiciAgent {
+  close(): Promise<void>;
+  stats?: Record<string, number>;
+}
 
 let _agent: UndiciAgent | undefined;
 
 function getAgent(): UndiciAgent {
   if (_agent) return _agent;
 
-   
-  const { Agent } = require('undici') as typeof import('undici');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { Agent } = require('undici') as { Agent: new (opts: Record<string, unknown>) => UndiciAgent };
 
   _agent = new Agent({
     keepAliveTimeout: 30_000,      // idle socket TTL
