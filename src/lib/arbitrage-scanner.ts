@@ -361,14 +361,17 @@ async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
   }
 }
 
-async function fetchKuCoinPrices(): Promise<ExchangePrice[]> {
+async function fetchKucoinPrices(): Promise<ExchangePrice[]> {
   const cacheKey = 'arb:kucoin:prices';
   const cached = cache.get<ExchangePrice[]>(cacheKey);
   if (cached) return cached;
 
   try {
     const response = await fetch('https://api.kucoin.com/api/v1/market/allTickers');
-    if (!response.ok) throw new Error(`KuCoin API error: ${response.status}`);
+    if (!response.ok) {
+      console.warn(`KuCoin price API returned ${response.status}`);
+      return cache.get<ExchangePrice[]>('arb:kucoin:stale') ?? [];
+    }
     
     const result = await response.json();
     const tickers = result.data?.ticker || [];

@@ -85,10 +85,17 @@ export async function GET(request: NextRequest) {
   try {
     // Fetch recent news
     const data = await getLatestNews(100);
+    const articles = data?.articles ?? [];
     
     // Filter by time window
     const cutoffTime = new Date(Date.now() - hours * 60 * 60 * 1000);
-    const recentArticles = data.articles.filter(a => new Date(a.pubDate) > cutoffTime);
+    const recentArticles = articles.filter(a => {
+      try {
+        return new Date(a.pubDate) > cutoffTime;
+      } catch {
+        return false;
+      }
+    });
     
     // Count topic mentions
     const topicCounts = new Map<string, { count: number; headlines: string[]; texts: string[] }>();

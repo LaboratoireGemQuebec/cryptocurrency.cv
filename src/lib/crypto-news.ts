@@ -4169,7 +4169,16 @@ export async function getNewsByCategory(
   
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
   
-  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
+  // Prefer category-scoped sources to avoid fetching 350+ feeds.
+  // Fall back to all sources only when no RSS_SOURCES match the category.
+  const categorySources = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(
+    key => RSS_SOURCES[key].category === category.toLowerCase()
+  );
+  const sourceKeysToFetch = categorySources.length > 0
+    ? categorySources
+    : (Object.keys(RSS_SOURCES) as SourceKey[]);
+  
+  const allArticles = await fetchMultipleSources(sourceKeysToFetch, categorySources.length === 0);
   
   // Category keyword mappings
   const categoryKeywords: Record<string, string[]> = {
