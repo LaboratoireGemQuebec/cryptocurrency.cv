@@ -9,6 +9,7 @@
 - Use `bunx` for executables (e.g. `bunx tsc`, `bunx drizzle-kit`, `bunx playwright`)
 - **Always use background terminals** (`isBackground: true`) for every command so a terminal ID is returned
 - **Always kill the terminal** after the command completes, whether it succeeds or fails — never leave terminals open
+- **Never create or modify GitHub Actions workflows** — this project does not use GitHub Actions for CI/CD, publishing, or automation
 
 ## Project Overview
 
