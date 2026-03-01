@@ -80,16 +80,21 @@ Errors return a JSON body with `error`, `message`, and `status`:
 
 | Tier | Limit |
 |------|-------|
-| **Per IP** | 100 requests/minute |
-| **Global** | 1000 requests/minute |
-| **Burst** | 50 requests/second |
+| **Public (browser, no key)** | 60 requests/hour per IP |
+| **Programmatic (no key)** | 300 requests/hour per IP |
+| **Free API key** | 1,000 requests/day (20/min burst) |
+| **Pro API key** | 50,000 requests/day (500/min burst) |
+| **Enterprise API key** | 500,000 requests/day (2,000/min burst) |
+
+Additionally, expensive endpoints (AI, search, export) have stricter per-route limits — see individual endpoint documentation.
 
 Rate limit headers are included in every response:
 
 ```
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 95
-X-RateLimit-Reset: 1706012400
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 950
+X-RateLimit-Reset: 2026-03-01T00:00:00.000Z
+X-RateLimit-Tier: free
 ```
 
 > **Tip:** Most endpoints cache for 5 minutes. Respect `Cache-Control` headers to avoid unnecessary requests.
@@ -3245,18 +3250,18 @@ Get API key registration information and available tiers.
     {
       "id": "free",
       "name": "Free",
-      "requestsPerDay": 100,
+      "requestsPerDay": 1000,
       "features": ["Basic endpoints", "Rate limited"]
     },
     {
       "id": "pro",
       "name": "Pro",
-      "requestsPerDay": 10000,
+      "requestsPerDay": 50000,
       "features": ["All endpoints", "Priority support"]
     }
   ],
   "notes": [
-    "Free tier: 100 requests/day",
+    "Free tier: 1,000 requests/day",
     "Maximum 3 keys per email"
   ]
 }

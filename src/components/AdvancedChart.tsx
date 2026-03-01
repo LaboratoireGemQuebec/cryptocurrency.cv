@@ -121,9 +121,12 @@ export default function AdvancedChart({
 }) {
   const chartContainerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
-  const candleSeriesRef = useRef<ISeriesApi<"Candlestick"> | null>(null);
-  const lineSeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
-  const volumeSeriesRef = useRef<ISeriesApi<"Histogram"> | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const candleSeriesRef = useRef<ISeriesApi<any> | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const lineSeriesRef = useRef<ISeriesApi<any> | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const volumeSeriesRef = useRef<ISeriesApi<any> | null>(null);
 
   const [coinId, setCoinId] = useState(initialCoinId);
   const [days, setDays] = useState(30);

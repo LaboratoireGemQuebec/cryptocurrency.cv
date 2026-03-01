@@ -264,10 +264,15 @@ The API implements a **distributed sliding-window** rate limiter:
 
 | Tier | Limit | Window | Description |
 |------|-------|--------|-------------|
-| Free (no key) | 100 req | 15 min | Public API access |
-| Basic key | 1,000 req | 15 min | Registered users |
-| Premium | 10,000 req | 15 min | Paid tier |
-| Internal | Unlimited | — | Server-to-server |
+| Public (browser, no key) | 60 req | 1 hour | Browser visitors |
+| Programmatic (no key) | 300 req | 1 hour | API clients without a key |
+| Free API key | 1,000 req | 1 day | Registered free users |
+| Pro API key | 50,000 req | 1 day | Pro subscribers |
+| Enterprise key | 500,000 req | 1 day | Enterprise customers |
+| Internal / SperaxOS | Unlimited | — | Server-to-server |
+
+Expensive endpoints (AI, export, search, backtest) also have per-route limits (5–30 req/min 
+depending on the endpoint) applied in addition to the tier limit.
 
 Rate limit state is stored in Redis (or in-memory fallback). Response headers include:
 
