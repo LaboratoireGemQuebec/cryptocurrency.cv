@@ -92,9 +92,9 @@ async function fetchTrendingConnections(): Promise<TrendingPair[]> {
       .slice(0, 10)
       .map(r => ({
         source: r.source,
-        sourceLabel: entities.get(r.source) || r.source,
+        sourceLabel: String(entities.get(r.source) ?? r.source),
         target: r.target,
-        targetLabel: entities.get(r.target) || r.target,
+        targetLabel: String(entities.get(r.target) ?? r.target),
         strength: Math.round(Math.min(100, r.weight)),
       }));
   } catch {

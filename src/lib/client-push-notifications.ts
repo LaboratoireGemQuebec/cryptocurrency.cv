@@ -69,7 +69,7 @@ export async function subscribeToPush(
         return { success: false, error: "No VAPID public key configured" };
       }
 
-      const applicationServerKey = urlBase64ToUint8Array(publicKey);
+      const applicationServerKey = urlBase64ToUint8Array(publicKey) as BufferSource;
 
       subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
@@ -139,7 +139,7 @@ export function sendLocalNotification(
   title: string,
   body: string,
   icon?: string,
-  options?: { tag?: string; url?: string; image?: string }
+  options?: { tag?: string; url?: string }
 ): void {
   if (typeof window === "undefined") return;
   if (Notification.permission !== "granted") return;
@@ -149,7 +149,6 @@ export function sendLocalNotification(
     icon: icon || "/icons/icon-192x192.png",
     badge: "/icons/icon-72x72.png",
     tag: options?.tag,
-    image: options?.image,
     data: { url: options?.url },
   });
 
