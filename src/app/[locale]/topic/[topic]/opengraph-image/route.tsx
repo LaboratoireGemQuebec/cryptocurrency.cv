@@ -10,14 +10,12 @@
 
 import { ImageResponse } from 'next/og';
 
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
+const size = { width: 1200, height: 630 };
 
-interface Props {
-  params: Promise<{ topic: string; locale: string }>;
-}
-
-export default async function Image({ params }: Props) {
+export async function GET(
+  _request: Request,
+  { params }: { params: Promise<{ topic: string; locale: string }> },
+) {
   const { topic } = await params;
 
   const displayTopic = decodeURIComponent(topic);

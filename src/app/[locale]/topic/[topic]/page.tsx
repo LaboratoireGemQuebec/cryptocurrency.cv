@@ -149,12 +149,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       url: canonical,
       siteName: 'Free Crypto News',
+      images: [
+        {
+          url: `${SITE_URL}/en/topic/${topic}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: `${title} - Crypto News`,
+        },
+      ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title,
       description,
       creator: '@AICryptoNews_',
+      images: [`${SITE_URL}/en/topic/${topic}/opengraph-image`],
     },
   };
 }
