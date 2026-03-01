@@ -10,7 +10,7 @@
 
 /// <reference lib="webworker" />
 
-// Service Worker for Free Crypto News PWA
+// Service Worker for Crypto Vision News PWA
 // Version: 2.0.0
 
 const CACHE_VERSION = 'v2';
@@ -316,7 +316,7 @@ async function networkFirstWithOfflineFallback(request) {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Offline - Free Crypto News</title>
+        <title>Offline - Crypto Vision News</title>
         <style>
           body { font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0a0a0a; color: #fff; }
           .container { text-align: center; padding: 2rem; }
@@ -451,7 +451,7 @@ self.addEventListener('push', (event) => {
     };
     
     event.waitUntil(
-      self.registration.showNotification(data.title || 'Free Crypto News', options)
+      self.registration.showNotification(data.title || 'Crypto Vision News', options)
     );
   } catch (error) {
     console.error('[SW] Error processing push:', error);
