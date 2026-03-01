@@ -62,7 +62,7 @@ export async function GET(request: NextRequest) {
   
   // Require authentication for usage data
   const authHeader = request.headers.get('authorization');
-  const apiKey = authHeader?.replace('Bearer ', '') || searchParams.get('api_key');
+  const apiKey = authHeader?.replace(/^Bearer\s+/i, '') || searchParams.get('api_key');
   
   if (!apiKey) {
     return NextResponse.json(

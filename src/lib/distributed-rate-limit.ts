@@ -288,7 +288,7 @@ export function getRequestIdentifier(request: NextRequest): string {
   // 3. IP address (with forwarding support)
   
   const apiKey = request.headers.get('x-api-key') || 
-                 request.headers.get('authorization')?.replace('Bearer ', '');
+                 request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   
   if (apiKey && apiKey.startsWith('cda_')) {
     return `key:${apiKey}`;
@@ -315,7 +315,7 @@ export function getRequestIdentifier(request: NextRequest): string {
  */
 export function getRequestTier(request: NextRequest): RateLimitTier {
   const apiKey = request.headers.get('x-api-key') || 
-                 request.headers.get('authorization')?.replace('Bearer ', '');
+                 request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
 
   // Internal service key
   if (apiKey === process.env.INTERNAL_API_KEY) {

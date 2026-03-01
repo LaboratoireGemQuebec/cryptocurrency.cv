@@ -173,7 +173,7 @@ export async function checkRateLimitFromRequest(
   tierConfig: TierConfig = FREE_TIER_CONFIG
 ): Promise<RateLimitResult> {
   // Extract identifier from API key header or IP
-  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
              request.headers.get('x-real-ip') || 
              'anonymous';
@@ -410,7 +410,7 @@ const DEFAULT_FREE_TIER: TierConfig = {
  */
 function getIdentifierFromRequest(request: NextRequest): string {
   // Try API key first
-  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   if (apiKey) {
     // Hash the API key for privacy
     let hash = 0;

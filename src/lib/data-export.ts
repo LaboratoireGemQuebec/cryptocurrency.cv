@@ -641,10 +641,6 @@ export function deleteExportJob(id: string): boolean {
   return exportJobs.delete(id);
 }
 
-export function deleteExportJob(id: string): boolean {
-  return exportJobs.delete(id);
-}
-
 export function updateExportJob(id: string, update: Partial<ExportJob>): void {
   const job = exportJobs.get(id);
   if (job) {

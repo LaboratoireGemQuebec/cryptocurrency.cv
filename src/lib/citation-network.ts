@@ -583,14 +583,58 @@ export function calculateNetworkMetrics(): NetworkMetrics {
   // Detect communities using label propagation
   const communities = detectCommunities(allNodes);
 
+  // BFS from every node to compute diameter and average shortest path length.
+  // Treat edges as undirected (references + citedBy).
+  // For large graphs (>500 nodes), sample a subset of sources to keep runtime bounded.
+  const nodeIds = allNodes.map(n => n.nodeId);
+  const sampleLimit = 500;
+  const sources = nodeCount <= sampleLimit
+    ? nodeIds
+    : nodeIds.filter((_, i) => i % Math.ceil(nodeCount / sampleLimit) === 0);
+
+  let globalMaxDist = 0;
+  let totalPathLength = 0;
+  let totalPaths = 0;
+
+  for (const srcId of sources) {
+    // BFS
+    const dist = new Map<string, number>();
+    dist.set(srcId, 0);
+    const queue: string[] = [srcId];
+    let head = 0;
+
+    while (head < queue.length) {
+      const cur = queue[head++];
+      const curDist = dist.get(cur)!;
+      const curNode = nodes.get(cur);
+      if (!curNode) continue;
+
+      // Neighbors in undirected sense
+      const neighbors = [...curNode.references, ...curNode.citedBy];
+      for (const nid of neighbors) {
+        if (!dist.has(nid) && nodes.has(nid)) {
+          const nd = curDist + 1;
+          dist.set(nid, nd);
+          queue.push(nid);
+          if (nd > globalMaxDist) globalMaxDist = nd;
+          totalPathLength += nd;
+          totalPaths++;
+        }
+      }
+    }
+  }
+
+  const diameter = globalMaxDist;
+  const averagePathLength = totalPaths > 0 ? totalPathLength / totalPaths : 0;
+
   return {
     nodeCount,
     edgeCount,
     averageDegree,
     density,
     clustering,
-    diameter: 0, // Would need full BFS
-    averagePathLength: 0, // Would need full BFS
+    diameter,
+    averagePathLength,
     centralNodes,
     communities,
   };

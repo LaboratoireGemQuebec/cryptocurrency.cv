@@ -18,6 +18,7 @@ import { x402Server } from './server';
 import { createRoutesConfig } from './routes';
 import { handleProtectedRequest } from './auth';
 import { validateApiKey, checkRateLimit, isKvConfigured, type ApiKeyData } from '@/lib/api-keys';
+import { logger } from '@/lib/logger';
 import { API_TIERS } from './pricing';
 import { IS_PRODUCTION, IS_BUILD_TIME, PAYMENT_ADDRESS } from './config';
 
@@ -181,7 +182,7 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.isValid) {
       // Payment verified successfully
       if (!IS_PRODUCTION) {
-        console.log('[x402] Payment verified:', {
+        logger.debug('[x402] Payment verified', {
           network: ctx.requirements.network,
           amount: ctx.requirements.amount,
           asset: ctx.requirements.asset,
@@ -195,7 +196,7 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.success) {
       // Payment settled successfully
       if (!IS_PRODUCTION) {
-        console.log('[x402] Payment settled:', {
+        logger.debug('[x402] Payment settled', {
           network: ctx.result.network,
           transaction: ctx.result.transaction,
         });

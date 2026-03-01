@@ -1,48 +1,74 @@
 # Features Guide
 
-Complete guide to all Free Crypto News features and tools.
+Complete guide to everything you can do with Free Crypto News — as a reader, trader, developer, or researcher.
+
+> **Quick links:** [API Reference](./API.md) · [Quick Start](./QUICKSTART.md) · [SDKs](./sdks/index.md) · [Tutorials](./tutorials/index.md)
+
+---
+
+## Feature Overview
+
+| Category | What's included |
+|----------|----------------|
+| [News & Content](#news--content) | Real-time aggregation, search, article reader, topics |
+| [Market Data](#market-data) | Prices, charts, trending, heatmaps, gas tracker |
+| [Trading Tools](#trading-tools) | Arbitrage, signals, funding rates, liquidations |
+| [Analytics & Research](#analytics--research) | Correlations, predictions, screener, sentiment |
+| [On-Chain Data](#on-chain-data) | Addresses, whale tracking, protocol health |
+| [AI Features](#ai-features) | Chat agent, daily digest, AI intelligence suite |
+| [Research & Analysis](#research--analysis) | Regulatory tracking, entities, fact-checking |
+| [Portfolio & User](#portfolio--user-features) | Portfolio, watchlist, bookmarks, saved items |
+| [Developer Tools](#developer-tools) | API docs, SDKs, embeddable charts |
+
+---
 
 ## News & Content
 
 ### 📰 News Feed
 
-The main news aggregator with real-time updates from 200+ sources.
+The main news aggregator — your single source for crypto news from 200+ professional outlets, updated every few minutes.
 
 **URL:** `/`
 
 **Features:**
-- Real-time news from 200+ professional sources
-- Category filtering (DeFi, Bitcoin, Ethereum, NFT, etc.)
-- Source filtering
-- Sentiment indicators
-- Breaking news highlights
+- Real-time news from 200+ professional sources (CoinDesk, The Block, Decrypt, Cointelegraph, and more)
+- Category filtering (DeFi, Bitcoin, Ethereum, NFT, Layer 2, Regulation, etc.)
+- Source filtering — see news from specific outlets
+- Sentiment indicators — see if coverage is bullish, bearish, or neutral
+- Breaking news highlights with prominent banner
 - Infinite scroll with lazy loading
+
+**API:** [`GET /api/news`](./API.md#get-apinews) — also available as [RSS](./API.md#get-apirss), [Atom](./API.md#get-apiatom), and [OPML](./API.md#get-apiopml)
 
 ### 🔍 Search
 
-Full-text search across all news articles.
+Find exactly what you're looking for across all articles — past and present.
 
 **URL:** `/search`
 
 **Features:**
-- Keyword search
+- Keyword search with instant results
 - Date range filtering
 - Source filtering
 - Category filtering
 - Saved searches
 
+**API:** [`GET /api/search`](./API.md#get-apisearch)
+
 ### 📖 Article Reader
 
-Distraction-free article reading experience.
+Distraction-free reading experience with AI enhancements.
 
 **URL:** `/read/[slug]` or `/article/[id]`
 
 **Features:**
-- Clean reading mode
-- AI-powered summary
-- Related articles
-- Share options
-- Text-to-speech
+- Clean reading mode — no ads, no clutter
+- AI-powered summary at the top of each article
+- Related articles sidebar
+- Share options (Twitter, Reddit, copy link)
+- Text-to-speech for hands-free reading
+
+**API:** [`POST /api/news/extract`](./API.md#post-apinewsextract) — extract and summarize any article URL
 
 ### 📚 Topics
 
@@ -79,16 +105,18 @@ Browse by content category.
 
 ### 📊 Markets
 
-Live cryptocurrency market data.
+Live cryptocurrency market data — prices, volumes, and trends at a glance.
 
 **URL:** `/markets`
 
 **Features:**
-- Top 100 cryptocurrencies
-- Price, volume, market cap
-- 24h/7d/30d changes
-- Sparkline charts
-- Sorting and filtering
+- Top 100 cryptocurrencies by market cap
+- Price, volume, market cap with real-time updates
+- 24h/7d/30d price changes
+- Sparkline charts for quick trend visualization
+- Sorting and filtering by any metric
+
+**API:** [`GET /api/market/coins`](./API.md#get-apimarketcoins)
 
 ### 🔥 Trending
 
@@ -180,15 +208,17 @@ Perpetual futures funding rates.
 
 ### 📉 Liquidations
 
-Liquidation data across exchanges.
+Real-time liquidation data across major exchanges — see when over-leveraged positions get wiped out.
 
 **URL:** `/liquidations`
 
 **Features:**
-- Real-time liquidations
-- Liquidation heatmap
-- Historical data
-- Alert setup
+- Real-time liquidation events
+- Liquidation heatmap visualization
+- Historical data and trends
+- Alert setup for large liquidation events
+
+**API:** [`GET /api/liquidations`](./API.md#get-apiliquidations)
 
 ### 📖 Order Book
 
@@ -204,15 +234,17 @@ Aggregated order book data.
 
 ### 📈 Signals
 
-AI-generated trading signals.
+AI-generated trading signals based on technical analysis and news sentiment.
 
 **URL:** `/signals`
 
 **Features:**
-- Buy/sell signals
-- Technical indicators
-- Confidence scores
-- Backtested results
+- Buy/sell signals with confidence scores
+- Technical indicators (RSI, MACD, Bollinger Bands, etc.)
+- Confidence scores for each signal
+- Backtested results with historical accuracy
+
+**API:** [`GET /api/signals`](./API.md#get-apisignals)
 
 ### ⚙️ Options
 
@@ -330,17 +362,19 @@ On-chain analytics dashboard.
 - Exchange flows
 - Holder distribution
 
-### 🐋 Whales
+### � Whales
 
-Whale transaction tracking.
+Track large cryptocurrency transactions and whale wallet movements in real time.
 
 **URL:** `/whales`
 
 **Features:**
-- Large transactions
-- Whale wallet tracking
-- Exchange inflows/outflows
-- Historical patterns
+- Large transaction alerts (>$1M+)
+- Whale wallet tracking and labeling
+- Exchange inflows/outflows (potential sell/buy pressure)
+- Historical patterns and trends
+
+**API:** [`GET /api/whale-alerts`](./API.md#get-apiwhale-alerts)
 
 ### 🏥 Protocol Health
 
@@ -372,27 +406,31 @@ Price oracle data.
 
 ### 🤖 AI Agent
 
-Conversational AI assistant.
+Conversational AI assistant that understands crypto markets and news — ask it anything.
 
 **URL:** `/ai-agent`
 
 **Features:**
-- Natural language queries
-- Market analysis
-- News summarization
-- Custom research
+- Natural language queries ("What's happening with Ethereum today?")
+- Real-time market analysis with news context
+- News summarization across multiple sources
+- Custom research queries with cited sources
+
+**API:** [`GET /api/ai/agent`](./API.md#get-apiaiagent) · [`POST /api/ai/agent`](./API.md#post-apiaiagent)
 
 ### 📝 Digest
 
-AI-generated news digest.
+AI-generated daily news digest — get caught up on everything important in 2 minutes.
 
 **URL:** `/digest`
 
 **Features:**
-- Daily summaries
-- Key highlights
-- Trend analysis
+- Daily summaries of the most important crypto news
+- Key highlights and takeaways
+- Trend analysis and market context
 - Customizable topics
+
+**API:** [`GET /api/digest`](./API.md#get-apidigest)
 
 ### � AI Intelligence Suite
 
@@ -556,15 +594,17 @@ Academic citation tracker.
 
 ### 💼 Portfolio
 
-Portfolio tracking.
+Track your cryptocurrency portfolio performance across multiple wallets.
 
 **URL:** `/portfolio`
 
 **Features:**
 - Multi-wallet support
-- Performance tracking
-- Asset allocation
-- P&L calculation
+- Real-time performance tracking
+- Asset allocation breakdown
+- P&L calculation with tax reporting
+
+**API:** [`POST /api/portfolio`](./API.md#post-apiportfolio) · [`GET /api/portfolio/performance`](./API.md#get-apiportfolioperformance)
 
 ### 👀 Watchlist
 
@@ -635,17 +675,19 @@ Cryptocurrency comparison.
 
 ## Developer Tools
 
-### 👨‍💻 Developers
+### 🧑‍💻 Developers
 
-Developer portal.
+Developer portal with everything you need to integrate with the API.
 
 **URL:** `/developers`
 
 **Features:**
-- API documentation
-- SDK downloads
-- Code examples
-- API key management
+- Full API documentation (180+ endpoints)
+- SDK downloads for 8 languages
+- Code examples in Python, JavaScript, Go, cURL
+- Optional API key management
+
+**Resources:** [API Reference](./API.md) · [Examples](./EXAMPLES.md) · [SDKs](./sdks/index.md) · [Tutorials](./tutorials/index.md)
 
 ### 📊 Charts
 
@@ -715,8 +757,17 @@ About the project.
 
 ---
 
+---
+
 ## Related Documentation
 
-- [API Reference](./API.md) - All API endpoints
-- [User Guide](./USER-GUIDE.md) - Getting started
-- [Developer Guide](./DEVELOPER-GUIDE.md) - Building & contributing
+| Resource | Description |
+|----------|-------------|
+| [API Reference](./API.md) | All 180+ API endpoints |
+| [Quick Start](./QUICKSTART.md) | Get started in 5 minutes |
+| [User Guide](./USER-GUIDE.md) | Web app user guide |
+| [Developer Guide](./DEVELOPER-GUIDE.md) | Building & contributing |
+| [SDKs](./sdks/index.md) | Python, JS, TS, Go, PHP, React, Ruby, Rust |
+| [Tutorials](./tutorials/index.md) | Step-by-step guides |
+| [Integrations](./integrations/index.md) | ChatGPT, Claude MCP, Discord, Slack, etc. |
+| [Examples](./EXAMPLES.md) | Code examples in 4+ languages |

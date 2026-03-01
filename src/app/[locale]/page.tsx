@@ -46,12 +46,37 @@ import {
 import { clusterSimilarArticles } from "@/lib/ai-intelligence";
 import { categories } from "@/lib/categories";
 import { Link } from "@/i18n/navigation";
+import { generateSEOMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 
 export const revalidate = 300; // Revalidate every 5 minutes
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSEOMetadata({
+    title: "Free Crypto News — Real-Time Cryptocurrency News Aggregator",
+    description:
+      "100% free crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources covering Bitcoin, Ethereum, DeFi, Solana & altcoins.",
+    path: "",
+    locale,
+    tags: [
+      "crypto news",
+      "cryptocurrency",
+      "bitcoin",
+      "ethereum",
+      "defi",
+      "solana",
+      "altcoins",
+      "free API",
+      "blockchain news",
+      "crypto market",
+    ],
+  });
+}
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;

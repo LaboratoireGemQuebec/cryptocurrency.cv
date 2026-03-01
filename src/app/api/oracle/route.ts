@@ -222,7 +222,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     // Check API key (optional for Oracle)
     const authHeader = request.headers.get('Authorization');
-    const apiKey = authHeader?.replace('Bearer ', '');
+    const apiKey = authHeader?.replace(/^Bearer\s+/i, '');
     let isAuthenticated = false;
     let userId = validation.data.userId;
 

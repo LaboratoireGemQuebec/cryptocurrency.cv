@@ -6,6 +6,7 @@
  */
 
 import { kv } from '@vercel/kv';
+import { logger } from '@/lib/logger';
 
 // =============================================================================
 // TYPES
@@ -111,13 +112,13 @@ export async function recordPayment(metric: PaymentMetric): Promise<void> {
     await kv.expire(walletsKey, 90 * 24 * 60 * 60);
     
     // Log for debugging
-    console.log('[x402-metrics] Payment recorded:', {
+    logger.debug('[x402-metrics] Payment recorded', {
       endpoint: metric.endpoint,
       success: metric.success,
       amount: metric.amount,
     });
   } catch (error) {
-    console.error('[x402-metrics] Failed to record payment:', error);
+    logger.error('[x402-metrics] Failed to record payment', error instanceof Error ? error : undefined);
     // Don't throw - metrics shouldn't break payment flow
   }
 }
@@ -285,5 +286,5 @@ export async function resetMetrics(): Promise<void> {
     }
   }
   
-  console.log('[x402-metrics] All metrics reset');
+  logger.info('[x402-metrics] All metrics reset');
 }

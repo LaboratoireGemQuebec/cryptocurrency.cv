@@ -1,0 +1,28 @@
+# Gitleaks ignore file — suppress known false positives
+# See: https://github.com/gitleaks/gitleaks#gitleaksignore
+
+# Example/placeholder API keys in documentation
+README.md:curl-auth-header:1707
+README.md:curl-auth-header:1877
+docs/ADMIN.md:curl-auth-header:57
+docs/PREMIUM.md:curl-auth-header:35
+docs/X402.md:curl-auth-header:204
+docs/API.md:curl-auth-header:4630
+docs/DATABASE.md:generic-api-key:236
+docs/integrations/smart-contracts.md:generic-api-key:96
+
+# Example API key in documentation page component
+src/app/docs/api/page.tsx:curl-auth-header:86
+
+# Example API key in API route documentation
+src/app/api/v1/route.ts:curl-auth-header:98
+src/app/api/archive/webhook/route.ts:curl-auth-header:22
+
+# Column customizer uses generic token pattern (not a real key)
+src/app/[locale]/markets/components/ColumnCustomizer.tsx:generic-api-key:18
+
+# Archive predictions contain Polymarket API tokens (public market data, not secrets)
+archive/predictions/*:generic-api-key
+
+# Next.js build cache — auto-generated, not committed to git
+.next/*

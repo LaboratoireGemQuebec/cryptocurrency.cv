@@ -1,8 +1,144 @@
 # 📚 API Reference
 
-Complete documentation for the Free Crypto News API. All endpoints are **100% free** with no API keys required.
+Complete documentation for the Free Crypto News API with **180+ endpoints**.
 
 **Base URL:** `https://cryptocurrency.cv`
+
+---
+
+## Before You Start
+
+### Authentication
+
+**None required.** All public endpoints work without API keys, tokens, or signup. Just make HTTP requests.
+
+```bash
+# This just works — no auth needed
+curl https://cryptocurrency.cv/api/news
+```
+
+> Some advanced endpoints (portfolio, alerts, webhooks) use optional API keys for personalization. See [API Key Management](#api-key-management) for details.
+
+### Quick Try
+
+Try these right now in your terminal:
+
+```bash
+# Latest crypto news
+curl https://cryptocurrency.cv/api/news?limit=3
+
+# Bitcoin news
+curl https://cryptocurrency.cv/api/bitcoin
+
+# AI daily digest
+curl https://cryptocurrency.cv/api/digest
+
+# Market sentiment
+curl https://cryptocurrency.cv/api/sentiment
+
+# Search articles
+curl "https://cryptocurrency.cv/api/search?q=ethereum+ETF"
+
+# Fear & Greed index
+curl https://cryptocurrency.cv/api/fear-greed
+```
+
+### Response Format
+
+All endpoints return JSON. Typical response structure:
+
+```json
+{
+  "articles": [ ... ],
+  "count": 50,
+  "fetchedAt": "2026-03-01T12:30:00Z",
+  "responseTime": "245ms"
+}
+```
+
+### Error Responses
+
+Errors return a JSON body with `error`, `message`, and `status`:
+
+```json
+{
+  "error": "Bad Request",
+  "message": "Invalid 'limit' parameter — must be between 1 and 100",
+  "status": 400
+}
+```
+
+| Status | Meaning | What to do |
+|--------|---------|------------|
+| 400 | Bad Request | Check your parameters |
+| 404 | Not Found | Endpoint or resource doesn't exist |
+| 429 | Rate Limited | Wait and retry with backoff |
+| 500 | Server Error | Retry after a moment |
+| 503 | Service Unavailable | Upstream source is down — retry later |
+
+### Rate Limits
+
+| Tier | Limit |
+|------|-------|
+| **Per IP** | 100 requests/minute |
+| **Global** | 1000 requests/minute |
+| **Burst** | 50 requests/second |
+
+Rate limit headers are included in every response:
+
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1706012400
+```
+
+> **Tip:** Most endpoints cache for 5 minutes. Respect `Cache-Control` headers to avoid unnecessary requests.
+
+### Common Parameters
+
+These parameters work on most endpoints:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `limit` | integer | Number of results (1-100, default: 10) |
+| `page` | integer | Page number for pagination |
+| `per_page` | integer | Results per page |
+| `from` | ISO date | Start date filter |
+| `to` | ISO date | End date filter |
+| `lang` | string | Language code (18 supported — see [Language Support](#language-support)) |
+| `source` | string | Filter by source key |
+| `category` | string | Filter by category |
+
+### Tools & Collections
+
+- **Postman Collection:** Import from [`/postman`](../postman/) for interactive API testing
+- **OpenAPI Spec:** Available at [`/chatgpt/openapi.yaml`](../chatgpt/openapi.yaml)
+- **SDKs:** [Python](./sdks/python.md) · [JavaScript](./sdks/javascript.md) · [TypeScript](./sdks/typescript.md) · [Go](./sdks/go.md) · [PHP](./sdks/php.md) · [React](./sdks/react.md) · [Ruby](./sdks/ruby.md) · [Rust](./sdks/rust.md)
+
+---
+
+## Endpoint Categories
+
+The API is organized into these categories:
+
+| Category | Endpoints | Description |
+|----------|-----------|-------------|
+| [News](#news-endpoints) | 9 | Core news aggregation, search, trending |
+| [AI-Powered](#ai-powered-endpoints) | 17 | Sentiment, summaries, digests, research |
+| [Trading & Market](#trading-market-apis) | 8 | Arbitrage, signals, funding, liquidations |
+| [AI Analysis](#ai-analysis-apis) | 9 | Content detection, entities, narratives |
+| [Research & Analytics](#research-analytics-apis) | 6 | Regulatory, predictions, academic |
+| [Intelligence](#intelligence-apis) | 4 | Anomalies, headlines, credibility |
+| [Social](#social-intelligence-apis) | 2+ | Social sentiment, influencers |
+| [Market Data](#market-data-apis) | 4+ | Coins, OHLC, exchanges, derivatives |
+| [DeFi](#defi-apis) | 15+ | Yields, stablecoins, DEX volumes, bridges |
+| [On-Chain](#bitcoin-on-chain-apis) | 10+ | Mempool, blocks, addresses, network stats |
+| [NFT](#nft-market-apis) | 8 | Collections, sales, market data |
+| [L2](#l2-scaling-apis) | 5 | Layer 2 projects, activity, risk |
+| [Real-Time](#real-time-endpoints) | 4+ | SSE, WebSocket, streaming |
+| [User Features](#user-features) | 8+ | Alerts, newsletter, webhooks |
+| [Feeds](#feed-formats) | 3 | RSS, Atom, OPML |
+| [Utility](#utility-endpoints) | 5 | Health, stats, cache |
 
 ---
 
@@ -260,7 +396,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 
 ### GET /api/news
 
-Fetch aggregated news from all 7 sources.
+Fetch aggregated news from all sources.
 
 **Parameters:**
 

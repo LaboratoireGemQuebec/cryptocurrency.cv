@@ -18,6 +18,8 @@
  * ```
  */
 
+import { logger } from '@/lib/logger';
+
 export interface PaymentEvent {
   requestId: string;
   resource: string;
@@ -153,13 +155,13 @@ export const paymentHooks = new PaymentHooksManager();
 // Console logging hook (development)
 if (process.env.NODE_ENV === 'development') {
   paymentHooks.on('afterVerify', (event) => {
-    console.log(`[x402] Payment verified: ${event.resource} - ${event.valid ? '✓' : '✗'}`);
+    logger.debug(`[x402] Payment verified: ${event.resource} - ${event.valid ? '✓' : '✗'}`);
   });
 
   paymentHooks.on('afterSettle', (event) => {
-    console.log(
+    logger.debug(
       `[x402] Payment settled: ${event.resource} - ${event.success ? '✓' : '✗'}`,
-      event.transactionHash ? `tx: ${event.transactionHash}` : ''
+      { transactionHash: event.transactionHash || undefined }
     );
   });
 }

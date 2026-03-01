@@ -1,35 +1,63 @@
 # 📚 API Examples & Tutorials
 
-> Complete examples for all 184 API endpoints in Python, JavaScript, Go, and cURL.
+> Complete examples for the Free Crypto News API in Python, JavaScript, Go, and cURL.
+> All endpoints are **100% free** — no API keys required.
+
+**Looking for something specific?**
+
+| I want to... | Jump to |
+|--------------|--------|
+| Make my first API call | [Quick Start](#-quick-start) |
+| Fetch & filter news | [News Endpoints](#-news-endpoints) |
+| Use AI features | [AI Endpoints](#-ai-endpoints) |
+| Get market/trading data | [Market Data](#-market-data) |
+| Stream real-time updates | [Real-time Streaming](#-real-time-streaming) |
+| See platform-specific examples | [Platform Examples](#platform-examples) |
+| Use an SDK instead | [SDKs](#-sdks) |
+
+---
 
 ## 🚀 Quick Start
 
 ### Installation
 
 ```bash
-# Python
+# Python — just use the built-in requests library
 pip install requests
 
-# JavaScript/Node.js
-npm install node-fetch  # or use built-in fetch in Node 18+
+# JavaScript/Node.js — fetch is built-in since Node 18+
+# No installation needed!
 
-# Go
-go get github.com/nirholas/free-crypto-news/sdk/go
+# Go — standard library is enough
+# Or use the SDK: go get github.com/nirholas/free-crypto-news/sdk/go
 ```
 
 ### Your First API Call
 
-<details>
+<details open>
 <summary><b>Python</b></summary>
 
 ```python
 import requests
 
 response = requests.get("https://cryptocurrency.cv/api/news?limit=5")
+response.raise_for_status()  # Raise an error for bad status codes
 news = response.json()
 
-for article in news.get("articles", news)[:5]:
+for article in news.get("articles", [])[:5]:
     print(f"📰 {article['title']}")
+    print(f"   Source: {article['source']} | Sentiment: {article.get('sentiment', 'N/A')}")
+    print()
+```
+
+**Expected output:**
+```
+📰 Bitcoin Surges Past $95K as Institutional Demand Grows
+   Source: CoinDesk | Sentiment: positive
+
+📰 Ethereum Layer 2 TVL Hits New Record
+   Source: The Block | Sentiment: positive
+...
 ```
 </details>
 
@@ -37,12 +65,17 @@ for article in news.get("articles", news)[:5]:
 <summary><b>JavaScript</b></summary>
 
 ```javascript
-const response = await fetch("https://cryptocurrency.cv/api/news?limit=5");
-const news = await response.json();
+try {
+  const response = await fetch("https://cryptocurrency.cv/api/news?limit=5");
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const news = await response.json();
 
-news.articles.forEach(article => {
-  console.log(`📰 ${article.title}`);
-});
+  news.articles.forEach(article => {
+    console.log(`📰 ${article.title} (${article.source})`);
+  });
+} catch (error) {
+  console.error('Failed to fetch news:', error.message);
+}
 ```
 </details>
 
@@ -50,10 +83,38 @@ news.articles.forEach(article => {
 <summary><b>Go</b></summary>
 
 ```go
-resp, _ := http.Get("https://cryptocurrency.cv/api/news?limit=5")
-defer resp.Body.Close()
-body, _ := io.ReadAll(resp.Body)
-fmt.Println(string(body))
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+)
+
+type NewsResponse struct {
+	Articles []struct {
+		Title  string `json:"title"`
+		Source string `json:"source"`
+	} `json:"articles"`
+}
+
+func main() {
+	resp, err := http.Get("https://cryptocurrency.cv/api/news?limit=5")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resp.Body.Close()
+
+	body, _ := io.ReadAll(resp.Body)
+	var news NewsResponse
+	json.Unmarshal(body, &news)
+
+	for _, a := range news.Articles {
+		fmt.Printf("📰 %s (%s)\n", a.Title, a.Source)
+	}
+}
 ```
 </details>
 
@@ -61,7 +122,11 @@ fmt.Println(string(body))
 <summary><b>cURL</b></summary>
 
 ```bash
-curl "https://cryptocurrency.cv/api/news?limit=5"
+# Pretty-printed output
+curl -s "https://cryptocurrency.cv/api/news?limit=5" | python3 -m json.tool
+
+# Or with jq
+curl -s "https://cryptocurrency.cv/api/news?limit=5" | jq '.articles[] | .title'
 ```
 </details>
 
@@ -910,17 +975,95 @@ chmod +x all-endpoints.sh
 
 Official SDKs for quick integration:
 
-- **Python**: `pip install crypto-news-sdk`
-- **JavaScript**: `npm install @crypto-news/sdk`
-- **Go**: `go get github.com/nirholas/free-crypto-news/sdk/go`
+| SDK | Install | Docs |
+|-----|---------|------|
+| **Python** | `pip install free-crypto-news` | [Python SDK](./sdks/python.md) |
+| **JavaScript** | `npm install free-crypto-news` | [JS SDK](./sdks/javascript.md) |
+| **TypeScript** | Full type definitions included | [TS SDK](./sdks/typescript.md) |
+| **React** | `npm install @free-crypto-news/react` | [React SDK](./sdks/react.md) |
+| **Go** | `go get github.com/nirholas/free-crypto-news/sdk/go` | [Go SDK](./sdks/go.md) |
+| **PHP** | Composer package | [PHP SDK](./sdks/php.md) |
+| **Ruby** | Gem package | [Ruby SDK](./sdks/ruby.md) |
+| **Rust** | Cargo crate | [Rust SDK](./sdks/rust.md) |
 
-See [sdk/](sdk/) directory for SDK source code.
+---
+
+## Platform Examples
+
+Full platform-specific tutorials with working code:
+
+| Platform | Guide |
+|----------|-------|
+| Discord Bot | [Build a Discord news bot →](./examples/discord.md) |
+| Slack Bot | [Build a Slack news bot →](./examples/slack.md) |
+| Telegram Bot | [Build a Telegram news bot →](./examples/telegram.md) |
+| LangChain | [Use with LangChain agents →](./examples/langchain.md) |
+| React App | [Build a React news app →](./examples/react.md) |
+| Rust | [Rust integration →](./examples/rust.md) |
+| C# | [C# integration →](./examples/csharp.md) |
+| Kotlin | [Kotlin integration →](./examples/kotlin.md) |
+| Swift | [Swift integration →](./examples/swift.md) |
+| AI Platforms | [AI platform integrations →](./examples/ai-platforms.md) |
+
+---
+
+## Error Handling Best Practices
+
+Always handle errors gracefully in production code:
+
+### Python
+
+```python
+import requests
+from time import sleep
+
+def fetch_news(retries=3):
+    for attempt in range(retries):
+        try:
+            response = requests.get("https://cryptocurrency.cv/api/news?limit=10", timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 429:  # Rate limited
+                wait = 2 ** attempt
+                print(f"Rate limited, retrying in {wait}s...")
+                sleep(wait)
+            else:
+                raise
+        except requests.exceptions.ConnectionError:
+            print("Connection error, retrying...")
+            sleep(1)
+    raise Exception("Failed after retries")
+```
+
+### JavaScript
+
+```javascript
+async function fetchNews(retries = 3) {
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const response = await fetch('https://cryptocurrency.cv/api/news?limit=10');
+      if (response.status === 429) {
+        const wait = Math.pow(2, attempt) * 1000;
+        console.log(`Rate limited, retrying in ${wait}ms...`);
+        await new Promise(r => setTimeout(r, wait));
+        continue;
+      }
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      if (attempt === retries - 1) throw error;
+      console.log('Retrying...', error.message);
+    }
+  }
+}
+```
 
 ---
 
 ## 📞 Support
 
-- 📖 [Full API Documentation](docs/API.md)
-- 💬 [Discord Community](https://discord.gg/cryptonews)
+- 📖 [Full API Reference](./API.md)
+- 🎓 [Tutorials](./tutorials/index.md)
+- 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
 - 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
-- 📧 [Email Support](mailto:support@cryptonews.dev)

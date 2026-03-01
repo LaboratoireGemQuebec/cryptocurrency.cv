@@ -183,7 +183,7 @@ export async function hybridAuthMiddleware(
   // 1. Extract API key from request
   const apiKey =
     request.headers.get('X-API-Key') ||
-    request.headers.get('Authorization')?.replace('Bearer ', '') ||
+    request.headers.get('Authorization')?.replace(/^Bearer\s+/i, '') ||
     request.nextUrl.searchParams.get('api_key');
 
   if (apiKey) {

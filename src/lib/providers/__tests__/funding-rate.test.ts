@@ -15,6 +15,17 @@ beforeEach(() => {
 
 describe('FundingRateChain', () => {
   it('fetches from Binance (highest priority)', async () => {
+    // Binance adapter fetches fundingRate + premiumIndex in parallel
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ([
+        {
+          symbol: 'BTCUSDT', markPrice: '65000.00', indexPrice: '64990.00',
+          lastFundingRate: '0.0001', nextFundingTime: 1700000000000,
+          interestRate: '0.0001', time: 1699990000000,
+        },
+      ]),
+    });
     mockFetch.mockResolvedValueOnce({
       ok: true,
       json: async () => ([
@@ -46,7 +57,8 @@ describe('FundingRateChain', () => {
   });
 
   it('fetches from Bybit when Binance fails', async () => {
-    // Binance fails
+    // Binance makes 2 parallel fetches — both fail
+    mockFetch.mockRejectedValueOnce(new Error('Binance down'));
     mockFetch.mockRejectedValueOnce(new Error('Binance down'));
     // Bybit succeeds
     mockFetch.mockResolvedValueOnce({

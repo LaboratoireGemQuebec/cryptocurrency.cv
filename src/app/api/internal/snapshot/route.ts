@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
   // Simple security: internal marker or cron secret
   const isInternal = request.headers.get('x-internal-snapshot') === '1';
   const cronSecret = process.env.CRON_SECRET;
-  const authToken = request.headers.get('authorization')?.replace('Bearer ', '');
+  const authToken = request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   const isAuthed = isInternal || (cronSecret && authToken === cronSecret);
 
   if (!isAuthed) {

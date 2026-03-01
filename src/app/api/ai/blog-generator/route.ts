@@ -17,7 +17,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { parseGroqJson } from '@/lib/groq';
+import { callGroq, parseGroqJson } from '@/lib/groq';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -148,17 +148,11 @@ async function generatePost(
 ): Promise<GeneratedPost> {
   const headlineList = headlines.map((h, i) => `${i + 1}. ${h}`).join('\n');
 
-  const response = await callGroq(
-    [
-      {
-        role: 'system',
-        content: `You are a professional crypto journalist writing a 1000-word SEO blog post.
+  const systemPrompt = `You are a professional crypto journalist writing a 1000-word SEO blog post.
 Write in clear, factual, engaging prose. Use markdown headings. Avoid hype/shilling language.
-Be technically accurate. Include actionable insights for crypto investors.`,
-      },
-      {
-        role: 'user',
-        content: `Write a 1000-word SEO-optimised crypto blog post covering the topic: "${topic}"
+Be technically accurate. Include actionable insights for crypto investors.`;
+
+  const userPrompt = `Write a 1000-word SEO-optimised crypto blog post covering the topic: "${topic}"
 
 Base the post on these recent news headlines:
 ${headlineList}
@@ -177,13 +171,16 @@ Return ONLY valid JSON with two fields:
 - "title": the post title (compelling, SEO-friendly, max 70 chars)
 - "body": the complete markdown body (no frontmatter, just H2-level headings and paragraphs)
 - "description": meta description for SEO (max 160 chars)
-- "tags": array of 5 tags (lowercase, no spaces)`,
-      },
-    ],
-    { maxTokens: 3000, temperature: 0.4, jsonMode: true }
+- "tags": array of 5 tags (lowercase, no spaces)`;
+
+  const response = await aiComplete(
+    systemPrompt,
+    userPrompt,
+    { maxTokens: 3000, temperature: 0.4, jsonMode: true },
+    true
   );
 
-  const data = JSON.parse(response.content.trim());
+  const data = parseGroqJson<Record<string, unknown>>(response);
 
   const title: string = data.title || topic;
   const body: string = data.body || '';

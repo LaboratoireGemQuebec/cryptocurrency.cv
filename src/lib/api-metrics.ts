@@ -11,6 +11,7 @@
  */
 
 import { kv } from '@vercel/kv';
+import { logger } from '@/lib/logger';
 
 // =============================================================================
 // TYPES
@@ -448,7 +449,7 @@ export async function resetMetrics(): Promise<void> {
     }
   }
   
-  console.log('[api-metrics] All metrics reset');
+  logger.info('[api-metrics] All metrics reset');
 }
 
 /**
@@ -490,7 +491,7 @@ export function withMetrics(endpoint: string, handler: RouteHandler): RouteHandl
                'unknown';
     const userAgent = request.headers.get('user-agent') || undefined;
     const apiKey = request.headers.get('x-api-key') || 
-                   request.headers.get('authorization')?.replace('Bearer ', '');
+                   request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
     const apiKeyPrefix = apiKey?.startsWith('cda_') ? apiKey.slice(0, 12) : undefined;
     const isX402 = !!(request.headers.get('x-payment') || request.headers.get('payment-signature'));
     
@@ -556,7 +557,7 @@ export function createMetricsTimer(request: NextRequest, endpoint: string) {
              'unknown';
   const userAgent = request.headers.get('user-agent') || undefined;
   const apiKey = request.headers.get('x-api-key') || 
-                 request.headers.get('authorization')?.replace('Bearer ', '');
+                 request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   const apiKeyPrefix = apiKey?.startsWith('cda_') ? apiKey.slice(0, 12) : undefined;
   const isX402 = !!(request.headers.get('x-payment') || request.headers.get('payment-signature'));
   

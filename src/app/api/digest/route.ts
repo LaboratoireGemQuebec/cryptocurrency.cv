@@ -161,6 +161,29 @@ async function buildAiDigest(articles: NewsArticle[]): Promise<AiDigestResponse>
 }
 
 // ---------------------------------------------------------------------------
+// HTML escaping — prevent XSS from upstream RSS content
+// ---------------------------------------------------------------------------
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function sanitizeUrl(url: string): string {
+  try {
+    const parsed = new URL(url);
+    if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+      return escapeHtml(url);
+    }
+  } catch { /* invalid URL */ }
+  return '#';
+}
+
+// ---------------------------------------------------------------------------
 // HTML renderer
 // ---------------------------------------------------------------------------
 
@@ -169,12 +192,12 @@ function renderDigestHtml(digest: AiDigestResponse): string {
     .map(
       s => `
   <div style="background:#1a1a2e;border-radius:12px;padding:20px;margin-bottom:16px;">
-    <span style="background:#6c63ff;color:#fff;padding:3px 10px;border-radius:20px;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">${s.tag}</span>
-    <h2 style="color:#e0e0e0;font-size:16px;margin:12px 0 8px;">${s.headline}</h2>
-    <p style="color:#a0a0b0;font-size:14px;line-height:1.6;margin:0 0 12px;">${s.summary}</p>
+    <span style="background:#6c63ff;color:#fff;padding:3px 10px;border-radius:20px;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">${escapeHtml(s.tag)}</span>
+    <h2 style="color:#e0e0e0;font-size:16px;margin:12px 0 8px;">${escapeHtml(s.headline)}</h2>
+    <p style="color:#a0a0b0;font-size:14px;line-height:1.6;margin:0 0 12px;">${escapeHtml(s.summary)}</p>
     <p style="color:#6c63ff;font-size:12px;margin:0 0 8px;">${s.article_count} articles</p>
     <ul style="padding-left:16px;margin:0;">
-      ${s.top_articles.map(a => `<li style="margin-bottom:6px;"><a href="${a.url}" style="color:#7c8cf8;text-decoration:none;font-size:13px;">${a.title}</a></li>`).join('')}
+      ${s.top_articles.map(a => `<li style="margin-bottom:6px;"><a href="${sanitizeUrl(a.url)}" style="color:#7c8cf8;text-decoration:none;font-size:13px;">${escapeHtml(a.title)}</a></li>`).join('')}
     </ul>
   </div>`
     )
@@ -185,17 +208,17 @@ function renderDigestHtml(digest: AiDigestResponse): string {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Crypto Daily Digest — ${digest.date}</title>
+  <title>Crypto Daily Digest — ${escapeHtml(digest.date)}</title>
 </head>
 <body style="margin:0;padding:0;background:#0d0d1a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
   <div style="max-width:600px;margin:0 auto;padding:32px 16px;">
     <h1 style="color:#fff;font-size:24px;margin:0 0 4px;">🗞 Crypto Daily Digest</h1>
-    <p style="color:#6c63ff;font-size:13px;margin:0 0 24px;">${digest.date} · ${digest.sections.length} topics</p>
+    <p style="color:#6c63ff;font-size:13px;margin:0 0 24px;">${escapeHtml(digest.date)} · ${digest.sections.length} topics</p>
     ${sectionHtml}
     <div style="text-align:center;margin-top:32px;">
       <a href="/newsletter" style="background:#6c63ff;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Subscribe for daily email</a>
     </div>
-    <p style="color:#444;font-size:11px;text-align:center;margin-top:24px;">Generated at ${digest.generated_at}</p>
+    <p style="color:#444;font-size:11px;text-align:center;margin-top:24px;">Generated at ${escapeHtml(digest.generated_at)}</p>
   </div>
 </body>
 </html>`;

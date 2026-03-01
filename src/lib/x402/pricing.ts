@@ -601,7 +601,7 @@ const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' ||
 const globalThisAny = globalThis as unknown as Record<string, boolean>;
 if (!isBuildTime && typeof globalThis !== 'undefined' && !globalThisAny.__tierConfigLogged) {
   globalThisAny.__tierConfigLogged = true;
-  console.log('[TIER CONFIG] ✅ All tier configurations validated successfully');
+  logger.info('[TIER CONFIG] All tier configurations validated successfully');
 }
 
 // =============================================================================

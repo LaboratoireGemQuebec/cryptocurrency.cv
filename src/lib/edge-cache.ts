@@ -226,6 +226,10 @@ class LRUCache<T> {
     return this._cache.delete(key);
   }
 
+  keys(): IterableIterator<string> {
+    return this._cache.keys();
+  }
+
   clear(): void {
     this._cache.clear();
   }

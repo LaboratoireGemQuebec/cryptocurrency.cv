@@ -1268,16 +1268,19 @@ const RSS_SOURCES = {
     name: 'What Bitcoin Did',
     url: 'https://feeds.simplecast.com/dsMGZxro',
     category: 'bitcoin',
+    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
   },
   bankless_podcast: {
     name: 'Bankless Podcast',
     url: 'https://feeds.simplecast.com/lKmQdc05',
     category: 'defi',
+    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
   },
   epicenter_podcast: {
     name: 'Epicenter Podcast',
     url: 'https://feeds.simplecast.com/0E5u4F_4',
     category: 'general',
+    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
   },
 
   // =========================================================================
@@ -2651,14 +2654,6 @@ const API_SOURCES: Record<string, ApiSource> = {
         timeAgo: 'just now',
       }));
     },
-  },
-  
-  // CoinDesk Wire (public news feed)
-  coindesk_wire: {
-    name: 'CoinDesk',
-    url: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
-    category: 'general',
-    parser: () => [], // RSS-based, handled by RSS_SOURCES
   },
   
   // Fear & Greed Index (Alternative.me - free)
