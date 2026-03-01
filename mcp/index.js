@@ -39,7 +39,7 @@ const TRANSPORT_MODE = process.argv.includes('--http') ? 'http' : 'stdio';
 const server = new Server(
   {
     name: 'free-crypto-news',
-    version: '1.0.2',
+    version: '2.0.0',
   },
   {
     capabilities: {
@@ -803,6 +803,183 @@ const tools = [
       readOnlyHint: true,
     },
   },
+  {
+    name: 'get_crypto_prices',
+    description: 'Get live cryptocurrency prices with market cap, volume, and 24h changes. Supports 100+ coins. Use this when the user asks about specific coin prices.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coin: {
+          type: 'string',
+          description: 'Comma-separated coin IDs (e.g., "bitcoin,ethereum,solana"). Uses CoinGecko identifiers.',
+          default: 'bitcoin,ethereum,solana',
+        },
+        vs_currency: {
+          type: 'string',
+          description: 'Quote currency (usd, eur, gbp, jpy, btc, eth)',
+          default: 'usd',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_market_overview',
+    description: 'Get a comprehensive crypto market overview including total market cap, BTC dominance, top gainers/losers, and volume. Use this for a broad market summary.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        limit: {
+          type: 'number',
+          description: 'Number of top coins to include (1-100)',
+          default: 20,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_predictions',
+    description: 'Get AI-generated price predictions and analyst forecasts for major cryptocurrencies. Use this when the user asks about price predictions or forecasts.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coin: {
+          type: 'string',
+          description: 'Coin symbol (btc, eth, sol, etc.)',
+          default: 'btc',
+        },
+        timeframe: {
+          type: 'string',
+          description: 'Prediction timeframe: 24h, 7d, 30d, 90d',
+          enum: ['24h', '7d', '30d', '90d'],
+          default: '7d',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_l2_data',
+    description: 'Get Layer 2 scaling solution data including TVL, transaction counts, and fees for Arbitrum, Optimism, Base, zkSync, and more. Use this when the user asks about L2s or rollups.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        limit: {
+          type: 'number',
+          description: 'Maximum L2 networks to return (1-20)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_airdrops',
+    description: 'Get information about upcoming, active, and recently completed crypto airdrops with eligibility criteria and estimated value. Use this when the user asks about airdrops or free tokens.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        status: {
+          type: 'string',
+          description: 'Filter by status: upcoming, active, ended',
+          enum: ['upcoming', 'active', 'ended'],
+          default: 'upcoming',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum results (1-30)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_macro_data',
+    description: 'Get macroeconomic indicators relevant to crypto markets including interest rates, CPI, dollar index (DXY), and correlation with traditional markets. Use this when the user asks about macro factors.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        indicators: {
+          type: 'string',
+          description: 'Comma-separated indicators (e.g., "dxy,cpi,fed_rate,sp500")',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_exchanges',
+    description: 'Get data about cryptocurrency exchanges including volume, trust score, supported coins, and fees. Use this when the user asks about exchanges or wants to compare them.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        limit: {
+          type: 'number',
+          description: 'Maximum exchanges to return (1-50)',
+          default: 20,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_glossary',
+    description: 'Get definitions of crypto terminology. Search for specific terms or browse by category. Use this when the user asks "what is" or wants a definition.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        term: {
+          type: 'string',
+          description: 'Search for a specific term (e.g., "DeFi", "staking", "halving")',
+        },
+        category: {
+          type: 'string',
+          description: 'Filter by category: trading, defi, blockchain, mining, nft, general',
+          enum: ['trading', 'defi', 'blockchain', 'mining', 'nft', 'general'],
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'ask_crypto_question',
+    description: 'Ask a natural language question about crypto news and markets. Returns an AI-generated answer with supporting sources. Use this for complex or conversational questions.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        question: {
+          type: 'string',
+          description: 'Natural language question (e.g., "What happened to Bitcoin this week?")',
+        },
+        context: {
+          type: 'string',
+          description: 'Optional context to refine the answer',
+        },
+      },
+      required: ['question'],
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
 ];
 
 // List tools handler
@@ -934,6 +1111,53 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case 'get_altcoin_news':
         url = `${API_BASE}/api/altcoin?limit=${args?.limit || 10}`;
         break;
+      case 'get_crypto_prices':
+        url = `${API_BASE}/api/prices?coin=${encodeURIComponent(args?.coin || 'bitcoin,ethereum,solana')}&vs_currency=${args?.vs_currency || 'usd'}`;
+        break;
+      case 'get_market_overview':
+        url = `${API_BASE}/api/market?limit=${args?.limit || 20}`;
+        break;
+      case 'get_predictions':
+        url = `${API_BASE}/api/predictions?coin=${args?.coin || 'btc'}&timeframe=${args?.timeframe || '7d'}`;
+        break;
+      case 'get_l2_data':
+        url = `${API_BASE}/api/l2?limit=${args?.limit || 10}`;
+        break;
+      case 'get_airdrops':
+        url = `${API_BASE}/api/airdrops?status=${args?.status || 'upcoming'}&limit=${args?.limit || 10}`;
+        break;
+      case 'get_macro_data':
+        url = `${API_BASE}/api/macro${args?.indicators ? `?indicators=${encodeURIComponent(args.indicators)}` : ''}`;
+        break;
+      case 'get_exchanges':
+        url = `${API_BASE}/api/exchanges?limit=${args?.limit || 20}`;
+        break;
+      case 'get_glossary':
+        url = `${API_BASE}/api/glossary${args?.term ? `?term=${encodeURIComponent(args.term)}` : ''}${args?.category ? `${args?.term ? '&' : '?'}category=${args.category}` : ''}`;
+        break;
+      case 'ask_crypto_question':
+        {
+          const askResponse = await fetch(`${API_BASE}/api/ask`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              question: args?.question || '',
+              context: args?.context || '',
+            }),
+          });
+          const askData = await askResponse.json();
+          let text = `🤖 **Answer:**\n\n${askData.answer || 'No answer available.'}\n`;
+          if (askData.confidence !== undefined) {
+            text += `\n🎯 Confidence: ${(askData.confidence * 100).toFixed(1)}%\n`;
+          }
+          if (askData.sources?.length > 0) {
+            text += `\n**Sources:**\n`;
+            askData.sources.slice(0, 5).forEach((s, i) => {
+              text += `${i + 1}. ${s.title} (${s.source})\n`;
+            });
+          }
+          return { content: [{ type: 'text', text }] };
+        }
       default:
         throw new Error(`Unknown tool: ${name}`);
     }
@@ -1584,6 +1808,184 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         text += `${i + 1}. **${a.title}**\n`;
         text += `   📰 ${a.source} • ${a.timeAgo || new Date(a.pubDate).toLocaleDateString()}\n\n`;
       });
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle crypto prices
+    if (name === 'get_crypto_prices') {
+      const prices = data.prices || data.data || [];
+      let text = `💰 **Crypto Prices**\n\n`;
+      
+      if (Array.isArray(prices)) {
+        prices.forEach(coin => {
+          const change = coin.price_change_percentage_24h || coin.change24h || 0;
+          const emoji = change >= 0 ? '🟢' : '🔴';
+          text += `**${coin.name || coin.symbol}** (${(coin.symbol || '').toUpperCase()})\n`;
+          text += `   ${emoji} $${(coin.current_price || coin.price || 0).toLocaleString()}`;
+          text += ` (${change >= 0 ? '+' : ''}${change.toFixed(2)}%)\n`;
+          text += `   📊 MCap: $${((coin.market_cap || 0) / 1e9).toFixed(2)}B | Vol: $${((coin.total_volume || coin.volume || 0) / 1e9).toFixed(2)}B\n\n`;
+        });
+      } else {
+        text += 'No price data available';
+      }
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle market overview
+    if (name === 'get_market_overview') {
+      let text = `📊 **Market Overview**\n\n`;
+      
+      if (data.totalMarketCap) text += `💰 Total Market Cap: $${(data.totalMarketCap / 1e12).toFixed(2)}T\n`;
+      if (data.btcDominance) text += `₿ BTC Dominance: ${data.btcDominance.toFixed(1)}%\n`;
+      if (data.totalVolume24h) text += `📈 24h Volume: $${(data.totalVolume24h / 1e9).toFixed(2)}B\n`;
+      if (data.marketCapChange24h) {
+        const emoji = data.marketCapChange24h >= 0 ? '🟢' : '🔴';
+        text += `${emoji} 24h Change: ${data.marketCapChange24h >= 0 ? '+' : ''}${data.marketCapChange24h.toFixed(2)}%\n`;
+      }
+      
+      if (data.topGainers?.length > 0) {
+        text += `\n**🚀 Top Gainers:**\n`;
+        data.topGainers.slice(0, 5).forEach(c => {
+          text += `   🟢 ${c.name} (${(c.symbol || '').toUpperCase()}): +${(c.price_change_percentage_24h || c.change24h || 0).toFixed(2)}%\n`;
+        });
+      }
+      
+      if (data.topLosers?.length > 0) {
+        text += `\n**📉 Top Losers:**\n`;
+        data.topLosers.slice(0, 5).forEach(c => {
+          text += `   🔴 ${c.name} (${(c.symbol || '').toUpperCase()}): ${(c.price_change_percentage_24h || c.change24h || 0).toFixed(2)}%\n`;
+        });
+      }
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle predictions
+    if (name === 'get_predictions') {
+      let text = `🔮 **Price Predictions** (${(args?.coin || 'BTC').toUpperCase()})\n\n`;
+      
+      if (data.currentPrice) text += `💰 Current Price: $${data.currentPrice.toLocaleString()}\n\n`;
+      
+      const predictions = data.predictions || [];
+      predictions.forEach(p => {
+        const emoji = p.direction === 'bullish' ? '📈' : p.direction === 'bearish' ? '📉' : '➡️';
+        text += `${emoji} **${p.timeframe}:** $${p.predictedPrice?.toLocaleString() || 'N/A'}`;
+        if (p.confidence) text += ` (${(p.confidence * 100).toFixed(0)}% confidence)`;
+        text += `\n`;
+      });
+      
+      if (data.analystConsensus) {
+        text += `\n🎯 **Analyst Consensus:** ${data.analystConsensus}\n`;
+      }
+      
+      text += `\n⚠️ _Predictions are for informational purposes only and should not be considered financial advice._`;
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle L2 data
+    if (name === 'get_l2_data') {
+      let text = `🔗 **Layer 2 Networks**\n\n`;
+      
+      if (data.totalTvl) text += `💰 Total L2 TVL: $${(data.totalTvl / 1e9).toFixed(2)}B\n\n`;
+      
+      const networks = data.networks || data.data || [];
+      networks.slice(0, 10).forEach((n, i) => {
+        text += `${i + 1}. **${n.name}**\n`;
+        text += `   TVL: $${((n.tvl || 0) / 1e9).toFixed(2)}B`;
+        if (n.transactions24h) text += ` | Txns/24h: ${n.transactions24h.toLocaleString()}`;
+        if (n.avgFee !== undefined) text += ` | Avg Fee: $${n.avgFee.toFixed(4)}`;
+        if (n.change7d !== undefined) {
+          const emoji = n.change7d >= 0 ? '🟢' : '🔴';
+          text += ` ${emoji} 7d: ${n.change7d >= 0 ? '+' : ''}${n.change7d.toFixed(2)}%`;
+        }
+        text += `\n\n`;
+      });
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle airdrops
+    if (name === 'get_airdrops') {
+      const airdrops = data.airdrops || data.data || [];
+      let text = `🎁 **Crypto Airdrops** (${args?.status || 'upcoming'})\n\n`;
+      
+      if (airdrops.length === 0) {
+        text += 'No airdrops found for this filter.';
+      } else {
+        airdrops.slice(0, 10).forEach((a, i) => {
+          text += `${i + 1}. **${a.name}** (${a.project || 'N/A'})\n`;
+          text += `   💰 Est. Value: ${a.estimatedValue || 'TBD'}\n`;
+          if (a.chain) text += `   ⛓ Chain: ${a.chain}\n`;
+          if (a.eligibility) text += `   ✅ Eligibility: ${a.eligibility}\n`;
+          if (a.deadline) text += `   ⏰ Deadline: ${a.deadline}\n`;
+          if (a.url) text += `   🔗 ${a.url}\n`;
+          text += `\n`;
+        });
+      }
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle macro data
+    if (name === 'get_macro_data') {
+      let text = `🏛️ **Macroeconomic Data**\n\n`;
+      
+      const indicators = data.indicators || data.data || [];
+      indicators.forEach(ind => {
+        const changeStr = ind.change !== undefined
+          ? ` (${ind.change >= 0 ? '+' : ''}${ind.change.toFixed(2)}%)`
+          : '';
+        text += `**${ind.name}:** ${ind.value}${changeStr}\n`;
+        if (ind.description) text += `   ${ind.description}\n`;
+        text += `\n`;
+      });
+      
+      if (data.cryptoCorrelation) {
+        text += `**Crypto Correlations:**\n`;
+        if (data.cryptoCorrelation.btcSp500 !== undefined) text += `• BTC-S&P500: ${data.cryptoCorrelation.btcSp500.toFixed(2)}\n`;
+        if (data.cryptoCorrelation.btcDxy !== undefined) text += `• BTC-DXY: ${data.cryptoCorrelation.btcDxy.toFixed(2)}\n`;
+        if (data.cryptoCorrelation.btcGold !== undefined) text += `• BTC-Gold: ${data.cryptoCorrelation.btcGold.toFixed(2)}\n`;
+      }
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle exchanges
+    if (name === 'get_exchanges') {
+      const exchanges = data.exchanges || data.data || [];
+      let text = `🏦 **Cryptocurrency Exchanges**\n\n`;
+      
+      exchanges.slice(0, 20).forEach((ex, i) => {
+        text += `${i + 1}. **${ex.name}**\n`;
+        text += `   📊 24h Volume: $${((ex.volume24h || 0) / 1e9).toFixed(2)}B`;
+        if (ex.trustScore !== undefined) text += ` | Trust: ${ex.trustScore}/10`;
+        if (ex.coins) text += ` | Coins: ${ex.coins}`;
+        if (ex.pairs) text += ` | Pairs: ${ex.pairs}`;
+        text += `\n\n`;
+      });
+      
+      return { content: [{ type: 'text', text }] };
+    }
+
+    // Handle glossary
+    if (name === 'get_glossary') {
+      const terms = data.terms || data.data || [];
+      let text = `📖 **Crypto Glossary**\n\n`;
+      
+      if (terms.length === 0) {
+        text += 'No matching terms found.';
+      } else {
+        terms.slice(0, 10).forEach(t => {
+          text += `**${t.term}**\n`;
+          text += `${t.definition}\n`;
+          if (t.category) text += `📁 Category: ${t.category}\n`;
+          if (t.relatedTerms?.length > 0) text += `🔗 Related: ${t.relatedTerms.join(', ')}\n`;
+          text += `\n`;
+        });
+      }
       
       return { content: [{ type: 'text', text }] };
     }

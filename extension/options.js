@@ -8,42 +8,71 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-// Load saved settings
-async function loadSettings() {
-  const result = await chrome.storage.local.get('settings');
-  const settings = result.settings || {
-    notifications: true,
-    showSource: true,
-    compactMode: false
-  };
-  
-  document.getElementById('notifications').checked = settings.notifications;
-  document.getElementById('showSource').checked = settings.showSource;
-  document.getElementById('compactMode').checked = settings.compactMode;
+// ── Options Page Logic ──────────────────────────────────
+
+const DEFAULTS = {
+  theme: 'dark',
+  breakingNews: true,
+  priceAlerts: false,
+  refreshInterval: 5,
+  badgeCoin: 'BTC'
+};
+
+// ── Apply theme to this page ─────────────────────────────
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
 }
 
-// Save settings
+// ── Load settings ────────────────────────────────────────
+
+async function loadSettings() {
+  const result = await chrome.storage.sync.get('settings');
+  const s = Object.assign({}, DEFAULTS, result.settings || {});
+
+  document.getElementById('theme').value = s.theme;
+  document.getElementById('breakingNews').checked = s.breakingNews;
+  document.getElementById('priceAlerts').checked = s.priceAlerts;
+  document.getElementById('refreshInterval').value = String(s.refreshInterval);
+  document.getElementById('badgeCoin').value = s.badgeCoin;
+
+  applyTheme(s.theme);
+}
+
+// ── Save settings ────────────────────────────────────────
+
 document.getElementById('save').addEventListener('click', async () => {
   const settings = {
-    notifications: document.getElementById('notifications').checked,
-    showSource: document.getElementById('showSource').checked,
-    compactMode: document.getElementById('compactMode').checked
+    theme: document.getElementById('theme').value,
+    breakingNews: document.getElementById('breakingNews').checked,
+    priceAlerts: document.getElementById('priceAlerts').checked,
+    refreshInterval: Number(document.getElementById('refreshInterval').value),
+    badgeCoin: document.getElementById('badgeCoin').value
   };
-  
-  await chrome.storage.local.set({ settings });
-  
-  // Show saved message
-  const saved = document.getElementById('saved');
-  saved.classList.add('show');
-  setTimeout(() => saved.classList.remove('show'), 2000);
+
+  await chrome.storage.sync.set({ settings });
+  applyTheme(settings.theme);
+
+  // Show toast
+  const toast = document.getElementById('toast');
+  toast.classList.add('visible');
+  setTimeout(() => toast.classList.remove('visible'), 2000);
 });
 
-// Clear cache
+// Live-preview theme changes
+document.getElementById('theme').addEventListener('change', (e) => {
+  applyTheme(e.target.value);
+});
+
+// ── Clear cache ──────────────────────────────────────────
+
 document.getElementById('clearCache').addEventListener('click', async () => {
-  const keys = ['cache_news', 'cache_breaking', 'cache_bitcoin', 'cache_defi', 'notifiedArticles'];
-  await chrome.storage.local.remove(keys);
-  alert('Cache cleared!');
+  await chrome.storage.local.clear();
+  const btn = document.getElementById('clearCache');
+  btn.textContent = 'Cleared!';
+  setTimeout(() => { btn.textContent = 'Clear'; }, 1500);
 });
 
-// Initialize
+// ── Init ─────────────────────────────────────────────────
+
 loadSettings();

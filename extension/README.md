@@ -1,89 +1,121 @@
 # Free Crypto News Browser Extension
 
-Get real-time crypto news directly in your browser toolbar.
+> Real-time crypto news and live prices directly in your browser toolbar. Powered by [cryptocurrency.cv](https://cryptocurrency.cv).
 
 ## Features
 
-- 📰 **Latest News** - Real-time crypto news from 130+ sources
-- 🔴 **Breaking News** - Urgent news alerts
-- ₿ **Bitcoin Tab** - Bitcoin-specific news
-- 🔷 **DeFi Tab** - DeFi-specific news
-- 🔔 **Notifications** - Optional breaking news alerts
-- 💾 **Offline Cache** - Browse previously loaded news offline
-
-## Installation
-
-### Chrome Web Store (Coming Soon)
-
-The extension will be available on the Chrome Web Store.
-
-### Manual Installation
-
-1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked"
-5. Select the `extension` folder
-
-## Usage
-
-1. Click the extension icon in your toolbar
-2. Browse news across different tabs:
-   - **Latest** - All recent news
-   - **Breaking** - News from the last 2 hours
-   - **Bitcoin** - Bitcoin-focused news
-   - **DeFi** - DeFi-focused news
-3. Click any article to read the full story
-
-## Settings
-
-Click the gear icon or right-click the extension → Options:
-
-- **Breaking News Alerts** - Enable/disable notifications
-- **Show Source Badges** - Toggle source labels
-- **Compact Mode** - Fit more articles in the popup
-- **Clear Cache** - Remove cached data
+- **Live Price Bar** — BTC, ETH, SOL prices with 24h change percentage
+- **Latest Headlines** — 5 most recent articles from 130+ trusted sources
+- **Breaking News Alerts** — Desktop notifications for urgent news
+- **Badge Count** — Unread breaking news count on the toolbar icon
+- **Quick Links** — One-click access to FCN, Markets, Search, Portfolio
+- **Theme Support** — Dark, Light, or System preference
+- **Offline Mode** — Cached data shown when network is unavailable
+- **Configurable Refresh** — 1, 5, 15, or 30 minute intervals
+- **Zero API Keys** — 100% free, no registration required
 
 ## Screenshots
 
-![Extension Popup](./screenshots/popup.png)
+<!-- Add screenshots here -->
+![Popup](./screenshots/popup.png)
+![Options](./screenshots/options.png)
 
-## Privacy
+## Installation
 
-This extension:
-- ✅ Only fetches from `cryptocurrency.cv`
-- ✅ Stores cache locally in your browser
-- ✅ Does not track you
-- ✅ Does not collect any personal data
-- ✅ Open source - review the code yourself
+### Chrome
 
-## Permissions
+1. Download or clone this repository
+2. Open `chrome://extensions/`
+3. Enable **Developer mode** (top right toggle)
+4. Click **Load unpacked**
+5. Select the `extension/` folder
+6. Pin the extension to your toolbar
 
-| Permission | Reason |
-|------------|--------|
-| `storage` | Cache news for offline access |
-| `alarms` | Periodic background refresh |
-| `host_permissions` | Fetch from our API only |
+### Edge
+
+1. Open `edge://extensions/`
+2. Enable **Developer mode** (left sidebar)
+3. Click **Load unpacked**
+4. Select the `extension/` folder
+
+### Firefox
+
+1. Open `about:debugging#/runtime/this-firefox`
+2. Click **Load Temporary Add-on**
+3. Select `extension/manifest.json`
+
+> **Note:** Firefox temporary add-ons are removed on restart. A signed Firefox add-on is planned.
+
+## Settings
+
+Right-click the extension icon → **Options**, or click **Settings →** in the popup footer.
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| Theme | Dark / Light / System | Dark |
+| Breaking News Alerts | On / Off | On |
+| Price Alerts | On / Off | Off |
+| Refresh Interval | 1 / 5 / 15 / 30 min | 5 min |
+| Default Badge Coin | BTC / ETH / SOL | BTC |
+
+## Architecture
+
+```
+extension/
+├── manifest.json      # Manifest V3 configuration
+├── background.js      # Service worker (alarms, notifications, badge)
+├── popup.html         # Extension popup UI (400×500px)
+├── popup.js           # Popup logic (prices, news, theme, caching)
+├── options.html       # Settings page
+├── options.js         # Settings logic (chrome.storage.sync)
+├── icons/             # Extension icons (16, 32, 48, 128px)
+└── README.md          # This file
+```
+
+## API
+
+All data is fetched from the public API at `https://cryptocurrency.cv/api`:
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/news` | Latest news articles |
+| `/api/breaking` | Breaking / urgent news |
+| `/api/prices` | Live cryptocurrency prices |
+
+No API key required. See [API docs](https://cryptocurrency.cv/docs) for full reference.
 
 ## Development
 
 ```bash
 # Clone the repo
 git clone https://github.com/nirholas/free-crypto-news.git
+cd free-crypto-news/extension
 
-# Load extension in Chrome
+# Load in Chrome
 # 1. Go to chrome://extensions
 # 2. Enable Developer mode
-# 3. Load unpacked → select extension folder
+# 3. Click "Load unpacked" → select this folder
 
-# Make changes and reload
+# Edit files and click the reload button on chrome://extensions to test changes
 ```
 
-## Firefox
+## Privacy
 
-Firefox version coming soon. The extension uses Manifest V3 which Firefox now supports.
+- Only fetches from `cryptocurrency.cv` — no third-party tracking
+- Caches data locally in `chrome.storage.local`
+- Settings synced via `chrome.storage.sync` (across your Chrome profile)
+- No personal data collected
+- Open source — audit the code yourself
+
+## Permissions
+
+| Permission | Reason |
+|------------|--------|
+| `storage` | Cache news/prices locally and sync settings |
+| `alarms` | Periodic background checks for breaking news |
+| `notifications` | Desktop alerts for breaking news |
+| `host_permissions` | Fetch data from `cryptocurrency.cv` only |
 
 ## License
 
-MIT
-
+See [LICENSE](../LICENSE) in the project root.

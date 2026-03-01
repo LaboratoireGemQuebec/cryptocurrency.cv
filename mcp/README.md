@@ -94,7 +94,7 @@ railway up
 # In ChatGPT app settings, use: https://your-app.railway.app/sse
 ```
 
-## 📋 Available Tools (40 Total)
+## 📋 Available Tools (49 Total)
 
 All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmation prompts needed).
 
@@ -119,31 +119,47 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 
 | Tool | Description |
 |------|-------------|
-| `get_market_data` | Live prices, market cap, volume |
+| `get_crypto_prices` | Live prices for 100+ coins |
+| `get_market_data` | Prices, market cap, volume |
+| `get_market_overview` | Total market cap, BTC dominance, gainers/losers |
 | `get_fear_greed_index` | Fear & Greed sentiment (0-100) |
 | `get_gas_prices` | Ethereum gas fees |
 | `compare_coins` | Side-by-side coin comparison |
-| `get_funding_rates` | Perpetual futures funding rates |
-| `get_liquidations` | Exchange liquidation data |
 | `get_stablecoin_data` | Stablecoin market caps and peg status |
-| `get_options_data` | Options OI, max pain, put/call ratio |
+| `get_exchanges` | Exchange volumes and trust scores |
 
-### 🔄 Trading Tools
+### 💹 Trading & Derivatives Tools
 
 | Tool | Description |
 |------|-------------|
+| `get_funding_rates` | Perpetual futures funding rates |
+| `get_liquidations` | Exchange liquidation data |
+| `get_options_data` | Options OI, max pain, put/call ratio |
 | `get_arbitrage` | Cross-exchange arbitrage opportunities |
 | `get_orderbook` | Order book depth and liquidity |
+
+### 🐋 On-Chain Tools
+
+| Tool | Description |
+|------|-------------|
 | `get_whale_alerts` | Large transaction alerts |
 | `get_exchange_flows` | Exchange inflow/outflow |
+| `get_token_unlocks` | Upcoming token unlock schedules |
 
-### 🔗 DeFi & Token Tools
+### 🔗 DeFi & Layer 2 Tools
 
 | Tool | Description |
 |------|-------------|
 | `get_defi_yields` | Top DeFi yield opportunities |
-| `get_token_unlocks` | Upcoming token unlock schedules |
+| `get_l2_data` | Layer 2 network TVL and stats |
+
+### 🎁 Discovery Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_airdrops` | Upcoming and active airdrops |
 | `get_events_calendar` | Conferences, forks, launches |
+| `get_predictions` | AI price predictions and forecasts |
 
 ### 🤖 AI & Analytics Tools
 
@@ -157,6 +173,14 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 | `analyze_news` | Topic classification & sentiment |
 | `get_social_sentiment` | Twitter/Reddit/Telegram sentiment |
 | `find_original_sources` | Trace news origins |
+| `ask_crypto_question` | Natural language Q&A |
+
+### 🏛️ Macro & Reference Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_macro_data` | Macroeconomic indicators & correlations |
+| `get_glossary` | Crypto term definitions |
 
 ### 📚 Archive & System Tools
 
@@ -180,6 +204,7 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 
 **Market Data:**
 - "What's the Bitcoin price right now?"
+- "Give me a market overview"
 - "Check the Fear & Greed Index"
 - "What are the current Ethereum gas prices?"
 - "Compare Bitcoin, Ethereum, and Solana"
@@ -191,29 +216,46 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 - "What token unlocks are coming up?"
 - "Get the latest liquidation data"
 
-**DeFi & Yields:**
+**DeFi, Yields & L2:**
 - "What are the top DeFi yields on Ethereum?"
 - "Show me staking opportunities on Solana"
+- "How are Layer 2 networks doing?"
 - "DeFi news from this week"
 
-**Analytics & Sentiment:**
-- "What are the trending crypto topics?"
-- "What's the market sentiment on Twitter?"
+**Trading & Analytics:**
+- "Show me arbitrage opportunities for ETH"
+- "What does the order book look like for BTC?"
 - "Give me an AI market brief"
 - "Analyze recent news for bullish signals"
+
+**Predictions & Discovery:**
+- "What's the price prediction for SOL?"
+- "Any upcoming crypto airdrops?"
+- "What events are coming up this month?"
+
+**Macro & Reference:**
+- "How do macro factors affect crypto right now?"
+- "What does 'impermanent loss' mean?"
+- "What is the DXY index doing?"
 
 **Portfolio & Historical:**
 - "Get news for BTC, ETH, SOL with prices"
 - "Search the archive for SEC news from last month"
 - "Find the original source of this Binance story"
 
+**Q&A:**
+- "What happened to Bitcoin this week?"
+- "Why is Ethereum dropping today?"
+- "Summarize the crypto market in 2025"
+
 ### ChatGPT Developer Mode
 
 For ChatGPT, be explicit about using the app and tool names:
 
 **Market Analysis:**
-- "Use `get_market_data` with coins='bitcoin,ethereum' to show me current prices"
-- "Call `get_fear_greed_index` to check market sentiment"
+- "Use `get_crypto_prices` with coin='bitcoin,ethereum' to show me current prices"
+- "Call `get_market_overview` for a full market summary"
+- "Use `get_fear_greed_index` to check market sentiment"
 - "Use `get_funding_rates` with symbol='BTCUSDT' to analyze derivatives positioning"
 
 **Whale Tracking:**
@@ -226,6 +268,12 @@ For ChatGPT, be explicit about using the app and tool names:
 - "Call `get_regulatory_news` with region='us' for SEC-related news"
 - "Use `get_breaking_news` only (no other tools) to show urgent updates"
 
+**Discovery & Reference:**
+- "Use `get_airdrops` to find upcoming token airdrops"
+- "Call `get_l2_data` to see Layer 2 network stats"
+- "Use `get_glossary` with term='staking' to explain what it means"
+- "Use `ask_crypto_question` with question='What happened to Bitcoin this week?'"
+
 **Best Practices for ChatGPT:**
 - Always mention the app name: "Free Crypto News"
 - Specify the exact tool name in backticks
@@ -236,18 +284,24 @@ For ChatGPT, be explicit about using the app and tool names:
 
 - **100% Free** - No API keys required
 - **Dual Transport** - Works with both Claude (stdio) and ChatGPT (HTTP/SSE)
-- **40 Tools** - The most comprehensive crypto MCP server
+- **49 Tools** - The most comprehensive crypto MCP server
 - **Read-Only** - All tools marked as safe for ChatGPT (no confirmation prompts)
 - **Real-Time** - Breaking news, live prices, whale alerts
 - **Market Data** - Prices, fear/greed, gas, funding rates, options
 - **Trading** - Arbitrage opportunities, order books, liquidations
 - **On-Chain** - Exchange flows, whale alerts, token unlocks
-- **AI-Powered** - Sentiment analysis, summaries, market briefs
+- **AI-Powered** - Sentiment analysis, summaries, market briefs, Q&A
 - **Social Tracking** - Twitter, Reddit, Telegram sentiment
 - **Historical Archive** - Query past news by date/source
 - **Portfolio Tracking** - Get news for specific coins with prices
 - **Original Sources** - Trace where news actually originated
 - **Events Calendar** - Conferences, hard forks, launches
+- **Predictions** - AI price predictions and analyst forecasts
+- **Airdrops** - Upcoming and active token airdrops
+- **Layer 2** - L2 network TVL, fees, and transaction data
+- **Macro Data** - Economic indicators and crypto correlations
+- **Glossary** - Crypto term definitions and explanations
+- **Exchange Data** - Volume, trust scores, and comparisons
 
 ## 🛠️ Technical Details
 
