@@ -92,7 +92,7 @@ export async function GET(request: NextRequest) {
                 📰
               </div>
               <span style={{ color: '#f1f5f9', fontSize: '24px', fontWeight: 700 }}>
-                Free Crypto News
+                Crypto Vision News
               </span>
             </div>
             

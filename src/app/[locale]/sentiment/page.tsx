@@ -375,10 +375,13 @@ export default async function SentimentPage({ params }: Props) {
       : MOCK_NARRATIVES;
   const socialTrends =
     socialData?.data?.trends && socialData.data.trends.length > 0
-      ? socialData.data.trends.map((t: Record<string, unknown>) => ({
-          topic: String((t as { topic?: string }).topic ?? (t as { coin?: string }).coin ?? t),
-          mentions: Number((t as { mentions?: number }).mentions ?? (t as { volume?: number }).volume ?? 0),
-        }))
+      ? socialData.data.trends.map((t) => {
+          const raw = t as unknown as Record<string, unknown>;
+          return {
+            topic: String(raw.topic ?? raw.coin ?? t),
+            mentions: Number(raw.mentions ?? raw.volume ?? 0),
+          };
+        })
       : MOCK_BUZZ;
 
   // Gauge values

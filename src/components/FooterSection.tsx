@@ -14,7 +14,7 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <nav aria-label={`${title} links`}>
       {/* Desktop: always-visible heading */}
       <h3 className="hidden md:block mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)]">
         {title}
@@ -25,6 +25,7 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
         onClick={() => setOpen((v) => !v)}
         className="md:hidden flex w-full items-center justify-between py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)] cursor-pointer min-h-[44px]"
         aria-expanded={open}
+        aria-label={`${title} section`}
       >
         {title}
         <ChevronDown
@@ -32,6 +33,7 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
             "h-4 w-4 text-[var(--color-text-tertiary)] transition-transform duration-200",
             open && "rotate-180",
           )}
+          aria-hidden="true"
         />
       </button>
 
@@ -56,6 +58,6 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }

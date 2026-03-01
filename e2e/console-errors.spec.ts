@@ -80,6 +80,9 @@ const IGNORED_CONSOLE_PATTERNS = [
   /finddomnode is deprecated/i,
   /each child in a list should have a unique/i, // key warning — useful but not a hard error
   /act\(\.\.\.\)/i, // React testing warnings leaking
+  /next-intl/i, // next-intl locale messages loading
+  /NEXT_REDIRECT/i, // Next.js redirect signals
+  /text content does not match/i, // SSR/client date mismatch
 ];
 
 // ─── All static routes (no dynamic params) ───────────────────────────────────
@@ -180,6 +183,17 @@ const STATIC_PAGES: string[] = [
   '/en/videos',
   '/en/watchlist',
   '/en/whales',
+  '/en/bitcoin',
+  '/en/ethereum',
+  '/en/solana',
+  '/en/stablecoins',
+  '/en/l2',
+  '/en/nft',
+  '/en/derivatives',
+  '/en/macro',
+  '/en/regulation',
+  '/en/research',
+  '/en/alerts',
   // Non-locale pages
   '/ask',
   '/blog',

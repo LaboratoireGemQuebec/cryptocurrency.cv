@@ -1105,10 +1105,10 @@ export function initializeOurDataset(): void {
   const ourDataset: CitationNode = {
     nodeId: OUR_DATASET_ID,
     nodeType: 'dataset',
-    title: 'Free Crypto News API',
+    title: 'Crypto Vision News API',
     authors: [
       {
-        name: 'Free Crypto News Contributors',
+        name: 'Crypto Vision News Contributors',
         affiliations: ['Open Source Community'],
       },
     ],

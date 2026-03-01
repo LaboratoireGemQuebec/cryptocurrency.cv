@@ -130,10 +130,47 @@ export default async function HomePage({ params }: Props) {
         )}
 
         {/* ── Markets Snapshot ── */}
-        <MarketsSnapshot />
+        <Suspense
+          fallback={
+            <section className="border-b border-[var(--color-border)]">
+              <div className="container-main py-6">
+                <div className="flex gap-6 overflow-hidden">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div key={i} className="flex items-center gap-2 shrink-0">
+                      <Skeleton className="h-6 w-6 rounded-full" />
+                      <Skeleton className="h-4 w-16" />
+                      <Skeleton className="h-4 w-20" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          }
+        >
+          <MarketsSnapshot />
+        </Suspense>
 
         {/* ── Top Movers (Gainers / Losers) ── */}
-        <TopMovers />
+        <Suspense
+          fallback={
+            <section className="border-b border-[var(--color-border)]">
+              <div className="container-main py-8">
+                <Skeleton className="h-7 w-36 mb-4" />
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {Array.from({ length: 4 }).map((_, i) => (
+                    <div key={i} className="rounded-lg border border-[var(--color-border)] p-4 space-y-2">
+                      <Skeleton className="h-5 w-24" />
+                      <Skeleton className="h-6 w-20" />
+                      <Skeleton className="h-4 w-16" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          }
+        >
+          <TopMovers />
+        </Suspense>
 
         {/* ── Latest + Sidebar ── */}
         <section className="container-main py-8 lg:py-10">
@@ -181,12 +218,13 @@ export default async function HomePage({ params }: Props) {
                 <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)]">
                   Trending
                 </h3>
-                <div className="space-y-4">
+                {/* Horizontal scroll on mobile, vertical list on lg+ */}
+                <div className="flex gap-4 overflow-x-auto pb-2 lg:flex-col lg:overflow-x-visible lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0">
                   {trending.length > 0 ? (
                     trending.slice(0, 8).map((article, i) => (
                       <div
                         key={article.link}
-                        className="pb-4 border-b border-[var(--color-border)] last:border-b-0"
+                        className="min-w-[200px] shrink-0 lg:min-w-0 lg:shrink lg:pb-4 lg:border-b border-[var(--color-border)] lg:last:border-b-0"
                       >
                         <NewsCardHeadline article={article} index={i} />
                       </div>

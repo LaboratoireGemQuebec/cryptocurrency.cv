@@ -707,7 +707,7 @@ async function callOpenAI(
     Authorization: `Bearer ${key}`,
   };
   if (spec.provider === 'openrouter') {
-    headers['X-Title'] = 'Free Crypto News';
+    headers['X-Title'] = 'Crypto Vision News';
     headers['HTTP-Referer'] = 'https://cryptocurrency.cv';
   }
 

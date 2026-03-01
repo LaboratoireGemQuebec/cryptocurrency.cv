@@ -451,11 +451,11 @@ export default function Header() {
             "font-bold tracking-tight transition-all duration-200",
             scrolled ? "text-lg" : "text-xl",
           )}>
-            <span className="text-[#f7931a] group-hover:text-[#e8850f] transition-colors">F</span>
-            <span>CN</span>
+            <span className="text-[#f7931a] group-hover:text-[#e8850f] transition-colors">C</span>
+            <span>V</span>
           </span>
           <span className="hidden sm:block text-xs font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-1">
-            Free Crypto News
+            Crypto Vision News
           </span>
         </Link>
 

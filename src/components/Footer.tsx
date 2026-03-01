@@ -162,7 +162,7 @@ export default function Footer() {
 
         <div className="container-main py-12">
           {/* Trending Topics Bar */}
-          <div className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+          <nav className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4" aria-label="Trending topics">
             <div className="flex flex-wrap items-center gap-2">
               <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
                 Trending:
@@ -177,9 +177,7 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Top section */}
+          </nav>          {/* Top section */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
