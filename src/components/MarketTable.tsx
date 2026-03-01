@@ -235,7 +235,7 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                 </td>
 
                 {/* Coin name + icon — sticky on mobile */}
-                <td className="px-3 py-2.5 sm:px-4 sm:py-3 sticky left-0 z-10 bg-[var(--color-surface)]">
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 sticky left-0 z-10 bg-[var(--color-surface)] group-hover:bg-[var(--color-surface-secondary)] transition-colors">
                   <div className="flex items-center gap-2">
                     {coin.image && (
                       <img

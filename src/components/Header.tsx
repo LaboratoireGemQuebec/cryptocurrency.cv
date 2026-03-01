@@ -599,7 +599,11 @@ export default function Header() {
 
           {/* Mobile menu toggle */}
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => {
+              const next = !mobileOpen;
+              setMobileOpen(next);
+              document.body.classList.toggle("menu-open", next);
+            }}
             className="lg:hidden p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -609,11 +613,11 @@ export default function Header() {
               <Menu className={cn(
                 "absolute inset-0 h-5 w-5 transition-all duration-200",
                 mobileOpen ? "opacity-0 rotate-90 scale-50" : "opacity-100 rotate-0 scale-100",
-              )} />
+              )} aria-hidden="true" />
               <X className={cn(
                 "absolute inset-0 h-5 w-5 transition-all duration-200",
                 mobileOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-50",
-              )} />
+              )} aria-hidden="true" />
             </div>
           </button>
         </div>
@@ -655,7 +659,7 @@ export default function Header() {
                     <ChevronDown className={cn(
                       "h-3.5 w-3.5 opacity-60 transition-transform duration-200",
                       mobileAccordion === item.label && "rotate-180",
-                    )} />
+                    )} aria-hidden="true" />
                   </button>
                 ) : (
                   <Link
@@ -693,7 +697,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-md border border-[var(--color-border)] text-sm text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors min-h-[44px]"
               >
-                <Star className="h-4 w-4" />
+                <Star className="h-4 w-4" aria-hidden="true" />
                 Watchlist
               </Link>
               <Link
@@ -701,7 +705,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-md border border-[var(--color-border)] text-sm text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors min-h-[44px]"
               >
-                <Briefcase className="h-4 w-4" />
+                <Briefcase className="h-4 w-4" aria-hidden="true" />
                 Portfolio
               </Link>
             </div>

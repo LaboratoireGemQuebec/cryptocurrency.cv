@@ -7,6 +7,8 @@ import { Skeleton, Card, CardContent } from "@/components/ui";
 import type { Metadata } from "next";
 import PortfolioContent from "@/components/PortfolioContent";
 
+export const revalidate = 300;
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
