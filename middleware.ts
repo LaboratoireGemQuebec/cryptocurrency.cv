@@ -33,6 +33,7 @@ import {
   isBlockedBot,
   isApiClient,
   isSperaxOSRequest,
+  isTrustedOrigin,
   SECURITY_HEADERS,
   isSuspiciousRequest,
   checkRateLimit,
@@ -137,6 +138,24 @@ export default async function middleware(request: NextRequest) {
         { error: 'Unauthorized', code: 'ADMIN_AUTH_REQUIRED', requestId },
         { status: 401, headers },
       );
+    }
+  }
+
+  // ── CORS restriction on sensitive routes ──────────────────────────────────
+  // Admin, internal, and key-management routes must NOT be open to all origins.
+  // Only trusted origins (Sperax) and same-origin requests are allowed.
+  const isSensitiveRoute =
+    pathname.startsWith('/api/admin') ||
+    pathname.startsWith('/api/internal') ||
+    pathname.startsWith('/api/keys/');
+
+  if (isSensitiveRoute) {
+    const origin = request.headers.get('origin') ?? '';
+    if (origin && !isTrustedOrigin(origin)) {
+      headers['Access-Control-Allow-Origin'] = 'null';
+    } else if (origin) {
+      headers['Access-Control-Allow-Origin'] = origin;
+      headers['Vary'] = 'Origin';
     }
   }
 

@@ -22,7 +22,7 @@ export {
 } from './config';
 
 export { isBlockedBot, isApiClient } from './bot-detection';
-export { isSperaxOSRequest } from './trusted-origins';
+export { isSperaxOSRequest, isTrustedOrigin } from './trusted-origins';
 export { SECURITY_HEADERS, isSuspiciousRequest } from './security';
 export { checkRateLimit, checkTierRateLimit, record429, isRepeat429Blocked } from './rate-limit';
 export { getX402Proxy } from './x402';

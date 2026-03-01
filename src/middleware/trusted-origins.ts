@@ -22,7 +22,7 @@ const TRUSTED_EXACT_ORIGINS = new Set([
 // Apex domains whose subdomains are ALSO trusted
 const TRUSTED_WILDCARD_DOMAINS = ['sperax.chat', 'sperax.io'];
 
-function isTrustedOrigin(origin: string): boolean {
+export function isTrustedOrigin(origin: string): boolean {
   if (!origin) return false;
   if (TRUSTED_EXACT_ORIGINS.has(origin)) return true;
   try {
