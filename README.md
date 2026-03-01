@@ -28,6 +28,8 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
   <a href="https://github.com/nirholas/free-crypto-news/commits/main"><img src="https://img.shields.io/github/last-commit/nirholas/free-crypto-news?style=flat-square" alt="Last Commit"></a>
   <a href="https://github.com/nirholas/free-crypto-news/graphs/contributors"><img src="https://img.shields.io/github/contributors/nirholas/free-crypto-news?style=flat-square" alt="Contributors"></a>
   <a href="https://github.com/nirholas/free-crypto-news"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://cryptocurrency.cv/api/graphql"><img src="https://img.shields.io/badge/GraphQL-API-e10098?style=flat-square&logo=graphql" alt="GraphQL"></a>
+  <a href="https://www.npmjs.com/package/@anthropic-ai/mcp-server-crypto-news"><img src="https://img.shields.io/badge/MCP-Server-5B4EFF?style=flat-square" alt="MCP Server"></a>
 </p>
 
 ### **🤖 AI Agents:** Free, no-auth crypto news API with 200+ sources.
@@ -38,8 +40,10 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-sdks">SDKs</a> •
   <a href="#-api-endpoints">API</a> •
+  <a href="#-graphql-api">GraphQL</a> •
   <a href="#-cli">CLI</a> •
   <a href="#-docker">Docker</a> •
+  <a href="#%EF%B8%8F-kubernetes-deployment">K8s</a> •
   <a href="https://cryptocurrency.cv/developers">Docs</a>
 </p>
 
@@ -65,11 +69,15 @@ curl https://cryptocurrency.cv/api/news
 | **API Key**       | ❌ None needed                  | Required     | Required |
 | **Rate Limit**    | Unlimited\*                     | 100-1000/day | Limited  |
 | **Sources**       | 130+ English + 75 International | 1            | Varies   |
-| **Historical**    | 📚 662,000+ articles (2017-2025) | Limited      | None     |
+| **Historical**    | 📚 662,000+ articles (2017-2026) | Limited      | None     |
 | **International** | 🌏 KO, ZH, JA, ES + translation | No           | No       |
-| **Self-host**     | ✅ One click                    | No           | No       |
+| **Self-host**     | ✅ One click (Vercel/Docker/K8s) | No           | No       |
 | **PWA**           | ✅ Installable                  | No           | No       |
 | **MCP**           | ✅ Claude + ChatGPT             | No           | No       |
+| **GraphQL**       | ✅ Full schema                  | No           | No       |
+| **SDKs**          | 13 languages                    | 0            | 1-2      |
+| **AI Features**   | 30+ AI endpoints (FREE)         | No           | No       |
+| **Voice**         | ✅ Alexa + Podcasts             | No           | No       |
 
 ---
 
@@ -1302,6 +1310,237 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | Main Widget | iframe     | Full news feed embed    |
 | Ticker      | JavaScript | Scrolling header ticker |
 | Carousel    | JavaScript | Featured news rotator   |
+
+### 🔗 GraphQL API
+
+Full GraphQL endpoint with schema for articles, prices, sentiment, and fear-greed data:
+
+```bash
+# Query latest articles with sentiment
+curl -X POST https://cryptocurrency.cv/api/graphql \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "{ articles(limit: 5) { title source sentiment { score label } } }"
+  }'
+
+# Get market data with fear & greed
+curl -X POST https://cryptocurrency.cv/api/graphql \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "{ fearGreed { value classification } prices(coins: [\"bitcoin\", \"ethereum\"]) { id price change24h } }"
+  }'
+```
+
+**Interactive Playground:** Visit `https://cryptocurrency.cv/api/graphql` in your browser to explore the schema with the built-in GraphQL playground.
+
+### 📡 Nostr Integration
+
+Decentralized news distribution via the Nostr protocol (NIP-23 long-form content):
+
+```bash
+# Publish latest news to Nostr relays
+curl -X POST https://cryptocurrency.cv/api/nostr \
+  -H "Content-Type: application/json" \
+  -d '{"action": "publish", "limit": 10}'
+
+# Get Nostr event IDs for published articles
+curl https://cryptocurrency.cv/api/nostr?action=events
+```
+
+Articles are published as NIP-23 long-form events to configured Nostr relays, enabling censorship-resistant news distribution.
+
+### 🧩 Knowledge Graph API
+
+Explore entity relationships across the crypto news landscape:
+
+```bash
+# Get entity graph for Bitcoin
+curl "https://cryptocurrency.cv/api/knowledge-graph?entity=Bitcoin&depth=2"
+
+# Filter by relationship type
+curl "https://cryptocurrency.cv/api/knowledge-graph?entity=Ethereum&type=partnership"
+
+# Get full graph snapshot
+curl "https://cryptocurrency.cv/api/knowledge-graph?action=snapshot"
+```
+
+Returns entities (people, companies, protocols, exchanges) and their relationships (partnerships, investments, acquisitions, competitions) as a traversable graph.
+
+### 🎙️ AI Podcast Generation
+
+Generate AI-narrated crypto news podcasts on demand:
+
+```bash
+# Generate flash briefing (2 min)
+curl "https://cryptocurrency.cv/api/podcast?format=flash"
+
+# Deep-dive analysis (10 min)
+curl "https://cryptocurrency.cv/api/podcast?format=deep-dive&topic=BTC"
+
+# Market open briefing
+curl "https://cryptocurrency.cv/api/podcast?format=market-open"
+
+# Weekly recap
+curl "https://cryptocurrency.cv/api/podcast?format=weekly-recap"
+
+# Subscribe via podcast RSS
+curl "https://cryptocurrency.cv/api/podcast/feed"
+```
+
+**Formats:** `flash` (2 min), `deep-dive` (10 min), `market-open` (5 min), `weekly-recap` (15 min)  
+**Voices:** 3 voice options (professional, casual, technical)
+
+### 🗣️ Alexa Skill
+
+Voice-activated crypto news for Amazon Echo devices:
+
+> "Alexa, ask Crypto News for the latest headlines"
+> "Alexa, ask Crypto News about Bitcoin"
+> "Alexa, ask Crypto News for DeFi updates"
+
+```bash
+# Alexa skill handler
+curl -X POST https://cryptocurrency.cv/api/alexa \
+  -H "Content-Type: application/json" \
+  -d '{"request": {"type": "IntentRequest", "intent": {"name": "GetNewsIntent"}}}'
+```
+
+### 🖼️ Farcaster Frames
+
+Interactive news frames for Warpcast and Farcaster clients:
+
+```bash
+# Get interactive news frame
+curl "https://cryptocurrency.cv/api/frames"
+
+# Frame with specific topic
+curl "https://cryptocurrency.cv/api/frames?topic=bitcoin"
+```
+
+Frames support inline article previews, sentiment badges, and action buttons directly within the Farcaster social feed.
+
+### 🔍 Vector Search
+
+Semantic search across the article archive using vector embeddings:
+
+```bash
+# Semantic search (finds conceptually similar articles)
+curl "https://cryptocurrency.cv/api/vector-search?q=institutional+adoption+impact+on+market"
+
+# With filters
+curl "https://cryptocurrency.cv/api/vector-search?q=defi+security+vulnerabilities&source=coindesk&limit=20"
+```
+
+### 🔬 Anomaly Detection
+
+Advanced anomaly detection across the news landscape:
+
+```bash
+# Detect all anomalies
+curl "https://cryptocurrency.cv/api/anomalies"
+
+# Specific anomaly types
+curl "https://cryptocurrency.cv/api/anomalies?type=sentiment-acceleration"
+curl "https://cryptocurrency.cv/api/anomalies?type=price-narrative-divergence"
+curl "https://cryptocurrency.cv/api/anomalies?type=news-velocity"
+```
+
+**Anomaly Types:**
+- **News Velocity** — Unusual spike in article volume for a topic
+- **Sentiment Acceleration** — Rapid sentiment shifts in short timeframes  
+- **Price-Narrative Divergence** — When news sentiment diverges from price action
+- **Coordinated Publishing** — Multiple sources publishing similar content simultaneously
+- **Source Outage** — Expected source goes silent
+
+### 🎮 Gaming & Chain-Specific APIs
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/gaming` | Blockchain gaming market data with chain breakdown |
+| `/api/sui` | Sui blockchain data (balances, objects, transactions) |
+| `/api/aptos` | Aptos blockchain data (events, resources, transactions) |
+| `/api/hyperliquid` | Hyperliquid DEX trading data |
+
+### 🎓 Academic Research Portal
+
+Full-featured academic access program for researchers and institutions:
+
+```bash
+# Register institution
+curl -X POST https://cryptocurrency.cv/api/academic \
+  -H "Content-Type: application/json" \
+  -d '{
+    "institution": "MIT Media Lab",
+    "email": "researcher@mit.edu",
+    "purpose": "Crypto market microstructure research",
+    "irb_approval": "IRB-2026-0142"
+  }'
+
+# Add co-investigators
+curl -X POST https://cryptocurrency.cv/api/academic \
+  -H "Content-Type: application/json" \
+  -d '{"action": "add_investigator", "email": "postdoc@mit.edu", "role": "co-pi"}'
+```
+
+**Benefits:** Unlimited API access, historical data exports, citation network access, priority support, co-investigator management, IRB approval tracking.
+
+---
+
+### 🤖 AI Agent Skills
+
+7 pre-built AI agent skills following the [agentskills.io](https://agentskills.io) standard, compatible with **Claude Code** and **Codex**:
+
+| Skill | Description |
+|-------|-------------|
+| `crypto-news-briefing` | Generate comprehensive news briefings |
+| `market-sentiment` | Analyze market sentiment across sources |
+| `coin-research` | Deep-dive research on any cryptocurrency |
+| `rug-pull-news-check` | Scan news for rug pull warning signs |
+| `historical-trend-analysis` | Analyze historical news trends |
+| `scale-to-1m` | Scale the system to 1M+ requests/day |
+| `add-data-sources` | Add new RSS/API data sources |
+
+Skills are located in [`/skills/`](./skills/) and can be loaded by AI coding agents for autonomous development tasks.
+
+### 🖥️ GitHub Copilot Extension
+
+Crypto news directly in your VS Code editor via Copilot Chat:
+
+```
+@crypto-news /breaking     — Breaking crypto news
+@crypto-news /market       — Market overview
+@crypto-news /prices       — Top coin prices
+@crypto-news /feargreed    — Fear & Greed Index
+@crypto-news /whale        — Recent whale alerts
+@crypto-news /trending     — Trending topics
+```
+
+Also supports natural language queries: *"@crypto-news What's happening with Ethereum?"*
+
+Install from the VS Code Marketplace or build from source: [`/copilot-extension/`](./copilot-extension/)
+
+### 🖥️ Terminal Dashboard
+
+Full-screen terminal dashboard with real-time news updates:
+
+```bash
+# Launch terminal dashboard
+node terminal/dashboard.js
+
+# With custom API URL
+API_URL=http://localhost:3000 node terminal/dashboard.js
+```
+
+**Features:**
+- Real-time SSE streaming updates
+- ASCII art dashboard layout with blessed UI
+- Keyboard shortcuts for navigation and filtering
+- Multiple view modes (all news, breaking only, by source)
+- Works over SSH — perfect for headless servers
+
+See [`/terminal/`](./terminal/) for details.
+
+---
 
 ### 🧠 RAG AI System
 
@@ -2756,10 +2995,334 @@ X_AUTH_TOKEN        # For X/Twitter (from XActions login)
 
 # Tech Stack
 
-- **Runtime:** Next.js 14 Edge Functions
-- **Hosting:** Vercel free tier
-- **Data:** Direct RSS parsing (no database)
-- **Cache:** 5-minute edge cache
+### Core
+
+| Layer | Technology | Purpose |
+|-------|------------|--------|
+| **Runtime** | Next.js 14 (Edge Functions) | SSR, API routes, ISR |
+| **Language** | TypeScript | Type-safe codebase |
+| **Hosting** | Vercel (free tier) | Global edge deployment |
+| **Data** | Direct RSS parsing | No database required |
+| **Cache** | 4-layer (Memory → Redis → ISR → CDN) | <200ms TTFB |
+
+### AI & ML
+
+| Technology | Purpose |
+|------------|--------|
+| Groq (LLaMA 3.3) | Sentiment, summarization, NER, translation (**FREE**) |
+| OpenAI (GPT-4o-mini) | Premium AI features |
+| Anthropic (Claude) | Alternative AI provider |
+| OpenRouter | Fallback AI routing |
+| Google Generative AI (Gemini) | Multi-provider support |
+
+### Data & Storage
+
+| Technology | Purpose |
+|------------|--------|
+| Vercel KV / Upstash Redis | Persistent cache & data store |
+| Drizzle ORM + Neon Postgres | Structured data (serverless) |
+| Content-Addressable Storage | IPFS-style article integrity |
+| JSONL Archives | Append-only historical data |
+
+### Frontend
+
+| Technology | Purpose |
+|------------|--------|
+| React 18 | Component framework |
+| Tailwind CSS | Utility-first styling |
+| Framer Motion | Animations & transitions |
+| Recharts | Charts & visualizations |
+| SWR | Data fetching & caching |
+| next-intl | Internationalization (42 languages) |
+
+### Infrastructure
+
+| Technology | Purpose |
+|------------|--------|
+| Docker + Docker Compose | Containerized deployment |
+| Kubernetes + Helm | Production scaling (3-10 replicas) |
+| Nginx | Reverse proxy & load balancing |
+| Inngest | Background job orchestration |
+
+### Observability
+
+| Technology | Purpose |
+|------------|--------|
+| OpenTelemetry | Distributed tracing & metrics |
+| Prometheus | Metrics collection & alerting |
+| Grafana | Dashboards & visualization |
+| Pino | Structured JSON logging |
+| Sentry | Error tracking |
+| web-vitals | Core Web Vitals monitoring |
+
+### Testing & Quality
+
+| Technology | Purpose |
+|------------|--------|
+| Vitest | Unit testing |
+| Playwright | E2E testing (18 spec files) |
+| Storybook | Component testing (60+ stories) |
+| pa11y + axe-core | Accessibility testing |
+| Lighthouse | Performance auditing |
+| ESLint + Stylelint | Code & CSS linting |
+| Secretlint | Secret scanning |
+| Zod | Runtime schema validation |
+| Husky | Git hooks |
+
+### Payments
+
+| Technology | Purpose |
+|------------|--------|
+| x402 Protocol | HTTP micropayments |
+| USDC on Base L2 | Payment settlement |
+| Stripe | Subscription billing |
+
+---
+
+## ☸️ Kubernetes Deployment
+
+Production-grade Kubernetes deployment with Helm chart:
+
+```bash
+# Deploy with Helm
+helm install free-crypto-news ./infra/helm/free-crypto-news \
+  --set image.tag=latest \
+  --set ingress.host=cryptocurrency.cv
+
+# Scale up
+helm upgrade free-crypto-news ./infra/helm/free-crypto-news \
+  --set replicaCount=5
+```
+
+**Helm Chart Features:**
+
+| Feature | Configuration |
+|---------|---------------|
+| **Autoscaling** | HPA: 3-10 replicas, CPU/memory targets |
+| **Pod Disruption Budget** | Minimum 2 pods always available |
+| **Ingress** | TLS termination, rate limiting |
+| **Network Policies** | Namespace isolation, egress rules |
+| **Service Accounts** | RBAC with least-privilege |
+| **Separate Deployments** | Web + WebSocket split for scaling |
+| **Resource Limits** | CPU/memory requests & limits |
+| **Health Checks** | Liveness & readiness probes |
+
+See [`/infra/helm/`](./infra/) for the full Helm chart.
+
+### Docker Compose
+
+```bash
+# Basic deployment
+docker compose up -d
+
+# With observability (Grafana + Prometheus)
+docker compose -f docker-compose.yml -f docker-compose.observability.yml up -d
+
+# Scaled deployment
+docker compose -f docker-compose.yml -f docker-compose.scale.yml up -d
+```
+
+---
+
+## 📊 Observability Stack
+
+Full observability with pre-built dashboards:
+
+```bash
+# Start with observability
+docker compose -f docker-compose.yml -f docker-compose.observability.yml up -d
+
+# Access dashboards
+# Grafana:    http://localhost:3001 (admin/admin)
+# Prometheus: http://localhost:9090
+```
+
+**Pre-built Grafana Dashboards:**
+- **API Overview** — Request rates, latency percentiles, error rates, cache hit ratios
+- **Production Dashboard** — System health, resource utilization, active connections
+
+**Prometheus Alerting Rules:**
+- High error rate (>5% for 5 min)
+- Elevated latency (p99 >2s)
+- Cache miss ratio spike
+- RSS source failures
+
+**OpenTelemetry Integration:**
+```typescript
+// Automatic instrumentation for all API routes
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('crypto-news');
+const span = tracer.startSpan('fetch-news');
+```
+
+---
+
+## 📖 Documentation Site
+
+Full documentation site powered by MkDocs Material:
+
+```bash
+# Serve docs locally
+pip install mkdocs-material
+mkdocs serve
+
+# Build static site
+mkdocs build
+```
+
+**30+ documentation pages** covering:
+- API Reference & Tutorials (19 step-by-step guides)
+- Architecture & Database design
+- AI Features & RAG system
+- Security & Authentication
+- Deployment & Scaling
+- SDK documentation for all 13 languages
+- Prompt templates for AI features
+- Admin & operations guides
+
+Live docs: [cryptocurrency.cv/developers](https://cryptocurrency.cv/developers)
+
+---
+
+## 📚 Storybook Component Gallery
+
+Browse and test **60+ UI components** in isolation:
+
+```bash
+pnpm storybook
+```
+
+**Featured Stories:**
+
+| Category | Components |
+|----------|------------|
+| **News** | NewsCard, FeaturedArticle, BreakingNewsBanner, LiveNewsTicker, ArticleIntelligenceBadges |
+| **Market** | FearGreedIndex, MarketStats, DominanceChart, LivePrice, Screener |
+| **AI** | BullBearDebate, ClickbaitDetector, SentimentDashboard, PredictionTracker |
+| **Trading** | WhaleAlerts, CryptoCalculator, GasTracker |
+| **Social** | InfluencerLeaderboard, SocialBuzz |
+| **UX** | Animations, CategoryNav, BookmarkButton |
+
+Each story includes interactive controls, responsive previews, and accessibility checks.
+
+---
+
+## 🔧 Inngest Background Jobs
+
+11 background job functions that keep data fresh via [Inngest](https://inngest.com):
+
+| Job | Schedule | Description |
+|-----|----------|-------------|
+| `archive/collect` | Every hour | Collect & enrich new articles |
+| `archive/sentiment` | Every hour | Run sentiment analysis on new articles |
+| `archive/market-snapshot` | Every hour | Capture BTC/ETH prices + Fear & Greed |
+| `archive/coverage-gap` | Every 6 hours | Detect under-covered topics |
+| `archive/derivatives` | Every hour | Snapshot derivatives market data |
+| `social/collect` | Every 30 min | Collect social signals |
+| `feeds/monitor` | Every 15 min | Monitor RSS feed health |
+| `cleanup/expired-keys` | Daily | Remove expired API keys |
+| `digest/generate` | Every 6 hours | Generate AI news digests |
+| `predictions/resolve` | Daily | Resolve prediction outcomes |
+| `newsletter/send` | Weekly | Send newsletter to subscribers |
+
+Jobs are defined in `/api/inngest` and run automatically on Vercel or any Inngest-compatible host.
+
+---
+
+## 🧪 Chaos Engineering & Load Testing
+
+Production resilience testing scripts:
+
+```bash
+# Chaos tests
+scripts/chaos/network-latency.sh    # Simulate network delays
+scripts/chaos/redis-failure.sh       # Test Redis failover
+scripts/chaos/upstream-failure.sh    # Simulate source outages
+
+# Load tests (k6)
+k6 run scripts/load-tests/baseline.js         # Baseline performance
+k6 run scripts/load-tests/breaking-news-spike.js  # Traffic spike
+k6 run scripts/load-tests/soak.js              # Sustained load
+k6 run scripts/load-tests/websocket.js         # WebSocket stress
+```
+
+**Performance Budgets** defined in `scripts/load-tests/budgets.json` enforce:
+- p95 latency <500ms
+- Error rate <1%
+- Throughput >100 req/s per instance
+
+---
+
+## 🌐 SDKs (13 Languages)
+
+| Language | Package | Install |
+|----------|---------|--------|
+| TypeScript | [`@nirholas/crypto-news`](sdk/typescript/) | `npm install @nirholas/crypto-news` |
+| Python | [`crypto_news.py`](sdk/python/) | `curl -O .../sdk/python/crypto_news.py` |
+| JavaScript | [`crypto-news.js`](sdk/javascript/) | `curl -O .../sdk/javascript/crypto-news.js` |
+| Go | [`free-crypto-news/sdk/go`](sdk/go/) | `go get github.com/nirholas/free-crypto-news/sdk/go` |
+| PHP | [`CryptoNews.php`](sdk/php/) | `curl -O .../sdk/php/CryptoNews.php` |
+| Rust | [`fcn-sdk`](sdk/rust/) | `cargo add fcn-sdk` |
+| Ruby | [`fcn-sdk`](sdk/ruby/) | `gem install fcn-sdk` |
+| React | [`<CryptoNews />`](sdk/react/) | `npm install @nirholas/crypto-news-react` |
+| Swift | [`CryptoNewsSDK`](sdk/swift/) | Swift Package Manager |
+| Kotlin | [`crypto-news-kt`](sdk/kotlin/) | Maven/Gradle |
+| Java | [`crypto-news-java`](sdk/java/) | Maven/Gradle |
+| C# | [`CryptoNews.NET`](sdk/csharp/) | NuGet |
+| R | [`cryptonews`](sdk/r/) | `install.packages("cryptonews")` |
+
+See [`/sdk/`](./sdk) for documentation and examples.
+
+---
+
+## 📝 Blog
+
+11 educational articles at [`/blog`](https://cryptocurrency.cv/blog):
+
+| Article | Topic |
+|---------|-------|
+| What is Bitcoin? | Bitcoin fundamentals |
+| What is Ethereum? | Ethereum & smart contracts |
+| Introduction to DeFi | Decentralized finance primer |
+| Crypto Trading Strategies | Technical & fundamental analysis |
+| Crypto Wallet Guide | Hot, cold, hardware wallets |
+| Security Best Practices | Protecting your crypto |
+| Layer 2 Scaling Solutions | Rollups, sidechains, channels |
+| Understanding Stablecoins | USDC, USDT, DAI, algorithmic |
+| NFT Guide | Non-fungible tokens explained |
+| Airdrop Guide | Finding and claiming airdrops |
+| How to Buy Crypto | Step-by-step purchasing guide |
+
+Blog content lives in [`/content/blog/`](./content/blog/) as Markdown files.
+
+---
+
+## ⛓️ Smart Contract (CryptoNewsOracle)
+
+Solidity contract for on-chain crypto sentiment data via Chainlink:
+
+```solidity
+// SPDX-License-Identifier: MIT
+// contracts/CryptoNewsOracle.sol
+
+// Request on-chain sentiment
+oracle.requestSentiment();
+
+// Request full market data
+oracle.requestFullData();
+
+// Read latest data
+(int256 sentiment, uint256 fearGreed, uint256 breakingCount) = oracle.getLatest();
+```
+
+**On-chain data available:**
+- Sentiment score (-100 to +100)
+- Fear & Greed Index (0-100)
+- Breaking news count
+- Last update timestamp
+
+See [`/contracts/CryptoNewsOracle.sol`](./contracts/CryptoNewsOracle.sol) for the full implementation.
 
 ---
 
@@ -2908,6 +3471,7 @@ If the main Vercel deployment is down, use the **GitHub Pages backup**:
 
 ```
 https://nirholas.github.io/free-crypto-news/
+https://fcn.dev
 ```
 
 ### Static JSON Endpoints

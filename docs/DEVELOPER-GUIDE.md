@@ -25,9 +25,16 @@ Free Crypto News is built with:
 |------------|---------|---------|
 | **Next.js** | 16.x | React framework with App Router |
 | **React** | 19.x | UI library |
-| **TypeScript** | 5.x | Type safety |
-| **Tailwind CSS** | 3.x | Utility-first styling |
+| **TypeScript** | 5.9 | Type safety |
+| **Tailwind CSS** | 4.x | Utility-first styling |
+| **Drizzle ORM** | - | Database (Neon Postgres) |
+| **Upstash Redis** | - | Distributed caching & rate limiting |
+| **next-intl** | - | Internationalisation (42 locales) |
 | **next-themes** | - | Dark mode support |
+| **Zod** | - | Runtime schema validation |
+| **Pino** | - | Structured JSON logging |
+| **OpenTelemetry** | - | Distributed tracing |
+| **Inngest** | - | Background job orchestration |
 
 ### Key Patterns
 
@@ -42,27 +49,60 @@ Free Crypto News is built with:
 
 ```
 src/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx          # Root layout with providers
-│   ├── page.tsx            # Homepage
-│   ├── globals.css         # Global styles
-│   ├── api/                # API routes
-│   │   ├── news/           # News endpoints
-│   │   ├── search/         # Search endpoint
-│   │   ├── article/        # AI summary endpoint
+├── app/                         # Next.js App Router
+│   ├── [locale]/                # i18n wrapper — all user-facing pages
+│   │   ├── page.tsx             # Homepage — latest news feed
+│   │   ├── article/[slug]/      # Article detail
+│   │   ├── category/[slug]/     # Category feed
+│   │   ├── source/[source]/     # Source filter
+│   │   ├── coin/[coinId]/       # Coin-specific news
+│   │   ├── search/              # Full-text search
 │   │   └── ...
-│   ├── article/[id]/       # Article detail pages
-│   ├── category/[slug]/    # Category pages
-│   ├── source/[source]/    # Source filter pages
+│   ├── api/                     # 150+ API routes (mostly Edge Runtime)
+│   │   ├── news/                # Main news feed
+│   │   ├── search/              # Search articles
+│   │   ├── article/             # AI summary, extraction
+│   │   ├── market/              # Price data, charts, fear & greed
+│   │   ├── ai/                  # Sentiment, summaries, RAG
+│   │   ├── onchain/             # On-chain metrics, whale alerts
+│   │   ├── defi/                # Yields, TVL, DEX volumes
+│   │   ├── sse/                 # Server-Sent Events stream
+│   │   ├── graphql/             # GraphQL endpoint
+│   │   ├── rss/ , atom/         # Feed endpoints
+│   │   ├── v1/ , v2/            # Versioned endpoints
+│   │   ├── og/                  # Dynamic OpenGraph images
+│   │   ├── cron/                # Scheduled jobs
+│   │   └── ...
+│   └── layout.tsx               # Root layout + providers
+├── components/                  # 170+ React components
+│   ├── cards/                   # Article card variants
+│   ├── charts/                  # Market charts (Recharts)
+│   ├── rag-chat/                # RAG chat interface
+│   ├── admin/                   # Admin dashboard
+│   ├── ui/                      # Base UI primitives
 │   └── ...
-├── components/             # React components
-│   ├── cards/              # Article card variants
-│   ├── ui/                 # Base UI components
-│   └── ...
-└── lib/                    # Utilities and helpers
-    ├── api.ts              # API client functions
-    ├── reading-time.ts     # Reading time utilities
-    └── utils.ts            # General utilities
+├── hooks/                       # Custom React hooks
+├── i18n/                        # Internationalization config
+├── types/                       # TypeScript type definitions
+├── __tests__/                   # Unit tests
+└── lib/                         # 200+ library modules
+    ├── api.ts                   # API client functions
+    ├── archive-v2.ts            # Archive read/write helpers
+    ├── distributed-cache.ts     # Redis / in-memory cache
+    ├── news-sources.ts          # Source registry (200+ feeds)
+    ├── rate-limiter.ts          # Distributed rate limiting
+    ├── reading-time.ts          # Reading time utilities
+    └── ...
+
+archive/                         # Static JSON data store
+mcp/                             # Claude MCP server
+sdk/                             # Official SDKs (13 languages)
+widget/                          # Embeddable HTML widgets
+scripts/                         # Build & automation scripts
+messages/                        # i18n translation files (42 locales)
+drizzle/                         # Database migrations
+e2e/                             # Playwright E2E tests
+stories/                         # Storybook component stories
 ```
 
 ---
@@ -370,21 +410,99 @@ const article = await fetchArticle(articleId);
 
 ---
 
+## 🌐 Environment Variables
+
+Copy `.env.example` to `.env.local` and configure:
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `KV_REST_API_URL` | No | Upstash Redis / Vercel KV URL |
+| `KV_REST_API_TOKEN` | No | Redis auth token |
+| `DATABASE_URL` | No | Neon Postgres connection string |
+| `GROQ_API_KEY` | No | Groq AI (free, recommended for dev) |
+| `OPENAI_API_KEY` | No | OpenAI GPT models |
+| `ANTHROPIC_API_KEY` | No | Anthropic Claude models |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | No | Google Gemini AI |
+| `INNGEST_EVENT_KEY` | No | Background job orchestration |
+| `SENTRY_DSN` | No | Error monitoring |
+| `VAPID_PUBLIC_KEY` | No | Web push notifications |
+| `VAPID_PRIVATE_KEY` | No | Web push notifications |
+
+> **Tip:** The app runs with **zero environment variables** for basic development. Without Redis, it uses in-memory caching. Without a database, it reads from the static archive. Without AI keys, AI endpoints return helpful error messages.
+
+---
+
 ## 🛣️ API Routes
 
-All API routes are in `src/app/api/`.
+All API routes are in `src/app/api/`. The project has **150+ endpoints** organised by category:
+
+### Core
 
 | Route | Method | Description |
 |-------|--------|-------------|
-| `/api/news` | GET | Latest news |
-| `/api/search` | GET | Search articles |
+| `/api/news` | GET | Latest news feed |
+| `/api/search` | GET | Full-text search |
 | `/api/article` | GET | Article with AI summary |
-| `/api/breaking` | GET | Breaking news (2h) |
+| `/api/breaking` | GET | Breaking news (last 2h) |
+| `/api/trending` | GET | Trending topics |
+| `/api/digest` | GET | AI-generated daily digest |
+| `/api/sources` | GET | Available news sources |
+| `/api/health` | GET | System health check |
+
+### Topic-Specific
+
+| Route | Method | Description |
+|-------|--------|-------------|
 | `/api/bitcoin` | GET | Bitcoin news |
 | `/api/defi` | GET | DeFi news |
-| `/api/trending` | GET | Trending topics |
-| `/api/sources` | GET | News sources |
-| `/api/health` | GET | API health check |
+| `/api/solana` | GET | Solana ecosystem |
+| `/api/nft` | GET | NFT news |
+| `/api/gaming` | GET | Web3 gaming |
+| `/api/regulatory` | GET | Regulation & policy |
+
+### Market Data
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/prices` | GET | Current prices |
+| `/api/market` | GET | Market overview |
+| `/api/fear-greed` | GET | Fear & Greed Index |
+| `/api/charts` | GET | Price charts |
+| `/api/ohlc` | GET | OHLC candle data |
+| `/api/derivatives` | GET | Derivatives data |
+| `/api/liquidations` | GET | Liquidation data |
+
+### AI & Analysis
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/ai` | POST | Multi-action AI endpoint |
+| `/api/sentiment` | GET | Market sentiment analysis |
+| `/api/summarize` | POST | Article summarisation |
+| `/api/extract` | POST | Entity extraction |
+| `/api/factcheck` | POST | Fact checking |
+| `/api/forecast` | GET | AI market forecasts |
+| `/api/rag` | POST | RAG chat with news context |
+
+### On-Chain
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/onchain` | GET | On-chain metrics |
+| `/api/whale-alerts` | GET | Whale transaction alerts |
+| `/api/gas` | GET | Gas prices |
+| `/api/flows` | GET | Exchange flows |
+
+### Feeds & Export
+
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/rss` | GET | RSS feed |
+| `/api/atom` | GET | Atom feed |
+| `/api/opml` | GET | OPML subscription list |
+| `/api/export` | GET | Data export (CSV/JSON) |
+| `/api/graphql` | POST | GraphQL endpoint |
+| `/api/openapi.json` | GET | OpenAPI specification |
 
 ### Adding a New Endpoint
 
@@ -498,33 +616,96 @@ node scripts/archive/stats.js
 
 ---
 
+## 🐛 Debugging Tips
+
+### Common development issues
+
+**Port 3000 already in use:**
+```bash
+lsof -i :3000          # Find the process
+kill -9 <PID>          # Kill it
+# Or use a different port:
+PORT=3001 bun run dev
+```
+
+**Redis connection errors:**
+The app works without Redis — it falls back to in-memory caching. To silence Redis warnings, remove `KV_REST_API_URL` from `.env.local`.
+
+**AI endpoints returning errors:**
+Set at least one AI provider key in `.env.local`. [Groq](https://console.groq.com) is free and recommended for development.
+
+**Empty news feed on fresh install:**
+News is fetched from RSS feeds every 5 minutes. On a fresh install, wait for the first fetch cycle or run:
+```bash
+bun run archive:collect
+```
+
+**TypeScript errors after pulling:**
+```bash
+pnpm install            # Install any new dependencies
+bun run typecheck       # Verify types
+```
+
+### Useful debug commands
+
+```bash
+bun run lint            # Run ESLint
+bun run typecheck       # Run TypeScript compiler check
+bun run test            # Run unit tests (Vitest)
+bun run test:e2e        # Run E2E tests (Playwright)
+bun run analyze         # Bundle size analysis
+bun run audit:unused    # Find unused exports (Knip)
+bun run audit:a11y      # Accessibility audit
+bun run archive:stats   # View archive statistics
+```
+
+---
+
 ## 🧪 Testing
 
 ### Running Tests
 
 ```bash
-# TypeScript SDK tests
-cd sdk/typescript && npm test
+# Unit tests (Vitest)
+bun run test
+
+# Unit tests with coverage
+bun run test:coverage
+
+# E2E tests (Playwright)
+bun run test:e2e
 
 # Lint
-npm run lint
+bun run lint
+
+# Type checking
+bun run typecheck
 ```
 
 ### Writing Tests
 
 ```typescript
-// sdk/typescript/src/__tests__/client.test.ts
+// src/__tests__/example.test.ts
 import { describe, it, expect } from 'vitest';
-import { CryptoNews } from '../client';
 
-describe('CryptoNews', () => {
-  it('should fetch latest news', async () => {
-    const client = new CryptoNews();
-    const articles = await client.getLatest(5);
-    expect(articles).toHaveLength(5);
+describe('MyFunction', () => {
+  it('should do something', () => {
+    expect(myFunction()).toBe(expected);
   });
 });
 ```
+
+### Testing strategies
+
+| Layer | Tool | Location |
+|-------|------|----------|
+| Unit tests | Vitest | `src/__tests__/` |
+| Component tests | Vitest + Testing Library | `src/__tests__/` |
+| Visual tests | Storybook 10 | `stories/` |
+| E2E tests | Playwright | `e2e/` |
+| API tests | Vitest | `src/__tests__/api/` |
+
+> See [Testing Guide](TESTING.md) for comprehensive testing documentation.
 
 ---
 
@@ -602,26 +783,100 @@ export function MyComponent({ title, onAction }: MyComponentProps) {
 
 ### Adding a New SDK
 
-See existing SDKs in `sdk/` for patterns:
+See existing SDKs in `sdk/` for patterns. The project currently ships **13 SDKs**:
+
+| Tier | SDKs |
+|------|------|
+| Tier 1 (full-featured) | Python, TypeScript, Go |
+| Tier 2 (standard) | JavaScript, React, PHP, Ruby, Rust |
+| Tier 3 (basic) | Java, Kotlin, Swift, C#, R |
+
+To add a new SDK:
 
 1. Create folder: `sdk/my-language/`
-2. Implement client with methods:
-   - `getLatest(limit)`
-   - `search(query)`
-   - `getDefi(limit)`
-   - `getBitcoin(limit)`
-   - `getBreaking(limit)`
-3. Add `README.md` with usage examples
-4. Update main `README.md` to list new SDK
+2. Implement a client class with these core methods:
+   - `getLatest(limit)` — Fetch latest news
+   - `search(query)` — Full-text search
+   - `getBitcoin(limit)` — Bitcoin-specific news
+   - `getDefi(limit)` — DeFi news
+   - `getBreaking(limit)` — Breaking news
+   - `getMarket()` — Market data
+   - `getSentiment()` — Sentiment analysis
+3. Add comprehensive `README.md` with:
+   - Installation instructions
+   - Quick start example
+   - Method reference table
+   - Error handling examples
+4. Add tests
+5. Update `docs/README.md` to list the new SDK
+6. Update the main `README.md` SDK section
+
+---
+
+### Adding a New Data Source
+
+To add a new RSS/Atom news source:
+
+1. Edit `src/lib/news-sources.ts`
+2. Add an entry to the sources array:
+
+```typescript
+{
+  name: 'My Source',
+  url: 'https://example.com/rss',
+  category: 'bitcoin',       // or 'ethereum', 'defi', 'nft', etc.
+  language: 'en',
+  reliability: 'high',       // 'high' | 'medium' | 'low'
+}
+```
+
+3. Test the feed: `curl https://example.com/rss | head -50`
+4. Run the dev server and verify articles appear
+
+---
+
+### Adding Background Jobs
+
+Background jobs use [Inngest](https://www.inngest.com/) for event-driven functions:
+
+```typescript
+// src/app/api/inngest/route.ts
+import { inngest } from '@/lib/inngest';
+
+export const myJob = inngest.createFunction(
+  { id: 'my-job', name: 'My Background Job' },
+  { cron: '0 * * * *' },  // Every hour
+  async ({ event, step }) => {
+    // Your job logic here
+  }
+);
+```
 
 ---
 
 ## 📚 Additional Resources
 
+### Project documentation
+
+- [Architecture](ARCHITECTURE.md) — System design, data flow, storage
+- [API Reference](API.md) — Complete endpoint catalogue (150+ endpoints)
+- [Testing Guide](TESTING.md) — Unit, component, and E2E testing
+- [Database](DATABASE.md) — Storage backends, Drizzle ORM, migrations
+- [Deployment](DEPLOYMENT.md) — Vercel, Docker, Railway
+- [Real-Time](REALTIME.md) — SSE, WebSocket, push notifications
+- [AI Features](AI-FEATURES.md) — Summarisation, sentiment, RAG
+- [Scalability](SCALABILITY.md) — Caching, edge runtime, load handling
+- [Security](SECURITY.md) — Security policy and architecture
+
+### External documentation
+
 - [Next.js Documentation](https://nextjs.org/docs)
 - [React Documentation](https://react.dev)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Drizzle ORM Documentation](https://orm.drizzle.team/docs/overview)
+- [Vitest Documentation](https://vitest.dev/)
+- [Playwright Documentation](https://playwright.dev/)
 
 ---
 

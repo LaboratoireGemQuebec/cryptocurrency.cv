@@ -50,9 +50,10 @@ Free Crypto News is a **100% free, open-source** cryptocurrency news API and web
 | Guide | Description |
 |-------|-------------|
 | [All Features](./FEATURES.md) | Complete feature catalog |
-| [AI Features](./AI-FEATURES.md) | Summarization, sentiment, fact-checking |
-| [Real-Time](./REALTIME.md) | WebSocket, SSE, push notifications |
-| [Admin Dashboard](./ADMIN.md) | Analytics and monitoring |
+| [AI Features](./AI-FEATURES.md) | Summarization, sentiment, fact-checking, RAG |
+| [Advanced Features](./ADVANCED-FEATURES.md) | Terminal CLI, trading signals, Farcaster Frames, oracles |
+| [Real-Time](./REALTIME.md) | WebSocket, SSE, push notifications, webhooks |
+| [Admin Dashboard](./ADMIN.md) | Analytics, monitoring, and administration |
 
 ---
 
@@ -85,8 +86,11 @@ Step-by-step guides for common use cases:
 | [Go](./sdks/go.md) | `go get github.com/nirholas/free-crypto-news/sdk/go` |
 | [PHP](./sdks/php.md) | Composer package |
 | [Ruby](./sdks/ruby.md) | Gem package |
-| [Rust](./sdks/rust.md) | Cargo crate |
-
+| [Rust](./sdks/rust.md) | Cargo crate || [Java](./sdks/java.md) | Maven / Gradle |
+| [Kotlin](./sdks/kotlin.md) | Kotlin Multiplatform |
+| [Swift](./sdks/swift.md) | Swift Package Manager |
+| [C#](./sdks/csharp.md) | NuGet package |
+| [R](./sdks/r.md) | R package |
 ### Integrations
 
 | Integration | Description |
@@ -118,12 +122,17 @@ Step-by-step guides for common use cases:
 
 | Guide | Description |
 |-------|-------------|
-| [Architecture](./ARCHITECTURE.md) | System design and structure |
+| [Architecture](./ARCHITECTURE.md) | System design, data flow, storage, security |
+| [Developer Guide](./DEVELOPER-GUIDE.md) | Setup, components, API routes, debugging |
 | [Components](./COMPONENTS.md) | React component documentation |
 | [Testing](./TESTING.md) | Unit, integration, and E2E tests |
-| [Database](./DATABASE.md) | Storage layer and backends |
-| [Deployment](./DEPLOYMENT.md) | Deploy your own instance |
-| [Scalability](./SCALABILITY.md) | Scaling and performance |
+| [Database](./DATABASE.md) | Storage backends, Drizzle ORM, migrations |
+| [Deployment](./DEPLOYMENT.md) | Deploy your own instance (Vercel, Docker, Railway) |
+| [Scalability](./SCALABILITY.md) | Edge runtime, caching tiers, load handling |
+| [Data Sources](./DATA-SOURCES-RUNBOOK.md) | Adding and managing RSS/Atom news sources |
+| [Hooks](./HOOKS.md) | Custom React hooks reference |
+| [SEO](./SEO.md) | Search engine optimization configuration |
+| [Internationalization](./INTERNATIONALIZATION.md) | i18n setup and translation guide |
 
 ---
 
@@ -131,12 +140,16 @@ Step-by-step guides for common use cases:
 
 | Resource | Description |
 |----------|-------------|
-| [Contributing](../CONTRIBUTING.md) | How to contribute |
-| [Security](../SECURITY.md) | Security policy |
+| [Contributing](./CONTRIBUTING.md) | How to contribute |
+| [Security](./SECURITY.md) | Security policy, architecture, and reporting |
 | [Changelog](../CHANGELOG.md) | Version history |
 | [License](../LICENSE) | MIT License |
 | [Postman Collection](../postman/) | Import into Postman |
 | [OpenAPI Spec](../chatgpt/openapi.yaml) | OpenAPI / Swagger definition |
+| [RAG](./RAG.md) | Retrieval-Augmented Generation pipeline |
+| [Premium](./PREMIUM.md) | Premium tier features and pricing |
+| [Well-Known](./WELL-KNOWN.md) | `.well-known` endpoint documentation |
+| [x402](./X402.md) | Crypto-native HTTP 402 payments |
 
 ---
 

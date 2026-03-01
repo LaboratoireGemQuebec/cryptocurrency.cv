@@ -76,7 +76,7 @@ curl https://cryptocurrency.cv/api/sentiment
 
 ### 3. Use an SDK
 
-Install an SDK to skip boilerplate. Available for [Python](./sdks/python.md), [JavaScript](./sdks/javascript.md), [TypeScript](./sdks/typescript.md), [React](./sdks/react.md), [Go](./sdks/go.md), [PHP](./sdks/php.md), [Ruby](./sdks/ruby.md), and [Rust](./sdks/rust.md).
+Install an SDK to skip boilerplate. Available for [Python](./sdks/python.md), [JavaScript](./sdks/javascript.md), [TypeScript](./sdks/typescript.md), [React](./sdks/react.md), [Go](./sdks/go.md), [PHP](./sdks/php.md), [Ruby](./sdks/ruby.md), [Rust](./sdks/rust.md), [Java](./sdks/java.md), [Kotlin](./sdks/kotlin.md), [Swift](./sdks/swift.md), [C#](./sdks/csharp.md), and [R](./sdks/r.md).
 
 **Python:**
 ```python
@@ -96,6 +96,24 @@ const articles = await client.getLatest(5);
 articles.forEach(a => console.log(a.title));
 ```
 
+**Go:**
+```go
+package main
+
+import (
+	"fmt"
+	cryptonews "github.com/nirholas/free-crypto-news/sdk/go"
+)
+
+func main() {
+	client := cryptonews.NewClient()
+	articles, _ := client.GetLatest(5)
+	for _, a := range articles {
+		fmt.Printf("%s: %s\n", a.Source, a.Title)
+	}
+}
+```
+
 **React:**
 ```jsx
 import { useCryptoNews } from '@cryptonews/react';
@@ -108,6 +126,25 @@ function NewsFeed() {
 }
 ```
 
+**PHP:**
+```php
+<?php
+require_once 'vendor/autoload.php';
+
+$client = new CryptoNews\Client();
+$articles = $client->getLatest(5);
+
+foreach ($articles as $article) {
+    echo $article['source'] . ': ' . $article['title'] . "\n";
+}
+```
+
+**cURL (no SDK needed):**
+```bash
+# Get latest 5 articles as JSON
+curl -s https://cryptocurrency.cv/api/news?limit=5 | jq '.articles[] | .title'
+```
+
 ### 4. Enable Real-Time Updates
 
 Subscribe to live news via Server-Sent Events (SSE):
@@ -116,7 +153,53 @@ Subscribe to live news via Server-Sent Events (SSE):
 const eventSource = new EventSource('https://cryptocurrency.cv/api/sse');
 
 eventSource.addEventListener('news', (event) => {
-  const { articles } = JSON.parse(event.data);
+  cError Handling
+
+### HTTP Status Codes
+
+All API endpoints return standard HTTP status codes:
+
+| Code | Meaning |
+|------|---------|
+| 200 | Success |
+| 400 | Bad request — check your parameters |
+| 404 | Endpoint or resource not found |
+| 429 | Rate limited — slow down and check `Retry-After` header |
+| 500 | Server error — try again later |
+
+### Rate Limit Headers
+
+Every response includes rate limit information:
+
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 87  
+X-RateLimit-Reset: 1709312400
+```
+
+The free tier allows **100 requests per 15 minutes** — no API key needed. For higher limits, [register for a free API key](./API-KEY-SIGNUP.md).
+
+### Example: Handling Errors in Python
+
+```python
+import requests
+
+response = requests.get('https://cryptocurrency.cv/api/news?limit=5')
+
+if response.status_code == 200:
+    articles = response.json()['articles']
+    for a in articles:
+        print(a['title'])
+elif response.status_code == 429:
+    retry_after = response.headers.get('Retry-After', 60)
+    print(f"Rate limited. Retry in {retry_after} seconds.")
+else:
+    print(f"Error: {response.status_code}")
+```
+
+---
+
+## onst { articles } = JSON.parse(event.data);
   updateFeed(articles);
 });
 

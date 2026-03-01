@@ -54,8 +54,10 @@ We love pull requests! Here are some ideas:
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- **Node.js 18+** — [Download](https://nodejs.org/)
+- **pnpm** — `npm install -g pnpm` (package manager)
+- **Bun** — `curl -fsSL https://bun.sh/install | bash` (script runner)
+- **Git** — [Download](https://git-scm.com/)
 
 ### Local Setup
 
@@ -67,25 +69,41 @@ git clone https://github.com/YOUR_USERNAME/free-crypto-news.git
 cd free-crypto-news
 
 # 3. Install dependencies
-npm install
+pnpm install
 
-# 4. Start development server
-npm run dev
+# 4. Create environment file (optional)
+cp .env.example .env.local
 
-# 5. Open http://localhost:3000
+# 5. Start development server
+bun run dev
+
+# 6. Open http://localhost:3000
 ```
+
+> **Note:** The app runs with zero configuration. Redis, database, and AI keys are all optional — the app gracefully falls back.
 
 ### Project Structure
 
 ```
 ├── src/
-│   ├── app/           # Next.js pages and API routes
-│   ├── components/    # React components
-│   └── lib/           # Utilities and helpers
-├── sdk/               # Language SDKs
-├── mcp/               # Model Context Protocol server
+│   ├── app/           # Next.js pages and 150+ API routes
+│   │   ├── [locale]/   # i18n-wrapped user-facing pages
+│   │   └── api/        # Serverless API routes (Edge Runtime)
+│   ├── components/    # 170+ React components
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # 200+ utility modules
+│   ├── types/         # TypeScript type definitions
+│   └── __tests__/     # Unit tests
+├── archive/           # Static JSON data store
+├── sdk/               # 13 language SDKs
+├── mcp/               # Claude MCP server
+├── widget/            # Embeddable HTML widgets
 ├── scripts/           # Build and archive scripts
-└── docs/              # Documentation
+├── messages/          # i18n translations (42 locales)
+├── drizzle/           # Database migrations
+├── e2e/               # Playwright E2E tests
+├── stories/           # Storybook component stories
+└── docs/              # Documentation (MkDocs)
 ```
 
 ## 💻 Development Process
@@ -101,8 +119,10 @@ npm run dev
 
 3. **Test your changes** locally:
    ```bash
-   npm run build
-   npm run lint
+   bun run build        # Verify build succeeds
+   bun run lint         # Check code style
+   bun run typecheck    # Check TypeScript types
+   bun run test         # Run unit tests
    ```
 
 4. **Commit your changes** with a clear message:
