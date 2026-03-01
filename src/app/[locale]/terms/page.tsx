@@ -57,7 +57,7 @@ export default async function TermsPage({ params }: Props) {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">2. Description of Service</h2>
               <p className="text-gray-700 dark:text-slate-300 leading-relaxed">
                 Free Crypto News is an open-source cryptocurrency news aggregator that collects and displays
-                publicly available news from 200+ sources. We provide:
+                publicly available news from 300+ sources. We provide:
               </p>
               <ul className="list-disc pl-6 text-gray-700 dark:text-slate-300 space-y-2">
                 <li>Real-time cryptocurrency news aggregation</li>

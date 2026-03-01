@@ -101,46 +101,86 @@ export async function POST(request: NextRequest) {
 
     const html = await response.text();
 
-    // Extract title
+    // Extract metadata from <head> (regex is fine for meta tags)
     const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-    const ogTitleMatch = html.match(/<meta[^>]*property="og:title"[^>]*content="([^"]+)"/i);
+    const ogTitleMatch = html.match(/<meta[^>]*property="og:title"[^>]*content="([^"]+)"/i) ||
+                         html.match(/<meta[^>]*content="([^"]+)"[^>]*property="og:title"/i);
     const title = ogTitleMatch?.[1] || titleMatch?.[1] || 'Unknown Title';
 
-    // Extract author
     const authorMatch = html.match(/<meta[^>]*name="author"[^>]*content="([^"]+)"/i) ||
+                       html.match(/<meta[^>]*content="([^"]+)"[^>]*name="author"/i) ||
                        html.match(/<meta[^>]*property="article:author"[^>]*content="([^"]+)"/i);
     const author = authorMatch?.[1];
 
-    // Extract published date
     const dateMatch = html.match(/<meta[^>]*property="article:published_time"[^>]*content="([^"]+)"/i) ||
-                     html.match(/<time[^>]*datetime="([^"]+)"/i);
+                     html.match(/<meta[^>]*content="([^"]+)"[^>]*property="article:published_time"/i) ||
+                     html.match(/<time[^>]*datetime="([^"]+)"/i) ||
+                     html.match(/<meta[^>]*name="date"[^>]*content="([^"]+)"/i);
     const published_date = dateMatch?.[1];
 
-    // Extract main content (simplified - strip tags from article/main elements)
+    const ogDescription = html.match(/<meta[^>]*property="og:description"[^>]*content="([^"]+)"/i) ||
+                           html.match(/<meta[^>]*content="([^"]+)"[^>]*property="og:description"/i) ||
+                           html.match(/<meta[^>]*name="description"[^>]*content="([^"]+)"/i);
+    const description = ogDescription?.[1];
+
+    const ogImage = html.match(/<meta[^>]*property="og:image"[^>]*content="([^"]+)"/i) ||
+                    html.match(/<meta[^>]*content="([^"]+)"[^>]*property="og:image"/i);
+    const image = ogImage?.[1];
+
+    // --- Content Extraction (multi-strategy) ---
+    // Strategy 1: JSON-LD structured data (most reliable when available)
     let content = '';
-    const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i) ||
-                        html.match(/<main[^>]*>([\s\S]*?)<\/main>/i) ||
-                        html.match(/<div[^>]*class="[^"]*content[^"]*"[^>]*>([\s\S]*?)<\/div>/i);
-    
-    if (articleMatch) {
-      content = articleMatch[1]
-        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
+    const jsonLdMatch = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi);
+    if (jsonLdMatch) {
+      for (const ldBlock of jsonLdMatch) {
+        try {
+          const jsonStr = ldBlock.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '');
+          const ld = JSON.parse(jsonStr);
+          // Handle arrays of LD+JSON objects
+          const items = Array.isArray(ld) ? ld : [ld];
+          for (const item of items) {
+            if (item['@type'] === 'NewsArticle' || item['@type'] === 'Article' || item['@type'] === 'BlogPosting') {
+              if (item.articleBody) {
+                content = item.articleBody;
+                break;
+              }
+            }
+          }
+          if (content) break;
+        } catch { /* invalid JSON-LD, skip */ }
+      }
     }
 
-    // Calculate reading time (avg 200 words/minute)
+    // Strategy 2: Semantic HTML elements with scoring
+    if (!content) {
+      content = extractContentFromHTML(html);
+    }
+
+    // Strategy 3: Fallback to <body> text if nothing else worked
+    if (!content || content.length < 100) {
+      const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+      if (bodyMatch) {
+        content = cleanHTMLToText(bodyMatch[1]);
+      }
+    }
+
+    // Final cleanup
+    content = content
+      .replace(/\s+/g, ' ')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+
     const wordCount = content.split(/\s+/).filter(w => w.length > 0).length;
     const readingTime = Math.max(1, Math.round(wordCount / 200));
 
     const result: ExtractedArticle = {
       url,
       title: title.trim(),
-      content: content.slice(0, 10000), // Limit content length
+      content: content.slice(0, 10000),
       author,
       published_date,
+      ...(description ? { description } : {}),
+      ...(image ? { image } : {}),
       word_count: wordCount,
       reading_time_minutes: readingTime
     };

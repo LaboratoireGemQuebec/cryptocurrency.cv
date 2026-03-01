@@ -18,7 +18,7 @@ import ClaimsDashboard from '@/app/[locale]/claims/ClaimsDashboard';
 export function generateMetadata(): Metadata {
   return generateSEOMetadata({
     title: 'Crypto News Claims',
-    description: 'Extract and analyze claims made in crypto news articles. AI-powered detection of predictions, statements, and verifiable claims from 200+ sources.',
+    description: 'Extract and analyze claims made in crypto news articles. AI-powered detection of predictions, statements, and verifiable claims from 300+ sources.',
     path: '/claims',
     tags: ['crypto claims', 'claim extraction', 'news claims', 'prediction claims', 'AI analysis'],
   });

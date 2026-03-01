@@ -275,7 +275,7 @@ export async function GET(request: NextRequest) {
       success: true,
       feed: {
         name: 'Free Crypto News',
-        description: 'Real-time crypto news from 200+ sources',
+        description: 'Real-time crypto news from 300+ sources',
         pubkey,
         relays: DEFAULT_RELAYS,
         tags: ['crypto', 'news', 'bitcoin', 'ethereum', 'defi'],

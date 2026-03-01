@@ -226,10 +226,10 @@ async function checkDatabase(): Promise<HealthCheck> {
     const dbUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL;
     
     // Attempt a lightweight query to verify connectivity
-    // Use dynamic import to avoid bundling pg in edge runtime
+    // Use @neondatabase/serverless which is already a direct dependency
     try {
-      // @ts-ignore - @vercel/postgres is optional, caught at runtime
-      const { sql } = await import(/* webpackIgnore: true */ '@vercel/postgres');
+      const { neon } = await import('@neondatabase/serverless');
+      const sql = neon(dbUrl!);
       const result = await sql`SELECT 1 as health_check`;
       
       return {
@@ -244,7 +244,7 @@ async function checkDatabase(): Promise<HealthCheck> {
         },
       };
     } catch (queryError) {
-      // If @vercel/postgres isn't available, try a basic TCP check
+      // If @neondatabase/serverless query fails, try a basic TCP check
       try {
         const url = new URL(dbUrl!.replace(/^postgres(ql)?:\/\//, 'http://'));
         const connectCheck = await fetch(`http://${url.hostname}:${url.port || 5432}`, {

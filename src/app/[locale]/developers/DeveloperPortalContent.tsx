@@ -43,7 +43,7 @@ interface HealthStatus {
 
 const ENDPOINTS = {
   free: [
-    { method: 'GET', path: '/api/news', desc: 'Latest crypto news from 200+ sources', example: '?limit=10&category=bitcoin' },
+    { method: 'GET', path: '/api/news', desc: 'Latest crypto news from 300+ sources', example: '?limit=10&category=bitcoin' },
     { method: 'GET', path: '/api/breaking', desc: 'Breaking news updates', example: '' },
     { method: 'GET', path: '/api/trending', desc: 'Trending topics & narratives', example: '' },
     { method: 'GET', path: '/api/search', desc: 'Full-text article search', example: '?q=ethereum+ETF' },
@@ -275,7 +275,7 @@ export default function DeveloperPortalContent() {
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Free API with <strong className="text-white">200+ sources</strong>, 
+              Free API with <strong className="text-white">300+ sources</strong>, 
               <strong className="text-white"> AI analysis</strong>, and 
               <strong className="text-white"> real-time updates</strong>. 
               No API key required. Start in seconds.

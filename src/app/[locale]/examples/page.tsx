@@ -329,7 +329,7 @@ API_BASE = "https://cryptocurrency.cv"
 
 @tool
 def get_crypto_news(limit: int = 5) -> str:
-    """Get the latest cryptocurrency news from 200+ sources."""
+    """Get the latest cryptocurrency news from 300+ sources."""
     response = requests.get(f"{API_BASE}/api/news?limit={limit}")
     data = response.json()
     

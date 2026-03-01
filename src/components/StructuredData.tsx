@@ -262,7 +262,7 @@ export function APIStructuredData() {
     name: 'Free Crypto News API',
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'All',
-    description: '100% free crypto news API. No API keys required. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources.',
+    description: '100% free crypto news API. No API keys required. No rate limits. Real-time cryptocurrency news aggregation from 300+ sources.',
     url: 'https://cryptocurrency.cv/developers',
     offers: {
       '@type': 'Offer',
@@ -270,7 +270,7 @@ export function APIStructuredData() {
       priceCurrency: 'USD',
     },
     featureList: [
-      'Real-time news from 200+ sources',
+      'Real-time news from 300+ sources',
       'AI-powered analysis',
       'Market data integration',
       'WebSocket streaming',

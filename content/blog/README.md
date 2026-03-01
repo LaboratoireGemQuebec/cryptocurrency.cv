@@ -121,13 +121,6 @@ content/
 - Individual post: http://localhost:3000/en/blog/{slug}
 - RSS feed: http://localhost:3000/blog/feed.xml
 
-### Admin Dashboard
-
-Visit http://localhost:3000/admin/blog to:
-- View all posts
-- Filter by category
-- See post statistics
-
 ### Testing Changes
 
 Posts are loaded at build time and on server requests. For development:
