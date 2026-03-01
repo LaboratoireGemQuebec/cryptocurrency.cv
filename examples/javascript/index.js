@@ -20,6 +20,10 @@ const ai = require('./ai');
 const market = require('./market');
 const trading = require('./trading');
 const streaming = require('./streaming');
+const defi = require('./defi');
+const macro = require('./macro');
+const blockchain = require('./blockchain');
+const social = require('./social');
 
 module.exports = {
   // News exports
@@ -36,6 +40,18 @@ module.exports = {
   
   // Streaming exports
   ...streaming,
+  
+  // DeFi exports
+  ...defi,
+  
+  // Macro exports
+  ...macro,
+  
+  // Blockchain exports
+  ...blockchain,
+  
+  // Social exports
+  ...social,
   
   // Base URL
   BASE_URL: 'https://cryptocurrency.cv',

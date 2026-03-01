@@ -361,6 +361,386 @@ def get_audits(protocol: Optional[str] = None, limit: int = 20) -> dict:
 
 
 # =============================================================================
+# GET /api/bitcoin/stats - Bitcoin Network Stats
+# =============================================================================
+
+def get_bitcoin_stats() -> dict:
+    """
+    Get comprehensive Bitcoin network statistics.
+    
+    Returns:
+        Network stats (hashrate, difficulty, block time, etc.)
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/stats")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/difficulty - Mining Difficulty
+# =============================================================================
+
+def get_bitcoin_difficulty() -> dict:
+    """
+    Get Bitcoin mining difficulty data and next adjustment estimate.
+    
+    Returns:
+        Difficulty data
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/difficulty")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/blocks - Recent Blocks
+# =============================================================================
+
+def get_bitcoin_blocks(limit: int = 10) -> dict:
+    """
+    Get recent Bitcoin blocks.
+    
+    Args:
+        limit: Number of blocks
+    
+    Returns:
+        Recent block data
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/blocks", params={"limit": limit})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/block-height - Current Block Height
+# =============================================================================
+
+def get_bitcoin_block_height() -> dict:
+    """
+    Get current Bitcoin block height.
+    
+    Returns:
+        Current block height
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/block-height")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/mempool/info - Mempool Status
+# =============================================================================
+
+def get_bitcoin_mempool() -> dict:
+    """
+    Get Bitcoin mempool information.
+    
+    Returns:
+        Mempool size, fees, congestion
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/mempool/info")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/mempool/fees - Recommended Fees
+# =============================================================================
+
+def get_bitcoin_mempool_fees() -> dict:
+    """
+    Get recommended Bitcoin transaction fees.
+    
+    Returns:
+        Fee estimates (fastest, half-hour, hour, economy)
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/mempool/fees")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/bitcoin/network-stats - Extended Network Stats
+# =============================================================================
+
+def get_bitcoin_network_stats() -> dict:
+    """
+    Get extended Bitcoin network statistics.
+    
+    Returns:
+        Detailed network statistics
+    """
+    response = requests.get(f"{BASE_URL}/api/bitcoin/network-stats")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/gas - Gas Prices (multi-chain)
+# =============================================================================
+
+def get_gas(chain: str = "ethereum") -> dict:
+    """
+    Get gas prices for a blockchain.
+    
+    Args:
+        chain: Blockchain (ethereum, polygon, bsc, etc.)
+    
+    Returns:
+        Gas price data (slow, standard, fast, instant)
+    """
+    response = requests.get(f"{BASE_URL}/api/gas", params={"chain": chain})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/gas/estimate - Gas Estimation
+# =============================================================================
+
+def get_gas_estimate(chain: str = "ethereum", tx_type: str = "transfer") -> dict:
+    """
+    Estimate gas for a transaction type.
+    
+    Args:
+        chain: Blockchain
+        tx_type: Transaction type (transfer, swap, mint, etc.)
+    
+    Returns:
+        Gas estimate in native currency and USD
+    """
+    params = {"chain": chain, "type": tx_type}
+    response = requests.get(f"{BASE_URL}/api/gas/estimate", params=params)
+    return response.json()
+
+
+# =============================================================================
+# GET /api/gas/history - Historical Gas Prices
+# =============================================================================
+
+def get_gas_history(chain: str = "ethereum", period: str = "24h") -> dict:
+    """
+    Get historical gas price data.
+    
+    Args:
+        chain: Blockchain
+        period: Time period (1h, 24h, 7d, 30d)
+    
+    Returns:
+        Historical gas price data
+    """
+    params = {"chain": chain, "period": period}
+    response = requests.get(f"{BASE_URL}/api/gas/history", params=params)
+    return response.json()
+
+
+# =============================================================================
+# GET /api/l2 - Layer 2 Overview
+# =============================================================================
+
+def get_l2() -> dict:
+    """
+    Get Layer 2 overview data.
+    
+    Returns:
+        L2 ecosystem overview
+    """
+    response = requests.get(f"{BASE_URL}/api/l2")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/l2/projects - L2 Projects
+# =============================================================================
+
+def get_l2_projects() -> dict:
+    """
+    Get all Layer 2 projects with TVL and activity data.
+    
+    Returns:
+        L2 project list with metrics
+    """
+    response = requests.get(f"{BASE_URL}/api/l2/projects")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/l2/activity - L2 Activity
+# =============================================================================
+
+def get_l2_activity() -> dict:
+    """
+    Get Layer 2 transaction activity data.
+    
+    Returns:
+        L2 activity metrics (TPS, transactions, users)
+    """
+    response = requests.get(f"{BASE_URL}/api/l2/activity")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/l2/risk - L2 Risk Assessment
+# =============================================================================
+
+def get_l2_risk() -> dict:
+    """
+    Get Layer 2 risk assessments.
+    
+    Returns:
+        L2 risk scores and analysis
+    """
+    response = requests.get(f"{BASE_URL}/api/l2/risk")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/solana - Solana Overview
+# =============================================================================
+
+def get_solana() -> dict:
+    """
+    Get Solana ecosystem overview.
+    
+    Returns:
+        Solana network data
+    """
+    response = requests.get(f"{BASE_URL}/api/solana")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/solana/tokens - Solana Tokens
+# =============================================================================
+
+def get_solana_tokens(limit: int = 50) -> dict:
+    """
+    Get Solana SPL tokens.
+    
+    Args:
+        limit: Number of tokens
+    
+    Returns:
+        Solana token data
+    """
+    response = requests.get(f"{BASE_URL}/api/solana/tokens", params={"limit": limit})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/solana/defi - Solana DeFi
+# =============================================================================
+
+def get_solana_defi() -> dict:
+    """
+    Get Solana DeFi protocol data.
+    
+    Returns:
+        Solana DeFi data
+    """
+    response = requests.get(f"{BASE_URL}/api/solana/defi")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/solana/nfts - Solana NFTs
+# =============================================================================
+
+def get_solana_nfts(limit: int = 20) -> dict:
+    """
+    Get Solana NFT collections.
+    
+    Args:
+        limit: Number of collections
+    
+    Returns:
+        Solana NFT data
+    """
+    response = requests.get(f"{BASE_URL}/api/solana/nfts", params={"limit": limit})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/nft/market - NFT Market Overview
+# =============================================================================
+
+def get_nft_market() -> dict:
+    """
+    Get NFT market overview data.
+    
+    Returns:
+        NFT market stats (volume, floor prices, etc.)
+    """
+    response = requests.get(f"{BASE_URL}/api/nft/market")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/nft/sales/recent - Recent NFT Sales
+# =============================================================================
+
+def get_nft_recent_sales(limit: int = 20) -> dict:
+    """
+    Get recent notable NFT sales.
+    
+    Args:
+        limit: Number of sales
+    
+    Returns:
+        Recent NFT sale data
+    """
+    response = requests.get(f"{BASE_URL}/api/nft/sales/recent", params={"limit": limit})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/nft/collections/trending - Trending NFT Collections
+# =============================================================================
+
+def get_nft_trending() -> dict:
+    """
+    Get trending NFT collections.
+    
+    Returns:
+        Trending NFT collections
+    """
+    response = requests.get(f"{BASE_URL}/api/nft/collections/trending")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/token-unlocks - Token Unlock Schedule
+# =============================================================================
+
+def get_token_unlocks(limit: int = 20) -> dict:
+    """
+    Get upcoming token unlock events.
+    
+    Args:
+        limit: Number of events
+    
+    Returns:
+        Token unlock schedule
+    """
+    response = requests.get(f"{BASE_URL}/api/token-unlocks", params={"limit": limit})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/validators - Validator Data
+# =============================================================================
+
+def get_validators(chain: Optional[str] = None) -> dict:
+    """
+    Get blockchain validator data.
+    
+    Args:
+        chain: Filter by chain (ethereum, solana, etc.)
+    
+    Returns:
+        Validator data
+    """
+    params = {}
+    if chain:
+        params["chain"] = chain
+    
+    response = requests.get(f"{BASE_URL}/api/validators", params=params)
+    return response.json()
+
+
+# =============================================================================
 # COMPLETE EXAMPLES
 # =============================================================================
 

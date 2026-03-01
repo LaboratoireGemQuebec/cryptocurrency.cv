@@ -446,6 +446,141 @@ def get_origins(story: Optional[str] = None, limit: int = 10) -> dict:
 
 
 # =============================================================================
+# GET /api/ai/flash-briefing - AI Flash Briefing
+# =============================================================================
+
+def get_flash_briefing() -> dict:
+    """
+    Get a concise AI-generated market flash briefing.
+    
+    Returns:
+        Flash briefing with key highlights
+    """
+    response = requests.get(f"{BASE_URL}/api/ai/flash-briefing")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/ai/oracle - AI Market Oracle
+# =============================================================================
+
+def get_oracle(asset: str = "BTC") -> dict:
+    """
+    Get AI oracle prediction and analysis.
+    
+    Args:
+        asset: Asset to analyze
+    
+    Returns:
+        Oracle prediction with reasoning
+    """
+    response = requests.get(f"{BASE_URL}/api/ai/oracle", params={"asset": asset})
+    return response.json()
+
+
+# =============================================================================
+# POST /api/ai/counter - Counter Arguments
+# =============================================================================
+
+def get_counter_arguments(thesis: str) -> dict:
+    """
+    Get AI-generated counter arguments to a market thesis.
+    
+    Args:
+        thesis: Market thesis to challenge
+    
+    Returns:
+        Counter arguments
+    """
+    response = requests.post(
+        f"{BASE_URL}/api/ai/counter",
+        json={"thesis": thesis},
+        headers={"Content-Type": "application/json"}
+    )
+    return response.json()
+
+
+# =============================================================================
+# GET /api/ai/research - AI Research
+# =============================================================================
+
+def ai_research(topic: str) -> dict:
+    """
+    Get AI-powered research on a crypto topic.
+    
+    Args:
+        topic: Research topic
+    
+    Returns:
+        Research report
+    """
+    response = requests.get(f"{BASE_URL}/api/ai/research", params={"topic": topic})
+    return response.json()
+
+
+# =============================================================================
+# GET /api/ai/source-quality - Source Quality Analysis
+# =============================================================================
+
+def get_source_quality(source: Optional[str] = None) -> dict:
+    """
+    Get AI analysis of news source quality and reliability.
+    
+    Args:
+        source: Specific source to analyze
+    
+    Returns:
+        Source quality scores
+    """
+    params = {}
+    if source:
+        params["source"] = source
+    
+    response = requests.get(f"{BASE_URL}/api/ai/source-quality", params=params)
+    return response.json()
+
+
+# =============================================================================
+# GET /api/ai/correlation - AI Correlation Analysis
+# =============================================================================
+
+def ai_correlation(assets: Optional[str] = None) -> dict:
+    """
+    Get AI-powered correlation analysis between assets.
+    
+    Args:
+        assets: Comma-separated asset symbols
+    
+    Returns:
+        Correlation analysis
+    """
+    params = {}
+    if assets:
+        params["assets"] = assets
+    
+    response = requests.get(f"{BASE_URL}/api/ai/correlation", params=params)
+    return response.json()
+
+
+# =============================================================================
+# GET /api/ai/explain - AI Explanation
+# =============================================================================
+
+def ai_explain(topic: str) -> dict:
+    """
+    Get an AI explanation of a crypto concept.
+    
+    Args:
+        topic: Topic to explain
+    
+    Returns:
+        Clear explanation
+    """
+    response = requests.get(f"{BASE_URL}/api/ai/explain", params={"topic": topic})
+    return response.json()
+
+
+# =============================================================================
 # COMPLETE EXAMPLES
 # =============================================================================
 

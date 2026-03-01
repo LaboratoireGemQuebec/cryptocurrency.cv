@@ -449,8 +449,8 @@ export default function Header() {
 
       <header
         className={cn(
-          "sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur-sm transition-all duration-300",
-          scrolled && "shadow-sm",
+          "sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/80 backdrop-blur-xl backdrop-saturate-150 transition-all duration-300",
+          scrolled && "shadow-[var(--shadow-md)] border-[var(--color-border)]/60",
           !headerVisible && "-translate-y-full",
         )}
       >
@@ -464,11 +464,11 @@ export default function Header() {
             "font-bold tracking-tight transition-all duration-200",
             scrolled ? "text-lg" : "text-xl",
           )}>
-            <span className="text-[#f7931a] group-hover:text-[#e8850f] transition-colors">C</span>
+            <span className="text-[var(--color-accent)] group-hover:opacity-80 transition-opacity">C</span>
             <span>V</span>
           </span>
-          <span className="hidden sm:block text-xs font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-1">
-            Crypto Vision News
+          <span className="hidden sm:block text-[11px] font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-0.5 uppercase tracking-widest">
+            Crypto Vision
           </span>
         </Link>
 
@@ -514,14 +514,14 @@ export default function Header() {
 
               {/* Dropdown with animation */}
               {"children" in item && openDropdown === item.label && (
-                <div className="absolute top-full left-0 pt-1 z-50" role="menu">
-                  <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg py-1 min-w-[200px] animate-dropdown">
+                <div className="absolute top-full left-0 pt-1.5 z-50" role="menu">
+                  <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-[var(--shadow-dropdown)] py-1.5 min-w-[220px] animate-dropdown">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         role="menuitem"
-                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors rounded-md mx-1"
                       >
                         {child.label}
                       </Link>

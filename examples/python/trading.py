@@ -258,6 +258,148 @@ def get_trading_options(asset: str = "BTC",
 
 
 # =============================================================================
+# GET /api/funding/dashboard - Funding Dashboard
+# =============================================================================
+
+def get_funding_dashboard() -> dict:
+    """
+    Get funding rates dashboard across exchanges.
+    
+    Returns:
+        Funding dashboard data
+    """
+    response = requests.get(f"{BASE_URL}/api/funding/dashboard")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/funding/history/[symbol] - Funding Rate History
+# =============================================================================
+
+def get_funding_history(symbol: str, period: str = "7d") -> dict:
+    """
+    Get historical funding rates for a symbol.
+    
+    Args:
+        symbol: Trading pair (e.g., 'BTCUSDT')
+        period: Time period (1d, 7d, 30d)
+    
+    Returns:
+        Historical funding rate data
+    """
+    response = requests.get(
+        f"{BASE_URL}/api/funding/history/{symbol}", 
+        params={"period": period}
+    )
+    return response.json()
+
+
+# =============================================================================
+# GET /api/derivatives/opportunities - Trading Opportunities
+# =============================================================================
+
+def get_derivatives_opportunities() -> dict:
+    """
+    Get derivatives trading opportunities (basis trades, funding arb).
+    
+    Returns:
+        Derivatives opportunities
+    """
+    response = requests.get(f"{BASE_URL}/api/derivatives/opportunities")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/derivatives/aggregated/funding - Aggregated Funding
+# =============================================================================
+
+def get_aggregated_funding() -> dict:
+    """
+    Get aggregated funding rates across exchanges.
+    
+    Returns:
+        Aggregated funding rate data
+    """
+    response = requests.get(f"{BASE_URL}/api/derivatives/aggregated/funding")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/derivatives/aggregated/open-interest - Aggregated OI
+# =============================================================================
+
+def get_aggregated_open_interest() -> dict:
+    """
+    Get aggregated open interest across exchanges.
+    
+    Returns:
+        Aggregated open interest data
+    """
+    response = requests.get(f"{BASE_URL}/api/derivatives/aggregated/open-interest")
+    return response.json()
+
+
+# =============================================================================
+# GET /api/whale-alerts/context - Whale Alerts with Context
+# =============================================================================
+
+def get_whale_alerts_context(min_value: int = 5000000) -> dict:
+    """
+    Get whale alerts with market context and analysis.
+    
+    Args:
+        min_value: Minimum transaction value in USD
+    
+    Returns:
+        Whale alerts with context
+    """
+    response = requests.get(
+        f"{BASE_URL}/api/whale-alerts/context", 
+        params={"min_value": min_value}
+    )
+    return response.json()
+
+
+# =============================================================================
+# GET /api/backtest - Strategy Backtesting
+# =============================================================================
+
+def backtest(strategy: str, asset: str = "BTC", 
+             period: str = "90d") -> dict:
+    """
+    Backtest a trading strategy.
+    
+    Args:
+        strategy: Strategy name or parameters
+        asset: Asset to backtest
+        period: Backtest period
+    
+    Returns:
+        Backtest results (returns, drawdown, Sharpe, etc.)
+    """
+    response = requests.get(
+        f"{BASE_URL}/api/backtest",
+        params={"strategy": strategy, "asset": asset, "period": period}
+    )
+    return response.json()
+
+
+# =============================================================================
+# GET /api/signals/narrative - Narrative Signals
+# =============================================================================
+
+def get_narrative_signals() -> dict:
+    """
+    Get trading signals based on market narratives.
+    
+    Returns:
+        Narrative-driven trading signals
+    """
+    response = requests.get(f"{BASE_URL}/api/signals/narrative")
+    return response.json()
+
+
+# =============================================================================
 # COMPLETE EXAMPLES
 # =============================================================================
 

@@ -7,6 +7,10 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import AdvancedChart from "@/components/AdvancedChart";
 import ChartAnalysis from "@/components/ChartAnalysis";
 import OrderBook from "@/components/OrderBook";
+import TradingViewChart from "@/components/TradingViewChart";
+import TradingViewTicker from "@/components/TradingViewTicker";
+import TradingViewHeatmap from "@/components/TradingViewHeatmap";
+import TradingViewMiniChart from "@/components/TradingViewMiniChart";
 import {
   BarChart3,
   Signal,
@@ -16,6 +20,7 @@ import {
   Minus,
   AlertTriangle,
   Zap,
+  Grid3x3,
 } from "lucide-react";
 
 // ---------- Types ------------------------------------------------------------
@@ -80,6 +85,7 @@ function riskBadgeColor(risk: string): string {
 
 export default function TradingPageClient() {
   const [coinId, setCoinId] = useState("bitcoin");
+  const [chartMode, setChartMode] = useState<"tradingview" | "lightweight">("tradingview");
   const [signals, setSignals] = useState<TradingSignal[]>([]);
   const [signalsLoading, setSignalsLoading] = useState(true);
   const [signalsError, setSignalsError] = useState<string | null>(null);
@@ -127,15 +133,68 @@ export default function TradingPageClient() {
         </p>
       </div>
 
+      {/* TradingView Ticker Tape */}
+      <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+        <TradingViewTicker />
+      </div>
+
+      {/* Chart Mode Toggle */}
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-0.5 rounded-lg bg-[var(--color-surface-secondary)] p-1 border border-[var(--color-border)]">
+          <button
+            onClick={() => setChartMode("tradingview")}
+            className={cn(
+              "rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
+              chartMode === "tradingview"
+                ? "bg-[var(--color-accent)] text-white shadow-sm"
+                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+            )}
+          >
+            TradingView
+          </button>
+          <button
+            onClick={() => setChartMode("lightweight")}
+            className={cn(
+              "rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
+              chartMode === "lightweight"
+                ? "bg-[var(--color-accent)] text-white shadow-sm"
+                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+            )}
+          >
+            Lightweight Chart
+          </button>
+        </div>
+        <span className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">
+          Chart Engine
+        </span>
+      </div>
+
       {/* Main layout: Chart + Order Book sidebar */}
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         {/* Left: Chart + Analysis */}
         <div className="space-y-6 min-w-0">
-          {/* Advanced Chart */}
-          <AdvancedChart
-            initialCoinId={coinId}
-            onCoinChange={(id) => setCoinId(id)}
-          />
+          {/* Chart — TradingView or Lightweight */}
+          {chartMode === "tradingview" ? (
+            <TradingViewChart
+              initialSymbol={
+                coinId === "bitcoin" ? "BINANCE:BTCUSDT" :
+                coinId === "ethereum" ? "BINANCE:ETHUSDT" :
+                coinId === "solana" ? "BINANCE:SOLUSDT" :
+                coinId === "ripple" ? "BINANCE:XRPUSDT" :
+                coinId === "cardano" ? "BINANCE:ADAUSDT" :
+                coinId === "dogecoin" ? "BINANCE:DOGEUSDT" :
+                coinId === "avalanche-2" ? "BINANCE:AVAXUSDT" :
+                coinId === "binancecoin" ? "BINANCE:BNBUSDT" :
+                "BINANCE:BTCUSDT"
+              }
+              height={560}
+            />
+          ) : (
+            <AdvancedChart
+              initialCoinId={coinId}
+              onCoinChange={(id) => setCoinId(id)}
+            />
+          )}
 
           {/* AI Chart Analysis */}
           <section>
@@ -158,6 +217,33 @@ export default function TradingPageClient() {
       <div className="lg:hidden">
         <OrderBook coinId={orderBookSymbol} maxLevels={10} />
       </div>
+
+      {/* TradingView Mini Charts Grid */}
+      <section>
+        <div className="flex items-center gap-3 mb-4">
+          <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)]">
+            Quick Charts
+          </h2>
+          <Grid3x3 className="h-5 w-5 text-[var(--color-accent)]" />
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <TradingViewMiniChart symbol="BINANCE:BTCUSDT" height={200} dateRange="1M" />
+          <TradingViewMiniChart symbol="BINANCE:ETHUSDT" height={200} dateRange="1M" />
+          <TradingViewMiniChart symbol="BINANCE:SOLUSDT" height={200} dateRange="1M" />
+          <TradingViewMiniChart symbol="BINANCE:XRPUSDT" height={200} dateRange="1M" />
+        </div>
+      </section>
+
+      {/* TradingView Crypto Heatmap */}
+      <section>
+        <div className="flex items-center gap-3 mb-4">
+          <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)]">
+            Crypto Heatmap
+          </h2>
+          <BarChart3 className="h-5 w-5 text-[var(--color-accent)]" />
+        </div>
+        <TradingViewHeatmap height={500} />
+      </section>
 
       {/* Trading Signals Feed */}
       <section>

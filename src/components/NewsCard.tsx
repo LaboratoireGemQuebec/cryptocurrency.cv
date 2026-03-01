@@ -22,12 +22,12 @@ function ArticleImage({
 }) {
   if (!src) return null;
   return (
-    <div className={cn("overflow-hidden rounded-md bg-[var(--color-surface-tertiary)]", className)}>
+    <div className={cn("overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]", className)}>
       <img
         src={src}
         alt={alt}
         loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
       />
     </div>
   );
