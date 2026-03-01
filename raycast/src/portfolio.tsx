@@ -52,7 +52,7 @@ function AddHoldingForm(props: { onAdd: (h: Holding) => void }) {
         <ActionPanel>
           <Action.SubmitForm
             title="Add Holding"
-            onSubmit={(values) => {
+            onSubmit={(values: Form.Values) => {
               const symbol = (values.symbol as string).trim().toLowerCase();
               const amount = parseFloat(values.amount as string);
               if (!symbol || isNaN(amount) || amount <= 0) {
