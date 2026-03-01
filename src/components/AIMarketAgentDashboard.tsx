@@ -620,7 +620,7 @@ export function AIMarketAgentDashboard() {
       {activeTab === 'chat' && (
         <div className="bg-white dark:bg-black border border-gray-200 dark:border-neutral-800 rounded-xl overflow-hidden">
           {/* Chat Header */}
-          <div className="border-b border-gray-200 dark:border-neutral-800 p-4 bg-gray-50 dark:bg-slate-750">
+          <div className="border-b border-gray-200 dark:border-neutral-800 p-4 bg-gray-50 dark:bg-black">
             <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
               <span>💬</span> Ask the AI Agent
             </h3>

@@ -787,7 +787,7 @@ export async function getAaveMultichain(): Promise<
   );
 
   return results
-    .filter((r): r is PromiseFulfilledResult<{ chain: string; tvl: number; marketCount: number; topRates: Array<{ symbol: string; supplyAPY: number; borrowAPY: number }> }> =>
+    .filter((r): r is PromiseFulfilledResult<{ chain: keyof typeof SUBGRAPHS.aaveV3; tvl: number; marketCount: number; topRates: Array<{ symbol: string; supplyAPY: number; borrowAPY: number }> }> =>
       r.status === 'fulfilled'
     )
     .map(r => r.value);

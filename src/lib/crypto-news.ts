@@ -3839,6 +3839,16 @@ export async function getLatestNews(
     sourceKeys = [source as SourceKey];
     // Don't mix in API sources when filtering by a specific RSS source
     includeApiSources = false;
+  } else if (source) {
+    // Source was provided but not found in RSS_SOURCES — return empty instead
+    // of falling through to fetch ALL 350+ sources (which causes 429 storms
+    // on medium.com, mirror.xyz, etc.)
+    return {
+      articles: [],
+      totalCount: 0,
+      sources: [],
+      fetchedAt: new Date().toISOString(),
+    } as NewsResponse;
   } else if (options?.category) {
     // Filter sources by category
     sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(
