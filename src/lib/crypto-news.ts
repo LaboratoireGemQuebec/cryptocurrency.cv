@@ -4059,6 +4059,20 @@ export async function getNewsByCategory(
 }
 
 export async function getSources(): Promise<{ sources: SourceInfo[] }> {
+  // During production build, return sources without status checks to prevent
+  // 60-second page timeout (200+ HEAD requests overwhelm build workers).
+  if (process.env.NEXT_PHASE === 'phase-production-build') {
+    return {
+      sources: (Object.keys(RSS_SOURCES) as SourceKey[]).map(key => ({
+        key,
+        name: RSS_SOURCES[key].name,
+        url: RSS_SOURCES[key].url,
+        category: RSS_SOURCES[key].category,
+        status: 'active' as const,
+      })),
+    };
+  }
+
   return withCache(newsCache, 'sources-list', 300, async () => {
     const SOURCES_TIMEOUT_MS = 15_000;
     const PER_REQUEST_TIMEOUT_MS = 3_000;
