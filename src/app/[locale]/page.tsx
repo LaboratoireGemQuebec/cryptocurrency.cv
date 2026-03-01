@@ -34,8 +34,7 @@ import {
   OrganizationStructuredData,
   NewsListStructuredData,
 } from "@/components/StructuredData";
-import WhaleAlerts from "@/components/WhaleAlerts";
-import { LiquidationsFeed } from "@/components/LiquidationsFeed";
+
 import { MarketSignals } from "@/components/MarketSignals";
 import { TrendingNarratives } from "@/components/TrendingNarratives";
 import { WhaleActivityFeed } from "@/components/WhaleActivityFeed";
@@ -316,32 +315,7 @@ export default async function Home({ params }: Props) {
           />
         </section>
 
-        {/* 7. Live Market Activity: Whale Alerts + Liquidations */}
-        <section
-          className="px-4 sm:px-6 lg:px-8 mb-8"
-          aria-label="Real-time market activity"
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-8 bg-brand-500 rounded-full" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-              Live Market Activity
-            </h2>
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
-            </span>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-6">
-            <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-64 animate-pulse" />}>
-              <WhaleAlerts />
-            </Suspense>
-            <Suspense fallback={<div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 h-64 animate-pulse" />}>
-              <LiquidationsFeed />
-            </Suspense>
-          </div>
-        </section>
-
-        {/* 8. Categories Navigation with scroll indicators */}
+        {/* 7. Categories Navigation with scroll indicators */}
         <nav className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="News categories">
           <ScrollIndicator showArrows={true} arrowSize="sm">
             <div className="flex gap-2 pb-2 min-w-max">
