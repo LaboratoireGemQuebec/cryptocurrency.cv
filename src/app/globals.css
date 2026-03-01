@@ -184,6 +184,18 @@ body {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
+/* Belt-and-suspenders: also override in @layer base for Tailwind v4 layer cascade */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    color: #ffffff !important;
+  }
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
 /* Neural mist — faint atmospheric glow at the top of the viewport */
 body::before {
   content: '';
