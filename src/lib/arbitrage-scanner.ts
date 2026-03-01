@@ -165,7 +165,10 @@ async function fetchBinancePrices(): Promise<ExchangePrice[]> {
 
   try {
     const response = await fetch(`${EXTERNAL_APIS.BINANCE}/ticker/bookTicker`);
-    if (!response.ok) throw new Error(`Binance API error: ${response.status}`);
+    if (!response.ok) {
+      console.warn(`Binance price API returned ${response.status} (likely geo-restricted from this region)`);
+      return cache.get<ExchangePrice[]>('arb:binance:stale') ?? [];
+    }
     
     const data: Array<{
       symbol: string;
@@ -193,10 +196,11 @@ async function fetchBinancePrices(): Promise<ExchangePrice[]> {
       }));
 
     cache.set(cacheKey, prices, 5);
+    cache.set('arb:binance:stale', prices, 3600); // 1hr stale fallback
     return prices;
   } catch (error) {
-    console.error('Binance price fetch error:', error);
-    return [];
+    console.warn('Binance price fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<ExchangePrice[]>('arb:binance:stale') ?? [];
   }
 }
 
@@ -207,7 +211,10 @@ async function fetchBybitPrices(): Promise<ExchangePrice[]> {
 
   try {
     const response = await fetch(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=spot`);
-    if (!response.ok) throw new Error(`Bybit API error: ${response.status}`);
+    if (!response.ok) {
+      console.warn(`Bybit price API returned ${response.status} (likely geo-restricted from this region)`);
+      return cache.get<ExchangePrice[]>('arb:bybit:stale') ?? [];
+    }
     
     const result = await response.json();
     const data = result.result?.list || [];
@@ -238,10 +245,11 @@ async function fetchBybitPrices(): Promise<ExchangePrice[]> {
       }));
 
     cache.set(cacheKey, prices, 5);
+    cache.set('arb:bybit:stale', prices, 3600); // 1hr stale fallback
     return prices;
   } catch (error) {
-    console.error('Bybit price fetch error:', error);
-    return [];
+    console.warn('Bybit price fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<ExchangePrice[]>('arb:bybit:stale') ?? [];
   }
 }
 
@@ -252,7 +260,10 @@ async function fetchOKXPrices(): Promise<ExchangePrice[]> {
 
   try {
     const response = await fetch(`${EXTERNAL_APIS.OKX}/market/tickers?instType=SPOT`);
-    if (!response.ok) throw new Error(`OKX API error: ${response.status}`);
+    if (!response.ok) {
+      console.warn(`OKX price API returned ${response.status} (likely geo-restricted from this region)`);
+      return cache.get<ExchangePrice[]>('arb:okx:stale') ?? [];
+    }
     
     const result = await response.json();
     const data = result.data || [];
@@ -283,16 +294,20 @@ async function fetchOKXPrices(): Promise<ExchangePrice[]> {
       }));
 
     cache.set(cacheKey, prices, 5);
+    cache.set('arb:okx:stale', prices, 3600); // 1hr stale fallback
     return prices;
   } catch (error) {
-    console.error('OKX price fetch error:', error);
-    return [];
+    console.warn('OKX price fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<ExchangePrice[]>('arb:okx:stale') ?? [];
   }
 }
 
 async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
   const cacheKey = 'arb:kraken:prices';
-  const cached = cache.get<ExchangePrice[]>(cacheKey);
+  const cached = cache{
+      console.warn(`Kraken price API returned ${response.status}`);
+      return cache.get<ExchangePrice[]>('arb:kraken:stale') ?? [];
+    }
   if (cached) return cached;
 
   try {
@@ -331,10 +346,11 @@ async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
         bidSize: parseFloat(t.b[1]),
         askPrice: parseFloat(t.a[0]),
         askSize: parseFloat(t.a[1]),
-        lastPrice: parseFloat(t.c[0]),
-        volume24h: parseFloat(t.v[1]),
-        timestamp: now,
-      };
+    cache.set('arb:kraken:stale', prices, 3600);
+    return prices;
+  } catch (error) {
+    console.warn('Kraken price fetch failed:', error instanceof Error ? error.message : error);
+    return cache.get<ExchangePrice[]>('arb:kraken:stale') ??
     });
 
     cache.set(cacheKey, prices, 5);
@@ -345,7 +361,10 @@ async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
   }
 }
 
-async function fetchKucoinPrices(): Promise<ExchangePrice[]> {
+async function fetchKu{
+      console.warn(`KuCoin price API returned ${response.status}`);
+      return cache.get<ExchangePrice[]>('arb:kucoin:stale') ?? [];
+    }
   const cacheKey = 'arb:kucoin:prices';
   const cached = cache.get<ExchangePrice[]>(cacheKey);
   if (cached) return cached;
@@ -374,10 +393,11 @@ async function fetchKucoinPrices(): Promise<ExchangePrice[]> {
         bidPrice: parseFloat(t.buy),
         bidSize: 0,
         askPrice: parseFloat(t.sell),
-        askSize: 0,
-        lastPrice: parseFloat(t.last),
-        volume24h: parseFloat(t.vol),
-        timestamp: now,
+    cache.set('arb:kucoin:stale', prices, 3600);
+    return prices;
+  } catch (error) {
+    console.warn('KuCoin price fetch failed:', error instanceof Error ? error.message : error);
+    return cache.get<ExchangePrice[]>('arb:kucoin:stale') ??mestamp: now,
       }));
 
     cache.set(cacheKey, prices, 5);

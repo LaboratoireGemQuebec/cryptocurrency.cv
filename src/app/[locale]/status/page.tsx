@@ -74,6 +74,7 @@ async function getHealth(): Promise<HealthResponse | null> {
   try {
     const res = await fetch(`${SITE_URL}/api/health`, {
       cache: 'no-store',
+      signal: AbortSignal.timeout(5000), // 5s timeout to prevent SSR hangs
     });
     if (!res.ok) return null;
     return res.json();
@@ -86,6 +87,7 @@ async function getStats(): Promise<StatsResponse | null> {
   try {
     const res = await fetch(`${SITE_URL}/api/stats`, {
       cache: 'no-store',
+      signal: AbortSignal.timeout(5000), // 5s timeout to prevent SSR hangs
     });
     if (!res.ok) return null;
     return res.json();

@@ -158,7 +158,8 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
     ]);
 
     if (!premiumResponse.ok) {
-      throw new Error(`Binance API error: ${premiumResponse.status}`);
+      console.warn(`Binance funding API returned ${premiumResponse.status} (likely geo-restricted from this region)`);
+      return cache.get<FundingRateData[]>('funding:binance:stale') ?? [];
     }
 
     const premiumData: BinancePremiumIndex[] = await premiumResponse.json();
@@ -220,10 +221,11 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
       });
 
     cache.set(cacheKey, rates, CACHE_TTL.funding);
+    cache.set('funding:binance:stale', rates, 3600); // 1hr stale fallback
     return rates;
   } catch (error) {
-    console.error('Binance funding fetch error:', error);
-    return [];
+    console.warn('Binance funding fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<FundingRateData[]>('funding:binance:stale') ?? [];
   }
 }
 
@@ -253,7 +255,8 @@ async function fetchBybitFundingRates(): Promise<FundingRateData[]> {
     const response = await fetch(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=linear`);
     
     if (!response.ok) {
-      throw new Error(`Bybit API error: ${response.status}`);
+      console.warn(`Bybit funding API returned ${response.status} (likely geo-restricted from this region)`);
+      return cache.get<FundingRateData[]>('funding:bybit:stale') ?? [];
     }
 
     const result = await response.json();
@@ -285,10 +288,11 @@ async function fetchBybitFundingRates(): Promise<FundingRateData[]> {
       });
 
     cache.set(cacheKey, rates, CACHE_TTL.funding);
+    cache.set('funding:bybit:stale', rates, 3600); // 1hr stale fallback
     return rates;
   } catch (error) {
-    console.error('Bybit funding fetch error:', error);
-    return [];
+    console.warn('Bybit funding fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<FundingRateData[]>('funding:bybit:stale') ?? [];
   }
 }
 
@@ -327,7 +331,8 @@ async function fetchOKXFundingRates(): Promise<FundingRateData[]> {
     ]);
 
     if (!fundingResponse.ok) {
-      throw new Error(`OKX API error: ${fundingResponse.status}`);
+      console.warn(`OKX funding API returned ${fundingResponse.status} (likely geo-restricted from this region)`);
+      return cache.get<FundingRateData[]>('funding:okx:stale') ?? [];
     }
 
     const fundingResult = await fundingResponse.json();
@@ -368,10 +373,11 @@ async function fetchOKXFundingRates(): Promise<FundingRateData[]> {
       });
 
     cache.set(cacheKey, rates, CACHE_TTL.funding);
+    cache.set('funding:okx:stale', rates, 3600); // 1hr stale fallback
     return rates;
   } catch (error) {
-    console.error('OKX funding fetch error:', error);
-    return [];
+    console.warn('OKX funding fetch failed (geo-restriction or network issue):', error instanceof Error ? error.message : error);
+    return cache.get<FundingRateData[]>('funding:okx:stale') ?? [];
   }
 }
 
@@ -454,10 +460,11 @@ async function fetchHyperliquidFundingRates(): Promise<FundingRateData[]> {
     });
 
     cache.set(cacheKey, rates, CACHE_TTL.funding);
+    cache.set('funding:hyperliquid:stale', rates, 3600);
     return rates;
   } catch (error) {
-    console.error('Hyperliquid funding fetch error:', error);
-    return [];
+    console.warn('Hyperliquid funding fetch failed:', error instanceof Error ? error.message : error);
+    return cache.get<FundingRateData[]>('funding:hyperliquid:stale') ?? [];
   }
 }
 
