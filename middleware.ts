@@ -166,7 +166,7 @@ const API_CLIENT_RATE_LIMIT = { requests: 300, windowMs: 3_600_000 }; // program
 // Known bad bot patterns (Googlebot intentionally excluded for SEO)
 // Note: x402 clients should set a custom User-Agent (e.g. "x402-client/1.0")
 const BLOCKED_BOTS =
-  /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\//i;
+  /bot|crawler|spider|scraper|wget|curl|python-requests|aiohttp|go-http|java\/|alphahunter/i;
 const BOT_ALLOWLIST = [
   'Googlebot',
   'Bingbot',
@@ -179,6 +179,72 @@ const BOT_ALLOWLIST = [
 
 // SDK / programmatic client User-Agent patterns
 const SDK_UA_PATTERNS = /fcn-sdk|free-crypto-news|axios|node-fetch|undici|python-httpx|guzzle|x402-client/i;
+
+// ── Repeat-429 escalation ─────────────────────────────────────────────────
+// Track IPs that repeatedly get rate-limited (429).  After N 429s in a
+// rolling window the client is escalated to a hard 403 block for a longer
+// cooldown.  This defends against abusive scrapers that ignore Retry-After.
+const REPEAT_429_THRESHOLD = 10;           // 429 responses before escalation
+const REPEAT_429_WINDOW_MS = 600_000;      // 10-minute rolling window
+const REPEAT_429_BLOCK_MS  = 3_600_000;    // 1-hour hard block after escalation
+
+interface RateLimitOffender {
+  /** Timestamps of 429 responses inside the current window */
+  hits: number[];
+  /** If set, the IP is hard-blocked until this timestamp */
+  blockedUntil?: number;
+}
+
+const offenderMap = new Map<string, RateLimitOffender>();
+
+/** Prune stale entries every 5 minutes to avoid unbounded memory growth. */
+const OFFENDER_PRUNE_INTERVAL = 300_000;
+let lastOffenderPrune = Date.now();
+
+function pruneOffenders(now: number) {
+  if (now - lastOffenderPrune < OFFENDER_PRUNE_INTERVAL) return;
+  lastOffenderPrune = now;
+  for (const [ip, entry] of offenderMap) {
+    // Remove entries whose block has expired and have no recent hits
+    const recentHits = entry.hits.filter((t) => now - t < REPEAT_429_WINDOW_MS);
+    if (recentHits.length === 0 && (!entry.blockedUntil || entry.blockedUntil <= now)) {
+      offenderMap.delete(ip);
+    }
+  }
+}
+
+/** Record a 429 for an IP and return true if the client should be escalated to 403. */
+function record429(ip: string): boolean {
+  const now = Date.now();
+  pruneOffenders(now);
+  let entry = offenderMap.get(ip);
+  if (!entry) {
+    entry = { hits: [] };
+    offenderMap.set(ip, entry);
+  }
+  // Already hard-blocked?
+  if (entry.blockedUntil && entry.blockedUntil > now) return true;
+  // Slide the window
+  entry.hits = entry.hits.filter((t) => now - t < REPEAT_429_WINDOW_MS);
+  entry.hits.push(now);
+  if (entry.hits.length >= REPEAT_429_THRESHOLD) {
+    entry.blockedUntil = now + REPEAT_429_BLOCK_MS;
+    entry.hits = []; // reset hits once blocked
+    return true;
+  }
+  return false;
+}
+
+/** Check if an IP is currently hard-blocked from repeat 429 escalation. */
+function isRepeat429Blocked(ip: string): number | false {
+  const entry = offenderMap.get(ip);
+  if (!entry?.blockedUntil) return false;
+  const now = Date.now();
+  if (entry.blockedUntil > now) return entry.blockedUntil;
+  // Block expired — clean up
+  entry.blockedUntil = undefined;
+  return false;
+}
 
 /** Detect whether the caller is a programmatic API consumer vs a browser visitor */
 function isApiClient(request: NextRequest): boolean {
@@ -444,6 +510,23 @@ export default async function middleware(request: NextRequest) {
     );
   }
 
+  // Repeat-429 escalation — hard-block IPs that ignore rate limits
+  const clientIpForEscalation = getClientIp(request);
+  const blockedUntil = isRepeat429Blocked(clientIpForEscalation);
+  if (blockedUntil) {
+    const retryEsc = Math.ceil((blockedUntil - Date.now()) / 1000);
+    return NextResponse.json(
+      {
+        error: 'Forbidden',
+        code: 'REPEAT_RATE_LIMIT_ABUSE',
+        message: 'Too many rate-limited requests. You are temporarily blocked.',
+        retryAfter: retryEsc,
+        requestId,
+      },
+      { status: 403, headers: { ...headers, 'Retry-After': retryEsc.toString() } },
+    );
+  }
+
   // Admin auth
   if (pathname.startsWith('/api/admin') || pathname.startsWith('/admin')) {
     const token = request.headers.get('Authorization')?.replace('Bearer ', '');
@@ -567,6 +650,19 @@ export default async function middleware(request: NextRequest) {
 
       if (!rl.allowed) {
         const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
+        // Escalate to 403 if this IP keeps ignoring 429s
+        if (record429(clientIpForEscalation)) {
+          return NextResponse.json(
+            {
+              error: 'Forbidden',
+              code: 'REPEAT_RATE_LIMIT_ABUSE',
+              message: 'Too many rate-limited requests. You are temporarily blocked.',
+              retryAfter: Math.ceil(REPEAT_429_BLOCK_MS / 1000),
+              requestId,
+            },
+            { status: 403, headers: { ...headers, 'Retry-After': Math.ceil(REPEAT_429_BLOCK_MS / 1000).toString() } },
+          );
+        }
         return NextResponse.json(
           {
             error: 'Rate Limit Exceeded',
@@ -620,6 +716,19 @@ export default async function middleware(request: NextRequest) {
 
       if (!rl.allowed) {
         const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
+        // Escalate to 403 if this IP keeps ignoring 429s
+        if (record429(clientIpForEscalation)) {
+          return NextResponse.json(
+            {
+              error: 'Forbidden',
+              code: 'REPEAT_RATE_LIMIT_ABUSE',
+              message: 'Too many rate-limited requests. You are temporarily blocked.',
+              retryAfter: Math.ceil(REPEAT_429_BLOCK_MS / 1000),
+              requestId,
+            },
+            { status: 403, headers: { ...headers, 'Retry-After': Math.ceil(REPEAT_429_BLOCK_MS / 1000).toString() } },
+          );
+        }
         return NextResponse.json(
           { error: 'Rate Limit Exceeded', code: 'RATE_LIMIT_EXCEEDED', retryAfter: retry, tier, requestId },
           { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
