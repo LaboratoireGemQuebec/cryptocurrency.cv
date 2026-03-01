@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getBridgeVolumes, getBridgeHistory } from '@/lib/apis/bridges';
 
 export const runtime = 'edge';

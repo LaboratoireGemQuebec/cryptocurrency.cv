@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getTopFundingOpportunities } from '@/lib/derivatives';
 
 export const runtime = 'edge';

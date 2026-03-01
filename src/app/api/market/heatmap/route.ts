@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getTopCoins } from '@/lib/market-data';
 
 export const runtime = 'edge';

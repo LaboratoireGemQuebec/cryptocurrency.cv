@@ -290,7 +290,7 @@ export function getRequestIdentifier(request: NextRequest): string {
   const apiKey = request.headers.get('x-api-key') || 
                  request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   
-  if (apiKey && apiKey.startsWith('cda_')) {
+  if (apiKey?.startsWith('cda_')) {
     return `key:${apiKey}`;
   }
 

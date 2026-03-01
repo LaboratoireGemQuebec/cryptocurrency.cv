@@ -7,7 +7,7 @@
  * GET /api/data-sources/onchain/whales?minEth=100 — whale transactions
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   getOnChainDashboard,
   getMultiChainGas,

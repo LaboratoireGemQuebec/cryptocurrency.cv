@@ -290,7 +290,7 @@ function connect() {
  * Resubscribe to all active symbols after reconnection
  */
 function resubscribeAll() {
-  if (!sharedWs || sharedWs.readyState !== WebSocket.OPEN) return;
+  if (sharedWs?.readyState !== WebSocket.OPEN) return;
   
   const symbols = Array.from(subscribers.keys())
     .map(coinId => coinIdToSymbol(coinId))

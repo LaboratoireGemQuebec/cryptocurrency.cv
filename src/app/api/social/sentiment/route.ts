@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getMarketSentiment } from '@/lib/apis/lunarcrush';
 
 export const runtime = 'edge';

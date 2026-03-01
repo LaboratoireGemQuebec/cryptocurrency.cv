@@ -5,7 +5,7 @@
  * chain distribution, price, and supply changes.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { stablecoinFlowsChain } from '@/lib/providers/adapters/stablecoin-flows';
 
 export const revalidate = 300;

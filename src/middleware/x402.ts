@@ -7,7 +7,7 @@
  * @module middleware/x402
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 

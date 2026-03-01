@@ -18,7 +18,7 @@ export async function GET() {
     { revalidate: 120 }
   );
 
-  if (!json || !json.data) {
+  if (!json?.data) {
     return NextResponse.json(
       { error: 'Failed to fetch global market data' },
       { status: 502 }

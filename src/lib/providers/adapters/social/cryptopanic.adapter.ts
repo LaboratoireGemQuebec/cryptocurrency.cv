@@ -112,7 +112,9 @@ export const cryptoPanicAdapter: DataProvider<SocialMetric[]> = {
           name: c.name,
           socialScore: Math.min(100, Math.round(c.mentions * 10 + c.total)),
           socialVolume: c.mentions,
-          socialDominance: 0, // Would need global count
+          socialDominance: totalMentions > 0
+            ? Math.round((c.mentions / totalMentions) * 10000) / 100
+            : 0,
           sentiment: Math.round(sentiment * 1000) / 1000,
           twitterMentions: c.mentions, // Approximation from news mentions
           source: 'cryptopanic',

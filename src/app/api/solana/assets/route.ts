@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getDASAssets, getDASAssetById } from '@/lib/apis/helius';
 
 export const runtime = 'edge';

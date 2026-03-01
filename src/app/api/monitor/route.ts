@@ -11,7 +11,7 @@
  * and generating alerts/reports without human prompting.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getMarketMonitor, type IntelligenceReport } from '@/lib/ai-market-monitor';
 
 export const runtime = 'edge';

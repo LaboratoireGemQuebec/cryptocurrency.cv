@@ -10,7 +10,7 @@
  * Cache: public, 1 h at the edge (s-maxage=3600) + 1 h at clients.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { readFile, readdir, stat } from 'fs/promises';
 import { join } from 'path';
 

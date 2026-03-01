@@ -8,7 +8,7 @@
  * POST /api/nostr - Publish news to Nostr
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import { schnorr } from '@noble/curves/secp256k1';
 import { bytesToHex } from '@noble/curves/abstract/utils';
@@ -76,7 +76,7 @@ function computeEventId(event: Omit<NostrEvent, 'id' | 'sig'>): string {
  */
 function getNostrKeypair(): { pubkey: string; privkey: string } | null {
   const privkey = process.env.NOSTR_PRIVATE_KEY;
-  if (!privkey || privkey.length !== 64) return null;
+  if (privkey?.length !== 64) return null;
   try {
     const pubkeyBytes = schnorr.getPublicKey(privkey);
     return { pubkey: bytesToHex(pubkeyBytes), privkey };

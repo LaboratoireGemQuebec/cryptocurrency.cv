@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getOwnedObjects, getObject, getMultiObjects } from '@/lib/apis/sui';
 
 export const runtime = 'edge';

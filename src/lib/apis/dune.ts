@@ -143,10 +143,10 @@ export async function executeQuery<T = DuneTableRow>(
     await new Promise((r) => setTimeout(r, pollInterval));
 
     const result = await getExecutionResult<T>(exec.execution_id);
-    if (result && result.state === 'QUERY_STATE_COMPLETED') {
+    if (result?.state === 'QUERY_STATE_COMPLETED') {
       return result;
     }
-    if (result && result.state === 'QUERY_STATE_FAILED') {
+    if (result?.state === 'QUERY_STATE_FAILED') {
       console.error(`Dune query ${queryId} failed`);
       return null;
     }

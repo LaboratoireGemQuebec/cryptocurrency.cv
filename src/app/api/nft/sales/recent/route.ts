@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getRecentSales } from '@/lib/apis/nft-markets';
 
 export const runtime = 'edge';

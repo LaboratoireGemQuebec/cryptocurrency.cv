@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { aiStream } from '@/lib/ai-provider';
 
 export const runtime = 'edge';

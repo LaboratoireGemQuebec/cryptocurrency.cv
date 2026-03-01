@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
-import { isKvConfigured, ApiKeyData, API_KEY_TIERS } from '@/lib/api-keys';
+import { isKvConfigured, type ApiKeyData, API_KEY_TIERS } from '@/lib/api-keys';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute cache
@@ -121,7 +121,7 @@ async function getKeyDataByPrefix(prefix: string): Promise<ApiKeyData | null> {
     const keys = await kv.keys(`apikey:*`);
     for (const key of keys) {
       const data = await kv.get<ApiKeyData>(key);
-      if (data && data.keyPrefix === prefix) {
+      if (data?.keyPrefix === prefix) {
         return data;
       }
     }
@@ -197,7 +197,7 @@ async function getUsageAnalytics(
   }
   
   // Get error counts
-  let errors = { total: 0, byStatus: {} as Record<number, number> };
+  const errors = { total: 0, byStatus: {} as Record<number, number> };
   try {
     const errorData = await kv.hgetall<Record<string, number>>(`errors:${keyId}`);
     if (errorData) {

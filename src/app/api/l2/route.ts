@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getL2Summary } from '@/lib/apis/l2beat';
 
 export const runtime = 'edge';

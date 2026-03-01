@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { registry } from '@/lib/providers/registry';
 import type { OnChainMetric } from '@/lib/providers/adapters/on-chain';
 import { ApiError } from '@/lib/api-error';

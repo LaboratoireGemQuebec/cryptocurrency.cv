@@ -179,7 +179,7 @@ async function fetchOKXFunding(): Promise<FundingRate[]> {
       
       if (response.ok) {
         const data = await response.json();
-        if (data.data && data.data[0]) {
+        if (data.data?.[0]) {
           const item = data.data[0];
           rates.push({
             exchange: 'okx',

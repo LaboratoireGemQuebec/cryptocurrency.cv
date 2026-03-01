@@ -62,7 +62,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
           (c.symbol as string)?.toUpperCase()?.includes(coinSymbol.toUpperCase())
       );
 
-      if (matched && matched.exchanges) {
+      if (matched?.exchanges) {
         coinRates = (matched.exchanges as Record<string, unknown>[]).map((e) => ({
           exchange: (e.exchange as string) || 'Unknown',
           rate: Number(e.fundingRate || e.rate || 0),

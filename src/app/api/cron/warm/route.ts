@@ -10,7 +10,7 @@
  * The route is in EXEMPT_PATTERNS so it bypasses rate limiting and x402.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 

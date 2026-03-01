@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getDeFiPositions } from '@/lib/apis/shyft';
 
 export const runtime = 'edge';

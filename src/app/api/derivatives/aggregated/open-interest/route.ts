@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getAggregatedOpenInterest } from '@/lib/derivatives';
 
 export const runtime = 'edge';

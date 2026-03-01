@@ -9,7 +9,7 @@
  * @module hooks/useApiKey
  */
 
-import { useState, useEffect, useCallback, createContext, useContext, ReactNode } from 'react';
+import { useState, useEffect, useCallback, createContext, useContext, type ReactNode } from 'react';
 
 // ============================================================================
 // Types
@@ -168,7 +168,7 @@ export function ApiKeyProvider({ children }: ApiKeyProviderProps) {
 
   // Set API key and persist to localStorage
   const setApiKey = useCallback((key: string) => {
-    if (!key || !key.startsWith('cda_')) {
+    if (!key?.startsWith('cda_')) {
       setError('Invalid API key format (must start with cda_)');
       return;
     }

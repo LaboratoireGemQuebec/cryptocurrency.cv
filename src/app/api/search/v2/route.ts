@@ -7,7 +7,7 @@
  * @route GET /api/search/v2?q=bitcoin&limit=20&offset=0&ticker=BTC&source=coindesk&facets=true
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getSearchEngine } from '@/lib/search-engine';
 import type { SearchQuery } from '@/lib/search-engine';
 

@@ -10,7 +10,7 @@
  *  - Auto-disconnect after MAX_CONNECTION_DURATION
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
 
 export const runtime = 'edge';

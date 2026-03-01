@@ -7,7 +7,7 @@
  * - Sends a test payload to the specified webhook
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { validateApiKey } from '@/lib/api-keys';
 import { testWebhook, getWebhookById, verifySignature } from '@/lib/webhooks';
 
@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
     // Verify the webhook exists and belongs to this key
     const webhook = await getWebhookById(webhookId);
 
-    if (!webhook || webhook.keyId !== auth.keyId) {
+    if (webhook?.keyId !== auth.keyId) {
       return NextResponse.json(
         { error: 'Not found', message: 'Webhook not found or access denied' },
         { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } }

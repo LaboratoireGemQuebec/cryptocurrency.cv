@@ -7,7 +7,7 @@
  * Returns a 1200×630 PNG image suitable for Open Graph / Twitter Cards.
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';

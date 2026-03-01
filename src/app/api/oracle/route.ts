@@ -25,7 +25,7 @@
  * ```
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { 
   queryOracle, 
   getOracleStats, 
@@ -226,7 +226,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     let isAuthenticated = false;
     let userId = validation.data.userId;
 
-    if (apiKey && apiKey.startsWith('cda_')) {
+    if (apiKey?.startsWith('cda_')) {
       // Valid API key format - consider authenticated
       isAuthenticated = true;
       userId = userId || `api_${apiKey.substring(0, 12)}`;

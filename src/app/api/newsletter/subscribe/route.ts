@@ -7,7 +7,7 @@
  * @module api/newsletter/subscribe
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { logger } from '@/lib/logger';
 
 export const runtime = 'edge';

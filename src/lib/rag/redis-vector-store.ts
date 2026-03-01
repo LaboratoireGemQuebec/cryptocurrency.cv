@@ -226,7 +226,7 @@ export class RedisVectorStore {
 
     try {
       const data = await client.hGetAll(`${DOCS_KEY}:${id}`);
-      if (!data || !data.id) return null;
+      if (!data?.id) return null;
 
       const embedding = await client.get(`${EMBEDDINGS_KEY}:${id}`);
 

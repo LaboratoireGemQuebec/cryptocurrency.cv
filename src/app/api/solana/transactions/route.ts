@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getTransactionHistory } from '@/lib/apis/helius';
 import { getParsedTransactions } from '@/lib/apis/shyft';
 

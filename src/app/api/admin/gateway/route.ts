@@ -7,7 +7,7 @@
  * @route GET  /api/admin/gateway — List keys / get usage stats
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   createApiKey,
   getUsageStats,

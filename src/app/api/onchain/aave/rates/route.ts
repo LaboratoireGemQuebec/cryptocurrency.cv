@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getAaveLendingRates } from '@/lib/apis/thegraph';
 
 export const runtime = 'edge';

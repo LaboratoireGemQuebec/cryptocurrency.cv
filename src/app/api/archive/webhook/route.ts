@@ -26,7 +26,7 @@
  *   -H "Authorization: Bearer YOUR_CRON_SECRET"
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { notifyIndexNow } from '@/lib/indexnow';
 import { callGroq, isGroqConfigured } from '@/lib/groq';
@@ -63,8 +63,26 @@ interface ArchiveArticle {
 }
 
 /**
+ * Constant-time string comparison to prevent timing attacks.
+ */
+function secureCompare(a: string, b: string): boolean {
+  const encoder = new TextEncoder();
+  const bufA = encoder.encode(a);
+  const bufB = encoder.encode(b);
+  const maxLen = Math.max(bufA.byteLength, bufB.byteLength);
+  if (maxLen === 0) return false;
+  let result = bufA.byteLength ^ bufB.byteLength;
+  for (let i = 0; i < maxLen; i++) {
+    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
+  }
+  return result === 0;
+}
+
+/**
  * Verify webhook authorization
  * If CRON_SECRET is not set, endpoint is PUBLIC (zero-config mode)
+ * Uses constant-time comparison to prevent timing attacks.
+ * Query-param auth removed — secrets must be sent via Authorization header only.
  */
 function verifyAuth(request: NextRequest): boolean {
   const cronSecret = process.env.CRON_SECRET;
@@ -75,14 +93,8 @@ function verifyAuth(request: NextRequest): boolean {
   }
 
   const authHeader = request.headers.get('Authorization');
-  if (authHeader === `Bearer ${cronSecret}`) {
-    return true;
-  }
-
-  // Also check query param for convenience
-  const querySecret = request.nextUrl.searchParams.get('secret');
-  if (querySecret === cronSecret) {
-    return true;
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    return secureCompare(authHeader.slice(7), cronSecret);
   }
 
   return false;

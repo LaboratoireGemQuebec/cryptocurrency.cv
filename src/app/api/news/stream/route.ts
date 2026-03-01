@@ -9,7 +9,7 @@
  *   limit      — max articles per poll (default 5, max 20)
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
 
 export const dynamic = 'force-dynamic';

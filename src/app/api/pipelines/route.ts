@@ -5,7 +5,7 @@
  * @route POST /api/pipelines — Trigger a pipeline execution
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getPipelineExecutor, generateFreshnessReport } from '@/lib/pipeline';
 
 export const runtime = 'nodejs';

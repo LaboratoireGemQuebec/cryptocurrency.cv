@@ -4,7 +4,7 @@
  * @module lib/telemetry-middleware
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { withSpan, metrics, log } from '@/lib/telemetry';
 
 export interface InstrumentedOptions {

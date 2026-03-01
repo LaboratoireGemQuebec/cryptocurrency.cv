@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getNetworkSummary as getSuiSummary } from '@/lib/apis/sui';
 import { getNetworkSummary as getAptosSummary } from '@/lib/apis/aptos';
 import * as helius from '@/lib/apis/helius';

@@ -463,7 +463,7 @@ export async function recordTierUsage(tier: string): Promise<void> {
 // API ROUTE WRAPPER
 // =============================================================================
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 type RouteHandler = (request: NextRequest, context?: unknown) => Promise<NextResponse>;
 

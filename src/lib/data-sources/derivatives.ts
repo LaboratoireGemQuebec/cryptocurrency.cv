@@ -311,17 +311,32 @@ export async function getOKXPerps(instId?: string): Promise<PerpMarket[]> {
 
   const data = await okx.fetch<{ data: any[] }>('/market/tickers', params);
 
-  return (data.data || []).slice(0, 50).map((t: any) => ({
-    exchange: 'okx',
-    symbol: t.instId,
-    markPrice: parseFloat(t.last) || 0,
-    indexPrice: 0, // Would need separate API call
-    basis: 0,
-    basisPercentage: 0,
-    fundingRate: 0,
-    openInterest: parseFloat(t.openInterest) || 0,
-    volume24h: parseFloat(t.vol24h) || 0,
-  }));
+  // Also fetch index prices for basis calculation
+  const indexMap = new Map<string, number>();
+  try {
+    const indexRes = await okx.fetch<{ data: any[] }>('/market/index-tickers', { instType: 'SWAP' });
+    for (const idx of (indexRes.data || [])) {
+      indexMap.set(idx.instId, parseFloat(idx.idxPx) || 0);
+    }
+  } catch { /* index prices unavailable — will use 0 */ }
+
+  return (data.data || []).slice(0, 50).map((t: any) => {
+    const markPrice = parseFloat(t.last) || 0;
+    const indexPrice = indexMap.get(t.instId) || 0;
+    const basis = indexPrice > 0 ? markPrice - indexPrice : 0;
+    const basisPercentage = indexPrice > 0 ? (basis / indexPrice) * 100 : 0;
+    return {
+      exchange: 'okx',
+      symbol: t.instId,
+      markPrice,
+      indexPrice,
+      basis,
+      basisPercentage,
+      fundingRate: 0,
+      openInterest: parseFloat(t.openInterest) || 0,
+      volume24h: parseFloat(t.vol24h) || 0,
+    };
+  });
 }
 
 /**

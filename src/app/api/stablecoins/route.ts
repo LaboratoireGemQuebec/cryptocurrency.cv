@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getStablecoins } from '@/lib/apis/defillama';
 import { registry } from '@/lib/providers/registry';
 import type { StablecoinFlow } from '@/lib/providers/adapters/stablecoin-flows';

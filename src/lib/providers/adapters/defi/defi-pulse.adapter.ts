@@ -39,7 +39,7 @@ export const defiPulseAdapter: DataProvider<ProtocolTvl[]> = {
     const limit = params.limit ?? 50;
 
     const results: ProtocolTvl[] = projects
-      .filter(p => p.value && p.value.tvl)
+      .filter(p => p.value?.tvl)
       .sort((a, b) => (b.value?.tvl?.USD ?? 0) - (a.value?.tvl?.USD ?? 0))
       .slice(0, limit)
       .map((p) => ({

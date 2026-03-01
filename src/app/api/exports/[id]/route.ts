@@ -5,7 +5,7 @@
  * GET /api/exports/[id]/download - Download export result
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getExportJob, getExportResult, getMonthlyArchive } from '@/lib/exports';
 
 // =============================================================================
@@ -64,7 +64,7 @@ export async function GET(
       
       const result = getExportResult(id);
       
-      if (!result || !result.data) {
+      if (!result?.data) {
         return NextResponse.json(
           { success: false, error: 'Export data not available' },
           { status: 404 }

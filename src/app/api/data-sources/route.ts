@@ -5,7 +5,7 @@
  * GET /api/data-sources?category=defi — filter by category
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { listDataSources, listDataSourcesByCategory, healthCheckAll, type DataSourceCategory } from '@/lib/data-sources/index';
 
 export const runtime = 'edge';

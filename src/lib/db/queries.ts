@@ -6,7 +6,7 @@
  * continue to use the existing GitHub-raw / JSONL approach.
  */
 
-import { desc, eq, and, gte, lte, ilike, sql, or, inArray, SQL } from 'drizzle-orm';
+import { desc, eq, and, gte, lte, ilike, sql, or, inArray, type SQL } from 'drizzle-orm';
 import { getDb, articles, pricesHistory, marketSnapshots, predictions, tagScores } from './index';
 import type { EnrichedArticle, ArchiveV2Stats, ArchiveV2QueryOptions } from '../archive-v2';
 

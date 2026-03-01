@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getFundingHistory } from '@/lib/funding-rates';
 
 export const runtime = 'edge';

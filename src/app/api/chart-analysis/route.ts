@@ -9,7 +9,7 @@
  *   → Analyzes OHLC data from market data provider (no image upload needed)
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { analyzeChart, analyzeOHLCData } from '@/lib/ai-chart-analysis';
 import { getOHLC } from '@/lib/market-data';
 

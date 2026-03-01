@@ -9,7 +9,7 @@
  * Checks price and keyword alerts every ~15 seconds and streams triggered alerts.
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { checkPriceAlerts, checkKeywordAlerts } from '@/lib/alerts';
 
 export const dynamic = 'force-dynamic';

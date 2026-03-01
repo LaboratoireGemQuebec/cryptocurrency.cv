@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getAssets, normalizeAsset } from '@/lib/coincap';
 
 export const runtime = 'edge';

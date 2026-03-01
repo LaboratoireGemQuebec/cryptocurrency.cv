@@ -220,7 +220,7 @@ export async function getSimilarArticles(
   topK: number = 5
 ): Promise<SearchResult[]> {
   const article = await vectorStore.get(articleId);
-  if (!article || !article.embedding) {
+  if (!article?.embedding) {
     return [];
   }
   

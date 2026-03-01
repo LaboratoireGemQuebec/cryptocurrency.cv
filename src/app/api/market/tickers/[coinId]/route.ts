@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getCoinTickers, TickerData } from '@/lib/market-data';
+import { type NextRequest, NextResponse } from 'next/server';
+import { getCoinTickers, type TickerData } from '@/lib/market-data';
 
 export const runtime = 'edge';
 export const revalidate = 120;
@@ -23,7 +23,7 @@ interface RouteParams {
 export async function GET(
   request: NextRequest,
   { params }: RouteParams
-): Promise<NextResponse<TickerData | { error: string; message: string }>> {
+): Promise<NextResponse<TickerData | { error: string; message?: string }>> {
   const { coinId } = await params;
   const searchParams = request.nextUrl.searchParams;
   

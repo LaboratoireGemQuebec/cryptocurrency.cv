@@ -259,6 +259,26 @@ export async function detectWhaleTransactions(
   for (const tx of blockData.result.transactions) {
     const value = BigInt(tx.value || '0x0');
     if (value >= threshold) {
+      const toAddr = (tx.to || '').toLowerCase();
+      const fromAddr = tx.from.toLowerCase();
+      // Known exchange hot wallet prefixes / addresses
+      const KNOWN_EXCHANGES = [
+        '0x28c6c06298d514db089934071355e5743bf21d60', // Binance
+        '0x21a31ee1afc51d94c2efccaa2092ad1028285549', // Binance
+        '0xdfd5293d8e347dfe59e90efd55b2956a1343963d', // Binance
+        '0x56eddb7aa87536c09ccc2793473599fd21a8b17f', // Binance
+        '0x503828976d22510aad0201ac7ec88293211d23da', // Coinbase
+        '0xf977814e90da44bfa03b6295a0616a897441acec', // Binance
+        '0x6cc5f688a315f3dc28a7781717a9a798a59fda7b', // OKX
+        '0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be', // Binance
+        '0xd24400ae8bfebb18ca49be86258a3c749cf46853', // Gemini
+        '0xfdb16996831753d5331ff813c29a93c76834a0ad', // Kraken
+        '0x2910543af39aba0cd09dbb2d50200b3e800a63d2', // Kraken
+        '0x71660c4005ba85c37ccec55d0c4493e66fe775d3', // Coinbase
+      ];
+      const isToExchange = KNOWN_EXCHANGES.includes(toAddr);
+      const isFromExchange = KNOWN_EXCHANGES.includes(fromAddr);
+
       whales.push({
         hash: tx.hash,
         from: tx.from,
@@ -266,8 +286,8 @@ export async function detectWhaleTransactions(
         value: Number(value) / 1e18,
         chain: 'ethereum',
         timestamp: parseInt(blockData.result.timestamp, 16) * 1000,
-        isExchangeDeposit: false, // Would need address labeling service
-        isExchangeWithdrawal: false,
+        isExchangeDeposit: isToExchange,
+        isExchangeWithdrawal: isFromExchange,
       });
     }
   }

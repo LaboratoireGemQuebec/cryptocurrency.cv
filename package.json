@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src/",
+    "lint": "eslint --config eslint.config.mjs src/",
     "typecheck": "tsc --noEmit",
     "lint:a11y": "eslint src/components/*.tsx src/app/**/*.tsx",
     "lint:css": "stylelint src/**/*.css",

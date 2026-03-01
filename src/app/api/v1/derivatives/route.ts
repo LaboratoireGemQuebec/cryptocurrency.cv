@@ -14,7 +14,7 @@
  * @price $0.003 per request
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
@@ -179,17 +179,30 @@ async function fetchBinanceDerivatives(
         const d = await res.json();
         const oiAmount = parseFloat(d.openInterest);
         // Get current price for USD conversion
-        const priceRes = await fetch(
-          `https://fapi.binance.com/fapi/v1/ticker/price?symbol=${pair}`,
-        );
+        const [priceRes, oiHistRes] = await Promise.all([
+          fetch(`https://fapi.binance.com/fapi/v1/ticker/price?symbol=${pair}`),
+          fetch(`https://fapi.binance.com/futures/data/openInterestHist?symbol=${pair}&period=5m&limit=288`),
+        ]);
         const priceData = priceRes.ok ? await priceRes.json() : { price: '0' };
         const price = parseFloat(priceData.price);
+
+        // Calculate 24h OI change from historical data (288 x 5min = 24h)
+        let change24h = 0;
+        if (oiHistRes.ok) {
+          const oiHist = await oiHistRes.json();
+          if (Array.isArray(oiHist) && oiHist.length >= 2) {
+            const oldestOi = parseFloat(oiHist[0].sumOpenInterest || '0');
+            const newestOi = parseFloat(oiHist[oiHist.length - 1].sumOpenInterest || '0');
+            change24h = oldestOi > 0 ? ((newestOi - oldestOi) / oldestOi) * 100 : 0;
+          }
+        }
+
         openInterest.push({
           exchange: 'binance',
           symbol: pair,
           openInterest: oiAmount,
           openInterestUsd: oiAmount * price,
-          change24h: 0, // Would need historical for delta
+          change24h,
         });
         sources.push('binance-oi');
       }

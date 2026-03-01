@@ -25,8 +25,8 @@
  *   }
  */
 
-import { NextRequest, NextResponse } from 'next/server';
-import { semanticSearch, EmbeddingDocument } from '@/lib/ai-embeddings';
+import { type NextRequest, NextResponse } from 'next/server';
+import { semanticSearch, type EmbeddingDocument } from '@/lib/ai-embeddings';
 
 export const runtime = 'edge';
 

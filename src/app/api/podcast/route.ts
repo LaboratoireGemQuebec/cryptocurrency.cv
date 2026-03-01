@@ -15,7 +15,7 @@
  *   - With audio=false: JSON script
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   generatePodcastEpisode,
   generatePodcastScript,

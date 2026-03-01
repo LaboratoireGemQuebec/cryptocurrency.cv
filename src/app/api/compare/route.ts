@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { ApiError } from '@/lib/api-error';
 

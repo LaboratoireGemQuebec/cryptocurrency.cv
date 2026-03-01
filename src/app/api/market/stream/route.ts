@@ -6,7 +6,7 @@
  * total market cap, BTC dominance, fear & greed index, top 5 coin prices.
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getMarketOverview } from '@/lib/market-data';
 
 export const dynamic = 'force-dynamic';

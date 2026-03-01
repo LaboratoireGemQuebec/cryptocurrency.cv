@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import {
   ingestDataPoint,
   getAnomalyDashboard,
@@ -238,7 +238,7 @@ export async function POST(request: NextRequest) {
         };
       };
 
-      if (!rule || !rule.signal || !rule.minSeverity) {
+      if (!rule?.signal || !rule.minSeverity) {
         return errorResponse('rule with signal and minSeverity is required', undefined, 400);
       }
 

@@ -12,7 +12,7 @@
  * Requires admin authentication (ADMIN_API_KEY header or ?key= query param).
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getPipelineStatus } from '@/lib/data-pipeline';
 import { requireAdminAuth } from '@/lib/admin-auth';
 

@@ -15,7 +15,7 @@
  * @module api/premium/portfolio/analytics
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getHistoricalPrices, getCoinDetails } from '@/lib/market-data';
 
@@ -360,7 +360,24 @@ async function handler(
         }, [])
       ),
       valueAtRisk95: calculateVaR95(portfolioReturns, totalValue),
-      betaToMarket: 1.0, // Would need BTC/market data to calculate properly
+      betaToMarket: (() => {
+        // Calculate portfolio beta against BTC (market proxy)
+        const btcReturns = assetReturns.get('bitcoin');
+        if (!btcReturns || btcReturns.length < 5 || portfolioReturns.length < 5) return 1.0;
+        const minLen = Math.min(btcReturns.length, portfolioReturns.length);
+        const bSlice = btcReturns.slice(0, minLen);
+        const pSlice = portfolioReturns.slice(0, minLen);
+        const bMean = bSlice.reduce((s, v) => s + v, 0) / minLen;
+        const pMean = pSlice.reduce((s, v) => s + v, 0) / minLen;
+        let cov = 0, varB = 0;
+        for (let k = 0; k < minLen; k++) {
+          const bDev = bSlice[k] - bMean;
+          const pDev = pSlice[k] - pMean;
+          cov += bDev * pDev;
+          varB += bDev * bDev;
+        }
+        return varB > 0 ? Math.round((cov / varB) * 1000) / 1000 : 1.0;
+      })(),
       diversificationScore,
     };
 

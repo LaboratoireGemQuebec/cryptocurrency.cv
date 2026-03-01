@@ -176,12 +176,20 @@ function parseProtocolData(
       volume24h: parseFloat(factory.totalVolumeUSD || '0'),
       fees24h: parseFloat(factory.totalFeesUSD || '0'),
       users24h: parseInt(factory.txCount || '0', 10),
-      topPools: pools.map((p) => ({
-        name: `${(p.token0 as Record<string, string>)?.symbol}/${(p.token1 as Record<string, string>)?.symbol}`,
-        tvl: parseFloat((p.totalValueLockedUSD as string) || '0'),
-        volume24h: parseFloat((p.volumeUSD as string) || '0'),
-        apy: 0, // Would need fee/TVL calculation
-      })),
+      topPools: pools.map((p) => {
+        const poolTvl = parseFloat((p.totalValueLockedUSD as string) || '0');
+        const poolVolume = parseFloat((p.volumeUSD as string) || '0');
+        const feeTier = parseFloat((p.feeTier as string) || '3000') / 1e6; // Uniswap fee tiers in 1e-6
+        // APY ≈ (dailyFees / TVL) * 365 * 100
+        const dailyFees = poolVolume * feeTier;
+        const poolApy = poolTvl > 0 ? (dailyFees / poolTvl) * 365 * 100 : 0;
+        return {
+          name: `${(p.token0 as Record<string, string>)?.symbol}/${(p.token1 as Record<string, string>)?.symbol}`,
+          tvl: poolTvl,
+          volume24h: poolVolume,
+          apy: Math.round(poolApy * 100) / 100,
+        };
+      }),
       source: 'thegraph',
       timestamp,
     };

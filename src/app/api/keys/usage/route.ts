@@ -16,7 +16,7 @@
  * @module api/keys/usage
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   validateApiKey,
   extractApiKey,

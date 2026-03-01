@@ -615,7 +615,7 @@ export function approveProject(projectId: string): ResearchProject | null {
 
   // Upgrade PI to enhanced access
   const pi = researchers.get(project.principalInvestigator);
-  if (pi && pi.accessLevel === 'basic') {
+  if (pi?.accessLevel === 'basic') {
     pi.accessLevel = 'enhanced';
   }
 

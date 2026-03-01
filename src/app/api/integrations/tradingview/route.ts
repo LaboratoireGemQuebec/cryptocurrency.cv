@@ -4,7 +4,7 @@
  * Provides TradingView widgets, Pine Script generation, and technical analysis.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { 
   tradingView,
@@ -256,7 +256,7 @@ export async function POST(request: NextRequest) {
     if (action === 'save-indicator') {
       const { indicator } = body;
 
-      if (!indicator || !indicator.name || !indicator.code) {
+      if (!indicator?.name || !indicator.code) {
         return NextResponse.json(
           { error: 'Indicator with name and code is required' },
           { status: 400 }

@@ -1078,7 +1078,7 @@ export function extractTagsFromArticle(article: { title: string; description?: s
 // Get related tags for a given tag
 export function getRelatedTags(slug: string): Tag[] {
   const tag = TAGS[slug];
-  if (!tag || !tag.relatedTags) return [];
+  if (!tag?.relatedTags) return [];
   
   return tag.relatedTags
     .map(relatedSlug => TAGS[relatedSlug])

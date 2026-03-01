@@ -172,7 +172,7 @@ export async function cancelAlert(
   alertId: string
 ): Promise<boolean> {
   const alert = await getAlertById(alertId);
-  if (!alert || alert.userId !== userId) return false;
+  if (alert?.userId !== userId) return false;
   
   alert.status = 'cancelled';
   await saveAlert(alert);
@@ -231,7 +231,7 @@ export async function checkAlerts(
     
     for (const alertId of activeAlertIds) {
       const alert = await getAlertById(alertId);
-      if (!alert || alert.coinId !== coinId || alert.status !== 'active') continue;
+      if (alert?.coinId !== coinId || alert.status !== 'active') continue;
       
       const result = evaluateAlert(alert, currentPrice);
       results.push(result);

@@ -8,7 +8,7 @@
  * GET /api/data-sources/social?view=proposals&space=aave.eth — specific space proposals
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   getSocialDashboard,
   getFearGreedIndex,

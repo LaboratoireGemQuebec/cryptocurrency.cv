@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 

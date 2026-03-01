@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getPoolChart } from '@/lib/defi-yields';
 
 export const runtime = 'edge';

@@ -8,7 +8,7 @@
  * POST /api/archive/ipfs - Archive new content
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 
 interface ArchivedItem {

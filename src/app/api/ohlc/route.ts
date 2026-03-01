@@ -3,7 +3,7 @@
  * GET /api/ohlc?coinId=bitcoin&days=30
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getOHLC } from '@/lib/market-data';
 import { ApiError } from '@/lib/api-error';
 

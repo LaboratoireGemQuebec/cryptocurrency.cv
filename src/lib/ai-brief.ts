@@ -5,7 +5,7 @@
 
 import { aiCache, withCache } from './cache';
 import { aiComplete } from './ai-provider';
-import { getLatestNews, NewsArticle } from './crypto-news';
+import { getLatestNews, type NewsArticle } from './crypto-news';
 import { getFearGreedIndex, getGlobalMarketData, getSimplePrices } from './market-data';
 
 // Types

@@ -7,7 +7,7 @@
  * Query: ?limit=20
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { stablecoinFlowsChain } from '@/lib/providers/adapters/stablecoin-flows';
 
 export const revalidate = 300; // ISR 5 min

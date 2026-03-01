@@ -439,7 +439,25 @@ export function calculatePaperMetrics(nodeId: string): BibliometricMetrics | nul
     selfCitationRate,
     averageCitationsPerYear: node.citationCount / yearsPublished,
     citationVelocity,
-    fieldNormalizedCitationImpact: 1.0, // Would need field data
+    fieldNormalizedCitationImpact: (() => {
+      // Field-normalized citation impact: citation count / field average for same year
+      // Use fieldsOfStudy from metadata to find peers, else fall back to year average
+      const fields = node.metadata.fieldsOfStudy;
+      if (fields.length > 0) {
+        // Gather all nodes sharing at least one field of study
+        const peers = Array.from(nodes.values()).filter(n =>
+          n.nodeId !== nodeId &&
+          n.year === node.year &&
+          n.metadata.fieldsOfStudy.some(f => fields.includes(f))
+        );
+        if (peers.length > 0) {
+          const fieldAvg = peers.reduce((s, n) => s + n.citationCount, 0) / peers.length;
+          return fieldAvg > 0 ? Math.round((node.citationCount / fieldAvg) * 100) / 100 : 1.0;
+        }
+      }
+      const yearAvg = averageCitationsByYear(node.year);
+      return yearAvg > 0 ? Math.round((node.citationCount / yearAvg) * 100) / 100 : 1.0;
+    })(),
     relativeImpact: node.citationCount / (averageCitationsByYear(node.year) || 1),
     percentileRank,
   };

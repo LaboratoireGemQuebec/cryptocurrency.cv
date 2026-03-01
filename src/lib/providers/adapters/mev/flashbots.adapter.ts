@@ -60,10 +60,20 @@ export const flashbotsAdapter: DataProvider<MEVStats> = {
       .sort((a, b) => b.mevEth - a.mevEth)
       .slice(0, 10);
 
+    // Fetch ETH price for USD conversion
+    let ethPrice = 0;
+    try {
+      const ethRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', { signal: AbortSignal.timeout(5000) });
+      if (ethRes.ok) {
+        const ethData = await ethRes.json();
+        ethPrice = ethData?.ethereum?.usd ?? 0;
+      }
+    } catch { /* ETH price unavailable */ }
+
     return {
       period: '24h',
       totalMevEth,
-      totalMevUsd: 0, // Would need ETH price
+      totalMevUsd: Math.round(totalMevEth * ethPrice * 100) / 100,
       bundleCount: payloads.length,
       topBuilders,
       avgMevPerBlock: payloads.length > 0 ? totalMevEth / payloads.length : 0,

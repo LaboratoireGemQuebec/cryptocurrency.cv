@@ -3,7 +3,7 @@
  * GET /api/data-sources/defi/dashboard — full DeFi snapshot
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getDeFiDashboard } from '@/lib/data-sources/defi';
 
 export const runtime = 'edge';

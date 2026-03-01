@@ -14,7 +14,7 @@
  * @price $0.003 per request
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
     ]);
 
     let protocols: Record<string, unknown>[] = [];
-    let feesMap = new Map<string, { fees30d: number; revenue30d: number }>();
+    const feesMap = new Map<string, { fees30d: number; revenue30d: number }>();
 
     if (protocolsRes.status === 'fulfilled' && protocolsRes.value.ok) {
       protocols = await protocolsRes.value.json();

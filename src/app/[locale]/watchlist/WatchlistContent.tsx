@@ -23,7 +23,7 @@ import { useWatchlist } from "@/components/watchlist/WatchlistProvider";
 import { PriceAlertButton } from "@/components/PriceAlertButton";
 import { WatchlistExport } from "@/components/watchlist/WatchlistExport";
 import { useToast } from "@/components/Toast";
-import { TokenPrice, getTopCoins } from "@/lib/market-data";
+import { type TokenPrice, getTopCoins } from "@/lib/market-data";
 
 type SortField =
   | "name"

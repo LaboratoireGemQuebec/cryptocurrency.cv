@@ -56,7 +56,7 @@
  */
 'use client';
 
-import { useEffect, useState, useCallback, createContext, useContext, ReactNode } from 'react';
+import { useEffect, useState, useCallback, createContext, useContext, type ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 

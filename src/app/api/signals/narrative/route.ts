@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
 
 export const runtime = 'edge';

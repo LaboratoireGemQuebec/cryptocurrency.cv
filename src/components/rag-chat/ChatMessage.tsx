@@ -154,7 +154,7 @@ function ChatMessageComponent({
       if (target.classList.contains('citation-link')) {
         const citationNum = parseInt(target.dataset.citation || '0', 10);
         const sources = message.metadata?.sources;
-        if (sources && sources[citationNum - 1]) {
+        if (sources?.[citationNum - 1]) {
           onCitationClick?.(sources[citationNum - 1]);
         }
       }

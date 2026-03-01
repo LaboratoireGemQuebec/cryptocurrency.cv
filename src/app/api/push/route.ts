@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
 
 export const runtime = 'nodejs';
@@ -143,7 +143,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { subscription, topics = ['breaking'] } = body;
     
-    if (!subscription || !subscription.endpoint) {
+    if (!subscription?.endpoint) {
       return NextResponse.json({
         success: false,
         error: 'Invalid subscription',

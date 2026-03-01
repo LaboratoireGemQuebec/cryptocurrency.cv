@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { escapeXml, resolveFeed } from '@/app/api/_feed-utils';
 
 export const runtime = 'edge';

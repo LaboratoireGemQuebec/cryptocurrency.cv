@@ -26,7 +26,7 @@
  * curl "https://cryptocurrency.cv/api/cron/archive?secret=YOUR_SECRET"
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { logger } from '@/lib/logger';
 

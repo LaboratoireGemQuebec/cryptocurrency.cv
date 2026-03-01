@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getAccountTransactions, getTransactionByHash } from '@/lib/apis/aptos';
 
 export const runtime = 'edge';

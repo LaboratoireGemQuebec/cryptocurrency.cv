@@ -179,7 +179,7 @@ function handleUnsubscribe(clientId: string, sub: Partial<Subscription>): void {
  */
 export function sendToClient(clientId: string, message: WSMessage): void {
   const client = clients.get(clientId);
-  if (client && client.ws.readyState === WebSocket.OPEN) {
+  if (client?.ws.readyState === WebSocket.OPEN) {
     client.ws.send(JSON.stringify(message));
   }
 }

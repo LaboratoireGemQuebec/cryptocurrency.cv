@@ -177,7 +177,7 @@ export class ABTestManager {
    */
   getVariant(experimentName: string): Variant | null {
     const experiment = this.experiments.get(experimentName);
-    if (!experiment || experiment.status !== 'running') return null;
+    if (experiment?.status !== 'running') return null;
 
     // Check for max duration
     if (experiment.maxDurationMs && Date.now() - experiment.createdAt > experiment.maxDurationMs) {
@@ -197,7 +197,7 @@ export class ABTestManager {
    */
   recordResult(experimentName: string, variantId: string, result: ExperimentResult): void {
     const experiment = this.experiments.get(experimentName);
-    if (!experiment || experiment.status !== 'running') return;
+    if (experiment?.status !== 'running') return;
 
     const stats = experiment.variantStats.get(variantId);
     if (!stats) return;

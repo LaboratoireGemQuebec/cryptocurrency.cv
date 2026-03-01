@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getHistoricalPrice, HistoricalSnapshot } from '@/lib/market-data';
+import { type NextRequest, NextResponse } from 'next/server';
+import { getHistoricalPrice, type HistoricalSnapshot } from '@/lib/market-data';
 
 export const runtime = 'edge';
 export const revalidate = 86400; // 24 hours - historical data doesn't change
@@ -23,7 +23,7 @@ interface RouteParams {
 export async function GET(
   request: NextRequest,
   { params }: RouteParams
-): Promise<NextResponse<HistoricalSnapshot | { error: string; message: string }>> {
+): Promise<NextResponse<HistoricalSnapshot | { error: string; message?: string }>> {
   const { coinId } = await params;
   const searchParams = request.nextUrl.searchParams;
   const date = searchParams.get('date');

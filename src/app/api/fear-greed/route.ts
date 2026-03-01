@@ -4,7 +4,7 @@
  * and provides historical trend analysis
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getPipelineFearGreed } from '@/lib/data-pipeline';
 import { registry } from '@/lib/providers/registry';
 import type { FearGreedIndex } from '@/lib/providers/adapters/fear-greed';

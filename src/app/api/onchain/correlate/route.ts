@@ -11,7 +11,7 @@ import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs';
 import { getLatestNews } from '@/lib/crypto-news';
-import { OnchainEvent, CorrelationResult, correlateToNews, detectAnomalies } from '@/lib/onchainCorrelator';
+import { type OnchainEvent, type CorrelationResult, correlateToNews, detectAnomalies } from '@/lib/onchainCorrelator';
 import { getAIConfigOrNull } from '@/lib/ai-provider';
 
 // ---------------------------------------------------------------------------

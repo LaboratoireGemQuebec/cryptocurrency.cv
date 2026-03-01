@@ -722,7 +722,7 @@ export function subscribeBars(
       
       if (bars.length > 0) {
         const newBar = bars[0];
-        if (!lastBar || newBar.t !== lastBar.t) {
+        if (newBar.t !== lastBar?.t) {
           callback(newBar);
           lastBar = newBar;
         }

@@ -15,8 +15,8 @@
  * Rate limit: 30 requests / minute per IP (in-memory, no Redis)
  */
 
-import { NextRequest, NextResponse } from 'next/server';
-import { getWhaleContext, WhaleTxType } from '@/lib/whaleContext';
+import { type NextRequest, NextResponse } from 'next/server';
+import { getWhaleContext, type WhaleTxType } from '@/lib/whaleContext';
 
 // ---------------------------------------------------------------------------
 // In-memory rate limiter (30 req / 60 s per IP)

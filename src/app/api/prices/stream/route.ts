@@ -8,7 +8,7 @@
  * Streams a JSON price object every ~5 seconds.
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getPricesForCoins } from '@/lib/market-data';
 
 export const dynamic = 'force-dynamic';

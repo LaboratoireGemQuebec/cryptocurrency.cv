@@ -300,7 +300,7 @@ export async function updateWebhook(
 ): Promise<WebhookSubscription | null> {
   const webhook = await getWebhookById(webhookId);
 
-  if (!webhook || webhook.keyId !== keyId) return null;
+  if (webhook?.keyId !== keyId) return null;
 
   // Validate URL if provided
   if (updates.url) {
@@ -380,7 +380,7 @@ export async function updateWebhook(
 export async function deleteWebhook(webhookId: string, keyId: string): Promise<boolean> {
   const webhook = await getWebhookById(webhookId);
 
-  if (!webhook || webhook.keyId !== keyId) return false;
+  if (webhook?.keyId !== keyId) return false;
 
   if (isKvConfigured()) {
     // Remove from webhook store
@@ -433,7 +433,7 @@ export async function regenerateWebhookSecret(
   keyId: string
 ): Promise<string | null> {
   const webhook = await getWebhookById(webhookId);
-  if (!webhook || webhook.keyId !== keyId) return null;
+  if (webhook?.keyId !== keyId) return null;
 
   webhook.secret = generateSecret();
   webhook.updatedAt = new Date().toISOString();
@@ -562,7 +562,7 @@ export async function sendWebhook(
     const webhookIds = eventIndex.get(event) || [];
     for (const id of webhookIds) {
       const webhook = webhookStore.get(id);
-      if (webhook && webhook.active) {
+      if (webhook?.active) {
         webhooks.push(webhook);
       }
     }
@@ -600,7 +600,7 @@ export async function testWebhook(
   webhookId: string
 ): Promise<WebhookDeliveryLog | null> {
   const webhook = await getWebhookById(webhookId);
-  if (!webhook || webhook.keyId !== keyId) return null;
+  if (webhook?.keyId !== keyId) return null;
 
   const payload: WebhookPayload = {
     event: 'system.health',
@@ -823,7 +823,7 @@ export function getWebhook(userId: string, webhookId: string): WebhookSubscripti
  */
 export function regenerateSecret(userId: string, webhookId: string): string | null {
   const webhook = webhookStore.get(webhookId);
-  if (!webhook || webhook.keyId !== userId) return null;
+  if (webhook?.keyId !== userId) return null;
 
   webhook.secret = generateSecret();
   webhook.updatedAt = new Date().toISOString();

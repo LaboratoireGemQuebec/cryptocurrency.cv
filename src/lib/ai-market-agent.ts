@@ -602,12 +602,20 @@ export class AIMarketAgent {
           
           for (const tx of largeTxs.slice(0, 5)) {
             const btcAmount = tx.out.reduce((sum: number, out: { value: number }) => sum + out.value, 0) / 100000000;
+            // Determine direction from output patterns:
+            // Many outputs = distribution (bearish), few outputs + high value = accumulation (bullish)
+            const outputCount = tx.out?.length || 0;
+            const whaleDirection: 'bullish' | 'bearish' | 'neutral' =
+              outputCount <= 2 ? 'bullish'   // Consolidation / accumulation
+              : outputCount >= 10 ? 'bearish' // Distribution to many addresses
+              : 'neutral';
+
             signals.push({
               id: `whale-${tx.hash?.slice(0, 8) || Date.now()}`,
               source: 'whale',
               type: 'whale-movement',
               asset: 'BTC',
-              direction: 'neutral', // Would need more analysis
+              direction: whaleDirection,
               strength: btcAmount > 1000 ? 'strong' : 'moderate',
               confidence: 85,
               timeHorizon: '1d',

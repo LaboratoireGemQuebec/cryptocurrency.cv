@@ -10,7 +10,7 @@
  *   data: [DONE]           — terminal frame
  */
 
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiCompleteStream, getAIConfigOrNull } from '@/lib/ai-provider';
 

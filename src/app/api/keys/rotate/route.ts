@@ -18,7 +18,7 @@
  * @module api/keys/rotate
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   validateApiKey,
   extractApiKey,

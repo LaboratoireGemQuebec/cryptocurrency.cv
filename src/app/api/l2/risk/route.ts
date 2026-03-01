@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getL2Projects } from '@/lib/apis/l2beat';
 import type { L2Project } from '@/lib/apis/l2beat';
 

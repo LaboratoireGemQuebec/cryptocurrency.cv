@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getBreakingNews } from '@/lib/crypto-news';
 import { db } from '@/lib/database';
 
@@ -72,9 +72,40 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Validate URL
+    // Validate URL — must be HTTPS and resolve to a public address (SSRF protection)
     try {
-      new URL(url);
+      const parsed = new URL(url);
+      // Require HTTPS for webhook delivery
+      if (parsed.protocol !== 'https:') {
+        return NextResponse.json(
+          { error: 'Webhook URL must use HTTPS' },
+          { status: 400 }
+        );
+      }
+      // Block internal/private network targets (SSRF protection)
+      const hostname = parsed.hostname.toLowerCase();
+      const blockedPatterns = [
+        /^localhost$/i,
+        /^127\./,
+        /^10\./,
+        /^172\.(1[6-9]|2\d|3[01])\./,
+        /^192\.168\./,
+        /^169\.254\./,           // link-local / cloud metadata
+        /^0\./,
+        /^\[::1\]$/,             // IPv6 loopback
+        /^\[fc/i,                // IPv6 unique local
+        /^\[fd/i,                // IPv6 unique local
+        /^\[fe80:/i,             // IPv6 link-local
+        /\.internal$/i,
+        /\.local$/i,
+        /metadata\.google/i,
+      ];
+      if (blockedPatterns.some(p => p.test(hostname))) {
+        return NextResponse.json(
+          { error: 'Webhook URL must point to a public address' },
+          { status: 400 }
+        );
+      }
     } catch {
       return NextResponse.json(
         { error: 'Invalid webhook URL' },
@@ -116,7 +147,6 @@ export async function POST(request: NextRequest) {
       persisted: true,
     }, {
       status: 201,
-      headers: { 'Access-Control-Allow-Origin': '*' },
     });
   } catch {
     return NextResponse.json(
@@ -178,8 +208,8 @@ export async function OPTIONS() {
   return new NextResponse(null, {
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-API-Key',
     },
   });
 }

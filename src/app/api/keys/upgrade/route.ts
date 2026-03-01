@@ -24,7 +24,7 @@
  * @module api/keys/upgrade
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   validateApiKey,
   extractApiKey,

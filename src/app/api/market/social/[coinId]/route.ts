@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { 
   getCoinDeveloperData, 
   getCoinCommunityData,
-  DeveloperData,
-  CommunityData
+  type DeveloperData,
+  type CommunityData
 } from '@/lib/market-data';
 
 export const runtime = 'edge';
@@ -34,7 +34,7 @@ interface CoinSocialData {
 export async function GET(
   request: NextRequest,
   { params }: RouteParams
-): Promise<NextResponse<CoinSocialData | DeveloperData | CommunityData | { error: string; message: string }>> {
+): Promise<NextResponse<CoinSocialData | DeveloperData | CommunityData | { error: string; message?: string }>> {
   const { coinId } = await params;
   const searchParams = request.nextUrl.searchParams;
   const type = searchParams.get('type') || 'all';

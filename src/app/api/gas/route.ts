@@ -55,20 +55,38 @@ export async function GET() {
       const data = await response.json();
       
       if (data.status === '1' && data.result) {
+        // Fetch ETH price for USD conversion
+        let ethPriceUsd: number | null = null;
+        try {
+          const ethRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', { next: { revalidate: 60 } });
+          if (ethRes.ok) {
+            const ethData = await ethRes.json();
+            ethPriceUsd = ethData?.ethereum?.usd ?? null;
+          }
+        } catch { /* ETH price fetch failed — USD will be null */ }
+
+        // Standard transfer gas: 21000 units. USD = gwei * 21000 * 1e-9 * ethPrice
+        const gweiToUsd = (gwei: number) =>
+          ethPriceUsd !== null ? parseFloat((gwei * 21000 * 1e-9 * ethPriceUsd).toFixed(4)) : null;
+
+        const lowGwei = parseInt(data.result.SafeGasPrice);
+        const medGwei = parseInt(data.result.ProposeGasPrice);
+        const highGwei = parseInt(data.result.FastGasPrice);
+
         return NextResponse.json({
           network: 'ethereum',
           baseFee: parseFloat(data.result.suggestBaseFee) || null,
           low: {
-            gwei: parseInt(data.result.SafeGasPrice),
-            usd: null, // Would need ETH price to calculate
+            gwei: lowGwei,
+            usd: gweiToUsd(lowGwei),
           },
           medium: {
-            gwei: parseInt(data.result.ProposeGasPrice),
-            usd: null,
+            gwei: medGwei,
+            usd: gweiToUsd(medGwei),
           },
           high: {
-            gwei: parseInt(data.result.FastGasPrice),
-            usd: null,
+            gwei: highGwei,
+            usd: gweiToUsd(highGwei),
           },
           lastBlock: data.result.LastBlock,
           timestamp: new Date().toISOString(),

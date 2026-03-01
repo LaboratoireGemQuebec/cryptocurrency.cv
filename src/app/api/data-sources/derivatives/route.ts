@@ -6,7 +6,7 @@
  * GET /api/data-sources/derivatives?view=hyperliquid — Hyperliquid DEX perps
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   getDerivativesDashboard,
   getCrossExchangeFunding,

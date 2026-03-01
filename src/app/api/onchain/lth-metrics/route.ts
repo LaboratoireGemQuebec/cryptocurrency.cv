@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getLongTermHolderMetrics } from '@/lib/apis/glassnode';
 
 export const runtime = 'edge';

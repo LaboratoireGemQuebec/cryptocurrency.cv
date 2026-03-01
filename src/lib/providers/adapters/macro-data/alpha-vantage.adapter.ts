@@ -65,7 +65,7 @@ async function fetchQuote(symbol: string): Promise<AlphaQuote | null> {
 
   const json = await res.json();
   const q = json['Global Quote'];
-  if (!q || !q['05. price']) return null;
+  if (!q?.['05. price']) return null;
 
   return {
     price: parseFloat(q['05. price']),

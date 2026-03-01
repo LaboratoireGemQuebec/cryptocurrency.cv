@@ -151,7 +151,9 @@ export const santimentAdapter: DataProvider<SocialMetric[]> = {
           name: slug,
           socialScore,
           socialVolume: Math.round(socialVolume),
-          socialDominance: 0, // Would need global volume for ratio
+          socialDominance: totalSocialVolume > 0
+            ? Math.round((socialVolume / totalSocialVolume) * 10000) / 100
+            : 0,
           sentiment: Math.round(sentiment * 1000) / 1000,
           contributors: Math.round(activeAddresses),
           source: 'santiment',

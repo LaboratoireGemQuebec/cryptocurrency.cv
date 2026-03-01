@@ -3,7 +3,7 @@
  * Generates chart data for portfolio performance visualization
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 interface Holding {
   coinId: string;
@@ -307,7 +307,7 @@ async function fetchPriceHistory(
   for (const { coinId, data } of results) {
     history[coinId] = {};
     
-    if (data && data.prices && Array.isArray(data.prices)) {
+    if (data?.prices && Array.isArray(data.prices)) {
       // CoinGecko returns [timestamp, price] pairs
       for (const [timestamp, price] of data.prices) {
         const date = new Date(timestamp);

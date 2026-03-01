@@ -272,7 +272,7 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
     return null;
   }
 
-  if (!rawKey || !rawKey.startsWith('cda_')) {
+  if (!rawKey?.startsWith('cda_')) {
     return null;
   }
 
@@ -281,7 +281,7 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
   try {
     const keyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${hashedKey}`);
 
-    if (!keyData || !keyData.active) {
+    if (!keyData?.active) {
       return null;
     }
 
@@ -335,7 +335,7 @@ export async function revokeApiKey(keyId: string, email: string): Promise<boolea
     if (!hashedKey) return false;
 
     const keyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${hashedKey}`);
-    if (!keyData || keyData.email !== email) return false;
+    if (keyData?.email !== email) return false;
 
     // Mark as inactive
     await kv.set(`${KV_PREFIX.key}${hashedKey}`, {

@@ -24,7 +24,7 @@
  * Reads the latest snapshot back (used by fallback reader).
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir, readFile } from 'fs/promises';
 import { join } from 'path';
 

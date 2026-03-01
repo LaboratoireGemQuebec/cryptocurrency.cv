@@ -4,7 +4,7 @@
  * Returns basic usage info for an API key.
  * Replaces the old Stripe-based usage endpoint.
  */
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { getKeyById, isKvConfigured } from "@/lib/api-keys";
 
 export const dynamic = "force-dynamic";
