@@ -584,12 +584,41 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
       };
     }
     
-    // NOTE: Previously this fell back to getLatestNews(100) which fetched
-    // ALL 160+ RSS sources — a 15-25 s operation on cold starts just to find
-    // one article. If an article isn't in KV, it's almost never in the latest
-    // RSS batch either, so we skip this expensive fallback.
+    // Fallback: search live RSS feeds (usually cached by Next.js from homepage)
+    // This handles the case where KV is not configured or article hasn't been archived yet
+    try {
+      const { articles } = await getLatestNews(50);
+      
+      for (const rssArticle of articles) {
+        const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
+        const id = generateArticleId(rssArticle.link);
+        
+        if (slug === idOrSlug || id === idOrSlug) {
+          return newsArticleToEnriched(rssArticle);
+        }
+      }
+    } catch {
+      // RSS fallback failed too — return null below
+    }
+    
     return null;
   } catch {
+    // Primary KV lookup failed — try RSS fallback
+    try {
+      const { articles } = await getLatestNews(50);
+      
+      for (const rssArticle of articles) {
+        const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
+        const id = generateArticleId(rssArticle.link);
+        
+        if (slug === idOrSlug || id === idOrSlug) {
+          return newsArticleToEnriched(rssArticle);
+        }
+      }
+    } catch {
+      // Both KV and RSS failed
+    }
+    
     return null;
   }
 }
