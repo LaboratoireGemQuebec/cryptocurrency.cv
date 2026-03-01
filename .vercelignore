@@ -14,8 +14,7 @@ mcp/
 mobile/
 postman/
 raycast/
-scripts/*
-!scripts/patch-next-write-atomic.js
+scripts/
 sdk/
 site/
 stories/
