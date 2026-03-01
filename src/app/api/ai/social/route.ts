@@ -17,7 +17,7 @@
  * Requires GROQ_API_KEY.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { parseGroqJson } from '@/lib/groq';
 

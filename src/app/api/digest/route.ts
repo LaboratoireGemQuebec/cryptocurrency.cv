@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getLatestNews, NewsArticle } from '@/lib/crypto-news';
+import { type NextRequest, NextResponse } from 'next/server';
+import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { promptGroqJson, isGroqConfigured, GroqAuthError, parseGroqJson } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
 import { aiComplete, getAIConfigOrNull, AIAuthError } from '@/lib/ai-provider';

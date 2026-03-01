@@ -1918,11 +1918,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // STABLECOINS & PAYMENTS — Expanding Coverage
   // =========================================================================
-  ethena_blog: {
-    name: 'Ethena Labs Blog',
-    url: 'https://mirror.xyz/ethena.eth/feed/atom',
-    category: 'stablecoin',
-  },
   mountain_protocol: {
     name: 'Mountain Protocol Blog',
     url: 'https://medium.com/feed/@mountainprotocol',
@@ -2248,19 +2243,9 @@ const RSS_SOURCES = {
   // =========================================================================
   // BITCOIN ECOSYSTEM — Expanding Coverage
   // =========================================================================
-  bitcoinops: {
-    name: 'Bitcoin Optech',
-    url: 'https://bitcoinops.org/feed.xml',
-    category: 'bitcoin',
-  },
   mempool_space: {
     name: 'Mempool.space Blog',
     url: 'https://mempool.space/blog/feed',
-    category: 'bitcoin',
-  },
-  swan_blog: {
-    name: 'Swan Bitcoin Blog',
-    url: 'https://www.swanbitcoin.com/feed/',
     category: 'bitcoin',
   },
   unchained_capital: {
@@ -3192,8 +3177,12 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       
       const data = await response.json();
       return source.parser(data);
-    } catch {
-      // Silent fail - APIs are supplementary
+    } catch (error) {
+      // APIs are supplementary — log for observability but don't fail the response
+      if (process.env.DEBUG_RSS || process.env.NODE_ENV === 'development') {
+        const isAbort = error instanceof Error && error.name === 'AbortError';
+        console.warn(`[API] ${source.name} failed:`, isAbort ? 'timeout' : (error instanceof Error ? error.message : error));
+      }
       return [];
     }
   });
@@ -3332,27 +3321,27 @@ function calculateTrendingScore(article: NewsArticle): number {
 }
 
 /**
- * Fetch sources in batches with concurrency limit to prevent network overload
+ * Fetch ALL sources in parallel — no sequential batching.
+ *
+ * Each individual source already has a 3 s timeout (AbortController in
+ * fetchFeed) so firing them all at once keeps total wall-clock time at
+ * ≤ 3 s instead of `ceil(N/batch) × 3 s`.
+ *
+ * Node.js handles hundreds of concurrent outbound HTTP requests without
+ * issue; the old batching was the root cause of 20 s+ cold starts.
  */
-async function fetchWithConcurrency<T>(
-  items: T[],
-  fn: (item: T) => Promise<NewsArticle[]>,
-  concurrency: number = 15
+async function fetchAllInParallel(
+  sourceKeys: SourceKey[],
+  fn: (key: SourceKey) => Promise<NewsArticle[]>,
 ): Promise<NewsArticle[]> {
+  const results = await Promise.allSettled(sourceKeys.map(fn));
   const articles: NewsArticle[] = [];
-  
-  for (let i = 0; i < items.length; i += concurrency) {
-    const batch = items.slice(i, i + concurrency);
-    const results = await Promise.allSettled(batch.map(fn));
-    
-    for (const result of results) {
-      if (result.status === 'fulfilled') {
-        articles.push(...result.value);
-      }
-      // Silently ignore rejected promises - already logged in fetchFeed
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      articles.push(...result.value);
     }
+    // Silently ignore rejected promises — already logged in fetchFeed
   }
-  
   return articles;
 }
 
@@ -3376,10 +3365,9 @@ async function fetchMultipleSources(sourceKeys: SourceKey[], includeApiSources: 
     const AGGREGATION_TIMEOUT_MS = 20_000;
 
     const aggregationPromise = (async () => {
-      // Fetch RSS and optionally API sources in parallel
+      // Fire ALL RSS feeds + API sources in parallel (no batching)
       const [rssArticles, apiArticles] = await Promise.all([
-        // RSS feeds with concurrency limit to reduce cold-start latency
-        fetchWithConcurrency(sourceKeys, fetchFeed, 20),
+        fetchAllInParallel(sourceKeys, fetchFeed),
         // Only fetch API sources if not filtering by specific RSS source
         includeApiSources ? fetchAllApiSources() : Promise.resolve([]),
       ]);
@@ -3532,7 +3520,7 @@ export async function searchNews(
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
   
   const matchingArticles = allArticles.filter(article => {
-    if (!article || !article.title) return false;
+    if (!article?.title) return false;
     const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
     return searchTerms.some(term => searchText.includes(term));
   });
@@ -3664,7 +3652,7 @@ export async function getNewsByCategory(
   const keywords = categoryKeywords[category.toLowerCase()] || [category.toLowerCase()];
   
   const filteredArticles = allArticles.filter(article => {
-    if (!article || !article.title) return false;
+    if (!article?.title) return false;
     
     // Check source category first
     if (article.category === category.toLowerCase()) return true;
