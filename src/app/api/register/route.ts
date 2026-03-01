@@ -198,42 +198,40 @@ async function verifyKeyOwnership(
 export async function GET() {
   return NextResponse.json({
     endpoint: '/api/register',
-    method: 'POST',
-    description: 'Register for a free API key',
+    status: 'Free key registration is discontinued',
+    description:
+      'Free API keys are no longer issued. Use x402 micropayment ($0.001/req in USDC on Base) ' +
+      'for pay-per-request access, or subscribe to Pro ($29/mo) or Enterprise ($99/mo) for a key.',
 
-    request: {
-      contentType: 'application/json',
-      body: {
-        email: 'string (required) - Your email address',
-        name: 'string (optional) - Name for this key',
-      },
+    freePreview: {
+      endpoint: '/api/sample',
+      description: '2 headline snippets + 2 coin prices — no key required',
     },
 
-    response: {
-      success: {
-        key: 'cda_free_xxxx... (SAVE THIS - shown only once!)',
-        tier: 'free',
-        rateLimit: '100 requests/day',
-        docs: '/docs/api',
-      },
-    },
+    tiers: Object.entries(API_KEY_TIERS)
+      .filter(([id]) => id !== 'free')
+      .map(([id, tier]) => ({
+        id,
+        name: tier.name,
+        requestsPerDay: tier.requestsPerDay === -1 ? 'Unlimited' : tier.requestsPerDay,
+        requestsPerMinute: tier.requestsPerMinute,
+        features: tier.features,
+      })),
 
-    tiers: Object.entries(API_KEY_TIERS).map(([id, tier]) => ({
-      id,
-      name: tier.name,
-      requestsPerDay: tier.requestsPerDay === -1 ? 'Unlimited' : tier.requestsPerDay,
-      requestsPerMinute: tier.requestsPerMinute,
-      features: tier.features,
-    })),
+    x402: {
+      price: '$0.001 per request',
+      currency: 'USDC on Base (EIP-155:8453)',
+      description: 'No key needed — include x402 payment header on any API request',
+      docs: 'https://x402.org',
+    },
 
     notes: [
-      'Free tier: 1,000 requests/day, 3 results per response, no AI endpoints',
-      'Pro tier: 50,000 requests/day, full results, AI access — $29/mo',
-      'Enterprise: 500,000 requests/day, priority routing, SLA — $99/mo',
-      'Maximum 3 keys per email',
-      'Keep your API key secret',
-      'Upgrade via /api/keys/upgrade with x402 USDC payment on Base',
-      'List and revoke actions require authentication via X-API-Key header',
+      'Free API keys are no longer issued',
+      'Use /api/sample for a free preview',
+      'x402 micropayment: $0.001/req, no signup, pay per request',
+      'Pro: $29/mo — 50,000 req/day, all endpoints, AI access',
+      'Enterprise: $99/mo — 500,000 req/day, priority routing, SLA',
+      'Existing key holders can still list/revoke keys via POST with action=list or action=revoke',
     ],
 
     configured: isKvConfigured(),
@@ -336,73 +334,22 @@ export async function POST(request: NextRequest) {
     }
 
     // --- Create new key ---
-    if (!email) {
-      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
-    }
-
-    if (!isValidEmail(email)) {
-      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
-    }
-
-    if (isDisposableEmail(email)) {
-      return NextResponse.json(
-        { error: 'Disposable email addresses are not allowed. Please use a permanent email.' },
-        { status: 400 }
-      );
-    }
-
-    // Enforce name length limit
-    const sanitizedName = name ? String(name).slice(0, MAX_NAME_LENGTH) : 'Default';
-
-    // Normalize email for dedup (lowercase, strip dots/aliases)
-    const normalizedEmail = normalizeEmail(email);
-
-    const result = await createApiKey({
-      email: normalizedEmail,
-      name: sanitizedName,
-      tier: 'free',
-    });
-
-    if ('error' in result) {
-      return NextResponse.json({ error: result.error }, { status: 400 });
-    }
-
-    return NextResponse.json({
-      success: true,
-      key: result.key,
-      message: 'API key created successfully. SAVE THIS KEY - it will only be shown once!',
-
-      details: {
-        id: result.data.id,
-        tier: result.data.tier,
-        email: result.data.email,
-        rateLimit: `${result.data.rateLimit} requests/day`,
-        maxResultsPerResponse: result.data.tier === 'free' ? 3 : 'unlimited',
-        permissions: result.data.permissions,
-        createdAt: result.data.createdAt,
+    // Free key registration is discontinued
+    return NextResponse.json(
+      {
+        error: 'Free key registration discontinued',
+        message:
+          'Free API keys are no longer issued. Use x402 micropayment ($0.001/req in USDC on Base) ' +
+          'or subscribe to a Pro key ($29/mo) at /api/keys/upgrade.',
+        alternatives: {
+          sample: '/api/sample — free preview (2 headlines, 2 prices)',
+          x402: 'Include x402 payment header on any API request — $0.001/req',
+          pro: '/api/keys/upgrade — $29/mo for 50,000 req/day',
+          enterprise: '/api/keys/upgrade — $99/mo for 500,000 req/day',
+        },
       },
-
-      limits: {
-        requestsPerDay: result.data.rateLimit,
-        maxResults: result.data.tier === 'free' ? 3 : null,
-        aiAccess: result.data.tier !== 'free',
-        webhookSupport: result.data.tier !== 'free',
-      },
-
-      usage: {
-        header: 'X-API-Key: ' + result.key,
-        queryParam: '?api_key=' + result.key,
-        example: `curl -H "X-API-Key: ${result.key}" https://your-domain.com/api/v1/coins`,
-      },
-
-      endpoints: {
-        usage: '/api/keys/usage',
-        rotate: '/api/keys/rotate',
-        upgrade: '/api/keys/upgrade',
-      },
-
-      docs: '/docs/api',
-    });
+      { status: 410 }
+    );
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }

@@ -273,19 +273,18 @@ export default async function middleware(request: NextRequest) {
   }
 
   // ── AI endpoint gating ─────────────────────────────────────────────────
+  // Free keys are no longer issued. Reject any existing free keys.
   if (
     resolvedTier === 'free' &&
-    matchesPattern(pathname, AI_ENDPOINT_PATTERNS) &&
     !speraxos
   ) {
     return NextResponse.json(
       {
-        error: 'Upgrade required',
-        code: 'TIER_INSUFFICIENT',
-        message: 'AI and premium endpoints require a Pro or Enterprise API key',
-        currentTier: 'free',
-        requiredTier: 'pro',
+        error: 'Free tier discontinued',
+        code: 'FREE_TIER_DISCONTINUED',
+        message: 'Free API keys are no longer supported. Use x402 micropayment ($0.001/req) or upgrade to Pro ($29/mo).',
         upgrade: '/api/keys/upgrade',
+        sample: '/api/sample',
         requestId,
       },
       { status: 403, headers },
@@ -446,7 +445,7 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
-  // x402 payment gate
+  // x402 payment gate — applies to all non-exempt, non-sample routes without a paid key
   if (
     pathname.startsWith('/api/') &&
     !speraxos &&

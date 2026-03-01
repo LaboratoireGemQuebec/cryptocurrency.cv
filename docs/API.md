@@ -80,21 +80,22 @@ Errors return a JSON body with `error`, `message`, and `status`:
 
 | Tier | Limit |
 |------|-------|
-| **Public (browser, no key)** | 60 requests/hour per IP |
-| **Programmatic (no key)** | 300 requests/hour per IP |
-| **Free API key** | 1,000 requests/day (20/min burst) |
+| **Anonymous (no key)** | 10 requests/hour per IP (only `/api/sample`) |
+| **x402 micropayment** | Unlimited (pay $0.001/req in USDC on Base) |
 | **Pro API key** | 50,000 requests/day (500/min burst) |
 | **Enterprise API key** | 500,000 requests/day (2,000/min burst) |
+
+> **Free API keys are no longer issued.** Use `/api/sample` for a free preview, x402 micropayment for pay-per-request access, or subscribe to a Pro/Enterprise key.
 
 Additionally, expensive endpoints (AI, search, export) have stricter per-route limits — see individual endpoint documentation.
 
 Rate limit headers are included in every response:
 
 ```
-X-RateLimit-Limit: 1000
-X-RateLimit-Remaining: 950
-X-RateLimit-Reset: 2026-03-01T00:00:00.000Z
-X-RateLimit-Tier: free
+X-RateLimit-Limit: 50000
+X-RateLimit-Remaining: 49950
+X-RateLimit-Reset: 2026-03-02T00:00:00.000Z
+X-RateLimit-Tier: pro
 ```
 
 > **Tip:** Most endpoints cache for 5 minutes. Respect `Cache-Control` headers to avoid unnecessary requests.
@@ -3237,32 +3238,28 @@ Get API key registration information and available tiers.
 ```json
 {
   "endpoint": "/api/register",
-  "method": "POST",
-  "description": "Register for a free API key",
-  "request": {
-    "contentType": "application/json",
-    "body": {
-      "email": "string (required)",
-      "name": "string (optional)"
-    }
+  "status": "Free key registration discontinued",
+  "description": "Free API keys are no longer issued. Use x402 micropayment or subscribe to Pro/Enterprise.",
+  "freePreview": {
+    "endpoint": "/api/sample",
+    "description": "2 headline snippets + 2 coin prices — no key required"
   },
   "tiers": [
-    {
-      "id": "free",
-      "name": "Free",
-      "requestsPerDay": 1000,
-      "features": ["Basic endpoints", "Rate limited"]
-    },
     {
       "id": "pro",
       "name": "Pro",
       "requestsPerDay": 50000,
-      "features": ["All endpoints", "Priority support"]
+      "features": ["All endpoints", "AI access", "Priority support"]
     }
   ],
+  "x402": {
+    "price": "$0.001 per request",
+    "currency": "USDC on Base"
+  },
   "notes": [
-    "Free tier: 1,000 requests/day",
-    "Maximum 3 keys per email"
+    "Free API keys are no longer issued",
+    "Use /api/sample for a free preview",
+    "x402 micropayment: $0.001/req, no signup"
   ]
 }
 ```

@@ -264,12 +264,13 @@ The API implements a **distributed sliding-window** rate limiter:
 
 | Tier | Limit | Window | Description |
 |------|-------|--------|-------------|
-| Public (browser, no key) | 60 req | 1 hour | Browser visitors |
-| Programmatic (no key) | 300 req | 1 hour | API clients without a key |
-| Free API key | 1,000 req | 1 day | Registered free users |
-| Pro API key | 50,000 req | 1 day | Pro subscribers |
-| Enterprise key | 500,000 req | 1 day | Enterprise customers |
+| Anonymous (no key) | 10 req | 1 hour | `/api/sample` only |
+| x402 micropayment | Unlimited | — | $0.001/req in USDC on Base |
+| Pro API key | 50,000 req | 1 day | Pro subscribers ($29/mo) |
+| Enterprise key | 500,000 req | 1 day | Enterprise customers ($99/mo) |
 | Internal / SperaxOS | Unlimited | — | Server-to-server |
+
+> **Free API keys are no longer issued.** All endpoints except `/api/sample` require payment.
 
 Expensive endpoints (AI, export, search, backtest) also have per-route limits (5–30 req/min 
 depending on the endpoint) applied in addition to the tier limit.
