@@ -14,7 +14,7 @@
  * Displays scrolling crypto prices with live indicator
  */
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { getTopCoins, getFearGreedIndex, formatPrice, formatPercent, getFearGreedColor } from '@/lib/market-data';
 
 interface PriceTickerProps {

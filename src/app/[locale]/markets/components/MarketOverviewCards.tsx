@@ -16,7 +16,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import type { GlobalMarketData, FearGreedIndex, TrendingCoin, TokenPrice } from '@/lib/market-data';
 import { formatPrice, formatPercent } from '@/lib/market-data';

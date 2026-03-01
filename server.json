@@ -3,59 +3,10 @@
   "name": "io.github.nirholas/free-crypto-news",
   "title": "Free Crypto News",
   "description": "Free crypto news MCP server — 38 tools, 130+ sources, market data, sentiment, whale alerts & more",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "nich",
-      "url": "https://github.com/nirholas"
-    }
-  ],
   "repository": {
     "url": "https://github.com/nirholas/free-crypto-news",
     "source": "github"
   },
-  "version": "1.0.2",
-  "links": {
-    "homepage": "https://github.com/nirholas/free-crypto-news",
-    "bugs": "https://github.com/nirholas/free-crypto-news/issues",
-    "npm": "https://www.npmjs.com/package/free-crypto-news"
-  },
-  "icons": [
-    {
-      "src": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
-      "type": "svg"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "free-crypto-news",
-      "version": "1.0.2",
-      "runtimeHint": "npx",
-      "transport": {
-        "type": "stdio"
-      },
-      "environmentVariables": []
-    }
-  ],
-  "_meta": {
-    "io.modelcontextprotocol.registry/publisher-provided": {
-      "keywords": [
-        "crypto",
-        "news",
-        "bitcoin",
-        "ethereum",
-        "defi",
-        "solana",
-        "altcoins",
-        "aggregator",
-        "sentiment",
-        "rss",
-        "mcp",
-        "ai"
-      ],
-      "category": "News"
-    }
-  }
+  "version": "1.0.2"
 }
 

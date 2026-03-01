@@ -82,7 +82,9 @@ test-results/
 .secrets/
 secrets/
 *.credentials
+.mcpregistry_*
 service-account*.json
 firebase-adminsdk*.json
 gcloud-*.json
 
+.mcpregistry_github_token

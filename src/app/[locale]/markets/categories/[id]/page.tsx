@@ -15,7 +15,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { getTopCoins, formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
 import type { Metadata } from 'next';

@@ -19,7 +19,6 @@ import { getLatestNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for sources not pre-rendered

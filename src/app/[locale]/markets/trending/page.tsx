@@ -15,7 +15,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { getTrending, getTopCoins, formatPercent } from '@/lib/market-data';
 import { generateSEOMetadata } from '@/lib/seo';

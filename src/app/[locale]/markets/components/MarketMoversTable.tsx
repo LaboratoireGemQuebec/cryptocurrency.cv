@@ -13,7 +13,7 @@
  * Shared table for gainers, losers, and new listings pages.
  */
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
 

@@ -182,23 +182,42 @@ function calculateVaR95(returns: number[], portfolioValue: number): number {
 }
 
 /**
- * Generate rebalancing suggestions
+ * Generate rebalancing suggestions based on market-cap weighted allocation
  */
-function generateRebalancingSuggestions(
+async function generateRebalancingSuggestions(
   assets: AssetMetrics[],
   totalValue: number
-): RebalanceSuggestion[] {
+): Promise<RebalanceSuggestion[]> {
   const suggestions: RebalanceSuggestion[] = [];
 
-  // Simple market-cap weighted target (simplified for demo)
-  const targetWeights: Record<string, number> = {
-    bitcoin: 0.5,
-    ethereum: 0.3,
-    // Others split remaining 20%
-  };
+  // Fetch real market caps from CoinGecko for proper weighting
+  const coinIds = assets.map(a => a.coinId).join(',');
+  let marketCaps: Record<string, number> = {};
+  try {
+    const res = await fetch(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${coinIds}&vs_currencies=usd&include_market_cap=true`
+    );
+    if (res.ok) {
+      const data = await res.json();
+      for (const [id, info] of Object.entries(data)) {
+        marketCaps[id] = (info as { usd_market_cap?: number }).usd_market_cap || 0;
+      }
+    }
+  } catch {
+    // Fall back to equal weighting if API fails
+  }
+
+  const totalMarketCap = Object.values(marketCaps).reduce((s, v) => s + v, 0);
 
   for (const asset of assets) {
-    const targetWeight = targetWeights[asset.coinId] || 0.2 / Math.max(1, assets.length - 2);
+    // Compute target weight from market cap proportions, or equal weight as fallback
+    let targetWeight: number;
+    if (totalMarketCap > 0 && marketCaps[asset.coinId]) {
+      targetWeight = marketCaps[asset.coinId] / totalMarketCap;
+    } else {
+      targetWeight = 1 / assets.length;
+    }
+
     const weightDiff = targetWeight - asset.weight;
     const amount = Math.abs(weightDiff * totalValue);
 
@@ -207,16 +226,16 @@ function generateRebalancingSuggestions(
 
     if (weightDiff > 0.05) {
       action = 'buy';
-      rationale = `Underweight by ${(weightDiff * 100).toFixed(1)}%. Consider adding to position.`;
+      rationale = `Underweight by ${(weightDiff * 100).toFixed(1)}% vs market-cap target. Consider adding to position.`;
     } else if (weightDiff < -0.05) {
       action = 'sell';
-      rationale = `Overweight by ${(Math.abs(weightDiff) * 100).toFixed(1)}%. Consider reducing position.`;
+      rationale = `Overweight by ${(Math.abs(weightDiff) * 100).toFixed(1)}% vs market-cap target. Consider reducing position.`;
     }
 
     suggestions.push({
       coinId: asset.coinId,
       currentWeight: asset.weight,
-      targetWeight,
+      targetWeight: Math.round(targetWeight * 10000) / 10000,
       action,
       amount,
       rationale,
@@ -391,8 +410,8 @@ async function handler(
       diversificationScore,
     };
 
-    // Generate rebalancing suggestions
-    const rebalancing = generateRebalancingSuggestions(assets, totalValue);
+    // Generate rebalancing suggestions from real market-cap data
+    const rebalancing = await generateRebalancingSuggestions(assets, totalValue);
 
     const totalReturn = assets.reduce((sum, a) => sum + a.contribution, 0);
 

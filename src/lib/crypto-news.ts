@@ -2688,7 +2688,7 @@ type SourceKey = keyof typeof RSS_SOURCES;
  * fintech, macro commentary, quant, and international sources are
  * excluded so the homepage stays focused and credible.
  */
-const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
+const HOMEPAGE_SOURCE_KEYS = new Set([
   // Tier 1 — Major crypto news
   'coindesk', 'theblock', 'decrypt', 'cointelegraph', 'bitcoinmagazine', 'blockworks', 'defiant',
 

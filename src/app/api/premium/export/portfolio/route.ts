@@ -102,7 +102,7 @@ async function handler(
         }
       }
     } catch (dbErr) {
-      logger.warn('Could not fetch portfolio from database, returning empty', dbErr);
+      logger.warn('Could not fetch portfolio from database, returning empty', { error: dbErr instanceof Error ? dbErr.message : String(dbErr) });
     }
 
     // If no data found, return 404 instead of empty data

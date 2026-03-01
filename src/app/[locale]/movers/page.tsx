@@ -17,7 +17,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getTopCoins, formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
 import { generateSEOMetadata } from '@/lib/seo';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 export const metadata = generateSEOMetadata({
   title: 'Top Gainers & Losers — Crypto Price Movers',

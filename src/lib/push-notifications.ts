@@ -282,7 +282,7 @@ async function encryptPayload(
   // Import client public key
   const clientKey = await crypto.subtle.importKey(
     'raw',
-    clientPublicKeyRaw,
+    clientPublicKeyRaw as BufferSource,
     { name: 'ECDH', namedCurve: 'P-256' },
     false,
     [],
@@ -304,10 +304,10 @@ async function encryptPayload(
 
   // -- Key derivation per RFC 8291 --
   // PRK = HKDF-Extract(auth_secret, ecdh_secret)
-  const prkKey = await crypto.subtle.importKey('raw', authSecret, { name: 'HKDF' }, false, ['deriveBits']);
+  const prkKey = await crypto.subtle.importKey('raw', authSecret as BufferSource, { name: 'HKDF' }, false, ['deriveBits']);
   // IKM for the info-keyed HKDF
   const ikmBits = await crypto.subtle.deriveBits(
-    { name: 'HKDF', hash: 'SHA-256', salt: new Uint8Array(sharedSecret), info: buildInfo('WebPush: info', clientPublicKeyRaw, localPublicKeyBytes) },
+    { name: 'HKDF', hash: 'SHA-256', salt: new Uint8Array(sharedSecret) as BufferSource, info: buildInfo('WebPush: info', clientPublicKeyRaw, localPublicKeyBytes) as BufferSource },
     prkKey,
     256,
   );
@@ -316,12 +316,12 @@ async function encryptPayload(
   // Derive content encryption key (CEK) and nonce
   const prkForCEK = await crypto.subtle.importKey('raw', ikm, { name: 'HKDF' }, false, ['deriveBits']);
   const cekBits = await crypto.subtle.deriveBits(
-    { name: 'HKDF', hash: 'SHA-256', salt, info: buildCEKInfo('Content-Encoding: aes128gcm') },
+    { name: 'HKDF', hash: 'SHA-256', salt: salt as BufferSource, info: buildCEKInfo('Content-Encoding: aes128gcm') as BufferSource },
     prkForCEK,
     128,
   );
   const nonceBits = await crypto.subtle.deriveBits(
-    { name: 'HKDF', hash: 'SHA-256', salt, info: buildCEKInfo('Content-Encoding: nonce') },
+    { name: 'HKDF', hash: 'SHA-256', salt: salt as BufferSource, info: buildCEKInfo('Content-Encoding: nonce') as BufferSource },
     prkForCEK,
     96,
   );

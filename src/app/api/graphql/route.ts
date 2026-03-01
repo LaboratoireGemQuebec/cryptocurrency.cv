@@ -219,47 +219,234 @@ const resolvers: Record<string, (args: any) => Promise<any>> = {
   },
 };
 
-// Simple GraphQL parser (for demo - in production use graphql-js)
-function parseQuery(query: string): { field: string; args: Record<string, any> } | null {
-  // Extract the first query field
-  const match = query.match(/\{\s*(\w+)(?:\s*\(([^)]*)\))?\s*\{/);
-  if (!match) return null;
-  
-  const field = match[1];
-  const argsStr = match[2] || '';
-  
-  // Parse arguments
-  const args: Record<string, any> = {};
-  const argMatches = argsStr.matchAll(/(\w+)\s*:\s*("([^"]+)"|(\d+)|\[([^\]]+)\])/g);
-  for (const m of argMatches) {
-    const key = m[1];
-    if (m[3] !== undefined) args[key] = m[3]; // string
-    else if (m[4] !== undefined) args[key] = parseInt(m[4]); // number
-    else if (m[5] !== undefined) args[key] = m[5].split(',').map(s => s.trim().replace(/"/g, '')); // array
-  }
-  
-  return { field, args };
+/**
+ * Recursive descent GraphQL query parser
+ * 
+ * Supports:
+ * - Multiple root fields: { news { ... } prices { ... } }
+ * - Arguments: news(limit: 10, source: "coindesk")
+ * - Array arguments: prices(symbols: ["btc", "eth"])
+ * - Variables via the variables object
+ * - Nested field selection (returned fields filtered to selection)
+ */
+
+interface ParsedField {
+  name: string;
+  args: Record<string, unknown>;
+  fields?: string[];
 }
 
-// Execute GraphQL query
+function tokenize(query: string): string[] {
+  const tokens: string[] = [];
+  let i = 0;
+  while (i < query.length) {
+    // Skip whitespace
+    if (/\s/.test(query[i])) { i++; continue; }
+    // Skip comments
+    if (query[i] === '#') {
+      while (i < query.length && query[i] !== '\n') i++;
+      continue;
+    }
+    // Structural chars
+    if ('{([])},.:!'.includes(query[i])) {
+      tokens.push(query[i]);
+      i++;
+      continue;
+    }
+    // String literal
+    if (query[i] === '"') {
+      let s = '';
+      i++; // skip opening quote
+      while (i < query.length && query[i] !== '"') {
+        if (query[i] === '\\' && i + 1 < query.length) { s += query[i + 1]; i += 2; }
+        else { s += query[i]; i++; }
+      }
+      i++; // skip closing quote
+      tokens.push(`"${s}"`);
+      continue;
+    }
+    // Number or word
+    let word = '';
+    while (i < query.length && /[a-zA-Z0-9_.\-]/.test(query[i])) {
+      word += query[i]; i++;
+    }
+    if (word) tokens.push(word);
+  }
+  return tokens;
+}
+
+function parseArgValue(tokens: string[], pos: { i: number }): unknown {
+  const t = tokens[pos.i];
+  if (!t) return null;
+
+  // String
+  if (t.startsWith('"')) {
+    pos.i++;
+    return t.slice(1, -1);
+  }
+  // Array
+  if (t === '[') {
+    pos.i++; // skip [
+    const arr: unknown[] = [];
+    while (pos.i < tokens.length && tokens[pos.i] !== ']') {
+      if (tokens[pos.i] === ',') { pos.i++; continue; }
+      arr.push(parseArgValue(tokens, pos));
+    }
+    pos.i++; // skip ]
+    return arr;
+  }
+  // Boolean
+  if (t === 'true' || t === 'false') { pos.i++; return t === 'true'; }
+  // Number
+  if (/^-?\d+(\.\d+)?$/.test(t)) { pos.i++; return parseFloat(t); }
+  // Variable reference ($varName) — just return as string for now
+  if (t.startsWith('$')) { pos.i++; return t; }
+  // Enum / identifier
+  pos.i++;
+  return t;
+}
+
+function parseArgs(tokens: string[], pos: { i: number }): Record<string, unknown> {
+  const args: Record<string, unknown> = {};
+  if (tokens[pos.i] !== '(') return args;
+  pos.i++; // skip (
+  while (pos.i < tokens.length && tokens[pos.i] !== ')') {
+    if (tokens[pos.i] === ',') { pos.i++; continue; }
+    const key = tokens[pos.i]; pos.i++;
+    if (tokens[pos.i] === ':') pos.i++; // skip :
+    args[key] = parseArgValue(tokens, pos);
+  }
+  pos.i++; // skip )
+  return args;
+}
+
+function parseSelectionSet(tokens: string[], pos: { i: number }): string[] {
+  const fields: string[] = [];
+  if (tokens[pos.i] !== '{') return fields;
+  pos.i++; // skip {
+  let depth = 0;
+  while (pos.i < tokens.length && !(tokens[pos.i] === '}' && depth === 0)) {
+    if (tokens[pos.i] === '{') { depth++; pos.i++; continue; }
+    if (tokens[pos.i] === '}') { depth--; pos.i++; continue; }
+    if (tokens[pos.i] === '(' || tokens[pos.i] === ')' || tokens[pos.i] === ':' || tokens[pos.i] === ',') {
+      pos.i++; continue;
+    }
+    const fieldName = tokens[pos.i];
+    if (fieldName && /^[a-zA-Z_]/.test(fieldName)) {
+      fields.push(fieldName);
+    }
+    pos.i++;
+  }
+  pos.i++; // skip closing }
+  return fields;
+}
+
+function parseQuery(query: string): ParsedField[] {
+  const tokens = tokenize(query);
+  const pos = { i: 0 };
+  const fields: ParsedField[] = [];
+
+  // Skip optional "query" keyword and operation name
+  if (tokens[pos.i] === 'query' || tokens[pos.i] === 'mutation') {
+    pos.i++;
+    // Skip operation name if present
+    if (pos.i < tokens.length && tokens[pos.i] !== '{' && tokens[pos.i] !== '(') pos.i++;
+    // Skip variables definition
+    if (tokens[pos.i] === '(') {
+      let depth = 1; pos.i++;
+      while (pos.i < tokens.length && depth > 0) {
+        if (tokens[pos.i] === '(') depth++;
+        else if (tokens[pos.i] === ')') depth--;
+        pos.i++;
+      }
+    }
+  }
+
+  // Skip to opening brace of root selection set
+  if (tokens[pos.i] === '{') pos.i++;
+
+  // Parse multiple fields
+  while (pos.i < tokens.length && tokens[pos.i] !== '}') {
+    const name = tokens[pos.i];
+    if (!name || !/^[a-zA-Z_]/.test(name)) { pos.i++; continue; }
+    pos.i++;
+
+    const args = parseArgs(tokens, pos);
+    const selFields = tokens[pos.i] === '{' ? parseSelectionSet(tokens, pos) : undefined;
+
+    fields.push({ name, args, fields: selFields });
+  }
+
+  return fields;
+}
+
+// Execute GraphQL query — supports multiple root fields
 async function executeQuery(query: string, variables?: Record<string, any>) {
-  const parsed = parseQuery(query);
-  if (!parsed) {
-    return { errors: [{ message: 'Could not parse query' }] };
+  const parsedFields = parseQuery(query);
+  if (parsedFields.length === 0) {
+    return { errors: [{ message: 'Could not parse query. Ensure it follows GraphQL syntax: { fieldName(args) { subFields } }' }] };
   }
-  
-  const resolver = resolvers[parsed.field];
-  if (!resolver) {
-    return { errors: [{ message: `Unknown field: ${parsed.field}` }] };
+
+  const data: Record<string, any> = {};
+  const errors: Array<{ message: string; path?: string[] }> = [];
+
+  // Resolve all root fields in parallel
+  const results = await Promise.allSettled(
+    parsedFields.map(async (field) => {
+      const resolver = resolvers[field.name];
+      if (!resolver) {
+        throw new Error(`Unknown field: ${field.name}`);
+      }
+
+      // Substitute variables into args
+      const resolvedArgs: Record<string, unknown> = {};
+      for (const [k, v] of Object.entries(field.args)) {
+        if (typeof v === 'string' && v.startsWith('$') && variables?.[v.slice(1)] !== undefined) {
+          resolvedArgs[k] = variables[v.slice(1)];
+        } else {
+          resolvedArgs[k] = v;
+        }
+      }
+
+      const result = await resolver(resolvedArgs);
+
+      // Filter to requested fields if specified
+      if (field.fields && field.fields.length > 0 && result !== null) {
+        if (Array.isArray(result)) {
+          return { name: field.name, data: result.map((item: Record<string, unknown>) => {
+            if (typeof item !== 'object' || item === null) return item;
+            const filtered: Record<string, unknown> = {};
+            for (const f of field.fields!) {
+              if (f in item) filtered[f] = item[f];
+            }
+            return filtered;
+          })};
+        } else if (typeof result === 'object') {
+          const filtered: Record<string, unknown> = {};
+          for (const f of field.fields) {
+            if (f in result) filtered[f] = result[f];
+          }
+          return { name: field.name, data: filtered };
+        }
+      }
+
+      return { name: field.name, data: result };
+    })
+  );
+
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      data[result.value.name] = result.value.data;
+    } else {
+      const errMsg = result.reason instanceof Error ? result.reason.message : 'Unknown error';
+      errors.push({ message: errMsg });
+    }
   }
-  
-  try {
-    const data = await resolver({ ...parsed.args, ...variables });
-    return { data: { [parsed.field]: data } };
-  } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
-    return { errors: [{ message }] };
+
+  if (errors.length > 0 && Object.keys(data).length === 0) {
+    return { errors };
   }
+  return errors.length > 0 ? { data, errors } : { data };
 }
 
 // GET - GraphQL Playground

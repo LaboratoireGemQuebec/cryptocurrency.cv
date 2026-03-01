@@ -155,9 +155,9 @@ const DEFAULT_RELAYS = [
 const SERVICE_PUBKEY = process.env.NOSTR_PUBKEY || null;
 
 /** Resolve the best available pubkey: explicit env var, or derived from private key. */
-function resolveServicePubkey(): string | null {
+async function resolveServicePubkey(): Promise<string | null> {
   if (SERVICE_PUBKEY) return SERVICE_PUBKEY;
-  const kp = getNostrKeypair();
+  const kp = await getNostrKeypair();
   return kp ? kp.pubkey : null;
 }
 
@@ -199,7 +199,6 @@ async function getNostrKeypair(): Promise<{ pubkey: string; privkey: string } | 
   const privkey = process.env.NOSTR_PRIVATE_KEY;
   if (privkey?.length !== 64) return null;
   try {
-    const { schnorr, bytesToHex } = await loadNobleCurves();
     const pubkeyBytes = schnorr.getPublicKey(privkey);
     return { pubkey: bytesToHex(pubkeyBytes), privkey };
   } catch {
@@ -212,7 +211,6 @@ async function getNostrKeypair(): Promise<{ pubkey: string; privkey: string } | 
  * Returns a fully signed NostrEvent.
  */
 async function signEvent(base: Omit<NostrEvent, 'id' | 'sig'>, privkey: string): Promise<NostrEvent> {
-  const { schnorr, bytesToHex } = await loadNobleCurves();
   const id = computeEventId(base);
   const sig = bytesToHex(schnorr.sign(id, privkey));
   return { ...base, id, sig };
@@ -248,7 +246,7 @@ export async function GET(request: NextRequest) {
   
   // Get NIP-05 verification
   if (action === 'nip05') {
-    const pubkey = resolveServicePubkey();
+    const pubkey = await resolveServicePubkey();
     if (!pubkey) {
       return NextResponse.json(
         { error: 'NOSTR_PUBKEY not configured. Set NOSTR_PUBKEY or NOSTR_PRIVATE_KEY in environment variables.' },
@@ -266,7 +264,7 @@ export async function GET(request: NextRequest) {
   
   // Get feed configuration
   if (action === 'feed') {
-    const pubkey = resolveServicePubkey();
+    const pubkey = await resolveServicePubkey();
     if (!pubkey) {
       return NextResponse.json(
         { error: 'NOSTR_PUBKEY not configured. Set NOSTR_PUBKEY or NOSTR_PRIVATE_KEY in environment variables.' },
@@ -312,7 +310,7 @@ export async function POST(request: NextRequest) {
     
     // Publish latest news
     if (action === 'publish') {
-      const keypair = getNostrKeypair();
+      const keypair = await getNostrKeypair();
       if (!keypair) {
         return NextResponse.json({
           success: false,
@@ -336,7 +334,7 @@ export async function POST(request: NextRequest) {
           ['r', article.link],
         ];
 
-        const event = signEvent(
+        const event = await signEvent(
           { pubkey: keypair.pubkey, created_at, kind: EVENT_KINDS.TEXT_NOTE, tags, content },
           keypair.privkey
         );
@@ -358,7 +356,7 @@ export async function POST(request: NextRequest) {
     
     // Create long-form article (NIP-23)
     if (action === 'article') {
-      const keypair = getNostrKeypair();
+      const keypair = await getNostrKeypair();
       if (!keypair) {
         return NextResponse.json({
           success: false,
@@ -379,7 +377,7 @@ export async function POST(request: NextRequest) {
         ...(tags || ['crypto', 'news']).map((t: string) => ['t', t]),
       ];
 
-      const event = signEvent(
+      const event = await signEvent(
         { pubkey: keypair.pubkey, created_at, kind: EVENT_KINDS.ARTICLE, tags: eventTags, content },
         keypair.privkey
       );
@@ -421,7 +419,7 @@ export async function POST(request: NextRequest) {
 
       try {
         // Use dynamic import for ws in Node.js runtime
-        const { WebSocket: WS } = await import('ws');
+        const { default: WS } = await import('ws');
         fetchedEvents = await new Promise<Array<Record<string, unknown>>>((resolve) => {
           const events: Array<Record<string, unknown>> = [];
           const ws = new WS(targetRelay);

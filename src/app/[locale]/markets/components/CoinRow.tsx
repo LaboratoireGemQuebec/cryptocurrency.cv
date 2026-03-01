@@ -17,7 +17,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import type { TokenPrice } from '@/lib/market-data';
 import { formatPrice, formatNumber, formatPercent } from '@/lib/market-data';
