@@ -1,9 +1,15 @@
+import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PriceChart from "@/components/PriceChart";
+import { NewsCardCompact } from "@/components/NewsCard";
 import { generateCoinMetadata } from "@/lib/seo";
 import { COINGECKO_BASE } from "@/lib/constants";
+import { Link } from "@/i18n/navigation";
+import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
+import type { NewsArticle } from "@/lib/crypto-news";
 
 export const revalidate = 60;
 
@@ -67,6 +73,23 @@ async function fetchCoinData(coinId: string): Promise<CoinData | null> {
   }
 }
 
+async function fetchRelatedNews(coinName: string): Promise<NewsArticle[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+    const res = await fetch(
+      `${baseUrl}/api/news?search=${encodeURIComponent(coinName)}&limit=8`,
+      { next: { revalidate: 120 } }
+    );
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.articles ?? [];
+  } catch {
+    return [];
+  }
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, id } = await params;
   const coin = await fetchCoinData(id);
@@ -113,6 +136,14 @@ function formatSupply(n: number | undefined | null): string {
   return n.toLocaleString();
 }
 
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export default async function CoinPage({ params }: Props) {
   const { locale, id } = await params;
   setRequestLocale(locale);
@@ -140,107 +171,132 @@ export default async function CoinPage({ params }: Props) {
   const priceChange24h = md?.price_change_percentage_24h;
   const isPositive = priceChange24h != null && priceChange24h >= 0;
 
+  // Fetch related news in parallel (non-blocking)
+  const relatedNews = await fetchRelatedNews(coin.name);
+
   return (
     <>
       <Header />
       <main className="container-main py-10">
-        {/* Coin header */}
-        <div className="flex items-center gap-4 mb-6">
+        {/* Breadcrumbs */}
+        <nav className="flex items-center gap-1 text-sm text-[var(--color-text-tertiary)] mb-6">
+          <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+            Home
+          </Link>
+          <ChevronRight className="h-3.5 w-3.5" />
+          <Link href="/markets" className="hover:text-[var(--color-accent)] transition-colors">
+            Markets
+          </Link>
+          <ChevronRight className="h-3.5 w-3.5" />
+          <span className="text-[var(--color-text-primary)] font-medium">{coin.name}</span>
+        </nav>
+
+        {/* ── Section 1: Coin Header ── */}
+        <div className="flex items-start gap-4 mb-8">
           {coin.image?.large && (
             <img
               src={coin.image.large}
               alt={coin.name}
               width={64}
               height={64}
-              className="rounded-full"
+              className="rounded-full shrink-0"
             />
           )}
-          <div>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
-              {coin.name}{" "}
-              <span className="text-[var(--color-text-tertiary)] font-normal text-2xl">
-                {coin.symbol.toUpperCase()}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-3 flex-wrap">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+                {coin.name}
+              </h1>
+              <span className="text-[var(--color-text-tertiary)] font-medium text-xl md:text-2xl uppercase">
+                {coin.symbol}
               </span>
-            </h1>
-            {coin.market_cap_rank && (
-              <span className="inline-block mt-1 px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)]">
-                Rank #{coin.market_cap_rank}
+              {coin.market_cap_rank && (
+                <span className="inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full bg-[var(--color-accent)] text-white">
+                  #{coin.market_cap_rank}
+                </span>
+              )}
+            </div>
+
+            {/* Price + change badges */}
+            <div className="flex items-baseline gap-4 mt-3 flex-wrap">
+              <span className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] tabular-nums">
+                {formatPrice(md?.current_price?.usd)}
               </span>
+              <div className="flex items-center gap-2">
+                <ChangePercent label="24h" value={priceChange24h} />
+                <ChangePercent label="7d" value={md?.price_change_percentage_7d} />
+                <ChangePercent label="30d" value={md?.price_change_percentage_30d} />
+              </div>
+            </div>
+
+            {md?.price_change_24h != null && (
+              <p className="text-sm text-[var(--color-text-tertiary)] mt-1.5">
+                {md.price_change_24h >= 0 ? "+" : ""}
+                ${Math.abs(md.price_change_24h).toFixed(4)} today
+              </p>
             )}
           </div>
         </div>
 
-        {/* Price section */}
-        <div className="mb-8">
-          <div className="flex items-baseline gap-3 flex-wrap">
-            <span className="text-4xl font-bold text-[var(--color-text-primary)]">
-              {formatPrice(md?.current_price?.usd)}
-            </span>
-            {priceChange24h != null && (
-              <span
-                className={`text-lg font-semibold ${
-                  isPositive ? "text-green-500" : "text-red-500"
-                }`}
-              >
-                {formatPercent(priceChange24h)}
-              </span>
-            )}
+        {/* ── Section 2: Price Chart ── */}
+        <div className="mb-10">
+          <Suspense
+            fallback={
+              <div className="h-[370px] rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] animate-pulse" />
+            }
+          >
+            <PriceChart coinId={coin.id} />
+          </Suspense>
+        </div>
+
+        {/* ── Section 3: Stats Grid ── */}
+        <div className="mb-10">
+          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+            Market Stats
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <StatCard label="Market Cap" value={formatNumber(md?.market_cap?.usd)} />
+            <StatCard label="24h Volume" value={formatNumber(md?.total_volume?.usd)} />
+            <StatCard label="Circulating Supply" value={formatSupply(md?.circulating_supply)} />
+            <StatCard
+              label="Total Supply"
+              value={md?.total_supply ? formatSupply(md.total_supply) : "—"}
+            />
+            <StatCard
+              label="All-Time High"
+              value={formatPrice(md?.ath?.usd)}
+              sub={md?.ath_date?.usd ? formatDate(md.ath_date.usd) : undefined}
+              highlight="green"
+            />
+            <StatCard
+              label="All-Time Low"
+              value={formatPrice(md?.atl?.usd)}
+              sub={md?.atl_date?.usd ? formatDate(md.atl_date.usd) : undefined}
+              highlight="red"
+            />
+            <StatCard label="24h High" value={formatPrice(md?.high_24h?.usd)} />
+            <StatCard label="24h Low" value={formatPrice(md?.low_24h?.usd)} />
           </div>
-          {md?.price_change_24h != null && (
-            <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
-              {md.price_change_24h >= 0 ? "+" : ""}
-              ${Math.abs(md.price_change_24h).toFixed(4)} today
-            </p>
-          )}
         </div>
 
-        {/* Market data grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <StatCard label="Market Cap" value={formatNumber(md?.market_cap?.usd)} />
-          <StatCard label="24h Volume" value={formatNumber(md?.total_volume?.usd)} />
-          <StatCard label="24h High" value={formatPrice(md?.high_24h?.usd)} />
-          <StatCard label="24h Low" value={formatPrice(md?.low_24h?.usd)} />
-          <StatCard label="7d Change" value={formatPercent(md?.price_change_percentage_7d)} />
-          <StatCard label="30d Change" value={formatPercent(md?.price_change_percentage_30d)} />
-          <StatCard label="Circulating Supply" value={formatSupply(md?.circulating_supply)} />
-          <StatCard
-            label="Max Supply"
-            value={md?.max_supply ? formatSupply(md.max_supply) : "∞"}
-          />
-        </div>
-
-        {/* ATH / ATL */}
-        {(md?.ath?.usd || md?.atl?.usd) && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {md?.ath?.usd != null && (
-              <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
-                <p className="text-sm text-[var(--color-text-tertiary)]">All-Time High</p>
-                <p className="text-xl font-bold text-green-500">{formatPrice(md.ath.usd)}</p>
-                {md.ath_date?.usd && (
-                  <p className="text-xs text-[var(--color-text-tertiary)]">
-                    {new Date(md.ath_date.usd).toLocaleDateString()}
-                  </p>
-                )}
-              </div>
-            )}
-            {md?.atl?.usd != null && (
-              <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
-                <p className="text-sm text-[var(--color-text-tertiary)]">All-Time Low</p>
-                <p className="text-xl font-bold text-red-500">{formatPrice(md.atl.usd)}</p>
-                {md.atl_date?.usd && (
-                  <p className="text-xs text-[var(--color-text-tertiary)]">
-                    {new Date(md.atl_date.usd).toLocaleDateString()}
-                  </p>
-                )}
-              </div>
-            )}
+        {/* ── Section 4: Related News ── */}
+        {relatedNews.length > 0 && (
+          <div className="mb-10">
+            <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+              Latest {coin.name} News
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {relatedNews.map((article) => (
+                <NewsCardCompact key={article.link} article={article} />
+              ))}
+            </div>
           </div>
         )}
 
         {/* Description */}
         {coin.description?.en && (
-          <div className="mb-8">
-            <h2 className="text-xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <div className="mb-10">
+            <h2 className="font-serif text-xl font-bold mb-3 text-[var(--color-text-primary)]">
               About {coin.name}
             </h2>
             <div
@@ -255,7 +311,7 @@ export default async function CoinPage({ params }: Props) {
         {/* Links */}
         {coin.links && (
           <div className="mb-8">
-            <h2 className="text-xl font-bold mb-3 text-[var(--color-text-primary)]">Links</h2>
+            <h2 className="font-serif text-xl font-bold mb-3 text-[var(--color-text-primary)]">Links</h2>
             <div className="flex flex-wrap gap-2">
               {coin.links.homepage?.[0] && (
                 <LinkPill href={coin.links.homepage[0]} label="Website" />
@@ -285,26 +341,9 @@ export default async function CoinPage({ params }: Props) {
           </div>
         )}
 
-        {/* Categories */}
-        {coin.categories && coin.categories.length > 0 && (
-          <div>
-            <h2 className="text-xl font-bold mb-3 text-[var(--color-text-primary)]">Categories</h2>
-            <div className="flex flex-wrap gap-2">
-              {coin.categories.filter(Boolean).map((cat) => (
-                <span
-                  key={cat}
-                  className="px-3 py-1 text-sm rounded-full bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)]"
-                >
-                  {cat}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Last updated */}
         {coin.last_updated && (
-          <p className="mt-8 text-xs text-[var(--color-text-tertiary)]">
+          <p className="text-xs text-[var(--color-text-tertiary)]">
             Last updated: {new Date(coin.last_updated).toLocaleString()}
           </p>
         )}
@@ -314,11 +353,53 @@ export default async function CoinPage({ params }: Props) {
   );
 }
 
-function StatCard({ label, value }: { label: string; value: string }) {
+/* ── Helper Components ── */
+
+function ChangePercent({ label, value }: { label: string; value?: number | null }) {
+  if (value == null) return null;
+  const positive = value >= 0;
+  return (
+    <span
+      className={`inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded-md ${
+        positive
+          ? "bg-green-500/10 text-green-600 dark:text-green-400"
+          : "bg-red-500/10 text-red-600 dark:text-red-400"
+      }`}
+    >
+      <span className="text-[10px]">{label}</span>
+      {formatPercent(value)}
+    </span>
+  );
+}
+
+function StatCard({
+  label,
+  value,
+  sub,
+  highlight,
+}: {
+  label: string;
+  value: string;
+  sub?: string;
+  highlight?: "green" | "red";
+}) {
   return (
     <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
       <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{label}</p>
-      <p className="text-lg font-semibold text-[var(--color-text-primary)]">{value}</p>
+      <p
+        className={`text-lg font-semibold ${
+          highlight === "green"
+            ? "text-green-500"
+            : highlight === "red"
+              ? "text-red-500"
+              : "text-[var(--color-text-primary)]"
+        }`}
+      >
+        {value}
+      </p>
+      {sub && (
+        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{sub}</p>
+      )}
     </div>
   );
 }

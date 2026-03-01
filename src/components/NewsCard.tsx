@@ -1,7 +1,11 @@
 import { Link } from "@/i18n/navigation";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
+import { BookmarkButton } from "@/components/BookmarkButton";
 import { cn } from "@/lib/utils";
 import type { NewsArticle } from "@/lib/crypto-news";
+
+const BOOKMARK_BTN =
+  "absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity";
 
 /* ------------------------------------------------
    Shared helpers
@@ -43,13 +47,15 @@ function SourceMeta({ source, timeAgo }: { source: string; timeAgo: string }) {
 
 export function FeaturedCard({ article }: { article: NewsArticle }) {
   return (
-    <Link
-      href={article.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block"
-    >
-      <article className="grid gap-5 md:grid-cols-2 md:gap-8 items-center">
+    <div className="group relative">
+      <BookmarkButton article={article} className={BOOKMARK_BTN} />
+      <Link
+        href={article.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <article className="grid gap-5 md:grid-cols-2 md:gap-8 items-center">
         <ArticleImage
           src={article.imageUrl}
           alt={article.title}
@@ -71,6 +77,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
         </div>
       </article>
     </Link>
+    </div>
   );
 }
 
@@ -80,13 +87,15 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
 
 export function NewsCardDefault({ article }: { article: NewsArticle }) {
   return (
-    <Link
-      href={article.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block"
-    >
-      <article className="flex flex-col gap-3">
+    <div className="group relative">
+      <BookmarkButton article={article} className={BOOKMARK_BTN} />
+      <Link
+        href={article.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <article className="flex flex-col gap-3">
         <ArticleImage
           src={article.imageUrl}
           alt={article.title}
@@ -108,6 +117,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
         </div>
       </article>
     </Link>
+    </div>
   );
 }
 
@@ -117,13 +127,15 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
 
 export function NewsCardCompact({ article }: { article: NewsArticle }) {
   return (
-    <Link
-      href={article.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block"
-    >
-      <article className="flex gap-4 items-start">
+    <div className="group relative">
+      <BookmarkButton article={article} className={BOOKMARK_BTN} />
+      <Link
+        href={article.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <article className="flex gap-4 items-start">
         <ArticleImage
           src={article.imageUrl}
           alt={article.title}
@@ -140,6 +152,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
         </div>
       </article>
     </Link>
+    </div>
   );
 }
 
