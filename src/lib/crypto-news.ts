@@ -2817,7 +2817,7 @@ export interface SourceInfo {
   name: string;
   url: string;
   category: string;
-  status: 'active' | 'unavailable';
+  status: 'active' | 'unavailable' | 'unknown';
 }
 
 /**
@@ -4055,38 +4055,66 @@ export async function getNewsByCategory(
 }
 
 export async function getSources(): Promise<{ sources: SourceInfo[] }> {
-  const sourceChecks = await Promise.allSettled(
-    (Object.keys(RSS_SOURCES) as SourceKey[]).map(async key => {
-      const source = RSS_SOURCES[key];
-      try {
-        const response = await fetch(source.url, {
-          method: 'HEAD',
-          headers: { 'User-Agent': 'FreeCryptoNews/1.0' },
-        });
-        return {
-          key,
-          name: source.name,
-          url: source.url,
-          category: source.category,
-          status: response.ok ? 'active' : 'unavailable',
-        } as SourceInfo;
-      } catch {
-        return {
-          key,
-          name: source.name,
-          url: source.url,
-          category: source.category,
-          status: 'unavailable',
-        } as SourceInfo;
-      }
-    })
-  );
-  
-  return {
-    sources: sourceChecks
-      .filter((r): r is PromiseFulfilledResult<SourceInfo> => r.status === 'fulfilled')
-      .map(r => r.value),
-  };
+  return withCache(newsCache, 'sources-list', 300, async () => {
+    const SOURCES_TIMEOUT_MS = 15_000;
+    const PER_REQUEST_TIMEOUT_MS = 3_000;
+
+    const sourcesPromise = (async () => {
+      const sourceChecks = await Promise.allSettled(
+        (Object.keys(RSS_SOURCES) as SourceKey[]).map(async key => {
+          const source = RSS_SOURCES[key];
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), PER_REQUEST_TIMEOUT_MS);
+          try {
+            const response = await fetch(source.url, {
+              method: 'HEAD',
+              signal: controller.signal,
+              headers: { 'User-Agent': 'FreeCryptoNews/1.0' },
+            });
+            return {
+              key,
+              name: source.name,
+              url: source.url,
+              category: source.category,
+              status: response.ok ? 'active' : 'unavailable',
+            } as SourceInfo;
+          } catch {
+            return {
+              key,
+              name: source.name,
+              url: source.url,
+              category: source.category,
+              status: 'unavailable',
+            } as SourceInfo;
+          } finally {
+            clearTimeout(timer);
+          }
+        })
+      );
+
+      return sourceChecks
+        .filter((r): r is PromiseFulfilledResult<SourceInfo> => r.status === 'fulfilled')
+        .map(r => r.value);
+    })();
+
+    // Fallback: return all sources as 'unknown' status if aggregate times out
+    const timeoutPromise = new Promise<SourceInfo[]>((resolve) =>
+      setTimeout(() => {
+        console.warn(`[getSources] Exceeded ${SOURCES_TIMEOUT_MS}ms — returning sources without status check`);
+        resolve(
+          (Object.keys(RSS_SOURCES) as SourceKey[]).map(key => ({
+            key,
+            name: RSS_SOURCES[key].name,
+            url: RSS_SOURCES[key].url,
+            category: RSS_SOURCES[key].category,
+            status: 'unknown' as const,
+          } as SourceInfo))
+        );
+      }, SOURCES_TIMEOUT_MS)
+    );
+
+    return { sources: await Promise.race([sourcesPromise, timeoutPromise]) };
+  });
 }
 
 /**

@@ -291,8 +291,8 @@ const nextConfig = {
 
   // Experimental features for better performance
   experimental: {
-    // Enable optimized loading of CSS (disabled - conflicts with Turbopack build)
-    // optimizeCss: true,
+    // Enable optimized loading of CSS
+    optimizeCss: true,
     // Client-side router cache: RSC payloads for dynamic routes survive 30 s,
     // static routes survive 3 min — reduces redundant network round-trips on navigation.
     staleTimes: {
