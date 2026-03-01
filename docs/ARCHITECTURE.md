@@ -206,13 +206,244 @@ All article cards use a three-tier image strategy:
 
 ## Internationalisation
 
-`next-intl` wraps all user-facing routes under `[locale]`. 40+ locales are supported. Translation files live in `messages/`. The `docs:translate` script auto-translates docs via the API.
+`next-intl` wraps all user-facing routes under `[locale]`. 42 locales are supported. Translation files live in `messages/`. The `i18n:translate` script auto-translates docs via the API.
+
+---
+
+## Database & storage architecture
+
+The project uses a **hybrid storage** approach:
+
+```
+                    ┌───────────────────────┐
+                    │   Neon (Postgres)      │
+                    │   via Drizzle ORM      │
+                    │   • User data          │
+                    │   • API keys           │
+                    │   • Predictions        │
+                    │   • Analytics          │
+                    └───────────┬───────────┘
+                                │
+    ┌───────────────────────────┼───────────────────────────┐
+    │                           │                           │
+    ▼                           ▼                           ▼
+┌───────────┐          ┌───────────────┐          ┌───────────────┐
+│  Archive  │          │ Upstash Redis │          │  In-memory    │
+│  (JSON)   │          │  / Vercel KV  │          │  LRU cache    │
+│ • Articles│          │ • Hot data    │          │ • Dev fallback│
+│ • Indexes │          │ • Rate limits │          │ • Single-node │
+│ • Market  │          │ • Sessions    │          │               │
+│ • Social  │          │ • Counters    │          │               │
+└───────────┘          └───────────────┘          └───────────────┘
+```
+
+### Storage backend priority
+
+The `distributed-cache.ts` module auto-selects the best available backend:
+
+1. **Vercel KV** — when `KV_REST_API_URL` is set (Vercel deployments)
+2. **Upstash Redis** — when `UPSTASH_REDIS_REST_URL` is set
+3. **In-memory LRU** — automatic fallback (development, single-instance)
+
+### Drizzle ORM
+
+Database schema is managed with Drizzle Kit. Migrations live in `drizzle/`:
+
+```bash
+bun run db:generate   # Generate migration from schema changes
+bun run db:migrate    # Apply pending migrations
+bun run db:push       # Push schema directly (dev only)
+bun run db:studio     # Open Drizzle Studio GUI
+```
+
+---
+
+## Rate limiting
+
+The API implements a **distributed sliding-window** rate limiter:
+
+| Tier | Limit | Window | Description |
+|------|-------|--------|-------------|
+| Free (no key) | 100 req | 15 min | Public API access |
+| Basic key | 1,000 req | 15 min | Registered users |
+| Premium | 10,000 req | 15 min | Paid tier |
+| Internal | Unlimited | — | Server-to-server |
+
+Rate limit state is stored in Redis (or in-memory fallback). Response headers include:
+
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 87
+X-RateLimit-Reset: 1709312400
+```
+
+---
+
+## Real-time architecture
+
+```
+                  ┌──────────────────────┐
+                  │   Clients            │
+                  │   (browsers, bots)   │
+                  └──────┬───────┬───────┘
+                         │       │
+      SSE (Vercel)──────┘       └──────WebSocket (Railway/Docker)
+                         │       │
+            ┌────────────▼──┐  ┌─▼────────────────┐
+            │ /api/sse      │  │ ws-server.js      │
+            │ Edge Runtime  │  │ Node.js process   │
+            │ event: news   │  │ rooms: topics,    │
+            │ event: break  │  │   coins, #general │
+            │ event: price  │  │ auto-reconnect    │
+            └────────────┬──┘  └─┬────────────────┘
+                         │       │
+                         ▼       ▼
+                   ┌─────────────────┐
+                   │  News pipeline  │
+                   │  (RSS ingest +  │
+                   │   archive sync) │
+                   └─────────────────┘
+```
+
+- **SSE** (Server-Sent Events) — primary real-time channel on Vercel (Edge Runtime, no WebSocket support)
+- **WebSocket** — full-duplex channel available on Railway / Docker / self-hosted deployments
+- **Push notifications** — VAPID-based web push via Service Worker
+- **Webhooks** — outbound HTTP POST to registered URLs on new articles
+
+---
+
+## Error handling strategy
+
+### API routes
+
+All API routes follow a consistent error response format:
+
+```json
+{
+  "error": "Human-readable message",
+  "code": "RATE_LIMIT_EXCEEDED",
+  "status": 429,
+  "timestamp": "2026-03-01T12:00:00Z"
+}
+```
+
+Standard HTTP status codes:
+
+| Code | Meaning |
+|------|---------|
+| 200 | Success |
+| 400 | Bad request (invalid parameters) |
+| 401 | Authentication required |
+| 402 | Payment required (x402 premium endpoints) |
+| 404 | Resource not found |
+| 429 | Rate limit exceeded |
+| 500 | Internal server error |
+| 503 | Upstream source unavailable |
+
+### Graceful degradation
+
+The app is designed to work with **zero external dependencies**:
+
+- No Redis → in-memory cache
+- No database → archive JSON as primary store
+- No AI key → AI endpoints return helpful error messages
+- No upstream RSS → serves cached/archived articles
+
+---
+
+## Observability
+
+### OpenTelemetry
+
+Instrumentation is configured in `instrumentation.ts`:
+
+```
+App → OTLP HTTP exporter → Collector → Backend (Jaeger, Grafana, etc.)
+```
+
+Traces cover:
+- Incoming HTTP requests
+- Outgoing fetch calls (RSS feeds, price APIs)
+- Cache hits/misses
+- Database queries
+
+### Structured logging
+
+[Pino](https://github.com/pinojs/pino) is used for JSON-structured logs:
+
+```json
+{"level":30,"time":1709312400,"msg":"RSS fetch completed","source":"coindesk","articles":12,"duration":340}
+```
+
+### Health endpoint
+
+`/api/health` returns system status:
+
+```json
+{
+  "status": "healthy",
+  "uptime": 86400,
+  "cache": "redis",
+  "version": "1.x.x",
+  "timestamp": "2026-03-01T12:00:00Z"
+}
+```
+
+---
+
+## Security architecture
+
+### Defence in depth
+
+```
+Client → Vercel Edge CDN (DDoS protection, WAF)
+       → Security headers middleware (CSP, HSTS, X-Frame-Options)
+       → Rate limiter (sliding-window, per-IP or per-key)
+       → Input validation (Zod schemas)
+       → Route handler logic
+       → Output sanitization
+```
+
+Key security measures:
+- **Content Security Policy** — restrictive CSP via middleware
+- **CORS** — configurable allowed origins
+- **Input validation** — Zod schemas on all user input
+- **Output encoding** — prevents XSS in rendered content
+- **Dependency scanning** — Dependabot + CodeQL
+- **Secret management** — environment variables only, never committed
+
+See [Security Policy](SECURITY.md) for vulnerability reporting.
+
+---
+
+## CI/CD pipeline
+
+The project deploys via **platform-native CI/CD** (no GitHub Actions):
+
+| Platform | Trigger | Pipeline |
+|----------|---------|----------|
+| Vercel | Git push to `main` | Build → Deploy → Health check |
+| Railway | Git push to `main` | Nixpacks build → Deploy |
+| Docker | Manual `docker build` | Multi-stage Dockerfile |
+
+### Build process
+
+```bash
+pnpm install          # Install dependencies
+bun run build         # Next.js production build (standalone output)
+bun run start         # Start production server
+```
+
+The standalone output (`next.config.js: output: 'standalone'`) produces a minimal Node.js server with all dependencies bundled — ideal for Docker containers.
 
 ---
 
 ## Related docs
 
-- [Scalability](SCALABILITY.md) — caching, edge runtime, load handling
+- [Scalability](SCALABILITY.md) — caching tiers, edge runtime, load handling
+- [Database](DATABASE.md) — storage backends, Drizzle ORM, migrations
 - [Developer Guide](DEVELOPER-GUIDE.md) — component reference, extending the app
-- [API Reference](API.md) — endpoint catalogue
-- [Deployment](DEPLOYMENT.md) — hosting options
+- [API Reference](API.md) — endpoint catalogue (150+ endpoints)
+- [Deployment](DEPLOYMENT.md) — hosting options and configuration
+- [Real-Time](REALTIME.md) — SSE, WebSocket, push notifications, webhooks
+- [Security](SECURITY.md) — security policy and reporting

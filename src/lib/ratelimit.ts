@@ -16,7 +16,7 @@
 
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 // ============================================================================
 // Types
@@ -495,6 +495,19 @@ export function getRateLimitErrorResponse(result: RateLimitResult): NextResponse
  * @deprecated Use getRateLimitErrorResponse instead
  */
 export const rateLimitResponse = getRateLimitErrorResponse;
+
+/**
+ * Add rate limit headers to an existing response
+ */
+export function addRateLimitHeaders(
+  response: NextResponse,
+  result: RateLimitResult
+): NextResponse {
+  response.headers.set('X-RateLimit-Limit', result.limit.toString());
+  response.headers.set('X-RateLimit-Remaining', result.remaining.toString());
+  response.headers.set('X-RateLimit-Reset', result.resetAt.toString());
+  return response;
+}
 
 // ============================================================================
 // Analytics (if enabled)

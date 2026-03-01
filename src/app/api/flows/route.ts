@@ -12,8 +12,9 @@
  * Falls back to CryptoQuant if CRYPTOQUANT_API_KEY is set.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { callGroq, isGroqConfigured } from '@/lib/groq';
+import { COINGECKO_BASE, BLOCKCHAIN_INFO_BASE } from '@/lib/constants';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5-minute cache

@@ -92,6 +92,10 @@ const commitTypes = {
  * Execute git command and return output
  */
 function git(command) {
+  // Sanitize: only allow safe git subcommand characters
+  if (!/^[a-zA-Z0-9\s\-_.\/='":%^~@{}|,\\]+$/.test(command)) {
+    throw new Error(`Potentially unsafe git command rejected: ${command}`);
+  }
   try {
     return execSync(`git ${command}`, {
       cwd: projectRoot,

@@ -38,8 +38,9 @@
  *   - Inherits the caller's tier (free-tier caps apply per sub-request)
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { CACHE_CONTROL, generateETag, checkETagMatch } from '@/lib/api-utils';
+import { PREMIUM_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 

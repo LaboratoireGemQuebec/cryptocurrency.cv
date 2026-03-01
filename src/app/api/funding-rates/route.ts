@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { getPipelineFundingRates } from '@/lib/data-pipeline';
 import { registry } from '@/lib/providers/registry';
 import type { FundingRate } from '@/lib/providers/adapters/funding-rate';
+import { ApiError } from '@/lib/api-error';
+import { BINANCE_FUTURES_BASE } from '@/lib/constants';
 
 /**
  * Funding Rates API Proxy
@@ -41,7 +43,7 @@ export async function GET() {
     } catch { /* provider chain miss — fall through to direct call */ }
 
     // Layer 3: Direct Binance fallback (legacy)
-    const response = await fetch('https://fapi.binance.com/fapi/v1/premiumIndex', {
+    const response = await fetch(`${BINANCE_FUTURES_BASE}/fapi/v1/premiumIndex`, {
       next: { revalidate: 30 },
     });
 
@@ -63,9 +65,6 @@ export async function GET() {
     });
   } catch (error) {
     console.error('Funding rates proxy error:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch funding rates' },
-      { status: 500 }
-    );
+    return ApiError.internal('Failed to fetch funding rates');
   }
 }

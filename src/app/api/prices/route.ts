@@ -11,12 +11,13 @@
  *   5. Emergency hardcoded data (always available)
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE, PREMIUM_URL } from '@/lib/constants';
 import { staleCache, cache, generateCacheKey } from '@/lib/cache';
 import { getPricesFallback } from '@/lib/fallback';
 import { getPipelinePrices } from '@/lib/data-pipeline';
+import { ApiError } from '@/lib/api-error';
 
 export const revalidate = 120;
 
@@ -25,10 +26,7 @@ export async function GET(request: NextRequest) {
   const coins = request.nextUrl.searchParams.get('coins');
 
   if (!coins) {
-    return NextResponse.json(
-      { error: 'Missing "coins" query parameter' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Missing "coins" query parameter');
   }
 
   const coinIds = coins

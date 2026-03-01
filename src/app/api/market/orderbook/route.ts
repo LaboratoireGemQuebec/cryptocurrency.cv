@@ -4,8 +4,8 @@
  * Multi-exchange order book aggregation and smart routing.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimitByRequest, rateLimitResponse } from '@/lib/rate-limit';
+import { type NextRequest, NextResponse } from 'next/server';
+import { checkRateLimitByRequest, rateLimitResponse } from '@/lib/ratelimit';
 import { 
   orderBook,
   type Exchange,

@@ -1,16 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import {
   extractClaims,
   isExtractorConfigured,
   hasSignificantClaims,
   analyzeClaimQuality,
-  ClaimExtractionResult,
+  type ClaimExtractionResult,
 } from '@/lib/claim-extractor';
 import {
   checkRateLimitByRequest,
   rateLimitResponse,
   addRateLimitHeaders,
-} from '@/lib/rate-limit';
+} from '@/lib/ratelimit';
 
 export const runtime = 'edge';
 
@@ -42,7 +42,7 @@ interface ErrorResponse {
  */
 export async function POST(request: NextRequest): Promise<NextResponse> {
   // Rate limiting
-  const rateLimitResult = checkRateLimitByRequest(request);
+  const rateLimitResult = await checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }

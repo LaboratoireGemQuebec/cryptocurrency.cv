@@ -14,10 +14,11 @@
  * @module api/premium/ai/analyze
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getCoinDetails, getHistoricalPrices, getFearGreedIndex } from '@/lib/market-data';
-import { callGroq, isGroqConfigured } from '@/lib/groq';
+import { parseGroqJson } from '@/lib/groq';
+import { aiComplete, isAIConfigured } from '@/lib/ai-provider';
 
 export const runtime = 'nodejs';
 
@@ -232,13 +233,19 @@ Response format:
       true
     );
 
-    const parsed = parseGroqJson<Record<string, unknown>>(raw);
+    const parsed = parseGroqJson<{
+      summary?: string;
+      keyPoints?: string[];
+      signal?: { type?: string; confidence?: number; rationale?: string };
+      risks?: string[];
+      opportunities?: string[];
+    }>(raw);
 
     return {
       summary: parsed.summary || 'Analysis unavailable',
       keyPoints: parsed.keyPoints || [],
       signals: {
-        type: parsed.signal?.type || 'hold',
+        type: (parsed.signal?.type as 'buy' | 'sell' | 'hold') || 'hold',
         confidence: parsed.signal?.confidence || 50,
         rationale: parsed.signal?.rationale || 'Insufficient data',
       },
@@ -419,7 +426,7 @@ async function handler(
         metadata: {
           generatedAt: new Date().toISOString(),
           dataFreshness: 'real-time',
-          model: isGroqConfigured() ? 'llama-3.3-70b-versatile' : 'rule-based',
+          model: isAIConfigured() ? 'llama-3.3-70b-versatile' : 'rule-based',
         },
       },
       {

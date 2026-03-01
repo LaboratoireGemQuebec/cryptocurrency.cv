@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { type NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
@@ -9,6 +9,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { getBulkEnrichment } from '@/lib/article-enrichment';
 import { staleCache, generateCacheKey } from '@/lib/cache';
 import { getNewsFallback } from '@/lib/fallback';
+import { PREMIUM_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content

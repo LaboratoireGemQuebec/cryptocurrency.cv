@@ -5,7 +5,7 @@
  * Find articles similar to a given article.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getSimilarArticles } from '@/lib/rag';
 
 export const runtime = 'nodejs';
@@ -50,7 +50,7 @@ export async function GET(
   } catch (error) {
     console.error('RAG similar error:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Internal server error' },
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }

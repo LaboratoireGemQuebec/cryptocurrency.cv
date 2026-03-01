@@ -5,7 +5,7 @@
  * Get a summary of recent news for a cryptocurrency.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { summarizeCryptoNews, VALID_CODES, normalizeToCode } from '@/lib/rag';
 
 export const runtime = 'nodejs';
@@ -53,7 +53,7 @@ export async function GET(
   } catch (error) {
     console.error('RAG summary error:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Internal server error' },
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }

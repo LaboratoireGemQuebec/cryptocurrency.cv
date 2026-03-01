@@ -9,7 +9,7 @@
  * @module api/rag/middleware
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import type { APIErrorResponse } from './schemas';
 import { logger } from '@/lib/logger';
 
@@ -188,7 +188,7 @@ export function handleAPIError(error: unknown, context: string): NextResponse {
     }
 
     return NextResponse.json(
-      { error: error.message, code: 'INTERNAL_ERROR' },
+      { error: 'Internal server error', code: 'INTERNAL_ERROR' },
       { status: 500 }
     );
   }
