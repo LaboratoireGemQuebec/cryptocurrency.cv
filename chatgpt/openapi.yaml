@@ -2,9 +2,11 @@ openapi: 3.1.0
 info:
   title: Free Crypto News API
   description: |
-    🆓 100% FREE crypto news API. No API keys required!
-    Aggregates real-time news from 130+ crypto sources.
-  version: 1.0.0
+    🆓 100% FREE crypto news & market data API. No API keys required!
+    Aggregates real-time news from 130+ crypto sources, live prices, on-chain data,
+    DeFi yields, whale alerts, sentiment analysis, and more.
+    https://cryptocurrency.cv
+  version: 2.0.0
   contact:
     name: GitHub
     url: https://github.com/nirholas/free-crypto-news
@@ -17,7 +19,7 @@ paths:
     get:
       operationId: getLatestNews
       summary: Get latest crypto news
-      description: Fetch the latest news from all 7 crypto news sources
+      description: Fetch the latest news from 130+ crypto news sources. Supports search, category filtering, and pagination.
       parameters:
         - name: limit
           in: query
@@ -27,6 +29,17 @@ paths:
             default: 10
             minimum: 1
             maximum: 50
+        - name: search
+          in: query
+          description: Search keywords to filter articles by title/description
+          schema:
+            type: string
+        - name: category
+          in: query
+          description: Filter by news category
+          schema:
+            type: string
+            enum: [general, bitcoin, ethereum, defi, nft, regulation, altcoins]
         - name: source
           in: query
           description: Filter by specific source
@@ -41,110 +54,173 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsResponse'
 
-  /api/search:
+  /api/prices:
     get:
-      operationId: searchNews
-      summary: Search news by keywords
-      description: Search across all sources for specific topics
+      operationId: getCryptoPrices
+      summary: Get live cryptocurrency prices
+      description: Get real-time prices, market cap, volume, and 24h changes for cryptocurrencies. Supports 100+ coins via CoinGecko IDs.
       parameters:
-        - name: q
+        - name: coin
           in: query
-          required: true
-          description: Comma-separated keywords to search for
+          description: Comma-separated coin IDs (e.g., "bitcoin,ethereum,solana"). Uses CoinGecko identifiers.
           schema:
             type: string
-        - name: limit
+            default: bitcoin,ethereum,solana
+        - name: vs_currency
           in: query
-          description: Maximum results (1-30)
+          description: Quote currency for prices
           schema:
-            type: integer
-            default: 10
+            type: string
+            default: usd
+            enum: [usd, eur, gbp, jpy, btc, eth]
       responses:
         '200':
-          description: Search results
+          description: Live price data
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsResponse'
+                type: object
+                properties:
+                  prices:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CoinPrice'
+                  fetchedAt:
+                    type: string
+                    format: date-time
 
-  /api/defi:
+  /api/market:
     get:
-      operationId: getDefiNews
-      summary: Get DeFi-specific news
-      description: News about DeFi, yield farming, DEXs, lending protocols
+      operationId: getMarketOverview
+      summary: Get market overview
+      description: Get a comprehensive overview of the crypto market including total market cap, BTC dominance, top gainers/losers, and trading volume.
       parameters:
         - name: limit
           in: query
+          description: Number of top coins to include (1-100)
           schema:
             type: integer
-            default: 10
+            default: 20
       responses:
         '200':
-          description: DeFi news
+          description: Market overview data
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsResponse'
+                type: object
+                properties:
+                  totalMarketCap:
+                    type: number
+                    description: Total crypto market capitalization in USD
+                  btcDominance:
+                    type: number
+                    description: Bitcoin dominance percentage
+                  totalVolume24h:
+                    type: number
+                    description: Total 24-hour trading volume in USD
+                  marketCapChange24h:
+                    type: number
+                    description: 24h market cap change percentage
+                  topCoins:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CoinPrice'
+                  topGainers:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CoinPrice'
+                  topLosers:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CoinPrice'
 
-  /api/bitcoin:
+  /api/fear-greed:
     get:
-      operationId: getBitcoinNews
-      summary: Get Bitcoin-specific news
-      description: News specifically about Bitcoin, Lightning Network, miners
+      operationId: getFearGreedIndex
+      summary: Get Crypto Fear & Greed Index
+      description: Returns the current Crypto Fear & Greed Index. 0 = Extreme Fear, 100 = Extreme Greed. Includes historical data.
       parameters:
-        - name: limit
+        - name: days
           in: query
+          description: Number of days of history to include (1-30)
           schema:
             type: integer
-            default: 10
+            default: 7
       responses:
         '200':
-          description: Bitcoin news
+          description: Fear & Greed Index
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsResponse'
+                type: object
+                properties:
+                  current:
+                    type: object
+                    properties:
+                      value:
+                        type: integer
+                        minimum: 0
+                        maximum: 100
+                      classification:
+                        type: string
+                        enum: [Extreme Fear, Fear, Neutral, Greed, Extreme Greed]
+                      timestamp:
+                        type: string
+                        format: date-time
+                  history:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        value:
+                          type: integer
+                        classification:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
 
-  /api/breaking:
+  /api/gas:
     get:
-      operationId: getBreakingNews
-      summary: Get breaking news
-      description: News from the last 2 hours
-      parameters:
-        - name: limit
-          in: query
-          schema:
-            type: integer
-            default: 5
+      operationId: getGasPrices
+      summary: Get Ethereum gas prices
+      description: Get current Ethereum gas prices in Gwei for slow, standard, fast, and instant transaction speeds.
       responses:
         '200':
-          description: Breaking news
+          description: Current gas prices
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsResponse'
-
-  /api/sources:
-    get:
-      operationId: getSources
-      summary: List all news sources
-      description: Get information about all available news sources and their status
-      responses:
-        '200':
-          description: Source list
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SourcesResponse'
+                type: object
+                properties:
+                  slow:
+                    type: number
+                    description: Slow gas price in Gwei
+                  standard:
+                    type: number
+                    description: Standard gas price in Gwei
+                  fast:
+                    type: number
+                    description: Fast gas price in Gwei
+                  instant:
+                    type: number
+                    description: Instant gas price in Gwei
+                  baseFee:
+                    type: number
+                    description: Current base fee in Gwei
+                  updatedAt:
+                    type: string
+                    format: date-time
 
   /api/trending:
     get:
       operationId: getTrendingTopics
       summary: Get trending topics
-      description: Most-mentioned keywords across all crypto news in the last 24 hours with sentiment
+      description: Most-mentioned keywords across all crypto news with sentiment analysis and mention counts.
       parameters:
         - name: limit
           in: query
+          description: Maximum topics to return (1-50)
           schema:
             type: integer
             default: 20
@@ -168,7 +244,7 @@ paths:
                     items:
                       type: object
                       properties:
-                        keyword:
+                        topic:
                           type: string
                         count:
                           type: integer
@@ -177,20 +253,171 @@ paths:
                         sentiment:
                           type: string
                           enum: [bullish, bearish, neutral]
+                  timeWindow:
+                    type: string
+                  articlesAnalyzed:
+                    type: integer
+
+  /api/defi:
+    get:
+      operationId: getDefiData
+      summary: Get DeFi data and news
+      description: Get DeFi ecosystem data including TVL, top protocols, and DeFi-specific news about yield farming, DEXs, and lending.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum results (1-50)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: DeFi data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalTvl:
+                    type: number
+                    description: Total value locked in DeFi (USD)
+                  protocols:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tvl:
+                          type: number
+                        change24h:
+                          type: number
+                        chain:
+                          type: string
+                  articles:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NewsArticle'
+
+  /api/yields:
+    get:
+      operationId: getDefiYields
+      summary: Get DeFi yield opportunities
+      description: Get top DeFi yield farming and staking opportunities across protocols with APY, TVL, and risk assessment.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum results (1-50)
+          schema:
+            type: integer
+            default: 10
+        - name: chain
+          in: query
+          description: Filter by blockchain
+          schema:
+            type: string
+            enum: [ethereum, bsc, polygon, arbitrum, solana, avalanche, optimism, base]
+        - name: min_tvl
+          in: query
+          description: Minimum TVL in USD
+          schema:
+            type: number
+            default: 1000000
+      responses:
+        '200':
+          description: DeFi yield opportunities
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pools:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        protocol:
+                          type: string
+                        pool:
+                          type: string
+                        chain:
+                          type: string
+                        apy:
+                          type: number
+                        tvlUsd:
+                          type: number
+                        risk:
+                          type: string
+                          enum: [low, medium, high]
+
+  /api/whale-alerts:
+    get:
+      operationId: getWhaleAlerts
+      summary: Get whale transaction alerts
+      description: Get large cryptocurrency transactions (whale movements). Shows big transfers between wallets and exchanges.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum alerts (1-50)
+          schema:
+            type: integer
+            default: 10
+        - name: min_usd
+          in: query
+          description: Minimum transaction value in USD
+          schema:
+            type: number
+            default: 1000000
+        - name: coin
+          in: query
+          description: Filter by coin (btc, eth, usdt, etc.)
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Whale alerts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  alerts:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        coin:
+                          type: string
+                        amount:
+                          type: number
+                        amount_usd:
+                          type: number
+                        from:
+                          type: string
+                        to:
+                          type: string
+                        from_owner_type:
+                          type: string
+                        to_owner_type:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
 
   /api/sentiment:
     get:
       operationId: getMarketSentiment
-      summary: Get market sentiment
-      description: AI-powered sentiment analysis from all news sources. Use asset param (BTC, ETH, SOL, etc.) to filter.
+      summary: Get market sentiment analysis
+      description: AI-powered sentiment analysis from news and social media. Filter by asset symbol for coin-specific sentiment.
       parameters:
         - name: asset
           in: query
-          description: Crypto asset symbol e.g. BTC, ETH, SOL. Omit for overall market sentiment.
+          description: Crypto asset symbol (BTC, ETH, SOL, etc.). Omit for overall market sentiment.
           schema:
             type: string
         - name: period
           in: query
+          description: Time period for analysis
           schema:
             type: string
             enum: [1h, 24h, 7d, 30d]
@@ -209,6 +436,9 @@ paths:
                   score:
                     type: number
                     description: Sentiment score from -1 (extreme fear) to 1 (extreme greed)
+                  confidence:
+                    type: number
+                    description: Confidence level 0-1
                   breakdown:
                     type: object
                     properties:
@@ -218,50 +448,602 @@ paths:
                         type: integer
                       bearish:
                         type: integer
+                  factors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        factor:
+                          type: string
+                        impact:
+                          type: string
+                          enum: [positive, negative, neutral]
+                        description:
+                          type: string
 
-  /api/fear-greed:
+  /api/predictions:
     get:
-      operationId: getFearGreedIndex
-      summary: Get Crypto Fear & Greed Index
-      description: Returns the current Crypto Fear & Greed Index. 0=Extreme Fear, 100=Extreme Greed.
+      operationId: getPricePredictions
+      summary: Get price predictions
+      description: Get AI-generated price predictions and analyst forecasts for major cryptocurrencies.
+      parameters:
+        - name: coin
+          in: query
+          description: Coin symbol (btc, eth, sol, etc.)
+          schema:
+            type: string
+            default: btc
+        - name: timeframe
+          in: query
+          description: Prediction timeframe
+          schema:
+            type: string
+            enum: [24h, 7d, 30d, 90d]
+            default: 7d
       responses:
         '200':
-          description: Fear & Greed Index
+          description: Price predictions
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  value:
-                    type: integer
-                    minimum: 0
-                    maximum: 100
-                  classification:
+                  coin:
                     type: string
-                    enum: [Extreme Fear, Fear, Neutral, Greed, Extreme Greed]
-                  previousValue:
-                    type: integer
-                  timestamp:
+                  currentPrice:
+                    type: number
+                  predictions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        timeframe:
+                          type: string
+                        predictedPrice:
+                          type: number
+                        confidence:
+                          type: number
+                        direction:
+                          type: string
+                          enum: [bullish, bearish, neutral]
+                  analystConsensus:
                     type: string
-                    format: date-time
-              example:
-                value: 72
-                classification: Greed
-                previousValue: 68
-                timestamp: '2026-02-21T00:00:00Z'
 
-  /api/ask:
+  /api/stablecoins:
     get:
-      operationId: askAboutCryptoNews
-      summary: Ask a question about crypto news
-      description: Natural language Q&A over the crypto news corpus. Ask anything about current events.
+      operationId: getStablecoinData
+      summary: Get stablecoin market data
+      description: Get stablecoin market caps, volumes, peg status, and market share data for USDT, USDC, DAI, and others.
       parameters:
-        - name: q
+        - name: limit
           in: query
-          required: true
-          description: Natural language question e.g. "What happened to Bitcoin this week?"
+          description: Maximum stablecoins to return (1-20)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Stablecoin data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalMarketCap:
+                    type: number
+                  stablecoins:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        symbol:
+                          type: string
+                        price:
+                          type: number
+                        marketCap:
+                          type: number
+                        volume24h:
+                          type: number
+                        pegDeviation:
+                          type: number
+                          description: Deviation from $1 peg in percentage
+
+  /api/l2:
+    get:
+      operationId: getL2Data
+      summary: Get Layer 2 network data
+      description: Get Layer 2 scaling solution data including TVL, transaction counts, and fees for Arbitrum, Optimism, Base, zkSync, and more.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum L2 networks to return (1-20)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Layer 2 data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalTvl:
+                    type: number
+                  networks:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tvl:
+                          type: number
+                        transactions24h:
+                          type: integer
+                        avgFee:
+                          type: number
+                        change7d:
+                          type: number
+
+  /api/liquidations:
+    get:
+      operationId: getLiquidations
+      summary: Get exchange liquidation data
+      description: Get recent liquidation data from crypto exchanges. Shows forced position closures for longs and shorts.
+      parameters:
+        - name: hours
+          in: query
+          description: Time window in hours (1-24)
+          schema:
+            type: integer
+            default: 24
+      responses:
+        '200':
+          description: Liquidation data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  stats:
+                    type: object
+                    properties:
+                      total:
+                        type: number
+                        description: Total liquidated value in USD
+                      longs:
+                        type: number
+                        description: Long position liquidations in USD
+                      shorts:
+                        type: number
+                        description: Short position liquidations in USD
+                      count:
+                        type: integer
+                        description: Total number of liquidation events
+                  topLiquidations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        exchange:
+                          type: string
+                        symbol:
+                          type: string
+                        side:
+                          type: string
+                          enum: [long, short]
+                        amount:
+                          type: number
+                        price:
+                          type: number
+
+  /api/funding-rates:
+    get:
+      operationId: getFundingRates
+      summary: Get perpetual futures funding rates
+      description: Get funding rates for perpetual futures contracts across exchanges. Positive rates mean longs pay shorts (bullish positioning).
+      parameters:
+        - name: symbol
+          in: query
+          description: Trading pair symbol (e.g., BTCUSDT, ETHUSDT)
           schema:
             type: string
+            default: BTCUSDT
+      responses:
+        '200':
+          description: Funding rate data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  rates:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        exchange:
+                          type: string
+                        symbol:
+                          type: string
+                        rate:
+                          type: number
+                          description: Funding rate as decimal (e.g., 0.0001 = 0.01%)
+                        nextFundingTime:
+                          type: string
+                          format: date-time
+
+  /api/nft:
+    get:
+      operationId: getNftData
+      summary: Get NFT market data and news
+      description: Get NFT collections, floor prices, volume, and NFT-specific news about drops, marketplaces, and digital art.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum results (1-30)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: NFT data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  collections:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        floorPrice:
+                          type: number
+                        volume24h:
+                          type: number
+                        change24h:
+                          type: number
+                  articles:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NewsArticle'
+
+  /api/airdrops:
+    get:
+      operationId: getAirdrops
+      summary: Get upcoming and active airdrops
+      description: Get information about upcoming, active, and recently completed crypto airdrops with eligibility criteria and estimated value.
+      parameters:
+        - name: status
+          in: query
+          description: Filter by airdrop status
+          schema:
+            type: string
+            enum: [upcoming, active, ended]
+            default: upcoming
+        - name: limit
+          in: query
+          description: Maximum results (1-30)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Airdrop listings
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  airdrops:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        project:
+                          type: string
+                        status:
+                          type: string
+                          enum: [upcoming, active, ended]
+                        estimatedValue:
+                          type: string
+                        eligibility:
+                          type: string
+                        deadline:
+                          type: string
+                          format: date-time
+                        chain:
+                          type: string
+                        url:
+                          type: string
+                          format: uri
+
+  /api/events:
+    get:
+      operationId: getEventsCalendar
+      summary: Get crypto events calendar
+      description: Get upcoming crypto events including conferences, hard forks, token unlocks, mainnet launches, and more.
+      parameters:
+        - name: days
+          in: query
+          description: Days to look ahead (1-90)
+          schema:
+            type: integer
+            default: 30
+        - name: category
+          in: query
+          description: Event category filter
+          schema:
+            type: string
+            enum: [conference, hardfork, unlock, launch, all]
+            default: all
+      responses:
+        '200':
+          description: Events calendar
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        date:
+                          type: string
+                          format: date
+                        category:
+                          type: string
+                        description:
+                          type: string
+                        url:
+                          type: string
+                          format: uri
+                        impact:
+                          type: string
+                          enum: [high, medium, low]
+
+  /api/regulatory:
+    get:
+      operationId: getRegulatoryNews
+      summary: Get regulatory and legal news
+      description: Get crypto regulatory news covering SEC, CFTC, global regulations, lawsuits, and compliance updates.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum articles (1-30)
+          schema:
+            type: integer
+            default: 10
+        - name: region
+          in: query
+          description: Filter by geographic region
+          schema:
+            type: string
+            enum: [us, eu, asia, global]
+      responses:
+        '200':
+          description: Regulatory news
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsResponse'
+
+  /api/macro:
+    get:
+      operationId: getMacroData
+      summary: Get macroeconomic data
+      description: Get macroeconomic indicators relevant to crypto markets including interest rates, CPI, dollar index, and correlation with traditional markets.
+      parameters:
+        - name: indicators
+          in: query
+          description: Comma-separated indicators (e.g., "dxy,cpi,fed_rate,sp500")
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Macroeconomic data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  indicators:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: number
+                        change:
+                          type: number
+                        description:
+                          type: string
+                        updatedAt:
+                          type: string
+                          format: date-time
+                  cryptoCorrelation:
+                    type: object
+                    properties:
+                      btcSp500:
+                        type: number
+                      btcDxy:
+                        type: number
+                      btcGold:
+                        type: number
+
+  /api/arbitrage:
+    get:
+      operationId: getArbitrageOpportunities
+      summary: Get cross-exchange arbitrage opportunities
+      description: Get price differences between exchanges for the same trading pair. Shows potential arbitrage spreads.
+      parameters:
+        - name: symbol
+          in: query
+          description: Trading pair (e.g., BTC, ETH)
+          schema:
+            type: string
+            default: BTC
+        - name: limit
+          in: query
+          description: Maximum opportunities (1-50)
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Arbitrage opportunities
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  opportunities:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        pair:
+                          type: string
+                        buyExchange:
+                          type: string
+                        sellExchange:
+                          type: string
+                        buyPrice:
+                          type: number
+                        sellPrice:
+                          type: number
+                        spreadPercent:
+                          type: number
+                  disclaimer:
+                    type: string
+
+  /api/exchanges:
+    get:
+      operationId: getExchangeData
+      summary: Get exchange information
+      description: Get data about cryptocurrency exchanges including volume, trust score, supported coins, and fees.
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum exchanges to return (1-50)
+          schema:
+            type: integer
+            default: 20
+      responses:
+        '200':
+          description: Exchange data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  exchanges:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        volume24h:
+                          type: number
+                        trustScore:
+                          type: number
+                        coins:
+                          type: integer
+                        pairs:
+                          type: integer
+                        url:
+                          type: string
+                          format: uri
+
+  /api/sources:
+    get:
+      operationId: getNewsSources
+      summary: List all news sources
+      description: Get information about all available crypto news sources and their current status.
+      responses:
+        '200':
+          description: Source list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SourcesResponse'
+
+  /api/glossary:
+    get:
+      operationId: getCryptoGlossary
+      summary: Get crypto glossary
+      description: Get definitions of crypto terminology. Search for specific terms or browse the full glossary.
+      parameters:
+        - name: term
+          in: query
+          description: Search for a specific term (e.g., "DeFi", "staking", "halving")
+          schema:
+            type: string
+        - name: category
+          in: query
+          description: Filter by category
+          schema:
+            type: string
+            enum: [trading, defi, blockchain, mining, nft, general]
+      responses:
+        '200':
+          description: Glossary entries
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  terms:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        term:
+                          type: string
+                        definition:
+                          type: string
+                        category:
+                          type: string
+                        relatedTerms:
+                          type: array
+                          items:
+                            type: string
+
+  /api/ask:
+    post:
+      operationId: askCryptoQuestion
+      summary: Ask a question about crypto
+      description: Natural language Q&A over the crypto news corpus. Ask anything about current events, market conditions, or crypto topics. Returns an AI-generated answer with supporting sources.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                  description: Natural language question (e.g., "What happened to Bitcoin this week?")
+                context:
+                  type: string
+                  description: Optional context to refine the answer
+              required:
+                - question
       responses:
         '200':
           description: AI-generated answer with supporting articles
@@ -278,6 +1060,7 @@ paths:
                       $ref: '#/components/schemas/NewsArticle'
                   confidence:
                     type: number
+                    description: Confidence score 0-1
 
 components:
   schemas:
@@ -306,10 +1089,13 @@ components:
           description: Source identifier
         category:
           type: string
-          enum: [general, bitcoin, defi]
+          enum: [general, bitcoin, ethereum, defi, nft, regulation, altcoins]
         timeAgo:
           type: string
           description: Human-readable time (e.g., "2h ago")
+        sentiment:
+          type: string
+          enum: [bullish, bearish, neutral]
 
     NewsResponse:
       type: object
@@ -327,6 +1113,24 @@ components:
         fetchedAt:
           type: string
           format: date-time
+
+    CoinPrice:
+      type: object
+      properties:
+        name:
+          type: string
+        symbol:
+          type: string
+        current_price:
+          type: number
+        market_cap:
+          type: number
+        total_volume:
+          type: number
+        price_change_percentage_24h:
+          type: number
+        market_cap_rank:
+          type: integer
 
     SourceInfo:
       type: object

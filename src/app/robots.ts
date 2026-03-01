@@ -30,6 +30,8 @@ export default function robots(): MetadataRoute.Robots {
           '/_next/',         // Next.js internals
           '/private/',       // Any private pages
           '/*.json',         // JSON files (except sitemap)
+          '/sources',        // Protect source list from scraping
+          '/*/sources',      // Localised source pages
         ],
       },
       // OpenAI bots

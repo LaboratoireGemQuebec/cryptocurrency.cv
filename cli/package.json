@@ -1,10 +1,11 @@
 {
-  "name": "crypto-news-cli",
-  "version": "1.0.0",
-  "description": "Command-line interface for Free Crypto News API",
+  "name": "@nicholasrq/fcn-cli",
+  "version": "2.0.0",
+  "description": "Feature-rich CLI for crypto news, prices, market data & more — powered by cryptocurrency.cv",
+  "type": "module",
   "main": "index.js",
   "bin": {
-    "crypto-news": "./index.js"
+    "fcn": "./index.js"
   },
   "keywords": [
     "crypto",
@@ -12,8 +13,14 @@
     "news",
     "bitcoin",
     "ethereum",
+    "defi",
     "cli",
-    "terminal"
+    "terminal",
+    "prices",
+    "market",
+    "fear-greed",
+    "gas",
+    "trending"
   ],
   "author": "Free Crypto News",
   "license": "SEE LICENSE IN LICENSE",
@@ -24,6 +31,10 @@
   },
   "homepage": "https://github.com/nirholas/free-crypto-news#readme",
   "engines": {
-    "node": ">=14.0.0"
-  }
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ]
 }

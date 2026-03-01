@@ -69,6 +69,12 @@ export default async function middleware(request: NextRequest) {
 
   // ── Non-API routes: internationalisation + nonce-based CSP ───────────────
   if (!pathname.startsWith('/api/')) {
+    // Bot detection on page routes — block scrapers before rendering
+    const pageUa = request.headers.get('user-agent') || '';
+    if (isBlockedBot(pageUa)) {
+      return new NextResponse('Forbidden', { status: 403 });
+    }
+
     const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
     const csp = buildCspHeader(nonce);
 
@@ -80,6 +86,12 @@ export default async function middleware(request: NextRequest) {
     response.headers.set('x-middleware-request-content-security-policy', csp);
     // Send the CSP to the browser
     response.headers.set('Content-Security-Policy', csp);
+
+    // Prevent search engines from indexing the sources page (anti-scrape)
+    const normalised = pathname.replace(/^\/[a-z]{2}(-[A-Z]{2})?/, '');
+    if (normalised === '/sources' || normalised.startsWith('/sources/')) {
+      response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+    }
 
     return response;
   }

@@ -21,6 +21,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../App';
 import { Article } from '../api/client';
+import Badge from './Badge';
 
 interface NewsCardProps {
   article: Article;
@@ -28,6 +29,18 @@ interface NewsCardProps {
 }
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+function getCategoryFromArticle(article: Article): string | null {
+  if (article.ticker) return article.ticker;
+  const title = article.title.toLowerCase();
+  if (title.includes('bitcoin') || title.includes('btc')) return 'BTC';
+  if (title.includes('ethereum') || title.includes('eth')) return 'ETH';
+  if (title.includes('solana') || title.includes('sol')) return 'SOL';
+  if (title.includes('defi')) return 'DeFi';
+  if (title.includes('nft')) return 'NFT';
+  if (title.includes('regulation') || title.includes('sec')) return 'Regulation';
+  return null;
+}
 
 export default function NewsCard({ article, compact = false }: NewsCardProps) {
   const navigation = useNavigation<NavigationProp>();
@@ -42,6 +55,7 @@ export default function NewsCard({ article, compact = false }: NewsCardProps) {
   };
 
   const styles = createStyles(isDark, compact);
+  const category = getCategoryFromArticle(article);
 
   return (
     <TouchableOpacity style={styles.card} onPress={handlePress} activeOpacity={0.7}>
@@ -50,7 +64,10 @@ export default function NewsCard({ article, compact = false }: NewsCardProps) {
       )}
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.source}>{article.source}</Text>
+          <View style={styles.sourceRow}>
+            <Text style={styles.source}>{article.source}</Text>
+            {category && <Badge label={category} />}
+          </View>
           <Text style={styles.time}>{article.timeAgo}</Text>
         </View>
         <Text style={styles.title} numberOfLines={compact ? 2 : 3}>
@@ -77,7 +94,7 @@ const createStyles = (isDark: boolean, compact: boolean) =>
       backgroundColor: isDark ? '#1a1a1a' : '#ffffff',
       borderRadius: 12,
       marginHorizontal: 16,
-      marginVertical: 8,
+      marginVertical: 6,
       overflow: 'hidden',
       shadowColor: '#000',
       shadowOffset: { width: 0, height: 2 },
@@ -99,15 +116,22 @@ const createStyles = (isDark: boolean, compact: boolean) =>
       alignItems: 'center',
       marginBottom: 8,
     },
+    sourceRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 8,
+      flex: 1,
+    },
     source: {
       fontSize: 12,
       fontWeight: '600',
-      color: '#ffffff',
+      color: '#f7931a',
       textTransform: 'uppercase',
     },
     time: {
       fontSize: 12,
       color: isDark ? '#888' : '#666',
+      marginLeft: 8,
     },
     title: {
       fontSize: compact ? 14 : 16,
@@ -132,6 +156,6 @@ const createStyles = (isDark: boolean, compact: boolean) =>
     tickerText: {
       fontSize: 12,
       fontWeight: '600',
-      color: '#ffffff',
+      color: '#f7931a',
     },
   });

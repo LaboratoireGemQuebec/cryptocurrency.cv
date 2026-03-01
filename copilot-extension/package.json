@@ -1,11 +1,11 @@
 {
   "name": "crypto-news-copilot",
   "displayName": "Crypto News for Copilot",
-  "description": "Get real-time crypto news directly in GitHub Copilot Chat",
-  "version": "1.0.0",
+  "description": "Query real-time crypto news, prices, gas, Fear & Greed Index and more directly in GitHub Copilot Chat",
+  "version": "1.1.0",
   "publisher": "free-crypto-news",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Chat"
@@ -16,88 +16,99 @@
     "bitcoin",
     "ethereum",
     "copilot",
-    "ai"
+    "ai",
+    "defi",
+    "prices",
+    "gas",
+    "fear-greed"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "chatParticipants": [
       {
-        "id": "crypto-news.chat",
-        "fullName": "Crypto News",
-        "name": "cryptonews",
-        "description": "Get real-time crypto news and market insights",
+        "id": "crypto-news.crypto",
+        "fullName": "Crypto",
+        "name": "crypto",
+        "description": "Real-time crypto news, prices, gas & market data from cryptocurrency.cv",
         "isSticky": true,
         "commands": [
           {
-            "name": "breaking",
-            "description": "Get breaking crypto news"
+            "name": "news",
+            "description": "Get the latest crypto news headlines"
+          },
+          {
+            "name": "price",
+            "description": "Get current price for a coin (e.g. /price bitcoin)"
           },
           {
             "name": "market",
-            "description": "Get market sentiment analysis"
+            "description": "Market overview with sentiment & top coins"
           },
           {
-            "name": "prices",
-            "description": "Get current crypto prices"
+            "name": "search",
+            "description": "Search news articles (e.g. /search ETF)"
           },
           {
-            "name": "feargreed",
-            "description": "Get Fear & Greed index"
+            "name": "gas",
+            "description": "Current Ethereum gas prices"
           },
           {
-            "name": "whale",
-            "description": "Get whale activity alerts"
+            "name": "fear-greed",
+            "description": "Fear & Greed Index"
           },
           {
-            "name": "trending",
-            "description": "Get trending topics"
+            "name": "explain",
+            "description": "Explain a crypto term (e.g. /explain DeFi)"
           }
         ]
       }
     ],
     "commands": [
       {
-        "command": "cryptonews.refresh",
-        "title": "Refresh Crypto News",
-        "category": "Crypto News"
+        "command": "crypto.refresh",
+        "title": "Refresh Crypto Data",
+        "category": "Crypto"
       },
       {
-        "command": "cryptonews.openDashboard",
-        "title": "Open News Dashboard",
-        "category": "Crypto News"
+        "command": "crypto.openDashboard",
+        "title": "Open Crypto Dashboard",
+        "category": "Crypto"
       }
     ],
     "configuration": {
       "title": "Crypto News",
       "properties": {
-        "cryptonews.apiUrl": {
+        "crypto.apiUrl": {
           "type": "string",
           "default": "https://cryptocurrency.cv",
-          "description": "API base URL for crypto news"
+          "description": "Base URL of the cryptocurrency.cv API"
         },
-        "cryptonews.defaultLimit": {
+        "crypto.defaultLimit": {
           "type": "number",
-          "default": 5,
-          "description": "Default number of news items to fetch"
+          "default": 10,
+          "description": "Default number of items to fetch per request"
         },
-        "cryptonews.showSentiment": {
+        "crypto.showSentiment": {
           "type": "boolean",
           "default": true,
-          "description": "Show sentiment indicators in news"
+          "description": "Show sentiment indicators alongside news"
         }
       }
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "bun run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/vscode": "^1.85.0",
+    "@types/vscode": "^1.90.0",
     "typescript": "^5.3.0"
   },
   "repository": {

@@ -2688,94 +2688,35 @@ type SourceKey = keyof typeof RSS_SOURCES;
 
 /**
  * Sources shown on the homepage feed.
- * Only high-signal sources are included — general-volume outlets,
- * fintech, macro commentary, quant, and international sources are
- * excluded so the homepage stays focused and credible.
+ * Restricted to Tier 1 (mainstream / institutional) and Tier 2
+ * (premium crypto-native) sources only — keeps the homepage
+ * focused, credible, and high-signal.
  */
 const HOMEPAGE_SOURCE_KEYS = new Set([
-  // Tier 1 — Major crypto news
-  'coindesk', 'theblock', 'decrypt', 'cointelegraph', 'bitcoinmagazine', 'blockworks', 'defiant',
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 1 — Mainstream / institutional media
+  // ═══════════════════════════════════════════════════════════════
+  'bloomberg_crypto', 'reuters_crypto', 'wsj_crypto', 'ft_crypto',
+  'cnbc_crypto', 'forbes_crypto', 'yahoo_crypto',
+  'techcrunch_crypto', 'wired_crypto',
+  'guardian_tech', 'bbc_business', 'cnn_business',
+  'barrons', 'business_insider_markets',
+  'fortune_crypto', 'axios_crypto',
+  // Geopolitical / Central Banks (Tier 1)
+  'bis_speeches', 'imf_blog', 'ecb_press', 'treasury_press',
+  'boe_speeches', 'atlantic_council_crypto',
 
-  // Tier 2 — Established crypto
-  'bitcoinist', 'cryptoslate', 'newsbtc', 'cryptonews', 'cryptopotato',
-
-  // Research & Analysis
-  'messari', 'thedefireport', 'glassnode', 'delphi_digital', 'paradigm_research', 'a16z_crypto', 'theblockresearch',
-
-  // Security
-  'slowmist', 'certik_blog', 'openzeppelin_blog', 'trailofbits', 'samczsun', 'immunefi_blog',
-
-  // Ethereum
-  'etherscan',
-
-  // Alt L1s
-  'near_blog', 'cosmos_blog', 'avalanche_blog', 'sui_blog', 'aptos_blog', 'cardano_blog', 'polkadot_blog',
-
-  // Stablecoins
-  'circle_blog', 'tether_news',
-
-  // Institutional / VC
-  'galaxy_research', 'pantera_capital', 'multicoin_capital', 'placeholder_vc', 'variant_fund', 'dragonfly_research',
-
-  // ETF / Asset Managers
-  'grayscale_insights', 'bitwise_research', 'vaneck_blog', 'coinshares_research', 'ark_invest', 'twentyone_shares', 'wisdomtree_blog',
-
-  // Mainstream — selected
-  'bloomberg_crypto', 'forbes_crypto', 'guardian_tech', 'fortune_crypto', 'axios_crypto',
-
-  // Geopolitical / Central Banks
-  'bis_speeches', 'imf_blog', 'ecb_press', 'treasury_press', 'atlantic_council_crypto',
-
-  // Developer Tools
-  'alchemy_blog', 'chainlink_blog', 'infura_blog', 'thegraph_blog', 'hardhat_blog', 'foundry_blog',
-
-  // Exchange Blogs
-  'coinbase_blog', 'binance_blog',
-
-  // Crypto Media — High Volume
-  'watcherguru', 'cryptopolitan', 'coinedition',
-
-  // DeFi Protocols
-  'dydx_blog', 'synthetix_blog', 'jupiter_blog',
-
-  // Solana Ecosystem
-  'helius_blog', 'jito_blog',
-
-  // Policy & Regulation
-  'coincenter', 'cftc_press',
-
-  // On-chain Analytics
-  'nansen_blog', 'artemis_blog', 'santiment_blog',
-
-  // Derivatives
-  'deribit_insights', 'hyperliquid_blog', 'laevitas_blog',
-
-  // Bitcoin Extended
-  'bitcoinops', 'blockstream_blog',
-
-  // Ethereum Extended
-  'ef_blog', 'flashbots_blog', 'lido_blog', 'ens_blog',
-
-  // Gaming
-  'immutable_blog', 'beam_gaming_blog',
-
-  // Journalism
-  'milkroad', 'coffeezilla_pod', 'molly_white',
-
-  // Social
-  'farcaster_blog', 'lens_blog',
-
-  // TradFi / RWA
-  'securitize_blog', 'blackrock_digital', 'franklin_templeton_digital',
-
-  // ETF Wave 4
-  'fidelity_digital', 'hashdex_research',
-
-  // Asia
-  'blocktempo', 'coinpost_en',
-
-  // Stablecoin Extended
-  'paxos_blog', 'makerdao_gov',
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 2 — Premium crypto-native outlets
+  // ═══════════════════════════════════════════════════════════════
+  'coindesk', 'theblock', 'blockworks', 'decrypt', 'defiant',
+  'dl_news', 'unchained_crypto',
+  // Institutional (Tier 2)
+  'fidelity_digital', 'securitize_blog', 'blackrock_digital',
+  'franklin_templeton_digital', 'coinbase_institutional',
+  'ripple_blog',
+  // Investigative journalism (Tier 2)
+  'coffeezilla_pod', 'molly_white',
 ]);
 
 export interface NewsArticle {

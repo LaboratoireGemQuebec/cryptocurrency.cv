@@ -5,29 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Crypto News</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --color-bg: #0f172a;
+      --color-surface: #1e293b;
+      --color-surface-hover: #263348;
+      --color-accent: #f59e0b;
+      --color-accent-hover: #d97706;
+      --color-border: #334155;
+      --color-text: #f1f5f9;
+      --color-text-secondary: #94a3b8;
+      --color-text-muted: #64748b;
+      --color-success: #22c55e;
+      --color-danger: #ef4444;
     }
-    
+
+    @media (prefers-color-scheme: light) {
+      :root[data-theme="system"] {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-surface-hover: #f1f5f9;
+        --color-accent: #d97706;
+        --color-accent-hover: #b45309;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-text-secondary: #475569;
+        --color-text-muted: #94a3b8;
+      }
+    }
+
+    :root[data-theme="light"] {
+      --color-bg: #f8fafc;
+      --color-surface: #ffffff;
+      --color-surface-hover: #f1f5f9;
+      --color-accent: #d97706;
+      --color-accent-hover: #b45309;
+      --color-border: #e2e8f0;
+      --color-text: #0f172a;
+      --color-text-secondary: #475569;
+      --color-text-muted: #94a3b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      width: 380px;
-      max-height: 500px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
+      width: 400px;
+      height: 500px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
-    
+
+    /* Header */
     .header {
-      padding: 16px;
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      border-bottom: 1px solid #334155;
+      padding: 12px 16px;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-shrink: 0;
     }
-    
+
     .logo {
       display: flex;
       align-items: center;
@@ -35,193 +78,327 @@
       font-weight: 700;
       font-size: 14px;
     }
-    
+
     .logo-icon {
-      width: 24px;
-      height: 24px;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      border-radius: 6px;
+      width: 26px;
+      height: 26px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+      border-radius: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 13px;
+      color: #fff;
     }
-    
-    .tabs {
+
+    .header-actions {
       display: flex;
-      padding: 0 16px;
-      background: #1e293b;
-      border-bottom: 1px solid #334155;
+      align-items: center;
+      gap: 6px;
     }
-    
-    .tab {
-      padding: 10px 16px;
-      font-size: 12px;
-      font-weight: 500;
-      color: #94a3b8;
+
+    .icon-btn {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      color: var(--color-text-secondary);
       cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s;
+      font-size: 14px;
+      transition: all 0.15s;
     }
-    
-    .tab:hover {
-      color: #f1f5f9;
+
+    .icon-btn:hover {
+      background: var(--color-surface-hover);
+      color: var(--color-accent);
+      border-color: var(--color-accent);
     }
-    
-    .tab.active {
-      color: #f59e0b;
-      border-bottom-color: #f59e0b;
+
+    /* Price Bar */
+    .price-bar {
+      display: flex;
+      gap: 0;
+      padding: 0;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      flex-shrink: 0;
     }
-    
-    .content {
-      max-height: 400px;
-      overflow-y: auto;
+
+    .price-item {
+      flex: 1;
+      padding: 10px 12px;
+      text-align: center;
+      border-right: 1px solid var(--color-border);
     }
-    
-    .article {
-      padding: 12px 16px;
-      border-bottom: 1px solid #1e293b;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    
-    .article:hover {
-      background: #1e293b;
-    }
-    
-    .article-source {
-      display: inline-block;
+
+    .price-item:last-child { border-right: none; }
+
+    .price-symbol {
       font-size: 10px;
       font-weight: 600;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-bottom: 6px;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    
-    .source-coindesk { background: #1d4ed8; }
-    .source-theblock { background: #7c3aed; }
-    .source-decrypt { background: #059669; }
-    .source-cointelegraph { background: #d97706; }
-    .source-bitcoinmagazine { background: #b45309; }
-    .source-blockworks { background: #4f46e5; }
-    .source-thedefiant { background: #db2777; }
-    
-    .article-title {
+
+    .price-value {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 2px 0;
+    }
+
+    .price-change {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .price-change.up { color: var(--color-success); }
+    .price-change.down { color: var(--color-danger); }
+
+    .price-skeleton {
+      height: 12px;
+      width: 60px;
+      background: var(--color-border);
+      border-radius: 4px;
+      margin: 3px auto;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    /* News List */
+    .news-section {
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-border) transparent;
+    }
+
+    .news-section::-webkit-scrollbar { width: 4px; }
+    .news-section::-webkit-scrollbar-track { background: transparent; }
+    .news-section::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+
+    .section-label {
+      padding: 8px 16px 4px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--color-text-muted);
+    }
+
+    .news-item {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--color-border);
+      cursor: pointer;
+      transition: background 0.15s;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .news-item:hover { background: var(--color-surface-hover); }
+
+    .news-body { flex: 1; min-width: 0; }
+
+    .news-source {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: var(--color-accent);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 4px;
+    }
+
+    .news-title {
       font-size: 13px;
       font-weight: 500;
       line-height: 1.4;
-      margin-bottom: 4px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-    
-    .article-meta {
+
+    .news-meta {
       font-size: 11px;
-      color: #64748b;
-    }
-    
-    .loading {
-      padding: 40px;
-      text-align: center;
-      color: #64748b;
-    }
-    
-    .spinner {
-      width: 24px;
-      height: 24px;
-      border: 2px solid #334155;
-      border-top-color: #f59e0b;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 12px;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    .error {
-      padding: 40px;
-      text-align: center;
-      color: #ef4444;
-    }
-    
-    .footer {
-      padding: 12px 16px;
-      background: #1e293b;
-      border-top: 1px solid #334155;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .footer-link {
-      font-size: 11px;
-      color: #64748b;
-      text-decoration: none;
-    }
-    
-    .footer-link:hover {
-      color: #f59e0b;
-    }
-    
-    .refresh-btn {
-      padding: 6px 12px;
-      font-size: 11px;
-      font-weight: 500;
-      background: #334155;
-      color: #f1f5f9;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    
-    .refresh-btn:hover {
-      background: #475569;
+      color: var(--color-text-muted);
+      margin-top: 3px;
     }
 
-    .breaking {
-      background: linear-gradient(90deg, #7f1d1d 0%, #0f172a 100%);
+    .news-skeleton {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--color-border);
     }
-    
-    .breaking .article-title::before {
-      content: '🔴 ';
+
+    .skel-line {
+      height: 10px;
+      background: var(--color-border);
+      border-radius: 4px;
+      animation: pulse 1.5s ease-in-out infinite;
+      margin-bottom: 6px;
     }
+    .skel-line.short { width: 40%; }
+    .skel-line.medium { width: 90%; }
+    .skel-line.long { width: 70%; }
+    .skel-line.tag { width: 50px; height: 14px; margin-bottom: 8px; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Quick Links */
+    .quick-links {
+      display: flex;
+      gap: 6px;
+      padding: 10px 16px;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .quick-link {
+      flex: 1;
+      padding: 7px 0;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      color: var(--color-text-secondary);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+    }
+
+    .quick-link:hover {
+      background: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+
+    /* Settings Footer */
+    .settings-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-toggle {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .footer-toggle:hover { color: var(--color-accent); }
+
+    .footer-link {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.15s;
+      background: none;
+      border: none;
+    }
+
+    .footer-link:hover { color: var(--color-accent); }
+
+    /* Error / offline state */
+    .error-state {
+      padding: 24px 16px;
+      text-align: center;
+      color: var(--color-text-muted);
+    }
+
+    .error-state .error-icon { font-size: 28px; margin-bottom: 8px; }
+    .error-state .error-msg { font-size: 13px; font-weight: 500; }
+    .error-state .error-sub { font-size: 11px; margin-top: 4px; }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <div class="header">
     <div class="logo">
-      <div class="logo-icon">📰</div>
-      Free Crypto News
+      <div class="logo-icon">&#8383;</div>
+      <span>Free Crypto News</span>
     </div>
-    <a href="https://cryptocurrency.cv" target="_blank" class="footer-link">
-      Open App →
-    </a>
-  </div>
-  
-  <div class="tabs">
-    <div class="tab active" data-endpoint="news">Latest</div>
-    <div class="tab" data-endpoint="breaking">Breaking</div>
-    <div class="tab" data-endpoint="bitcoin">Bitcoin</div>
-    <div class="tab" data-endpoint="defi">DeFi</div>
-  </div>
-  
-  <div class="content" id="content">
-    <div class="loading">
-      <div class="spinner"></div>
-      Loading news...
+    <div class="header-actions">
+      <button class="icon-btn" id="refreshBtn" title="Refresh">&#x1f504;</button>
     </div>
   </div>
-  
-  <div class="footer">
-    <span class="footer-link" id="lastUpdate">Updated just now</span>
-    <button class="refresh-btn" id="refresh">Refresh</button>
+
+  <!-- Price Bar -->
+  <div class="price-bar" id="priceBar">
+    <div class="price-item">
+      <div class="price-symbol">BTC</div>
+      <div class="price-skeleton" id="priceBtc"></div>
+      <div class="price-skeleton" id="changeBtc" style="width:40px"></div>
+    </div>
+    <div class="price-item">
+      <div class="price-symbol">ETH</div>
+      <div class="price-skeleton" id="priceEth"></div>
+      <div class="price-skeleton" id="changeEth" style="width:40px"></div>
+    </div>
+    <div class="price-item">
+      <div class="price-symbol">SOL</div>
+      <div class="price-skeleton" id="priceSol"></div>
+      <div class="price-skeleton" id="changeSol" style="width:40px"></div>
+    </div>
   </div>
-  
+
+  <!-- News Section -->
+  <div class="news-section" id="newsSection">
+    <div class="section-label">Latest Headlines</div>
+    <div id="newsList">
+      <div class="news-skeleton"><div class="skel-line tag"></div><div class="skel-line medium"></div><div class="skel-line long"></div><div class="skel-line short"></div></div>
+      <div class="news-skeleton"><div class="skel-line tag"></div><div class="skel-line long"></div><div class="skel-line medium"></div><div class="skel-line short"></div></div>
+      <div class="news-skeleton"><div class="skel-line tag"></div><div class="skel-line medium"></div><div class="skel-line long"></div><div class="skel-line short"></div></div>
+      <div class="news-skeleton"><div class="skel-line tag"></div><div class="skel-line long"></div><div class="skel-line medium"></div><div class="skel-line short"></div></div>
+      <div class="news-skeleton"><div class="skel-line tag"></div><div class="skel-line medium"></div><div class="skel-line long"></div><div class="skel-line short"></div></div>
+    </div>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="quick-links">
+    <a class="quick-link" id="linkOpen">Open FCN</a>
+    <a class="quick-link" id="linkMarkets">Markets</a>
+    <a class="quick-link" id="linkSearch">Search</a>
+    <a class="quick-link" id="linkPortfolio">Portfolio</a>
+  </div>
+
+  <!-- Settings Footer -->
+  <div class="settings-footer">
+    <div class="footer-left">
+      <button class="footer-toggle" id="themeToggle" title="Toggle theme">&#x1f319; Theme</button>
+      <button class="footer-toggle" id="notifToggle" title="Toggle notifications">&#x1f514; Alerts</button>
+    </div>
+    <button class="footer-link" id="openOptions">Settings &#x2192;</button>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
