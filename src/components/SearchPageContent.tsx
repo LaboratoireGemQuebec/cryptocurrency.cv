@@ -122,7 +122,7 @@ export function SearchPageContent() {
               <button
                 key={term}
                 onClick={() => handleQuickSearch(term)}
-                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm hover:bg-gray-50 hover:border-gray-300 transition"
+                className="px-4 py-2 bg-white dark:bg-black border border-gray-200 rounded-full text-sm hover:bg-gray-50 hover:border-gray-300 transition"
               >
                 {term}
               </button>
@@ -152,7 +152,7 @@ export function SearchPageContent() {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-white rounded-lg border border-gray-200 p-5 hover:shadow-md hover:border-gray-300 transition"
+                  className="block bg-white dark:bg-black rounded-lg border border-gray-200 p-5 hover:shadow-md hover:border-gray-300 transition"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className={`text-xs px-2 py-1 rounded-full ${sourceColors[article.source] || 'bg-gray-100'}`}>
@@ -160,7 +160,7 @@ export function SearchPageContent() {
                     </span>
                     <span className="text-xs text-gray-500">{article.timeAgo}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 hover:text-blue-600">
                     {article.title}
                   </h3>
                   {article.description && (

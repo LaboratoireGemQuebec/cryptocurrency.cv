@@ -71,7 +71,7 @@ function ExampleCard({ example, isSelected, onClick }: { example: Example; isSel
       className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
         isSelected
           ? 'border-black bg-black text-white'
-          : 'border-gray-200 hover:border-gray-300 bg-white'
+          : 'border-gray-200 hover:border-gray-300 bg-white dark:bg-black'
       }`}
     >
       <div className="flex items-center gap-3">
@@ -123,7 +123,7 @@ export function ExamplesContent({ examples }: ExamplesContentProps) {
       </div>
 
       {/* Main Content */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 shadow-sm overflow-hidden">
         {/* Header */}
         <div className="p-6 border-b border-gray-200 bg-gray-50">
           <div className="flex items-center justify-between mb-4">

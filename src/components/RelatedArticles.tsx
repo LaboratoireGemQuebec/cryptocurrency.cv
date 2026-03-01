@@ -43,7 +43,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
   if (articles.length === 0) return null;
   
   return (
-    <div className="bg-white rounded-2xl border p-6">
+    <div className="bg-white dark:bg-black rounded-2xl border p-6">
       <h2 className="font-bold text-lg mb-4">📰 Related Articles</h2>
       
       <div className="space-y-4">

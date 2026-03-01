@@ -25,7 +25,7 @@ export default function HeaderNew() {
 
   const t = useTranslations('common');
   return (
-    <header className="bg-white border-b sticky top-0 z-50">
+    <header className="bg-white dark:bg-black border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

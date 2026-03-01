@@ -40,7 +40,7 @@ const defaultTopics: Topic[] = [
 
 export default function TrendingTopics({ topics = defaultTopics }: TrendingTopicsProps) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-6">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 p-6">
       <h3 className="font-bold text-lg mb-4">🔥 Trending Topics</h3>
       
       <div className="space-y-2">

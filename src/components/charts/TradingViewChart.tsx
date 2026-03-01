@@ -341,7 +341,7 @@ export function TradingViewChart({
       className={`rounded-lg border ${
         theme === 'dark' 
           ? 'bg-gray-900 border-gray-800' 
-          : 'bg-white border-gray-200'
+          : 'bg-white dark:bg-black border-gray-200'
       } ${className}`}
       style={{ height }}
     >

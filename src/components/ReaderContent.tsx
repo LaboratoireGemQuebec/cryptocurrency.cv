@@ -71,7 +71,7 @@ function SourceFilter({
         className={`px-4 py-2 rounded-full text-sm font-medium transition ${
           selected === null
             ? 'bg-black text-white'
-            : 'bg-white text-gray-700 border hover:bg-gray-50'
+            : 'bg-white dark:bg-black text-gray-700 dark:text-white border hover:bg-gray-50'
         }`}
       >
         All Sources
@@ -107,7 +107,7 @@ function ArticleCard({
   isLoading: boolean;
 }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all">
       {/* Header - Always visible */}
       <div 
         onClick={onToggle}
