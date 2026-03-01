@@ -40,9 +40,9 @@ function StatCard({ icon: Icon, label, value, subtext }: {
   subtext?: string;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-gray-700">
       <div className="flex items-center gap-3">
-        <div className="p-2 bg-gray-100 dark:bg-gray-800/30 rounded-lg">
+        <div className="p-2 bg-gray-100 dark:bg-black/30 rounded-lg">
           <Icon className="w-5 h-5 text-gray-600" />
         </div>
         <div>
@@ -115,10 +115,10 @@ export function ReadingAnalytics() {
   if (loading) {
     return (
       <div className="space-y-4 animate-pulse">
-        <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48" />
+        <div className="h-8 bg-gray-200 dark:bg-black rounded w-48" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="h-24 bg-gray-200 dark:bg-gray-700 rounded-xl" />
+            <div key={i} className="h-24 bg-gray-200 dark:bg-black rounded-xl" />
           ))}
         </div>
       </div>
@@ -171,7 +171,7 @@ export function ReadingAnalytics() {
 
       {/* Reading History Chart */}
       {stats.readingHistory.length > 0 && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
           <h3 className="text-sm font-medium text-gray-500 mb-4 flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             Reading Activity (Last 7 Days)
@@ -200,7 +200,7 @@ export function ReadingAnalytics() {
 
       {/* Categories Breakdown */}
       {Object.keys(stats.categoriesRead).length > 0 && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
           <h3 className="text-sm font-medium text-gray-500 mb-4 flex items-center gap-2">
             <BookOpen className="w-4 h-4" />
             Categories
@@ -219,7 +219,7 @@ export function ReadingAnalytics() {
                       <span className="capitalize">{category}</span>
                       <span className="text-gray-500">{count} articles</span>
                     </div>
-                    <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                       <div
                         className="h-full bg-gray-400 rounded-full transition-all"
                         style={{ width: `${percentage}%` }}
@@ -234,14 +234,14 @@ export function ReadingAnalytics() {
 
       {/* Recent Articles */}
       {stats.recentArticles.length > 0 && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
           <h3 className="text-sm font-medium text-gray-500 mb-4">Recently Read</h3>
           <div className="space-y-3">
             {stats.recentArticles.slice(0, 5).map((article, i) => (
               <a
                 key={i}
                 href={article.url}
-                className="block p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="block p-3 bg-gray-50 dark:bg-black/50 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
               >
                 <p className="font-medium text-sm line-clamp-1">{article.title}</p>
                 <p className="text-xs text-gray-500 mt-1">
@@ -254,7 +254,7 @@ export function ReadingAnalytics() {
       )}
 
       {stats.totalArticles === 0 && (
-        <div className="text-center py-8 text-gray-500 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+        <div className="text-center py-8 text-gray-500 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700">
           <BookOpen className="w-12 h-12 mx-auto mb-3 opacity-30" />
           <p>Start reading articles to see your stats!</p>
           <p className="text-sm">Your reading history is stored locally and never shared.</p>

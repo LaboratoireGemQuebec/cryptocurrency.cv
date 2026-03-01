@@ -136,7 +136,7 @@ export function PriceAlertModal({
     >
       <div 
         role="presentation"
-        className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
+        className="bg-white dark:bg-black rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
         onClick={e => e.stopPropagation()}
         onKeyDown={e => e.stopPropagation()}
       >
@@ -157,14 +157,14 @@ export function PriceAlertModal({
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 transition-colors"
+            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Current Price */}
-        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800/50">
+        <div className="px-6 py-4 bg-gray-50 dark:bg-black/50">
           <p className="text-sm text-gray-500 dark:text-gray-400">Current Price</p>
           <p className="text-2xl font-bold text-gray-900 dark:text-white">
             ${currentPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })}
@@ -245,7 +245,7 @@ export function PriceAlertModal({
                   step="0.1"
                   min="0.1"
                   max="1000"
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">%</span>
               </div>
@@ -259,7 +259,7 @@ export function PriceAlertModal({
                   placeholder="0.00"
                   step="any"
                   min="0"
-                  className="w-full px-4 py-3 pl-8 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 pl-8 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
             )}
@@ -328,7 +328,7 @@ export function PriceAlertModal({
                     className={`flex items-center justify-between p-3 rounded-lg ${
                       alert.triggered
                         ? 'bg-green-50 dark:bg-green-900/20'
-                        : 'bg-gray-50 dark:bg-gray-700/50'
+                        : 'bg-gray-50 dark:bg-black/50'
                     }`}
                   >
                     <div className="flex items-center gap-2">

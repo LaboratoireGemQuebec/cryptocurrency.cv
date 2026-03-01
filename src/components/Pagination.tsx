@@ -86,7 +86,7 @@ export function Pagination({
       {hasPrev ? (
         <Link
           href={getPageUrl(currentPage - 1)}
-          className="px-3 py-2 rounded-lg text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+          className="px-3 py-2 rounded-lg text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
           aria-label="Previous page"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export function Pagination({
               px-3 py-2 rounded-lg font-medium transition-colors
               ${isActive 
                 ? 'bg-brand-600 text-white' 
-                : 'text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800'
+                : 'text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-neutral-900'
               }
             `}
             aria-current={isActive ? 'page' : undefined}
@@ -138,7 +138,7 @@ export function Pagination({
       {hasNext ? (
         <Link
           href={getPageUrl(currentPage + 1)}
-          className="px-3 py-2 rounded-lg text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+          className="px-3 py-2 rounded-lg text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
           aria-label="Next page"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

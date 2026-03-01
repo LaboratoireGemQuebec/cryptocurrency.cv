@@ -16,12 +16,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
+  return <div className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`} />;
 }
 
 export default function SearchLoading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       
       <main className="max-w-4xl mx-auto px-4 py-8">
@@ -40,7 +40,7 @@ export default function SearchLoading() {
         {/* Results Skeleton */}
         <div className="space-y-4">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 p-5">
+            <div key={i} className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 p-5">
               <div className="flex gap-4">
                 <Skeleton className="w-1 h-16 rounded-full" />
                 <div className="flex-1">

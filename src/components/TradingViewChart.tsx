@@ -142,7 +142,7 @@ export function TradingViewChart({
     <div className="relative w-full">
       {!isLoaded && (
         <div 
-          className="absolute inset-0 flex items-center justify-center bg-neutral-100 dark:bg-neutral-900 rounded-xl"
+          className="absolute inset-0 flex items-center justify-center bg-neutral-100 dark:bg-black rounded-xl"
           style={{ height: autosize ? '500px' : `${height}px` }}
         >
           <div className="flex flex-col items-center gap-3">

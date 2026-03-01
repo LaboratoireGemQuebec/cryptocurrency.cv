@@ -46,7 +46,7 @@ export function LanguageSwitcher({ variant = 'dropdown', className = '' }: Langu
           const nextIndex = (currentIndex + 1) % locales.length;
           handleChange(locales[nextIndex]);
         }}
-        className={`flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ${className}`}
+        className={`flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors ${className}`}
         aria-label={`${locale.toUpperCase()}: ${t('selectLanguage')}`}
       >
         <span className="text-lg" aria-hidden="true">🌐</span>
@@ -65,7 +65,7 @@ export function LanguageSwitcher({ variant = 'dropdown', className = '' }: Langu
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
               loc === locale
                 ? 'bg-brand-500 text-white'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
             }`}
           >
             {localeNames[loc]}
@@ -89,7 +89,7 @@ export function LanguageSwitcher({ variant = 'dropdown', className = '' }: Langu
           className="appearance-none bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 transition-colors cursor-pointer"
         >
           {locales.map((loc) => (
-            <option key={loc} value={loc} className="bg-white dark:bg-gray-900">
+            <option key={loc} value={loc} className="bg-white dark:bg-black">
               {localeNames[loc]}
             </option>
           ))}

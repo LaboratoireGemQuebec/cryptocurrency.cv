@@ -83,7 +83,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
         <h2 className="text-xl font-bold text-gray-900 dark:text-white">
           Top Stories
         </h2>
-        <span className="text-xs font-medium text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-slate-800 px-2.5 py-1 rounded-full">
+        <span className="text-xs font-medium text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-black px-2.5 py-1 rounded-full">
           Multi-source coverage
         </span>
       </div>
@@ -99,7 +99,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
           return (
             <div
               key={primary.link}
-              className="group bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow duration-200"
+              className="group bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
               {/* Primary article image */}
               <div className="relative aspect-[2/1] overflow-hidden">
@@ -148,7 +148,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
 
               {/* Perspectives */}
               {perspectives.length > 0 && (
-                <div className="border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/50 divide-y divide-gray-100 dark:divide-slate-700/50">
+                <div className="border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50 divide-y divide-gray-100 dark:divide-slate-700/50">
                   {perspectives.map((article) => {
                     const slug = generateArticleSlug(article.title, article.pubDate);
                     const srcInfo = sourceIcons[article.source] || defaultSource;
@@ -156,7 +156,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
                       <Link
                         key={article.link}
                         href={`/article/${slug}`}
-                        className="group flex items-start gap-3 px-5 py-3 hover:bg-gray-100/60 dark:hover:bg-slate-700/30 transition-colors"
+                        className="group flex items-start gap-3 px-5 py-3 hover:bg-gray-100/60 dark:hover:bg-neutral-900/30 transition-colors"
                       >
                         <SourceBadge source={article.source} />
                         <div className="min-w-0 flex-1">

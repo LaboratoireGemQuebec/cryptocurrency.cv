@@ -114,7 +114,7 @@ export default async function ProtocolPage({ params }: Props) {
     .slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
         
@@ -135,7 +135,7 @@ export default async function ProtocolPage({ params }: Props) {
           </nav>
 
           {/* Protocol Header */}
-          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               {/* Logo & Name */}
               <div className="flex items-center gap-4">
@@ -154,7 +154,7 @@ export default async function ProtocolPage({ params }: Props) {
                     {protocol.symbol && (
                       <span className="text-gray-500 dark:text-slate-400 font-medium">{protocol.symbol}</span>
                     )}
-                    <span className="text-xs bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 px-2 py-1 rounded-full">
+                    <span className="text-xs bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 px-2 py-1 rounded-full">
                       {protocol.category}
                     </span>
                   </div>
@@ -163,23 +163,23 @@ export default async function ProtocolPage({ params }: Props) {
               
               {/* Quick Stats */}
               <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4 md:ml-auto">
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">TVL</p>
                   <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">${formatNumber(protocol.tvl)}</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">24h Change</p>
                   <p className={`text-xl md:text-2xl font-bold ${(protocol.change_1d || 0) >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                     {formatPercent(protocol.change_1d)}
                   </p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">7d Change</p>
                   <p className={`text-xl md:text-2xl font-bold ${(protocol.change_7d || 0) >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                     {formatPercent(protocol.change_7d)}
                   </p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">Chains</p>
                   <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{protocol.chains?.length || 1}</p>
                 </div>
@@ -219,7 +219,7 @@ export default async function ProtocolPage({ params }: Props) {
                 href={`https://defillama.com/protocol/${slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-slate-300 rounded-lg text-sm font-medium transition"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-slate-300 rounded-lg text-sm font-medium transition"
               >
                 📊 DeFiLlama
               </a>
@@ -232,14 +232,14 @@ export default async function ProtocolPage({ params }: Props) {
             <div className="lg:col-span-2 space-y-8">
               {/* Chain Distribution */}
               {protocol.chains && protocol.chains.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">⛓️ Chain Distribution</h2>
                   <div className="flex flex-wrap gap-2">
                     {protocol.chains.map(chain => (
                       <Link
                         key={chain}
                         href={`/defi/chain/${chain.toLowerCase()}`}
-                        className="px-4 py-2 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-slate-300 rounded-lg text-sm font-medium transition"
+                        className="px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-slate-300 rounded-lg text-sm font-medium transition"
                       >
                         {chain}
                       </Link>
@@ -250,17 +250,17 @@ export default async function ProtocolPage({ params }: Props) {
 
               {/* Market Data */}
               {(protocol.mcap || protocol.fdv) && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">💰 Market Data</h2>
                   <div className="grid grid-cols-2 gap-4">
                     {protocol.mcap && (
-                      <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4">
+                      <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4">
                         <p className="text-gray-500 dark:text-slate-400 text-sm">Market Cap</p>
                         <p className="text-xl font-bold text-gray-900 dark:text-white">${formatNumber(protocol.mcap)}</p>
                       </div>
                     )}
                     {protocol.fdv && (
-                      <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4">
+                      <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4">
                         <p className="text-gray-500 dark:text-slate-400 text-sm">Fully Diluted Valuation</p>
                         <p className="text-xl font-bold text-gray-900 dark:text-white">${formatNumber(protocol.fdv)}</p>
                       </div>
@@ -282,7 +282,7 @@ export default async function ProtocolPage({ params }: Props) {
             <div className="space-y-6">
               {/* Audits */}
               {protocol.audit_links && protocol.audit_links.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white mb-4">🔒 Security Audits</h2>
                   <div className="space-y-2">
                     {protocol.audit_links.map((audit, idx) => (
@@ -302,7 +302,7 @@ export default async function ProtocolPage({ params }: Props) {
 
               {/* Similar Protocols */}
               {similarProtocols.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
                   <div className="p-4 border-b border-gray-200 dark:border-slate-700">
                     <h2 className="font-bold text-lg text-gray-900 dark:text-white">Similar Protocols</h2>
                     <p className="text-sm text-gray-500 dark:text-slate-400">Other {protocol.category} protocols</p>
@@ -312,7 +312,7 @@ export default async function ProtocolPage({ params }: Props) {
                       <Link 
                         key={p.id} 
                         href={`/defi/protocol/${p.slug || p.id}`}
-                        className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
+                        className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition"
                       >
                         <div className="flex items-center gap-3">
                           {p.logo && (
@@ -332,7 +332,7 @@ export default async function ProtocolPage({ params }: Props) {
               )}
 
               {/* Quick Actions */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">📊 Quick Links</h3>
                 <div className="space-y-2">
                   <Link href="/defi" className="block text-blue-600 dark:text-blue-400 hover:underline">

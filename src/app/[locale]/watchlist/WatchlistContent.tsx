@@ -235,7 +235,7 @@ export default function WatchlistPage() {
   // Loading state
   if (!isLoaded || isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Star className="w-8 h-8 text-yellow-500" />
@@ -247,7 +247,7 @@ export default function WatchlistPage() {
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className="h-16 bg-gray-200 dark:bg-gray-800 rounded-lg"
+                className="h-16 bg-gray-200 dark:bg-black rounded-lg"
               />
             ))}
           </div>
@@ -259,7 +259,7 @@ export default function WatchlistPage() {
   // Empty state
   if (watchlist.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Star className="w-8 h-8 text-yellow-500" />
@@ -268,7 +268,7 @@ export default function WatchlistPage() {
             </h1>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
             <Star className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Your watchlist is empty
@@ -288,7 +288,7 @@ export default function WatchlistPage() {
               </Link>
               <button
                 onClick={() => setShowExportModal(true)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
               >
                 <Upload className="w-4 h-4" />
                 Import Watchlist
@@ -306,7 +306,7 @@ export default function WatchlistPage() {
                     <Link
                       key={name}
                       href={`/coin/${name.toLowerCase()}`}
-                      className="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-yellow-100 dark:hover:bg-yellow-500/20 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors"
+                      className="px-4 py-2 bg-gray-100 dark:bg-black hover:bg-yellow-100 dark:hover:bg-yellow-500/20 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors"
                     >
                       {name}
                     </Link>
@@ -335,7 +335,7 @@ export default function WatchlistPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -355,7 +355,7 @@ export default function WatchlistPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => fetchCoinData()}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
               title={tCommon('refresh')}
             >
               <RefreshCw
@@ -364,7 +364,7 @@ export default function WatchlistPage() {
             </button>
             <button
               onClick={() => setShowExportModal(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 font-medium transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 rounded-lg text-gray-700 dark:text-gray-300 font-medium transition-colors"
             >
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">Export</span>
@@ -395,7 +395,7 @@ export default function WatchlistPage() {
               placeholder="Search watchlist..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
+              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
             />
             {searchQuery && (
               <button
@@ -424,7 +424,7 @@ export default function WatchlistPage() {
         </div>
 
         {/* Table */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -493,7 +493,7 @@ export default function WatchlistPage() {
                 {filteredCoins.map((coin, index) => (
                   <tr
                     key={coin.id}
-                    className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors ${
+                    className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors ${
                       draggedItem === coin.id ? "opacity-50" : ""
                     }`}
                     draggable
@@ -527,7 +527,7 @@ export default function WatchlistPage() {
                             className="w-8 h-8 rounded-full"
                           />
                         ) : (
-                          <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600" />
+                          <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-black" />
                         )}
                         <div>
                           <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

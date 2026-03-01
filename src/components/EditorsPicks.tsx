@@ -42,7 +42,7 @@ const sourceColors: Record<string, { accent: string; badge: string; bg: string }
   'The Defiant': { accent: 'border-l-pink-500', badge: 'text-pink-600 dark:text-pink-400', bg: 'bg-pink-50 dark:bg-pink-900/20' },
 };
 
-const defaultStyle = { accent: 'border-l-gray-400', badge: 'text-gray-600 dark:text-gray-400', bg: 'bg-gray-50 dark:bg-gray-900/20' };
+const defaultStyle = { accent: 'border-l-gray-400', badge: 'text-gray-600 dark:text-gray-400', bg: 'bg-gray-50 dark:bg-black/20' };
 
 export default function EditorsPicks({ articles }: EditorsPicksProps) {
   const picks = articles.slice(0, 5);
@@ -82,7 +82,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
               href={`/article/${articleSlug}`}
               className="group block"
             >
-              <div className={`relative h-full bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-lg hover:border-gray-200 dark:hover:border-slate-600 transition-all duration-200 border-l-4 ${style.accent}`}>
+              <div className={`relative h-full bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-lg hover:border-gray-200 dark:hover:border-slate-600 transition-all duration-200 border-l-4 ${style.accent}`}>
                 <div className="p-5 md:p-6">
                   {/* Category label */}
                   <div className="flex items-center gap-2 mb-3">
@@ -129,7 +129,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
                 href={`/article/${articleSlug}`}
                 className="group block"
               >
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 p-4 hover:shadow-md hover:border-gray-200 dark:hover:border-slate-600 transition-all duration-200 h-full">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 p-4 hover:shadow-md hover:border-gray-200 dark:hover:border-slate-600 transition-all duration-200 h-full">
                   <span className={`text-[11px] font-bold uppercase tracking-wider ${style.badge} mb-2 block`}>
                     {article.category || 'Markets'}
                   </span>

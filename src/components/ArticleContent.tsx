@@ -74,12 +74,12 @@ export function ArticleContent({ article }: ArticleContentProps) {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
       {/* Header */}
       <button
         onClick={fetchContent}
         disabled={loading}
-        className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
+        className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition"
       >
         <div className="flex items-center gap-3">
           <span className="text-2xl">🤖</span>
@@ -113,7 +113,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
               <span>📝</span> Summary
             </h3>
-            <div className="text-gray-700 dark:text-slate-300 leading-relaxed whitespace-pre-line bg-gray-50 dark:bg-slate-700/50 p-4 rounded-xl">
+            <div className="text-gray-700 dark:text-slate-300 leading-relaxed whitespace-pre-line bg-gray-50 dark:bg-black/50 p-4 rounded-xl">
               {content.summary}
             </div>
           </div>
@@ -143,7 +143,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
               <span>📊</span> AI Sentiment Analysis
             </h3>
-            <div className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-slate-700/50 rounded-xl">
+            <div className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-black/50 rounded-xl">
               <span className="text-3xl">{sentimentEmoji[content.sentiment]}</span>
               <div>
                 <div className="font-medium capitalize text-gray-900 dark:text-white">{content.sentiment}</div>
@@ -158,7 +158,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
               <span>📄</span> Article Excerpt
             </h3>
-            <div className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed bg-gray-50 dark:bg-slate-700/50 p-4 rounded-xl max-h-64 overflow-y-auto">
+            <div className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed bg-gray-50 dark:bg-black/50 p-4 rounded-xl max-h-64 overflow-y-auto">
                 {content.content.slice(0, 1500)}
                 {content.content.length > 1500 && '...'}
               </div>

@@ -115,7 +115,7 @@ export default async function ChainPage({ params }: Props) {
   const newsData = await searchNews(chain.name, 10);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
         
@@ -136,7 +136,7 @@ export default async function ChainPage({ params }: Props) {
           </nav>
 
           {/* Chain Header */}
-          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -149,16 +149,16 @@ export default async function ChainPage({ params }: Props) {
               
               {/* Quick Stats */}
               <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 md:ml-auto md:max-w-lg">
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">Total TVL</p>
                   <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">${formatNumber(chain.tvl)}</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                   <p className="text-gray-500 dark:text-slate-400 text-sm">Protocols</p>
                   <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{chainProtocols.length}+</p>
                 </div>
                 {chain.chainId && (
-                  <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4 text-center">
+                  <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4 text-center">
                     <p className="text-gray-500 dark:text-slate-400 text-sm">Chain ID</p>
                     <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{chain.chainId}</p>
                   </div>
@@ -171,7 +171,7 @@ export default async function ChainPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Protocols on Chain (2/3) */}
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
                 <div className="p-4 border-b border-gray-200 dark:border-slate-700">
                   <h2 className="font-bold text-lg text-gray-900 dark:text-white">🏆 Top Protocols on {chain.name}</h2>
                   <p className="text-sm text-gray-500 dark:text-slate-400">Ranked by TVL on this chain</p>
@@ -183,7 +183,7 @@ export default async function ChainPage({ params }: Props) {
                       <Link 
                         key={protocol.id} 
                         href={`/defi/protocol/${protocol.slug || protocol.id}`}
-                        className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
+                        className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition"
                       >
                         <div className="flex items-center gap-4">
                           <span className="text-gray-500 dark:text-slate-400 w-6 text-sm">{index + 1}</span>
@@ -222,7 +222,7 @@ export default async function ChainPage({ params }: Props) {
             {/* Sidebar (1/3) */}
             <div className="space-y-6">
               {/* Chain Info */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">ℹ️ Chain Info</h3>
                 <dl className="space-y-3 text-sm">
                   <div className="flex justify-between">
@@ -249,7 +249,7 @@ export default async function ChainPage({ params }: Props) {
               </div>
 
               {/* External Links */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">🔗 External Links</h3>
                 <div className="space-y-2">
                   <a
@@ -274,7 +274,7 @@ export default async function ChainPage({ params }: Props) {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3">📊 Quick Links</h3>
                 <div className="space-y-2">
                   <Link href="/defi" className="block text-blue-600 dark:text-blue-400 hover:underline">

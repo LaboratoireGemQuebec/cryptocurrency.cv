@@ -164,7 +164,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -194,11 +194,11 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
 
           {/* Coins Table */}
           {coins.length > 0 ? (
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+                    <tr className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-gray-700">
                       <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">#</th>
                       <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Coin</th>
                       <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Price</th>
@@ -212,7 +212,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
                     {coins.map((coin, index) => (
                       <tr
                         key={coin.id}
-                        className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                        className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
                       >
                         <td className="p-4 text-gray-500 dark:text-gray-400">{index + 1}</td>
                         <td className="p-4">
@@ -272,7 +272,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
               </div>
             </div>
           ) : (
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center">
               <span className="text-4xl mb-4 block">🔍</span>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 No coins found

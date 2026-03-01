@@ -343,7 +343,7 @@ export default async function ArticlePage({ params }: Props) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Structured Data for SEO */}
       <ArticleStructuredData article={article} url={articleUrl} />
       <BreadcrumbStructuredData items={breadcrumbs} />
@@ -389,12 +389,12 @@ export default async function ArticlePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
               {/* Article Header */}
-              <article className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+              <article className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
                 <div className="p-6 md:p-8">
                   {/* Meta row */}
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <span
-                      className={`text-sm px-3 py-1 rounded-full border ${sourceColors[article.source] || "bg-gray-100 dark:bg-slate-700 text-gray-800 dark:text-slate-200"}`}
+                      className={`text-sm px-3 py-1 rounded-full border ${sourceColors[article.source] || "bg-gray-100 dark:bg-black text-gray-800 dark:text-slate-200"}`}
                     >
                       {article.source}
                     </span>
@@ -409,12 +409,12 @@ export default async function ArticlePage({ params }: Props) {
                       </span>
                     )}
                     {article.meta.is_opinion && (
-                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800/30 text-gray-700 dark:text-gray-300">
+                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-black/30 text-gray-700 dark:text-gray-300">
                         💭 Opinion
                       </span>
                     )}
                     {readingTime && (
-                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300">
+                      <span className="text-sm px-3 py-1 rounded-full bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300">
                         📖 {readingTime} min read
                         {article.meta.word_count
                           ? ` · ${article.meta.word_count.toLocaleString()} words`
@@ -443,7 +443,7 @@ export default async function ArticlePage({ params }: Props) {
 
                   {/* Sentiment Meter */}
                   {article.sentiment && (
-                    <div className="mb-6 p-4 bg-gray-50 dark:bg-slate-700/50 rounded-xl">
+                    <div className="mb-6 p-4 bg-gray-50 dark:bg-black/50 rounded-xl">
                       <SentimentMeter
                         score={article.sentiment.score}
                         label={article.sentiment.label}
@@ -491,7 +491,7 @@ export default async function ArticlePage({ params }: Props) {
               <ArticleContent article={article} />
 
               {/* Entities & Tags */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   📋 Article Details
                 </h2>
@@ -579,7 +579,7 @@ export default async function ArticlePage({ params }: Props) {
                           <Link
                             key={tag}
                             href={`/topic/${tag}`}
-                            className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-slate-600 transition"
+                            className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-neutral-900 transition"
                           >
                             #{tag}
                           </Link>
@@ -630,7 +630,7 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Article Reactions */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   💬 What do you think?
                 </h2>
@@ -648,7 +648,7 @@ export default async function ArticlePage({ params }: Props) {
 
               {/* More from This Source */}
               {moreFromSource.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                     📰 More from {article.source}
                   </h2>
@@ -657,7 +657,7 @@ export default async function ArticlePage({ params }: Props) {
                       <Link
                         key={i}
                         href={`/article/${a.link ? encodeURIComponent(Buffer.from(a.link).toString("base64url").slice(0, 12)) : i}`}
-                        className="block p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition group"
+                        className="block p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition group"
                       >
                         <h3 className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition line-clamp-2 text-sm">
                           {a.title}
@@ -688,7 +688,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="space-y-6">
               {/* Market Context */}
               {article.market_context && (
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                     📊 Market Context
                   </h2>
@@ -728,7 +728,7 @@ export default async function ArticlePage({ params }: Props) {
                       </div>
                     )}
                     {article.market_context.total_market_cap && (
-                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-black rounded-lg">
                         <span className="font-medium text-gray-900 dark:text-white">
                           📈 Total Market Cap
                         </span>
@@ -742,7 +742,7 @@ export default async function ArticlePage({ params }: Props) {
                       </div>
                     )}
                     {article.market_context.btc_dominance && (
-                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-black rounded-lg">
                         <span className="font-medium text-gray-900 dark:text-white">
                           👑 BTC Dominance
                         </span>
@@ -752,7 +752,7 @@ export default async function ArticlePage({ params }: Props) {
                       </div>
                     )}
                     {article.market_context.fear_greed_index != null && (
-                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-black rounded-lg">
                         <span className="font-medium text-gray-900 dark:text-white">
                           😱 Fear & Greed
                         </span>
@@ -774,16 +774,16 @@ export default async function ArticlePage({ params }: Props) {
               <ArticleShareCard title={article.title} url={articleUrl} />
 
               {/* Source Info */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
                   📰 Source
                 </h2>
                 <Link
                   href={`/source/${article.source_key}`}
-                  className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition"
+                  className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-black rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition"
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${sourceColors[article.source]?.split(" ")[0] || "bg-gray-200 dark:bg-slate-600"}`}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${sourceColors[article.source]?.split(" ")[0] || "bg-gray-200 dark:bg-black"}`}
                   >
                     {article.source.charAt(0)}
                   </div>

@@ -17,12 +17,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
+  return <div className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`} />;
 }
 
 function NewsCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-5 h-full">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5 h-full">
       <div className="flex items-center justify-between mb-3">
         <Skeleton className="h-6 w-20 rounded-full" />
         <Skeleton className="h-4 w-16" />
@@ -75,7 +75,7 @@ function SidebarSkeleton() {
   return (
     <div className="space-y-6">
       {/* Trending Skeleton */}
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
         <Skeleton className="h-6 w-32 mb-4" />
         {[...Array(5)].map((_, i) => (
           <div key={i} className="flex items-start gap-4 py-3">
@@ -100,7 +100,7 @@ function SidebarSkeleton() {
 
 export default function HomeLoading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Price Ticker Skeleton */}
       <div className="bg-slate-900 py-2.5">
         <div className="max-w-7xl mx-auto px-4">

@@ -150,11 +150,11 @@ export function FundingRates({
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
         <div className="animate-pulse space-y-4">
-          <div className="h-8 w-48 bg-neutral-200 dark:bg-neutral-800 rounded" />
+          <div className="h-8 w-48 bg-neutral-200 dark:bg-black rounded" />
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="h-12 bg-neutral-200 dark:bg-neutral-800 rounded" />
+            <div key={i} className="h-12 bg-neutral-200 dark:bg-black rounded" />
           ))}
         </div>
       </div>
@@ -163,7 +163,7 @@ export function FundingRates({
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg className="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -187,7 +187,7 @@ export function FundingRates({
 
   if (rates.length === 0) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg className="w-12 h-12 text-neutral-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
@@ -204,7 +204,7 @@ export function FundingRates({
   }
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
         <div>
@@ -217,14 +217,14 @@ export function FundingRates({
         </div>
 
         {/* Filter */}
-        <div className="flex gap-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg p-1">
+        <div className="flex gap-1 bg-neutral-100 dark:bg-black rounded-lg p-1">
           {(['all', 'positive', 'negative'] as const).map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors capitalize ${
                 filter === f
-                  ? 'bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-black text-neutral-900 dark:text-white shadow-sm'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
             >
@@ -237,7 +237,7 @@ export function FundingRates({
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-neutral-50 dark:bg-neutral-800/50">
+          <thead className="bg-neutral-50 dark:bg-black/50">
             <tr>
               <th className="px-4 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
                 Symbol
@@ -276,7 +276,7 @@ export function FundingRates({
             {filteredRates.map((rate) => (
               <tr 
                 key={rate.symbol}
-                className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors"
+                className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"
               >
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-2">
@@ -314,7 +314,7 @@ export function FundingRates({
       </div>
 
       {/* Footer */}
-      <div className="p-3 bg-neutral-50 dark:bg-neutral-800/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
+      <div className="p-3 bg-neutral-50 dark:bg-black/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
         Positive rate = Longs pay shorts • Negative rate = Shorts pay longs • Data from Binance
       </div>
     </div>

@@ -169,7 +169,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
   };
 
   return (
-    <div className={`bg-white dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
       {/* ── Header ── */}
       <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
         <div className="flex items-center gap-3 mb-4">
@@ -192,7 +192,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && startResearch()}
               placeholder="Ask anything about crypto… e.g., 'What's the impact of spot ETH ETFs on DeFi?'"
-              className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500/50 transition-all"
+              className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500/50 transition-all"
             />
           </div>
           <button
@@ -216,7 +216,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                   depth === opt.value
                     ? 'bg-violet-500/20 text-violet-400 border border-violet-500/30'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
+                    : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -358,7 +358,7 @@ export function ResearchAgentDashboard({ className = '' }: ResearchAgentDashboar
               <button
                 key={r.id}
                 onClick={() => { setReport(r); setQuery(r.query); }}
-                className="w-full text-left p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/50 transition-colors"
+                className="w-full text-left p-3 rounded-lg bg-slate-50 dark:bg-black/50 hover:bg-slate-100 dark:hover:bg-neutral-900 border border-slate-200 dark:border-slate-700/50 transition-colors"
               >
                 <div className="text-sm font-medium text-slate-700 dark:text-slate-300 truncate">{r.query}</div>
                 <div className="text-xs text-slate-400 mt-1 flex items-center gap-2">
@@ -414,7 +414,7 @@ function StatusBanner({ report }: { report: ResearchReport }) {
               className={`w-2 h-2 rounded-full ${
                 i < report.agentResults.length / (report.plan?.[0]?.agents.length || 1)
                   ? 'bg-blue-500'
-                  : 'bg-slate-300 dark:bg-slate-600'
+                  : 'bg-slate-300 dark:bg-black'
               }`}
             />
           ))}
@@ -439,7 +439,7 @@ function AgentCard({
     <div className="rounded-lg border border-slate-200 dark:border-slate-700/50 overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+        className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-neutral-900/50 transition-colors"
       >
         {expanded ? (
           <ChevronDown className="w-4 h-4 text-slate-400 flex-shrink-0" />
@@ -464,7 +464,7 @@ function AgentCard({
               <span className="text-xs text-slate-400 font-medium">Sources:</span>
               <div className="flex flex-wrap gap-1 mt-1">
                 {agent.sources.map((src, i) => (
-                  <span key={i} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500">
+                  <span key={i} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-black text-slate-500">
                     {src}
                   </span>
                 ))}

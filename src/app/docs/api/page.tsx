@@ -21,7 +21,7 @@ const SwaggerUI = dynamic(() => import('swagger-ui-react'), { ssr: false });
 
 export default function ApiDocsPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       <div className="container mx-auto p-6">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
@@ -32,7 +32,7 @@ export default function ApiDocsPage() {
           </p>
         </div>
         
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div className="bg-white dark:bg-black rounded-lg shadow-lg p-6">
           <SwaggerUI url="/api/openapi.json" />
         </div>
         
@@ -65,7 +65,7 @@ export default function ApiDocsPage() {
           </div>
         </div>
         
-        <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="mt-8 bg-gray-50 dark:bg-black p-6 rounded-lg">
           <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
             Quick Start
           </h2>

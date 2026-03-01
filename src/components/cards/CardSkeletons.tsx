@@ -17,7 +17,7 @@ import { Skeleton } from '@/components/Skeletons';
 
 export function ArticleCardLargeSkeleton() {
   return (
-    <div className="h-[400px] flex bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
+    <div className="h-[400px] flex bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
       {/* Image placeholder */}
       <div className="w-[40%] flex-shrink-0">
         <Skeleton className="h-full w-full" />
@@ -48,7 +48,7 @@ export function ArticleCardLargeSkeleton() {
 
 export function ArticleCardMediumSkeleton() {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 overflow-hidden">
       {/* Image placeholder */}
       <Skeleton className="h-[200px] w-full" />
       
@@ -69,7 +69,7 @@ export function ArticleCardMediumSkeleton() {
 
 export function ArticleCardSmallSkeleton({ showRank = false }: { showRank?: boolean }) {
   return (
-    <div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-gray-900">
+    <div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-black">
       {showRank ? (
         <Skeleton className="flex-shrink-0 w-7 h-7 rounded-lg" />
       ) : (
@@ -90,7 +90,7 @@ export function ArticleCardSmallSkeleton({ showRank = false }: { showRank?: bool
 
 export function ArticleCardListSkeleton() {
   return (
-    <div className="flex gap-4 p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
+    <div className="flex gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800">
       {/* Image */}
       <Skeleton className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-lg" />
       

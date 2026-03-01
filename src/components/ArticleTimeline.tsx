@@ -50,7 +50,7 @@ const typeColors: Record<string, { dot: string; line: string; badge: string; lab
   official: { dot: 'bg-blue-500', line: 'border-blue-300 dark:border-blue-700', badge: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400', label: 'Official' },
   'press-release': { dot: 'bg-purple-500', line: 'border-purple-300 dark:border-purple-700', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400', label: 'Press Release' },
   social: { dot: 'bg-cyan-500', line: 'border-cyan-300 dark:border-cyan-700', badge: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400', label: 'Social' },
-  blog: { dot: 'bg-gray-400', line: 'border-gray-300 dark:border-gray-600', badge: 'bg-gray-100 dark:bg-gray-800/30 text-gray-700 dark:text-gray-400', label: 'Blog' },
+  blog: { dot: 'bg-gray-400', line: 'border-gray-300 dark:border-gray-600', badge: 'bg-gray-100 dark:bg-black/30 text-gray-700 dark:text-gray-400', label: 'Blog' },
   government: { dot: 'bg-red-500', line: 'border-red-300 dark:border-red-700', badge: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400', label: 'Government' },
 };
 
@@ -102,19 +102,19 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-44 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-44 bg-gray-200 dark:bg-black rounded" />
           </div>
           {[1, 2, 3, 4].map(i => (
             <div key={i} className="flex gap-3">
               <div className="flex flex-col items-center">
-                <div className="w-3 h-3 bg-gray-200 dark:bg-slate-700 rounded-full" />
-                <div className="w-0.5 h-12 bg-gray-200 dark:bg-slate-700" />
+                <div className="w-3 h-3 bg-gray-200 dark:bg-black rounded-full" />
+                <div className="w-0.5 h-12 bg-gray-200 dark:bg-black" />
               </div>
-              <div className="flex-1 h-14 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
+              <div className="flex-1 h-14 bg-gray-100 dark:bg-black/50 rounded-lg" />
             </div>
           ))}
         </div>
@@ -124,7 +124,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">🕵️</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Story Origins</h2>
@@ -148,7 +148,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
   const allItems = data.withOrigins || [];
   if (allItems.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">🕵️</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Story Origins</h2>
@@ -168,7 +168,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
     : [];
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center gap-3">
@@ -211,7 +211,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
                 <div className="flex flex-col items-center">
                   <div className={`w-3 h-3 rounded-full flex-shrink-0 ring-4 ring-white dark:ring-slate-800 ${tc.dot}`} />
                   {!isLast && (
-                    <div className="w-0.5 flex-1 bg-gray-200 dark:bg-slate-600 min-h-[2rem]" />
+                    <div className="w-0.5 flex-1 bg-gray-200 dark:bg-black min-h-[2rem]" />
                   )}
                 </div>
 
@@ -263,7 +263,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
         <Link
           href={`/origins`}
           className="text-xs text-blue-600 dark:text-blue-400 hover:underline"

@@ -64,7 +64,7 @@ export const sourceColors: Record<string, { bg: string; text: string; solid: str
 
 export const defaultGradient = 'from-gray-500 via-gray-600 to-gray-700';
 export const defaultSourceStyle = { 
-  bg: 'bg-gray-100 dark:bg-gray-800', 
+  bg: 'bg-gray-100 dark:bg-black', 
   text: 'text-gray-700 dark:text-gray-300',
   solid: 'bg-gray-500'
 };
@@ -82,7 +82,7 @@ export const sentimentColors: Record<string, { bg: string; text: string; icon: s
     icon: '📉'
   },
   'neutral': { 
-    bg: 'bg-gray-100 dark:bg-gray-800', 
+    bg: 'bg-gray-100 dark:bg-black', 
     text: 'text-gray-600 dark:text-gray-400',
     icon: '➡️'
   },

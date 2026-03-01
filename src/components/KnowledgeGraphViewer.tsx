@@ -183,7 +183,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
   }, [selectedEntity, relationships]);
 
   return (
-    <div className={`bg-white dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
       {/* ── Header ── */}
       <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
         <div className="flex items-center justify-between mb-4">
@@ -201,7 +201,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
           <button
             onClick={fetchGraph}
             disabled={isLoading}
-            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-black text-slate-500"
           >
             <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </button>
@@ -216,7 +216,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                 tab === t
                   ? 'bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent'
+                  : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent'
               }`}
             >
               {t === 'graph' && <Globe className="w-3.5 h-3.5" />}
@@ -235,7 +235,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
               className={`px-2 py-1 rounded text-xs font-medium transition-all ${
                 !filterType
                   ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-500 border border-transparent'
+                  : 'bg-slate-100 dark:bg-black text-slate-500 border border-transparent'
               }`}
             >
               All ({entities.length})
@@ -249,7 +249,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
                   className={`px-2 py-1 rounded text-xs font-medium flex items-center gap-1 transition-all ${
                     filterType === type
                       ? `${config.color} bg-opacity-20 border border-current`
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-500 border border-transparent'
+                      : 'bg-slate-100 dark:bg-black text-slate-500 border border-transparent'
                   }`}
                 >
                   {type} ({count})
@@ -280,7 +280,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
             {/* SVG Graph View */}
             <div
               ref={canvasRef}
-              className="relative w-full bg-slate-50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-700/50 overflow-hidden"
+              className="relative w-full bg-slate-50 dark:bg-black/30 rounded-xl border border-slate-200 dark:border-slate-700/50 overflow-hidden"
               style={{ height: 500 }}
             >
               <svg
@@ -356,26 +356,26 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
               <div className="absolute bottom-3 right-3 flex gap-1">
                 <button
                   onClick={() => setZoom((z) => Math.min(3, z + 0.2))}
-                  className="p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
+                  className="p-1.5 rounded bg-white dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
                 >
                   <ZoomIn className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setZoom((z) => Math.max(0.3, z - 0.2))}
-                  className="p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
+                  className="p-1.5 rounded bg-white dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
                 >
                   <ZoomOut className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setZoom(1)}
-                  className="p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
+                  className="p-1.5 rounded bg-white dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-600 shadow-sm"
                 >
                   <Maximize2 className="w-4 h-4" />
                 </button>
               </div>
 
               {/* Legend */}
-              <div className="absolute top-3 left-3 p-2 rounded-lg bg-white/90 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-xs space-y-1">
+              <div className="absolute top-3 left-3 p-2 rounded-lg bg-white/90 dark:bg-black/90 border border-slate-200 dark:border-slate-700 text-xs space-y-1">
                 {Object.entries(RELATIONSHIP_COLORS).slice(0, 5).map(([type, color]) => (
                   <div key={type} className="flex items-center gap-1.5">
                     <div className="w-3 h-0.5 rounded" style={{ backgroundColor: color }} />
@@ -406,7 +406,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
                 <button
                   key={entity.id}
                   onClick={() => { setSelectedEntity(entity); setTab('graph'); }}
-                  className="w-full text-left flex items-center gap-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all"
+                  className="w-full text-left flex items-center gap-3 p-3 rounded-lg bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all"
                 >
                   <div className={`p-1.5 rounded ${config.color} bg-opacity-10`}>
                     <Icon className="w-4 h-4" />
@@ -432,7 +432,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
             {events.map((event) => (
               <div
                 key={event.id}
-                className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50"
+                className="p-3 rounded-lg bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50"
               >
                 <div className="flex items-start gap-3">
                   <Calendar className="w-4 h-4 text-orange-500 mt-0.5" />
@@ -454,7 +454,7 @@ export function KnowledgeGraphViewer({ className = '' }: KnowledgeGraphViewerPro
                         {event.entities.map((eid) => (
                           <span
                             key={eid}
-                            className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500"
+                            className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-black text-slate-500"
                           >
                             {entities.find((e) => e.id === eid)?.name || eid}
                           </span>
@@ -494,7 +494,7 @@ function SelectedEntityDetail({
   const Icon = config.icon;
 
   return (
-    <div className="mt-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-indigo-200 dark:border-indigo-500/20">
+    <div className="mt-4 p-4 rounded-xl bg-slate-50 dark:bg-black/50 border border-indigo-200 dark:border-indigo-500/20">
       <div className="flex items-center gap-3 mb-3">
         <div className={`p-2 rounded-lg ${config.color} bg-opacity-10`}>
           <Icon className="w-5 h-5" />

@@ -235,7 +235,7 @@ function ComparePageContent() {
 
   const t = useTranslations('common');
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -252,14 +252,14 @@ function ComparePageContent() {
           <div className="flex items-center gap-2">
             <button
               onClick={fetchCoinData}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
               title={t('refresh')}
             >
               <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={handleShare}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 font-medium transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 rounded-lg text-gray-700 dark:text-gray-300 font-medium transition-colors"
             >
               <Share2 className="w-4 h-4" />
               <span className="hidden sm:inline">{t('share')}</span>
@@ -268,14 +268,14 @@ function ComparePageContent() {
         </div>
 
         {/* Coin Selector */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
           <div className="flex flex-wrap items-center gap-3">
             {selectedCoins.map((coinId, index) => {
               const coin = getCoinInfo(coinId);
               return (
                 <div
                   key={coinId}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-100 dark:bg-gray-700"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-100 dark:bg-black"
                   style={{ borderLeft: `4px solid ${colors[index % colors.length]}` }}
                 >
                   {coin && (
@@ -286,7 +286,7 @@ function ComparePageContent() {
                       {selectedCoins.length > 1 && (
                         <button
                           onClick={() => removeCoin(coinId)}
-                          className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-500"
+                          className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-500"
                         >
                           <X className="w-4 h-4" />
                         </button>
@@ -308,7 +308,7 @@ function ComparePageContent() {
                 </button>
 
                 {showCoinSelector && (
-                  <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-10">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-10">
                     <div className="p-3 border-b border-gray-200 dark:border-gray-700">
                       <div className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -317,7 +317,7 @@ function ComparePageContent() {
                           value={searchQuery}
                           onChange={e => setSearchQuery(e.target.value)}
                           placeholder="Search coins..."
-                          className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-black text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -326,12 +326,12 @@ function ComparePageContent() {
                         <button
                           key={coin.id}
                           onClick={() => addCoin(coin.id)}
-                          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-left"
+                          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors text-left"
                         >
                           {(coin as TokenPrice).image ? (
                             <img src={(coin as TokenPrice).image} alt={coin.name} className="w-6 h-6 rounded-full" />
                           ) : (
-                            <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-600" />
+                            <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-black" />
                           )}
                           <div>
                             <p className="font-medium text-gray-900 dark:text-white text-sm">{coin.name}</p>
@@ -351,14 +351,14 @@ function ComparePageContent() {
             )}
 
             {/* Time Range Selector */}
-            <div className="ml-auto flex items-center gap-1 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+            <div className="ml-auto flex items-center gap-1 bg-gray-100 dark:bg-black rounded-lg p-1">
               {(['24h', '7d', '30d', '90d', '1y'] as TimeRange[]).map(range => (
                 <button
                   key={range}
                   onClick={() => setTimeRange(range)}
                   className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
                     timeRange === range
-                      ? 'bg-white dark:bg-gray-600 text-gray-900 dark:text-white shadow'
+                      ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >
@@ -381,7 +381,7 @@ function ComparePageContent() {
         )}
 
         {/* Normalized Price Chart */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Normalized Price Chart
           </h2>
@@ -491,7 +491,7 @@ function ComparePageContent() {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -667,13 +667,13 @@ function ComparePageContent() {
 export default function CompareClient() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="animate-pulse space-y-6">
-            <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-lg w-48" />
-            <div className="h-20 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
-            <div className="h-80 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
-            <div className="h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
+            <div className="h-12 bg-gray-200 dark:bg-black rounded-lg w-48" />
+            <div className="h-20 bg-gray-200 dark:bg-black rounded-2xl" />
+            <div className="h-80 bg-gray-200 dark:bg-black rounded-2xl" />
+            <div className="h-96 bg-gray-200 dark:bg-black rounded-2xl" />
           </div>
         </div>
       </div>

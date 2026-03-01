@@ -99,7 +99,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
     <div className="relative">
       <button
         onClick={() => canShare ? handleNativeShare() : setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+        className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg transition-colors"
         aria-label={tCommon('share')}
       >
         <Share2 className="w-4 h-4" />
@@ -115,7 +115,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
             onClick={() => setIsOpen(false)}
             onKeyDown={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-20 animate-fadeIn">
+          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-20 animate-fadeIn">
             {shareLinks.map((link) => (
               <a
                 key={link.name}
@@ -134,7 +134,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
             
             <button
               onClick={copyToClipboard}
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 w-full transition-colors"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-900 w-full transition-colors"
             >
               {copied ? (
                 <>
@@ -179,7 +179,7 @@ export function ShareButtons({ title, url, description }: SocialShareProps) {
         href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-black hover:text-white transition-colors"
+        className="p-2 rounded-full bg-gray-100 dark:bg-black hover:bg-black hover:text-white transition-colors"
         aria-label="Share on Twitter"
       >
         <Twitter className="w-4 h-4" />
@@ -189,7 +189,7 @@ export function ShareButtons({ title, url, description }: SocialShareProps) {
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 hover:text-white transition-colors"
+        className="p-2 rounded-full bg-gray-100 dark:bg-black hover:bg-blue-600 hover:text-white transition-colors"
         aria-label="Share on Facebook"
       >
         <Facebook className="w-4 h-4" />
@@ -199,7 +199,7 @@ export function ShareButtons({ title, url, description }: SocialShareProps) {
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-700 hover:text-white transition-colors"
+        className="p-2 rounded-full bg-gray-100 dark:bg-black hover:bg-blue-700 hover:text-white transition-colors"
         aria-label="Share on LinkedIn"
       >
         <Linkedin className="w-4 h-4" />
@@ -209,7 +209,7 @@ export function ShareButtons({ title, url, description }: SocialShareProps) {
         href={`https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-orange-600 hover:text-white transition-colors"
+        className="p-2 rounded-full bg-gray-100 dark:bg-black hover:bg-orange-600 hover:text-white transition-colors"
         aria-label="Share on Reddit"
       >
         <MessageCircle className="w-4 h-4" />
@@ -217,7 +217,7 @@ export function ShareButtons({ title, url, description }: SocialShareProps) {
       
       <button
         onClick={copyToClipboard}
-        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-600 hover:text-white transition-colors"
+        className="p-2 rounded-full bg-gray-100 dark:bg-black hover:bg-gray-600 hover:text-white transition-colors"
         aria-label="Copy link"
       >
         {copied ? <Check className="w-4 h-4 text-green-500" /> : <Link2 className="w-4 h-4" />}

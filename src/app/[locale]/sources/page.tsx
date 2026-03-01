@@ -91,7 +91,7 @@ export default async function SourcesPage() {
   const { sources } = await getSources();
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <BreadcrumbStructuredData
         items={[
           { name: 'Home', url: 'https://cryptocurrency.cv' },
@@ -113,19 +113,19 @@ export default async function SourcesPage() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
+            <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
               <p className="text-4xl font-bold text-blue-600 dark:text-blue-400">{sources.length}</p>
               <p className="text-gray-500 dark:text-slate-400">Active Sources</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
+            <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
               <p className="text-4xl font-bold text-green-600 dark:text-green-400">100%</p>
               <p className="text-gray-500 dark:text-slate-400">Free Access</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
+            <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
               <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">Real-time</p>
               <p className="text-gray-500 dark:text-slate-400">RSS Feeds</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
+            <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-slate-700 text-center">
               <p className="text-4xl font-bold text-gray-600 dark:text-gray-400">0</p>
               <p className="text-gray-500 dark:text-slate-400">API Keys Required</p>
             </div>
@@ -139,7 +139,7 @@ export default async function SourcesPage() {
                 <Link
                   key={source.key}
                   href={`/source/${source.key}`}
-                  className="group bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition"
+                  className="group bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition"
                 >
                   {/* Color Banner */}
                   <div className={`h-2 bg-gradient-to-r ${details?.color || 'from-gray-400 to-gray-500'}`} />
@@ -172,7 +172,7 @@ export default async function SourcesPage() {
                       {(details?.focus || [source.category]).map(tag => (
                         <span 
                           key={tag}
-                          className="bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 px-2 py-1 rounded text-xs"
+                          className="bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300 px-2 py-1 rounded text-xs"
                         >
                           {tag}
                         </span>
@@ -185,7 +185,7 @@ export default async function SourcesPage() {
           </div>
 
           {/* Info Section */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-8">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">How It Works</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div>

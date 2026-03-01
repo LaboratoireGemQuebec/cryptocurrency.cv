@@ -257,7 +257,7 @@ export function MobileNav() {
       <button
         ref={openButtonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2.5 text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+        className="relative p-2.5 text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-xl transition-colors focus-ring"
         aria-label={isOpen ? tA11y('closeMenu') : tA11y('openMenu')}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
@@ -291,7 +291,7 @@ export function MobileNav() {
       <div
         ref={menuRef}
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-full sm:w-96 sm:max-w-[85vw] bg-white dark:bg-slate-900 shadow-2xl z-50 overflow-hidden flex flex-col ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-96 sm:max-w-[85vw] bg-white dark:bg-black shadow-2xl z-50 overflow-hidden flex flex-col ${
           isSwiping ? '' : 'transition-transform duration-300 ease-out'
         } ${
           isOpen ? '' : 'translate-x-full'
@@ -307,9 +307,9 @@ export function MobileNav() {
         onTouchEnd={handleTouchEnd}
       >
         {/* Swipe indicator bar */}
-        <div className="absolute top-1/2 left-2 -translate-y-1/2 w-1 h-16 bg-gray-300 dark:bg-slate-600 rounded-full opacity-50" aria-hidden="true" />
+        <div className="absolute top-1/2 left-2 -translate-y-1/2 w-1 h-16 bg-gray-300 dark:bg-black rounded-full opacity-50" aria-hidden="true" />
         {/* Menu Header */}
-        <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 px-5 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white dark:bg-black border-b border-gray-100 dark:border-slate-800 px-5 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-2.5">
             <span className="text-xl" aria-hidden="true">📰</span>
             <span className="font-bold text-lg bg-gradient-to-r from-brand-600 to-brand-500 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent">
@@ -319,7 +319,7 @@ export function MobileNav() {
           <button
             ref={closeButtonRef}
             onClick={closeMenu}
-            className="p-2 text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors focus-ring"
+            className="p-2 text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg transition-colors focus-ring"
             aria-label={tA11y('closeMenu')}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -338,7 +338,7 @@ export function MobileNav() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
-                  className="flex items-center px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                  className="flex items-center px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                 >
                   <span className="text-[13px] font-medium">{item.label}</span>
                 </Link>
@@ -373,7 +373,7 @@ export function MobileNav() {
                     key={cat.slug}
                     href={`/category/${cat.slug}`}
                     onClick={closeMenu}
-                    className="flex items-center gap-2.5 px-3 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring text-sm"
+                    className="flex items-center gap-2.5 px-3 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 rounded-xl transition-colors focus-ring text-sm"
                   >
                     <span className="text-base" aria-hidden="true">{cat.icon}</span>
                     <span className="font-medium">{cat.name}</span>
@@ -410,7 +410,7 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                   >
                     <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
@@ -446,7 +446,7 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                   >
                     <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
@@ -482,7 +482,7 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                   >
                     <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
@@ -518,7 +518,7 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMenu}
-                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                   >
                     <span className="text-[13px] font-medium">{item.label}</span>
                   </Link>
@@ -527,7 +527,7 @@ export function MobileNav() {
                   href="https://github.com/nirholas/free-crypto-news"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus-ring"
+                  className="flex items-center px-4 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors focus-ring"
                 >
                   <span className="text-[13px] font-medium">GitHub</span>
                   <svg className="w-4 h-4 ml-auto text-gray-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -540,7 +540,7 @@ export function MobileNav() {
         </nav>
 
         {/* Footer CTA */}
-        <div className="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 p-4">
+        <div className="sticky bottom-0 bg-white dark:bg-black border-t border-gray-100 dark:border-slate-800 p-4">
           <div className="flex items-center justify-between mb-4">
             <LanguageSwitcher />
           </div>

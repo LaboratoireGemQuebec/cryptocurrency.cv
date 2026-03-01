@@ -56,7 +56,7 @@ export function Skeleton({
 
   return (
     <div 
-      className={`bg-gray-200 dark:bg-gray-700/50 rounded ${className}`}
+      className={`bg-gray-200 dark:bg-black/50 rounded ${className}`}
       style={combinedStyle}
       aria-hidden="true"
     />
@@ -136,7 +136,7 @@ export function CardSkeleton({
   className?: string;
 }) {
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+    <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {hasImage && (
         <Skeleton className="w-full h-40" delay={delay} />
       )}
@@ -214,7 +214,7 @@ export function ChartSkeleton({
       </div>
       
       {/* Chart area */}
-      <div className="absolute left-14 right-0 top-0 bottom-8 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+      <div className="absolute left-14 right-0 top-0 bottom-8 bg-gray-100 dark:bg-black rounded-lg overflow-hidden">
         <Skeleton className="w-full h-full" delay={delay + 150} />
         
         {/* Fake bars/lines */}
@@ -222,7 +222,7 @@ export function ChartSkeleton({
           {[...Array(7)].map((_, i) => (
             <div 
               key={i}
-              className="w-8 bg-gray-300 dark:bg-gray-600 rounded-t"
+              className="w-8 bg-gray-300 dark:bg-black rounded-t"
               style={{ 
                 height: `${30 + Math.random() * 50}%`,
                 opacity: 0.5,
@@ -259,7 +259,7 @@ export function StatsGridSkeleton({
       {Array.from({ length: count }).map((_, i) => (
         <div 
           key={i}
-          className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
+          className="bg-white dark:bg-black rounded-lg p-4 border border-gray-200 dark:border-gray-700"
         >
           <TextSkeleton width="w-20" height="h-3" delay={delay + i * 50} className="mb-2" />
           <Skeleton className="h-8 w-24" delay={delay + i * 50 + 30} />
@@ -286,7 +286,7 @@ export function NewsFeedSkeleton({
       {Array.from({ length: count }).map((_, i) => (
         <div 
           key={i}
-          className="flex gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
+          className="flex gap-4 p-4 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-gray-700"
         >
           <Skeleton className="w-24 h-24 rounded-lg flex-shrink-0" delay={delay + i * 100} />
           <div className="flex-1 space-y-2">

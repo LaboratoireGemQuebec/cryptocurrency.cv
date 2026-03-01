@@ -107,7 +107,7 @@ export default function HeadlinesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-6xl mx-auto">
         <Header />
 
@@ -121,7 +121,7 @@ export default function HeadlinesPage() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 mb-6">
             <div className="flex flex-wrap gap-4 items-center">
               <div className="flex items-center gap-2">
                 <label htmlFor="time-range" className="text-sm text-gray-600 dark:text-slate-400">Time range:</label>
@@ -129,7 +129,7 @@ export default function HeadlinesPage() {
                   id="time-range"
                   value={hours}
                   onChange={(e) => setHours(Number(e.target.value))}
-                  className="px-3 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm"
+                  className="px-3 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white text-sm"
                 >
                   <option value={6}>Last 6 hours</option>
                   <option value={12}>Last 12 hours</option>
@@ -169,7 +169,7 @@ export default function HeadlinesPage() {
 
           {/* Loading State */}
           {loading && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4 animate-pulse">📝</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300">Tracking headlines...</h3>
             </div>
@@ -180,19 +180,19 @@ export default function HeadlinesPage() {
             <div className="space-y-6">
               {/* Stats Overview */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
                   <div className="text-3xl font-bold text-gray-900 dark:text-white">{data.stats.totalTracked}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">Articles Tracked</div>
                 </div>
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
                   <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">{data.stats.withChanges}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">With Changes</div>
                 </div>
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
                   <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{data.recentChanges.length}</div>
                   <div className="text-sm text-gray-500 dark:text-slate-400">Recent Mutations</div>
                 </div>
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
                   <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
                     {data.stats.avgChangesPerArticle.toFixed(2)}
                   </div>
@@ -202,11 +202,11 @@ export default function HeadlinesPage() {
 
               {/* Recent Changes */}
               {data.recentChanges.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🔄 Recent Headline Changes</h2>
                   <div className="space-y-4">
                     {data.recentChanges.slice(0, 10).map((change, i) => (
-                      <div key={i} className="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div key={i} className="p-4 bg-gray-50 dark:bg-black rounded-lg">
                         <div className="flex flex-col gap-2">
                           <div className="flex items-start gap-2">
                             <span className="text-red-500 font-mono text-sm">-</span>
@@ -228,7 +228,7 @@ export default function HeadlinesPage() {
 
               {/* Articles with Changes */}
               {data.tracked.filter(t => t.totalChanges > 0).length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Headline Evolution History</h2>
                   <div className="space-y-6">
                     {data.tracked
@@ -284,7 +284,7 @@ export default function HeadlinesPage() {
 
               {/* No Changes */}
               {data.stats.withChanges === 0 && (
-                <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+                <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
                   <div className="text-6xl mb-4">✅</div>
                   <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">No Headline Changes Detected</h3>
                   <p className="text-gray-500 dark:text-slate-400">
@@ -302,7 +302,7 @@ export default function HeadlinesPage() {
 
           {/* Empty State */}
           {!data && !loading && !error && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">📝</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Headline Tracker</h3>
               <p className="text-gray-500 dark:text-slate-400">

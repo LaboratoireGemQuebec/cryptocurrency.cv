@@ -111,9 +111,9 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
 
   const t = useTranslations('common');
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm dark:shadow-lg">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/50">
+      <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-brand-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +138,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
         {dayGroups.map(group => (
           <div key={group.label}>
             {/* Day Header */}
-            <div className="px-5 py-2 bg-gray-50/80 dark:bg-slate-700/30 border-b border-gray-100 dark:border-slate-700/50 sticky top-0 z-10">
+            <div className="px-5 py-2 bg-gray-50/80 dark:bg-black/30 border-b border-gray-100 dark:border-slate-700/50 sticky top-0 z-10">
               <span className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
                 {group.label}
               </span>
@@ -156,7 +156,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
                   <Link
                     key={article.link}
                     href={`/article/${slug}`}
-                    className="group flex gap-4 px-5 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/40 transition-colors"
+                    className="group flex gap-4 px-5 py-4 hover:bg-gray-50 dark:hover:bg-neutral-900/40 transition-colors"
                   >
                     {/* Time Column */}
                     <div className="flex-shrink-0 w-16 pt-0.5">

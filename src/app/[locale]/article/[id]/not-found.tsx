@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 export default function ArticleNotFound() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
         

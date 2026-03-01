@@ -44,7 +44,7 @@ function BookmarkCard({
   onRemove: (link: string) => void;
 }) {
   return (
-    <article className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition-shadow">
+    <article className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition-shadow">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <a
@@ -58,7 +58,7 @@ function BookmarkCard({
             </h2>
           </a>
           <div className="flex items-center gap-3 mt-3 text-xs text-gray-500 dark:text-slate-500">
-            <span className="font-medium px-2 py-0.5 bg-gray-100 dark:bg-slate-700 rounded">
+            <span className="font-medium px-2 py-0.5 bg-gray-100 dark:bg-black rounded">
               {bookmark.source}
             </span>
             <span>Saved {formatTimeAgo(bookmark.savedAt)}</span>
@@ -91,14 +91,14 @@ export default function SavedPage() {
   // Don't render until client-side to avoid hydration mismatch
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-4xl mx-auto">
           <Header />
           <main className="px-4 py-8">
             <div className="animate-pulse space-y-4">
-              <div className="h-8 bg-gray-200 dark:bg-slate-700 rounded w-1/3"></div>
-              <div className="h-24 bg-gray-200 dark:bg-slate-700 rounded"></div>
-              <div className="h-24 bg-gray-200 dark:bg-slate-700 rounded"></div>
+              <div className="h-8 bg-gray-200 dark:bg-black rounded w-1/3"></div>
+              <div className="h-24 bg-gray-200 dark:bg-black rounded"></div>
+              <div className="h-24 bg-gray-200 dark:bg-black rounded"></div>
             </div>
           </main>
           <Footer />
@@ -108,7 +108,7 @@ export default function SavedPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-4xl mx-auto">
         <Header />
         
@@ -154,7 +154,7 @@ export default function SavedPage() {
                     </button>
                     <button
                       onClick={() => setShowClearConfirm(false)}
-                      className="px-3 py-1.5 text-sm bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors"
+                      className="px-3 py-1.5 text-sm bg-gray-200 dark:bg-black text-gray-700 dark:text-slate-300 rounded-lg hover:bg-gray-300 dark:hover:bg-neutral-900 transition-colors"
                     >
                       No
                     </button>
@@ -183,7 +183,7 @@ export default function SavedPage() {
               ))}
             </div>
           ) : (
-            <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-12 text-center">
+            <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-12 text-center">
               <div className="text-6xl mb-4">📚</div>
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 No saved articles yet
@@ -205,7 +205,7 @@ export default function SavedPage() {
           )}
           
           {/* Info Box */}
-          <div className="mt-8 bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
+          <div className="mt-8 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
             <div className="flex items-start gap-3">
               <span className="text-xl">💡</span>
               <div>

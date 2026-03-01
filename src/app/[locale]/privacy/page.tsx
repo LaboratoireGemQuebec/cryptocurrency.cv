@@ -32,7 +32,7 @@ export default async function PrivacyPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 

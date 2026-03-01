@@ -92,10 +92,10 @@ export function EntityRelationships({
   if (loading) {
     return (
       <div className={`animate-pulse space-y-3 ${className}`}>
-        <div className="h-6 w-48 bg-gray-200 dark:bg-gray-700 rounded" />
+        <div className="h-6 w-48 bg-gray-200 dark:bg-black rounded" />
         <div className="flex flex-wrap gap-2">
           {[1, 2, 3, 4].map(i => (
-            <div key={i} className="h-8 w-24 bg-gray-200 dark:bg-gray-700 rounded-full" />
+            <div key={i} className="h-8 w-24 bg-gray-200 dark:bg-black rounded-full" />
           ))}
         </div>
       </div>
@@ -137,7 +137,7 @@ export function EntityRelationships({
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
             selectedType === null
               ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-black dark:text-gray-300 dark:hover:bg-neutral-900'
           }`}
         >
           All
@@ -151,7 +151,7 @@ export function EntityRelationships({
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 selectedType === type
                   ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-black dark:text-gray-300 dark:hover:bg-neutral-900'
               }`}
             >
               {config.icon} {config.label} ({grouped[type].length})
@@ -169,7 +169,7 @@ export function EntityRelationships({
           return (
             <div
               key={rel.id}
-              className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow"
+              className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black hover:shadow-md transition-shadow"
             >
               <div className="flex items-start justify-between mb-2">
                 <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${config.color}`}>
@@ -209,7 +209,7 @@ export function EntityRelationships({
               
               {/* Confidence indicator */}
               <div className="mt-3 flex items-center gap-2">
-                <div className="flex-1 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div className="flex-1 h-1 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-blue-500 rounded-full"
                     style={{ width: `${rel.confidence * 100}%` }}
@@ -292,7 +292,7 @@ export function EntityRelationshipsCompact({
         {relationships.length > maxItems && (
           <Link
             href={`/coin/${coinId}?tab=ecosystem`}
-            className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700"
+            className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-black dark:text-gray-400 dark:hover:bg-neutral-900"
           >
             +{relationships.length - maxItems} more
           </Link>

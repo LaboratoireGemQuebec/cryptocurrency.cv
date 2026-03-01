@@ -214,7 +214,7 @@ export function SocialBuzz() {
   const getSentimentColor = (upPct: number): string => {
     if (upPct >= 70) return 'bg-slate-900 dark:bg-white text-white dark:text-slate-900';
     if (upPct >= 50) return 'bg-slate-500 text-white';
-    return 'bg-slate-300 dark:bg-slate-600 text-slate-700 dark:text-slate-200';
+    return 'bg-slate-300 dark:bg-black text-slate-700 dark:text-slate-200';
   };
 
   const getSentimentLabel = (upPct: number): string => {
@@ -226,9 +226,9 @@ export function SocialBuzz() {
   if (loading) {
     return (
       <div className="space-y-4">
-        <div className="h-10 w-48 bg-gray-200 dark:bg-slate-800 rounded animate-pulse" />
+        <div className="h-10 w-48 bg-gray-200 dark:bg-black rounded animate-pulse" />
         {Array.from({ length: 5 }).map((_, i) => (
-          <div key={i} className="h-20 bg-gray-200 dark:bg-slate-800 rounded-lg animate-pulse" />
+          <div key={i} className="h-20 bg-gray-200 dark:bg-black rounded-lg animate-pulse" />
         ))}
       </div>
     );
@@ -320,7 +320,7 @@ export function SocialBuzz() {
             <a
               key={coin.id}
               href={`/coin/${coin.id}`}
-              className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
+              className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
             >
               <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
               <Image 
@@ -328,7 +328,7 @@ export function SocialBuzz() {
                 alt={coin.name} 
                 width={40}
                 height={40}
-                className="rounded-full bg-gray-100 dark:bg-slate-700" 
+                className="rounded-full bg-gray-100 dark:bg-black" 
               />
               <div className="flex-1 min-w-0">
                 <div className="font-medium text-slate-900 dark:text-white truncate">
@@ -383,7 +383,7 @@ export function SocialBuzz() {
             return (
               <div
                 key={coin.id}
-                className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Image 
@@ -391,7 +391,7 @@ export function SocialBuzz() {
                     alt={coin.name} 
                     width={32}
                     height={32}
-                    className="rounded-full bg-gray-100 dark:bg-slate-700" 
+                    className="rounded-full bg-gray-100 dark:bg-black" 
                   />
                   <div>
                     <div className="font-medium text-slate-900 dark:text-white">{coin.name}</div>
@@ -427,7 +427,7 @@ export function SocialBuzz() {
                     <div>
                       <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">Sentiment</div>
                       <div className="flex items-center gap-2">
-                        <div className="flex-1 h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div className="flex-1 h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                           <div 
                             className="h-full bg-slate-900 dark:bg-white"
                             style={{ width: `${social.sentiment_votes_up_percentage}%` }}
@@ -461,7 +461,7 @@ export function SocialBuzz() {
             trendingNFTs.map((nft, index) => (
               <div
                 key={nft.id}
-                className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
               >
                 <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
                 <Image 
@@ -469,7 +469,7 @@ export function SocialBuzz() {
                   alt={nft.name} 
                   width={40}
                   height={40}
-                  className="rounded-lg bg-gray-100 dark:bg-slate-700" 
+                  className="rounded-lg bg-gray-100 dark:bg-black" 
                 />
                 <div className="flex-1 min-w-0">
                   <div className="font-medium text-slate-900 dark:text-white truncate">
@@ -503,7 +503,7 @@ export function SocialBuzz() {
             trendingCategories.map((category, index) => (
               <div
                 key={category.id}
-                className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg"
               >
                 <span className="text-lg font-bold text-gray-400 w-6 text-center">{index + 1}</span>
                 <div className="flex-1 min-w-0">
@@ -559,7 +559,7 @@ export function SocialBuzzWidget() {
     return (
       <div className="space-y-2">
         {Array.from({ length: 5 }).map((_, i) => (
-          <div key={i} className="h-10 bg-gray-200 dark:bg-slate-800 rounded animate-pulse" />
+          <div key={i} className="h-10 bg-gray-200 dark:bg-black rounded animate-pulse" />
         ))}
       </div>
     );
@@ -575,7 +575,7 @@ export function SocialBuzzWidget() {
         <a
           key={coin.id}
           href={`/coin/${coin.id}`}
-          className="flex items-center gap-2 p-2 rounded hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+          className="flex items-center gap-2 p-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
         >
           <span className="text-xs text-gray-400 w-4">{i + 1}</span>
           <Image src={coin.thumb} alt={coin.name} width={20} height={20} className="rounded-full" />

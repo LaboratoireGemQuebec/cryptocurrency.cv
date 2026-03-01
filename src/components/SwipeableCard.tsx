@@ -129,7 +129,7 @@ export default function SwipeableCard({
           transform: `translateX(${offsetX}px)`,
           transition: isDragging ? 'none' : 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         }}
-        className="relative z-10 bg-white dark:bg-slate-800"
+        className="relative z-10 bg-white dark:bg-black"
       >
         {children}
       </div>

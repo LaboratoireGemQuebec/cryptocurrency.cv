@@ -175,12 +175,12 @@ export function OrderBookDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
           <div className="animate-pulse space-y-4">
-            <div className="h-8 w-48 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-2 gap-4">
-              <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded" />
-              <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded" />
+              <div className="h-64 bg-gray-200 dark:bg-black rounded" />
+              <div className="h-64 bg-gray-200 dark:bg-black rounded" />
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export function OrderBookDashboard() {
   // Error state
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg
             className="w-12 h-12 text-red-500 mb-4"
@@ -240,7 +240,7 @@ export function OrderBookDashboard() {
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 symbol === s
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+                  : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >
               {s}
@@ -248,7 +248,7 @@ export function OrderBookDashboard() {
           ))}
         </div>
 
-        <div className="flex gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+        <div className="flex gap-1 bg-gray-100 dark:bg-black rounded-lg p-1">
           {MARKET_TYPES.map((m) => (
             <button
               key={m}
@@ -258,7 +258,7 @@ export function OrderBookDashboard() {
               }}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors capitalize ${
                 market === m
-                  ? 'bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                   : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -316,7 +316,7 @@ export function OrderBookDashboard() {
       {/* Main Order Book */}
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Bids */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
           <div className="p-4 border-b border-gray-200 dark:border-slate-700 flex justify-between items-center">
             <div>
               <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">
@@ -330,7 +330,7 @@ export function OrderBookDashboard() {
             <select
               value={maxLevels}
               onChange={(e) => setMaxLevels(parseInt(e.target.value))}
-              className="px-2 py-1 bg-gray-100 dark:bg-slate-700 rounded text-sm"
+              className="px-2 py-1 bg-gray-100 dark:bg-black rounded text-sm"
             >
               <option value={10}>10 levels</option>
               <option value={15}>15 levels</option>
@@ -339,7 +339,7 @@ export function OrderBookDashboard() {
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 dark:bg-slate-700/50 text-xs">
+              <thead className="bg-gray-50 dark:bg-black/50 text-xs">
                 <tr>
                   <th className="px-3 py-2 text-left text-gray-500 dark:text-slate-400">Price</th>
                   <th className="px-3 py-2 text-right text-gray-500 dark:text-slate-400">
@@ -356,7 +356,7 @@ export function OrderBookDashboard() {
                   const maxValue = Math.max(...aggregatedBook.bids.slice(0, maxLevels).map(l => l.valueUsd));
                   const widthPct = maxValue > 0 ? (level.valueUsd / maxValue) * 100 : 0;
                   return (
-                    <tr key={i} className="relative hover:bg-gray-50 dark:hover:bg-slate-700/30">
+                    <tr key={i} className="relative hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                       <td className="px-3 py-2 text-sm font-mono text-green-600 dark:text-green-400 relative z-10">
                         {formatPrice(level.price)}
                       </td>
@@ -382,7 +382,7 @@ export function OrderBookDashboard() {
         </div>
 
         {/* Asks */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
           <div className="p-4 border-b border-gray-200 dark:border-slate-700">
             <h3 className="text-lg font-semibold text-red-600 dark:text-red-400">
               📉 Asks (Sell Orders)
@@ -394,7 +394,7 @@ export function OrderBookDashboard() {
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 dark:bg-slate-700/50 text-xs">
+              <thead className="bg-gray-50 dark:bg-black/50 text-xs">
                 <tr>
                   <th className="px-3 py-2 text-left text-gray-500 dark:text-slate-400">Price</th>
                   <th className="px-3 py-2 text-right text-gray-500 dark:text-slate-400">
@@ -411,7 +411,7 @@ export function OrderBookDashboard() {
                   const maxValue = Math.max(...aggregatedBook.asks.slice(0, maxLevels).map(l => l.valueUsd));
                   const widthPct = maxValue > 0 ? (level.valueUsd / maxValue) * 100 : 0;
                   return (
-                    <tr key={i} className="relative hover:bg-gray-50 dark:hover:bg-slate-700/30">
+                    <tr key={i} className="relative hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                       <td className="px-3 py-2 text-sm font-mono text-red-600 dark:text-red-400 relative z-10">
                         {formatPrice(level.price)}
                       </td>
@@ -438,7 +438,7 @@ export function OrderBookDashboard() {
       </div>
 
       {/* Exchange Breakdown */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
         <div className="p-4 border-b border-gray-200 dark:border-slate-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             🏦 Exchange Breakdown
@@ -446,7 +446,7 @@ export function OrderBookDashboard() {
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 dark:bg-slate-700/50 text-xs">
+            <thead className="bg-gray-50 dark:bg-black/50 text-xs">
               <tr>
                 <th className="px-4 py-3 text-left text-gray-500 dark:text-slate-400">Exchange</th>
                 <th className="px-4 py-3 text-right text-gray-500 dark:text-slate-400">
@@ -464,7 +464,7 @@ export function OrderBookDashboard() {
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
               {aggregatedBook.exchangeBreakdown.map((ex) => (
-                <tr key={ex.exchange} className="hover:bg-gray-50 dark:hover:bg-slate-700/30">
+                <tr key={ex.exchange} className="hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                   <td className="px-4 py-3 text-sm font-medium text-gray-900 dark:text-white capitalize">
                     {ex.exchange}
                   </td>
@@ -482,7 +482,7 @@ export function OrderBookDashboard() {
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
-                      <div className="flex-1 h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden flex">
+                      <div className="flex-1 h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden flex">
                         <div
                           className="bg-green-500 h-full"
                           style={{ width: `${ex.bidPercent}%` }}
@@ -506,7 +506,7 @@ export function OrderBookDashboard() {
 
       {/* Slippage Estimates */}
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             📊 Buy Slippage Estimates
           </h3>
@@ -514,7 +514,7 @@ export function OrderBookDashboard() {
             {slippageEstimates.buy.map((est) => (
               <div
                 key={est.orderSizeUsd}
-                className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg"
+                className="flex items-center justify-between p-3 bg-gray-50 dark:bg-black/50 rounded-lg"
               >
                 <div>
                   <span className="text-sm font-medium text-gray-900 dark:text-white">
@@ -545,7 +545,7 @@ export function OrderBookDashboard() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             📊 Sell Slippage Estimates
           </h3>
@@ -553,7 +553,7 @@ export function OrderBookDashboard() {
             {slippageEstimates.sell.map((est) => (
               <div
                 key={est.orderSizeUsd}
-                className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg"
+                className="flex items-center justify-between p-3 bg-gray-50 dark:bg-black/50 rounded-lg"
               >
                 <div>
                   <span className="text-sm font-medium text-gray-900 dark:text-white">
@@ -586,7 +586,7 @@ export function OrderBookDashboard() {
       </div>
 
       {/* Liquidity Depth */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           💧 Liquidity Depth Analysis
         </h3>
@@ -597,7 +597,7 @@ export function OrderBookDashboard() {
             { label: '±5%', data: liquidityAnalysis.depth5Percent },
             { label: '±10%', data: liquidityAnalysis.depth10Percent },
           ].map((depth) => (
-            <div key={depth.label} className="text-center p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg">
+            <div key={depth.label} className="text-center p-3 bg-gray-50 dark:bg-black/50 rounded-lg">
               <p className="text-xs text-gray-500 dark:text-slate-400 mb-1">{depth.label} from mid</p>
               <div className="flex justify-center gap-4">
                 <div>

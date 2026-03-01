@@ -131,7 +131,7 @@ const IMPACT_TEXT_COLORS: Record<string, string> = {
 const STANCE_COLORS: Record<string, string> = {
   restrictive: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
   cautious: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
-  neutral: 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300',
+  neutral: 'bg-gray-100 text-gray-800 dark:bg-black dark:text-gray-300',
   progressive: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
   unclear: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
 };
@@ -279,14 +279,14 @@ function GlobalRiskRadar({ summary }: { summary: RegulatoryIntelligenceSummary |
   const riskValue = riskLevelValue[summary.globalRiskLevel] || 50;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">🌐 Global Regulatory Risk</h3>
         <RiskLevelBadge level={summary.globalRiskLevel} />
       </div>
 
       {/* Risk Gauge */}
-      <div className="relative h-4 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden mb-4">
+      <div className="relative h-4 bg-gray-200 dark:bg-black rounded-full overflow-hidden mb-4">
         <div 
           className={`absolute left-0 top-0 h-full transition-all duration-500 ${
             riskValue >= 75 ? 'bg-red-500' : 
@@ -345,7 +345,7 @@ function JurisdictionRiskMap({ jurisdictions }: { jurisdictions: JurisdictionPro
   }, [jurisdictions]);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">🗺️ Jurisdiction Risk Map</h3>
       
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -365,7 +365,7 @@ function JurisdictionRiskMap({ jurisdictions }: { jurisdictions: JurisdictionPro
               <RiskLevelBadge level={jurisdiction.riskLevel} />
             </div>
             <div className="mt-2">
-              <div className="h-1.5 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <div className="h-1.5 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                 <div 
                   className="h-full bg-blue-500"
                   style={{ width: `${jurisdiction.recentActivity}%` }}
@@ -389,7 +389,7 @@ function DeadlinesTimeline({ deadlines }: { deadlines: ComplianceDeadline[] }) {
   }, [deadlines]);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">⏰ Compliance Deadlines</h3>
       
       <div className="space-y-4">
@@ -457,7 +457,7 @@ function EventCard({ event }: { event: RegulatoryEvent }) {
       className={`p-4 rounded-lg border ${
         event.isBreaking 
           ? 'border-red-500 bg-red-50 dark:bg-red-900/10' 
-          : 'border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+          : 'border-gray-200 dark:border-slate-700 bg-white dark:bg-black'
       } cursor-pointer hover:shadow-md transition-shadow`}
       onClick={() => setExpanded(!expanded)}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setExpanded(!expanded); }}
@@ -491,7 +491,7 @@ function EventCard({ event }: { event: RegulatoryEvent }) {
             <div className="mt-2 flex items-center gap-1 flex-wrap">
               <span className="text-xs text-gray-500 dark:text-gray-400">Affected:</span>
               {event.affectedAssets.map((asset) => (
-                <span key={asset} className="px-1.5 py-0.5 bg-gray-100 dark:bg-slate-700 text-xs rounded">
+                <span key={asset} className="px-1.5 py-0.5 bg-gray-100 dark:bg-black text-xs rounded">
                   {asset}
                 </span>
               ))}
@@ -521,7 +521,7 @@ function EventFeed({ events }: { events: RegulatoryEvent[] }) {
   }, [events, filter]);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">📰 Regulatory Events</h3>
         <div className="flex items-center gap-2">
@@ -532,7 +532,7 @@ function EventFeed({ events }: { events: RegulatoryEvent[] }) {
               className={`px-3 py-1 text-xs rounded-full transition-colors ${
                 filter === f
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+                  : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >
               {f.charAt(0).toUpperCase() + f.slice(1)}
@@ -559,7 +559,7 @@ function EventFeed({ events }: { events: RegulatoryEvent[] }) {
  */
 function TrendingTopics({ topics }: { topics: { topic: string; mentions: number; sentiment: string }[] }) {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-black rounded-lg p-6 shadow-sm border border-gray-200 dark:border-slate-700">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">🔥 Trending Topics</h3>
       
       <div className="space-y-2">
@@ -590,14 +590,14 @@ function LoadingSkeleton() {
   return (
     <div className="animate-pulse">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-        <div className="lg:col-span-2 h-48 bg-gray-200 dark:bg-slate-700 rounded-lg" />
-        <div className="h-48 bg-gray-200 dark:bg-slate-700 rounded-lg" />
+        <div className="lg:col-span-2 h-48 bg-gray-200 dark:bg-black rounded-lg" />
+        <div className="h-48 bg-gray-200 dark:bg-black rounded-lg" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded-lg" />
-        <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded-lg" />
+        <div className="h-64 bg-gray-200 dark:bg-black rounded-lg" />
+        <div className="h-64 bg-gray-200 dark:bg-black rounded-lg" />
       </div>
-      <div className="h-96 bg-gray-200 dark:bg-slate-700 rounded-lg" />
+      <div className="h-96 bg-gray-200 dark:bg-black rounded-lg" />
     </div>
   );
 }

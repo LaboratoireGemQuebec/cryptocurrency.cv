@@ -153,8 +153,8 @@ export function SourceComparison() {
   if (loading) {
     return (
       <div className="space-y-4 animate-pulse">
-        <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48" />
-        <div className="h-64 bg-gray-200 dark:bg-gray-700 rounded-xl" />
+        <div className="h-8 bg-gray-200 dark:bg-black rounded w-48" />
+        <div className="h-64 bg-gray-200 dark:bg-black rounded-xl" />
       </div>
     );
   }
@@ -168,7 +168,7 @@ export function SourceComparison() {
         </h2>
         <button
           onClick={fetchSourceData}
-          className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+          className="p-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg"
           title="Refresh data"
         >
           <RefreshCw className="w-4 h-4" />
@@ -176,11 +176,11 @@ export function SourceComparison() {
       </div>
 
       {/* Table */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+              <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
                 <th className="text-left px-4 py-3 text-sm font-medium text-gray-500">Source</th>
                 <th 
                   className="text-right px-4 py-3 text-sm font-medium text-gray-500 cursor-pointer hover:text-gray-700"
@@ -217,7 +217,7 @@ export function SourceComparison() {
               {sortedSources.map((source, index) => (
                 <tr 
                   key={source.slug}
-                  className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30 ${
+                  className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 ${
                     index === 0 ? 'bg-amber-50 dark:bg-amber-900/10' : ''
                   }`}
                 >
@@ -250,7 +250,7 @@ export function SourceComparison() {
                       {source.topCategories.map((category) => (
                         <span 
                           key={category}
-                          className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 rounded-full"
+                          className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-black rounded-full"
                         >
                           {category}
                         </span>
@@ -274,7 +274,7 @@ export function SourceComparison() {
       </div>
 
       {/* Visual Comparison */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
         <h3 className="text-sm font-medium text-gray-500 mb-4">24h Article Volume</h3>
         <div className="space-y-3">
           {sortedSources.map((source) => {
@@ -284,7 +284,7 @@ export function SourceComparison() {
             return (
               <div key={source.slug} className="flex items-center gap-3">
                 <span className="w-32 text-sm truncate">{source.name}</span>
-                <div className="flex-1 h-6 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div className="flex-1 h-6 bg-gray-100 dark:bg-black rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gray-400 rounded-full transition-all flex items-center justify-end pr-2"
                     style={{ width: `${percentage}%` }}

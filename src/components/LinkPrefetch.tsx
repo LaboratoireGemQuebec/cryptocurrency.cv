@@ -109,7 +109,7 @@ export function NavLink({
   href,
   activePath,
   activeClassName = 'text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30',
-  inactiveClassName = 'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800',
+  inactiveClassName = 'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-neutral-900',
   className = '',
   ...props
 }: NavLinkProps) {

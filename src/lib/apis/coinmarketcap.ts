@@ -509,3 +509,310 @@ export async function getCryptocurrency(idOrSymbol: string | number): Promise<Cm
   const cryptoData = Object.values(data)[0];
   return cryptoData || null;
 }
+
+// =============================================================================
+// Extended CoinMarketCap API Features
+// =============================================================================
+
+export interface CmcCryptoInfo {
+  id: number;
+  name: string;
+  symbol: string;
+  slug: string;
+  category: string;
+  description: string;
+  dateAdded: string;
+  dateLaunched: string | null;
+  logo: string;
+  tags: string[];
+  tagNames: string[];
+  tagGroups: string[];
+  platform: {
+    id: number;
+    name: string;
+    symbol: string;
+    slug: string;
+    tokenAddress: string;
+  } | null;
+  urls: {
+    website: string[];
+    twitter: string[];
+    reddit: string[];
+    messageBoard: string[];
+    announcement: string[];
+    chat: string[];
+    explorer: string[];
+    sourceCode: string[];
+    technicalDoc: string[];
+  };
+  selfReportedCirculatingSupply: number | null;
+  selfReportedTags: string[] | null;
+  notice: string | null;
+}
+
+export interface CmcOHLCV {
+  timeOpen: string;
+  timeClose: string;
+  timeHigh: string;
+  timeLow: string;
+  quote: {
+    USD: {
+      open: number;
+      high: number;
+      low: number;
+      close: number;
+      volume: number;
+      marketCap: number;
+      timestamp: string;
+    };
+  };
+}
+
+export interface CmcMarketPair {
+  exchange: {
+    id: number;
+    name: string;
+    slug: string;
+  };
+  marketId: number;
+  marketPair: string;
+  category: string;
+  feeType: string;
+  outlierDetected: number;
+  exclusions: string | null;
+  quote: {
+    exchangeReported: {
+      price: number;
+      volume24hBase: number;
+      volume24hQuote: number;
+      lastUpdated: string;
+    };
+    USD: {
+      price: number;
+      volume24h: number;
+      depth_negative_two: number;
+      depth_positive_two: number;
+      effectiveLiquidity: number;
+      lastUpdated: string;
+    };
+  };
+}
+
+export interface CmcCategory {
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  numTokens: number;
+  avgPriceChange: number;
+  marketCap: number;
+  marketCapChange: number;
+  volume: number;
+  volumeChange: number;
+  lastUpdated: string;
+}
+
+/**
+ * Get detailed metadata/info for cryptocurrencies by ID or symbol.
+ * Includes description, logo, social links, tags, and platform info.
+ */
+export async function getCryptoInfo(
+  ids?: number[],
+  symbols?: string[],
+): Promise<Record<string, CmcCryptoInfo> | null> {
+  const params: Record<string, string> = {};
+  if (ids?.length) params.id = ids.join(',');
+  else if (symbols?.length) params.symbol = symbols.join(',');
+  else return null;
+
+  return cmcFetch<Record<string, CmcCryptoInfo>>('/cryptocurrency/info', params);
+}
+
+/**
+ * Get latest OHLCV quotes for one or more cryptocurrencies.
+ */
+export async function getOHLCVLatest(
+  ids?: number[],
+  symbols?: string[],
+): Promise<Record<string, CmcOHLCV[]> | null> {
+  const params: Record<string, string> = { convert: 'USD' };
+  if (ids?.length) params.id = ids.join(',');
+  else if (symbols?.length) params.symbol = symbols.join(',');
+  else return null;
+
+  return cmcFetch<Record<string, CmcOHLCV[]>>(
+    '/cryptocurrency/ohlcv/latest',
+    params,
+  );
+}
+
+/**
+ * Get market pairs for a specific cryptocurrency.
+ * Shows which exchanges list it and at what price/volume.
+ */
+export async function getMarketPairs(
+  idOrSymbol: string | number,
+  options?: { limit?: number; start?: number; sort?: 'volume_24h_strict' | 'cmc_rank' | 'effective_liquidity'; category?: 'spot' | 'derivatives' | 'all' },
+): Promise<{ marketPairs: CmcMarketPair[]; numMarketPairs: number } | null> {
+  const isId = typeof idOrSymbol === 'number' || /^\d+$/.test(String(idOrSymbol));
+  const params: Record<string, string> = {
+    convert: 'USD',
+    limit: String(options?.limit || 50),
+    start: String(options?.start || 1),
+    sort: options?.sort || 'volume_24h_strict',
+    category: options?.category || 'spot',
+  };
+
+  if (isId) params.id = String(idOrSymbol);
+  else params.symbol = String(idOrSymbol).toUpperCase();
+
+  const data = await cmcFetch<{
+    market_pairs: CmcMarketPair[];
+    num_market_pairs: number;
+  }>('/cryptocurrency/market-pairs/latest', params);
+
+  if (!data) return null;
+  return {
+    marketPairs: data.market_pairs || [],
+    numMarketPairs: data.num_market_pairs || 0,
+  };
+}
+
+/**
+ * Get cryptocurrency categories (DeFi, Layer 1, Meme, etc.)
+ */
+export async function getCategories(options?: {
+  limit?: number;
+  start?: number;
+}): Promise<CmcCategory[]> {
+  const data = await cmcFetch<CmcCategory[]>('/cryptocurrency/categories', {
+    limit: String(options?.limit || 50),
+    start: String(options?.start || 1),
+  });
+  return data || [];
+}
+
+/**
+ * Get tokens within a specific category.
+ */
+export async function getCategoryTokens(
+  categoryId: string,
+  options?: { limit?: number; start?: number },
+): Promise<{ name: string; tokens: CmcCryptocurrency[] } | null> {
+  const data = await cmcFetch<{
+    name: string;
+    tokens: CmcCryptocurrency[];
+  }>('/cryptocurrency/category', {
+    id: categoryId,
+    limit: String(options?.limit || 50),
+    start: String(options?.start || 1),
+    convert: 'USD',
+  });
+  return data;
+}
+
+/**
+ * Get CMC's native trending cryptocurrencies (v1 endpoint).
+ */
+export async function getTrendingNative(): Promise<CmcCryptocurrency[]> {
+  const data = await cmcFetch<CmcCryptocurrency[]>(
+    '/cryptocurrency/trending/latest',
+    { limit: '30', convert: 'USD' },
+  );
+  return data || [];
+}
+
+/**
+ * Get most-visited cryptocurrencies on CoinMarketCap.
+ */
+export async function getMostVisited(): Promise<CmcCryptocurrency[]> {
+  const data = await cmcFetch<CmcCryptocurrency[]>(
+    '/cryptocurrency/trending/most-visited',
+    { limit: '30', convert: 'USD' },
+  );
+  return data || [];
+}
+
+/**
+ * Get native gainers/losers endpoint from CMC.
+ * More accurate than the synthetic approach.
+ */
+export async function getGainersLosersNative(options?: {
+  timePeriod?: '1h' | '24h' | '7d' | '30d';
+  limit?: number;
+}): Promise<{ gainers: CmcCryptocurrency[]; losers: CmcCryptocurrency[] } | null> {
+  const data = await cmcFetch<{
+    gainers: CmcCryptocurrency[];
+    losers: CmcCryptocurrency[];
+  }>('/cryptocurrency/trending/gainers-losers', {
+    limit: String(options?.limit || 20),
+    time_period: options?.timePeriod || '24h',
+    convert: 'USD',
+  });
+  return data;
+}
+
+/**
+ * Get CMC ID map for all active cryptocurrencies.
+ * Useful for resolving slugs, symbols, or IDs.
+ */
+export async function getIdMap(options?: {
+  listingStatus?: 'active' | 'inactive' | 'untracked';
+  limit?: number;
+  sort?: 'id' | 'cmc_rank';
+  symbol?: string;
+}): Promise<Array<{
+  id: number;
+  name: string;
+  symbol: string;
+  slug: string;
+  rank: number;
+  isActive: number;
+  platform: { id: number; name: string; symbol: string; tokenAddress: string } | null;
+}>> {
+  const params: Record<string, string> = {
+    listing_status: options?.listingStatus || 'active',
+    limit: String(options?.limit || 200),
+    sort: options?.sort || 'cmc_rank',
+  };
+  if (options?.symbol) params.symbol = options.symbol;
+
+  const data = await cmcFetch<Array<{
+    id: number;
+    name: string;
+    symbol: string;
+    slug: string;
+    rank: number;
+    is_active: number;
+    platform: { id: number; name: string; symbol: string; token_address: string } | null;
+  }>>('/cryptocurrency/map', params);
+
+  if (!data) return [];
+  return data.map(d => ({
+    id: d.id,
+    name: d.name,
+    symbol: d.symbol,
+    slug: d.slug,
+    rank: d.rank,
+    isActive: d.is_active,
+    platform: d.platform ? { id: d.platform.id, name: d.platform.name, symbol: d.platform.symbol, tokenAddress: d.platform.token_address } : null,
+  }));
+}
+
+/**
+ * Get fiat currency map (USD, EUR, etc.)
+ */
+export async function getFiatMap(): Promise<Array<{
+  id: number;
+  name: string;
+  sign: string;
+  symbol: string;
+}>> {
+  const data = await cmcFetch<Array<{
+    id: number;
+    name: string;
+    sign: string;
+    symbol: string;
+  }>>('/fiat/map', { include_metals: 'true' });
+  return data || [];
+}

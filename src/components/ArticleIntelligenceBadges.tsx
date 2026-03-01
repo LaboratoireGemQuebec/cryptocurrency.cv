@@ -56,9 +56,9 @@ const eventTypeConfig: Record<string, { emoji: string; label: string; color: str
   acquisition: { emoji: '🏢', label: 'M&A', color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400' },
   listing: { emoji: '📈', label: 'Listing', color: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400' },
   airdrop: { emoji: '🎁', label: 'Airdrop', color: 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-400' },
-  analysis: { emoji: '📊', label: 'Analysis', color: 'bg-slate-100 text-slate-800 dark:bg-slate-900/30 dark:text-slate-400' },
+  analysis: { emoji: '📊', label: 'Analysis', color: 'bg-slate-100 text-slate-800 dark:bg-black/30 dark:text-slate-400' },
   opinion: { emoji: '💭', label: 'Opinion', color: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400' },
-  technical: { emoji: '🔧', label: 'Technical', color: 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400' },
+  technical: { emoji: '🔧', label: 'Technical', color: 'bg-gray-100 text-gray-800 dark:bg-black/30 dark:text-gray-400' },
   market: { emoji: '📉', label: 'Market', color: 'bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400' },
   legal: { emoji: '⚖️', label: 'Legal', color: 'bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400' },
 };
@@ -137,7 +137,7 @@ export function ArticleIntelligenceBadges({
   if (loading) {
     return (
       <div className="flex gap-1">
-        <div className="h-5 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+        <div className="h-5 w-16 bg-gray-200 dark:bg-black rounded animate-pulse" />
       </div>
     );
   }

@@ -59,7 +59,7 @@ export default function QuickShareButton({ title, url, className = '' }: QuickSh
         onClick={handleShare}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="flex items-center justify-center w-8 h-8 rounded-full bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        className="flex items-center justify-center w-8 h-8 rounded-full bg-white/90 dark:bg-black/90 hover:bg-white dark:hover:bg-neutral-900 shadow-sm backdrop-blur-sm transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-500"
         aria-label="Share article"
       >
         {copied ? (
@@ -75,7 +75,7 @@ export default function QuickShareButton({ title, url, className = '' }: QuickSh
 
       {/* Tooltip */}
       {showTooltip && !copied && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-gray-900 dark:bg-gray-700 rounded shadow-lg whitespace-nowrap">
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-gray-900 dark:bg-black rounded shadow-lg whitespace-nowrap">
           {t('share')}
           <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700" />
         </div>

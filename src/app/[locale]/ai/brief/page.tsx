@@ -86,7 +86,7 @@ async function getBrief(date?: string): Promise<DailyBrief | null> {
 const sentimentConfig = {
   bullish: { color: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400', icon: '🟢', label: 'Bullish' },
   bearish: { color: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400', icon: '🔴', label: 'Bearish' },
-  neutral: { color: 'text-gray-600 bg-gray-100 dark:bg-gray-700 dark:text-gray-300', icon: '⚪', label: 'Neutral' },
+  neutral: { color: 'text-gray-600 bg-gray-100 dark:bg-black dark:text-gray-300', icon: '⚪', label: 'Neutral' },
 };
 
 const impactConfig = {
@@ -105,7 +105,7 @@ export default async function BriefPage() {
   const brief = await getBrief();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-4xl mx-auto">
         <Header />
 
@@ -139,7 +139,7 @@ export default async function BriefPage() {
               </div>
 
               {/* Market Overview */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
                   📊 Market Overview
                 </h3>
@@ -161,7 +161,7 @@ export default async function BriefPage() {
                 </div>
 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-3 gap-4 mt-4 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                <div className="grid grid-cols-3 gap-4 mt-4 p-4 bg-gray-50 dark:bg-black rounded-lg">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-gray-900 dark:text-white">{brief.marketOverview.keyMetrics.fearGreedIndex}</div>
                     <div className="text-sm text-gray-500 dark:text-slate-400">Fear & Greed</div>
@@ -179,11 +179,11 @@ export default async function BriefPage() {
 
               {/* Top Stories */}
               {brief.topStories?.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">🔥 Top Stories</h3>
                   <div className="space-y-4">
                     {brief.topStories.map((story, i) => (
-                      <div key={i} className="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div key={i} className="p-4 bg-gray-50 dark:bg-black rounded-lg">
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
@@ -216,11 +216,11 @@ export default async function BriefPage() {
 
               {/* Sectors in Focus */}
               {brief.sectorsInFocus?.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">🎯 Sectors in Focus</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {brief.sectorsInFocus.map((sector, i) => (
-                      <div key={i} className="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div key={i} className="p-4 bg-gray-50 dark:bg-black rounded-lg">
                         <div className="flex items-center justify-between mb-2">
                           <span className="font-semibold text-gray-900 dark:text-white">{sector.sector}</span>
                           <span className={trendConfig[sector.trend].color}>
@@ -236,11 +236,11 @@ export default async function BriefPage() {
 
               {/* Upcoming Events */}
               {brief.upcomingEvents?.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">📅 Upcoming Events</h3>
                   <div className="space-y-3">
                     {brief.upcomingEvents.map((event, i) => (
-                      <div key={i} className="flex items-start gap-4 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                      <div key={i} className="flex items-start gap-4 p-3 bg-gray-50 dark:bg-black rounded-lg">
                         <div className="text-center min-w-[60px]">
                           <div className="text-xs text-gray-500 dark:text-slate-400">{event.date}</div>
                         </div>
@@ -275,7 +275,7 @@ export default async function BriefPage() {
               </div>
             </div>
           ) : (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Daily Brief Unavailable</h3>
               <p className="text-gray-500 dark:text-slate-400 mb-4">

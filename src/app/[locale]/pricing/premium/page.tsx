@@ -183,7 +183,7 @@ export default function PremiumPricingPage() {
                 className={`rounded-xl p-8 ${
                   pass.popular
                     ? 'bg-blue-600 text-white ring-4 ring-blue-300 dark:ring-blue-800'
-                    : 'bg-white dark:bg-neutral-900 border border-gray-200 dark:border-gray-700'
+                    : 'bg-white dark:bg-black border border-gray-200 dark:border-gray-700'
                 }`}
               >
                 {pass.popular && <div className="text-sm font-semibold mb-2">MOST POPULAR</div>}
@@ -277,9 +277,9 @@ export default function PremiumPricingPage() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Why Pay-Per-Use?</h2>
-          <div className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+          <div className="bg-white dark:bg-black rounded-xl overflow-hidden shadow-lg">
             <table className="w-full">
-              <thead className="bg-gray-50 dark:bg-neutral-800">
+              <thead className="bg-gray-50 dark:bg-black">
                 <tr>
                   <th className="px-6 py-4 text-left dark:text-white">Provider</th>
                   <th className="px-6 py-4 text-left dark:text-white">Price</th>
@@ -357,7 +357,7 @@ function EndpointCard({
   description: string;
 }) {
   return (
-    <div className="bg-gray-50 dark:bg-neutral-900 rounded-lg p-6 hover:shadow-lg transition border border-gray-100 dark:border-neutral-800">
+    <div className="bg-gray-50 dark:bg-black rounded-lg p-6 hover:shadow-lg transition border border-gray-100 dark:border-neutral-800">
       <div className="flex justify-between items-start mb-3">
         <h3 className="font-semibold text-lg dark:text-white">{name}</h3>
         <span className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
@@ -365,7 +365,7 @@ function EndpointCard({
         </span>
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-3">{description}</p>
-      <code className="text-sm bg-gray-200 dark:bg-neutral-800 px-2 py-1 rounded text-gray-700 dark:text-gray-300">
+      <code className="text-sm bg-gray-200 dark:bg-black px-2 py-1 rounded text-gray-700 dark:text-gray-300">
         GET {path}
       </code>
     </div>

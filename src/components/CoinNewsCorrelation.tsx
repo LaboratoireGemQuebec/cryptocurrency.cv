@@ -141,15 +141,15 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-44 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-44 bg-gray-200 dark:bg-black rounded" />
           </div>
-          <div className="h-16 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
+          <div className="h-16 bg-gray-100 dark:bg-black/50 rounded-xl" />
           {[1, 2, 3].map(i => (
-            <div key={i} className="h-14 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
+            <div key={i} className="h-14 bg-gray-100 dark:bg-black/50 rounded-lg" />
           ))}
         </div>
       </div>
@@ -158,7 +158,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-xl">📰</span>
           <h3 className="font-bold text-gray-900 dark:text-white">News × Price</h3>
@@ -181,7 +181,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
   const ringOffset = ringCircumference * (1 - scorePercent / 100);
 
   return (
-    <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -229,7 +229,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
               const pctChange = formatPctChange(entry.priceAtPublish, entry.priceAfter);
 
               return (
-                <div key={i} className={`border-l-2 ${impactColor} pl-3 py-2 hover:bg-gray-50 dark:hover:bg-slate-700/30 rounded-r-lg`}>
+                <div key={i} className={`border-l-2 ${impactColor} pl-3 py-2 hover:bg-gray-50 dark:hover:bg-neutral-900/30 rounded-r-lg`}>
                   <div className="flex items-start justify-between gap-2">
                     <p className="text-sm text-gray-900 dark:text-white font-medium line-clamp-1 flex-1">{entry.title}</p>
                     <span className={`text-xs font-mono font-bold flex-shrink-0 ${
@@ -265,7 +265,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
                   ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
                   : conf >= 0.4
                   ? 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-700'
-                  : 'bg-gray-50 border-gray-200 dark:bg-slate-700/30 dark:border-slate-600';
+                  : 'bg-gray-50 border-gray-200 dark:bg-black/30 dark:border-slate-600';
               const confBadge =
                 conf >= 0.7
                   ? 'text-green-700 dark:text-green-400'
@@ -326,7 +326,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
       )}
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
         <p className="text-xs text-gray-500 dark:text-slate-400">
           AI-powered analysis. Correlation ≠ causation. Not financial advice.
         </p>

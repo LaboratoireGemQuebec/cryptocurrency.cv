@@ -327,6 +327,209 @@ export async function getDASAssetById(assetId: string): Promise<DASAsset | null>
 }
 
 // ---------------------------------------------------------------------------
+// Extended DAS Methods
+// ---------------------------------------------------------------------------
+
+/**
+ * Get digital assets by collection/group (e.g., all NFTs in a collection).
+ */
+export async function getDASAssetsByGroup(
+  groupKey: string,
+  groupValue: string,
+  opts?: { page?: number; limit?: number },
+): Promise<DASAssetsResponse | null> {
+  return heliusRpc<DASAssetsResponse>('getAssetsByGroup', {
+    groupKey,
+    groupValue,
+    page: opts?.page ?? 1,
+    limit: opts?.limit ?? 100,
+    displayOptions: { showFungible: false, showNativeBalance: false },
+  });
+}
+
+/**
+ * Get digital assets by creator address.
+ */
+export async function getDASAssetsByCreator(
+  creatorAddress: string,
+  opts?: { page?: number; limit?: number; onlyVerified?: boolean },
+): Promise<DASAssetsResponse | null> {
+  return heliusRpc<DASAssetsResponse>('getAssetsByCreator', {
+    creatorAddress,
+    page: opts?.page ?? 1,
+    limit: opts?.limit ?? 100,
+    onlyVerified: opts?.onlyVerified ?? true,
+    displayOptions: { showFungible: false },
+  });
+}
+
+/**
+ * Get digital assets by authority address.
+ */
+export async function getDASAssetsByAuthority(
+  authorityAddress: string,
+  opts?: { page?: number; limit?: number },
+): Promise<DASAssetsResponse | null> {
+  return heliusRpc<DASAssetsResponse>('getAssetsByAuthority', {
+    authorityAddress,
+    page: opts?.page ?? 1,
+    limit: opts?.limit ?? 100,
+  });
+}
+
+/**
+ * Search digital assets with advanced filters.
+ */
+export async function searchDASAssets(params: {
+  ownerAddress?: string;
+  creatorAddress?: string;
+  grouping?: { groupKey: string; groupValue: string };
+  burnt?: boolean;
+  frozen?: boolean;
+  compressed?: boolean;
+  interface?: string;
+  jsonUri?: string;
+  page?: number;
+  limit?: number;
+}): Promise<DASAssetsResponse | null> {
+  return heliusRpc<DASAssetsResponse>('searchAssets', {
+    ...params,
+    page: params.page ?? 1,
+    limit: params.limit ?? 100,
+  });
+}
+
+/**
+ * Get Merkle proof for a compressed NFT (needed for transfers/burns).
+ */
+export async function getDASAssetProof(assetId: string): Promise<{
+  root: string;
+  proof: string[];
+  nodeIndex: number;
+  leaf: string;
+  treeId: string;
+} | null> {
+  return heliusRpc<{
+    root: string;
+    proof: string[];
+    nodeIndex: number;
+    leaf: string;
+    treeId: string;
+  }>('getAssetProof', { id: assetId });
+}
+
+// ---------------------------------------------------------------------------
+// Priority Fees
+// ---------------------------------------------------------------------------
+
+export interface PriorityFeeEstimate {
+  priorityFeeLevels: {
+    min: number;
+    low: number;
+    medium: number;
+    high: number;
+    veryHigh: number;
+    unsafeMax: number;
+  };
+}
+
+/**
+ * Get priority fee estimate for optimal transaction landing.
+ */
+export async function getPriorityFeeEstimate(
+  accountKeys?: string[],
+): Promise<PriorityFeeEstimate | null> {
+  const params: Record<string, unknown> = {
+    options: {
+      includeAllPriorityFeeLevels: true,
+    },
+  };
+  if (accountKeys?.length) {
+    params.accountKeys = accountKeys;
+  }
+
+  return heliusRpc<PriorityFeeEstimate>('getPriorityFeeEstimate', params);
+}
+
+// ---------------------------------------------------------------------------
+// Token Accounts
+// ---------------------------------------------------------------------------
+
+export interface TokenAccountInfo {
+  address: string;
+  mint: string;
+  owner: string;
+  amount: number;
+  decimals: number;
+  delegateOption: number;
+  delegate?: string;
+  state: string;
+}
+
+/**
+ * Get all token accounts for an owner or by mint.
+ */
+export async function getTokenAccounts(
+  owner?: string,
+  mint?: string,
+  opts?: { page?: number; limit?: number },
+): Promise<{ total: number; tokenAccounts: TokenAccountInfo[] } | null> {
+  const params: Record<string, unknown> = {
+    page: opts?.page ?? 1,
+    limit: opts?.limit ?? 100,
+    displayOptions: { showZeroBalance: false },
+  };
+  if (owner) params.owner = owner;
+  if (mint) params.mint = mint;
+
+  return heliusRpc<{ total: number; tokenAccounts: TokenAccountInfo[] }>(
+    'getTokenAccounts',
+    params,
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Enhanced Wallet Analysis
+// ---------------------------------------------------------------------------
+
+/**
+ * Get a comprehensive analysis of a Solana wallet.
+ */
+export async function getWalletAnalysis(address: string): Promise<{
+  address: string;
+  tokenBalances: TokenBalancesResponse | null;
+  nfts: HeliusNFT[];
+  compressedAssets: DASAssetsResponse | null;
+  recentTransactions: TransactionHistoryItem[];
+  tokenAccountCount: number;
+  priorityFees: PriorityFeeEstimate | null;
+  timestamp: string;
+}> {
+  const [tokenBalances, nfts, dasAssets, transactions, tokenAccounts, fees] = await Promise.allSettled([
+    getTokenBalances(address),
+    getNFTsByWallet(address, 1, 50),
+    getDASAssets(address, { limit: 50 }),
+    getTransactionHistory(address, { limit: 20 }),
+    getTokenAccounts(address),
+    getPriorityFeeEstimate(),
+  ]);
+
+  return {
+    address,
+    tokenBalances: tokenBalances.status === 'fulfilled' ? tokenBalances.value : null,
+    nfts: nfts.status === 'fulfilled' ? nfts.value : [],
+    compressedAssets: dasAssets.status === 'fulfilled' ? dasAssets.value : null,
+    recentTransactions: transactions.status === 'fulfilled' ? transactions.value : [],
+    tokenAccountCount:
+      tokenAccounts.status === 'fulfilled'
+        ? tokenAccounts.value?.total ?? 0
+        : 0,
+    priorityFees: fees.status === 'fulfilled' ? fees.value : null,
+    timestamp: new Date().toISOString(),
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Summary
 // ---------------------------------------------------------------------------
 

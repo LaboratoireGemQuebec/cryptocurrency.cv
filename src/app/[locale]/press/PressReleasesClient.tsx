@@ -52,7 +52,7 @@ export function PressReleasesClient({ releases }: { releases: PressRelease[] }) 
           className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${
             filter === 'all'
               ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-              : 'bg-white dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
+              : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
           }`}
         >
           All
@@ -66,7 +66,7 @@ export function PressReleasesClient({ releases }: { releases: PressRelease[] }) 
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition inline-flex items-center gap-1.5 ${
                 filter === cat
                   ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                  : 'bg-white dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
+                  : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
               }`}
             >
               <span>{cfg.emoji}</span> {cfg.label}
@@ -90,7 +90,7 @@ export function PressReleasesClient({ releases }: { releases: PressRelease[] }) 
           return (
             <article
               key={pr.id}
-              className={`bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition ${
+              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition ${
                 pr.sponsored ? 'border-l-4 border-l-yellow-400' : ''
               }`}
             >
@@ -117,7 +117,7 @@ export function PressReleasesClient({ releases }: { releases: PressRelease[] }) 
               {pr.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {pr.tags.map(tag => (
-                    <span key={tag} className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-700 text-xs text-gray-600 dark:text-slate-300">
+                    <span key={tag} className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-black text-xs text-gray-600 dark:text-slate-300">
                       #{tag}
                     </span>
                   ))}

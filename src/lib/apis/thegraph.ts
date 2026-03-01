@@ -425,6 +425,374 @@ export async function getCurvePools(): Promise<CurvePool[]> {
   return data?.pools || [];
 }
 
+// =============================================================================
+// Compound V3
+// =============================================================================
+
+export interface CompoundV3Market {
+  id: string;
+  symbol: string;
+  name: string;
+  tvl: number;
+  totalBorrow: number;
+  supplyAPY: number;
+  borrowAPY: number;
+  utilization: number;
+  collateralAssets: Array<{
+    symbol: string;
+    tvl: number;
+    collateralFactor: number;
+  }>;
+}
+
+/**
+ * Get Compound V3 lending markets.
+ */
+export async function getCompoundV3Markets(): Promise<CompoundV3Market[]> {
+  const subgraphId = SUBGRAPHS.compoundV3.ethereum;
+
+  const query = {
+    query: `
+      query GetMarkets {
+        markets(first: 20, orderBy: totalValueLockedUSD, orderDirection: desc) {
+          id
+          name
+          inputToken { id symbol name decimals }
+          outputToken { id symbol name }
+          totalValueLockedUSD
+          totalDepositBalanceUSD
+          totalBorrowBalanceUSD
+          rates {
+            rate
+            side
+            type
+          }
+        }
+      }
+    `,
+  };
+
+  const data = await querySubgraph<{
+    markets: Array<{
+      id: string;
+      name: string;
+      inputToken: { symbol: string; name: string };
+      totalValueLockedUSD: string;
+      totalDepositBalanceUSD: string;
+      totalBorrowBalanceUSD: string;
+      rates: Array<{ rate: string; side: string; type: string }>;
+    }>;
+  }>(subgraphId, query);
+
+  if (!data?.markets) return [];
+
+  return data.markets.map(m => {
+    const supplyRate = m.rates.find(r => r.side === 'LENDER')?.rate || '0';
+    const borrowRate = m.rates.find(r => r.side === 'BORROWER')?.rate || '0';
+    const deposits = parseFloat(m.totalDepositBalanceUSD);
+    const borrows = parseFloat(m.totalBorrowBalanceUSD);
+
+    return {
+      id: m.id,
+      symbol: m.inputToken.symbol,
+      name: m.name || m.inputToken.name,
+      tvl: parseFloat(m.totalValueLockedUSD),
+      totalBorrow: borrows,
+      supplyAPY: parseFloat(supplyRate) * 100,
+      borrowAPY: parseFloat(borrowRate) * 100,
+      utilization: deposits > 0 ? (borrows / deposits) * 100 : 0,
+      collateralAssets: [],
+    };
+  });
+}
+
+// =============================================================================
+// GMX (Perpetual DEX)
+// =============================================================================
+
+export interface GMXStats {
+  totalTvl: number;
+  volume24h: number;
+  fees24h: number;
+  users24h: number;
+  openInterest: number;
+  markets: Array<{
+    id: string;
+    indexToken: string;
+    tvl: number;
+    volume24h: number;
+    longOpenInterest: number;
+    shortOpenInterest: number;
+  }>;
+}
+
+/**
+ * Get GMX perpetual DEX stats from Arbitrum.
+ */
+export async function getGMXStats(): Promise<GMXStats | null> {
+  const subgraphId = SUBGRAPHS.gmx.arbitrum;
+
+  const query = {
+    query: `
+      query GetGMXStats {
+        marketInfos: markets(first: 30, orderBy: totalValueLockedUSD, orderDirection: desc) {
+          id
+          name
+          inputToken { symbol name }
+          totalValueLockedUSD
+          cumulativeVolumeUSD
+          openInterestUSD
+        }
+        protocol: protocols(first: 1) {
+          totalValueLockedUSD
+          cumulativeVolumeUSD
+          cumulativeUniqueUsers
+        }
+      }
+    `,
+  };
+
+  const data = await querySubgraph<{
+    marketInfos: Array<{
+      id: string;
+      name: string;
+      inputToken: { symbol: string; name: string };
+      totalValueLockedUSD: string;
+      cumulativeVolumeUSD: string;
+      openInterestUSD: string;
+    }>;
+    protocol: Array<{
+      totalValueLockedUSD: string;
+      cumulativeVolumeUSD: string;
+      cumulativeUniqueUsers: number;
+    }>;
+  }>(subgraphId, query);
+
+  if (!data?.marketInfos) return null;
+
+  const proto = data.protocol?.[0];
+  const totalTvl = proto ? parseFloat(proto.totalValueLockedUSD) : 0;
+
+  return {
+    totalTvl,
+    volume24h: 0, // Cumulative only from subgraph — would need daily snapshots
+    fees24h: 0,
+    users24h: 0,
+    openInterest: data.marketInfos.reduce((sum, m) => sum + parseFloat(m.openInterestUSD || '0'), 0),
+    markets: data.marketInfos.map(m => ({
+      id: m.id,
+      indexToken: m.inputToken?.symbol || m.name || 'Unknown',
+      tvl: parseFloat(m.totalValueLockedUSD),
+      volume24h: parseFloat(m.cumulativeVolumeUSD) / 365, // Rough daily estimate
+      longOpenInterest: parseFloat(m.openInterestUSD || '0') / 2,
+      shortOpenInterest: parseFloat(m.openInterestUSD || '0') / 2,
+    })),
+  };
+}
+
+// =============================================================================
+// Lido (Liquid Staking)
+// =============================================================================
+
+export interface LidoStats {
+  totalPooledEther: number;
+  totalShares: number;
+  stethPrice: number;
+  apr: number;
+  validatorsCount: number;
+  beaconDeposits: number;
+  withdrawalsProcessed: number;
+}
+
+/**
+ * Get Lido staking protocol stats.
+ */
+export async function getLidoStats(): Promise<LidoStats | null> {
+  const subgraphId = SUBGRAPHS.lido.ethereum;
+
+  const query = {
+    query: `
+      query GetLidoStats {
+        lidoStats: protocols(first: 1) {
+          totalValueLockedUSD
+          cumulativeSupplySideRevenueUSD
+        }
+        markets(first: 1, orderBy: totalValueLockedUSD, orderDirection: desc) {
+          totalValueLockedUSD
+          totalDepositBalanceUSD
+          outputTokenSupply
+          outputTokenPriceUSD
+          rates { rate side }
+        }
+      }
+    `,
+  };
+
+  const data = await querySubgraph<{
+    lidoStats: Array<{
+      totalValueLockedUSD: string;
+      cumulativeSupplySideRevenueUSD: string;
+    }>;
+    markets: Array<{
+      totalValueLockedUSD: string;
+      totalDepositBalanceUSD: string;
+      outputTokenSupply: string;
+      outputTokenPriceUSD: string;
+      rates: Array<{ rate: string; side: string }>;
+    }>;
+  }>(subgraphId, query);
+
+  if (!data?.markets?.[0]) return null;
+
+  const m = data.markets[0];
+  const supplyRate = m.rates?.find(r => r.side === 'LENDER')?.rate || '0';
+
+  return {
+    totalPooledEther: parseFloat(m.totalValueLockedUSD),
+    totalShares: parseFloat(m.outputTokenSupply || '0'),
+    stethPrice: parseFloat(m.outputTokenPriceUSD || '1'),
+    apr: parseFloat(supplyRate) * 100,
+    validatorsCount: 0,
+    beaconDeposits: 0,
+    withdrawalsProcessed: 0,
+  };
+}
+
+// =============================================================================
+// Maker (DAI / Collateralized Debt)
+// =============================================================================
+
+export interface MakerStats {
+  totalTvl: number;
+  daiSupply: number;
+  vaults: Array<{
+    id: string;
+    collateralType: string;
+    tvl: number;
+    debtCeiling: number;
+    stabilityFee: number;
+    liquidationRatio: number;
+  }>;
+}
+
+/**
+ * Get Maker protocol stats (vaults, DAI supply, etc.)
+ */
+export async function getMakerStats(): Promise<MakerStats | null> {
+  const subgraphId = SUBGRAPHS.maker.ethereum;
+
+  const query = {
+    query: `
+      query GetMakerStats {
+        protocols(first: 1) {
+          totalValueLockedUSD
+        }
+        markets(first: 30, orderBy: totalValueLockedUSD, orderDirection: desc) {
+          id
+          name
+          inputToken { symbol name }
+          totalValueLockedUSD
+          totalBorrowBalanceUSD
+          rates { rate side type }
+        }
+      }
+    `,
+  };
+
+  const data = await querySubgraph<{
+    protocols: Array<{ totalValueLockedUSD: string }>;
+    markets: Array<{
+      id: string;
+      name: string;
+      inputToken: { symbol: string; name: string };
+      totalValueLockedUSD: string;
+      totalBorrowBalanceUSD: string;
+      rates: Array<{ rate: string; side: string; type: string }>;
+    }>;
+  }>(subgraphId, query);
+
+  if (!data?.markets) return null;
+
+  const totalTvl = data.protocols?.[0]
+    ? parseFloat(data.protocols[0].totalValueLockedUSD)
+    : data.markets.reduce((s, m) => s + parseFloat(m.totalValueLockedUSD), 0);
+
+  return {
+    totalTvl,
+    daiSupply: data.markets.reduce((s, m) => s + parseFloat(m.totalBorrowBalanceUSD || '0'), 0),
+    vaults: data.markets.map(m => {
+      const stabilityFee = m.rates?.find(r => r.side === 'BORROWER')?.rate || '0';
+      return {
+        id: m.id,
+        collateralType: m.inputToken?.symbol || m.name || 'Unknown',
+        tvl: parseFloat(m.totalValueLockedUSD),
+        debtCeiling: 0,
+        stabilityFee: parseFloat(stabilityFee) * 100,
+        liquidationRatio: 0,
+      };
+    }),
+  };
+}
+
+// =============================================================================
+// Multi-Chain Protocol Aggregation
+// =============================================================================
+
+/**
+ * Get Uniswap V3 data across all supported chains.
+ */
+export async function getUniswapMultichain(): Promise<
+  Array<{ chain: string; tvl: number; poolCount: number; topPools: UniswapPool[] }>
+> {
+  const chains = Object.keys(SUBGRAPHS.uniswapV3) as Array<keyof typeof SUBGRAPHS.uniswapV3>;
+
+  const results = await Promise.allSettled(
+    chains.map(async (chain) => {
+      const pools = await getUniswapPools(chain, { first: 10 });
+      const tvl = pools.reduce((s, p) => s + parseFloat(p.totalValueLockedUSD), 0);
+      return { chain, tvl, poolCount: pools.length, topPools: pools };
+    })
+  );
+
+  return results
+    .filter((r): r is PromiseFulfilledResult<{ chain: string; tvl: number; poolCount: number; topPools: UniswapPool[] }> =>
+      r.status === 'fulfilled'
+    )
+    .map(r => r.value);
+}
+
+/**
+ * Get Aave V3 data across all supported chains.
+ */
+export async function getAaveMultichain(): Promise<
+  Array<{ chain: string; tvl: number; marketCount: number; topRates: Array<{ symbol: string; supplyAPY: number; borrowAPY: number }> }>
+> {
+  const chains = Object.keys(SUBGRAPHS.aaveV3) as Array<keyof typeof SUBGRAPHS.aaveV3>;
+
+  const results = await Promise.allSettled(
+    chains.map(async (chain) => {
+      const rates = await getAaveLendingRates(chain);
+      const tvl = rates.reduce((s, r) => s + r.tvl, 0);
+      return {
+        chain,
+        tvl,
+        marketCount: rates.length,
+        topRates: rates.slice(0, 10).map(r => ({
+          symbol: r.symbol,
+          supplyAPY: r.supplyAPY,
+          borrowAPY: r.borrowAPY,
+        })),
+      };
+    })
+  );
+
+  return results
+    .filter((r): r is PromiseFulfilledResult<{ chain: string; tvl: number; marketCount: number; topRates: Array<{ symbol: string; supplyAPY: number; borrowAPY: number }> }> =>
+      r.status === 'fulfilled'
+    )
+    .map(r => r.value);
+}
+
 /**
  * Get protocol data summary
  */
@@ -498,6 +866,83 @@ export async function getProtocolData(
           timestamp: new Date().toISOString(),
         };
       }
+      case 'compoundV3': {
+        const data = await getCompoundV3Markets();
+        const tvl = data.reduce((sum, m) => sum + m.tvl, 0);
+
+        return {
+          protocol: 'Compound V3',
+          chain: 'ethereum',
+          tvl,
+          volume24h: 0,
+          users24h: 0,
+          transactions24h: 0,
+          topPools: data.slice(0, 10).map(m => ({
+            id: m.id,
+            name: m.symbol,
+            tvl: m.tvl,
+            volume24h: 0,
+            apy: m.supplyAPY,
+          })),
+          timestamp: new Date().toISOString(),
+        };
+      }
+      case 'gmx': {
+        const data = await getGMXStats();
+        return data ? {
+          protocol: 'GMX',
+          chain: 'arbitrum',
+          tvl: data.totalTvl,
+          volume24h: data.volume24h,
+          users24h: data.users24h,
+          transactions24h: 0,
+          topPools: data.markets.slice(0, 10).map(m => ({
+            id: m.id,
+            name: m.indexToken,
+            tvl: m.tvl,
+            volume24h: m.volume24h,
+          })),
+          timestamp: new Date().toISOString(),
+        } : null;
+      }
+      case 'lido': {
+        const data = await getLidoStats();
+        return data ? {
+          protocol: 'Lido',
+          chain: 'ethereum',
+          tvl: data.totalPooledEther,
+          volume24h: 0,
+          users24h: 0,
+          transactions24h: 0,
+          topPools: [{
+            id: 'steth',
+            name: 'stETH',
+            tvl: data.totalPooledEther,
+            volume24h: 0,
+            apy: data.apr,
+          }],
+          timestamp: new Date().toISOString(),
+        } : null;
+      }
+      case 'maker': {
+        const data = await getMakerStats();
+        return data ? {
+          protocol: 'Maker',
+          chain: 'ethereum',
+          tvl: data.totalTvl,
+          volume24h: 0,
+          users24h: 0,
+          transactions24h: 0,
+          topPools: data.vaults.slice(0, 10).map(v => ({
+            id: v.id,
+            name: v.collateralType,
+            tvl: v.tvl,
+            volume24h: 0,
+            apy: v.stabilityFee,
+          })),
+          timestamp: new Date().toISOString(),
+        } : null;
+      }
       default:
         return null;
     }
@@ -511,13 +956,21 @@ export async function getProtocolData(
  * Get cross-protocol analysis
  */
 export async function getCrossProtocolAnalysis(): Promise<CrossProtocolAnalysis> {
-  const [uniswap, aave, curve] = await Promise.all([
+  const [uniswap, aave, curve, compound, gmx, lido, maker] = await Promise.allSettled([
     getProtocolData('uniswapV3', 'ethereum'),
     getProtocolData('aaveV3', 'ethereum'),
     getProtocolData('curveFinance', 'ethereum'),
+    getProtocolData('compoundV3', 'ethereum'),
+    getProtocolData('gmx', 'arbitrum'),
+    getProtocolData('lido', 'ethereum'),
+    getProtocolData('maker', 'ethereum'),
   ]);
 
-  const protocols = [uniswap, aave, curve].filter((p): p is DeFiProtocolData => p !== null);
+  const protocols = [uniswap, aave, curve, compound, gmx, lido, maker]
+    .filter((p): p is PromiseFulfilledResult<DeFiProtocolData> =>
+      p.status === 'fulfilled' && p.value !== null
+    )
+    .map(p => p.value);
 
   const totalTvl = protocols.reduce((sum, p) => sum + p.tvl, 0);
   const totalVolume24h = protocols.reduce((sum, p) => sum + p.volume24h, 0);
@@ -525,32 +978,20 @@ export async function getCrossProtocolAnalysis(): Promise<CrossProtocolAnalysis>
   // Find yield opportunities
   const yieldOpportunities: CrossProtocolAnalysis['topYieldOpportunities'] = [];
 
-  if (aave) {
-    aave.topPools.forEach(pool => {
+  for (const proto of protocols) {
+    if (!proto.topPools) continue;
+    const protocolName = proto.protocol;
+    for (const pool of proto.topPools) {
       if (pool.apy && pool.apy > 1) {
         yieldOpportunities.push({
-          protocol: 'Aave V3',
+          protocol: protocolName,
           pool: pool.name,
           apy: pool.apy,
           tvl: pool.tvl,
-          risk: pool.apy > 10 ? 'high' : pool.apy > 5 ? 'medium' : 'low',
+          risk: pool.apy > 20 ? 'high' : pool.apy > 5 ? 'medium' : 'low',
         });
       }
-    });
-  }
-
-  if (curve) {
-    curve.topPools.forEach(pool => {
-      if (pool.apy && pool.apy > 1) {
-        yieldOpportunities.push({
-          protocol: 'Curve Finance',
-          pool: pool.name,
-          apy: pool.apy,
-          tvl: pool.tvl,
-          risk: pool.apy > 20 ? 'high' : pool.apy > 8 ? 'medium' : 'low',
-        });
-      }
-    });
+    }
   }
 
   // Sort by APY

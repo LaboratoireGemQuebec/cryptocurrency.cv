@@ -211,7 +211,7 @@ export function PriceAlerts() {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-hidden">
+          <div className="bg-white dark:bg-black rounded-xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-2">
@@ -220,7 +220,7 @@ export function PriceAlerts() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                className="p-2 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -229,14 +229,14 @@ export function PriceAlerts() {
             {/* Content */}
             <div className="p-4 space-y-4 overflow-y-auto max-h-[60vh]">
               {/* Add Alert Form */}
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg space-y-3">
+              <div className="p-4 bg-gray-50 dark:bg-black rounded-lg space-y-3">
                 <h3 className="font-medium text-sm text-gray-600 dark:text-gray-400">Create Alert</h3>
                 
                 <div className="grid grid-cols-2 gap-2">
                   <select
                     value={selectedCoin.id}
                     onChange={(e) => setSelectedCoin(COINS.find(c => c.id === e.target.value) || COINS[0])}
-                    className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
                   >
                     {COINS.map(coin => (
                       <option key={coin.id} value={coin.id}>
@@ -248,7 +248,7 @@ export function PriceAlerts() {
                   <select
                     value={direction}
                     onChange={(e) => setDirection(e.target.value as 'above' | 'below')}
-                    className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
                   >
                     <option value="above">Goes above</option>
                     <option value="below">Goes below</option>
@@ -263,7 +263,7 @@ export function PriceAlerts() {
                       value={targetPrice}
                       onChange={(e) => setTargetPrice(e.target.value)}
                       placeholder="Target price"
-                      className="w-full pl-7 pr-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
+                      className="w-full pl-7 pr-3 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-600 rounded-lg text-sm"
                     />
                   </div>
                   <button
@@ -289,7 +289,7 @@ export function PriceAlerts() {
                   {activeAlerts.map(alert => (
                     <div
                       key={alert.id}
-                      className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                      className="flex items-center justify-between p-3 bg-gray-50 dark:bg-black rounded-lg"
                     >
                       <div className="flex items-center gap-3">
                         {alert.direction === 'above' ? (
@@ -310,7 +310,7 @@ export function PriceAlerts() {
                       </div>
                       <button
                         onClick={() => removeAlert(alert.id)}
-                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-neutral-900 rounded"
                       >
                         <X className="w-4 h-4 text-gray-400" />
                       </button>
@@ -339,7 +339,7 @@ export function PriceAlerts() {
                       </div>
                       <button
                         onClick={() => removeAlert(alert.id)}
-                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-neutral-900 rounded"
                       >
                         <X className="w-4 h-4 text-gray-400" />
                       </button>

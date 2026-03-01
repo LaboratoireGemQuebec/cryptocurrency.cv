@@ -214,7 +214,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Empty state
   if (holdings.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Portfolio Performance
         </h3>
@@ -231,12 +231,12 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Loading state
   if (isLoading && chartData.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
         <div className="flex items-center justify-between mb-6">
-          <div className="h-6 w-40 bg-gray-200 dark:bg-slate-700 rounded animate-pulse" />
-          <div className="h-8 w-56 bg-gray-200 dark:bg-slate-700 rounded animate-pulse" />
+          <div className="h-6 w-40 bg-gray-200 dark:bg-black rounded animate-pulse" />
+          <div className="h-8 w-56 bg-gray-200 dark:bg-black rounded animate-pulse" />
         </div>
-        <div className="h-48 bg-gray-100 dark:bg-slate-700/50 rounded-xl animate-pulse" />
+        <div className="h-48 bg-gray-100 dark:bg-black/50 rounded-xl animate-pulse" />
       </div>
     );
   }
@@ -244,7 +244,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   // Insufficient data state
   if (chartData.length < 2) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Portfolio Performance
         </h3>
@@ -270,7 +270,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
   }
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
@@ -299,14 +299,14 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
         </div>
 
         {/* Time range selector */}
-        <div className="flex gap-1 bg-gray-100 dark:bg-slate-700 rounded-lg p-1">
+        <div className="flex gap-1 bg-gray-100 dark:bg-black rounded-lg p-1">
           {(['1D', '1W', '1M', '3M', '1Y', 'ALL'] as TimeRange[]).map((range) => (
             <button
               key={range}
               onClick={() => setTimeRange(range)}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 timeRange === range
-                  ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                   : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -318,21 +318,21 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
 
       {/* Metrics row */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <div className="bg-gray-50 dark:bg-slate-700/50 rounded-lg p-3">
+        <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3">
           <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">High</p>
           <p className="text-sm font-semibold text-gray-900 dark:text-white">{formatValue(metrics.highValue)}</p>
         </div>
-        <div className="bg-gray-50 dark:bg-slate-700/50 rounded-lg p-3">
+        <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3">
           <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Low</p>
           <p className="text-sm font-semibold text-gray-900 dark:text-white">{formatValue(metrics.lowValue)}</p>
         </div>
-        <div className="bg-gray-50 dark:bg-slate-700/50 rounded-lg p-3">
+        <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3">
           <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Change</p>
           <p className={`text-sm font-semibold ${isPositive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
             {formatValue(Math.abs(metrics.absoluteChange))}
           </p>
         </div>
-        <div className="bg-gray-50 dark:bg-slate-700/50 rounded-lg p-3">
+        <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3">
           <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Volatility</p>
           <p className="text-sm font-semibold text-gray-900 dark:text-white">{metrics.volatility.toFixed(1)}%</p>
         </div>
@@ -470,7 +470,7 @@ export function PerformanceChart({ totalValue: propTotalValue, prices = {} }: Pe
 
       {/* Loading overlay */}
       {isLoading && chartData.length > 0 && (
-        <div className="absolute inset-0 bg-white/50 dark:bg-slate-800/50 flex items-center justify-center rounded-2xl">
+        <div className="absolute inset-0 bg-white/50 dark:bg-black/50 flex items-center justify-center rounded-2xl">
           <div className="flex items-center gap-2 text-gray-500">
             <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />

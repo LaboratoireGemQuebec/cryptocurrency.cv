@@ -88,12 +88,12 @@ export default function PriceWidget({ variant = 'compact', className = '' }: Pri
     return (
       <div className={`flex items-center gap-4 ${className}`}>
         <div className="animate-pulse flex items-center gap-2">
-          <div className="w-6 h-6 bg-gray-200 dark:bg-gray-700 rounded-full" />
-          <div className="w-20 h-4 bg-gray-200 dark:bg-gray-700 rounded" />
+          <div className="w-6 h-6 bg-gray-200 dark:bg-black rounded-full" />
+          <div className="w-20 h-4 bg-gray-200 dark:bg-black rounded" />
         </div>
         <div className="animate-pulse flex items-center gap-2">
-          <div className="w-6 h-6 bg-gray-200 dark:bg-gray-700 rounded-full" />
-          <div className="w-20 h-4 bg-gray-200 dark:bg-gray-700 rounded" />
+          <div className="w-6 h-6 bg-gray-200 dark:bg-black rounded-full" />
+          <div className="w-20 h-4 bg-gray-200 dark:bg-black rounded" />
         </div>
       </div>
     );
@@ -118,7 +118,7 @@ export default function PriceWidget({ variant = 'compact', className = '' }: Pri
             {formatChange(btcChange)}
           </span>
         </div>
-        <div className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
+        <div className="w-px h-4 bg-gray-200 dark:bg-black" />
         <div className="flex items-center gap-1.5">
           <span className="text-blue-500 font-bold">Ξ</span>
           <span className="font-medium text-gray-900 dark:text-white">

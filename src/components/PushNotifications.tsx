@@ -178,13 +178,13 @@ export function PushNotifications() {
       {isOpen && (
         <>
           <div role="presentation" className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} onKeyDown={() => setIsOpen(false)} />
-          <div className="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 overflow-hidden animate-fadeIn">
+          <div className="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-black rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 overflow-hidden animate-fadeIn">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold">Notifications</h3>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -220,7 +220,7 @@ export function PushNotifications() {
                   {notifications.map((notification) => (
                     <div
                       key={notification.id}
-                      className="p-3 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700/50"
+                      className="p-3 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-neutral-900/50"
                     >
                       <div className="flex justify-between items-start gap-2">
                         <div className="flex-1 min-w-0">

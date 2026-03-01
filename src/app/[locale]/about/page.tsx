@@ -76,7 +76,7 @@ export default async function AboutPage({ params }: Props) {
   const t = await getTranslations('nav');
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -95,7 +95,7 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Why Free Crypto News?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature) => (
-                <div key={feature.title} className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:shadow-lg transition">
+                <div key={feature.title} className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:shadow-lg transition">
                   <div className="text-4xl mb-3">{feature.icon}</div>
                   <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
                   <p className="text-gray-600 dark:text-slate-400">{feature.description}</p>
@@ -114,7 +114,7 @@ export default async function AboutPage({ params }: Props) {
             {/* Category Overview */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
               {sourceCategories.map((cat) => (
-                <div key={cat.name} className="p-4 rounded-lg bg-gray-100 dark:bg-slate-800 text-center">
+                <div key={cat.name} className="p-4 rounded-lg bg-gray-100 dark:bg-black text-center">
                   <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{cat.count}+</div>
                   <div className="text-sm font-medium text-gray-900 dark:text-white">{cat.name}</div>
                   <div className="text-xs text-gray-500 dark:text-slate-500 mt-1">{cat.description}</div>
@@ -131,11 +131,11 @@ export default async function AboutPage({ params }: Props) {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md transition group"
+                  className="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md transition group"
                 >
                   <div className="flex justify-between items-start">
                     <h3 className="font-bold text-lg mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-gray-900 dark:text-white">{source.name}</h3>
-                    <span className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400">{source.category}</span>
+                    <span className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400">{source.category}</span>
                   </div>
                   <p className="text-gray-600 dark:text-slate-400 text-sm">{source.description}</p>
                 </a>
@@ -193,21 +193,21 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">API Endpoints</h2>
             <div className="max-w-3xl mx-auto overflow-x-auto">
               <table className="w-full text-left">
-                <thead className="bg-gray-100 dark:bg-slate-800">
+                <thead className="bg-gray-100 dark:bg-black">
                   <tr>
                     <th className="px-4 py-3 font-semibold text-gray-900 dark:text-white">Endpoint</th>
                     <th className="px-4 py-3 font-semibold text-gray-900 dark:text-white">Description</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/news</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Latest news from all sources</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/search?q=</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Search news by keywords</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/bitcoin</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Bitcoin-specific news</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/defi</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">DeFi news and updates</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/breaking</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Breaking news (last 2 hours)</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/trending</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Trending topics analysis</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/sources</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">List of news sources</td></tr>
-                  <tr className="dark:bg-slate-800/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/rss</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">RSS feed output</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/news</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Latest news from all sources</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/search?q=</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Search news by keywords</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/bitcoin</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Bitcoin-specific news</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/defi</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">DeFi news and updates</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/breaking</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Breaking news (last 2 hours)</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/trending</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Trending topics analysis</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/sources</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">List of news sources</td></tr>
+                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/rss</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">RSS feed output</td></tr>
                 </tbody>
               </table>
             </div>
@@ -220,7 +220,7 @@ export default async function AboutPage({ params }: Props) {
             <div className="flex justify-center gap-4 flex-wrap">
               <a
                 href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnirholas%2Ffree-crypto-news"
-                className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition"
+                className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:bg-gray-800 dark:hover:bg-neutral-900 transition"
               >
                 ▲ Deploy on Vercel
               </a>

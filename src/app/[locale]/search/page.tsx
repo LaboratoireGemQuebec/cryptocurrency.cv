@@ -47,7 +47,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
   void category; // consumed by SearchFilters via URL params
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <WebsiteStructuredData />
       <BreadcrumbStructuredData
         items={[

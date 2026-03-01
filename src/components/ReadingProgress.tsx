@@ -83,7 +83,7 @@ export default function ReadingProgress({ className = '' }: ReadingProgressProps
 
   return (
     <div 
-      className={`fixed top-0 left-0 right-0 h-1 z-50 bg-gray-200/50 dark:bg-gray-700/50 ${className}`}
+      className={`fixed top-0 left-0 right-0 h-1 z-50 bg-gray-200/50 dark:bg-black/50 ${className}`}
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}

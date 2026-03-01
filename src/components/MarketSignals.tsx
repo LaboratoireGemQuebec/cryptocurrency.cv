@@ -69,7 +69,7 @@ function formatUsd(value: number): string {
 const signalConfig: Record<string, { label: string; color: string; bg: string }> = {
   strong_buy: { label: 'Strong Buy', color: 'text-green-700 dark:text-green-400', bg: 'bg-green-100 dark:bg-green-900/30' },
   buy: { label: 'Buy', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-900/20' },
-  hold: { label: 'Hold', color: 'text-gray-600 dark:text-gray-400', bg: 'bg-gray-100 dark:bg-gray-800/50' },
+  hold: { label: 'Hold', color: 'text-gray-600 dark:text-gray-400', bg: 'bg-gray-100 dark:bg-black/50' },
   sell: { label: 'Sell', color: 'text-red-600 dark:text-red-400', bg: 'bg-red-50 dark:bg-red-900/20' },
   strong_sell: { label: 'Strong Sell', color: 'text-red-700 dark:text-red-400', bg: 'bg-red-100 dark:bg-red-900/30' },
 };
@@ -163,7 +163,7 @@ function SignalRow({
       <span className="text-xs text-gray-500 dark:text-slate-400">{sig.confidence}%</span>
 
       {open && explanation && (
-        <div className="absolute z-20 bottom-full left-0 mb-2 w-64 max-w-xs rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 shadow-xl p-3 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
+        <div className="absolute z-20 bottom-full left-0 mb-2 w-64 max-w-xs rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-slate-600 shadow-xl p-3 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
           <span className="inline-flex items-center gap-1 text-brand-500 font-semibold mb-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15z" /><path fillRule="evenodd" d="M10 5a5 5 0 100 10A5 5 0 0010 5zm-3 5a3 3 0 116 0 3 3 0 01-6 0z" clipRule="evenodd" /></svg>
             AI insight
@@ -242,9 +242,9 @@ export function MarketSignals() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[1, 2, 3].map(i => (
-            <div key={i} className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 animate-pulse">
-              <div className="h-5 w-32 bg-gray-200 dark:bg-slate-700 rounded mb-4" />
-              <div className="h-28 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 animate-pulse">
+              <div className="h-5 w-32 bg-gray-200 dark:bg-black rounded mb-4" />
+              <div className="h-28 bg-gray-100 dark:bg-black/50 rounded-xl" />
             </div>
           ))}
         </div>
@@ -265,7 +265,7 @@ export function MarketSignals() {
         {/* Fear & Greed */}
         <Link
           href="/fear-greed"
-          className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Fear & Greed Index</h3>
           {data.fearGreed ? (
@@ -278,7 +278,7 @@ export function MarketSignals() {
         {/* Trading Signals */}
         <Link
           href="/signals"
-          className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Trading Signals</h3>
           {data.signals.length > 0 ? (
@@ -300,7 +300,7 @@ export function MarketSignals() {
         {/* Liquidations */}
         <Link
           href="/liquidations"
-          className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+          className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
         >
           <h3 className="text-sm font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-4">Liquidations (24h)</h3>
           {data.liquidations ? (
@@ -332,12 +332,12 @@ export function MarketSignals() {
 
       {/* AI Narrative */}
       {narrativeLoading && (
-        <div className="mt-5 rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 animate-pulse">
-          <div className="h-4 w-20 bg-gray-200 dark:bg-slate-700 rounded mb-3" />
+        <div className="mt-5 rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-black p-5 animate-pulse">
+          <div className="h-4 w-20 bg-gray-200 dark:bg-black rounded mb-3" />
           <div className="space-y-2">
-            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-full" />
-            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-5/6" />
-            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-4/6" />
+            <div className="h-3 bg-gray-100 dark:bg-black/60 rounded w-full" />
+            <div className="h-3 bg-gray-100 dark:bg-black/60 rounded w-5/6" />
+            <div className="h-3 bg-gray-100 dark:bg-black/60 rounded w-4/6" />
           </div>
         </div>
       )}

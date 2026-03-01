@@ -91,7 +91,7 @@ export function OracleChat() {
         </p>
       </div>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 min-h-[500px] flex flex-col">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 min-h-[500px] flex flex-col">
         {/* Messages */}
         <div className="flex-1 p-6 overflow-y-auto space-y-4">
           {messages.length === 0 && (
@@ -104,7 +104,7 @@ export function OracleChat() {
                   <button
                     key={i}
                     onClick={() => setInput(s)}
-                    className="px-4 py-2 bg-gray-100 dark:bg-slate-700 rounded-full text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+                    className="px-4 py-2 bg-gray-100 dark:bg-black rounded-full text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 transition-colors"
                   >
                     {s}
                   </button>
@@ -122,7 +122,7 @@ export function OracleChat() {
                 className={`max-w-[80%] rounded-2xl px-4 py-3 ${
                   msg.role === 'user'
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
-                    : 'bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white'
+                    : 'bg-gray-100 dark:bg-black text-gray-900 dark:text-white'
                 }`}
               >
                 {msg.role === 'oracle' && (
@@ -135,7 +135,7 @@ export function OracleChat() {
 
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-gray-100 dark:bg-slate-700 rounded-2xl px-4 py-3">
+              <div className="bg-gray-100 dark:bg-black rounded-2xl px-4 py-3">
                 <span className="text-lg mr-2">🔮</span>
                 <span className="animate-pulse">Consulting the oracle...</span>
               </div>
@@ -153,7 +153,7 @@ export function OracleChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask The Oracle..."
-              className="flex-1 px-4 py-3 bg-gray-100 dark:bg-slate-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white"
+              className="flex-1 px-4 py-3 bg-gray-100 dark:bg-black rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white"
               disabled={loading}
             />
             <button

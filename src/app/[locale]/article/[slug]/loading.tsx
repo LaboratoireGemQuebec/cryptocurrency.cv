@@ -16,12 +16,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
+  return <div className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`} />;
 }
 
 export default function ArticleLoading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

@@ -77,7 +77,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
   return (
     <div className="grid lg:grid-cols-[340px_1fr] gap-6">
       {/* Left: Latest Crypto News sidebar list - CoinDesk style */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden">
         <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100 dark:border-slate-700">
           <svg className="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
@@ -94,14 +94,14 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
 
         <div className="divide-y divide-gray-50 dark:divide-slate-700/50">
           {/* Today label */}
-          <div className="px-5 py-2 bg-gray-50/50 dark:bg-slate-800/80">
+          <div className="px-5 py-2 bg-gray-50/50 dark:bg-black/80">
             <span className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Today</span>
           </div>
 
           {/* Main hero article in the sidebar */}
           <Link
             href={`/article/${articleSlug}`}
-            className="group block px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700/40 transition-colors"
+            className="group block px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-neutral-900/40 transition-colors"
           >
             <div className="text-[11px] text-gray-500 dark:text-slate-400 mb-1.5 tabular-nums">
               {formatTime(article.timeAgo)}
@@ -129,7 +129,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
               <Link
                 key={sideArticle.link}
                 href={`/article/${slug}`}
-                className="group block px-5 py-3 hover:bg-gray-50 dark:hover:bg-slate-700/40 transition-colors"
+                className="group block px-5 py-3 hover:bg-gray-50 dark:hover:bg-neutral-900/40 transition-colors"
               >
                 <div className="text-[11px] text-gray-500 dark:text-slate-400 mb-1 tabular-nums">
                   {(() => {
@@ -150,7 +150,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
           })}
 
           {/* View all link */}
-          <div className="px-5 py-3 bg-gray-50/30 dark:bg-slate-800/50">
+          <div className="px-5 py-3 bg-gray-50/30 dark:bg-black/50">
             <Link
               href="/read"
               className="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors flex items-center gap-1"

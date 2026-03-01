@@ -62,7 +62,7 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
           <select
             value={sortBy}
             onChange={e => setSortBy(e.target.value as typeof sortBy)}
-            className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm text-gray-900 dark:text-white"
+            className="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-sm text-gray-900 dark:text-white"
           >
             <option value="trust">Sort: Trust Score</option>
             <option value="rating">Sort: Rating</option>
@@ -70,11 +70,11 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
             <option value="coins">Sort: Most Coins</option>
           </select>
         </div>
-        <div className="flex bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
-          <button onClick={() => setView('cards')} className={`px-3 py-1.5 text-sm ${view === 'cards' ? 'bg-gray-100 dark:bg-slate-700 font-medium' : ''}`}>
+        <div className="flex bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
+          <button onClick={() => setView('cards')} className={`px-3 py-1.5 text-sm ${view === 'cards' ? 'bg-gray-100 dark:bg-black font-medium' : ''}`}>
             Cards
           </button>
-          <button onClick={() => setView('table')} className={`px-3 py-1.5 text-sm ${view === 'table' ? 'bg-gray-100 dark:bg-slate-700 font-medium' : ''}`}>
+          <button onClick={() => setView('table')} className={`px-3 py-1.5 text-sm ${view === 'table' ? 'bg-gray-100 dark:bg-black font-medium' : ''}`}>
             Table
           </button>
         </div>
@@ -85,7 +85,7 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
           {sorted.map((exchange, i) => (
             <div
               key={exchange.id}
-              className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
+              className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4 mb-4">
@@ -116,23 +116,23 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
 
               {/* Key metrics */}
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
-                <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 text-center">
                   <p className="text-xs text-gray-500 dark:text-slate-400">Maker Fee</p>
                   <p className="text-sm font-bold text-gray-900 dark:text-white">{exchange.tradingFees.maker}</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 text-center">
                   <p className="text-xs text-gray-500 dark:text-slate-400">Taker Fee</p>
                   <p className="text-sm font-bold text-gray-900 dark:text-white">{exchange.tradingFees.taker}</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 text-center">
                   <p className="text-xs text-gray-500 dark:text-slate-400">Coins</p>
                   <p className="text-sm font-bold text-gray-900 dark:text-white">{exchange.supportedCoins}+</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 text-center">
                   <p className="text-xs text-gray-500 dark:text-slate-400">KYC</p>
                   <p className="text-sm font-bold text-gray-900 dark:text-white capitalize">{exchange.kyc}</p>
                 </div>
-                <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 text-center">
+                <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 text-center">
                   <p className="text-xs text-gray-500 dark:text-slate-400">Security</p>
                   <div className="flex items-center justify-center gap-1 text-xs mt-0.5">
                     {exchange.regulated && <span title="Regulated" className="text-green-500">🏛️</span>}
@@ -145,7 +145,7 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
               {/* Features */}
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {exchange.features.map(f => (
-                  <span key={f} className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-slate-700 text-xs text-gray-600 dark:text-slate-300">
+                  <span key={f} className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-black text-xs text-gray-600 dark:text-slate-300">
                     {f}
                   </span>
                 ))}
@@ -180,8 +180,8 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
       ) : (
         /* Table view */
         <div className="overflow-x-auto">
-          <table className="w-full bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-            <thead className="bg-gray-50 dark:bg-slate-900/50">
+          <table className="w-full bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+            <thead className="bg-gray-50 dark:bg-black/50">
               <tr>
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 dark:text-slate-400 uppercase">#</th>
                 <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 dark:text-slate-400 uppercase">Exchange</th>
@@ -197,7 +197,7 @@ export function ExchangeReviewsClient({ exchanges }: { exchanges: Exchange[] }) 
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-slate-700">
               {sorted.map((ex, i) => (
-                <tr key={ex.id} className="hover:bg-gray-50 dark:hover:bg-slate-700/50 transition">
+                <tr key={ex.id} className="hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition">
                   <td className="px-4 py-3 text-sm font-bold text-gray-400">{i + 1}</td>
                   <td className="px-4 py-3">
                     <a href={ex.url} target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 dark:text-white hover:text-amber-600 transition text-sm">

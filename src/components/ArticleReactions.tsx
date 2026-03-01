@@ -138,7 +138,7 @@ export default function ArticleReactions({ articleId, className = '' }: ArticleR
                 transition-all duration-200 
                 ${isSelected 
                   ? 'bg-brand-100 dark:bg-brand-900/40 ring-2 ring-brand-500' 
-                  : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  : 'bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900'
                 }
                 ${isCurrentlyAnimating ? 'scale-125' : 'scale-100'}
               `}

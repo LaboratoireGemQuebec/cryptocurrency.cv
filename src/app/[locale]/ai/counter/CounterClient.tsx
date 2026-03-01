@@ -49,7 +49,7 @@ const exampleClaims = [
 const typeConfig = {
   factual: { color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400', icon: '📊' },
   logical: { color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400', icon: '🧠' },
-  contextual: { color: 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400', icon: '🔍' },
+  contextual: { color: 'bg-gray-100 text-gray-700 dark:bg-black/30 dark:text-gray-400', icon: '🔍' },
   alternative: { color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400', icon: '💡' },
 };
 
@@ -99,7 +99,7 @@ export default function CounterClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-4xl mx-auto">
         <Header />
 
@@ -121,7 +121,7 @@ export default function CounterClient() {
           </div>
 
           {/* Input Form */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
             <div className="mb-4">
               <label htmlFor="claim-input" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Enter a claim to challenge
@@ -132,7 +132,7 @@ export default function CounterClient() {
                 onChange={(e) => setClaim(e.target.value)}
                 placeholder="e.g., Bitcoin will reach $1 million by 2030"
                 rows={3}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function CounterClient() {
                 onChange={(e) => setContext(e.target.value)}
                 placeholder="Add any relevant context, source, or background information..."
                 rows={2}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               />
             </div>
 
@@ -169,7 +169,7 @@ export default function CounterClient() {
                       setClaim(c);
                       generateCounter(c);
                     }}
-                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-900 transition-colors"
                   >
                     {c.length > 40 ? c.substring(0, 40) + '...' : c}
                   </button>
@@ -187,7 +187,7 @@ export default function CounterClient() {
 
           {/* Loading State */}
           {loading && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4 animate-pulse">⚖️</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Analyzing Claim...</h3>
               <p className="text-gray-500 dark:text-slate-400">Our AI is finding counter-arguments</p>
@@ -207,7 +207,7 @@ export default function CounterClient() {
               </div>
 
               {/* Overall Assessment */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-2xl">🎯</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Overall Assessment</h3>
@@ -225,11 +225,11 @@ export default function CounterClient() {
               </div>
 
               {/* Counter Arguments */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⚔️ Counter Arguments</h3>
                 <div className="space-y-4">
                   {result.counterArguments.map((arg, i) => (
-                    <div key={i} className="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                    <div key={i} className="p-4 bg-gray-50 dark:bg-black rounded-lg">
                       <div className="flex items-center gap-2 mb-2">
                         <span className={`px-2 py-1 rounded text-xs font-medium ${typeConfig[arg.type].color}`}>
                           {typeConfig[arg.type].icon} {arg.type.charAt(0).toUpperCase() + arg.type.slice(1)}
@@ -270,7 +270,7 @@ export default function CounterClient() {
 
               {/* Alternative Interpretations */}
               {result.alternativeInterpretations?.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💡 Alternative Interpretations</h3>
                   <ul className="space-y-2">
                     {result.alternativeInterpretations.map((item, i) => (
@@ -285,7 +285,7 @@ export default function CounterClient() {
 
               {/* Missing Context */}
               {result.missingContext?.length > 0 && (
-                <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+                <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">❓ Missing Context</h3>
                   <ul className="space-y-2">
                     {result.missingContext.map((item, i) => (
@@ -307,7 +307,7 @@ export default function CounterClient() {
 
           {/* Empty State */}
           {!result && !loading && !error && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">⚖️</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Enter a Claim</h3>
               <p className="text-gray-500 dark:text-slate-400">

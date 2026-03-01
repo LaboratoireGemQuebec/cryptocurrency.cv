@@ -133,11 +133,11 @@ function PremiumFeatureCard({ feature, showPreview = true }: PremiumFeatureCardP
           
           {/* Preview data placeholder */}
           {showPreview && (
-            <div className="mb-3 p-3 rounded-lg bg-gray-100 dark:bg-gray-700/50 relative overflow-hidden">
+            <div className="mb-3 p-3 rounded-lg bg-gray-100 dark:bg-black/50 relative overflow-hidden">
               {loading ? (
                 <div className="animate-pulse space-y-2">
-                  <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-3/4" />
-                  <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-1/2" />
+                  <div className="h-4 bg-gray-200 dark:bg-black rounded w-3/4" />
+                  <div className="h-4 bg-gray-200 dark:bg-black rounded w-1/2" />
                 </div>
               ) : (
                 <div className="space-y-1 blur-sm">

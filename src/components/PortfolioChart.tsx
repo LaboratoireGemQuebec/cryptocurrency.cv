@@ -52,7 +52,7 @@ export function PortfolioChart({ data, timeframe = '30d' }: PortfolioChartProps)
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Portfolio Performance
@@ -60,13 +60,13 @@ export function PortfolioChart({ data, timeframe = '30d' }: PortfolioChartProps)
         <div className="flex gap-2">
           <button
             onClick={() => setShowChange(false)}
-            className={`px-3 py-1 text-sm rounded-lg ${!showChange ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300'}`}
+            className={`px-3 py-1 text-sm rounded-lg ${!showChange ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300'}`}
           >
             Value
           </button>
           <button
             onClick={() => setShowChange(true)}
-            className={`px-3 py-1 text-sm rounded-lg ${showChange ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300'}`}
+            className={`px-3 py-1 text-sm rounded-lg ${showChange ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900' : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300'}`}
           >
             Change %
           </button>

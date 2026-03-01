@@ -165,12 +165,12 @@ export default function SettingsPage() {
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="animate-pulse space-y-6">
-            <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-lg w-48" />
+            <div className="h-12 bg-gray-200 dark:bg-black rounded-lg w-48" />
             {[1, 2, 3, 4].map(i => (
-              <div key={i} className="h-32 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
+              <div key={i} className="h-32 bg-gray-200 dark:bg-black rounded-2xl" />
             ))}
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
@@ -189,7 +189,7 @@ export default function SettingsPage() {
 
         <div className="space-y-6">
           {/* Theme (dark mode only) */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               {t('appearance')}
             </h2>
@@ -211,7 +211,7 @@ export default function SettingsPage() {
                 <button
                   onClick={() => updatePreference('compactView', !preferences.compactView)}
                   className={`relative w-12 h-6 rounded-full transition-colors ${
-                    preferences.compactView ? 'bg-blue-600' : 'bg-gray-300 dark:bg-gray-600'
+                    preferences.compactView ? 'bg-blue-600' : 'bg-gray-300 dark:bg-black'
                   }`}
                 >
                   <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${
@@ -237,7 +237,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Currency & Display */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Display Preferences
             </h2>
@@ -335,7 +335,7 @@ export default function SettingsPage() {
           </div>
 
           {/* Notifications */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Notifications
             </h2>
@@ -354,7 +354,7 @@ export default function SettingsPage() {
                   <button
                     onClick={() => updatePreference('notifications', !preferences.notifications)}
                     className={`relative w-12 h-6 rounded-full transition-colors ${
-                      preferences.notifications ? 'bg-blue-600' : 'bg-gray-300 dark:bg-gray-600'
+                      preferences.notifications ? 'bg-blue-600' : 'bg-gray-300 dark:bg-black'
                     }`}
                   >
                     <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${
@@ -388,7 +388,7 @@ export default function SettingsPage() {
                 <button
                   onClick={() => updatePreference('soundEffects', !preferences.soundEffects)}
                   className={`relative w-12 h-6 rounded-full transition-colors ${
-                    preferences.soundEffects ? 'bg-blue-600' : 'bg-gray-300 dark:bg-gray-600'
+                    preferences.soundEffects ? 'bg-blue-600' : 'bg-gray-300 dark:bg-black'
                   }`}
                 >
                   <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${
@@ -400,14 +400,14 @@ export default function SettingsPage() {
           </div>
 
           {/* Data Management */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Data Management
             </h2>
             <div className="space-y-3">
               <button
                 onClick={exportAllData}
-                className="w-full flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                className="w-full flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors"
               >
                 <div className="flex items-center gap-3">
                   <Download className="w-5 h-5 text-gray-500" />
@@ -438,7 +438,7 @@ export default function SettingsPage() {
           </div>
 
           {/* About */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               About
             </h2>

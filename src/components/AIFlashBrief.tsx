@@ -35,7 +35,7 @@ const importanceIcon: Record<string, string> = {
 const sentimentStyle: Record<string, { bg: string; text: string }> = {
   bullish: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-400' },
   bearish: { bg: 'bg-red-100 dark:bg-red-900/30', text: 'text-red-700 dark:text-red-400' },
-  neutral: { bg: 'bg-gray-100 dark:bg-slate-700', text: 'text-gray-600 dark:text-slate-400' },
+  neutral: { bg: 'bg-gray-100 dark:bg-black', text: 'text-gray-600 dark:text-slate-400' },
 };
 
 export function AIFlashBrief({ category, maxItems = 5 }: AIFlashBriefProps) {

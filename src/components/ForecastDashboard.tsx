@@ -123,7 +123,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
   }, [fetchForecast]);
 
   return (
-    <div className={`bg-white dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
       {/* ── Header ── */}
       <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
         <div className="flex items-center justify-between mb-4">
@@ -139,7 +139,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
           <button
             onClick={fetchForecast}
             disabled={isLoading}
-            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-black text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
           >
             <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </button>
@@ -154,7 +154,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                 asset === a
                   ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
+                  : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
               }`}
             >
               {a}
@@ -164,7 +164,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
             type="text"
             value={asset}
             onChange={(e) => setAsset(e.target.value.toUpperCase())}
-            className="w-20 px-3 py-1.5 rounded-lg text-sm bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center uppercase"
+            className="w-20 px-3 py-1.5 rounded-lg text-sm bg-slate-100 dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center uppercase"
             placeholder="Other"
           />
         </div>
@@ -178,7 +178,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                 horizon === h
                   ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
+                  : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
               }`}
             >
               {h}
@@ -250,7 +250,7 @@ export function ForecastDashboard({ className = '', defaultAsset = 'BTC' }: Fore
                   {forecast.narratives.map((n, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
+                      className="px-2.5 py-1 text-xs rounded-full bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
                     >
                       {n}
                     </span>
@@ -312,7 +312,7 @@ function CompositeSignalCard({ forecast }: { forecast: ForecastResult }) {
           <span>Confidence</span>
           <span>{confidencePct}%</span>
         </div>
-        <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+        <div className="h-2 bg-slate-200 dark:bg-black rounded-full overflow-hidden">
           <div
             className={`h-full rounded-full transition-all duration-700 ${
               confidencePct >= 70 ? 'bg-emerald-500' :
@@ -349,7 +349,7 @@ function ModelSignalCard({
     <div className="rounded-lg border border-slate-200 dark:border-slate-700/50 overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+        className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-neutral-900/50 transition-colors"
       >
         {expanded ? (
           <ChevronDown className="w-4 h-4 text-slate-400" />

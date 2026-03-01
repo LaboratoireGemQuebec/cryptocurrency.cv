@@ -160,7 +160,7 @@ function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargePro
 
   const cardClasses = [
     'flex flex-col md:flex-row h-auto md:h-[320px] rounded-3xl overflow-hidden',
-    'bg-white dark:bg-gray-900',
+    'bg-white dark:bg-black',
     'shadow-xl hover:shadow-2xl',
     style.glow,
     'dark:shadow-none dark:border dark:border-gray-800 dark:hover:border-gray-600',
@@ -183,7 +183,7 @@ function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargePro
     'opacity-40 animate-[pulse_8s_ease-in-out_infinite] motion-reduce:animate-none',
   ].join(' ');
 
-  const categoryClasses = 'inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200';
+  const categoryClasses = 'inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-gray-100 dark:bg-black text-gray-800 dark:text-gray-200';
   
   const badgeClasses = ['text-xs font-bold px-3 py-1.5 rounded-full shadow-lg', style.badge, style.badgeText].join(' ');
 

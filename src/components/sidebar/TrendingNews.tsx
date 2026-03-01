@@ -49,7 +49,7 @@ export default function TrendingNews({
   const trendingArticles = articles.slice(0, 5);
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">
@@ -78,7 +78,7 @@ export default function TrendingNews({
             <Link
               key={articleId}
               href={`/article/${articleSlug}`}
-              className="group flex items-start gap-3 p-3 -mx-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-ring"
+              className="group flex items-start gap-3 p-3 -mx-3 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors focus-ring"
               role="listitem"
             >
               {/* Rank Number */}
@@ -87,7 +87,7 @@ export default function TrendingNews({
                   flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-sm font-bold
                   ${index < 3 
                     ? 'bg-brand-500 text-black' 
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
+                    : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400'
                   }
                 `}
               >

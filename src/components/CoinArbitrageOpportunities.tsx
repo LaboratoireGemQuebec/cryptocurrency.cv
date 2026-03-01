@@ -90,14 +90,14 @@ export function CoinArbitrageOpportunities({ coinId, coinSymbol }: CoinArbitrage
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-48 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-48 bg-gray-200 dark:bg-black rounded" />
           </div>
           {[1, 2, 3].map(i => (
-            <div key={i} className="h-10 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
+            <div key={i} className="h-10 bg-gray-100 dark:bg-black/50 rounded-lg" />
           ))}
         </div>
       </div>
@@ -106,7 +106,7 @@ export function CoinArbitrageOpportunities({ coinId, coinSymbol }: CoinArbitrage
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-xl">💰</span>
           <h3 className="font-bold text-gray-900 dark:text-white">Arbitrage Opportunities</h3>
@@ -121,7 +121,7 @@ export function CoinArbitrageOpportunities({ coinId, coinSymbol }: CoinArbitrage
   }
 
   return (
-    <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -157,7 +157,7 @@ export function CoinArbitrageOpportunities({ coinId, coinSymbol }: CoinArbitrage
                     : opp.spreadPercent > 1 ? 'text-yellow-600 dark:text-yellow-400 font-semibold'
                     : 'text-gray-600 dark:text-gray-400';
                   return (
-                    <tr key={i} className="hover:bg-gray-50 dark:hover:bg-slate-700/30">
+                    <tr key={i} className="hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                       <td className="py-2 text-gray-900 dark:text-white font-medium">{opp.buyExchange}</td>
                       <td className="py-2 text-right text-gray-700 dark:text-slate-300">{formatPrice(opp.buyPrice)}</td>
                       <td className="py-2 text-gray-900 dark:text-white font-medium pl-4">{opp.sellExchange}</td>
@@ -177,7 +177,7 @@ export function CoinArbitrageOpportunities({ coinId, coinSymbol }: CoinArbitrage
       )}
 
       {/* Disclaimer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
         <p className="text-xs text-gray-500 dark:text-slate-400">
           ⚠️ Prices may vary. Fees not included. Not financial advice. Refreshes every 30s.
         </p>

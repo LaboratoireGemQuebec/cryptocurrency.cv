@@ -28,7 +28,7 @@ interface Narrative {
 const sentimentColors: Record<string, { border: string; text: string; badge: string }> = {
   bullish: { border: 'border-green-300 dark:border-green-700', text: 'text-green-700 dark:text-green-400', badge: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' },
   bearish: { border: 'border-red-300 dark:border-red-700', text: 'text-red-700 dark:text-red-400', badge: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400' },
-  neutral: { border: 'border-gray-300 dark:border-slate-600', text: 'text-gray-600 dark:text-gray-400', badge: 'bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400' },
+  neutral: { border: 'border-gray-300 dark:border-slate-600', text: 'text-gray-600 dark:text-gray-400', badge: 'bg-gray-100 dark:bg-black/50 text-gray-600 dark:text-gray-400' },
 };
 
 function StrengthRing({ value }: { value: number }) {
@@ -85,10 +85,10 @@ export function TrendingNarratives() {
         </div>
         <div className="flex gap-4 overflow-hidden">
           {[1, 2, 3, 4].map(i => (
-            <div key={i} className="min-w-[280px] bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-5 animate-pulse">
-              <div className="h-5 w-36 bg-gray-200 dark:bg-slate-700 rounded mb-3" />
-              <div className="h-3 w-full bg-gray-100 dark:bg-slate-700/50 rounded mb-2" />
-              <div className="h-3 w-2/3 bg-gray-100 dark:bg-slate-700/50 rounded" />
+            <div key={i} className="min-w-[280px] bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5 animate-pulse">
+              <div className="h-5 w-36 bg-gray-200 dark:bg-black rounded mb-3" />
+              <div className="h-3 w-full bg-gray-100 dark:bg-black/50 rounded mb-2" />
+              <div className="h-3 w-2/3 bg-gray-100 dark:bg-black/50 rounded" />
             </div>
           ))}
         </div>
@@ -124,7 +124,7 @@ export function TrendingNarratives() {
               <Link
                 key={narrative.id}
                 href="/narratives"
-                className={`min-w-[280px] max-w-[320px] flex-shrink-0 snap-start bg-white dark:bg-slate-800 rounded-2xl border-2 ${colors.border} p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`}
+                className={`min-w-[280px] max-w-[320px] flex-shrink-0 snap-start bg-white dark:bg-black rounded-2xl border-2 ${colors.border} p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`}
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex-1 min-w-0">
@@ -152,7 +152,7 @@ export function TrendingNarratives() {
                     {narrative.relatedTickers.slice(0, 4).map(ticker => (
                       <span
                         key={ticker}
-                        className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full font-medium"
+                        className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 rounded-full font-medium"
                       >
                         ${ticker}
                       </span>

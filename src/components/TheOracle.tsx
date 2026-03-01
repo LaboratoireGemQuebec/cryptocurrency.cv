@@ -141,7 +141,7 @@ export function TheOracle() {
   };
 
   return (
-    <div className="flex flex-col h-full max-h-[80vh] bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="flex flex-col h-full max-h-[80vh] bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="flex items-center gap-3 px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
         <div className="text-3xl">🔮</div>
@@ -168,7 +168,7 @@ export function TheOracle() {
                   ? 'bg-blue-500 text-white'
                   : message.role === 'system'
                   ? 'bg-purple-500/10 text-neutral-700 dark:text-neutral-300 border border-purple-500/20'
-                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white'
+                  : 'bg-neutral-100 dark:bg-black text-neutral-900 dark:text-white'
               }`}
             >
               <p className="text-sm whitespace-pre-wrap">{message.content}</p>
@@ -206,7 +206,7 @@ export function TheOracle() {
         {/* Loading indicator */}
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-neutral-100 dark:bg-neutral-800 rounded-2xl px-4 py-3">
+            <div className="bg-neutral-100 dark:bg-black rounded-2xl px-4 py-3">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" />
                 <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce [animation-delay:0.1s]" />
@@ -230,7 +230,7 @@ export function TheOracle() {
               <button
                 key={query}
                 onClick={() => handleSuggestedQuery(query)}
-                className="text-xs px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+                className="text-xs px-3 py-1.5 bg-neutral-100 dark:bg-black text-neutral-700 dark:text-neutral-300 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-900 transition-colors"
               >
                 {query}
               </button>
@@ -254,7 +254,7 @@ export function TheOracle() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask anything about crypto..."
-            className="flex-1 px-4 py-3 bg-neutral-100 dark:bg-neutral-800 border-0 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="flex-1 px-4 py-3 bg-neutral-100 dark:bg-black border-0 rounded-xl text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
             disabled={isLoading}
           />
           <button

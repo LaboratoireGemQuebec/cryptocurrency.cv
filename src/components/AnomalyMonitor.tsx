@@ -147,7 +147,7 @@ export function AnomalyMonitor({ className = '', refreshInterval = 30000 }: Anom
   }) || [];
 
   return (
-    <div className={`bg-white dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
       {/* ── Header ── */}
       <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
         <div className="flex items-center justify-between mb-4">
@@ -170,7 +170,7 @@ export function AnomalyMonitor({ className = '', refreshInterval = 30000 }: Anom
           <button
             onClick={fetchDashboard}
             disabled={isLoading}
-            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 transition-colors"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-black text-slate-500 transition-colors"
           >
             <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </button>
@@ -195,7 +195,7 @@ export function AnomalyMonitor({ className = '', refreshInterval = 30000 }: Anom
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                 filter === f
                   ? 'bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/30'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
+                  : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent hover:border-slate-300 dark:hover:border-slate-600'
               }`}
             >
               {f === 'all' ? 'All' : f === 'unack' ? 'Unacknowledged' : f.charAt(0).toUpperCase() + f.slice(1) + '+'}
@@ -285,7 +285,7 @@ function StatCard({
   color: string;
 }) {
   return (
-    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+    <div className="p-3 rounded-xl bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50">
       <div className="flex items-center gap-2 mb-1">
         <Icon className={`w-4 h-4 ${color}`} />
         <span className="text-xs text-slate-500 dark:text-slate-400">{label}</span>
@@ -315,7 +315,7 @@ function SignalCard({
       className={`text-left p-3 rounded-lg border transition-all ${
         selected
           ? 'bg-blue-50 dark:bg-blue-500/10 border-blue-300 dark:border-blue-500/30'
-          : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600'
+          : 'bg-slate-50 dark:bg-black/50 border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600'
       }`}
     >
       <div className="flex items-center justify-between">
@@ -379,7 +379,7 @@ function AnomalyCard({
       </button>
 
       {expanded && (
-        <div className="p-4 bg-white dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800 space-y-3">
+        <div className="p-4 bg-white dark:bg-black/50 border-t border-slate-100 dark:border-slate-800 space-y-3">
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div>
               <span className="text-xs text-slate-400 block">Expected Range</span>
@@ -402,7 +402,7 @@ function AnomalyCard({
               {anomaly.algorithms.map((algo) => (
                 <span
                   key={algo}
-                  className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 font-mono"
+                  className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-black text-slate-500 font-mono"
                 >
                   {algo}
                 </span>
@@ -412,7 +412,7 @@ function AnomalyCard({
 
           {/* AI Interpretation */}
           {anomaly.interpretation && (
-            <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+            <div className="p-3 rounded-lg bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50">
               <span className="text-xs text-slate-400 block mb-1">AI Interpretation</span>
               <p className="text-sm text-slate-700 dark:text-slate-300">{anomaly.interpretation}</p>
             </div>
@@ -432,7 +432,7 @@ function AnomalyCard({
             {!anomaly.falsePositive && (
               <button
                 onClick={onFalsePositive}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg bg-slate-50 dark:bg-black text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 transition-colors"
               >
                 <XCircle className="w-3.5 h-3.5" />
                 False Positive

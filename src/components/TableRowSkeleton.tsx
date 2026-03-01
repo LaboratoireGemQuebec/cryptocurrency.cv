@@ -104,11 +104,11 @@ interface CoinsTableSkeletonProps {
  */
 export function CoinsTableSkeleton({ rows = 10, showWatchlist = false }: CoinsTableSkeletonProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
+            <tr className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black/50">
               <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4 w-12">#</th>
               <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Coin</th>
               <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Price</th>

@@ -128,7 +128,7 @@ export default async function CategoryPage({ params }: Props) {
   const data = await getNewsByCategory(category, 50);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: SITE_URL },
         { name: 'News', url: `${SITE_URL}/category` },

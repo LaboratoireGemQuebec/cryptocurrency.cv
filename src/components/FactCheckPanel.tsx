@@ -36,7 +36,7 @@ interface FactCheckPanelProps {
 const verdictConfig: Record<string, { color: string; bgColor: string; icon: string; label: string }> = {
   verified: { color: 'text-green-700 dark:text-green-400', bgColor: 'bg-green-100 dark:bg-green-900/30', icon: '✅', label: 'Verified' },
   likely: { color: 'text-yellow-700 dark:text-yellow-400', bgColor: 'bg-yellow-100 dark:bg-yellow-900/30', icon: '🟡', label: 'Likely' },
-  unverified: { color: 'text-gray-600 dark:text-gray-400', bgColor: 'bg-gray-100 dark:bg-gray-800/50', icon: '❓', label: 'Unverified' },
+  unverified: { color: 'text-gray-600 dark:text-gray-400', bgColor: 'bg-gray-100 dark:bg-black/50', icon: '❓', label: 'Unverified' },
   disputed: { color: 'text-red-700 dark:text-red-400', bgColor: 'bg-red-100 dark:bg-red-900/30', icon: '❌', label: 'Disputed' },
 };
 
@@ -94,15 +94,15 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-40 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="ml-auto h-8 w-20 bg-gray-200 dark:bg-slate-700 rounded-full" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-40 bg-gray-200 dark:bg-black rounded" />
+            <div className="ml-auto h-8 w-20 bg-gray-200 dark:bg-black rounded-full" />
           </div>
           {[1, 2, 3].map(i => (
-            <div key={i} className="h-16 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
+            <div key={i} className="h-16 bg-gray-100 dark:bg-black/50 rounded-xl" />
           ))}
         </div>
       </div>
@@ -111,7 +111,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">🔍</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Fact Check</h2>
@@ -135,7 +135,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
   if (!data || data.claims.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">🔍</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Fact Check</h2>
@@ -151,7 +151,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
     : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400';
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -181,7 +181,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
             >
               <button
                 onClick={() => toggleClaim(index)}
-                className="w-full p-4 text-left flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
+                className="w-full p-4 text-left flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition"
               >
                 <span className={`mt-0.5 px-2 py-0.5 rounded-full text-xs font-semibold ${verdict.bgColor} ${verdict.color}`}>
                   {verdict.icon} {verdict.label}
@@ -215,7 +215,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
 
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-gray-100 dark:border-slate-700">
-                  <div className="mt-3 p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg">
+                  <div className="mt-3 p-3 bg-gray-50 dark:bg-black/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-1">
                       Verification Notes
                     </h4>
@@ -236,7 +236,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 Powered by AI · {new Date(data.checkedAt).toLocaleTimeString()}
         </span>

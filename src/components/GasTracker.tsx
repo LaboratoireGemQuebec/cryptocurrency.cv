@@ -263,7 +263,7 @@ export function GasTracker() {
       <div className="space-y-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="h-32 bg-gray-200 dark:bg-slate-800 rounded-xl animate-pulse" />
+            <div key={i} className="h-32 bg-gray-200 dark:bg-black rounded-xl animate-pulse" />
           ))}
         </div>
       </div>
@@ -299,7 +299,7 @@ export function GasTracker() {
         <button
           onClick={handleRefresh}
           disabled={isRefreshing}
-          className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors disabled:opacity-50"
+          className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg transition-colors disabled:opacity-50"
         >
           <ArrowPathIcon className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
           {t('refresh')}
@@ -321,7 +321,7 @@ export function GasTracker() {
               className={`p-5 rounded-xl border transition-all ${
                 priority === 'instant'
                   ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white'
-                  : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700'
+                  : 'bg-white dark:bg-black border-gray-200 dark:border-slate-700'
               }`}
             >
               <div className="flex items-center gap-2 mb-3">
@@ -357,7 +357,7 @@ export function GasTracker() {
       </div>
 
       {/* Transaction Type Selector */}
-      <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+      <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
         <h3 className="text-sm font-medium text-slate-900 dark:text-white mb-4">
           Estimate costs for:
         </h3>
@@ -369,7 +369,7 @@ export function GasTracker() {
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors text-left ${
                 selectedTx === id
                   ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+                  : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >
               <div>{info.label}</div>
@@ -379,7 +379,7 @@ export function GasTracker() {
         </div>
 
         {/* Cost Summary */}
-        <div className="mt-6 p-4 bg-gray-50 dark:bg-slate-900 rounded-lg">
+        <div className="mt-6 p-4 bg-gray-50 dark:bg-black rounded-lg">
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">
             {TX_GAS_LIMITS[selectedTx].description} cost at each speed:
           </div>

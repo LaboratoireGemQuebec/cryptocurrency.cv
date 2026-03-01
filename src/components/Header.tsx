@@ -351,10 +351,10 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
       aria-label={`${item.label} submenu`}
     >
       {/* Arrow pointer */}
-      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-slate-800 border-l border-t border-gray-200 dark:border-slate-700" />
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-black border-l border-t border-gray-200 dark:border-slate-700" />
       
       <div 
-        className={`relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 shadow-xl overflow-hidden ${
+        className={`relative bg-white dark:bg-black border border-gray-200 dark:border-slate-700 shadow-xl overflow-hidden ${
           hasMultipleSections ? 'min-w-[480px]' : 'min-w-[320px]'
         }`}
         style={{
@@ -375,7 +375,7 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
                       <li key={linkIdx}>
                         <Link
                           href={link.href}
-                          className="flex items-center px-2 py-1.5 text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors duration-100"
+                          className="flex items-center px-2 py-1.5 text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors duration-100"
                           role="menuitem"
                         >
                           <span className="text-[13px] font-medium">{link.label}</span>
@@ -389,7 +389,7 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
           </div>
 
           {/* Featured Card - Right side */}
-          <div className="w-44 bg-gray-900 dark:bg-slate-900 p-4 flex flex-col justify-between border-l border-gray-200 dark:border-slate-700">
+          <div className="w-44 bg-gray-900 dark:bg-black p-4 flex flex-col justify-between border-l border-gray-200 dark:border-slate-700">
             <div>
               <h4 className="font-semibold text-white text-sm mb-1">
                 {item.megaMenu.featured.title}
@@ -495,7 +495,7 @@ export default function Header() {
 
       <header 
         ref={headerRef}
-        className={`sticky top-0 z-40 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-all duration-300 w-full max-w-full ${
+        className={`sticky top-0 z-40 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 transition-all duration-300 w-full max-w-full ${
           isScrolled ? 'shadow-sm' : ''
         }`}
         style={{
@@ -571,8 +571,8 @@ export default function Header() {
           <div className="flex items-center gap-1 flex-shrink-0">
             {/* Market Widget - Desktop only (2xl+ to avoid crowding nav) */}
             <div className="hidden 2xl:flex items-center mr-2">
-              <div className="w-px h-5 bg-gray-200 dark:bg-slate-700 mr-3" />
-              <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />}>
+              <div className="w-px h-5 bg-gray-200 dark:bg-black mr-3" />
+              <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-black rounded animate-pulse" />}>
                 <MarketWidget />
               </Suspense>
             </div>
@@ -580,14 +580,14 @@ export default function Header() {
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="flex items-center gap-2 px-3 py-2 text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-all duration-200 focus-ring"
+              className="flex items-center gap-2 px-3 py-2 text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg transition-all duration-200 focus-ring"
               aria-label={`${tCommon('search')} (⌘K)`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <span className="hidden md:flex items-center gap-1 text-xs text-gray-500 dark:text-slate-400">
-                <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-slate-800 rounded text-[10px] font-medium">⌘K</kbd>
+                <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-black rounded text-[10px] font-medium">⌘K</kbd>
               </span>
             </button>
 
@@ -603,7 +603,7 @@ export default function Header() {
               href="https://github.com/nirholas/free-crypto-news"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[13px] font-bold hover:bg-gray-700 dark:hover:bg-gray-100 active:scale-[0.98] transition-all duration-100 focus-ring rounded-sm"
+              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[13px] font-bold hover:bg-gray-700 dark:hover:bg-neutral-900 active:scale-[0.98] transition-all duration-100 focus-ring rounded-sm"
               aria-label="Star on GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -14,7 +14,7 @@ import { Skeleton } from '@/components/Skeletons';
 
 export default function Loading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Skeleton className="h-10 w-48 mb-2" />
@@ -23,7 +23,7 @@ export default function Loading() {
         {/* Portfolio summary cards */}
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           {[...Array(3)].map((_, i) => (
-            <div key={i} className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6">
+            <div key={i} className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6">
               <Skeleton className="h-4 w-24 mb-2" />
               <Skeleton className="h-8 w-40 mb-1" />
               <Skeleton className="h-4 w-20" />
@@ -32,13 +32,13 @@ export default function Loading() {
         </div>
 
         {/* Allocation chart */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6 mb-8">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6 mb-8">
           <Skeleton className="h-6 w-36 mb-4" />
           <Skeleton className="h-48 w-48 rounded-full mx-auto" />
         </div>
 
         {/* Holdings table */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-6">
           <Skeleton className="h-6 w-32 mb-4" />
           {/* Table header */}
           <div className="grid grid-cols-5 gap-4 pb-3 border-b border-gray-100 dark:border-slate-700 mb-3">

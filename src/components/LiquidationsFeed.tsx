@@ -319,11 +319,11 @@ export function LiquidationsFeed() {
       <div className="space-y-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="h-24 bg-gray-200 dark:bg-slate-800 rounded-lg animate-pulse" />
+            <div key={i} className="h-24 bg-gray-200 dark:bg-black rounded-lg animate-pulse" />
           ))}
         </div>
         {Array.from({ length: 5 }).map((_, i) => (
-          <div key={i} className="h-16 bg-gray-200 dark:bg-slate-800 rounded-lg animate-pulse" />
+          <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded-lg animate-pulse" />
         ))}
       </div>
     );
@@ -359,7 +359,7 @@ export function LiquidationsFeed() {
             className={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
               liveMode 
                 ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900' 
-                : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300'
+                : 'bg-gray-200 dark:bg-black text-gray-700 dark:text-gray-300'
             }`}
           >
             {liveMode ? 'Pause' : 'Resume'}
@@ -367,7 +367,7 @@ export function LiquidationsFeed() {
           <button
             onClick={fetchInitialData}
             aria-label="Refresh liquidations"
-            className="p-1.5 text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+            className="p-1.5 text-gray-500 hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-lg transition-colors"
           >
             <ArrowPathIcon className="w-5 h-5" aria-hidden="true" />
           </button>
@@ -384,7 +384,7 @@ export function LiquidationsFeed() {
 
       {/* Stats Summary */}
       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
-        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+        <div className="p-3 sm:p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl">
           <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
             <ArrowTrendingDownIcon className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">Longs Liquidated</span>
@@ -393,7 +393,7 @@ export function LiquidationsFeed() {
             {formatAmount(stats.totalLongs)}
           </div>
         </div>
-        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+        <div className="p-3 sm:p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl">
           <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
             <ArrowTrendingUpIcon className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">Shorts Liquidated</span>
@@ -402,7 +402,7 @@ export function LiquidationsFeed() {
             {formatAmount(stats.totalShorts)}
           </div>
         </div>
-        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+        <div className="p-3 sm:p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl">
           <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">
             <CurrencyDollarIcon className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">Largest Liquidation</span>
@@ -416,7 +416,7 @@ export function LiquidationsFeed() {
             </div>
           )}
         </div>
-        <div className="p-3 sm:p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl">
+        <div className="p-3 sm:p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl">
           <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">Last Hour Volume</div>
           <div className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-mono">
             {formatAmount(stats.lastHourVolume)}
@@ -449,7 +449,7 @@ export function LiquidationsFeed() {
           value={minAmount}
           onChange={(e) => setMinAmount(Number(e.target.value))}
           aria-label="Minimum liquidation size"
-          className="px-3 py-2 text-sm border border-gray-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
+          className="px-3 py-2 text-sm border border-gray-300 dark:border-slate-700 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white"
         >
           <option value={0}>All sizes</option>
           <option value={10000}>$10K+</option>

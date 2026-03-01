@@ -134,11 +134,11 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-5 shadow-sm">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5 shadow-sm">
         <div className="animate-pulse space-y-3">
-          <div className="h-5 w-40 bg-gray-200 dark:bg-slate-700 rounded" />
-          <div className="h-10 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
-          <div className="h-10 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
+          <div className="h-5 w-40 bg-gray-200 dark:bg-black rounded" />
+          <div className="h-10 bg-gray-100 dark:bg-black/50 rounded-lg" />
+          <div className="h-10 bg-gray-100 dark:bg-black/50 rounded-lg" />
         </div>
       </div>
     );
@@ -147,8 +147,8 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
   // Fallback: simple bullish/bearish toggle
   if (!prediction) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
-        <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/50">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+        <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
           <div className="flex items-center gap-2">
             <span>🔮</span>
             <h3 className="font-bold text-gray-900 dark:text-white text-sm">Your Outlook</h3>
@@ -166,7 +166,7 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
                 fallbackVote === 'bullish'
                   ? 'bg-green-500 text-white scale-105'
                   : fallbackVote !== null
-                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400'
+                  ? 'bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400'
                   : 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/40'
               }`}
             >
@@ -179,7 +179,7 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
                 fallbackVote === 'bearish'
                   ? 'bg-red-500 text-white scale-105'
                   : fallbackVote !== null
-                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400'
+                  ? 'bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400'
                   : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40'
               }`}
             >
@@ -197,8 +197,8 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
-      <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/50">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+      <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span>🔮</span>
@@ -225,14 +225,14 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
                 className={`w-full relative overflow-hidden rounded-xl text-left transition-all ${
                   showResults
                     ? 'cursor-default'
-                    : 'hover:bg-gray-50 dark:hover:bg-slate-700/50 active:scale-[0.98]'
+                    : 'hover:bg-gray-50 dark:hover:bg-neutral-900/50 active:scale-[0.98]'
                 } ${isVoted ? 'ring-2 ring-brand-500 dark:ring-amber-400' : ''}`}
               >
                 {/* Background bar */}
                 {showResults && (
                   <div
                     className={`absolute inset-0 rounded-xl transition-all duration-700 ${
-                      isVoted ? 'bg-brand-100 dark:bg-brand-900/30' : 'bg-gray-100 dark:bg-slate-700/30'
+                      isVoted ? 'bg-brand-100 dark:bg-brand-900/30' : 'bg-gray-100 dark:bg-black/30'
                     }`}
                     style={{ width: `${pct}%` }}
                   />

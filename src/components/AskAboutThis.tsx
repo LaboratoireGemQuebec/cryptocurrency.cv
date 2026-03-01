@@ -67,7 +67,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
   const showClear = history.length > 0 || !!streamText;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Input bar */}
       <form onSubmit={handleSubmit} className="flex items-center gap-2 p-3 border-b border-gray-100 dark:border-slate-700">
         <span className="text-lg flex-shrink-0">❓</span>

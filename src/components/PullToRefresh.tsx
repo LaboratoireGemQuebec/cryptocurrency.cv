@@ -118,7 +118,7 @@ export default function PullToRefresh({
         }}
       >
         <div 
-          className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center"
+          className="w-10 h-10 rounded-full bg-white dark:bg-black shadow-lg flex items-center justify-center"
         >
           <svg
             className={`w-6 h-6 text-orange-500 ${isRefreshing ? 'animate-spin' : ''}`}

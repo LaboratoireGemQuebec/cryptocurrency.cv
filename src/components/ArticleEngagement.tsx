@@ -31,7 +31,7 @@ const reactionConfig: { key: ReactionType; emoji: string; label: string; color: 
   { key: 'bullish', emoji: '🚀', label: 'Bullish', color: 'hover:bg-green-50 dark:hover:bg-green-900/20', activeColor: 'bg-green-100 dark:bg-green-900/30 ring-2 ring-green-400' },
   { key: 'bearish', emoji: '📉', label: 'Bearish', color: 'hover:bg-red-50 dark:hover:bg-red-900/20', activeColor: 'bg-red-100 dark:bg-red-900/30 ring-2 ring-red-400' },
   { key: 'interesting', emoji: '🤔', label: 'Interesting', color: 'hover:bg-blue-50 dark:hover:bg-blue-900/20', activeColor: 'bg-blue-100 dark:bg-blue-900/30 ring-2 ring-blue-400' },
-  { key: 'boring', emoji: '😴', label: 'Boring', color: 'hover:bg-gray-100 dark:hover:bg-slate-700', activeColor: 'bg-gray-200 dark:bg-slate-600 ring-2 ring-gray-400' },
+  { key: 'boring', emoji: '😴', label: 'Boring', color: 'hover:bg-gray-100 dark:hover:bg-neutral-900', activeColor: 'bg-gray-200 dark:bg-black ring-2 ring-gray-400' },
 ];
 
 export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagementProps) {
@@ -116,7 +116,7 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
   const dominantPct = dominant && total > 0 ? Math.round((reactions[dominant.key] / total) * 100) : 0;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-5 space-y-4">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-5 space-y-4">
       {/* Dominant reaction summary */}
       {dominant && total > 0 && (
         <div className="flex items-center gap-2 text-sm">
@@ -155,19 +155,19 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
         <span className="text-xs text-gray-500 dark:text-slate-400 mr-1">Share:</span>
         <button
           onClick={handleCopyLink}
-          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition"
+          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 transition"
         >
           {copied ? '✓ Copied' : '🔗 Link'}
         </button>
         <button
           onClick={handleShareX}
-          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition"
+          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 transition"
         >
           𝕏 Post
         </button>
         <button
           onClick={handleShareTelegram}
-          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition"
+          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 transition"
         >
           ✈️ Telegram
         </button>

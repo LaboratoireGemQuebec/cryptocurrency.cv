@@ -58,7 +58,7 @@ const statusConfig: Record<ConnectionState, {
   },
   disconnected: {
     color: 'text-gray-500 dark:text-gray-400',
-    bgColor: 'bg-gray-100 dark:bg-gray-800',
+    bgColor: 'bg-gray-100 dark:bg-black',
     label: 'Disconnected',
     icon: '○',
     pulseColor: 'bg-gray-400',

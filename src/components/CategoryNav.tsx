@@ -23,7 +23,7 @@ interface CategoryNavProps {
 }
 
 const categories = [
-  { slug: '', label: 'All News', icon: '📰', color: 'bg-gray-100 dark:bg-slate-800' },
+  { slug: '', label: 'All News', icon: '📰', color: 'bg-gray-100 dark:bg-black' },
   { slug: 'bitcoin', label: 'Bitcoin', icon: '₿', color: 'bg-orange-100 dark:bg-orange-900/30' },
   { slug: 'ethereum', label: 'Ethereum', icon: 'Ξ', color: 'bg-indigo-100 dark:bg-indigo-900/30' },
   { slug: 'defi', label: 'DeFi', icon: '🏦', color: 'bg-green-100 dark:bg-green-900/30' },
@@ -76,7 +76,7 @@ export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {
 
   return (
     <nav 
-      className="border-b border-gray-100 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm sticky top-[64px] z-30"
+      className="border-b border-gray-100 dark:border-slate-800 bg-white/95 dark:bg-black/95 backdrop-blur-sm sticky top-[64px] z-30"
       aria-label="News categories"
     >
       <div className="max-w-7xl mx-auto px-4 relative">

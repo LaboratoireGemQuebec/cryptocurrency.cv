@@ -209,7 +209,7 @@ export function WhaleAlertsDashboard() {
       case 'exchange_deposit': return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300';
       case 'exchange_withdrawal': return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300';
       case 'whale_transfer': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300';
-      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-black/30 dark:text-gray-300';
     }
   };
 
@@ -233,16 +233,16 @@ export function WhaleAlertsDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
           <div className="animate-pulse space-y-4">
-            <div className="h-8 w-48 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-4 gap-4">
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="h-20 bg-gray-200 dark:bg-slate-700 rounded" />
+                <div key={i} className="h-20 bg-gray-200 dark:bg-black rounded" />
               ))}
             </div>
             {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="h-16 bg-gray-200 dark:bg-slate-700 rounded" />
+              <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded" />
             ))}
           </div>
         </div>
@@ -253,7 +253,7 @@ export function WhaleAlertsDashboard() {
   // Error state
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg
             className="w-12 h-12 text-red-500 mb-4"
@@ -299,7 +299,7 @@ export function WhaleAlertsDashboard() {
       {/* Filters */}
       <div className="flex flex-wrap items-center gap-4">
         {/* Blockchain Filter */}
-        <div className="flex gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+        <div className="flex gap-1 bg-gray-100 dark:bg-black rounded-lg p-1">
           {(['all', 'ethereum', 'bitcoin'] as const).map((chain) => (
             <button
               key={chain}
@@ -309,7 +309,7 @@ export function WhaleAlertsDashboard() {
               }}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors capitalize ${
                 blockchain === chain
-                  ? 'bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                   : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -325,7 +325,7 @@ export function WhaleAlertsDashboard() {
             setMinValue(parseInt(e.target.value));
             setLoading(true);
           }}
-          className="px-3 py-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-sm border-0"
+          className="px-3 py-2 bg-gray-100 dark:bg-black rounded-lg text-sm border-0"
         >
           {MIN_VALUE_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -338,7 +338,7 @@ export function WhaleAlertsDashboard() {
         <select
           value={typeFilter}
           onChange={(e) => setTypeFilter(e.target.value as TypeFilter)}
-          className="px-3 py-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-sm border-0"
+          className="px-3 py-2 bg-gray-100 dark:bg-black rounded-lg text-sm border-0"
         >
           <option value="all">All Types</option>
           <option value="exchange_deposit">Exchange Deposits</option>
@@ -350,7 +350,7 @@ export function WhaleAlertsDashboard() {
         <select
           value={significanceFilter}
           onChange={(e) => setSignificanceFilter(e.target.value as SignificanceFilter)}
-          className="px-3 py-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-sm border-0"
+          className="px-3 py-2 bg-gray-100 dark:bg-black rounded-lg text-sm border-0"
         >
           <option value="all">All Sizes</option>
           <option value="notable">Notable Only</option>
@@ -427,7 +427,7 @@ export function WhaleAlertsDashboard() {
       )}
 
       {/* Alerts List */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
         <div className="p-4 border-b border-gray-200 dark:border-slate-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             🐋 Recent Whale Transactions
@@ -446,7 +446,7 @@ export function WhaleAlertsDashboard() {
             filteredAlerts.map((alert) => (
               <div
                 key={alert.id}
-                className={`p-4 hover:bg-gray-50 dark:hover:bg-slate-700/30 transition-colors ${getSignificanceColor(alert.significance)}`}
+                className={`p-4 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors ${getSignificanceColor(alert.significance)}`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-3">

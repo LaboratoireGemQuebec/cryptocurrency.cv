@@ -103,7 +103,7 @@ export function WatchlistButton({
         transition-all duration-200
         ${isInWatchlist 
           ? 'text-yellow-500 hover:text-yellow-600 dark:text-yellow-400 dark:hover:text-yellow-300 bg-yellow-50 dark:bg-yellow-500/10 hover:bg-yellow-100 dark:hover:bg-yellow-500/20' 
-          : 'text-gray-400 hover:text-yellow-500 dark:text-gray-500 dark:hover:text-yellow-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+          : 'text-gray-400 hover:text-yellow-500 dark:text-gray-500 dark:hover:text-yellow-400 hover:bg-gray-100 dark:hover:bg-neutral-900'
         }
         focus:outline-none focus:ring-2 focus:ring-yellow-500/50
         ${className}

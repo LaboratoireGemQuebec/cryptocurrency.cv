@@ -119,7 +119,7 @@ export default async function SentimentPage() {
   const data = await getSentiment();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-6xl mx-auto">
         <Header />
 
@@ -134,13 +134,13 @@ export default async function SentimentPage() {
           {data ? (
             <div className="space-y-8">
               {/* Overall Sentiment Card */}
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+              <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="text-center">
                     <h2 className="text-lg text-gray-500 dark:text-slate-400 mb-4">Market Sentiment Score</h2>
                     <SentimentGauge score={data.market.score} />
                     <div className="mt-12">
-                      <span className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-lg font-bold ${sentimentColors[data.market.overall]?.bg || 'bg-gray-100 dark:bg-slate-700'} ${sentimentColors[data.market.overall]?.text || 'text-gray-600 dark:text-slate-300'}`}>
+                      <span className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-lg font-bold ${sentimentColors[data.market.overall]?.bg || 'bg-gray-100 dark:bg-black'} ${sentimentColors[data.market.overall]?.text || 'text-gray-600 dark:text-slate-300'}`}>
                         {sentimentEmojis[data.market.overall] || '➡️'} {data.market.overall.replace('_', ' ').toUpperCase()}
                       </span>
                     </div>
@@ -173,7 +173,7 @@ export default async function SentimentPage() {
                   {data.articles?.map((article, i) => (
                     <div 
                       key={i} 
-                      className={`bg-white dark:bg-slate-800 rounded-xl border p-5 ${sentimentColors[article.sentiment]?.border || 'border-gray-200 dark:border-slate-700'}`}
+                      className={`bg-white dark:bg-black rounded-xl border p-5 ${sentimentColors[article.sentiment]?.border || 'border-gray-200 dark:border-slate-700'}`}
                     >
                       <div className="flex items-start justify-between gap-4 mb-3">
                         <div className="flex-1">
@@ -181,10 +181,10 @@ export default async function SentimentPage() {
                           <p className="text-sm text-gray-500 dark:text-slate-400">{article.source}</p>
                         </div>
                         <div className="flex flex-col items-end gap-2">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${sentimentColors[article.sentiment]?.bg || 'bg-gray-100 dark:bg-slate-700'} ${sentimentColors[article.sentiment]?.text || 'text-gray-600 dark:text-slate-300'}`}>
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${sentimentColors[article.sentiment]?.bg || 'bg-gray-100 dark:bg-black'} ${sentimentColors[article.sentiment]?.text || 'text-gray-600 dark:text-slate-300'}`}>
                             {sentimentEmojis[article.sentiment] || '➡️'} {article.sentiment.replace('_', ' ')}
                           </span>
-                          <span className={`text-xs px-2 py-0.5 rounded ${article.impactLevel === 'high' ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400' : article.impactLevel === 'medium' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400' : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300'}`}>
+                          <span className={`text-xs px-2 py-0.5 rounded ${article.impactLevel === 'high' ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400' : article.impactLevel === 'medium' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400' : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-300'}`}>
                             {article.impactLevel} impact
                           </span>
                         </div>
@@ -209,7 +209,7 @@ export default async function SentimentPage() {
               </div>
             </div>
           ) : (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Sentiment Analysis Unavailable</h3>
               <p className="text-gray-500 dark:text-slate-400 mb-4">AI features require GROQ_API_KEY to be configured</p>

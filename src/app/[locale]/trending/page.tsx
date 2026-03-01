@@ -59,7 +59,7 @@ export default async function TrendingPage() {
   const data = await getTrending();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -76,7 +76,7 @@ export default async function TrendingPage() {
               {data.trending.map((topic, index) => (
                 <div
                   key={topic.topic}
-                  className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg dark:hover:shadow-xl transition"
+                  className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg dark:hover:shadow-xl transition"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ export default async function TrendingPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Analyzing trends...</h3>
               <p className="text-gray-500 dark:text-slate-400">Check back soon for trending topics</p>
@@ -121,7 +121,7 @@ export default async function TrendingPage() {
           )}
 
           {/* Sentiment Legend */}
-          <div className="mt-8 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700">
+          <div className="mt-8 p-4 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700">
             <h4 className="font-medium mb-3 text-gray-900 dark:text-white">Understanding Sentiment</h4>
             <div className="flex flex-wrap gap-4 text-sm text-gray-700 dark:text-slate-300">
               <div className="flex items-center gap-2">

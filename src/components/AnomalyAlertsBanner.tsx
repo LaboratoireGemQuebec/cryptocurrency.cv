@@ -125,7 +125,7 @@ export function AnomalyAlertsBanner({
 
   if (loading) {
     return (
-      <div className={`animate-pulse h-12 bg-gray-100 dark:bg-gray-800 rounded-lg ${className}`} />
+      <div className={`animate-pulse h-12 bg-gray-100 dark:bg-black rounded-lg ${className}`} />
     );
   }
 
@@ -140,7 +140,7 @@ export function AnomalyAlertsBanner({
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
           <span>🔔</span>
           Market Alerts
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-gray-200 dark:bg-gray-700">
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-gray-200 dark:bg-black">
             {visibleAnomalies.length}
           </span>
         </h3>

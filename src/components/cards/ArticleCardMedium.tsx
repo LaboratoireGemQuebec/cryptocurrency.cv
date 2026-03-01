@@ -153,7 +153,7 @@ function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumP
         {...linkProps}
         className={`
           flex flex-col h-full rounded-2xl overflow-hidden
-          bg-white dark:bg-gray-900
+          bg-white dark:bg-black
           shadow-lg hover:shadow-2xl ${style.glow}
           dark:shadow-none dark:border dark:border-gray-800 dark:hover:border-gray-600
           transform transition-all duration-300 ease-out
@@ -207,7 +207,7 @@ function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumP
           {/* Category Badge - Glassmorphism */}
           {article.category && (
             <div className="absolute top-4 left-4">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-white backdrop-blur-md shadow-lg">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-white/95 dark:bg-black/95 text-gray-900 dark:text-white backdrop-blur-md shadow-lg">
                 <span className={`w-1.5 h-1.5 rounded-full ${style.accent}`} aria-hidden="true" />
                 {article.category}
               </span>
@@ -217,7 +217,7 @@ function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumP
           {/* External link indicator with hover effect */}
           {externalLink && (
             <div className="absolute top-4 right-4">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg group-hover:scale-110 transition-transform duration-300 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/95 dark:bg-black/95 backdrop-blur-md shadow-lg group-hover:scale-110 transition-transform duration-300 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
                 <svg 
                   className="w-4 h-4 text-gray-700 dark:text-gray-300" 
                   fill="none" 

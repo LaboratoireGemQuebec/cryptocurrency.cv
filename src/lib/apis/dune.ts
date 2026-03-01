@@ -362,3 +362,174 @@ export async function getBridgeVolumes(): Promise<
  * Alias for getExecutionResult — get query results by execution ID.
  */
 export const getQueryResults = getExecutionResult;
+
+// ---------------------------------------------------------------------------
+// Extended Dune Analytics Features
+// ---------------------------------------------------------------------------
+
+/**
+ * Get top NFT collections by volume.
+ */
+export async function getTopNFTCollections(): Promise<
+  Array<{ collection: string; volume24h: number; sales24h: number; floorPrice: number }> | null
+> {
+  const result = await getLatestResults<{
+    collection_name: string;
+    volume_24h: number;
+    sales_24h: number;
+    floor_price: number;
+  }>(POPULAR_QUERIES.topNftCollections);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    collection: r.collection_name || 'Unknown',
+    volume24h: r.volume_24h || 0,
+    sales24h: r.sales_24h || 0,
+    floorPrice: r.floor_price || 0,
+  }));
+}
+
+/**
+ * Get daily active addresses across chains.
+ */
+export async function getDailyActiveAddresses(): Promise<
+  Array<{ chain: string; date: string; activeAddresses: number }> | null
+> {
+  const result = await getLatestResults<{
+    blockchain: string;
+    date: string;
+    active_addresses: number;
+  }>(POPULAR_QUERIES.dailyActiveAddresses);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    chain: r.blockchain || 'Unknown',
+    date: r.date || '',
+    activeAddresses: r.active_addresses || 0,
+  }));
+}
+
+/**
+ * Get MEV activity on Ethereum (sandwich attacks, arbitrage, liquidations).
+ */
+export async function getMEVActivity(): Promise<
+  Array<{ type: string; count: number; profitUsd: number; date: string }> | null
+> {
+  const result = await getLatestResults<{
+    mev_type: string;
+    tx_count: number;
+    profit_usd: number;
+    day: string;
+  }>(POPULAR_QUERIES.mevActivity);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    type: r.mev_type || 'Unknown',
+    count: r.tx_count || 0,
+    profitUsd: r.profit_usd || 0,
+    date: r.day || '',
+  }));
+}
+
+/**
+ * Get Uniswap V3 pool analytics.
+ */
+export async function getUniswapV3Analytics(): Promise<
+  Array<{ pool: string; tvl: number; volume24h: number; fees24h: number }> | null
+> {
+  const result = await getLatestResults<{
+    pool_name: string;
+    tvl_usd: number;
+    volume_24h: number;
+    fees_24h: number;
+  }>(POPULAR_QUERIES.uniswapV3Pools);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    pool: r.pool_name || 'Unknown',
+    tvl: r.tvl_usd || 0,
+    volume24h: r.volume_24h || 0,
+    fees24h: r.fees_24h || 0,
+  }));
+}
+
+/**
+ * Get recent airdrop claims and activity.
+ */
+export async function getAirdropTracker(): Promise<
+  Array<{ project: string; token: string; claimers: number; totalClaimed: number; date: string }> | null
+> {
+  const result = await getLatestResults<{
+    project: string;
+    token_symbol: string;
+    unique_claimers: number;
+    total_claimed: number;
+    day: string;
+  }>(POPULAR_QUERIES.airdropTracker);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    project: r.project || 'Unknown',
+    token: r.token_symbol || '',
+    claimers: r.unique_claimers || 0,
+    totalClaimed: r.total_claimed || 0,
+    date: r.day || '',
+  }));
+}
+
+/**
+ * Execute a custom SQL query with parameters — useful for parameterized queries.
+ */
+export async function executeCustomQuery<T = DuneTableRow>(
+  queryId: number,
+  params: Record<string, string | number>,
+): Promise<QueryResult<T> | null> {
+  return executeQuery<T>(queryId, params);
+}
+
+/**
+ * Get a comprehensive Dune analytics dashboard.
+ */
+export async function getDuneDashboard(): Promise<{
+  dexVolume: Awaited<ReturnType<typeof getDexVolumeByProtocol>>;
+  ethGas: Awaited<ReturnType<typeof getEthGasAnalytics>>;
+  stablecoins: Awaited<ReturnType<typeof getStablecoinSupply>>;
+  l2Comparison: Awaited<ReturnType<typeof getL2TransactionComparison>>;
+  bridges: Awaited<ReturnType<typeof getBridgeVolumes>>;
+  nftCollections: Awaited<ReturnType<typeof getTopNFTCollections>>;
+  dailyActiveAddresses: Awaited<ReturnType<typeof getDailyActiveAddresses>>;
+  mev: Awaited<ReturnType<typeof getMEVActivity>>;
+  airdrops: Awaited<ReturnType<typeof getAirdropTracker>>;
+  timestamp: string;
+}> {
+  const [dexVolume, ethGas, stablecoins, l2Comparison, bridges, nftCollections, dailyActive, mev, airdrops] =
+    await Promise.allSettled([
+      getDexVolumeByProtocol(),
+      getEthGasAnalytics(),
+      getStablecoinSupply(),
+      getL2TransactionComparison(),
+      getBridgeVolumes(),
+      getTopNFTCollections(),
+      getDailyActiveAddresses(),
+      getMEVActivity(),
+      getAirdropTracker(),
+    ]);
+
+  return {
+    dexVolume: dexVolume.status === 'fulfilled' ? dexVolume.value : null,
+    ethGas: ethGas.status === 'fulfilled' ? ethGas.value : null,
+    stablecoins: stablecoins.status === 'fulfilled' ? stablecoins.value : null,
+    l2Comparison: l2Comparison.status === 'fulfilled' ? l2Comparison.value : null,
+    bridges: bridges.status === 'fulfilled' ? bridges.value : null,
+    nftCollections: nftCollections.status === 'fulfilled' ? nftCollections.value : null,
+    dailyActiveAddresses: dailyActive.status === 'fulfilled' ? dailyActive.value : null,
+    mev: mev.status === 'fulfilled' ? mev.value : null,
+    airdrops: airdrops.status === 'fulfilled' ? airdrops.value : null,
+    timestamp: new Date().toISOString(),
+  };
+}

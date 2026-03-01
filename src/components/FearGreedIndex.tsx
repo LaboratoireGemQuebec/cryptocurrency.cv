@@ -98,13 +98,13 @@ export function FearGreedIndex({
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
         <div className="animate-pulse space-y-4">
-          <div className="h-8 w-48 bg-neutral-200 dark:bg-neutral-800 rounded" />
+          <div className="h-8 w-48 bg-neutral-200 dark:bg-black rounded" />
           <div className="flex justify-center">
-            <div className="w-48 h-48 bg-neutral-200 dark:bg-neutral-800 rounded-full" />
+            <div className="w-48 h-48 bg-neutral-200 dark:bg-black rounded-full" />
           </div>
-          <div className="h-20 bg-neutral-200 dark:bg-neutral-800 rounded" />
+          <div className="h-20 bg-neutral-200 dark:bg-black rounded" />
         </div>
       </div>
     );
@@ -112,7 +112,7 @@ export function FearGreedIndex({
 
   if (error || !data) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg className="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -138,7 +138,7 @@ export function FearGreedIndex({
   const classification = CLASSIFICATIONS[current.valueClassification as keyof typeof CLASSIFICATIONS] || CLASSIFICATIONS['Neutral'];
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="p-4 border-b border-neutral-200 dark:border-neutral-800">
         <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">
@@ -245,7 +245,7 @@ export function FearGreedIndex({
                 <span className="text-sm text-neutral-500 dark:text-neutral-400 w-32 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()} ({weight}%)
                 </span>
-                <div className="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+                <div className="flex-1 h-2 bg-neutral-200 dark:bg-black rounded-full overflow-hidden">
                   <div 
                     className={`h-full rounded-full ${
                       value < 30 ? 'bg-red-500' :
@@ -298,7 +298,7 @@ export function FearGreedIndex({
       )}
 
       {/* Footer */}
-      <div className="p-3 bg-neutral-50 dark:bg-neutral-800/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
+      <div className="p-3 bg-neutral-50 dark:bg-black/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
         Data from Alternative.me • Updates every hour • Next update: {current.timeUntilUpdate}
       </div>
     </div>

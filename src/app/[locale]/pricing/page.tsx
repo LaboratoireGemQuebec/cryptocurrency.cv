@@ -32,7 +32,7 @@ export default async function PricingPage({ params }: Props) {
   const t = await getTranslations('common');
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       <main className="pt-16">
         <PricingContent />

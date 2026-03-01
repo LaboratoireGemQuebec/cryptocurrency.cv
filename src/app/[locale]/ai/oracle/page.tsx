@@ -117,7 +117,7 @@ export default function OraclePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-black flex flex-col">
       <Header />
       
       <main id="main-content" className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
@@ -141,7 +141,7 @@ export default function OraclePage() {
                 <button
                   key={idx}
                   onClick={() => handleExampleClick(example.text)}
-                  className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors text-left"
+                  className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black hover:bg-gray-50 dark:hover:bg-neutral-900 transition-colors text-left"
                 >
                   <example.icon className="w-5 h-5 text-purple-500 dark:text-purple-400 flex-shrink-0" />
                   <span className="text-sm text-gray-700 dark:text-slate-300">{example.text}</span>
@@ -162,7 +162,7 @@ export default function OraclePage() {
                 className={`max-w-[85%] rounded-2xl px-5 py-4 ${
                   message.role === 'user'
                     ? 'bg-gradient-to-br from-purple-500 to-indigo-600 text-white'
-                    : 'bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-white'
+                    : 'bg-gray-100 dark:bg-black text-gray-900 dark:text-white'
                 }`}
               >
                 <p className="whitespace-pre-wrap">{message.content}</p>
@@ -197,7 +197,7 @@ export default function OraclePage() {
           {/* Loading indicator */}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-gray-100 dark:bg-slate-800 rounded-2xl px-5 py-4">
+              <div className="bg-gray-100 dark:bg-black rounded-2xl px-5 py-4">
                 <div className="flex items-center gap-2">
                   <ArrowPathIcon className="w-5 h-5 text-purple-500 animate-spin" />
                   <span className="text-gray-600 dark:text-slate-400">Thinking...</span>
@@ -217,7 +217,7 @@ export default function OraclePage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about crypto news, prices, trends..."
-              className="w-full px-5 py-4 pr-14 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent shadow-lg"
+              className="w-full px-5 py-4 pr-14 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent shadow-lg"
               disabled={isLoading}
             />
             <button

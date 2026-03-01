@@ -64,7 +64,7 @@ const urgencyStyles: Record<CommentaryUrgency, { bg: string; border: string; bad
   flash: { bg: 'bg-red-500/10 dark:bg-red-500/20', border: 'border-red-500/50', badge: 'bg-red-500 text-white', pulse: true },
   breaking: { bg: 'bg-amber-500/10 dark:bg-amber-500/15', border: 'border-amber-500/40', badge: 'bg-amber-500 text-black', pulse: true },
   developing: { bg: 'bg-blue-500/10 dark:bg-blue-500/15', border: 'border-blue-500/30', badge: 'bg-blue-500 text-white', pulse: false },
-  routine: { bg: 'bg-gray-500/5 dark:bg-gray-500/10', border: 'border-gray-500/20', badge: 'bg-gray-500 text-white', pulse: false },
+  routine: { bg: 'bg-gray-500/5 dark:bg-black/10', border: 'border-gray-500/20', badge: 'bg-gray-500 text-white', pulse: false },
 };
 
 const typeIcons: Record<string, string> = {
@@ -207,7 +207,7 @@ export function AICommentaryStream({
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
       {/* Header */}
       <div className="px-4 py-3 border-b border-gray-100 dark:border-slate-700 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 dark:from-indigo-500/20 dark:via-purple-500/20 dark:to-pink-500/20">
         <div className="flex items-center justify-between">
@@ -229,7 +229,7 @@ export function AICommentaryStream({
             <select
               value={tone}
               onChange={e => setTone(e.target.value as CommentaryTone)}
-              className="text-xs bg-white/50 dark:bg-slate-700/50 border border-gray-200 dark:border-slate-600 rounded-lg px-2 py-1 text-gray-700 dark:text-gray-300"
+              className="text-xs bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-slate-600 rounded-lg px-2 py-1 text-gray-700 dark:text-gray-300"
             >
               {Object.entries(toneLabels).map(([key, { label, emoji }]) => (
                 <option key={key} value={key}>
@@ -255,7 +255,7 @@ export function AICommentaryStream({
 
       {/* Market Snapshot Bar */}
       {showSnapshot && snapshot && (
-        <div className="px-4 py-2 bg-gray-50/50 dark:bg-slate-700/30 border-b border-gray-100 dark:border-slate-700/50 flex items-center gap-4 overflow-x-auto text-xs">
+        <div className="px-4 py-2 bg-gray-50/50 dark:bg-black/30 border-b border-gray-100 dark:border-slate-700/50 flex items-center gap-4 overflow-x-auto text-xs">
           <span className="font-mono font-semibold text-gray-800 dark:text-gray-200">
             BTC ${snapshot.btcPrice.toLocaleString()}
             <span className={snapshot.btcChange24h >= 0 ? 'text-emerald-500 ml-1' : 'text-red-500 ml-1'}>
@@ -317,7 +317,7 @@ export function AICommentaryStream({
                   <span className="text-sm">{typeIcons[event.type]}</span>
                   <div className="flex items-center gap-1.5 ml-auto">
                     {event.tickers.slice(0, 3).map(ticker => (
-                      <span key={ticker} className="px-1.5 py-0.5 text-[10px] font-bold bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 rounded">
+                      <span key={ticker} className="px-1.5 py-0.5 text-[10px] font-bold bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300 rounded">
                         ${ticker}
                       </span>
                     ))}
@@ -346,7 +346,7 @@ export function AICommentaryStream({
                 {event.type === 'prediction' && (
                   <div className="mt-2 flex items-center gap-2">
                     <span className="text-[10px] text-gray-500">Confidence:</span>
-                    <div className="flex-1 h-1 bg-gray-200 dark:bg-slate-600 rounded-full overflow-hidden">
+                    <div className="flex-1 h-1 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000"
                         style={{ width: `${event.confidence}%` }}
@@ -362,7 +362,7 @@ export function AICommentaryStream({
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/30 flex items-center justify-between">
+      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/30 flex items-center justify-between">
         <span className="text-[10px] text-gray-400 dark:text-gray-500">
           ⚠️ AI-generated commentary. Not financial advice.
         </span>

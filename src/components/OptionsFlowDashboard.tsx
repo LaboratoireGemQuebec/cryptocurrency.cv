@@ -185,15 +185,15 @@ export function OptionsFlowDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
           <div className="animate-pulse space-y-4">
-            <div className="h-8 w-48 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-4 gap-4">
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="h-24 bg-gray-200 dark:bg-slate-700 rounded" />
+                <div key={i} className="h-24 bg-gray-200 dark:bg-black rounded" />
               ))}
             </div>
-            <div className="h-64 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-64 bg-gray-200 dark:bg-black rounded" />
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@ export function OptionsFlowDashboard() {
   // Error state
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg
             className="w-12 h-12 text-red-500 mb-4"
@@ -252,7 +252,7 @@ export function OptionsFlowDashboard() {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 underlying === asset
                   ? 'bg-purple-500 text-white'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+                  : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >
               {asset}
@@ -321,7 +321,7 @@ export function OptionsFlowDashboard() {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex gap-1 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+      <div className="flex gap-1 bg-gray-100 dark:bg-black rounded-lg p-1">
         {(
           [
             { key: 'flow', label: '📈 Flow' },
@@ -335,7 +335,7 @@ export function OptionsFlowDashboard() {
             onClick={() => setActiveTab(tab.key)}
             className={`flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
               activeTab === tab.key
-                ? 'bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm'
+                ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                 : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
@@ -348,7 +348,7 @@ export function OptionsFlowDashboard() {
       {activeTab === 'flow' && (
         <div className="space-y-6">
           {/* Top Unusual Trades */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
             <div className="p-4 border-b border-gray-200 dark:border-slate-700">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 🔥 Unusual Options Activity
@@ -359,7 +359,7 @@ export function OptionsFlowDashboard() {
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-50 dark:bg-slate-700/50">
+                <thead className="bg-gray-50 dark:bg-black/50">
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-slate-400 uppercase">
                       Contract
@@ -391,7 +391,7 @@ export function OptionsFlowDashboard() {
                   {flow.topTrades.slice(0, 10).map((trade) => (
                     <tr
                       key={trade.id}
-                      className="hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
+                      className="hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
                     >
                       <td className="px-4 py-3 text-sm font-medium text-gray-900 dark:text-white">
                         {trade.contract.underlying}
@@ -442,7 +442,7 @@ export function OptionsFlowDashboard() {
 
           {/* Volume by Expiry */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Volume by Expiry
               </h3>
@@ -462,7 +462,7 @@ export function OptionsFlowDashboard() {
                             {formatVolume(data.premium)}
                           </span>
                         </div>
-                        <div className="h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden flex">
+                        <div className="h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden flex">
                           <div
                             className="bg-green-500 h-full"
                             style={{ width: `${callPct}%` }}
@@ -488,7 +488,7 @@ export function OptionsFlowDashboard() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Recent Trades
               </h3>
@@ -537,7 +537,7 @@ export function OptionsFlowDashboard() {
       {activeTab === 'surface' && (
         <div className="space-y-6">
           {/* Term Structure */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               📈 IV Term Structure
             </h3>
@@ -563,7 +563,7 @@ export function OptionsFlowDashboard() {
 
           {/* ATM IV & Skew by Expiry */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 ATM Implied Volatility
               </h3>
@@ -576,7 +576,7 @@ export function OptionsFlowDashboard() {
                         {formatExpiry(expiry)}
                       </span>
                       <div className="flex items-center gap-2">
-                        <div className="w-32 h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div className="w-32 h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                           <div
                             className="h-full bg-purple-500"
                             style={{ width: `${Math.min(iv, 150)}%` }}
@@ -591,7 +591,7 @@ export function OptionsFlowDashboard() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Volatility Skew
               </h3>
@@ -627,7 +627,7 @@ export function OptionsFlowDashboard() {
       {activeTab === 'maxpain' && (
         <div className="space-y-6">
           {/* Max Pain Overview */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <p className="text-sm text-gray-500 dark:text-slate-400 mb-1">Current Price</p>
@@ -658,7 +658,7 @@ export function OptionsFlowDashboard() {
           </div>
 
           {/* OI Distribution */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Open Interest Distribution
             </h3>
@@ -730,7 +730,7 @@ export function OptionsFlowDashboard() {
       {activeTab === 'gamma' && (
         <div className="space-y-6">
           {/* Gamma Overview */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <p className="text-sm text-gray-500 dark:text-slate-400 mb-1">Spot Price</p>
@@ -803,7 +803,7 @@ export function OptionsFlowDashboard() {
           </div>
 
           {/* Gamma by Strike */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Gamma Exposure by Strike
             </h3>

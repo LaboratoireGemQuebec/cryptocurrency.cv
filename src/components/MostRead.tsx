@@ -86,7 +86,7 @@ export default function MostRead({ articles, maxArticles = 7 }: MostReadProps) {
             <Link
               key={article.link}
               href={`/article/${slug}`}
-              className="group flex items-start gap-4 py-4 border-b border-gray-100 dark:border-slate-700/50 hover:bg-gray-50/50 dark:hover:bg-slate-800/30 transition-colors rounded-lg px-2 -mx-2"
+              className="group flex items-start gap-4 py-4 border-b border-gray-100 dark:border-slate-700/50 hover:bg-gray-50/50 dark:hover:bg-neutral-900/30 transition-colors rounded-lg px-2 -mx-2"
             >
               {/* Rank Number */}
               <span className="flex-shrink-0 text-3xl font-black text-gray-200 dark:text-slate-700 group-hover:text-brand-300 dark:group-hover:text-amber-600 transition-colors tabular-nums leading-none pt-1 w-8 text-center">

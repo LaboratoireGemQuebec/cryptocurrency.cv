@@ -23,7 +23,7 @@ export default async function MarketStats() {
   const fearGreedValue = market.fearGreed ? Number(market.fearGreed.value) : 50;
 
   return (
-    <div className="relative overflow-hidden bg-white dark:bg-slate-900/80 rounded-2xl shadow-card dark:shadow-xl dark:border dark:border-slate-700/50 backdrop-blur-sm">
+    <div className="relative overflow-hidden bg-white dark:bg-black/80 rounded-2xl shadow-card dark:shadow-xl dark:border dark:border-slate-700/50 backdrop-blur-sm">
       {/* Animated gradient background */}
       <div 
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]"
@@ -49,7 +49,7 @@ export default async function MarketStats() {
           </h3>
           <Link 
             href="/markets" 
-            className="group text-sm font-semibold text-brand-700 dark:text-gray-300 hover:text-brand-800 dark:hover:text-gray-200 transition-colors focus-ring rounded-lg px-3 py-1.5 -mr-3 hover:bg-brand-50 dark:hover:bg-gray-500/10 flex items-center gap-1"
+            className="group text-sm font-semibold text-brand-700 dark:text-gray-300 hover:text-brand-800 dark:hover:text-gray-200 transition-colors focus-ring rounded-lg px-3 py-1.5 -mr-3 hover:bg-brand-50 dark:hover:bg-neutral-900/10 flex items-center gap-1"
           >
             View All
             <span className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
@@ -100,13 +100,13 @@ export default async function MarketStats() {
 
           {/* Volume & BTC Dominance */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
               <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">24h Volume</span>
               <div className="text-lg font-bold text-gray-900 dark:text-white mt-1">
                 ${formatNumber(market.global.total_volume?.usd)}
               </div>
             </div>
-            <div className="bg-gray-50 dark:bg-slate-800/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-3.5 border border-gray-100 dark:border-slate-700/50">
               <span className="text-gray-500 dark:text-slate-400 text-xs uppercase tracking-wider font-medium">BTC Dom.</span>
               <div className="text-lg font-bold text-gray-900 dark:text-white mt-1 flex items-baseline gap-1">
                 {market.global.market_cap_percentage?.btc?.toFixed(1)}
@@ -139,7 +139,7 @@ export default async function MarketStats() {
                   aria-label={`Fear and Greed Index: ${market.fearGreed.value} - ${market.fearGreed.value_classification}`}
                 >
                   <div 
-                    className="absolute h-3 bg-gray-200 dark:bg-slate-700 right-0 top-0 transition-all duration-500"
+                    className="absolute h-3 bg-gray-200 dark:bg-black right-0 top-0 transition-all duration-500"
                     style={{ width: `${100 - fearGreedValue}%` }}
                   />
                 </div>
@@ -171,7 +171,7 @@ export default async function MarketStats() {
                     className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:scale-105 active:scale-95 cursor-default ${
                       index === 0 
                         ? 'bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800/40 dark:to-gray-700/40 text-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-600/50'
-                        : 'bg-gray-100 dark:bg-slate-700/50 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-600/50'
+                        : 'bg-gray-100 dark:bg-black/50 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900 border border-gray-200 dark:border-slate-600/50'
                     }`}
                     role="listitem"
                   >

@@ -77,7 +77,7 @@ export default async function ExchangesPage() {
   const exchanges = await getExchanges();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -102,11 +102,11 @@ export default async function ExchangesPage() {
           </div>
 
           {/* Exchanges Table */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
+                  <tr className="bg-gray-50 dark:bg-black/50 border-b border-gray-200 dark:border-gray-700">
                     <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">#</th>
                     <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Exchange</th>
                     <th className="text-center text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Trust Score</th>
@@ -121,7 +121,7 @@ export default async function ExchangesPage() {
                   {exchanges.map((exchange) => (
                     <tr
                       key={exchange.id}
-                      className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
                     >
                       <td className="p-4 text-gray-500 dark:text-gray-400">
                         {exchange.trust_score_rank}
@@ -171,7 +171,7 @@ export default async function ExchangesPage() {
                           href={exchange.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900/30 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-black hover:bg-blue-100 dark:hover:bg-blue-900/30 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                           title={`Visit ${exchange.name}`}
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

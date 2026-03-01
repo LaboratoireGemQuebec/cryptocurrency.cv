@@ -17,7 +17,7 @@ import type { Airdrop } from './page';
 const statusConfig: Record<string, { label: string; color: string; bg: string }> = {
   upcoming: { label: '⏳ Upcoming', color: 'text-amber-700 dark:text-amber-300', bg: 'bg-amber-100 dark:bg-amber-900/40' },
   active:   { label: '🟢 Active', color: 'text-green-700 dark:text-green-300', bg: 'bg-green-100 dark:bg-green-900/40' },
-  ended:    { label: '⬛ Ended', color: 'text-gray-700 dark:text-gray-300', bg: 'bg-gray-100 dark:bg-gray-800' },
+  ended:    { label: '⬛ Ended', color: 'text-gray-700 dark:text-gray-300', bg: 'bg-gray-100 dark:bg-black' },
 };
 
 const difficultyConfig: Record<string, { label: string; color: string; bg: string }> = {
@@ -47,7 +47,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
           { label: 'Upcoming', value: airdrops.filter(a => a.status === 'upcoming').length, emoji: '⏳' },
           { label: 'Verified', value: airdrops.filter(a => a.verified).length, emoji: '✅' },
         ].map(stat => (
-          <div key={stat.label} className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
+          <div key={stat.label} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 text-center">
             <span className="text-2xl">{stat.emoji}</span>
             <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{stat.value}</p>
             <p className="text-xs text-gray-500 dark:text-slate-400">{stat.label}</p>
@@ -64,7 +64,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
             className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${
               statusFilter === status
                 ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                : 'bg-white dark:bg-slate-800 text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
+                : 'bg-white dark:bg-black text-gray-600 dark:text-slate-300 border border-gray-200 dark:border-slate-700 hover:bg-gray-100'
             }`}
           >
             {status === 'all' ? 'All' : statusConfig[status].label}
@@ -80,7 +80,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
           return (
             <div
               key={airdrop.id}
-              className={`bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition ${
+              className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg transition ${
                 airdrop.status === 'ended' ? 'opacity-60' : ''
               }`}
             >
@@ -115,7 +115,7 @@ export function AirdropTrackerClient({ airdrops }: { airdrops: Airdrop[] }) {
               <p className="text-sm text-gray-600 dark:text-slate-400 mb-3">{airdrop.description}</p>
 
               {/* Eligibility */}
-              <div className="bg-gray-50 dark:bg-slate-900/50 rounded-lg p-3 mb-3">
+              <div className="bg-gray-50 dark:bg-black/50 rounded-lg p-3 mb-3">
                 <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-2 uppercase tracking-wide">Eligibility Criteria</h4>
                 <ul className="space-y-1">
                   {airdrop.eligibility.map((criteria, i) => (

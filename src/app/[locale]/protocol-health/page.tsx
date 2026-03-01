@@ -31,31 +31,31 @@ function DashboardSkeleton() {
   return (
     <div className="space-y-6 animate-pulse">
       {/* Header skeleton */}
-      <div className="h-10 bg-gray-200 dark:bg-slate-700 rounded-lg w-1/3" />
+      <div className="h-10 bg-gray-200 dark:bg-black rounded-lg w-1/3" />
       
       {/* Tabs skeleton */}
       <div className="flex gap-4 border-b border-gray-200 dark:border-slate-700 pb-3">
-        <div className="h-6 w-32 bg-gray-200 dark:bg-slate-700 rounded" />
-        <div className="h-6 w-32 bg-gray-200 dark:bg-slate-700 rounded" />
+        <div className="h-6 w-32 bg-gray-200 dark:bg-black rounded" />
+        <div className="h-6 w-32 bg-gray-200 dark:bg-black rounded" />
       </div>
       
       {/* Filters skeleton */}
       <div className="flex gap-4">
-        <div className="flex-1 h-10 bg-gray-200 dark:bg-slate-700 rounded-lg" />
-        <div className="w-48 h-10 bg-gray-200 dark:bg-slate-700 rounded-lg" />
+        <div className="flex-1 h-10 bg-gray-200 dark:bg-black rounded-lg" />
+        <div className="w-48 h-10 bg-gray-200 dark:bg-black rounded-lg" />
       </div>
       
       {/* Stats skeleton */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="bg-gray-200 dark:bg-slate-700 rounded-xl h-20" />
+          <div key={i} className="bg-gray-200 dark:bg-black rounded-xl h-20" />
         ))}
       </div>
       
       {/* Cards skeleton */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {Array.from({ length: 9 }).map((_, i) => (
-          <div key={i} className="bg-gray-200 dark:bg-slate-700 rounded-xl h-48" />
+          <div key={i} className="bg-gray-200 dark:bg-black rounded-xl h-48" />
         ))}
       </div>
     </div>
@@ -74,7 +74,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
   const { locale } = await params;
   
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <main className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 py-12 md:py-16">
@@ -119,24 +119,24 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Risk Score Methodology */}
-      <section className="py-8 bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
+      <section className="py-8 bg-white dark:bg-black border-b border-gray-200 dark:border-slate-700">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-center text-sm">
             <div>
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">10</div>
               <div className="text-gray-500 dark:text-slate-400">Risk Factors</div>
             </div>
-            <div className="hidden md:block w-px bg-gray-200 dark:bg-slate-700"></div>
+            <div className="hidden md:block w-px bg-gray-200 dark:bg-black"></div>
             <div>
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">A+→F</div>
               <div className="text-gray-500 dark:text-slate-400">Safety Grades</div>
             </div>
-            <div className="hidden md:block w-px bg-gray-200 dark:bg-slate-700"></div>
+            <div className="hidden md:block w-px bg-gray-200 dark:bg-black"></div>
             <div>
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">DefiLlama</div>
               <div className="text-gray-500 dark:text-slate-400">TVL Data Source</div>
             </div>
-            <div className="hidden md:block w-px bg-gray-200 dark:bg-slate-700"></div>
+            <div className="hidden md:block w-px bg-gray-200 dark:bg-black"></div>
             <div>
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">24/7</div>
               <div className="text-gray-500 dark:text-slate-400">Monitoring</div>
@@ -153,14 +153,14 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Methodology Section */}
-      <section className="bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
+      <section className="bg-white dark:bg-black border-t border-gray-200 dark:border-slate-700">
         <div className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Risk Scoring Methodology
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-5">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-5">
               <div className="text-2xl mb-3">📜</div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Smart Contract Risk
@@ -173,7 +173,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-5">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-5">
               <div className="text-2xl mb-3">🏛️</div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Centralization Risk
@@ -186,7 +186,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-5">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-5">
               <div className="text-2xl mb-3">🔮</div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Oracle Risk
@@ -199,7 +199,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-5">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-5">
               <div className="text-2xl mb-3">💰</div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Economic Risk
@@ -212,7 +212,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
               </div>
             </div>
             
-            <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-5">
+            <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-5">
               <div className="text-2xl mb-3">👥</div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Team & Track Record
@@ -248,7 +248,7 @@ export default async function ProtocolHealthPage({ params }: PageProps) {
       </section>
 
       {/* Disclaimer */}
-      <section className="bg-gray-100 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800">
+      <section className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-slate-800">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-3xl mx-auto text-center text-sm text-gray-500 dark:text-slate-400">
             <p className="mb-2">

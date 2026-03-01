@@ -115,15 +115,15 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-36 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-36 bg-gray-200 dark:bg-black rounded" />
           </div>
-          <div className="h-20 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
+          <div className="h-20 bg-gray-100 dark:bg-black/50 rounded-xl" />
           {[1, 2, 3].map(i => (
-            <div key={i} className="h-12 bg-gray-100 dark:bg-slate-700/50 rounded-lg" />
+            <div key={i} className="h-12 bg-gray-100 dark:bg-black/50 rounded-lg" />
           ))}
         </div>
       </div>
@@ -132,7 +132,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-xl">🔥</span>
           <h3 className="font-bold text-gray-900 dark:text-white">Social Buzz</h3>
@@ -156,7 +156,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
   const sentimentEmojis = { positive: '😊', negative: '😟', neutral: '😐' } as const;
 
   return (
-    <div className="bg-white dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -180,7 +180,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
         </div>
         <div className="flex h-3 rounded-full overflow-hidden">
           <div className="bg-green-500 transition-all" style={{ width: `${pPos}%` }} title={`Positive: ${pPos.toFixed(0)}%`} />
-          <div className="bg-gray-400 dark:bg-slate-500 transition-all" style={{ width: `${pNeutral}%` }} title={`Neutral: ${pNeutral.toFixed(0)}%`} />
+          <div className="bg-gray-400 dark:bg-black transition-all" style={{ width: `${pNeutral}%` }} title={`Neutral: ${pNeutral.toFixed(0)}%`} />
           <div className="bg-red-500 transition-all" style={{ width: `${pNeg}%` }} title={`Negative: ${pNeg.toFixed(0)}%`} />
         </div>
         <div className="flex justify-between mt-1.5 text-xs text-gray-500 dark:text-slate-400">
@@ -209,7 +209,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
           <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-2">Key Influencers</h4>
           <div className="space-y-2">
             {data.influencers.map((inf, i) => (
-              <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700/30">
+              <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white text-xs font-bold">
                   {inf.name.charAt(0).toUpperCase()}
                 </div>
@@ -230,7 +230,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
       )}
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
         <p className="text-xs text-gray-500 dark:text-slate-400">
           Social data aggregated from X, Reddit, Telegram. Refreshes every 2 min.
         </p>

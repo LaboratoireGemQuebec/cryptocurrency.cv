@@ -253,7 +253,7 @@ export function CorrelationMatrix() {
               Loading historical data... {progress}%
             </span>
           </div>
-          <div className="mt-4 w-64 mx-auto bg-gray-200 dark:bg-slate-700 rounded-full h-2">
+          <div className="mt-4 w-64 mx-auto bg-gray-200 dark:bg-black rounded-full h-2">
             <div 
               className="bg-slate-900 dark:bg-white h-2 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
@@ -324,13 +324,13 @@ export function CorrelationMatrix() {
 
       {/* Insights */}
       <div className="grid md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Average Correlation</div>
           <div className="text-2xl font-bold text-slate-900 dark:text-white">
             {stats.avgCorrelation.toFixed(2)}
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Highly Correlated</div>
           <div className="text-sm text-slate-900 dark:text-white">
             {stats.highlyCorrelated.length > 0 
@@ -339,7 +339,7 @@ export function CorrelationMatrix() {
             }
           </div>
         </div>
-        <div className="p-4 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg">
+        <div className="p-4 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Least Correlated</div>
           <div className="text-sm text-slate-900 dark:text-white">
             {stats.inversePairs.length > 0 
@@ -410,7 +410,7 @@ export function CorrelationMatrix() {
       </div>
 
       {/* Interpretation Guide */}
-      <div className="flex items-start gap-2 p-4 bg-gray-50 dark:bg-slate-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-400">
+      <div className="flex items-start gap-2 p-4 bg-gray-50 dark:bg-black/50 rounded-lg text-sm text-gray-600 dark:text-gray-400">
         <InformationCircleIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
         <div>
           <strong className="text-slate-900 dark:text-white">How to read:</strong> Correlation measures how assets move together. 

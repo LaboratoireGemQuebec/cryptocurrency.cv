@@ -70,19 +70,19 @@ export function PriceAlertButton({
     <div className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${hasAlert ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400" : "bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-400 hover:bg-gray-200 dark:hover:bg-slate-600"}`}
+        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${hasAlert ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400" : "bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-400 hover:bg-gray-200 dark:hover:bg-neutral-900"}`}
       >
         🔔 {hasAlert ? "Alert set" : "Set alert"}
       </button>
       {open && (
-        <div className="absolute top-full mt-2 left-0 z-20 w-64 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-xl p-4">
+        <div className="absolute top-full mt-2 left-0 z-20 w-64 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl shadow-xl p-4">
           <p className="text-xs text-gray-500 dark:text-slate-400 mb-3">
             Current: ${currentPrice.toLocaleString()}
           </p>
           <select
             value={direction}
             onChange={(e) => setDirection(e.target.value as "above" | "below")}
-            className="w-full mb-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
+            className="w-full mb-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
           >
             <option value="above">Alert when price goes above</option>
             <option value="below">Alert when price goes below</option>
@@ -92,7 +92,7 @@ export function PriceAlertButton({
             value={target}
             onChange={(e) => setTarget(e.target.value)}
             placeholder={`e.g. ${(currentPrice * 1.1).toFixed(2)}`}
-            className="w-full mb-3 px-3 py-2 rounded-lg bg-gray-50 dark:bg-slate-700 border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
+            className="w-full mb-3 px-3 py-2 rounded-lg bg-gray-50 dark:bg-black border border-gray-200 dark:border-slate-600 text-sm text-gray-900 dark:text-white"
           />
           <div className="flex gap-2">
             <button

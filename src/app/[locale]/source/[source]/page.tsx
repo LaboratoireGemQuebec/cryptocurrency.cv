@@ -964,20 +964,20 @@ export default async function SourcePage({ params }: PageProps) {
   const allSources = Object.entries(sourceInfo);
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
         
         <main className="px-4 py-8">
           {/* Source Header */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-8">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-8">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="flex-1">
                 <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">{info.name}</h1>
                 <p className="text-gray-600 dark:text-slate-400 mb-4">{info.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {info.focus.map(tag => (
-                    <span key={tag} className="bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm">
+                    <span key={tag} className="bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm">
                       {tag}
                     </span>
                   ))}
@@ -1023,7 +1023,7 @@ export default async function SourcePage({ params }: PageProps) {
                 className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition ${
                   key === source
                     ? 'bg-blue-600 text-white'
-                    : 'bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700'
+                    : 'bg-white dark:bg-black border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-neutral-900'
                 }`}
               >
                 {src.name}
@@ -1033,19 +1033,19 @@ export default async function SourcePage({ params }: PageProps) {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Articles</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">{newsData.totalCount}</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Focus</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">{info.focus[0]}</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Since</p>
               <p className="text-2xl font-bold text-gray-900 dark:text-white">{info.founded || 'N/A'}</p>
             </div>
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-gray-200 dark:border-slate-700">
+            <div className="bg-white dark:bg-black rounded-xl p-4 border border-gray-200 dark:border-slate-700">
               <p className="text-gray-500 dark:text-slate-400 text-sm">Status</p>
               <p className="text-2xl font-bold text-green-600 dark:text-green-400">Active</p>
             </div>
@@ -1061,7 +1061,7 @@ export default async function SourcePage({ params }: PageProps) {
           {newsData.articles.length > 0 ? (
             <Posts articles={newsData.articles} />
           ) : (
-            <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-8 text-center">
+            <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-8 text-center">
               <p className="text-gray-600 dark:text-slate-400">No articles available at the moment.</p>
               <p className="text-gray-500 dark:text-slate-500 text-sm mt-2">Check back soon for updates.</p>
             </div>

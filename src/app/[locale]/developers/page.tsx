@@ -34,7 +34,7 @@ export default async function DevelopersPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <APIStructuredData />
       <OrganizationStructuredData />
       <BreadcrumbStructuredData

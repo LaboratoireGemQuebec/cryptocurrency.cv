@@ -90,7 +90,7 @@ export default function DebateClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-4xl mx-auto">
         <Header />
 
@@ -112,7 +112,7 @@ export default function DebateClient() {
           </div>
 
           {/* Topic Input */}
-          <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+          <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
             <label htmlFor="debate-topic" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
               Enter a topic to debate
             </label>
@@ -124,7 +124,7 @@ export default function DebateClient() {
                 onChange={(e) => setTopic(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && generateDebate(topic)}
                 placeholder="e.g., Will Bitcoin reach $200k in 2026?"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button
                 onClick={() => generateDebate(topic)}
@@ -146,7 +146,7 @@ export default function DebateClient() {
                       setTopic(t);
                       generateDebate(t);
                     }}
-                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-900 transition-colors"
                   >
                     {t}
                   </button>
@@ -164,7 +164,7 @@ export default function DebateClient() {
 
           {/* Loading State */}
           {loading && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4 animate-pulse">🎭</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Generating Debate...</h3>
               <p className="text-gray-500 dark:text-slate-400">Our AI is analyzing both sides</p>
@@ -249,14 +249,14 @@ export default function DebateClient() {
               </div>
 
               {/* Neutral Analysis */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+              <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-2xl">⚖️</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Neutral Analysis</h3>
                 </div>
 
                 {debate.neutralAnalysis.consensus && (
-                  <p className="text-gray-700 dark:text-slate-300 mb-4 p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                  <p className="text-gray-700 dark:text-slate-300 mb-4 p-4 bg-gray-50 dark:bg-black rounded-lg">
                     <span className="font-semibold">Consensus: </span>
                     {debate.neutralAnalysis.consensus}
                   </p>
@@ -298,7 +298,7 @@ export default function DebateClient() {
 
           {/* Empty State */}
           {!debate && !loading && !error && (
-            <div className="text-center py-16 bg-white dark:bg-slate-800 rounded-xl">
+            <div className="text-center py-16 bg-white dark:bg-black rounded-xl">
               <div className="text-6xl mb-4">🎭</div>
               <h3 className="text-xl font-semibold text-gray-700 dark:text-slate-300 mb-2">Enter a Topic</h3>
               <p className="text-gray-500 dark:text-slate-400">

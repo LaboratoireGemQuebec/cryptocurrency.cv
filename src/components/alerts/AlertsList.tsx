@@ -66,7 +66,7 @@ export function AlertsList({
     return (
       <div className={`animate-pulse space-y-3 ${className}`}>
         {[1, 2, 3].map(i => (
-          <div key={i} className="h-16 bg-gray-200 dark:bg-gray-700 rounded-lg" />
+          <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded-lg" />
         ))}
       </div>
     );
@@ -195,7 +195,7 @@ function AlertItem({ alert, onRemove, onReactivate }: AlertItemProps) {
       className={`flex items-center gap-3 p-3 rounded-xl border transition-colors ${
         alert.triggered
           ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800'
-          : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+          : 'bg-gray-50 dark:bg-black border-gray-200 dark:border-gray-700'
       }`}
     >
       <div className={`p-2 rounded-lg ${
@@ -238,7 +238,7 @@ function AlertItem({ alert, onRemove, onReactivate }: AlertItemProps) {
         {alert.triggered && onReactivate && (
           <button
             onClick={onReactivate}
-            className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-500 transition-colors"
+            className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
             title="Reactivate alert"
           >
             <RefreshCw className="w-4 h-4" />
@@ -278,7 +278,7 @@ function getConditionColor(condition: PriceAlert['condition']) {
     case 'percent_down':
       return 'bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400';
     default:
-      return 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400';
+      return 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400';
   }
 }
 

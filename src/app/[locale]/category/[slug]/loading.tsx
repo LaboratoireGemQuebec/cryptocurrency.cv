@@ -16,12 +16,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
+  return <div className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`} />;
 }
 
 function NewsCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-5">
       <div className="flex items-center justify-between mb-3">
         <Skeleton className="h-6 w-20 rounded-full" />
         <Skeleton className="h-4 w-16" />
@@ -41,7 +41,7 @@ function NewsCardSkeleton() {
 
 export default function CategoryLoading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       
       <main className="max-w-7xl mx-auto px-4 py-8">

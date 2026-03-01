@@ -563,6 +563,188 @@ export async function getTrendingTopics(limit: number = 10): Promise<TrendingTop
   return trending;
 }
 
+// =============================================================================
+// Extended CryptoPanic Features
+// =============================================================================
+
+/**
+ * Get CryptoPanic posts with advanced filters:
+ *   filter: trending | hot | rising | bullish | bearish | important | saved | lol
+ *   kind: news | media | analysis (or omit for all)
+ *   regions: en | de | es | fr | it | pt | ru (comma-separated)
+ *   source: specific source domain
+ */
+export async function getCryptoPanicFiltered(options: {
+  filter?: 'trending' | 'hot' | 'rising' | 'bullish' | 'bearish' | 'important' | 'saved' | 'lol';
+  kind?: 'news' | 'media' | 'analysis';
+  currencies?: string[];
+  regions?: string[];
+  source?: string;
+  page?: number;
+}): Promise<NewsFeed> {
+  const params: Record<string, string> = {};
+
+  if (options.filter) params.filter = options.filter;
+  if (options.kind) params.kind = options.kind;
+  if (options.currencies?.length) params.currencies = options.currencies.join(',');
+  if (options.regions?.length) params.regions = options.regions.join(',');
+  if (options.source) params.source = options.source;
+  if (options.page) params.page = String(options.page);
+
+  // Request metadata for richer results
+  params.metadata = 'true';
+
+  const data = await cryptoPanicFetch<{
+    count: number;
+    next: string | null;
+    results: Array<{
+      id: number;
+      title: string;
+      published_at: string;
+      url: string;
+      source: { domain: string; title: string };
+      currencies: Array<{ code: string; title: string }> | null;
+      votes: {
+        positive: number;
+        negative: number;
+        important: number;
+        liked: number;
+        disliked: number;
+        lol: number;
+        toxic: number;
+        saved: number;
+      };
+      metadata?: {
+        description?: string;
+        image?: string;
+      };
+      kind: string;
+    }>;
+  }>('/posts/', params);
+
+  if (!data?.results) {
+    return {
+      articles: [],
+      totalResults: 0,
+      page: options.page || 1,
+      pageSize: 20,
+      hasMore: false,
+      lastUpdated: new Date().toISOString(),
+    };
+  }
+
+  const articles: NewsArticle[] = data.results.map(post => ({
+    id: String(post.id),
+    title: post.title,
+    description: post.metadata?.description || '',
+    content: '',
+    url: post.url,
+    source: {
+      id: post.source.domain,
+      name: post.source.title,
+      domain: post.source.domain,
+    },
+    author: null,
+    publishedAt: post.published_at,
+    imageUrl: post.metadata?.image || null,
+    categories: post.kind ? [post.kind] : [],
+    currencies: post.currencies?.map(c => c.code) || [],
+    sentiment: determineSentiment(post.votes),
+    votes: post.votes,
+    metadata: { kind: post.kind, filter: options.filter },
+  }));
+
+  return {
+    articles,
+    totalResults: data.count,
+    page: options.page || 1,
+    pageSize: 20,
+    hasMore: !!data.next,
+    lastUpdated: new Date().toISOString(),
+  };
+}
+
+/**
+ * Get bullish news — posts the community voted as bullish.
+ */
+export async function getBullishNews(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ filter: 'bullish', currencies });
+}
+
+/**
+ * Get bearish news — posts the community voted as bearish.
+ */
+export async function getBearishNews(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ filter: 'bearish', currencies });
+}
+
+/**
+ * Get rising news — recently gaining traction.
+ */
+export async function getRisingNews(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ filter: 'rising', currencies });
+}
+
+/**
+ * Get important news — community-flagged as important.
+ */
+export async function getImportantNews(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ filter: 'important', currencies });
+}
+
+/**
+ * Get media posts only (videos, podcasts).
+ */
+export async function getMediaPosts(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ kind: 'media', currencies });
+}
+
+/**
+ * Get analysis-only posts.
+ */
+export async function getAnalysisPosts(currencies?: string[]): Promise<NewsFeed> {
+  return getCryptoPanicFiltered({ kind: 'analysis', currencies });
+}
+
+/**
+ * Get a comprehensive CryptoPanic dashboard combining multiple filters.
+ */
+export async function getCryptoPanicDashboard(currencies?: string[]): Promise<{
+  trending: NewsArticle[];
+  bullish: NewsArticle[];
+  bearish: NewsArticle[];
+  important: NewsArticle[];
+  rising: NewsArticle[];
+  media: NewsArticle[];
+  sentimentScore: number;
+  timestamp: string;
+}> {
+  const [trending, bullish, bearish, important, rising, media] = await Promise.allSettled([
+    getCryptoPanicFiltered({ filter: 'trending', currencies }),
+    getCryptoPanicFiltered({ filter: 'bullish', currencies }),
+    getCryptoPanicFiltered({ filter: 'bearish', currencies }),
+    getCryptoPanicFiltered({ filter: 'important', currencies }),
+    getCryptoPanicFiltered({ filter: 'rising', currencies }),
+    getCryptoPanicFiltered({ kind: 'media', currencies }),
+  ]);
+
+  const bullCount = bullish.status === 'fulfilled' ? bullish.value.totalResults : 0;
+  const bearCount = bearish.status === 'fulfilled' ? bearish.value.totalResults : 0;
+  const total = bullCount + bearCount;
+  const sentimentScore = total > 0 ? ((bullCount - bearCount) / total) : 0;
+
+  return {
+    trending: trending.status === 'fulfilled' ? trending.value.articles.slice(0, 10) : [],
+    bullish: bullish.status === 'fulfilled' ? bullish.value.articles.slice(0, 10) : [],
+    bearish: bearish.status === 'fulfilled' ? bearish.value.articles.slice(0, 10) : [],
+    important: important.status === 'fulfilled' ? important.value.articles.slice(0, 10) : [],
+    rising: rising.status === 'fulfilled' ? rising.value.articles.slice(0, 10) : [],
+    media: media.status === 'fulfilled' ? media.value.articles.slice(0, 10) : [],
+    sentimentScore,
+    timestamp: new Date().toISOString(),
+  };
+}
+
 /**
  * Get comprehensive news summary
  */

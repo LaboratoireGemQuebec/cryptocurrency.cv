@@ -34,7 +34,7 @@ export default async function BillingPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       <main className="pt-16 max-w-3xl mx-auto px-4 py-12">
         <div className="mb-8">
@@ -50,33 +50,33 @@ export default async function BillingPage({ params }: Props) {
         </div>
 
         {/* How it works */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-green-500" />
             How x402 works
           </h2>
           <ol className="space-y-3 text-gray-600 dark:text-gray-400">
             <li className="flex gap-3">
-              <span className="font-mono text-sm bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">1</span>
-              <span>Make a request to any <code className="text-sm font-mono bg-gray-100 dark:bg-slate-700 px-1 rounded">/api/premium/*</code> endpoint without payment — get a <code className="text-sm font-mono bg-gray-100 dark:bg-slate-700 px-1 rounded">402 Payment Required</code> response.</span>
+              <span className="font-mono text-sm bg-gray-100 dark:bg-black px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">1</span>
+              <span>Make a request to any <code className="text-sm font-mono bg-gray-100 dark:bg-black px-1 rounded">/api/premium/*</code> endpoint without payment — get a <code className="text-sm font-mono bg-gray-100 dark:bg-black px-1 rounded">402 Payment Required</code> response.</span>
             </li>
             <li className="flex gap-3">
-              <span className="font-mono text-sm bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">2</span>
+              <span className="font-mono text-sm bg-gray-100 dark:bg-black px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">2</span>
               <span>The 402 response includes a payment payload describing the amount ($0.001 USDC), network (Base), and receive address.</span>
             </li>
             <li className="flex gap-3">
-              <span className="font-mono text-sm bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">3</span>
-              <span>Sign and broadcast the on-chain payment, then retry the request with the <code className="text-sm font-mono bg-gray-100 dark:bg-slate-700 px-1 rounded">X-Payment</code> header containing the payment proof.</span>
+              <span className="font-mono text-sm bg-gray-100 dark:bg-black px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">3</span>
+              <span>Sign and broadcast the on-chain payment, then retry the request with the <code className="text-sm font-mono bg-gray-100 dark:bg-black px-1 rounded">X-Payment</code> header containing the payment proof.</span>
             </li>
             <li className="flex gap-3">
-              <span className="font-mono text-sm bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">4</span>
+              <span className="font-mono text-sm bg-gray-100 dark:bg-black px-2 py-0.5 rounded text-gray-800 dark:text-white shrink-0">4</span>
               <span>The server verifies the payment on-chain and returns the data. No accounts. No tokens.</span>
             </li>
           </ol>
         </div>
 
         {/* Pricing */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Pricing
           </h2>
@@ -87,18 +87,18 @@ export default async function BillingPage({ params }: Props) {
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Network: Base (Ethereum L2) · Asset: USDC
           </p>
-          <div className="font-mono text-xs bg-gray-50 dark:bg-slate-700 rounded-lg p-3 break-all text-gray-700 dark:text-gray-300">
+          <div className="font-mono text-xs bg-gray-50 dark:bg-black rounded-lg p-3 break-all text-gray-700 dark:text-gray-300">
             Receive address: {RECEIVE_ADDRESS}
           </div>
         </div>
 
         {/* Code sample */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <Code2 className="w-5 h-5 text-blue-500" />
             Quick start (TypeScript)
           </h2>
-          <pre className="text-xs bg-gray-50 dark:bg-slate-900 rounded-lg p-4 overflow-x-auto text-gray-800 dark:text-gray-200">
+          <pre className="text-xs bg-gray-50 dark:bg-black rounded-lg p-4 overflow-x-auto text-gray-800 dark:text-gray-200">
 {`import { createClient } from '@x402/sdk';
 
 const client = createClient({ network: 'base' });
@@ -123,13 +123,13 @@ const data = await client.fetch(
           </a>
           <Link
             href={`/${locale}/pricing`}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors"
           >
             View all endpoints
           </Link>
           <Link
             href={`/${locale}/developers`}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium transition-colors"
           >
             Developer portal
           </Link>

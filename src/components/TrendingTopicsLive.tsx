@@ -65,10 +65,10 @@ export function TrendingTopicsLive() {
 
   if (loading) {
     return (
-      <div className="bg-gray-50 dark:bg-slate-800/50 -mx-4 px-4 py-4">
+      <div className="bg-gray-50 dark:bg-black/50 -mx-4 px-4 py-4">
         <div className="animate-pulse flex gap-3">
           {[1, 2, 3, 4, 5].map(i => (
-            <div key={i} className="h-8 w-28 bg-gray-200 dark:bg-slate-700 rounded-full flex-shrink-0" />
+            <div key={i} className="h-8 w-28 bg-gray-200 dark:bg-black rounded-full flex-shrink-0" />
           ))}
         </div>
       </div>
@@ -86,7 +86,7 @@ export function TrendingTopicsLive() {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-slate-800/50 -mx-4 px-4 py-4">
+    <div className="bg-gray-50 dark:bg-black/50 -mx-4 px-4 py-4">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className="text-sm">🔥</span>
@@ -104,11 +104,11 @@ export function TrendingTopicsLive() {
               <Link
                 key={i}
                 href={`/topic/${slugify(topic.topic)}`}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border-2 ${border} bg-white dark:bg-slate-800 hover:shadow-md hover:-translate-y-0.5 transition-all text-sm snap-start`}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border-2 ${border} bg-white dark:bg-black hover:shadow-md hover:-translate-y-0.5 transition-all text-sm snap-start`}
               >
                 <span className="font-medium text-gray-900 dark:text-white">{topic.topic}</span>
                 {topic.count > 0 && (
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400">
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400">
                     {topic.count}
                   </span>
                 )}

@@ -105,7 +105,7 @@ export function RelatedByMention({
           <Link
             key={a.link}
             href={`/article?url=${encodeURIComponent(a.link)}`}
-            className="flex gap-3 group p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors -mx-3"
+            className="flex gap-3 group p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors -mx-3"
           >
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2">

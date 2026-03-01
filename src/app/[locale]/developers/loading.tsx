@@ -16,12 +16,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
+  return <div className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`} />;
 }
 
 export default function DevelopersLoading() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       
       <main className="max-w-6xl mx-auto px-4 py-8">
@@ -47,12 +47,12 @@ export default function DevelopersLoading() {
 
         {/* Content skeleton */}
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
+          <div className="bg-white dark:bg-black rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
             <Skeleton className="h-6 w-40 mb-4" />
             <Skeleton className="h-32 w-full rounded-lg mb-4" />
             <Skeleton className="h-10 w-full rounded-lg" />
           </div>
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
+          <div className="bg-white dark:bg-black rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
             <Skeleton className="h-6 w-48 mb-4" />
             <div className="space-y-3">
               <Skeleton className="h-12 w-full rounded-lg" />

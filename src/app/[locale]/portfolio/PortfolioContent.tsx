@@ -162,7 +162,7 @@ export default function PortfolioPage() {
   // Loading state
   if (!isLoaded || isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Wallet className="w-8 h-8 text-blue-500" />
@@ -171,10 +171,10 @@ export default function PortfolioPage() {
           <div className="animate-pulse space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {[1, 2, 3, 4].map(i => (
-                <div key={i} className="h-32 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
+                <div key={i} className="h-32 bg-gray-200 dark:bg-black rounded-2xl" />
               ))}
             </div>
-            <div className="h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl" />
+            <div className="h-96 bg-gray-200 dark:bg-black rounded-2xl" />
           </div>
         </div>
       </div>
@@ -184,14 +184,14 @@ export default function PortfolioPage() {
   // Empty state
   if (holdings.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Wallet className="w-8 h-8 text-blue-500" />
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Portfolio</h1>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
             <PieChart className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Start tracking your portfolio
@@ -210,7 +210,7 @@ export default function PortfolioPage() {
               </button>
               <button
                 onClick={() => setShowImportModal(true)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition-colors"
               >
                 <Upload className="w-5 h-5" />
                 Import Portfolio
@@ -223,13 +223,13 @@ export default function PortfolioPage() {
         
         {showImportModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-6">
+            <div className="bg-white dark:bg-black rounded-2xl shadow-2xl max-w-lg w-full p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Import Portfolio</h3>
               <textarea
                 value={importText}
                 onChange={e => setImportText(e.target.value)}
                 placeholder="Paste your portfolio JSON here..."
-                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="flex justify-end gap-3 mt-4">
                 <button
@@ -254,7 +254,7 @@ export default function PortfolioPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -271,14 +271,14 @@ export default function PortfolioPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={fetchPrices}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
               title={t('refresh')}
             >
               <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={handleExport}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
               title="Export"
             >
               <Download className="w-5 h-5" />
@@ -358,13 +358,13 @@ export default function PortfolioPage() {
         {/* Import Modal */}
         {showImportModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-6">
+            <div className="bg-white dark:bg-black rounded-2xl shadow-2xl max-w-lg w-full p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Import Portfolio</h3>
               <textarea
                 value={importText}
                 onChange={e => setImportText(e.target.value)}
                 placeholder="Paste your portfolio JSON here..."
-                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full h-48 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="flex justify-end gap-3 mt-4">
                 <button

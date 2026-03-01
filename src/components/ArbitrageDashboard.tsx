@@ -195,16 +195,16 @@ export function ArbitrageDashboard() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6">
           <div className="animate-pulse space-y-4">
-            <div className="h-8 w-48 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-8 w-48 bg-gray-200 dark:bg-black rounded" />
             <div className="grid grid-cols-4 gap-4">
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="h-20 bg-gray-200 dark:bg-slate-700 rounded" />
+                <div key={i} className="h-20 bg-gray-200 dark:bg-black rounded" />
               ))}
             </div>
             {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="h-16 bg-gray-200 dark:bg-slate-700 rounded" />
+              <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded" />
             ))}
           </div>
         </div>
@@ -215,7 +215,7 @@ export function ArbitrageDashboard() {
   // Error state
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg
             className="w-12 h-12 text-red-500 mb-4"
@@ -260,7 +260,7 @@ export function ArbitrageDashboard() {
             setExchange(e.target.value);
             setLoading(true);
           }}
-          className="px-3 py-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-sm border-0"
+          className="px-3 py-2 bg-gray-100 dark:bg-black rounded-lg text-sm border-0"
         >
           <option value="all">All Exchanges</option>
           {EXCHANGES.map((ex) => (
@@ -280,7 +280,7 @@ export function ArbitrageDashboard() {
               setMinProfit(parseFloat(e.target.value));
               setLoading(true);
             }}
-            className="px-3 py-2 bg-gray-100 dark:bg-slate-800 rounded-lg text-sm border-0"
+            className="px-3 py-2 bg-gray-100 dark:bg-black rounded-lg text-sm border-0"
           >
             <option value={0}>0%</option>
             <option value={0.05}>0.05%</option>
@@ -376,7 +376,7 @@ export function ArbitrageDashboard() {
       )}
 
       {/* Exchange Stats */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🏦 Exchange Performance
         </h3>
@@ -386,7 +386,7 @@ export function ArbitrageDashboard() {
             return (
               <div
                 key={ex}
-                className="text-center p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg"
+                className="text-center p-3 bg-gray-50 dark:bg-black/50 rounded-lg"
               >
                 <p className="text-sm font-medium text-gray-900 dark:text-white capitalize">
                   {ex}
@@ -404,7 +404,7 @@ export function ArbitrageDashboard() {
       </div>
 
       {/* Opportunities Table */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
         <div className="p-4 border-b border-gray-200 dark:border-slate-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             📈 Arbitrage Opportunities
@@ -415,7 +415,7 @@ export function ArbitrageDashboard() {
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50 dark:bg-slate-700/50 text-xs">
+            <thead className="bg-gray-50 dark:bg-black/50 text-xs">
               <tr>
                 <th className="px-4 py-3 text-left text-gray-500 dark:text-slate-400">Pair</th>
                 <th className="px-4 py-3 text-left text-gray-500 dark:text-slate-400">
@@ -446,7 +446,7 @@ export function ArbitrageDashboard() {
                 opportunities.slice(0, 25).map((opp) => (
                   <tr
                     key={opp.id}
-                    className="hover:bg-gray-50 dark:hover:bg-slate-700/30 transition-colors"
+                    className="hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors"
                   >
                     <td className="px-4 py-3">
                       <span className="font-medium text-gray-900 dark:text-white">{opp.symbol}</span>
@@ -506,7 +506,7 @@ export function ArbitrageDashboard() {
 
       {/* Triangular Arbitrage */}
       {showTriangular && triangular.length > 0 && (
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 overflow-hidden">
           <div className="p-4 border-b border-gray-200 dark:border-slate-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               🔺 Triangular Arbitrage
@@ -517,7 +517,7 @@ export function ArbitrageDashboard() {
           </div>
           <div className="divide-y divide-gray-200 dark:divide-slate-700">
             {triangular.slice(0, 10).map((tri) => (
-              <div key={tri.id} className="p-4 hover:bg-gray-50 dark:hover:bg-slate-700/30">
+              <div key={tri.id} className="p-4 hover:bg-gray-50 dark:hover:bg-neutral-900/30">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-1">

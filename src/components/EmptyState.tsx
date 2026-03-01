@@ -95,7 +95,7 @@ export function EmptyState({
   const ActionButton = ({ action: act, primary = false }: { action: NonNullable<EmptyStateProps['action']>; primary?: boolean }) => {
     const baseClasses = primary
       ? 'px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white font-medium rounded-lg transition-colors'
-      : 'px-4 py-2 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-slate-300 font-medium rounded-lg transition-colors';
+      : 'px-4 py-2 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-700 dark:text-slate-300 font-medium rounded-lg transition-colors';
 
     if (act.href) {
       return (

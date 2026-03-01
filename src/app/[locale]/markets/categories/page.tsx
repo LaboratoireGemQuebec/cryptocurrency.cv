@@ -127,7 +127,7 @@ const CATEGORIES = [
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -157,7 +157,7 @@ export default function CategoriesPage() {
               <Link
                 key={category.id}
                 href={`/markets/categories/${category.id}`}
-                className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all"
+                className="group bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all"
               >
                 <div className={`h-2 bg-gradient-to-r ${category.color}`} />
                 <div className="p-5">
@@ -174,7 +174,7 @@ export default function CategoriesPage() {
                     {category.examples.map((example) => (
                       <span
                         key={example}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full"
+                        className="px-2 py-1 bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300 text-xs rounded-full"
                       >
                         {example}
                       </span>

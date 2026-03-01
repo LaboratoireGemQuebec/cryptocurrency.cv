@@ -48,14 +48,14 @@ export function WatchlistMiniWidget({
   
   if (!isLoaded) {
     return (
-      <div className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-5 h-5 text-yellow-500" />
           <h3 className="font-semibold text-gray-900 dark:text-white">Watchlist</h3>
         </div>
         <div className="animate-pulse space-y-3">
           {[1, 2, 3].map(i => (
-            <div key={i} className="h-10 bg-gray-200 dark:bg-gray-700 rounded" />
+            <div key={i} className="h-10 bg-gray-200 dark:bg-black rounded" />
           ))}
         </div>
       </div>
@@ -64,7 +64,7 @@ export function WatchlistMiniWidget({
 
   if (watchlist.length === 0) {
     return (
-      <div className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
         <div className="flex items-center gap-2 mb-4">
           <Star className="w-5 h-5 text-yellow-500" />
           <h3 className="font-semibold text-gray-900 dark:text-white">Watchlist</h3>
@@ -88,7 +88,7 @@ export function WatchlistMiniWidget({
   // If we have watchlist but no coin data available
   if (displayCoins.length === 0 && watchlist.length > 0) {
     return (
-      <div className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+      <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
@@ -106,7 +106,7 @@ export function WatchlistMiniWidget({
         </div>
         <div className="space-y-2">
           {watchlist.slice(0, maxItems).map(coinId => (
-            <div key={coinId} className="flex items-center justify-between py-2 px-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+            <div key={coinId} className="flex items-center justify-between py-2 px-3 bg-gray-50 dark:bg-black/50 rounded-lg">
               <span className="text-sm font-medium text-gray-900 dark:text-white capitalize">
                 {coinId.replace(/-/g, ' ')}
               </span>
@@ -124,7 +124,7 @@ export function WatchlistMiniWidget({
   }
 
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
+    <div className={`bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 ${className}`}>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
@@ -146,13 +146,13 @@ export function WatchlistMiniWidget({
           <Link
             key={coin.id}
             href={`/coin/${coin.id}`}
-            className="flex items-center justify-between py-2 px-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-lg transition-colors group"
+            className="flex items-center justify-between py-2 px-3 hover:bg-gray-50 dark:hover:bg-neutral-900/50 rounded-lg transition-colors group"
           >
             <div className="flex items-center gap-3">
               {coin.image ? (
                 <Image src={coin.image} alt={coin.name} width={24} height={24} className="rounded-full" />
               ) : (
-                <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-600" />
+                <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-black" />
               )}
               <div>
                 <p className="text-sm font-medium text-gray-900 dark:text-white">{coin.symbol.toUpperCase()}</p>

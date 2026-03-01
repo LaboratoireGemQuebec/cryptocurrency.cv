@@ -15,7 +15,7 @@
  * Provides query capabilities for the new JSONL-based archive format.
  */
 
-import { type NewsArticle, getLatestNews } from './crypto-news';
+import { type NewsArticle, getLatestNews, getHomepageNews } from './crypto-news';
 
 // ============================================================================
 // SLUG UTILITIES
@@ -586,10 +586,25 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
     
     // Fallback: search live RSS feeds (usually cached by Next.js from homepage)
     // This handles the case where KV is not configured or article hasn't been archived yet
+    // Uses getHomepageNews() to search the same articles the user sees on the homepage
     try {
-      const { articles } = await getLatestNews(50);
+      const homepageData = await getHomepageNews();
+      // Combine all article pools — latest, breaking, and trending
+      const allHomepageArticles = [
+        ...homepageData.latest.articles,
+        ...homepageData.breaking.articles,
+        ...homepageData.trending.articles,
+      ];
       
-      for (const rssArticle of articles) {
+      // Deduplicate by link
+      const seen = new Set<string>();
+      const uniqueArticles = allHomepageArticles.filter(a => {
+        if (seen.has(a.link)) return false;
+        seen.add(a.link);
+        return true;
+      });
+      
+      for (const rssArticle of uniqueArticles) {
         const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
         const id = generateArticleId(rssArticle.link);
         
@@ -605,9 +620,21 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
   } catch {
     // Primary KV lookup failed — try RSS fallback
     try {
-      const { articles } = await getLatestNews(50);
+      const homepageData = await getHomepageNews();
+      const allHomepageArticles = [
+        ...homepageData.latest.articles,
+        ...homepageData.breaking.articles,
+        ...homepageData.trending.articles,
+      ];
       
-      for (const rssArticle of articles) {
+      const seen = new Set<string>();
+      const uniqueArticles = allHomepageArticles.filter(a => {
+        if (seen.has(a.link)) return false;
+        seen.add(a.link);
+        return true;
+      });
+      
+      for (const rssArticle of uniqueArticles) {
         const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
         const id = generateArticleId(rssArticle.link);
         

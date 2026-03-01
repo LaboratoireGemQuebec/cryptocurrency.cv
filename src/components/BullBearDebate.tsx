@@ -43,7 +43,7 @@ function ConfidenceMeter({ value, color }: { value: number; color: string }) {
   const pct = Math.round(value * 100);
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-2 bg-gray-200 dark:bg-slate-600 rounded-full overflow-hidden">
+      <div className="flex-1 h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-500 ${color}`}
           style={{ width: `${pct}%` }}
@@ -87,7 +87,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
   // Initial state — show generate button
   if (!data && !loading && !error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">⚔️</span>
           <div>
@@ -108,7 +108,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
   // Loading
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-2xl">⚔️</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Bull vs Bear Debate</h2>
@@ -130,7 +130,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
   // Error
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">⚔️</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Bull vs Bear Debate</h2>
@@ -155,7 +155,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
   if (!data) return null;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center justify-between">
@@ -165,7 +165,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
           </div>
           <button
             onClick={generateDebate}
-            className="text-xs px-3 py-1.5 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-lg text-gray-600 dark:text-slate-400 transition-colors"
+            className="text-xs px-3 py-1.5 bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 rounded-lg text-gray-600 dark:text-slate-400 transition-colors"
           >
             ↻ Regenerate
           </button>
@@ -243,7 +243,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
       </div>
 
       {/* Neutral Analysis / Verdict */}
-      <div className="p-5 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/20">
+      <div className="p-5 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/20">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-lg">⚖️</span>
           <h3 className="font-bold text-gray-900 dark:text-white">Verdict</h3>
@@ -260,7 +260,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
             <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-1.5">Key Uncertainties</h4>
             <div className="flex flex-wrap gap-1.5">
               {data.neutralAnalysis.keyUncertainties.map((u, i) => (
-                <span key={i} className="text-xs px-2 py-1 bg-gray-50 dark:bg-gray-800/20 text-gray-700 dark:text-gray-400 rounded-lg">
+                <span key={i} className="text-xs px-2 py-1 bg-gray-50 dark:bg-black/20 text-gray-700 dark:text-gray-400 rounded-lg">
                   {u}
                 </span>
               ))}
@@ -283,7 +283,7 @@ export function BullBearDebate({ topic, articleContent }: BullBearDebateProps) {
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700">
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 AI-generated debate · {data.generatedAt ? new Date(data.generatedAt).toLocaleTimeString() : 'Just now'}
         </span>

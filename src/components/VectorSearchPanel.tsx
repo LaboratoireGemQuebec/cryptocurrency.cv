@@ -132,7 +132,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
   }, []);
 
   return (
-    <div className={`bg-white dark:bg-slate-900/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
+    <div className={`bg-white dark:bg-black/80 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700/50 ${className}`}>
       {/* ── Header ── */}
       <div className="p-6 border-b border-slate-200 dark:border-slate-700/50">
         <div className="flex items-center gap-3 mb-4">
@@ -152,7 +152,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
               mode === 'search'
                 ? 'bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30'
-                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent'
+                : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent'
             }`}
           >
             <Search className="w-3.5 h-3.5" />
@@ -163,7 +163,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
               mode === 'topics'
                 ? 'bg-purple-500/20 text-purple-600 dark:text-purple-400 border border-purple-500/30'
-                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-transparent'
+                : 'bg-slate-100 dark:bg-black text-slate-600 dark:text-slate-400 border border-transparent'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
@@ -183,7 +183,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && doSearch()}
                   placeholder="Search with natural language… 'impact of ETH ETF on DeFi volumes'"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-black border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all"
                 />
               </div>
               <button
@@ -198,7 +198,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
                 className={`px-3 py-3 rounded-xl border transition-all ${
                   showAdvanced
                     ? 'bg-cyan-50 dark:bg-cyan-500/10 border-cyan-300 dark:border-cyan-500/30 text-cyan-600'
-                    : 'bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500'
+                    : 'bg-slate-100 dark:bg-black border-slate-200 dark:border-slate-700 text-slate-500'
                 }`}
               >
                 <SlidersHorizontal className="w-5 h-5" />
@@ -207,7 +207,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
 
             {/* Advanced Options */}
             {showAdvanced && (
-              <div className="mt-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 grid grid-cols-2 gap-4">
+              <div className="mt-3 p-4 rounded-xl bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50 grid grid-cols-2 gap-4">
                 <SliderOption
                   label="Vector Weight (α)"
                   value={alpha}
@@ -244,7 +244,7 @@ export function VectorSearchPanel({ className = '', onArticleClick }: VectorSear
                     onChange={(e) => setTopK(Math.min(100, Math.max(1, parseInt(e.target.value) || 10)))}
                     min={1}
                     max={100}
-                    className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white"
+                    className="w-full px-3 py-2 rounded-lg bg-white dark:bg-black border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white"
                   />
                 </div>
               </div>
@@ -330,7 +330,7 @@ function SearchResultCard({ result, onClick }: { result: SearchResult; onClick?:
   return (
     <button
       onClick={onClick}
-      className="w-full text-left p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-300 dark:hover:border-cyan-500/30 transition-all group"
+      className="w-full text-left p-4 rounded-xl bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-slate-700/50 hover:border-cyan-300 dark:hover:border-cyan-500/30 transition-all group"
     >
       <div className="flex items-start gap-3">
         <FileText className="w-5 h-5 text-slate-400 mt-0.5 flex-shrink-0 group-hover:text-cyan-500 transition-colors" />
@@ -388,7 +388,7 @@ function TopicClusterCard({ cluster, index }: { cluster: TopicCluster; index: nu
     <div className="rounded-xl border border-slate-200 dark:border-slate-700/50 overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center gap-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+        className="w-full flex items-center gap-3 p-4 hover:bg-slate-50 dark:hover:bg-neutral-900/50 transition-colors"
       >
         <div className={`w-2 h-8 rounded-full bg-gradient-to-b ${CLUSTER_COLORS[index % CLUSTER_COLORS.length]}`} />
         <div className="flex-1 text-left">
@@ -397,7 +397,7 @@ function TopicClusterCard({ cluster, index }: { cluster: TopicCluster; index: nu
           </div>
           <div className="flex flex-wrap gap-1 mt-1">
             {cluster.keywords.slice(0, 5).map((kw) => (
-              <span key={kw} className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500">
+              <span key={kw} className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-black text-slate-500">
                 {kw}
               </span>
             ))}
@@ -453,7 +453,7 @@ function SliderOption({
         max={max}
         step={step}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 appearance-none mt-1 accent-cyan-500"
+        className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-black appearance-none mt-1 accent-cyan-500"
       />
       <span className="text-[10px] text-slate-400">{hint}</span>
     </div>

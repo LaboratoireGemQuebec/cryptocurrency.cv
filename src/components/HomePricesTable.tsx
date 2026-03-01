@@ -265,7 +265,7 @@ function ColumnCustomizer({
       onClick={onClose}
       onKeyDown={(e) => { if (e.key === 'Escape' || e.key === 'Enter') onClose(); }}
     >
-      <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+      <div className="bg-white dark:bg-black rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
         role="dialog"
         aria-modal="true"
         aria-label="Customize columns"
@@ -303,7 +303,7 @@ function ColumnCustomizer({
                         className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${
                           active
                             ? 'bg-blue-600 border-blue-600 text-white'
-                            : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-400 dark:hover:border-blue-500'
+                            : 'bg-white dark:bg-black border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-400 dark:hover:border-blue-500'
                         } ${locked ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
                       >
                         {col.label}
@@ -320,7 +320,7 @@ function ColumnCustomizer({
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between p-5 border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30 rounded-b-2xl">
+        <div className="flex items-center justify-between p-5 border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-black/30 rounded-b-2xl">
           <button onClick={reset} className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Restart
           </button>
@@ -550,16 +550,16 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
         <div className="animate-pulse">
           {Array.from({ length: 10 }).map((_, i) => (
             <div key={i} className="flex items-center gap-4 px-4 py-3.5 border-b border-gray-50 dark:border-slate-700/50">
-              <div className="w-6 h-4 bg-gray-100 dark:bg-slate-700 rounded" />
-              <div className="w-7 h-7 bg-gray-100 dark:bg-slate-700 rounded-full" />
-              <div className="flex-1 h-4 bg-gray-100 dark:bg-slate-700 rounded" />
-              <div className="w-24 h-4 bg-gray-100 dark:bg-slate-700 rounded" />
-              <div className="w-16 h-4 bg-gray-100 dark:bg-slate-700 rounded" />
-              <div className="w-20 h-4 bg-gray-100 dark:bg-slate-700 rounded" />
+              <div className="w-6 h-4 bg-gray-100 dark:bg-black rounded" />
+              <div className="w-7 h-7 bg-gray-100 dark:bg-black rounded-full" />
+              <div className="flex-1 h-4 bg-gray-100 dark:bg-black rounded" />
+              <div className="w-24 h-4 bg-gray-100 dark:bg-black rounded" />
+              <div className="w-16 h-4 bg-gray-100 dark:bg-black rounded" />
+              <div className="w-20 h-4 bg-gray-100 dark:bg-black rounded" />
             </div>
           ))}
         </div>
@@ -569,7 +569,7 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 p-8 text-center">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 p-8 text-center">
         <p className="text-sm text-gray-500 dark:text-slate-400">Unable to load price data. <button onClick={() => window.location.reload()} className="text-blue-600 dark:text-blue-400 underline">Retry</button></p>
       </div>
     );
@@ -585,9 +585,9 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
         />
       )}
 
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
         {/* Toolbar */}
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 dark:border-slate-700 bg-gray-50/60 dark:bg-slate-800/60">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 dark:border-slate-700 bg-gray-50/60 dark:bg-black/60">
           <p className="text-xs text-gray-500 dark:text-slate-400">
             Showing top {coins.length} by market cap · <span className="text-gray-400 dark:text-slate-500">{visibleCols.size} columns</span>
           </p>
@@ -606,11 +606,11 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
         <div className="overflow-x-auto">
           <table className="w-full min-w-max text-sm">
             <thead>
-              <tr className="border-b border-gray-100 dark:border-slate-700 bg-gray-50/40 dark:bg-slate-800/40">
+              <tr className="border-b border-gray-100 dark:border-slate-700 bg-gray-50/40 dark:bg-black/40">
                 {/* Fixed: rank */}
-                <th className="sticky left-0 z-10 bg-gray-50/90 dark:bg-slate-800/90 backdrop-blur-sm text-left text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider px-4 py-3 w-10">#</th>
+                <th className="sticky left-0 z-10 bg-gray-50/90 dark:bg-black/90 backdrop-blur-sm text-left text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider px-4 py-3 w-10">#</th>
                 {/* Fixed: name */}
-                <th className="sticky left-10 z-10 bg-gray-50/90 dark:bg-slate-800/90 backdrop-blur-sm text-left text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider px-4 py-3 min-w-[160px]">Name</th>
+                <th className="sticky left-10 z-10 bg-gray-50/90 dark:bg-black/90 backdrop-blur-sm text-left text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider px-4 py-3 min-w-[160px]">Name</th>
                 {/* Dynamic columns */}
                 {activeCols.map(col => (
                   <th
@@ -627,18 +627,18 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
             </thead>
             <tbody className="divide-y divide-gray-50 dark:divide-slate-700/50">
               {sortedCoins.map((coin, idx) => (
-                <tr key={coin.id} className="group hover:bg-gray-50 dark:hover:bg-slate-700/30 transition-colors">
+                <tr key={coin.id} className="group hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors">
                   {/* Rank */}
-                  <td className="sticky left-0 z-10 bg-white dark:bg-slate-800 group-hover:bg-gray-50 dark:group-hover:bg-slate-700/30 transition-colors px-4 py-3 text-xs font-bold text-gray-300 dark:text-slate-600 tabular-nums w-10">
+                  <td className="sticky left-0 z-10 bg-white dark:bg-black group-hover:bg-gray-50 dark:group-hover:bg-slate-700/30 transition-colors px-4 py-3 text-xs font-bold text-gray-300 dark:text-slate-600 tabular-nums w-10">
                     {coin.market_cap_rank ?? idx + 1}
                   </td>
                   {/* Name */}
-                  <td className="sticky left-10 z-10 bg-white dark:bg-slate-800 group-hover:bg-gray-50 dark:group-hover:bg-slate-700/30 transition-colors px-4 py-3 min-w-[160px]">
+                  <td className="sticky left-10 z-10 bg-white dark:bg-black group-hover:bg-gray-50 dark:group-hover:bg-slate-700/30 transition-colors px-4 py-3 min-w-[160px]">
                     <Link href={`/coin/${coin.id}`} className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-opacity">
                       {coin.image ? (
                         <Image src={coin.image} alt={coin.name} width={24} height={24} className="rounded-full flex-shrink-0" />
                       ) : (
-                        <span className="w-6 h-6 flex items-center justify-center text-xs font-bold text-gray-500 bg-gray-100 dark:bg-slate-700 rounded-full flex-shrink-0">
+                        <span className="w-6 h-6 flex items-center justify-center text-xs font-bold text-gray-500 bg-gray-100 dark:bg-black rounded-full flex-shrink-0">
                           {coin.symbol?.charAt(0)?.toUpperCase()}
                         </span>
                       )}
@@ -662,7 +662,7 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
         </div>
 
         {/* Footer */}
-        <div className="px-4 py-3 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/50 flex items-center justify-between">
+        <div className="px-4 py-3 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/50 flex items-center justify-between">
           <p className="text-xs text-gray-400 dark:text-slate-500">Data by CoinGecko · Updates every minute</p>
           <Link
             href="/markets"

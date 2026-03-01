@@ -169,7 +169,7 @@ export default async function TopicPage({ params }: Props) {
   const data = await searchNews(keywords, 30);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: SITE_URL },
         { name: 'Topics', url: `${SITE_URL}/topics` },
@@ -213,7 +213,7 @@ export default async function TopicPage({ params }: Props) {
           {data.articles.length > 0 ? (
             <Posts articles={data.articles} />
           ) : (
-            <div className="text-center py-12 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700">
+            <div className="text-center py-12 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700">
               <span className="text-5xl mb-4 block">🔍</span>
               <p className="text-gray-500 dark:text-slate-400 mb-2">No articles found for this topic.</p>
               <p className="text-sm text-gray-500 dark:text-slate-400">

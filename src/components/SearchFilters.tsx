@@ -61,7 +61,7 @@ export function SearchFilters() {
           <button
             key={opt.value}
             onClick={() => update("date", opt.value)}
-            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("date", opt.value) ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600"}`}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("date", opt.value) ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900" : "bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900"}`}
           >
             {opt.label}
           </button>
@@ -71,7 +71,7 @@ export function SearchFilters() {
       <select
         value={params.get("sort") ?? "relevance"}
         onChange={(e) => update("sort", e.target.value)}
-        className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 border-none outline-none cursor-pointer"
+        className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 border-none outline-none cursor-pointer"
       >
         {SORT_OPTIONS.map((opt) => (
           <option key={opt.value} value={opt.value}>
@@ -87,7 +87,7 @@ export function SearchFilters() {
             onClick={() =>
               update("category", cat === "All" ? "" : cat.toLowerCase())
             }
-            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("category", cat === "All" ? "" : cat.toLowerCase()) ? "bg-brand-500 text-white" : "bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600"}`}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active("category", cat === "All" ? "" : cat.toLowerCase()) ? "bg-brand-500 text-white" : "bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900"}`}
           >
             {cat}
           </button>

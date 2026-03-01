@@ -28,13 +28,13 @@ const TradingViewMiniChart = dynamic(
 
 const TradingViewTicker = dynamic(
   () => import('@/components/charts/TradingViewTicker'),
-  { ssr: false, loading: () => <div className="h-12 bg-gray-200 dark:bg-gray-800 animate-pulse rounded" /> }
+  { ssr: false, loading: () => <div className="h-12 bg-gray-200 dark:bg-black animate-pulse rounded" /> }
 );
 
 function ChartSkeleton({ height }: { height: number }) {
   return (
     <div 
-      className="bg-gray-200 dark:bg-gray-800 animate-pulse rounded-xl"
+      className="bg-gray-200 dark:bg-black animate-pulse rounded-xl"
       style={{ height }}
     />
   );
@@ -68,7 +68,7 @@ export default function ChartsClient() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Ticker Tape */}
       <div className="border-b border-gray-200 dark:border-gray-800">
         <TradingViewTicker 
@@ -92,7 +92,7 @@ export default function ChartsClient() {
         </div>
 
         {/* Controls */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Pair Selection */}
             <div className="flex-1">
@@ -107,7 +107,7 @@ export default function ChartsClient() {
                     className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                       selectedPair.symbol === pair.symbol
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
                     }`}
                   >
                     {pair.shortName}
@@ -129,7 +129,7 @@ export default function ChartsClient() {
                     className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                       interval === int.value
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
                     }`}
                   >
                     {int.label}
@@ -149,7 +149,7 @@ export default function ChartsClient() {
                   className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                     theme === 'light'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
                   }`}
                 >
                   Light
@@ -159,7 +159,7 @@ export default function ChartsClient() {
                   className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                     theme === 'dark'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
                   }`}
                 >
                   Dark
@@ -170,7 +170,7 @@ export default function ChartsClient() {
         </div>
 
         {/* Main Chart */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 p-4 mb-6">
           <div className="flex items-center gap-2 mb-4">
             <BarChart3 className="w-5 h-5 text-gray-500" />
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -199,7 +199,7 @@ export default function ChartsClient() {
               <button
                 key={pair.symbol}
                 onClick={() => setSelectedPair(pair)}
-                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 cursor-pointer hover:border-blue-500 transition-colors text-left w-full"
+                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-3 cursor-pointer hover:border-blue-500 transition-colors text-left w-full"
               >
                 <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                   {pair.name}

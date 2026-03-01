@@ -88,7 +88,7 @@ export default function PricingContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700"
+          className="relative bg-white dark:bg-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700"
         >
           <div className="mb-6">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Free</h3>
@@ -125,7 +125,7 @@ export default function PricingContent() {
 
           <a
             href="/developers"
-            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
+            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-900 dark:text-white"
           >
             Get Started
           </a>
@@ -136,7 +136,7 @@ export default function PricingContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 ring-2 ring-white shadow-xl"
+          className="relative bg-white dark:bg-black rounded-2xl p-8 ring-2 ring-white shadow-xl"
         >
           <div className="absolute -top-4 left-1/2 -translate-x-1/2">
             <span className="bg-white text-black text-xs font-bold px-4 py-1 rounded-full">
@@ -274,7 +274,7 @@ export default function PricingContent() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedCategory === null
                 ? 'bg-white text-black'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
             All ({premiumCount})
@@ -288,7 +288,7 @@ export default function PricingContent() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   selectedCategory === key
                     ? 'bg-white text-black'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
                 {cat.icon} {cat.name} ({count})
@@ -306,7 +306,7 @@ export default function PricingContent() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.02 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-gray-400/50 transition-all"
+                className="bg-white dark:bg-black rounded-xl p-5 border border-gray-200 dark:border-gray-700 hover:border-gray-400/50 transition-all"
               >
                 <div className="flex items-start justify-between mb-3">
                   <code className="text-sm font-mono text-white bg-white/10 px-2 py-1 rounded">
@@ -340,7 +340,7 @@ export default function PricingContent() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: i * 0.02 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-green-500/30 hover:border-green-500/60 transition-all"
+              className="bg-white dark:bg-black rounded-xl p-5 border border-green-500/30 hover:border-green-500/60 transition-all"
             >
               <div className="flex items-start justify-between mb-3">
                 <code className="text-sm font-mono text-green-500 bg-green-500/10 px-2 py-1 rounded">
@@ -379,7 +379,7 @@ export default function PricingContent() {
         </p>
 
         <div className="overflow-x-auto">
-          <table className="w-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+          <table className="w-full bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700">
             <thead>
               <tr className="border-b border-gray-200 dark:border-gray-700">
                 <th className="text-left p-4 text-gray-900 dark:text-white font-semibold">
@@ -485,7 +485,7 @@ export default function PricingContent() {
           </a>
           <a
             href="/developers"
-            className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-3 rounded-xl font-semibold transition-all"
+            className="bg-gray-100 dark:bg-black hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-900 dark:text-white px-8 py-3 rounded-xl font-semibold transition-all"
           >
             Read the Docs
           </a>
@@ -525,7 +525,7 @@ function FeatureValue({ value }: { value: boolean | string }) {
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-black rounded-xl p-6 border border-gray-200 dark:border-gray-700">
       <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{question}</h3>
       <p className="text-sm text-gray-600 dark:text-gray-400">{answer}</p>
     </div>

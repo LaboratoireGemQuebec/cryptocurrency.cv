@@ -132,7 +132,7 @@ export default function CoverageGapWidget({
           {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={i}
-              className="h-16 rounded-lg bg-zinc-100 dark:bg-zinc-800 animate-pulse"
+              className="h-16 rounded-lg bg-zinc-100 dark:bg-black animate-pulse"
               aria-hidden="true"
             />
           ))}
@@ -178,7 +178,7 @@ export default function CoverageGapWidget({
 
   return (
     <section
-      className={`rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 ${className}`}
+      className={`rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-black ${className}`}
       aria-label="Coverage gap analysis"
     >
       {/* Header */}

@@ -44,7 +44,7 @@ const RegimeBadge: React.FC<{ regime: MarketRegime; confidence: number }> = ({ r
     markup: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
     distribution: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
     markdown: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
-    ranging: 'bg-gray-100 text-gray-800 dark:bg-gray-700/50 dark:text-gray-300',
+    ranging: 'bg-gray-100 text-gray-800 dark:bg-black/50 dark:text-gray-300',
     capitulation: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
     euphoria: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300',
   };
@@ -91,7 +91,7 @@ const FearGreedGauge: React.FC<{ value: number }> = ({ value }) => {
         <span className="text-gray-600 dark:text-slate-400">Fear & Greed</span>
         <span className="font-bold text-gray-900 dark:text-white">{value}</span>
       </div>
-      <div className="h-3 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
+      <div className="h-3 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
         <div 
           className={`h-full transition-all duration-500 ${getColor(value)}`}
           style={{ width: `${value}%` }}
@@ -108,11 +108,11 @@ const SignalCard: React.FC<{ signal: MarketSignal }> = ({ signal }) => {
   const directionColors = {
     bullish: 'border-green-400 bg-green-50 dark:bg-green-900/20',
     bearish: 'border-red-400 bg-red-50 dark:bg-red-900/20',
-    neutral: 'border-gray-400 bg-gray-50 dark:bg-gray-700/20',
+    neutral: 'border-gray-400 bg-gray-50 dark:bg-black/20',
   };
   
   const strengthBadges = {
-    weak: 'bg-gray-200 text-gray-700 dark:bg-gray-600 dark:text-gray-200',
+    weak: 'bg-gray-200 text-gray-700 dark:bg-black dark:text-gray-200',
     moderate: 'bg-blue-200 text-blue-700 dark:bg-blue-800 dark:text-blue-200',
     strong: 'bg-purple-200 text-purple-700 dark:bg-purple-800 dark:text-purple-200',
     extreme: 'bg-red-200 text-red-700 dark:bg-red-800 dark:text-red-200',
@@ -164,7 +164,7 @@ const OpportunityCard: React.FC<{ opportunity: TradingOpportunity }> = ({ opport
   };
   
   return (
-    <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
+    <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className={`px-2 py-1 rounded text-xs font-bold text-white uppercase ${typeColors[opportunity.type]}`}>
@@ -183,7 +183,7 @@ const OpportunityCard: React.FC<{ opportunity: TradingOpportunity }> = ({ opport
       <p className="text-sm text-gray-600 dark:text-slate-300 mb-3">{opportunity.rationale}</p>
       
       <div className="grid grid-cols-3 gap-2 text-sm">
-        <div className="bg-gray-100 dark:bg-slate-700 rounded p-2">
+        <div className="bg-gray-100 dark:bg-black rounded p-2">
           <div className="text-xs text-gray-500 dark:text-slate-400">Entry</div>
           <div className="font-semibold text-gray-900 dark:text-white">
             ${opportunity.entry.toLocaleString()}
@@ -205,7 +205,7 @@ const OpportunityCard: React.FC<{ opportunity: TradingOpportunity }> = ({ opport
       
       <div className="flex flex-wrap gap-1 mt-3">
         {opportunity.signalSources.map(source => (
-          <span key={source} className="px-2 py-0.5 bg-gray-200 dark:bg-slate-600 rounded text-xs">
+          <span key={source} className="px-2 py-0.5 bg-gray-200 dark:bg-black rounded text-xs">
             {source}
           </span>
         ))}
@@ -238,7 +238,7 @@ const RiskAlertCard: React.FC<{ alert: RiskAlert }> = ({ alert }) => {
           <p className="text-sm text-gray-600 dark:text-slate-300 mt-1">{alert.description}</p>
         </div>
       </div>
-      <div className="mt-3 p-2 bg-white/50 dark:bg-slate-800/50 rounded">
+      <div className="mt-3 p-2 bg-white/50 dark:bg-black/50 rounded">
         <span className="text-xs text-gray-500 dark:text-slate-400">Recommendation:</span>
         <p className="text-sm font-medium text-gray-700 dark:text-slate-200">{alert.recommendation}</p>
       </div>
@@ -434,7 +434,7 @@ export function AIMarketAgentDashboard() {
             className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition ${
               activeTab === tab
                 ? 'bg-purple-600 text-white'
-                : 'bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700'
+                : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
             }`}
           >
             {tab === 'chat' && '💬 '}
@@ -451,7 +451,7 @@ export function AIMarketAgentDashboard() {
       {activeTab === 'overview' && (
         <div className="space-y-6">
           {/* Market Narrative */}
-          <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+          <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <span>📝</span> Market Narrative
             </h3>
@@ -461,7 +461,7 @@ export function AIMarketAgentDashboard() {
           </div>
           
           {/* Sector Rotation */}
-          <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+          <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <span>🔄</span> Sector Rotation
             </h3>
@@ -469,7 +469,7 @@ export function AIMarketAgentDashboard() {
               {intelligence.sectorRotation.map(sector => (
                 <div key={sector.sector} className="flex items-center gap-4">
                   <div className="w-32 font-medium text-gray-900 dark:text-white">{sector.sector}</div>
-                  <div className="flex-1 h-6 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden relative">
+                  <div className="flex-1 h-6 bg-gray-200 dark:bg-black rounded-full overflow-hidden relative">
                     <div 
                       className={`absolute h-full transition-all ${
                         sector.magnitude > 0 ? 'bg-green-500' : 'bg-red-500'
@@ -493,7 +493,7 @@ export function AIMarketAgentDashboard() {
           
           {/* Upcoming Catalysts */}
           {intelligence.upcomingCatalysts.length > 0 && (
-            <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+            <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                 <span>📅</span> Upcoming Catalysts
               </h3>
@@ -501,7 +501,7 @@ export function AIMarketAgentDashboard() {
                 {intelligence.upcomingCatalysts.map(catalyst => (
                   <div 
                     key={catalyst.id}
-                    className="flex items-start gap-4 p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg"
+                    className="flex items-start gap-4 p-3 bg-gray-50 dark:bg-black/50 rounded-lg"
                   >
                     <div className="text-2xl">
                       {catalyst.type === 'macro' ? '🏛️' : 
@@ -514,7 +514,7 @@ export function AIMarketAgentDashboard() {
                       <div className="text-sm text-gray-600 dark:text-slate-300">{catalyst.description}</div>
                       <div className="flex gap-2 mt-2">
                         {catalyst.assets.map(asset => (
-                          <span key={asset} className="px-2 py-0.5 bg-gray-200 dark:bg-slate-600 rounded text-xs">
+                          <span key={asset} className="px-2 py-0.5 bg-gray-200 dark:bg-black rounded text-xs">
                             {asset}
                           </span>
                         ))}
@@ -587,13 +587,13 @@ export function AIMarketAgentDashboard() {
           
           {/* Correlation Anomalies */}
           {intelligence.correlationAnomalies.length > 0 && (
-            <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6">
+            <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 🔗 Correlation Anomalies
               </h3>
               <div className="space-y-3">
                 {intelligence.correlationAnomalies.map((anomaly, i) => (
-                  <div key={i} className="p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg">
+                  <div key={i} className="p-3 bg-gray-50 dark:bg-black/50 rounded-lg">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold">{anomaly.asset1}/{anomaly.asset2}</span>
                       <span className={`px-2 py-0.5 rounded text-xs ${
@@ -618,7 +618,7 @@ export function AIMarketAgentDashboard() {
       )}
       
       {activeTab === 'chat' && (
-        <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden">
+        <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden">
           {/* Chat Header */}
           <div className="border-b border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-750">
             <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
@@ -660,7 +660,7 @@ export function AIMarketAgentDashboard() {
                 <div className={`max-w-[80%] rounded-2xl p-4 ${
                   msg.role === 'user'
                     ? 'bg-purple-600 text-white rounded-br-none'
-                    : 'bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-bl-none'
+                    : 'bg-gray-100 dark:bg-black text-gray-900 dark:text-white rounded-bl-none'
                 }`}>
                   <div className="whitespace-pre-wrap">{msg.content}</div>
                   
@@ -684,7 +684,7 @@ export function AIMarketAgentDashboard() {
             
             {chatLoading && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 dark:bg-slate-700 rounded-2xl rounded-bl-none p-4">
+                <div className="bg-gray-100 dark:bg-black rounded-2xl rounded-bl-none p-4">
                   <div className="flex gap-1">
                     <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                     <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -706,7 +706,7 @@ export function AIMarketAgentDashboard() {
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                 placeholder="Ask about markets, signals, opportunities..."
-                className="flex-1 px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-xl bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="flex-1 px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-xl bg-white dark:bg-black text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 disabled={chatLoading}
               />
               <button

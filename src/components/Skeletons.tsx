@@ -26,7 +26,7 @@ interface SkeletonProps {
 export function Skeleton({ className = '' }: SkeletonProps) {
   return (
     <div
-      className={`animate-pulse bg-gray-200 dark:bg-gray-700 rounded ${className}`}
+      className={`animate-pulse bg-gray-200 dark:bg-black rounded ${className}`}
     />
   );
 }
@@ -36,7 +36,7 @@ export function Skeleton({ className = '' }: SkeletonProps) {
  */
 export function ArticleCardSkeleton() {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-5 h-full">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-700 p-5 h-full">
       <div className="flex items-center justify-between mb-3">
         <Skeleton className="h-6 w-20 rounded-full" />
         <Skeleton className="h-4 w-16" />
@@ -75,7 +75,7 @@ export function ArticleCompactSkeleton() {
  */
 export function HeroSkeleton() {
   return (
-    <div className="relative h-[500px] bg-gray-200 dark:bg-gray-800 rounded-3xl overflow-hidden">
+    <div className="relative h-[500px] bg-gray-200 dark:bg-black rounded-3xl overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-8">
         <Skeleton className="h-6 w-24 mb-4 rounded-full" />
@@ -100,7 +100,7 @@ export function HeroSkeleton() {
  */
 export function TrendingItemSkeleton() {
   return (
-    <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
+    <div className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-black rounded-xl">
       <Skeleton className="w-10 h-10 rounded-lg" />
       <div className="flex-1">
         <Skeleton className="h-4 w-20 mb-1" />
@@ -137,7 +137,7 @@ export function SearchResultsSkeleton({ count = 5 }: { count?: number }) {
   return (
     <div className="space-y-4">
       {[...Array(count)].map((_, i) => (
-        <div key={i} className="flex gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl">
+        <div key={i} className="flex gap-4 p-4 bg-white dark:bg-black rounded-xl">
           <div className="flex-1">
             <Skeleton className="h-5 w-3/4 mb-2" />
             <Skeleton className="h-4 w-full mb-2" />
@@ -192,7 +192,7 @@ export function ArticlePageSkeleton() {
 export function SidebarSkeleton() {
   return (
     <aside className="space-y-6">
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-6">
+      <div className="bg-white dark:bg-black rounded-xl p-6">
         <Skeleton className="h-6 w-32 mb-4" />
         {[...Array(5)].map((_, i) => (
           <TrendingItemSkeleton key={i} />
@@ -207,7 +207,7 @@ export function SidebarSkeleton() {
  */
 export function PageSkeleton() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <HeroSkeleton />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">

@@ -81,8 +81,8 @@ const SHARE_CONFIGS: Record<Platform, ShareConfig> = {
   copy: {
     icon: '📋',
     label: 'Copy',
-    color: 'bg-gray-600 dark:bg-gray-700',
-    hoverColor: 'hover:bg-gray-700 dark:hover:bg-gray-600',
+    color: 'bg-gray-600 dark:bg-black',
+    hoverColor: 'hover:bg-gray-700 dark:hover:bg-neutral-900',
     getUrl: () => '',
   },
 };
@@ -200,7 +200,7 @@ export function FloatingShareBar({
 
   return (
     <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-      <div className="flex flex-col gap-2 p-2 bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700">
+      <div className="flex flex-col gap-2 p-2 bg-white dark:bg-black rounded-2xl shadow-lg border border-gray-200 dark:border-slate-700">
         <SocialShareButtons
           url={url}
           title={title}

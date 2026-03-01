@@ -79,10 +79,10 @@ export function HoldingsTable({
 
   if (isLoading) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="animate-pulse p-4 space-y-4">
           {[1, 2, 3, 4].map(i => (
-            <div key={i} className="h-16 bg-gray-200 dark:bg-gray-700 rounded" />
+            <div key={i} className="h-16 bg-gray-200 dark:bg-black rounded" />
           ))}
         </div>
       </div>
@@ -94,7 +94,7 @@ export function HoldingsTable({
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
@@ -156,14 +156,14 @@ export function HoldingsTable({
             {sortedHoldings.map(holding => (
               <React.Fragment key={holding.coinId}>
                 <tr 
-                  className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors"
+                  className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-neutral-900/30 transition-colors"
                 >
                   <td className="px-6 py-4">
                     <Link href={`/coin/${holding.coinId}`} className="flex items-center gap-3 group">
                       {holding.image ? (
                         <Image src={holding.image} alt={holding.coinName} width={40} height={40} className="rounded-full" />
                       ) : (
-                        <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center text-sm font-bold text-gray-600 dark:text-gray-300">
+                        <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-black flex items-center justify-center text-sm font-bold text-gray-600 dark:text-gray-300">
                           {holding.coinSymbol.slice(0, 2).toUpperCase()}
                         </div>
                       )}
@@ -228,7 +228,7 @@ export function HoldingsTable({
                   </td>
                   <td className="px-4 py-4 text-right">
                     <div className="flex items-center justify-end gap-2">
-                      <div className="w-16 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                      <div className="w-16 h-2 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-blue-500 rounded-full"
                           style={{ width: `${Math.min(holding.allocation, 100)}%` }}
@@ -261,7 +261,7 @@ export function HoldingsTable({
                       )}
                       <button
                         onClick={() => setExpandedRow(expandedRow === holding.coinId ? null : holding.coinId)}
-                        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 transition-colors"
+                        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 text-gray-500 transition-colors"
                         title="Transaction history"
                       >
                         <History className="w-4 h-4" />
@@ -273,7 +273,7 @@ export function HoldingsTable({
                 {/* Expanded transaction history */}
                 {expandedRow === holding.coinId && (
                   <tr>
-                    <td colSpan={9} className="px-6 py-4 bg-gray-50 dark:bg-gray-800/50">
+                    <td colSpan={9} className="px-6 py-4 bg-gray-50 dark:bg-black/50">
                       <div className="space-y-2">
                         <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                           Transaction History
@@ -283,7 +283,7 @@ export function HoldingsTable({
                             {holding.transactions.slice().reverse().map(tx => (
                               <div 
                                 key={tx.id}
-                                className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
+                                className="flex items-center justify-between p-3 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-gray-700"
                               >
                                 <div className="flex items-center gap-3">
                                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ${

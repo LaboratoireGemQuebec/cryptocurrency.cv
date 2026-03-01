@@ -28,7 +28,7 @@ export default async function ReaderPage() {
   const data = await getLatestNews(50);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* Structured Data for SEO */}
       <BreadcrumbStructuredData 
         items={[

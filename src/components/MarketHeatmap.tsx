@@ -221,10 +221,10 @@ export function MarketHeatmap({
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
         <div className="animate-pulse">
-          <div className="h-8 w-48 bg-neutral-200 dark:bg-neutral-800 rounded mb-4" />
-          <div className="h-[400px] bg-neutral-200 dark:bg-neutral-800 rounded" />
+          <div className="h-8 w-48 bg-neutral-200 dark:bg-black rounded mb-4" />
+          <div className="h-[400px] bg-neutral-200 dark:bg-black rounded" />
         </div>
       </div>
     );
@@ -232,7 +232,7 @@ export function MarketHeatmap({
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg className="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -255,7 +255,7 @@ export function MarketHeatmap({
   }
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
         <div>
@@ -278,7 +278,7 @@ export function MarketHeatmap({
             <span className="text-neutral-500 dark:text-neutral-400">-5%</span>
           </div>
           <div className="flex items-center gap-1">
-            <div className="w-4 h-4 bg-neutral-200 dark:bg-neutral-700 rounded" />
+            <div className="w-4 h-4 bg-neutral-200 dark:bg-black rounded" />
             <span className="text-neutral-500 dark:text-neutral-400">0%</span>
           </div>
           <div className="flex items-center gap-1">
@@ -348,7 +348,7 @@ export function MarketHeatmap({
 
         {/* Tooltip */}
         {hoveredCoin && (
-          <div className="absolute top-4 right-4 bg-white dark:bg-neutral-800 rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-700 p-4 z-10 min-w-[200px]">
+          <div className="absolute top-4 right-4 bg-white dark:bg-black rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-700 p-4 z-10 min-w-[200px]">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-bold text-neutral-900 dark:text-white">
                 {hoveredCoin.symbol}
@@ -388,7 +388,7 @@ export function MarketHeatmap({
       </div>
 
       {/* Footer */}
-      <div className="p-3 bg-neutral-50 dark:bg-neutral-800/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
+      <div className="p-3 bg-neutral-50 dark:bg-black/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
         Data from CoinGecko • Updates every minute • Top {coins.length} by market cap
       </div>
     </div>

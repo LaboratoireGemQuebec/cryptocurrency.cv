@@ -87,6 +87,10 @@ export { tokenterminal };
 import * as dune from './dune';
 export { dune };
 
+// Comprehensive Market Data - CryptoCompare (Free: 100K calls/mo)
+import * as cryptocompare from './cryptocompare';
+export { cryptocompare };
+
 // Solana Deep Data - Helius (Free tier: 100k req/day)
 import * as helius from './helius';
 export { helius };

@@ -152,7 +152,7 @@ function SentimentBadge({ score, label }: { score: number; label?: string }) {
   const getColor = () => {
     if (score > 0.3) return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400';
     if (score < -0.3) return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400';
-    return 'bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-400';
+    return 'bg-neutral-100 text-neutral-800 dark:bg-black dark:text-neutral-400';
   };
 
   const getLabel = () => {
@@ -210,7 +210,7 @@ function GalaxyScoreBar({ score }: { score: number }) {
 
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+      <div className="flex-1 h-2 bg-neutral-200 dark:bg-black rounded-full overflow-hidden">
         <div 
           className={`h-full ${getColor()} transition-all duration-500`}
           style={{ width: `${Math.min(score, 100)}%` }}
@@ -241,13 +241,13 @@ function TabButton({ active, onClick, children, count }: TabButtonProps) {
       className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
         active
           ? 'bg-purple-600 text-white'
-          : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
+          : 'bg-neutral-100 dark:bg-black text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-900'
       }`}
     >
       {children}
       {count !== undefined && (
         <span className={`px-1.5 py-0.5 text-xs rounded-full ${
-          active ? 'bg-white/20' : 'bg-neutral-200 dark:bg-neutral-700'
+          active ? 'bg-white/20' : 'bg-neutral-200 dark:bg-black'
         }`}>
           {count}
         </span>
@@ -295,7 +295,7 @@ function TrendsView({
           {trends.map((trend, index) => (
             <tr 
               key={trend.ticker}
-              className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors cursor-pointer"
+              className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors cursor-pointer"
               onClick={() => onTickerClick?.(trend.ticker)}
             >
               <td className="py-3 text-neutral-500 dark:text-neutral-400">{index + 1}</td>
@@ -325,7 +325,7 @@ function TrendsView({
                     {trend.topChannels.slice(0, 3).map((channel, i) => (
                       <span 
                         key={i}
-                        className="inline-flex items-center gap-1 px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 rounded text-xs"
+                        className="inline-flex items-center gap-1 px-2 py-0.5 bg-neutral-100 dark:bg-black rounded text-xs"
                       >
                         <PlatformIcon platform={channel.platform} />
                         {channel.name}
@@ -418,7 +418,7 @@ function MetricsView({
               {sortedMetrics.map((metric) => (
                 <tr 
                   key={metric.symbol}
-                  className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors cursor-pointer"
+                  className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors cursor-pointer"
                   onClick={() => onTickerClick?.(metric.symbol)}
                 >
                   <td className="py-3">
@@ -480,7 +480,7 @@ function MetricsView({
                 key={metric.slug}
                 role="button"
                 tabIndex={0}
-                className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
                 onClick={() => onTickerClick?.(metric.ticker)}
                 onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onTickerClick?.(metric.ticker); }}
               >
@@ -530,7 +530,7 @@ function MessagesView({
       {messages.map((message) => (
         <div 
           key={message.id}
-          className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg border border-neutral-200 dark:border-neutral-700"
+          className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg border border-neutral-200 dark:border-neutral-700"
         >
           <div className="flex items-start justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -586,10 +586,10 @@ function NarrativesView({ narratives, loading }: { narratives: NarrativeItem[]; 
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="animate-pulse p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border border-neutral-200 dark:border-neutral-700">
-            <div className="h-5 bg-neutral-200 dark:bg-neutral-700 rounded w-1/3 mb-3" />
-            <div className="h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-2/3 mb-2" />
-            <div className="h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-1/2" />
+          <div key={i} className="animate-pulse p-4 bg-neutral-50 dark:bg-black/50 rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <div className="h-5 bg-neutral-200 dark:bg-black rounded w-1/3 mb-3" />
+            <div className="h-3 bg-neutral-200 dark:bg-black rounded w-2/3 mb-2" />
+            <div className="h-3 bg-neutral-200 dark:bg-black rounded w-1/2" />
           </div>
         ))}
       </div>
@@ -621,12 +621,12 @@ function NarrativesView({ narratives, loading }: { narratives: NarrativeItem[]; 
             ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
             : isFading
             ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300'
-            : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300';
+            : 'bg-neutral-100 dark:bg-black text-neutral-700 dark:text-neutral-300';
 
           return (
             <div
               key={narrative.id}
-              className={`p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border ${cardBorder}`}
+              className={`p-4 bg-neutral-50 dark:bg-black/50 rounded-xl border ${cardBorder}`}
             >
               {/* Header row */}
               <div className="flex items-center gap-3 mb-2 flex-wrap">
@@ -768,7 +768,7 @@ export function SocialIntelligenceDashboard({
 
   if (loading && !data) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800">
         <LoadingSpinner />
       </div>
     );
@@ -776,14 +776,14 @@ export function SocialIntelligenceDashboard({
 
   if (error && !data) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800">
         <ErrorDisplay message={error} onRetry={fetchData} />
       </div>
     );
   }
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       {showHeader && (
         <div className="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10">
@@ -834,7 +834,7 @@ export function SocialIntelligenceDashboard({
       )}
 
       {/* Tabs */}
-      <div className="px-6 py-3 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/30">
+      <div className="px-6 py-3 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-black/30">
         <div className="flex gap-2">
           <TabButton
             active={activeView === 'trends'}
@@ -870,7 +870,7 @@ export function SocialIntelligenceDashboard({
       {/* Content */}
       <div className="p-6">
         {loading && (
-          <div className="absolute inset-0 bg-white/50 dark:bg-neutral-900/50 flex items-center justify-center z-10">
+          <div className="absolute inset-0 bg-white/50 dark:bg-black/50 flex items-center justify-center z-10">
             <LoadingSpinner />
           </div>
         )}
@@ -907,7 +907,7 @@ export function SocialIntelligenceDashboard({
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/30 text-xs text-neutral-500 dark:text-neutral-400">
+      <div className="px-6 py-3 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-black/30 text-xs text-neutral-500 dark:text-neutral-400">
         <div className="flex items-center justify-between">
           <span>
             Data from {[

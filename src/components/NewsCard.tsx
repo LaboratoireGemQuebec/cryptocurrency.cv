@@ -85,7 +85,7 @@ const sourceColors: Record<string, { bg: string; light: string; text: string; bo
   'The Defiant': { bg: 'bg-pink-600', light: 'bg-pink-50', text: 'text-pink-700', border: 'border-pink-200', darkLight: 'dark:bg-pink-900/30', darkText: 'dark:text-pink-300' },
 };
 
-const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', darkLight: 'dark:bg-gray-800', darkText: 'dark:text-gray-300' };
+const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', darkLight: 'dark:bg-black', darkText: 'dark:text-gray-300' };
 
 export default function NewsCard({ article, variant = 'default', showDescription = true, priority }: NewsCardProps) {
   const t = useTranslations('news');
@@ -159,7 +159,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           className="flex items-start gap-4 p-4 rounded-xl card-hover transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
         >
           {priority && (
-            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
               {priority}
             </span>
           )}
@@ -184,7 +184,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
       <article className="group" data-article>
         <Link 
           href={`/article/${articleSlug}`}
-          className="flex gap-5 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 card-hover transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
+          className="flex gap-5 p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-slate-700 card-hover transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
         >
           {/* Left accent */}
           <div className={`w-1 self-stretch ${style.bg} rounded-full flex-shrink-0`} />
@@ -240,7 +240,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
         {/* Share button */}
         <button
           onClick={handleShare}
-          className="relative p-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full shadow-md border border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-800 transition-all"
+          className="relative p-2 bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full shadow-md border border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900 transition-all"
           aria-label="Share article"
           title={tCommon('share')}
         >
@@ -260,7 +260,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           className={`p-2 rounded-full shadow-md border backdrop-blur-sm transition-all ${
             bookmarked
               ? 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-600 text-amber-600 dark:text-amber-400'
-              : 'bg-white/90 dark:bg-slate-800/90 border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-slate-800'
+              : 'bg-white/90 dark:bg-black/90 border-gray-200/50 dark:border-slate-600/50 text-gray-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-white dark:hover:bg-neutral-900'
           }`}
           aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark article'}
           title={bookmarked ? 'Bookmarked' : 'Bookmark'}
@@ -279,7 +279,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
 
       <Link 
         href={`/article/${articleSlug}`}
-        className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden card-hover hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+        className="block h-full bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden card-hover hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
         {/* Article thumbnail - always shown with gradient fallback */}
         <div className="relative aspect-[16/9] overflow-hidden">

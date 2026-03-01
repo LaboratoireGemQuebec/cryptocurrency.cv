@@ -21,7 +21,7 @@ const quickLinks = [
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-slate-950 px-4 py-16">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-black px-4 py-16">
       <div className="text-center max-w-lg">
         {/* Animated 404 */}
         <div className="relative mb-6">
@@ -62,7 +62,7 @@ export default function NotFound() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-slate-500 hover:shadow-md transition-all text-center"
+                className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-slate-500 hover:shadow-md transition-all text-center"
               >
                 <span className="text-xl">{link.icon}</span>
                 <span className="text-xs font-medium text-gray-600 dark:text-slate-400">

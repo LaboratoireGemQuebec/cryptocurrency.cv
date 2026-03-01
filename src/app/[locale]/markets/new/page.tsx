@@ -39,7 +39,7 @@ export default async function NewCoinsPage() {
     .slice(0, 50);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -84,7 +84,7 @@ export default async function NewCoinsPage() {
               <Link
                 key={coin.id}
                 href={`/coin/${coin.id}`}
-                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
+                className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="relative w-10 h-10">

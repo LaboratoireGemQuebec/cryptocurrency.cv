@@ -291,17 +291,17 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
     >
       <div 
         role="presentation"
-        className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-lg w-full max-h-[80vh] overflow-auto"
+        className="bg-white dark:bg-black rounded-2xl shadow-2xl max-w-lg w-full max-h-[80vh] overflow-auto"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 bg-white dark:bg-gray-800 px-6 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+        <div className="sticky top-0 bg-white dark:bg-black px-6 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">
             ⌨️ Keyboard Shortcuts
           </h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 transition-colors"
             aria-label={t('close')}
           >
             <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,7 +323,7 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
                     <div className="flex items-center gap-1">
                       {shortcut.keys.map((key, i) => (
                         <span key={i}>
-                          <kbd className="px-2 py-1 text-xs font-semibold text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">
+                          <kbd className="px-2 py-1 text-xs font-semibold text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-black rounded border border-gray-200 dark:border-gray-600">
                             {key}
                           </kbd>
                           {i < shortcut.keys.length - 1 && (
@@ -341,9 +341,9 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
           ))}
         </div>
 
-        <div className="px-6 py-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-b-2xl">
+        <div className="px-6 py-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-black/50 rounded-b-2xl">
           <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-            Press <kbd className="px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-gray-700 rounded">?</kbd> anytime to show this help
+            Press <kbd className="px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-black rounded">?</kbd> anytime to show this help
           </p>
         </div>
       </div>

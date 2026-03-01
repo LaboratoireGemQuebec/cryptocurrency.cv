@@ -190,7 +190,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden shadow-sm">
       {/* Header */}
       <div className={`px-5 py-4 bg-gradient-to-r ${formatConfig[format].color} bg-opacity-10`}>
         <div className="flex items-center justify-between">
@@ -216,7 +216,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
               className={`px-3 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap transition-all ${
                 format === key
                   ? 'bg-indigo-500 text-white shadow-md'
-                  : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600'
+                  : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900'
               }`}
             >
               {cfg.icon} {cfg.label}
@@ -286,7 +286,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
 
             {/* Audio Player */}
             {episode.audioUrl && (
-              <div className="bg-gray-50 dark:bg-slate-700/50 rounded-xl p-4">
+              <div className="bg-gray-50 dark:bg-black/50 rounded-xl p-4">
                 <audio ref={audioRef} src={episode.audioUrl} preload="metadata">
                   <track kind="captions" />
                 </audio>
@@ -309,7 +309,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
                       aria-valuenow={Math.round(currentTime)}
                       aria-valuemin={0}
                       aria-valuemax={Math.round(duration)}
-                      className="h-2 bg-gray-200 dark:bg-slate-600 rounded-full cursor-pointer overflow-hidden"
+                      className="h-2 bg-gray-200 dark:bg-black rounded-full cursor-pointer overflow-hidden"
                       onClick={e => {
                         const rect = e.currentTarget.getBoundingClientRect();
                         seekTo((e.clientX - rect.left) / rect.width);
@@ -361,7 +361,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
                     className={`p-3 rounded-lg border transition-all ${
                       i === activeSegment
                         ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-300 dark:border-indigo-700'
-                        : 'bg-gray-50 dark:bg-slate-700/30 border-gray-100 dark:border-slate-600/30'
+                        : 'bg-gray-50 dark:bg-black/30 border-gray-100 dark:border-slate-600/30'
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-1">
@@ -385,7 +385,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
             <button
               onClick={generateEpisode}
               disabled={loading}
-              className="w-full py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-slate-600 transition-all text-sm"
+              className="w-full py-2.5 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-neutral-900 transition-all text-sm"
             >
               🔄 Generate New Episode
             </button>
@@ -394,7 +394,7 @@ export function AIPodcastPlayer({ defaultFormat = 'flash' }: AIPodcastPlayerProp
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-700/30">
+      <div className="px-4 py-2 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-black/30">
         <span className="text-[10px] text-gray-400">
           ⚠️ AI-generated content. Not financial advice. Powered by multi-provider AI + Google Cloud TTS.
         </span>

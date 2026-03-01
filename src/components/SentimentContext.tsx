@@ -58,7 +58,7 @@ function SentimentBar({ score, label }: { score: number; label: string }) {
           {Math.round(pct)}%
         </span>
       </div>
-      <div className="h-2.5 bg-gray-200 dark:bg-slate-600 rounded-full overflow-hidden">
+      <div className="h-2.5 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-700"
           style={{
@@ -146,15 +146,15 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 bg-gray-200 dark:bg-slate-700 rounded" />
-            <div className="h-6 w-44 bg-gray-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-6 bg-gray-200 dark:bg-black rounded" />
+            <div className="h-6 w-44 bg-gray-200 dark:bg-black rounded" />
           </div>
-          <div className="h-4 bg-gray-200 dark:bg-slate-700 rounded w-3/4" />
-          <div className="h-8 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
-          <div className="h-8 bg-gray-100 dark:bg-slate-700/50 rounded-xl" />
+          <div className="h-4 bg-gray-200 dark:bg-black rounded w-3/4" />
+          <div className="h-8 bg-gray-100 dark:bg-black/50 rounded-xl" />
+          <div className="h-8 bg-gray-100 dark:bg-black/50 rounded-xl" />
         </div>
       </div>
     );
@@ -162,7 +162,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">📊</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Sentiment Context</h2>
@@ -184,7 +184,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
   // If no data at all, show a minimal card
   if (!marketData && !socialData) {
     return (
-      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
+      <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm p-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">📊</span>
           <h2 className="font-bold text-lg text-gray-900 dark:text-white">Sentiment Context</h2>
@@ -203,7 +203,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
   const hasDivergence = marketData && !isSentimentSimilar(articleSentiment, marketData.overall);
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center gap-3">
@@ -219,7 +219,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
       <div className="px-6 pb-4 space-y-5">
         {/* Article Sentiment */}
-        <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-700/50 rounded-xl">
+        <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-black/50 rounded-xl">
           <span className="text-sm font-medium text-gray-700 dark:text-slate-300">This Article</span>
           <span className={`text-sm font-semibold ${articleSent.color}`}>
             {articleSent.emoji} {articleSent.label}
@@ -262,7 +262,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
             <h3 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-2">Key Drivers</h3>
             <div className="flex flex-wrap gap-1.5">
               {marketData.keyDrivers.map((driver, i) => (
-                <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-lg">
+                <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-slate-300 rounded-lg">
                   {driver}
                 </span>
               ))}
@@ -272,7 +272,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
 
         {/* Divergence Alert */}
         {hasDivergence && (
-          <div className="p-4 bg-gray-50 dark:bg-gray-800/20 border border-gray-200 dark:border-gray-600/50 rounded-xl">
+          <div className="p-4 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-600/50 rounded-xl">
             <div className="flex items-start gap-2">
               <span className="text-lg">⚠️</span>
               <div>
@@ -291,7 +291,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
       </div>
 
       {/* Footer */}
-      <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
+      <div className="px-6 py-3 bg-gray-50 dark:bg-black/30 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between">
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 Powered by AI sentiment analysis
         </span>

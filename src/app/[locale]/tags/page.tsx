@@ -64,7 +64,7 @@ function TagCard({ tag }: { tag: Tag }) {
   return (
     <Link
       href={`/tags/${tag.slug}`}
-      className="group block bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 hover:shadow-lg hover:border-primary/50 transition-all duration-200"
+      className="group block bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-4 hover:shadow-lg hover:border-primary/50 transition-all duration-200"
     >
       <div className="flex items-start gap-3">
         <span className="text-2xl">{tag.icon}</span>
@@ -127,7 +127,7 @@ export default async function TagsPage({ params }: { params: Promise<{ locale: s
   const structuredData = generateStructuredData();
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -149,19 +149,19 @@ export default async function TagsPage({ params }: { params: Promise<{ locale: s
           
           {/* Quick Navigation */}
           <div className="mb-12 flex flex-wrap gap-2 justify-center">
-            <a href="#assets" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
+            <a href="#assets" className="px-4 py-2 bg-white dark:bg-black rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
               ₿ Assets
             </a>
-            <a href="#topics" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
+            <a href="#topics" className="px-4 py-2 bg-white dark:bg-black rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
               📚 Topics
             </a>
-            <a href="#events" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
+            <a href="#events" className="px-4 py-2 bg-white dark:bg-black rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
               📅 Events
             </a>
-            <a href="#technology" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
+            <a href="#technology" className="px-4 py-2 bg-white dark:bg-black rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
               🔧 Technology
             </a>
-            <a href="#entities" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
+            <a href="#entities" className="px-4 py-2 bg-white dark:bg-black rounded-full border border-gray-200 dark:border-slate-700 text-sm font-medium hover:border-primary/50 transition-colors">
               🏛️ Entities
             </a>
           </div>
@@ -222,7 +222,7 @@ export default async function TagsPage({ params }: { params: Promise<{ locale: s
           </div>
           
           {/* SEO Content */}
-          <section className="mt-16 bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+          <section className="mt-16 bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
               About Our Tag System
             </h2>
@@ -248,7 +248,7 @@ export default async function TagsPage({ params }: { params: Promise<{ locale: s
               </Link>
               <Link
                 href="/topics"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-black text-gray-900 dark:text-white rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-neutral-900 transition-colors"
               >
                 📂 Browse Topics
               </Link>

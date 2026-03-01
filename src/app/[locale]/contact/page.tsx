@@ -49,7 +49,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <Header />
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
                         placeholder="Your name"
                       />
                     </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
                         placeholder="you@example.com"
                       />
                     </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                       id="subject"
                       value={formData.subject}
                       onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="bug">Bug Report</option>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition resize-y"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-black text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition resize-y"
                       placeholder="Tell us what's on your mind..."
                     />
                   </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Direct Contact */}
-              <div className="bg-gray-50 dark:bg-slate-800 rounded-xl p-6">
+              <div className="bg-gray-50 dark:bg-black rounded-xl p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Direct Contact</h3>
                 <ul className="space-y-4 text-sm text-gray-600 dark:text-slate-400">
                   <li className="flex items-start gap-3">
@@ -207,7 +207,7 @@ export default function ContactPage() {
               </div>
 
               {/* Community */}
-              <div className="bg-gray-50 dark:bg-slate-800 rounded-xl p-6">
+              <div className="bg-gray-50 dark:bg-black rounded-xl p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Community</h3>
                 <ul className="space-y-3 text-sm">
                   <li>
@@ -247,7 +247,7 @@ export default function ContactPage() {
               </div>
 
               {/* Response Time */}
-              <div className="bg-gray-50 dark:bg-slate-800 rounded-xl p-6">
+              <div className="bg-gray-50 dark:bg-black rounded-xl p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h3>
                 <p className="text-sm text-gray-600 dark:text-slate-400">
                   We typically respond within 24–48 hours. For urgent security issues, please email{' '}

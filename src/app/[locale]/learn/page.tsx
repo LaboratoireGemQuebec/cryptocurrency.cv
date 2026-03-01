@@ -147,7 +147,7 @@ export default async function LearnPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       <main id="main-content" className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero */}
@@ -167,7 +167,7 @@ export default async function LearnPage({ params }: Props) {
             </Link>
             <Link
               href="/learn/what-is-cryptocurrency"
-              className="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-gray-900 dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-slate-700 transition text-sm"
+              className="px-5 py-2.5 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-slate-700 text-gray-900 dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-neutral-900 transition text-sm"
             >
               Start from scratch →
             </Link>
@@ -179,7 +179,7 @@ export default async function LearnPage({ params }: Props) {
           {tracks.map(track => {
             const lvl = levelConfig[track.level];
             return (
-              <div key={track.id} className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg transition">
+              <div key={track.id} className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-lg transition">
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-3xl">{track.emoji}</span>
                   <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${lvl.bg} ${lvl.color}`}>

@@ -67,7 +67,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
   const picks = getVariedArticles(articles, 3);
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
       {/* Header */}
       <div className="flex items-center gap-2 mb-5">
         <span className="text-xl" aria-hidden="true">🔥</span>
@@ -87,7 +87,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
             <Link
               key={articleId}
               href={`/article/${articleSlug}`}
-              className="group block p-4 -mx-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200 focus-ring"
+              className="group block p-4 -mx-4 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-all duration-200 focus-ring"
               role="listitem"
             >
               {/* Source Badge */}

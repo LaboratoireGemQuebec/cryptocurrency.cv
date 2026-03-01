@@ -71,7 +71,7 @@ export function PriceAlertButton({
         transition-all duration-200
         ${activeAlerts.length > 0 || hasTriggered
           ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 hover:bg-blue-100 dark:hover:bg-blue-500/20' 
-          : 'text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+          : 'text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-neutral-900'
         }
         ${hasTriggered ? 'animate-pulse' : ''}
         focus:outline-none focus:ring-2 focus:ring-blue-500/50

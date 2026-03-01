@@ -89,12 +89,12 @@ function LoadingState() {
     <div className="animate-pulse space-y-4 p-6">
       {[...Array(5)].map((_, i) => (
         <div key={i} className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-neutral-200 dark:bg-neutral-700 rounded-full" />
+          <div className="w-12 h-12 bg-neutral-200 dark:bg-black rounded-full" />
           <div className="flex-1 space-y-2">
-            <div className="h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-1/3" />
-            <div className="h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-1/4" />
+            <div className="h-4 bg-neutral-200 dark:bg-black rounded w-1/3" />
+            <div className="h-3 bg-neutral-200 dark:bg-black rounded w-1/4" />
           </div>
-          <div className="w-20 h-8 bg-neutral-200 dark:bg-neutral-700 rounded" />
+          <div className="w-20 h-8 bg-neutral-200 dark:bg-black rounded" />
         </div>
       ))}
     </div>
@@ -170,7 +170,7 @@ function ScoreBar({ value, max = 100, color = 'purple' }: { value: number; max?:
 
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+      <div className="flex-1 h-2 bg-neutral-200 dark:bg-black rounded-full overflow-hidden">
         <div 
           className={`h-full ${colors[color] || colors.purple} transition-all duration-500`}
           style={{ width: `${percentage}%` }}
@@ -202,7 +202,7 @@ function CallStatusBadge({ status }: { status: string }) {
     open: { color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400', label: 'Open' },
     won: { color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400', label: 'Won' },
     lost: { color: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400', label: 'Lost' },
-    expired: { color: 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400', label: 'Expired' },
+    expired: { color: 'bg-neutral-100 dark:bg-black text-neutral-600 dark:text-neutral-400', label: 'Expired' },
   };
 
   const { color, label } = config[status] || config.expired;
@@ -221,7 +221,7 @@ function CallStatusBadge({ status }: { status: string }) {
 function StatsCards({ stats }: { stats: InfluencerStats }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-      <div className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
+      <div className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg">
         <div className="text-2xl font-bold text-neutral-900 dark:text-white">
           {stats.activeInfluencers}
         </div>
@@ -229,7 +229,7 @@ function StatsCards({ stats }: { stats: InfluencerStats }) {
           Active Influencers
         </div>
       </div>
-      <div className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
+      <div className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg">
         <div className="text-2xl font-bold text-neutral-900 dark:text-white">
           {stats.totalCalls.toLocaleString()}
         </div>
@@ -237,7 +237,7 @@ function StatsCards({ stats }: { stats: InfluencerStats }) {
           Total Calls Tracked
         </div>
       </div>
-      <div className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
+      <div className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg">
         <div className={`text-2xl font-bold ${stats.avgAccuracy >= 50 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
           {stats.avgAccuracy.toFixed(1)}%
         </div>
@@ -245,7 +245,7 @@ function StatsCards({ stats }: { stats: InfluencerStats }) {
           Avg Accuracy
         </div>
       </div>
-      <div className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
+      <div className="p-4 bg-neutral-50 dark:bg-black/50 rounded-lg">
         <div className={`text-2xl font-bold ${stats.avgReturn >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
           {stats.avgReturn >= 0 ? '+' : ''}{stats.avgReturn.toFixed(2)}%
         </div>
@@ -287,7 +287,7 @@ function RecentCalls({
           return (
             <div 
               key={call.id}
-              className="flex items-center justify-between p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg"
+              className="flex items-center justify-between p-3 bg-neutral-50 dark:bg-black/50 rounded-lg"
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
@@ -390,14 +390,14 @@ export function InfluencerLeaderboard({
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800">
         <LoadingState />
       </div>
     );
   }
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-gray-500/10 via-gray-400/10 to-gray-300/10">
         <div className="flex items-center justify-between">
@@ -416,7 +416,7 @@ export function InfluencerLeaderboard({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-              className="px-3 py-1.5 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-3 py-1.5 bg-white dark:bg-black border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               <option value="reliability">Reliability Score</option>
               <option value="accuracy">Accuracy Rate</option>
@@ -449,7 +449,7 @@ export function InfluencerLeaderboard({
                 <div 
                   role="button"
                   tabIndex={0}
-                  className="flex items-center gap-4 p-4 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors"
+                  className="flex items-center gap-4 p-4 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors"
                   onClick={() => {
                     setExpandedId(expandedId === influencer.id ? null : influencer.id);
                     onInfluencerClick?.(influencer);
@@ -457,7 +457,7 @@ export function InfluencerLeaderboard({
                   onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { setExpandedId(expandedId === influencer.id ? null : influencer.id); onInfluencerClick?.(influencer); } }}
                 >
                   {/* Rank */}
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 font-bold text-neutral-600 dark:text-neutral-400">
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-black font-bold text-neutral-600 dark:text-neutral-400">
                     {index + 1}
                   </div>
 
@@ -513,7 +513,7 @@ export function InfluencerLeaderboard({
 
                 {/* Expanded Details */}
                 {expandedId === influencer.id && (
-                  <div className="p-4 bg-neutral-50 dark:bg-neutral-800/30 border-t border-neutral-200 dark:border-neutral-700">
+                  <div className="p-4 bg-neutral-50 dark:bg-black/30 border-t border-neutral-200 dark:border-neutral-700">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* Performance Metrics */}
                       <div>
@@ -556,7 +556,7 @@ export function InfluencerLeaderboard({
                                 key={ticker.ticker}
                                 role="button"
                                 tabIndex={0}
-                                className="flex items-center justify-between p-2 bg-white dark:bg-neutral-800 rounded cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                className="flex items-center justify-between p-2 bg-white dark:bg-black rounded cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-900"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onTickerClick?.(ticker.ticker);

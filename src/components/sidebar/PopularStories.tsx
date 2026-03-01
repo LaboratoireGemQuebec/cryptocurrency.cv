@@ -122,7 +122,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
+    <div className="bg-white dark:bg-black rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
       {/* Header with Filter */}
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">
@@ -131,12 +131,12 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
         </h3>
         
         {/* Time Filter Toggle */}
-        <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg p-0.5">
+        <div className="flex items-center bg-gray-100 dark:bg-black rounded-lg p-0.5">
           <button
             onClick={() => setTimeFilter('24h')}
             className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${
               timeFilter === '24h'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+                ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                 : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
             }`}
             aria-pressed={timeFilter === '24h'}
@@ -147,7 +147,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
             onClick={() => setTimeFilter('7d')}
             className={`px-2.5 py-1 text-xs font-medium rounded-md transition-all ${
               timeFilter === '7d'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+                ? 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm'
                 : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
             }`}
             aria-pressed={timeFilter === '7d'}
@@ -169,7 +169,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
             <Link
               key={articleId}
               href={`/article/${articleSlug}`}
-              className="group flex gap-3 p-2 -mx-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-ring"
+              className="group flex gap-3 p-2 -mx-2 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors focus-ring"
               role="listitem"
               onClick={() => trackView(articleId)}
             >

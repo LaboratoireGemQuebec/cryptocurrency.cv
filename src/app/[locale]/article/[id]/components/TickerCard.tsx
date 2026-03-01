@@ -111,11 +111,11 @@ export default function TickerCard({ ticker }: TickerCardProps) {
   return (
     <Link
       href={`/coin/${coinId}`}
-      className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700/40 text-gray-800 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800/40 transition group"
+      className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700/40 text-gray-800 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-100 dark:hover:bg-neutral-900/40 transition group"
     >
       <span className="font-semibold">${ticker}</span>
       {loading ? (
-        <span className="w-12 h-3 bg-gray-200/50 dark:bg-gray-700/30 rounded animate-pulse" />
+        <span className="w-12 h-3 bg-gray-200/50 dark:bg-black/30 rounded animate-pulse" />
       ) : priceData ? (
         <span className="flex items-center gap-1 text-xs">
           <span className="text-gray-600 dark:text-gray-300">{formatPrice(priceData.price)}</span>

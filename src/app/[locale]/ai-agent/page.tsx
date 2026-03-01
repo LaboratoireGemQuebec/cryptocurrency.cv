@@ -33,7 +33,7 @@ export default async function AIAgentPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       <Header />
       <main id="main-content" className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
@@ -76,7 +76,7 @@ export default async function AIAgentPage({ params }: Props) {
         </div>
 
         {/* How It Works */}
-        <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-6 mb-8">
+        <div className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <span>⚡</span> How It Works
           </h2>

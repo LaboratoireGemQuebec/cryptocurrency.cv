@@ -165,7 +165,7 @@ export function WhaleAlerts({
   function getSignificanceStyle(significance: WhaleTransaction['significance']) {
     switch (significance) {
       case 'massive':
-        return 'border-l-4 border-l-gray-400 bg-gray-50 dark:bg-gray-800/20';
+        return 'border-l-4 border-l-gray-400 bg-gray-50 dark:bg-black/20';
       case 'notable':
         return 'border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-900/10';
       default:
@@ -184,11 +184,11 @@ export function WhaleAlerts({
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 p-6">
         <div className="animate-pulse space-y-4">
-          <div className="h-8 w-48 bg-neutral-200 dark:bg-neutral-800 rounded" />
+          <div className="h-8 w-48 bg-neutral-200 dark:bg-black rounded" />
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="h-16 bg-neutral-200 dark:bg-neutral-800 rounded" />
+            <div key={i} className="h-16 bg-neutral-200 dark:bg-black rounded" />
           ))}
         </div>
       </div>
@@ -197,7 +197,7 @@ export function WhaleAlerts({
 
   if (error) {
     return (
-      <div className="bg-white dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-800/50 p-6">
+      <div className="bg-white dark:bg-black rounded-xl border border-red-200 dark:border-red-800/50 p-6">
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <svg className="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -220,7 +220,7 @@ export function WhaleAlerts({
   }
 
   return (
-    <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="bg-white dark:bg-black rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 border-b border-neutral-200 dark:border-neutral-800">
         <div>
@@ -236,14 +236,14 @@ export function WhaleAlerts({
         </div>
 
         {/* Filter */}
-        <div className="flex gap-1 bg-neutral-100 dark:bg-neutral-800 rounded-lg p-1 overflow-x-auto">
+        <div className="flex gap-1 bg-neutral-100 dark:bg-black rounded-lg p-1 overflow-x-auto">
           {(['all', 'deposits', 'withdrawals', 'transfers'] as const).map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
               className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize whitespace-nowrap ${
                 filter === f
-                  ? 'bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-black text-neutral-900 dark:text-white shadow-sm'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
             >
@@ -255,7 +255,7 @@ export function WhaleAlerts({
 
       {/* Summary */}
       {data?.summary && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 p-4 bg-neutral-50 dark:bg-neutral-800/50">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 p-4 bg-neutral-50 dark:bg-black/50">
           <div className="text-center">
             <div className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white">
               {data.summary.totalTransactions}
@@ -301,7 +301,7 @@ export function WhaleAlerts({
           filteredAlerts.map((alert) => (
             <div
               key={alert.id}
-              className={`p-4 hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors ${getSignificanceStyle(alert.significance)}`}
+              className={`p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition-colors ${getSignificanceStyle(alert.significance)}`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
@@ -320,7 +320,7 @@ export function WhaleAlerts({
                         ({formatUsd(alert.amountUsd)})
                       </span>
                       {alert.significance === 'massive' && (
-                        <span className="px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-800/30 text-gray-800 dark:text-gray-400 rounded-full">
+                        <span className="px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-black/30 text-gray-800 dark:text-gray-400 rounded-full">
                           🔥 Massive
                         </span>
                       )}
@@ -360,7 +360,7 @@ export function WhaleAlerts({
       </div>
 
       {/* Footer */}
-      <div className="p-3 bg-neutral-50 dark:bg-neutral-800/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
+      <div className="p-3 bg-neutral-50 dark:bg-black/50 text-xs text-neutral-500 dark:text-neutral-400 text-center">
         Data from Blockchair, Blockchain.info, Etherscan • Updates every 30 seconds
       </div>
     </div>

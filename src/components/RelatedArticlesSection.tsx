@@ -65,13 +65,13 @@ export default function RelatedArticlesSection({
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {articles.slice(0, 6).map((article) => {
           const articleId = generateArticleId(article.link);
-          const sourceColor = sourceColors[article.source] || 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
+          const sourceColor = sourceColors[article.source] || 'bg-gray-100 text-gray-700 dark:bg-black dark:text-gray-300';
           
           return (
             <Link
               key={article.link}
               href={`/article/${articleId}`}
-              className="group block p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg transition-all"
+              className="group block p-4 bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-gray-700 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg transition-all"
             >
               <div className="flex items-center gap-2 mb-2">
                 <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${sourceColor}`}>

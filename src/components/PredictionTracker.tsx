@@ -137,7 +137,7 @@ function PredictionRow({ prediction, latestResult, accuracy }: RowData) {
               title={isCorrect ? 'Last prediction: correct direction' : 'Last prediction: wrong direction'}
             />
           ) : (
-            <span className="w-2 h-2 rounded-full flex-shrink-0 bg-gray-300 dark:bg-gray-600" title="Not yet scored" />
+            <span className="w-2 h-2 rounded-full flex-shrink-0 bg-gray-300 dark:bg-black" title="Not yet scored" />
           )}
           {prediction.coin}
         </div>
@@ -221,7 +221,7 @@ function ReasoningPanel({ predictions }: ReasoningPanelProps) {
       {open && (
         <ul className="mt-2 space-y-2">
           {predictions.map(p => (
-            <li key={p.coin} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 rounded p-2">
+            <li key={p.coin} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-black rounded p-2">
               <span className="font-semibold text-gray-800 dark:text-gray-200">{p.coin}:</span>{' '}
               {p.reasoning}
             </li>
@@ -255,7 +255,7 @@ export default function PredictionTracker() {
     return (
       <div className="animate-pulse space-y-2">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="h-10 bg-gray-100 dark:bg-gray-800 rounded" />
+          <div key={i} className="h-10 bg-gray-100 dark:bg-black rounded" />
         ))}
       </div>
     );
@@ -273,7 +273,7 @@ export default function PredictionTracker() {
 
   if (!latest || latest.predictions.length === 0) {
     return (
-      <div className="text-sm text-gray-500 dark:text-gray-400 p-4 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700">
+      <div className="text-sm text-gray-500 dark:text-gray-400 p-4 bg-gray-50 dark:bg-black rounded border border-gray-200 dark:border-gray-700">
         <p className="font-medium mb-1">No AI predictions yet.</p>
         <p>The daily cron job will populate predictions at midnight UTC.</p>
         <p className="mt-2 text-xs text-gray-400">
@@ -304,7 +304,7 @@ export default function PredictionTracker() {
       <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
         <table className="w-full text-left">
           <thead>
-            <tr className="bg-gray-50 dark:bg-gray-800/60 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            <tr className="bg-gray-50 dark:bg-black/60 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
               <th className="py-2.5 px-4 font-semibold">Coin</th>
               <th className="py-2.5 px-4 font-semibold text-right">Current</th>
               <th className="py-2.5 px-4 font-semibold text-right">24h Pred.</th>

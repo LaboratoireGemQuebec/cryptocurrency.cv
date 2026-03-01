@@ -117,7 +117,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
             className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${
               activeTab === tab.id
                 ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-md'
-                : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-400 hover:bg-gray-200 dark:hover:bg-slate-700 hover:text-gray-900 dark:hover:text-white'
+                : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-slate-400 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
             {tab.label}
@@ -132,7 +132,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
           href={`/article/${heroSlug}`}
           className="group block"
         >
-          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden h-full hover:shadow-xl dark:hover:shadow-2xl hover:border-gray-300 dark:hover:border-slate-500 transition-all duration-300">
+          <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden h-full hover:shadow-xl dark:hover:shadow-2xl hover:border-gray-300 dark:hover:border-slate-500 transition-all duration-300">
             {/* Featured hero image */}
             <div className="relative aspect-[16/9] overflow-hidden">
               <CardImage
@@ -178,7 +178,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
         </Link>
 
         {/* Article List */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
           <div className="divide-y divide-gray-100 dark:divide-slate-700">
             {rest.map((article, i) => {
               const slug = generateArticleSlug(article.title, article.pubDate);
@@ -187,7 +187,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                 <Link
                   key={article.link}
                   href={`/article/${slug}`}
-                  className="group flex items-start gap-4 p-5 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
+                  className="group flex items-start gap-4 p-5 hover:bg-gray-50 dark:hover:bg-neutral-900/50 transition-colors"
                 >
                   {/* Thumbnail */}
                   <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
