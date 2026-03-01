@@ -319,7 +319,146 @@ def main():
 
     result = api_get("/api/predictions")
     print(json.dumps(result, indent=2)[:1000])
+    # ── 19. Flash Briefing ────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("AI Flash Briefing — /api/ai/flash-briefing")
+    print("=" * 60)
 
+    result = api_get("/api/ai/flash-briefing")
+    if result and (result.get("briefing") or result.get("summary")):
+        print(result.get("briefing") or result.get("summary"))
+    else:
+        print(json.dumps(result, indent=2)[:2000])
+
+    # ── 20. AI Oracle ─────────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("AI Oracle — /api/ai/oracle")
+    print("=" * 60)
+
+    for asset in ["bitcoin", "ethereum"]:
+        result = api_get("/api/ai/oracle", {"asset": asset})
+        print(f"\n{asset.upper()} Oracle:")
+        print(json.dumps(result, indent=2)[:1000])
+
+    # ── 21. AI Research ───────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("AI Research — /api/ai/research")
+    print("=" * 60)
+
+    result = api_post("/api/ai/research", {"topic": "Ethereum layer 2 scaling"})
+    print(json.dumps(result, indent=2)[:2000])
+
+    # ── 22. Source Quality ────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Source Quality — /api/ai/source-quality")
+    print("=" * 60)
+
+    result = api_get("/api/ai/source-quality")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 23. AI Correlation ────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("AI Correlation — /api/ai/correlation")
+    print("=" * 60)
+
+    result = api_get("/api/ai/correlation", {"assets": "bitcoin,ethereum,solana"})
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 24. AI Explain ────────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("AI Explain — /api/ai/explain")
+    print("=" * 60)
+
+    result = api_get("/api/ai/explain", {"topic": "yield farming"})
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 25. DeFi Summary ──────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("DeFi Summary — /api/defi/summary")
+    print("=" * 60)
+
+    result = api_get("/api/defi/summary")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 26. Protocol Health ───────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Protocol Health — /api/defi/protocol-health")
+    print("=" * 60)
+
+    result = api_get("/api/defi/protocol-health")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 27. DeFi Yields ───────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("DeFi Yields — /api/yields")
+    print("=" * 60)
+
+    result = api_get("/api/yields", {"limit": "10"})
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 28. Stablecoins ──────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Stablecoins — /api/stablecoins")
+    print("=" * 60)
+
+    result = api_get("/api/stablecoins")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 29. L2 Projects ──────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("L2 Projects — /api/l2/projects")
+    print("=" * 60)
+
+    result = api_get("/api/l2/projects")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 30. Bitcoin Stats ─────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Bitcoin Network Stats — /api/bitcoin/stats")
+    print("=" * 60)
+
+    result = api_get("/api/bitcoin/stats")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 31. NFT Market ────────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("NFT Market — /api/nft/market")
+    print("=" * 60)
+
+    result = api_get("/api/nft/market")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 32. Token Unlocks ─────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Token Unlocks — /api/token-unlocks")
+    print("=" * 60)
+
+    result = api_get("/api/token-unlocks")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 33. Macro Indicators ──────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Macro Indicators — /api/macro/indicators")
+    print("=" * 60)
+
+    result = api_get("/api/macro/indicators")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 34. Fed Data ──────────────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Fed Data — /api/macro/fed")
+    print("=" * 60)
+
+    result = api_get("/api/macro/fed")
+    print(json.dumps(result, indent=2)[:1000])
+
+    # ── 35. Funding Dashboard ─────────────────────────
+    print("\n\n" + "=" * 60)
+    print("Funding Dashboard — /api/funding/dashboard")
+    print("=" * 60)
+
+    result = api_get("/api/funding/dashboard")
+    print(json.dumps(result, indent=2)[:1000])
     print("\n" + "=" * 60)
     print("✅ Analysis complete!")
 

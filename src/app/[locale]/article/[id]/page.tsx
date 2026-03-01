@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
 import NewsCard from "@/components/NewsCard";
 import ShareBar from "@/components/ShareBar";
+import { ArticleStructuredData } from "@/components/StructuredData";
 import type { Metadata } from "next";
 
 export const revalidate = 300;
@@ -117,6 +118,17 @@ export default async function ArticlePage({ params }: Props) {
     <>
       <ReadingProgressBar />
       <Header />
+      <ArticleStructuredData
+        headline={article.title}
+        description={article.description || `${article.title} — from ${article.source}`}
+        url={articleUrl}
+        image={`https://cryptocurrency.cv/api/og?title=${encodeURIComponent(article.title)}&tags=${encodeURIComponent([...article.tickers, ...article.tags].slice(0, 3).join(','))}&source=${encodeURIComponent(article.source)}`}
+        datePublished={pubDate}
+        dateModified={article.last_seen || pubDate}
+        author={article.source}
+        section={article.category}
+        keywords={[...article.tickers, ...article.tags].slice(0, 10)}
+      />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
         <nav aria-label="Breadcrumb" className="mb-6 max-w-[720px] mx-auto">

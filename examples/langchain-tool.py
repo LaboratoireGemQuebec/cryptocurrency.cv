@@ -208,6 +208,185 @@ def get_gas_prices() -> str:
     return json.dumps(data, indent=2)[:1000] if data else "No gas data."
 
 
+# ── DeFi Tools ───────────────────────────────────
+
+@tool
+def get_defi_summary() -> str:
+    """Get DeFi overview: total TVL, protocol count, TVL change, top protocols."""
+    data = _get("/api/defi/summary")
+    return json.dumps(data, indent=2)[:2000] if data else "No DeFi summary."
+
+
+@tool
+def get_defi_yields(chain: str = "", project: str = "") -> str:
+    """Get DeFi yield farming opportunities. Optionally filter by chain or project name."""
+    params = {}
+    if chain:
+        params["chain"] = chain
+    if project:
+        params["project"] = project
+    data = _get("/api/yields", params)
+    return json.dumps(data, indent=2)[:3000] if data else "No yield data."
+
+
+@tool
+def get_protocol_health(protocol: str = "") -> str:
+    """Get DeFi protocol health metrics: audits, TVL trend, risk scores, hacks history."""
+    params = {"protocol": protocol} if protocol else {}
+    data = _get("/api/defi/protocol-health", params)
+    return json.dumps(data, indent=2)[:2000] if data else "No protocol health data."
+
+
+@tool
+def get_stablecoins() -> str:
+    """Get stablecoin market data: USDT, USDC, DAI market caps, prices, and peg status."""
+    data = _get("/api/stablecoins")
+    return json.dumps(data, indent=2)[:2000] if data else "No stablecoin data."
+
+
+@tool
+def get_stablecoin_depeg_alerts() -> str:
+    """Get stablecoins that are currently depegged from their target price."""
+    data = _get("/api/stablecoins/depeg")
+    return json.dumps(data, indent=2)[:2000] if data else "No depeg alerts."
+
+
+@tool
+def get_dex_volumes() -> str:
+    """Get decentralized exchange (DEX) trading volumes across chains."""
+    data = _get("/api/dex/volumes")
+    return json.dumps(data, indent=2)[:2000] if data else "No DEX volume data."
+
+
+# ── Blockchain Tools ─────────────────────────────
+
+@tool
+def get_bitcoin_stats() -> str:
+    """Get Bitcoin network stats: hashrate, difficulty, block height, mempool size."""
+    data = _get("/api/bitcoin/stats")
+    return json.dumps(data, indent=2)[:2000] if data else "No Bitcoin stats."
+
+
+@tool
+def get_l2_projects() -> str:
+    """Get Layer 2 project data: TVL, TPS, type (rollup/sidechain), risk levels."""
+    data = _get("/api/l2/projects")
+    return json.dumps(data, indent=2)[:3000] if data else "No L2 data."
+
+
+@tool
+def get_solana_tokens() -> str:
+    """Get trending and top Solana tokens by volume and market cap."""
+    data = _get("/api/solana/tokens")
+    return json.dumps(data, indent=2)[:2000] if data else "No Solana token data."
+
+
+@tool
+def get_nft_market() -> str:
+    """Get NFT market overview: total volume, sales count, average price, trends."""
+    data = _get("/api/nft/market")
+    return json.dumps(data, indent=2)[:2000] if data else "No NFT market data."
+
+
+@tool
+def get_nft_trending() -> str:
+    """Get trending NFT collections with floor prices and volume changes."""
+    data = _get("/api/nft/collections/trending")
+    return json.dumps(data, indent=2)[:2000] if data else "No trending NFT data."
+
+
+@tool
+def get_token_unlocks() -> str:
+    """Get upcoming token unlock events that may impact prices."""
+    data = _get("/api/token-unlocks")
+    return json.dumps(data, indent=2)[:2000] if data else "No token unlock data."
+
+
+# ── Macro & Predictions Tools ────────────────────
+
+@tool
+def get_macro_indicators() -> str:
+    """Get macro economic indicators relevant to crypto: interest rates, CPI, DXY, etc."""
+    data = _get("/api/macro/indicators")
+    return json.dumps(data, indent=2)[:2000] if data else "No macro data."
+
+
+@tool
+def get_fed_data() -> str:
+    """Get Federal Reserve data: interest rate decisions, FOMC meetings, quantitative tightening."""
+    data = _get("/api/macro/fed")
+    return json.dumps(data, indent=2)[:2000] if data else "No Fed data."
+
+
+@tool
+def get_dxy_index() -> str:
+    """Get DXY (US Dollar Index) data. Strong dollar typically pressures crypto prices."""
+    data = _get("/api/macro/dxy")
+    return json.dumps(data, indent=2)[:1000] if data else "No DXY data."
+
+
+@tool
+def get_predictions() -> str:
+    """Get AI-generated crypto price predictions and forecast models."""
+    data = _get("/api/predictions")
+    return json.dumps(data, indent=2)[:2000] if data else "No prediction data."
+
+
+@tool
+def get_exchange_rates(base: str = "USD") -> str:
+    """Get fiat exchange rates for crypto-relevant currencies (EUR, JPY, GBP, etc)."""
+    data = _get("/api/exchange-rates", {"base": base})
+    return json.dumps(data, indent=2)[:2000] if data else "No exchange rate data."
+
+
+# ── Extended AI Tools ────────────────────────────
+
+@tool
+def get_flash_briefing() -> str:
+    """Get a quick AI-generated flash briefing of the most important crypto events right now."""
+    data = _get("/api/ai/flash-briefing")
+    if data and (data.get("briefing") or data.get("summary")):
+        return (data.get("briefing") or data.get("summary"))[:2000]
+    return json.dumps(data, indent=2)[:2000] if data else "No briefing available."
+
+
+@tool
+def get_ai_oracle(asset: str = "bitcoin") -> str:
+    """Get AI oracle prediction for a specific crypto asset with confidence and timeframe."""
+    data = _get("/api/ai/oracle", {"asset": asset})
+    return json.dumps(data, indent=2)[:2000] if data else f"No oracle data for {asset}."
+
+
+@tool
+def get_counter_arguments(claim: str) -> str:
+    """Get AI-generated counter-arguments to a crypto claim or thesis."""
+    data = _post("/api/ai/counter", {"claim": claim})
+    return json.dumps(data, indent=2)[:2000] if data else "No counter-arguments available."
+
+
+@tool
+def ai_research(topic: str) -> str:
+    """Deep AI research on a crypto topic with sourced analysis and key findings."""
+    data = _post("/api/ai/research", {"topic": topic})
+    return json.dumps(data, indent=2)[:3000] if data else f"No research data for {topic}."
+
+
+# ── Extended Trading Tools ───────────────────────
+
+@tool
+def get_funding_dashboard() -> str:
+    """Get funding rate dashboard across all major perpetual futures exchanges."""
+    data = _get("/api/funding/dashboard")
+    return json.dumps(data, indent=2)[:2000] if data else "No funding dashboard data."
+
+
+@tool
+def get_derivatives_opportunities() -> str:
+    """Get derivatives trading opportunities: basis trades, funding arbitrage, etc."""
+    data = _get("/api/derivatives/opportunities")
+    return json.dumps(data, indent=2)[:2000] if data else "No derivatives opportunities."
+
+
 # ── Agent Setup ──────────────────────────────────
 
 def create_news_agent():
@@ -232,12 +411,38 @@ def create_news_agent():
         get_trading_signals,
         get_funding_rates,
         get_liquidations,
+        get_funding_dashboard,
+        get_derivatives_opportunities,
+        # DeFi
+        get_defi_summary,
+        get_defi_yields,
+        get_protocol_health,
+        get_stablecoins,
+        get_stablecoin_depeg_alerts,
+        get_dex_volumes,
+        # Blockchain
+        get_bitcoin_stats,
+        get_l2_projects,
+        get_solana_tokens,
+        get_nft_market,
+        get_nft_trending,
+        get_token_unlocks,
+        # Macro & Predictions
+        get_macro_indicators,
+        get_fed_data,
+        get_dxy_index,
+        get_predictions,
+        get_exchange_rates,
         # AI / Analysis
         get_sentiment_analysis,
         ask_crypto_question,
         get_ai_daily_brief,
         get_regulatory_updates,
         get_gas_prices,
+        get_flash_briefing,
+        get_ai_oracle,
+        get_counter_arguments,
+        ai_research,
     ]
 
     prompt = ChatPromptTemplate.from_messages([

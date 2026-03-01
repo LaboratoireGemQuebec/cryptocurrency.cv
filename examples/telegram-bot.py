@@ -30,6 +30,15 @@ Commands:
     /trending  — Trending topics
     /signals   — Trading signals
     /gas       — Ethereum gas prices
+    /defisummary — DeFi TVL & protocol summary
+    /stablecoins — Stablecoin market overview
+    /l2        — Layer 2 project stats
+    /briefing  — AI flash briefing
+    /oracle    — AI oracle prediction
+    /macro     — Macro indicators
+    /funding   — Funding rate dashboard
+    /nft       — NFT market overview
+    /unlocks   — Upcoming token unlocks
     /help      — Show available commands
 """
 
@@ -92,6 +101,15 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/trending — Trending topics\n"
         "/signals — Trading signals\n"
         "/gas — Ethereum gas prices\n"
+        "/defisummary — DeFi protocol summary\n"
+        "/stablecoins — Stablecoin overview\n"
+        "/l2 — Layer 2 project stats\n"
+        "/briefing — AI flash briefing\n"
+        "/oracle `<asset>` — AI oracle prediction\n"
+        "/macro — Macro indicators\n"
+        "/funding — Funding rates\n"
+        "/nft — NFT market overview\n"
+        "/unlocks — Token unlocks\n"
         "/help — This message\n\n"
         "_Powered by cryptocurrency.cv_"
     )
@@ -242,6 +260,169 @@ async def gas_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(text, parse_mode="Markdown")
 
 
+async def defisummary_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /defisummary — Get DeFi protocol summary."""
+    data = await api_fetch("/api/defi/summary")
+
+    if not data:
+        await update.message.reply_text("Could not fetch DeFi summary.")
+        return
+
+    lines = ["🏦 *DeFi Summary*\n"]
+    lines.append(f"Total TVL: ${(data.get('totalTvl', 0) / 1e9):.2f}B")
+    lines.append(f"Protocols: {data.get('protocolCount', 'N/A')}")
+    lines.append(f"24h Change: {data.get('tvlChange24h', 0):.2f}%")
+
+    await update.message.reply_text("\n".join(lines), parse_mode="Markdown")
+
+
+async def stablecoins_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /stablecoins — Get stablecoin market overview."""
+    data = await api_fetch("/api/stablecoins")
+
+    if not data:
+        await update.message.reply_text("Could not fetch stablecoin data.")
+        return
+
+    coins = data if isinstance(data, list) else data.get("stablecoins", [])
+    lines = ["💵 *Stablecoin Market*\n"]
+    for coin in coins[:8]:
+        name = coin.get("name") or coin.get("symbol", "Unknown")
+        mcap = coin.get("marketCap", 0)
+        price = coin.get("price", 1)
+        lines.append(f"• {name}: ${price:.4f} (Mkt Cap: ${mcap / 1e9:.2f}B)")
+
+    await update.message.reply_text("\n".join(lines) if len(lines) > 1 else "No stablecoin data.", parse_mode="Markdown")
+
+
+async def l2_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /l2 — Get Layer 2 project stats."""
+    data = await api_fetch("/api/l2/projects")
+
+    if not data:
+        await update.message.reply_text("Could not fetch L2 data.")
+        return
+
+    projects = data if isinstance(data, list) else data.get("projects", [])
+    lines = ["🔗 *Layer 2 Projects*\n"]
+    for p in projects[:8]:
+        name = p.get("name", "Unknown")
+        tvl = p.get("tvl", 0)
+        ptype = p.get("type", "N/A")
+        lines.append(f"• {name}: TVL ${tvl / 1e9:.2f}B ({ptype})")
+
+    await update.message.reply_text("\n".join(lines) if len(lines) > 1 else "No L2 data.", parse_mode="Markdown")
+
+
+async def briefing_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /briefing — Get AI flash briefing."""
+    await update.message.reply_text("⚡ Generating flash briefing...")
+    data = await api_fetch("/api/ai/flash-briefing")
+
+    if not data:
+        await update.message.reply_text("Could not generate briefing.")
+        return
+
+    briefing = data.get("briefing") or data.get("summary") or ""
+    if briefing:
+        text = f"⚡ *AI Flash Briefing*\n\n{briefing[:3000]}"
+    else:
+        import json
+        text = f"⚡ *AI Flash Briefing*\n\n```\n{json.dumps(data, indent=2)[:2000]}\n```"
+
+    await update.message.reply_text(text, parse_mode="Markdown")
+
+
+async def oracle_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /oracle <asset> — Get AI oracle prediction."""
+    asset = context.args[0] if context.args else "bitcoin"
+    await update.message.reply_text(f"🔮 Consulting oracle for {asset}...")
+    data = await api_fetch("/api/ai/oracle", {"asset": asset})
+
+    if not data:
+        await update.message.reply_text(f"Could not get oracle data for {asset}.")
+        return
+
+    prediction = data.get("prediction", "")
+    confidence = data.get("confidence", "")
+    timeframe = data.get("timeframe", "")
+
+    lines = [f"🔮 *AI Oracle: {asset.upper()}*\n"]
+    if prediction:
+        lines.append(prediction[:2000])
+    if confidence:
+        lines.append(f"\nConfidence: {confidence}")
+    if timeframe:
+        lines.append(f"Timeframe: {timeframe}")
+
+    if len(lines) == 1:
+        import json
+        lines.append(f"```\n{json.dumps(data, indent=2)[:2000]}\n```")
+
+    await update.message.reply_text("\n".join(lines), parse_mode="Markdown")
+
+
+async def macro_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /macro — Get macro indicators."""
+    data = await api_fetch("/api/macro/indicators")
+
+    if not data:
+        await update.message.reply_text("Could not fetch macro data.")
+        return
+
+    import json
+    text = f"🌐 *Macro Indicators*\n\n```\n{json.dumps(data, indent=2)[:3000]}\n```"
+    await update.message.reply_text(text, parse_mode="Markdown")
+
+
+async def funding_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /funding — Get funding rate dashboard."""
+    data = await api_fetch("/api/funding/dashboard")
+
+    if not data:
+        await update.message.reply_text("Could not fetch funding data.")
+        return
+
+    import json
+    text = f"📈 *Funding Rate Dashboard*\n\n```\n{json.dumps(data, indent=2)[:3000]}\n```"
+    await update.message.reply_text(text, parse_mode="Markdown")
+
+
+async def nft_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /nft — Get NFT market overview."""
+    data = await api_fetch("/api/nft/market")
+
+    if not data:
+        await update.message.reply_text("Could not fetch NFT data.")
+        return
+
+    lines = ["🎨 *NFT Market Overview*\n"]
+    lines.append(f"24h Volume: ${(data.get('totalVolume24h', 0) / 1e6):.1f}M")
+    lines.append(f"Sales: {data.get('totalSales24h', 'N/A')}")
+    lines.append(f"Avg Price: ${data.get('averagePrice', 0):.2f}")
+
+    await update.message.reply_text("\n".join(lines), parse_mode="Markdown")
+
+
+async def unlocks_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /unlocks — Get upcoming token unlocks."""
+    data = await api_fetch("/api/token-unlocks")
+
+    if not data:
+        await update.message.reply_text("Could not fetch token unlocks.")
+        return
+
+    unlocks = data if isinstance(data, list) else data.get("unlocks", [])
+    lines = ["🔓 *Upcoming Token Unlocks*\n"]
+    for u in unlocks[:8]:
+        token = u.get("token") or u.get("symbol", "Unknown")
+        value = u.get("valueUsd", 0)
+        date = u.get("date", "N/A")
+        lines.append(f"• {token}: ${value / 1e6:.1f}M on {date}")
+
+    await update.message.reply_text("\n".join(lines) if len(lines) > 1 else "No upcoming unlocks.", parse_mode="Markdown")
+
+
 # ── Main ──────────────────────────────────────────
 
 def main():
@@ -260,6 +441,15 @@ def main():
     app.add_handler(CommandHandler("trending", trending_command))
     app.add_handler(CommandHandler("signals", signals_command))
     app.add_handler(CommandHandler("gas", gas_command))
+    app.add_handler(CommandHandler("defisummary", defisummary_command))
+    app.add_handler(CommandHandler("stablecoins", stablecoins_command))
+    app.add_handler(CommandHandler("l2", l2_command))
+    app.add_handler(CommandHandler("briefing", briefing_command))
+    app.add_handler(CommandHandler("oracle", oracle_command))
+    app.add_handler(CommandHandler("macro", macro_command))
+    app.add_handler(CommandHandler("funding", funding_command))
+    app.add_handler(CommandHandler("nft", nft_command))
+    app.add_handler(CommandHandler("unlocks", unlocks_command))
 
     print("🤖 Telegram bot is running...")
     app.run_polling()
