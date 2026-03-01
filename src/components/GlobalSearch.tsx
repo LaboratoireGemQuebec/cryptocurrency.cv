@@ -287,10 +287,11 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
         <Dialog.Content
           className="fixed left-1/2 top-[12%] z-[101] w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl transition-all duration-150 flex flex-col max-h-[75vh]"
           onKeyDown={handleKeyDown}
+          aria-label="Search news, topics, and coins"
         >
           {/* Search input */}
           <div className="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3 shrink-0">
-            <Search className="h-5 w-5 shrink-0 text-[var(--color-text-tertiary)]" />
+            <Search className="h-5 w-5 shrink-0 text-[var(--color-text-tertiary)]" aria-hidden="true" />
             <input
               ref={inputRef}
               value={query}
@@ -298,9 +299,14 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
               placeholder="Search news, topics, coins…"
               className="flex-1 bg-transparent text-base text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] outline-none"
               autoFocus
+              aria-label="Search"
+              aria-autocomplete="list"
+              aria-controls="search-results"
+              role="combobox"
+              aria-expanded={results.length > 0}
             />
             {loading && (
-              <Loader2 className="h-4 w-4 animate-spin text-[var(--color-text-tertiary)]" />
+              <Loader2 className="h-4 w-4 animate-spin text-[var(--color-text-tertiary)]" aria-hidden="true" />
             )}
             {query && (
               <button
@@ -347,7 +353,10 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
           {/* Scrollable results area */}
           <div
             ref={listRef}
+            id="search-results"
             className="flex-1 overflow-y-auto overscroll-contain"
+            role="listbox"
+            aria-label="Search results"
           >
             {/* ---- Idle state: trending + recent ---- */}
             {!debouncedQuery.trim() && (
@@ -498,6 +507,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                     : 'hover:bg-[var(--color-surface-secondary)]',
                 )}
                 onMouseEnter={() => setActiveIndex(i)}
+                role="option"
+                aria-selected={i === activeIndex}
               >
                 <div className="min-w-0 flex-1">
                   <p
@@ -540,13 +551,13 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
           {/* Footer */}
           {results.length > 0 && (
             <div className="border-t border-[var(--color-border)] px-4 py-2 flex items-center justify-between text-xs text-[var(--color-text-tertiary)] shrink-0">
-              <span>
+              <span aria-live="polite" aria-atomic="true">
                 {results.length} result{results.length !== 1 ? 's' : ''}
                 {category && (
                   <> in <span className="font-medium">{CATEGORY_FILTERS.find(c => c.value === category)?.label}</span></>
                 )}
               </span>
-              <span className="inline-flex items-center gap-1">
+              <span className="inline-flex items-center gap-1" aria-hidden="true">
                 <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono text-[10px]">↵</kbd>
                 to open
               </span>

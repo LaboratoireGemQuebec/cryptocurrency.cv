@@ -606,7 +606,7 @@ for article in news.articles:
 # Get market prices
 prices = client.get_prices(coins=["bitcoin", "ethereum"])
 for coin in prices:
-    print(f"{coin.symbol}: ${coin.price:,.2f} ({coin.change_24h:+.1f}%)")
+    print(f"{coin.symbol}: $" + f"{coin.price:,.2f}" + f" ({coin.change_24h:+.1f}%)")
 
 # Async support
 import asyncio

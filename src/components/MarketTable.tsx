@@ -263,7 +263,11 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
 
                 {/* 24h % */}
                 <td className={cn("px-3 py-2.5 sm:px-4 sm:py-3 text-right font-mono", pct24.className)}>
+                  <span aria-hidden="true">{pct24.text.startsWith('+') ? '▲' : pct24.text.startsWith('-') ? '▼' : ''}</span>
                   {pct24.text}
+                  <span className="sr-only">
+                    {coin.name} 24 hour change {pct24.text.startsWith('+') ? 'up' : pct24.text.startsWith('-') ? 'down' : ''} {pct24.text}
+                  </span>
                 </td>
 
                 {/* 7d % */}
@@ -273,6 +277,7 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                     pct7d.className,
                   )}
                 >
+                  <span aria-hidden="true">{pct7d.text.startsWith('+') ? '▲' : pct7d.text.startsWith('-') ? '▼' : ''}</span>
                   {pct7d.text}
                 </td>
 

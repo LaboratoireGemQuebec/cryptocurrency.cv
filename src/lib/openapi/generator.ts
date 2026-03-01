@@ -84,11 +84,11 @@ export function generateOpenAPISpec(): OpenAPISpec {
   return {
     openapi: '3.0.0',
     info: {
-      title: 'Free Crypto News API',
+      title: 'Crypto Vision News API',
       version: '1.0.0',
       description: 'Comprehensive cryptocurrency news and market data API with x402 micropayments. Access real-time crypto news, market data, AI trading signals, and portfolio analytics.',
       contact: {
-        name: 'Free Crypto News',
+        name: 'Crypto Vision News',
         url: 'https://github.com/nirholas/free-crypto-news',
       },
       license: {

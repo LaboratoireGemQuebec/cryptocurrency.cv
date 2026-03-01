@@ -316,6 +316,7 @@ const NAV_ITEMS = [
       { label: "Heatmap", href: "/heatmap" },
       { label: "Screener", href: "/screener" },
       { label: "Gas Tracker", href: "/gas" },
+      { label: "Token Unlocks", href: "/unlocks" },
     ],
   },
   {
@@ -330,6 +331,7 @@ const NAV_ITEMS = [
       { label: "Altcoins", href: "/category/altcoins" },
     ],
   },
+  { label: "Intelligence", href: "/intelligence" },
   { label: "DeFi", href: "/defi" },
   { label: "Learn", href: "/learn" },
   {
@@ -351,6 +353,7 @@ const NAV_ITEMS = [
       { label: "Portfolio", href: "/portfolio" },
       { label: "Bookmarks", href: "/bookmarks" },
       { label: "Alerts", href: "/alerts" },
+      { label: "Settings", href: "/settings" },
     ],
   },
   { label: "Pricing", href: "/pricing" },
@@ -538,21 +541,6 @@ export default function Header() {
             title="Portfolio"
           >
             <Briefcase className="h-4.5 w-4.5" aria-hidden="true" />
-          </Link>
-
-          {/* Notification Bell */}
-          <Link
-            href="/alerts"
-            className="relative hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
-            aria-label="Alerts"
-            title="Alerts"
-          >
-            <Bell className="h-4.5 w-4.5" />
-            {notifCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
-                {notifCount > 9 ? "9+" : notifCount}
-              </span>
-            )}
           </Link>
 
           {/* Notification Bell */}

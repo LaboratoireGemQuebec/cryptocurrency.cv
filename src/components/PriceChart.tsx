@@ -191,13 +191,14 @@ export default function PriceChart({ coinId }: { coinId: string }) {
             </span>
           )}
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1" role="group" aria-label="Chart time range">
           {TIME_RANGES.map((range) => (
             <button
               key={range.days}
               onClick={() => setDays(range.days)}
+              aria-pressed={days === range.days}
               className={cn(
-                "px-3 py-1.5 text-xs font-medium rounded-md transition-colors",
+                "px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer",
                 days === range.days
                   ? "bg-[var(--color-accent)] text-white"
                   : "text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]"
@@ -233,6 +234,8 @@ export default function PriceChart({ coinId }: { coinId: string }) {
             className="w-full h-auto select-none"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            role="img"
+            aria-label={`Price chart for ${coinId} over ${days} days. ${changePercent != null ? `Change: ${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%` : ''}`}
           >
             <defs>
               <linearGradient

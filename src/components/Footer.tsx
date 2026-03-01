@@ -21,12 +21,12 @@ const FOOTER_SECTIONS = [
     title: "Markets",
     links: [
       { label: "Overview", href: "/markets" },
+      { label: "Intelligence", href: "/intelligence" },
       { label: "Fear & Greed", href: "/fear-greed" },
       { label: "Heatmap", href: "/heatmap" },
       { label: "Screener", href: "/screener" },
       { label: "Gas Tracker", href: "/gas" },
-      { label: "Calculator", href: "/calculator" },
-      { label: "Compare", href: "/compare" },
+      { label: "Token Unlocks", href: "/unlocks" },
     ],
   },
   {
@@ -34,10 +34,12 @@ const FOOTER_SECTIONS = [
     links: [
       { label: "API Documentation", href: "/developers" },
       { label: "Sources", href: "/sources" },
+      { label: "Calculator", href: "/calculator" },
+      { label: "Compare", href: "/compare" },
       { label: "RSS Feed", href: "/api/rss" },
       { label: "Watchlist", href: "/watchlist" },
       { label: "Portfolio", href: "/portfolio" },
-      { label: "Bookmarks", href: "/bookmarks" },
+      { label: "Settings", href: "/settings" },
     ],
   },
   {

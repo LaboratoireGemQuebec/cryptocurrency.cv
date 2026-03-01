@@ -451,7 +451,7 @@ export function TradingSignals() {
                 <Target className="h-3 w-3" />
                 {signal.confidence}%
               </span>
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="default" className="text-xs">
                 {signal.timeframe}
               </Badge>
             </div>

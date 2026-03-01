@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import type { NewsArticle } from "@/lib/crypto-news";
 
 const BOOKMARK_BTN =
-  "absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity";
+  "absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity";
 
 /* ------------------------------------------------
    Shared helpers
@@ -47,7 +47,7 @@ function SourceMeta({ source, timeAgo }: { source: string; timeAgo: string }) {
 
 export function FeaturedCard({ article }: { article: NewsArticle }) {
   return (
-    <div className="group relative">
+    <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
       <Link
         href={article.link}
@@ -87,7 +87,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
 
 export function NewsCardDefault({ article }: { article: NewsArticle }) {
   return (
-    <div className="group relative">
+    <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
       <Link
         href={article.link}
@@ -127,7 +127,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
 
 export function NewsCardCompact({ article }: { article: NewsArticle }) {
   return (
-    <div className="group relative">
+    <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
       <Link
         href={article.link}

@@ -22,6 +22,7 @@ import { KeyboardShortcutsProvider } from "@/components/KeyboardShortcuts";
 import { WatchlistProvider } from "@/components/watchlist";
 import { AlertsProvider } from "@/components/alerts";
 import { PortfolioProvider } from "@/components/portfolio";
+import { SettingsProvider } from "@/components/SettingsProvider";
 import { AlternateLinks } from "@/components/AlternateLinks";
 import { locales, isRtlLocale, type Locale } from "@/i18n/config";
 
@@ -218,17 +219,19 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <ToastProvider>
-              <KeyboardShortcutsProvider>
-                <WatchlistProvider>
-                  <AlertsProvider>
-                    <PortfolioProvider>
-                      <BookmarksProvider>
-                        <PWAProvider>{children}</PWAProvider>
-                      </BookmarksProvider>
-                    </PortfolioProvider>
-                  </AlertsProvider>
-                </WatchlistProvider>
-              </KeyboardShortcutsProvider>
+              <SettingsProvider>
+                <KeyboardShortcutsProvider>
+                  <WatchlistProvider>
+                    <AlertsProvider>
+                      <PortfolioProvider>
+                        <BookmarksProvider>
+                          <PWAProvider>{children}</PWAProvider>
+                        </BookmarksProvider>
+                      </PortfolioProvider>
+                    </AlertsProvider>
+                  </WatchlistProvider>
+                </KeyboardShortcutsProvider>
+              </SettingsProvider>
             </ToastProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

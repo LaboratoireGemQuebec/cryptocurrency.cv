@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import BreakingNewsBanner from "@/components/BreakingNewsBanner";
 import MarketsSnapshot from "@/components/MarketsSnapshot";
 import TopMovers from "@/components/TopMovers";
+import TrendingCoins from "@/components/TrendingCoins";
+import MarketMovers from "@/components/MarketMovers";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import ExploreMore from "@/components/ExploreMore";
 import NewsCard, {
@@ -27,6 +29,10 @@ import {
 } from "@/components/StructuredData";
 import { Badge } from "@/components/ui/Badge";
 import { Skeleton } from "@/components/ui/Skeleton";
+import { TrendingTopicsWidget } from "@/components/TrendingTopics";
+import { SentimentBanner } from "@/components/SentimentIndicator";
+import { LiveActivityFeed } from "@/components/LiveActivityFeed";
+import { SmartFeed, FeedStatsWidget } from "@/components/SmartFeed";
 import {
   getHomepageNews,
   getSourceCount,
@@ -172,44 +178,16 @@ export default async function HomePage({ params }: Props) {
           <TopMovers />
         </Suspense>
 
+        {/* ── Market Sentiment Banner ── */}
+        <Suspense fallback={null}>
+          <SentimentBanner />
+        </Suspense>
+
         {/* ── Latest + Sidebar ── */}
         <section className="container-main py-8 lg:py-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
-            {/* Latest feed */}
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold font-serif">Latest News</h2>
-                <span className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
-                  <span className="live-dot" />
-                  Live
-                </span>
-              </div>
-
-              <div className="space-y-6">
-                {latestFeed.length > 0 ? (
-                  latestFeed.map((article) => (
-                    <div
-                      key={article.link}
-                      className="pb-6 border-b border-[var(--color-border)] last:border-b-0"
-                    >
-                      <NewsCardCompact article={article} />
-                    </div>
-                  ))
-                ) : (
-                  Array.from({ length: 6 }).map((_, i) => (
-                    <div key={i} className="flex gap-4 pb-6 border-b border-[var(--color-border)]">
-                      <Skeleton className="aspect-square w-20 shrink-0" />
-                      <div className="flex-1 space-y-2">
-                        <Skeleton className="h-4 w-16" />
-                        <Skeleton className="h-5 w-full" />
-                        <Skeleton className="h-5 w-3/4" />
-                        <Skeleton className="h-3 w-32" />
-                      </div>
-                    </div>
-                  ))
-                )}
-              </div>
-            </div>
+            {/* Smart feed (replaces static list with auto-refresh + modes) */}
+            <SmartFeed initialArticles={latestFeed} />
 
             {/* Sidebar */}
             <aside className="space-y-8">
@@ -258,6 +236,19 @@ export default async function HomePage({ params }: Props) {
                   ))}
                 </div>
               </div>
+
+              {/* Trending Topics (AI-powered narrative clusters) */}
+              <Suspense fallback={<Skeleton className="h-48 w-full rounded-lg" />}>
+                <TrendingTopicsWidget />
+              </Suspense>
+
+              {/* Feed Stats */}
+              <FeedStatsWidget />
+
+              {/* Live On-Chain Activity */}
+              <Suspense fallback={<Skeleton className="h-64 w-full rounded-lg" />}>
+                <LiveActivityFeed maxItems={5} compact />
+              </Suspense>
 
               {/* Stats */}
               <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">

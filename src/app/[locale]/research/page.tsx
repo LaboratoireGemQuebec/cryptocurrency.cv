@@ -422,7 +422,7 @@ export default async function ResearchPage({ params }: Props) {
             ].map((topic) => (
               <Badge
                 key={topic}
-                variant="outline"
+                variant="default"
                 className="px-3 py-1.5 text-sm cursor-pointer hover:bg-[var(--color-surface-secondary)] transition-colors"
               >
                 {topic}

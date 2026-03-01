@@ -41,6 +41,7 @@ export default function BackToTop() {
         width="44"
         height="44"
         viewBox="0 0 44 44"
+        aria-hidden="true"
       >
         <circle
           cx="22"
@@ -63,7 +64,7 @@ export default function BackToTop() {
           className="transition-[stroke-dashoffset] duration-150"
         />
       </svg>
-      <ArrowUp className="h-4 w-4 text-[var(--color-text-primary)]" />
+      <ArrowUp className="h-4 w-4 text-[var(--color-text-primary)]" aria-hidden="true" />
     </button>
   );
 }

@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 
+export const revalidate = 120;
+
 // ---------- Types ------------------------------------------------------------
 
 type Props = {
