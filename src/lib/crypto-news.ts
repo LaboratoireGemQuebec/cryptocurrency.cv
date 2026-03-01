@@ -959,6 +959,7 @@ const RSS_SOURCES = {
     name: 'Investopedia',
     url: 'https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_headline',
     category: 'mainstream',
+    disabled: true, // Feed URL discontinued (404) — 2026-03-01
   },
   seekingalpha: {
     name: 'Seeking Alpha',
@@ -2198,6 +2199,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
+        redirect: 'manual', // Prevent redirect loops hitting own domain
         ...(skipDataCache
           ? { cache: 'no-store' as RequestCache }
           : { cache: 'force-cache' as RequestCache, next: { revalidate: 300 } }
@@ -2206,6 +2208,15 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       const response = await fetch(source.url, fetchOptions);
       
       clearTimeout(timeoutId);
+      
+      // Detect redirects (3xx) — log warning and bail to prevent self-referential requests
+      if (response.status >= 300 && response.status < 400) {
+        const location = response.headers.get('location') || 'unknown';
+        if (process.env.NODE_ENV === 'development' || process.env.DEBUG_RSS) {
+          console.warn(`Redirect detected for ${source.name}: ${response.status} → ${location}`);
+        }
+        return [];
+      }
       
       if (!response.ok) {
         // Only log in development, not every failed fetch
