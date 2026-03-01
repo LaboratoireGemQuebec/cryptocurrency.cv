@@ -5,7 +5,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
-export const revalidate = 60; // 1 minute for fresher content
+export const revalidate = 300; // 5 minutes — trending topics don't change minute-to-minute
 
 interface TrendingTopic {
   topic: string;
@@ -124,7 +124,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(responseData, {
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+        'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200',
         'Access-Control-Allow-Origin': '*',
       },
     });

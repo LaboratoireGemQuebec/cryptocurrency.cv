@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/cron/warm",
+      "schedule": "* * * * *"
+    }
+  ],
   "functions": {
     "src/app/api/news/route.ts": {
       "maxDuration": 60

@@ -574,21 +574,10 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
       };
     }
     
-    // Fallback for very new articles: check live RSS
-    const isLegacyId2 = isLegacyId(idOrSlug);
-    const liveNews = await getLatestNews(100);
-    const liveArticle = liveNews.articles.find(a => {
-      if (isLegacyId2) {
-        return generateArticleId(a.link) === idOrSlug;
-      }
-      const liveSlug = generateArticleSlug(a.title, a.pubDate);
-      return liveSlug === idOrSlug;
-    });
-    
-    if (liveArticle) {
-      return newsArticleToEnriched(liveArticle);
-    }
-    
+    // NOTE: Previously this fell back to getLatestNews(100) which fetched
+    // ALL 160+ RSS sources — a 15-25 s operation on cold starts just to find
+    // one article. If an article isn't in KV, it's almost never in the latest
+    // RSS batch either, so we skip this expensive fallback.
     return null;
   } catch {
     return null;

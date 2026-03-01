@@ -15,12 +15,15 @@ import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
 
 export const runtime = 'edge';
 
-// Polling interval in milliseconds
-const POLL_INTERVAL = 30000; // 30 seconds
+// Polling interval in milliseconds — 60 s matches the aggregate cache TTL,
+// so most polls are instant cache hits instead of fetching 160+ RSS feeds.
+const POLL_INTERVAL = 60000; // 60 seconds
 
 // --- Connection limits ---
 const MAX_CONCURRENT_SSE = parseInt(process.env.SSE_MAX_CONNECTIONS ?? '500', 10);
-const MAX_CONNECTION_DURATION = 30 * 60 * 1000; // 30 minutes hard cap
+// 5-minute cap: keeps Vercel function cost low.  Clients should reconnect
+// via EventSource's built-in retry mechanism.
+const MAX_CONNECTION_DURATION = 5 * 60 * 1000; // 5 minutes hard cap
 let activeConnections = 0;
 
 export async function GET(request: NextRequest) {
@@ -71,7 +74,7 @@ export async function GET(request: NextRequest) {
         if (isConnected) {
           const closeEvent = `event: close\ndata: ${JSON.stringify({
             reason: 'max_duration_reached',
-            message: 'Connection closed after 30 minutes. Please reconnect.',
+            message: 'Connection closed after 5 minutes. Please reconnect.',
           })}\n\n`;
           safeEnqueue(controller, encoder.encode(closeEvent));
           isConnected = false;

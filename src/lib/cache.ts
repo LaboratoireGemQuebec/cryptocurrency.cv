@@ -21,6 +21,11 @@ class MemoryCache {
     // Cleanup expired entries every minute
     if (typeof setInterval !== 'undefined') {
       this.cleanupInterval = setInterval(() => this.cleanup(), 60000);
+      // In serverless / Node.js, unref the timer so it doesn’t keep the
+      // process alive (preventing graceful shutdown / GC of workers).
+      if (this.cleanupInterval && typeof this.cleanupInterval === 'object' && 'unref' in this.cleanupInterval) {
+        (this.cleanupInterval as NodeJS.Timeout).unref();
+      }
     }
   }
 
@@ -141,9 +146,9 @@ export const cache = new MemoryCache(500);          // General purpose cache (fo
 /**
  * Stale cache — stores "last known good" data with a much longer TTL.
  * When upstream APIs fail, this cache is checked as a fallback.
- * Default max size is generous because entries only matter when things break.
+ * Reduced from 2000 to 500 to cut ~200 MB memory on busy instances.
  */
-export const staleCache = new MemoryCache(2000);
+export const staleCache = new MemoryCache(500);
 
 /**
  * In-flight promise map for request deduplication.

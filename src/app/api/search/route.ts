@@ -114,73 +114,81 @@ export async function GET(request: NextRequest) {
     );
   }
   
-  // --- Semantic search branch ---
+  // --- Parallel search: run semantic, Postgres FTS, and keyword search concurrently ---
+  // Whichever returns results first wins. This eliminates the ~3-layer sequential
+  // waterfall that was causing 25s TTFB on /api/search.
+  type SearchResult = { articles: unknown[]; search_type: string; total: number } | null;
+
+  const searchPromises: Array<Promise<SearchResult>> = [];
+
+  // Semantic search (only when explicitly requested)
   if (useSemantic) {
-    try {
-      const semanticResults = await semanticSearch(sanitizedQuery);
-      if (semanticResults) {
-        return NextResponse.json(
-          {
-            query: sanitizedQuery,
-            total: semanticResults.length,
-            search_type: 'semantic',
-            articles: semanticResults.map((r) => ({
-              title: r.title,
-              url: r.url,
-              date: r.date,
-              tags: r.tags,
-            })),
-            lang: 'en',
-          },
-          {
-            headers: {
-              'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
-              'Access-Control-Allow-Origin': '*',
-            },
-          }
-        );
-      }
-      // Fall through to keyword search if KV/API unavailable
-    } catch {
-      // Non-fatal — fall through to keyword search
-    }
+    searchPromises.push(
+      semanticSearch(sanitizedQuery)
+        .then((results): SearchResult =>
+          results && results.length > 0
+            ? {
+                articles: results.map((r) => ({ title: r.title, url: r.url, date: r.date, tags: r.tags })),
+                search_type: 'semantic',
+                total: results.length,
+              }
+            : null,
+        )
+        .catch(() => null),
+    );
   }
 
-  // --- Postgres full-text search (if DATABASE_URL is configured) ---
+  // Postgres full-text search
   if (isDbAvailable()) {
-    try {
-      const pgResult = await pgFullTextSearch(sanitizedQuery, { limit });
-      if (pgResult.total > 0) {
-        let pgArticles: unknown[] = pgResult.results.map((r) => ({
-          title: r.title,
-          link: r.link,
-          description: r.description,
-          pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
-          source: r.source,
-          sourceKey: r.sourceKey,
-          tickers: r.tickers,
-          tags: r.tags,
-          sentiment: r.sentimentLabel,
-          relevance: r.rank,
-        }));
-        let pgLang = 'en';
+    searchPromises.push(
+      pgFullTextSearch(sanitizedQuery, { limit })
+        .then((pgResult): SearchResult =>
+          pgResult.total > 0
+            ? {
+                articles: pgResult.results.map((r) => ({
+                  title: r.title,
+                  link: r.link,
+                  description: r.description,
+                  pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
+                  source: r.source,
+                  sourceKey: r.sourceKey,
+                  tickers: r.tickers,
+                  tags: r.tags,
+                  sentiment: r.sentimentLabel,
+                  relevance: r.rank,
+                })),
+                search_type: 'fulltext',
+                total: pgResult.total,
+              }
+            : null,
+        )
+        .catch(() => null),
+    );
+  }
 
-        if (lang !== 'en' && pgArticles.length > 0) {
+  // If we have higher-priority search backends, race them before falling back
+  if (searchPromises.length > 0) {
+    const results = await Promise.allSettled(searchPromises);
+    // Pick the first non-null result (semantic > fulltext priority)
+    for (const r of results) {
+      if (r.status === 'fulfilled' && r.value) {
+        let articles = r.value.articles;
+        let resultLang = 'en';
+        if (lang !== 'en' && articles.length > 0) {
           try {
-            pgArticles = await translateArticles(pgArticles as any, lang);
-            pgLang = lang;
+            articles = await translateArticles(articles as any, lang);
+            resultLang = lang;
           } catch {
-            // continue with original articles
+            // continue with original
           }
         }
-
         return NextResponse.json(
           {
             query: sanitizedQuery,
-            total: pgResult.total,
-            search_type: 'fulltext',
-            articles: pgArticles,
-            lang: pgLang,
+            total: r.value.total,
+            search_type: r.value.search_type,
+            articles,
+            lang: resultLang,
             availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
           },
           {
@@ -188,12 +196,9 @@ export async function GET(request: NextRequest) {
               'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
               'Access-Control-Allow-Origin': '*',
             },
-          }
+          },
         );
       }
-      // Fall through to keyword search if no FTS results
-    } catch {
-      // Non-fatal — fall through to keyword search
     }
   }
 
@@ -229,9 +234,9 @@ export async function GET(request: NextRequest) {
         },
       }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
-      { error: 'Failed to search news', message: String(error) },
+      { error: 'Failed to search news' },
       { status: 500 }
     );
   }
