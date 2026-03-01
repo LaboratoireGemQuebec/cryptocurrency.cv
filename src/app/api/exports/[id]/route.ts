@@ -122,7 +122,7 @@ export async function GET(
       { 
         success: false, 
         error: 'Failed to get export status',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );

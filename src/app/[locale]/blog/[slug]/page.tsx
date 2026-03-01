@@ -37,15 +37,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
   
+  const canonical = `${SITE_URL}/en/blog/${slug}`;
+
   return {
     title: `${post.title} | Free Crypto News Blog`,
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author.name }],
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: 'article',
+      url: canonical,
+      siteName: 'Free Crypto News',
       publishedTime: post.date,
       modifiedTime: post.updatedAt,
       authors: [post.author.name],
@@ -56,6 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
+      creator: '@AICryptoNews_',
       images: post.image ? [post.image] : undefined,
     },
   };

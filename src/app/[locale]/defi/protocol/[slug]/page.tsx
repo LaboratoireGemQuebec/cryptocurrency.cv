@@ -17,7 +17,7 @@ import ProtocolImage from '@/components/ProtocolImage';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/config';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for protocols not pre-rendered
 export const dynamicParams = true;
@@ -37,13 +37,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   
+  const canonical = `${SITE_URL}/en/defi/protocol/${slug}`;
+
   return {
-    title: `${protocol.name} - DeFi Protocol`,
+    title: `${protocol.name} — DeFi Protocol`,
     description: protocol.description || `${protocol.name} DeFi protocol with $${formatNumber(protocol.tvl)} TVL. Category: ${protocol.category}. Chains: ${protocol.chains?.join(', ') || protocol.chain}.`,
+    alternates: {
+      canonical,
+    },
     openGraph: {
-      title: `${protocol.name} - DeFi Protocol`,
+      title: `${protocol.name} — DeFi Protocol`,
       description: protocol.description || `${protocol.name} DeFi protocol analytics and news`,
       type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+      images: protocol.logo ? [protocol.logo] : undefined,
+    },
+    twitter: {
+      card: 'summary',
+      title: `${protocol.name} — DeFi Protocol`,
+      description: protocol.description || `${protocol.name} DeFi protocol analytics and news`,
+      creator: '@AICryptoNews_',
       images: protocol.logo ? [protocol.logo] : undefined,
     },
   };

@@ -123,7 +123,7 @@ export async function GET(request: NextRequest) {
       {
         success: false,
         error: 'Failed to process expired subscriptions',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
         results,
       },
       { status: 500 }

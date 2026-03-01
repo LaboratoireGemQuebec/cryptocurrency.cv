@@ -907,10 +907,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: 'Source Not Found',
     };
   }
+
+  const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+  const canonical = `${SITE_URL}/en/source/${source}`;
   
   return {
     title: `${info.name} News`,
     description: `Latest crypto news from ${info.name}. ${info.description}`,
+    alternates: { canonical },
+    openGraph: {
+      title: `${info.name} — Crypto News`,
+      description: `Latest crypto news from ${info.name}. ${info.description}`,
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${info.name} News`,
+      description: `Latest crypto news from ${info.name}.`,
+      creator: '@cryptocurrencycv',
+    },
   };
 }
 

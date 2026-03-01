@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getPostsByCategory, CATEGORIES, type BlogCategory } from '@/lib/blog';
+import { SITE_URL } from '@/lib/constants';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600;
@@ -29,12 +30,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Category Not Found' };
   }
   
+  const canonical = `${SITE_URL}/en/blog/category/${category}`;
+
   return {
     title: `${categoryInfo.name} Articles | Free Crypto News Blog`,
     description: categoryInfo.description,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: `${categoryInfo.name} Articles | Free Crypto News`,
       description: categoryInfo.description,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${categoryInfo.name} Articles | Free Crypto News`,
+      description: categoryInfo.description,
+      creator: '@AICryptoNews_',
     },
   };
 }

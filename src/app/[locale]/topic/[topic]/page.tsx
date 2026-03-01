@@ -123,10 +123,29 @@ const topicInfo: Record<string, {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { topic } = await params;
   const info = topicInfo[topic];
-  
+  const canonical = `${SITE_URL}/en/topic/${topic}`;
+  const title = info?.title || topic;
+  const description = info?.description || `Latest news about ${topic}`;
+
   return {
-    title: info?.title || topic,
-    description: info?.description || `Latest news about ${topic}`,
+    title,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+      creator: '@AICryptoNews_',
+    },
   };
 }
 

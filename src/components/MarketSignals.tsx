@@ -201,11 +201,12 @@ export function MarketSignals() {
   // Fetch AI narrative once signals are available
   useEffect(() => {
     if (!data?.signals || data.signals.length === 0) return;
+    const signals = data.signals;
     let cancelled = false;
     async function fetchNarrative() {
       setNarrativeLoading(true);
       try {
-        const encoded = encodeURIComponent(JSON.stringify(data!.signals));
+        const encoded = encodeURIComponent(JSON.stringify(signals));
         const url = `/api/signals/narrative?signals=${encoded}`;
         const res = await fetch(url).catch(() => null);
         if (!res || !res.ok || cancelled) return;

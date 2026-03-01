@@ -4,19 +4,15 @@
  * Full-page RAG-powered chat interface
  */
 
-import { type Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { RAGChat } from '@/components/rag-chat';
 
-export const metadata: Metadata = {
-  title: 'Ask AI - Crypto News Assistant',
+export const metadata = generateSEOMetadata({
+  title: 'Ask AI \u2014 Crypto News Assistant',
   description: 'Get instant answers about cryptocurrency news, market trends, Bitcoin, Ethereum, DeFi, NFTs, and more using our AI-powered assistant.',
-  keywords: ['crypto', 'AI', 'assistant', 'news', 'bitcoin', 'ethereum', 'chat'],
-  openGraph: {
-    title: 'Ask AI - Crypto News Assistant',
-    description: 'Get instant answers about cryptocurrency news and market trends.',
-    type: 'website',
-  },
-};
+  path: '/ask',
+  tags: ['crypto AI', 'AI assistant', 'news chat', 'bitcoin', 'ethereum', 'crypto questions'],
+});
 
 export default function AskPage() {
   return (

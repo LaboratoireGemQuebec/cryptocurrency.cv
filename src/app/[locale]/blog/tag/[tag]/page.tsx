@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getPostsByTag, getAllTags, CATEGORIES, type BlogCategory } from '@/lib/blog';
+import { SITE_URL } from '@/lib/constants';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600;
@@ -25,12 +26,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { tag } = await params;
   const decodedTag = decodeURIComponent(tag);
   
+  const canonical = `${SITE_URL}/en/blog/tag/${tag}`;
+
   return {
     title: `Articles tagged "${decodedTag}" | Free Crypto News Blog`,
     description: `All articles about ${decodedTag} - cryptocurrency guides, tutorials, and analysis.`,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: `#${decodedTag} Articles | Free Crypto News`,
-      description: `All articles about ${decodedTag}`,
+      description: `All articles about ${decodedTag} - cryptocurrency guides, tutorials, and analysis.`,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title: `#${decodedTag} Articles | Free Crypto News`,
+      description: `All articles about ${decodedTag} - cryptocurrency guides, tutorials, and analysis.`,
+      creator: '@AICryptoNews_',
     },
   };
 }

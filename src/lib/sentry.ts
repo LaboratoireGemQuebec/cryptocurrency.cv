@@ -68,16 +68,41 @@ const isEnabled = !!SENTRY_DSN && process.env.NODE_ENV === 'production';
  * In Edge Runtime, we can't use the full Sentry SDK, so we use the
  * Sentry envelope API directly or queue errors for server-side processing.
  */
+/** Parsed DSN components for the Sentry envelope endpoint. */
+interface ParsedDSN {
+  host: string;
+  projectId: string;
+  publicKey: string;
+}
+
+function parseDSN(dsn: string): ParsedDSN | null {
+  try {
+    // DSN format: https://<publicKey>@<host>/<projectId>
+    const url = new URL(dsn);
+    const publicKey = url.username;
+    const projectId = url.pathname.replace(/^\//,  '');
+    const host = url.host;
+    if (!publicKey || !projectId || !host) return null;
+    return { host, projectId, publicKey };
+  } catch {
+    return null;
+  }
+}
+
 class SentryEdge {
   private dsn: string | null;
+  private parsed: ParsedDSN | null;
   private enabled: boolean;
   private breadcrumbs: SentryBreadcrumb[] = [];
   private user: SentryUser | null = null;
   private tags: Record<string, string> = {};
   private context: Record<string, SentryContext> = {};
+  /** Queue of failed sends to retry (max 20). */
+  private sendQueue: Array<Record<string, unknown>> = [];
 
   constructor() {
     this.dsn = SENTRY_DSN || null;
+    this.parsed = this.dsn ? parseDSN(this.dsn) : null;
     this.enabled = isEnabled;
   }
 
@@ -91,22 +116,32 @@ class SentryEdge {
     }
 
     const eventId = this.generateEventId();
-    
-    // In Edge, we log for now - full integration would send to Sentry API
-    console.error('[Sentry] Captured exception:', {
-      eventId,
-      error: error instanceof Error ? {
-        name: error.name,
-        message: error.message,
-        stack: error.stack,
-      } : error,
-      context,
-      user: this.user,
-      tags: this.tags,
-      breadcrumbs: this.breadcrumbs.slice(-10),
+    const err = error instanceof Error ? error : new Error(String(error));
+
+    const event: Record<string, unknown> = {
+      event_id: eventId,
+      timestamp: new Date().toISOString(),
+      platform: 'javascript',
+      level: 'error',
+      server_name: 'edge',
       environment: SENTRY_ENVIRONMENT,
       release: SENTRY_RELEASE,
-    });
+      exception: {
+        values: [{
+          type: err.name,
+          value: err.message,
+          stacktrace: err.stack ? { frames: this.parseStackFrames(err.stack) } : undefined,
+        }],
+      },
+      tags: { ...this.tags },
+      contexts: { ...this.context, ...(context ? { extra: context } : {}) },
+      breadcrumbs: { values: this.breadcrumbs.slice(-20) },
+      ...(this.user ? { user: this.user } : {}),
+      sdk: { name: 'sentry.edge.custom', version: '1.0.0' },
+    };
+
+    // Fire-and-forget: send to Sentry via the Envelope API
+    this.sendEnvelope(event);
 
     return eventId;
   }
@@ -121,13 +156,24 @@ class SentryEdge {
     }
 
     const eventId = this.generateEventId();
-    
-    logger.debug('[Sentry] Captured message', {
-      eventId,
-      message,
+
+    const event: Record<string, unknown> = {
+      event_id: eventId,
+      timestamp: new Date().toISOString(),
+      platform: 'javascript',
       level,
+      server_name: 'edge',
       environment: SENTRY_ENVIRONMENT,
-    });
+      release: SENTRY_RELEASE,
+      message: { formatted: message },
+      tags: { ...this.tags },
+      contexts: { ...this.context },
+      breadcrumbs: { values: this.breadcrumbs.slice(-20) },
+      ...(this.user ? { user: this.user } : {}),
+      sdk: { name: 'sentry.edge.custom', version: '1.0.0' },
+    };
+
+    this.sendEnvelope(event);
 
     return eventId;
   }
@@ -208,6 +254,90 @@ class SentryEdge {
     };
   }
 
+  // ---------------------------------------------------------------------------
+  // Sentry Envelope Transport
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Send a Sentry event via the Envelope API (edge-compatible, uses fetch).
+   * https://develop.sentry.dev/sdk/envelopes/
+   */
+  private async sendEnvelope(event: Record<string, unknown>): Promise<void> {
+    if (!this.parsed) return;
+    const { host, projectId, publicKey } = this.parsed;
+    const url = `https://${host}/api/${projectId}/envelope/`;
+
+    // Envelope: header line, item header line, item payload
+    const envelopeHeader = JSON.stringify({
+      event_id: event.event_id,
+      sent_at: new Date().toISOString(),
+      dsn: this.dsn,
+      sdk: event.sdk,
+    });
+    const itemHeader = JSON.stringify({
+      type: 'event',
+      content_type: 'application/json',
+    });
+    const itemPayload = JSON.stringify(event);
+    const body = `${envelopeHeader}\n${itemHeader}\n${itemPayload}`;
+
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-sentry-envelope',
+          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_client=edge-custom/1.0, sentry_key=${publicKey}`,
+        },
+        body,
+      });
+      if (!res.ok) {
+        // Queue for retry (up to 20)
+        if (this.sendQueue.length < 20) {
+          this.sendQueue.push(event);
+        }
+        console.warn(`[Sentry] Envelope send failed: ${res.status}`);
+      } else {
+        // Flush queued events on successful connection
+        this.flushQueue();
+      }
+    } catch (err) {
+      if (this.sendQueue.length < 20) {
+        this.sendQueue.push(event);
+      }
+      console.warn('[Sentry] Envelope send error:', err);
+    }
+  }
+
+  /** Best-effort flush of queued events. */
+  private async flushQueue(): Promise<void> {
+    if (this.sendQueue.length === 0 || !this.parsed) return;
+    const items = this.sendQueue.splice(0, this.sendQueue.length);
+    for (const event of items) {
+      // Re-queue will be skipped on this pass since we already cleared
+      await this.sendEnvelope(event).catch(() => {});
+    }
+  }
+
+  /** Parse a JS Error stack into Sentry-compatible frames. */
+  private parseStackFrames(stack: string): Array<{ filename: string; function: string; lineno?: number; colno?: number; in_app: boolean }> {
+    const frames: Array<{ filename: string; function: string; lineno?: number; colno?: number; in_app: boolean }> = [];
+    const lines = stack.split('\n').slice(1); // Skip the first "Error: message" line
+    for (const line of lines) {
+      const match = line.match(/^\s+at\s+(?:(.+?)\s+)?\(?(.*?):(\d+):(\d+)\)?$/);
+      if (match) {
+        frames.push({
+          function: match[1] || '<anonymous>',
+          filename: match[2],
+          lineno: parseInt(match[3], 10),
+          colno: parseInt(match[4], 10),
+          in_app: !match[2].includes('node_modules'),
+        });
+      }
+    }
+    // Sentry expects frames in reverse order (most recent last)
+    return frames.reverse();
+  }
+
   private generateEventId(): string {
     return Array.from({ length: 32 }, () => 
       Math.floor(Math.random() * 16).toString(16)
@@ -256,12 +386,15 @@ class SentryTransaction {
     });
   }
 
-  setData(key: string, _value: unknown): void {
-    // Store transaction data
+  private _data: Record<string, unknown> = {};
+  private _status: 'ok' | 'error' | 'cancelled' = 'ok';
+
+  setData(key: string, value: unknown): void {
+    this._data[key] = value;
   }
 
   setStatus(status: 'ok' | 'error' | 'cancelled'): void {
-    // Store transaction status
+    this._status = status;
   }
 }
 

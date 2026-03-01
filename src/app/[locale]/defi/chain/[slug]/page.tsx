@@ -17,7 +17,7 @@ import ProtocolImage from '@/components/ProtocolImage';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/config';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for chains not pre-rendered
 export const dynamicParams = true;
@@ -37,13 +37,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   
+  const canonical = `${SITE_URL}/en/defi/chain/${slug}`;
+
   return {
-    title: `${chain.name} DeFi - TVL & Protocols`,
+    title: `${chain.name} DeFi — TVL & Protocols`,
     description: `${chain.name} blockchain DeFi ecosystem with $${formatNumber(chain.tvl)} Total Value Locked. Explore top protocols, analytics, and news.`,
+    alternates: {
+      canonical,
+    },
     openGraph: {
-      title: `${chain.name} DeFi - TVL & Protocols`,
+      title: `${chain.name} DeFi — TVL & Protocols`,
       description: `${chain.name} blockchain DeFi analytics and news`,
       type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${chain.name} DeFi — TVL & Protocols`,
+      description: `${chain.name} blockchain DeFi analytics and news`,
+      creator: '@AICryptoNews_',
     },
   };
 }

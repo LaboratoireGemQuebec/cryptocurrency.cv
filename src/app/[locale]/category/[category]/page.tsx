@@ -80,9 +80,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     emoji: '📰',
   };
 
+  const canonical = `${SITE_URL}/en/category/${category}`;
+
   return {
-    title: `${info.title} - Free Crypto News`,
+    title: `${info.title} — Free Crypto News`,
     description: info.description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: `${info.emoji} ${info.title}`,
+      description: info.description,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${info.emoji} ${info.title}`,
+      description: info.description,
+      creator: '@AICryptoNews_',
+    },
   };
 }
 

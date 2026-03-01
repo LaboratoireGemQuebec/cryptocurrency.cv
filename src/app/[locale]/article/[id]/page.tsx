@@ -16,13 +16,13 @@ import {
 } from "@/lib/archive-v2";
 import {
   getLatestNews,
-  getHomepageNews,
   type NewsArticle,
 } from "@/lib/crypto-news";
-import { RelatedByMention } from "@/components/RelatedByMention";
+import { RelatedByMentionLoader } from "@/components/RelatedByMentionLoader";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { ArticleContent } from "@/components/ArticleContent";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import {
@@ -291,15 +291,14 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
 
-  // Fetch related articles + more from this source + homepage news in parallel
-  const [relatedArticles, sourceNewsData, homepageResult] = await Promise.all([
+  // Fetch related articles + more from this source in parallel
+  // (homepage news for RelatedByMention is loaded via Suspense — does not block render)
+  const [relatedArticles, sourceNewsData] = await Promise.all([
     getRelatedArticles(article, 6),
     getLatestNews(5, article.source_key).catch(() => ({
       articles: [] as NewsArticle[],
     })),
-    getHomepageNews({ latestLimit: 50 }).catch(() => null),
   ]);
-  const homepageArticles: NewsArticle[] = homepageResult?.latest.articles ?? [];
   const sentiment =
     sentimentConfig[article.sentiment.label] || sentimentConfig.neutral;
 
@@ -628,13 +627,14 @@ export default async function ArticlePage({ params }: Props) {
                 <ArticleReactions articleId={article.id} />
               </div>
 
-              {/* Related by Coin Mention */}
-              <RelatedByMention
-                currentTitle={article.title}
-                currentDescription={article.description ?? undefined}
-                currentLink={article.link}
-                allArticles={homepageArticles}
-              />
+              {/* Related by Coin Mention — streamed via Suspense, does not block article render */}
+              <Suspense fallback={null}>
+                <RelatedByMentionLoader
+                  currentTitle={article.title}
+                  currentDescription={article.description ?? undefined}
+                  currentLink={article.link}
+                />
+              </Suspense>
 
               {/* More from This Source */}
               {moreFromSource.length > 0 && (

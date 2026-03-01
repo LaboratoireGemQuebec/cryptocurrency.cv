@@ -11,7 +11,7 @@ import { formatNumber, formatPrice } from '@/lib/market-data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fetchCoinGecko } from '@/lib/coingecko';
-import { COINGECKO_BASE } from '@/lib/constants';
+import { COINGECKO_BASE, SITE_URL } from '@/lib/constants';
 
 export const dynamic = 'force-dynamic';
 
@@ -72,9 +72,30 @@ export async function generateMetadata({ params }: ExchangePageProps): Promise<M
     return { title: 'Exchange Not Found' };
   }
   
+  const canonical = `${SITE_URL}/en/markets/exchanges/${id}`;
+  const description = exchange.description || `${exchange.name} exchange information, trading pairs, and volume statistics.`;
+
   return {
-    title: `${exchange.name} - Cryptocurrency Exchange - Free Crypto News`,
-    description: exchange.description || `${exchange.name} exchange information, trading pairs, and volume statistics.`,
+    title: `${exchange.name} — Cryptocurrency Exchange — Free Crypto News`,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: `${exchange.name} — Cryptocurrency Exchange`,
+      description,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+      images: exchange.image ? [exchange.image] : undefined,
+    },
+    twitter: {
+      card: 'summary',
+      title: `${exchange.name} — Cryptocurrency Exchange`,
+      description,
+      creator: '@AICryptoNews_',
+      images: exchange.image ? [exchange.image] : undefined,
+    },
   };
 }
 

@@ -76,7 +76,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to retrieve data sources', details: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Failed to retrieve data sources', details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error' },
       { status: 500 },
     );
   }

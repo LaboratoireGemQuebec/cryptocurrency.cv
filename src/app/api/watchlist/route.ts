@@ -119,7 +119,7 @@ export async function GET(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to get watchlist',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );
@@ -187,7 +187,7 @@ export async function POST(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to add to watchlist',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );
@@ -235,7 +235,7 @@ export async function DELETE(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to remove from watchlist',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );
@@ -273,7 +273,7 @@ export async function PUT(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to update watchlist item',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );

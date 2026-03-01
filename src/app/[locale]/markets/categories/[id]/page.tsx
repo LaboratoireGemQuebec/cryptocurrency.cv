@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { getTopCoins, formatPrice, formatPercent, formatNumber } from '@/lib/market-data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { SITE_URL } from '@/lib/constants';
 
 // Category metadata
 const CATEGORY_META: Record<string, { name: string; icon: string; description: string }> = {
@@ -100,9 +101,27 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const category = CATEGORY_META[id];
   if (!category) return { title: 'Category Not Found' };
   
+  const canonical = `${SITE_URL}/en/markets/categories/${id}`;
+
   return {
-    title: `${category.name} Cryptocurrencies - Free Crypto News`,
+    title: `${category.name} Cryptocurrencies — Free Crypto News`,
     description: `Browse ${category.name} cryptocurrencies. ${category.description}`,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: `${category.icon} ${category.name} Cryptocurrencies`,
+      description: `Browse ${category.name} cryptocurrencies. ${category.description}`,
+      type: 'website',
+      url: canonical,
+      siteName: 'Free Crypto News',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${category.icon} ${category.name} Cryptocurrencies`,
+      description: `Browse ${category.name} cryptocurrencies. ${category.description}`,
+      creator: '@AICryptoNews_',
+    },
   };
 }
 

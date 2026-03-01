@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to list exports',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );
@@ -179,7 +179,7 @@ export async function POST(request: NextRequest) {
       { 
         success: false, 
         error: 'Failed to create export',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : 'Internal server error',
       },
       { status: 500 }
     );

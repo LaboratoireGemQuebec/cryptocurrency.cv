@@ -32,6 +32,7 @@ import { SITE_URL } from '@/lib/constants';
 import type { SortField, SortOrder } from './components/SortableHeader';
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonical = `${SITE_URL}/en/markets`;
   // Fetch current market data for dynamic OG image
   try {
     const [global, fearGreed] = await Promise.all([
@@ -47,11 +48,15 @@ export async function generateMetadata(): Promise<Metadata> {
     const ogImageUrl = `${SITE_URL}/api/og/market?type=overview&btc=${encodeURIComponent(btcPrice)}&btc_change=${btcChange}&fear_greed=${fearGreed?.value ?? 50}&fear_greed_label=${encodeURIComponent(fearGreed?.value_classification ?? 'Neutral')}`;
 
     return {
-      title: 'Crypto Markets - Free Crypto News',
+      title: 'Crypto Markets — Live Prices & Analytics',
       description: 'Live cryptocurrency prices, market data, charts, and analytics. Browse and discover cryptocurrencies.',
+      keywords: ['crypto markets', 'cryptocurrency prices', 'bitcoin price', 'market cap', 'trading volume'],
+      alternates: { canonical },
       openGraph: {
-        title: 'Crypto Markets - Free Crypto News',
+        title: 'Crypto Markets — Live Prices & Analytics',
         description: 'Live cryptocurrency prices, market data, charts, and analytics.',
+        url: canonical,
+        siteName: 'Free Crypto News',
         images: [{
           url: ogImageUrl,
           width: 1200,
@@ -61,15 +66,17 @@ export async function generateMetadata(): Promise<Metadata> {
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'Crypto Markets - Free Crypto News',
+        title: 'Crypto Markets — Live Prices & Analytics',
         description: 'Live cryptocurrency prices and market data',
         images: [ogImageUrl],
+        creator: '@cryptocurrencycv',
       },
     };
   } catch {
     return {
-      title: 'Crypto Markets - Free Crypto News',
+      title: 'Crypto Markets — Live Prices & Analytics',
       description: 'Live cryptocurrency prices, market data, charts, and analytics.',
+      alternates: { canonical },
     };
   }
 }
