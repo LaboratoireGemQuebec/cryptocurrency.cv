@@ -1,6 +1,6 @@
 # Free Crypto News Go SDK
 
-100% FREE Go SDK for the Free Crypto News API. No API keys required!
+Production-ready Go client for the [Free Crypto News API](https://cryptocurrency.cv). No API keys required!
 
 ## Installation
 
@@ -8,85 +8,165 @@
 go get github.com/nirholas/free-crypto-news/sdk/go
 ```
 
-## Usage
+## Quick Start
 
 ```go
 package main
 
 import (
+    "context"
     "fmt"
     "log"
-    
+    "time"
+
     cryptonews "github.com/nirholas/free-crypto-news/sdk/go"
 )
 
 func main() {
     client := cryptonews.NewClient()
-    
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+
     // Get latest news
-    articles, err := client.GetLatest(10)
+    articles, err := client.GetLatest(ctx, 10)
     if err != nil {
         log.Fatal(err)
     }
-    
+
     for _, article := range articles {
-        fmt.Printf("📰 %s\n", article.Title)
-        fmt.Printf("   %s • %s\n", article.Source, article.TimeAgo)
-        fmt.Printf("   %s\n\n", article.Link)
+        fmt.Printf("%s\n  %s • %s\n  %s\n\n", article.Title, article.Source, article.TimeAgo, article.Link)
     }
-    
-    // Search for specific topics
-    results, _ := client.Search("ethereum,etf", 5)
-    
-    // Get DeFi news
-    defi, _ := client.GetDeFi(5)
-    
-    // Get Bitcoin news
-    btc, _ := client.GetBitcoin(5)
-    
-    // Get breaking news
-    breaking, _ := client.GetBreaking(5)
-    
-    // Get trending topics
-    trending, _ := client.GetTrending(10, 24)
-    for _, topic := range trending.Trending {
-        fmt.Printf("%s: %d mentions (%s)\n", topic.Topic, topic.Count, topic.Sentiment)
-    }
-    
-    // Check API health
-    health, _ := client.GetHealth()
-    fmt.Printf("API Status: %s\n", health.Status)
 }
 ```
 
-## Analytics & Trends
+## Context Support
+
+All methods accept `context.Context` as the first argument for cancellation and timeout:
 
 ```go
-// Get API statistics
-stats, _ := client.GetStats()
+// With timeout
+ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+defer cancel()
+articles, err := client.GetLatest(ctx, 10)
+
+// With cancellation
+ctx, cancel := context.WithCancel(context.Background())
+go func() {
+    time.Sleep(2 * time.Second)
+    cancel()
+}()
+articles, err := client.GetLatest(ctx, 10)
+```
+
+## Market Data
+
+```go
+// Cryptocurrency prices
+prices, _ := client.GetPrices(ctx, "bitcoin")
+
+// Market overview
+market, _ := client.GetMarket(ctx)
+
+// Fear & Greed Index
+fg, _ := client.GetFearGreed(ctx)
+fmt.Printf("Fear & Greed: %d (%s)\n", fg.Value, fg.Classification)
+
+// Ethereum gas prices
+gas, _ := client.GetGas(ctx)
+fmt.Printf("Gas: fast=%.0f standard=%.0f\n", gas.Fast, gas.Standard)
+```
+
+## News Endpoints
+
+```go
+// Search
+results, _ := client.Search(ctx, "ethereum,etf", 5)
+
+// DeFi news
+defi, _ := client.GetDeFi(ctx, 5)
+
+// Bitcoin news
+btc, _ := client.GetBitcoin(ctx, 5)
+
+// Breaking news
+breaking, _ := client.GetBreaking(ctx, 5)
+
+// Trending topics
+trending, _ := client.GetTrending(ctx, 10, 24)
+for _, topic := range trending.Trending {
+    fmt.Printf("%s: %d mentions (%s)\n", topic.Topic, topic.Count, topic.Sentiment)
+}
+```
+
+## Error Handling
+
+The SDK provides typed errors for structured error handling:
+
+```go
+import "errors"
+
+articles, err := client.GetLatest(ctx, 5)
+if err != nil {
+    var rateLimitErr *cryptonews.RateLimitError
+    var apiErr *cryptonews.APIError
+    var netErr *cryptonews.NetworkError
+
+    switch {
+    case errors.As(err, &rateLimitErr):
+        fmt.Printf("Rate limited — retry after %.0fs\n", rateLimitErr.RetryAfter)
+    case errors.As(err, &apiErr):
+        fmt.Printf("API error (HTTP %d): %s\n", apiErr.StatusCode, apiErr.Body)
+    case errors.As(err, &netErr):
+        fmt.Printf("Network error: %s\n", netErr.Message)
+    }
+}
+```
+
+Error hierarchy:
+
+```
+SDKError            ← base, implements error + Unwrap()
+├── NetworkError    ← connection failures, DNS, timeouts
+└── APIError        ← non-2xx HTTP responses
+    └── RateLimitError  ← HTTP 429, includes RetryAfter
+```
+
+## Analytics
+
+```go
+// API statistics
+stats, _ := client.GetStats(ctx)
 fmt.Printf("Total articles: %d\n", stats.TotalArticles)
 
-// Analyze news with sentiment
-analysis, _ := client.Analyze(20, "bitcoin", "bullish")
+// Sentiment analysis
+analysis, _ := client.Analyze(ctx, 20, "bitcoin", "bullish")
 fmt.Printf("Market: %s\n", analysis.Summary.OverallSentiment)
 ```
 
 ## Historical & Sources
 
 ```go
-// Get archived news
-archive, _ := client.GetArchive("2024-01-15", "SEC", 20)
+// Archived news
+archive, _ := client.GetArchive(ctx, "2024-01-15", "SEC", 20)
 
 // Find original sources
-origins, _ := client.GetOrigins("binance", "exchange", 10)
+origins, _ := client.GetOrigins(ctx, "binance", "exchange", 10)
 for _, item := range origins.Items {
-    fmt.Printf("%s - Original: %s\n", item.Title, item.LikelyOriginalSource)
+    fmt.Printf("%s — Original: %s\n", item.Title, item.LikelyOriginalSource)
 }
+
+// List all sources
+sources, _ := client.GetSources(ctx)
 ```
 
-## Custom Base URL
+## Examples
 
-For self-hosted instances:
+See the [examples/](examples/) directory for runnable programs:
+
+- [basic](examples/basic/main.go) — fetch news, search, trending, prices
+- [errors](examples/errors/main.go) — typed error handling
+
+## Custom Base URL
 
 ```go
 client := cryptonews.NewClientWithURL("https://your-instance.com")
@@ -94,21 +174,29 @@ client := cryptonews.NewClientWithURL("https://your-instance.com")
 
 ## API Methods
 
+All methods require `context.Context` as the first argument.
+
 | Method | Description |
 |--------|-------------|
-| `GetLatest(limit)` | Get latest news |
-| `GetLatestFromSource(limit, source)` | Get news from specific source |
-| `Search(keywords, limit)` | Search by keywords |
-| `GetDeFi(limit)` | DeFi-specific news |
-| `GetBitcoin(limit)` | Bitcoin-specific news |
-| `GetBreaking(limit)` | Breaking news (last 2h) |
-| `GetTrending(limit, hours)` | Trending topics |
-| `GetStats()` | API statistics |
-| `Analyze(limit, topic, sentiment)` | Sentiment analysis |
-| `GetArchive(date, query, limit)` | Historical archive |
-| `GetOrigins(query, category, limit)` | Find original sources |
-| `GetSources()` | List all sources |
-| `GetHealth()` | API health status |
+| `GetLatest(ctx, limit)` | Get latest news |
+| `GetLatestFromSource(ctx, limit, source)` | News from specific source |
+| `GetNews(ctx, limit, category, search)` | News with optional filters |
+| `Search(ctx, keywords, limit)` | Search by keywords |
+| `GetPrices(ctx, coin)` | Cryptocurrency prices |
+| `GetMarket(ctx)` | Market overview |
+| `GetFearGreed(ctx)` | Fear & Greed Index |
+| `GetGas(ctx)` | Ethereum gas prices |
+| `GetDeFi(ctx, limit)` | DeFi-specific news |
+| `GetBitcoin(ctx, limit)` | Bitcoin-specific news |
+| `GetBreaking(ctx, limit)` | Breaking news (last 2h) |
+| `GetTrending(ctx, limit, hours)` | Trending topics |
+| `GetStats(ctx)` | API statistics |
+| `Analyze(ctx, limit, topic, sentiment)` | Sentiment analysis |
+| `GetArchive(ctx, date, query, limit)` | Historical archive |
+| `GetOrigins(ctx, query, category, limit)` | Find original sources |
+| `GetSources(ctx)` | List all sources |
+| `GetHealth(ctx)` | API health status |
+| `GetCoinSentiment(ctx, opts)` | Per-coin sentiment with trade signals |
 
 ## License
 

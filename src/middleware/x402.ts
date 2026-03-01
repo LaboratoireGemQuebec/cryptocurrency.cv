@@ -60,7 +60,15 @@ export function getX402Proxy(): (req: NextRequest) => any {
       );
     } catch (err) {
       console.warn('[x402] Proxy init deferred — scheme not yet available:', (err as Error).message);
-      return (_req: NextRequest) => NextResponse.next();
+      return (_req: NextRequest) =>
+        NextResponse.json(
+          {
+            error: 'Service Unavailable',
+            code: 'PAYMENT_GATE_UNAVAILABLE',
+            message: 'Payment verification is temporarily unavailable. Please retry shortly.',
+          },
+          { status: 503, headers: { 'Retry-After': '30' } },
+        );
     }
   }
   return _x402;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { createChart, type IChartApi, type ISeriesApi, ColorType, type CandlestickData, type LineData, type HistogramData, type Time } from "lightweight-charts";
+import { createChart, type IChartApi, type ISeriesApi, ColorType, type CandlestickData, type LineData, type HistogramData, type Time, CandlestickSeries, LineSeries, HistogramSeries } from "lightweight-charts";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui";
@@ -226,7 +226,7 @@ export default function AdvancedChart({
       const sortedCandles = [...candles].sort((a, b) => a[0] - b[0]);
 
       if (chartType === "candlestick") {
-        const candleSeries = chart.addCandlestickSeries({
+        const candleSeries = chart.addSeries(CandlestickSeries, {
           upColor: "#22c55e",
           downColor: "#ef4444",
           borderDownColor: "#ef4444",
@@ -246,7 +246,7 @@ export default function AdvancedChart({
         candleSeries.setData(candleData);
         candleSeriesRef.current = candleSeries;
       } else {
-        const lineSeries = chart.addLineSeries({
+        const lineSeries = chart.addSeries(LineSeries, {
           color: "#3b82f6",
           lineWidth: 2,
         });
@@ -261,7 +261,7 @@ export default function AdvancedChart({
       }
 
       // Volume bars
-      const volumeSeries = chart.addHistogramSeries({
+      const volumeSeries = chart.addSeries(HistogramSeries, {
         priceFormat: { type: "volume" },
         priceScaleId: "volume",
       });

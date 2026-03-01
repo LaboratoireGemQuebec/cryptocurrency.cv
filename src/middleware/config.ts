@@ -82,6 +82,34 @@ export const TIER_LIMITS: Record<string, { daily: number; perMinute: number }> =
 export const FREE_TIER_MAX_RESULTS = 3;
 
 // =============================================================================
+// PER-ROUTE RATE LIMITS (expensive endpoints)
+// =============================================================================
+
+/**
+ * Stricter per-route rate limits for expensive operations.
+ * These are checked IN ADDITION to the global tier limit.
+ */
+export const ROUTE_RATE_LIMITS: { pattern: RegExp; requests: number; windowMs: number; label: string }[] = [
+  { pattern: /^\/api\/ai/,           requests: 10,  windowMs: 60_000,     label: 'ai' },
+  { pattern: /^\/api\/ask/,          requests: 10,  windowMs: 60_000,     label: 'ask' },
+  { pattern: /^\/api\/summarize/,    requests: 20,  windowMs: 60_000,     label: 'summarize' },
+  { pattern: /^\/api\/translate/,    requests: 10,  windowMs: 60_000,     label: 'translate' },
+  { pattern: /^\/api\/forecast/,     requests: 10,  windowMs: 60_000,     label: 'forecast' },
+  { pattern: /^\/api\/detect/,       requests: 20,  windowMs: 60_000,     label: 'detect' },
+  { pattern: /^\/api\/classify/,     requests: 20,  windowMs: 60_000,     label: 'classify' },
+  { pattern: /^\/api\/factcheck/,    requests: 10,  windowMs: 60_000,     label: 'factcheck' },
+  { pattern: /^\/api\/rag/,          requests: 10,  windowMs: 60_000,     label: 'rag' },
+  { pattern: /^\/api\/vector-search/,requests: 20,  windowMs: 60_000,     label: 'vector-search' },
+  { pattern: /^\/api\/export/,       requests: 5,   windowMs: 60_000,     label: 'export' },
+  { pattern: /^\/api\/exports/,      requests: 5,   windowMs: 60_000,     label: 'exports' },
+  { pattern: /^\/api\/search/,       requests: 30,  windowMs: 60_000,     label: 'search' },
+  { pattern: /^\/api\/backtest/,     requests: 5,   windowMs: 60_000,     label: 'backtest' },
+];
+
+/** Rate limit for /api/register — prevent abuse / enumeration. */
+export const REGISTER_RATE_LIMIT = { requests: 5, windowMs: 3_600_000 }; // 5 per hour per IP
+
+// =============================================================================
 // REPEAT-429 ESCALATION
 // =============================================================================
 
@@ -92,6 +120,10 @@ export const REPEAT_429_BLOCK_MS  = 3_600_000;    // 1-hour hard block after esc
 // =============================================================================
 // HELPERS
 // =============================================================================
+
+export function findRouteRateLimit(pathname: string): (typeof ROUTE_RATE_LIMITS)[number] | null {
+  return ROUTE_RATE_LIMITS.find((r) => r.pattern.test(pathname)) ?? null;
+}
 
 export function matchesPattern(pathname: string, patterns: RegExp[]): boolean {
   return patterns.some((p) => p.test(pathname));

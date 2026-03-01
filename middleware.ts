@@ -37,7 +37,9 @@ import {
   TIER_LIMITS,
   FREE_TIER_MAX_RESULTS,
   REPEAT_429_BLOCK_MS,
+  REGISTER_RATE_LIMIT,
   matchesPattern,
+  findRouteRateLimit,
   generateRequestId,
   getClientIp,
   isBlockedBot,
@@ -275,6 +277,27 @@ export default async function middleware(request: NextRequest) {
     );
   }
 
+  // ── /api/register rate limit — prevent abuse / key enumeration ──────────
+  // This route is exempt from regular rate limiting, so we apply a separate limit.
+  if (pathname === '/api/register' && !speraxos) {
+    const regIp = getClientIp(request);
+    const regRl = await checkRateLimit(`register:${regIp}`, 'public');
+    // Override with the register-specific limits
+    if (regRl.remaining <= 0 || !regRl.allowed) {
+      const retry = Math.ceil((regRl.resetAt - Date.now()) / 1000);
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'REGISTER_RATE_LIMIT',
+          message: `API key registration is limited to ${REGISTER_RATE_LIMIT.requests} requests per hour per IP`,
+          retryAfter: retry,
+          requestId,
+        },
+        { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
+      );
+    }
+  }
+
   // Exempt patterns — skip rate limiting / size check
   if (!matchesPattern(pathname, EXEMPT_PATTERNS)) {
     if (['POST', 'PUT', 'PATCH'].includes(request.method)) {
@@ -379,6 +402,31 @@ export default async function middleware(request: NextRequest) {
           { error: 'Rate Limit Exceeded', code: 'RATE_LIMIT_EXCEEDED', retryAfter: retry, tier, requestId },
           { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
         );
+      }
+    }
+
+    // ── Per-route rate limits for expensive endpoints ──────────────────────
+    if (!speraxos) {
+      const routeLimit = findRouteRateLimit(pathname);
+      if (routeLimit) {
+        const routeKey = resolvedKeyId
+          ? `route:${routeLimit.label}:${resolvedKeyId}`
+          : `route:${routeLimit.label}:${getClientIp(request)}`;
+        const routeRl = await checkRateLimit(routeKey, 'public');
+        if (!routeRl.allowed) {
+          const retry = Math.ceil((routeRl.resetAt - Date.now()) / 1000);
+          return NextResponse.json(
+            {
+              error: 'Rate Limit Exceeded',
+              code: 'ROUTE_RATE_LIMIT',
+              message: `This endpoint is limited to ${routeLimit.requests} requests per minute`,
+              endpoint: routeLimit.label,
+              retryAfter: retry,
+              requestId,
+            },
+            { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
+          );
+        }
       }
     }
   }

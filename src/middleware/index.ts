@@ -26,7 +26,9 @@ export {
   TIER_LIMITS,
   FREE_TIER_MAX_RESULTS,
   REPEAT_429_BLOCK_MS,
+  REGISTER_RATE_LIMIT,
   matchesPattern,
+  findRouteRateLimit,
   generateRequestId,
   getClientIp,
 } from './config';
