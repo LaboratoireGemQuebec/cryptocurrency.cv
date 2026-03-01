@@ -40,19 +40,19 @@ interface ReaderContentProps {
 }
 
 const sourceColors: Record<string, string> = {
-  'CoinDesk': 'bg-blue-100 text-blue-800 border-blue-200',
-  'The Block': 'bg-purple-100 text-purple-800 border-purple-200',
-  'Decrypt': 'bg-green-100 text-green-800 border-green-200',
-  'CoinTelegraph': 'bg-orange-100 text-orange-800 border-orange-200',
-  'Bitcoin Magazine': 'bg-yellow-100 text-yellow-800 border-yellow-200',
-  'Blockworks': 'bg-indigo-100 text-indigo-800 border-indigo-200',
-  'The Defiant': 'bg-pink-100 text-pink-800 border-pink-200',
+  'CoinDesk': 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/40 dark:text-blue-200 dark:border-blue-800',
+  'The Block': 'bg-purple-100 text-purple-800 border-purple-200 dark:bg-purple-900/40 dark:text-purple-200 dark:border-purple-800',
+  'Decrypt': 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/40 dark:text-green-200 dark:border-green-800',
+  'CoinTelegraph': 'bg-orange-100 text-orange-800 border-orange-200 dark:bg-orange-900/40 dark:text-orange-200 dark:border-orange-800',
+  'Bitcoin Magazine': 'bg-yellow-100 text-yellow-800 border-yellow-200 dark:bg-yellow-900/40 dark:text-yellow-200 dark:border-yellow-800',
+  'Blockworks': 'bg-indigo-100 text-indigo-800 border-indigo-200 dark:bg-indigo-900/40 dark:text-indigo-200 dark:border-indigo-800',
+  'The Defiant': 'bg-pink-100 text-pink-800 border-pink-200 dark:bg-pink-900/40 dark:text-pink-200 dark:border-pink-800',
 };
 
 const sentimentConfig = {
-  bullish: { emoji: '🟢', label: 'Bullish', color: 'text-green-600 bg-green-50' },
-  bearish: { emoji: '🔴', label: 'Bearish', color: 'text-red-600 bg-red-50' },
-  neutral: { emoji: '⚪', label: 'Neutral', color: 'text-gray-600 bg-gray-50' },
+  bullish: { emoji: '🟢', label: 'Bullish', color: 'text-green-600 bg-green-50 dark:text-green-300 dark:bg-green-900/30' },
+  bearish: { emoji: '🔴', label: 'Bearish', color: 'text-red-600 bg-red-50 dark:text-red-300 dark:bg-red-900/30' },
+  neutral: { emoji: '⚪', label: 'Neutral', color: 'text-gray-600 bg-gray-50 dark:text-gray-300 dark:bg-gray-800' },
 };
 
 function SourceFilter({ 
@@ -83,7 +83,7 @@ function SourceFilter({
           className={`px-4 py-2 rounded-full text-sm font-medium transition ${
             selected === source
               ? 'bg-black text-white'
-              : `${sourceColors[source]?.split(' ')[0] || 'bg-gray-100'} border hover:opacity-80`
+              : `${sourceColors[source]?.split(' ').slice(0, 3).join(' ') || 'bg-gray-100 dark:bg-gray-800'} ${sourceColors[source]?.split(' ').slice(3).join(' ') || 'text-gray-800 dark:text-gray-200'} border hover:opacity-80`
           }`}
         >
           {source}
@@ -107,29 +107,29 @@ function ArticleCard({
   isLoading: boolean;
 }) {
   return (
-    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all">
+    <div className="bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden transition-all">
       {/* Header - Always visible */}
       <div 
         onClick={onToggle}
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle(); } }}
         role="button"
         tabIndex={0}
-        className="p-5 cursor-pointer hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500"
+        className="p-5 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500"
         aria-expanded={isExpanded}
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <span className={`text-xs px-2 py-1 rounded-full border ${sourceColors[article.source] || 'bg-gray-100 text-gray-800'}`}>
+              <span className={`text-xs px-2 py-1 rounded-full border ${sourceColors[article.source] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200'}`}>
                 {article.source}
               </span>
-              <span className="text-xs text-gray-500">{article.timeAgo}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{article.timeAgo}</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 leading-tight">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight">
               {article.title}
             </h3>
             {article.description && !isExpanded && (
-              <p className="text-gray-600 mt-2 text-sm line-clamp-2">
+              <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm line-clamp-2">
                 {article.description}
               </p>
             )}
@@ -149,11 +149,11 @@ function ArticleCard({
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-gray-100">
+        <div className="border-t border-gray-100 dark:border-gray-800">
           {isLoading ? (
             <div className="p-8 text-center">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-gray-200 border-t-black mb-3"></div>
-              <p className="text-gray-500">Fetching full article content...</p>
+              <p className="text-gray-500 dark:text-gray-400">Fetching full article content...</p>
             </div>
           ) : content ? (
             <div className="p-5 space-y-5">
@@ -166,24 +166,24 @@ function ArticleCard({
               </div>
 
               {/* Summary */}
-              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                <h4 className="font-semibold text-blue-900 mb-2 flex items-center gap-2">
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800">
+                <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
                   <span>✨</span> AI Summary
                 </h4>
-                <p className="text-blue-800 leading-relaxed whitespace-pre-wrap">
+                <p className="text-blue-800 dark:text-blue-300 leading-relaxed whitespace-pre-wrap">
                   {content.summary}
                 </p>
               </div>
 
               {/* Key Points */}
               {content.keyPoints.length > 0 && (
-                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                     <span>📌</span> Key Takeaways
                   </h4>
                   <ul className="space-y-2">
                     {content.keyPoints.map((point, i) => (
-                      <li key={i} className="flex items-start gap-2 text-gray-700">
+                      <li key={i} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
                         <span className="text-green-500 mt-0.5">✓</span>
                         {point}
                       </li>
@@ -194,7 +194,7 @@ function ArticleCard({
 
               {/* Read Original */}
               <div className="pt-3 flex items-center justify-between">
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-400 dark:text-gray-500">
                   Analyzed at {new Date(content.fetchedAt).toLocaleTimeString()}
                 </span>
                 <a
@@ -211,7 +211,7 @@ function ArticleCard({
               </div>
             </div>
           ) : (
-            <div className="p-5 text-center text-gray-500">
+            <div className="p-5 text-center text-gray-500 dark:text-gray-400">
               <p>Failed to load article content.</p>
               <a
                 href={article.link}
@@ -297,7 +297,7 @@ export function ReaderContent({ articles }: ReaderContentProps) {
       </div>
 
       {filteredArticles.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-gray-500 dark:text-gray-400">
           No articles found for this source.
         </div>
       )}

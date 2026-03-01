@@ -183,7 +183,19 @@
     "bn.js": "^5.2.3",
     "elliptic": "^6.6.1"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "bufferutil",
+      "core-js-pure",
+      "esbuild",
+      "protobufjs",
+      "sharp",
+      "utf-8-validate"
+    ]
+  },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0 <23"
   }
 }

@@ -615,15 +615,11 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
     console.warn('[getArticleById] Homepage RSS fallback failed:', err instanceof Error ? err.message : err);
   }
 
-  // 3. Last resort: search all sources (covers category/reader pages)
-  try {
-    const { articles } = await getLatestNews(50);
-    const found = findInArticles(articles);
-    if (found) return found;
-  } catch (err) {
-    console.warn('[getArticleById] Global RSS fallback failed:', err instanceof Error ? err.message : err);
-  }
-
+  // 3. Last resort: the article is either in KV or in the homepage feeds.
+  //    Avoid calling getLatestNews(50) with no source filter here — that
+  //    would trigger 350+ parallel RSS fetches and cause 429 storms from
+  //    medium.com, mirror.xyz, etc.  If it wasn't found above, it's an
+  //    older or niche article that won't appear in live feeds.
   return null;
 }
 

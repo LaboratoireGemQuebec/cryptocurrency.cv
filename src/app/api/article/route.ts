@@ -38,6 +38,9 @@ async function fetchArticleContent(url: string): Promise<string> {
     });
 
     if (!response.ok) {
+      if (response.status === 429) {
+        throw new Error(`Rate limited by source (429). Try again later.`);
+      }
       throw new Error(`Failed to fetch: ${response.status}`);
     }
 
@@ -177,9 +180,14 @@ export async function GET(request: Request) {
     });
   } catch (error) {
     console.error('Article fetch error:', error);
+    const message = error instanceof Error ? error.message : 'Failed to fetch article content';
+    const is429 = message.includes('429');
     return NextResponse.json(
-      { error: 'Failed to fetch article content' },
-      { status: 500 }
+      { error: is429 ? 'Source is rate-limiting requests. Try again later.' : 'Failed to fetch article content' },
+      {
+        status: is429 ? 429 : 500,
+        headers: is429 ? { 'Retry-After': '60' } : {},
+      },
     );
   }
 }

@@ -3538,6 +3538,13 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
   return withCache(newsCache, cacheKey, 300, async () => { // 5 min cache for APIs
     const source = API_SOURCES[sourceKey];
     if (!source) return [];
+
+    const domain = DomainSemaphore.domainOf(source.url);
+
+    // Skip if domain is in 429 back-off
+    if (domainSemaphore.isBackedOff(domain)) return [];
+
+    await domainSemaphore.acquire(domain);
     
     try {
       const controller = new AbortController();
@@ -3562,7 +3569,17 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       
       clearTimeout(timeoutId);
       
-      if (!response.ok) return [];
+      if (!response.ok) {
+        // Handle 429 with domain-level back-off
+        if (response.status === 429) {
+          const retryAfter = response.headers.get('retry-after');
+          const backoffMs = retryAfter
+            ? (Number(retryAfter) > 0 ? Number(retryAfter) * 1000 : 60_000)
+            : 60_000;
+          domainSemaphore.markBackoff(domain, backoffMs);
+        }
+        return [];
+      }
       
       const data = await response.json();
       return source.parser(data);
@@ -3573,6 +3590,8 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
         console.warn(`[API] ${source.name} failed:`, isAbort ? 'timeout' : (error instanceof Error ? error.message : error));
       }
       return [];
+    } finally {
+      domainSemaphore.release(domain);
     }
   });
 }
@@ -3594,7 +3613,9 @@ async function fetchAllApiSources(): Promise<NewsArticle[]> {
 }
 
 /**
- * Fetch RSS feed from a source with caching
+ * Fetch RSS feed from a source with caching and domain-level throttling.
+ * Uses domainSemaphore to limit concurrent requests per domain (max 3)
+ * to avoid 429 rate-limit storms from medium.com, mirror.xyz, etc.
  */
 async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   const source = RSS_SOURCES[sourceKey];
@@ -3603,10 +3624,20 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   if ('disabled' in source && source.disabled) {
     return [];
   }
+
+  const domain = DomainSemaphore.domainOf(source.url);
+
+  // If this domain is in 429 back-off, skip the fetch entirely
+  if (domainSemaphore.isBackedOff(domain)) {
+    return [];
+  }
   
   const cacheKey = `feed:${sourceKey}`;
   
   return withCache(newsCache, cacheKey, 300, async () => { // 5 min cache — RSS feeds don't change faster than this
+
+    // Acquire a domain-level slot before making the request
+    await domainSemaphore.acquire(domain);
     
     try {
       const controller = new AbortController();
@@ -3645,8 +3676,18 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       }
       
       if (!response.ok) {
-        // Only log in development, not every failed fetch
-        if (process.env.NODE_ENV === 'development' && process.env.DEBUG_RSS) {
+        // Handle 429 Too Many Requests — back off the entire domain
+        if (response.status === 429) {
+          const retryAfter = response.headers.get('retry-after');
+          // Default 60s backoff; honour Retry-After header if present
+          const backoffMs = retryAfter
+            ? (Number(retryAfter) > 0 ? Number(retryAfter) * 1000 : 60_000)
+            : 60_000;
+          domainSemaphore.markBackoff(domain, backoffMs);
+          if (process.env.DEBUG_RSS || process.env.NODE_ENV === 'development') {
+            console.warn(`[429] ${source.name} (${domain}) — backing off ${backoffMs / 1000}s`);
+          }
+        } else if (process.env.NODE_ENV === 'development' && process.env.DEBUG_RSS) {
           console.warn(`Failed to fetch ${source.name}: ${response.status}`);
         }
         return [];
@@ -3661,6 +3702,8 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
         console.warn(`Error fetching ${source.name}:`, isAbortError ? 'timeout' : error);
       }
       return [];
+    } finally {
+      domainSemaphore.release(domain);
     }
   });
 }
@@ -3712,14 +3755,100 @@ function calculateTrendingScore(article: NewsArticle): number {
 }
 
 /**
- * Fetch ALL sources in parallel — no sequential batching.
+ * Domain-level concurrency limiter.
+ *
+ * Prevents firing 45+ simultaneous requests to medium.com (or similar)
+ * which triggers 429 Too Many Requests. Each domain gets a semaphore with
+ * a configurable max-concurrency (default 3).
+ */
+class DomainSemaphore {
+  private queues = new Map<string, Array<() => void>>();
+  private active = new Map<string, number>();
+  /** Domains currently in 429 back-off with the timestamp they can resume. */
+  private backoff = new Map<string, number>();
+  private maxConcurrency: number;
+
+  constructor(maxConcurrency = 3) {
+    this.maxConcurrency = maxConcurrency;
+  }
+
+  /** Extract registrable domain (e.g. "medium.com" from "https://medium.com/feed/foo"). */
+  static domainOf(url: string): string {
+    try {
+      const host = new URL(url).hostname; // e.g. "slowmist.medium.com"
+      const parts = host.split('.');
+      // Take last two parts for most TLDs (medium.com, mirror.xyz, grayscale.com)
+      return parts.slice(-2).join('.');
+    } catch {
+      return 'unknown';
+    }
+  }
+
+  /** Mark a domain as rate-limited; no new requests for `ms` milliseconds. */
+  markBackoff(domain: string, ms: number): void {
+    this.backoff.set(domain, Date.now() + ms);
+  }
+
+  /** Check if a domain is currently in back-off. */
+  isBackedOff(domain: string): boolean {
+    const until = this.backoff.get(domain);
+    if (!until) return false;
+    if (Date.now() >= until) {
+      this.backoff.delete(domain);
+      return false;
+    }
+    return true;
+  }
+
+  /** Acquire a slot for the given domain; resolves when a slot is available. */
+  acquire(domain: string): Promise<void> {
+    const current = this.active.get(domain) || 0;
+    if (current < this.maxConcurrency) {
+      this.active.set(domain, current + 1);
+      return Promise.resolve();
+    }
+    // Queue up
+    return new Promise<void>((resolve) => {
+      let queue = this.queues.get(domain);
+      if (!queue) {
+        queue = [];
+        this.queues.set(domain, queue);
+      }
+      queue.push(resolve);
+    });
+  }
+
+  /** Release a slot for the given domain. */
+  release(domain: string): void {
+    const queue = this.queues.get(domain);
+    if (queue && queue.length > 0) {
+      const next = queue.shift()!;
+      if (queue.length === 0) this.queues.delete(domain);
+      next(); // hand slot to next waiter (active count stays the same)
+    } else {
+      const current = this.active.get(domain) || 1;
+      if (current <= 1) {
+        this.active.delete(domain);
+      } else {
+        this.active.set(domain, current - 1);
+      }
+    }
+  }
+}
+
+/**
+ * Singleton domain semaphore — max 3 concurrent requests per domain.
+ * This prevents 429s from medium.com (~45 feeds), mirror.xyz (~12 feeds), etc.
+ */
+const domainSemaphore = new DomainSemaphore(3);
+
+/**
+ * Fetch ALL sources in parallel with domain-level concurrency limiting.
  *
  * Each individual source already has a 3 s timeout (AbortController in
- * fetchFeed) so firing them all at once keeps total wall-clock time at
- * ≤ 3 s instead of `ceil(N/batch) × 3 s`.
- *
- * Node.js handles hundreds of concurrent outbound HTTP requests without
- * issue; the old batching was the root cause of 20 s+ cold starts.
+ * fetchFeed) so firing them all at once keeps total wall-clock time low.
+ * The domain semaphore ensures we don't fire 45+ requests to medium.com
+ * simultaneously, which was causing 429 rate-limit storms.
  */
 async function fetchAllInParallel(
   sourceKeys: SourceKey[],
