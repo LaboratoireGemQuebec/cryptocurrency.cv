@@ -8,6 +8,9 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { GlossaryClient } from './GlossaryClient';
+import type { GlossaryTerm } from './types';
+
+export type { GlossaryTerm };
 
 export const metadata: Metadata = {
   title: 'Crypto Glossary | 200+ Blockchain & Cryptocurrency Terms Defined',
@@ -19,12 +22,6 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/learn/glossary' },
 };
-
-export interface GlossaryTerm {
-  term: string;
-  definition: string;
-  category: string;
-}
 
 const GLOSSARY: GlossaryTerm[] = [
   // A

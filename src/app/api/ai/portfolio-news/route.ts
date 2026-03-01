@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Portfolio news API error:', error);
     return NextResponse.json(
-      { error: 'Failed to analyze portfolio relevance', details: String(error) },
+      { error: 'Failed to analyze portfolio relevance', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

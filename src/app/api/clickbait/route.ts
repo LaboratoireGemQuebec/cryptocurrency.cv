@@ -137,7 +137,7 @@ ${JSON.stringify(headlines, null, 2)}`;
     }
 
     return NextResponse.json(
-      { error: 'Failed to analyze headlines', details: String(error) },
+      { error: 'Failed to analyze headlines', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

@@ -18,6 +18,7 @@
 import { aiComplete, getAIConfigOrNull } from './ai-provider';
 import { getLatestNews } from './crypto-news';
 import { buildMarketSnapshot, type MarketSnapshot } from './ai-commentary';
+import { logger } from '@/lib/logger';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -501,7 +502,7 @@ export class AutonomousMarketMonitor {
 
     this.state = 'observing';
     this.startedAt = Date.now();
-    console.log('[Monitor] Autonomous market monitor started');
+    logger.info('[Monitor] Autonomous market monitor started');
 
     // Observation loop
     this.runObservationCycle(); // immediate first run
@@ -518,7 +519,7 @@ export class AutonomousMarketMonitor {
     this.observeTimer = null;
     this.analyzeTimer = null;
     this.state = 'idle';
-    console.log('[Monitor] Autonomous market monitor stopped');
+    logger.info('[Monitor] Autonomous market monitor stopped');
   }
 
   on(event: 'alert' | 'report', callback: (data: MonitorAlert | IntelligenceReport) => void) {

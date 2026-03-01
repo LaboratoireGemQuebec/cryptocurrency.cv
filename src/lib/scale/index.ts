@@ -315,7 +315,7 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
       const category = (job.payload as { category?: string })?.category;
       const limit = (job.payload as { limit?: number })?.limit || 20;
       try {
-        const result = await getLatestNews({ limit, category });
+        const result = await getLatestNews(limit, undefined, { category });
         const articlesFound = result.articles.length;
         // Cache the fetched articles for downstream consumers
         if (articlesFound > 0) {
@@ -383,10 +383,10 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
         return {
           source,
           fetched: true,
-          totalMarketCap: marketData.totalMarketCap,
-          btcDominance: marketData.btcDominance,
-          totalVolume: marketData.totalVolume24h,
-          topMoversCount: marketData.topGainers?.length || 0,
+          totalMarketCap: marketData.global?.total_market_cap?.usd ?? 0,
+          btcDominance: marketData.global?.market_cap_percentage?.btc ?? 0,
+          totalVolume: marketData.global?.total_volume?.usd ?? 0,
+          topMoversCount: marketData.trending?.length || 0,
           timestamp: Date.now(),
         };
       } catch (error) {
@@ -406,7 +406,7 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
       const since = payload?.since || new Date(Date.now() - 3600_000).toISOString(); // Default: last hour
       try {
         // Fetch recent articles to archive
-        const result = await getLatestNews({ limit: 100, category: payload?.category });
+        const result = await getLatestNews(100, undefined, { category: payload?.category });
         const articlesToArchive = result.articles.filter(
           (a) => new Date(a.pubDate) >= new Date(since)
         );
@@ -451,7 +451,7 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
         return {
           articleId: payload?.articleId,
           sentiment: result.label,
-          score: result.score,
+          score: result.overall,
           confidence: result.confidence,
           analyzedAt: new Date().toISOString(),
         };

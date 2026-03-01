@@ -106,7 +106,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Narratives API error:', error);
     return NextResponse.json(
-      { error: 'Failed to analyze narratives', details: String(error) },
+      { error: 'Failed to analyze narratives', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

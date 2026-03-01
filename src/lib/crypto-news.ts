@@ -119,11 +119,13 @@ const RSS_SOURCES = {
     name: 'Daily DeFi',
     url: 'https://dailydefi.org/feed/',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   rekt: {
     name: 'Rekt News',
     url: 'https://rekt.news/rss.xml',
     category: 'defi',
+    disabled: true, // 500 Server Error — 2026-03-01
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -210,6 +212,7 @@ const RSS_SOURCES = {
     name: 'L2BEAT Blog',
     url: 'https://l2beat.com/blog/rss.xml',
     category: 'layer2',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -379,6 +382,7 @@ const RSS_SOURCES = {
     name: 'Polygon Blog',
     url: 'https://polygon.technology/blog/feed',
     category: 'layer2',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   starknet_blog: {
     name: 'StarkNet Blog',
@@ -413,11 +417,13 @@ const RSS_SOURCES = {
     name: 'Paradigm Research',
     url: 'https://www.paradigm.xyz/feed.xml',
     category: 'research',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   a16z_crypto: {
     name: 'a16z Crypto',
     url: 'https://a16zcrypto.com/feed/',
     category: 'research',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   theblockresearch: {
     name: 'The Block Research',
@@ -432,6 +438,7 @@ const RSS_SOURCES = {
     name: 'Alchemy Blog',
     url: 'https://www.alchemy.com/blog/rss',
     category: 'developer',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   chainlink_blog: {
     name: 'Chainlink Blog',
@@ -452,6 +459,7 @@ const RSS_SOURCES = {
     name: 'Hardhat Blog',
     url: 'https://hardhat.org/blog/rss.xml',
     category: 'developer',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   foundry_blog: {
     name: 'Foundry Blog',
@@ -533,11 +541,13 @@ const RSS_SOURCES = {
     name: 'Reuters Crypto',
     url: 'https://www.reuters.com/technology/cryptocurrency/rss',
     category: 'mainstream',
+    disabled: true, // 401 Unauthorized — 2026-03-01
   },
   forbes_crypto: {
     name: 'Forbes Crypto',
     url: 'https://www.forbes.com/crypto-blockchain/feed/',
     category: 'mainstream',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   cnbc_crypto: {
     name: 'CNBC Crypto',
@@ -587,6 +597,7 @@ const RSS_SOURCES = {
     name: 'Lightning Labs Blog',
     url: 'https://lightning.engineering/feed',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   stackernews: {
     name: 'Stacker News',
@@ -642,6 +653,7 @@ const RSS_SOURCES = {
     name: 'Circle Blog',
     url: 'https://www.circle.com/blog/feed',
     category: 'stablecoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   tether_news: {
     name: 'Tether News',
@@ -666,6 +678,7 @@ const RSS_SOURCES = {
     name: 'Multicoin Capital',
     url: 'https://multicoin.capital/feed/',
     category: 'institutional',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   placeholder_vc: {
     name: 'Placeholder VC',
@@ -793,6 +806,7 @@ const RSS_SOURCES = {
     name: 'Macro Voices',
     url: 'https://www.macrovoices.com/feed',
     category: 'macro',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -812,6 +826,7 @@ const RSS_SOURCES = {
     name: 'Man Institute',
     url: 'https://www.man.com/maninstitute/feed',
     category: 'quant',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   alpha_architect: {
     name: 'Alpha Architect',
@@ -822,6 +837,7 @@ const RSS_SOURCES = {
     name: 'QuantStart',
     url: 'https://www.quantstart.com/articles/rss/',
     category: 'quant',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -836,6 +852,7 @@ const RSS_SOURCES = {
     name: 'DL News',
     url: 'https://www.dlnews.com/feed/',
     category: 'journalism',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   protos: {
     name: 'Protos',
@@ -866,6 +883,7 @@ const RSS_SOURCES = {
     name: 'Goldman Sachs Insights',
     url: 'https://www.goldmansachs.com/insights/feed.rss',
     category: 'tradfi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   bny_mellon: {
     name: 'BNY Mellon Aerial View',
@@ -946,6 +964,7 @@ const RSS_SOURCES = {
     name: 'Washington Post Business',
     url: 'https://feeds.washingtonpost.com/rss/business',
     category: 'mainstream',
+    disabled: true, // DNS resolution failure — 2026-03-01
   },
   economist: {
     name: 'The Economist',
@@ -994,6 +1013,7 @@ const RSS_SOURCES = {
     name: 'Reuters',
     url: 'https://www.reuters.com/rssFeed/worldNews/',
     category: 'geopolitical',
+    disabled: true, // 401 Unauthorized — 2026-03-01
   },
   ap_news: {
     name: 'AP News',
@@ -1099,6 +1119,7 @@ const RSS_SOURCES = {
     name: 'Mantle Blog',
     url: 'https://www.mantle.xyz/blog/feed',
     category: 'layer2',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   blast_blog: {
     name: 'Blast Blog',
@@ -1111,6 +1132,7 @@ const RSS_SOURCES = {
     name: 'TON Blog',
     url: 'https://blog.ton.org/rss.xml',
     category: 'altl1',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   sei_blog: {
     name: 'Sei Blog',
@@ -1126,6 +1148,7 @@ const RSS_SOURCES = {
     name: 'Monad Blog',
     url: 'https://www.monad.xyz/blog/feed',
     category: 'altl1',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   celestia_blog: {
     name: 'Celestia Blog',
@@ -1138,11 +1161,13 @@ const RSS_SOURCES = {
     name: 'Bisq Blog',
     url: 'https://bisq.network/blog/feed.xml',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   rgb_blog: {
     name: 'RGB Blog',
     url: 'https://rgb.tech/blog/feed',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   nostr_blog: {
     name: 'Nostr Protocol',
@@ -1167,6 +1192,7 @@ const RSS_SOURCES = {
     name: 'Maple Finance Blog',
     url: 'https://maple.finance/blog/rss.xml',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   centrifuge_blog: {
     name: 'Centrifuge Blog',
@@ -1236,6 +1262,7 @@ const RSS_SOURCES = {
     name: 'Hacken Blog',
     url: 'https://hacken.io/blog/feed/',
     category: 'security',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // Payments & Stablecoins Extended
@@ -1255,6 +1282,7 @@ const RSS_SOURCES = {
     name: 'CoinGlass Blog',
     url: 'https://www.coinglass.com/blog/feed',
     category: 'derivatives',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // Podcasts (show notes via RSS)
@@ -1269,18 +1297,21 @@ const RSS_SOURCES = {
     url: 'https://feeds.simplecast.com/dsMGZxro',
     category: 'bitcoin',
     noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   bankless_podcast: {
     name: 'Bankless Podcast',
     url: 'https://feeds.simplecast.com/lKmQdc05',
     category: 'defi',
     noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   epicenter_podcast: {
     name: 'Epicenter Podcast',
     url: 'https://feeds.simplecast.com/0E5u4F_4',
     category: 'general',
     noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1310,16 +1341,19 @@ const RSS_SOURCES = {
     name: 'CoinCodex Blog',
     url: 'https://coincodex.com/blog/feed/',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   invezz_crypto: {
     name: 'Invezz Crypto',
     url: 'https://invezz.com/cryptocurrency/feed/',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   ibtimes_crypto: {
     name: 'IBTimes Crypto',
     url: 'https://www.ibtimes.com/cryptocurrency/feed',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1358,6 +1392,7 @@ const RSS_SOURCES = {
     name: 'dYdX Blog',
     url: 'https://dydx.exchange/blog/feed',
     category: 'defi',
+    disabled: true, // 500 Server Error — 2026-03-01
   },
   synthetix_blog: {
     name: 'Synthetix Blog',
@@ -1397,6 +1432,7 @@ const RSS_SOURCES = {
     name: 'Wormhole Blog',
     url: 'https://wormhole.com/blog/feed',
     category: 'developer',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   layerzero_blog: {
     name: 'LayerZero Blog',
@@ -1416,11 +1452,13 @@ const RSS_SOURCES = {
     name: 'Wired Crypto',
     url: 'https://www.wired.com/feed/tag/cryptocurrency/latest/rss',
     category: 'mainstream',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   theregister_crypto: {
     name: 'The Register',
     url: 'https://www.theregister.com/offbeat/geek/headlines.atom',
     category: 'mainstream',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1440,6 +1478,7 @@ const RSS_SOURCES = {
     name: 'EU Blockchain Observatory',
     url: 'https://blockchain-observatory.ec.europa.eu/feed',
     category: 'geopolitical',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1449,6 +1488,7 @@ const RSS_SOURCES = {
     name: 'Helius Blog',
     url: 'https://www.helius.dev/blog/feed',
     category: 'solana',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   phantom_blog: {
     name: 'Phantom Blog',
@@ -1478,11 +1518,13 @@ const RSS_SOURCES = {
     name: 'Akash Network Blog',
     url: 'https://akash.network/blog/feed/',
     category: 'altl1',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   ritual_blog: {
     name: 'Ritual Blog',
     url: 'https://ritual.net/blog/feed',
     category: 'altl1',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1492,6 +1534,7 @@ const RSS_SOURCES = {
     name: 'Nansen Blog',
     url: 'https://www.nansen.ai/research/feed',
     category: 'onchain',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   dune_blog: {
     name: 'Dune Analytics Blog',
@@ -1511,6 +1554,7 @@ const RSS_SOURCES = {
     name: 'Crypto.Press',
     url: 'https://crypto.press/feed/',
     category: 'general',
+    disabled: true, // DNS resolution failure — 2026-03-01
   },
   cryptoslam: {
     name: 'CryptoSlam Blog',
@@ -1521,6 +1565,7 @@ const RSS_SOURCES = {
     name: 'CoinPaprika Blog',
     url: 'https://coinpaprika.com/blog/feed/',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   thecoinrepublic: {
     name: 'The Coin Republic',
@@ -1531,6 +1576,7 @@ const RSS_SOURCES = {
     name: 'BitDegree News',
     url: 'https://www.bitdegree.org/crypto/news/feed',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   cryptotvplus: {
     name: 'CryptoTvPlus',
@@ -1555,11 +1601,13 @@ const RSS_SOURCES = {
     name: 'Frax Finance Blog',
     url: 'https://medium.com/feed/frax-finance',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   convex_blog: {
     name: 'Convex Finance Blog',
     url: 'https://medium.com/feed/convex-finance',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   radiant_blog: {
     name: 'Radiant Capital Blog',
@@ -1575,11 +1623,13 @@ const RSS_SOURCES = {
     name: 'Sommelier Finance Blog',
     url: 'https://medium.com/feed/sommelier-finance',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   liquity_blog: {
     name: 'Liquity Blog',
     url: 'https://www.liquity.org/blog/feed',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   sushi_blog: {
     name: 'SushiSwap Blog',
@@ -1599,6 +1649,7 @@ const RSS_SOURCES = {
     name: 'Immutable Blog',
     url: 'https://www.immutable.com/blog/feed',
     category: 'gaming',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   ronin_blog: {
     name: 'Ronin Blog',
@@ -1628,6 +1679,7 @@ const RSS_SOURCES = {
     name: 'Polygon zkEVM Blog',
     url: 'https://polygon.technology/blog/polygon-zkevm/feed',
     category: 'layer2',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1647,11 +1699,13 @@ const RSS_SOURCES = {
     name: 'Tensor Blog',
     url: 'https://medium.com/feed/@tensor_hq',
     category: 'solana',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   drift_blog: {
     name: 'Drift Protocol Blog',
     url: 'https://medium.com/feed/drift-protocol',
     category: 'solana',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   solflare_blog: {
     name: 'Solflare Blog',
@@ -1666,6 +1720,7 @@ const RSS_SOURCES = {
     name: 'Ordinals Blog',
     url: 'https://ordinalsbot.com/blog/feed',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   bitcoinops: {
     name: 'Bitcoin Optech',
@@ -1676,11 +1731,13 @@ const RSS_SOURCES = {
     name: 'River Financial Blog',
     url: 'https://river.com/learn/feed/',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   swan_blog: {
     name: 'Swan Bitcoin Blog',
     url: 'https://www.swanbitcoin.com/feed/',
     category: 'bitcoin',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   casa_blog: {
     name: 'Casa Blog',
@@ -1695,11 +1752,13 @@ const RSS_SOURCES = {
     name: 'Elliptic Compliance Blog',
     url: 'https://www.elliptic.co/blog/category/compliance/rss.xml',
     category: 'geopolitical',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   trminsights: {
     name: 'TRM Labs Insights',
     url: 'https://www.trmlabs.com/insights/feed',
     category: 'geopolitical',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   fireblocks_blog: {
     name: 'Fireblocks Blog',
@@ -1714,6 +1773,7 @@ const RSS_SOURCES = {
     name: 'HashKey Capital Blog',
     url: 'https://medium.com/feed/hashkey-capital',
     category: 'institutional',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   polychain_blog: {
     name: 'Polychain Capital Blog',
@@ -1738,11 +1798,13 @@ const RSS_SOURCES = {
     name: 'MetaMask Blog',
     url: 'https://metamask.io/news/feed',
     category: 'developer',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   ledger_blog: {
     name: 'Ledger Blog',
     url: 'https://www.ledger.com/blog/feed',
     category: 'security',
+    disabled: true, // 401 Unauthorized — 2026-03-01
   },
   trezor_blog: {
     name: 'Trezor Blog',
@@ -1796,6 +1858,7 @@ const RSS_SOURCES = {
     name: 'Flashbots Blog',
     url: 'https://writings.flashbots.net/feed',
     category: 'ethereum',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1810,6 +1873,7 @@ const RSS_SOURCES = {
     name: 'dYdX Chain Blog',
     url: 'https://www.dydx.foundation/blog/feed',
     category: 'altl1',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   stride_blog: {
     name: 'Stride Blog',
@@ -1897,6 +1961,7 @@ const RSS_SOURCES = {
     name: 'TokenPost EN',
     url: 'https://tokenpost.com/rss/feed/',
     category: 'asia',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   bitpinas: {
     name: 'BitPinas',
@@ -1916,21 +1981,25 @@ const RSS_SOURCES = {
     name: 'JPMorgan Insights',
     url: 'https://www.jpmorgan.com/insights/feed',
     category: 'tradfi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   citi_blog: {
     name: 'Citi GPS',
     url: 'https://www.citigroup.com/global/insights/feed',
     category: 'tradfi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   fidelity_digital: {
     name: 'Fidelity Digital Assets',
     url: 'https://www.fidelitydigitalassets.com/research/feed',
     category: 'tradfi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   standard_chartered_crypto: {
     name: 'Standard Chartered Crypto',
     url: 'https://www.sc.com/en/feature/crypto-insights/feed/',
     category: 'tradfi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -1974,11 +2043,13 @@ const RSS_SOURCES = {
     name: 'Luxor Mining Blog',
     url: 'https://luxor.tech/blog/feed',
     category: 'mining',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   foundation_mining: {
     name: 'Foundation Mining',
     url: 'https://foundationmining.com/blog/feed/',
     category: 'mining',
+    disabled: true, // DNS resolution failure — 2026-03-01
   },
 
   // =========================================================================
@@ -2008,6 +2079,7 @@ const RSS_SOURCES = {
     name: 'Crypto Weekly',
     url: 'https://cryptoweekly.co/feed/',
     category: 'journalism',
+    disabled: true, // DNS resolution failure — 2026-03-01
   },
   metaversal: {
     name: 'Metaversal',
@@ -2022,6 +2094,7 @@ const RSS_SOURCES = {
     name: 'Art Blocks Blog',
     url: 'https://medium.com/feed/the-art-blocks-blog',
     category: 'nft',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   superrare_blog: {
     name: 'SuperRare Blog',
@@ -2032,6 +2105,7 @@ const RSS_SOURCES = {
     name: 'OpenSea Blog',
     url: 'https://opensea.io/blog/feed',
     category: 'nft',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   blur_blog: {
     name: 'Blur Blog',
@@ -2042,11 +2116,13 @@ const RSS_SOURCES = {
     name: 'Zora Blog',
     url: 'https://zora.co/blog/feed',
     category: 'nft',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   foundation_blog: {
     name: 'Foundation Blog',
     url: 'https://foundation.app/blog/feed',
     category: 'nft',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -2061,6 +2137,7 @@ const RSS_SOURCES = {
     name: 'Kaiko Research',
     url: 'https://www.kaiko.com/research/feed',
     category: 'trading',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   ccdata_research: {
     name: 'CCData Research',
@@ -2094,6 +2171,7 @@ const RSS_SOURCES = {
     name: 'Lens Protocol Blog',
     url: 'https://lens.xyz/blog/feed',
     category: 'social',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   farcaster_blog: {
     name: 'Farcaster Blog',
@@ -2108,36 +2186,43 @@ const RSS_SOURCES = {
     name: 'Bell Curve Podcast',
     url: 'https://feeds.simplecast.com/ePJmCHr3',
     category: 'defi',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   the_chopping_block: {
     name: 'The Chopping Block',
     url: 'https://feeds.simplecast.com/2LYbgm7h',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   empire_podcast: {
     name: 'Empire Podcast',
     url: 'https://feeds.simplecast.com/lKRGWp6K',
     category: 'general',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   lightspeed_podcast: {
     name: 'Lightspeed Podcast',
     url: 'https://feeds.simplecast.com/V3RQUAFM',
     category: 'solana',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   on_the_margin_podcast: {
     name: 'On The Margin',
     url: 'https://feeds.simplecast.com/I1bKBJmR',
     category: 'trading',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   zero_knowledge_podcast: {
     name: 'Zero Knowledge Podcast',
     url: 'https://feeds.simplecast.com/BBRRTZZP',
     category: 'developer',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   into_the_bytecode: {
     name: 'Into the Bytecode',
     url: 'https://feeds.simplecast.com/wN3UNzZa',
     category: 'ethereum',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -2157,6 +2242,7 @@ const RSS_SOURCES = {
     name: 'Nethermind Blog',
     url: 'https://www.nethermind.io/blog/feed',
     category: 'ethereum',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 
   // =========================================================================
@@ -2195,21 +2281,25 @@ const RSS_SOURCES = {
     name: 'Token Terminal Blog',
     url: 'https://tokenterminal.com/blog/feed',
     category: 'research',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   cryptorank_blog: {
     name: 'CryptoRank Blog',
     url: 'https://cryptorank.io/blog/feed',
     category: 'research',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   flipside_blog: {
     name: 'Flipside Crypto Blog',
     url: 'https://flipsidecrypto.xyz/blog/feed',
     category: 'onchain',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
   debank_blog: {
     name: 'DeBank Blog',
     url: 'https://medium.com/feed/@DeBank_',
     category: 'onchain',
+    disabled: true, // 404 Not Found — 2026-03-01
   },
 } as const;
 

@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Cross-lingual API error:', error);
     return NextResponse.json(
-      { error: 'Failed to analyze cross-lingual intelligence', details: String(error) },
+      { error: 'Failed to analyze cross-lingual intelligence', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

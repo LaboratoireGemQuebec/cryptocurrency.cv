@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import type { PodcastShow } from './page';
+import type { PodcastShow } from './types';
 
 interface Props {
   channels: { name: string; url: string; subscribers: string; emoji: string; description: string }[];

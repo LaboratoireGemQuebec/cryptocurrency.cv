@@ -126,7 +126,7 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       return aiAuthErrorResponse((error as Error).message);
     }
     return NextResponse.json(
-      { error: 'Failed to fact-check articles', details: String(error) },
+      { error: 'Failed to fact-check articles', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

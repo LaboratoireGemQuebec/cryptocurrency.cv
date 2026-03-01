@@ -113,7 +113,7 @@ ${articlesText}`;
       return aiAuthErrorResponse((error as Error).message);
     }
     return NextResponse.json(
-      { error: 'Failed to extract entities', details: String(error) },
+      { error: 'Failed to extract entities', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

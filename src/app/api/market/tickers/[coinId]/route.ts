@@ -49,7 +49,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in tickers route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch ticker data' },
+      { error: 'Failed to fetch ticker data', message: 'Failed to fetch ticker data' },
       { status: 500 }
     );
   }

@@ -49,7 +49,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in exchange details route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch exchange details' },
+      { error: 'Failed to fetch exchange details', message: 'Failed to fetch exchange details' },
       { status: 500 }
     );
   }

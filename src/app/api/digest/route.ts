@@ -292,7 +292,7 @@ export async function GET(request: NextRequest) {
       }
 
       return NextResponse.json(
-        { error: 'Failed to generate AI digest', details: String(error) },
+        { error: 'Failed to generate AI digest', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
         { status: 500 }
       );
     }
@@ -400,7 +400,7 @@ ${articlesText}`;
     }
 
     return NextResponse.json(
-      { error: 'Failed to generate digest', details: String(error) },
+      { error: 'Failed to generate digest', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

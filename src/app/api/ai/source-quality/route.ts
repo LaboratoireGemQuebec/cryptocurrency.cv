@@ -157,7 +157,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Source quality API error:', error);
     return NextResponse.json(
-      { error: 'Failed to analyze source quality', details: String(error) },
+      { error: 'Failed to analyze source quality', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }
@@ -219,7 +219,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Article quality API error:', error);
     return NextResponse.json(
-      { error: 'Failed to score article quality', details: String(error) },
+      { error: 'Failed to score article quality', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

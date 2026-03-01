@@ -18,6 +18,7 @@
  */
 
 import { redisGet, redisSet, isRedisAvailable, initRedis } from './redis';
+import { logger } from '@/lib/logger';
 import {
   CircuitBreaker,
   CircuitOpenError,
@@ -426,16 +427,16 @@ async function runFetchLoop(
     recordSuccess(name, latency);
 
      
-    console.log(`[Pipeline] ${name} OK (${latency}ms)`);
+    logger.info(`[Pipeline] ${name} OK (${latency}ms)`);
   } catch (error) {
     recordError(name, error);
 
     if (error instanceof CircuitOpenError) {
        
-      console.warn(`[Pipeline] ${name} SKIPPED — circuit open`);
+      logger.warn(`[Pipeline] ${name} SKIPPED — circuit open`);
     } else {
        
-      console.error(`[Pipeline] ${name} FAILED:`, error instanceof Error ? error.message : error);
+      logger.error(`[Pipeline] ${name} FAILED`, error instanceof Error ? error : undefined);
     }
     // Pipeline does NOT throw — stale data remains in Redis
   }
@@ -460,7 +461,7 @@ export async function startPipeline(): Promise<void> {
   await initRedis().catch(() => {});
 
    
-  console.log('[Pipeline] Starting real-time data pipeline…');
+  logger.info('[Pipeline] Starting real-time data pipeline…');
 
   // Initialize health entries
   for (const name of ['prices', 'news', 'fearGreed', 'gas', 'fundingRates'] as SourceName[]) {
@@ -513,7 +514,7 @@ export async function startPipeline(): Promise<void> {
   );
 
    
-  console.log('[Pipeline] All fetch loops scheduled');
+  logger.info('[Pipeline] All fetch loops scheduled');
 }
 
 /**
@@ -525,7 +526,7 @@ export function stopPipeline(): void {
   _running = false;
   _startedAt = null;
    
-  console.log('[Pipeline] Stopped');
+  logger.info('[Pipeline] Stopped');
 }
 
 /**

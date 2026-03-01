@@ -416,15 +416,15 @@ function ComparePageContent() {
                       borderRadius: '0.5rem',
                       padding: '8px 12px',
                     }}
-                    labelFormatter={(ts: number) => new Date(ts).toLocaleDateString([], {
+                    labelFormatter={((ts: number) => new Date(ts).toLocaleDateString([], {
                       year: 'numeric', month: 'short', day: 'numeric',
                       ...(timeRange === '24h' ? { hour: '2-digit', minute: '2-digit' } : {}),
-                    })}
-                    formatter={(value: number, name: string) => {
+                    })) as never}
+                    formatter={((value: number, name: string) => {
                       const coin = coinData.get(name);
                       const symbol = coin?.symbol?.toUpperCase() || name;
                       return [`${value.toFixed(2)}`, symbol];
-                    }}
+                    }) as never}
                     labelStyle={{ color: '#9ca3af', fontSize: 12 }}
                     itemStyle={{ fontSize: 12 }}
                   />

@@ -9,6 +9,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SITE_URL } from '@/lib/constants';
 import { VideoPodcastClient } from './VideoPodcastClient';
+import type { VideoItem, PodcastShow } from './types';
+
+export type { VideoItem, PodcastShow };
 
 export const metadata: Metadata = {
   title: 'Crypto Videos & Podcasts | Watch & Listen',
@@ -26,32 +29,6 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/videos' },
 };
-
-export interface VideoItem {
-  id: string;
-  title: string;
-  channel: string;
-  channelUrl: string;
-  thumbnail: string;
-  duration: string;
-  date: string;
-  category: 'video' | 'podcast' | 'livestream';
-  tags: string[];
-  url: string;
-  description: string;
-}
-
-export interface PodcastShow {
-  id: string;
-  name: string;
-  host: string;
-  description: string;
-  logo: string;
-  platforms: { name: string; url: string }[];
-  category: string;
-  frequency: string;
-  rating: number;
-}
 
 const FEATURED_CHANNELS = [
   { name: 'Coin Bureau', url: 'https://youtube.com/@CoinBureau', subscribers: '2.4M', emoji: '🎓', description: 'In-depth crypto research & education' },

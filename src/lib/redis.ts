@@ -5,6 +5,7 @@
  */
 
 import { newsCache, aiCache, translationCache, withCache as memoryWithCache } from './cache';
+import { logger } from '@/lib/logger';
 
 // Redis client placeholder - initialized lazily
 let _redisClient: any = null;
@@ -16,7 +17,7 @@ let initPromise: Promise<boolean> | null = null;
  */
 export async function initRedis(): Promise<boolean> {
   if (!process.env.REDIS_URL) {
-    console.log('[Redis] REDIS_URL not set, using memory cache');
+    logger.info('[Redis] REDIS_URL not set, using memory cache');
     return false;
   }
 
@@ -35,7 +36,7 @@ export async function initRedis(): Promise<boolean> {
           keepAlive: true,
           reconnectStrategy: (retries: number) => {
             if (retries > 10) {
-              console.error('[Redis] Max retries reached, falling back to memory');
+              logger.error('[Redis] Max retries reached, falling back to memory');
               return new Error('Max retries');
             }
             // Exponential back-off with jitter: 200, 400, 800 … capped at 5 s
@@ -48,26 +49,26 @@ export async function initRedis(): Promise<boolean> {
       });
 
       _redisClient.on('error', (err: Error) => {
-        console.error('[Redis] Error:', err.message);
+        logger.error('[Redis] Error', new Error(err.message));
         redisAvailable = false;
       });
 
       _redisClient.on('connect', () => {
-        console.log('[Redis] Connected');
+        logger.info('[Redis] Connected');
         redisAvailable = true;
       });
 
       _redisClient.on('disconnect', () => {
-        console.log('[Redis] Disconnected');
+        logger.info('[Redis] Disconnected');
         redisAvailable = false;
       });
 
       await _redisClient.connect();
       redisAvailable = true;
-      console.log('[Redis] Initialization successful');
+      logger.info('[Redis] Initialization successful');
       return true;
     } catch (error) {
-      console.error('[Redis] Init failed:', error);
+      logger.error('[Redis] Init failed', error instanceof Error ? error : undefined);
       redisAvailable = false;
       return false;
     }
@@ -88,7 +89,7 @@ export async function redisGet<T>(key: string): Promise<T | null> {
       }
     }
   } catch (error) {
-    console.error('[Redis] Get error:', error);
+    logger.error('[Redis] Get error', error instanceof Error ? error : undefined);
   }
   
   // Fallback to memory cache
@@ -114,7 +115,7 @@ export async function redisSet<T>(
       return true;
     }
   } catch (error) {
-    console.error('[Redis] Set error:', error);
+    logger.error('[Redis] Set error', error instanceof Error ? error : undefined);
   }
 
   return true; // Memory cache succeeded
@@ -148,7 +149,7 @@ export async function redisDel(key: string): Promise<boolean> {
       await _redisClient.del(key);
     }
   } catch (error) {
-    console.error('[Redis] Del error:', error);
+    logger.error('[Redis] Del error', error instanceof Error ? error : undefined);
   }
 
   return true;
@@ -168,7 +169,7 @@ export async function redisDelPattern(pattern: string): Promise<number> {
       }
     }
   } catch (error) {
-    console.error('[Redis] Del pattern error:', error);
+    logger.error('[Redis] Del pattern error', error instanceof Error ? error : undefined);
   }
 
   return count;
@@ -308,7 +309,7 @@ export const redisTTL = {
 
 // Auto-initialize in server environment
 if (typeof window === 'undefined' && process.env.REDIS_URL) {
-  initRedis().catch(console.error);
+  initRedis().catch((err) => logger.error('[Redis] Auto-init failed', err instanceof Error ? err : undefined));
 }
 
 export default {

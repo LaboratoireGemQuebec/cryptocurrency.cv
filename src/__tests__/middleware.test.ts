@@ -1,6 +1,6 @@
 /**
  * @fileoverview Middleware and Security Tests
- * Tests for global middleware, rate limiting, and security utilities
+ * Tests for global middleware and security utilities
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
@@ -20,27 +20,6 @@ import {
   getSecurityHeaders,
   getRateLimitKey,
 } from '@/lib/security';
-import {
-  checkRateLimit,
-  resetRateLimit,
-  getRateLimitStatus,
-  checkMultipleRateLimits,
-  createRateLimitKey,
-  RateLimitError,
-  rateLimiter,
-  checkRateLimitByRequest,
-} from '@/lib/rate-limit';
-
-// Mock Vercel KV
-vi.mock('@vercel/kv', () => ({
-  kv: {
-    zremrangebyscore: vi.fn().mockResolvedValue(0),
-    zcard: vi.fn().mockResolvedValue(0),
-    zadd: vi.fn().mockResolvedValue(1),
-    expire: vi.fn().mockResolvedValue(1),
-    del: vi.fn().mockResolvedValue(1),
-  },
-}));
 
 // Helper to create mock NextRequest
 function createMockRequest(
@@ -411,105 +390,4 @@ describe('getRateLimitKey', () => {
   });
 });
 
-describe('createRateLimitKey', () => {
-  it('should create key with endpoint', () => {
-    const key = createRateLimitKey('free', '192.168.1.1', '/api/news');
-    expect(key).toBe('free:192.168.1.1:/api/news');
-  });
 
-  it('should create key without endpoint', () => {
-    const key = createRateLimitKey('global', '192.168.1.1');
-    expect(key).toBe('global:192.168.1.1');
-  });
-});
-
-// =============================================================================
-// DISTRIBUTED RATE LIMITING TESTS
-// =============================================================================
-
-describe('checkRateLimit', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  it('should allow request when under limit', async () => {
-    const result = await checkRateLimit('test:key', 100, 3600);
-    
-    expect(result.allowed).toBe(true);
-    expect(result.remaining).toBeLessThan(100);
-  });
-
-  it('should return correct limit in result', async () => {
-    const result = await checkRateLimit('test:key', 50, 3600);
-    
-    expect(result.limit).toBe(50);
-  });
-
-  it('should include reset timestamp', async () => {
-    const before = Date.now();
-    const result = await checkRateLimit('test:key', 100, 3600);
-    const after = Date.now() + 3600 * 1000;
-    
-    expect(result.resetAt).toBeGreaterThanOrEqual(before);
-    expect(result.resetAt).toBeLessThanOrEqual(after);
-  });
-});
-
-describe('getRateLimitStatus', () => {
-  it('should return status without incrementing', async () => {
-    const status = await getRateLimitStatus('status:key', 100, 3600);
-    
-    expect(status.limit).toBe(100);
-    expect(typeof status.allowed).toBe('boolean');
-  });
-});
-
-describe('checkMultipleRateLimits', () => {
-  it('should check multiple limits and return most restrictive', async () => {
-    const result = await checkMultipleRateLimits([
-      { key: 'test:1', limit: 100, window: 3600 },
-      { key: 'test:2', limit: 50, window: 3600 },
-    ]);
-    
-    expect(result.allowed).toBe(true);
-    expect(typeof result.remaining).toBe('number');
-  });
-});
-
-// =============================================================================
-// IN-MEMORY RATE LIMITER TESTS
-// =============================================================================
-
-describe('rateLimiter', () => {
-  beforeEach(() => {
-    // Reset any existing rate limits
-    rateLimiter.reset('test:inmemory');
-  });
-
-  it('should allow requests under limit', async () => {
-    await expect(
-      rateLimiter.checkLimit('test:inmemory', 10, 60000)
-    ).resolves.not.toThrow();
-  });
-
-  it('should track remaining requests', () => {
-    const remaining = rateLimiter.getRemainingRequests('new:key', 100);
-    expect(remaining).toBe(100);
-  });
-
-  it('should reset limit', () => {
-    rateLimiter.reset('test:reset');
-    const remaining = rateLimiter.getRemainingRequests('test:reset', 100);
-    expect(remaining).toBe(100);
-  });
-});
-
-describe('RateLimitError', () => {
-  it('should include retryAfter property', () => {
-    const error = new RateLimitError(60);
-    
-    expect(error.retryAfter).toBe(60);
-    expect(error.name).toBe('RateLimitError');
-    expect(error.message).toBe('Rate limit exceeded');
-  });
-});

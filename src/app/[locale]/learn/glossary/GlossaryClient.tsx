@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import type { GlossaryTerm } from './page';
+import type { GlossaryTerm } from './types';
 
 export function GlossaryClient({ terms }: { terms: GlossaryTerm[] }) {
   const [search, setSearch] = useState('');

@@ -27,7 +27,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in derivatives route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch derivatives data' },
+      { error: 'Failed to fetch derivatives data', message: 'Failed to fetch derivatives data' },
       { status: 500 }
     );
   }

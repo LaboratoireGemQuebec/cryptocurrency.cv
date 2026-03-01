@@ -101,9 +101,9 @@ Important: each tweet in the "thread" array should be self-contained and flow na
 
   const raw = await aiComplete(systemPrompt, userPrompt, { maxTokens: 2000, temperature: 0.5, jsonMode: true }, true);
 
-  const data = parseGroqJson<Record<string, unknown>>(raw);
+  const data = parseGroqJson<{ thread?: string[]; linkedin?: string; hashtags?: string[] }>(raw);
 
-  const rawThread: string[] = data.thread || [];
+  const rawThread: string[] = data.thread ?? [];
 
   // Enforce 280-char limit — truncate tweets that are too long
   const thread = rawThread.map((tweet, i) => {
@@ -115,8 +115,8 @@ Important: each tweet in the "thread" array should be self-contained and flow na
 
   return {
     thread,
-    linkedin: data.linkedin || '',
-    hashtags: (data.hashtags || []).map((h: string) => h.replace(/^#/, '')),
+    linkedin: data.linkedin ?? '',
+    hashtags: (data.hashtags ?? []).map((h: string) => h.replace(/^#/, '')),
     threadText: thread.join('\n\n'),
     charCounts: thread.map(t => t.length),
   };
@@ -184,7 +184,7 @@ export async function POST(request: NextRequest) {
       );
     }
     return NextResponse.json(
-      { error: 'Failed to generate social content', details: String(error) },
+      { error: 'Failed to generate social content', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

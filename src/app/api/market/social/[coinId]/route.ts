@@ -101,7 +101,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in social route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch social data' },
+      { error: 'Failed to fetch social data', message: 'Failed to fetch social data' },
       { status: 500 }
     );
   }

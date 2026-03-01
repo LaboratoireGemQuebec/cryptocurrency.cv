@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Synthesis API error:', error);
     return NextResponse.json(
-      { error: 'Failed to synthesize stories', details: String(error) },
+      { error: 'Failed to synthesize stories', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Synthesis API error:', error);
     return NextResponse.json(
-      { error: 'Failed to synthesize story', details: String(error) },
+      { error: 'Failed to synthesize story', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

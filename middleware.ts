@@ -672,6 +672,25 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
+  // ── CORS restriction on sensitive routes ──────────────────────────────────
+  // Admin, internal, and key-management routes must NOT be open to all origins.
+  // Only trusted origins (Sperax) and same-origin requests are allowed.
+  const isSensitiveRoute =
+    pathname.startsWith('/api/admin') ||
+    pathname.startsWith('/api/internal') ||
+    pathname.startsWith('/api/keys/');
+
+  if (isSensitiveRoute) {
+    const origin = request.headers.get('origin') ?? '';
+    if (origin && !isTrustedOrigin(origin)) {
+      // Reject cross-origin requests from untrusted sources
+      headers['Access-Control-Allow-Origin'] = 'null';
+    } else if (origin) {
+      headers['Access-Control-Allow-Origin'] = origin;
+      headers['Vary'] = 'Origin';
+    }
+  }
+
   // Compute once — reused in rate-limiting tier selection AND request-header forwarding below.
   const apiClient = isApiClient(request);
 

@@ -54,7 +54,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in OHLC route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch OHLC data' },
+      { error: 'Failed to fetch OHLC data', message: 'Failed to fetch OHLC data' },
       { status: 500 }
     );
   }

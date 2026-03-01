@@ -10,6 +10,8 @@ const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'crypto-news-indexnow';
 const HOST = 'cryptocurrency.cv';
 const API_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
+import { logger } from '@/lib/logger';
+
 /**
  * Notify IndexNow-supported search engines about new or updated URLs.
  *
@@ -43,11 +45,10 @@ export async function notifyIndexNow(urls: string[]): Promise<void> {
       body: JSON.stringify(body),
     });
 
-    console.log(
+    logger.info(
       `[IndexNow] Submitted ${urls.length} URL(s) — HTTP ${response.status}`
     );
   } catch (error) {
-    // Never throw — IndexNow notifications are best-effort only
-    console.warn('[IndexNow] Notification failed (non-fatal):', error);
+    logger.warn('[IndexNow] Notification failed (non-fatal)', { error: error instanceof Error ? error.message : String(error) });
   }
 }

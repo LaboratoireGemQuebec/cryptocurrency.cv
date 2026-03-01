@@ -105,7 +105,7 @@ export async function GET() {
   } catch (error) {
     console.error('[trending-narratives] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to detect narratives', details: String(error) },
+      { error: 'Failed to detect narratives', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

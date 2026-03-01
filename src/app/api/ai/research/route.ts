@@ -187,7 +187,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Research API error:', error);
     return NextResponse.json(
-      { error: 'Failed to generate research', details: String(error) },
+      { error: 'Failed to generate research', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

@@ -28,6 +28,14 @@ vi.mock('@/lib/groq', () => ({
   promptGroqJson: mockPromptGroqJson,
 }));
 
+vi.mock('@/lib/ai-provider', () => ({
+  isAIConfigured: mockIsGroqConfigured,
+  promptAIJson: mockPromptGroqJson,
+  AIAuthError: class AIAuthError extends Error {
+    constructor(msg: string) { super(msg); this.name = 'AIAuthError'; }
+  },
+}));
+
 vi.mock('@/lib/crypto-news', () => ({
   getLatestNews: mockGetLatestNews,
 }));
@@ -37,6 +45,16 @@ vi.mock('@/app/api/_utils', () => ({
     new Response(
       JSON.stringify({ error: 'AI features not configured' }),
       { status: 503, headers: { 'Content-Type': 'application/json' } }
+    ),
+  aiNotConfiguredResponse: () =>
+    new Response(
+      JSON.stringify({ error: 'AI features not configured' }),
+      { status: 503, headers: { 'Content-Type': 'application/json' } }
+    ),
+  aiAuthErrorResponse: (details?: string) =>
+    new Response(
+      JSON.stringify({ error: details || 'AI auth error' }),
+      { status: 401, headers: { 'Content-Type': 'application/json' } }
     ),
 }));
 

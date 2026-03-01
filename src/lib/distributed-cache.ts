@@ -334,17 +334,17 @@ export class DistributedCache {
       count = await this.memory.deleteByPrefix(fullPrefix);
 
       // KV cleanup via prefix-based key scanning
-      if (this.kv) {
+      if (isKVAvailable()) {
         try {
           // Use Redis SCAN pattern for efficient prefix-based deletion
-          // Vercel KV supports the keys() method with pattern matching
-          const kvKeys = await this.kv.keys(`${fullPrefix}*`);
+          // Vercel KV / Upstash supports the keys() method with pattern matching
+          const kvKeys = await db.keys(`${fullPrefix}*`);
           if (kvKeys && kvKeys.length > 0) {
             // Delete in batches of 100 to avoid overwhelming KV
             const batchSize = 100;
             for (let i = 0; i < kvKeys.length; i += batchSize) {
               const batch = kvKeys.slice(i, i + batchSize);
-              await Promise.all(batch.map(k => this.kv!.del(k)));
+              await Promise.all(batch.map(k => db.del(k)));
             }
             count += kvKeys.length;
           }

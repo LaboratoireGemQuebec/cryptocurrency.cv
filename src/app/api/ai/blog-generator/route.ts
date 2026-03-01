@@ -14,10 +14,10 @@
  * Requires GROQ_API_KEY.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { callGroq, parseGroqJson } from '@/lib/groq';
+import { parseGroqJson } from '@/lib/groq';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -180,7 +180,7 @@ Return ONLY valid JSON with two fields:
     true
   );
 
-  const data = parseGroqJson<Record<string, unknown>>(response);
+  const data = parseGroqJson<{ title?: string; body?: string; description?: string; tags?: string[] }>(response);
 
   const title: string = data.title || topic;
   const body: string = data.body || '';
@@ -298,7 +298,7 @@ export async function POST(request: NextRequest) {
       );
     }
     return NextResponse.json(
-      { error: 'Failed to generate blog posts', details: String(error) },
+      { error: 'Failed to generate blog posts', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
     );
   }

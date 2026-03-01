@@ -63,7 +63,10 @@ export async function GET(request: NextRequest) {
           true
         );
 
-        const parsed = parseGroqJson<unknown>(raw);
+        const parsed = parseGroqJson<
+          Array<{ index: number; ai_context: string }> |
+          { alerts?: Array<{ index: number; ai_context: string }> }
+        >(raw);
         const contexts: Array<{ index: number; ai_context: string }> =
           Array.isArray(parsed) ? parsed : parsed.alerts || [];
 
