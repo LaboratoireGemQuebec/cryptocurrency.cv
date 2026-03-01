@@ -11,6 +11,7 @@ const eslintConfig = [
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
+        projectService: true,
         ecmaFeatures: {
           jsx: true,
         },
