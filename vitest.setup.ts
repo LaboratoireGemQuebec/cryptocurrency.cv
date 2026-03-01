@@ -56,6 +56,29 @@ vi.mock('next-intl/navigation', () => ({
     React.createElement('a', { href, ...props }, children),
   redirect: vi.fn(),
   permanentRedirect: vi.fn(),
+  createNavigation: () => ({
+    Link: ({ children, href, ...props }: { children: React.ReactNode; href: string; [key: string]: unknown }) =>
+      React.createElement('a', { href, ...props }, children),
+    redirect: vi.fn(),
+    usePathname: () => '/',
+    useRouter: () => ({
+      push: vi.fn(),
+      replace: vi.fn(),
+      prefetch: vi.fn(),
+      back: vi.fn(),
+      forward: vi.fn(),
+    }),
+    getPathname: vi.fn(),
+  }),
+}));
+
+// Mock next-intl/routing
+vi.mock('next-intl/routing', () => ({
+  defineRouting: () => ({
+    locales: ['en'],
+    defaultLocale: 'en',
+    localePrefix: 'as-needed',
+  }),
 }));
 
 // Mock next/link

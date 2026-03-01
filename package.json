@@ -67,7 +67,7 @@
     "test:e2e:headed": "playwright test --headed",
     "audit:ui": "playwright test e2e/ui-audit.spec.ts --project=chromium",
     "audit:ui:headed": "playwright test e2e/ui-audit.spec.ts --project=chromium --headed",
-    "analyze": "ANALYZE=true next build",
+    "analyze": "ANALYZE=true bun run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "docs:install": "pip install -r docs/requirements.txt",
