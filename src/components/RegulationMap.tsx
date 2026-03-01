@@ -300,11 +300,12 @@ const stanceConfig: Record<
 export default function RegulationMap() {
   const [selected, setSelected] = useState<CountryRegulation | null>(null);
 
-  const grouped = {
+  const grouped: Record<RegulatoryStance, CountryRegulation[]> = {
     friendly: COUNTRIES.filter((c) => c.stance === "friendly"),
     cautious: COUNTRIES.filter((c) => c.stance === "cautious"),
     restrictive: COUNTRIES.filter((c) => c.stance === "restrictive"),
     banned: COUNTRIES.filter((c) => c.stance === "banned"),
+    unknown: COUNTRIES.filter((c) => c.stance === "unknown"),
   };
 
   return (
@@ -352,7 +353,7 @@ export default function RegulationMap() {
                 {cfg.label}
               </h3>
               <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                {countries.map((country) => (
+                {countries.map((country: CountryRegulation) => (
                   <button
                     key={country.code}
                     onClick={() =>

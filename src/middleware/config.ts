@@ -110,6 +110,17 @@ export const ROUTE_RATE_LIMITS: { pattern: RegExp; requests: number; windowMs: n
 export const REGISTER_RATE_LIMIT = { requests: 5, windowMs: 3_600_000 }; // 5 per hour per IP
 
 // =============================================================================
+// API KEY EXPIRATION
+// =============================================================================
+
+/** Default key expiry in days per tier. Free keys expire after 90 days, pro after 365, enterprise after 730. */
+export const KEY_EXPIRY_DAYS: Record<string, number> = {
+  free: 90,
+  pro: 365,
+  enterprise: 730,
+};
+
+// =============================================================================
 // REPEAT-429 ESCALATION
 // =============================================================================
 

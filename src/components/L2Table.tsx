@@ -56,16 +56,18 @@ interface SortHeaderProps {
   currentDir: SortDir;
   onSort: (key: SortKey) => void;
   align?: "left" | "right";
+  className?: string;
 }
 
-function SortHeader({ label, sortKey, currentSort, currentDir, onSort, align = "right" }: SortHeaderProps) {
+function SortHeader({ label, sortKey, currentSort, currentDir, onSort, align = "right", className }: SortHeaderProps) {
   const active = currentSort === sortKey;
   return (
     <th
       className={cn(
         "px-3 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none transition-colors hover:text-[var(--color-accent)]",
         align === "left" ? "text-left" : "text-right",
-        active ? "text-[var(--color-accent)]" : "text-[var(--color-text-tertiary)]"
+        active ? "text-[var(--color-accent)]" : "text-[var(--color-text-tertiary)]",
+        className
       )}
       onClick={() => onSort(sortKey)}
     >

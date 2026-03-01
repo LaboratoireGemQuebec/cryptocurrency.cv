@@ -236,9 +236,24 @@ export default async function middleware(request: NextRequest) {
           tier: 'free' | 'pro' | 'enterprise';
           active: boolean;
           email: string;
+          expiresAt?: string;
         }>(`apikey:${hashHex}`);
 
         if (keyData && keyData.active) {
+          // Check key expiration
+          if (keyData.expiresAt && new Date(keyData.expiresAt) < new Date()) {
+            return NextResponse.json(
+              {
+                error: 'API key expired',
+                code: 'KEY_EXPIRED',
+                message: 'Your API key has expired. Please register a new key or contact support.',
+                expiredAt: keyData.expiresAt,
+                register: '/api/register',
+                requestId,
+              },
+              { status: 401, headers },
+            );
+          }
           resolvedTier = keyData.tier;
           resolvedKeyId = keyData.id;
         } else if (keyData && !keyData.active) {

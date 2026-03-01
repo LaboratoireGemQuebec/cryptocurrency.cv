@@ -180,6 +180,17 @@ function generateKeyId(): string {
   return `key_${Date.now()}_${toHex(getRandomBytes(4))}`;
 }
 
+/**
+ * Default expiry per tier: free=90d, pro=365d, enterprise=730d.
+ * Returns an ISO string for the expiry date.
+ */
+function getDefaultExpiry(tier: 'free' | 'pro' | 'enterprise'): string {
+  const days: Record<string, number> = { free: 90, pro: 365, enterprise: 730 };
+  const d = new Date();
+  d.setDate(d.getDate() + (days[tier] ?? 90));
+  return d.toISOString();
+}
+
 // ============================================================================
 // Key Storage (Vercel KV)
 // ============================================================================
@@ -238,6 +249,7 @@ export async function createApiKey(params: {
     usageToday: 0,
     usageMonth: 0,
     createdAt: new Date().toISOString(),
+    expiresAt: getDefaultExpiry(tier),
     active: true,
   };
 
@@ -292,6 +304,17 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
     const keyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${hashedKey}`);
 
     if (!keyData?.active) {
+      return null;
+    }
+
+    // Check key expiration
+    if (keyData.expiresAt && new Date(keyData.expiresAt) < new Date()) {
+      console.warn(`[API Keys] Key ${keyData.keyPrefix}… expired at ${keyData.expiresAt}`);
+      // Deactivate expired key (non-blocking)
+      kv.set(`${KV_PREFIX.key}${hashedKey}`, {
+        ...keyData,
+        active: false,
+      }).catch(() => {});
       return null;
     }
 

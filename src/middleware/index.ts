@@ -27,6 +27,7 @@ export {
   FREE_TIER_MAX_RESULTS,
   REPEAT_429_BLOCK_MS,
   REGISTER_RATE_LIMIT,
+  KEY_EXPIRY_DAYS,
   matchesPattern,
   findRouteRateLimit,
   generateRequestId,

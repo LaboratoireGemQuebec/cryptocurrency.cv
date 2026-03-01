@@ -274,6 +274,7 @@ function SortHeader({
   currentDir,
   onSort,
   align = "right",
+  className,
 }: {
   label: string;
   sortKey: SortKey;
@@ -281,10 +282,11 @@ function SortHeader({
   currentDir: SortDir;
   onSort: (key: SortKey) => void;
   align?: "left" | "right";
+  className?: string;
 }) {
   const active = currentSort === sortKey;
   return (
-    <th className={cn("px-4 py-3 font-medium", align === "right" ? "text-right" : "text-left")}>
+    <th className={cn("px-4 py-3 font-medium", align === "right" ? "text-right" : "text-left", className)}>
       <button
         onClick={() => onSort(sortKey)}
         className="inline-flex items-center gap-1 hover:text-[var(--color-text-primary)] transition-colors"

@@ -230,7 +230,10 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               { key: "unavailable" as StatusFilter, label: "Down", count: statusCounts.unavailable, dotColor: "bg-red-500" },
               { key: "unknown" as StatusFilter, label: "Unknown", count: statusCounts.unknown, dotColor: "bg-yellow-500" },
             ] as const
-          ).map(({ key, label, count, dotColor }) => (
+          ).map((status) => {
+            const { key, label, count } = status;
+            const dotColor = 'dotColor' in status ? status.dotColor : undefined;
+            return (
             <button
               key={key}
               onClick={() => setStatusFilter(key)}
@@ -244,7 +247,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               {dotColor && <span className={cn("h-1.5 w-1.5 rounded-full", dotColor)} />}
               {label} ({count})
             </button>
-          ))}
+            );
+          })}
         </div>
 
         {/* Category Filter Pills */}

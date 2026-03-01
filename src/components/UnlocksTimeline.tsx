@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Skeleton } from "@/components/ui/Skeleton";
-import { Lock, Unlock, TrendingDown, Calendar, DollarSign, Percent } from "lucide-react";
+import { Lock, Unlock, TrendingDown, Calendar, DollarSign, Percent, Coins } from "lucide-react";
 
 /* ---------- Types -------------------------------------------------------- */
 
