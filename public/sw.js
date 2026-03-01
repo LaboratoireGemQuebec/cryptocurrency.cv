@@ -79,8 +79,8 @@ self.addEventListener('install', (event) => {
         }
       }
       
-      // Skip waiting to activate immediately
-      await self.skipWaiting();
+      // Do NOT auto-skipWaiting here so updates can be controlled
+      // via the SKIP_WAITING message from UpdatePrompt
     })()
   );
 });

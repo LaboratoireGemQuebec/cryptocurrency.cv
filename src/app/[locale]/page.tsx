@@ -10,6 +10,10 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreakingNewsBanner from "@/components/BreakingNewsBanner";
+import MarketsSnapshot from "@/components/MarketsSnapshot";
+import NewsletterCTA from "@/components/NewsletterCTA";
+import ExploreMore from "@/components/ExploreMore";
 import NewsCard, {
   FeaturedCard,
   NewsCardCompact,
@@ -70,6 +74,7 @@ export default async function HomePage({ params }: Props) {
   }
 
   const articles = data?.latest?.articles ?? [];
+  const breaking = data?.breaking?.articles ?? [];
   const featured = articles[0] ?? null;
   const topGrid = articles.slice(1, 5);
   const latestFeed = articles.slice(5, 20);
@@ -83,6 +88,11 @@ export default async function HomePage({ params }: Props) {
       {articles.length > 0 && <NewsListStructuredData articles={articles} />}
 
       <Header />
+
+      {/* ── Breaking News ── */}
+      <BreakingNewsBanner
+        articles={breaking.map((a) => ({ title: a.title, link: a.link }))}
+      />
 
       <main id="main-content" className="min-h-screen">
         {/* ── Hero section ── */}
@@ -117,6 +127,9 @@ export default async function HomePage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* ── Markets Snapshot ── */}
+        <MarketsSnapshot />
 
         {/* ── Latest + Sidebar ── */}
         <section className="container-main py-8 lg:py-10">
@@ -237,6 +250,12 @@ export default async function HomePage({ params }: Props) {
             </aside>
           </div>
         </section>
+
+        {/* ── Newsletter CTA ── */}
+        <NewsletterCTA />
+
+        {/* ── Explore More ── */}
+        <ExploreMore />
       </main>
 
       <Footer />
