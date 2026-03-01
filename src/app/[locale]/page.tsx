@@ -19,8 +19,6 @@ import NewsletterCTA from "@/components/NewsletterCTA";
 import ExploreMore from "@/components/ExploreMore";
 import NewsCard, {
   FeaturedCard,
-  NewsCardCompact,
-  NewsCardHeadline,
 } from "@/components/NewsCard";
 import {
   WebsiteStructuredData,
