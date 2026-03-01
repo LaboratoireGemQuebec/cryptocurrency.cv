@@ -230,7 +230,7 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                 className="group border-b border-[var(--color-border)] bg-[var(--color-surface)] transition-colors hover:bg-[var(--color-surface-secondary)] cursor-pointer"
               >
                 {/* Rank */}
-                <td className="px-3 py-2.5 sm:px-4 sm:py-3 text-[var(--color-text-secondary)]">
+                <td className="hidden sm:table-cell px-3 py-2.5 sm:px-4 sm:py-3 text-[var(--color-text-secondary)]">
                   {coin.market_cap_rank}
                 </td>
 
