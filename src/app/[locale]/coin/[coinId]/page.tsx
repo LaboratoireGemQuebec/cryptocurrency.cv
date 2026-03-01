@@ -34,6 +34,7 @@ import {
   type CommunityData,
 } from '@/lib/market-data';
 import CoinPageClient from './CoinPageClient';
+import CoinLoadError from './CoinLoadError';
 import { CoinArbitrageOpportunities } from '@/components/CoinArbitrageOpportunities';
 import { CoinFundingRates } from '@/components/CoinFundingRates';
 import { CoinSocialBuzz } from '@/components/CoinSocialBuzz';
@@ -85,8 +86,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     
     if (!coinData) {
       return {
-        title: 'Coin Not Found | Free Crypto News',
-        description: 'The requested cryptocurrency could not be found.',
+        title: `${coinMeta[coinId]?.name || coinId} | Free Crypto News`,
+        description: `View ${coinMeta[coinId]?.name || coinId} price, market cap, and latest news.`,
       };
     }
 
@@ -234,10 +235,10 @@ export default async function CoinPage({ params, searchParams }: Props) {
 
   try {
     [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
-      // Cap the entire 3-API fallback chain at 15 s to stay well within maxDuration
+      // Cap the entire 3-API fallback chain at 25 s to stay well within maxDuration
       withTimeout(
         getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
-        15000,
+        25000,
         null,
       ),
       withTimeout(
@@ -269,12 +270,23 @@ export default async function CoinPage({ params, searchParams }: Props) {
       ),
     ]);
   } catch {
-    // If Promise.all itself throws, gracefully show not-found
-    notFound();
+    // If Promise.all itself throws, show a temporary error page with retry
+    coinData = null;
   }
 
   if (!coinData) {
-    notFound();
+    // Don't call notFound() — the coin likely exists but APIs are temporarily
+    // unavailable (rate-limited, timed out, etc.). Show a retry-friendly page
+    // instead of the permanent "Coin Not Found" 404 message.
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950">
+        <div className="max-w-7xl mx-auto">
+          <Header />
+          <CoinLoadError coinId={coinId} coinName={meta?.name} />
+          <Footer />
+        </div>
+      </div>
+    );
   }
 
   // Extract market data with safe defaults
