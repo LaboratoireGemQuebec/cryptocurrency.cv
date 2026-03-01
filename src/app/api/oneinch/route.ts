@@ -68,7 +68,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch 1inch data', message: String(error) },
+      { error: 'Failed to fetch 1inch data' },
       { status: 500 },
     );
   }

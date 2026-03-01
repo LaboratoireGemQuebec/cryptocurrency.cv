@@ -36,7 +36,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
     );
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch dominance data', message: String(error) },
+      { error: 'Failed to fetch dominance data' },
       { status: 500 }
     );
   }

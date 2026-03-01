@@ -25,7 +25,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch trending collections', message: String(error) },
+      { error: 'Failed to fetch trending collections' },
       { status: 500 }
     );
   }

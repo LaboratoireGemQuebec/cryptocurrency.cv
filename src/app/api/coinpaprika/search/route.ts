@@ -31,7 +31,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to search CoinPaprika', message: String(error) },
+      { error: 'Failed to search CoinPaprika' },
       { status: 500 }
     );
   }

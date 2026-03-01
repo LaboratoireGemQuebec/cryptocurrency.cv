@@ -27,7 +27,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in categories route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch categories', message: String(error) },
+      { error: 'Failed to fetch categories' },
       { status: 500 }
     );
   }

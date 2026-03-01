@@ -26,7 +26,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch Uniswap pools', message: String(error) },
+      { error: 'Failed to fetch Uniswap pools' },
       { status: 500 }
     );
   }

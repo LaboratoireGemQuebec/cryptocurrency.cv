@@ -29,7 +29,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to search pools', message: String(error) },
+      { error: 'Failed to search pools' },
       { status: 500 }
     );
   }

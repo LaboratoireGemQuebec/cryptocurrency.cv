@@ -24,7 +24,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch CoinPaprika tickers', message: String(error) },
+      { error: 'Failed to fetch CoinPaprika tickers' },
       { status: 500 }
     );
   }

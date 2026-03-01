@@ -22,7 +22,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch Aave markets', message: String(error) },
+      { error: 'Failed to fetch Aave markets' },
       { status: 500 }
     );
   }

@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
     _meta: {
       totalMs: Date.now() - start,
       count: results.length,
-      ...(isFreeTier ? { free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : {}),
+      ...(isFreeTier ? { free_tier: true, upgrade: PREMIUM_URL } : {}),
     },
   };
 

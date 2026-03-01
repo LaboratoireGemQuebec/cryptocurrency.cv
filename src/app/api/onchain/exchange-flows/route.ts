@@ -40,7 +40,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch exchange flows', message: String(error) },
+      { error: 'Failed to fetch exchange flows' },
       { status: 500 }
     );
   }

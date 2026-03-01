@@ -65,7 +65,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in history route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch historical data', message: String(error) },
+      { error: 'Failed to fetch historical data' },
       { status: 500 }
     );
   }

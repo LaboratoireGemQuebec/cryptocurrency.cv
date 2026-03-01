@@ -31,7 +31,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch funding history', message: String(error) },
+      { error: 'Failed to fetch funding history' },
       { status: 500 }
     );
   }

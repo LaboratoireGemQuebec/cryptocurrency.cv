@@ -42,26 +42,45 @@ src/
 │   │   ├── search/              # Full-text search
 │   │   ├── read/                # Reading mode
 │   │   └── ...
-│   ├── api/                     # API routes (serverless / edge)
-│   │   ├── news/                # /api/news — main feed
-│   │   ├── search/              # /api/search
+│   ├── api/                     # 150+ API routes (mostly Edge Runtime)
+│   │   ├── news/                # /api/news — main news feed
+│   │   ├── search/              # /api/search — full-text search
 │   │   ├── article/             # /api/article — AI summary, extraction
-│   │   ├── market/              # /api/market — price data
+│   │   ├── market/              # /api/market — price data, charts
 │   │   ├── ai/                  # /api/ai — sentiment, summaries, RAG
-│   │   ├── v2/                  # /api/v2 — stable versioned endpoints
+│   │   ├── onchain/             # /api/onchain — on-chain metrics, whale alerts
+│   │   ├── defi/                # /api/defi — yields, TVL, DEX volumes
+│   │   ├── sentiment/           # /api/sentiment — market sentiment analysis
+│   │   ├── sse/                 # /api/sse — Server-Sent Events stream
+│   │   ├── graphql/             # /api/graphql — GraphQL endpoint
+│   │   ├── rss/ , atom/ , opml/ # Feed endpoints (RSS, Atom, OPML)
+│   │   ├── v1/ , v2/            # Versioned stable endpoints
 │   │   ├── og/                  # /api/og — dynamic Open Graph images
+│   │   ├── cron/                # Scheduled jobs (archive sync, sentiment)
+│   │   ├── webhooks/            # Webhook delivery
 │   │   └── ...
 │   └── layout.tsx               # Root layout + providers
-├── components/                  # Shared React components
+├── components/                  # 170+ React components
 │   ├── cards/                   # ArticleCardLarge/Medium/Small/List
 │   ├── rag-chat/                # RAG chat interface
+│   ├── charts/                  # Market charts (Recharts)
+│   ├── admin/                   # Admin dashboard components
 │   ├── ui/                      # Base primitives (Button, Modal, …)
 │   └── ...
-└── lib/                         # Pure utilities
+├── hooks/                       # Custom React hooks
+├── i18n/                        # Internationalization config
+├── types/                       # TypeScript type definitions
+├── __tests__/                   # Unit tests
+└── lib/                         # 200+ library modules
     ├── archive-v2.ts            # Archive read/write helpers
     ├── distributed-cache.ts     # Redis / in-memory cache abstraction
     ├── news-sources.ts          # Source registry (200+ feeds)
-    ├── unsplash-fallback.ts     # Image fallback pool
+    ├── rate-limiter.ts          # Distributed rate limiting
+    ├── ai/                      # AI service integrations
+    ├── market/                  # Market data providers
+    ├── analytics/               # Analytics and metrics
+    ├── security/                # Security utilities
+    ├── rag/                     # RAG pipeline (embeddings, vector search)
     └── ...
 
 archive/                         # Static JSON data store
@@ -71,10 +90,31 @@ archive/                         # Static JSON data store
 ├── market/                      # Hourly market snapshots
 ├── social/                      # Social sentiment data
 ├── onchain/                     # On-chain metrics
-└── YYYY/MM/DD/                  # Daily archives
+├── predictions/                 # Market predictions archive
+├── search/                      # Search index data
+├── snapshots/                   # Point-in-time snapshots
+└── YYYY/MM/DD/                  # Daily archives (2021–present)
 
+mcp/                             # Claude MCP server
+├── index.js                     # stdio transport (Claude Desktop)
+└── http-server.js               # HTTP/SSE transport (ChatGPT, etc.)
+
+sdk/                             # Official SDKs (13 languages)
+├── python/ , typescript/ , go/  # Tier 1 SDKs
+├── react/                       # React hooks & components
+├── php/ , ruby/ , rust/         # Community SDKs
+├── java/ , kotlin/ , swift/     # Mobile / JVM SDKs
+├── csharp/ , r/                 # Specialised SDKs
+└── javascript/                  # Vanilla JS SDK
+
+widget/                          # Embeddable HTML widgets
+├── crypto-news-widget.html      # Full news widget
+├── carousel.html / carousel.js  # News carousel
+└── ticker.html / ticker.js      # Price ticker
+
+scripts/                         # Build, archive, and automation scripts
 public/                          # Static assets
-├── sw.js                        # Service Worker (offline support)
+├── sw.js                        # Service Worker (offline + push notifications)
 └── manifest.json                # PWA manifest
 ```
 

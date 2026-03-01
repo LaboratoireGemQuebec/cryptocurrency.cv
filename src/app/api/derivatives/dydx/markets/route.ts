@@ -19,7 +19,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch dYdX markets', message: String(error) },
+      { error: 'Failed to fetch dYdX markets' },
       { status: 500 }
     );
   }

@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch digital assets', message: String(error) },
+      { error: 'Failed to fetch digital assets' },
       { status: 500, headers: CORS_HEADERS },
     );
   }

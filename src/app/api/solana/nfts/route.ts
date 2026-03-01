@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch NFTs', message: String(error) },
+      { error: 'Failed to fetch NFTs' },
       { status: 500, headers: CORS_HEADERS },
     );
   }

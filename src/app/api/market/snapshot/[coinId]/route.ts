@@ -84,7 +84,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in snapshot route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch snapshot', message: String(error) },
+      { error: 'Failed to fetch snapshot' },
       { status: 500 }
     );
   }

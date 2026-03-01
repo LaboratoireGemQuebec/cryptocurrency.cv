@@ -48,7 +48,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch address data', message: String(error) },
+      { error: 'Failed to fetch address data' },
       { status: 500 }
     );
   }

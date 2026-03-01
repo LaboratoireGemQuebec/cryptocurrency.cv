@@ -19,7 +19,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch miner metrics', message: String(error) },
+      { error: 'Failed to fetch miner metrics' },
       { status: 500 }
     );
   }

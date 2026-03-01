@@ -23,7 +23,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch Bybit tickers', message: String(error) },
+      { error: 'Failed to fetch Bybit tickers' },
       { status: 500 }
     );
   }

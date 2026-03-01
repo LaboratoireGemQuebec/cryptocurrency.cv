@@ -36,7 +36,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch social metrics', message: String(error) },
+      { error: 'Failed to fetch social metrics' },
       { status: 500 }
     );
   }

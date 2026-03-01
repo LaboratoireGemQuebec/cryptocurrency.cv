@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to generate RSS feed', message: String(error) },
+      { error: 'Failed to generate RSS feed' },
       { status: 500 }
     );
   }

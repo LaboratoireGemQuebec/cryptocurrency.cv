@@ -13,7 +13,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { fetchCoinGecko } from '@/lib/coingecko';
-import { COINGECKO_BASE } from '@/lib/constants';
+import { COINGECKO_BASE, PREMIUM_URL } from '@/lib/constants';
 import { staleCache, cache, generateCacheKey } from '@/lib/cache';
 import { getPricesFallback } from '@/lib/fallback';
 import { getPipelinePrices } from '@/lib/data-pipeline';
@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
       }
       if (hits === coinIds.length) {
         return NextResponse.json(
-          isFreeTier ? { ...filtered, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : filtered,
+          isFreeTier ? { ...filtered, free_tier: true, upgrade: PREMIUM_URL } : filtered,
           {
             headers: {
               'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
@@ -74,7 +74,7 @@ export async function GET(request: NextRequest) {
   const cached = cache.get<Record<string, unknown>>(cacheKey);
   if (cached) {
     return NextResponse.json(
-      isFreeTier ? { ...cached, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : cached,
+      isFreeTier ? { ...cached, free_tier: true, upgrade: PREMIUM_URL } : cached,
       {
         headers: {
           'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
@@ -105,7 +105,7 @@ export async function GET(request: NextRequest) {
     } catch { /* ignore */ }
 
     return NextResponse.json(
-      isFreeTier ? { ...data as object, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : data,
+      isFreeTier ? { ...data as object, free_tier: true, upgrade: PREMIUM_URL } : data,
       {
         headers: {
           'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
@@ -118,7 +118,7 @@ export async function GET(request: NextRequest) {
   const stale = staleCache.get<Record<string, unknown>>(cacheKey);
   if (stale) {
     return NextResponse.json(
-      isFreeTier ? { ...stale, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : stale,
+      isFreeTier ? { ...stale, free_tier: true, upgrade: PREMIUM_URL } : stale,
       {
         headers: {
           'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
@@ -132,7 +132,7 @@ export async function GET(request: NextRequest) {
   const fallback = await getPricesFallback(request.nextUrl.origin);
   const fallbackData = fallback.data;
   return NextResponse.json(
-    isFreeTier ? { ...fallbackData, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : fallbackData,
+    isFreeTier ? { ...fallbackData, free_tier: true, upgrade: PREMIUM_URL } : fallbackData,
     {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',

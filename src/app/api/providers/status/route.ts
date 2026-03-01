@@ -69,7 +69,7 @@ export async function GET() {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to get provider status', message: String(error) },
+      { error: 'Failed to get provider status' },
       { status: 500, headers: CORS_HEADERS },
     );
   }

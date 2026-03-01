@@ -19,7 +19,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch median yields', message: String(error) },
+      { error: 'Failed to fetch median yields' },
       { status: 500 }
     );
   }

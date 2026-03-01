@@ -54,7 +54,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in compare route:', error);
     return NextResponse.json(
-      { error: 'Comparison failed', message: String(error) },
+      { error: 'Comparison failed' },
       { status: 500 }
     );
   }

@@ -34,7 +34,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch social feed', message: String(error) },
+      { error: 'Failed to fetch social feed' },
       { status: 500 }
     );
   }

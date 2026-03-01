@@ -87,7 +87,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Views API error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch view counts', message: String(error) },
+      { error: 'Failed to fetch view counts' },
       { status: 500 }
     );
   }
@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Views POST error:', error);
     return NextResponse.json(
-      { error: 'Failed to record view', message: String(error) },
+      { error: 'Failed to record view' },
       { status: 500 }
     );
   }

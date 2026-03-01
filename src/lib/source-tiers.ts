@@ -79,8 +79,6 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   cryptonews:     { tier: 'tier4', displayName: 'Crypto.news',         credibility: 0.68, reputation: 58 },
   ambcrypto:      { tier: 'tier4', displayName: 'AMBCrypto',           credibility: 0.65, reputation: 55 },
   cryptopotato:   { tier: 'tier4', displayName: 'CryptoPotato',        credibility: 0.65, reputation: 55 },
-  watcherguru:    { tier: 'tier4', displayName: 'Watcher Guru',        credibility: 0.62, reputation: 52 },
-  cryptopolitan:  { tier: 'tier4', displayName: 'Cryptopolitan',       credibility: 0.62, reputation: 52 },
   coinedition:    { tier: 'tier4', displayName: 'CoinEdition',         credibility: 0.60, reputation: 50 },
   bitcoinworld:   { tier: 'tier4', displayName: 'BitcoinWorld',        credibility: 0.60, reputation: 50 },
   invezz:         { tier: 'tier4', displayName: 'Invezz Crypto',       credibility: 0.60, reputation: 50 },

@@ -21,6 +21,7 @@ import { PortfolioProvider } from '@/components/portfolio';
 import { GlobalSearch } from '@/components/GlobalSearch';
 import { ToastProvider } from '@/components/Toast';
 import { AlternateLinks } from '@/components/AlternateLinks';
+import { CookieConsent } from '@/components/CookieConsent';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
 const roboto = Roboto({
@@ -254,6 +255,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                           <UpdatePrompt />
                           <OfflineIndicator />
                           <BottomNav />
+                          <CookieConsent />
                         </PWAProvider>
                       </BookmarksProvider>
                     </PortfolioProvider>

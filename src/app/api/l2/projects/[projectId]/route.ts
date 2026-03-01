@@ -39,7 +39,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch L2 risk assessment', message: String(error) },
+      { error: 'Failed to fetch L2 risk assessment' },
       { status: 500 }
     );
   }

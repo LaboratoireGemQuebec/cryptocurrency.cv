@@ -132,7 +132,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to analyze news', message: String(error) },
+      { error: 'Failed to analyze news' },
       { status: 500 }
     );
   }

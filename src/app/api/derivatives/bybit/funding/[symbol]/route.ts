@@ -30,7 +30,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch Bybit funding history', message: String(error) },
+      { error: 'Failed to fetch Bybit funding history' },
       { status: 500 }
     );
   }

@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Gateway error', message: String(error) },
+      { error: 'Gateway error' },
       { status: 500 }
     );
   }

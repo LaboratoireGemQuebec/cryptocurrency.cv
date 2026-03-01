@@ -31,7 +31,7 @@ export async function GET(
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch collection activity', message: String(error) },
+      { error: 'Failed to fetch collection activity' },
       { status: 500 }
     );
   }

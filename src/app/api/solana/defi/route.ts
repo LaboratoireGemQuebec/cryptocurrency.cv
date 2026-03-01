@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch DeFi positions', message: String(error) },
+      { error: 'Failed to fetch DeFi positions' },
       { status: 500, headers: CORS_HEADERS },
     );
   }

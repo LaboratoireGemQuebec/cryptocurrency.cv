@@ -509,15 +509,20 @@ function normalizeDexPair(p: RawDexPair): DEXPair {
 // GECKO TERMINAL
 // ═══════════════════════════════════════════════════════════════
 
+export interface GeckoPool {
+  id: string;
+  [key: string]: unknown;
+}
+
 /**
  * Get trending pools across all networks
  */
-export async function getTrendingPools(network?: string): Promise<any[]> {
+export async function getTrendingPools(network?: string): Promise<GeckoPool[]> {
   const endpoint = network
     ? `/networks/${network}/trending_pools`
     : '/networks/trending_pools';
-  const data = await geckoterminal.fetch(endpoint) as { data: any[] };
-  return (data.data || []).map((p: any) => ({
+  const data = await geckoterminal.fetch(endpoint) as { data: RawGeckoPool[] };
+  return (data.data || []).map((p) => ({
     id: p.id,
     ...p.attributes,
   }));
@@ -526,12 +531,12 @@ export async function getTrendingPools(network?: string): Promise<any[]> {
 /**
  * Get new pools listed on GeckoTerminal
  */
-export async function getNewPools(network?: string): Promise<any[]> {
+export async function getNewPools(network?: string): Promise<GeckoPool[]> {
   const endpoint = network
     ? `/networks/${network}/new_pools`
     : '/networks/new_pools';
-  const data = await geckoterminal.fetch(endpoint) as { data: any[] };
-  return (data.data || []).map((p: any) => ({
+  const data = await geckoterminal.fetch(endpoint) as { data: RawGeckoPool[] };
+  return (data.data || []).map((p) => ({
     id: p.id,
     ...p.attributes,
   }));
@@ -546,8 +551,8 @@ export async function getNewPools(network?: string): Promise<any[]> {
  */
 export async function getL2ScalingData(): Promise<L2Data[]> {
   try {
-    const data = await l2beat.fetch('/scaling/summary') as { data: { projects: any[] } };
-    return (data.data?.projects || []).map((p: any) => ({
+    const data = await l2beat.fetch('/scaling/summary') as { data: { projects: RawL2Project[] } };
+    return (data.data?.projects || []).map((p) => ({
       name: p.name,
       tvl: p.tvl?.canonical || 0,
       tvlChange7d: p.tvl?.change7d || 0,
@@ -574,7 +579,7 @@ export async function getDeFiDashboard(): Promise<{
   topYields: YieldPool[];
   stablecoins: StablecoinData[];
   topFees: ProtocolRevenue[];
-  topDEXVolumes: any[];
+  topDEXVolumes: DEXVolume[];
 }> {
   const [topProtocols, topChains, topYields, stablecoins, topFees, topDEXVolumes] = await Promise.allSettled([
     getProtocolsTVL(20),
@@ -601,7 +606,7 @@ export async function getDeFiDashboard(): Promise<{
 export async function getTokenDeFiProfile(tokenSymbol: string): Promise<{
   dexPairs: DEXPair[];
   yields: YieldPool[];
-  trendingPools: any[];
+  trendingPools: GeckoPool[];
 }> {
   const [dexPairs, yields, trendingPools] = await Promise.allSettled([
     searchDEXPairs(tokenSymbol),

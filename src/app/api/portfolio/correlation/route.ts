@@ -106,7 +106,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     );
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to compute correlation matrix', message: String(error) },
+      { error: 'Failed to compute correlation matrix' },
       { status: 500 },
     );
   }

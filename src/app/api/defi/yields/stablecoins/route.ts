@@ -22,7 +22,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch stablecoin yields', message: String(error) },
+      { error: 'Failed to fetch stablecoin yields' },
       { status: 500 }
     );
   }

@@ -172,6 +172,21 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Legal Links */}
+        <div className="mt-6 pt-6 border-t border-gray-800/30">
+          <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-500">
+            <Link href="/privacy" className="hover:text-white transition-colors">{t('privacy')}</Link>
+            <span className="text-gray-700">•</span>
+            <Link href="/terms" className="hover:text-white transition-colors">{t('terms')}</Link>
+            <span className="text-gray-700">•</span>
+            <Link href="/editorial" className="hover:text-white transition-colors">Editorial Policy</Link>
+            <span className="text-gray-700">•</span>
+            <Link href="/contact" className="hover:text-white transition-colors">{t('contact')}</Link>
+            <span className="text-gray-700">•</span>
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-gray-800/50 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm flex items-center gap-2">
@@ -191,7 +206,7 @@ export default function Footer() {
             </span>
           </p>
           <p className="text-center md:text-right text-gray-600 text-sm">
-            Data from CoinDesk, The Block, Decrypt & more
+            © {new Date().getFullYear()} Free Crypto News • Data from CoinDesk, The Block, Decrypt & more
           </p>
         </div>
       </div>

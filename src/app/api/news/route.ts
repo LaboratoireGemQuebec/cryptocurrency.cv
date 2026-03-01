@@ -103,7 +103,7 @@ export async function GET(request: NextRequest) {
       lang: translatedLang,
       availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
       availableCategories: VALID_CATEGORIES,
-      ...(isFreeTier ? { free_tier: true, total: articles.length, upgrade: 'https://cryptocurrency.cv/premium' } : {}),
+      ...(isFreeTier ? { free_tier: true, total: articles.length, upgrade: PREMIUM_URL } : {}),
     }, startTime);
 
     // Persist into stale cache so we can serve it when feeds are unreachable

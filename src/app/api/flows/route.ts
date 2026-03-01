@@ -55,7 +55,7 @@ interface MarketData {
 async function fetchCoinGeckoMarket(coinId: string): Promise<MarketData | null> {
   try {
     const res = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`,
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`,
       { next: { revalidate: 300 } }
     );
     if (!res.ok) return null;
@@ -83,7 +83,7 @@ interface BtcExchangeFlow {
 async function fetchBtcExchangeFlow(btcPrice: number): Promise<BtcExchangeFlow | null> {
   try {
     const res = await fetch(
-      'https://api.blockchain.info/charts/exchange-balance?timespan=2days&format=json&cors=true',
+      `${BLOCKCHAIN_INFO_BASE}/charts/exchange-balance?timespan=2days&format=json&cors=true`,
       { next: { revalidate: 300 } }
     );
     if (!res.ok) return null;

@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch token balances', message: String(error) },
+      { error: 'Failed to fetch token balances' },
       { status: 500, headers: CORS_HEADERS },
     );
   }

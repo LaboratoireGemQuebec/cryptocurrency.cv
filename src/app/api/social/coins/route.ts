@@ -37,7 +37,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to fetch social coins', message: String(error) },
+      { error: 'Failed to fetch social coins' },
       { status: 500 }
     );
   }
