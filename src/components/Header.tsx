@@ -12,6 +12,8 @@ import {
   Sun,
   Moon,
   ChevronDown,
+  Star,
+  Briefcase,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -188,7 +190,18 @@ const NAV_ITEMS = [
       { label: "API Docs", href: "/developers" },
       { label: "Calculator", href: "/calculator" },
       { label: "Compare", href: "/compare" },
+      { label: "Gas Tracker", href: "/gas" },
       { label: "Sources", href: "/sources" },
+    ],
+  },
+  {
+    label: "My",
+    href: "/watchlist",
+    children: [
+      { label: "Watchlist", href: "/watchlist" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Bookmarks", href: "/bookmarks" },
+      { label: "Alerts", href: "/alerts" },
     ],
   },
   { label: "Pricing", href: "/pricing" },
@@ -286,6 +299,22 @@ export default function Header() {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
+          <Link
+            href="/watchlist"
+            className="hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
+            aria-label="Watchlist"
+          >
+            <Star className="h-4.5 w-4.5" />
+          </Link>
+
+          <Link
+            href="/portfolio"
+            className="hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
+            aria-label="Portfolio"
+          >
+            <Briefcase className="h-4.5 w-4.5" />
+          </Link>
+
           <button
             onClick={() => setSearchOpen(true)}
             className="flex items-center gap-2 p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer"

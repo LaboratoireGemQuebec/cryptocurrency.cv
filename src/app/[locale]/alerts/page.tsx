@@ -47,7 +47,7 @@ export default function AlertsPage() {
   const { alerts, addAlert, removeAlert, updateAlert, triggered, clearTriggered } = useAlerts();
 
   /* Form state */
-  const [coinId, setCoinId] = useState(COIN_OPTIONS[0].id);
+  const [coinId, setCoinId] = useState(COIN_OPTIONS[0].id as string);
   const [alertType, setAlertType] = useState<Alert["type"]>("price_above");
   const [target, setTarget] = useState("");
 
