@@ -33,8 +33,8 @@ const BOT_ALLOWLIST = [
   'facebookexternalhit',
   'x402',              // x402 payment clients
   'coinbase',          // Coinbase Wallet SDK
-  'fcn-telegram-bot',  // Our own Telegram bot
-  'fcn-discord-bot',   // Our own Discord bot
+  'fcn-telegram',      // Our own Telegram bot
+  'fcn-discord',       // Our own Discord bot
 ];
 
 // SDK / programmatic client User-Agent patterns
