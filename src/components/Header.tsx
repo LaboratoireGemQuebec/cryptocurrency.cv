@@ -13,6 +13,7 @@ import {
   ChevronDown,
   Star,
   Briefcase,
+  User,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import NotificationCenter from "@/components/NotificationCenter";
@@ -177,9 +178,15 @@ export default function Header() {
       )}>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0 group">
-          <Logo size={scrolled ? "sm" : "md"} showText={false} />
+          <span className={cn(
+            "font-bold tracking-tight transition-all duration-200",
+            scrolled ? "text-lg" : "text-xl",
+          )}>
+            <span className="text-[var(--color-accent)] group-hover:opacity-80 transition-opacity">C</span>
+            <span>V</span>
+          </span>
           <span className="hidden sm:block text-[11px] font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-0.5 uppercase tracking-widest">
-            Free Crypto News
+            Crypto Vision
           </span>
         </Link>
 
@@ -268,6 +275,17 @@ export default function Header() {
           <div className="hidden sm:flex">
             <NotificationCenter />
           </div>
+
+          {/* Dashboard / Sign In */}
+          <Link
+            href="/dashboard"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
+            aria-label="Dashboard"
+            title="Dashboard"
+          >
+            <User className="h-4 w-4" aria-hidden="true" />
+            <span className="hidden md:inline">Dashboard</span>
+          </Link>
 
           <div className="hidden sm:block w-px h-5 bg-[var(--color-border)] mx-1" />
 
