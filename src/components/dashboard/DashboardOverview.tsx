@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Link } from "@/i18n/navigation";
 
 interface UsageData {
   totals: { today: number; month: number; allTime: number };
@@ -23,7 +24,9 @@ function StatCard({
     <div className="rounded-xl border border-border bg-card p-5">
       <div className="flex items-center gap-3 mb-3">
         <span className="text-xl">{icon}</span>
-        <span className="text-sm text-muted-foreground font-medium">{label}</span>
+        <span className="text-sm text-muted-foreground font-medium">
+          {label}
+        </span>
       </div>
       <div className="text-2xl font-bold">{value}</div>
       {subtitle && (
@@ -106,8 +109,8 @@ export default function DashboardOverview() {
       <div className="rounded-xl border border-border bg-card p-6">
         <h2 className="text-lg font-semibold mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <a
-            href="keys"
+          <Link
+            href="/dashboard/keys"
             className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-blue-500/50 hover:bg-muted/50 transition-all"
           >
             <span className="text-2xl">🔑</span>
@@ -117,22 +120,21 @@ export default function DashboardOverview() {
                 Generate a new key
               </div>
             </div>
-          </a>
+          </Link>
           <a
-            href="/en/docs"
+            href="https://docs.cryptocurrency.cv"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-blue-500/50 hover:bg-muted/50 transition-all"
           >
             <span className="text-2xl">📖</span>
             <div>
               <div className="font-semibold text-sm">View Docs</div>
-              <div className="text-xs text-muted-foreground">
-                API reference
-              </div>
+              <div className="text-xs text-muted-foreground">API reference</div>
             </div>
           </a>
-          <a
-            href="/en/pricing"
+          <Link
+            href="/pricing"
             className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-blue-500/50 hover:bg-muted/50 transition-all"
           >
             <span className="text-2xl">⬆️</span>
@@ -142,7 +144,7 @@ export default function DashboardOverview() {
                 Get more requests
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -157,7 +159,14 @@ export default function DashboardOverview() {
             <div>
               <div className="font-medium">Create an API key</div>
               <div className="text-muted-foreground">
-                Go to <a href="keys" className="text-blue-500 hover:underline">API Keys</a> and create your first key.
+                Go to{" "}
+                <Link
+                  href="/dashboard/keys"
+                  className="text-blue-500 hover:underline"
+                >
+                  API Keys
+                </Link>{" "}
+                and create your first key.
               </div>
             </div>
           </div>
@@ -168,7 +177,11 @@ export default function DashboardOverview() {
             <div>
               <div className="font-medium">Make your first request</div>
               <div className="text-muted-foreground">
-                Include your key as <code className="bg-muted px-1 py-0.5 rounded text-xs">X-API-Key</code> header.
+                Include your key as{" "}
+                <code className="bg-muted px-1 py-0.5 rounded text-xs">
+                  X-API-Key
+                </code>{" "}
+                header.
               </div>
             </div>
           </div>
@@ -179,7 +192,14 @@ export default function DashboardOverview() {
             <div>
               <div className="font-medium">Monitor usage</div>
               <div className="text-muted-foreground">
-                Track requests and rate limits on <a href="usage" className="text-blue-500 hover:underline">Usage</a>.
+                Track requests and rate limits on{" "}
+                <Link
+                  href="/dashboard/usage"
+                  className="text-blue-500 hover:underline"
+                >
+                  Usage
+                </Link>
+                .
               </div>
             </div>
           </div>
@@ -190,7 +210,7 @@ export default function DashboardOverview() {
             Example Request
           </div>
           <pre className="text-xs font-mono overflow-x-auto">
-{`curl -H "X-API-Key: YOUR_KEY" \\
+            {`curl -H "X-API-Key: YOUR_KEY" \\
   https://cryptocurrency.cv/api/prices?limit=10`}
           </pre>
         </div>
