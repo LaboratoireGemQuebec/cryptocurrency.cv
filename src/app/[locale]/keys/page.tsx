@@ -63,7 +63,7 @@ const accessTiers = [
       "No rate limit authentication",
     ],
     cta: { text: "Try /api/sample", href: "/api/sample", external: true },
-    code: 'curl https://cryptocurrency.cv/api/sample',
+    code: "curl https://cryptocurrency.cv/api/sample",
   },
   {
     name: "Pay-per-Request",
@@ -235,7 +235,9 @@ export default async function KeysPage({ params }: Props) {
                   {tier.cta.external ? (
                     <a
                       href={tier.cta.href}
-                      target={tier.cta.href.startsWith("http") ? "_blank" : undefined}
+                      target={
+                        tier.cta.href.startsWith("http") ? "_blank" : undefined
+                      }
                       rel={
                         tier.cta.href.startsWith("http")
                           ? "noopener noreferrer"
