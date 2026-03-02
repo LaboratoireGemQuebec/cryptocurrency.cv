@@ -67,7 +67,7 @@ export async function createMagicLink(
     ipAddress: ipAddress || null,
   });
 
-  return `${BASE_URL}/en/auth/verify?token=${rawToken}`;
+  return `${BASE_URL}/api/auth/verify?token=${rawToken}`;
 }
 
 /**
