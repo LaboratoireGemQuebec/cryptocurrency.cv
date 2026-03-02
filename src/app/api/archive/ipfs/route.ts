@@ -342,7 +342,7 @@ export async function POST(request: NextRequest) {
         storage: 'ipfs',
         contentHash: `sha256:${contentHash}`,
         title: `Daily Crypto News Snapshot - ${date}`,
-        source: 'Free Crypto News',
+        source: 'Crypto Vision News',
         originalUrl: `https://cryptocurrency.cv/snapshot/${date}`,
         archivedAt: new Date().toISOString(),
         size: Buffer.byteLength(snapshotContent, 'utf8'),

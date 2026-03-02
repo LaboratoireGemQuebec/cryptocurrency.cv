@@ -23,7 +23,7 @@ export const runtime = 'edge';
 export async function GET() {
   const agents = {
     version: '1.0.0',
-    name: 'Free Crypto News',
+    name: 'Crypto Vision News',
     description: 'Real-time cryptocurrency news and market intelligence API',
     homepage: SITE_URL,
     

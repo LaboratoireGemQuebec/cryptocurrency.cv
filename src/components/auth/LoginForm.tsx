@@ -150,7 +150,7 @@ export default function LoginForm() {
 
       <div className="mt-6 text-center">
         <p className="text-sm text-muted-foreground">
-          New to Free Crypto News?{" "}
+          New to Crypto Vision News?{" "}
           <a href="/en/pricing" className="text-blue-500 hover:underline font-medium">
             View pricing plans
           </a>

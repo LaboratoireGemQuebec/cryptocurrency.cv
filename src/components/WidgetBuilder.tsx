@@ -99,7 +99,7 @@ export default function WidgetBuilder() {
 
   const iframeWidth = config.width === "fixed" ? `${config.fixedWidth}px` : "100%";
 
-  const iframeCode = `<iframe src="${embedUrl}" width="${config.width === "fixed" ? config.fixedWidth : "100%"}" height="${iframeHeight}" style="border:none;border-radius:8px;overflow:hidden;" loading="lazy" title="Free Crypto News Widget"></iframe>`;
+  const iframeCode = `<iframe src="${embedUrl}" width="${config.width === "fixed" ? config.fixedWidth : "100%"}" height="${iframeHeight}" style="border:none;border-radius:8px;overflow:hidden;" loading="lazy" title="Crypto Vision News Widget"></iframe>`;
 
   const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${config.type === "chart" ? ` data-symbol="${config.symbol}" data-interval="${config.interval}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}${!config.showBranding ? ' data-branding="false"' : ""}></script>`;
 
@@ -420,7 +420,7 @@ export default function WidgetBuilder() {
                 <li>• Use <code className="bg-muted px-1.5 py-0.5 rounded text-xs">theme=auto</code> to match your site&apos;s color scheme</li>
                 <li>• Widgets are fully responsive and mobile-friendly</li>
                 <li>• No API key required — free for everyone</li>
-                <li>• Data powered by <a href={BASE_URL} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Free Crypto News</a></li>
+                <li>• Data powered by <a href={BASE_URL} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Crypto Vision News</a></li>
               </ul>
             </div>
           </div>

@@ -83,7 +83,7 @@ export function handleConnection(ws: WebSocket): string {
     type: 'ping',
     payload: { 
       clientId,
-      message: 'Connected to Free Crypto News WebSocket',
+      message: 'Connected to Crypto Vision News WebSocket',
       serverTime: new Date().toISOString(),
     },
     timestamp: new Date().toISOString(),

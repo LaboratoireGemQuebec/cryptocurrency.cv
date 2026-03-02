@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
     });
   } catch {
     // Fallback inline content if file not found
-    const fallbackContent = `# Free Crypto News API
+    const fallbackContent = `# Crypto Vision News API
 
 > Real-time cryptocurrency news aggregator with AI analysis.
 

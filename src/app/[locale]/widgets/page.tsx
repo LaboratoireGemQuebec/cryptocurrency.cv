@@ -19,7 +19,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Widget Builder — Free Crypto News",
+    title: "Widget Builder — Crypto Vision News",
     description:
       "Create embeddable cryptocurrency widgets for your website. Price tickers, news feeds, coin cards, market overviews, and Fear & Greed gauges — all free, no API key required.",
     path: "/widgets",

@@ -701,9 +701,9 @@ export function listResearcherProjects(researcherId: string): ResearchProject[] 
 // ============================================================================
 
 const CITATION_BASE = {
-  dataset: 'Free Crypto News API',
+  dataset: 'Crypto Vision News API',
   url: 'https://cryptocurrency.cv',
-  publisher: 'Free Crypto News',
+  publisher: 'Crypto Vision',
 };
 
 /**

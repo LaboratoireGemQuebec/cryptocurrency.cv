@@ -90,7 +90,7 @@ export async function GET() {
       // x402 Bazaar discovery format
       x402Version: 2,
       provider: {
-        name: 'Free Crypto News API',
+        name: 'Crypto Vision News API',
         description:
           'Real-time cryptocurrency news, prices, and market data via x402 micropayments',
         url: 'https://cryptocurrency.cv',

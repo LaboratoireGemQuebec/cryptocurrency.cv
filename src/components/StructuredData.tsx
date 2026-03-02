@@ -2,8 +2,8 @@ export function WebsiteStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Free Crypto News",
-    alternateName: ["CV News", "Free Crypto News", "cryptocurrency.cv"],
+    name: "Crypto Vision News",
+    alternateName: ["CV News", "Crypto Vision News", "cryptocurrency.cv"],
     url: "https://cryptocurrency.cv",
     potentialAction: {
       "@type": "SearchAction",
@@ -23,7 +23,7 @@ export function OrganizationStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Free Crypto News",
+    name: "Crypto Vision News",
     url: "https://cryptocurrency.cv",
     logo: "https://cryptocurrency.cv/icons/icon-512x512.png",
     sameAs: [
@@ -164,11 +164,11 @@ export function ArticleStructuredData({
     dateModified: dateModified || datePublished,
     author: {
       "@type": "Person",
-      name: author || "Free Crypto News",
+      name: author || "Crypto Vision",
     },
     publisher: {
       "@type": "Organization",
-      name: publisher || "Free Crypto News",
+      name: publisher || "Crypto Vision",
       url: "https://cryptocurrency.cv",
       logo: {
         "@type": "ImageObject",
@@ -193,7 +193,7 @@ export function SoftwareApplicationStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Free Crypto News API",
+    name: "Crypto Vision News API",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     description:
@@ -206,7 +206,7 @@ export function SoftwareApplicationStructuredData() {
     },
     creator: {
       "@type": "Organization",
-      name: "Free Crypto News",
+      name: "Crypto Vision News",
       url: "https://cryptocurrency.cv",
     },
     featureList: [

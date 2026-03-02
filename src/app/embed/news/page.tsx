@@ -141,7 +141,7 @@ export default function NewsWidget() {
             rel="noopener noreferrer"
             style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
           >
-            Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Free Crypto News</span>
+            Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
           </a>
         </div>
       )}

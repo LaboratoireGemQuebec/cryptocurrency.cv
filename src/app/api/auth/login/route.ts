@@ -87,12 +87,12 @@ export async function POST(request: NextRequest) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            from: process.env.EMAIL_FROM || 'Free Crypto News <noreply@cryptocurrency.cv>',
+            from: process.env.EMAIL_FROM || 'Crypto Vision News <noreply@cryptocurrency.cv>',
             to: normalizedEmail,
-            subject: 'Sign in to Free Crypto News',
+            subject: 'Sign in to Crypto Vision News',
             html: `
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
-                <h1 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">Sign in to Free Crypto News</h1>
+                <h1 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">Sign in to Crypto Vision News</h1>
                 <p style="color: #64748b; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">
                   Click the button below to sign in to your developer dashboard. This link expires in 15 minutes.
                 </p>
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
                 </p>
                 <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 32px 0;" />
                 <p style="color: #94a3b8; font-size: 12px;">
-                  Free Crypto News — <a href="https://cryptocurrency.cv" style="color: #3b82f6;">cryptocurrency.cv</a>
+                  Crypto Vision News — <a href="https://cryptocurrency.cv" style="color: #3b82f6;">cryptocurrency.cv</a>
                 </p>
               </div>
             `,

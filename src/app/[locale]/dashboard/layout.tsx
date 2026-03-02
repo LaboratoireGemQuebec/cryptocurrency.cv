@@ -20,7 +20,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Developer Dashboard — Free Crypto News",
+    title: "Developer Dashboard — Crypto Vision News",
     description: "Manage your API keys, monitor usage, and configure your crypto data integration.",
     path: "/dashboard",
     locale,

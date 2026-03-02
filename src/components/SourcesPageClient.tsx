@@ -163,7 +163,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
           {sources.length}+ News Sources
         </h1>
         <p className="text-[var(--color-text-secondary)] max-w-2xl text-base leading-relaxed">
-          Free Crypto News aggregates headlines from {sources.length}+ sources
+          Crypto Vision News aggregates headlines from {sources.length}+ sources
           across {categories.size} categories in the crypto ecosystem —
           updated in real-time, with intelligent health monitoring.
         </p>

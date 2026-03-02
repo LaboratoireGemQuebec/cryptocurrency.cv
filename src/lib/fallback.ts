@@ -51,7 +51,7 @@ export const EMERGENCY_NEWS = {
       description:
         'We are experiencing a temporary service disruption. Please check back shortly for the latest crypto news.',
       pubDate: new Date().toISOString(),
-      source: 'Free Crypto News',
+      source: 'Crypto Vision News',
       sourceKey: 'system',
       category: 'general',
       timeAgo: 'just now',

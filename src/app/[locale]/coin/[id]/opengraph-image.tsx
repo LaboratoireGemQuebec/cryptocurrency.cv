@@ -11,7 +11,7 @@ import { ImageResponse } from 'next/og';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 export const runtime = 'edge';
-export const alt = 'Free Crypto News — Coin Price';
+export const alt = 'Crypto Vision News — Coin Price';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -108,18 +108,18 @@ export default async function Image({ params }: { params: { locale: string; id: 
               style={{
                 width: '48px',
                 height: '48px',
-                background: '#0f172a',
+                background: '#1e3a5f',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '2px solid rgba(247,147,26,0.4)',
+                border: '2px solid rgba(59,130,246,0.4)',
               }}
             >
-              <span style={{ fontSize: '28px', fontWeight: 900, fontFamily: "Georgia,'Times New Roman',serif", color: '#F7931A' }}>N</span>
+              <span style={{ fontSize: '32px', fontWeight: 900, fontFamily: "Georgia,'Times New Roman',serif", color: '#ffffff' }}>V</span>
             </div>
-            <span style={{ color: '#f1f5f9', fontSize: '24px', fontWeight: 700 }}>
-              Free Crypto News
+            <span style={{ color: '#f1f5f9', fontSize: '24px', fontWeight: 700, fontFamily: "Georgia,'Times New Roman',serif" }}>
+              crypto<span style={{ fontSize: '28px' }}>V</span>ision News
             </span>
           </div>
 

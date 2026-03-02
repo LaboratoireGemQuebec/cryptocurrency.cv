@@ -274,7 +274,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       feed: {
-        name: 'Free Crypto News',
+        name: 'Crypto Vision News',
         description: 'Real-time crypto news from 300+ sources',
         pubkey,
         relays: DEFAULT_RELAYS,

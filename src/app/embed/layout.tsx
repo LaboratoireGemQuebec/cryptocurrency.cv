@@ -8,8 +8,8 @@
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Crypto News Widget",
-  description: "Embeddable cryptocurrency widget by Free Crypto News",
+  title: "Crypto Vision News Widget",
+  description: "Embeddable cryptocurrency widget by Crypto Vision News",
   robots: { index: false, follow: false },
 };
 
