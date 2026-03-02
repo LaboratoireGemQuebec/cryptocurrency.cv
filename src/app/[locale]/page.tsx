@@ -14,6 +14,7 @@ import BreakingNewsBanner from "@/components/BreakingNewsBanner";
 import MarketsSnapshot from "@/components/MarketsSnapshot";
 import TopMovers from "@/components/TopMovers";
 import TrendingCoins from "@/components/TrendingCoins";
+import MarketMovers from "@/components/MarketMovers";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import ExploreMore from "@/components/ExploreMore";
 import NewsCard, {
@@ -36,6 +37,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { TrendingTopicsWidget } from "@/components/TrendingTopics";
 import { SentimentBanner } from "@/components/SentimentIndicator";
+import { LiveActivityFeed } from "@/components/LiveActivityFeed";
 import { SmartFeed, FeedStatsWidget } from "@/components/SmartFeed";
 import {
   getHomepageNews,
@@ -57,7 +59,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Free Crypto News — Breaking Crypto News, Analysis & Market Intelligence",
+    title: "Crypto Vision News — Breaking Crypto News, Analysis & Market Intelligence",
     description:
       "Breaking cryptocurrency news and in-depth analysis from 300+ sources. Coverage of Bitcoin, Ethereum, DeFi, regulation, and market movements — updated every minute.",
     path: "",
@@ -144,16 +146,8 @@ export default async function HomePage({ params }: Props) {
 
       <main id="main-content" className="min-h-screen">
         {/* ── Hero section ── */}
-        <section className="relative border-b border-[var(--color-border)] overflow-hidden">
-          {/* Subtle premium background pattern */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 opacity-[0.015]" style={{
-              backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-text-primary) 1px, transparent 0)",
-              backgroundSize: "32px 32px"
-            }} />
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--color-accent)] opacity-[0.03] blur-[120px] -translate-y-1/2 translate-x-1/3" />
-          </div>
-          <div className="container-main py-8 lg:py-10 relative z-10">
+        <section className="border-b border-[var(--color-border)]">
+          <div className="container-main py-8 lg:py-10">
             {featured ? (
               <FeaturedCard article={featured} />
             ) : (
@@ -301,6 +295,11 @@ export default async function HomePage({ params }: Props) {
               {/* Feed Stats */}
               <FeedStatsWidget />
 
+              {/* Live On-Chain Activity */}
+              <Suspense fallback={<Skeleton className="h-64 w-full rounded-lg" />}>
+                <LiveActivityFeed maxItems={5} compact />
+              </Suspense>
+
               {/* About — editorial-focused */}
               <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">
                 <h3 className="text-base font-bold font-serif mb-3">
@@ -331,6 +330,34 @@ export default async function HomePage({ params }: Props) {
                 <TrendingCoins />
               </Suspense>
 
+              {/* Market Movers */}
+              <Suspense fallback={<Skeleton className="h-48 w-full rounded-lg" />}>
+                <MarketMovers />
+              </Suspense>
+
+              {/* Quick Links */}
+              <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">
+                <h3 className="text-base font-bold font-serif mb-3">
+                  Explore
+                </h3>
+                <div className="space-y-1.5">
+                  {[
+                    { label: "Market Intelligence", href: "/intelligence" },
+                    { label: "Token Unlocks", href: "/unlocks" },
+                    { label: "DeFi Dashboard", href: "/defi" },
+                    { label: "Fear & Greed Index", href: "/fear-greed" },
+                    { label: "Market Heatmap", href: "/heatmap" },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-1"
+                    >
+                      {item.label} →
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </aside>
           </div>
         </section>

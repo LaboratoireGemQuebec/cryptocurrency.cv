@@ -178,16 +178,7 @@ export default function Header() {
       )}>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0 group">
-          <span className={cn(
-            "font-bold tracking-tight transition-all duration-200",
-            scrolled ? "text-lg" : "text-xl",
-          )}>
-            <span className="text-[var(--color-accent)] group-hover:opacity-80 transition-opacity">C</span>
-            <span>V</span>
-          </span>
-          <span className="hidden sm:block text-[11px] font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-0.5 uppercase tracking-widest">
-            Crypto Vision
-          </span>
+          <Logo size={scrolled ? "sm" : "md"} />
         </Link>
 
         {/* Desktop Nav */}
@@ -382,15 +373,17 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center px-3 py-2.5 text-sm font-medium rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors min-h-[44px]"
+                    className="flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors min-h-[44px]"
                   >
                     {item.label}
                   </Link>
                 )}
 
-                {/* Accordion children */}
-                {"children" in item && mobileAccordion === item.label && (
-                  <div className="pl-3 space-y-0.5 animate-slide-up">
+                {"children" in item && (
+                  <div className={cn(
+                    "ml-4 space-y-0.5 border-l-2 border-[var(--color-border)] pl-3 overflow-hidden transition-all duration-200",
+                    mobileAccordion === item.label ? "max-h-96 mt-0.5 opacity-100" : "max-h-0 opacity-0",
+                  )}>
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
