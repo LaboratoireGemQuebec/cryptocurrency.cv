@@ -562,6 +562,11 @@ const RSS_SOURCES = {
     category: 'mainstream',
     disabled: true, // 404 Not Found — 2026-03-01
   },
+  entrepreneur_crypto: {
+    name: 'Entrepreneur',
+    url: 'https://www.entrepreneur.com/topic/cryptocurrency/feed',
+    category: 'mainstream',
+  },
   cnbc_crypto: {
     name: 'CNBC Crypto',
     url: 'https://www.cnbc.com/id/100727362/device/rss/rss.html',
@@ -2692,36 +2697,12 @@ type SourceKey = keyof typeof RSS_SOURCES;
  * focused, credible, and high-signal.
  */
 const HOMEPAGE_SOURCE_KEYS = new Set([
-  // ═══════════════════════════════════════════════════════════════
-  // Tier 1 — Major crypto news outlets
-  // ═══════════════════════════════════════════════════════════════
-  'coindesk', 'theblock', 'decrypt', 'cointelegraph',
-  'bitcoinmagazine', 'blockworks', 'defiant',
-
-  // ═══════════════════════════════════════════════════════════════
-  // Tier 1 — Mainstream / institutional media
-  // ═══════════════════════════════════════════════════════════════
-  'bloomberg_crypto', 'reuters_crypto', 'wsj_crypto', 'ft_crypto',
-  'cnbc_crypto', 'forbes_crypto', 'yahoo_crypto',
-  'techcrunch_crypto', 'wired_crypto',
-  'guardian_tech', 'bbc_business', 'cnn_business',
-  'barrons', 'business_insider_markets',
-  'fortune_crypto', 'axios_crypto',
-  // Geopolitical / Central Banks (Tier 1)
-  'bis_speeches', 'imf_blog', 'ecb_press', 'treasury_press',
-  'boe_speeches', 'atlantic_council_crypto',
-
-  // ═══════════════════════════════════════════════════════════════
-  // Tier 2 — Established crypto news sources
-  // ═══════════════════════════════════════════════════════════════
-  'bitcoinist', 'cryptoslate', 'newsbtc', 'cryptonews', 'cryptopotato',
-  'dl_news', 'unchained_crypto',
-  // Institutional (Tier 2)
-  'fidelity_digital', 'securitize_blog', 'blackrock_digital',
-  'franklin_templeton_digital', 'coinbase_institutional',
-  'ripple_blog',
-  // Investigative journalism (Tier 2)
-  'coffeezilla_pod', 'molly_white',
+  // Only premium T1/T2 sources on the homepage
+  'coindesk',
+  'cointelegraph',
+  'theblock',
+  'forbes_crypto',
+  'entrepreneur_crypto',
 ]);
 
 export interface NewsArticle {
