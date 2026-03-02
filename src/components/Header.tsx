@@ -63,6 +63,7 @@ const NAV_ITEMS = [
     href: "/developers",
     children: [
       { label: "API Docs", href: "/developers" },
+      { label: "Widget Builder", href: "/widgets" },
       { label: "Calculator", href: "/calculator" },
       { label: "Compare", href: "/compare" },
       { label: "Gas Tracker", href: "/gas" },

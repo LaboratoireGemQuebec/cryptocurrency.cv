@@ -10,7 +10,6 @@
  *     data-count="10"
  *     data-coin="bitcoin"
  *     data-title="true"
- *     data-branding="true"
  *     data-width="100%"
  *   ></script>
  *
@@ -64,7 +63,6 @@
 
     var coin = (script.getAttribute("data-coin") || "bitcoin").toLowerCase();
     var title = script.getAttribute("data-title");
-    var branding = script.getAttribute("data-branding");
     var width = script.getAttribute("data-width") || "100%";
     var symbol = script.getAttribute("data-symbol") || "BINANCE:BTCUSDT";
     var interval = script.getAttribute("data-interval") || "D";
@@ -75,7 +73,6 @@
       count: count,
       coin: coin,
       showTitle: title !== "false",
-      showBranding: branding !== "false",
       width: width,
       symbol: symbol,
       interval: interval,
@@ -98,9 +95,6 @@
     if (!config.showTitle) {
       params.push("title=false");
     }
-    if (!config.showBranding) {
-      params.push("branding=false");
-    }
     if (config.type === "chart") {
       params.push("symbol=" + encodeURIComponent(config.symbol));
       params.push("interval=" + encodeURIComponent(config.interval));
@@ -117,7 +111,7 @@
       var base = 40;
       var itemHeight = 76;
       var titleHeight = config.showTitle ? 40 : 0;
-      var brandingHeight = config.showBranding ? 32 : 0;
+      var brandingHeight = 32;
       return base + config.count * itemHeight + titleHeight + brandingHeight;
     }
     return DEFAULT_HEIGHTS[config.type] || 400;

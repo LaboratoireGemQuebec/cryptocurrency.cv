@@ -26,7 +26,6 @@ export default function FearGreedWidget() {
   const [value, setValue] = useState(50);
   const [label, setLabel] = useState("Neutral");
   const [theme, setTheme] = useState<"dark" | "light">("dark");
-  const [showBranding, setShowBranding] = useState(true);
   const [showTitle, setShowTitle] = useState(true);
   const [animatedValue, setAnimatedValue] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,6 @@ export default function FearGreedWidget() {
     const params = new URLSearchParams(window.location.search);
     const t = params.get("theme") || "dark";
     setTheme(t === "light" ? "light" : "dark");
-    setShowBranding(params.get("branding") !== "false");
     setShowTitle(params.get("title") !== "false");
   }, []);
 
@@ -178,18 +176,16 @@ export default function FearGreedWidget() {
         </>
       )}
 
-      {showBranding && (
-        <div style={{ marginTop: 16, paddingTop: 8, borderTop: `1px solid ${border}` }}>
-          <a
-            href={`${BASE_URL}/en/fear-greed`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
-          >
-            Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
-          </a>
-        </div>
-      )}
+      <div style={{ marginTop: 16, paddingTop: 8, borderTop: `1px solid ${border}` }}>
+        <a
+          href={`${BASE_URL}/en/fear-greed`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
+        >
+          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+        </a>
+      </div>
     </div>
   );
 }

@@ -14,7 +14,6 @@ interface WidgetConfig {
   count: number;
   coin: string;
   showTitle: boolean;
-  showBranding: boolean;
   showTimestamp: boolean;
   symbol: string;
   interval: string;
@@ -55,7 +54,6 @@ export default function WidgetBuilder() {
     count: 10,
     coin: "bitcoin",
     showTitle: true,
-    showBranding: true,
     showTimestamp: true,
     symbol: "BINANCE:BTCUSDT",
     interval: "D",
@@ -81,14 +79,13 @@ export default function WidgetBuilder() {
       params.set("interval", config.interval);
     }
     if (!config.showTitle) params.set("title", "false");
-    if (!config.showBranding) params.set("branding", "false");
     return `${BASE_URL}/embed/${config.type}?${params.toString()}`;
   }, [config]);
 
   const iframeHeight = useMemo(() => {
     switch (config.type) {
       case "ticker": return 48;
-      case "news": return 40 + config.count * 76 + (config.showTitle ? 40 : 0) + (config.showBranding ? 32 : 0);
+      case "news": return 40 + config.count * 76 + (config.showTitle ? 40 : 0) + 32;
       case "coin": return 320;
       case "market": return 380;
       case "fear-greed": return 280;
@@ -101,7 +98,7 @@ export default function WidgetBuilder() {
 
   const iframeCode = `<iframe src="${embedUrl}" width="${config.width === "fixed" ? config.fixedWidth : "100%"}" height="${iframeHeight}" style="border:none;border-radius:8px;overflow:hidden;" loading="lazy" title="Crypto Vision News Widget"></iframe>`;
 
-  const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${config.type === "chart" ? ` data-symbol="${config.symbol}" data-interval="${config.interval}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}${!config.showBranding ? ' data-branding="false"' : ""}></script>`;
+  const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${config.type === "chart" ? ` data-symbol="${config.symbol}" data-interval="${config.interval}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}></script>`;
 
   const copyToClipboard = useCallback(async (text: string, type: "iframe" | "script") => {
     try {
@@ -331,15 +328,6 @@ export default function WidgetBuilder() {
                     <span className="text-sm">Show title</span>
                   </label>
                 )}
-                <label className="flex items-center gap-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={config.showBranding}
-                    onChange={(e) => updateConfig("showBranding", e.target.checked)}
-                    className="w-4 h-4 rounded accent-blue-500"
-                  />
-                  <span className="text-sm">Show &quot;Powered by&quot; branding</span>
-                </label>
               </div>
             </div>
           </div>

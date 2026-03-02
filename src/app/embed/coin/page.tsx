@@ -52,7 +52,6 @@ export default function CoinWidget() {
   const [coin, setCoin] = useState<CoinData | null>(null);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [coinId, setCoinId] = useState("bitcoin");
-  const [showBranding, setShowBranding] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -60,7 +59,6 @@ export default function CoinWidget() {
     const t = params.get("theme") || "dark";
     setTheme(t === "light" ? "light" : "dark");
     setCoinId(params.get("coin") || "bitcoin");
-    setShowBranding(params.get("branding") !== "false");
   }, []);
 
   useEffect(() => {
@@ -173,18 +171,16 @@ export default function CoinWidget() {
         </div>
       </div>
 
-      {showBranding && (
-        <div style={{ textAlign: "center", marginTop: 10 }}>
-          <a
-            href={`${BASE_URL}/en/coin/${coin.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
-          >
-            Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
-          </a>
-        </div>
-      )}
+      <div style={{ textAlign: "center", marginTop: 10 }}>
+        <a
+          href={`${BASE_URL}/en/coin/${coin.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
+        >
+          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+        </a>
+      </div>
     </div>
   );
 }

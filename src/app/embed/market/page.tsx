@@ -30,7 +30,6 @@ export default function MarketWidget() {
   const [coins, setCoins] = useState<CoinData[]>([]);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [showTitle, setShowTitle] = useState(true);
-  const [showBranding, setShowBranding] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,7 +37,6 @@ export default function MarketWidget() {
     const t = params.get("theme") || "dark";
     setTheme(t === "light" ? "light" : "dark");
     setShowTitle(params.get("title") !== "false");
-    setShowBranding(params.get("branding") !== "false");
   }, []);
 
   useEffect(() => {
@@ -149,18 +147,16 @@ export default function MarketWidget() {
         </div>
       )}
 
-      {showBranding && (
-        <div style={{ textAlign: "center", marginTop: 12, paddingTop: 8, borderTop: `1px solid ${border}` }}>
-          <a
-            href={BASE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
-          >
-            Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
-          </a>
-        </div>
-      )}
+      <div style={{ textAlign: "center", marginTop: 12, paddingTop: 8, borderTop: `1px solid ${border}` }}>
+        <a
+          href={BASE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
+        >
+          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+        </a>
+      </div>
     </div>
   );
 }

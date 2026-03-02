@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 
 interface Session {
   userId: string;
@@ -10,18 +10,14 @@ interface Session {
 }
 
 const NAV_ITEMS = [
-  { href: "/dashboard", label: "Overview", icon: "📊" },
-  { href: "/dashboard/keys", label: "API Keys", icon: "🔑" },
-  { href: "/dashboard/usage", label: "Usage", icon: "📈" },
-  { href: "/dashboard/settings", label: "Settings", icon: "⚙️" },
+  { href: "/dashboard" as const, label: "Overview", icon: "📊" },
+  { href: "/dashboard/keys" as const, label: "API Keys", icon: "🔑" },
+  { href: "/dashboard/usage" as const, label: "Usage", icon: "📈" },
+  { href: "/dashboard/settings" as const, label: "Settings", icon: "⚙️" },
 ];
 
 export default function DashboardSidebar({ session }: { session: Session }) {
   const pathname = usePathname();
-
-  // Extract locale-relative path
-  const segments = pathname.split("/");
-  const localePath = "/" + segments.slice(2).join("/");
 
   return (
     <aside className="space-y-4">
@@ -52,13 +48,13 @@ export default function DashboardSidebar({ session }: { session: Session }) {
         <ul className="space-y-1">
           {NAV_ITEMS.map((item) => {
             const isActive =
-              localePath === item.href ||
-              (item.href !== "/dashboard" && localePath.startsWith(item.href));
+              pathname === item.href ||
+              (item.href !== "/dashboard" && pathname.startsWith(item.href));
 
             return (
               <li key={item.href}>
-                <a
-                  href={`/${segments[1]}${item.href}`}
+                <Link
+                  href={item.href}
                   className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                     isActive
                       ? "bg-blue-500/10 text-blue-500 font-semibold"
@@ -67,7 +63,7 @@ export default function DashboardSidebar({ session }: { session: Session }) {
                 >
                   <span>{item.icon}</span>
                   <span>{item.label}</span>
-                </a>
+                </Link>
               </li>
             );
           })}
@@ -81,29 +77,29 @@ export default function DashboardSidebar({ session }: { session: Session }) {
         </h3>
         <ul className="space-y-2">
           <li>
-            <a
-              href="/en/docs"
+            <Link
+              href="/docs"
               className="text-sm text-muted-foreground hover:text-blue-500 transition-colors"
               target="_blank"
             >
               API Documentation
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/en/widgets"
+            <Link
+              href="/widgets"
               className="text-sm text-muted-foreground hover:text-blue-500 transition-colors"
             >
               Widget Builder
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/en/pricing"
+            <Link
+              href="/pricing"
               className="text-sm text-muted-foreground hover:text-blue-500 transition-colors"
             >
               Pricing Plans
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

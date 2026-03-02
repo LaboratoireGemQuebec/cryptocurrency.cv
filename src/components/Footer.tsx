@@ -40,6 +40,7 @@ const FOOTER_SECTIONS = [
     title: "Tools",
     links: [
       { label: "API Documentation", href: "/developers" },
+      { label: "Widget Builder", href: "/widgets" },
       { label: "Sources", href: "/sources" },
       { label: "Calculator", href: "/calculator" },
       { label: "Compare", href: "/compare" },

@@ -10,7 +10,6 @@ export default function ChartWidget() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [interval, setInterval] = useState("D");
   const [height, setHeight] = useState("100%");
-  const [showBranding, setShowBranding] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -18,13 +17,11 @@ export default function ChartWidget() {
     const t = params.get("theme") || "dark";
     const i = params.get("interval") || "D";
     const h = params.get("height") || "100%";
-    const b = params.get("branding") !== "false";
 
     setSymbol(s.toUpperCase());
     setTheme(t === "light" ? "light" : "dark");
     setInterval(i);
     setHeight(h);
-    setShowBranding(b);
   }, []);
 
   useEffect(() => {
@@ -97,47 +94,45 @@ export default function ChartWidget() {
         }}
       />
 
-      {showBranding && (
-        <div
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 6,
+          padding: "6px 12px",
+          borderTop: `1px solid ${border}`,
+          fontSize: 10,
+          color: theme === "dark" ? "#a3a3a3" : "#737373",
+        }}
+      >
+        <span>Powered by</span>
+        <a
+          href={BASE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 6,
-            padding: "6px 12px",
-            borderTop: `1px solid ${border}`,
-            fontSize: 10,
-            color: theme === "dark" ? "#a3a3a3" : "#737373",
+            color: accent,
+            textDecoration: "none",
+            fontWeight: 600,
           }}
         >
-          <span>Powered by</span>
-          <a
-            href={BASE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: accent,
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Crypto Vision News
-          </a>
-          <span>×</span>
-          <a
-            href="https://www.tradingview.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: accent,
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            TradingView
-          </a>
-        </div>
-      )}
+          Crypto Vision News
+        </a>
+        <span>×</span>
+        <a
+          href="https://www.tradingview.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: accent,
+            textDecoration: "none",
+            fontWeight: 600,
+          }}
+        >
+          TradingView
+        </a>
+      </div>
     </div>
   );
 }
