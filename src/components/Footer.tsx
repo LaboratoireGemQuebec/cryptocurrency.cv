@@ -287,7 +287,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row">
             <p className="text-xs text-[var(--color-text-tertiary)] tracking-wide">
-              &copy; {new Date().getFullYear()} Free Crypto News. Open source under
+              &copy; {new Date().getFullYear()} Crypto Vision. Open source under
               MIT license.
             </p>
             <div className="flex items-center gap-3 text-xs text-[var(--color-text-tertiary)]">

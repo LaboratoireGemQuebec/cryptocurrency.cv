@@ -303,7 +303,7 @@ export default async function HomePage({ params }: Props) {
               {/* About — editorial-focused */}
               <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">
                 <h3 className="text-base font-bold font-serif mb-3">
-                  About Free Crypto News
+                  About Crypto Vision News
                 </h3>
                 <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
                   Real-time crypto news aggregated from {sourceCount}+ trusted sources.

@@ -2,81 +2,74 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
-  /** Show the full wordmark (true) or just the CV icon (false). */
+  /** Show the full wordmark (true) or just the V icon mark (false). */
   showText?: boolean;
   className?: string;
 }
 
 /**
- * CryptoVision brand logo — "cryptoVision" wordmark with oversized serif V.
+ * Crypto Vision brand logo.
  *
- * Icon mode: stylized V on accent-colored rounded square.
- * Text mode: "crypto" + oversized "V" + "ision" wordmark.
+ * Full mode: serif wordmark "cryptoVision" with oversized V.
+ * Icon mode (showText=false): the "V" mark on a dark-blue rounded square.
  *
  * Used in Header, Footer, and anywhere the brand mark is needed.
  */
 export default function Logo({ size = "md", showText = true, className }: LogoProps) {
   const cfg = {
-    sm: { icon: 24, wordH: 20, textSm: "text-[13px]", textLg: "text-[22px]" },
-    md: { icon: 28, wordH: 26, textSm: "text-[16px]", textLg: "text-[28px]" },
-    lg: { icon: 36, wordH: 34, textSm: "text-[20px]", textLg: "text-[36px]" },
+    sm: { icon: 24, crypto: "text-sm", v: "text-xl", ision: "text-sm" },
+    md: { icon: 28, crypto: "text-base", v: "text-2xl", ision: "text-base" },
+    lg: { icon: 36, crypto: "text-xl", v: "text-3xl", ision: "text-xl" },
   }[size];
 
   if (!showText) {
-    /* Icon‑only — stylised "V" on accent rounded square */
+    /* Icon‑only — the stylized "V" on dark-blue rounded square */
     return (
       <span className={cn("inline-flex items-center", className)}>
         <svg
           width={cfg.icon}
           height={cfg.icon}
-          viewBox="0 0 32 32"
+          viewBox="0 0 512 512"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          aria-label="CryptoVision"
+          aria-label="Crypto Vision"
           className="shrink-0"
         >
-          <rect width="32" height="32" rx="7" fill="var(--color-accent)" />
-          {/* Serif V with top terminals */}
+          <rect width="512" height="512" rx="96" fill="var(--color-accent, #1e3a5f)" />
           <path
-            d="M9 8h4.5l.5 1-3.5 14.5h-1L9 8Zm14 0h-4.5l-.5 1 3.5 14.5h1L23 8Z"
-            fill="white"
+            d="M144 128h72l8 16-56 232h-16L144 128Zm224 0h-72l-8 16 56 232h16L368 128Z"
+            fill="#ffffff"
           />
-          <rect x="7" y="8" width="8" height="1.2" rx=".6" fill="white" />
-          <rect x="17" y="8" width="8" height="1.2" rx=".6" fill="white" />
+          <rect x="112" y="128" width="128" height="14" rx="7" fill="#ffffff" />
+          <rect x="272" y="128" width="128" height="14" rx="7" fill="#ffffff" />
         </svg>
       </span>
     );
   }
 
-  /* Full wordmark — "crypto" + oversized V + "ision" */
+  /* Full wordmark — "cryptoVision" with oversized V */
   return (
-    <span className={cn("inline-flex items-baseline", className)}>
+    <span
+      className={cn("inline-flex items-baseline", className)}
+      aria-label="Crypto Vision News"
+    >
       <span
-        className={cn(
-          "tracking-tight",
-          cfg.textSm,
-        )}
-        style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+        className={cn(cfg.crypto, "font-normal tracking-wide")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
       >
-        <span className="text-[var(--color-text-primary)]">crypto</span>
+        crypto
       </span>
       <span
-        className={cn(
-          "font-bold leading-none -mx-[1px]",
-          cfg.textLg,
-        )}
-        style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+        className={cn(cfg.v, "font-bold")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
       >
-        <span className="text-[var(--color-text-primary)]">V</span>
+        V
       </span>
       <span
-        className={cn(
-          "tracking-tight",
-          cfg.textSm,
-        )}
-        style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+        className={cn(cfg.ision, "font-normal tracking-wide")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
       >
-        <span className="text-[var(--color-text-primary)]">ision</span>
+        ision
       </span>
     </span>
   );
