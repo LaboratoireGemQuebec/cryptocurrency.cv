@@ -208,6 +208,19 @@ const nextConfig = {
     ];
   },
   // ================================================================
+  // Redirects — /docs → external docs site
+  // ================================================================
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: 'https://docs.cryptocurrency.cv',
+        permanent: true,
+      },
+    ];
+  },
+
+  // ================================================================
   // Rewrites — /llms-full.txt → dynamic API route (static file fallback)
   // ================================================================
   async rewrites() {
