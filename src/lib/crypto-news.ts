@@ -2697,36 +2697,57 @@ const HOMEPAGE_SOURCE_KEYS = new Set([
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Major crypto news outlets
   // ═══════════════════════════════════════════════════════════════
-  'coindesk', 'theblock', 'decrypt', 'cointelegraph',
-  'bitcoinmagazine', 'blockworks', 'defiant',
+  "coindesk",
+  "theblock",
+  "decrypt",
+  "cointelegraph",
+  "bitcoinmagazine",
+  "blockworks",
+  "defiant",
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Mainstream / institutional media
   // ═══════════════════════════════════════════════════════════════
-  'bloomberg_crypto', 'reuters_crypto', 'wsj_crypto', 'ft_crypto',
-  'cnbc_crypto', 'forbes_crypto', 'yahoo_crypto',
-  'techcrunch_crypto', 'wired_crypto',
-  'guardian_tech', 'bbc_business', 'cnn_business',
-  'barrons', 'business_insider_markets',
-  'fortune_crypto', 'axios_crypto',
-  'entrepreneur_crypto',
+  "bloomberg_crypto",
+  "reuters_crypto",
+  "wsj_crypto",
+  "ft_crypto",
+  "cnbc_crypto",
+  "forbes_crypto",
+  "yahoo_crypto",
+  "techcrunch_crypto",
+  "wired_crypto",
+  "guardian_tech",
+  "bbc_business",
+  "cnn_business",
+  "barrons",
+  "business_insider_markets",
+  "fortune_crypto",
+  "axios_crypto",
+  "entrepreneur_crypto",
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Institutional / research
   // ═══════════════════════════════════════════════════════════════
-  'fidelity_digital', 'blackrock_digital', 'coinbase_institutional',
-  'franklin_templeton_digital',
+  "fidelity_digital",
+  "blackrock_digital",
+  "coinbase_institutional",
+  "franklin_templeton_digital",
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Geopolitical / Central Banks
   // ═══════════════════════════════════════════════════════════════
-  'bis_speeches', 'imf_blog', 'ecb_press', 'treasury_press',
-  'boe_speeches', 'atlantic_council_crypto',
+  "bis_speeches",
+  "imf_blog",
+  "ecb_press",
+  "treasury_press",
+  "boe_speeches",
+  "atlantic_council_crypto",
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 2 — Established crypto (quality editorial only)
   // ═══════════════════════════════════════════════════════════════
-  'dl_news', 'unchained_crypto',
+  "unchained_crypto",
 ]);
 
 export interface NewsArticle {
