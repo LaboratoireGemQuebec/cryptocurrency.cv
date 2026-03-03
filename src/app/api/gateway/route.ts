@@ -20,7 +20,6 @@ import {
 
 export const runtime = "edge";
 
-
 const MAX_LIMIT = 100;
 const MAX_KEYWORD_LENGTH = 500;
 

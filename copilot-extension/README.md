@@ -64,28 +64,28 @@ Or type a free-form question:
 
 ## Commands
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `/breaking` | Latest breaking crypto news with priority | `@crypto /breaking` |
-| `/news` | Latest crypto news headlines | `@crypto /news` |
-| `/price <coin>` | Current price, 24h change, market cap & volume | `@crypto /price bitcoin` |
-| `/market` | Market overview with prices, F&G & sentiment | `@crypto /market` |
-| `/sentiment <coin>` | AI sentiment analysis for a coin | `@crypto /sentiment BTC` |
-| `/search <query>` | Search news articles | `@crypto /search SEC` |
-| `/gas` | Ethereum gas prices (slow/standard/fast) | `@crypto /gas` |
-| `/fear-greed` | Fear & Greed Index with trend & breakdown | `@crypto /fear-greed` |
-| `/explain <topic>` | Why is a topic trending? AI explainer | `@crypto /explain staking` |
-| `/research <topic>` | Deep AI research report | `@crypto /research Solana` |
+| Command             | Description                                    | Example                    |
+| ------------------- | ---------------------------------------------- | -------------------------- |
+| `/breaking`         | Latest breaking crypto news with priority      | `@crypto /breaking`        |
+| `/news`             | Latest crypto news headlines                   | `@crypto /news`            |
+| `/price <coin>`     | Current price, 24h change, market cap & volume | `@crypto /price bitcoin`   |
+| `/market`           | Market overview with prices, F&G & sentiment   | `@crypto /market`          |
+| `/sentiment <coin>` | AI sentiment analysis for a coin               | `@crypto /sentiment BTC`   |
+| `/search <query>`   | Search news articles                           | `@crypto /search SEC`      |
+| `/gas`              | Ethereum gas prices (slow/standard/fast)       | `@crypto /gas`             |
+| `/fear-greed`       | Fear & Greed Index with trend & breakdown      | `@crypto /fear-greed`      |
+| `/explain <topic>`  | Why is a topic trending? AI explainer          | `@crypto /explain staking` |
+| `/research <topic>` | Deep AI research report                        | `@crypto /research Solana` |
 
 ## Configuration
 
 Access via **Settings → Extensions → Crypto News**:
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `crypto.apiUrl` | `https://cryptocurrency.cv` | API base URL |
-| `crypto.defaultLimit` | `10` | Items per request |
-| `crypto.showSentiment` | `true` | Show sentiment indicators |
+| Setting                | Default                     | Description               |
+| ---------------------- | --------------------------- | ------------------------- |
+| `crypto.apiUrl`        | `https://cryptocurrency.cv` | API base URL              |
+| `crypto.defaultLimit`  | `10`                        | Items per request         |
+| `crypto.showSentiment` | `true`                      | Show sentiment indicators |
 
 ## API
 
@@ -116,4 +116,3 @@ See [LICENSE](../LICENSE) file.
 - [cryptocurrency.cv](https://cryptocurrency.cv)
 - [API Documentation](https://cryptocurrency.cv/developers)
 - [GitHub Repository](https://github.com/nirholas/free-crypto-news)
-

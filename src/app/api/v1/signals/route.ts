@@ -18,18 +18,18 @@
  * @price $0.005 per request
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { hybridAuthMiddleware } from '@/lib/x402';
-import { ApiError } from '@/lib/api-error';
-import { createRequestLogger } from '@/lib/logger';
-import { getLatestNews } from '@/lib/crypto-news';
-import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { type NextRequest, NextResponse } from "next/server";
+import { hybridAuthMiddleware } from "@/lib/x402";
+import { ApiError } from "@/lib/api-error";
+import { createRequestLogger } from "@/lib/logger";
+import { getLatestNews } from "@/lib/crypto-news";
+import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 export const revalidate = 300;
 
-const ENDPOINT = '/api/v1/signals';
+const ENDPOINT = "/api/v1/signals";
 
 const SYSTEM_PROMPT = `You are a crypto news-based trading signal generator. Analyze news for potential trading opportunities.
 
@@ -58,27 +58,33 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30', 10), 50);
-  const minConfidence = Math.max(0, Math.min(100, parseInt(searchParams.get('min_confidence') || '50', 10)));
+  const limit = Math.min(parseInt(searchParams.get("limit") || "30", 10), 50);
+  const minConfidence = Math.max(
+    0,
+    Math.min(100, parseInt(searchParams.get("min_confidence") || "50", 10)),
+  );
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
-    logger.info('Generating trading signals', { limit, minConfidence });
+    logger.info("Generating trading signals", { limit, minConfidence });
 
     const data = await getLatestNews(limit);
     const context = data.articles
-      .map((a, i) => `[${i + 1}] "${a.title}" (${a.source})\n${a.description || ''}`)
-      .join('\n\n');
+      .map(
+        (a, i) =>
+          `[${i + 1}] "${a.title}" (${a.source})\n${a.description || ""}`,
+      )
+      .join("\n\n");
 
-    const result = await promptAIJson(
+    const result = (await promptAIJson(
       SYSTEM_PROMPT,
-      `Analyze these ${data.articles.length} articles and generate trading signals:\n\n${context}`
-    ) as { signals?: Array<{ confidence?: number }>; disclaimer?: string };
+      `Analyze these ${data.articles.length} articles and generate trading signals:\n\n${context}`,
+    )) as { signals?: Array<{ confidence?: number }>; disclaimer?: string };
 
     // Filter by min confidence
     const signals = (result.signals || []).filter(
-      (s: { confidence?: number }) => (s.confidence || 0) >= minConfidence
+      (s: { confidence?: number }) => (s.confidence || 0) >= minConfidence,
     );
 
     return NextResponse.json(
@@ -87,19 +93,25 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         total: signals.length,
         minConfidence,
         articlesAnalyzed: data.articles.length,
-        disclaimer: result.disclaimer || 'Not financial advice. For educational purposes only.',
-        version: 'v1',
+        disclaimer:
+          result.disclaimer ||
+          "Not financial advice. For educational purposes only.",
+        version: "v1",
         duration: Date.now() - startTime,
       },
-      { headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' } }
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+        },
+      },
     );
   } catch (error) {
     if (error instanceof AIAuthError) return aiAuthErrorResponse(error.message);
-    logger.error('Signals error', { error });
+    logger.error("Signals error", { error });
     const apiError = ApiError.from(error);
     return NextResponse.json(
-      { error: apiError.message, code: apiError.code, version: 'v1' },
-      { status: apiError.statusCode }
+      { error: apiError.message, code: apiError.code, version: "v1" },
+      { status: apiError.statusCode },
     );
   }
 }

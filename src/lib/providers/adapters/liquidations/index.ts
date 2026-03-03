@@ -21,12 +21,12 @@
  * @module providers/adapters/liquidations
  */
 
-import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
-import { ProviderChain } from '../../provider-chain';
-import type { LiquidationData } from './types';
-import { coinglassLiquidationsAdapter } from './coinglass-liquidations.adapter';
+import type { ProviderChainConfig, ResolutionStrategy } from "../../types";
+import { ProviderChain } from "../../provider-chain";
+import type { LiquidationData } from "./types";
+import { coinglassLiquidationsAdapter } from "./coinglass-liquidations.adapter";
 
-export type { LiquidationData } from './types';
+export type { LiquidationData } from "./types";
 
 export interface LiquidationsChainOptions {
   strategy?: ResolutionStrategy;
@@ -38,13 +38,17 @@ export function createLiquidationsChain(
   options: LiquidationsChainOptions = {},
 ): ProviderChain<LiquidationData[]> {
   const {
-    strategy = 'fallback',
+    strategy = "fallback",
     cacheTtlSeconds = 30,
     staleWhileError = true,
   } = options;
 
-  const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
-  const chain = new ProviderChain<LiquidationData[]>('liquidations', config);
+  const config: Partial<ProviderChainConfig> = {
+    strategy,
+    cacheTtlSeconds,
+    staleWhileError,
+  };
+  const chain = new ProviderChain<LiquidationData[]>("liquidations", config);
   chain.addProvider(coinglassLiquidationsAdapter);
 
   return chain;
