@@ -30,10 +30,25 @@ export const runtime = 'nodejs';
 
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN ?? process.env.CRON_SECRET;
 
+/** Constant-time string comparison to prevent timing attacks. */
+function secureCompare(a: string, b: string): boolean {
+  const encoder = new TextEncoder();
+  const bufA = encoder.encode(a);
+  const bufB = encoder.encode(b);
+  const maxLen = Math.max(bufA.byteLength, bufB.byteLength);
+  if (maxLen === 0) return false;
+  let result = bufA.byteLength ^ bufB.byteLength;
+  for (let i = 0; i < maxLen; i++) {
+    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
+  }
+  return result === 0;
+}
+
 function isAuthorized(request: NextRequest): boolean {
   if (!ADMIN_TOKEN) return false;
   const auth = request.headers.get('authorization');
-  return auth === `Bearer ${ADMIN_TOKEN}`;
+  if (!auth) return false;
+  return secureCompare(auth, `Bearer ${ADMIN_TOKEN}`);
 }
 
 /**

@@ -25,12 +25,12 @@
  * @module providers/adapters/token-unlocks
  */
 
-import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
-import { ProviderChain } from '../../provider-chain';
-import type { TokenUnlockEvent } from './types';
-import { defillamaUnlocksAdapter } from './defillama-unlocks.adapter';
+import type { ProviderChainConfig, ResolutionStrategy } from "../../types";
+import { ProviderChain } from "../../provider-chain";
+import type { TokenUnlockEvent } from "./types";
+import { defillamaUnlocksAdapter } from "./defillama-unlocks.adapter";
 
-export type { TokenUnlockEvent } from './types';
+export type { TokenUnlockEvent } from "./types";
 
 export interface TokenUnlocksChainOptions {
   strategy?: ResolutionStrategy;
@@ -42,13 +42,17 @@ export function createTokenUnlocksChain(
   options: TokenUnlocksChainOptions = {},
 ): ProviderChain<TokenUnlockEvent[]> {
   const {
-    strategy = 'fallback',
+    strategy = "fallback",
     cacheTtlSeconds = 300,
     staleWhileError = true,
   } = options;
 
-  const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
-  const chain = new ProviderChain<TokenUnlockEvent[]>('token-unlocks', config);
+  const config: Partial<ProviderChainConfig> = {
+    strategy,
+    cacheTtlSeconds,
+    staleWhileError,
+  };
+  const chain = new ProviderChain<TokenUnlockEvent[]>("token-unlocks", config);
   chain.addProvider(defillamaUnlocksAdapter);
 
   return chain;

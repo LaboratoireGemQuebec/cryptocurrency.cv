@@ -27,15 +27,29 @@ import { getMarketMonitor, type IntelligenceReport } from '@/lib/ai-market-monit
 export const runtime = 'edge';
 export const maxDuration = 60;
 
+/** Constant-time string comparison to prevent timing attacks. */
+function secureCompare(a: string, b: string): boolean {
+  const encoder = new TextEncoder();
+  const bufA = encoder.encode(a);
+  const bufB = encoder.encode(b);
+  const maxLen = Math.max(bufA.byteLength, bufB.byteLength);
+  if (maxLen === 0) return false;
+  let result = bufA.byteLength ^ bufB.byteLength;
+  for (let i = 0; i < maxLen; i++) {
+    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
+  }
+  return result === 0;
+}
+
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const action = params.get('action') || 'status';
 
   // Read-only 'status' action is public; all mutations require admin auth
   if (action !== 'status') {
-    const token = request.headers.get('authorization')?.replace('Bearer ', '');
+    const token = request.headers.get('authorization')?.replace('Bearer ', '') ?? '';
     const expected = process.env.ADMIN_TOKEN || process.env.CRON_SECRET;
-    if (!expected || token !== expected) {
+    if (!expected || !secureCompare(token, expected)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
   }

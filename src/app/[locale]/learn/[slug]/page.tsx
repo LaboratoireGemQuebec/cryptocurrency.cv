@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/i18n/navigation";
 import { generateSEOMetadata } from "@/lib/seo";
+import { sanitizeMarkdown } from "@/lib/sanitize";
 import {
   learnArticles,
   getArticleBySlug,
@@ -95,7 +96,7 @@ export default async function LearnArticlePage({ params }: Props) {
             {/* Article body rendered as prose */}
             <div
               className="prose dark:prose-invert max-w-none prose-headings:font-serif prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: markdownToHtml(article.content) }}
+              dangerouslySetInnerHTML={{ __html: sanitizeMarkdown(markdownToHtml(article.content)) }}
             />
 
             {/* Back link */}

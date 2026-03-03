@@ -23,7 +23,15 @@ export interface DePINProject {
   /** Project slug/ID */
   slug: string;
   /** DePIN sub-category */
-  category: 'wireless' | 'compute' | 'storage' | 'sensor' | 'energy' | 'mapping' | 'cdn' | 'other';
+  category:
+    | "wireless"
+    | "compute"
+    | "storage"
+    | "sensor"
+    | "energy"
+    | "mapping"
+    | "cdn"
+    | "other";
   /** Market cap (USD) */
   marketCap: number;
   /** Fully diluted valuation (USD) */

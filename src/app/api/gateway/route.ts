@@ -18,33 +18,51 @@ interface GatewayRequest {
   arguments?: string;
 }
 
+const MAX_LIMIT = 100;
+const MAX_KEYWORD_LENGTH = 500;
+
+function clampLimit(val: unknown, fallback: number): number {
+  const n = typeof val === 'number' ? val : parseInt(String(val), 10);
+  return Number.isFinite(n) ? Math.min(Math.max(1, n), MAX_LIMIT) : fallback;
+}
+
+function sanitizeString(val: unknown, maxLen: number): string {
+  return typeof val === 'string' ? val.slice(0, maxLen) : '';
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const { apiName, arguments: argsString } = await request.json() as GatewayRequest;
-    const args = argsString ? JSON.parse(argsString) : {};
+    const body = await request.json();
+    const apiName = typeof body?.apiName === 'string' ? body.apiName : '';
+    let args: Record<string, unknown> = {};
+    if (typeof body?.arguments === 'string') {
+      try { args = JSON.parse(body.arguments); } catch { args = {}; }
+    } else if (body?.arguments && typeof body.arguments === 'object') {
+      args = body.arguments;
+    }
 
     let result;
     switch (apiName) {
       case 'getLatestNews':
-        result = await getLatestNews(args.limit || 10, args.source);
+        result = await getLatestNews(clampLimit(args.limit, 10), sanitizeString(args.source, 100) || undefined);
         break;
       case 'searchNews':
-        result = await searchNews(args.keywords || '', args.limit || 10);
+        result = await searchNews(sanitizeString(args.keywords, MAX_KEYWORD_LENGTH), clampLimit(args.limit, 10));
         break;
       case 'getDefiNews':
-        result = await getDefiNews(args.limit || 10);
+        result = await getDefiNews(clampLimit(args.limit, 10));
         break;
       case 'getBitcoinNews':
-        result = await getBitcoinNews(args.limit || 10);
+        result = await getBitcoinNews(clampLimit(args.limit, 10));
         break;
       case 'getBreakingNews':
-        result = await getBreakingNews(args.limit || 5);
+        result = await getBreakingNews(clampLimit(args.limit, 5));
         break;
       case 'getSources':
         result = await getSources();
         break;
       default:
-        return NextResponse.json({ error: `Unknown API: ${apiName}` }, { status: 400 });
+        return NextResponse.json({ error: 'Unknown API name' }, { status: 400 });
     }
 
     return NextResponse.json(result, {
