@@ -16,12 +16,34 @@
  * continue to use the existing GitHub-raw / JSONL approach.
  */
 
-import { desc, eq, and, gte, lte, ilike, sql, or, inArray, type SQL } from 'drizzle-orm';
-import { getDb, articles, pricesHistory, marketSnapshots, predictions, tagScores } from './index';
-import type { EnrichedArticle, ArchiveV2Stats, ArchiveV2QueryOptions } from '../archive-v2';
+import {
+  desc,
+  eq,
+  and,
+  gte,
+  lte,
+  ilike,
+  sql,
+  or,
+  inArray,
+  type SQL,
+} from "drizzle-orm";
+import {
+  getDb,
+  articles,
+  pricesHistory,
+  marketSnapshots,
+  predictions,
+  tagScores,
+} from "./index";
+import type {
+  EnrichedArticle,
+  ArchiveV2Stats,
+  ArchiveV2QueryOptions,
+} from "../archive-v2";
 
 // Re-export for convenience
-export { isDbAvailable } from './client';
+export { isDbAvailable } from "./client";
 
 // ────────────────────────────────────────────────────────────────────────────
 // Full-text search
@@ -48,7 +70,12 @@ export interface FtsResult {
  */
 export async function pgFullTextSearch(
   query: string,
-  options: { limit?: number; offset?: number; ticker?: string; source?: string } = {}
+  options: {
+    limit?: number;
+    offset?: number;
+    ticker?: string;
+    source?: string;
+  } = {},
 ): Promise<{ results: FtsResult[]; total: number }> {
   const db = getDb();
   if (!db) return { results: [], total: 0 };
@@ -65,7 +92,7 @@ export async function pgFullTextSearch(
   }
   if (source) {
     // Escape LIKE wildcards in user input to prevent wildcard injection
-    const escapedSource = source.replace(/%/g, '\\%').replace(/_/g, '\\_');
+    const escapedSource = source.replace(/%/g, "\\%").replace(/_/g, "\\_");
     conditions.push(ilike(articles.sourceKey, `%${escapedSource}%`));
   }
 
@@ -118,7 +145,12 @@ export async function pgQueryArchive(options: ArchiveV2QueryOptions): Promise<{
   pagination: { limit: number; offset: number; hasMore: boolean };
 }> {
   const db = getDb();
-  if (!db) return { articles: [], total: 0, pagination: { limit: 50, offset: 0, hasMore: false } };
+  if (!db)
+    return {
+      articles: [],
+      total: 0,
+      pagination: { limit: 50, offset: 0, hasMore: false },
+    };
 
   const {
     startDate,
@@ -138,14 +170,16 @@ export async function pgQueryArchive(options: ArchiveV2QueryOptions): Promise<{
     conditions.push(gte(articles.firstSeen, new Date(startDate)));
   }
   if (endDate) {
-    conditions.push(lte(articles.firstSeen, new Date(endDate + 'T23:59:59.999Z')));
+    conditions.push(
+      lte(articles.firstSeen, new Date(endDate + "T23:59:59.999Z")),
+    );
   }
   if (source) {
     conditions.push(
       or(
         ilike(articles.source, `%${source}%`),
-        ilike(articles.sourceKey, `%${source}%`)
-      )!
+        ilike(articles.sourceKey, `%${source}%`),
+      )!,
     );
   }
   if (ticker) {
@@ -154,20 +188,26 @@ export async function pgQueryArchive(options: ArchiveV2QueryOptions): Promise<{
   if (search) {
     // Use FTS if the search_vector index is available
     conditions.push(
-      sql`${articles.searchVector} @@ websearch_to_tsquery('english', ${search})`
+      sql`${articles.searchVector} @@ websearch_to_tsquery('english', ${search})`,
     );
   }
   if (sentiment) {
-    if (sentiment === 'positive') {
+    if (sentiment === "positive") {
       conditions.push(
-        or(eq(articles.sentimentLabel, 'positive'), eq(articles.sentimentLabel, 'very_positive'))!
+        or(
+          eq(articles.sentimentLabel, "positive"),
+          eq(articles.sentimentLabel, "very_positive"),
+        )!,
       );
-    } else if (sentiment === 'negative') {
+    } else if (sentiment === "negative") {
       conditions.push(
-        or(eq(articles.sentimentLabel, 'negative'), eq(articles.sentimentLabel, 'very_negative'))!
+        or(
+          eq(articles.sentimentLabel, "negative"),
+          eq(articles.sentimentLabel, "very_negative"),
+        )!,
       );
     } else {
-      conditions.push(eq(articles.sentimentLabel, 'neutral'));
+      conditions.push(eq(articles.sentimentLabel, "neutral"));
     }
   }
   if (filterTags && filterTags.length > 0) {
@@ -193,14 +233,14 @@ export async function pgQueryArchive(options: ArchiveV2QueryOptions): Promise<{
     .offset(offset);
 
   // Map row → EnrichedArticle shape expected by callers
-  const mapped: EnrichedArticle[] = rows.map(r => ({
+  const mapped: EnrichedArticle[] = rows.map((r) => ({
     id: r.id,
     slug: r.slug ?? undefined,
-    schema_version: r.schemaVersion ?? '2.0.0',
+    schema_version: r.schemaVersion ?? "2.0.0",
     title: r.title,
     link: r.link,
     canonical_link: r.canonicalLink ?? r.link,
-    description: r.description ?? '',
+    description: r.description ?? "",
     source: r.source,
     source_key: r.sourceKey,
     category: r.category,
@@ -209,20 +249,30 @@ export async function pgQueryArchive(options: ArchiveV2QueryOptions): Promise<{
     last_seen: r.lastSeen.toISOString(),
     fetch_count: r.fetchCount ?? 1,
     tickers: r.tickers ?? [],
-    entities: (r.entities as EnrichedArticle['entities']) ?? { people: [], companies: [], protocols: [] },
+    entities: (r.entities as EnrichedArticle["entities"]) ?? {
+      people: [],
+      companies: [],
+      protocols: [],
+    },
     tags: r.tags ?? [],
     sentiment: {
       score: r.sentimentScore ?? 0,
-      label: (r.sentimentLabel ?? 'neutral') as EnrichedArticle['sentiment']['label'],
+      label: (r.sentimentLabel ??
+        "neutral") as EnrichedArticle["sentiment"]["label"],
       confidence: r.sentimentConfidence ?? 0.5,
     },
-    market_context: (r.marketContext as EnrichedArticle['market_context']) ?? null,
-    content_hash: r.contentHash ?? '',
+    market_context:
+      (r.marketContext as EnrichedArticle["market_context"]) ?? null,
+    content_hash: r.contentHash ?? "",
     meta: {
-      word_count: (r.meta as Record<string, unknown>)?.word_count as number ?? 0,
-      has_numbers: (r.meta as Record<string, unknown>)?.has_numbers as boolean ?? false,
-      is_breaking: (r.meta as Record<string, unknown>)?.is_breaking as boolean ?? false,
-      is_opinion: (r.meta as Record<string, unknown>)?.is_opinion as boolean ?? false,
+      word_count:
+        ((r.meta as Record<string, unknown>)?.word_count as number) ?? 0,
+      has_numbers:
+        ((r.meta as Record<string, unknown>)?.has_numbers as boolean) ?? false,
+      is_breaking:
+        ((r.meta as Record<string, unknown>)?.is_breaking as boolean) ?? false,
+      is_opinion:
+        ((r.meta as Record<string, unknown>)?.is_opinion as boolean) ?? false,
     },
   }));
 
@@ -274,13 +324,13 @@ export async function pgGetArchiveStats(): Promise<ArchiveV2Stats | null> {
     .limit(50);
 
   return {
-    version: '2.0.0',
+    version: "2.0.0",
     total_articles: totals.total,
     total_fetches: totals.total, // approximation
     first_fetch: totals.firstSeen,
     last_fetch: totals.lastSeen,
-    sources: Object.fromEntries(sources.map(s => [s.sourceKey, s.count])),
-    tickers: Object.fromEntries(tickers.map(t => [t.ticker, t.count])),
+    sources: Object.fromEntries(sources.map((s) => [s.sourceKey, s.count])),
+    tickers: Object.fromEntries(tickers.map((t) => [t.ticker, t.count])),
     daily_counts: {}, // omit for now to keep the query fast
   };
 }
@@ -289,7 +339,9 @@ export async function pgGetArchiveStats(): Promise<ArchiveV2Stats | null> {
 // Trending tickers (from article tickers in recent N hours)
 // ────────────────────────────────────────────────────────────────────────────
 
-export async function pgGetTrendingTickers(hours = 24): Promise<{ ticker: string; count: number }[]> {
+export async function pgGetTrendingTickers(
+  hours = 24,
+): Promise<{ ticker: string; count: number }[]> {
   const db = getDb();
   if (!db) return [];
 
@@ -313,34 +365,56 @@ export async function pgGetTrendingTickers(hours = 24): Promise<{ ticker: string
 // Market history from prices_history table
 // ────────────────────────────────────────────────────────────────────────────
 
-export async function pgGetMarketHistory(yearMonth: string): Promise<Array<{
-  timestamp: string;
-  btc_price: number | null;
-  eth_price: number | null;
-  fear_greed_index: number | null;
-}>> {
+export async function pgGetMarketHistory(yearMonth: string): Promise<
+  Array<{
+    timestamp: string;
+    btc_price: number | null;
+    eth_price: number | null;
+    fear_greed_index: number | null;
+  }>
+> {
   const db = getDb();
   if (!db) return [];
 
   const start = new Date(`${yearMonth}-01T00:00:00Z`);
-  const [y, m] = yearMonth.split('-').map(Number);
+  const [y, m] = yearMonth.split("-").map(Number);
   const end = new Date(Date.UTC(y, m, 1)); // first day of next month
 
   const rows = await db
     .select()
     .from(pricesHistory)
-    .where(and(gte(pricesHistory.timestamp, start), lte(pricesHistory.timestamp, end)))
+    .where(
+      and(
+        gte(pricesHistory.timestamp, start),
+        lte(pricesHistory.timestamp, end),
+      ),
+    )
     .orderBy(pricesHistory.timestamp);
 
   // Group by timestamp to emit one row per time-point
-  const grouped = new Map<string, { btc_price: number | null; eth_price: number | null; fear_greed_index: number | null }>();
+  const grouped = new Map<
+    string,
+    {
+      btc_price: number | null;
+      eth_price: number | null;
+      fear_greed_index: number | null;
+    }
+  >();
   for (const r of rows) {
     const ts = r.timestamp.toISOString();
-    if (!grouped.has(ts)) grouped.set(ts, { btc_price: null, eth_price: null, fear_greed_index: null });
+    if (!grouped.has(ts))
+      grouped.set(ts, {
+        btc_price: null,
+        eth_price: null,
+        fear_greed_index: null,
+      });
     const entry = grouped.get(ts)!;
-    if (r.ticker === 'BTC') entry.btc_price = r.price;
-    if (r.ticker === 'ETH') entry.eth_price = r.price;
+    if (r.ticker === "BTC") entry.btc_price = r.price;
+    if (r.ticker === "ETH") entry.eth_price = r.price;
   }
 
-  return Array.from(grouped.entries()).map(([ts, data]) => ({ timestamp: ts, ...data }));
+  return Array.from(grouped.entries()).map(([ts, data]) => ({
+    timestamp: ts,
+    ...data,
+  }));
 }

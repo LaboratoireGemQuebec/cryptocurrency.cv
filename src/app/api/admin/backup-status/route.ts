@@ -24,12 +24,12 @@
  * @module api/admin/backup-status
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { requireAdminAuth } from '@/lib/admin-auth';
-import fs from 'fs';
-import path from 'path';
+import { type NextRequest, NextResponse } from "next/server";
+import { requireAdminAuth } from "@/lib/admin-auth";
+import fs from "fs";
+import path from "path";
 
-export const runtime = 'nodejs';
+export const runtime = "nodejs";
 
 // ============================================================================
 // Types
@@ -44,7 +44,7 @@ interface BackupInfo {
 }
 
 interface BackupStatusResponse {
-  status: 'healthy' | 'warning' | 'error' | 'unknown';
+  status: "healthy" | "warning" | "error" | "unknown";
   last_backup: LastBackupStatus | null;
   available_backups: BackupInfo[];
   storage: StorageInfo;
@@ -79,7 +79,7 @@ interface RtoRpoInfo {
   rpo_target_hours: number;
   rto_target_hours: number;
   rpo_actual_hours: number | null;
-  rpo_status: 'met' | 'warning' | 'exceeded' | 'unknown';
+  rpo_status: "met" | "warning" | "exceeded" | "unknown";
   rto_estimated_minutes: number;
 }
 
@@ -100,21 +100,23 @@ function getProjectRoot(): string {
 }
 
 function getBackupDir(): string {
-  return process.env.BACKUP_DIR || path.join(getProjectRoot(), 'backups');
+  return process.env.BACKUP_DIR || path.join(getProjectRoot(), "backups");
 }
 
 function parseTimestamp(filename: string): string | null {
   // Extract timestamp from "full-backup_20250615T120000Z.tar.gz"
-  const match = filename.match(/full-backup_(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z/);
+  const match = filename.match(
+    /full-backup_(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z/,
+  );
   if (!match) return null;
   return `${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:${match[6]}Z`;
 }
 
 function getLastBackupStatus(): LastBackupStatus | null {
-  const statusFile = path.join(getBackupDir(), '.last-backup-status.json');
+  const statusFile = path.join(getBackupDir(), ".last-backup-status.json");
   try {
     if (!fs.existsSync(statusFile)) return null;
-    const raw = fs.readFileSync(statusFile, 'utf-8');
+    const raw = fs.readFileSync(statusFile, "utf-8");
     const data = JSON.parse(raw);
 
     // Calculate age
@@ -135,19 +137,25 @@ function getAvailableBackups(): BackupInfo[] {
   try {
     if (!fs.existsSync(backupDir)) return [];
 
-    const files = fs.readdirSync(backupDir)
-      .filter(f => f.startsWith('full-backup_') && f.endsWith('.tar.gz') && !f.endsWith('.sha256'))
+    const files = fs
+      .readdirSync(backupDir)
+      .filter(
+        (f) =>
+          f.startsWith("full-backup_") &&
+          f.endsWith(".tar.gz") &&
+          !f.endsWith(".sha256"),
+      )
       .sort()
       .reverse();
 
-    return files.map(f => {
+    return files.map((f) => {
       const filePath = path.join(backupDir, f);
       const stats = fs.statSync(filePath);
       const checksumExists = fs.existsSync(`${filePath}.sha256`);
 
       return {
         name: f,
-        timestamp: parseTimestamp(f) || 'unknown',
+        timestamp: parseTimestamp(f) || "unknown",
         size_bytes: stats.size,
         size_human: humanSize(stats.size),
         has_checksum: checksumExists,
@@ -171,21 +179,21 @@ function getStorageInfo(backups: BackupInfo[]): StorageInfo {
 
 function getRtoRpoInfo(lastBackup: LastBackupStatus | null): RtoRpoInfo {
   const RPO_TARGET_HOURS = 24; // Recovery Point Objective: 24 hours
-  const RTO_TARGET_HOURS = 4;  // Recovery Time Objective: 4 hours
+  const RTO_TARGET_HOURS = 4; // Recovery Time Objective: 4 hours
   const RTO_ESTIMATED_MINUTES = 30; // Estimated time to restore
 
   let rpoActual: number | null = null;
-  let rpoStatus: 'met' | 'warning' | 'exceeded' | 'unknown' = 'unknown';
+  let rpoStatus: "met" | "warning" | "exceeded" | "unknown" = "unknown";
 
   if (lastBackup) {
     rpoActual = lastBackup.age_hours;
 
     if (rpoActual <= RPO_TARGET_HOURS) {
-      rpoStatus = 'met';
+      rpoStatus = "met";
     } else if (rpoActual <= RPO_TARGET_HOURS * 1.5) {
-      rpoStatus = 'warning';
+      rpoStatus = "warning";
     } else {
-      rpoStatus = 'exceeded';
+      rpoStatus = "exceeded";
     }
   }
 
@@ -200,15 +208,17 @@ function getRtoRpoInfo(lastBackup: LastBackupStatus | null): RtoRpoInfo {
 
 function getOverallStatus(
   lastBackup: LastBackupStatus | null,
-  rtoRpo: RtoRpoInfo
-): 'healthy' | 'warning' | 'error' | 'unknown' {
-  if (!lastBackup) return 'unknown';
-  if (lastBackup.status === 'error') return 'error';
-  if (lastBackup.errors && lastBackup.errors.filter(Boolean).length > 0) return 'error';
-  if (rtoRpo.rpo_status === 'exceeded') return 'error';
-  if (rtoRpo.rpo_status === 'warning') return 'warning';
-  if (lastBackup.warnings && lastBackup.warnings.filter(Boolean).length > 0) return 'warning';
-  return 'healthy';
+  rtoRpo: RtoRpoInfo,
+): "healthy" | "warning" | "error" | "unknown" {
+  if (!lastBackup) return "unknown";
+  if (lastBackup.status === "error") return "error";
+  if (lastBackup.errors && lastBackup.errors.filter(Boolean).length > 0)
+    return "error";
+  if (rtoRpo.rpo_status === "exceeded") return "error";
+  if (rtoRpo.rpo_status === "warning") return "warning";
+  if (lastBackup.warnings && lastBackup.warnings.filter(Boolean).length > 0)
+    return "warning";
+  return "healthy";
 }
 
 // ============================================================================
@@ -236,10 +246,10 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(response);
   } catch (error) {
-    console.error('Backup status API error:', error);
+    console.error("Backup status API error:", error);
     return NextResponse.json(
-      { error: 'Failed to fetch backup status' },
-      { status: 500 }
+      { error: "Failed to fetch backup status" },
+      { status: 500 },
     );
   }
 }
@@ -257,7 +267,7 @@ export async function POST(request: NextRequest) {
     const { action } = body;
 
     switch (action) {
-      case 'trigger': {
+      case "trigger": {
         // Trigger a backup asynchronously
         // In production, this would trigger the backup script via a job queue
         // For now, return a confirmation that the backup was requested
@@ -265,19 +275,19 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({
           success: true,
-          message: 'Backup triggered',
+          message: "Backup triggered",
           backup_id: backupId,
-          note: 'Run scripts/backup-full.sh manually or via cron for full backup functionality',
+          note: "Run scripts/backup-full.sh manually or via cron for full backup functionality",
         });
       }
 
-      case 'verify': {
+      case "verify": {
         // Verify the latest backup
         const backups = getAvailableBackups();
         if (backups.length === 0) {
           return NextResponse.json({
             success: false,
-            message: 'No backups available to verify',
+            message: "No backups available to verify",
           });
         }
 
@@ -292,7 +302,9 @@ export async function POST(request: NextRequest) {
         if (hasChecksum) {
           try {
             const checksumFile = `${backupPath}.sha256`;
-            const checksumContent = fs.readFileSync(checksumFile, 'utf-8').trim();
+            const checksumContent = fs
+              .readFileSync(checksumFile, "utf-8")
+              .trim();
             checksumValid = checksumContent.length > 0;
           } catch {
             checksumValid = false;
@@ -315,14 +327,14 @@ export async function POST(request: NextRequest) {
       default:
         return NextResponse.json(
           { error: `Invalid action: ${action}. Use "trigger" or "verify".` },
-          { status: 400 }
+          { status: 400 },
         );
     }
   } catch (error) {
-    console.error('Backup status POST error:', error);
+    console.error("Backup status POST error:", error);
     return NextResponse.json(
-      { error: 'Failed to process backup action' },
-      { status: 500 }
+      { error: "Failed to process backup action" },
+      { status: 500 },
     );
   }
 }

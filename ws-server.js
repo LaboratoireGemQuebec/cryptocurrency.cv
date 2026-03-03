@@ -743,7 +743,9 @@ function startHeartbeat() {
               }),
             );
           }
-        } catch { /* ignore send errors on dying socket */ }
+        } catch {
+          /* ignore send errors on dying socket */
+        }
         client.ws.terminate();
         return;
       }
@@ -980,7 +982,10 @@ wss.on("connection", async (ws, req) => {
   // Reject during shutdown
   if (isShuttingDown) {
     const guidance = reconnectGuidance(1001);
-    ws.close(1001, JSON.stringify({ reason: "Server shutting down", reconnect: guidance }));
+    ws.close(
+      1001,
+      JSON.stringify({ reason: "Server shutting down", reconnect: guidance }),
+    );
     return;
   }
 
@@ -988,7 +993,10 @@ wss.on("connection", async (ws, req) => {
   if (clients.size >= MAX_CONNECTIONS) {
     metricsCounters.connectionLimitHits++;
     const guidance = reconnectGuidance(4003);
-    ws.close(4003, JSON.stringify({ reason: "Server at capacity", reconnect: guidance }));
+    ws.close(
+      4003,
+      JSON.stringify({ reason: "Server at capacity", reconnect: guidance }),
+    );
     return;
   }
 
@@ -1091,10 +1099,18 @@ wss.on("connection", async (ws, req) => {
         ],
         availableChannels: Object.keys(CHANNELS),
         availableTopics: [
-          "prices:BTC", "prices:ETH", "prices:SOL", "prices:*",
-          "news:breaking", "news:bitcoin", "news:defi", "news:*",
-          "sentiment:global", "sentiment:*",
-          "whales:BTC", "whales:*",
+          "prices:BTC",
+          "prices:ETH",
+          "prices:SOL",
+          "prices:*",
+          "news:breaking",
+          "news:bitcoin",
+          "news:defi",
+          "news:*",
+          "sentiment:global",
+          "sentiment:*",
+          "whales:BTC",
+          "whales:*",
           "alerts:*",
         ],
         rateLimit: RATE_LIMIT,
@@ -1381,7 +1397,12 @@ function handleSubscribeTopics(clientId, payload) {
     } else if (prefix === "news") {
       // Map news topics to channels where applicable
       const [, suffix] = topic.split(":");
-      if (suffix && suffix !== "breaking" && suffix !== "*" && CHANNELS[suffix]) {
+      if (
+        suffix &&
+        suffix !== "breaking" &&
+        suffix !== "*" &&
+        CHANNELS[suffix]
+      ) {
         client.channels.add(suffix);
         redisTrackChannelJoin(suffix);
       }
@@ -1881,7 +1902,10 @@ function localBroadcastNews(articles, isBreaking = false) {
   clients.forEach((client, clientId) => {
     // ── Topic-based news filtering ──
     // If client has news:breaking topic and this IS breaking → deliver all
-    if (isBreaking && (client.topics.has("news:breaking") || client.topics.has("news:*"))) {
+    if (
+      isBreaking &&
+      (client.topics.has("news:breaking") || client.topics.has("news:*"))
+    ) {
       safeSend(client, clientId, {
         type,
         payload: { articles },
@@ -2016,18 +2040,24 @@ function localBroadcastPrices(prices) {
       let hasAny = false;
       for (const [coinId, data] of Object.entries(prices)) {
         // Find symbol for this coinId
-        const sym = Object.entries(COIN_TO_ID).find(([, id]) => id === coinId)?.[0];
+        const sym = Object.entries(COIN_TO_ID).find(
+          ([, id]) => id === coinId,
+        )?.[0];
         if (sym && client.topics.has(`prices:${sym}`)) {
           filtered[coinId] = data;
           hasAny = true;
         }
       }
       if (hasAny) {
-        safeSend(client, clientId, JSON.stringify({
-          type: WS_MSG_TYPES.PRICES,
-          payload: { prices: filtered },
-          timestamp: ts,
-        }));
+        safeSend(
+          client,
+          clientId,
+          JSON.stringify({
+            type: WS_MSG_TYPES.PRICES,
+            payload: { prices: filtered },
+            timestamp: ts,
+          }),
+        );
       } else if (client.streamPrices) {
         // Fallback: stream enabled but no topic match — send all
         safeSend(client, clientId, fullMsg);
@@ -2064,11 +2094,15 @@ function localBroadcastWhales(payload) {
         return sym && client.topics.has(`whales:${sym}`);
       });
       if (filtered.length > 0) {
-        safeSend(client, clientId, JSON.stringify({
-          type: WS_MSG_TYPES.WHALES,
-          payload: { ...payload, alerts: filtered },
-          timestamp: ts,
-        }));
+        safeSend(
+          client,
+          clientId,
+          JSON.stringify({
+            type: WS_MSG_TYPES.WHALES,
+            payload: { ...payload, alerts: filtered },
+            timestamp: ts,
+          }),
+        );
       } else if (client.streamWhales) {
         safeSend(client, clientId, fullMsg);
       }
@@ -2091,7 +2125,10 @@ function localBroadcastSentiment(payload) {
       return;
     }
     // Topic-based: sentiment:global or sentiment:*
-    if (client.topics.has("sentiment:global") || client.topics.has("sentiment:*")) {
+    if (
+      client.topics.has("sentiment:global") ||
+      client.topics.has("sentiment:*")
+    ) {
       safeSend(client, clientId, msg);
     }
   });

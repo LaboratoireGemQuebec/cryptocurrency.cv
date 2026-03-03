@@ -5,11 +5,11 @@
  * Response: { success: true, message: string }
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { createUser, getUserByEmail } from '@/lib/auth/users';
-import { createMagicLink } from '@/lib/auth/tokens';
+import { type NextRequest, NextResponse } from "next/server";
+import { createUser, getUserByEmail } from "@/lib/auth/users";
+import { createMagicLink } from "@/lib/auth/tokens";
 
-export const runtime = 'nodejs';
+export const runtime = "nodejs";
 
 // Rate limit: 5 login requests per IP per 15 minutes
 const loginAttempts = new Map<string, { count: number; resetAt: number }>();
@@ -51,25 +51,22 @@ function checkRateLimit(ip: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     const ip =
-      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      request.headers.get('x-real-ip') ||
-      'unknown';
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      request.headers.get("x-real-ip") ||
+      "unknown";
 
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { error: 'Too many login attempts. Please try again later.' },
-        { status: 429 }
+        { error: "Too many login attempts. Please try again later." },
+        { status: 429 },
       );
     }
 
     const body = await request.json();
     const { email, name } = body;
 
-    if (!email || typeof email !== 'string') {
-      return NextResponse.json(
-        { error: 'Email is required' },
-        { status: 400 }
-      );
+    if (!email || typeof email !== "string") {
+      return NextResponse.json({ error: "Email is required" }, { status: 400 });
     }
 
     const normalizedEmail = email.toLowerCase().trim();
@@ -77,8 +74,8 @@ export async function POST(request: NextRequest) {
     // Basic email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
+        { error: "Invalid email format" },
+        { status: 400 },
       );
     }
 
@@ -93,23 +90,28 @@ export async function POST(request: NextRequest) {
 
     // In production, send email. For now, log it.
     // TODO: Integrate with email service (Resend, SendGrid, etc.)
-    if (process.env.NODE_ENV === 'development' || process.env.LOG_MAGIC_LINKS === 'true') {
+    if (
+      process.env.NODE_ENV === "development" ||
+      process.env.LOG_MAGIC_LINKS === "true"
+    ) {
       console.log(`[AUTH] Magic link for ${normalizedEmail}: ${magicLink}`);
     }
 
     // If an email service is configured, send email
     if (process.env.RESEND_API_KEY) {
       try {
-        await fetch('https://api.resend.com/emails', {
-          method: 'POST',
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
           headers: {
-            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: process.env.EMAIL_FROM || 'Crypto Vision News <noreply@cryptocurrency.cv>',
+            from:
+              process.env.EMAIL_FROM ||
+              "Crypto Vision News <noreply@cryptocurrency.cv>",
             to: normalizedEmail,
-            subject: 'Sign in to Crypto Vision News',
+            subject: "Sign in to Crypto Vision News",
             html: `
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
                 <h1 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">Sign in to Crypto Vision News</h1>
@@ -132,21 +134,22 @@ export async function POST(request: NextRequest) {
           }),
         });
       } catch (emailError) {
-        console.error('[AUTH] Failed to send magic link email:', emailError);
+        console.error("[AUTH] Failed to send magic link email:", emailError);
       }
     }
 
     return NextResponse.json({
       success: true,
-      message: 'If an account exists for this email, a sign-in link has been sent.',
+      message:
+        "If an account exists for this email, a sign-in link has been sent.",
       // In dev mode, include the magic link for testing
-      ...(process.env.NODE_ENV === 'development' ? { magicLink } : {}),
+      ...(process.env.NODE_ENV === "development" ? { magicLink } : {}),
     });
   } catch (error) {
-    console.error('[AUTH] Login error:', error);
+    console.error("[AUTH] Login error:", error);
     return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
+      { error: "An unexpected error occurred" },
+      { status: 500 },
     );
   }
 }

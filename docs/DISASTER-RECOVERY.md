@@ -4,30 +4,33 @@
 
 ## Recovery Objectives
 
-| Metric | Target | Description |
-|--------|--------|-------------|
-| **RPO** (Recovery Point Objective) | **24 hours** | Maximum acceptable data loss. Backups run daily; at most 24h of data could be lost. |
-| **RTO** (Recovery Time Objective) | **4 hours** | Maximum time to restore full service from a disaster event. |
-| **RTO Estimated (Actual)** | **~30 minutes** | Typical restore time with automated scripts and pre-staged backups. |
-| **Backup Retention** | **30 days** | Both local and remote backups retained for 30 days by default. |
+| Metric                             | Target          | Description                                                                         |
+| ---------------------------------- | --------------- | ----------------------------------------------------------------------------------- |
+| **RPO** (Recovery Point Objective) | **24 hours**    | Maximum acceptable data loss. Backups run daily; at most 24h of data could be lost. |
+| **RTO** (Recovery Time Objective)  | **4 hours**     | Maximum time to restore full service from a disaster event.                         |
+| **RTO Estimated (Actual)**         | **~30 minutes** | Typical restore time with automated scripts and pre-staged backups.                 |
+| **Backup Retention**               | **30 days**     | Both local and remote backups retained for 30 days by default.                      |
 
 ## Backup Components
 
 The full backup system (`scripts/backup-full.sh`) captures three critical components:
 
 ### 1. Postgres Database
+
 - **Method:** `pg_dump` with `--format=custom --compress=6`
 - **Output:** `postgres.sql.gz` (compressed custom format)
 - **Also saves:** `postgres-schema.sql` (schema-only dump for reference)
 - **RPO impact:** Contains all structured data (articles, users, analytics)
 
 ### 2. Redis Cache
+
 - **Method:** Key-by-key export to JSON, supporting all data types (string, list, set, hash, zset)
 - **Output:** `redis-snapshot.json.gz`
 - **Includes:** Key types, TTL values, and full payloads
 - **RPO impact:** Cache can be rebuilt from Postgres, but snapshot speeds recovery
 
 ### 3. Archive Directory
+
 - **Method:** `tar -czf` of the entire `archive/` directory
 - **Output:** `archive.tar.gz`
 - **Includes:** All historical articles, indexes, market data, snapshots
@@ -127,24 +130,24 @@ curl -X POST \
 
 ## Environment Variables
 
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `DATABASE_URL` | For PG backup | — | Postgres connection string |
-| `PGHOST` | Alternative | `localhost` | Postgres host |
-| `PGPORT` | Alternative | `5432` | Postgres port |
-| `PGUSER` | Alternative | `postgres` | Postgres user |
-| `PGPASSWORD` | Alternative | — | Postgres password |
-| `PGDATABASE` | Alternative | `free_crypto_news` | Postgres database |
-| `REDIS_URL` | For Redis | `redis://localhost:6379` | Redis connection URL |
-| `BACKUP_S3_BUCKET` | For S3 | — | S3 bucket name |
-| `BACKUP_S3_ENDPOINT` | For non-AWS | — | S3-compatible endpoint (MinIO, R2, etc.) |
-| `BACKUP_S3_REGION` | Optional | `us-east-1` | S3 region |
-| `AWS_ACCESS_KEY_ID` | For S3 | — | AWS/S3 access key |
-| `AWS_SECRET_ACCESS_KEY` | For S3 | — | AWS/S3 secret key |
-| `BACKUP_RETENTION_DAYS` | Optional | `30` | Days to retain backups |
-| `BACKUP_DIR` | Optional | `./backups` | Local backup directory |
-| `BACKUP_ENCRYPTION_KEY` | Optional | — | GPG passphrase for AES-256 encryption |
-| `ADMIN_API_KEY` | For API | — | Admin API authentication token |
+| Variable                | Required      | Default                  | Description                              |
+| ----------------------- | ------------- | ------------------------ | ---------------------------------------- |
+| `DATABASE_URL`          | For PG backup | —                        | Postgres connection string               |
+| `PGHOST`                | Alternative   | `localhost`              | Postgres host                            |
+| `PGPORT`                | Alternative   | `5432`                   | Postgres port                            |
+| `PGUSER`                | Alternative   | `postgres`               | Postgres user                            |
+| `PGPASSWORD`            | Alternative   | —                        | Postgres password                        |
+| `PGDATABASE`            | Alternative   | `free_crypto_news`       | Postgres database                        |
+| `REDIS_URL`             | For Redis     | `redis://localhost:6379` | Redis connection URL                     |
+| `BACKUP_S3_BUCKET`      | For S3        | —                        | S3 bucket name                           |
+| `BACKUP_S3_ENDPOINT`    | For non-AWS   | —                        | S3-compatible endpoint (MinIO, R2, etc.) |
+| `BACKUP_S3_REGION`      | Optional      | `us-east-1`              | S3 region                                |
+| `AWS_ACCESS_KEY_ID`     | For S3        | —                        | AWS/S3 access key                        |
+| `AWS_SECRET_ACCESS_KEY` | For S3        | —                        | AWS/S3 secret key                        |
+| `BACKUP_RETENTION_DAYS` | Optional      | `30`                     | Days to retain backups                   |
+| `BACKUP_DIR`            | Optional      | `./backups`              | Local backup directory                   |
+| `BACKUP_ENCRYPTION_KEY` | Optional      | —                        | GPG passphrase for AES-256 encryption    |
+| `ADMIN_API_KEY`         | For API       | —                        | Admin API authentication token           |
 
 ## Disaster Recovery Runbook
 
@@ -219,6 +222,7 @@ Backups are verified automatically with:
 - **Manifest validation** — JSON structure check
 
 Run manual verification:
+
 ```bash
 ./scripts/backup-full.sh --no-upload  # Creates and verifies locally
 ```
@@ -246,6 +250,7 @@ The `/api/admin/backup-status` endpoint returns:
 ```
 
 **Alert thresholds:**
+
 - `rpo_status: "warning"` — backup is 24–36 hours old
 - `rpo_status: "exceeded"` — backup is >36 hours old (action required)
 - `status: "error"` — last backup failed or RPO exceeded

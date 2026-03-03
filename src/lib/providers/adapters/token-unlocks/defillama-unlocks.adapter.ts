@@ -27,10 +27,10 @@
  * @module providers/adapters/token-unlocks/defillama-unlocks
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { TokenUnlockEvent } from './types';
+import type { DataProvider, FetchParams, RateLimitConfig } from "../../types";
+import type { TokenUnlockEvent } from "./types";
 
-const BASE = 'https://api.llama.fi';
+const BASE = "https://api.llama.fi";
 
 const RATE_LIMIT: RateLimitConfig = {
   maxRequests: 30,
@@ -38,12 +38,13 @@ const RATE_LIMIT: RateLimitConfig = {
 };
 
 export const defillamaUnlocksAdapter: DataProvider<TokenUnlockEvent[]> = {
-  name: 'defillama-unlocks',
-  description: 'DefiLlama — Token unlock schedules, cliff vesting, and emissions data (free, no key)',
+  name: "defillama-unlocks",
+  description:
+    "DefiLlama — Token unlock schedules, cliff vesting, and emissions data (free, no key)",
   priority: 1,
-  weight: 0.60,
+  weight: 0.6,
   rateLimit: RATE_LIMIT,
-  capabilities: ['token-unlocks'],
+  capabilities: ["token-unlocks"],
 
   async fetch(params: FetchParams): Promise<TokenUnlockEvent[]> {
     const limit = params.limit ?? 50;
@@ -53,8 +54,8 @@ export const defillamaUnlocksAdapter: DataProvider<TokenUnlockEvent[]> = {
     // Fetch the list of protocols with emissions data
     const res = await fetch(`${BASE}/emissions/breakdown`, {
       headers: {
-        'User-Agent': 'free-crypto-news/2.0',
-        Accept: 'application/json',
+        "User-Agent": "free-crypto-news/2.0",
+        Accept: "application/json",
       },
       signal: AbortSignal.timeout(15_000),
     });
@@ -66,7 +67,9 @@ export const defillamaUnlocksAdapter: DataProvider<TokenUnlockEvent[]> = {
     const protocols: DLProtocol[] = await res.json();
 
     // Filter to upcoming unlock events (next 30 days)
-    const thirtyDaysFromNow = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+    const thirtyDaysFromNow = new Date(
+      now.getTime() + 30 * 24 * 60 * 60 * 1000,
+    );
     const events: TokenUnlockEvent[] = [];
 
     for (const protocol of protocols) {
@@ -87,8 +90,8 @@ export const defillamaUnlocksAdapter: DataProvider<TokenUnlockEvent[]> = {
           : 0;
 
         events.push({
-          name: protocol.name ?? 'Unknown',
-          symbol: (protocol.symbol ?? '').toUpperCase(),
+          name: protocol.name ?? "Unknown",
+          symbol: (protocol.symbol ?? "").toUpperCase(),
           unlockDate: eventDate.toISOString(),
           unlockValueUsd,
           unlockTokens: event.noOfTokens ?? 0,
@@ -96,16 +99,19 @@ export const defillamaUnlocksAdapter: DataProvider<TokenUnlockEvent[]> = {
           unlockPctTotal,
           price: protocol.price ?? 0,
           marketCap: (protocol.price ?? 0) * (protocol.circSupply ?? 0),
-          unlockCategory: event.description ?? 'unknown',
+          unlockCategory: event.description ?? "unknown",
           coingeckoId: protocol.gecko_id,
-          source: 'defillama-unlocks',
+          source: "defillama-unlocks",
           timestamp: nowIso,
         });
       }
     }
 
     // Sort by unlock date ascending
-    events.sort((a, b) => new Date(a.unlockDate).getTime() - new Date(b.unlockDate).getTime());
+    events.sort(
+      (a, b) =>
+        new Date(a.unlockDate).getTime() - new Date(b.unlockDate).getTime(),
+    );
 
     return events.slice(0, limit);
   },

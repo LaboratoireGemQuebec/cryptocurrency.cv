@@ -8,9 +8,9 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-const API_BASE = 'https://cryptocurrency.cv';
+const API_BASE = "https://cryptocurrency.cv";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -156,11 +156,14 @@ interface BreakingNewsResponse {
 // ---------------------------------------------------------------------------
 
 function getApiBase(): string {
-  const config = vscode.workspace.getConfiguration('crypto');
-  return config.get<string>('apiUrl') || API_BASE;
+  const config = vscode.workspace.getConfiguration("crypto");
+  return config.get<string>("apiUrl") || API_BASE;
 }
 
-async function fetchAPI<T = any>(endpoint: string, token?: vscode.CancellationToken): Promise<T> {
+async function fetchAPI<T = any>(
+  endpoint: string,
+  token?: vscode.CancellationToken,
+): Promise<T> {
   const baseUrl = getApiBase();
   const url = `${baseUrl}${endpoint}`;
 
@@ -169,48 +172,61 @@ async function fetchAPI<T = any>(endpoint: string, token?: vscode.CancellationTo
 
   const response = await fetch(url, { signal: controller.signal });
   if (!response.ok) {
-    throw new Error(`API request failed (${response.status}): ${response.statusText}`);
+    throw new Error(
+      `API request failed (${response.status}): ${response.statusText}`,
+    );
   }
   return response.json() as Promise<T>;
 }
 
 function formatArticles(articles: NewsArticle[]): string {
-  if (articles.length === 0) return '*No articles found.*';
+  if (articles.length === 0) return "*No articles found.*";
   return articles
     .map((a, i) => {
       const sentiment =
-        a.sentiment === 'bullish' ? '🟢' : a.sentiment === 'bearish' ? '🔴' : '⚪';
-      const desc = a.description ? `\n   > ${a.description.slice(0, 120)}…` : '';
+        a.sentiment === "bullish"
+          ? "🟢"
+          : a.sentiment === "bearish"
+            ? "🔴"
+            : "⚪";
+      const desc = a.description
+        ? `\n   > ${a.description.slice(0, 120)}…`
+        : "";
       return `${i + 1}. ${sentiment} **${a.title}**${desc}\n   📰 ${a.source} • ${a.timeAgo}\n   🔗 [Read more](${a.link})`;
     })
-    .join('\n\n');
+    .join("\n\n");
 }
 
 function fearGreedEmoji(value: number): string {
-  if (value < 25) return '😱';
-  if (value < 40) return '😨';
-  if (value < 60) return '😐';
-  if (value < 75) return '😀';
-  return '🤑';
+  if (value < 25) return "😱";
+  if (value < 40) return "😨";
+  if (value < 60) return "😐";
+  if (value < 75) return "😀";
+  return "🤑";
 }
 
 function fearGreedBar(value: number): string {
   const filled = Math.floor(value / 5);
-  return `\`${'█'.repeat(filled)}${'░'.repeat(20 - filled)}\` ${value}/100`;
+  return `\`${"█".repeat(filled)}${"░".repeat(20 - filled)}\` ${value}/100`;
 }
 
 function sentimentEmoji(sentiment: string): string {
   switch (sentiment) {
-    case 'very_bullish': return '🟢🟢';
-    case 'bullish': return '🟢';
-    case 'bearish': return '🔴';
-    case 'very_bearish': return '🔴🔴';
-    default: return '⚪';
+    case "very_bullish":
+      return "🟢🟢";
+    case "bullish":
+      return "🟢";
+    case "bearish":
+      return "🔴";
+    case "very_bearish":
+      return "🔴🔴";
+    default:
+      return "⚪";
   }
 }
 
 function sentimentLabel(sentiment: string): string {
-  return sentiment.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  return sentiment.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 // ---------------------------------------------------------------------------
@@ -221,40 +237,59 @@ async function handleNews(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  stream.markdown('📰 **Latest Crypto News**\n\n');
-  stream.progress('Fetching latest news…');
+  stream.markdown("📰 **Latest Crypto News**\n\n");
+  stream.progress("Fetching latest news…");
 
-  const data = await fetchAPI<{ articles: NewsArticle[] }>('/api/news?limit=10', token);
+  const data = await fetchAPI<{ articles: NewsArticle[] }>(
+    "/api/news?limit=10",
+    token,
+  );
   const articles = data.articles || [];
 
   stream.markdown(formatArticles(articles));
-  stream.markdown('\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'news' } };
+  stream.markdown(
+    "\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "news" } };
 }
 
 async function handleBreaking(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  stream.markdown('🚨 **Breaking Crypto News**\n\n');
-  stream.progress('Fetching breaking news…');
+  stream.markdown("🚨 **Breaking Crypto News**\n\n");
+  stream.progress("Fetching breaking news…");
 
-  const data = await fetchAPI<BreakingNewsResponse>('/api/breaking?limit=10', token);
+  const data = await fetchAPI<BreakingNewsResponse>(
+    "/api/breaking?limit=10",
+    token,
+  );
   const articles = data.articles || [];
 
   if (articles.length === 0) {
-    stream.markdown('*No breaking news right now. Check back soon!*\n');
-    stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-    return { metadata: { command: 'breaking' } };
+    stream.markdown("*No breaking news right now. Check back soon!*\n");
+    stream.markdown(
+      "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+    );
+    return { metadata: { command: "breaking" } };
   }
 
   for (let i = 0; i < articles.length; i++) {
     const a = articles[i]!;
-    const priority = a.priority === 'high' ? '🔴 HIGH' : a.priority === 'medium' ? '🟡 MED' : '';
-    const badge = priority ? ` \`${priority}\`` : '';
+    const priority =
+      a.priority === "high"
+        ? "🔴 HIGH"
+        : a.priority === "medium"
+          ? "🟡 MED"
+          : "";
+    const badge = priority ? ` \`${priority}\`` : "";
     const sentimentIcon =
-      a.sentiment === 'bullish' ? '🟢' : a.sentiment === 'bearish' ? '🔴' : '⚪';
-    const desc = a.description ? `\n   > ${a.description.slice(0, 140)}` : '';
+      a.sentiment === "bullish"
+        ? "🟢"
+        : a.sentiment === "bearish"
+          ? "🔴"
+          : "⚪";
+    const desc = a.description ? `\n   > ${a.description.slice(0, 140)}` : "";
 
     stream.markdown(
       `${i + 1}. ${sentimentIcon}${badge} **${a.title}**${desc}\n   📰 ${a.source} • ${a.timeAgo}\n   🔗 [Read more](${a.link})\n\n`,
@@ -265,8 +300,10 @@ async function handleBreaking(
     stream.markdown(`*Updated: ${data.updatedAt}*\n`);
   }
 
-  stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'breaking' } };
+  stream.markdown(
+    "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "breaking" } };
 }
 
 async function handlePrice(
@@ -274,8 +311,10 @@ async function handlePrice(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  const coin = query.trim().toLowerCase() || 'bitcoin';
-  stream.markdown(`💰 **Price: ${coin.charAt(0).toUpperCase() + coin.slice(1)}**\n\n`);
+  const coin = query.trim().toLowerCase() || "bitcoin";
+  stream.markdown(
+    `💰 **Price: ${coin.charAt(0).toUpperCase() + coin.slice(1)}**\n\n`,
+  );
   stream.progress(`Looking up ${coin} price…`);
 
   const data = await fetchAPI<{ prices: Record<string, PriceInfo> }>(
@@ -286,61 +325,83 @@ async function handlePrice(
 
   if (Object.keys(prices).length === 0) {
     stream.markdown(`*Could not find price data for "${coin}".*`);
-    return { metadata: { command: 'price' } };
+    return { metadata: { command: "price" } };
   }
 
-  stream.markdown('| Coin | Price | 24h Change | Market Cap | Volume (24h) |\n');
-  stream.markdown('|------|-------|------------|------------|-------------|\n');
+  stream.markdown(
+    "| Coin | Price | 24h Change | Market Cap | Volume (24h) |\n",
+  );
+  stream.markdown("|------|-------|------------|------------|-------------|\n");
 
   for (const [symbol, info] of Object.entries(prices).slice(0, 10)) {
-    const changeEmoji = info.change24h > 0 ? '📈' : info.change24h < 0 ? '📉' : '➡️';
-    const cap = info.marketCap ? `$${(info.marketCap / 1e9).toFixed(2)}B` : '—';
-    const vol = info.volume24h ? `$${(info.volume24h / 1e9).toFixed(2)}B` : '—';
+    const changeEmoji =
+      info.change24h > 0 ? "📈" : info.change24h < 0 ? "📉" : "➡️";
+    const cap = info.marketCap ? `$${(info.marketCap / 1e9).toFixed(2)}B` : "—";
+    const vol = info.volume24h ? `$${(info.volume24h / 1e9).toFixed(2)}B` : "—";
     stream.markdown(
-      `| ${symbol.toUpperCase()} | $${info.usd?.toLocaleString() ?? 'N/A'} | ${changeEmoji} ${info.change24h?.toFixed(2) ?? 0}% | ${cap} | ${vol} |\n`,
+      `| ${symbol.toUpperCase()} | $${info.usd?.toLocaleString() ?? "N/A"} | ${changeEmoji} ${info.change24h?.toFixed(2) ?? 0}% | ${cap} | ${vol} |\n`,
     );
   }
 
-  stream.markdown('\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'price' } };
+  stream.markdown(
+    "\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "price" } };
 }
 
 async function handleMarket(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  stream.markdown('📊 **Market Overview**\n\n');
-  stream.progress('Loading market data…');
+  stream.markdown("📊 **Market Overview**\n\n");
+  stream.progress("Loading market data…");
 
   const [sentimentData, priceData, fgData] = await Promise.all([
-    fetchAPI<{ market: { score: number; label: string; bullish: number; bearish: number; neutral: number } }>(
-      '/api/sentiment',
+    fetchAPI<{
+      market: {
+        score: number;
+        label: string;
+        bullish: number;
+        bearish: number;
+        neutral: number;
+      };
+    }>("/api/sentiment", token).catch(() => null),
+    fetchAPI<{ prices: Record<string, PriceInfo> }>(
+      "/api/prices?limit=5",
       token,
-    ).catch(() => null),
-    fetchAPI<{ prices: Record<string, PriceInfo> }>('/api/prices?limit=5', token),
-    fetchAPI<FearGreedResponse>('/api/fear-greed', token).catch(() => null),
+    ),
+    fetchAPI<FearGreedResponse>("/api/fear-greed", token).catch(() => null),
   ]);
 
   // --- Fear & Greed section ---
   if (fgData?.current) {
     const fgVal = fgData.current.value;
-    const fgLabel = fgData.current.valueClassification || 'Unknown';
+    const fgLabel = fgData.current.valueClassification || "Unknown";
     stream.markdown(`### Fear & Greed Index\n\n`);
     stream.markdown(`${fearGreedEmoji(fgVal)} **${fgVal}** — ${fgLabel}\n\n`);
     stream.markdown(`${fearGreedBar(fgVal)}\n\n`);
     if (fgData.trend) {
-      const dir = fgData.trend.direction === 'improving' ? '⬆️' : fgData.trend.direction === 'worsening' ? '⬇️' : '➡️';
-      stream.markdown(`7d change: ${dir} ${fgData.trend.change7d > 0 ? '+' : ''}${fgData.trend.change7d} · 30d change: ${fgData.trend.change30d > 0 ? '+' : ''}${fgData.trend.change30d}\n\n`);
+      const dir =
+        fgData.trend.direction === "improving"
+          ? "⬆️"
+          : fgData.trend.direction === "worsening"
+            ? "⬇️"
+            : "➡️";
+      stream.markdown(
+        `7d change: ${dir} ${fgData.trend.change7d > 0 ? "+" : ""}${fgData.trend.change7d} · 30d change: ${fgData.trend.change30d > 0 ? "+" : ""}${fgData.trend.change30d}\n\n`,
+      );
     }
   }
 
   // --- Sentiment section ---
   if (sentimentData?.market) {
     const market = sentimentData.market;
-    const emoji = market.score > 60 ? '🟢' : market.score < 40 ? '🔴' : '🟡';
+    const emoji = market.score > 60 ? "🟢" : market.score < 40 ? "🔴" : "🟡";
 
     stream.markdown(`### News Sentiment\n\n`);
-    stream.markdown(`**Overall:** ${emoji} ${market.label} (${market.score}/100)\n\n`);
+    stream.markdown(
+      `**Overall:** ${emoji} ${market.label} (${market.score}/100)\n\n`,
+    );
     stream.markdown(`- 🟢 Bullish: ${market.bullish}%\n`);
     stream.markdown(`- 🔴 Bearish: ${market.bearish}%\n`);
     stream.markdown(`- ⚪ Neutral: ${market.neutral}%\n\n`);
@@ -349,16 +410,21 @@ async function handleMarket(
   // --- Top coins section ---
   const prices = priceData.prices || {};
   if (Object.keys(prices).length > 0) {
-    stream.markdown('### Top Coins\n\n');
-    stream.markdown('| Coin | Price | 24h |\n|------|-------|-----|\n');
+    stream.markdown("### Top Coins\n\n");
+    stream.markdown("| Coin | Price | 24h |\n|------|-------|-----|\n");
     for (const [symbol, info] of Object.entries(prices).slice(0, 5)) {
-      const arrow = info.change24h > 0 ? '📈' : info.change24h < 0 ? '📉' : '➡️';
-      stream.markdown(`| ${symbol.toUpperCase()} | $${info.usd?.toLocaleString() ?? 'N/A'} | ${arrow} ${info.change24h?.toFixed(2) ?? 0}% |\n`);
+      const arrow =
+        info.change24h > 0 ? "📈" : info.change24h < 0 ? "📉" : "➡️";
+      stream.markdown(
+        `| ${symbol.toUpperCase()} | $${info.usd?.toLocaleString() ?? "N/A"} | ${arrow} ${info.change24h?.toFixed(2) ?? 0}% |\n`,
+      );
     }
   }
 
-  stream.markdown('\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'market' } };
+  stream.markdown(
+    "\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "market" } };
 }
 
 async function handleSentiment(
@@ -366,11 +432,13 @@ async function handleSentiment(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  const coin = query.trim().toUpperCase() || '';
+  const coin = query.trim().toUpperCase() || "";
 
   if (!coin) {
-    stream.markdown('⚠️ Please provide a coin, e.g. `/sentiment BTC` or `/sentiment ethereum`');
-    return { metadata: { command: 'sentiment' } };
+    stream.markdown(
+      "⚠️ Please provide a coin, e.g. `/sentiment BTC` or `/sentiment ethereum`",
+    );
+    return { metadata: { command: "sentiment" } };
   }
 
   stream.markdown(`🧠 **Sentiment Analysis: ${coin}**\n\n`);
@@ -385,58 +453,73 @@ async function handleSentiment(
   if (data.market) {
     const m = data.market;
     stream.markdown(`### Overall Market Mood\n\n`);
-    stream.markdown(`${sentimentEmoji(m.overall)} **${sentimentLabel(m.overall)}** (score: ${m.score > 0 ? '+' : ''}${m.score}/100, confidence: ${m.confidence}%)\n\n`);
+    stream.markdown(
+      `${sentimentEmoji(m.overall)} **${sentimentLabel(m.overall)}** (score: ${m.score > 0 ? "+" : ""}${m.score}/100, confidence: ${m.confidence}%)\n\n`,
+    );
     stream.markdown(`> ${m.summary}\n\n`);
 
     if (m.keyDrivers && m.keyDrivers.length > 0) {
-      stream.markdown('**Key Drivers:**\n');
+      stream.markdown("**Key Drivers:**\n");
       for (const driver of m.keyDrivers) {
         stream.markdown(`- ${driver}\n`);
       }
-      stream.markdown('\n');
+      stream.markdown("\n");
     }
   }
 
   // Distribution breakdown
   if (data.distribution) {
     const d = data.distribution;
-    stream.markdown('### Sentiment Distribution\n\n');
-    stream.markdown('| Sentiment | Count |\n|-----------|-------|\n');
-    if (d.very_bullish) stream.markdown(`| 🟢🟢 Very Bullish | ${d.very_bullish} |\n`);
+    stream.markdown("### Sentiment Distribution\n\n");
+    stream.markdown("| Sentiment | Count |\n|-----------|-------|\n");
+    if (d.very_bullish)
+      stream.markdown(`| 🟢🟢 Very Bullish | ${d.very_bullish} |\n`);
     if (d.bullish) stream.markdown(`| 🟢 Bullish | ${d.bullish} |\n`);
     if (d.neutral) stream.markdown(`| ⚪ Neutral | ${d.neutral} |\n`);
     if (d.bearish) stream.markdown(`| 🔴 Bearish | ${d.bearish} |\n`);
-    if (d.very_bearish) stream.markdown(`| 🔴🔴 Very Bearish | ${d.very_bearish} |\n`);
-    stream.markdown('\n');
+    if (d.very_bearish)
+      stream.markdown(`| 🔴🔴 Very Bearish | ${d.very_bearish} |\n`);
+    stream.markdown("\n");
   }
 
   // High-impact news
-  const highImpact = data.highImpactNews || data.articles?.filter(a => a.impactLevel === 'high') || [];
+  const highImpact =
+    data.highImpactNews ||
+    data.articles?.filter((a) => a.impactLevel === "high") ||
+    [];
   if (highImpact.length > 0) {
-    stream.markdown('### High-Impact News\n\n');
+    stream.markdown("### High-Impact News\n\n");
     for (const article of highImpact.slice(0, 5)) {
       stream.markdown(
-        `- ${sentimentEmoji(article.sentiment)} **${article.title}**\n  ${article.reasoning}\n  ⏱ ${article.timeHorizon} · Affects: ${article.affectedAssets.join(', ')}\n  🔗 [Read](${article.link})\n\n`,
+        `- ${sentimentEmoji(article.sentiment)} **${article.title}**\n  ${article.reasoning}\n  ⏱ ${article.timeHorizon} · Affects: ${article.affectedAssets.join(", ")}\n  🔗 [Read](${article.link})\n\n`,
       );
     }
   }
 
   // Remaining articles summary
-  const remaining = (data.articles || []).filter(a => a.impactLevel !== 'high');
+  const remaining = (data.articles || []).filter(
+    (a) => a.impactLevel !== "high",
+  );
   if (remaining.length > 0) {
-    stream.markdown(`### Other ${coin} News (${remaining.length} articles)\n\n`);
+    stream.markdown(
+      `### Other ${coin} News (${remaining.length} articles)\n\n`,
+    );
     for (const article of remaining.slice(0, 5)) {
       stream.markdown(
         `- ${sentimentEmoji(article.sentiment)} **${article.title}** — ${article.reasoning}\n`,
       );
     }
     if (remaining.length > 5) {
-      stream.markdown(`\n*…and ${remaining.length - 5} more articles analyzed.*\n`);
+      stream.markdown(
+        `\n*…and ${remaining.length - 5} more articles analyzed.*\n`,
+      );
     }
   }
 
-  stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'sentiment' } };
+  stream.markdown(
+    "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "sentiment" } };
 }
 
 async function handleSearch(
@@ -445,8 +528,10 @@ async function handleSearch(
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
   if (!query) {
-    stream.markdown('⚠️ Please provide a search term, e.g. `/search bitcoin ETF`');
-    return { metadata: { command: 'search' } };
+    stream.markdown(
+      "⚠️ Please provide a search term, e.g. `/search bitcoin ETF`",
+    );
+    return { metadata: { command: "search" } };
   }
 
   stream.markdown(`🔍 **Search: "${query}"**\n\n`);
@@ -465,90 +550,125 @@ async function handleSearch(
     stream.markdown(formatArticles(articles));
   }
 
-  stream.markdown('\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'search' } };
+  stream.markdown(
+    "\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "search" } };
 }
 
 async function handleGas(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  stream.markdown('⛽ **Ethereum Gas Prices**\n\n');
-  stream.progress('Fetching gas prices…');
+  stream.markdown("⛽ **Ethereum Gas Prices**\n\n");
+  stream.progress("Fetching gas prices…");
 
-  const data = await fetchAPI<{ gas: GasPrice }>('/api/gas', token);
+  const data = await fetchAPI<{ gas: GasPrice }>("/api/gas", token);
   const gas = data.gas || ({} as GasPrice);
 
-  stream.markdown('| Speed | Gwei | Est. USD |\n');
-  stream.markdown('|-------|------|----------|\n');
-  stream.markdown(`| 🐢 Slow | ${gas.slow ?? '—'} gwei | ${gas.usdSlow ? '$' + gas.usdSlow.toFixed(2) : '—'} |\n`);
-  stream.markdown(`| 🚶 Standard | ${gas.standard ?? '—'} gwei | ${gas.usdStandard ? '$' + gas.usdStandard.toFixed(2) : '—'} |\n`);
-  stream.markdown(`| 🚀 Fast | ${gas.fast ?? '—'} gwei | ${gas.usdFast ? '$' + gas.usdFast.toFixed(2) : '—'} |\n`);
+  stream.markdown("| Speed | Gwei | Est. USD |\n");
+  stream.markdown("|-------|------|----------|\n");
+  stream.markdown(
+    `| 🐢 Slow | ${gas.slow ?? "—"} gwei | ${gas.usdSlow ? "$" + gas.usdSlow.toFixed(2) : "—"} |\n`,
+  );
+  stream.markdown(
+    `| 🚶 Standard | ${gas.standard ?? "—"} gwei | ${gas.usdStandard ? "$" + gas.usdStandard.toFixed(2) : "—"} |\n`,
+  );
+  stream.markdown(
+    `| 🚀 Fast | ${gas.fast ?? "—"} gwei | ${gas.usdFast ? "$" + gas.usdFast.toFixed(2) : "—"} |\n`,
+  );
 
-  stream.markdown('\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'gas' } };
+  stream.markdown(
+    "\n\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "gas" } };
 }
 
 async function handleFearGreed(
   stream: vscode.ChatResponseStream,
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
-  stream.markdown('😱 **Fear & Greed Index**\n\n');
-  stream.progress('Fetching index…');
+  stream.markdown("😱 **Fear & Greed Index**\n\n");
+  stream.progress("Fetching index…");
 
   // Try the structured endpoint first
   try {
-    const data = await fetchAPI<FearGreedResponse>('/api/fear-greed', token);
+    const data = await fetchAPI<FearGreedResponse>("/api/fear-greed", token);
 
     if (data.current) {
       const value = data.current.value ?? 50;
-      const label = data.current.valueClassification || 'Neutral';
+      const label = data.current.valueClassification || "Neutral";
 
-      stream.markdown(`**Current:** ${fearGreedEmoji(value)} **${value}** — ${label}\n\n`);
+      stream.markdown(
+        `**Current:** ${fearGreedEmoji(value)} **${value}** — ${label}\n\n`,
+      );
       stream.markdown(`${fearGreedBar(value)}\n\n`);
 
       if (data.trend) {
-        const dir = data.trend.direction === 'improving' ? '⬆️' : data.trend.direction === 'worsening' ? '⬇️' : '➡️';
+        const dir =
+          data.trend.direction === "improving"
+            ? "⬆️"
+            : data.trend.direction === "worsening"
+              ? "⬇️"
+              : "➡️";
         stream.markdown(`**Trend:** ${dir} ${data.trend.direction}\n`);
-        stream.markdown(`- 7-day change: ${data.trend.change7d > 0 ? '+' : ''}${data.trend.change7d}\n`);
-        stream.markdown(`- 30-day change: ${data.trend.change30d > 0 ? '+' : ''}${data.trend.change30d}\n\n`);
+        stream.markdown(
+          `- 7-day change: ${data.trend.change7d > 0 ? "+" : ""}${data.trend.change7d}\n`,
+        );
+        stream.markdown(
+          `- 30-day change: ${data.trend.change30d > 0 ? "+" : ""}${data.trend.change30d}\n\n`,
+        );
       }
 
       if (data.breakdown) {
-        stream.markdown('### Breakdown\n\n');
-        stream.markdown('| Factor | Value | Weight |\n|--------|-------|--------|\n');
+        stream.markdown("### Breakdown\n\n");
+        stream.markdown(
+          "| Factor | Value | Weight |\n|--------|-------|--------|\n",
+        );
         for (const [factor, info] of Object.entries(data.breakdown)) {
-          const name = factor.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase());
-          stream.markdown(`| ${name} | ${info.value} | ${(info.weight * 100).toFixed(0)}% |\n`);
+          const name = factor
+            .replace(/([A-Z])/g, " $1")
+            .replace(/^./, (s) => s.toUpperCase());
+          stream.markdown(
+            `| ${name} | ${info.value} | ${(info.weight * 100).toFixed(0)}% |\n`,
+          );
         }
-        stream.markdown('\n');
+        stream.markdown("\n");
       }
 
-      stream.markdown(`*Updated: ${data.lastUpdated || 'Recently'}*\n`);
-      stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-      return { metadata: { command: 'fear-greed' } };
+      stream.markdown(`*Updated: ${data.lastUpdated || "Recently"}*\n`);
+      stream.markdown(
+        "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+      );
+      return { metadata: { command: "fear-greed" } };
     }
   } catch {
     // Fall through to legacy format
   }
 
   // Legacy fallback
-  const data = await fetchAPI<FearGreedLegacy>('/api/fear-greed', token);
+  const data = await fetchAPI<FearGreedLegacy>("/api/fear-greed", token);
   const value = data.value ?? 50;
-  const label = data.classification || 'Neutral';
+  const label = data.classification || "Neutral";
 
-  stream.markdown(`**Current:** ${fearGreedEmoji(value)} **${value}** — ${label}\n\n`);
+  stream.markdown(
+    `**Current:** ${fearGreedEmoji(value)} **${value}** — ${label}\n\n`,
+  );
   stream.markdown(`${fearGreedBar(value)}\n\n`);
 
   if (data.previous) {
     const prev = data.previous;
-    const dir = prev.value < value ? '⬆️' : prev.value > value ? '⬇️' : '➡️';
-    stream.markdown(`**Previous:** ${prev.value} — ${prev.classification} ${dir}\n\n`);
+    const dir = prev.value < value ? "⬆️" : prev.value > value ? "⬇️" : "➡️";
+    stream.markdown(
+      `**Previous:** ${prev.value} — ${prev.classification} ${dir}\n\n`,
+    );
   }
 
-  stream.markdown(`*Updated: ${data.timestamp || 'Recently'}*\n`);
-  stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'fear-greed' } };
+  stream.markdown(`*Updated: ${data.timestamp || "Recently"}*\n`);
+  stream.markdown(
+    "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "fear-greed" } };
 }
 
 async function handleExplain(
@@ -557,8 +677,10 @@ async function handleExplain(
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
   if (!topic) {
-    stream.markdown('⚠️ Please provide a topic to explain, e.g. `/explain Bitcoin` or `/explain DeFi`');
-    return { metadata: { command: 'explain' } };
+    stream.markdown(
+      "⚠️ Please provide a topic to explain, e.g. `/explain Bitcoin` or `/explain DeFi`",
+    );
+    return { metadata: { command: "explain" } };
   }
 
   stream.markdown(`💡 **Why is "${topic}" Trending?**\n\n`);
@@ -585,7 +707,9 @@ async function handleExplain(
       }
 
       if (ex.marketImplications) {
-        stream.markdown(`### Market Implications\n\n${ex.marketImplications}\n\n`);
+        stream.markdown(
+          `### Market Implications\n\n${ex.marketImplications}\n\n`,
+        );
       }
 
       if (ex.outlook) {
@@ -593,19 +717,21 @@ async function handleExplain(
       }
 
       if (data.recentHeadlines && data.recentHeadlines.length > 0) {
-        stream.markdown('### Recent Headlines\n\n');
+        stream.markdown("### Recent Headlines\n\n");
         for (const hl of data.recentHeadlines.slice(0, 5)) {
           stream.markdown(`- ${hl}\n`);
         }
-        stream.markdown('\n');
+        stream.markdown("\n");
       }
 
       if (data.articleCount) {
         stream.markdown(`*Based on ${data.articleCount} recent articles.*\n`);
       }
 
-      stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-      return { metadata: { command: 'explain' } };
+      stream.markdown(
+        "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+      );
+      return { metadata: { command: "explain" } };
     }
 
     // AI endpoint returned no results — try glossary fallback
@@ -631,17 +757,25 @@ async function handleExplain(
         stream.markdown(`**Category:** ${glossary.term.category}\n\n`);
       }
       if (glossary.term.relatedTerms && glossary.term.relatedTerms.length > 0) {
-        stream.markdown(`**Related:** ${glossary.term.relatedTerms.join(', ')}\n`);
+        stream.markdown(
+          `**Related:** ${glossary.term.relatedTerms.join(", ")}\n`,
+        );
       }
     } else {
-      stream.markdown(`*No explanation or glossary entry found for "${topic}".*`);
+      stream.markdown(
+        `*No explanation or glossary entry found for "${topic}".*`,
+      );
     }
   } catch {
-    stream.markdown(`*Could not find an explanation for "${topic}". Try a different topic.*`);
+    stream.markdown(
+      `*Could not find an explanation for "${topic}". Try a different topic.*`,
+    );
   }
 
-  stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'explain' } };
+  stream.markdown(
+    "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "explain" } };
 }
 
 async function handleResearch(
@@ -650,12 +784,16 @@ async function handleResearch(
   token: vscode.CancellationToken,
 ): Promise<vscode.ChatResult> {
   if (!topic) {
-    stream.markdown('⚠️ Please provide a topic, e.g. `/research Bitcoin` or `/research Solana DeFi`');
-    return { metadata: { command: 'research' } };
+    stream.markdown(
+      "⚠️ Please provide a topic, e.g. `/research Bitcoin` or `/research Solana DeFi`",
+    );
+    return { metadata: { command: "research" } };
   }
 
   stream.markdown(`🔬 **Research Report: ${topic}**\n\n`);
-  stream.progress(`Generating deep research on "${topic}"… (this may take a moment)`);
+  stream.progress(
+    `Generating deep research on "${topic}"… (this may take a moment)`,
+  );
 
   const data = await fetchAPI<ResearchResponse>(
     `/api/ai/research?topic=${encodeURIComponent(topic)}`,
@@ -663,36 +801,50 @@ async function handleResearch(
   );
 
   if (!data.success) {
-    stream.markdown(`*${data.error || `Could not generate research for "${topic}".`}*\n`);
-    stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-    return { metadata: { command: 'research' } };
+    stream.markdown(
+      `*${data.error || `Could not generate research for "${topic}".`}*\n`,
+    );
+    stream.markdown(
+      "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+    );
+    return { metadata: { command: "research" } };
   }
 
   const report = data.report;
 
   if (!report) {
-    stream.markdown(`*No report data returned for "${topic}". Try a different query.*\n`);
-    stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-    return { metadata: { command: 'research' } };
+    stream.markdown(
+      `*No report data returned for "${topic}". Try a different query.*\n`,
+    );
+    stream.markdown(
+      "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+    );
+    return { metadata: { command: "research" } };
   }
 
   // Sentiment badge
   const badge = sentimentEmoji(report.sentiment);
-  stream.markdown(`**Sentiment:** ${badge} ${sentimentLabel(report.sentiment)}\n\n`);
+  stream.markdown(
+    `**Sentiment:** ${badge} ${sentimentLabel(report.sentiment)}\n\n`,
+  );
 
   // Price data if available
   if (report.priceData) {
     const p = report.priceData;
-    const ch24 = p.change24h > 0 ? '📈' : p.change24h < 0 ? '📉' : '➡️';
-    stream.markdown(`**Price:** $${p.price.toLocaleString()} ${ch24} ${p.change24h?.toFixed(2)}% (24h)`);
+    const ch24 = p.change24h > 0 ? "📈" : p.change24h < 0 ? "📉" : "➡️";
+    stream.markdown(
+      `**Price:** $${p.price.toLocaleString()} ${ch24} ${p.change24h?.toFixed(2)}% (24h)`,
+    );
     if (p.change7d !== undefined) {
       stream.markdown(` · ${p.change7d?.toFixed(2)}% (7d)`);
     }
-    stream.markdown('\n');
+    stream.markdown("\n");
     if (report.marketCap) {
-      stream.markdown(`**Market Cap:** $${(report.marketCap / 1e9).toFixed(2)}B\n`);
+      stream.markdown(
+        `**Market Cap:** $${(report.marketCap / 1e9).toFixed(2)}B\n`,
+      );
     }
-    stream.markdown('\n');
+    stream.markdown("\n");
   }
 
   // Summary
@@ -700,29 +852,29 @@ async function handleResearch(
 
   // Key findings
   if (report.keyFindings && report.keyFindings.length > 0) {
-    stream.markdown('### Key Findings\n\n');
+    stream.markdown("### Key Findings\n\n");
     for (const finding of report.keyFindings) {
       stream.markdown(`- ${finding}\n`);
     }
-    stream.markdown('\n');
+    stream.markdown("\n");
   }
 
   // Opportunities
   if (report.opportunities && report.opportunities.length > 0) {
-    stream.markdown('### Opportunities\n\n');
+    stream.markdown("### Opportunities\n\n");
     for (const opp of report.opportunities) {
       stream.markdown(`- 🟢 ${opp}\n`);
     }
-    stream.markdown('\n');
+    stream.markdown("\n");
   }
 
   // Risks
   if (report.risks && report.risks.length > 0) {
-    stream.markdown('### Risks\n\n');
+    stream.markdown("### Risks\n\n");
     for (const risk of report.risks) {
       stream.markdown(`- ⚠️ ${risk}\n`);
     }
-    stream.markdown('\n');
+    stream.markdown("\n");
   }
 
   // Outlook
@@ -731,11 +883,15 @@ async function handleResearch(
   }
 
   if (data.articlesAnalyzed) {
-    stream.markdown(`*Based on analysis of ${data.articlesAnalyzed} recent articles.*\n`);
+    stream.markdown(
+      `*Based on analysis of ${data.articlesAnalyzed} recent articles.*\n`,
+    );
   }
 
-  stream.markdown('\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*');
-  return { metadata: { command: 'research' } };
+  stream.markdown(
+    "\n---\n*Source: [cryptocurrency.cv](https://cryptocurrency.cv)*",
+  );
+  return { metadata: { command: "research" } };
 }
 
 // ---------------------------------------------------------------------------
@@ -753,25 +909,25 @@ const chatHandler: vscode.ChatRequestHandler = async (
 
   try {
     switch (command) {
-      case 'breaking':
+      case "breaking":
         return await handleBreaking(stream, token);
-      case 'news':
+      case "news":
         return await handleNews(stream, token);
-      case 'price':
+      case "price":
         return await handlePrice(query, stream, token);
-      case 'market':
+      case "market":
         return await handleMarket(stream, token);
-      case 'sentiment':
+      case "sentiment":
         return await handleSentiment(query, stream, token);
-      case 'search':
+      case "search":
         return await handleSearch(query, stream, token);
-      case 'gas':
+      case "gas":
         return await handleGas(stream, token);
-      case 'fear-greed':
+      case "fear-greed":
         return await handleFearGreed(stream, token);
-      case 'explain':
+      case "explain":
         return await handleExplain(query, stream, token);
-      case 'research':
+      case "research":
         return await handleResearch(query, stream, token);
       default:
         // No command — treat prompt as a search if text is present
@@ -779,29 +935,38 @@ const chatHandler: vscode.ChatRequestHandler = async (
           return await handleSearch(query, stream, token);
         }
         // Show help
-        stream.markdown('👋 **Welcome to @crypto!**\n\n');
-        stream.markdown('Available commands:\n\n');
-        stream.markdown('| Command | Description |\n');
-        stream.markdown('|---------|-------------|\n');
-        stream.markdown('| `/breaking` | Latest breaking crypto news |\n');
-        stream.markdown('| `/news` | Latest crypto news headlines |\n');
-        stream.markdown('| `/price <coin>` | Current price (e.g. `/price bitcoin`) |\n');
-        stream.markdown('| `/market` | Market overview with prices & Fear/Greed |\n');
-        stream.markdown('| `/sentiment <coin>` | AI sentiment analysis (e.g. `/sentiment BTC`) |\n');
-        stream.markdown('| `/search <query>` | Search news articles |\n');
-        stream.markdown('| `/gas` | Ethereum gas prices |\n');
-        stream.markdown('| `/fear-greed` | Fear & Greed Index |\n');
-        stream.markdown('| `/explain <topic>` | Why is a topic trending? |\n');
-        stream.markdown('| `/research <topic>` | Deep AI research report |\n');
-        stream.markdown('\nOr just type a question and I\'ll search for relevant news.\n');
-        return { metadata: { command: 'help' } };
+        stream.markdown("👋 **Welcome to @crypto!**\n\n");
+        stream.markdown("Available commands:\n\n");
+        stream.markdown("| Command | Description |\n");
+        stream.markdown("|---------|-------------|\n");
+        stream.markdown("| `/breaking` | Latest breaking crypto news |\n");
+        stream.markdown("| `/news` | Latest crypto news headlines |\n");
+        stream.markdown(
+          "| `/price <coin>` | Current price (e.g. `/price bitcoin`) |\n",
+        );
+        stream.markdown(
+          "| `/market` | Market overview with prices & Fear/Greed |\n",
+        );
+        stream.markdown(
+          "| `/sentiment <coin>` | AI sentiment analysis (e.g. `/sentiment BTC`) |\n",
+        );
+        stream.markdown("| `/search <query>` | Search news articles |\n");
+        stream.markdown("| `/gas` | Ethereum gas prices |\n");
+        stream.markdown("| `/fear-greed` | Fear & Greed Index |\n");
+        stream.markdown("| `/explain <topic>` | Why is a topic trending? |\n");
+        stream.markdown("| `/research <topic>` | Deep AI research report |\n");
+        stream.markdown(
+          "\nOr just type a question and I'll search for relevant news.\n",
+        );
+        return { metadata: { command: "help" } };
     }
   } catch (error: any) {
-    const message = error.name === 'AbortError'
-      ? 'Request was cancelled.'
-      : error.message || 'An unknown error occurred.';
+    const message =
+      error.name === "AbortError"
+        ? "Request was cancelled."
+        : error.message || "An unknown error occurred.";
     stream.markdown(`\n\n❌ **Error:** ${message}\n\nPlease try again later.`);
-    return { metadata: { command: command ?? 'unknown', error: true } };
+    return { metadata: { command: command ?? "unknown", error: true } };
   }
 };
 
@@ -811,23 +976,30 @@ const chatHandler: vscode.ChatRequestHandler = async (
 
 export function activate(context: vscode.ExtensionContext) {
   // Register @crypto chat participant
-  const participant = vscode.chat.createChatParticipant('crypto-news.crypto', chatHandler);
-  participant.iconPath = vscode.Uri.joinPath(context.extensionUri, 'media', 'icon.png');
+  const participant = vscode.chat.createChatParticipant(
+    "crypto-news.crypto",
+    chatHandler,
+  );
+  participant.iconPath = vscode.Uri.joinPath(
+    context.extensionUri,
+    "media",
+    "icon.png",
+  );
   context.subscriptions.push(participant);
 
   // Refresh command
   context.subscriptions.push(
-    vscode.commands.registerCommand('crypto.refresh', async () => {
-      vscode.window.showInformationMessage('Crypto data refreshed!');
+    vscode.commands.registerCommand("crypto.refresh", async () => {
+      vscode.window.showInformationMessage("Crypto data refreshed!");
     }),
   );
 
   // Dashboard command
   context.subscriptions.push(
-    vscode.commands.registerCommand('crypto.openDashboard', async () => {
+    vscode.commands.registerCommand("crypto.openDashboard", async () => {
       const panel = vscode.window.createWebviewPanel(
-        'cryptoDashboard',
-        'Crypto Dashboard',
+        "cryptoDashboard",
+        "Crypto Dashboard",
         vscode.ViewColumn.One,
         { enableScripts: true },
       );
@@ -835,7 +1007,7 @@ export function activate(context: vscode.ExtensionContext) {
     }),
   );
 
-  console.log('Crypto News Copilot extension activated!');
+  console.log("Crypto News Copilot extension activated!");
 }
 
 function getDashboardHTML(): string {
