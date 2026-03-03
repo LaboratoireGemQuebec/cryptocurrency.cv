@@ -37,18 +37,18 @@
  * @module semantic-chunking
  */
 
-import { generateEmbedding } from './embedding-service';
-import { ragLogger } from './observability';
+import { generateEmbedding } from "./embedding-service";
+import { ragLogger } from "./observability";
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════
 
 export type ChunkingMethod =
-  | 'sentence_similarity'
-  | 'topic_boundary'
-  | 'fixed_overlap'
-  | 'hybrid';
+  | "sentence_similarity"
+  | "topic_boundary"
+  | "fixed_overlap"
+  | "hybrid";
 
 export interface ChunkingOptions {
   /** Chunking strategy (default: 'sentence_similarity') */
@@ -137,7 +137,7 @@ export class SemanticChunker {
     options: ChunkingOptions = {},
   ): Promise<ChunkingResult> {
     const {
-      method = 'sentence_similarity',
+      method = "sentence_similarity",
       targetSize = 512,
       maxSize = 1024,
       overlap = 50,
@@ -146,16 +146,20 @@ export class SemanticChunker {
       preserveStructure = true,
     } = options;
 
-    ragLogger.debug('Semantic chunking started', undefined, {
+    ragLogger.debug("Semantic chunking started", undefined, {
       documentId,
       method,
       contentLength: content.length,
     });
 
-    let rawChunks: Array<{ content: string; charStart: number; charEnd: number }>;
+    let rawChunks: Array<{
+      content: string;
+      charStart: number;
+      charEnd: number;
+    }>;
 
     switch (method) {
-      case 'sentence_similarity':
+      case "sentence_similarity":
         rawChunks = await this.chunkBySentenceSimilarity(
           content,
           targetSize,
@@ -164,7 +168,7 @@ export class SemanticChunker {
         );
         break;
 
-      case 'topic_boundary':
+      case "topic_boundary":
         rawChunks = await this.chunkByTopicBoundary(
           content,
           targetSize,
@@ -174,7 +178,7 @@ export class SemanticChunker {
         );
         break;
 
-      case 'hybrid':
+      case "hybrid":
         rawChunks = await this.chunkHybrid(
           content,
           targetSize,
@@ -184,9 +188,14 @@ export class SemanticChunker {
         );
         break;
 
-      case 'fixed_overlap':
+      case "fixed_overlap":
       default:
-        rawChunks = this.chunkFixedOverlap(content, targetSize, overlap, preserveStructure);
+        rawChunks = this.chunkFixedOverlap(
+          content,
+          targetSize,
+          overlap,
+          preserveStructure,
+        );
         break;
     }
 
@@ -215,7 +224,10 @@ export class SemanticChunker {
       stats: {
         inputLength: content.length,
         chunkCount: chunks.length,
-        avgChunkSize: sizes.length > 0 ? sizes.reduce((a, b) => a + b, 0) / sizes.length : 0,
+        avgChunkSize:
+          sizes.length > 0
+            ? sizes.reduce((a, b) => a + b, 0) / sizes.length
+            : 0,
         minChunkSize: sizes.length > 0 ? Math.min(...sizes) : 0,
         maxChunkSize: sizes.length > 0 ? Math.max(...sizes) : 0,
         avgCoherence:
@@ -225,7 +237,7 @@ export class SemanticChunker {
       },
     };
 
-    ragLogger.debug('Semantic chunking completed', undefined, {
+    ragLogger.debug("Semantic chunking completed", undefined, {
       documentId,
       chunkCount: result.stats.chunkCount,
       avgSize: Math.round(result.stats.avgChunkSize),
@@ -250,7 +262,9 @@ export class SemanticChunker {
   ): Promise<Array<{ content: string; charStart: number; charEnd: number }>> {
     const sentences = splitSentences(content);
     if (sentences.length <= 1) {
-      return [{ content: content.trim(), charStart: 0, charEnd: content.length }];
+      return [
+        { content: content.trim(), charStart: 0, charEnd: content.length },
+      ];
     }
 
     // Generate embeddings for all sentences
@@ -300,7 +314,9 @@ export class SemanticChunker {
   ): Promise<Array<{ content: string; charStart: number; charEnd: number }>> {
     const sentences = splitSentences(content);
     if (sentences.length <= windowSize * 2) {
-      return [{ content: content.trim(), charStart: 0, charEnd: content.length }];
+      return [
+        { content: content.trim(), charStart: 0, charEnd: content.length },
+      ];
     }
 
     // Generate embeddings
@@ -350,7 +366,9 @@ export class SemanticChunker {
   ): Promise<Array<{ content: string; charStart: number; charEnd: number }>> {
     const sentences = splitSentences(content);
     if (sentences.length <= 2) {
-      return [{ content: content.trim(), charStart: 0, charEnd: content.length }];
+      return [
+        { content: content.trim(), charStart: 0, charEnd: content.length },
+      ];
     }
 
     const embeddings = await Promise.all(
@@ -362,7 +380,10 @@ export class SemanticChunker {
 
     // Sentence-level similarity splits
     for (let i = 0; i < sentences.length - 1; i++) {
-      const sim = cosineSim(sentences[i].embedding!, sentences[i + 1].embedding!);
+      const sim = cosineSim(
+        sentences[i].embedding!,
+        sentences[i + 1].embedding!,
+      );
       if (sim < threshold) {
         splitPoints.add(i + 1);
       }
@@ -373,7 +394,9 @@ export class SemanticChunker {
       const windowEmbs: number[][] = [];
       for (let i = 0; i <= sentences.length - windowSize; i++) {
         windowEmbs.push(
-          averageEmbeddings(sentences.slice(i, i + windowSize).map((s) => s.embedding!)),
+          averageEmbeddings(
+            sentences.slice(i, i + windowSize).map((s) => s.embedding!),
+          ),
         );
       }
       for (let i = 0; i < windowEmbs.length - 1; i++) {
@@ -406,10 +429,16 @@ export class SemanticChunker {
     preserveStructure: boolean,
   ): Array<{ content: string; charStart: number; charEnd: number }> {
     if (content.length <= targetSize) {
-      return [{ content: content.trim(), charStart: 0, charEnd: content.length }];
+      return [
+        { content: content.trim(), charStart: 0, charEnd: content.length },
+      ];
     }
 
-    const chunks: Array<{ content: string; charStart: number; charEnd: number }> = [];
+    const chunks: Array<{
+      content: string;
+      charStart: number;
+      charEnd: number;
+    }> = [];
     let start = 0;
 
     while (start < content.length) {
@@ -455,12 +484,17 @@ export class SemanticChunker {
       }
 
       // For efficiency, sample up to 5 sentences
-      const sampled = sentences.length <= 5
-        ? sentences
-        : sentences.filter((_, i) => i % Math.ceil(sentences.length / 5) === 0).slice(0, 5);
+      const sampled =
+        sentences.length <= 5
+          ? sentences
+          : sentences
+              .filter((_, i) => i % Math.ceil(sentences.length / 5) === 0)
+              .slice(0, 5);
 
       try {
-        const embeddings = await Promise.all(sampled.map((s) => generateEmbedding(s.text)));
+        const embeddings = await Promise.all(
+          sampled.map((s) => generateEmbedding(s.text)),
+        );
 
         // Average pairwise similarity
         let totalSim = 0;
@@ -566,7 +600,8 @@ function buildChunksFromSplits(
   splitIndices: number[],
   originalText: string,
 ): Array<{ content: string; charStart: number; charEnd: number }> {
-  const chunks: Array<{ content: string; charStart: number; charEnd: number }> = [];
+  const chunks: Array<{ content: string; charStart: number; charEnd: number }> =
+    [];
   let prevSplit = 0;
 
   const splits = [...splitIndices, sentences.length];
@@ -596,7 +631,8 @@ function enforceMaxSize(
   chunks: Array<{ content: string; charStart: number; charEnd: number }>,
   maxSize: number,
 ): Array<{ content: string; charStart: number; charEnd: number }> {
-  const result: Array<{ content: string; charStart: number; charEnd: number }> = [];
+  const result: Array<{ content: string; charStart: number; charEnd: number }> =
+    [];
 
   for (const chunk of chunks) {
     if (chunk.content.length <= maxSize) {
@@ -611,7 +647,7 @@ function enforceMaxSize(
 
     for (const sent of subSentences) {
       if (currentLen + sent.text.length > maxSize && current.length > 0) {
-        const text = current.map((s) => s.text).join(' ');
+        const text = current.map((s) => s.text).join(" ");
         result.push({
           content: text,
           charStart: chunk.charStart + current[0].start,
@@ -625,7 +661,7 @@ function enforceMaxSize(
     }
 
     if (current.length > 0) {
-      const text = current.map((s) => s.text).join(' ');
+      const text = current.map((s) => s.text).join(" ");
       result.push({
         content: text,
         charStart: chunk.charStart + current[0].start,
@@ -643,7 +679,10 @@ function enforceMaxSize(
 function findSentenceEnd(text: string, start: number, end: number): number {
   // Look backwards from `end` for a sentence-ending punctuation
   for (let i = end; i > start + (end - start) * 0.5; i--) {
-    if ('.!?\n'.includes(text[i]) && (i + 1 >= text.length || /\s/.test(text[i + 1]))) {
+    if (
+      ".!?\n".includes(text[i]) &&
+      (i + 1 >= text.length || /\s/.test(text[i + 1]))
+    ) {
       return i + 1;
     }
   }

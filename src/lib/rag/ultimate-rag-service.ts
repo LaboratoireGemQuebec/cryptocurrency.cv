@@ -27,39 +27,64 @@
  * Use this for production deployments requiring maximum capability.
  */
 
-import { callGroq } from '../groq';
-import { vectorStore } from './vector-store';
-import { redisVectorStore } from './redis-vector-store';
-import { hybridSearch } from './hybrid-search';
-import { generateEmbedding } from './embedding-service';
-import { extractCurrencies } from './currency-extractor';
-import { extractDateRange } from './date-range-extractor';
-import { processQuery, generateHypotheticalDocument } from './query-processor';
+import { callGroq } from "../groq";
+import { vectorStore } from "./vector-store";
+import { redisVectorStore } from "./redis-vector-store";
+import { hybridSearch } from "./hybrid-search";
+import { generateEmbedding } from "./embedding-service";
+import { extractCurrencies } from "./currency-extractor";
+import { extractDateRange } from "./date-range-extractor";
+import { processQuery, generateHypotheticalDocument } from "./query-processor";
 import {
   rerankResults,
   llmRerank,
   applyTimeDecay,
   applySourceCredibility,
-} from './reranker';
-import { contextualizeQuery, conversationMemory, generateContextualResponse } from './conversation-memory';
-import { agenticRAG } from './agentic-rag';
-import { selfRAG, gradeRetrievals, detectHallucinations } from './self-rag';
-import { compressDocuments, assembleContext, extractKeyFacts, type AssembledContext } from './contextual-compression';
-import { generateAttributedAnswer, formatCitationsForDisplay, type AttributedAnswer } from './answer-attribution';
-import { ragTracer, ragLogger, type RAGTrace } from './observability';
-import { ragCache } from './cache';
-import { generateSuggestedQuestions, type SuggestedQuestion } from './suggested-questions';
-import { ConfidenceScorer, type ConfidenceScore, formatConfidenceForUI, type ConfidenceScoringContext } from './confidence-scorer';
-import { routeQuery, type QueryRoute } from './query-router';
-import { findRelatedArticles, type RelatedArticle, RelatedArticlesFinder } from './related-articles';
-import { graphRAG, type GraphSearchResult } from './graph-rag';
-import { quickDedup } from './deduplication';
+} from "./reranker";
+import {
+  contextualizeQuery,
+  conversationMemory,
+  generateContextualResponse,
+} from "./conversation-memory";
+import { agenticRAG } from "./agentic-rag";
+import { selfRAG, gradeRetrievals, detectHallucinations } from "./self-rag";
+import {
+  compressDocuments,
+  assembleContext,
+  extractKeyFacts,
+  type AssembledContext,
+} from "./contextual-compression";
+import {
+  generateAttributedAnswer,
+  formatCitationsForDisplay,
+  type AttributedAnswer,
+} from "./answer-attribution";
+import { ragTracer, ragLogger, type RAGTrace } from "./observability";
+import { ragCache } from "./cache";
+import {
+  generateSuggestedQuestions,
+  type SuggestedQuestion,
+} from "./suggested-questions";
+import {
+  ConfidenceScorer,
+  type ConfidenceScore,
+  formatConfidenceForUI,
+  type ConfidenceScoringContext,
+} from "./confidence-scorer";
+import { routeQuery, type QueryRoute } from "./query-router";
+import {
+  findRelatedArticles,
+  type RelatedArticle,
+  RelatedArticlesFinder,
+} from "./related-articles";
+import { graphRAG, type GraphSearchResult } from "./graph-rag";
+import { quickDedup } from "./deduplication";
 import type {
   ScoredDocument,
   SearchFilter,
   SearchResult,
   NewsDocument,
-} from './types';
+} from "./types";
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
@@ -109,7 +134,7 @@ export interface UltimateRAGOptions {
   // Compression options
   compressionOptions?: {
     maxTokens?: number;
-    method?: 'llm_compress' | 'extract_sentences' | 'extractive';
+    method?: "llm_compress" | "extract_sentences" | "extractive";
   };
 
   // Graph RAG options
@@ -137,7 +162,15 @@ interface TopicCluster {
 }
 
 // RAG strategy type (matches RouteType from query-router)
-type RAGStrategy = 'semantic' | 'keyword' | 'hybrid' | 'agentic' | 'direct' | 'temporal' | 'comparison' | 'aggregation';
+type RAGStrategy =
+  | "semantic"
+  | "keyword"
+  | "hybrid"
+  | "agentic"
+  | "direct"
+  | "temporal"
+  | "comparison"
+  | "aggregation";
 
 export interface UltimateRAGResponse {
   // Core response
@@ -248,10 +281,10 @@ export class UltimateRAGService {
         const stats = await redisVectorStore.getStats();
         if (stats.totalDocuments > 0) {
           this.useRedis = true;
-          ragLogger.info('Ultimate RAG: Using Redis vector store');
+          ragLogger.info("Ultimate RAG: Using Redis vector store");
         }
       } catch {
-        ragLogger.warn('Ultimate RAG: Redis not available, using file store');
+        ragLogger.warn("Ultimate RAG: Redis not available, using file store");
       }
     }
 
@@ -265,9 +298,12 @@ export class UltimateRAGService {
   /**
    * Main query method with all advanced features
    */
-  async ask(query: string, options: UltimateRAGOptions = {}): Promise<UltimateRAGResponse> {
+  async ask(
+    query: string,
+    options: UltimateRAGOptions = {},
+  ): Promise<UltimateRAGResponse> {
     const startTime = Date.now();
-    const timings: UltimateRAGResponse['timings'] = {};
+    const timings: UltimateRAGResponse["timings"] = {};
 
     await this.initialize();
 
@@ -304,7 +340,7 @@ export class UltimateRAGService {
     let trace: RAGTrace | undefined;
     if (useTracing) {
       trace = ragTracer.startTrace(query);
-      ragLogger.info('Query started', trace.id, { query, conversationId });
+      ragLogger.info("Query started", trace.id, { query, conversationId });
     }
 
     try {
@@ -312,7 +348,9 @@ export class UltimateRAGService {
       // CACHE CHECK
       // ─────────────────────────────────────────────────────────────
       if (useCaching) {
-        const cacheSpan = trace ? ragTracer.startSpan(trace.id, 'cache_check') : undefined;
+        const cacheSpan = trace
+          ? ragTracer.startSpan(trace.id, "cache_check")
+          : undefined;
 
         // Check semantic query cache
         const cachedResult = await ragCache.query.get(query, async () => {
@@ -321,18 +359,22 @@ export class UltimateRAGService {
         });
 
         if (cachedResult) {
-          ragLogger.info('Cache hit', trace?.id, { cacheType: cachedResult.type });
+          ragLogger.info("Cache hit", trace?.id, {
+            cacheType: cachedResult.type,
+          });
           if (cacheSpan && trace) {
-            ragTracer.endSpan(trace.id, cacheSpan.id, 'success', { cacheHit: true });
+            ragTracer.endSpan(trace.id, cacheSpan.id, "success", {
+              cacheHit: true,
+            });
           }
 
           // Build response from cached entry
           const cachedResponse: UltimateRAGResponse = {
             answer: cachedResult.entry.answer,
-            sources: cachedResult.entry.documents.map(d => ({
+            sources: cachedResult.entry.documents.map((d) => ({
               title: d.title,
-              url: d.url || '',
-              pubDate: d.publishedAt?.toISOString() || '',
+              url: d.url || "",
+              pubDate: d.publishedAt?.toISOString() || "",
               source: d.source,
               voteScore: d.voteScore || 0,
             })),
@@ -348,7 +390,9 @@ export class UltimateRAGService {
         }
 
         if (cacheSpan && trace) {
-          ragTracer.endSpan(trace.id, cacheSpan.id, 'success', { cacheHit: false });
+          ragTracer.endSpan(trace.id, cacheSpan.id, "success", {
+            cacheHit: false,
+          });
         }
       }
 
@@ -358,18 +402,20 @@ export class UltimateRAGService {
       let route: QueryRoute | undefined;
       if (useRouting) {
         const routeStart = Date.now();
-        const routeSpan = trace ? ragTracer.startSpan(trace.id, 'routing') : undefined;
+        const routeSpan = trace
+          ? ragTracer.startSpan(trace.id, "routing")
+          : undefined;
 
         route = await routeQuery(query);
         timings.routing = Date.now() - routeStart;
 
         if (routeSpan && trace) {
-          ragTracer.endSpan(trace.id, routeSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, routeSpan.id, "success", {
             route: route.primary,
             confidence: route.confidence,
           });
         }
-        ragLogger.debug('Route determined', trace?.id, { route });
+        ragLogger.debug("Route determined", trace?.id, { route });
 
         // Apply route parameters
         if (route.parameters.topK) {
@@ -381,7 +427,11 @@ export class UltimateRAGService {
       // QUERY PROCESSING
       // ─────────────────────────────────────────────────────────────
       let processedQuery = query;
-      const queryInfo: { intent?: string; complexity?: string; isFollowUp?: boolean } = {};
+      const queryInfo: {
+        intent?: string;
+        complexity?: string;
+        isFollowUp?: boolean;
+      } = {};
 
       // Conversation context
       if (useConversationMemory && conversationId) {
@@ -423,38 +473,45 @@ export class UltimateRAGService {
       // SEARCH
       // ─────────────────────────────────────────────────────────────
       const searchStart = Date.now();
-      const searchSpan = trace ? ragTracer.startSpan(trace.id, 'retrieval') : undefined;
+      const searchSpan = trace
+        ? ragTracer.startSpan(trace.id, "retrieval")
+        : undefined;
 
       let searchResults: SearchResult[];
       const store = this.getStore();
 
       // Route to appropriate search strategy
       const searchMethod =
-        route?.primary === 'keyword'
-          ? 'bm25'
-          : route?.primary === 'semantic'
-            ? 'semantic'
+        route?.primary === "keyword"
+          ? "bm25"
+          : route?.primary === "semantic"
+            ? "semantic"
             : useHybridSearch
-              ? 'hybrid'
-              : 'semantic';
+              ? "hybrid"
+              : "semantic";
 
-      if (searchMethod === 'hybrid') {
+      if (searchMethod === "hybrid") {
         searchResults = await hybridSearch(searchQuery, {
           topK: limit * 2,
           filter,
-          fusionMethod: 'rrf',
+          fusionMethod: "rrf",
           semanticWeight: route?.parameters.semanticWeight ?? 0.7,
           similarityThreshold,
         });
       } else {
         const embedding = await generateEmbedding(searchQuery);
-        searchResults = await store.search(embedding, limit * 2, filter, similarityThreshold);
+        searchResults = await store.search(
+          embedding,
+          limit * 2,
+          filter,
+          similarityThreshold,
+        );
       }
 
       timings.search = Date.now() - searchStart;
 
       if (searchSpan && trace) {
-        ragTracer.endSpan(trace.id, searchSpan.id, 'success', {
+        ragTracer.endSpan(trace.id, searchSpan.id, "success", {
           docsFound: searchResults.length,
           method: searchMethod,
         });
@@ -486,7 +543,7 @@ export class UltimateRAGService {
         };
 
         if (trace) {
-          ragTracer.endTrace(trace.id, 'success');
+          ragTracer.endTrace(trace.id, "success");
         }
 
         return noResultsResponse;
@@ -499,7 +556,9 @@ export class UltimateRAGService {
       let rankedResults = searchResults;
 
       if (useAdvancedReranking) {
-        const rerankSpan = trace ? ragTracer.startSpan(trace.id, 'reranking') : undefined;
+        const rerankSpan = trace
+          ? ragTracer.startSpan(trace.id, "reranking")
+          : undefined;
 
         rankedResults = await rerankResults(processedQuery, searchResults, {
           useTimeDecay: rerankOptions.useTimeDecay ?? true,
@@ -512,7 +571,7 @@ export class UltimateRAGService {
         timings.reranking = Date.now() - rerankStart;
 
         if (rerankSpan && trace) {
-          ragTracer.endSpan(trace.id, rerankSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, rerankSpan.id, "success", {
             originalCount: searchResults.length,
             rerankCount: rankedResults.length,
           });
@@ -526,10 +585,12 @@ export class UltimateRAGService {
       // ─────────────────────────────────────────────────────────────
       let graphEntities: string[] | undefined;
       let graphRelationshipsTraversed: number | undefined;
-      let entityContext = '';
+      let entityContext = "";
 
       if (useGraphRAG) {
-        const graphSpan = trace ? ragTracer.startSpan(trace.id, 'graph_rag') : undefined;
+        const graphSpan = trace
+          ? ragTracer.startSpan(trace.id, "graph_rag")
+          : undefined;
 
         try {
           const graphResult = await graphRAG.search(processedQuery, {
@@ -545,21 +606,28 @@ export class UltimateRAGService {
 
           if (graphResult.queryEntities.length > 0) {
             // Merge graph results with existing results
-            const existingIds = new Set(documents.map(d => d.id));
-            const newGraphDocs = graphResult.documents.filter(d => !existingIds.has(d.id));
+            const existingIds = new Set(documents.map((d) => d.id));
+            const newGraphDocs = graphResult.documents.filter(
+              (d) => !existingIds.has(d.id),
+            );
             documents = [...documents, ...newGraphDocs];
             entityContext = graphResult.entityContext;
-            graphEntities = graphResult.queryEntities.map(e => e.name);
-            graphRelationshipsTraversed = graphResult.metadata.relationshipsTraversed;
+            graphEntities = graphResult.queryEntities.map((e) => e.name);
+            graphRelationshipsTraversed =
+              graphResult.metadata.relationshipsTraversed;
           }
         } catch (error) {
-          ragLogger.warn('GraphRAG search failed, continuing without graph', trace?.id, {
-            error: String(error),
-          });
+          ragLogger.warn(
+            "GraphRAG search failed, continuing without graph",
+            trace?.id,
+            {
+              error: String(error),
+            },
+          );
         }
 
         if (graphSpan && trace) {
-          ragTracer.endSpan(trace.id, graphSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, graphSpan.id, "success", {
             entities: graphEntities?.length ?? 0,
             relationships: graphRelationshipsTraversed ?? 0,
           });
@@ -572,25 +640,31 @@ export class UltimateRAGService {
       let deduplicatedCount: number | undefined;
 
       if (useDeduplication && documents.length > 1) {
-        const dedupSpan = trace ? ragTracer.startSpan(trace.id, 'deduplication') : undefined;
+        const dedupSpan = trace
+          ? ragTracer.startSpan(trace.id, "deduplication")
+          : undefined;
         const before = documents.length;
 
         try {
           const { documents: deduped } = await quickDedup(documents, {
-            method: 'minhash',
+            method: "minhash",
             threshold: 0.85,
-            strategy: 'keep_newest',
+            strategy: "keep_newest",
           });
           deduplicatedCount = before - deduped.length;
           documents = deduped;
         } catch (error) {
-          ragLogger.warn('Deduplication failed, continuing with original docs', trace?.id, {
-            error: String(error),
-          });
+          ragLogger.warn(
+            "Deduplication failed, continuing with original docs",
+            trace?.id,
+            {
+              error: String(error),
+            },
+          );
         }
 
         if (dedupSpan && trace) {
-          ragTracer.endSpan(trace.id, dedupSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, dedupSpan.id, "success", {
             before,
             after: documents.length,
             removed: deduplicatedCount ?? 0,
@@ -603,19 +677,25 @@ export class UltimateRAGService {
       // ─────────────────────────────────────────────────────────────
       let selfRAGIterations = 0;
 
-      if (useSelfRAG && route?.primary === 'agentic') {
-        const selfRAGSpan = trace ? ragTracer.startSpan(trace.id, 'self_rag') : undefined;
+      if (useSelfRAG && route?.primary === "agentic") {
+        const selfRAGSpan = trace
+          ? ragTracer.startSpan(trace.id, "self_rag")
+          : undefined;
 
         // Grade retrievals (threshold is the 3rd parameter)
         const graded = await gradeRetrievals(
           processedQuery,
           documents,
-          selfRAGOptions.minRetrievalScore ?? 0.6
+          selfRAGOptions.minRetrievalScore ?? 0.6,
         );
 
         // If not enough relevant docs, perform additional retrieval
         if (graded.needsMoreRetrieval) {
-          const expanded = await this.expandSearch(processedQuery, documents, filter);
+          const expanded = await this.expandSearch(
+            processedQuery,
+            documents,
+            filter,
+          );
           documents = [...graded.relevant, ...expanded].slice(0, limit);
           selfRAGIterations = 1;
         } else {
@@ -623,7 +703,7 @@ export class UltimateRAGService {
         }
 
         if (selfRAGSpan && trace) {
-          ragTracer.endSpan(trace.id, selfRAGSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, selfRAGSpan.id, "success", {
             originalRelevant: graded.relevant.length,
             finalCount: documents.length,
             iterations: selfRAGIterations,
@@ -643,12 +723,14 @@ export class UltimateRAGService {
 
       if (useContextualCompression) {
         const compressStart = Date.now();
-        const compressSpan = trace ? ragTracer.startSpan(trace.id, 'compression') : undefined;
+        const compressSpan = trace
+          ? ragTracer.startSpan(trace.id, "compression")
+          : undefined;
 
         assembledContext = await assembleContext(
           processedQuery,
           topResults,
-          compressionOptions.maxTokens ?? 4000
+          compressionOptions.maxTokens ?? 4000,
         );
         context = assembledContext.text;
         compressed = true;
@@ -656,7 +738,7 @@ export class UltimateRAGService {
         timings.compression = Date.now() - compressStart;
 
         if (compressSpan && trace) {
-          ragTracer.endSpan(trace.id, compressSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, compressSpan.id, "success", {
             originalDocs: topResults.length,
             contextLength: context.length,
           });
@@ -664,17 +746,19 @@ export class UltimateRAGService {
       } else {
         context = topResults
           .map((d, i) => {
-            const date = d.publishedAt?.toLocaleDateString() || 'unknown date';
+            const date = d.publishedAt?.toLocaleDateString() || "unknown date";
             return `[${i + 1}] "${d.title}" (${d.source}, ${date})\n${d.content.substring(0, 600)}`;
           })
-          .join('\n\n---\n\n');
+          .join("\n\n---\n\n");
       }
 
       // ─────────────────────────────────────────────────────────────
       // ANSWER GENERATION
       // ─────────────────────────────────────────────────────────────
       const genStart = Date.now();
-      const genSpan = trace ? ragTracer.startSpan(trace.id, 'generation') : undefined;
+      const genSpan = trace
+        ? ragTracer.startSpan(trace.id, "generation")
+        : undefined;
 
       // Prepend entity context from graph RAG if available
       if (entityContext && context) {
@@ -685,10 +769,17 @@ export class UltimateRAGService {
       let attributedAnswer: AttributedAnswer | undefined;
 
       if (useAttributedAnswers) {
-        attributedAnswer = await generateAttributedAnswer(processedQuery, topResults);
+        attributedAnswer = await generateAttributedAnswer(
+          processedQuery,
+          topResults,
+        );
         answer = attributedAnswer.answer;
       } else if (useConversationMemory && conversationId) {
-        answer = await generateContextualResponse(processedQuery, topResults, conversationId);
+        answer = await generateContextualResponse(
+          processedQuery,
+          topResults,
+          conversationId,
+        );
       } else {
         answer = await this.generateAnswer(processedQuery, context);
       }
@@ -696,7 +787,7 @@ export class UltimateRAGService {
       timings.generation = Date.now() - genStart;
 
       if (genSpan && trace) {
-        ragTracer.endSpan(trace.id, genSpan.id, 'success', {
+        ragTracer.endSpan(trace.id, genSpan.id, "success", {
           answerLength: answer.length,
           attributed: !!attributedAnswer,
         });
@@ -708,11 +799,11 @@ export class UltimateRAGService {
       // Save to conversation memory
       if (useConversationMemory && conversationId) {
         await conversationMemory.addMessage(conversationId, {
-          role: 'user',
+          role: "user",
           content: query,
         });
         await conversationMemory.addMessage(conversationId, {
-          role: 'assistant',
+          role: "assistant",
           content: answer,
           metadata: {
             documentsUsed: topResults.map((d) => d.id),
@@ -729,7 +820,9 @@ export class UltimateRAGService {
 
       if (useConfidenceScoring) {
         const confStart = Date.now();
-        const confSpan = trace ? ragTracer.startSpan(trace.id, 'confidence') : undefined;
+        const confSpan = trace
+          ? ragTracer.startSpan(trace.id, "confidence")
+          : undefined;
 
         const context: ConfidenceScoringContext = {
           query: processedQuery,
@@ -742,7 +835,7 @@ export class UltimateRAGService {
         timings.confidence = Date.now() - confStart;
 
         if (confSpan && trace) {
-          ragTracer.endSpan(trace.id, confSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, confSpan.id, "success", {
             overall: confidence.overall,
             level: confidence.level,
           });
@@ -756,19 +849,21 @@ export class UltimateRAGService {
 
       if (useSuggestedQuestions) {
         const suggestStart = Date.now();
-        const suggestSpan = trace ? ragTracer.startSpan(trace.id, 'suggestions') : undefined;
+        const suggestSpan = trace
+          ? ragTracer.startSpan(trace.id, "suggestions")
+          : undefined;
 
         suggestedQuestions = await generateSuggestedQuestions(
           processedQuery,
           answer,
           topResults,
-          3  // numQuestions
+          3, // numQuestions
         );
 
         timings.suggestions = Date.now() - suggestStart;
 
         if (suggestSpan && trace) {
-          ragTracer.endSpan(trace.id, suggestSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, suggestSpan.id, "success", {
             count: suggestedQuestions.length,
           });
         }
@@ -782,7 +877,9 @@ export class UltimateRAGService {
 
       if (useRelatedArticles) {
         const relatedStart = Date.now();
-        const relatedSpan = trace ? ragTracer.startSpan(trace.id, 'related') : undefined;
+        const relatedSpan = trace
+          ? ragTracer.startSpan(trace.id, "related")
+          : undefined;
 
         // Get all documents for finding related
         const allResults = toScoredDocuments(searchResults);
@@ -791,14 +888,17 @@ export class UltimateRAGService {
           topResults,
           allResults,
           processedQuery,
-          5  // maxArticles
+          5, // maxArticles
         );
 
         // Simple topic clustering based on shared words
         const topicMap = new Map<string, ScoredDocument[]>();
-        const allDocs = [...topResults, ...relatedArticles.map((r) => r.document)];
+        const allDocs = [
+          ...topResults,
+          ...relatedArticles.map((r) => r.document),
+        ];
         for (const doc of allDocs) {
-          const topic = doc.title.split(' ')[0].toLowerCase();
+          const topic = doc.title.split(" ")[0].toLowerCase();
           if (!topicMap.has(topic)) topicMap.set(topic, []);
           topicMap.get(topic)!.push(doc);
         }
@@ -807,13 +907,15 @@ export class UltimateRAGService {
           .map(([topic, documents]) => ({
             topic,
             documents,
-            relevance: documents.reduce((acc, d) => acc + (d.score || 0), 0) / documents.length,
+            relevance:
+              documents.reduce((acc, d) => acc + (d.score || 0), 0) /
+              documents.length,
           }));
 
         timings.related = Date.now() - relatedStart;
 
         if (relatedSpan && trace) {
-          ragTracer.endSpan(trace.id, relatedSpan.id, 'success', {
+          ragTracer.endSpan(trace.id, relatedSpan.id, "success", {
             relatedCount: relatedArticles.length,
             topicCount: topicClusters?.length || 0,
           });
@@ -823,9 +925,12 @@ export class UltimateRAGService {
       // ─────────────────────────────────────────────────────────────
       // FORMAT CITATIONS
       // ─────────────────────────────────────────────────────────────
-      let citations: UltimateRAGResponse['citations'];
+      let citations: UltimateRAGResponse["citations"];
       if (attributedAnswer) {
-        const formatted = formatCitationsForDisplay(attributedAnswer, topResults);
+        const formatted = formatCitationsForDisplay(
+          attributedAnswer,
+          topResults,
+        );
         citations = {
           claims: attributedAnswer.citations.map((c) => ({
             claim: c.claim,
@@ -844,8 +949,8 @@ export class UltimateRAGService {
         answer,
         sources: topResults.map((d) => ({
           title: d.title,
-          url: d.url || '',
-          pubDate: d.publishedAt?.toISOString() || '',
+          url: d.url || "",
+          pubDate: d.publishedAt?.toISOString() || "",
           source: d.source,
           voteScore: d.voteScore || 0,
         })),
@@ -870,7 +975,8 @@ export class UltimateRAGService {
           documentsSearched: searchResults.length,
           documentsUsed: topResults.length,
           conversationId,
-          selfRAGIterations: selfRAGIterations > 0 ? selfRAGIterations : undefined,
+          selfRAGIterations:
+            selfRAGIterations > 0 ? selfRAGIterations : undefined,
           cacheHit: false,
           traceId: trace?.id,
           graphEntities,
@@ -889,7 +995,7 @@ export class UltimateRAGService {
           embedding,
           response.answer,
           topResults,
-          confidence?.overall ?? 0
+          confidence?.overall ?? 0,
         );
       }
 
@@ -901,8 +1007,8 @@ export class UltimateRAGService {
           totalLatencyMs: response.processingTime,
           documentsUsed: topResults.length,
         });
-        ragTracer.endTrace(trace.id, 'success');
-        ragLogger.info('Query completed', trace.id, {
+        ragTracer.endTrace(trace.id, "success");
+        ragLogger.info("Query completed", trace.id, {
           processingTime: response.processingTime,
           documentsUsed: topResults.length,
           confidence: confidence?.overall,
@@ -912,8 +1018,8 @@ export class UltimateRAGService {
       return response;
     } catch (error) {
       if (trace) {
-        ragTracer.endTrace(trace.id, 'error', (error as Error).message);
-        ragLogger.error('Query failed', trace.id, { error: String(error) });
+        ragTracer.endTrace(trace.id, "error", (error as Error).message);
+        ragLogger.error("Query failed", trace.id, { error: String(error) });
       }
       throw error;
     }
@@ -927,7 +1033,7 @@ export class UltimateRAGService {
     options: UltimateRAGOptions & {
       maxIterations?: number;
       confidenceThreshold?: number;
-    } = {}
+    } = {},
   ): Promise<{
     answer: string;
     reasoning: Array<{ type: string; input: string; output: string }>;
@@ -937,7 +1043,8 @@ export class UltimateRAGService {
   }> {
     await this.initialize();
 
-    const trace = options.useTracing !== false ? ragTracer.startTrace(query) : undefined;
+    const trace =
+      options.useTracing !== false ? ragTracer.startTrace(query) : undefined;
 
     try {
       const result = await agenticRAG(
@@ -960,11 +1067,11 @@ export class UltimateRAGService {
             };
           },
         },
-        options
+        options,
       );
 
       if (trace) {
-        ragTracer.endTrace(trace.id, 'success');
+        ragTracer.endTrace(trace.id, "success");
       }
 
       return {
@@ -973,7 +1080,7 @@ export class UltimateRAGService {
       };
     } catch (error) {
       if (trace) {
-        ragTracer.endTrace(trace.id, 'error', (error as Error).message);
+        ragTracer.endTrace(trace.id, "error", (error as Error).message);
       }
       throw error;
     }
@@ -1016,7 +1123,7 @@ export class UltimateRAGService {
       limit?: number;
       currencies?: string[];
       dateRange?: { startDate: string; endDate: string };
-    } = {}
+    } = {},
   ): Promise<ScoredDocument[]> {
     await this.initialize();
 
@@ -1029,7 +1136,8 @@ export class UltimateRAGService {
 
     const filter: SearchFilter = {};
     if (extractedDateRange) filter.dateRange = extractedDateRange;
-    if (extractedCurrencies.length > 0) filter.currencies = extractedCurrencies.slice(0, 3);
+    if (extractedCurrencies.length > 0)
+      filter.currencies = extractedCurrencies.slice(0, 3);
 
     const embedding = await generateEmbedding(query);
     const store = this.getStore();
@@ -1044,7 +1152,7 @@ export class UltimateRAGService {
   private async expandSearch(
     query: string,
     existingDocs: ScoredDocument[],
-    filter: SearchFilter
+    filter: SearchFilter,
   ): Promise<ScoredDocument[]> {
     const existingIds = new Set(existingDocs.map((d) => d.id));
 
@@ -1062,7 +1170,7 @@ export class UltimateRAGService {
     const response = await callGroq(
       [
         {
-          role: 'user',
+          role: "user",
           content: `Expand and rephrase this crypto news query to find more relevant results. Keep it focused.
 
 Query: "${query}"
@@ -1070,26 +1178,29 @@ Query: "${query}"
 Expanded query:`,
         },
       ],
-      { temperature: 0.3, maxTokens: 100 }
+      { temperature: 0.3, maxTokens: 100 },
     );
 
     return response.content.trim() || query;
   }
 
-  private async generateAnswer(query: string, context: string): Promise<string> {
+  private async generateAnswer(
+    query: string,
+    context: string,
+  ): Promise<string> {
     const response = await callGroq(
       [
         {
-          role: 'system',
+          role: "system",
           content: `You are a cryptocurrency news assistant. Answer questions based on the provided context.
 Be concise but comprehensive. Cite sources by number [1], [2], etc. If information isn't in the context, say so.`,
         },
         {
-          role: 'user',
+          role: "user",
           content: `Context:\n${context}\n\nQuestion: ${query}\n\nAnswer:`,
         },
       ],
-      { temperature: 0.4, maxTokens: 800 }
+      { temperature: 0.4, maxTokens: 800 },
     );
 
     return response.content.trim();
@@ -1120,7 +1231,7 @@ export const ultimateRAG = getUltimateRAGService();
  */
 export async function askUltimate(
   query: string,
-  options?: UltimateRAGOptions
+  options?: UltimateRAGOptions,
 ): Promise<UltimateRAGResponse> {
   return ultimateRAG.ask(query, options);
 }
@@ -1147,7 +1258,7 @@ export async function askFast(query: string): Promise<UltimateRAGResponse> {
  */
 export async function askComplete(
   query: string,
-  conversationId?: string
+  conversationId?: string,
 ): Promise<UltimateRAGResponse> {
   return ultimateRAG.ask(query, {
     useRouting: true,

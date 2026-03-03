@@ -15,8 +15,8 @@
  * and the full chunking pipeline with mocked embeddings.
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { SemanticChunker } from '@/lib/rag/semantic-chunking';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { SemanticChunker } from "@/lib/rag/semantic-chunking";
 
 // ═══════════════════════════════════════════════════════════════
 // MOCKS
@@ -24,20 +24,21 @@ import { SemanticChunker } from '@/lib/rag/semantic-chunking';
 
 let embeddingCounter = 0;
 
-vi.mock('@/lib/rag/embedding-service', () => ({
+vi.mock("@/lib/rag/embedding-service", () => ({
   generateEmbedding: vi.fn().mockImplementation(async (text: string) => {
     // Produce slightly varied embeddings based on input to make similarity tests meaningful
     embeddingCounter++;
     const base = new Array(384).fill(0.1);
     const seed = simpleHash(text);
     for (let i = 0; i < 384; i++) {
-      base[i] = Math.sin(seed + i * 0.01 + embeddingCounter * 0.001) * 0.5 + 0.5;
+      base[i] =
+        Math.sin(seed + i * 0.01 + embeddingCounter * 0.001) * 0.5 + 0.5;
     }
     return base;
   }),
 }));
 
-vi.mock('@/lib/rag/observability', () => ({
+vi.mock("@/lib/rag/observability", () => ({
   ragLogger: {
     debug: vi.fn(),
     info: vi.fn(),
@@ -66,13 +67,13 @@ Meanwhile, Ethereum developers announced the Dencun upgrade timeline. The upgrad
 
 In other news, the Federal Reserve maintained interest rates, signaling potential cuts later this year. Crypto markets are closely watching macro developments.`;
 
-const SHORT_TEXT = 'Bitcoin is digital gold.';
+const SHORT_TEXT = "Bitcoin is digital gold.";
 
 const METADATA = {
-  title: 'Crypto Market Update',
-  source: 'CoinDesk',
-  pubDate: '2024-01-10',
-  url: 'https://example.com/article',
+  title: "Crypto Market Update",
+  source: "CoinDesk",
+  pubDate: "2024-01-10",
+  url: "https://example.com/article",
   voteScore: 42,
 };
 
@@ -80,7 +81,7 @@ const METADATA = {
 // TESTS
 // ═══════════════════════════════════════════════════════════════
 
-describe('SemanticChunker', () => {
+describe("SemanticChunker", () => {
   let chunker: SemanticChunker;
 
   beforeEach(() => {
@@ -92,22 +93,22 @@ describe('SemanticChunker', () => {
   // Fixed Overlap Chunking
   // ─────────────────────────────────────────────────────────────
 
-  describe('fixed_overlap method', () => {
-    it('chunks text into fixed-size segments', async () => {
-      const result = await chunker.chunk('doc-1', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+  describe("fixed_overlap method", () => {
+    it("chunks text into fixed-size segments", async () => {
+      const result = await chunker.chunk("doc-1", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
         overlap: 30,
       });
 
       expect(result.chunks.length).toBeGreaterThan(1);
-      expect(result.method).toBe('fixed_overlap');
+      expect(result.method).toBe("fixed_overlap");
       expect(result.stats.chunkCount).toBe(result.chunks.length);
     });
 
-    it('returns single chunk for short text', async () => {
-      const result = await chunker.chunk('doc-2', SHORT_TEXT, METADATA, {
-        method: 'fixed_overlap',
+    it("returns single chunk for short text", async () => {
+      const result = await chunker.chunk("doc-2", SHORT_TEXT, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
       });
 
@@ -115,9 +116,9 @@ describe('SemanticChunker', () => {
       expect(result.chunks[0].content).toBe(SHORT_TEXT);
     });
 
-    it('assigns correct chunk IDs', async () => {
-      const result = await chunker.chunk('doc-3', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+    it("assigns correct chunk IDs", async () => {
+      const result = await chunker.chunk("doc-3", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 150,
       });
 
@@ -128,22 +129,22 @@ describe('SemanticChunker', () => {
       }
     });
 
-    it('preserves metadata in chunks', async () => {
-      const result = await chunker.chunk('doc-4', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+    it("preserves metadata in chunks", async () => {
+      const result = await chunker.chunk("doc-4", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
       });
 
       for (const chunk of result.chunks) {
-        expect(chunk.metadata.title).toBe('Crypto Market Update');
-        expect(chunk.metadata.source).toBe('CoinDesk');
-        expect(chunk.metadata.pubDate).toBe('2024-01-10');
+        expect(chunk.metadata.title).toBe("Crypto Market Update");
+        expect(chunk.metadata.source).toBe("CoinDesk");
+        expect(chunk.metadata.pubDate).toBe("2024-01-10");
       }
     });
 
-    it('tracks character offsets', async () => {
-      const result = await chunker.chunk('doc-5', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+    it("tracks character offsets", async () => {
+      const result = await chunker.chunk("doc-5", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
         overlap: 0,
       });
@@ -160,21 +161,21 @@ describe('SemanticChunker', () => {
   // Sentence Similarity Chunking
   // ─────────────────────────────────────────────────────────────
 
-  describe('sentence_similarity method', () => {
-    it('chunks text by sentence similarity', async () => {
-      const result = await chunker.chunk('doc-6', SAMPLE_ARTICLE, METADATA, {
-        method: 'sentence_similarity',
+  describe("sentence_similarity method", () => {
+    it("chunks text by sentence similarity", async () => {
+      const result = await chunker.chunk("doc-6", SAMPLE_ARTICLE, METADATA, {
+        method: "sentence_similarity",
         targetSize: 512,
         similarityThreshold: 0.5,
       });
 
       expect(result.chunks.length).toBeGreaterThanOrEqual(1);
-      expect(result.method).toBe('sentence_similarity');
+      expect(result.method).toBe("sentence_similarity");
     });
 
-    it('handles single sentence input', async () => {
-      const result = await chunker.chunk('doc-7', SHORT_TEXT, METADATA, {
-        method: 'sentence_similarity',
+    it("handles single sentence input", async () => {
+      const result = await chunker.chunk("doc-7", SHORT_TEXT, METADATA, {
+        method: "sentence_similarity",
       });
 
       expect(result.chunks.length).toBe(1);
@@ -185,16 +186,16 @@ describe('SemanticChunker', () => {
   // Topic Boundary Chunking
   // ─────────────────────────────────────────────────────────────
 
-  describe('topic_boundary method', () => {
-    it('detects topic boundaries', async () => {
-      const result = await chunker.chunk('doc-8', SAMPLE_ARTICLE, METADATA, {
-        method: 'topic_boundary',
+  describe("topic_boundary method", () => {
+    it("detects topic boundaries", async () => {
+      const result = await chunker.chunk("doc-8", SAMPLE_ARTICLE, METADATA, {
+        method: "topic_boundary",
         windowSize: 2,
         similarityThreshold: 0.5,
       });
 
       expect(result.chunks.length).toBeGreaterThanOrEqual(1);
-      expect(result.method).toBe('topic_boundary');
+      expect(result.method).toBe("topic_boundary");
     });
   });
 
@@ -202,16 +203,16 @@ describe('SemanticChunker', () => {
   // Hybrid Chunking
   // ─────────────────────────────────────────────────────────────
 
-  describe('hybrid method', () => {
-    it('combines multiple splitting signals', async () => {
-      const result = await chunker.chunk('doc-9', SAMPLE_ARTICLE, METADATA, {
-        method: 'hybrid',
+  describe("hybrid method", () => {
+    it("combines multiple splitting signals", async () => {
+      const result = await chunker.chunk("doc-9", SAMPLE_ARTICLE, METADATA, {
+        method: "hybrid",
         similarityThreshold: 0.5,
         windowSize: 2,
       });
 
       expect(result.chunks.length).toBeGreaterThanOrEqual(1);
-      expect(result.method).toBe('hybrid');
+      expect(result.method).toBe("hybrid");
     });
   });
 
@@ -219,10 +220,10 @@ describe('SemanticChunker', () => {
   // Coherence Scoring
   // ─────────────────────────────────────────────────────────────
 
-  describe('coherence scoring', () => {
-    it('assigns coherence scores to chunks', async () => {
-      const result = await chunker.chunk('doc-10', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+  describe("coherence scoring", () => {
+    it("assigns coherence scores to chunks", async () => {
+      const result = await chunker.chunk("doc-10", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
       });
 
@@ -232,9 +233,9 @@ describe('SemanticChunker', () => {
       }
     });
 
-    it('computes average coherence in stats', async () => {
-      const result = await chunker.chunk('doc-11', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+    it("computes average coherence in stats", async () => {
+      const result = await chunker.chunk("doc-11", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
       });
 
@@ -247,10 +248,10 @@ describe('SemanticChunker', () => {
   // Statistics
   // ─────────────────────────────────────────────────────────────
 
-  describe('stats', () => {
-    it('computes accurate chunk statistics', async () => {
-      const result = await chunker.chunk('doc-12', SAMPLE_ARTICLE, METADATA, {
-        method: 'fixed_overlap',
+  describe("stats", () => {
+    it("computes accurate chunk statistics", async () => {
+      const result = await chunker.chunk("doc-12", SAMPLE_ARTICLE, METADATA, {
+        method: "fixed_overlap",
         targetSize: 200,
         overlap: 0,
       });
@@ -258,7 +259,9 @@ describe('SemanticChunker', () => {
       expect(result.stats.inputLength).toBe(SAMPLE_ARTICLE.length);
       expect(result.stats.chunkCount).toBe(result.chunks.length);
       expect(result.stats.avgChunkSize).toBeGreaterThan(0);
-      expect(result.stats.minChunkSize).toBeLessThanOrEqual(result.stats.maxChunkSize);
+      expect(result.stats.minChunkSize).toBeLessThanOrEqual(
+        result.stats.maxChunkSize,
+      );
     });
   });
 });

@@ -10,10 +10,10 @@
 
 /**
  * RAG System - Main Exports
- * 
+ *
  * Production-grade Retrieval-Augmented Generation for crypto news.
  * Adapted from https://github.com/soheilrahsaz/crypto-news-rag
- * 
+ *
  * Core Features:
  * - Multi-tier vector storage (file, Redis)
  * - Hybrid search (BM25 + semantic)
@@ -22,7 +22,7 @@
  * - Multi-turn conversation memory
  * - Agentic multi-hop reasoning
  * - Streaming responses
- * 
+ *
  * Advanced Features (Ultimate RAG Service):
  * - Self-RAG with adaptive retrieval
  * - Contextual compression
@@ -32,13 +32,13 @@
  * - Related articles discovery
  * - Full observability & tracing
  * - Multi-layer semantic caching
- * 
+ *
  * Usage:
  * ```typescript
  * // Simple usage
  * import { askRAG } from '@/lib/rag';
  * const response = await askRAG("What happened to Bitcoin last week?");
- * 
+ *
  * // Ultimate service (all features)
  * import { askUltimate, askFast, askComplete } from '@/lib/rag';
  * const result = await askUltimate(query);
@@ -63,7 +63,7 @@ export type {
   RAGResponse,
   EmbeddingConfig,
   VectorStoreStats,
-} from './types';
+} from "./types";
 
 // ═══════════════════════════════════════════════════════════════
 // CORE RAG SERVICE
@@ -75,10 +75,10 @@ export {
   quickSearch,
   getSimilarArticles,
   summarizeCryptoNews,
-} from './rag-service';
+} from "./rag-service";
 
 // Enhanced service with all features
-export { ragService, createRAGService } from './enhanced-rag-service';
+export { ragService, createRAGService } from "./enhanced-rag-service";
 
 // Ultimate service - full production system with all features
 export {
@@ -88,25 +88,22 @@ export {
   askUltimate,
   askFast,
   askComplete,
-} from './ultimate-rag-service';
+} from "./ultimate-rag-service";
 
 export type {
   UltimateRAGOptions,
   UltimateRAGResponse,
-} from './ultimate-rag-service';
+} from "./ultimate-rag-service";
 
 // ═══════════════════════════════════════════════════════════════
 // VECTOR STORES
 // ═══════════════════════════════════════════════════════════════
 
 // File-based (development/small datasets)
-export { vectorStore, computeVoteScore } from './vector-store';
+export { vectorStore, computeVoteScore } from "./vector-store";
 
 // Redis-backed (production)
-export { 
-  RedisVectorStore, 
-  redisVectorStore 
-} from './redis-vector-store';
+export { RedisVectorStore, redisVectorStore } from "./redis-vector-store";
 
 // ═══════════════════════════════════════════════════════════════
 // SEARCH & RETRIEVAL
@@ -117,9 +114,9 @@ export {
   hybridSearch,
   keywordSearch,
   searchWithExpansion,
-} from './hybrid-search';
+} from "./hybrid-search";
 
-export type { HybridSearchOptions } from './hybrid-search';
+export type { HybridSearchOptions } from "./hybrid-search";
 
 // Reranking
 export {
@@ -133,9 +130,9 @@ export {
   crossEncoderRerank,
   diversifyBySources,
   SOURCE_CREDIBILITY,
-} from './reranker';
+} from "./reranker";
 
-export type { RerankerOptions } from './reranker';
+export type { RerankerOptions } from "./reranker";
 
 // ═══════════════════════════════════════════════════════════════
 // QUERY PROCESSING
@@ -150,7 +147,7 @@ export {
   generateHypotheticalDocuments,
   reformulateQuery,
   processQuery,
-} from './query-processor';
+} from "./query-processor";
 
 export type {
   QueryIntent,
@@ -159,7 +156,7 @@ export type {
   DecomposedQuery,
   ExpandedQuery,
   ProcessedQuery,
-} from './query-processor';
+} from "./query-processor";
 
 // ═══════════════════════════════════════════════════════════════
 // CONVERSATION & CONTEXT
@@ -171,42 +168,29 @@ export {
   generateContextualResponse,
   generateConversationId,
   exportConversation,
-} from './conversation-memory';
+} from "./conversation-memory";
 
 export type {
   ConversationMessage,
   ConversationContext,
   ContextualizedQuery,
-} from './conversation-memory';
+} from "./conversation-memory";
 
 // ═══════════════════════════════════════════════════════════════
 // AGENTIC RAG
 // ═══════════════════════════════════════════════════════════════
 
-export {
-  agenticRAG,
-  simpleMultiHop,
-} from './agentic-rag';
+export { agenticRAG, simpleMultiHop } from "./agentic-rag";
 
-export type {
-  ReasoningStep,
-  AgenticResponse,
-  AgentTools,
-} from './agentic-rag';
+export type { ReasoningStep, AgenticResponse, AgentTools } from "./agentic-rag";
 
 // ═══════════════════════════════════════════════════════════════
 // STREAMING
 // ═══════════════════════════════════════════════════════════════
 
-export {
-  streamRAG,
-  createRAGStreamHandler,
-} from './streaming-client';
+export { streamRAG, createRAGStreamHandler } from "./streaming-client";
 
-export type {
-  StreamEvent,
-  RAGStreamCallbacks,
-} from './streaming-client';
+export type { StreamEvent, RAGStreamCallbacks } from "./streaming-client";
 
 // ═══════════════════════════════════════════════════════════════
 // EMBEDDINGS
@@ -219,7 +203,7 @@ export {
   normalizeVector,
   dotProduct,
   cosineSimilarity,
-} from './embedding-service';
+} from "./embedding-service";
 
 // ═══════════════════════════════════════════════════════════════
 // EXTRACTORS
@@ -231,13 +215,13 @@ export {
   extractCurrenciesStatic,
   extractCurrenciesSync,
   convertToCodes,
-} from './currency-extractor';
+} from "./currency-extractor";
 
 export {
   extractDateRange,
   extractDateRangeWithDefaults,
   parseSimpleDateExpression,
-} from './date-range-extractor';
+} from "./date-range-extractor";
 
 // ═══════════════════════════════════════════════════════════════
 // RANKERS (Legacy)
@@ -250,7 +234,7 @@ export {
   rankCombined,
   diversifyBySource,
   rankForRAG,
-} from './document-ranker';
+} from "./document-ranker";
 
 // ═══════════════════════════════════════════════════════════════
 // REFERENCE DATA
@@ -262,7 +246,7 @@ export {
   VALID_CODES,
   CRYPTO_ALIASES,
   normalizeToCode,
-} from './known-cryptos';
+} from "./known-cryptos";
 
 // ═══════════════════════════════════════════════════════════════
 // SELF-RAG (Adaptive Retrieval)
@@ -275,7 +259,7 @@ export {
   detectHallucinations,
   decideRetrievalAction,
   selfRAG,
-} from './self-rag';
+} from "./self-rag";
 
 export type {
   RetrievalGrade,
@@ -283,7 +267,7 @@ export type {
   HallucinationCheck,
   RetrievalAction,
   SelfRAGResult,
-} from './self-rag';
+} from "./self-rag";
 
 // ═══════════════════════════════════════════════════════════════
 // CONTEXTUAL COMPRESSION
@@ -295,14 +279,14 @@ export {
   compressDocuments,
   extractKeyFacts,
   assembleContext,
-} from './contextual-compression';
+} from "./contextual-compression";
 
 export type {
   CompressedDocument,
   ExtractedSentence,
   KeyFact,
   AssembledContext,
-} from './contextual-compression';
+} from "./contextual-compression";
 
 // ═══════════════════════════════════════════════════════════════
 // ANSWER ATTRIBUTION
@@ -314,13 +298,13 @@ export {
   generateAttributedAnswer,
   generateSourceHighlights,
   formatCitationsForDisplay,
-} from './answer-attribution';
+} from "./answer-attribution";
 
 export type {
   AttributedAnswer,
   Citation,
   SourceHighlight,
-} from './answer-attribution';
+} from "./answer-attribution";
 
 // ═══════════════════════════════════════════════════════════════
 // OBSERVABILITY & TRACING
@@ -332,7 +316,7 @@ export {
   withSpan,
   estimateTokens,
   estimateCost,
-} from './observability';
+} from "./observability";
 
 export type {
   RAGSpan,
@@ -341,7 +325,7 @@ export type {
   RAGMetrics,
   AggregatedMetrics,
   RAGLogEntry,
-} from './observability';
+} from "./observability";
 
 // ═══════════════════════════════════════════════════════════════
 // INTELLIGENT CACHING
@@ -354,14 +338,14 @@ export {
   LLMResponseCache,
   DocumentCache,
   RAGCacheManager,
-} from './cache';
+} from "./cache";
 
 export type {
   CacheEntry,
   CacheStats,
   QueryCacheEntry,
   EmbeddingCacheEntry,
-} from './cache';
+} from "./cache";
 
 // ═══════════════════════════════════════════════════════════════
 // SUGGESTED QUESTIONS
@@ -371,13 +355,13 @@ export {
   SuggestedQuestionsGenerator,
   getSuggestedQuestionsGenerator,
   generateSuggestedQuestions,
-} from './suggested-questions';
+} from "./suggested-questions";
 
 export type {
   SuggestedQuestion,
   QuestionGenerationContext,
   QuestionGenerationConfig,
-} from './suggested-questions';
+} from "./suggested-questions";
 
 // ═══════════════════════════════════════════════════════════════
 // CONFIDENCE SCORING
@@ -388,30 +372,26 @@ export {
   getConfidenceScorer,
   scoreAnswerConfidence,
   formatConfidenceForUI,
-} from './confidence-scorer';
+} from "./confidence-scorer";
 
 export type {
   ConfidenceScore,
   ConfidenceScoringContext,
   ConfidenceScoringConfig,
-} from './confidence-scorer';
+} from "./confidence-scorer";
 
 // ═══════════════════════════════════════════════════════════════
 // QUERY ROUTING
 // ═══════════════════════════════════════════════════════════════
 
-export {
-  QueryRouter,
-  getQueryRouter,
-  routeQuery,
-} from './query-router';
+export { QueryRouter, getQueryRouter, routeQuery } from "./query-router";
 
 export type {
   RouteType,
   QueryRoute,
   RouteParameters,
   RouterConfig,
-} from './query-router';
+} from "./query-router";
 
 // ═══════════════════════════════════════════════════════════════
 // RELATED ARTICLES
@@ -421,28 +401,21 @@ export {
   RelatedArticlesFinder,
   relatedArticlesFinder,
   findRelatedArticles,
-} from './related-articles';
+} from "./related-articles";
 
-export type {
-  RelatedArticle,
-  RelatedArticlesConfig,
-} from './related-articles';
+export type { RelatedArticle, RelatedArticlesConfig } from "./related-articles";
 
 // ═══════════════════════════════════════════════════════════════
 // GRAPH RAG (Knowledge Graph Enhanced Retrieval)
 // ═══════════════════════════════════════════════════════════════
 
-export {
-  GraphRAGService,
-  getGraphRAGService,
-  graphRAG,
-} from './graph-rag';
+export { GraphRAGService, getGraphRAGService, graphRAG } from "./graph-rag";
 
 export type {
   GraphRAGOptions,
   GraphSearchResult,
   GraphEntityMatch,
-} from './graph-rag';
+} from "./graph-rag";
 
 // ═══════════════════════════════════════════════════════════════
 // SEMANTIC CHUNKING (Pre-Indexing Segmentation)
@@ -452,7 +425,7 @@ export {
   SemanticChunker,
   getSemanticChunker,
   semanticChunk,
-} from './semantic-chunking';
+} from "./semantic-chunking";
 
 export type {
   ChunkingMethod,
@@ -460,7 +433,7 @@ export type {
   DocumentChunk,
   ChunkMetadata,
   ChunkingResult,
-} from './semantic-chunking';
+} from "./semantic-chunking";
 
 // ═══════════════════════════════════════════════════════════════
 // DOCUMENT DEDUPLICATION
@@ -470,7 +443,7 @@ export {
   findDuplicates,
   deduplicateDocuments,
   quickDedup,
-} from './deduplication';
+} from "./deduplication";
 
 export type {
   DeduplicationMethod,
@@ -478,4 +451,4 @@ export type {
   DeduplicationOptions,
   DuplicateCluster,
   DeduplicationResult,
-} from './deduplication';
+} from "./deduplication";

@@ -9,7 +9,7 @@
  */
 
 /**
- * Standalone WebSocket Server v3.0 — Horizontally Scalable
+ * Standalone WebSocket Server v4.0 — Production-Grade, Horizontally Scalable
  * 
  * Deploy to Railway, Render, or any Node.js host for full WebSocket support.
  * Designed for 1M+ concurrent connections across multiple instances.
@@ -20,8 +20,14 @@
  * - Whale alert streaming (large transactions)
  * - Market sentiment updates (Fear & Greed Index)
  * - Subscription-based filtering (sources, topics, coins, keywords)
+ * - Topic-based subscriptions (prices:BTC, news:breaking, sentiment:global)
  * - Alert system integration
  * - Topic channels (bitcoin, defi, nft, regulation, etc.)
+ * - API key authentication via query param
+ * - Per-API-key connection limits
+ * - Server-initiated WebSocket ping/pong heartbeat
+ * - Auto-reconnection guidance in error payloads
+ * - permessage-deflate compression
  * - Rate limiting protection
  * - Connection health monitoring
  * - Graceful backpressure handling
@@ -35,7 +41,11 @@
  *   node ws-server.js
  * 
  * Or with environment:
- *   PORT=8080 REDIS_URL=redis://... node ws-server.js
+ *   PORT=8080 REDIS_URL=redis://... WS_API_KEYS=key1,key2 node ws-server.js
+ *
+ * Authentication:
+ *   ws://host:port?apiKey=YOUR_KEY
+ *   Anonymous connections allowed when WS_REQUIRE_AUTH=false (default)
  */
 
 const WebSocket = require('ws');
@@ -394,11 +404,203 @@ const MAX_CONNECTIONS = parseInt(process.env.WS_MAX_CONNECTIONS || '10000', 10);
 const MAX_PAYLOAD = 64 * 1024; // 64 KB max message size from clients
 const MAX_BUFFER_SIZE = 256 * 1024; // 256 KB — backpressure threshold
 
+// =============================================================================
+// API KEY AUTHENTICATION & PER-KEY CONNECTION LIMITS
+// =============================================================================
+
+const WS_REQUIRE_AUTH = (process.env.WS_REQUIRE_AUTH || 'false') === 'true';
+const WS_API_KEYS = new Set(
+  (process.env.WS_API_KEYS || '').split(',').map(k => k.trim()).filter(Boolean)
+);
+const CONNECTIONS_PER_KEY = parseInt(process.env.WS_CONNECTIONS_PER_KEY || '100', 10);
+const CONNECTIONS_ANONYMOUS = parseInt(process.env.WS_CONNECTIONS_ANONYMOUS || '5', 10);
+
+// Per-key and per-IP connection tracking
+const connectionsByKey = new Map(); // apiKey → Set<clientId>
+const connectionsByIp = new Map();  // ip → Set<clientId> (for anonymous)
+
+/**
+ * Validate an API key. Returns { valid, tier } or { valid: false, reason }.
+ * Keys in WS_API_KEYS env are "static" keys. Redis-backed lookup optional.
+ */
+async function validateApiKey(apiKey) {
+  if (!apiKey) {
+    return WS_REQUIRE_AUTH
+      ? { valid: false, reason: 'API key required. Pass ?apiKey=YOUR_KEY in the connection URL.' }
+      : { valid: true, tier: 'anonymous' };
+  }
+
+  // Check static keys
+  if (WS_API_KEYS.size > 0 && WS_API_KEYS.has(apiKey)) {
+    return { valid: true, tier: 'standard' };
+  }
+
+  // Check Redis-stored keys
+  if (redisPub) {
+    try {
+      const keyData = await redisPub.get(`ws:apikey:${apiKey}`);
+      if (keyData) {
+        const parsed = JSON.parse(keyData);
+        return { valid: true, tier: parsed.tier || 'standard', meta: parsed };
+      }
+    } catch (err) {
+      console.error('[auth] Redis key lookup failed:', err.message);
+    }
+  }
+
+  // If no keys are configured, allow everything (open mode)
+  if (WS_API_KEYS.size === 0 && !WS_REQUIRE_AUTH) {
+    return { valid: true, tier: 'anonymous' };
+  }
+
+  return { valid: false, reason: 'Invalid API key.' };
+}
+
+/**
+ * Check per-key connection limit. Returns true if allowed.
+ */
+function checkConnectionLimit(apiKey, ip) {
+  if (apiKey && apiKey !== '__anonymous__') {
+    const existing = connectionsByKey.get(apiKey);
+    const count = existing ? existing.size : 0;
+    return count < CONNECTIONS_PER_KEY;
+  }
+  // Anonymous: limit per IP
+  const existing = connectionsByIp.get(ip);
+  const count = existing ? existing.size : 0;
+  return count < CONNECTIONS_ANONYMOUS;
+}
+
+function trackConnection(clientId, apiKey, ip) {
+  if (apiKey && apiKey !== '__anonymous__') {
+    if (!connectionsByKey.has(apiKey)) connectionsByKey.set(apiKey, new Set());
+    connectionsByKey.get(apiKey).add(clientId);
+  } else {
+    if (!connectionsByIp.has(ip)) connectionsByIp.set(ip, new Set());
+    connectionsByIp.get(ip).add(clientId);
+  }
+}
+
+function untrackConnection(clientId, apiKey, ip) {
+  if (apiKey && apiKey !== '__anonymous__') {
+    const set = connectionsByKey.get(apiKey);
+    if (set) {
+      set.delete(clientId);
+      if (set.size === 0) connectionsByKey.delete(apiKey);
+    }
+  } else {
+    const set = connectionsByIp.get(ip);
+    if (set) {
+      set.delete(clientId);
+      if (set.size === 0) connectionsByIp.delete(ip);
+    }
+  }
+}
+
+// =============================================================================
+// TOPIC-BASED SUBSCRIPTIONS (prices:BTC, news:breaking, sentiment:global)
+// =============================================================================
+
+/**
+ * Topic subscriptions allow fine-grained pub/sub:
+ *   prices:BTC, prices:ETH, prices:SOL, prices:*
+ *   news:breaking, news:bitcoin, news:defi, news:*
+ *   sentiment:global, sentiment:*
+ *   whales:BTC, whales:*, whales:ETH
+ *   alerts:*
+ *
+ * Clients send: { type: "subscribe_topics", payload: { topics: ["prices:BTC", "news:breaking"] } }
+ */
+const VALID_TOPIC_PREFIXES = ['prices', 'news', 'sentiment', 'whales', 'alerts'];
+const COIN_SYMBOLS = ['BTC', 'ETH', 'SOL', 'ADA', 'DOT', 'AVAX', 'LINK', 'MATIC', 'DOGE', 'XRP', 'BNB', 'UNI', 'AAVE', 'ATOM'];
+const COIN_TO_ID = {
+  BTC: 'bitcoin', ETH: 'ethereum', SOL: 'solana', ADA: 'cardano',
+  DOT: 'polkadot', AVAX: 'avalanche-2', LINK: 'chainlink', MATIC: 'polygon',
+  DOGE: 'dogecoin', XRP: 'ripple', BNB: 'binancecoin', UNI: 'uniswap',
+  AAVE: 'aave', ATOM: 'cosmos',
+};
+
+function isValidTopic(topic) {
+  const [prefix, suffix] = topic.split(':');
+  if (!VALID_TOPIC_PREFIXES.includes(prefix)) return false;
+  if (!suffix) return false;
+  if (suffix === '*') return true;
+  switch (prefix) {
+    case 'prices': return COIN_SYMBOLS.includes(suffix.toUpperCase());
+    case 'news': return suffix === 'breaking' || Object.keys(CHANNELS).includes(suffix);
+    case 'sentiment': return suffix === 'global';
+    case 'whales': return suffix === '*' || COIN_SYMBOLS.includes(suffix.toUpperCase());
+    case 'alerts': return true;
+    default: return false;
+  }
+}
+
+// =============================================================================
+// RECONNECTION GUIDANCE
+// =============================================================================
+
+/**
+ * Build a reconnection guidance object for error/close payloads.
+ * Gives clients actionable instructions on how to reconnect.
+ */
+function reconnectGuidance(code, extra = {}) {
+  const base = {
+    shouldReconnect: true,
+    delay: 1000,
+    maxDelay: 30000,
+    strategy: 'exponential-backoff',
+    jitter: true,
+    url: extra.url || null,
+    message: 'Reconnect with exponential backoff: delay = min(1000 * 2^attempt, 30000) + random(0..1000)',
+  };
+  switch (code) {
+    case 4001: // Auth failed
+      return { ...base, shouldReconnect: false, message: 'Authentication failed. Check your API key and retry.' };
+    case 4002: // Connection limit
+      return { ...base, delay: 5000, message: 'Connection limit reached. Close other connections or upgrade your plan.' };
+    case 4003: // Server at capacity
+      return { ...base, delay: 10000, maxDelay: 60000, message: 'Server at capacity. Retry with backoff.' };
+    case 1001: // Going away (shutdown)
+      return { ...base, delay: 500, message: 'Server is restarting. Reconnect shortly.' };
+    case 4008: // Heartbeat timeout
+      return { ...base, delay: 1000, message: 'Connection timed out. Check your network and reconnect.' };
+    default:
+      return base;
+  }
+}
+
+// =============================================================================
+// SERVER-INITIATED HEARTBEAT (WebSocket protocol-level ping/pong)
+// =============================================================================
+
+const HEARTBEAT_INTERVAL = parseInt(process.env.WS_HEARTBEAT_INTERVAL || '30000', 10); // 30s
+const HEARTBEAT_TIMEOUT = parseInt(process.env.WS_HEARTBEAT_TIMEOUT || '10000', 10);   // 10s grace
+
+function startHeartbeat() {
+  setInterval(() => {
+    clients.forEach((client, clientId) => {
+      if (client._pongReceived === false) {
+        // Didn't respond to last ping — terminate
+        console.log(`[heartbeat] Client ${clientId} failed ping/pong — terminating`);
+        client.ws.terminate();
+        return;
+      }
+      // Mark as waiting for pong, send protocol-level ping
+      client._pongReceived = false;
+      if (client.ws.readyState === WebSocket.OPEN) {
+        client.ws.ping();
+      }
+    });
+  }, HEARTBEAT_INTERVAL);
+}
+
 // Prometheus metrics counters
 const metricsCounters = {
   messagesSent: 0,
   messagesReceived: 0,
   messagesDropped: 0,
+  authFailures: 0,
+  connectionLimitHits: 0,
 };
 
 // Client management
@@ -429,15 +631,21 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(isShuttingDown ? 503 : 200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
       status: isShuttingDown ? 'draining' : 'ok',
-      version: '3.0.0',
+      version: '4.0.0',
       instanceId: INSTANCE_ID,
       isLeader,
       redis: redisPub ? 'connected' : 'unavailable',
+      auth: { required: WS_REQUIRE_AUTH, keysConfigured: WS_API_KEYS.size },
       clients: clients.size,
       globalClients: globalStats?.totalConnections ?? clients.size,
       maxClients: MAX_CONNECTIONS,
+      connectionsPerKey: CONNECTIONS_PER_KEY,
       uptime: process.uptime(),
-      features: ['news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment', 'channels'],
+      features: [
+        'news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment',
+        'channels', 'topics', 'api-key-auth', 'heartbeat', 'compression',
+      ],
+      heartbeat: { interval: HEARTBEAT_INTERVAL, timeout: HEARTBEAT_TIMEOUT },
     }));
     return;
   }
@@ -520,9 +728,20 @@ const server = http.createServer(async (req, res) => {
   }
   
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end(`Free Crypto News WebSocket Server v3.0
+  res.end(`Free Crypto News WebSocket Server v4.0
 
-Connect via ws://${req.headers.host}
+Connect via ws://${req.headers.host}?apiKey=YOUR_KEY
+
+Authentication:
+  Pass your API key as a query parameter: ?apiKey=YOUR_KEY
+  ${WS_REQUIRE_AUTH ? 'Authentication is REQUIRED.' : 'Anonymous connections allowed (limited).'}
+
+Topic Subscriptions:
+  Subscribe to fine-grained topics:
+    prices:BTC, prices:ETH, prices:*
+    news:breaking, news:bitcoin, news:defi, news:*
+    sentiment:global, sentiment:*
+    whales:BTC, whales:*, alerts:*
 
 Features:
   - Real-time news streaming
@@ -531,6 +750,11 @@ Features:
   - Market sentiment (Fear & Greed)
   - Topic channels (bitcoin, defi, nft, etc.)
   - Custom alert subscriptions
+  - API key authentication
+  - Per-key connection limits
+  - Server-side heartbeat (ping/pong)
+  - permessage-deflate compression
+  - Auto-reconnection guidance
 
 Endpoints:
   /health   - Server health check

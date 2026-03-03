@@ -52,12 +52,12 @@ import {
   type ImpactResult,
   EntityType,
   RelationType,
-} from '@/lib/knowledge-graph';
-import { generateEmbedding } from './embedding-service';
-import { vectorStore } from './vector-store';
-import { hybridSearch, type HybridSearchOptions } from './hybrid-search';
-import { ragLogger } from './observability';
-import type { ScoredDocument, SearchFilter, SearchResult } from './types';
+} from "@/lib/knowledge-graph";
+import { generateEmbedding } from "./embedding-service";
+import { vectorStore } from "./vector-store";
+import { hybridSearch, type HybridSearchOptions } from "./hybrid-search";
+import { ragLogger } from "./observability";
+import type { ScoredDocument, SearchFilter, SearchResult } from "./types";
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
@@ -114,7 +114,7 @@ export interface GraphSearchResult {
 export interface GraphEntityMatch {
   entity: Entity;
   /** How the entity was matched (exact, alias, fuzzy) */
-  matchType: 'exact' | 'alias' | 'fuzzy';
+  matchType: "exact" | "alias" | "fuzzy";
   /** Position in the query string */
   position: number;
   /** The matching text fragment */
@@ -147,7 +147,7 @@ export class GraphRAGService {
     const matches: GraphEntityMatch[] = [];
 
     // Get all entities from the graph
-    const allEntities = this.graph.searchEntities('', 1000);
+    const allEntities = this.graph.searchEntities("", 1000);
 
     for (const entity of allEntities) {
       // Try exact name match first
@@ -156,7 +156,7 @@ export class GraphRAGService {
       if (idx !== -1) {
         matches.push({
           entity,
-          matchType: 'exact',
+          matchType: "exact",
           position: idx,
           matchedText: entity.name,
         });
@@ -168,7 +168,7 @@ export class GraphRAGService {
       if (idx !== -1 && isWordBoundary(q, idx, entity.id.length)) {
         matches.push({
           entity,
-          matchType: 'exact',
+          matchType: "exact",
           position: idx,
           matchedText: entity.id,
         });
@@ -183,7 +183,7 @@ export class GraphRAGService {
         if (idx !== -1 && isWordBoundary(q, idx, aliasLower.length)) {
           matches.push({
             entity,
-            matchType: 'alias',
+            matchType: "alias",
             position: idx,
             matchedText: alias,
           });
@@ -263,41 +263,43 @@ export class GraphRAGService {
     subgraph: SubGraph,
     impactResults?: ImpactResult[],
   ): string {
-    if (entities.length === 0) return '';
+    if (entities.length === 0) return "";
 
-    const lines: string[] = ['## Entity Context'];
+    const lines: string[] = ["## Entity Context"];
 
     // Entity summaries
     for (const entity of entities) {
       const rels = this.graph.getRelationships(entity.id);
-      const relSummaries = rels
-        .slice(0, 5)
-        .map((r) => {
-          const other = r.source === entity.id ? r.target : r.source;
-          const otherEntity = this.graph.getEntity(other);
-          const direction = r.source === entity.id ? '→' : '←';
-          return `  ${direction} ${formatRelationType(r.type)} ${otherEntity?.name ?? other} (confidence: ${(r.confidence * 100).toFixed(0)}%)`;
-        });
+      const relSummaries = rels.slice(0, 5).map((r) => {
+        const other = r.source === entity.id ? r.target : r.source;
+        const otherEntity = this.graph.getEntity(other);
+        const direction = r.source === entity.id ? "→" : "←";
+        return `  ${direction} ${formatRelationType(r.type)} ${otherEntity?.name ?? other} (confidence: ${(r.confidence * 100).toFixed(0)}%)`;
+      });
 
       lines.push(
         `\n### ${entity.name} (${entity.type})`,
-        `Mentions: ${entity.mentionCount} | Sentiment: ${entity.sentimentAvg >= 0 ? '+' : ''}${entity.sentimentAvg.toFixed(2)}`,
+        `Mentions: ${entity.mentionCount} | Sentiment: ${entity.sentimentAvg >= 0 ? "+" : ""}${entity.sentimentAvg.toFixed(2)}`,
       );
 
       if (relSummaries.length > 0) {
-        lines.push('Relationships:', ...relSummaries);
+        lines.push("Relationships:", ...relSummaries);
       }
     }
 
     // Shortest paths between query entities
     if (entities.length >= 2) {
-      lines.push('\n### Entity Connections');
+      lines.push("\n### Entity Connections");
       for (let i = 0; i < entities.length - 1; i++) {
         for (let j = i + 1; j < entities.length; j++) {
           const path = this.graph.shortestPath(entities[i].id, entities[j].id);
           if (path && path.length > 1) {
-            const pathNames = path.map((id) => this.graph.getEntity(id)?.name ?? id);
-            lines.push(`${entities[i].name} ↔ ${entities[j].name}: ${pathNames.join(' → ')}`);
+            const pathNames = path.map(
+              (id) => this.graph.getEntity(id)?.name ?? id,
+            );
+            lines.push(
+              `${entities[i].name} ↔ ${entities[j].name}: ${pathNames.join(" → ")}`,
+            );
           }
         }
       }
@@ -305,17 +307,17 @@ export class GraphRAGService {
 
     // Impact propagation
     if (impactResults && impactResults.length > 0) {
-      lines.push('\n### Impact Propagation');
+      lines.push("\n### Impact Propagation");
       for (const ir of impactResults.slice(0, 8)) {
         if (ir.hops === 0) continue; // Skip the source entity
-        const sign = ir.impact >= 0 ? '+' : '';
+        const sign = ir.impact >= 0 ? "+" : "";
         lines.push(
-          `  ${ir.entity.name}: ${sign}${(ir.impact * 100).toFixed(1)}% impact (${ir.hops} hops, path: ${ir.path.join(' → ')})`,
+          `  ${ir.entity.name}: ${sign}${(ir.impact * 100).toFixed(1)}% impact (${ir.hops} hops, path: ${ir.path.join(" → ")})`,
         );
       }
     }
 
-    return lines.join('\n');
+    return lines.join("\n");
   }
 
   // ─────────────────────────────────────────────────────────────
@@ -350,13 +352,17 @@ export class GraphRAGService {
       similarityThreshold = 0.4,
     } = options;
 
-    ragLogger.debug('GraphRAG search started', undefined, { query, maxHops, fusionWeight });
+    ragLogger.debug("GraphRAG search started", undefined, {
+      query,
+      maxHops,
+      fusionWeight,
+    });
 
     // Step 1: Extract entities
     const entityMatches = this.extractEntities(query, maxEntities);
     const queryEntities = entityMatches.map((m) => m.entity);
 
-    ragLogger.debug('Entities extracted', undefined, {
+    ragLogger.debug("Entities extracted", undefined, {
       count: queryEntities.length,
       entities: queryEntities.map((e) => e.name),
     });
@@ -373,7 +379,7 @@ export class GraphRAGService {
         documents: toScoredDocuments(vectorResults),
         queryEntities: [],
         subgraph: { nodes: [], edges: [] },
-        entityContext: '',
+        entityContext: "",
         metadata: {
           graphDocsFound: 0,
           vectorDocsFound: vectorResults.length,
@@ -413,9 +419,10 @@ export class GraphRAGService {
       .slice(0, 5)
       .map((n) => n.name);
 
-    const expandedQuery = relatedEntityNames.length > 0
-      ? `${query} (related: ${relatedEntityNames.join(', ')})`
-      : query;
+    const expandedQuery =
+      relatedEntityNames.length > 0
+        ? `${query} (related: ${relatedEntityNames.join(", ")})`
+        : query;
 
     // Step 5: Graph-enhanced vector search
     const graphSearchResults = await hybridSearch(expandedQuery, {
@@ -427,11 +434,16 @@ export class GraphRAGService {
     // Step 6: Boost documents mentioning graph entities
     const graphEntityIds = new Set(subgraph.nodes.map((n) => n.id));
     const graphEntityNames = new Set(
-      subgraph.nodes.flatMap((n) => [n.name.toLowerCase(), n.id, ...n.aliases.map((a) => a.toLowerCase())]),
+      subgraph.nodes.flatMap((n) => [
+        n.name.toLowerCase(),
+        n.id,
+        ...n.aliases.map((a) => a.toLowerCase()),
+      ]),
     );
 
     const boostedGraphResults = graphSearchResults.map((r) => {
-      const text = `${r.document.metadata.title} ${r.document.content}`.toLowerCase();
+      const text =
+        `${r.document.metadata.title} ${r.document.content}`.toLowerCase();
       let boost = 0;
 
       for (const name of graphEntityNames) {
@@ -479,9 +491,9 @@ export class GraphRAGService {
     // Step 9: Build entity context
     const entityContext = injectEntityContext
       ? this.buildEntityContext(queryEntities, subgraph, impactResults)
-      : '';
+      : "";
 
-    ragLogger.debug('GraphRAG search completed', undefined, {
+    ragLogger.debug("GraphRAG search completed", undefined, {
       graphDocs: boostedGraphResults.length,
       vectorDocs: vectorDocsFound,
       merged: finalDocs.length,
@@ -512,7 +524,10 @@ export class GraphRAGService {
    * and adds them to the graph. Should be called when new documents
    * are indexed into the vector store.
    */
-  ingestDocument(doc: ScoredDocument): { entities: Entity[]; relationships: Relationship[] } {
+  ingestDocument(doc: ScoredDocument): {
+    entities: Entity[];
+    relationships: Relationship[];
+  } {
     return this.graph.ingestArticle({
       title: doc.title,
       content: doc.content,
@@ -591,8 +606,8 @@ function reciprocalRankFusion(
  * Check if a match at the given position is on a word boundary.
  */
 function isWordBoundary(text: string, start: number, length: number): boolean {
-  const before = start > 0 ? text[start - 1] : ' ';
-  const after = start + length < text.length ? text[start + length] : ' ';
+  const before = start > 0 ? text[start - 1] : " ";
+  const after = start + length < text.length ? text[start + length] : " ";
   return /\W/.test(before) && /\W/.test(after);
 }
 
@@ -601,18 +616,18 @@ function isWordBoundary(text: string, start: number, length: number): boolean {
  */
 function inferEventType(query: string): string {
   const q = query.toLowerCase();
-  if (/regulat|sec |cftc|ban|law|compli/i.test(q)) return 'regulation';
-  if (/hack|exploit|breach|attack|drain/i.test(q)) return 'hack';
-  if (/partner|collab|integrat|alliance/i.test(q)) return 'partnership';
-  if (/upgrad|fork|update|v2|dencun|pectra/i.test(q)) return 'upgrade';
-  return 'general';
+  if (/regulat|sec |cftc|ban|law|compli/i.test(q)) return "regulation";
+  if (/hack|exploit|breach|attack|drain/i.test(q)) return "hack";
+  if (/partner|collab|integrat|alliance/i.test(q)) return "partnership";
+  if (/upgrad|fork|update|v2|dencun|pectra/i.test(q)) return "upgrade";
+  return "general";
 }
 
 /**
  * Format a RelationType enum into readable text.
  */
 function formatRelationType(type: RelationType): string {
-  return type.replace(/_/g, ' ').toLowerCase();
+  return type.replace(/_/g, " ").toLowerCase();
 }
 
 /**

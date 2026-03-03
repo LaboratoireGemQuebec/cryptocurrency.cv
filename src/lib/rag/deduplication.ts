@@ -35,16 +35,20 @@
  * @module deduplication
  */
 
-import { generateEmbedding } from './embedding-service';
-import { ragLogger } from './observability';
-import type { ScoredDocument } from './types';
+import { generateEmbedding } from "./embedding-service";
+import { ragLogger } from "./observability";
+import type { ScoredDocument } from "./types";
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════
 
-export type DeduplicationMethod = 'minhash' | 'simhash' | 'embedding';
-export type DeduplicationStrategy = 'keep_newest' | 'keep_highest_vote' | 'keep_best_source' | 'merge';
+export type DeduplicationMethod = "minhash" | "simhash" | "embedding";
+export type DeduplicationStrategy =
+  | "keep_newest"
+  | "keep_highest_vote"
+  | "keep_best_source"
+  | "merge";
 
 export interface DeduplicationOptions {
   /** Detection method (default: 'minhash') */
@@ -121,7 +125,8 @@ class MinHashSignature {
 
     for (const shingle of shingles) {
       for (let i = 0; i < this.numHashes; i++) {
-        const hash = ((this.hashA[i] * shingle + this.hashB[i]) % LARGE_PRIME) >>> 0;
+        const hash =
+          ((this.hashA[i] * shingle + this.hashB[i]) % LARGE_PRIME) >>> 0;
         if (hash < signature[i]) {
           signature[i] = hash;
         }
@@ -224,14 +229,14 @@ function fnv1aHash(str: string, bits: number): bigint {
 function generateShingles(text: string, shingleSize: number): Set<number> {
   const words = text
     .toLowerCase()
-    .replace(/[^\w\s]/g, '')
+    .replace(/[^\w\s]/g, "")
     .split(/\s+/)
     .filter((w) => w.length > 0);
 
   const shingles = new Set<number>();
 
   for (let i = 0; i <= words.length - shingleSize; i++) {
-    const shingle = words.slice(i, i + shingleSize).join(' ');
+    const shingle = words.slice(i, i + shingleSize).join(" ");
     shingles.add(simpleHash(shingle));
   }
 
@@ -256,7 +261,7 @@ function simpleHash(str: string): number {
 function tokenize(text: string): string[] {
   return text
     .toLowerCase()
-    .replace(/[^\w\s]/g, '')
+    .replace(/[^\w\s]/g, "")
     .split(/\s+/)
     .filter((w) => w.length > 1);
 }
@@ -273,7 +278,7 @@ export async function findDuplicates(
   options: DeduplicationOptions = {},
 ): Promise<DeduplicationResult> {
   const {
-    method = 'minhash',
+    method = "minhash",
     threshold = 0.9,
     numHashes = 128,
     simHashBits = 64,
@@ -282,7 +287,7 @@ export async function findDuplicates(
 
   const startTime = Date.now();
 
-  ragLogger.debug('Deduplication started', undefined, {
+  ragLogger.debug("Deduplication started", undefined, {
     method,
     threshold,
     docCount: documents.length,
@@ -291,17 +296,27 @@ export async function findDuplicates(
   let clusters: DuplicateCluster[];
 
   switch (method) {
-    case 'minhash':
-      clusters = findDuplicatesMinHash(documents, threshold, numHashes, shingleSize);
+    case "minhash":
+      clusters = findDuplicatesMinHash(
+        documents,
+        threshold,
+        numHashes,
+        shingleSize,
+      );
       break;
-    case 'simhash':
+    case "simhash":
       clusters = findDuplicatesSimHash(documents, threshold, simHashBits);
       break;
-    case 'embedding':
+    case "embedding":
       clusters = await findDuplicatesEmbedding(documents, threshold);
       break;
     default:
-      clusters = findDuplicatesMinHash(documents, threshold, numHashes, shingleSize);
+      clusters = findDuplicatesMinHash(
+        documents,
+        threshold,
+        numHashes,
+        shingleSize,
+      );
   }
 
   const duplicateIds = new Set<string>();
@@ -320,7 +335,7 @@ export async function findDuplicates(
     processingTime: Date.now() - startTime,
   };
 
-  ragLogger.debug('Deduplication completed', undefined, {
+  ragLogger.debug("Deduplication completed", undefined, {
     clusters: clusters.length,
     totalDuplicates: result.totalDuplicates,
     processingTime: result.processingTime,
@@ -485,13 +500,13 @@ function clusterSimilarPairs<T extends { id: string }>(
 /** Source credibility ranking (higher = more credible) */
 const SOURCE_CREDIBILITY: Record<string, number> = {
   coindesk: 10,
-  'the block': 9,
+  "the block": 9,
   cointelegraph: 8,
   decrypt: 8,
-  'bitcoin magazine': 7,
+  "bitcoin magazine": 7,
   blockworks: 7,
-  'the defiant': 6,
-  'crypto briefing': 5,
+  "the defiant": 6,
+  "crypto briefing": 5,
   cryptopanic: 4,
   unknown: 1,
 };
@@ -505,7 +520,7 @@ const SOURCE_CREDIBILITY: Record<string, number> = {
 export function deduplicateDocuments(
   documents: ScoredDocument[],
   result: DeduplicationResult,
-  strategy: DeduplicationStrategy = 'keep_newest',
+  strategy: DeduplicationStrategy = "keep_newest",
 ): ScoredDocument[] {
   // Assign canonical IDs
   const docMap = new Map(documents.map((d) => [d.id, d]));
@@ -521,7 +536,7 @@ export function deduplicateDocuments(
     let canonical: ScoredDocument;
 
     switch (strategy) {
-      case 'keep_newest':
+      case "keep_newest":
         canonical = clusterDocs.sort((a, b) => {
           const dateA = a.publishedAt?.getTime() ?? 0;
           const dateB = b.publishedAt?.getTime() ?? 0;
@@ -529,21 +544,25 @@ export function deduplicateDocuments(
         })[0];
         break;
 
-      case 'keep_highest_vote':
-        canonical = clusterDocs.sort((a, b) =>
-          (b.voteScore ?? 0) - (a.voteScore ?? 0),
+      case "keep_highest_vote":
+        canonical = clusterDocs.sort(
+          (a, b) => (b.voteScore ?? 0) - (a.voteScore ?? 0),
         )[0];
         break;
 
-      case 'keep_best_source':
+      case "keep_best_source":
         canonical = clusterDocs.sort((a, b) => {
-          const credA = SOURCE_CREDIBILITY[a.source.toLowerCase()] ?? SOURCE_CREDIBILITY.unknown;
-          const credB = SOURCE_CREDIBILITY[b.source.toLowerCase()] ?? SOURCE_CREDIBILITY.unknown;
+          const credA =
+            SOURCE_CREDIBILITY[a.source.toLowerCase()] ??
+            SOURCE_CREDIBILITY.unknown;
+          const credB =
+            SOURCE_CREDIBILITY[b.source.toLowerCase()] ??
+            SOURCE_CREDIBILITY.unknown;
           return credB - credA;
         })[0];
         break;
 
-      case 'merge':
+      case "merge":
         // Keep the newest but merge vote scores
         canonical = clusterDocs.sort((a, b) => {
           const dateA = a.publishedAt?.getTime() ?? 0;
@@ -582,7 +601,7 @@ export async function quickDedup(
   documents: ScoredDocument[],
   options: DeduplicationOptions & { strategy?: DeduplicationStrategy } = {},
 ): Promise<{ documents: ScoredDocument[]; result: DeduplicationResult }> {
-  const { strategy = 'keep_newest', ...dedupOptions } = options;
+  const { strategy = "keep_newest", ...dedupOptions } = options;
   const result = await findDuplicates(documents, dedupOptions);
   const cleaned = deduplicateDocuments(documents, result, strategy);
   return { documents: cleaned, result };

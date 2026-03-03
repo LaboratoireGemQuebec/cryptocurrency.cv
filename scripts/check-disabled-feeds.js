@@ -78,12 +78,12 @@ async function checkAll(sources) {
       batch.map(async (src) => {
         const result = await checkUrl(src.url);
         return { ...src, ...result };
-      })
+      }),
     );
     results.push(...batchResults);
     if (!JSON_OUTPUT) {
       process.stderr.write(
-        `\r  Checked ${results.length}/${sources.length} feeds...`
+        `\r  Checked ${results.length}/${sources.length} feeds...`,
       );
     }
   }
@@ -101,10 +101,7 @@ function statusEmoji(r) {
 }
 
 async function main() {
-  const filePath = path.resolve(
-    __dirname,
-    "../src/lib/crypto-news.ts"
-  );
+  const filePath = path.resolve(__dirname, "../src/lib/crypto-news.ts");
 
   if (!JSON_OUTPUT) {
     console.log("🔍 Parsing disabled feed sources from crypto-news.ts...\n");
@@ -123,17 +120,23 @@ async function main() {
   const stillBroken = results.filter((r) => !r.ok);
 
   if (JSON_OUTPUT) {
-    console.log(JSON.stringify({ recovered, stillBroken, total: results.length }, null, 2));
+    console.log(
+      JSON.stringify(
+        { recovered, stillBroken, total: results.length },
+        null,
+        2,
+      ),
+    );
     return;
   }
 
   if (recovered.length > 0) {
-    console.log(`\n✅ RECOVERED (${recovered.length} feeds now responding OK):\n`);
+    console.log(
+      `\n✅ RECOVERED (${recovered.length} feeds now responding OK):\n`,
+    );
     console.log(
       "  " +
-        ["Name", "Status", "Category", "URL"]
-          .map((h) => h.padEnd(30))
-          .join("")
+        ["Name", "Status", "Category", "URL"].map((h) => h.padEnd(30)).join(""),
     );
     console.log("  " + "─".repeat(110));
     for (const r of recovered) {
@@ -141,20 +144,16 @@ async function main() {
         "  " +
           [r.name, `${r.status}`, r.category, r.url]
             .map((v, i) => v.padEnd(i === 2 ? 15 : 30))
-            .join("")
+            .join(""),
       );
     }
   }
 
   if (!ONLY_OK) {
-    console.log(
-      `\n❌ STILL BROKEN (${stillBroken.length} feeds):\n`
-    );
+    console.log(`\n❌ STILL BROKEN (${stillBroken.length} feeds):\n`);
     console.log(
       "  " +
-        ["Name", "Status", "Reason", "URL"]
-          .map((h) => h.padEnd(30))
-          .join("")
+        ["Name", "Status", "Reason", "URL"].map((h) => h.padEnd(30)).join(""),
     );
     console.log("  " + "─".repeat(120));
     for (const r of stillBroken) {
@@ -164,18 +163,18 @@ async function main() {
           `${statusEmoji(r)} ` +
           [r.name, statusStr, r.reason.slice(0, 28), r.url]
             .map((v, i) => v.padEnd(30))
-            .join("")
+            .join(""),
       );
     }
   }
 
   console.log(
-    `\n📊 Summary: ${recovered.length} recovered, ${stillBroken.length} still broken, ${results.length} total disabled\n`
+    `\n📊 Summary: ${recovered.length} recovered, ${stillBroken.length} still broken, ${results.length} total disabled\n`,
   );
 
   if (recovered.length > 0) {
     console.log(
-      "💡 To re-enable recovered feeds, remove `disabled: true` from these entries in src/lib/crypto-news.ts:\n"
+      "💡 To re-enable recovered feeds, remove `disabled: true` from these entries in src/lib/crypto-news.ts:\n",
     );
     for (const r of recovered) {
       console.log(`   - ${r.key} (${r.name})`);
