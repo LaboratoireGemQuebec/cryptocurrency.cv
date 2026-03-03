@@ -17,16 +17,16 @@
  * @route GET  /api/admin/gateway — List keys / get usage stats
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from "next/server";
 import {
   createApiKey,
   getUsageStats,
   TIER_CONFIG,
   type ApiKeyCreateRequest,
   type ApiTier,
-} from '@/lib/gateway';
+} from "@/lib/gateway";
 
-export const runtime = 'nodejs';
+export const runtime = "nodejs";
 
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN ?? process.env.CRON_SECRET;
 
@@ -39,14 +39,15 @@ function secureCompare(a: string, b: string): boolean {
   if (maxLen === 0) return false;
   let result = bufA.byteLength ^ bufB.byteLength;
   for (let i = 0; i < maxLen; i++) {
-    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
+    result |=
+      (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
   }
   return result === 0;
 }
 
 function isAuthorized(request: NextRequest): boolean {
   if (!ADMIN_TOKEN) return false;
-  const auth = request.headers.get('authorization');
+  const auth = request.headers.get("authorization");
   if (!auth) return false;
   return secureCompare(auth, `Bearer ${ADMIN_TOKEN}`);
 }
@@ -57,45 +58,53 @@ function isAuthorized(request: NextRequest): boolean {
  */
 export async function POST(request: NextRequest) {
   if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   try {
-    const body = await request.json() as ApiKeyCreateRequest;
+    const body = (await request.json()) as ApiKeyCreateRequest;
 
     if (!body.name || !body.ownerId) {
       return NextResponse.json(
-        { error: 'Missing required fields: name, ownerId' },
+        { error: "Missing required fields: name, ownerId" },
         { status: 400 },
       );
     }
 
     // Validate tier
-    const tier = (body.tier ?? 'free') as ApiTier;
+    const tier = (body.tier ?? "free") as ApiTier;
     if (!TIER_CONFIG[tier]) {
       return NextResponse.json(
-        { error: `Invalid tier: ${tier}. Must be one of: ${Object.keys(TIER_CONFIG).join(', ')}` },
+        {
+          error: `Invalid tier: ${tier}. Must be one of: ${Object.keys(TIER_CONFIG).join(", ")}`,
+        },
         { status: 400 },
       );
     }
 
     const result = await createApiKey({ ...body, tier });
 
-    return NextResponse.json({
-      success: true,
-      apiKey: result.key,
-      keyId: result.record.id,
-      tier: result.record.tier,
-      limits: {
-        requestsPerHour: result.record.rateLimit,
-        requestsPerDay: result.record.dailyLimit,
-        burstLimit: result.record.burstLimit,
+    return NextResponse.json(
+      {
+        success: true,
+        apiKey: result.key,
+        keyId: result.record.id,
+        tier: result.record.tier,
+        limits: {
+          requestsPerHour: result.record.rateLimit,
+          requestsPerDay: result.record.dailyLimit,
+          burstLimit: result.record.burstLimit,
+        },
+        message: "Store this API key securely — it cannot be retrieved again.",
       },
-      message: 'Store this API key securely — it cannot be retrieved again.',
-    }, { status: 201 });
+      { status: 201 },
+    );
   } catch (error) {
     return NextResponse.json(
-      { error: 'Failed to create API key', message: error instanceof Error ? error.message : 'Unknown error' },
+      {
+        error: "Failed to create API key",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
       { status: 500 },
     );
   }
@@ -107,13 +116,13 @@ export async function POST(request: NextRequest) {
  */
 export async function GET(request: NextRequest) {
   if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const params = request.nextUrl.searchParams;
 
   // Return tier configuration
-  if (params.has('tiers')) {
+  if (params.has("tiers")) {
     return NextResponse.json({
       tiers: Object.entries(TIER_CONFIG).map(([name, config]) => ({
         name,
@@ -123,18 +132,18 @@ export async function GET(request: NextRequest) {
   }
 
   // Return usage stats for a specific key
-  const keyId = params.get('keyId');
+  const keyId = params.get("keyId");
   if (keyId) {
-    const days = parseInt(params.get('days') ?? '7', 10);
+    const days = parseInt(params.get("days") ?? "7", 10);
     const stats = await getUsageStats(keyId, days);
     return NextResponse.json({ keyId, ...stats });
   }
 
   return NextResponse.json({
     endpoints: {
-      'POST /api/admin/gateway': 'Create new API key',
-      'GET /api/admin/gateway?tiers': 'List tier configuration',
-      'GET /api/admin/gateway?keyId=...&days=7': 'Get usage stats',
+      "POST /api/admin/gateway": "Create new API key",
+      "GET /api/admin/gateway?tiers": "List tier configuration",
+      "GET /api/admin/gateway?keyId=...&days=7": "Get usage stats",
     },
   });
 }

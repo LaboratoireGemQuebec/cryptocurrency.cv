@@ -27,10 +27,10 @@
  * @module providers/adapters/depin-data/depinscan
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { DePINProject } from './types';
+import type { DataProvider, FetchParams, RateLimitConfig } from "../../types";
+import type { DePINProject } from "./types";
 
-const BASE = 'https://api.depinscan.io/api';
+const BASE = "https://api.depinscan.io/api";
 
 const RATE_LIMIT: RateLimitConfig = {
   maxRequests: 30,
@@ -38,12 +38,13 @@ const RATE_LIMIT: RateLimitConfig = {
 };
 
 export const depinscanAdapter: DataProvider<DePINProject[]> = {
-  name: 'depinscan',
-  description: 'DePINscan — DePIN ecosystem metrics: device counts, revenue, growth (free, no key)',
+  name: "depinscan",
+  description:
+    "DePINscan — DePIN ecosystem metrics: device counts, revenue, growth (free, no key)",
   priority: 1,
   weight: 0.55,
   rateLimit: RATE_LIMIT,
-  capabilities: ['depin-data'],
+  capabilities: ["depin-data"],
 
   async fetch(params: FetchParams): Promise<DePINProject[]> {
     const limit = params.limit ?? 50;
@@ -51,8 +52,8 @@ export const depinscanAdapter: DataProvider<DePINProject[]> = {
 
     const res = await fetch(`${BASE}/projects?limit=${limit}`, {
       headers: {
-        'User-Agent': 'free-crypto-news/2.0',
-        Accept: 'application/json',
+        "User-Agent": "free-crypto-news/2.0",
+        Accept: "application/json",
       },
       signal: AbortSignal.timeout(10_000),
     });
@@ -63,24 +64,26 @@ export const depinscanAdapter: DataProvider<DePINProject[]> = {
 
     const projects: DePINscanProject[] = await res.json();
 
-    return projects.slice(0, limit).map((p): DePINProject => ({
-      name: p.name ?? 'Unknown',
-      symbol: (p.symbol ?? '').toUpperCase(),
-      slug: p.slug ?? '',
-      category: mapCategory(p.category),
-      marketCap: p.market_cap ?? 0,
-      fdv: p.fdv ?? 0,
-      price: p.price ?? 0,
-      priceChange24h: p.price_change_24h ?? 0,
-      activeDevices: p.active_devices ?? p.device_count ?? 0,
-      deviceGrowth30d: p.device_growth_30d ?? 0,
-      monthlyRevenue: p.monthly_revenue ?? 0,
-      totalRevenue: p.total_revenue ?? 0,
-      chains: p.chains ?? [],
-      website: p.website,
-      source: 'depinscan',
-      timestamp: now,
-    }));
+    return projects.slice(0, limit).map(
+      (p): DePINProject => ({
+        name: p.name ?? "Unknown",
+        symbol: (p.symbol ?? "").toUpperCase(),
+        slug: p.slug ?? "",
+        category: mapCategory(p.category),
+        marketCap: p.market_cap ?? 0,
+        fdv: p.fdv ?? 0,
+        price: p.price ?? 0,
+        priceChange24h: p.price_change_24h ?? 0,
+        activeDevices: p.active_devices ?? p.device_count ?? 0,
+        deviceGrowth30d: p.device_growth_30d ?? 0,
+        monthlyRevenue: p.monthly_revenue ?? 0,
+        totalRevenue: p.total_revenue ?? 0,
+        chains: p.chains ?? [],
+        website: p.website,
+        source: "depinscan",
+        timestamp: now,
+      }),
+    );
   },
 
   async healthCheck(): Promise<boolean> {
@@ -103,20 +106,20 @@ export const depinscanAdapter: DataProvider<DePINProject[]> = {
 // Helpers
 // ────────────────────────────────────────────────────────────────────────────
 
-const CATEGORY_MAP: Record<string, DePINProject['category']> = {
-  wireless: 'wireless',
-  compute: 'compute',
-  storage: 'storage',
-  sensor: 'sensor',
-  sensors: 'sensor',
-  energy: 'energy',
-  mapping: 'mapping',
-  cdn: 'cdn',
+const CATEGORY_MAP: Record<string, DePINProject["category"]> = {
+  wireless: "wireless",
+  compute: "compute",
+  storage: "storage",
+  sensor: "sensor",
+  sensors: "sensor",
+  energy: "energy",
+  mapping: "mapping",
+  cdn: "cdn",
 };
 
-function mapCategory(raw?: string): DePINProject['category'] {
-  if (!raw) return 'other';
-  return CATEGORY_MAP[raw.toLowerCase()] ?? 'other';
+function mapCategory(raw?: string): DePINProject["category"] {
+  if (!raw) return "other";
+  return CATEGORY_MAP[raw.toLowerCase()] ?? "other";
 }
 
 // ────────────────────────────────────────────────────────────────────────────

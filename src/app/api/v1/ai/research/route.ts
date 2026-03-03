@@ -18,18 +18,18 @@
  * @price $0.01 per request
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { hybridAuthMiddleware } from '@/lib/x402';
-import { ApiError } from '@/lib/api-error';
-import { createRequestLogger } from '@/lib/logger';
-import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
-import { getLatestNews } from '@/lib/crypto-news';
+import { type NextRequest, NextResponse } from "next/server";
+import { hybridAuthMiddleware } from "@/lib/x402";
+import { ApiError } from "@/lib/api-error";
+import { createRequestLogger } from "@/lib/logger";
+import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
+import { getLatestNews } from "@/lib/crypto-news";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 export const revalidate = 600;
 
-const ENDPOINT = '/api/v1/ai/research';
+const ENDPOINT = "/api/v1/ai/research";
 
 const SYSTEM_PROMPT = `You are an expert crypto research analyst. Produce institutional-quality research reports.
 
@@ -64,58 +64,65 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const topic = searchParams.get('topic') || searchParams.get('q');
-  const depth = searchParams.get('depth') || 'standard';
+  const topic = searchParams.get("topic") || searchParams.get("q");
+  const depth = searchParams.get("depth") || "standard";
 
   if (!topic) {
     return NextResponse.json(
       {
-        error: 'Missing topic',
-        message: 'Provide a research topic via ?topic=your+topic',
-        version: 'v1',
+        error: "Missing topic",
+        message: "Provide a research topic via ?topic=your+topic",
+        version: "v1",
         examples: [
-          '/api/v1/ai/research?topic=ethereum+layer2+scaling',
-          '/api/v1/ai/research?topic=bitcoin+etf+impact&depth=deep',
-          '/api/v1/ai/research?topic=defi+lending+protocols',
+          "/api/v1/ai/research?topic=ethereum+layer2+scaling",
+          "/api/v1/ai/research?topic=bitcoin+etf+impact&depth=deep",
+          "/api/v1/ai/research?topic=defi+lending+protocols",
         ],
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
-    const contextSize = depth === 'deep' ? 40 : 20;
-    logger.info('AI research', { topic, depth, contextSize });
+    const contextSize = depth === "deep" ? 40 : 20;
+    logger.info("AI research", { topic, depth, contextSize });
 
     const data = await getLatestNews(contextSize);
     const context = data.articles
-      .map((a, i) => `[${i + 1}] "${a.title}" (${a.source})\n${a.description || ''}`)
-      .join('\n\n');
+      .map(
+        (a, i) =>
+          `[${i + 1}] "${a.title}" (${a.source})\n${a.description || ""}`,
+      )
+      .join("\n\n");
 
     const result = await promptAIJson(
       SYSTEM_PROMPT,
-      `Research Topic: ${topic}\nDepth: ${depth}\n\nRecent News Context:\n${context}`
+      `Research Topic: ${topic}\nDepth: ${depth}\n\nRecent News Context:\n${context}`,
     );
 
     return NextResponse.json(
       {
         ...result,
         depth,
-        version: 'v1',
-        disclaimer: 'AI-generated research. Not financial advice.',
+        version: "v1",
+        disclaimer: "AI-generated research. Not financial advice.",
         duration: Date.now() - startTime,
       },
-      { headers: { 'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200' } }
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=600, stale-while-revalidate=1200",
+        },
+      },
     );
   } catch (error) {
     if (error instanceof AIAuthError) return aiAuthErrorResponse(error.message);
-    logger.error('AI research error', { error });
+    logger.error("AI research error", { error });
     const apiError = ApiError.from(error);
     return NextResponse.json(
-      { error: apiError.message, code: apiError.code, version: 'v1' },
-      { status: apiError.statusCode }
+      { error: apiError.message, code: apiError.code, version: "v1" },
+      { status: apiError.statusCode },
     );
   }
 }

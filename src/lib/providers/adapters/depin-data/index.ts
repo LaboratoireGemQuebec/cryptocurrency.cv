@@ -21,12 +21,12 @@
  * @module providers/adapters/depin-data
  */
 
-import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
-import { ProviderChain } from '../../provider-chain';
-import type { DePINProject } from './types';
-import { depinscanAdapter } from './depinscan.adapter';
+import type { ProviderChainConfig, ResolutionStrategy } from "../../types";
+import { ProviderChain } from "../../provider-chain";
+import type { DePINProject } from "./types";
+import { depinscanAdapter } from "./depinscan.adapter";
 
-export type { DePINProject } from './types';
+export type { DePINProject } from "./types";
 
 export interface DePINChainOptions {
   strategy?: ResolutionStrategy;
@@ -38,13 +38,17 @@ export function createDePINChain(
   options: DePINChainOptions = {},
 ): ProviderChain<DePINProject[]> {
   const {
-    strategy = 'fallback',
+    strategy = "fallback",
     cacheTtlSeconds = 300,
     staleWhileError = true,
   } = options;
 
-  const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
-  const chain = new ProviderChain<DePINProject[]>('depin-data', config);
+  const config: Partial<ProviderChainConfig> = {
+    strategy,
+    cacheTtlSeconds,
+    staleWhileError,
+  };
+  const chain = new ProviderChain<DePINProject[]>("depin-data", config);
   chain.addProvider(depinscanAdapter);
 
   return chain;

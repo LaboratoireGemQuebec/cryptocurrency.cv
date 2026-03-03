@@ -6,13 +6,16 @@ Powered by the free [cryptocurrency.cv](https://cryptocurrency.cv) API. No API k
 
 ## Features
 
+- � **Breaking News** — Breaking crypto headlines with priority & sentiment indicators
 - 📰 **Latest News** — Top crypto headlines from 200+ sources
-- 💰 **Live Prices** — Real-time coin prices with 24h change
-- 📊 **Market Overview** — Sentiment analysis & top coins
+- 💰 **Live Prices** — Real-time coin prices with 24h change, market cap & volume
+- 📊 **Market Overview** — Prices, Fear & Greed Index, and news sentiment in one view
+- 🧠 **Sentiment Analysis** — AI-powered per-coin sentiment with key drivers & impact levels
 - 🔍 **Search** — Full-text search across news articles
-- ⛽ **Gas Prices** — Current Ethereum gas (slow / standard / fast)
-- 😱 **Fear & Greed** — Market emotion gauge with trend
-- 📖 **Glossary** — Explain any crypto term
+- ⛽ **Gas Prices** — Current Ethereum gas (slow / standard / fast) with USD estimates
+- 😱 **Fear & Greed** — Market emotion gauge with trend, 7d/30d changes & factor breakdown
+- 💡 **Trending Explainer** — AI-generated explanation of why a topic is trending
+- 🔬 **Deep Research** — AI research reports with key findings, risks, opportunities & outlook
 
 ## Installation
 
@@ -37,13 +40,16 @@ bun run compile
 Open **Copilot Chat** and type `@crypto` followed by a command:
 
 ```
+@crypto /breaking
 @crypto /news
 @crypto /price bitcoin
 @crypto /market
+@crypto /sentiment BTC
 @crypto /search ethereum ETF
 @crypto /gas
 @crypto /fear-greed
 @crypto /explain DeFi
+@crypto /research Solana
 ```
 
 Or type a free-form question:
@@ -60,13 +66,16 @@ Or type a free-form question:
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `/news` | Latest crypto news | `@crypto /news` |
-| `/price <coin>` | Current price for a coin | `@crypto /price bitcoin` |
-| `/market` | Market overview & sentiment | `@crypto /market` |
+| `/breaking` | Latest breaking crypto news with priority | `@crypto /breaking` |
+| `/news` | Latest crypto news headlines | `@crypto /news` |
+| `/price <coin>` | Current price, 24h change, market cap & volume | `@crypto /price bitcoin` |
+| `/market` | Market overview with prices, F&G & sentiment | `@crypto /market` |
+| `/sentiment <coin>` | AI sentiment analysis for a coin | `@crypto /sentiment BTC` |
 | `/search <query>` | Search news articles | `@crypto /search SEC` |
-| `/gas` | Ethereum gas prices | `@crypto /gas` |
-| `/fear-greed` | Fear & Greed Index | `@crypto /fear-greed` |
-| `/explain <term>` | Explain a crypto term | `@crypto /explain staking` |
+| `/gas` | Ethereum gas prices (slow/standard/fast) | `@crypto /gas` |
+| `/fear-greed` | Fear & Greed Index with trend & breakdown | `@crypto /fear-greed` |
+| `/explain <topic>` | Why is a topic trending? AI explainer | `@crypto /explain staking` |
+| `/research <topic>` | Deep AI research report | `@crypto /research Solana` |
 
 ## Configuration
 

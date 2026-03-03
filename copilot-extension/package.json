@@ -1,8 +1,8 @@
 {
   "name": "crypto-news-copilot",
   "displayName": "Crypto News for Copilot",
-  "description": "Query real-time crypto news, prices, gas, Fear & Greed Index and more directly in GitHub Copilot Chat",
-  "version": "1.1.0",
+  "description": "Real-time crypto news, prices, sentiment analysis, AI research reports & market data in GitHub Copilot Chat",
+  "version": "2.0.0",
   "publisher": "free-crypto-news",
   "engines": {
     "vscode": "^1.90.0"
@@ -20,7 +20,10 @@
     "defi",
     "prices",
     "gas",
-    "fear-greed"
+    "fear-greed",
+    "sentiment",
+    "research",
+    "breaking"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -32,9 +35,13 @@
         "id": "crypto-news.crypto",
         "fullName": "Crypto",
         "name": "crypto",
-        "description": "Real-time crypto news, prices, gas & market data from cryptocurrency.cv",
+        "description": "Real-time crypto news, prices, sentiment, AI research & market data from cryptocurrency.cv",
         "isSticky": true,
         "commands": [
+          {
+            "name": "breaking",
+            "description": "Latest breaking crypto news with priority & sentiment"
+          },
           {
             "name": "news",
             "description": "Get the latest crypto news headlines"
@@ -45,7 +52,11 @@
           },
           {
             "name": "market",
-            "description": "Market overview with sentiment & top coins"
+            "description": "Market overview with prices, Fear & Greed Index & sentiment"
+          },
+          {
+            "name": "sentiment",
+            "description": "AI sentiment analysis for a coin (e.g. /sentiment BTC)"
           },
           {
             "name": "search",
@@ -57,11 +68,15 @@
           },
           {
             "name": "fear-greed",
-            "description": "Fear & Greed Index"
+            "description": "Fear & Greed Index with trend & breakdown"
           },
           {
             "name": "explain",
-            "description": "Explain a crypto term (e.g. /explain DeFi)"
+            "description": "Why is a topic trending? AI explainer (e.g. /explain DeFi)"
+          },
+          {
+            "name": "research",
+            "description": "Deep AI research report on a topic (e.g. /research Solana)"
           }
         ]
       }

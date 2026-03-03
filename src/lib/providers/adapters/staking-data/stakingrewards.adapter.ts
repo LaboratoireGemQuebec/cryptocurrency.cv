@@ -27,11 +27,11 @@
  * @module providers/adapters/staking-data/stakingrewards
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { StakingYield } from './types';
+import type { DataProvider, FetchParams, RateLimitConfig } from "../../types";
+import type { StakingYield } from "./types";
 
-const BASE = 'https://api.stakingrewards.com/public/query';
-const STAKINGREWARDS_API_KEY = process.env.STAKINGREWARDS_API_KEY ?? '';
+const BASE = "https://api.stakingrewards.com/public/query";
+const STAKINGREWARDS_API_KEY = process.env.STAKINGREWARDS_API_KEY ?? "";
 
 const RATE_LIMIT: RateLimitConfig = {
   maxRequests: STAKINGREWARDS_API_KEY ? 60 : 20,
@@ -39,24 +39,25 @@ const RATE_LIMIT: RateLimitConfig = {
 };
 
 export const stakingRewardsAdapter: DataProvider<StakingYield[]> = {
-  name: 'stakingrewards',
-  description: 'StakingRewards — Comprehensive staking yields, ratios, and validator data for 200+ PoS chains',
+  name: "stakingrewards",
+  description:
+    "StakingRewards — Comprehensive staking yields, ratios, and validator data for 200+ PoS chains",
   priority: 1,
   weight: 0.55,
   rateLimit: RATE_LIMIT,
-  capabilities: ['staking-data'],
+  capabilities: ["staking-data"],
 
   async fetch(params: FetchParams): Promise<StakingYield[]> {
     const limit = params.limit ?? 50;
     const now = new Date().toISOString();
 
     const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-      'User-Agent': 'free-crypto-news/2.0',
+      "Content-Type": "application/json",
+      "User-Agent": "free-crypto-news/2.0",
     };
 
     if (STAKINGREWARDS_API_KEY) {
-      headers['X-API-KEY'] = STAKINGREWARDS_API_KEY;
+      headers["X-API-KEY"] = STAKINGREWARDS_API_KEY;
     }
 
     // GraphQL query for staking assets
@@ -91,14 +92,14 @@ export const stakingRewardsAdapter: DataProvider<StakingYield[]> = {
     };
 
     const res = await fetch(BASE, {
-      method: 'POST',
+      method: "POST",
       headers,
       body: JSON.stringify(query),
       signal: AbortSignal.timeout(15_000),
     });
 
     if (res.status === 429) {
-      throw new Error('StakingRewards rate limit exceeded (429)');
+      throw new Error("StakingRewards rate limit exceeded (429)");
     }
 
     if (!res.ok) {
@@ -111,8 +112,8 @@ export const stakingRewardsAdapter: DataProvider<StakingYield[]> = {
     return assets.slice(0, limit).map((asset): StakingYield => {
       const metrics = metricsToMap(asset.metrics ?? []);
       return {
-        name: asset.name ?? 'Unknown',
-        symbol: (asset.symbol ?? '').toUpperCase(),
+        name: asset.name ?? "Unknown",
+        symbol: (asset.symbol ?? "").toUpperCase(),
         rewardRate: metrics.reward_rate ?? 0,
         adjustedRewardRate: metrics.adjusted_reward_rate ?? 0,
         stakingRatio: metrics.staking_ratio ?? 0,
@@ -123,9 +124,9 @@ export const stakingRewardsAdapter: DataProvider<StakingYield[]> = {
         lockupDays: metrics.lock_up_period ?? 0,
         minStake: metrics.minimum_staking ?? 0,
         validatorCount: metrics.validator_count ?? 0,
-        stakingType: asset.tags?.find(t => t.name)?.name ?? 'PoS',
-        chain: asset.slug ?? asset.name ?? '',
-        source: 'stakingrewards',
+        stakingType: asset.tags?.find((t) => t.name)?.name ?? "PoS",
+        chain: asset.slug ?? asset.name ?? "",
+        source: "stakingrewards",
         timestamp: now,
       };
     });
@@ -133,13 +134,15 @@ export const stakingRewardsAdapter: DataProvider<StakingYield[]> = {
 
   async healthCheck(): Promise<boolean> {
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (STAKINGREWARDS_API_KEY) headers['X-API-KEY'] = STAKINGREWARDS_API_KEY;
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+      };
+      if (STAKINGREWARDS_API_KEY) headers["X-API-KEY"] = STAKINGREWARDS_API_KEY;
 
       const res = await fetch(BASE, {
-        method: 'POST',
+        method: "POST",
         headers,
-        body: JSON.stringify({ query: '{ assets(limit: 1) { name } }' }),
+        body: JSON.stringify({ query: "{ assets(limit: 1) { name } }" }),
         signal: AbortSignal.timeout(5000),
       });
       return res.ok;

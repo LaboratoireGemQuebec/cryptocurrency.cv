@@ -30,11 +30,11 @@
  * @module providers/adapters/liquidations/coinglass-liquidations
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { LiquidationData } from './types';
+import type { DataProvider, FetchParams, RateLimitConfig } from "../../types";
+import type { LiquidationData } from "./types";
 
-const BASE = 'https://open-api-v3.coinglass.com/api';
-const COINGLASS_API_KEY = process.env.COINGLASS_API_KEY ?? '';
+const BASE = "https://open-api-v3.coinglass.com/api";
+const COINGLASS_API_KEY = process.env.COINGLASS_API_KEY ?? "";
 
 const RATE_LIMIT: RateLimitConfig = {
   maxRequests: 30,
@@ -42,20 +42,21 @@ const RATE_LIMIT: RateLimitConfig = {
 };
 
 export const coinglassLiquidationsAdapter: DataProvider<LiquidationData[]> = {
-  name: 'coinglass-liquidations',
-  description: 'CoinGlass — Aggregated liquidation data across exchanges (long/short breakdowns)',
+  name: "coinglass-liquidations",
+  description:
+    "CoinGlass — Aggregated liquidation data across exchanges (long/short breakdowns)",
   priority: 1,
-  weight: 0.60,
+  weight: 0.6,
   rateLimit: RATE_LIMIT,
-  capabilities: ['liquidations'],
+  capabilities: ["liquidations"],
 
   async fetch(params: FetchParams): Promise<LiquidationData[]> {
     if (!COINGLASS_API_KEY) {
-      throw new Error('CoinGlass API key not configured (COINGLASS_API_KEY)');
+      throw new Error("CoinGlass API key not configured (COINGLASS_API_KEY)");
     }
 
     const limit = params.limit ?? 25;
-    const period = (params.extra?.period as string) ?? '24h';
+    const period = (params.extra?.period as string) ?? "24h";
     const now = new Date().toISOString();
 
     // Map period to CoinGlass time parameter
@@ -65,15 +66,15 @@ export const coinglassLiquidationsAdapter: DataProvider<LiquidationData[]> = {
       `${BASE}/futures/liquidation/info?time_type=${timeType}`,
       {
         headers: {
-          'CoinGlass-API-Key': COINGLASS_API_KEY,
-          Accept: 'application/json',
+          "CoinGlass-API-Key": COINGLASS_API_KEY,
+          Accept: "application/json",
         },
         signal: AbortSignal.timeout(10_000),
       },
     );
 
     if (res.status === 429) {
-      throw new Error('CoinGlass rate limit exceeded (429)');
+      throw new Error("CoinGlass rate limit exceeded (429)");
     }
     if (!res.ok) {
       throw new Error(`CoinGlass Liquidations API error: ${res.status}`);
@@ -87,18 +88,18 @@ export const coinglassLiquidationsAdapter: DataProvider<LiquidationData[]> = {
       const shortUsd = item.shortVolUsd ?? 0;
 
       return {
-        symbol: (item.symbol ?? '').toUpperCase(),
+        symbol: (item.symbol ?? "").toUpperCase(),
         longLiquidationsUsd: longUsd,
         shortLiquidationsUsd: shortUsd,
         totalLiquidationsUsd: longUsd + shortUsd,
         longLiquidationCount: item.longCount ?? 0,
         shortLiquidationCount: item.shortCount ?? 0,
         largestLiquidationUsd: item.largestLiquidation ?? 0,
-        topExchange: item.topExchange ?? 'unknown',
+        topExchange: item.topExchange ?? "unknown",
         period,
         price: item.price ?? 0,
         priceChange24h: item.priceChangePercent24h ?? 0,
-        source: 'coinglass-liquidations',
+        source: "coinglass-liquidations",
         timestamp: now,
       };
     });
@@ -108,7 +109,7 @@ export const coinglassLiquidationsAdapter: DataProvider<LiquidationData[]> = {
     if (!COINGLASS_API_KEY) return false;
     try {
       const res = await fetch(`${BASE}/futures/liquidation/info?time_type=2`, {
-        headers: { 'CoinGlass-API-Key': COINGLASS_API_KEY },
+        headers: { "CoinGlass-API-Key": COINGLASS_API_KEY },
         signal: AbortSignal.timeout(5000),
       });
       return res.ok;
@@ -128,10 +129,10 @@ export const coinglassLiquidationsAdapter: DataProvider<LiquidationData[]> = {
 
 /** Map period string to CoinGlass time_type */
 const PERIOD_MAP: Record<string, number> = {
-  '1h': 0,
-  '4h': 1,
-  '12h': 3,
-  '24h': 2,
+  "1h": 0,
+  "4h": 1,
+  "12h": 3,
+  "24h": 2,
 };
 
 // ────────────────────────────────────────────────────────────────────────────

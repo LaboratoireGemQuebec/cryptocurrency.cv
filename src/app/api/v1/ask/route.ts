@@ -18,18 +18,18 @@
  * @price $0.005 per request
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { hybridAuthMiddleware } from '@/lib/x402';
-import { ApiError } from '@/lib/api-error';
-import { createRequestLogger } from '@/lib/logger';
-import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
-import { getLatestNews } from '@/lib/crypto-news';
+import { type NextRequest, NextResponse } from "next/server";
+import { hybridAuthMiddleware } from "@/lib/x402";
+import { ApiError } from "@/lib/api-error";
+import { createRequestLogger } from "@/lib/logger";
+import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
+import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
+import { getLatestNews } from "@/lib/crypto-news";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 export const revalidate = 0; // Dynamic - depends on question
 
-const ENDPOINT = '/api/v1/ask';
+const ENDPOINT = "/api/v1/ask";
 
 const SYSTEM_PROMPT = `You are a crypto market analyst assistant. Answer questions using the provided news articles as context.
 
@@ -57,38 +57,45 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const question = searchParams.get('q') || searchParams.get('question');
-  const limit = Math.min(parseInt(searchParams.get('context_size') || '20', 10), 50);
+  const question = searchParams.get("q") || searchParams.get("question");
+  const limit = Math.min(
+    parseInt(searchParams.get("context_size") || "20", 10),
+    50,
+  );
 
   if (!question) {
     return NextResponse.json(
       {
-        error: 'Missing question',
-        message: 'Provide a question via ?q=your+question or ?question=your+question',
-        version: 'v1',
+        error: "Missing question",
+        message:
+          "Provide a question via ?q=your+question or ?question=your+question",
+        version: "v1",
         examples: [
-          '/api/v1/ask?q=What is the latest Bitcoin ETF news?',
-          '/api/v1/ask?q=How is DeFi performing this week?',
-          '/api/v1/ask?q=What are the biggest crypto events today?',
+          "/api/v1/ask?q=What is the latest Bitcoin ETF news?",
+          "/api/v1/ask?q=How is DeFi performing this week?",
+          "/api/v1/ask?q=What are the biggest crypto events today?",
         ],
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
-    logger.info('Processing question', { question, limit });
+    logger.info("Processing question", { question, limit });
 
     const data = await getLatestNews(limit);
     const context = data.articles
-      .map((a, i) => `[${i + 1}] "${a.title}" (${a.source}, ${a.pubDate})\n${a.description || ''}`)
-      .join('\n\n');
+      .map(
+        (a, i) =>
+          `[${i + 1}] "${a.title}" (${a.source}, ${a.pubDate})\n${a.description || ""}`,
+      )
+      .join("\n\n");
 
     const result = await promptAIJson(
       SYSTEM_PROMPT,
-      `Context (recent crypto news):\n${context}\n\nQuestion: ${question}`
+      `Context (recent crypto news):\n${context}\n\nQuestion: ${question}`,
     );
 
     return NextResponse.json(
@@ -96,18 +103,22 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         question,
         ...result,
         articlesAnalyzed: data.articles.length,
-        version: 'v1',
+        version: "v1",
         duration: Date.now() - startTime,
       },
-      { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' } }
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+        },
+      },
     );
   } catch (error) {
     if (error instanceof AIAuthError) return aiAuthErrorResponse(error.message);
-    logger.error('Ask error', { error });
+    logger.error("Ask error", { error });
     const apiError = ApiError.from(error);
     return NextResponse.json(
-      { error: apiError.message, code: apiError.code, version: 'v1' },
-      { status: apiError.statusCode }
+      { error: apiError.message, code: apiError.code, version: "v1" },
+      { status: apiError.statusCode },
     );
   }
 }

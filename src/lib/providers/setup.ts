@@ -63,6 +63,10 @@ import { orderBookChain } from './adapters/order-book';
 import { nftMarketChain } from './adapters/nft-market';
 import { gamingDataChain } from './adapters/gaming-data';
 import { macroChain } from './adapters/macro';
+import { tokenUnlocksChain } from './adapters/token-unlocks';
+import { depinChain } from './adapters/depin-data';
+import { stakingDataChain } from './adapters/staking-data';
+import { liquidationsChain as coinglassLiquidationsChain } from './adapters/liquidations';
 
 // =============================================================================
 // REGISTER ALL CHAINS
@@ -163,6 +167,26 @@ registry.register('macro-data', macroChain, {
   description: 'Macro economic indicators from FRED, Alpha Vantage, and Twelve Data',
 });
 
+// Token Unlocks (vesting schedules)
+registry.register('token-unlocks', tokenUnlocksChain, {
+  description: 'Upcoming token unlock/vesting events from DefiLlama',
+});
+
+// DePIN (Decentralized Physical Infrastructure)
+registry.register('depin-data', depinChain, {
+  description: 'DePIN ecosystem metrics from DePINscan — devices, revenue, growth',
+});
+
+// Staking Yields
+registry.register('staking-data', stakingDataChain, {
+  description: 'Staking yields and validator data from StakingRewards',
+});
+
+// CoinGlass Liquidations
+registry.register('coinglass-liquidations', coinglassLiquidationsChain, {
+  description: 'Aggregated liquidation data from CoinGlass (long/short breakdowns)',
+});
+
 // =============================================================================
 // CONVENIENCE: Export registry for re-import
 // =============================================================================
@@ -170,7 +194,7 @@ registry.register('macro-data', macroChain, {
 export { registry };
 
 /** Number of registered categories */
-export const registeredCategories = 19;
+export const registeredCategories = 23;
 
 /** List all registered categories */
 export function listRegisteredCategories() {
@@ -194,5 +218,9 @@ export function listRegisteredCategories() {
     'nft-market',
     'gaming-data',
     'macro-data',
+    'token-unlocks',
+    'depin-data',
+    'staking-data',
+    'coinglass-liquidations',
   ] as const;
 }

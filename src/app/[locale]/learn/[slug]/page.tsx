@@ -55,11 +55,17 @@ export default async function LearnArticlePage({ params }: Props) {
       <main className="container-main py-10">
         {/* Breadcrumbs */}
         <nav className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] mb-8">
-          <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+          <Link
+            href="/"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             Home
           </Link>
           <span>/</span>
-          <Link href="/learn" className="hover:text-[var(--color-accent)] transition-colors">
+          <Link
+            href="/learn"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             Learn
           </Link>
           <span>/</span>
@@ -96,7 +102,9 @@ export default async function LearnArticlePage({ params }: Props) {
             {/* Article body rendered as prose */}
             <div
               className="prose dark:prose-invert max-w-none prose-headings:font-serif prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: sanitizeMarkdown(markdownToHtml(article.content)) }}
+              dangerouslySetInnerHTML={{
+                __html: sanitizeMarkdown(markdownToHtml(article.content)),
+              }}
             />
 
             {/* Back link */}
@@ -175,7 +183,7 @@ function markdownToHtml(md: string): string {
         })
         .join("");
       htmlLines.push(
-        `<table><thead><tr>${thCells}</tr></thead><tbody>${bodyHtml}</tbody></table>`
+        `<table><thead><tr>${thCells}</tr></thead><tbody>${bodyHtml}</tbody></table>`,
       );
       tableRows = [];
     }
@@ -214,9 +222,7 @@ function markdownToHtml(md: string): string {
     if (headingMatch) {
       flushList();
       const level = headingMatch[1].length;
-      htmlLines.push(
-        `<h${level}>${inlineFormat(headingMatch[2])}</h${level}>`
-      );
+      htmlLines.push(`<h${level}>${inlineFormat(headingMatch[2])}</h${level}>`);
       continue;
     }
 
@@ -228,7 +234,9 @@ function markdownToHtml(md: string): string {
         inList = true;
         listType = "ul";
       }
-      htmlLines.push(`<li>${inlineFormat(trimmed.replace(/^[-*]\s+/, ""))}</li>`);
+      htmlLines.push(
+        `<li>${inlineFormat(trimmed.replace(/^[-*]\s+/, ""))}</li>`,
+      );
       continue;
     }
 
@@ -268,7 +276,7 @@ function inlineFormat(text: string): string {
       // Links
       .replace(
         /\[(.+?)\]\((.+?)\)/g,
-        '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+        '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
       )
   );
 }

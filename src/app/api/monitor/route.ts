@@ -21,10 +21,13 @@
  * and generating alerts/reports without human prompting.
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
-import { getMarketMonitor, type IntelligenceReport } from '@/lib/ai-market-monitor';
+import { type NextRequest, NextResponse } from "next/server";
+import {
+  getMarketMonitor,
+  type IntelligenceReport,
+} from "@/lib/ai-market-monitor";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 export const maxDuration = 60;
 
 /** Constant-time string comparison to prevent timing attacks. */
@@ -36,21 +39,23 @@ function secureCompare(a: string, b: string): boolean {
   if (maxLen === 0) return false;
   let result = bufA.byteLength ^ bufB.byteLength;
   for (let i = 0; i < maxLen; i++) {
-    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
+    result |=
+      (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
   }
   return result === 0;
 }
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
-  const action = params.get('action') || 'status';
+  const action = params.get("action") || "status";
 
   // Read-only 'status' action is public; all mutations require admin auth
-  if (action !== 'status') {
-    const token = request.headers.get('authorization')?.replace('Bearer ', '') ?? '';
+  if (action !== "status") {
+    const token =
+      request.headers.get("authorization")?.replace("Bearer ", "") ?? "";
     const expected = process.env.ADMIN_TOKEN || process.env.CRON_SECRET;
     if (!expected || !secureCompare(token, expected)) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
   }
 
@@ -58,70 +63,83 @@ export async function GET(request: NextRequest) {
 
   try {
     switch (action) {
-      case 'start': {
-        const observeInterval = Math.max(30000, parseInt(params.get('observe_interval') || '60000', 10));
-        const analyzeInterval = Math.max(60000, parseInt(params.get('analyze_interval') || '300000', 10));
+      case "start": {
+        const observeInterval = Math.max(
+          30000,
+          parseInt(params.get("observe_interval") || "60000", 10),
+        );
+        const analyzeInterval = Math.max(
+          60000,
+          parseInt(params.get("analyze_interval") || "300000", 10),
+        );
         monitor.start(observeInterval, analyzeInterval);
-        return NextResponse.json({
-          status: 'started',
-          ...monitor.getStatus(),
-        }, { headers: corsHeaders() });
+        return NextResponse.json(
+          {
+            status: "started",
+            ...monitor.getStatus(),
+          },
+          { headers: corsHeaders() },
+        );
       }
 
-      case 'stop': {
+      case "stop": {
         monitor.stop();
-        return NextResponse.json({
-          status: 'stopped',
-          ...monitor.getStatus(),
-        }, { headers: corsHeaders() });
+        return NextResponse.json(
+          {
+            status: "stopped",
+            ...monitor.getStatus(),
+          },
+          { headers: corsHeaders() },
+        );
       }
 
-      case 'report': {
-        const type = (params.get('type') || 'hourly-brief') as IntelligenceReport['type'];
+      case "report": {
+        const type = (params.get("type") ||
+          "hourly-brief") as IntelligenceReport["type"];
         const report = await monitor.generateReport(type);
         if (!report) {
           return NextResponse.json(
-            { error: 'No AI provider configured' },
-            { status: 503, headers: corsHeaders() }
+            { error: "No AI provider configured" },
+            { status: 503, headers: corsHeaders() },
           );
         }
         return NextResponse.json({ report }, { headers: corsHeaders() });
       }
 
-      case 'alerts': {
-        const limit = Math.min(50, parseInt(params.get('limit') || '10', 10));
-        return NextResponse.json({
-          alerts: monitor.getRecentAlerts(limit),
-          regime: monitor.getRegime(),
-        }, { headers: corsHeaders() });
+      case "alerts": {
+        const limit = Math.min(50, parseInt(params.get("limit") || "10", 10));
+        return NextResponse.json(
+          {
+            alerts: monitor.getRecentAlerts(limit),
+            regime: monitor.getRegime(),
+          },
+          { headers: corsHeaders() },
+        );
       }
 
-      case 'status':
+      case "status":
       default: {
-        return NextResponse.json(
-          monitor.getStatus(),
-          {
-            headers: {
-              ...corsHeaders(),
-              'Cache-Control': 'no-cache',
-            },
-          }
-        );
+        return NextResponse.json(monitor.getStatus(), {
+          headers: {
+            ...corsHeaders(),
+            "Cache-Control": "no-cache",
+          },
+        });
       }
     }
   } catch (error) {
-    console.error('[Monitor API] Error:', error);
+    console.error("[Monitor API] Error:", error);
     return NextResponse.json(
-      { error: 'Monitor error' },
-      { status: 500, headers: corsHeaders() }
+      { error: "Monitor error" },
+      { status: 500, headers: corsHeaders() },
     );
   }
 }
 
 function corsHeaders(): Record<string, string> {
   return {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
   };
 }
