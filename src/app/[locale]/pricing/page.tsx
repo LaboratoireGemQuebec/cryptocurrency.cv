@@ -67,7 +67,13 @@ type Tier = {
   badge?: string;
   color: string;
   features: Feature[];
-  cta: { text: string; href: string; variant: "primary" | "outline"; external?: boolean; disabled?: boolean };
+  cta: {
+    text: string;
+    href: string;
+    variant: "primary" | "outline";
+    external?: boolean;
+    disabled?: boolean;
+  };
 };
 
 const tiers: Tier[] = [
@@ -110,7 +116,12 @@ const tiers: Tier[] = [
       { text: "Higher rate limits", icon: Zap, included: true },
       { text: "Advanced analytics dashboard", icon: BarChart3, included: true },
     ],
-    cta: { text: "Join Waitlist", href: "#", variant: "outline", disabled: true },
+    cta: {
+      text: "Join Waitlist",
+      href: "#",
+      variant: "outline",
+      disabled: true,
+    },
   },
   {
     name: "Enterprise",
@@ -148,18 +159,90 @@ type ComparisonRow = {
 };
 
 const comparisonFeatures: ComparisonRow[] = [
-  { name: "News sources", icon: Globe, free: { value: "300+", type: "text" }, pro: { value: "300+", type: "text" }, enterprise: { value: "Custom", type: "text" } },
-  { name: "API access", icon: Code, free: { value: "✓", type: "check" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "RSS/Atom feeds", icon: Rss, free: { value: "✓", type: "check" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "API key required", icon: Shield, free: { value: "No", type: "text" }, pro: { value: "Yes", type: "text" }, enterprise: { value: "Yes", type: "text" } },
-  { name: "Search & filtering", icon: Search, free: { value: "✓", type: "check" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "AI analysis", icon: Brain, free: { value: "—", type: "dash" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "Historical archive", icon: Clock, free: { value: "—", type: "dash" }, pro: { value: "90 days", type: "text" }, enterprise: { value: "Unlimited", type: "text" } },
-  { name: "Webhooks", icon: Server, free: { value: "—", type: "dash" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "Analytics dashboard", icon: BarChart3, free: { value: "—", type: "dash" }, pro: { value: "✓", type: "check" }, enterprise: { value: "✓", type: "check" } },
-  { name: "Custom integrations", icon: Code, free: { value: "—", type: "dash" }, pro: { value: "—", type: "dash" }, enterprise: { value: "✓", type: "check" } },
-  { name: "SLA guarantee", icon: Shield, free: { value: "—", type: "dash" }, pro: { value: "—", type: "dash" }, enterprise: { value: "99.9%", type: "text" } },
-  { name: "Support", icon: Headphones, free: { value: "Community", type: "text" }, pro: { value: "Priority", type: "text" }, enterprise: { value: "Dedicated", type: "text" } },
+  {
+    name: "News sources",
+    icon: Globe,
+    free: { value: "300+", type: "text" },
+    pro: { value: "300+", type: "text" },
+    enterprise: { value: "Custom", type: "text" },
+  },
+  {
+    name: "API access",
+    icon: Code,
+    free: { value: "✓", type: "check" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "RSS/Atom feeds",
+    icon: Rss,
+    free: { value: "✓", type: "check" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "API key required",
+    icon: Shield,
+    free: { value: "No", type: "text" },
+    pro: { value: "Yes", type: "text" },
+    enterprise: { value: "Yes", type: "text" },
+  },
+  {
+    name: "Search & filtering",
+    icon: Search,
+    free: { value: "✓", type: "check" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "AI analysis",
+    icon: Brain,
+    free: { value: "—", type: "dash" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "Historical archive",
+    icon: Clock,
+    free: { value: "—", type: "dash" },
+    pro: { value: "90 days", type: "text" },
+    enterprise: { value: "Unlimited", type: "text" },
+  },
+  {
+    name: "Webhooks",
+    icon: Server,
+    free: { value: "—", type: "dash" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "Analytics dashboard",
+    icon: BarChart3,
+    free: { value: "—", type: "dash" },
+    pro: { value: "✓", type: "check" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "Custom integrations",
+    icon: Code,
+    free: { value: "—", type: "dash" },
+    pro: { value: "—", type: "dash" },
+    enterprise: { value: "✓", type: "check" },
+  },
+  {
+    name: "SLA guarantee",
+    icon: Shield,
+    free: { value: "—", type: "dash" },
+    pro: { value: "—", type: "dash" },
+    enterprise: { value: "99.9%", type: "text" },
+  },
+  {
+    name: "Support",
+    icon: Headphones,
+    free: { value: "Community", type: "text" },
+    pro: { value: "Priority", type: "text" },
+    enterprise: { value: "Dedicated", type: "text" },
+  },
 ];
 
 function ComparisonCellValue({ cell }: { cell: ComparisonCell }) {
@@ -214,10 +297,26 @@ const faqs = [
 ];
 
 const trustPoints = [
-  { icon: Heart, label: "Open Source", description: "MIT licensed, fully transparent" },
-  { icon: Shield, label: "No Lock-in", description: "Fork it if we ever change" },
-  { icon: GitBranch, label: "13K+ Stars", description: "Trusted by developers" },
-  { icon: Globe, label: "99.9% Uptime", description: "Reliable infrastructure" },
+  {
+    icon: Heart,
+    label: "Open Source",
+    description: "MIT licensed, fully transparent",
+  },
+  {
+    icon: Shield,
+    label: "No Lock-in",
+    description: "Fork it if we ever change",
+  },
+  {
+    icon: GitBranch,
+    label: "13K+ Stars",
+    description: "Trusted by developers",
+  },
+  {
+    icon: Globe,
+    label: "99.9% Uptime",
+    description: "Reliable infrastructure",
+  },
 ];
 
 export default async function PricingPage({ params }: Props) {
@@ -246,10 +345,15 @@ export default async function PricingPage({ params }: Props) {
             {trustPoints.map((point) => {
               const Icon = point.icon;
               return (
-                <div key={point.label} className="flex items-center gap-2 text-xs text-text-secondary">
+                <div
+                  key={point.label}
+                  className="flex items-center gap-2 text-xs text-text-secondary"
+                >
                   <Icon className="h-4 w-4 text-accent" />
                   <div className="text-left">
-                    <div className="font-semibold text-text-primary">{point.label}</div>
+                    <div className="font-semibold text-text-primary">
+                      {point.label}
+                    </div>
                     <div className="text-[10px]">{point.description}</div>
                   </div>
                 </div>
@@ -268,9 +372,7 @@ export default async function PricingPage({ params }: Props) {
                   key={tier.name}
                   className={cn(
                     "flex flex-col relative overflow-hidden",
-                    tier.highlight
-                      ? "border-accent ring-2 ring-accent"
-                      : ""
+                    tier.highlight ? "border-accent ring-2 ring-accent" : "",
                   )}
                 >
                   {tier.highlight && (
@@ -288,7 +390,12 @@ export default async function PricingPage({ params }: Props) {
                       </Badge>
                     )}
 
-                    <div className={cn("h-10 w-10 rounded-lg bg-surface-secondary flex items-center justify-center mb-4 mt-4", tier.color)}>
+                    <div
+                      className={cn(
+                        "h-10 w-10 rounded-lg bg-surface-secondary flex items-center justify-center mb-4 mt-4",
+                        tier.color,
+                      )}
+                    >
                       <TierIcon className="h-5 w-5" />
                     </div>
 
@@ -318,7 +425,14 @@ export default async function PricingPage({ params }: Props) {
                             key={f.text}
                             className="flex items-start gap-2.5 text-sm text-text-secondary"
                           >
-                            <FeatIcon className={cn("h-4 w-4 mt-0.5 shrink-0", f.included ? "text-green-500" : "text-text-tertiary")} />
+                            <FeatIcon
+                              className={cn(
+                                "h-4 w-4 mt-0.5 shrink-0",
+                                f.included
+                                  ? "text-green-500"
+                                  : "text-text-tertiary",
+                              )}
+                            />
                             {f.text}
                           </li>
                         );
@@ -326,19 +440,40 @@ export default async function PricingPage({ params }: Props) {
                     </ul>
 
                     {tier.cta.disabled ? (
-                      <Button variant={tier.cta.variant} size="lg" disabled className="w-full">
+                      <Button
+                        variant={tier.cta.variant}
+                        size="lg"
+                        disabled
+                        className="w-full"
+                      >
                         {tier.cta.text}
                       </Button>
                     ) : tier.cta.external ? (
-                      <Button variant={tier.cta.variant} size="lg" asChild className="w-full">
-                        <a href={tier.cta.href} target="_blank" rel="noopener noreferrer">
-                          {tier.cta.text} <ArrowRight className="ml-1 h-4 w-4" />
+                      <Button
+                        variant={tier.cta.variant}
+                        size="lg"
+                        asChild
+                        className="w-full"
+                      >
+                        <a
+                          href={tier.cta.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {tier.cta.text}{" "}
+                          <ArrowRight className="ml-1 h-4 w-4" />
                         </a>
                       </Button>
                     ) : (
-                      <Button variant={tier.cta.variant} size="lg" asChild className="w-full">
+                      <Button
+                        variant={tier.cta.variant}
+                        size="lg"
+                        asChild
+                        className="w-full"
+                      >
                         <Link href={tier.cta.href}>
-                          {tier.cta.text} <ArrowRight className="ml-1 h-4 w-4" />
+                          {tier.cta.text}{" "}
+                          <ArrowRight className="ml-1 h-4 w-4" />
                         </Link>
                       </Button>
                     )}
@@ -361,9 +496,10 @@ export default async function PricingPage({ params }: Props) {
                   Free Forever Guarantee
                 </h2>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Our Free tier will never be taken away, degraded, or restricted.
-                  We&apos;re committed to keeping crypto news accessible to everyone.
-                  The project is open source — if anything changes, fork it and run your own instance.
+                  Our Free tier will never be taken away, degraded, or
+                  restricted. We&apos;re committed to keeping crypto news
+                  accessible to everyone. The project is open source — if
+                  anything changes, fork it and run your own instance.
                 </p>
               </div>
             </div>
@@ -391,15 +527,21 @@ export default async function PricingPage({ params }: Props) {
                     </th>
                     <th className="py-4 px-5 text-center">
                       <div className="font-bold text-accent">Free</div>
-                      <div className="text-[10px] text-text-tertiary font-normal">$0/forever</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">
+                        $0/forever
+                      </div>
                     </th>
                     <th className="py-4 px-5 text-center">
                       <div className="font-bold text-violet-500">Pro</div>
-                      <div className="text-[10px] text-text-tertiary font-normal">$29/mo</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">
+                        $29/mo
+                      </div>
                     </th>
                     <th className="py-4 px-5 text-center">
                       <div className="font-bold text-amber-500">Enterprise</div>
-                      <div className="text-[10px] text-text-tertiary font-normal">Custom</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">
+                        Custom
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -411,7 +553,7 @@ export default async function PricingPage({ params }: Props) {
                         key={row.name}
                         className={cn(
                           "border-b border-border transition-colors hover:bg-surface-tertiary",
-                          i % 2 === 0 && "bg-surface-secondary"
+                          i % 2 === 0 && "bg-surface-secondary",
                         )}
                       >
                         <td className="py-3 px-5 text-text-primary font-medium">
@@ -451,21 +593,60 @@ export default async function PricingPage({ params }: Props) {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Globe, title: "300+ Sources", desc: "CoinDesk, The Block, Bloomberg, Reuters, and hundreds more" },
-              { icon: Rss, title: "RSS & Atom", desc: "Subscribe to feeds in your favorite reader or app" },
-              { icon: Code, title: "REST API", desc: "JSON endpoints for news, search, categories, and more" },
-              { icon: Search, title: "Full-text Search", desc: "Search across millions of articles by keyword or topic" },
-              { icon: Zap, title: "Real-time Updates", desc: "New articles every 5 minutes, breaking news in seconds" },
-              { icon: BarChart3, title: "Market Context", desc: "Price data alongside news for informed analysis" },
-              { icon: Brain, title: "AI/LLM Ready", desc: "Structured data perfect for ChatGPT, Claude, and more" },
-              { icon: Server, title: "Self-hostable", desc: "Docker, Vercel, Railway — deploy your own in minutes" },
+              {
+                icon: Globe,
+                title: "300+ Sources",
+                desc: "CoinDesk, The Block, Bloomberg, Reuters, and hundreds more",
+              },
+              {
+                icon: Rss,
+                title: "RSS & Atom",
+                desc: "Subscribe to feeds in your favorite reader or app",
+              },
+              {
+                icon: Code,
+                title: "REST API",
+                desc: "JSON endpoints for news, search, categories, and more",
+              },
+              {
+                icon: Search,
+                title: "Full-text Search",
+                desc: "Search across millions of articles by keyword or topic",
+              },
+              {
+                icon: Zap,
+                title: "Real-time Updates",
+                desc: "New articles every 5 minutes, breaking news in seconds",
+              },
+              {
+                icon: BarChart3,
+                title: "Market Context",
+                desc: "Price data alongside news for informed analysis",
+              },
+              {
+                icon: Brain,
+                title: "AI/LLM Ready",
+                desc: "Structured data perfect for ChatGPT, Claude, and more",
+              },
+              {
+                icon: Server,
+                title: "Self-hostable",
+                desc: "Docker, Vercel, Railway — deploy your own in minutes",
+              },
             ].map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="rounded-lg border border-border bg-surface-secondary p-4 hover:border-accent/40 transition-colors">
+                <div
+                  key={item.title}
+                  className="rounded-lg border border-border bg-surface-secondary p-4 hover:border-accent/40 transition-colors"
+                >
                   <Icon className="h-5 w-5 text-accent mb-2" />
-                  <h3 className="font-bold text-sm text-text-primary mb-1">{item.title}</h3>
-                  <p className="text-xs text-text-secondary leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-sm text-text-primary mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-text-secondary leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               );
             })}
@@ -508,7 +689,8 @@ export default async function PricingPage({ params }: Props) {
               Ready to get started?
             </h2>
             <p className="text-sm text-text-secondary mb-6">
-              No sign-up required. Start making API requests in under 30 seconds.
+              No sign-up required. Start making API requests in under 30
+              seconds.
             </p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Button variant="primary" asChild>

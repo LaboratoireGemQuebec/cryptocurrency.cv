@@ -52,6 +52,8 @@ import { generateSuggestedQuestions, type SuggestedQuestion } from './suggested-
 import { ConfidenceScorer, type ConfidenceScore, formatConfidenceForUI, type ConfidenceScoringContext } from './confidence-scorer';
 import { routeQuery, type QueryRoute } from './query-router';
 import { findRelatedArticles, type RelatedArticle, RelatedArticlesFinder } from './related-articles';
+import { graphRAG, type GraphSearchResult } from './graph-rag';
+import { quickDedup } from './deduplication';
 import type {
   ScoredDocument,
   SearchFilter,
@@ -81,6 +83,8 @@ export interface UltimateRAGOptions {
   useConfidenceScoring?: boolean;
   useSuggestedQuestions?: boolean;
   useRelatedArticles?: boolean;
+  useGraphRAG?: boolean;
+  useDeduplication?: boolean;
   useCaching?: boolean;
   useTracing?: boolean;
 
@@ -106,6 +110,13 @@ export interface UltimateRAGOptions {
   compressionOptions?: {
     maxTokens?: number;
     method?: 'llm_compress' | 'extract_sentences' | 'extractive';
+  };
+
+  // Graph RAG options
+  graphRAGOptions?: {
+    maxHops?: number;
+    fusionWeight?: number;
+    useImpactPropagation?: boolean;
   };
 }
 
@@ -176,6 +187,9 @@ export interface UltimateRAGResponse {
     selfRAGIterations?: number;
     cacheHit?: boolean;
     traceId?: string;
+    graphEntities?: string[];
+    graphRelationshipsTraversed?: number;
+    deduplicatedCount?: number;
   };
 
   // Performance
@@ -273,12 +287,15 @@ export class UltimateRAGService {
       useConfidenceScoring = true,
       useSuggestedQuestions = true,
       useRelatedArticles = true,
+      useGraphRAG = false, // Off by default, opt-in for entity-relationship queries
+      useDeduplication = true,
       useCaching = true,
       useTracing = true,
       conversationId,
       selfRAGOptions = {},
       rerankOptions = {},
       compressionOptions = {},
+      graphRAGOptions = {},
     } = options;
 
     // ─────────────────────────────────────────────────────────────
@@ -505,6 +522,83 @@ export class UltimateRAGService {
       let documents = toScoredDocuments(rankedResults);
 
       // ─────────────────────────────────────────────────────────────
+      // GRAPH RAG (KNOWLEDGE GRAPH ENHANCED RETRIEVAL)
+      // ─────────────────────────────────────────────────────────────
+      let graphEntities: string[] | undefined;
+      let graphRelationshipsTraversed: number | undefined;
+      let entityContext = '';
+
+      if (useGraphRAG) {
+        const graphSpan = trace ? ragTracer.startSpan(trace.id, 'graph_rag') : undefined;
+
+        try {
+          const graphResult = await graphRAG.search(processedQuery, {
+            maxHops: graphRAGOptions.maxHops ?? 2,
+            fusionWeight: graphRAGOptions.fusionWeight ?? 0.3,
+            combineWithVector: true,
+            useImpactPropagation: graphRAGOptions.useImpactPropagation ?? false,
+            injectEntityContext: true,
+            filter,
+            limit: limit * 2,
+            similarityThreshold,
+          });
+
+          if (graphResult.queryEntities.length > 0) {
+            // Merge graph results with existing results
+            const existingIds = new Set(documents.map(d => d.id));
+            const newGraphDocs = graphResult.documents.filter(d => !existingIds.has(d.id));
+            documents = [...documents, ...newGraphDocs];
+            entityContext = graphResult.entityContext;
+            graphEntities = graphResult.queryEntities.map(e => e.name);
+            graphRelationshipsTraversed = graphResult.metadata.relationshipsTraversed;
+          }
+        } catch (error) {
+          ragLogger.warn('GraphRAG search failed, continuing without graph', trace?.id, {
+            error: String(error),
+          });
+        }
+
+        if (graphSpan && trace) {
+          ragTracer.endSpan(trace.id, graphSpan.id, 'success', {
+            entities: graphEntities?.length ?? 0,
+            relationships: graphRelationshipsTraversed ?? 0,
+          });
+        }
+      }
+
+      // ─────────────────────────────────────────────────────────────
+      // DEDUPLICATION
+      // ─────────────────────────────────────────────────────────────
+      let deduplicatedCount: number | undefined;
+
+      if (useDeduplication && documents.length > 1) {
+        const dedupSpan = trace ? ragTracer.startSpan(trace.id, 'deduplication') : undefined;
+        const before = documents.length;
+
+        try {
+          const { documents: deduped } = await quickDedup(documents, {
+            method: 'minhash',
+            threshold: 0.85,
+            strategy: 'keep_newest',
+          });
+          deduplicatedCount = before - deduped.length;
+          documents = deduped;
+        } catch (error) {
+          ragLogger.warn('Deduplication failed, continuing with original docs', trace?.id, {
+            error: String(error),
+          });
+        }
+
+        if (dedupSpan && trace) {
+          ragTracer.endSpan(trace.id, dedupSpan.id, 'success', {
+            before,
+            after: documents.length,
+            removed: deduplicatedCount ?? 0,
+          });
+        }
+      }
+
+      // ─────────────────────────────────────────────────────────────
       // SELF-RAG (ADAPTIVE RETRIEVAL)
       // ─────────────────────────────────────────────────────────────
       let selfRAGIterations = 0;
@@ -581,6 +675,11 @@ export class UltimateRAGService {
       // ─────────────────────────────────────────────────────────────
       const genStart = Date.now();
       const genSpan = trace ? ragTracer.startSpan(trace.id, 'generation') : undefined;
+
+      // Prepend entity context from graph RAG if available
+      if (entityContext && context) {
+        context = `${entityContext}\n\n---\n\n${context}`;
+      }
 
       let answer: string;
       let attributedAnswer: AttributedAnswer | undefined;
@@ -774,6 +873,9 @@ export class UltimateRAGService {
           selfRAGIterations: selfRAGIterations > 0 ? selfRAGIterations : undefined,
           cacheHit: false,
           traceId: trace?.id,
+          graphEntities,
+          graphRelationshipsTraversed,
+          deduplicatedCount,
         },
       };
 
@@ -1060,6 +1162,8 @@ export async function askComplete(
     useConfidenceScoring: true,
     useSuggestedQuestions: true,
     useRelatedArticles: true,
+    useGraphRAG: true,
+    useDeduplication: true,
     useCaching: true,
     useTracing: true,
     conversationId,

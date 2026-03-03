@@ -427,3 +427,55 @@ export type {
   RelatedArticle,
   RelatedArticlesConfig,
 } from './related-articles';
+
+// ═══════════════════════════════════════════════════════════════
+// GRAPH RAG (Knowledge Graph Enhanced Retrieval)
+// ═══════════════════════════════════════════════════════════════
+
+export {
+  GraphRAGService,
+  getGraphRAGService,
+  graphRAG,
+} from './graph-rag';
+
+export type {
+  GraphRAGOptions,
+  GraphSearchResult,
+  GraphEntityMatch,
+} from './graph-rag';
+
+// ═══════════════════════════════════════════════════════════════
+// SEMANTIC CHUNKING (Pre-Indexing Segmentation)
+// ═══════════════════════════════════════════════════════════════
+
+export {
+  SemanticChunker,
+  getSemanticChunker,
+  semanticChunk,
+} from './semantic-chunking';
+
+export type {
+  ChunkingMethod,
+  ChunkingOptions,
+  DocumentChunk,
+  ChunkMetadata,
+  ChunkingResult,
+} from './semantic-chunking';
+
+// ═══════════════════════════════════════════════════════════════
+// DOCUMENT DEDUPLICATION
+// ═══════════════════════════════════════════════════════════════
+
+export {
+  findDuplicates,
+  deduplicateDocuments,
+  quickDedup,
+} from './deduplication';
+
+export type {
+  DeduplicationMethod,
+  DeduplicationStrategy,
+  DeduplicationOptions,
+  DuplicateCluster,
+  DeduplicationResult,
+} from './deduplication';

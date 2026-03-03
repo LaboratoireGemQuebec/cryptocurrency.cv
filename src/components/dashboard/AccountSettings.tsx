@@ -141,7 +141,9 @@ export default function AccountSettings() {
         <div className="text-sm text-muted-foreground space-y-3">
           <p>
             This platform uses{" "}
-            <span className="text-blue-500 font-semibold">x402 micropayments</span>{" "}
+            <span className="text-blue-500 font-semibold">
+              x402 micropayments
+            </span>{" "}
             — pay per request with USDC on Base.
           </p>
           <p>No credit card. No subscriptions. Pay only for what you use.</p>
@@ -175,9 +177,7 @@ export default function AccountSettings() {
 
       {/* Danger Zone */}
       <div className="rounded-xl border border-red-500/20 bg-card p-6">
-        <h2 className="text-lg font-semibold mb-4 text-red-400">
-          Session
-        </h2>
+        <h2 className="text-lg font-semibold mb-4 text-red-400">Session</h2>
         <p className="text-sm text-muted-foreground mb-4">
           Sign out of your account on this device.
         </p>
