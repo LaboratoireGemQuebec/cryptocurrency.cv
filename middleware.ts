@@ -160,9 +160,9 @@ export default async function middleware(request: NextRequest) {
     );
   }
 
-  // Bot check
+  // Bot check — skip for marketplace SPI callbacks (Alibaba Cloud sends server-to-server)
   const ua = request.headers.get("user-agent") || "";
-  if (isBlockedBot(ua)) {
+  if (isBlockedBot(ua) && !pathname.startsWith("/api/marketplace/")) {
     return NextResponse.json(
       { error: "Forbidden", code: "BOT_BLOCKED", requestId },
       { status: 403, headers },
