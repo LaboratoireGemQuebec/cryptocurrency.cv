@@ -97,7 +97,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       )
       .join("\n\n");
 
-    const result = await promptAIJson(
+    const result = await promptAIJson<Record<string, unknown>>(
       SYSTEM_PROMPT,
       `Research Topic: ${topic}\nDepth: ${depth}\n\nRecent News Context:\n${context}`,
     );
