@@ -29,14 +29,14 @@
       "get": {
         "operationId": "getPrices",
         "summary": "Get cryptocurrency prices",
-        "description": "Fetch real-time prices for specified cryptocurrencies. Supports 10,000+ tokens via CoinGecko IDs. Multi-source fallback chain ensures 99.9% uptime.",
+        "description": "Fetch real-time prices for specified cryptocurrencies. Supports 10,000+ tokens via SperaxOS. Multi-source fallback chain ensures 99.9% uptime.",
         "tags": ["Prices"],
         "parameters": [
           {
             "name": "coins",
             "in": "query",
             "required": true,
-            "description": "Comma-separated CoinGecko coin IDs (e.g., bitcoin,ethereum,solana)",
+            "description": "Comma-separated coin IDs (e.g., bitcoin,ethereum,solana)",
             "schema": {
               "type": "string",
               "example": "bitcoin,ethereum,solana"
@@ -332,7 +332,7 @@
       "get": {
         "operationId": "getDefiYields",
         "summary": "Top DeFi yield farming opportunities",
-        "description": "Aggregated yield data from DefiLlama covering 500+ protocols. Filter by chain, sort by APY. Includes TVL, IL risk, and stablecoin flags.",
+        "description": "Aggregated yield data covering 500+ protocols. Filter by chain, sort by APY. Includes TVL, IL risk, and stablecoin flags.",
         "tags": ["DeFi"],
         "parameters": [
           {
