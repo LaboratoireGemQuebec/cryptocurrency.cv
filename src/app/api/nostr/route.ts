@@ -21,7 +21,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import { schnorr } from '@noble/curves/secp256k1.js';
-import { bytesToHex } from '@noble/curves/utils.js';
+import { bytesToHex, hexToBytes } from '@noble/curves/utils.js';
 
 export const runtime = 'nodejs';
 
@@ -199,7 +199,7 @@ async function getNostrKeypair(): Promise<{ pubkey: string; privkey: string } | 
   const privkey = process.env.NOSTR_PRIVATE_KEY;
   if (privkey?.length !== 64) return null;
   try {
-    const pubkeyBytes = schnorr.getPublicKey(privkey);
+    const pubkeyBytes = schnorr.getPublicKey(hexToBytes(privkey));
     return { pubkey: bytesToHex(pubkeyBytes), privkey };
   } catch {
     return null;
@@ -212,7 +212,7 @@ async function getNostrKeypair(): Promise<{ pubkey: string; privkey: string } | 
  */
 async function signEvent(base: Omit<NostrEvent, 'id' | 'sig'>, privkey: string): Promise<NostrEvent> {
   const id = computeEventId(base);
-  const sig = bytesToHex(schnorr.sign(id, privkey));
+  const sig = bytesToHex(schnorr.sign(hexToBytes(id), hexToBytes(privkey)));
   return { ...base, id, sig };
 }
 
