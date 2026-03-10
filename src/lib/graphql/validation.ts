@@ -36,7 +36,7 @@ export const MAX_ALIASES = 10;
 
 export const GraphQLRequestSchema = z.object({
   query: z.string().min(1).max(MAX_QUERY_LENGTH).optional(),
-  variables: z.record(z.unknown()).optional().default({}),
+  variables: z.record(z.string(), z.unknown()).optional().default({}),
   operationName: z.string().max(100).optional(),
   extensions: z
     .object({

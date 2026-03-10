@@ -488,7 +488,11 @@ export type DataCategory =
   | 'bridges'
   | 'btc-etf'
   | 'mining'
-  | 'news-aggregate';
+  | 'news-aggregate'
+  | 'token-unlocks'
+  | 'depin-data'
+  | 'staking-data'
+  | 'coinglass-liquidations';
 
 /**
  * Registry entry for a provider chain.

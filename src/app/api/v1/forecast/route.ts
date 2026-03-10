@@ -90,7 +90,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     // Multi-asset forecast
     if (!asset) {
       logger.info("Generating multi-asset forecast", { horizon });
-      const forecast = await generateMultiAssetForecast(horizon);
+      const defaultAssets = ["BTC", "ETH", "SOL", "BNB", "XRP"];
+      const forecast = await generateMultiAssetForecast(defaultAssets, horizon);
       return NextResponse.json(
         {
           success: true,
@@ -109,7 +110,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     // Single asset forecast
     logger.info("Generating forecast", { asset, horizon });
-    const forecast = await generateForecast(asset, horizon);
+    const forecast = await generateForecast(asset, { horizon });
 
     return NextResponse.json(
       {
