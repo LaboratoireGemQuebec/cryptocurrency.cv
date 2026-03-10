@@ -21,75 +21,88 @@
  * @see https://www.alibabacloud.com/help/en/api-gateway/developer-reference/spi-notification
  */
 
-import { NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-interface SpiNotification {
-  action: 'createInstance' | 'renewInstance' | 'releaseInstance';
-  instanceId?: string;
-  orderId?: string;
-  orderBizId?: string;
-  aliUid?: string;
-  token?: string;
-  productCode?: string;
-  created?: string;
-  expired?: string;
-  [key: string]: unknown;
-}
+/**
+ * Alibaba Cloud Marketplace sends SPI notifications as GET requests with
+ * all parameters in the query string, including a `token` for verification.
+ *
+ * Example:
+ *   /api/marketplace/notify?action=createInstance&aliUid=...&orderId=...&token=...
+ *
+ * Must respond with HTTP 200 + JSON `{ success: true }` within 2 seconds.
+ */
 
-export async function POST(request: Request) {
+function handleSpiNotification(params: URLSearchParams): Response {
   const startTime = Date.now();
 
-  try {
-    const body = (await request.json()) as SpiNotification;
-    const { action, instanceId, orderId, aliUid } = body;
+  const action = params.get('action') ?? 'unknown';
+  const aliUid = params.get('aliUid');
+  const orderId = params.get('orderId');
+  const orderBizId = params.get('orderBizId');
+  const productCode = params.get('productCode');
+  const skuId = params.get('skuId');
+  const trial = params.get('trial');
 
-    // Log the event (visible in Vercel/deployment logs)
-    console.log(
-      `[marketplace-spi] action=${action} instance=${instanceId ?? 'n/a'} order=${orderId ?? 'n/a'} uid=${aliUid ?? 'n/a'} ts=${new Date().toISOString()}`,
-    );
+  // Log for Vercel dashboard visibility
+  console.log(
+    `[marketplace-spi] action=${action} uid=${aliUid ?? 'n/a'} order=${orderId ?? 'n/a'} ` +
+    `bizId=${orderBizId ?? 'n/a'} product=${productCode ?? 'n/a'} sku=${skuId ?? 'n/a'} ` +
+    `trial=${trial ?? 'n/a'} ts=${new Date().toISOString()}`,
+  );
 
-    // Acknowledge the event — Alibaba requires 200 within 2 seconds
-    return NextResponse.json(
-      {
-        success: true,
-        action,
-        instanceId: instanceId ?? null,
-        processedAt: new Date().toISOString(),
-        processingTimeMs: Date.now() - startTime,
-      },
-      { status: 200 },
-    );
-  } catch {
-    // Even on parse failures, return 200 to prevent Alibaba retries flooding the endpoint
-    console.error(
-      `[marketplace-spi] Failed to parse notification body ts=${new Date().toISOString()}`,
-    );
-
-    return NextResponse.json(
-      {
-        success: true,
-        error: 'Invalid payload — acknowledged',
-        processedAt: new Date().toISOString(),
-      },
-      { status: 200 },
-    );
-  }
-}
-
-/** Health check for the notification endpoint */
-export async function GET() {
+  // Alibaba expects: { "success": true } with 200 status
   return NextResponse.json(
     {
-      status: 'ok',
-      endpoint: 'marketplace-spi-notify',
-      description: 'Alibaba Cloud Marketplace SPI notification receiver',
-      accepts: 'POST',
+      success: true,
+      instanceId: orderBizId ?? orderId ?? `inst-${Date.now()}`,
     },
     {
       status: 200,
       headers: { 'Cache-Control': 'no-store' },
     },
   );
+}
+
+/** Alibaba SPI notifications arrive as GET with query parameters */
+export async function GET(request: NextRequest) {
+  const params = request.nextUrl.searchParams;
+
+  // If there's an `action` param, this is an SPI notification
+  if (params.has('action')) {
+    return handleSpiNotification(params);
+  }
+
+  // Otherwise, health check
+  return NextResponse.json(
+    {
+      status: 'ok',
+      endpoint: 'marketplace-spi-notify',
+      description: 'Alibaba Cloud Marketplace SPI notification receiver',
+      accepts: 'GET with query params (?action=createInstance&...)',
+    },
+    {
+      status: 200,
+      headers: { 'Cache-Control': 'no-store' },
+    },
+  );
+}
+
+/** Also handle POST in case Alibaba ever sends POST for some event types */
+export async function POST(request: Request) {
+  try {
+    const url = new URL(request.url);
+    // Check query params first (some SPI variants send POST with query params)
+    if (url.searchParams.has('action')) {
+      return handleSpiNotification(url.searchParams);
+    }
+    // Fallback: try JSON body
+    const body = await request.json() as Record<string, string>;
+    const params = new URLSearchParams(body);
+    return handleSpiNotification(params);
+  } catch {
+    return NextResponse.json({ success: true }, { status: 200 });
+  }
 }
