@@ -33,23 +33,23 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
   const Icon = ICON_MAP[newsletter.icon] || MailIcon;
 
   return (
-    <Card className="group h-full transition-colors hover:border-accent/50">
+    <Card className="group hover:border-accent/50 h-full transition-colors">
       <CardContent className="flex h-full flex-col p-6">
         {/* Icon + Name */}
         <div className="mb-3 flex items-start gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-secondary transition-transform group-hover:scale-110">
-            <Icon className="h-5 w-5 text-accent" />
+          <div className="bg-surface-secondary flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-transform group-hover:scale-110">
+            <Icon className="text-accent h-5 w-5" />
           </div>
           <div className="min-w-0">
             <Link
               href={`/newsletters/${newsletter.slug}`}
-              className="font-bold text-text-primary transition-colors hover:text-accent"
+              className="text-text-primary hover:text-accent font-bold transition-colors"
             >
               {newsletter.name}
             </Link>
             <div className="mt-1 flex items-center gap-2">
               <Badge>{FREQUENCY_LABELS[newsletter.frequency]}</Badge>
-              <span className="text-[11px] text-text-tertiary">
+              <span className="text-text-tertiary text-[11px]">
                 {CATEGORY_LABELS[newsletter.category]}
               </span>
             </div>
@@ -57,16 +57,14 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
         </div>
 
         {/* Description */}
-        <p className="mb-4 flex-1 text-sm leading-relaxed text-text-secondary">
+        <p className="text-text-secondary mb-4 flex-1 text-sm leading-relaxed">
           {newsletter.description}
         </p>
 
         {/* Sample Subject  */}
-        <div className="mb-4 rounded-lg bg-surface-secondary p-3 text-xs">
-          <span className="mb-0.5 block text-text-tertiary">Sample subject:</span>
-          <span className="font-medium text-text-primary">
-            {newsletter.sampleSubject}
-          </span>
+        <div className="bg-surface-secondary mb-4 rounded-lg p-3 text-xs">
+          <span className="text-text-tertiary mb-0.5 block">Sample subject:</span>
+          <span className="text-text-primary font-medium">{newsletter.sampleSubject}</span>
         </div>
 
         {/* Subscribe Form */}
@@ -78,7 +76,7 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
             href={newsletter.previewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 text-xs text-accent hover:underline"
+            className="text-accent mt-3 text-xs hover:underline"
           >
             Preview latest issue &rarr;
           </a>

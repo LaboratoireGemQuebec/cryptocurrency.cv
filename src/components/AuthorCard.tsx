@@ -43,7 +43,7 @@ export default function AuthorCard({ author }: { author: Author }) {
   return (
     <Link
       href={`/author/${author.slug}`}
-      className="group block rounded-xl border border-border bg-(--color-surface) p-5 transition-all hover:border-accent/40 hover:shadow-md"
+      className="group border-border hover:border-accent/40 block rounded-xl border bg-(--color-surface) p-5 transition-all hover:shadow-md"
     >
       <div className="mb-3 flex items-center gap-3">
         {/* Avatar */}
@@ -61,13 +61,13 @@ export default function AuthorCard({ author }: { author: Author }) {
           </div>
         )}
         <div className="min-w-0">
-          <h3 className="truncate text-sm font-semibold text-text-primary transition-colors group-hover:text-accent">
+          <h3 className="text-text-primary group-hover:text-accent truncate text-sm font-semibold transition-colors">
             {author.name}
           </h3>
-          <p className="truncate text-xs text-text-tertiary">{sourcesLabel}</p>
+          <p className="text-text-tertiary truncate text-xs">{sourcesLabel}</p>
         </div>
       </div>
-      <p className="text-xs text-text-secondary">
+      <p className="text-text-secondary text-xs">
         {author.articleCount} {author.articleCount === 1 ? 'article' : 'articles'}
       </p>
     </Link>

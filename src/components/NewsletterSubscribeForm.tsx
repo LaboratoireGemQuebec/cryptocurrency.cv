@@ -61,7 +61,7 @@ export default function NewsletterSubscribeForm({
       className={cn('flex gap-2', compact ? 'flex-row' : 'flex-col sm:flex-row')}
     >
       <div className="relative flex-1">
-        <Mail className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-text-tertiary" />
+        <Mail className="text-text-tertiary absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
         <input
           type="email"
           value={email}
@@ -72,8 +72,8 @@ export default function NewsletterSubscribeForm({
           placeholder="your@email.com"
           required
           className={cn(
-            'w-full rounded-lg border border-border bg-(--color-surface) pr-4 pl-10 text-sm',
-            'focus:border-transparent focus:ring-2 focus:ring-accent focus:outline-none',
+            'border-border w-full rounded-lg border bg-(--color-surface) pr-4 pl-10 text-sm',
+            'focus:ring-accent focus:border-transparent focus:ring-2 focus:outline-none',
             'placeholder:text-text-tertiary',
             compact ? 'h-9' : 'h-10',
           )}

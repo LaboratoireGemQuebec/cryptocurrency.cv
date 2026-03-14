@@ -5,6 +5,8 @@ import { TagChip } from "@/components/TagChip";
 import { cn } from "@/lib/utils";
 import type { NewsArticle } from "@/lib/crypto-news";
 import { extractTagsFromArticle } from "@/lib/tags";
+import { classifyArticle } from "@/lib/article-classifier";
+import { NEWS_VERTICALS } from "@/lib/verticals";
 
 const BOOKMARK_BTN =
   "absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity";
@@ -24,6 +26,35 @@ function ContentTypeBadge({ contentType }: { contentType?: NewsArticle["contentT
     <Badge variant="opinion" className="w-fit">
       {labels[contentType] ?? contentType}
     </Badge>
+  );
+}
+
+/* ------------------------------------------------
+   Vertical badge helper
+   ------------------------------------------------ */
+
+function VerticalBadges({ article }: { article: NewsArticle }) {
+  const verticals = classifyArticle({
+    url: article.link,
+    title: article.title,
+    description: article.description ?? '',
+  });
+  const matched = verticals
+    .map((slug) => NEWS_VERTICALS.find((v) => v.slug === slug))
+    .filter(Boolean);
+  if (matched.length === 0) return null;
+  return (
+    <>
+      {matched.map((v) => (
+        <span
+          key={v!.slug}
+          className="inline-flex items-center rounded-sm px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white"
+          style={{ backgroundColor: v!.color }}
+        >
+          {v!.name}
+        </span>
+      ))}
+    </>
   );
 }
 
@@ -105,11 +136,12 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
           className="aspect-[16/10] w-full shadow-lg rounded-xl"
         />
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1.5">
             <Badge variant={categoryToBadgeVariant(article.category)}>
               {article.category}
             </Badge>
             <ContentTypeBadge contentType={article.contentType} />
+            <VerticalBadges article={article} />
           </div>
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.15] tracking-tight group-hover:text-[var(--color-accent)] transition-colors duration-200">
             {article.title}
@@ -154,11 +186,12 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
           className="aspect-[16/10] w-full"
         />
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1.5">
             <Badge variant={categoryToBadgeVariant(article.category)}>
               {article.category}
             </Badge>
             <ContentTypeBadge contentType={article.contentType} />
+            <VerticalBadges article={article} />
           </div>
           <h3 className="font-serif text-lg font-bold leading-snug tracking-tight group-hover:text-[var(--color-accent)] transition-colors line-clamp-3">
             {article.title}

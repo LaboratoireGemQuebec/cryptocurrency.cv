@@ -7,7 +7,7 @@ export function TagChip({ tag, size = 'default' }: { tag: Tag; size?: 'sm' | 'de
     <Link
       href={`/tags/${tag.slug}`}
       className={cn(
-        'inline-flex items-center gap-1 rounded-full bg-surface-secondary font-medium text-text-secondary transition-colors hover:bg-surface-tertiary hover:text-text-primary',
+        'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary hover:text-text-primary inline-flex items-center gap-1 rounded-full font-medium transition-colors',
         size === 'sm' ? 'px-2 py-0.5 text-[10px]' : 'px-3 py-1 text-xs',
       )}
     >
