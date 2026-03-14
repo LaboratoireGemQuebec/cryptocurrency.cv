@@ -69,4 +69,4 @@ export const GET = instrumented(async function GET(request: NextRequest) {
       { status: 500 }
     );
   }
-}
+}, { name: 'defi' });

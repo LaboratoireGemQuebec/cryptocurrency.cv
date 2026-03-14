@@ -109,8 +109,7 @@ describe('getClientIp', () => {
   it('should extract first IP from x-forwarded-for', () => {
     const request = {
       headers: {
-        get: (name: string) =>
-          name === 'x-forwarded-for' ? '1.2.3.4, 5.6.7.8' : null,
+        get: (name: string) => (name === 'x-forwarded-for' ? '1.2.3.4, 5.6.7.8' : null),
       },
     };
     expect(getClientIp(request)).toBe('1.2.3.4');

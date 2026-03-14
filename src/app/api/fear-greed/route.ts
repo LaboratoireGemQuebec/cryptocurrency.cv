@@ -164,7 +164,7 @@ export const GET = instrumented(async function GET(request: NextRequest) {
       { status: 500 }
     );
   }
-}
+}, { name: 'fear-greed' });
 
 function calculateTrend(historical: FearGreedData[]): FearGreedResponse['trend'] {
   const current = historical[0]?.value || 50;

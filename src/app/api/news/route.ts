@@ -211,4 +211,4 @@ export const GET = instrumented(async function GET(request: NextRequest) {
       { cacheControl: 'realtime', etag: true, request, stale: true },
     );
   }
-}
+}, { name: 'news' });

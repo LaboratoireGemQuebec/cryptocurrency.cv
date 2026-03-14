@@ -169,4 +169,4 @@ export const GET = instrumented(async function GET(request: NextRequest) {
 
     return ApiError.internal('Failed to get trending topics', error);
   }
-}
+}, { name: 'trending' });

@@ -123,7 +123,7 @@ export const GET = instrumented(async function GET(request: NextRequest) {
     console.error('Ask GET error:', error);
     return ApiError.internal('Failed to answer question');
   }
-}
+}, { name: 'ask' });
 
 export const POST = instrumented(async function POST(request: NextRequest) {
   // Support POST for longer questions, conversation history, or streaming
@@ -169,4 +169,4 @@ export const POST = instrumented(async function POST(request: NextRequest) {
     console.error('Ask POST error:', error);
     return ApiError.internal('Failed to process request');
   }
-}
+}, { name: 'ask.post' });

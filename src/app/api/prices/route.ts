@@ -150,4 +150,4 @@ export const GET = instrumented(async function GET(request: NextRequest) {
       },
     },
   );
-}
+}, { name: 'prices' });

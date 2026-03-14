@@ -161,4 +161,4 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       { status: 500 }
     );
   }
-}
+}, { name: 'sentiment' });

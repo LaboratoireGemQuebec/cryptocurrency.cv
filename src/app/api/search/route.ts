@@ -258,4 +258,4 @@ export const GET = instrumented(async function GET(request: NextRequest) {
   } catch {
     return NextResponse.json({ error: 'Failed to search news' }, { status: 500 });
   }
-}
+}, { name: 'search' });

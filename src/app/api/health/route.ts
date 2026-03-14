@@ -209,4 +209,4 @@ export const GET = instrumented(async function GET() {
       'Cache-Control': 'no-store, no-cache, must-revalidate',
     },
   });
-}
+}, { name: 'health' });
