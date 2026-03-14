@@ -63,6 +63,7 @@ export const options = {
     error_rate: ['rate<0.01'],
     api_latency: ['p(95)<500', 'p(99)<2000'],
     http_req_failed: ['rate<0.01'],
+    cache_hits: ['count>1000'],
   },
 };
 
@@ -71,20 +72,22 @@ const NEWS_ENDPOINTS = [
   '/api/news?category=bitcoin',
   '/api/news?category=ethereum',
   '/api/news?category=defi',
+  '/api/news?limit=50',
 ];
 
 const PRICE_ENDPOINTS = [
   '/api/prices/bitcoin',
   '/api/prices/ethereum',
+  '/api/prices?ids=bitcoin,ethereum,solana',
+  '/api/market/fear-greed',
 ];
 
-const API_ENDPOINTS = [
-  '/api/news',
-  '/api/news?category=bitcoin',
-  '/api/prices/bitcoin',
-  '/api/market/fear-greed',
+const DEEP_ENDPOINTS = [
   '/api/defi/tvl',
   '/api/derivatives/funding-rates',
+  '/api/onchain/gas',
+  '/api/market/dominance',
+  '/api/social/trending',
   '/api/search?q=bitcoin',
 ];
 
@@ -123,11 +126,29 @@ export function priceCheckerScenario() {
 }
 
 export function apiUserScenario() {
-  const endpoint = API_ENDPOINTS[Math.floor(Math.random() * API_ENDPOINTS.length)];
+  const endpoints = [...NEWS_ENDPOINTS, ...PRICE_ENDPOINTS, ...DEEP_ENDPOINTS];
+  const endpoint = endpoints[Math.floor(Math.random() * endpoints.length)];
   const res = http.get(`${BASE_URL}${endpoint}`, {
+    headers: { 'X-API-Key': __ENV.API_KEY || '' },
     tags: { name: 'apiUser' },
   });
-  trackResponse(res, endpoint);
+
+  const ok = res.status === 200 || res.status === 429;
+  errorRate.add(res.status >= 500);
+  apiLatency.add(res.timings.duration);
+
+  const cacheHeader = res.headers['X-Cache'] || res.headers['x-cache'] || '';
+  if (cacheHeader.toLowerCase() === 'hit') {
+    cacheHits.add(1);
+  }
+
+  check(res, {
+    [`${endpoint} api status ok`]: () => ok,
+    [`${endpoint} rate limit returns retry-after`]: (r) =>
+      r.status !== 429 || r.headers['Retry-After'] !== undefined,
+  });
+
+  sleep(0.5);
 }
 
 export function handleSummary(data) {
