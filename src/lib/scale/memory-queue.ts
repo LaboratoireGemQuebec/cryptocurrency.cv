@@ -183,7 +183,8 @@ export class MemoryQueueAdapter implements QueueAdapter {
       completed: this.completedCount,
       failed: this.failedCount,
       dead: this.deadLetter.length,
-      avgProcessingTimeMs: this.completedCount > 0 ? this.totalProcessingTime / this.completedCount : 0,
+      avgProcessingTimeMs:
+        this.completedCount > 0 ? this.totalProcessingTime / this.completedCount : 0,
       throughputPerMinute: 0,
       errorRate: total > 0 ? this.failedCount / total : 0,
     };

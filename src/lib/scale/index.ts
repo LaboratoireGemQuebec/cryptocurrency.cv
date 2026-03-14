@@ -84,8 +84,11 @@ export interface QueueMetrics {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// JOB QUEUE IMPLEMENTATION (In-Memory — Redis adapter planned)
+// JOB QUEUE IMPLEMENTATION (Adapter-based: Memory or Redis)
 // ═══════════════════════════════════════════════════════════════
+
+import type { QueueAdapter } from './queue-interface';
+import { MemoryQueueAdapter } from './memory-queue';
 
 const DEFAULT_CONFIG: JobQueueConfig = {
   maxConcurrency: 10,
@@ -99,19 +102,16 @@ const DEFAULT_CONFIG: JobQueueConfig = {
 };
 
 class JobQueue {
-  private queues = new Map<string, Job[]>();
+  private adapter: QueueAdapter;
   private handlers = new Map<string, JobHandler>();
   private activeJobs = new Map<string, Job>();
   private config: JobQueueConfig;
   private running = false;
-  private processedCount = 0;
-  private errorCount = 0;
-  private totalProcessingTime = 0;
-  private throughputWindow: number[] = []; // timestamps of completed jobs
-  private readonly THROUGHPUT_WINDOW_MS = 60_000; // 1 minute window
 
-  constructor(config: Partial<JobQueueConfig> = {}) {
-    this.config = { ...DEFAULT_CONFIG, ...config };
+  constructor(config: Partial<JobQueueConfig> & { adapter?: QueueAdapter } = {}) {
+    const { adapter, ...queueConfig } = config;
+    this.config = { ...DEFAULT_CONFIG, ...queueConfig };
+    this.adapter = adapter ?? new MemoryQueueAdapter();
   }
 
   /**
@@ -122,53 +122,33 @@ class JobQueue {
   }
 
   /**
-   * Add a job to the queue
+   * Add a job to the queue via the adapter
    */
-  enqueue<T = unknown>(
+  async enqueue<T = unknown>(
     type: string,
     payload: T,
     options?: { priority?: JobPriority; maxAttempts?: number; metadata?: Record<string, unknown> },
-  ): Job<T> {
-    const job: Job<T> = {
-      id: `${type}:${Date.now()}:${crypto.randomUUID().slice(0, 8)}`,
-      type,
-      payload,
-      status: 'pending',
-      priority: options?.priority || 'normal',
-      attempts: 0,
-      maxAttempts: options?.maxAttempts || this.config.defaultMaxAttempts,
-      createdAt: Date.now(),
+  ): Promise<string> {
+    return this.adapter.enqueue(type, payload, {
+      priority: options?.priority,
+      maxAttempts: options?.maxAttempts ?? this.config.defaultMaxAttempts,
       metadata: options?.metadata,
-    };
-
-    if (!this.queues.has(type)) {
-      this.queues.set(type, []);
-    }
-
-    const queue = this.queues.get(type)!;
-    // Insert by priority
-    const priorityOrder: Record<JobPriority, number> = { critical: 0, high: 1, normal: 2, low: 3 };
-    const insertIdx = queue.findIndex(
-      (j) => priorityOrder[j.priority] > priorityOrder[job.priority],
-    );
-    if (insertIdx === -1) {
-      queue.push(job as Job);
-    } else {
-      queue.splice(insertIdx, 0, job as Job);
-    }
-
-    return job;
+    });
   }
 
   /**
    * Enqueue multiple jobs at once
    */
-  enqueueBatch<T = unknown>(
+  async enqueueBatch<T = unknown>(
     type: string,
     payloads: T[],
     options?: { priority?: JobPriority; maxAttempts?: number },
-  ): Job<T>[] {
-    return payloads.map((payload) => this.enqueue(type, payload, options));
+  ): Promise<string[]> {
+    const ids: string[] = [];
+    for (const payload of payloads) {
+      ids.push(await this.enqueue(type, payload, options));
+    }
+    return ids;
   }
 
   /**
@@ -188,110 +168,78 @@ class JobQueue {
   }
 
   /**
-   * Get queue metrics
+   * Get queue metrics from the adapter
    */
-  getMetrics(): QueueMetrics {
-    let pending = 0;
-    for (const queue of this.queues.values()) {
-      pending += queue.filter((j) => j.status === 'pending').length;
-    }
-
-    return {
-      pending,
-      active: this.activeJobs.size,
-      completed: this.processedCount,
-      failed: this.errorCount,
-      dead: 0,
-      avgProcessingTimeMs: this.processedCount > 0 ? this.totalProcessingTime / this.processedCount : 0,
-      throughputPerMinute: this.calculateThroughput(),
-      errorRate: this.processedCount > 0 ? this.errorCount / this.processedCount : 0,
-    };
+  getMetrics(): QueueMetrics | Promise<QueueMetrics> {
+    return this.adapter.getMetrics();
   }
 
   /**
    * Get a specific job by ID
    */
-  getJob(jobId: string): Job | undefined {
-    for (const queue of this.queues.values()) {
-      const job = queue.find((j) => j.id === jobId);
-      if (job) return job;
-    }
-    return this.activeJobs.get(jobId);
+  getJob(jobId: string): Promise<Job | null> {
+    return this.adapter.getJob(jobId);
   }
 
   /**
-   * Get all jobs of a type
+   * Get dead letter jobs
    */
-  getJobs(type: string, status?: JobStatus): Job[] {
-    const queue = this.queues.get(type) || [];
-    return status ? queue.filter((j) => j.status === status) : queue;
+  getDeadLetterJobs(limit?: number): Promise<Job[]> {
+    return this.adapter.getDeadLetterJobs(limit);
   }
 
-  private calculateThroughput(): number {
-    const now = Date.now();
-    const cutoff = now - this.THROUGHPUT_WINDOW_MS;
-    // Prune old entries
-    this.throughputWindow = this.throughputWindow.filter(ts => ts > cutoff);
-    return this.throughputWindow.length;
+  /**
+   * Retry a dead letter job
+   */
+  retryDeadLetterJob(jobId: string): Promise<void> {
+    return this.adapter.retryDeadLetterJob(jobId);
+  }
+
+  /**
+   * Purge all dead letter jobs
+   */
+  purgeDeadLetter(): Promise<number> {
+    return this.adapter.purgeDeadLetter();
+  }
+
+  /**
+   * Get the underlying adapter (for admin/testing)
+   */
+  getAdapter(): QueueAdapter {
+    return this.adapter;
   }
 
   private async processLoop(): Promise<void> {
     while (this.running) {
       if (this.activeJobs.size < this.config.maxConcurrency) {
-        const job = this.getNextJob();
-        if (job) {
-          this.processJob(job); // Fire and forget — managed internally
+        // Process all registered job types
+        for (const type of this.handlers.keys()) {
+          if (this.activeJobs.size >= this.config.maxConcurrency) break;
+          const jobs = await this.adapter.dequeue(type, 1);
+          for (const job of jobs) {
+            this.activeJobs.set(job.id, job);
+            this.processJob(job); // Fire and forget — managed internally
+          }
         }
       }
       await sleep(this.config.pollIntervalMs);
     }
   }
 
-  private getNextJob(): Job | undefined {
-    // Process queues in order, favoring higher-priority jobs
-    for (const queue of this.queues.values()) {
-      const job = queue.find((j) => j.status === 'pending');
-      if (job) return job;
-    }
-    return undefined;
-  }
-
   private async processJob(job: Job): Promise<void> {
     const handler = this.handlers.get(job.type);
     if (!handler) {
-      job.status = 'failed';
-      job.error = `No handler registered for job type: ${job.type}`;
+      await this.adapter.nack(job.id, `No handler registered for job type: ${job.type}`);
+      this.activeJobs.delete(job.id);
       return;
     }
 
-    job.status = 'active';
-    job.startedAt = Date.now();
-    job.attempts++;
-    this.activeJobs.set(job.id, job);
-
     try {
       const result = await handler(job);
-      job.status = 'completed';
-      job.completedAt = Date.now();
-      job.result = result;
-      this.processedCount++;
-      this.totalProcessingTime += (job.completedAt - job.startedAt);
-      this.throughputWindow.push(job.completedAt);
+      await this.adapter.ack(job.id, result);
     } catch (error) {
-      job.error = error instanceof Error ? error.message : String(error);
-
-      if (job.attempts < job.maxAttempts) {
-        job.status = 'retrying';
-        const delay = Math.min(
-          this.config.retryDelayMs * Math.pow(this.config.retryBackoffMultiplier, job.attempts - 1),
-          this.config.maxRetryDelayMs,
-        );
-        await sleep(delay);
-        job.status = 'pending'; // Re-enter queue
-      } else {
-        job.status = 'failed';
-        this.errorCount++;
-      }
+      const message = error instanceof Error ? error.message : String(error);
+      await this.adapter.nack(job.id, message);
     } finally {
       this.activeJobs.delete(job.id);
     }
@@ -1004,7 +952,7 @@ export async function getSystemStatus(): Promise<{
   rateLimitTiers: Record<string, RateLimitTier>;
 }> {
   const services = await healthMonitor.runChecks();
-  const queue = jobQueue.getMetrics();
+  const queue = await jobQueue.getMetrics();
 
   return {
     overall: healthMonitor.getOverallStatus(),
@@ -1015,3 +963,6 @@ export async function getSystemStatus(): Promise<{
 }
 
 export { JobQueue, HealthMonitor };
+export { MemoryQueueAdapter } from './memory-queue';
+export { RedisQueueAdapter } from './redis-queue';
+export type { QueueAdapter, EnqueueOptions } from './queue-interface';

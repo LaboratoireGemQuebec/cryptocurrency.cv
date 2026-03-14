@@ -91,6 +91,8 @@ export interface GeminiStreamChunk {
 // Configuration
 // ---------------------------------------------------------------------------
 
+import { withSpan, metrics } from '@/lib/telemetry';
+
 function getConfig(): GeminiConfig | null {
   const apiKey = process.env.GOOGLE_AI_API_KEY || process.env.GEMINI_API_KEY;
   if (!apiKey) return null;

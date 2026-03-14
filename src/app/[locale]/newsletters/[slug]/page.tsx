@@ -6,26 +6,18 @@
  * Individual Newsletter Page
  */
 
-import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Badge } from "@/components/ui/Badge";
-import { Card, CardContent } from "@/components/ui/Card";
-import { generateSEOMetadata } from "@/lib/seo";
-import { NEWSLETTERS, getNewsletterBySlug } from "@/lib/newsletters";
-import {
-  Newspaper,
-  TrendingUp,
-  Layers,
-  Code,
-  GraduationCap,
-  Mail,
-  ArrowLeft,
-} from "lucide-react";
-import { Link } from "@/i18n/navigation";
-import NewsletterSubscribeForm from "@/components/NewsletterSubscribeForm";
-import type { Metadata } from "next";
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { Badge } from '@/components/ui/Badge';
+import { Card, CardContent } from '@/components/ui/Card';
+import { generateSEOMetadata } from '@/lib/seo';
+import { NEWSLETTERS, getNewsletterBySlug } from '@/lib/newsletters';
+import { Newspaper, TrendingUp, Layers, Code, GraduationCap, Mail, ArrowLeft } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
+import NewsletterSubscribeForm from '@/components/NewsletterSubscribeForm';
+import type { Metadata } from 'next';
 
 export const revalidate = 3600;
 
@@ -38,17 +30,17 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 const FREQUENCY_LABELS: Record<string, string> = {
-  daily: "Daily",
-  weekly: "Weekly",
-  biweekly: "Biweekly",
+  daily: 'Daily',
+  weekly: 'Weekly',
+  biweekly: 'Biweekly',
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
-  news: "News",
-  markets: "Markets",
-  defi: "DeFi",
-  education: "Education",
-  developer: "Developer",
+  news: 'News',
+  markets: 'Markets',
+  defi: 'DeFi',
+  education: 'Education',
+  developer: 'Developer',
 };
 
 type Props = {
@@ -64,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const newsletter = getNewsletterBySlug(slug);
 
   if (!newsletter) {
-    return { title: "Newsletter Not Found" };
+    return { title: 'Newsletter Not Found' };
   }
 
   return generateSEOMetadata({
@@ -73,7 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/newsletters/${newsletter.slug}`,
     locale,
     tags: [
-      "crypto newsletter",
+      'crypto newsletter',
       newsletter.category,
       newsletter.name.toLowerCase(),
       `${newsletter.frequency} newsletter`,
@@ -84,52 +76,52 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const FAQ_BY_CATEGORY: Record<string, { q: string; a: string }[]> = {
   news: [
     {
-      q: "What sources do you pull from?",
-      a: "We aggregate from 300+ trusted crypto news sources including CoinDesk, CoinTelegraph, The Block, and more.",
+      q: 'What sources do you pull from?',
+      a: 'We aggregate from 300+ trusted crypto news sources including CoinDesk, CoinTelegraph, The Block, and more.',
     },
     {
-      q: "When does it arrive?",
-      a: "The Daily Digest lands in your inbox every morning before markets open, so you start each day informed.",
+      q: 'When does it arrive?',
+      a: 'The Daily Digest lands in your inbox every morning before markets open, so you start each day informed.',
     },
   ],
   markets: [
     {
-      q: "What data is included?",
-      a: "Price charts, on-chain metrics, funding rates, exchange flows, stablecoin supply changes, and sentiment indicators.",
+      q: 'What data is included?',
+      a: 'Price charts, on-chain metrics, funding rates, exchange flows, stablecoin supply changes, and sentiment indicators.',
     },
     {
-      q: "Is this trading advice?",
-      a: "No. Market Pulse is for informational purposes only. Always do your own research before making investment decisions.",
+      q: 'Is this trading advice?',
+      a: 'No. Market Pulse is for informational purposes only. Always do your own research before making investment decisions.',
     },
   ],
   defi: [
     {
-      q: "Which protocols do you cover?",
-      a: "All major DeFi protocols across Ethereum, Solana, Arbitrum, Base, and other chains — from Aave and Uniswap to newer projects.",
+      q: 'Which protocols do you cover?',
+      a: 'All major DeFi protocols across Ethereum, Solana, Arbitrum, Base, and other chains — from Aave and Uniswap to newer projects.',
     },
     {
-      q: "Do you cover security incidents?",
-      a: "Yes. We report on hacks, exploits, and audit findings so you can protect your assets.",
+      q: 'Do you cover security incidents?',
+      a: 'Yes. We report on hacks, exploits, and audit findings so you can protect your assets.',
     },
   ],
   developer: [
     {
-      q: "Is this for API users?",
-      a: "Yes. Developer Weekly covers API changes, new endpoints, SDK releases, and best practices for integrating with our platform.",
+      q: 'Is this for API users?',
+      a: 'Yes. Developer Weekly covers API changes, new endpoints, SDK releases, and best practices for integrating with our platform.',
     },
     {
-      q: "Will I get breaking change alerts?",
-      a: "Absolutely. Any breaking API changes are announced in the newsletter before they go live.",
+      q: 'Will I get breaking change alerts?',
+      a: 'Absolutely. Any breaking API changes are announced in the newsletter before they go live.',
     },
   ],
   education: [
     {
-      q: "Is this good for beginners?",
-      a: "Yes! Learn Crypto is written specifically for newcomers. We avoid jargon and explain concepts from the ground up.",
+      q: 'Is this good for beginners?',
+      a: 'Yes! Learn Crypto is written specifically for newcomers. We avoid jargon and explain concepts from the ground up.',
     },
     {
-      q: "What topics do you cover?",
-      a: "Everything from Bitcoin basics to advanced DeFi strategies, security best practices, and how blockchain technology works.",
+      q: 'What topics do you cover?',
+      a: 'Everything from Bitcoin basics to advanced DeFi strategies, security best practices, and how blockchain technology works.',
     },
   ],
 };
@@ -154,7 +146,7 @@ export default async function NewsletterSlugPage({ params }: Props) {
         <div className="container-main pt-6">
           <Link
             href="/newsletters"
-            className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
           >
             <ArrowLeft className="h-4 w-4" />
             All Newsletters
@@ -164,12 +156,12 @@ export default async function NewsletterSlugPage({ params }: Props) {
         {/* Hero */}
         <section className="border-b border-[var(--color-border)]">
           <div className="container-main py-10 lg:py-14">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="h-14 w-14 rounded-xl bg-[var(--color-surface-secondary)] flex items-center justify-center shrink-0">
+            <div className="mb-6 flex items-start gap-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[var(--color-surface-secondary)]">
                 <Icon className="h-7 w-7 text-[var(--color-accent)]" />
               </div>
               <div>
-                <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-2">
+                <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
                   {newsletter.name}
                 </h1>
                 <div className="flex items-center gap-3">
@@ -180,7 +172,7 @@ export default async function NewsletterSlugPage({ params }: Props) {
                 </div>
               </div>
             </div>
-            <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mb-8">
+            <p className="mb-8 max-w-2xl text-lg text-[var(--color-text-secondary)]">
               {newsletter.description}
             </p>
 
@@ -197,33 +189,31 @@ export default async function NewsletterSlugPage({ params }: Props) {
         {/* Sample Issue Preview */}
         <section className="border-b border-[var(--color-border)]">
           <div className="container-main py-8 lg:py-10">
-            <h2 className="text-xl font-bold font-serif mb-6">
-              Sample Issue Preview
-            </h2>
+            <h2 className="mb-6 font-serif text-xl font-bold">Sample Issue Preview</h2>
             <Card>
               <CardContent className="p-6">
                 <div className="rounded-lg bg-[var(--color-surface-secondary)] p-4">
-                  <div className="flex items-center gap-2 mb-3 text-xs text-[var(--color-text-tertiary)]">
+                  <div className="mb-3 flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
                     <Mail className="h-3.5 w-3.5" />
                     <span>From: Free Crypto News</span>
                   </div>
-                  <div className="text-sm font-semibold text-[var(--color-text-primary)] mb-1">
+                  <div className="mb-1 text-sm font-semibold text-[var(--color-text-primary)]">
                     Subject: {newsletter.sampleSubject}
                   </div>
                   <div className="text-xs text-[var(--color-text-tertiary)]">
                     To: you@example.com
                   </div>
                 </div>
-                <div className="mt-4 text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <div className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                   <p>
-                    This is a preview of what a typical {newsletter.name}{" "}
-                    email looks like. Each issue includes curated content
-                    tailored to the {newsletter.category} category, delivered{" "}
-                    {newsletter.frequency === "daily"
-                      ? "every morning"
-                      : newsletter.frequency === "weekly"
-                        ? "once per week"
-                        : "every two weeks"}
+                    This is a preview of what a typical {newsletter.name} email looks like. Each
+                    issue includes curated content tailored to the {newsletter.category} category,
+                    delivered{' '}
+                    {newsletter.frequency === 'daily'
+                      ? 'every morning'
+                      : newsletter.frequency === 'weekly'
+                        ? 'once per week'
+                        : 'every two weeks'}
                     .
                   </p>
                 </div>
@@ -235,7 +225,7 @@ export default async function NewsletterSlugPage({ params }: Props) {
         {/* Past Issues */}
         <section className="border-b border-[var(--color-border)]">
           <div className="container-main py-8 lg:py-10">
-            <h2 className="text-xl font-bold font-serif mb-6">Past Issues</h2>
+            <h2 className="mb-6 font-serif text-xl font-bold">Past Issues</h2>
             <p className="text-sm text-[var(--color-text-tertiary)]">
               Past issues will appear here once published.
             </p>
@@ -246,16 +236,16 @@ export default async function NewsletterSlugPage({ params }: Props) {
         {faq.length > 0 && (
           <section>
             <div className="container-main py-8 lg:py-10">
-              <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+              <h2 className="mb-6 font-serif text-2xl font-bold text-[var(--color-text-primary)]">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-6 max-w-2xl">
+              <div className="max-w-2xl space-y-6">
                 {faq.map((item) => (
                   <div key={item.q}>
-                    <h3 className="font-bold text-sm text-[var(--color-text-primary)] mb-1">
+                    <h3 className="mb-1 text-sm font-bold text-[var(--color-text-primary)]">
                       {item.q}
                     </h3>
-                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
                       {item.a}
                     </p>
                   </div>

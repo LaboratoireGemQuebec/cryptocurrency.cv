@@ -48,6 +48,7 @@ import { DEFAULT_CHAIN_CONFIG } from './types';
 import { CircuitBreaker, CircuitOpenError } from './circuit-breaker';
 import { DataFusionEngine, type FusionInput } from './data-fusion';
 import { HealthMonitor } from './health-monitor';
+import { withSpan, metrics } from '@/lib/telemetry';
 
 // =============================================================================
 // CACHE — Stale-while-revalidate
@@ -639,12 +640,18 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
     provider: DataProvider<T>,
     params: FetchParams,
   ): Promise<T> {
+    return withSpan(`provider.fetch.${provider.name}`, {
+      'provider.name': provider.name,
+      'provider.priority': provider.priority,
+      'provider.chain': this.name,
+    }, async (span) => {
     const controller = new AbortController();
     const timeout = setTimeout(
       () => controller.abort(),
       this._config.timeoutMs,
     );
 
+    const start = Date.now();
     try {
       // Perform the actual fetch
       let data = await Promise.race([
@@ -666,10 +673,22 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         throw new Error(`Validation failed for provider "${provider.name}"`);
       }
 
+      const latencyMs = Date.now() - start;
+      span.setAttribute('provider.latency_ms', latencyMs);
+      metrics.providerRequests.add(1, { provider: provider.name, status: 'success' });
+      metrics.providerLatency.record(latencyMs, { provider: provider.name });
+
       return data;
+    } catch (error) {
+      const latencyMs = Date.now() - start;
+      span.setAttribute('provider.latency_ms', latencyMs);
+      metrics.providerRequests.add(1, { provider: provider.name, status: 'error' });
+      metrics.providerErrors.add(1, { provider: provider.name });
+      throw error;
     } finally {
       clearTimeout(timeout);
     }
+    });
   }
 
   private _buildCacheKey(params: FetchParams): string {

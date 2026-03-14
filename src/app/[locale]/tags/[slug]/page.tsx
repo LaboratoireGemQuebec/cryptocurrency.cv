@@ -1,15 +1,21 @@
-import { setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PageShareSection from "@/components/PageShareSection";
-import { FeaturedCard, NewsCardDefault } from "@/components/NewsCard";
-import { TagChip } from "@/components/TagChip";
-import { getTagBySlug, getAllTags, getRelatedTags, extractTagsFromArticle, generateTagStructuredData } from "@/lib/tags";
-import { getLatestNews } from "@/lib/crypto-news";
-import { generateSEOMetadata } from "@/lib/seo";
-import { Link } from "@/i18n/navigation";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import PageShareSection from '@/components/PageShareSection';
+import { FeaturedCard, NewsCardDefault } from '@/components/NewsCard';
+import { TagChip } from '@/components/TagChip';
+import {
+  getTagBySlug,
+  getAllTags,
+  getRelatedTags,
+  extractTagsFromArticle,
+  generateTagStructuredData,
+} from '@/lib/tags';
+import { getLatestNews } from '@/lib/crypto-news';
+import { generateSEOMetadata } from '@/lib/seo';
+import { Link } from '@/i18n/navigation';
+import type { Metadata } from 'next';
 
 export const revalidate = 300;
 
@@ -31,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tag.description,
     path: `/tags/${tag.slug}`,
     locale,
-    tags: [tag.name, "cryptocurrency", "crypto news", ...(tag.relatedTags ?? [])],
+    tags: [tag.name, 'cryptocurrency', 'crypto news', ...(tag.relatedTags ?? [])],
   });
 }
 
@@ -45,7 +51,7 @@ export default async function TagPage({ params }: Props) {
   const relatedTags = getRelatedTags(slug);
 
   // Fetch articles and filter by tag keywords
-  let articles: Awaited<ReturnType<typeof getLatestNews>>["articles"] = [];
+  let articles: Awaited<ReturnType<typeof getLatestNews>>['articles'] = [];
   try {
     const data = await getLatestNews(50);
     articles = data.articles.filter((article) => {
@@ -76,45 +82,38 @@ export default async function TagPage({ params }: Props) {
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/tags" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/tags" className="transition-colors hover:text-[var(--color-accent)]">
                 Topics
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-[var(--color-text-primary)] font-medium">
-              {tag.name}
-            </li>
+            <li className="font-medium text-[var(--color-text-primary)]">{tag.name}</li>
           </ol>
         </nav>
 
         {/* Tag Header */}
         <div className="mb-10">
-          <div
-            className="h-1 w-16 rounded-full mb-4 bg-[var(--color-accent)]"
-            aria-hidden="true"
-          />
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <div className="mb-4 h-1 w-16 rounded-full bg-[var(--color-accent)]" aria-hidden="true" />
+          <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
             <span className="mr-2">{tag.icon}</span>
             {tag.name}
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl mb-4">
-            {tag.description}
-          </p>
+          <p className="mb-4 max-w-2xl text-[var(--color-text-secondary)]">{tag.description}</p>
           <p className="text-sm text-[var(--color-text-tertiary)]">
-            {totalCount} {totalCount === 1 ? "article" : "articles"}
+            {totalCount} {totalCount === 1 ? 'article' : 'articles'}
           </p>
         </div>
 
         {/* Related Tags */}
         {relatedTags.length > 0 && (
           <div className="mb-8 flex flex-wrap items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mr-1">
+            <span className="mr-1 text-xs font-semibold tracking-wider text-[var(--color-text-tertiary)] uppercase">
               Related
             </span>
             {relatedTags.map((related) => (
@@ -124,16 +123,16 @@ export default async function TagPage({ params }: Props) {
         )}
 
         {totalCount === 0 ? (
-          <p className="text-[var(--color-text-tertiary)] py-12 text-center">
+          <p className="py-12 text-center text-[var(--color-text-tertiary)]">
             No articles found for this topic yet.
           </p>
         ) : (
           <div className="flex gap-10">
             {/* Main content */}
-            <div className="flex-1 min-w-0">
+            <div className="min-w-0 flex-1">
               {/* Featured Article */}
               {featuredArticle && (
-                <div className="mb-10 pb-10 border-b border-[var(--color-border)]">
+                <div className="mb-10 border-b border-[var(--color-border)] pb-10">
                   <FeaturedCard article={featuredArticle} />
                 </div>
               )}
@@ -149,9 +148,9 @@ export default async function TagPage({ params }: Props) {
             </div>
 
             {/* Sidebar (desktop) */}
-            <aside className="hidden lg:block w-64 shrink-0">
+            <aside className="hidden w-64 shrink-0 lg:block">
               <div className="sticky top-24">
-                <h2 className="font-serif text-lg font-bold mb-4 text-[var(--color-text-primary)]">
+                <h2 className="mb-4 font-serif text-lg font-bold text-[var(--color-text-primary)]">
                   Related Topics
                 </h2>
                 <nav aria-label="Related topics">
@@ -160,7 +159,7 @@ export default async function TagPage({ params }: Props) {
                       <li key={related.slug}>
                         <Link
                           href={`/tags/${related.slug}`}
-                          className="flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
+                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
                         >
                           <span>{related.icon}</span>
                           <span>{related.name}</span>
@@ -171,11 +170,11 @@ export default async function TagPage({ params }: Props) {
                 </nav>
 
                 {/* Tag info */}
-                <div className="mt-8 p-4 rounded-lg bg-[var(--color-surface-secondary)]">
-                  <h3 className="text-sm font-semibold mb-2 text-[var(--color-text-primary)]">
+                <div className="mt-8 rounded-lg bg-[var(--color-surface-secondary)] p-4">
+                  <h3 className="mb-2 text-sm font-semibold text-[var(--color-text-primary)]">
                     About this topic
                   </h3>
-                  <p className="text-xs text-[var(--color-text-tertiary)] leading-relaxed">
+                  <p className="text-xs leading-relaxed text-[var(--color-text-tertiary)]">
                     {tag.description}
                   </p>
                   <div className="mt-3 flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">

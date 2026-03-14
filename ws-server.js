@@ -2075,11 +2075,15 @@ function localBroadcastNews(articles, isBreaking = false) {
       // All articles matched — reuse pre-serialized message
       safeSend(client, clientId, fullMsg);
     } else if (filteredArticles.length > 0) {
-      safeSend(client, clientId, JSON.stringify({
-        type,
-        payload: { articles: filteredArticles },
-        timestamp: ts,
-      }));
+      safeSend(
+        client,
+        clientId,
+        JSON.stringify({
+          type,
+          payload: { articles: filteredArticles },
+          timestamp: ts,
+        }),
+      );
     }
   });
 }
@@ -2600,12 +2604,14 @@ server.listen(PORT, () => {
 async function gracefulShutdown(signal) {
   if (isShuttingDown) return; // Prevent double-shutdown
   isShuttingDown = true;
-  console.log(JSON.stringify({
-    event: "shutdown_started",
-    signal,
-    drainTimeoutMs: DRAIN_TIMEOUT_MS,
-    timestamp: new Date().toISOString(),
-  }));
+  console.log(
+    JSON.stringify({
+      event: 'shutdown_started',
+      signal,
+      drainTimeoutMs: DRAIN_TIMEOUT_MS,
+      timestamp: new Date().toISOString(),
+    }),
+  );
 
   // 1. Stop accepting new HTTP & WS connections
   server.close(() => {
@@ -2629,10 +2635,12 @@ async function gracefulShutdown(signal) {
   if (redisPub && isLeader) {
     await redisPub.del(LEADER_KEY).catch(() => {});
     isLeader = false;
-    console.log(JSON.stringify({
-      event: "shutdown_leadership_released",
-      timestamp: new Date().toISOString(),
-    }));
+    console.log(
+      JSON.stringify({
+        event: 'shutdown_leadership_released',
+        timestamp: new Date().toISOString(),
+      }),
+    );
   }
 
   // 3. Notify clients to reconnect with guidance, then send close frame

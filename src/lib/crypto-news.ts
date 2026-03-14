@@ -4083,9 +4083,12 @@ export interface AuthorSummary {
 /**
  * Get all known authors from current feed data.
  */
-export async function getAllAuthors(
-  options?: { sort?: 'articles' | 'recent' | 'name'; search?: string; limit?: number; offset?: number },
-): Promise<{ authors: AuthorSummary[]; total: number; hasMore: boolean }> {
+export async function getAllAuthors(options?: {
+  sort?: 'articles' | 'recent' | 'name';
+  search?: string;
+  limit?: number;
+  offset?: number;
+}): Promise<{ authors: AuthorSummary[]; total: number; hasMore: boolean }> {
   const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
 
   // Build author map

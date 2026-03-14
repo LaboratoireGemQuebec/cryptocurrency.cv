@@ -137,18 +137,18 @@ export default async function AuthorPage({ params }: Props) {
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/authors" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/authors" className="transition-colors hover:text-[var(--color-accent)]">
                 Authors
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-[var(--color-text-primary)] font-medium">{author.name}</li>
+            <li className="font-medium text-[var(--color-text-primary)]">{author.name}</li>
           </ol>
         </nav>
 
@@ -168,7 +168,7 @@ export default async function AuthorPage({ params }: Props) {
             </div>
           )}
           <div>
-            <h1 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+            <h1 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
               {author.name}
             </h1>
             <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
@@ -198,12 +198,12 @@ export default async function AuthorPage({ params }: Props) {
 
         {/* Articles */}
         {articles.length === 0 ? (
-          <p className="text-[var(--color-text-tertiary)] py-12 text-center">
+          <p className="py-12 text-center text-[var(--color-text-tertiary)]">
             No articles found for this author.
           </p>
         ) : (
           <>
-            <h2 className="font-serif text-xl font-bold mb-6 text-[var(--color-text-primary)]">
+            <h2 className="mb-6 font-serif text-xl font-bold text-[var(--color-text-primary)]">
               Articles by {author.name}
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -75,7 +75,9 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
   setRequestLocale(locale);
 
   const sp = await searchParams;
-  const sort = (['articles', 'recent', 'name'] as const).includes(sp.sort as 'articles' | 'recent' | 'name')
+  const sort = (['articles', 'recent', 'name'] as const).includes(
+    sp.sort as 'articles' | 'recent' | 'name',
+  )
     ? (sp.sort as 'articles' | 'recent' | 'name')
     : 'articles';
   const search = typeof sp.search === 'string' ? sp.search : undefined;
@@ -105,40 +107,37 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-[var(--color-text-primary)] font-medium">Authors</li>
+            <li className="font-medium text-[var(--color-text-primary)]">Authors</li>
           </ol>
         </nav>
 
         {/* Page Header */}
         <div className="mb-10">
-          <div
-            className="h-1 w-16 rounded-full mb-4 bg-[var(--color-accent)]"
-            aria-hidden="true"
-          />
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <div className="mb-4 h-1 w-16 rounded-full bg-[var(--color-accent)]" aria-hidden="true" />
+          <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
             ✍️ Authors
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="max-w-2xl text-[var(--color-text-secondary)]">
             Browse articles by journalist and analyst across 300+ crypto news sources.
           </p>
         </div>
 
         {/* Search & Sort Controls */}
-        <div className="mb-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+        <div className="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           {/* Search */}
-          <form method="GET" className="flex-1 max-w-sm">
+          <form method="GET" className="max-w-sm flex-1">
             <input type="hidden" name="sort" value={sort} />
             <input
               type="search"
               name="search"
               placeholder="Search authors..."
               defaultValue={search}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/50"
+              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:ring-2 focus:ring-[var(--color-accent)]/50 focus:outline-none"
             />
           </form>
 
@@ -168,9 +167,7 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
 
         {/* Author Grid */}
         {authors.length === 0 ? (
-          <p className="text-[var(--color-text-tertiary)] py-12 text-center">
-            No authors found.
-          </p>
+          <p className="py-12 text-center text-[var(--color-text-tertiary)]">No authors found.</p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {authors.map((author) => (

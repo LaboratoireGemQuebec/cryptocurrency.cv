@@ -1,12 +1,12 @@
-import { setRequestLocale } from "next-intl/server";
-import { generateSEOMetadata } from "@/lib/seo";
-import { getNewsByCategory } from "@/lib/crypto-news";
-import { NEWS_VERTICALS } from "@/lib/verticals";
-import { classifyArticle } from "@/lib/article-classifier";
-import VerticalPage from "@/components/VerticalPage";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import { generateSEOMetadata } from '@/lib/seo';
+import { getNewsByCategory } from '@/lib/crypto-news';
+import { NEWS_VERTICALS } from '@/lib/verticals';
+import { classifyArticle } from '@/lib/article-classifier';
+import VerticalPage from '@/components/VerticalPage';
+import type { Metadata } from 'next';
 
-const VERTICAL = NEWS_VERTICALS.find((v) => v.slug === "tech")!;
+const VERTICAL = NEWS_VERTICALS.find((v) => v.slug === 'tech')!;
 
 export const revalidate = 300;
 
@@ -15,11 +15,11 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Crypto Technology News — Protocol Upgrades, Infrastructure, Dev Tools",
+    title: 'Crypto Technology News — Protocol Upgrades, Infrastructure, Dev Tools',
     description: VERTICAL.description,
-    path: "/tech",
+    path: '/tech',
     locale,
-    tags: ["technology", "protocol", "infrastructure", "developer tools", "upgrades"],
+    tags: ['technology', 'protocol', 'infrastructure', 'developer tools', 'upgrades'],
   });
 }
 
@@ -29,7 +29,7 @@ export default async function TechPage({ params }: Props) {
 
   let allArticles;
   try {
-    allArticles = await getNewsByCategory("technology", 50);
+    allArticles = await getNewsByCategory('technology', 50);
   } catch {
     allArticles = { articles: [], totalCount: 0 };
   }
@@ -38,9 +38,9 @@ export default async function TechPage({ params }: Props) {
     const verticals = classifyArticle({
       url: article.link,
       title: article.title,
-      description: article.description ?? "",
+      description: article.description ?? '',
     });
-    return verticals.includes("tech");
+    return verticals.includes('tech');
   });
 
   return (

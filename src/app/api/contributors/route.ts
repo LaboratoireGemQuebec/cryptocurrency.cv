@@ -1,21 +1,17 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
-const GITHUB_API =
-  "https://api.github.com/repos/nirholas/free-crypto-news/contributors";
+const GITHUB_API = 'https://api.github.com/repos/nirholas/free-crypto-news/contributors';
 
 export const revalidate = 86400; // Cache for 24 hours
 
 export async function GET() {
   const res = await fetch(GITHUB_API, {
-    headers: { Accept: "application/vnd.github+json" },
+    headers: { Accept: 'application/vnd.github+json' },
     next: { revalidate: 86400 },
   });
 
   if (!res.ok) {
-    return NextResponse.json(
-      { error: "Failed to fetch contributors" },
-      { status: 502 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch contributors' }, { status: 502 });
   }
 
   const contributors: Array<{

@@ -8,7 +8,7 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-const STORAGE_KEY = "guide-progress";
+const STORAGE_KEY = 'guide-progress';
 
 export interface GuideProgressData {
   /** Map of seriesSlug -> Set of completed article slugs */
@@ -16,7 +16,7 @@ export interface GuideProgressData {
 }
 
 export function getProgress(): GuideProgressData {
-  if (typeof window === "undefined") return {};
+  if (typeof window === 'undefined') return {};
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : {};

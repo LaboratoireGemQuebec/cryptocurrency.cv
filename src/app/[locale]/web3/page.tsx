@@ -1,12 +1,12 @@
-import { setRequestLocale } from "next-intl/server";
-import { generateSEOMetadata } from "@/lib/seo";
-import { getNewsByCategory } from "@/lib/crypto-news";
-import { NEWS_VERTICALS } from "@/lib/verticals";
-import { classifyArticle } from "@/lib/article-classifier";
-import VerticalPage from "@/components/VerticalPage";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import { generateSEOMetadata } from '@/lib/seo';
+import { getNewsByCategory } from '@/lib/crypto-news';
+import { NEWS_VERTICALS } from '@/lib/verticals';
+import { classifyArticle } from '@/lib/article-classifier';
+import VerticalPage from '@/components/VerticalPage';
+import type { Metadata } from 'next';
 
-const VERTICAL = NEWS_VERTICALS.find((v) => v.slug === "web3")!;
+const VERTICAL = NEWS_VERTICALS.find((v) => v.slug === 'web3')!;
 
 export const revalidate = 300;
 
@@ -15,11 +15,11 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Web3 News — Decentralized Apps, Social, Gaming, Metaverse",
+    title: 'Web3 News — Decentralized Apps, Social, Gaming, Metaverse',
     description: VERTICAL.description,
-    path: "/web3",
+    path: '/web3',
     locale,
-    tags: ["web3", "dapps", "gaming", "metaverse", "identity", "social"],
+    tags: ['web3', 'dapps', 'gaming', 'metaverse', 'identity', 'social'],
   });
 }
 
@@ -29,7 +29,7 @@ export default async function Web3Page({ params }: Props) {
 
   let allArticles;
   try {
-    allArticles = await getNewsByCategory("nft", 50);
+    allArticles = await getNewsByCategory('nft', 50);
   } catch {
     allArticles = { articles: [], totalCount: 0 };
   }
@@ -38,9 +38,9 @@ export default async function Web3Page({ params }: Props) {
     const verticals = classifyArticle({
       url: article.link,
       title: article.title,
-      description: article.description ?? "",
+      description: article.description ?? '',
     });
-    return verticals.includes("web3");
+    return verticals.includes('web3');
   });
 
   return (

@@ -19,6 +19,7 @@
  */
 
 import { aiCache, generateCacheKey, withCache } from './cache';
+import { withSpan, metrics } from '@/lib/telemetry';
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const DEFAULT_MODEL = 'llama-3.3-70b-versatile';
@@ -105,35 +106,53 @@ export async function callGroq(
     body.response_format = { type: 'json_object' };
   }
 
-  const response = await fetch(GROQ_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify(body),
-  });
+  return withSpan('ai.inference.groq', {
+    'ai.model': model,
+    'ai.provider': 'groq',
+    'ai.temperature': temperature,
+  }, async (span) => {
+    const start = Date.now();
 
-  if (!response.ok) {
-    const error = await response.text();
-    if (response.status === 401) {
-      throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+    const response = await fetch(GROQ_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      metrics.aiErrors.add(1, { model, provider: 'groq' });
+      if (response.status === 401) {
+        throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+      }
+      throw new Error(`Groq API error: ${response.status} - ${error}`);
     }
-    throw new Error(`Groq API error: ${response.status} - ${error}`);
-  }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content || '';
-  const usage = data.usage || {};
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content || '';
+    const usage = data.usage || {};
+    const latencyMs = Date.now() - start;
 
-  return {
-    content,
-    usage: {
-      promptTokens: usage.prompt_tokens || 0,
-      completionTokens: usage.completion_tokens || 0,
-      totalTokens: usage.total_tokens || 0,
-    },
-  };
+    const promptTokens = usage.prompt_tokens || 0;
+    const completionTokens = usage.completion_tokens || 0;
+    const totalTokens = usage.total_tokens || 0;
+
+    span.setAttribute('ai.prompt_tokens', promptTokens);
+    span.setAttribute('ai.completion_tokens', completionTokens);
+    span.setAttribute('ai.total_tokens', totalTokens);
+    span.setAttribute('ai.latency_ms', latencyMs);
+    metrics.aiInferences.add(1, { model, provider: 'groq' });
+    metrics.aiLatency.record(latencyMs, { model });
+    metrics.aiTokens.add(totalTokens, { model });
+
+    return {
+      content,
+      usage: { promptTokens, completionTokens, totalTokens },
+    };
+  });
 }
 
 /**
