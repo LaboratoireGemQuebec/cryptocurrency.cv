@@ -6,8 +6,8 @@
  * Design System — The Block-inspired editorial crypto news
  */
 
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 /* ============================================
    THEME — Tailwind v4 overrides
@@ -30,7 +30,8 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
   --shadow-card: 0 0 0 1px rgb(0 0 0 / 0.03), 0 2px 4px 0 rgb(0 0 0 / 0.04);
-  --shadow-card-hover: 0 0 0 1px rgb(0 0 0 / 0.04), 0 8px 16px -4px rgb(0 0 0 / 0.08), 0 2px 4px -1px rgb(0 0 0 / 0.04);
+  --shadow-card-hover:
+    0 0 0 1px rgb(0 0 0 / 0.04), 0 8px 16px -4px rgb(0 0 0 / 0.08), 0 2px 4px -1px rgb(0 0 0 / 0.04);
   --shadow-dropdown: 0 4px 24px -4px rgb(0 0 0 / 0.12), 0 8px 16px -8px rgb(0 0 0 / 0.08);
 
   /* Font stacks */
@@ -119,7 +120,10 @@ html.theme-transitioning,
 html.theme-transitioning *,
 html.theme-transitioning *::before,
 html.theme-transitioning *::after {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease !important;
 }
 
 /* ============================================
@@ -157,7 +161,12 @@ body {
    TYPOGRAPHY
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.2;
@@ -212,40 +221,80 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes dropdown-in {
-  from { opacity: 0; transform: translateY(-4px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 @keyframes waveform {
-  0%, 100% { height: 4px; }
-  25% { height: 70%; }
-  50% { height: 40%; }
-  75% { height: 90%; }
+  0%,
+  100% {
+    height: 4px;
+  }
+  25% {
+    height: 70%;
+  }
+  50% {
+    height: 40%;
+  }
+  75% {
+    height: 90%;
+  }
 }
 
 .animate-waveform {
@@ -313,35 +362,116 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Category badge colors */
-.cat-bitcoin { background: #fef3c7; color: #92400e; }
-.cat-ethereum { background: #ede9fe; color: #5b21b6; }
-.cat-defi { background: #d1fae5; color: #065f46; }
-.cat-nft { background: #f3e8ff; color: #6b21a8; }
-.cat-regulation { background: #fee2e2; color: #991b1b; }
-.cat-altcoins { background: #cffafe; color: #155e75; }
-.cat-trading { background: #fef9c3; color: #854d0e; }
-.cat-mining { background: #f3f4f6; color: #374151; }
-.cat-web3 { background: #fce7f3; color: #9d174d; }
+.cat-bitcoin {
+  background: #fef3c7;
+  color: #92400e;
+}
+.cat-ethereum {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+.cat-defi {
+  background: #d1fae5;
+  color: #065f46;
+}
+.cat-nft {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+.cat-regulation {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.cat-altcoins {
+  background: #cffafe;
+  color: #155e75;
+}
+.cat-trading {
+  background: #fef9c3;
+  color: #854d0e;
+}
+.cat-mining {
+  background: #f3f4f6;
+  color: #374151;
+}
+.cat-web3 {
+  background: #fce7f3;
+  color: #9d174d;
+}
 
-.dark .cat-bitcoin { background: #78350f; color: #fde68a; }
-.dark .cat-ethereum { background: #4c1d95; color: #c4b5fd; }
-.dark .cat-defi { background: #064e3b; color: #6ee7b7; }
-.dark .cat-nft { background: #581c87; color: #d8b4fe; }
-.dark .cat-regulation { background: #7f1d1d; color: #fca5a5; }
-.dark .cat-altcoins { background: #164e63; color: #67e8f9; }
-.dark .cat-trading { background: #713f12; color: #fde047; }
-.dark .cat-mining { background: #374151; color: #d1d5db; }
-.dark .cat-web3 { background: #831843; color: #f9a8d4; }
+.dark .cat-bitcoin {
+  background: #78350f;
+  color: #fde68a;
+}
+.dark .cat-ethereum {
+  background: #4c1d95;
+  color: #c4b5fd;
+}
+.dark .cat-defi {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+.dark .cat-nft {
+  background: #581c87;
+  color: #d8b4fe;
+}
+.dark .cat-regulation {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+.dark .cat-altcoins {
+  background: #164e63;
+  color: #67e8f9;
+}
+.dark .cat-trading {
+  background: #713f12;
+  color: #fde047;
+}
+.dark .cat-mining {
+  background: #374151;
+  color: #d1d5db;
+}
+.dark .cat-web3 {
+  background: #831843;
+  color: #f9a8d4;
+}
 
-.midnight .cat-bitcoin { background: #78350f; color: #fde68a; }
-.midnight .cat-ethereum { background: #4c1d95; color: #c4b5fd; }
-.midnight .cat-defi { background: #064e3b; color: #6ee7b7; }
-.midnight .cat-nft { background: #581c87; color: #d8b4fe; }
-.midnight .cat-regulation { background: #7f1d1d; color: #fca5a5; }
-.midnight .cat-altcoins { background: #164e63; color: #67e8f9; }
-.midnight .cat-trading { background: #713f12; color: #fde047; }
-.midnight .cat-mining { background: #374151; color: #d1d5db; }
-.midnight .cat-web3 { background: #831843; color: #f9a8d4; }
+.midnight .cat-bitcoin {
+  background: #78350f;
+  color: #fde68a;
+}
+.midnight .cat-ethereum {
+  background: #4c1d95;
+  color: #c4b5fd;
+}
+.midnight .cat-defi {
+  background: #064e3b;
+  color: #6ee7b7;
+}
+.midnight .cat-nft {
+  background: #581c87;
+  color: #d8b4fe;
+}
+.midnight .cat-regulation {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+.midnight .cat-altcoins {
+  background: #164e63;
+  color: #67e8f9;
+}
+.midnight .cat-trading {
+  background: #713f12;
+  color: #fde047;
+}
+.midnight .cat-mining {
+  background: #374151;
+  color: #d1d5db;
+}
+.midnight .cat-web3 {
+  background: #831843;
+  color: #f9a8d4;
+}
 
 /* Focus ring — refined with ring-offset for spacing */
 :focus-visible {
@@ -381,7 +511,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Elevated card effect — subtle lift on hover */
 .card-elevated {
   box-shadow: var(--shadow-card);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .card-elevated:hover {
@@ -437,20 +569,38 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE TYPOGRAPHY
    ============================================ */
 
-h1 { font-size: 1.5rem; } /* text-2xl on mobile */
-h2 { font-size: 1.25rem; }
-h3 { font-size: 1.125rem; }
+h1 {
+  font-size: 1.5rem;
+} /* text-2xl on mobile */
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
 
 @media (width >= 640px) {
-  h1 { font-size: 1.875rem; } /* text-3xl */
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
+  h1 {
+    font-size: 1.875rem;
+  } /* text-3xl */
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (width >= 1024px) {
-  h1 { font-size: 2.25rem; } /* text-4xl */
-  h2 { font-size: 1.875rem; }
-  h3 { font-size: 1.5rem; }
+  h1 {
+    font-size: 2.25rem;
+  } /* text-4xl */
+  h2 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Section headings — professional editorial style */
@@ -517,7 +667,9 @@ h3 { font-size: 1.125rem; }
     min-width: 44px;
   }
 
-  button, a, [role="button"] {
+  button,
+  a,
+  [role='button'] {
     min-height: 44px;
   }
 
@@ -532,7 +684,9 @@ h3 { font-size: 1.125rem; }
    ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -546,7 +700,9 @@ h3 { font-size: 1.125rem; }
 
 @media print {
   /* Hide non-essential elements */
-  header, footer, nav,
+  header,
+  footer,
+  nav,
   .skip-link,
   .live-dot,
   [data-ticker],
@@ -554,9 +710,9 @@ h3 { font-size: 1.125rem; }
   .newsletter-cta,
   .mobile-menu,
   .price-ticker-strip,
-  button[aria-label="Toggle menu"],
-  button[aria-label="Toggle theme"],
-  button[aria-label="Search (Cmd+K)"] {
+  button[aria-label='Toggle menu'],
+  button[aria-label='Toggle theme'],
+  button[aria-label='Search (Cmd+K)'] {
     display: none !important;
   }
 
@@ -578,15 +734,15 @@ h3 { font-size: 1.125rem; }
 
   /* Show full URLs after links */
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
     font-size: 0.85em;
     color: #555 !important;
     word-break: break-all;
   }
 
   /* Don't show URLs for internal navigation links */
-  a[href^="/"]::after,
-  a[href^="#"]::after {
+  a[href^='/']::after,
+  a[href^='#']::after {
     content: none;
   }
 
@@ -597,7 +753,9 @@ h3 { font-size: 1.125rem; }
   }
 
   /* Avoid page breaks inside cards and articles */
-  article, .card, tr {
+  article,
+  .card,
+  tr {
     break-inside: avoid;
   }
 
