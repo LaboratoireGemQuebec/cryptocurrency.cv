@@ -1,0 +1,1 @@
+Create advertise page with professional layout, placeholder stats, and all required sections.

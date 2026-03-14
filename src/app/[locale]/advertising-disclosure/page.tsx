@@ -1,0 +1,1 @@
+Create advertising disclosure page with editorial independence, labeling, compensation types, and complaint contact info.

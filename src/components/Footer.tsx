@@ -65,6 +65,8 @@ const FOOTER_SECTIONS = [
       { label: "Learn", href: "/learn" },
       { label: "Blog", href: "/blog" },
       { label: "Status", href: "/status" },
+        { label: "Advertise", href: "/advertise" },
+        { label: "Advertising Disclosure", href: "/advertising-disclosure" },
     ],
   },
 ];
@@ -149,6 +151,12 @@ function FooterStructuredData() {
         "@type": "ContactPoint",
         email: "support@cryptocurrency.cv",
         contactType: "customer support",
+        },
+        advertisingContact: {
+          "@type": "ContactPoint",
+          email: "ads@cryptocurrency.cv",
+          contactType: "advertising",
+          url: "https://cryptocurrency.cv/advertise",
       },
     },
   };
