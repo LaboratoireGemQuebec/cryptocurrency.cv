@@ -2494,9 +2494,7 @@ export function normalizeAuthorName(raw: string): string {
   // Strip email in angle brackets: "John <john@example.com>" → "John"
   name = name.replace(/<[^>]+>/, '').trim();
   // Title-case
-  name = name
-    .toLowerCase()
-    .replace(/(?:^|\s|-)\S/g, (ch) => ch.toUpperCase());
+  name = name.toLowerCase().replace(/(?:^|\s|-)\S/g, (ch) => ch.toUpperCase());
   return name;
 }
 
@@ -2591,7 +2589,13 @@ function parseRSSFeed(
     const pubDateStr = pubDateMatch?.[1] || '';
 
     // Extract author from dc:creator or <author>
-    const rawAuthor = (authorMatch?.[1] || authorMatch?.[2] || authorMatch?.[3] || authorMatch?.[4] || '').trim();
+    const rawAuthor = (
+      authorMatch?.[1] ||
+      authorMatch?.[2] ||
+      authorMatch?.[3] ||
+      authorMatch?.[4] ||
+      ''
+    ).trim();
     const normalizedAuthor = rawAuthor ? normalizeAuthorName(rawAuthor) : undefined;
 
     if (title && link) {
@@ -3989,6 +3993,147 @@ export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> 
     sources: [...new Set(recentArticles.map((a) => a.source))],
     fetchedAt: new Date().toISOString(),
   };
+}
+
+/**
+ * Get opinion / editorial articles from all sources.
+ */
+export async function getOpinionNews(
+  limit: number = 20,
+  options?: { category?: string; page?: number; perPage?: number },
+): Promise<NewsResponse> {
+  const normalizedLimit = Math.min(Math.max(1, limit), 50);
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
+
+  let opinionArticles = allArticles.filter((a) => a.contentType === 'opinion');
+
+  if (options?.category) {
+    const cat = options.category.toLowerCase();
+    opinionArticles = opinionArticles.filter((a) => a.category === cat);
+  }
+
+  const page = options?.page || 1;
+  const perPage = options?.perPage || normalizedLimit;
+  const startIndex = (page - 1) * perPage;
+  const paginatedArticles = opinionArticles.slice(startIndex, startIndex + perPage);
+
+  return {
+    articles: paginatedArticles,
+    totalCount: opinionArticles.length,
+    sources: [...new Set(opinionArticles.map((a) => a.source))],
+    fetchedAt: new Date().toISOString(),
+    ...(options?.page && {
+      pagination: {
+        page,
+        perPage,
+        totalPages: Math.ceil(opinionArticles.length / perPage),
+        hasMore: startIndex + perPage < opinionArticles.length,
+      },
+    }),
+  } as NewsResponse;
+}
+
+/**
+ * Get articles by a specific author (across all sources).
+ */
+export async function getArticlesByAuthor(
+  authorSlug: string,
+  limit: number = 20,
+  options?: { source?: string; page?: number; perPage?: number },
+): Promise<NewsResponse> {
+  const normalizedLimit = Math.min(Math.max(1, limit), 50);
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
+
+  let authorArticles = allArticles.filter((a) => a.authorSlug === authorSlug);
+
+  if (options?.source) {
+    authorArticles = authorArticles.filter((a) => a.sourceKey === options.source);
+  }
+
+  const page = options?.page || 1;
+  const perPage = options?.perPage || normalizedLimit;
+  const startIndex = (page - 1) * perPage;
+  const paginatedArticles = authorArticles.slice(startIndex, startIndex + perPage);
+
+  return {
+    articles: paginatedArticles,
+    totalCount: authorArticles.length,
+    sources: [...new Set(authorArticles.map((a) => a.source))],
+    fetchedAt: new Date().toISOString(),
+    ...(options?.page && {
+      pagination: {
+        page,
+        perPage,
+        totalPages: Math.ceil(authorArticles.length / perPage),
+        hasMore: startIndex + perPage < authorArticles.length,
+      },
+    }),
+  } as NewsResponse;
+}
+
+export interface AuthorSummary {
+  slug: string;
+  name: string;
+  sources: string[];
+  articleCount: number;
+  firstSeen: string;
+  lastSeen: string;
+}
+
+/**
+ * Get all known authors from current feed data.
+ */
+export async function getAllAuthors(
+  options?: { sort?: 'articles' | 'recent' | 'name'; search?: string; limit?: number; offset?: number },
+): Promise<{ authors: AuthorSummary[]; total: number; hasMore: boolean }> {
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
+
+  // Build author map
+  const authorMap = new Map<string, AuthorSummary>();
+  for (const a of allArticles) {
+    if (!a.author || !a.authorSlug) continue;
+    const existing = authorMap.get(a.authorSlug);
+    if (existing) {
+      existing.articleCount++;
+      if (!existing.sources.includes(a.source)) existing.sources.push(a.source);
+      if (a.pubDate < existing.firstSeen) existing.firstSeen = a.pubDate;
+      if (a.pubDate > existing.lastSeen) existing.lastSeen = a.pubDate;
+    } else {
+      authorMap.set(a.authorSlug, {
+        slug: a.authorSlug,
+        name: a.author,
+        sources: [a.source],
+        articleCount: 1,
+        firstSeen: a.pubDate,
+        lastSeen: a.pubDate,
+      });
+    }
+  }
+
+  let authors = Array.from(authorMap.values());
+
+  // Filter by search
+  if (options?.search) {
+    const q = options.search.toLowerCase();
+    authors = authors.filter((a) => a.name.toLowerCase().includes(q));
+  }
+
+  // Sort
+  const sort = options?.sort || 'articles';
+  if (sort === 'articles') {
+    authors.sort((a, b) => b.articleCount - a.articleCount);
+  } else if (sort === 'recent') {
+    authors.sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime());
+  } else {
+    authors.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  const total = authors.length;
+  const offset = options?.offset || 0;
+  const limit = options?.limit || 50;
+  authors = authors.slice(offset, offset + limit);
+
+  return { authors, total, hasMore: offset + limit < total };
 }
 
 /**

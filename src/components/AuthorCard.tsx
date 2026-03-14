@@ -43,9 +43,9 @@ export default function AuthorCard({ author }: { author: Author }) {
   return (
     <Link
       href={`/author/${author.slug}`}
-      className="group block rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:shadow-md hover:border-[var(--color-accent)]/40"
+      className="group block rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-accent)]/40 hover:shadow-md"
     >
-      <div className="flex items-center gap-3 mb-3">
+      <div className="mb-3 flex items-center gap-3">
         {/* Avatar */}
         {author.avatarUrl ? (
           <img
@@ -61,12 +61,10 @@ export default function AuthorCard({ author }: { author: Author }) {
           </div>
         )}
         <div className="min-w-0">
-          <h3 className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors truncate">
+          <h3 className="truncate text-sm font-semibold text-[var(--color-text-primary)] transition-colors group-hover:text-[var(--color-accent)]">
             {author.name}
           </h3>
-          <p className="text-xs text-[var(--color-text-tertiary)] truncate">
-            {sourcesLabel}
-          </p>
+          <p className="truncate text-xs text-[var(--color-text-tertiary)]">{sourcesLabel}</p>
         </div>
       </div>
       <p className="text-xs text-[var(--color-text-secondary)]">

@@ -28,18 +28,12 @@ export async function GET(request: Request, { params }: Props) {
     const result = await getAuthorBySlug(slug, { limit, offset, source });
 
     if (!result) {
-      return NextResponse.json(
-        { error: 'Author not found' },
-        { status: 404 },
-      );
+      return NextResponse.json({ error: 'Author not found' }, { status: 404 });
     }
 
     return NextResponse.json(result);
   } catch (error) {
     console.error(`[/api/authors/${slug}] Error:`, error);
-    return NextResponse.json(
-      { error: 'Failed to fetch author' },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: 'Failed to fetch author' }, { status: 500 });
   }
 }

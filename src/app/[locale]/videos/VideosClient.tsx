@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
-import VideoCard from "@/components/VideoCard";
-import VideoPlayer from "@/components/VideoPlayer";
-import { Skeleton } from "@/components/ui/Skeleton";
-import { VIDEO_CATEGORIES, type Video, type VideoCategory } from "@/lib/video-sources";
-import { cn } from "@/lib/utils";
-import { Link } from "@/i18n/navigation";
+import { useState, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
+import VideoCard from '@/components/VideoCard';
+import VideoPlayer from '@/components/VideoPlayer';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { VIDEO_CATEGORIES, type Video, type VideoCategory } from '@/lib/video-sources';
+import { cn } from '@/lib/utils';
+import { Link } from '@/i18n/navigation';
 
 interface VideosResponse {
   videos: Video[];
@@ -20,14 +20,14 @@ interface VideosResponse {
 const PAGE_SIZE = 21;
 
 export default function VideosClient({ initialSource }: { initialSource?: string }) {
-  const t = useTranslations("videos");
+  const t = useTranslations('videos');
   const [videos, setVideos] = useState<Video[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
   const [hasMore, setHasMore] = useState(false);
   const [offset, setOffset] = useState(0);
-  const [activeCategory, setActiveCategory] = useState<VideoCategory | "all">("all");
+  const [activeCategory, setActiveCategory] = useState<VideoCategory | 'all'>('all');
   const [activeVideo, setActiveVideo] = useState<Video | null>(null);
 
   const fetchVideos = useCallback(
@@ -41,11 +41,11 @@ export default function VideosClient({ initialSource }: { initialSource?: string
           limit: String(PAGE_SIZE),
           offset: String(newOffset),
         });
-        if (initialSource) params.set("source", initialSource);
-        if (activeCategory !== "all") params.set("category", activeCategory);
+        if (initialSource) params.set('source', initialSource);
+        if (activeCategory !== 'all') params.set('category', activeCategory);
 
         const res = await fetch(`/api/videos?${params}`);
-        if (!res.ok) throw new Error("Failed to fetch");
+        if (!res.ok) throw new Error('Failed to fetch');
         const data: VideosResponse = await res.json();
 
         if (reset) {
@@ -63,7 +63,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
         setLoadingMore(false);
       }
     },
-    [offset, activeCategory, initialSource]
+    [offset, activeCategory, initialSource],
   );
 
   // Fetch on mount and when category changes
@@ -79,16 +79,16 @@ export default function VideosClient({ initialSource }: { initialSource?: string
     <>
       {/* Category tabs (hidden on per-source pages) */}
       {!initialSource && (
-        <div className="flex gap-2 overflow-x-auto pb-1 mb-8 scrollbar-hide">
+        <div className="scrollbar-hide mb-8 flex gap-2 overflow-x-auto pb-1">
           {VIDEO_CATEGORIES.map((cat) => (
             <button
               key={cat.value}
               onClick={() => setActiveCategory(cat.value)}
               className={cn(
-                "shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
+                'shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
                 activeCategory === cat.value
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+                  ? 'bg-[var(--color-accent)] text-white'
+                  : 'bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]',
               )}
             >
               {t(`category.${cat.value}`)}
@@ -100,7 +100,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
       {loading ? (
         <div className="space-y-8">
           {/* Featured skeleton */}
-          <div className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
+          <div className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
             <Skeleton className="aspect-video w-full rounded-xl" />
             <div className="space-y-4">
               <Skeleton className="h-8 w-3/4" />
@@ -121,8 +121,8 @@ export default function VideosClient({ initialSource }: { initialSource?: string
           </div>
         </div>
       ) : videos.length === 0 ? (
-        <div className="text-center py-20">
-          <p className="text-[var(--color-text-secondary)] text-lg">{t("noVideos")}</p>
+        <div className="py-20 text-center">
+          <p className="text-lg text-[var(--color-text-secondary)]">{t('noVideos')}</p>
         </div>
       ) : (
         <div className="space-y-10">
@@ -150,24 +150,22 @@ export default function VideosClient({ initialSource }: { initialSource?: string
               <button
                 onClick={() => fetchVideos(false)}
                 disabled={loadingMore}
-                className="rounded-lg bg-[var(--color-surface-secondary)] px-6 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition-colors disabled:opacity-50"
+                className="rounded-lg bg-[var(--color-surface-secondary)] px-6 py-2.5 text-sm font-medium text-[var(--color-text-primary)] transition-colors hover:bg-[var(--color-surface-tertiary)] disabled:opacity-50"
               >
-                {loadingMore ? t("loading") : t("loadMore")}
+                {loadingMore ? t('loading') : t('loadMore')}
               </button>
             </div>
           )}
 
           {/* Total count */}
           <p className="text-center text-xs text-[var(--color-text-tertiary)]">
-            {t("showingCount", { shown: videos.length, total })}
+            {t('showingCount', { shown: videos.length, total })}
           </p>
         </div>
       )}
 
       {/* Video player modal */}
-      {activeVideo && (
-        <VideoPlayer video={activeVideo} onClose={() => setActiveVideo(null)} />
-      )}
+      {activeVideo && <VideoPlayer video={activeVideo} onClose={() => setActiveVideo(null)} />}
     </>
   );
 }

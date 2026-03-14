@@ -851,5 +851,21 @@
     "errorInvalid": "Please enter a valid email address",
     "errorGeneric": "Something went wrong. Please try again.",
     "freeForever": "Free forever. No spam. Unsubscribe anytime."
+  },
+  "videos": {
+    "title": "Crypto Video News & Analysis",
+    "subtitle": "The latest video content from top crypto YouTube channels — news, education, DeFi deep dives, and market analysis.",
+    "noVideos": "No videos found. Check back soon!",
+    "loadMore": "Load more videos",
+    "loading": "Loading...",
+    "showingCount": "Showing {shown} of {total} videos",
+    "viewAll": "View all videos",
+    "latestVideos": "Latest Videos",
+    "category.all": "All",
+    "category.news": "News",
+    "category.education": "Education",
+    "category.analysis": "Analysis",
+    "category.interviews": "Interviews",
+    "category.defi": "DeFi"
   }
 }

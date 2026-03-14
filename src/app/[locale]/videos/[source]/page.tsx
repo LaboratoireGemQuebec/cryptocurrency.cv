@@ -1,14 +1,14 @@
-import { setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { generateSEOMetadata } from "@/lib/seo";
-import { VIDEO_SOURCES, getVideoSourceBySlug } from "@/lib/video-sources";
-import { Link } from "@/i18n/navigation";
-import { ChevronLeft } from "lucide-react";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { generateSEOMetadata } from '@/lib/seo';
+import { VIDEO_SOURCES, getVideoSourceBySlug } from '@/lib/video-sources';
+import { Link } from '@/i18n/navigation';
+import { ChevronLeft } from 'lucide-react';
+import type { Metadata } from 'next';
 
-import VideosClient from "../VideosClient";
+import VideosClient from '../VideosClient';
 
 type Props = { params: Promise<{ locale: string; source: string }> };
 
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Watch the latest crypto video content from ${source.name}. News, analysis, and insights about Bitcoin, Ethereum, DeFi, and more.`,
     path: `/videos/${source.slug}`,
     locale,
-    tags: [source.name, "crypto videos", "crypto news", source.category],
+    tags: [source.name, 'crypto videos', 'crypto news', source.category],
   });
 }
 
@@ -44,7 +44,7 @@ export default async function VideoSourcePage({ params }: Props) {
         {/* Back link */}
         <Link
           href="/videos"
-          className="inline-flex items-center gap-1 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors mb-6"
+          className="mb-6 inline-flex items-center gap-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
         >
           <ChevronLeft className="h-4 w-4" />
           All Videos
@@ -52,11 +52,11 @@ export default async function VideoSourcePage({ params }: Props) {
 
         {/* Channel header */}
         <div className="mb-8">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold tracking-tight">
+          <h1 className="font-serif text-3xl font-bold tracking-tight md:text-4xl">
             {source.name}
           </h1>
-          <p className="mt-2 text-[var(--color-text-secondary)] text-base">
-            {source.category.charAt(0).toUpperCase() + source.category.slice(1)} videos from{" "}
+          <p className="mt-2 text-base text-[var(--color-text-secondary)]">
+            {source.category.charAt(0).toUpperCase() + source.category.slice(1)} videos from{' '}
             <a
               href={source.channelUrl}
               target="_blank"

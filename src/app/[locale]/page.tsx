@@ -238,6 +238,34 @@ export default async function HomePage({ params }: Props) {
           articles={regulationArticles}
         />
 
+        {/* ── Latest Videos ── */}
+        <section className="border-b border-[var(--color-border)]">
+          <div className="container-main py-8 lg:py-10">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-bold font-serif">Latest Videos</h2>
+              <Link
+                href="/videos"
+                className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+              >
+                View all videos →
+              </Link>
+            </div>
+            <Suspense fallback={
+              <div className="flex gap-4 overflow-hidden">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="shrink-0 w-72 space-y-2">
+                    <Skeleton className="aspect-video w-full rounded-lg" />
+                    <Skeleton className="h-4 w-3/4" />
+                    <Skeleton className="h-3 w-1/2" />
+                  </div>
+                ))}
+              </div>
+            }>
+              <LatestVideosRow />
+            </Suspense>
+          </div>
+        </section>
+
         {/* ── Top Movers (Gainers / Losers) ── */}
         <Suspense
           fallback={

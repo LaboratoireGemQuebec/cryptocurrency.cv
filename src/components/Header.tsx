@@ -52,6 +52,7 @@ const NAV_ITEMS = [
       { label: "Regulation", href: "/category/regulation" },
       { label: "Altcoins", href: "/category/altcoins" },
       { label: "Podcast", href: "/podcast" },
+      { label: "Videos", href: "/videos" },
     ],
   },
   { label: "Intelligence", href: "/intelligence" },
