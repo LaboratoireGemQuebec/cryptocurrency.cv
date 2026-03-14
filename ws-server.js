@@ -238,24 +238,35 @@ const CONN_STATE_TTL = 300; // 5 min — enough for reconnection window
 async function redisSaveConnectionState(clientId, clientData) {
   if (!redisPub) return;
   try {
-    const state = {
-      instanceId: INSTANCE_ID,
-      connectedAt: clientData.connectedAt,
-      lastPingAt: clientData.lastPing,
-      clientIp: clientData.ip,
-      channels: Array.from(clientData.channels || []),
-      subscriptions: clientData.subscription || {},
-      alertSubscriptions: Array.from(clientData.alertSubscriptions || []),
-      streamPrices: !!clientData.streamPrices,
-      streamWhales: !!clientData.streamWhales,
-      streamSentiment: !!clientData.streamSentiment,
-    };
-    await redisPub.set(`ws:conn:${clientId}`, JSON.stringify(state), {
-      EX: CONN_STATE_TTL,
-    });
+    const channels = Array.from(clientData.channels || []);
+    const topics = Array.from(clientData.topics || []);
+    const alertSubs = Array.from(clientData.alertSubscriptions || []);
 
-    // Also maintain per-channel membership sets for O(1) lookup
-    for (const ch of state.channels) {
+    // Store connection metadata as a Redis hash for granular access
+    await redisPub.hSet(`ws:conn:${clientId}`, {
+      instanceId: INSTANCE_ID,
+      connectedAt: String(clientData.connectedAt),
+      lastPingAt: String(clientData.lastPing),
+      clientIp: clientData.ip || '',
+      channels: JSON.stringify(channels),
+      subscriptions: JSON.stringify(clientData.subscription || {}),
+      topics: JSON.stringify(topics),
+      alertSubscriptions: JSON.stringify(alertSubs),
+      streamPrices: clientData.streamPrices ? '1' : '0',
+      streamWhales: clientData.streamWhales ? '1' : '0',
+      streamSentiment: clientData.streamSentiment ? '1' : '0',
+    });
+    await redisPub.expire(`ws:conn:${clientId}`, CONN_STATE_TTL);
+
+    // Store subscriptions in a Redis set for O(1) lookup by channel
+    await redisPub.del(`ws:subs:${clientId}`);
+    if (channels.length > 0) {
+      await redisPub.sAdd(`ws:subs:${clientId}`, ...channels);
+      await redisPub.expire(`ws:subs:${clientId}`, CONN_STATE_TTL);
+    }
+
+    // Maintain per-channel membership sets for cross-instance fan-out
+    for (const ch of channels) {
       await redisPub.sAdd(`ws:channel:${ch}:members`, clientId);
       await redisPub.expire(`ws:channel:${ch}:members`, CONN_STATE_TTL);
     }
@@ -268,9 +279,21 @@ async function redisSaveConnectionState(clientId, clientData) {
 async function redisLoadConnectionState(clientId) {
   if (!redisPub) return null;
   try {
-    const raw = await redisPub.get(`ws:conn:${clientId}`);
-    if (!raw) return null;
-    return JSON.parse(raw);
+    const raw = await redisPub.hGetAll(`ws:conn:${clientId}`);
+    if (!raw || Object.keys(raw).length === 0) return null;
+    return {
+      instanceId: raw.instanceId,
+      connectedAt: parseInt(raw.connectedAt, 10),
+      lastPingAt: parseInt(raw.lastPingAt, 10),
+      clientIp: raw.clientIp,
+      channels: JSON.parse(raw.channels || '[]'),
+      subscriptions: JSON.parse(raw.subscriptions || '{}'),
+      topics: JSON.parse(raw.topics || '[]'),
+      alertSubscriptions: JSON.parse(raw.alertSubscriptions || '[]'),
+      streamPrices: raw.streamPrices === '1',
+      streamWhales: raw.streamWhales === '1',
+      streamSentiment: raw.streamSentiment === '1',
+    };
   } catch (err) {
     console.error('[redis] Load connection state error:', err.message);
     return null;
@@ -282,6 +305,7 @@ async function redisRemoveConnectionState(clientId, clientData) {
   if (!redisPub) return;
   try {
     await redisPub.del(`ws:conn:${clientId}`);
+    await redisPub.del(`ws:subs:${clientId}`);
     // Remove from per-channel membership sets
     if (clientData) {
       for (const ch of clientData.channels || []) {
@@ -845,6 +869,12 @@ const healthServer = http.createServer((req, res) => {
       `# HELP ws_leader Is this instance the leader`,
       `# TYPE ws_leader gauge`,
       `ws_leader ${isLeader ? 1 : 0}`,
+      `# HELP ws_auth_failures_total Authentication failures`,
+      `# TYPE ws_auth_failures_total counter`,
+      `ws_auth_failures_total ${metricsCounters.authFailures}`,
+      `# HELP ws_connection_limit_hits_total Connection limit rejections`,
+      `# TYPE ws_connection_limit_hits_total counter`,
+      `ws_connection_limit_hits_total ${metricsCounters.connectionLimitHits}`,
     ].join('\n');
 
     res.writeHead(200, { 'Content-Type': 'text/plain; version=0.0.4; charset=utf-8' });
@@ -990,6 +1020,14 @@ const server = http.createServer(async (req, res) => {
       '# HELP ws_leader Is this instance the leader',
       '# TYPE ws_leader gauge',
       `ws_leader ${isLeader ? 1 : 0}`,
+      '',
+      '# HELP ws_auth_failures_total Authentication failures',
+      '# TYPE ws_auth_failures_total counter',
+      `ws_auth_failures_total ${metricsCounters.authFailures}`,
+      '',
+      '# HELP ws_connection_limit_hits_total Connection limit rejections',
+      '# TYPE ws_connection_limit_hits_total counter',
+      `ws_connection_limit_hits_total ${metricsCounters.connectionLimitHits}`,
       '',
     ].join('\n');
 
@@ -1601,6 +1639,15 @@ async function handleRestore(clientId, previousClientId) {
     redisTrackStreamSubscribe('sentiment');
   }
 
+  // Restore topic subscriptions
+  if (state.topics) {
+    for (const topic of state.topics) {
+      if (isValidTopic(topic)) {
+        client.topics.add(topic);
+      }
+    }
+  }
+
   // Clean up old session
   await redisRemoveConnectionState(previousClientId, null);
 
@@ -1614,6 +1661,7 @@ async function handleRestore(clientId, previousClientId) {
         previousClientId,
         subscription: client.subscription,
         channels: Array.from(client.channels),
+        topics: Array.from(client.topics),
         alertSubscriptions: Array.from(client.alertSubscriptions),
         streamPrices: client.streamPrices,
         streamWhales: client.streamWhales,
@@ -2601,10 +2649,11 @@ async function gracefulShutdown(signal) {
   wss.clients.forEach((ws) => {
     try {
       if (ws.readyState === WebSocket.OPEN) {
+        // Send reconnect directive so clients initiate reconnection immediately
         ws.send(
           JSON.stringify({
-            type: 'system',
-            event: 'server_shutdown',
+            type: 'reconnect',
+            reason: 'server-shutdown',
             message: 'Server is restarting. Please reconnect.',
             reconnectAfter: 5000,
             reconnect: shutdownGuidance,

@@ -48,6 +48,8 @@ export type MessageType =
   | 'channel_left'
   | 'alerts_subscribed'
   | 'alerts_unsubscribed'
+  | 'topics_subscribed'
+  | 'topics_unsubscribed'
   | 'restored'
   | 'restore_failed'
   | 'reconnect'
@@ -95,6 +97,7 @@ export class CryptoNewsWS {
   } = { sources: [], categories: [], keywords: [], coins: [] };
   private channels = new Set<string>();
   private alertSubscriptions = new Set<string>();
+  private topicSubscriptions = new Set<string>();
   private streamFlags = {
     prices: false,
     whales: false,
@@ -222,6 +225,22 @@ export class CryptoNewsWS {
       this.alertSubscriptions.clear();
     }
     this.send({ type: 'unsubscribe_alerts', payload: { ruleIds } });
+  }
+
+  /** Subscribe to fine-grained topics (e.g. 'prices:BTC', 'news:breaking', 'whales:*'). */
+  subscribeTopics(topics: string[]): void {
+    for (const t of topics) this.topicSubscriptions.add(t);
+    this.send({ type: 'subscribe_topics', payload: { topics } });
+  }
+
+  /** Unsubscribe from topics. Pass empty array or omit to unsubscribe from all. */
+  unsubscribeTopics(topics?: string[]): void {
+    if (topics && topics.length > 0) {
+      for (const t of topics) this.topicSubscriptions.delete(t);
+    } else {
+      this.topicSubscriptions.clear();
+    }
+    this.send({ type: 'unsubscribe_topics', payload: { topics } });
   }
 
   /** Register an event listener. */
@@ -386,6 +405,14 @@ export class CryptoNewsWS {
     if (this.streamFlags.whales) this.send({ type: 'stream_whales', payload: { enabled: true } });
     if (this.streamFlags.sentiment)
       this.send({ type: 'stream_sentiment', payload: { enabled: true } });
+
+    // Re-subscribe to topics
+    if (this.topicSubscriptions.size > 0) {
+      this.send({
+        type: 'subscribe_topics',
+        payload: { topics: Array.from(this.topicSubscriptions) },
+      });
+    }
   }
 
   private scheduleReconnect(): void {
