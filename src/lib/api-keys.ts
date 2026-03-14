@@ -110,7 +110,7 @@ import { API_TIERS, type TierConfig } from '@/lib/x402/pricing';
 /**
  * API_KEY_TIERS is derived from API_TIERS (the single source of truth).
  * Maps permission scopes to the 'features' field for backward compatibility.
- * 
+ *
  * @deprecated Import API_TIERS from '@/lib/x402/pricing' directly for new code.
  */
 export const API_KEY_TIERS = Object.fromEntries(
@@ -122,13 +122,16 @@ export const API_KEY_TIERS = Object.fromEntries(
       requestsPerMinute: config.requestsPerMinute,
       features: config.permissions, // Map permissions to features for backward compat
     },
-  ])
-) as Record<string, {
-  name: string;
-  requestsPerDay: number;
-  requestsPerMinute: number;
-  features: readonly string[];
-}>;
+  ]),
+) as Record<
+  string,
+  {
+    name: string;
+    requestsPerDay: number;
+    requestsPerMinute: number;
+    features: readonly string[];
+  }
+>;
 
 // Key prefixes for different tiers
 const KEY_PREFIXES = {
@@ -274,14 +277,20 @@ export async function createApiKey(params: {
         keyPrefix: keyData.keyPrefix,
         tier,
         email,
-      })
+      }),
     ).catch((err) => {
-      authLogger.error({ err: err instanceof Error ? err : new Error(String(err)) }, 'Failed to send key.created webhook');
+      authLogger.error(
+        { err: err instanceof Error ? err : new Error(String(err)) },
+        'Failed to send key.created webhook',
+      );
     });
 
     return { key: rawKey, data: keyData };
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to create API key');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to create API key',
+    );
     return { error: 'Failed to create API key. Please try again.' };
   }
 }
@@ -310,7 +319,10 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
 
     // Check key expiration
     if (keyData.expiresAt && new Date(keyData.expiresAt) < new Date()) {
-      authLogger.warn({ keyPrefix: keyData.keyPrefix, expiresAt: keyData.expiresAt }, 'Key expired');
+      authLogger.warn(
+        { keyPrefix: keyData.keyPrefix, expiresAt: keyData.expiresAt },
+        'Key expired',
+      );
       // Deactivate expired key (non-blocking)
       kv.set(`${KV_PREFIX.key}${hashedKey}`, {
         ...keyData,
@@ -327,7 +339,10 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
 
     return keyData;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to validate API key');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to validate API key',
+    );
     return null;
   }
 }
@@ -353,7 +368,10 @@ export async function getKeysByEmail(email: string): Promise<ApiKeyData[]> {
 
     return keys;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get keys by email');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to get keys by email',
+    );
     return [];
   }
 }
@@ -379,7 +397,10 @@ export async function revokeApiKey(keyId: string, email: string): Promise<boolea
 
     return true;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to revoke API key');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to revoke API key',
+    );
     return false;
   }
 }
@@ -431,7 +452,7 @@ export async function checkRateLimit(keyData: ApiKeyData): Promise<RateLimitResu
 async function sendRateLimitNotifications(
   keyData: ApiKeyData,
   result: RateLimitResult,
-  tierConfig: (typeof API_KEY_TIERS)[keyof typeof API_KEY_TIERS]
+  tierConfig: (typeof API_KEY_TIERS)[keyof typeof API_KEY_TIERS],
 ): Promise<void> {
   // Skip if KV not configured (can't track notifications)
   if (!isKvConfigured() || !isRedisConfigured()) return;
@@ -461,11 +482,15 @@ async function sendRateLimitNotifications(
           limit: tierConfig.requestsPerDay,
           percentage: 100,
           limitType: '100%',
-        })
+        }),
       ).catch((err) => {
-        authLogger.error({ err: err instanceof Error ? err : new Error(String(err)), limitType: '100%' }, 'Failed to send key.usage.limit webhook');
+        authLogger.error(
+          { err: err instanceof Error ? err : new Error(String(err)), limitType: '100%' },
+          'Failed to send key.usage.limit webhook',
+        );
       });
-      await kv.set(notifiedKey, { ...notified, at100: true });      await kv.expire(notifiedKey, 90000);
+      await kv.set(notifiedKey, { ...notified, at100: true });
+      await kv.expire(notifiedKey, 90000);
     }
     // Check 90% threshold
     else if (percentage >= 90 && percentage < 100 && !notified.at90) {
@@ -479,15 +504,22 @@ async function sendRateLimitNotifications(
           limit: tierConfig.requestsPerDay,
           percentage,
           limitType: '90%',
-        })
+        }),
       ).catch((err) => {
-        authLogger.error({ err: err instanceof Error ? err : new Error(String(err)), limitType: '90%' }, 'Failed to send key.usage.limit webhook');
+        authLogger.error(
+          { err: err instanceof Error ? err : new Error(String(err)), limitType: '90%' },
+          'Failed to send key.usage.limit webhook',
+        );
       });
-      await kv.set(notifiedKey, { ...notified, at90: true });      await kv.expire(notifiedKey, 90000);
+      await kv.set(notifiedKey, { ...notified, at90: true });
+      await kv.expire(notifiedKey, 90000);
     }
   } catch (error) {
     // Non-fatal - don't fail the request if notifications fail
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to send rate limit notifications');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to send rate limit notifications',
+    );
   }
 }
 
@@ -578,7 +610,10 @@ export async function getKeyById(keyId: string): Promise<ApiKeyData | null> {
     const keyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${hashedKey}`);
     return keyData;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get key by ID');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to get key by ID',
+    );
     return null;
   }
 }
@@ -592,7 +627,7 @@ export async function getKeyById(keyId: string): Promise<ApiKeyData | null> {
  */
 export async function rotateApiKey(
   keyId: string,
-  email: string
+  email: string,
 ): Promise<{ key: string; data: ApiKeyData } | { error: string }> {
   if (!isKvConfigured()) {
     return { error: 'API key storage not configured' };
@@ -653,7 +688,10 @@ export async function rotateApiKey(
 
     return { key: newRawKey, data: newKeyData };
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to rotate API key');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to rotate API key',
+    );
     return { error: 'Failed to rotate API key. Please try again.' };
   }
 }
@@ -687,7 +725,10 @@ export async function incrementUsage(keyId: string): Promise<void> {
     await pipeline.exec();
   } catch (error) {
     // Non-fatal — don't block request if usage tracking fails
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to increment usage');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to increment usage',
+    );
   }
 }
 
@@ -723,9 +764,9 @@ export async function getUsageStats(keyId: string): Promise<{
       d.setUTCDate(d.getUTCDate() - i);
       const dateStr = d.toISOString().split('T')[0];
       dayPromises.push(
-        kv.get<number>(`${KV_PREFIX.usage}${keyId}:${dateStr}`).then(
-          (v) => [dateStr, v] as [string, number | null]
-        )
+        kv
+          .get<number>(`${KV_PREFIX.usage}${keyId}:${dateStr}`)
+          .then((v) => [dateStr, v] as [string, number | null]),
       );
     }
     const dayResults = await Promise.all(dayPromises);
@@ -746,7 +787,10 @@ export async function getUsageStats(keyId: string): Promise<{
       resetAt: tomorrow.toISOString(),
     };
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get usage stats');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to get usage stats',
+    );
     return null;
   }
 }
@@ -757,7 +801,7 @@ export async function getUsageStats(keyId: string): Promise<{
 export async function upgradeKeyTier(
   keyId: string,
   newTier: 'pro' | 'enterprise',
-  expiresAt?: string
+  expiresAt?: string,
 ): Promise<{ success: boolean; data?: ApiKeyData; error?: string }> {
   if (!isKvConfigured()) {
     return { success: false, error: 'API key storage not configured' };
@@ -803,14 +847,20 @@ export async function upgradeKeyTier(
         keyPrefix: keyData.keyPrefix,
         previousTier: keyData.tier,
         newTier,
-      })
+      }),
     ).catch((err) => {
-      authLogger.error({ err: err instanceof Error ? err : new Error(String(err)) }, 'Failed to send key.upgraded webhook');
+      authLogger.error(
+        { err: err instanceof Error ? err : new Error(String(err)) },
+        'Failed to send key.upgraded webhook',
+      );
     });
 
     return { success: true, data: updatedKeyData };
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to upgrade key tier');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to upgrade key tier',
+    );
     return { success: false, error: 'Failed to upgrade key tier' };
   }
 }
@@ -847,7 +897,10 @@ export async function downgradeKeyToFree(keyId: string): Promise<boolean> {
 
     return true;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to downgrade key');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to downgrade key',
+    );
     return false;
   }
 }
@@ -880,7 +933,10 @@ export async function checkSubscriptionExpiry(): Promise<string[]> {
 
     return expiredKeyIds;
   } catch (error) {
-    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to check subscription expiry');
+    authLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Failed to check subscription expiry',
+    );
     return [];
   }
 }

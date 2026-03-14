@@ -7,7 +7,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 
 export const embed: MiddlewareHandler = (ctx) => {
   if (!ctx.isEmbedRoute) return ctx;

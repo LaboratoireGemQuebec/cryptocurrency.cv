@@ -72,6 +72,12 @@ export interface NewsArticle {
   category: string;
   /** Human-readable time ago string */
   timeAgo: string;
+  /** Source quality tier, e.g. 'tier1', 'tier2', 'tier3', 'research' */
+  tier?: string;
+  /** Source credibility score (0-1) */
+  credibility?: number;
+  /** Source reputation score (0-100) */
+  reputation?: number;
   /** Article author when available */
   author?: string;
   /** Source domain (e.g. 'cointelegraph.com') */

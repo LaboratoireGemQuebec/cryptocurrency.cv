@@ -8,7 +8,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { FREE_TIER_PATTERNS, FREE_TIER_MAX_RESULTS, matchesPattern } from './config';
 
 export const apiResponse: MiddlewareHandler = (ctx) => {

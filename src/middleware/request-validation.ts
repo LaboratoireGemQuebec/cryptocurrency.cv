@@ -8,7 +8,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { isSuspiciousRequest } from './security';
 
 export const requestValidation: MiddlewareHandler = (ctx) => {

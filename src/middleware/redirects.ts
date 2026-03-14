@@ -8,7 +8,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 
 export const redirects: MiddlewareHandler = (ctx) => {
   const { pathname } = ctx;

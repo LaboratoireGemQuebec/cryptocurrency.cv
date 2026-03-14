@@ -10,13 +10,13 @@
 
 /**
  * Database Abstraction Layer
- * 
+ *
  * Enterprise-grade storage abstraction supporting multiple backends:
  * - Vercel KV (production)
  * - Upstash Redis (serverless)
  * - In-memory (development/testing)
  * - File-based (local persistence)
- * 
+ *
  * @module database
  * @description Unified data persistence layer with automatic backend detection,
  * connection pooling, retry logic, and comprehensive error handling.
@@ -92,12 +92,12 @@ class MemoryBackend {
   async get(key: string): Promise<string | null> {
     const entry = this.store.get(key);
     if (!entry) return null;
-    
+
     if (entry.expiresAt && Date.now() > entry.expiresAt) {
       this.store.delete(key);
       return null;
     }
-    
+
     return entry.value;
   }
 
@@ -122,7 +122,7 @@ class MemoryBackend {
     const escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*');
     const regex = new RegExp('^' + escaped + '$');
     const result: string[] = [];
-    
+
     for (const [key, entry] of this.store.entries()) {
       if (entry.expiresAt && Date.now() > entry.expiresAt) {
         this.store.delete(key);
@@ -132,12 +132,12 @@ class MemoryBackend {
         result.push(key);
       }
     }
-    
+
     return result;
   }
 
   async mget(keys: string[]): Promise<(string | null)[]> {
-    return Promise.all(keys.map(k => this.get(k)));
+    return Promise.all(keys.map((k) => this.get(k)));
   }
 
   async mset(entries: Array<{ key: string; value: string; ttl?: number }>): Promise<void> {
@@ -156,7 +156,7 @@ class MemoryBackend {
   async expire(key: string, ttlSeconds: number): Promise<boolean> {
     const entry = this.store.get(key);
     if (!entry) return false;
-    
+
     this.store.set(key, {
       ...entry,
       expiresAt: Date.now() + ttlSeconds * 1000,
@@ -190,40 +190,45 @@ class MemoryBackend {
   async zadd(key: string, score: number, member: string): Promise<number> {
     const current = await this.get(key);
     const set: Array<{ score: number; member: string }> = current ? JSON.parse(current) : [];
-    
-    const existingIndex = set.findIndex(s => s.member === member);
+
+    const existingIndex = set.findIndex((s) => s.member === member);
     if (existingIndex >= 0) {
       set[existingIndex].score = score;
     } else {
       set.push({ score, member });
     }
-    
+
     set.sort((a, b) => a.score - b.score);
     await this.set(key, JSON.stringify(set));
     return existingIndex >= 0 ? 0 : 1;
   }
 
-  async zrange(key: string, start: number, stop: number, options?: { withScores?: boolean }): Promise<string[]> {
+  async zrange(
+    key: string,
+    start: number,
+    stop: number,
+    options?: { withScores?: boolean },
+  ): Promise<string[]> {
     const current = await this.get(key);
     if (!current) return [];
-    
+
     const set: Array<{ score: number; member: string }> = JSON.parse(current);
     const sliced = set.slice(start, stop === -1 ? undefined : stop + 1);
-    
+
     if (options?.withScores) {
-      return sliced.flatMap(s => [s.member, s.score.toString()]);
+      return sliced.flatMap((s) => [s.member, s.score.toString()]);
     }
-    return sliced.map(s => s.member);
+    return sliced.map((s) => s.member);
   }
 
   async zrevrange(key: string, start: number, stop: number): Promise<string[]> {
     const current = await this.get(key);
     if (!current) return [];
-    
+
     const set: Array<{ score: number; member: string }> = JSON.parse(current);
     set.sort((a, b) => b.score - a.score);
     const sliced = set.slice(start, stop === -1 ? undefined : stop + 1);
-    return sliced.map(s => s.member);
+    return sliced.map((s) => s.member);
   }
 
   async hset(key: string, field: string, value: string): Promise<number> {
@@ -250,7 +255,7 @@ class MemoryBackend {
 
   async hincrby(key: string, field: string, increment: number): Promise<number> {
     const current = await this.hget(key, field);
-    const newValue = (parseInt(current || '0', 10) + increment);
+    const newValue = parseInt(current || '0', 10) + increment;
     await this.hset(key, field, newValue.toString());
     return newValue;
   }
@@ -301,12 +306,12 @@ class FileBackend extends MemoryBackend {
     if (typeof process === 'undefined') return;
     // @ts-expect-error - EdgeRuntime is a global in Vercel Edge Runtime
     if (typeof EdgeRuntime !== 'undefined') return;
-    
+
     try {
       const fs = await import(/* webpackIgnore: true */ 'fs/promises');
       const data = await fs.readFile(this.filePath, 'utf-8');
       const parsed = JSON.parse(data);
-      
+
       for (const [key, entry] of Object.entries(parsed)) {
         const typedEntry = entry as { value: string; expiresAt?: number };
         // Restore TTL: skip entries that have already expired
@@ -338,29 +343,32 @@ class FileBackend extends MemoryBackend {
     if (typeof process === 'undefined') return;
     // @ts-expect-error - EdgeRuntime is a global in Vercel Edge Runtime
     if (typeof EdgeRuntime !== 'undefined') return;
-    
+
     try {
       const fs = await import(/* webpackIgnore: true */ 'fs/promises');
       const pathModule = await import(/* webpackIgnore: true */ 'path');
       // Handle both ESM default export and CommonJS module
       const path = pathModule.default || pathModule;
-      
+
       const dir = path.dirname(this.filePath);
       await fs.mkdir(dir, { recursive: true });
-      
+
       const data: Record<string, unknown> = {};
       const keys = await this.keys('*');
-      
+
       for (const key of keys) {
         const value = await this.get(key);
         if (value) {
           data[key] = { value };
         }
       }
-      
+
       await fs.writeFile(this.filePath, JSON.stringify(data, null, 2));
     } catch (error) {
-      dbLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to save database to file');
+      dbLogger.error(
+        { err: error instanceof Error ? error : new Error(String(error)) },
+        'Failed to save database to file',
+      );
     }
   }
 
@@ -394,13 +402,16 @@ class VercelKVBackend {
 
   private async init(): Promise<void> {
     if (this.initialized) return;
-    
+
     try {
       const vercelKv = await import('@vercel/kv');
       this.kv = vercelKv.kv;
       this.initialized = true;
     } catch (error) {
-      dbLogger.warn({ err: error instanceof Error ? error : new Error(String(error)) }, 'Vercel KV not available, falling back to memory backend');
+      dbLogger.warn(
+        { err: error instanceof Error ? error : new Error(String(error)) },
+        'Vercel KV not available, falling back to memory backend',
+      );
       throw error;
     }
   }
@@ -553,22 +564,22 @@ class DatabaseClient {
 
   private async withRetry<T>(operation: () => Promise<T>): Promise<T> {
     let lastError: Error | null = null;
-    
+
     for (let attempt = 0; attempt < (this.config.maxRetries || 3); attempt++) {
       try {
         this.operationCount++;
         return await operation();
       } catch (error) {
         lastError = error as Error;
-        
+
         if (attempt < (this.config.maxRetries || 3) - 1) {
-          await new Promise(resolve => 
-            setTimeout(resolve, (this.config.retryDelayMs || 100) * Math.pow(2, attempt))
+          await new Promise((resolve) =>
+            setTimeout(resolve, (this.config.retryDelayMs || 100) * Math.pow(2, attempt)),
           );
         }
       }
     }
-    
+
     throw lastError;
   }
 
@@ -580,7 +591,7 @@ class DatabaseClient {
     return this.withRetry(async () => {
       const value = await this.backend.get(this.prefixKey(key));
       if (!value) return null;
-      
+
       try {
         return JSON.parse(value) as T;
       } catch {
@@ -612,15 +623,15 @@ class DatabaseClient {
     return this.withRetry(async () => {
       const prefixedPattern = this.prefixKey(pattern);
       const keys = await this.backend.keys(prefixedPattern);
-      return keys.map(k => k.replace(this.config.prefix!, ''));
+      return keys.map((k) => k.replace(this.config.prefix!, ''));
     });
   }
 
   async mget<T = unknown>(keys: string[]): Promise<(T | null)[]> {
     return this.withRetry(async () => {
-      const prefixedKeys = keys.map(k => this.prefixKey(k));
+      const prefixedKeys = keys.map((k) => this.prefixKey(k));
       const values = await this.backend.mget(prefixedKeys);
-      return values.map(v => {
+      return values.map((v) => {
         if (!v) return null;
         try {
           return JSON.parse(v) as T;
@@ -649,7 +660,7 @@ class DatabaseClient {
 
   async lpush<T = unknown>(key: string, ...values: T[]): Promise<number> {
     return this.withRetry(async () => {
-      const serialized = values.map(v => typeof v === 'string' ? v : JSON.stringify(v));
+      const serialized = values.map((v) => (typeof v === 'string' ? v : JSON.stringify(v)));
       return this.backend.lpush(this.prefixKey(key), ...serialized);
     });
   }
@@ -657,7 +668,7 @@ class DatabaseClient {
   async lrange<T = unknown>(key: string, start: number, stop: number): Promise<T[]> {
     return this.withRetry(async () => {
       const values = await this.backend.lrange(this.prefixKey(key), start, stop);
-      return values.map(v => {
+      return values.map((v) => {
         try {
           return JSON.parse(v) as T;
         } catch {
@@ -722,7 +733,7 @@ class DatabaseClient {
     return this.withRetry(async () => {
       const hash = await this.backend.hgetall(this.prefixKey(key));
       if (!hash) return null;
-      
+
       const result: Record<string, unknown> = {};
       for (const [field, value] of Object.entries(hash)) {
         try {
@@ -749,10 +760,10 @@ class DatabaseClient {
     collection: string,
     id: string,
     data: T,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown>,
   ): Promise<StoredDocument<T>> {
     const existing = await this.getDocument<T>(collection, id);
-    
+
     const doc: StoredDocument<T> = {
       id,
       data,
@@ -761,12 +772,12 @@ class DatabaseClient {
       version: (existing?.version || 0) + 1,
       metadata,
     };
-    
+
     await this.set(`${collection}:${id}`, doc);
-    
+
     // Update collection index
     await this.zadd(`${collection}:_index`, Date.now(), id);
-    
+
     return doc;
   }
 
@@ -782,24 +793,23 @@ class DatabaseClient {
 
   async listDocuments<T>(
     collection: string,
-    options: QueryOptions = {}
+    options: QueryOptions = {},
   ): Promise<StoredDocument<T>[]> {
     const { limit = 100, offset = 0, orderBy = 'desc' } = options;
-    
-    const ids = orderBy === 'desc'
-      ? await this.zrevrange(`${collection}:_index`, offset, offset + limit - 1)
-      : await this.zrange(`${collection}:_index`, offset, offset + limit - 1);
-    
-    const docs = await Promise.all(
-      ids.map(id => this.getDocument<T>(collection, id))
-    );
-    
+
+    const ids =
+      orderBy === 'desc'
+        ? await this.zrevrange(`${collection}:_index`, offset, offset + limit - 1)
+        : await this.zrange(`${collection}:_index`, offset, offset + limit - 1);
+
+    const docs = await Promise.all(ids.map((id) => this.getDocument<T>(collection, id)));
+
     return docs.filter((d): d is StoredDocument<T> => d !== null);
   }
 
   async countDocuments(collection: string): Promise<number> {
     const keys = await this.keys(`${collection}:*`);
-    return keys.filter(k => !k.includes('_index')).length;
+    return keys.filter((k) => !k.includes('_index')).length;
   }
 
   // ==========================================================================
@@ -819,7 +829,7 @@ class DatabaseClient {
       await this.set('_healthcheck', { timestamp: Date.now() }, 60);
       await this.get('_healthcheck');
       await this.delete('_healthcheck');
-      
+
       return {
         healthy: true,
         latencyMs: Date.now() - start,

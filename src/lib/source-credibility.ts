@@ -89,8 +89,6 @@ const SOURCE_BASELINES: Record<string, Partial<SourceMetrics>> = {
   bitcoinist: { accuracy: 70, timeliness: 75, consistency: 70 },
   cryptoslate: { accuracy: 75, timeliness: 80, consistency: 75 },
   newsbtc: { accuracy: 68, timeliness: 80, consistency: 70 },
-  cryptonews: { accuracy: 72, timeliness: 78, consistency: 72 },
-  cryptopotato: { accuracy: 70, timeliness: 75, consistency: 72 },
 };
 
 // ═══════════════════════════════════════════════════════════════

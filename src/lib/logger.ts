@@ -19,45 +19,45 @@
  * - Backward-compatible helpers for existing callers
  */
 
-import pino from "pino";
-import { type NextRequest } from "next/server";
+import pino from 'pino';
+import { type NextRequest } from 'next/server';
 
 // =============================================================================
 // CONFIGURATION
 // =============================================================================
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 
 export const logger = pino({
-  level: process.env.LOG_LEVEL || (isProduction ? "info" : "debug"),
+  level: process.env.LOG_LEVEL || (isProduction ? 'info' : 'debug'),
 
   // Structured JSON in production, pretty-printed in development
   transport: isProduction
     ? undefined // JSON to stdout (Vercel/Docker picks this up)
     : {
-        target: "pino-pretty",
-        options: { colorize: true, translateTime: "SYS:standard" },
+        target: 'pino-pretty',
+        options: { colorize: true, translateTime: 'SYS:standard' },
       },
 
   // Redact sensitive fields
   redact: {
     paths: [
-      "req.headers.authorization",
-      "req.headers.cookie",
-      "apiKey",
-      "password",
-      "token",
-      "secret",
-      "DATABASE_URL",
-      "REDIS_URL",
+      'req.headers.authorization',
+      'req.headers.cookie',
+      'apiKey',
+      'password',
+      'token',
+      'secret',
+      'DATABASE_URL',
+      'REDIS_URL',
     ],
-    censor: "[REDACTED]",
+    censor: '[REDACTED]',
   },
 
   // Base fields on every log line
   base: {
-    service: "free-crypto-news",
-    env: process.env.NODE_ENV || "development",
+    service: 'free-crypto-news',
+    env: process.env.NODE_ENV || 'development',
     version: process.env.npm_package_version,
   },
 
@@ -73,14 +73,14 @@ export const logger = pino({
 // CHILD LOGGERS — domain-specific
 // =============================================================================
 
-export const apiLogger = logger.child({ module: "api" });
-export const cacheLogger = logger.child({ module: "cache" });
-export const dbLogger = logger.child({ module: "database" });
-export const wsLogger = logger.child({ module: "websocket" });
-export const authLogger = logger.child({ module: "auth" });
-export const rateLimitLogger = logger.child({ module: "rate-limit" });
-export const aiLogger = logger.child({ module: "ai" });
-export const archiveLogger = logger.child({ module: "archive" });
+export const apiLogger = logger.child({ module: 'api' });
+export const cacheLogger = logger.child({ module: 'cache' });
+export const dbLogger = logger.child({ module: 'database' });
+export const wsLogger = logger.child({ module: 'websocket' });
+export const authLogger = logger.child({ module: 'auth' });
+export const rateLimitLogger = logger.child({ module: 'rate-limit' });
+export const aiLogger = logger.child({ module: 'ai' });
+export const archiveLogger = logger.child({ module: 'archive' });
 
 // =============================================================================
 // BACKWARD-COMPATIBLE HELPERS
@@ -88,10 +88,10 @@ export const archiveLogger = logger.child({ module: "archive" });
 
 /** Legacy LogLevel enum — kept for existing imports */
 export enum LogLevel {
-  DEBUG = "debug",
-  INFO = "info",
-  WARN = "warn",
-  ERROR = "error",
+  DEBUG = 'debug',
+  INFO = 'info',
+  WARN = 'warn',
+  ERROR = 'error',
 }
 
 /**
@@ -102,11 +102,11 @@ export enum LogLevel {
  */
 export function createRequestLogger(request: NextRequest) {
   const child = apiLogger.child({
-    requestId: request.headers.get("x-request-id") || undefined,
+    requestId: request.headers.get('x-request-id') || undefined,
     endpoint: request.nextUrl.pathname,
     method: request.method,
-    ip: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
-    userAgent: request.headers.get("user-agent") || undefined,
+    ip: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim(),
+    userAgent: request.headers.get('user-agent') || undefined,
   });
 
   return {
@@ -119,15 +119,12 @@ export function createRequestLogger(request: NextRequest) {
     warn(message: string, meta?: Record<string, unknown>) {
       child.warn(meta ?? {}, message);
     },
-    error(
-      message: string,
-      error?: Error | unknown,
-      meta?: Record<string, unknown>,
-    ) {
+    error(message: string, error?: Error | unknown, meta?: Record<string, unknown>) {
       child.error(
         {
           ...(meta ?? {}),
-          err: error instanceof Error ? error : error != null ? new Error(String(error)) : undefined,
+          err:
+            error instanceof Error ? error : error != null ? new Error(String(error)) : undefined,
         },
         message,
       );
@@ -139,8 +136,11 @@ export function createRequestLogger(request: NextRequest) {
       duration: number,
       meta?: Record<string, unknown>,
     ) {
-      const lvl = status >= 500 ? "error" : status >= 400 ? "warn" : "info";
-      child[lvl]({ method, path, status, duration, ...(meta ?? {}) }, `${method} ${path} ${status}`);
+      const lvl = status >= 500 ? 'error' : status >= 400 ? 'warn' : 'info';
+      child[lvl](
+        { method, path, status, duration, ...(meta ?? {}) },
+        `${method} ${path} ${status}`,
+      );
     },
     /** Expose the underlying Pino child for native API usage */
     pino: child,
@@ -155,19 +155,28 @@ export function createLogger(module: string) {
 
   return {
     debug(message: string, data?: unknown) {
-      child.debug(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+      child.debug(
+        typeof data === 'object' && data !== null ? (data as Record<string, unknown>) : {},
+        `[${module}] ${message}`,
+      );
     },
     info(message: string, data?: unknown) {
-      child.info(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+      child.info(
+        typeof data === 'object' && data !== null ? (data as Record<string, unknown>) : {},
+        `[${module}] ${message}`,
+      );
     },
     warn(message: string, data?: unknown) {
-      child.warn(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+      child.warn(
+        typeof data === 'object' && data !== null ? (data as Record<string, unknown>) : {},
+        `[${module}] ${message}`,
+      );
     },
     error(message: string, data?: unknown) {
       child.error(
         {
           err: data instanceof Error ? data : undefined,
-          ...(typeof data === "object" && data !== null && !(data instanceof Error)
+          ...(typeof data === 'object' && data !== null && !(data instanceof Error)
             ? (data as Record<string, unknown>)
             : {}),
         },
@@ -200,10 +209,10 @@ export function measureTime<T>(
  * Pre-configured loggers for common modules (legacy)
  */
 export const loggers = {
-  api: createLogger("API"),
-  auth: createLogger("Auth"),
-  ws: createLogger("WebSocket"),
-  cache: createLogger("Cache"),
-  pwa: createLogger("PWA"),
-  admin: createLogger("Admin"),
+  api: createLogger('API'),
+  auth: createLogger('Auth'),
+  ws: createLogger('WebSocket'),
+  cache: createLogger('Cache'),
+  pwa: createLogger('PWA'),
+  admin: createLogger('Admin'),
 } as const;

@@ -10,13 +10,13 @@
 
 /**
  * Schema Validation Tests
- * 
+ *
  * Tests for Zod schema validation across all API endpoints
  */
 
 import { describe, it, expect } from 'vitest';
-import { 
-  newsQuerySchema, 
+import {
+  newsQuerySchema,
   v1CoinsQuerySchema,
   aiSignalsQuerySchema,
   breakingNewsQuerySchema,
@@ -38,21 +38,21 @@ describe('Schema Validation', () => {
         expect(result.data.category).toBe('bitcoin');
       }
     });
-    
+
     it('should reject invalid limit', () => {
       const result = newsQuerySchema.safeParse({
         limit: '999', // exceeds max
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should reject invalid category', () => {
       const result = newsQuerySchema.safeParse({
         category: 'invalid-category',
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should use defaults', () => {
       const result = newsQuerySchema.safeParse({});
       expect(result.success).toBe(true);
@@ -62,7 +62,7 @@ describe('Schema Validation', () => {
         expect(result.data.page).toBe(1);
       }
     });
-    
+
     it('should coerce string numbers to integers', () => {
       const result = newsQuerySchema.safeParse({
         limit: '25',
@@ -74,8 +74,24 @@ describe('Schema Validation', () => {
         expect(result.data.page).toBe(2);
       }
     });
+
+    it('should validate quality parameter', () => {
+      const valid = newsQuerySchema.safeParse({ quality: 'high' });
+      expect(valid.success).toBe(true);
+
+      const premium = newsQuerySchema.safeParse({ quality: 'premium' });
+      expect(premium.success).toBe(true);
+
+      const invalid = newsQuerySchema.safeParse({ quality: 'ultra' });
+      expect(invalid.success).toBe(false);
+    });
+
+    it('should reject fintech category', () => {
+      const result = newsQuerySchema.safeParse({ category: 'fintech' });
+      expect(result.success).toBe(false);
+    });
   });
-  
+
   describe('v1CoinsQuerySchema', () => {
     it('should validate valid coins query', () => {
       const result = v1CoinsQuerySchema.safeParse({
@@ -85,14 +101,14 @@ describe('Schema Validation', () => {
       });
       expect(result.success).toBe(true);
     });
-    
+
     it('should reject per_page exceeding limit', () => {
       const result = v1CoinsQuerySchema.safeParse({
         per_page: '500', // exceeds max of 250
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should accept valid order values', () => {
       const validOrders = [
         'market_cap_desc',
@@ -102,13 +118,13 @@ describe('Schema Validation', () => {
         'id_asc',
         'id_desc',
       ];
-      
-      validOrders.forEach(order => {
+
+      validOrders.forEach((order) => {
         const result = v1CoinsQuerySchema.safeParse({ order });
         expect(result.success).toBe(true);
       });
     });
-    
+
     it('should reject invalid order value', () => {
       const result = v1CoinsQuerySchema.safeParse({
         order: 'invalid-order',
@@ -116,7 +132,7 @@ describe('Schema Validation', () => {
       expect(result.success).toBe(false);
     });
   });
-  
+
   describe('aiSignalsQuerySchema', () => {
     it('should validate valid AI signals query', () => {
       const result = aiSignalsQuerySchema.safeParse({
@@ -125,23 +141,23 @@ describe('Schema Validation', () => {
       });
       expect(result.success).toBe(true);
     });
-    
+
     it('should reject invalid coin ID format', () => {
       const result = aiSignalsQuerySchema.safeParse({
         coin: 'Bitcoin_123', // uppercase and underscore not allowed
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should accept valid coin ID formats', () => {
       const validCoinIds = ['bitcoin', 'ethereum', 'binance-coin', 'usd-coin'];
-      
-      validCoinIds.forEach(coin => {
+
+      validCoinIds.forEach((coin) => {
         const result = aiSignalsQuerySchema.safeParse({ coin });
         expect(result.success).toBe(true);
       });
     });
-    
+
     it('should use default timeframe', () => {
       const result = aiSignalsQuerySchema.safeParse({
         coin: 'bitcoin',
@@ -152,7 +168,7 @@ describe('Schema Validation', () => {
       }
     });
   });
-  
+
   describe('breakingNewsQuerySchema', () => {
     it('should validate valid breaking news query', () => {
       const result = breakingNewsQuerySchema.safeParse({
@@ -161,23 +177,23 @@ describe('Schema Validation', () => {
       });
       expect(result.success).toBe(true);
     });
-    
+
     it('should reject limit exceeding max', () => {
       const result = breakingNewsQuerySchema.safeParse({
         limit: '100', // exceeds max of 50
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should accept valid priority values', () => {
       const result1 = breakingNewsQuerySchema.safeParse({ priority: 'high' });
       const result2 = breakingNewsQuerySchema.safeParse({ priority: 'critical' });
-      
+
       expect(result1.success).toBe(true);
       expect(result2.success).toBe(true);
     });
   });
-  
+
   describe('paginationSchema', () => {
     it('should validate valid pagination', () => {
       const result = paginationSchema.safeParse({
@@ -190,14 +206,14 @@ describe('Schema Validation', () => {
         expect(result.data.per_page).toBe(50);
       }
     });
-    
+
     it('should reject page less than 1', () => {
       const result = paginationSchema.safeParse({
         page: '0',
       });
       expect(result.success).toBe(false);
     });
-    
+
     it('should reject per_page exceeding max', () => {
       const result = paginationSchema.safeParse({
         per_page: '200', // exceeds max of 100
@@ -205,24 +221,17 @@ describe('Schema Validation', () => {
       expect(result.success).toBe(false);
     });
   });
-  
+
   describe('coinIdSchema', () => {
     it('should accept valid coin IDs', () => {
-      const validIds = [
-        'bitcoin',
-        'ethereum',
-        'binance-coin',
-        'cardano',
-        'solana',
-        'polkadot',
-      ];
-      
-      validIds.forEach(id => {
+      const validIds = ['bitcoin', 'ethereum', 'binance-coin', 'cardano', 'solana', 'polkadot'];
+
+      validIds.forEach((id) => {
         const result = coinIdSchema.safeParse(id);
         expect(result.success).toBe(true);
       });
     });
-    
+
     it('should reject invalid coin IDs', () => {
       const invalidIds = [
         'Bitcoin', // uppercase
@@ -232,8 +241,8 @@ describe('Schema Validation', () => {
         '', // empty
         'a'.repeat(51), // too long
       ];
-      
-      invalidIds.forEach(id => {
+
+      invalidIds.forEach((id) => {
         const result = coinIdSchema.safeParse(id);
         expect(result.success).toBe(false);
       });

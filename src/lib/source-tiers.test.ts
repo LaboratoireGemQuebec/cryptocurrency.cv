@@ -21,7 +21,8 @@ import {
   getSourceCredibility,
   getSourceReputation,
   getSourceTier,
-  isFintechSource,
+  sourcePassesQuality,
+  getTiersForQuality,
   SOURCE_REPUTATION_SCORES,
   SOURCE_CREDIBILITY,
   type SourceTier,
@@ -37,7 +38,7 @@ describe('SOURCE_TIERS catalog', () => {
   });
 
   it('every entry has required fields with correct types', () => {
-    const validTiers: SourceTier[] = ['tier1', 'tier2', 'tier3', 'tier4', 'research', 'fintech'];
+    const validTiers: SourceTier[] = ['tier1', 'tier2', 'tier3', 'research'];
     for (const [key, entry] of Object.entries(SOURCE_TIERS)) {
       expect(validTiers).toContain(entry.tier);
       expect(typeof entry.displayName).toBe('string');
@@ -63,16 +64,8 @@ describe('SOURCE_TIERS catalog', () => {
 
   it('bloomberg is tier1 with high credibility', () => {
     expect(SOURCE_TIERS['bloomberg'].tier).toBe('tier1');
-    expect(SOURCE_TIERS['bloomberg'].credibility).toBeGreaterThanOrEqual(0.90);
+    expect(SOURCE_TIERS['bloomberg'].credibility).toBeGreaterThanOrEqual(0.9);
     expect(SOURCE_TIERS['bloomberg'].reputation).toBe(100);
-  });
-
-  it('fintech sources have lower credibility than tier1', () => {
-    const fintech = Object.values(SOURCE_TIERS).filter(e => e.tier === 'fintech');
-    const tier1 = Object.values(SOURCE_TIERS).filter(e => e.tier === 'tier1');
-    const avgFintech = fintech.reduce((s, e) => s + e.credibility, 0) / fintech.length;
-    const avgTier1 = tier1.reduce((s, e) => s + e.credibility, 0) / tier1.length;
-    expect(avgFintech).toBeLessThan(avgTier1);
   });
 });
 
@@ -82,7 +75,7 @@ describe('SOURCE_TIERS catalog', () => {
 
 describe('defaults', () => {
   it('DEFAULT_CREDIBILITY is 0.60', () => {
-    expect(DEFAULT_CREDIBILITY).toBe(0.60);
+    expect(DEFAULT_CREDIBILITY).toBe(0.6);
   });
 
   it('DEFAULT_REPUTATION is 50', () => {
@@ -161,8 +154,9 @@ describe('getSourceTier', () => {
     expect(getSourceTier('cointelegraph')).toBe('tier3');
   });
 
-  it('returns fintech for fintech sources', () => {
-    expect(getSourceTier('finextra')).toBe('fintech');
+  it('returns null for removed sources', () => {
+    expect(getSourceTier('finextra')).toBeNull();
+    expect(getSourceTier('coinedition')).toBeNull();
   });
 
   it('is case-insensitive', () => {
@@ -175,28 +169,73 @@ describe('getSourceTier', () => {
 });
 
 // ---------------------------------------------------------------------------
-// isFintechSource
+// getTiersForQuality
 // ---------------------------------------------------------------------------
 
-describe('isFintechSource', () => {
-  it('returns true for finextra', () => {
-    expect(isFintechSource('finextra')).toBe(true);
+describe('getTiersForQuality', () => {
+  it('returns all tiers for undefined/all', () => {
+    const tiers = getTiersForQuality();
+    expect(tiers.has('tier1')).toBe(true);
+    expect(tiers.has('tier2')).toBe(true);
+    expect(tiers.has('tier3')).toBe(true);
+    expect(tiers.has('research')).toBe(true);
   });
 
-  it('returns true for pymnts', () => {
-    expect(isFintechSource('pymnts')).toBe(true);
+  it('returns all tiers for "all"', () => {
+    const tiers = getTiersForQuality('all');
+    expect(tiers.size).toBe(4);
   });
 
-  it('returns false for bloomberg (tier1)', () => {
-    expect(isFintechSource('bloomberg')).toBe(false);
+  it('returns tier1+tier2+research for "high"', () => {
+    const tiers = getTiersForQuality('high');
+    expect(tiers.has('tier1')).toBe(true);
+    expect(tiers.has('tier2')).toBe(true);
+    expect(tiers.has('research')).toBe(true);
+    expect(tiers.has('tier3')).toBe(false);
   });
 
-  it('returns false for coindesk (tier2)', () => {
-    expect(isFintechSource('coindesk')).toBe(false);
+  it('returns tier1+research for "premium"', () => {
+    const tiers = getTiersForQuality('premium');
+    expect(tiers.has('tier1')).toBe(true);
+    expect(tiers.has('research')).toBe(true);
+    expect(tiers.has('tier2')).toBe(false);
+    expect(tiers.has('tier3')).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// sourcePassesQuality
+// ---------------------------------------------------------------------------
+
+describe('sourcePassesQuality', () => {
+  it('bloomberg passes all quality levels', () => {
+    expect(sourcePassesQuality('bloomberg')).toBe(true);
+    expect(sourcePassesQuality('bloomberg', 'all')).toBe(true);
+    expect(sourcePassesQuality('bloomberg', 'high')).toBe(true);
+    expect(sourcePassesQuality('bloomberg', 'premium')).toBe(true);
   });
 
-  it('returns false for unknown source not matching fintech keywords', () => {
-    expect(isFintechSource('randomnews')).toBe(false);
+  it('coindesk (tier2) passes high but not premium', () => {
+    expect(sourcePassesQuality('coindesk', 'high')).toBe(true);
+    expect(sourcePassesQuality('coindesk', 'premium')).toBe(false);
+  });
+
+  it('cointelegraph (tier3) only passes all/undefined', () => {
+    expect(sourcePassesQuality('cointelegraph')).toBe(true);
+    expect(sourcePassesQuality('cointelegraph', 'all')).toBe(true);
+    expect(sourcePassesQuality('cointelegraph', 'high')).toBe(false);
+    expect(sourcePassesQuality('cointelegraph', 'premium')).toBe(false);
+  });
+
+  it('messari (research) passes all quality levels', () => {
+    expect(sourcePassesQuality('messari', 'premium')).toBe(true);
+    expect(sourcePassesQuality('messari', 'high')).toBe(true);
+  });
+
+  it('unknown source passes unless premium', () => {
+    expect(sourcePassesQuality('unknownsource')).toBe(true);
+    expect(sourcePassesQuality('unknownsource', 'high')).toBe(true);
+    expect(sourcePassesQuality('unknownsource', 'premium')).toBe(false);
   });
 });
 

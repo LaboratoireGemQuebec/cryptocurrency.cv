@@ -114,6 +114,17 @@ These parameters work on most endpoints:
 | `lang` | string | Language code (18 supported — see [Language Support](#language-support)) |
 | `source` | string | Filter by source key |
 | `category` | string | Filter by category |
+| `quality` | string | Quality filter: `premium` (T1 + research), `high` (T1 + T2 + research), `all` (default, all tiers) |
+
+**Quality filter example:**
+```
+GET /api/news?quality=high&limit=20
+```
+
+Each article includes tier metadata:
+- `tier`: Source quality tier (`tier1`, `tier2`, `tier3`, `research`)
+- `credibility`: Source credibility score (0-1)
+- `reputation`: Source reputation score (0-100)
 
 ### Tools & Collections
 
@@ -435,7 +446,10 @@ curl "https://cryptocurrency.cv/api/news?limit=5&source=coindesk"
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2 hours ago"
+      "timeAgo": "2 hours ago",
+      "tier": "tier2",
+      "credibility": 0.95,
+      "reputation": 90
     }
   ],
   "totalCount": 150,
@@ -2430,7 +2444,7 @@ curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=accuracy"
   ],
   "averageScore": 78.5,
   "topSources": ["The Block", "CoinDesk", "Blockworks"],
-  "bottomSources": ["NewsBTC", "Bitcoinist", "CryptoPotato"],
+  "bottomSources": ["NewsBTC", "Bitcoinist"],
   "generatedAt": "2026-01-22T15:00:00Z"
 }
 ```

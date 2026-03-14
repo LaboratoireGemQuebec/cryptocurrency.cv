@@ -46,6 +46,13 @@ paths:
           schema:
             type: string
             enum: [coindesk, theblock, decrypt, cointelegraph, bitcoinmagazine, blockworks, defiant]
+        - name: quality
+          in: query
+          description: Quality filter for source tiers
+          schema:
+            type: string
+            enum: [premium, high, all]
+            default: all
       responses:
         '200':
           description: Successfully retrieved news

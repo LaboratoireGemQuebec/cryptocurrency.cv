@@ -15,31 +15,24 @@
  * with consistent structure across all route handlers.
  */
 
-import { apiLogger } from "@/lib/logger";
-import { type NextRequest } from "next/server";
+import { apiLogger } from '@/lib/logger';
+import { type NextRequest } from 'next/server';
 
-export function logApiRequest(
-  req: NextRequest,
-  extra?: Record<string, unknown>,
-) {
+export function logApiRequest(req: NextRequest, extra?: Record<string, unknown>) {
   apiLogger.info(
     {
       method: req.method,
       url: req.nextUrl.pathname,
       search: req.nextUrl.search,
-      ip: req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip"),
-      userAgent: req.headers.get("user-agent")?.slice(0, 100),
+      ip: req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip'),
+      userAgent: req.headers.get('user-agent')?.slice(0, 100),
       ...extra,
     },
     `${req.method} ${req.nextUrl.pathname}`,
   );
 }
 
-export function logApiError(
-  req: NextRequest,
-  error: unknown,
-  extra?: Record<string, unknown>,
-) {
+export function logApiError(req: NextRequest, error: unknown, extra?: Record<string, unknown>) {
   apiLogger.error(
     {
       method: req.method,

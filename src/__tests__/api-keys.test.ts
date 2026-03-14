@@ -23,14 +23,22 @@ vi.mock('@/lib/webhooks', () => ({
   webhookPayloads: {},
 }));
 
-vi.mock('@/lib/logger', () => ({
-  authLogger: {
+vi.mock('@/lib/logger', () => {
+  const mockLogger = {
     info: vi.fn(),
     warn: vi.fn(),
     error: vi.fn(),
     debug: vi.fn(),
-  },
-}));
+    child: vi.fn().mockReturnThis(),
+  };
+  return {
+    logger: mockLogger,
+    authLogger: mockLogger,
+    apiLogger: mockLogger,
+    rateLimitLogger: mockLogger,
+    createLogger: vi.fn().mockReturnValue(mockLogger),
+  };
+});
 
 vi.mock('@/lib/ratelimit', () => ({
   checkRateLimit: vi
@@ -142,8 +150,9 @@ describe('API_KEY_TIERS', () => {
   it('should have free tier', () => {
     expect(API_KEY_TIERS.free).toBeDefined();
     expect(API_KEY_TIERS.free.name).toBeTruthy();
-    expect(API_KEY_TIERS.free.requestsPerDay).toBeGreaterThan(0);
-    expect(API_KEY_TIERS.free.requestsPerMinute).toBeGreaterThan(0);
+    // Free tier is discontinued — 0 requests
+    expect(API_KEY_TIERS.free.requestsPerDay).toBe(0);
+    expect(API_KEY_TIERS.free.requestsPerMinute).toBe(0);
   });
 
   it('should have pro tier', () => {
@@ -158,9 +167,12 @@ describe('API_KEY_TIERS', () => {
     );
   });
 
-  it('each tier should have features/permissions', () => {
-    for (const [, tier] of Object.entries(API_KEY_TIERS)) {
-      expect(tier.features.length).toBeGreaterThan(0);
-    }
+  it('pro and enterprise tiers should have permissions', () => {
+    expect(API_KEY_TIERS.pro.features.length).toBeGreaterThan(0);
+    expect(API_KEY_TIERS.enterprise.features.length).toBeGreaterThan(0);
+  });
+
+  it('free tier should have empty permissions (discontinued)', () => {
+    expect(API_KEY_TIERS.free.features.length).toBe(0);
   });
 });

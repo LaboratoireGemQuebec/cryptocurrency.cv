@@ -7,7 +7,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { SECURITY_HEADERS } from './security';
 import { isTrustedOrigin } from './trusted-origins';
 

@@ -37,7 +37,7 @@ export async function initRedis(): Promise<boolean> {
     try {
       // Dynamic import to avoid bundling in edge runtime
       const { createClient } = await import('redis');
-      
+
       _redisClient = createClient({
         url: process.env.REDIS_URL,
         socket: {
@@ -78,7 +78,10 @@ export async function initRedis(): Promise<boolean> {
       cacheLogger.info('Redis initialization successful');
       return true;
     } catch (error) {
-      cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis init failed');
+      cacheLogger.error(
+        { err: error instanceof Error ? error : new Error(String(error)) },
+        'Redis init failed',
+      );
       redisAvailable = false;
       return false;
     }
@@ -99,9 +102,12 @@ export async function redisGet<T>(key: string): Promise<T | null> {
       }
     }
   } catch (error) {
-    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis get error');
+    cacheLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Redis get error',
+    );
   }
-  
+
   // Fallback to memory cache
   return newsCache.get<T>(key);
 }
@@ -112,10 +118,10 @@ export async function redisGet<T>(key: string): Promise<T | null> {
 export async function redisSet<T>(
   key: string,
   value: T,
-  ttlSeconds: number = 300
+  ttlSeconds: number = 300,
 ): Promise<boolean> {
   const serialized = JSON.stringify(value);
-  
+
   // Always set in memory cache as backup
   newsCache.set(key, value, ttlSeconds);
 
@@ -125,7 +131,10 @@ export async function redisSet<T>(
       return true;
     }
   } catch (error) {
-    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis set error');
+    cacheLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Redis set error',
+    );
   }
 
   return true; // Memory cache succeeded
@@ -159,7 +168,10 @@ export async function redisDel(key: string): Promise<boolean> {
       await _redisClient.del(key);
     }
   } catch (error) {
-    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis del error');
+    cacheLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Redis del error',
+    );
   }
 
   return true;
@@ -179,7 +191,10 @@ export async function redisDelPattern(pattern: string): Promise<number> {
       }
     }
   } catch (error) {
-    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis del pattern error');
+    cacheLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Redis del pattern error',
+    );
   }
 
   return count;
@@ -228,7 +243,7 @@ export async function getRedisStats(): Promise<{
 export async function withRedisCache<T>(
   key: string,
   ttlSeconds: number,
-  fetchFn: () => Promise<T>
+  fetchFn: () => Promise<T>,
 ): Promise<T> {
   // Try cache first
   const cached = await redisGet<T>(key);
@@ -295,31 +310,33 @@ export const redisKeys = {
  */
 export const redisTTL = {
   // News content
-  NEWS_FEED: 300,        // 5 minutes
-  ARTICLE: 3600,         // 1 hour
-  SEARCH: 600,           // 10 minutes
-  TRENDING: 300,         // 5 minutes
-  BREAKING: 60,          // 1 minute
-  SOURCES: 3600,         // 1 hour
+  NEWS_FEED: 300, // 5 minutes
+  ARTICLE: 3600, // 1 hour
+  SEARCH: 600, // 10 minutes
+  TRENDING: 300, // 5 minutes
+  BREAKING: 60, // 1 minute
+  SOURCES: 3600, // 1 hour
 
   // Market data
-  MARKET_PRICE: 30,      // 30 seconds
-  MARKET_HISTORY: 300,   // 5 minutes
+  MARKET_PRICE: 30, // 30 seconds
+  MARKET_HISTORY: 300, // 5 minutes
 
   // User data
-  USER_ALERTS: 300,      // 5 minutes
-  USER_PORTFOLIO: 300,   // 5 minutes
-  USER_BOOKMARKS: 600,   // 10 minutes
+  USER_ALERTS: 300, // 5 minutes
+  USER_PORTFOLIO: 300, // 5 minutes
+  USER_BOOKMARKS: 600, // 10 minutes
 
   // AI responses
-  AI_SUMMARY: 86400,     // 24 hours
-  AI_SENTIMENT: 86400,   // 24 hours
+  AI_SUMMARY: 86400, // 24 hours
+  AI_SENTIMENT: 86400, // 24 hours
   AI_TRANSLATION: 86400, // 24 hours
 };
 
 // Auto-initialize in server environment
 if (typeof window === 'undefined' && process.env.REDIS_URL) {
-  initRedis().catch((err) => logger.error('[Redis] Auto-init failed', err instanceof Error ? err : undefined));
+  initRedis().catch((err) =>
+    logger.error('[Redis] Auto-init failed', err instanceof Error ? err : undefined),
+  );
 }
 
 export default {

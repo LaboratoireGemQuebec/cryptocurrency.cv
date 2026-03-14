@@ -65,11 +65,12 @@ export const newsQuerySchema = z.object({
   source: z.string().optional(),
   category: z.enum([
     'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional',
-    'etf', 'derivatives', 'onchain', 'fintech', 'macro', 'quant',
+    'etf', 'derivatives', 'onchain', 'macro', 'quant',
     'journalism', 'ethereum', 'asia', 'tradfi', 'mainstream', 'mining',
     'gaming', 'altl1', 'stablecoin', 'geopolitical', 'security', 'developer',
     'layer2', 'solana', 'trading',
   ]).optional(),
+  quality: z.enum(['all', 'high', 'premium']).optional(),
   lang: languageSchema.default('en'),
   from: z.string().optional(),
   to: z.string().optional(),

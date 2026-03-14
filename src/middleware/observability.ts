@@ -7,7 +7,7 @@
  * @module middleware/observability
  */
 
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { SECURITY_HEADERS } from './security';
 import { getClientIp } from './config';
 import { isApiClient } from './bot-detection';

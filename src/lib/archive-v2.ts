@@ -617,7 +617,7 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
 
   // 3. Last resort: the article is either in KV or in the homepage feeds.
   //    Avoid calling getLatestNews(50) with no source filter here — that
-  //    would trigger 350+ parallel RSS fetches and cause 429 storms from
+  //    would trigger 200+ parallel RSS fetches and cause 429 storms from
   //    medium.com, mirror.xyz, etc.  If it wasn't found above, it's an
   //    older or niche article that won't appear in live feeds.
   return null;

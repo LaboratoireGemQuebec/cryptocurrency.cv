@@ -171,26 +171,29 @@ const FREE_TIER_CONFIG: TierConfig = {
 
 /**
  * Check rate limit from a NextRequest (convenience wrapper)
- * 
+ *
  * Extracts identifier from request headers/IP and uses free tier limits.
  * For more control, use checkRateLimit(identifier, tierConfig) directly.
- * 
+ *
  * @param request - NextRequest object
  * @param tierConfig - Optional tier config (defaults to free tier)
  * @returns Rate limit result
  */
 export async function checkRateLimitFromRequest(
   request: NextRequest,
-  tierConfig: TierConfig = FREE_TIER_CONFIG
+  tierConfig: TierConfig = FREE_TIER_CONFIG,
 ): Promise<RateLimitResult> {
   // Extract identifier from API key header or IP
-  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
-             request.headers.get('x-real-ip') || 
-             'anonymous';
-  
+  const apiKey =
+    request.headers.get('x-api-key') ||
+    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
+  const ip =
+    request.headers.get('x-forwarded-for')?.split(',')[0] ||
+    request.headers.get('x-real-ip') ||
+    'anonymous';
+
   const identifier = apiKey || `ip:${ip}`;
-  
+
   return checkRateLimit(identifier, tierConfig);
 }
 
@@ -206,7 +209,7 @@ export async function checkRateLimitFromRequest(
  */
 export async function checkRateLimit(
   identifier: string,
-  tierConfig: TierConfig
+  tierConfig: TierConfig,
 ): Promise<RateLimitResult> {
   // Unlimited tier
   if (tierConfig.requestsPerDay === -1) {
@@ -267,7 +270,10 @@ export async function checkRateLimit(
       resetAt: result.reset,
     };
   } catch (error) {
-    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error checking rate limit');
+    rateLimitLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Error checking rate limit',
+    );
     // Fail open - allow request on error
     return {
       allowed: true,
@@ -290,7 +296,7 @@ export async function checkRateLimit(
 export async function checkTierRateLimit(
   identifier: string,
   tier: string,
-  tiers: Record<string, TierConfig>
+  tiers: Record<string, TierConfig>,
 ): Promise<RateLimitResult> {
   const tierConfig = tiers[tier];
 
@@ -313,7 +319,7 @@ export async function checkTierRateLimit(
  */
 export async function getUsage(
   identifier: string,
-  tierConfig: TierConfig
+  tierConfig: TierConfig,
 ): Promise<{ used: number; limit: number; resetAt: number } | null> {
   if (!isRedisConfigured()) return null;
 
@@ -335,7 +341,10 @@ export async function getUsage(
       resetAt: result.reset,
     };
   } catch (error) {
-    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error getting usage');
+    rateLimitLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Error getting usage',
+    );
     return null;
   }
 }
@@ -345,10 +354,7 @@ export async function getUsage(
  *
  * Useful for testing or admin overrides.
  */
-export async function resetRateLimit(
-  identifier: string,
-  tierConfig: TierConfig
-): Promise<boolean> {
+export async function resetRateLimit(identifier: string, tierConfig: TierConfig): Promise<boolean> {
   if (!isRedisConfigured()) return false;
 
   const limiter = getRateLimiter(tierConfig.name, tierConfig.requestsPerDay);
@@ -358,7 +364,10 @@ export async function resetRateLimit(
     await limiter.resetUsedTokens(identifier);
     return true;
   } catch (error) {
-    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error resetting rate limit');
+    rateLimitLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Error resetting rate limit',
+    );
     return false;
   }
 }
@@ -370,7 +379,7 @@ export async function resetRateLimit(
  */
 export async function blockIdentifier(
   identifier: string,
-  durationMs: number = 86400000 // Default: 24 hours
+  durationMs: number = 86400000, // Default: 24 hours
 ): Promise<boolean> {
   const redis = getRedis();
   if (!redis) return false;
@@ -381,7 +390,10 @@ export async function blockIdentifier(
     });
     return true;
   } catch (error) {
-    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error blocking identifier');
+    rateLimitLogger.error(
+      { err: error instanceof Error ? error : new Error(String(error)) },
+      'Error blocking identifier',
+    );
     return false;
   }
 }
@@ -421,13 +433,15 @@ const DEFAULT_FREE_TIER: TierConfig = {
  */
 function getIdentifierFromRequest(request: NextRequest): string {
   // Try API key first
-  const apiKey = request.headers.get('x-api-key') || request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
+  const apiKey =
+    request.headers.get('x-api-key') ||
+    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   if (apiKey) {
     // Hash the API key for privacy
     let hash = 0;
     for (let i = 0; i < apiKey.length; i++) {
       const char = apiKey.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
+      hash = (hash << 5) - hash + char;
       hash = hash & hash;
     }
     return `key:${Math.abs(hash).toString(36)}`;
@@ -438,7 +452,7 @@ function getIdentifierFromRequest(request: NextRequest): string {
   if (forwardedFor) {
     return `ip:${forwardedFor.split(',')[0].trim()}`;
   }
-  
+
   const realIP = request.headers.get('x-real-ip');
   if (realIP) {
     return `ip:${realIP}`;
@@ -449,7 +463,7 @@ function getIdentifierFromRequest(request: NextRequest): string {
   let hash = 0;
   for (let i = 0; i < userAgent.length; i++) {
     const char = userAgent.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
   return `ua:${Math.abs(hash).toString(36)}`;
@@ -457,13 +471,13 @@ function getIdentifierFromRequest(request: NextRequest): string {
 
 /**
  * Check rate limit for a request (simpler API)
- * 
+ *
  * Automatically extracts identifier from request and uses free tier limits.
  * For API key-based requests with custom tiers, use checkRateLimit directly.
  */
 export async function checkRateLimitByRequest(
   request: NextRequest,
-  tierConfig: TierConfig = DEFAULT_FREE_TIER
+  tierConfig: TierConfig = DEFAULT_FREE_TIER,
 ): Promise<RateLimitResult> {
   const identifier = getIdentifierFromRequest(request);
   return checkRateLimit(identifier, tierConfig);
@@ -475,12 +489,12 @@ export async function checkRateLimitByRequest(
 
 /**
  * Generate rate limit error response
- * 
+ *
  * Returns a 429 Too Many Requests response with proper headers.
  */
 export function getRateLimitErrorResponse(result: RateLimitResult): NextResponse {
   const retryAfter = Math.ceil((result.resetAt - Date.now()) / 1000);
-  
+
   return NextResponse.json(
     {
       error: {
@@ -497,7 +511,7 @@ export function getRateLimitErrorResponse(result: RateLimitResult): NextResponse
         'X-RateLimit-Reset': result.resetAt.toString(),
         'Retry-After': retryAfter.toString(),
       },
-    }
+    },
   );
 }
 
@@ -510,10 +524,7 @@ export const rateLimitResponse = getRateLimitErrorResponse;
 /**
  * Add rate limit headers to an existing response
  */
-export function addRateLimitHeaders(
-  response: NextResponse,
-  result: RateLimitResult
-): NextResponse {
+export function addRateLimitHeaders(response: NextResponse, result: RateLimitResult): NextResponse {
   response.headers.set('X-RateLimit-Limit', result.limit.toString());
   response.headers.set('X-RateLimit-Remaining', result.remaining.toString());
   response.headers.set('X-RateLimit-Reset', result.resetAt.toString());
@@ -531,7 +542,7 @@ export function addRateLimitHeaders(
  */
 export async function getAnalytics(
   tier: string,
-  requestsPerDay: number
+  requestsPerDay: number,
 ): Promise<{
   requests: number;
   blocked: number;

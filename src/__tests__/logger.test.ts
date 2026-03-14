@@ -8,7 +8,7 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock pino before importing logger so we can inspect calls
 const mockChild = vi.fn().mockReturnValue({
@@ -45,63 +45,63 @@ mockPino.stdSerializers = {
   res: vi.fn(),
 };
 
-vi.mock("pino", () => ({
+vi.mock('pino', () => ({
   default: mockPino,
 }));
 
-describe("Logger", () => {
+describe('Logger', () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  it("should create logger with correct base fields", async () => {
+  it('should create logger with correct base fields', async () => {
     // Re-import to trigger the pino() call
     vi.resetModules();
-    vi.doMock("pino", () => ({ default: mockPino }));
-    await import("@/lib/logger");
+    vi.doMock('pino', () => ({ default: mockPino }));
+    await import('@/lib/logger');
 
     expect(mockPino).toHaveBeenCalledWith(
       expect.objectContaining({
         base: expect.objectContaining({
-          service: "free-crypto-news",
+          service: 'free-crypto-news',
           env: expect.any(String),
         }),
       }),
     );
   });
 
-  it("should redact sensitive fields", async () => {
+  it('should redact sensitive fields', async () => {
     vi.resetModules();
-    vi.doMock("pino", () => ({ default: mockPino }));
-    await import("@/lib/logger");
+    vi.doMock('pino', () => ({ default: mockPino }));
+    await import('@/lib/logger');
 
     const pinoConfig = mockPino.mock.calls[0][0];
     expect(pinoConfig.redact).toBeDefined();
-    expect(pinoConfig.redact.paths).toContain("req.headers.authorization");
-    expect(pinoConfig.redact.paths).toContain("req.headers.cookie");
-    expect(pinoConfig.redact.paths).toContain("apiKey");
-    expect(pinoConfig.redact.paths).toContain("password");
-    expect(pinoConfig.redact.paths).toContain("token");
-    expect(pinoConfig.redact.paths).toContain("secret");
-    expect(pinoConfig.redact.paths).toContain("DATABASE_URL");
-    expect(pinoConfig.redact.paths).toContain("REDIS_URL");
-    expect(pinoConfig.redact.censor).toBe("[REDACTED]");
+    expect(pinoConfig.redact.paths).toContain('req.headers.authorization');
+    expect(pinoConfig.redact.paths).toContain('req.headers.cookie');
+    expect(pinoConfig.redact.paths).toContain('apiKey');
+    expect(pinoConfig.redact.paths).toContain('password');
+    expect(pinoConfig.redact.paths).toContain('token');
+    expect(pinoConfig.redact.paths).toContain('secret');
+    expect(pinoConfig.redact.paths).toContain('DATABASE_URL');
+    expect(pinoConfig.redact.paths).toContain('REDIS_URL');
+    expect(pinoConfig.redact.censor).toBe('[REDACTED]');
   });
 
-  it("should create child loggers with module field", async () => {
+  it('should create child loggers with module field', async () => {
     vi.resetModules();
-    vi.doMock("pino", () => ({ default: mockPino }));
-    const loggerModule = await import("@/lib/logger");
+    vi.doMock('pino', () => ({ default: mockPino }));
+    const loggerModule = await import('@/lib/logger');
 
     // The module creates child loggers during initialization
-    expect(mockChild).toHaveBeenCalledWith({ module: "api" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "cache" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "database" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "websocket" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "auth" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "rate-limit" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "ai" });
-    expect(mockChild).toHaveBeenCalledWith({ module: "archive" });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'api' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'cache' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'database' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'websocket' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'auth' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'rate-limit' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'ai' });
+    expect(mockChild).toHaveBeenCalledWith({ module: 'archive' });
 
     // Verify exports exist
     expect(loggerModule.apiLogger).toBeDefined();
@@ -114,57 +114,57 @@ describe("Logger", () => {
     expect(loggerModule.archiveLogger).toBeDefined();
   });
 
-  it("should use pino-pretty in development", async () => {
+  it('should use pino-pretty in development', async () => {
     vi.resetModules();
     const prevEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = "development";
-    vi.doMock("pino", () => ({ default: mockPino }));
-    await import("@/lib/logger");
+    process.env.NODE_ENV = 'development';
+    vi.doMock('pino', () => ({ default: mockPino }));
+    await import('@/lib/logger');
 
     const pinoConfig = mockPino.mock.calls[0][0];
     expect(pinoConfig.transport).toEqual({
-      target: "pino-pretty",
-      options: { colorize: true, translateTime: "SYS:standard" },
+      target: 'pino-pretty',
+      options: { colorize: true, translateTime: 'SYS:standard' },
     });
 
     process.env.NODE_ENV = prevEnv;
   });
 
-  it("should output JSON in production", async () => {
+  it('should output JSON in production', async () => {
     vi.resetModules();
     const prevEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = "production";
-    vi.doMock("pino", () => ({ default: mockPino }));
-    await import("@/lib/logger");
+    process.env.NODE_ENV = 'production';
+    vi.doMock('pino', () => ({ default: mockPino }));
+    await import('@/lib/logger');
 
     const pinoConfig = mockPino.mock.calls[0][0];
     expect(pinoConfig.transport).toBeUndefined();
-    expect(pinoConfig.level).toBe("info");
+    expect(pinoConfig.level).toBe('info');
 
     process.env.NODE_ENV = prevEnv;
   });
 
-  it("should respect LOG_LEVEL environment variable", async () => {
+  it('should respect LOG_LEVEL environment variable', async () => {
     vi.resetModules();
     const prevLogLevel = process.env.LOG_LEVEL;
-    process.env.LOG_LEVEL = "warn";
-    vi.doMock("pino", () => ({ default: mockPino }));
-    await import("@/lib/logger");
+    process.env.LOG_LEVEL = 'warn';
+    vi.doMock('pino', () => ({ default: mockPino }));
+    await import('@/lib/logger');
 
     const pinoConfig = mockPino.mock.calls[0][0];
-    expect(pinoConfig.level).toBe("warn");
+    expect(pinoConfig.level).toBe('warn');
 
     process.env.LOG_LEVEL = prevLogLevel;
   });
 
-  it("createRequestLogger should return object with logging methods", async () => {
+  it('createRequestLogger should return object with logging methods', async () => {
     vi.resetModules();
-    vi.doMock("pino", () => ({ default: mockPino }));
-    const { createRequestLogger } = await import("@/lib/logger");
+    vi.doMock('pino', () => ({ default: mockPino }));
+    const { createRequestLogger } = await import('@/lib/logger');
 
     const mockReq = {
-      method: "GET",
-      nextUrl: { pathname: "/api/news", search: "" },
+      method: 'GET',
+      nextUrl: { pathname: '/api/news', search: '' },
       headers: {
         get: vi.fn().mockReturnValue(null),
       },
@@ -178,12 +178,12 @@ describe("Logger", () => {
     expect(reqLogger.request).toBeInstanceOf(Function);
   });
 
-  it("createLogger should return legacy-compatible logger", async () => {
+  it('createLogger should return legacy-compatible logger', async () => {
     vi.resetModules();
-    vi.doMock("pino", () => ({ default: mockPino }));
-    const { createLogger } = await import("@/lib/logger");
+    vi.doMock('pino', () => ({ default: mockPino }));
+    const { createLogger } = await import('@/lib/logger');
 
-    const moduleLogger = createLogger("TestModule");
+    const moduleLogger = createLogger('TestModule');
     expect(moduleLogger.info).toBeInstanceOf(Function);
     expect(moduleLogger.error).toBeInstanceOf(Function);
     expect(moduleLogger.warn).toBeInstanceOf(Function);

@@ -44,155 +44,140 @@
  * - Other: Podcasts
  */
 
-import sanitizeHtml from "sanitize-html";
-import { SOURCE_REPUTATION_SCORES, isFintechSource } from "./source-tiers";
+import sanitizeHtml from 'sanitize-html';
+import { SOURCE_REPUTATION_SCORES, sourcePassesQuality } from './source-tiers';
 
-// RSS Feed URLs for crypto news sources (350+ sources)
+// RSS Feed URLs for crypto news sources (200+ sources)
 const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // TIER 1: Major News Outlets
   // ═══════════════════════════════════════════════════════════════
   coindesk: {
-    name: "CoinDesk",
-    url: "https://www.coindesk.com/arc/outboundfeeds/rss/",
-    category: "general",
+    name: 'CoinDesk',
+    url: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
+    category: 'general',
   },
   theblock: {
-    name: "The Block",
-    url: "https://www.theblock.co/rss.xml",
-    category: "general",
+    name: 'The Block',
+    url: 'https://www.theblock.co/rss.xml',
+    category: 'general',
   },
   decrypt: {
-    name: "Decrypt",
-    url: "https://decrypt.co/feed",
-    category: "general",
+    name: 'Decrypt',
+    url: 'https://decrypt.co/feed',
+    category: 'general',
   },
   cointelegraph: {
-    name: "CoinTelegraph",
-    url: "https://cointelegraph.com/rss",
-    category: "general",
+    name: 'CoinTelegraph',
+    url: 'https://cointelegraph.com/rss',
+    category: 'general',
   },
   bitcoinmagazine: {
-    name: "Bitcoin Magazine",
-    url: "https://bitcoinmagazine.com/.rss/full/",
-    category: "bitcoin",
+    name: 'Bitcoin Magazine',
+    url: 'https://bitcoinmagazine.com/.rss/full/',
+    category: 'bitcoin',
   },
   blockworks: {
-    name: "Blockworks",
-    url: "https://blockworks.co/feed",
-    category: "general",
+    name: 'Blockworks',
+    url: 'https://blockworks.co/feed',
+    category: 'general',
   },
   defiant: {
-    name: "The Defiant",
-    url: "https://thedefiant.io/feed",
-    category: "defi",
+    name: 'The Defiant',
+    url: 'https://thedefiant.io/feed',
+    category: 'defi',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // TIER 2: Established News Sources
   // ═══════════════════════════════════════════════════════════════
   bitcoinist: {
-    name: "Bitcoinist",
-    url: "https://bitcoinist.com/feed/",
-    category: "bitcoin",
+    name: 'Bitcoinist',
+    url: 'https://bitcoinist.com/feed/',
+    category: 'bitcoin',
   },
   cryptoslate: {
-    name: "CryptoSlate",
-    url: "https://cryptoslate.com/feed/",
-    category: "general",
+    name: 'CryptoSlate',
+    url: 'https://cryptoslate.com/feed/',
+    category: 'general',
   },
   newsbtc: {
-    name: "NewsBTC",
-    url: "https://www.newsbtc.com/feed/",
-    category: "general",
-  },
-  cryptonews: {
-    name: "Crypto.news",
-    url: "https://crypto.news/feed/",
-    category: "general",
-  },
-  cryptopotato: {
-    name: "CryptoPotato",
-    url: "https://cryptopotato.com/feed/",
-    category: "general",
+    name: 'NewsBTC',
+    url: 'https://www.newsbtc.com/feed/',
+    category: 'general',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: DeFi & Web3 Focused Sources
   // ═══════════════════════════════════════════════════════════════
   defirate: {
-    name: "DeFi Rate",
-    url: "https://defirate.com/feed/",
-    category: "defi",
+    name: 'DeFi Rate',
+    url: 'https://defirate.com/feed/',
+    category: 'defi',
   },
   // ═══════════════════════════════════════════════════════════════
   // NEW: NFT & Metaverse Sources
   // ═══════════════════════════════════════════════════════════════
   nftnow: {
-    name: "NFT Now",
-    url: "https://nftnow.com/feed/",
-    category: "nft",
+    name: 'NFT Now',
+    url: 'https://nftnow.com/feed/',
+    category: 'nft',
   },
   nftevening: {
-    name: "NFT Evening",
-    url: "https://nftevening.com/feed/",
-    category: "nft",
+    name: 'NFT Evening',
+    url: 'https://nftevening.com/feed/',
+    category: 'nft',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Research & Analysis Sources
   // ═══════════════════════════════════════════════════════════════
   messari: {
-    name: "Messari",
-    url: "https://messari.io/rss",
-    category: "research",
+    name: 'Messari',
+    url: 'https://messari.io/rss',
+    category: 'research',
   },
   thedefireport: {
-    name: "The DeFi Report",
-    url: "https://thedefireport.substack.com/feed",
-    category: "research",
+    name: 'The DeFi Report',
+    url: 'https://thedefireport.substack.com/feed',
+    category: 'research',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Trading & Market Analysis
   // ═══════════════════════════════════════════════════════════════
-  ambcrypto: {
-    name: "AMBCrypto",
-    url: "https://ambcrypto.com/feed/",
-    category: "trading",
-  },
   beincrypto: {
-    name: "BeInCrypto",
-    url: "https://beincrypto.com/feed/",
-    category: "trading",
+    name: 'BeInCrypto',
+    url: 'https://beincrypto.com/feed/',
+    category: 'trading',
   },
   u_today: {
-    name: "U.Today",
-    url: "https://u.today/rss",
-    category: "trading",
+    name: 'U.Today',
+    url: 'https://u.today/rss',
+    category: 'trading',
   },
   cryptobriefing: {
-    name: "Crypto Briefing",
-    url: "https://cryptobriefing.com/feed/",
-    category: "research",
+    name: 'Crypto Briefing',
+    url: 'https://cryptobriefing.com/feed/',
+    category: 'research',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Mining & Infrastructure
   // ═══════════════════════════════════════════════════════════════
   bitcoinmining: {
-    name: "Bitcoin Mining News",
-    url: "https://bitcoinmagazine.com/tags/mining/.rss/full/",
-    category: "mining",
+    name: 'Bitcoin Mining News',
+    url: 'https://bitcoinmagazine.com/tags/mining/.rss/full/',
+    category: 'mining',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Ethereum-Focused Sources
   // ═══════════════════════════════════════════════════════════════
   etherscan: {
-    name: "Etherscan Blog",
-    url: "https://etherscan.io/blog?rss",
-    category: "ethereum",
+    name: 'Etherscan Blog',
+    url: 'https://etherscan.io/blog?rss',
+    category: 'ethereum',
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -202,536 +187,508 @@ const RSS_SOURCES = {
   // NEW: Regulatory & Institutional
   // ═══════════════════════════════════════════════════════════════
   coinbase_blog: {
-    name: "Coinbase Blog",
-    url: "https://www.coinbase.com/blog/rss.xml",
-    category: "institutional",
+    name: 'Coinbase Blog',
+    url: 'https://www.coinbase.com/blog/rss.xml',
+    category: 'institutional',
   },
   binance_blog: {
-    name: "Binance Blog",
-    url: "https://www.binance.com/en/blog/rss.xml",
-    category: "institutional",
+    name: 'Binance Blog',
+    url: 'https://www.binance.com/en/blog/rss.xml',
+    category: 'institutional',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Asia-Pacific English Sources
   // ═══════════════════════════════════════════════════════════════
   forkast: {
-    name: "Forkast News",
-    url: "https://forkast.news/feed/",
-    category: "asia",
-  },
-  coingape: {
-    name: "CoinGape",
-    url: "https://coingape.com/feed/",
-    category: "general",
+    name: 'Forkast News',
+    url: 'https://forkast.news/feed/',
+    category: 'asia',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Bitcoin-Specific Sources
   // ═══════════════════════════════════════════════════════════════
   btctimes: {
-    name: "BTC Times",
-    url: "https://www.btctimes.com/feed/",
-    category: "bitcoin",
+    name: 'BTC Times',
+    url: 'https://www.btctimes.com/feed/',
+    category: 'bitcoin',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Security & Hacks
   // ═══════════════════════════════════════════════════════════════
   slowmist: {
-    name: "SlowMist Blog",
-    url: "https://slowmist.medium.com/feed",
-    category: "security",
+    name: 'SlowMist Blog',
+    url: 'https://slowmist.medium.com/feed',
+    category: 'security',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Solana Ecosystem
   // ═══════════════════════════════════════════════════════════════
   solana_news: {
-    name: "Solana News",
-    url: "https://solana.com/news/rss.xml",
-    category: "solana",
+    name: 'Solana News',
+    url: 'https://solana.com/news/rss.xml',
+    category: 'solana',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Additional General News Sources
   // ═══════════════════════════════════════════════════════════════
   dailyhodl: {
-    name: "The Daily Hodl",
-    url: "https://dailyhodl.com/feed/",
-    category: "general",
+    name: 'The Daily Hodl',
+    url: 'https://dailyhodl.com/feed/',
+    category: 'general',
   },
   coinjournal: {
-    name: "CoinJournal",
-    url: "https://coinjournal.net/feed/",
-    category: "general",
+    name: 'CoinJournal',
+    url: 'https://coinjournal.net/feed/',
+    category: 'general',
   },
   cryptoglobe: {
-    name: "CryptoGlobe",
-    url: "https://www.cryptoglobe.com/latest/feed/",
-    category: "general",
-  },
-  zycrypto: {
-    name: "ZyCrypto",
-    url: "https://zycrypto.com/feed/",
-    category: "general",
+    name: 'CryptoGlobe',
+    url: 'https://www.cryptoglobe.com/latest/feed/',
+    category: 'general',
   },
   cryptodaily: {
-    name: "Crypto Daily",
-    url: "https://cryptodaily.co.uk/feed",
-    category: "general",
-  },
-  blockonomi: {
-    name: "Blockonomi",
-    url: "https://blockonomi.com/feed/",
-    category: "general",
+    name: 'Crypto Daily',
+    url: 'https://cryptodaily.co.uk/feed',
+    category: 'general',
   },
   usethebitcoin: {
-    name: "UseTheBitcoin",
-    url: "https://usethebitcoin.com/feed/",
-    category: "general",
+    name: 'UseTheBitcoin',
+    url: 'https://usethebitcoin.com/feed/',
+    category: 'general',
   },
   nulltx: {
-    name: "NullTX",
-    url: "https://nulltx.com/feed/",
-    category: "general",
+    name: 'NullTX',
+    url: 'https://nulltx.com/feed/',
+    category: 'general',
   },
   coinspeaker: {
-    name: "Coinspeaker",
-    url: "https://www.coinspeaker.com/feed/",
-    category: "general",
+    name: 'Coinspeaker',
+    url: 'https://www.coinspeaker.com/feed/',
+    category: 'general',
   },
   cryptoninjas: {
-    name: "CryptoNinjas",
-    url: "https://www.cryptoninjas.net/feed/",
-    category: "general",
+    name: 'CryptoNinjas',
+    url: 'https://www.cryptoninjas.net/feed/',
+    category: 'general',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Additional DeFi Sources
   // ═══════════════════════════════════════════════════════════════
   defipulse: {
-    name: "DeFi Pulse Blog",
-    url: "https://defipulse.com/blog/feed/",
-    category: "defi",
+    name: 'DeFi Pulse Blog',
+    url: 'https://defipulse.com/blog/feed/',
+    category: 'defi',
   },
   defillama_news: {
-    name: "DefiLlama News",
-    url: "https://defillama.com/feed",
-    category: "defi",
+    name: 'DefiLlama News',
+    url: 'https://defillama.com/feed',
+    category: 'defi',
   },
   uniswap_blog: {
-    name: "Uniswap Blog",
-    url: "https://uniswap.org/blog/feed.xml",
-    category: "defi",
+    name: 'Uniswap Blog',
+    url: 'https://uniswap.org/blog/feed.xml',
+    category: 'defi',
   },
   aave_blog: {
-    name: "Aave Blog",
-    url: "https://aave.mirror.xyz/feed/atom",
-    category: "defi",
+    name: 'Aave Blog',
+    url: 'https://aave.mirror.xyz/feed/atom',
+    category: 'defi',
   },
   compound_blog: {
-    name: "Compound Blog",
-    url: "https://medium.com/feed/compound-finance",
-    category: "defi",
+    name: 'Compound Blog',
+    url: 'https://medium.com/feed/compound-finance',
+    category: 'defi',
   },
   makerdao_blog: {
-    name: "MakerDAO Blog",
-    url: "https://blog.makerdao.com/feed/",
-    category: "defi",
+    name: 'MakerDAO Blog',
+    url: 'https://blog.makerdao.com/feed/',
+    category: 'defi',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Layer 2 & Scaling
   // ═══════════════════════════════════════════════════════════════
   optimism_blog: {
-    name: "Optimism Blog",
-    url: "https://optimism.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'Optimism Blog',
+    url: 'https://optimism.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
   arbitrum_blog: {
-    name: "Arbitrum Blog",
-    url: "https://arbitrum.io/blog/rss.xml",
-    category: "layer2",
+    name: 'Arbitrum Blog',
+    url: 'https://arbitrum.io/blog/rss.xml',
+    category: 'layer2',
   },
   starknet_blog: {
-    name: "StarkNet Blog",
-    url: "https://starkware.medium.com/feed",
-    category: "layer2",
+    name: 'StarkNet Blog',
+    url: 'https://starkware.medium.com/feed',
+    category: 'layer2',
   },
   zksync_blog: {
-    name: "zkSync Blog",
-    url: "https://zksync.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'zkSync Blog',
+    url: 'https://zksync.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
   base_blog: {
-    name: "Base Blog",
-    url: "https://base.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'Base Blog',
+    url: 'https://base.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Research & Analysis Deep Dive
   // ═══════════════════════════════════════════════════════════════
   glassnode: {
-    name: "Glassnode Insights",
-    url: "https://insights.glassnode.com/rss/",
-    category: "research",
+    name: 'Glassnode Insights',
+    url: 'https://insights.glassnode.com/rss/',
+    category: 'research',
   },
   delphi_digital: {
-    name: "Delphi Digital",
-    url: "https://members.delphidigital.io/feed",
-    category: "research",
+    name: 'Delphi Digital',
+    url: 'https://members.delphidigital.io/feed',
+    category: 'research',
   },
   theblockresearch: {
-    name: "The Block Research",
-    url: "https://www.theblock.co/research/feed",
-    category: "research",
+    name: 'The Block Research',
+    url: 'https://www.theblock.co/research/feed',
+    category: 'research',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Developer & Tech Sources
   // ═══════════════════════════════════════════════════════════════
   chainlink_blog: {
-    name: "Chainlink Blog",
-    url: "https://blog.chain.link/feed/",
-    category: "developer",
+    name: 'Chainlink Blog',
+    url: 'https://blog.chain.link/feed/',
+    category: 'developer',
   },
   infura_blog: {
-    name: "Infura Blog",
-    url: "https://blog.infura.io/feed/",
-    category: "developer",
+    name: 'Infura Blog',
+    url: 'https://blog.infura.io/feed/',
+    category: 'developer',
   },
   thegraph_blog: {
-    name: "The Graph Blog",
-    url: "https://thegraph.com/blog/feed",
-    category: "developer",
+    name: 'The Graph Blog',
+    url: 'https://thegraph.com/blog/feed',
+    category: 'developer',
   },
   foundry_blog: {
-    name: "Foundry Blog",
-    url: "https://book.getfoundry.sh/feed.xml",
-    category: "developer",
+    name: 'Foundry Blog',
+    url: 'https://book.getfoundry.sh/feed.xml',
+    category: 'developer',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Security & Auditing
   // ═══════════════════════════════════════════════════════════════
   certik_blog: {
-    name: "CertiK Blog",
-    url: "https://www.certik.com/resources/blog/rss.xml",
-    category: "security",
+    name: 'CertiK Blog',
+    url: 'https://www.certik.com/resources/blog/rss.xml',
+    category: 'security',
   },
   openzeppelin_blog: {
-    name: "OpenZeppelin Blog",
-    url: "https://blog.openzeppelin.com/feed/",
-    category: "security",
+    name: 'OpenZeppelin Blog',
+    url: 'https://blog.openzeppelin.com/feed/',
+    category: 'security',
   },
   trailofbits: {
-    name: "Trail of Bits Blog",
-    url: "https://blog.trailofbits.com/feed/",
-    category: "security",
+    name: 'Trail of Bits Blog',
+    url: 'https://blog.trailofbits.com/feed/',
+    category: 'security',
   },
   samczsun: {
-    name: "samczsun Blog",
-    url: "https://samczsun.com/rss/",
-    category: "security",
+    name: 'samczsun Blog',
+    url: 'https://samczsun.com/rss/',
+    category: 'security',
   },
   immunefi_blog: {
-    name: "Immunefi Blog",
-    url: "https://immunefi.medium.com/feed",
-    category: "security",
+    name: 'Immunefi Blog',
+    url: 'https://immunefi.medium.com/feed',
+    category: 'security',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Trading & Market Analysis Extended
   // ═══════════════════════════════════════════════════════════════
   fxstreet_crypto: {
-    name: "FXStreet Crypto",
-    url: "https://www.fxstreet.com/cryptocurrencies/news/feed",
-    category: "trading",
+    name: 'FXStreet Crypto',
+    url: 'https://www.fxstreet.com/cryptocurrencies/news/feed',
+    category: 'trading',
   },
   tradingview_crypto: {
-    name: "TradingView Crypto Ideas",
-    url: "https://www.tradingview.com/feed/?sort=recent&stream=crypto",
-    category: "trading",
+    name: 'TradingView Crypto Ideas',
+    url: 'https://www.tradingview.com/feed/?sort=recent&stream=crypto',
+    category: 'trading',
   },
   cryptoquant_blog: {
-    name: "CryptoQuant Blog",
-    url: "https://cryptoquant.com/blog/feed",
-    category: "trading",
+    name: 'CryptoQuant Blog',
+    url: 'https://cryptoquant.com/blog/feed',
+    category: 'trading',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Mining & Energy
   // ═══════════════════════════════════════════════════════════════
   hashrateindex: {
-    name: "Hashrate Index",
-    url: "https://hashrateindex.com/blog/feed/",
-    category: "mining",
+    name: 'Hashrate Index',
+    url: 'https://hashrateindex.com/blog/feed/',
+    category: 'mining',
   },
   compassmining_blog: {
-    name: "Compass Mining Blog",
-    url: "https://compassmining.io/education/feed/",
-    category: "mining",
+    name: 'Compass Mining Blog',
+    url: 'https://compassmining.io/education/feed/',
+    category: 'mining',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Mainstream Finance Crypto Coverage
   // ═══════════════════════════════════════════════════════════════
   bloomberg_crypto: {
-    name: "Bloomberg Crypto",
-    url: "https://www.bloomberg.com/crypto/feed",
-    category: "mainstream",
+    name: 'Bloomberg Crypto',
+    url: 'https://www.bloomberg.com/crypto/feed',
+    category: 'mainstream',
   },
   entrepreneur_crypto: {
-    name: "Entrepreneur",
-    url: "https://www.entrepreneur.com/topic/cryptocurrency/feed",
-    category: "mainstream",
+    name: 'Entrepreneur',
+    url: 'https://www.entrepreneur.com/topic/cryptocurrency/feed',
+    category: 'mainstream',
   },
   cnbc_crypto: {
-    name: "CNBC Crypto",
-    url: "https://www.cnbc.com/id/100727362/device/rss/rss.html",
-    category: "mainstream",
+    name: 'CNBC Crypto',
+    url: 'https://www.cnbc.com/id/100727362/device/rss/rss.html',
+    category: 'mainstream',
   },
   yahoo_crypto: {
-    name: "Yahoo Finance Crypto",
-    url: "https://finance.yahoo.com/rss/cryptocurrency",
-    category: "mainstream",
+    name: 'Yahoo Finance Crypto',
+    url: 'https://finance.yahoo.com/rss/cryptocurrency',
+    category: 'mainstream',
   },
   wsj_crypto: {
-    name: "Wall Street Journal Crypto",
-    url: "https://feeds.a.dj.com/rss/RSSWSJD.xml",
-    category: "mainstream",
+    name: 'Wall Street Journal Crypto',
+    url: 'https://feeds.a.dj.com/rss/RSSWSJD.xml',
+    category: 'mainstream',
   },
   ft_crypto: {
-    name: "Financial Times Crypto",
-    url: "https://www.ft.com/cryptocurrencies?format=rss",
-    category: "mainstream",
+    name: 'Financial Times Crypto',
+    url: 'https://www.ft.com/cryptocurrencies?format=rss',
+    category: 'mainstream',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: NFT & Gaming Extended
   // ═══════════════════════════════════════════════════════════════
   nftplazas: {
-    name: "NFT Plazas",
-    url: "https://nftplazas.com/feed/",
-    category: "nft",
+    name: 'NFT Plazas',
+    url: 'https://nftplazas.com/feed/',
+    category: 'nft',
   },
   playtoearn: {
-    name: "PlayToEarn",
-    url: "https://playtoearn.net/feed/",
-    category: "gaming",
+    name: 'PlayToEarn',
+    url: 'https://playtoearn.net/feed/',
+    category: 'gaming',
   },
   dappradar_blog: {
-    name: "DappRadar Blog",
-    url: "https://dappradar.com/blog/feed",
-    category: "nft",
+    name: 'DappRadar Blog',
+    url: 'https://dappradar.com/blog/feed',
+    category: 'nft',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Bitcoin Ecosystem Extended
   // ═══════════════════════════════════════════════════════════════
   stackernews: {
-    name: "Stacker News",
-    url: "https://stacker.news/rss",
-    category: "bitcoin",
+    name: 'Stacker News',
+    url: 'https://stacker.news/rss',
+    category: 'bitcoin',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Alternative L1 Ecosystems
   // ═══════════════════════════════════════════════════════════════
   near_blog: {
-    name: "NEAR Protocol Blog",
-    url: "https://near.org/blog/feed/",
-    category: "altl1",
+    name: 'NEAR Protocol Blog',
+    url: 'https://near.org/blog/feed/',
+    category: 'altl1',
   },
   avalanche_blog: {
-    name: "Avalanche Blog",
-    url: "https://medium.com/feed/avalancheavax",
-    category: "altl1",
+    name: 'Avalanche Blog',
+    url: 'https://medium.com/feed/avalancheavax',
+    category: 'altl1',
   },
   sui_blog: {
-    name: "Sui Blog",
-    url: "https://blog.sui.io/feed/",
-    category: "altl1",
+    name: 'Sui Blog',
+    url: 'https://blog.sui.io/feed/',
+    category: 'altl1',
   },
   aptos_blog: {
-    name: "Aptos Blog",
-    url: "https://medium.com/feed/aptoslabs",
-    category: "altl1",
+    name: 'Aptos Blog',
+    url: 'https://medium.com/feed/aptoslabs',
+    category: 'altl1',
   },
   cardano_blog: {
-    name: "Cardano Blog",
-    url: "https://iohk.io/en/blog/posts/feed.rss",
-    category: "altl1",
+    name: 'Cardano Blog',
+    url: 'https://iohk.io/en/blog/posts/feed.rss',
+    category: 'altl1',
   },
   polkadot_blog: {
-    name: "Polkadot Blog",
-    url: "https://polkadot.network/blog/feed/",
-    category: "altl1",
+    name: 'Polkadot Blog',
+    url: 'https://polkadot.network/blog/feed/',
+    category: 'altl1',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Stablecoin & CBDC News
   // ═══════════════════════════════════════════════════════════════
   tether_news: {
-    name: "Tether News",
-    url: "https://tether.to/en/news/feed/",
-    category: "stablecoin",
+    name: 'Tether News',
+    url: 'https://tether.to/en/news/feed/',
+    category: 'stablecoin',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // INSTITUTIONAL RESEARCH & VC INSIGHTS
   // ═══════════════════════════════════════════════════════════════
   galaxy_research: {
-    name: "Galaxy Digital Research",
-    url: "https://www.galaxy.com/insights/feed/",
-    category: "institutional",
+    name: 'Galaxy Digital Research',
+    url: 'https://www.galaxy.com/insights/feed/',
+    category: 'institutional',
   },
   pantera_capital: {
-    name: "Pantera Capital",
-    url: "https://panteracapital.com/feed/",
-    category: "institutional",
+    name: 'Pantera Capital',
+    url: 'https://panteracapital.com/feed/',
+    category: 'institutional',
   },
   placeholder_vc: {
-    name: "Placeholder VC",
-    url: "https://www.placeholder.vc/blog?format=rss",
-    category: "institutional",
+    name: 'Placeholder VC',
+    url: 'https://www.placeholder.vc/blog?format=rss',
+    category: 'institutional',
   },
   variant_fund: {
-    name: "Variant Fund",
-    url: "https://variant.fund/writing/rss",
-    category: "institutional",
+    name: 'Variant Fund',
+    url: 'https://variant.fund/writing/rss',
+    category: 'institutional',
   },
   dragonfly_research: {
-    name: "Dragonfly Research",
-    url: "https://medium.com/feed/dragonfly-research",
-    category: "institutional",
+    name: 'Dragonfly Research',
+    url: 'https://medium.com/feed/dragonfly-research',
+    category: 'institutional',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // ASSET MANAGERS & ETF ISSUERS
   // ═══════════════════════════════════════════════════════════════
   grayscale_insights: {
-    name: "Grayscale Insights",
-    url: "https://grayscale.com/insights/feed/",
-    category: "etf",
+    name: 'Grayscale Insights',
+    url: 'https://grayscale.com/insights/feed/',
+    category: 'etf',
   },
   bitwise_research: {
-    name: "Bitwise Research",
-    url: "https://bitwiseinvestments.com/feed/",
-    category: "etf",
+    name: 'Bitwise Research',
+    url: 'https://bitwiseinvestments.com/feed/',
+    category: 'etf',
   },
   coinshares_research: {
-    name: "CoinShares Research",
-    url: "https://blog.coinshares.com/feed",
-    category: "etf",
+    name: 'CoinShares Research',
+    url: 'https://blog.coinshares.com/feed',
+    category: 'etf',
   },
   ark_invest: {
-    name: "ARK Invest",
-    url: "https://ark-invest.com/articles/feed/",
-    category: "etf",
+    name: 'ARK Invest',
+    url: 'https://ark-invest.com/articles/feed/',
+    category: 'etf',
   },
   twentyone_shares: {
-    name: "21Shares Research",
-    url: "https://21shares.com/research/feed/",
-    category: "etf",
+    name: '21Shares Research',
+    url: 'https://21shares.com/research/feed/',
+    category: 'etf',
   },
   wisdomtree_blog: {
-    name: "WisdomTree Blog",
-    url: "https://www.wisdomtree.com/blog/feed",
-    category: "etf",
+    name: 'WisdomTree Blog',
+    url: 'https://www.wisdomtree.com/blog/feed',
+    category: 'etf',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // DERIVATIVES & OPTIONS MARKET
   // ═══════════════════════════════════════════════════════════════
   deribit_insights: {
-    name: "Deribit Insights",
-    url: "https://insights.deribit.com/feed/",
-    category: "derivatives",
+    name: 'Deribit Insights',
+    url: 'https://insights.deribit.com/feed/',
+    category: 'derivatives',
   },
 
   // ═══════════════════════════════════════════════════════════════
   // ON-CHAIN ANALYTICS & DATA PROVIDERS
   // ═══════════════════════════════════════════════════════════════
   intotheblock: {
-    name: "IntoTheBlock",
-    url: "https://medium.com/feed/intotheblock",
-    category: "onchain",
+    name: 'IntoTheBlock',
+    url: 'https://medium.com/feed/intotheblock',
+    category: 'onchain',
   },
   coin_metrics: {
-    name: "Coin Metrics",
-    url: "https://coinmetrics.substack.com/feed",
-    category: "onchain",
+    name: 'Coin Metrics',
+    url: 'https://coinmetrics.substack.com/feed',
+    category: 'onchain',
   },
   woobull: {
-    name: "Willy Woo (Woobull)",
-    url: "https://woobull.com/feed/",
-    category: "onchain",
+    name: 'Willy Woo (Woobull)',
+    url: 'https://woobull.com/feed/',
+    category: 'onchain',
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // FINTECH & PAYMENTS NEWS
-  // ═══════════════════════════════════════════════════════════════
-  finextra: {
-    name: "Finextra",
-    url: "https://www.finextra.com/rss/headlines.aspx",
-    category: "fintech",
-  },
-  pymnts_crypto: {
-    name: "PYMNTS Crypto",
-    url: "https://www.pymnts.com/cryptocurrency/feed/",
-    category: "fintech",
-  },
   // ═══════════════════════════════════════════════════════════════
   // MACRO ANALYSIS & INDEPENDENT RESEARCHERS
   // ═══════════════════════════════════════════════════════════════
   lyn_alden: {
-    name: "Lyn Alden",
-    url: "https://www.lynalden.com/feed/",
-    category: "macro",
+    name: 'Lyn Alden',
+    url: 'https://www.lynalden.com/feed/',
+    category: 'macro',
   },
   alhambra_partners: {
-    name: "Alhambra Partners",
-    url: "https://www.alhambrapartners.com/feed/",
-    category: "macro",
+    name: 'Alhambra Partners',
+    url: 'https://www.alhambrapartners.com/feed/',
+    category: 'macro',
   },
   // ═══════════════════════════════════════════════════════════════
   // QUANT & SYSTEMATIC TRADING RESEARCH
   // ═══════════════════════════════════════════════════════════════
   aqr_insights: {
-    name: "AQR Insights",
-    url: "https://www.aqr.com/Insights/feed",
-    category: "quant",
+    name: 'AQR Insights',
+    url: 'https://www.aqr.com/Insights/feed',
+    category: 'quant',
   },
   alpha_architect: {
-    name: "Alpha Architect",
-    url: "https://alphaarchitect.com/feed/",
-    category: "quant",
+    name: 'Alpha Architect',
+    url: 'https://alphaarchitect.com/feed/',
+    category: 'quant',
   },
   // ═══════════════════════════════════════════════════════════════
   // ADDITIONAL CRYPTO JOURNALISM
   // ═══════════════════════════════════════════════════════════════
   unchained_crypto: {
-    name: "Unchained Crypto",
-    url: "https://unchainedcrypto.com/feed/",
-    category: "journalism",
+    name: 'Unchained Crypto',
+    url: 'https://unchainedcrypto.com/feed/',
+    category: 'journalism',
   },
   protos: {
-    name: "Protos",
-    url: "https://protos.com/feed/",
-    category: "journalism",
+    name: 'Protos',
+    url: 'https://protos.com/feed/',
+    category: 'journalism',
   },
   daily_gwei: {
-    name: "The Daily Gwei",
-    url: "https://thedailygwei.substack.com/feed",
-    category: "ethereum",
+    name: 'The Daily Gwei',
+    url: 'https://thedailygwei.substack.com/feed',
+    category: 'ethereum',
   },
   wu_blockchain: {
-    name: "Wu Blockchain",
-    url: "https://wublock.substack.com/feed",
-    category: "asia",
+    name: 'Wu Blockchain',
+    url: 'https://wublock.substack.com/feed',
+    category: 'asia',
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -740,55 +697,45 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // ADDITIONAL CRYPTO NEWS (from HQ DeFi Dashboard)
   // ═══════════════════════════════════════════════════════════════
-  dailycoin: {
-    name: "DailyCoin",
-    url: "https://dailycoin.com/feed/",
-    category: "general",
-  },
-  coinpedia: {
-    name: "CoinPedia",
-    url: "https://coinpedia.org/feed/",
-    category: "general",
-  },
   thenewscrypto: {
-    name: "TheNewsCrypto",
-    url: "https://thenewscrypto.com/feed/",
-    category: "general",
+    name: 'TheNewsCrypto',
+    url: 'https://thenewscrypto.com/feed/',
+    category: 'general',
   },
   cryptonewsflash: {
-    name: "Crypto-News Flash",
-    url: "https://www.crypto-news-flash.com/feed/",
-    category: "general",
+    name: 'Crypto-News Flash',
+    url: 'https://www.crypto-news-flash.com/feed/',
+    category: 'general',
   },
   finance_magnates_crypto: {
-    name: "Finance Magnates Crypto",
-    url: "https://www.financemagnates.com/cryptocurrency/feed/",
-    category: "general",
+    name: 'Finance Magnates Crypto',
+    url: 'https://www.financemagnates.com/cryptocurrency/feed/',
+    category: 'general',
   },
   insidebitcoins: {
-    name: "InsideBitcoins",
-    url: "https://insidebitcoins.com/feed",
-    category: "general",
+    name: 'InsideBitcoins',
+    url: 'https://insidebitcoins.com/feed',
+    category: 'general',
   },
   thecryptobasic: {
-    name: "TheCryptoBasic",
-    url: "https://thecryptobasic.com/feed/",
-    category: "general",
+    name: 'TheCryptoBasic',
+    url: 'https://thecryptobasic.com/feed/',
+    category: 'general',
   },
   bitcoincom: {
-    name: "Bitcoin.com News",
-    url: "https://news.bitcoin.com/feed/",
-    category: "bitcoin",
+    name: 'Bitcoin.com News',
+    url: 'https://news.bitcoin.com/feed/',
+    category: 'bitcoin',
   },
   coincentral_news: {
-    name: "CoinCentral",
-    url: "https://coincentral.com/news/feed/",
-    category: "general",
+    name: 'CoinCentral',
+    url: 'https://coincentral.com/news/feed/',
+    category: 'general',
   },
   cryptonewsz: {
-    name: "CryptoNewsZ",
-    url: "https://www.cryptonewsz.com/feed/",
-    category: "general",
+    name: 'CryptoNewsZ',
+    url: 'https://www.cryptonewsz.com/feed/',
+    category: 'general',
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -797,39 +744,39 @@ const RSS_SOURCES = {
   // decisions that directly move crypto markets.
   // ═══════════════════════════════════════════════════════════════
   wsj_business: {
-    name: "Wall Street Journal",
-    url: "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
-    category: "mainstream",
+    name: 'Wall Street Journal',
+    url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
+    category: 'mainstream',
   },
   nyt_business: {
-    name: "New York Times Business",
-    url: "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
-    category: "mainstream",
+    name: 'New York Times Business',
+    url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+    category: 'mainstream',
   },
   economist: {
-    name: "The Economist",
-    url: "https://www.economist.com/sections/economics/rss.xml",
-    category: "mainstream",
+    name: 'The Economist',
+    url: 'https://www.economist.com/sections/economics/rss.xml',
+    category: 'mainstream',
   },
   marketwatch: {
-    name: "MarketWatch",
-    url: "https://feeds.marketwatch.com/marketwatch/topstories/",
-    category: "mainstream",
+    name: 'MarketWatch',
+    url: 'https://feeds.marketwatch.com/marketwatch/topstories/',
+    category: 'mainstream',
   },
   seekingalpha: {
-    name: "Seeking Alpha",
-    url: "https://seekingalpha.com/market_currents.xml",
-    category: "mainstream",
+    name: 'Seeking Alpha',
+    url: 'https://seekingalpha.com/market_currents.xml',
+    category: 'mainstream',
   },
   nikkei_asia: {
-    name: "Nikkei Asia",
-    url: "https://asia.nikkei.com/rss/feed/nar",
-    category: "mainstream",
+    name: 'Nikkei Asia',
+    url: 'https://asia.nikkei.com/rss/feed/nar',
+    category: 'mainstream',
   },
   economic_times_india: {
-    name: "Economic Times India Markets",
-    url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms",
-    category: "mainstream",
+    name: 'Economic Times India Markets',
+    url: 'https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms',
+    category: 'mainstream',
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -839,34 +786,34 @@ const RSS_SOURCES = {
   // policy sources provide the earliest signals.
   // ═══════════════════════════════════════════════════════════════
   bbc_world: {
-    name: "BBC World",
-    url: "https://feeds.bbci.co.uk/news/world/rss.xml",
-    category: "geopolitical",
+    name: 'BBC World',
+    url: 'https://feeds.bbci.co.uk/news/world/rss.xml',
+    category: 'geopolitical',
   },
   federal_reserve: {
-    name: "Federal Reserve",
-    url: "https://www.federalreserve.gov/feeds/press_all.xml",
-    category: "geopolitical",
+    name: 'Federal Reserve',
+    url: 'https://www.federalreserve.gov/feeds/press_all.xml',
+    category: 'geopolitical',
   },
   sec_press: {
-    name: "SEC Press Releases",
-    url: "https://www.sec.gov/news/pressreleases.rss",
-    category: "geopolitical",
+    name: 'SEC Press Releases',
+    url: 'https://www.sec.gov/news/pressreleases.rss',
+    category: 'geopolitical',
   },
   dw_news: {
-    name: "DW News",
-    url: "https://rss.dw.com/xml/rss-en-all",
-    category: "geopolitical",
+    name: 'DW News',
+    url: 'https://rss.dw.com/xml/rss-en-all',
+    category: 'geopolitical',
   },
   cbc_news: {
-    name: "CBC News",
-    url: "https://www.cbc.ca/cmlink/1.1244475",
-    category: "geopolitical",
+    name: 'CBC News',
+    url: 'https://www.cbc.ca/cmlink/1.1244475',
+    category: 'geopolitical',
   },
   al_jazeera: {
-    name: "Al Jazeera",
-    url: "https://www.aljazeera.com/xml/rss/all.xml",
-    category: "geopolitical",
+    name: 'Al Jazeera',
+    url: 'https://www.aljazeera.com/xml/rss/all.xml',
+    category: 'geopolitical',
   },
 
   // =========================================================================
@@ -875,633 +822,618 @@ const RSS_SOURCES = {
 
   // Exchange Blogs
   kraken_blog: {
-    name: "Kraken Blog",
-    url: "https://blog.kraken.com/feed/",
-    category: "institutional",
+    name: 'Kraken Blog',
+    url: 'https://blog.kraken.com/feed/',
+    category: 'institutional',
   },
   okx_blog: {
-    name: "OKX Blog",
-    url: "https://www.okx.com/academy/en/feed",
-    category: "institutional",
+    name: 'OKX Blog',
+    url: 'https://www.okx.com/academy/en/feed',
+    category: 'institutional',
   },
   bybit_blog: {
-    name: "Bybit Blog",
-    url: "https://blog.bybit.com/feed/",
-    category: "institutional",
+    name: 'Bybit Blog',
+    url: 'https://blog.bybit.com/feed/',
+    category: 'institutional',
   },
   bitfinex_blog: {
-    name: "Bitfinex Blog",
-    url: "https://blog.bitfinex.com/feed/",
-    category: "institutional",
+    name: 'Bitfinex Blog',
+    url: 'https://blog.bitfinex.com/feed/',
+    category: 'institutional',
   },
   gemini_blog: {
-    name: "Gemini Blog",
-    url: "https://www.gemini.com/blog/feed",
-    category: "institutional",
+    name: 'Gemini Blog',
+    url: 'https://www.gemini.com/blog/feed',
+    category: 'institutional',
   },
 
   // DeFi Protocols
   lido_blog: {
-    name: "Lido Blog",
-    url: "https://blog.lido.fi/rss/",
-    category: "defi",
+    name: 'Lido Blog',
+    url: 'https://blog.lido.fi/rss/',
+    category: 'defi',
   },
   curve_blog: {
-    name: "Curve Blog",
-    url: "https://news.curve.fi/rss/",
-    category: "defi",
+    name: 'Curve Blog',
+    url: 'https://news.curve.fi/rss/',
+    category: 'defi',
   },
   eigenlayer_blog: {
-    name: "EigenLayer Blog",
-    url: "https://www.blog.eigenlayer.xyz/rss/",
-    category: "defi",
+    name: 'EigenLayer Blog',
+    url: 'https://www.blog.eigenlayer.xyz/rss/',
+    category: 'defi',
   },
   pendle_blog: {
-    name: "Pendle Blog",
-    url: "https://medium.com/feed/pendle",
-    category: "defi",
+    name: 'Pendle Blog',
+    url: 'https://medium.com/feed/pendle',
+    category: 'defi',
   },
   ethena_blog: {
-    name: "Ethena Blog",
-    url: "https://mirror.xyz/ethena/feed/atom",
-    category: "defi",
+    name: 'Ethena Blog',
+    url: 'https://mirror.xyz/ethena/feed/atom',
+    category: 'defi',
   },
 
   // Layer 2 & Rollups
   scroll_blog: {
-    name: "Scroll Blog",
-    url: "https://scroll.io/blog/feed",
-    category: "layer2",
+    name: 'Scroll Blog',
+    url: 'https://scroll.io/blog/feed',
+    category: 'layer2',
   },
   linea_blog: {
-    name: "Linea Blog",
-    url: "https://linea.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'Linea Blog',
+    url: 'https://linea.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
   blast_blog: {
-    name: "Blast Blog",
-    url: "https://mirror.xyz/blastofficial.eth/feed/atom",
-    category: "layer2",
+    name: 'Blast Blog',
+    url: 'https://mirror.xyz/blastofficial.eth/feed/atom',
+    category: 'layer2',
   },
 
   // Alt L1 Ecosystem Extended
   sei_blog: {
-    name: "Sei Blog",
-    url: "https://blog.sei.io/rss/",
-    category: "altl1",
+    name: 'Sei Blog',
+    url: 'https://blog.sei.io/rss/',
+    category: 'altl1',
   },
   injective_blog: {
-    name: "Injective Blog",
-    url: "https://blog.injective.com/feed/",
-    category: "altl1",
+    name: 'Injective Blog',
+    url: 'https://blog.injective.com/feed/',
+    category: 'altl1',
   },
   celestia_blog: {
-    name: "Celestia Blog",
-    url: "https://blog.celestia.org/rss/",
-    category: "altl1",
+    name: 'Celestia Blog',
+    url: 'https://blog.celestia.org/rss/',
+    category: 'altl1',
   },
 
   // Bitcoin Ecosystem Extended
   nostr_blog: {
-    name: "Nostr Protocol",
-    url: "https://nostr.com/feed.xml",
-    category: "bitcoin",
+    name: 'Nostr Protocol',
+    url: 'https://nostr.com/feed.xml',
+    category: 'bitcoin',
   },
 
   // Privacy & ZK
   zcash_blog: {
-    name: "Zcash Blog",
-    url: "https://electriccoin.co/blog/feed/",
-    category: "security",
+    name: 'Zcash Blog',
+    url: 'https://electriccoin.co/blog/feed/',
+    category: 'security',
   },
   aztec_blog: {
-    name: "Aztec Blog",
-    url: "https://medium.com/feed/aztec-protocol",
-    category: "layer2",
+    name: 'Aztec Blog',
+    url: 'https://medium.com/feed/aztec-protocol',
+    category: 'layer2',
   },
 
   // RWA (Real World Assets)
   centrifuge_blog: {
-    name: "Centrifuge Blog",
-    url: "https://medium.com/feed/centrifuge",
-    category: "defi",
+    name: 'Centrifuge Blog',
+    url: 'https://medium.com/feed/centrifuge',
+    category: 'defi',
   },
   ondo_finance: {
-    name: "Ondo Finance Blog",
-    url: "https://blog.ondo.finance/rss/",
-    category: "defi",
+    name: 'Ondo Finance Blog',
+    url: 'https://blog.ondo.finance/rss/',
+    category: 'defi',
   },
 
   // AI x Crypto
   fetch_ai_blog: {
-    name: "Fetch.ai Blog",
-    url: "https://fetch.ai/blog/feed",
-    category: "altl1",
+    name: 'Fetch.ai Blog',
+    url: 'https://fetch.ai/blog/feed',
+    category: 'altl1',
   },
   render_blog: {
-    name: "Render Network Blog",
-    url: "https://medium.com/feed/render-token",
-    category: "altl1",
+    name: 'Render Network Blog',
+    url: 'https://medium.com/feed/render-token',
+    category: 'altl1',
   },
 
   // Oracles & Infrastructure
   pyth_blog: {
-    name: "Pyth Network Blog",
-    url: "https://pyth.network/blog/feed",
-    category: "developer",
+    name: 'Pyth Network Blog',
+    url: 'https://pyth.network/blog/feed',
+    category: 'developer',
   },
   api3_blog: {
-    name: "API3 Blog",
-    url: "https://medium.com/feed/api3",
-    category: "developer",
+    name: 'API3 Blog',
+    url: 'https://medium.com/feed/api3',
+    category: 'developer',
   },
 
   // Governance & DAOs
   snapshot_blog: {
-    name: "Snapshot Blog",
-    url: "https://snapshot.mirror.xyz/feed/atom",
-    category: "defi",
+    name: 'Snapshot Blog',
+    url: 'https://snapshot.mirror.xyz/feed/atom',
+    category: 'defi',
   },
   tally_blog: {
-    name: "Tally Blog",
-    url: "https://blog.tally.xyz/feed",
-    category: "defi",
+    name: 'Tally Blog',
+    url: 'https://blog.tally.xyz/feed',
+    category: 'defi',
   },
 
   // Security Extended
   chainalysis_blog: {
-    name: "Chainalysis Blog",
-    url: "https://www.chainalysis.com/blog/feed/",
-    category: "security",
+    name: 'Chainalysis Blog',
+    url: 'https://www.chainalysis.com/blog/feed/',
+    category: 'security',
   },
   elliptic_blog: {
-    name: "Elliptic Blog",
-    url: "https://www.elliptic.co/blog/rss.xml",
-    category: "security",
+    name: 'Elliptic Blog',
+    url: 'https://www.elliptic.co/blog/rss.xml',
+    category: 'security',
   },
   // Payments & Stablecoins Extended
   stripe_crypto: {
-    name: "Stripe Blog (Crypto)",
-    url: "https://stripe.com/blog/feed.rss",
-    category: "fintech",
+    name: 'Stripe Blog (Crypto)',
+    url: 'https://stripe.com/blog/feed.rss',
+    category: 'fintech',
   },
   paypal_newsroom: {
-    name: "PayPal Newsroom",
-    url: "https://newsroom.paypal-corp.com/feed",
-    category: "fintech",
+    name: 'PayPal Newsroom',
+    url: 'https://newsroom.paypal-corp.com/feed',
+    category: 'fintech',
   },
 
   // Derivatives Extended
   // Podcasts (show notes via RSS)
   unchained_podcast: {
-    name: "Unchained Podcast",
-    url: "https://feeds.simplecast.com/JGE3yC0V",
-    category: "journalism",
+    name: 'Unchained Podcast',
+    url: 'https://feeds.simplecast.com/JGE3yC0V',
+    category: 'journalism',
     noDataCache: true, // 11.9MB feed exceeds Next.js 2MB data cache limit
   },
   // =========================================================================
   // CRYPTO MEDIA — High-Volume News Sources
   // =========================================================================
   watcherguru: {
-    name: "Watcher Guru",
-    url: "https://watcher.guru/news/feed",
-    category: "general",
+    name: 'Watcher Guru',
+    url: 'https://watcher.guru/news/feed',
+    category: 'general',
   },
   cryptopolitan: {
-    name: "Cryptopolitan",
-    url: "https://www.cryptopolitan.com/feed/",
-    category: "general",
-  },
-  coinedition: {
-    name: "CoinEdition",
-    url: "https://coinedition.com/feed/",
-    category: "general",
-  },
-  bitcoinworld: {
-    name: "BitcoinWorld",
-    url: "https://bitcoinworld.co.in/feed/",
-    category: "general",
+    name: 'Cryptopolitan',
+    url: 'https://www.cryptopolitan.com/feed/',
+    category: 'general',
   },
   // =========================================================================
   // EXCHANGE & PLATFORM BLOGS
   // =========================================================================
   coinmarketcap_blog: {
-    name: "CoinMarketCap Blog",
-    url: "https://blog.coinmarketcap.com/feed/",
-    category: "institutional",
+    name: 'CoinMarketCap Blog',
+    url: 'https://blog.coinmarketcap.com/feed/',
+    category: 'institutional',
   },
   coingecko_blog: {
-    name: "CoinGecko Blog",
-    url: "https://blog.coingecko.com/feed/",
-    category: "institutional",
+    name: 'CoinGecko Blog',
+    url: 'https://blog.coingecko.com/feed/',
+    category: 'institutional',
   },
   kucoin_blog: {
-    name: "KuCoin Blog",
-    url: "https://www.kucoin.com/blog/rss.xml",
-    category: "institutional",
+    name: 'KuCoin Blog',
+    url: 'https://www.kucoin.com/blog/rss.xml',
+    category: 'institutional',
   },
   cryptocom_blog: {
-    name: "Crypto.com Blog",
-    url: "https://crypto.com/company-news/feed",
-    category: "institutional",
+    name: 'Crypto.com Blog',
+    url: 'https://crypto.com/company-news/feed',
+    category: 'institutional',
   },
   bitget_blog: {
-    name: "Bitget Blog",
-    url: "https://www.bitget.com/blog/feed",
-    category: "institutional",
+    name: 'Bitget Blog',
+    url: 'https://www.bitget.com/blog/feed',
+    category: 'institutional',
   },
 
   // =========================================================================
   // DEFI PROTOCOLS — Major DEX/Lending/Yield
   // =========================================================================
   synthetix_blog: {
-    name: "Synthetix Blog",
-    url: "https://blog.synthetix.io/rss/",
-    category: "defi",
+    name: 'Synthetix Blog',
+    url: 'https://blog.synthetix.io/rss/',
+    category: 'defi',
   },
   oneinch_blog: {
-    name: "1inch Blog",
-    url: "https://blog.1inch.io/feed",
-    category: "defi",
+    name: '1inch Blog',
+    url: 'https://blog.1inch.io/feed',
+    category: 'defi',
   },
   yearn_blog: {
-    name: "Yearn Finance Blog",
-    url: "https://blog.yearn.fi/feed",
-    category: "defi",
+    name: 'Yearn Finance Blog',
+    url: 'https://blog.yearn.fi/feed',
+    category: 'defi',
   },
   gmx_blog: {
-    name: "GMX Blog",
-    url: "https://medium.com/feed/@gmx.io",
-    category: "defi",
+    name: 'GMX Blog',
+    url: 'https://medium.com/feed/@gmx.io',
+    category: 'defi',
   },
   jupiter_blog: {
-    name: "Jupiter Blog",
-    url: "https://station.jup.ag/blog/rss.xml",
-    category: "defi",
+    name: 'Jupiter Blog',
+    url: 'https://station.jup.ag/blog/rss.xml',
+    category: 'defi',
   },
   morpho_blog: {
-    name: "Morpho Blog",
-    url: "https://medium.com/feed/morpho-labs",
-    category: "defi",
+    name: 'Morpho Blog',
+    url: 'https://medium.com/feed/morpho-labs',
+    category: 'defi',
   },
 
   // =========================================================================
   // CROSS-CHAIN & INTEROPERABILITY
   // =========================================================================
   layerzero_blog: {
-    name: "LayerZero Blog",
-    url: "https://medium.com/feed/layerzero-official",
-    category: "developer",
+    name: 'LayerZero Blog',
+    url: 'https://medium.com/feed/layerzero-official',
+    category: 'developer',
   },
 
   // =========================================================================
   // TECH / MAINSTREAM — Crypto Coverage
   // =========================================================================
   techcrunch_crypto: {
-    name: "TechCrunch Crypto",
-    url: "https://techcrunch.com/category/cryptocurrency/feed/",
-    category: "mainstream",
+    name: 'TechCrunch Crypto',
+    url: 'https://techcrunch.com/category/cryptocurrency/feed/',
+    category: 'mainstream',
   },
   // =========================================================================
   // POLICY & REGULATION
   // =========================================================================
   coincenter: {
-    name: "Coin Center",
-    url: "https://www.coincenter.org/feed/",
-    category: "geopolitical",
+    name: 'Coin Center',
+    url: 'https://www.coincenter.org/feed/',
+    category: 'geopolitical',
   },
   cftc_press: {
-    name: "CFTC Press Releases",
-    url: "https://www.cftc.gov/PressRoom/PressReleases/RSS",
-    category: "geopolitical",
+    name: 'CFTC Press Releases',
+    url: 'https://www.cftc.gov/PressRoom/PressReleases/RSS',
+    category: 'geopolitical',
   },
   // =========================================================================
   // SOLANA ECOSYSTEM
   // =========================================================================
   phantom_blog: {
-    name: "Phantom Blog",
-    url: "https://phantom.app/blog/feed",
-    category: "solana",
+    name: 'Phantom Blog',
+    url: 'https://phantom.app/blog/feed',
+    category: 'solana',
   },
   marinade_blog: {
-    name: "Marinade Finance Blog",
-    url: "https://medium.com/feed/marinade-finance",
-    category: "solana",
+    name: 'Marinade Finance Blog',
+    url: 'https://medium.com/feed/marinade-finance',
+    category: 'solana',
   },
   jito_blog: {
-    name: "Jito Blog",
-    url: "https://www.jito.network/blog/rss.xml",
-    category: "solana",
+    name: 'Jito Blog',
+    url: 'https://www.jito.network/blog/rss.xml',
+    category: 'solana',
   },
 
   // =========================================================================
   // AI x CRYPTO — Emerging Narrative
   // =========================================================================
   bittensor_blog: {
-    name: "Bittensor Blog",
-    url: "https://blog.bittensor.com/feed",
-    category: "altl1",
+    name: 'Bittensor Blog',
+    url: 'https://blog.bittensor.com/feed',
+    category: 'altl1',
   },
   // =========================================================================
   // DATA ANALYTICS PLATFORMS
   // =========================================================================
   dune_blog: {
-    name: "Dune Analytics Blog",
-    url: "https://dune.com/blog/feed",
-    category: "onchain",
+    name: 'Dune Analytics Blog',
+    url: 'https://dune.com/blog/feed',
+    category: 'onchain',
   },
   artemis_blog: {
-    name: "Artemis Blog",
-    url: "https://www.artemis.xyz/blog/feed",
-    category: "onchain",
+    name: 'Artemis Blog',
+    url: 'https://www.artemis.xyz/blog/feed',
+    category: 'onchain',
   },
 
   // =========================================================================
   // GENERAL CRYPTO NEWS — Extended Coverage
   // =========================================================================
   cryptoslam: {
-    name: "CryptoSlam Blog",
-    url: "https://www.cryptoslam.io/blog/feed/",
-    category: "general",
-  },
-  thecoinrepublic: {
-    name: "The Coin Republic",
-    url: "https://www.thecoinrepublic.com/feed/",
-    category: "general",
+    name: 'CryptoSlam Blog',
+    url: 'https://www.cryptoslam.io/blog/feed/',
+    category: 'general',
   },
   cryptotvplus: {
-    name: "CryptoTvPlus",
-    url: "https://cryptotvplus.com/feed/",
-    category: "general",
+    name: 'CryptoTvPlus',
+    url: 'https://cryptotvplus.com/feed/',
+    category: 'general',
   },
   blocktempo: {
-    name: "BlockTempo",
-    url: "https://www.blocktempo.com/feed/",
-    category: "general",
+    name: 'BlockTempo',
+    url: 'https://www.blocktempo.com/feed/',
+    category: 'general',
   },
 
   // =========================================================================
   // DEFI PROTOCOLS — Extended
   // =========================================================================
   balancer_blog: {
-    name: "Balancer Blog",
-    url: "https://medium.com/feed/balancer-protocol",
-    category: "defi",
+    name: 'Balancer Blog',
+    url: 'https://medium.com/feed/balancer-protocol',
+    category: 'defi',
   },
   radiant_blog: {
-    name: "Radiant Capital Blog",
-    url: "https://medium.com/feed/@radiantcapital",
-    category: "defi",
+    name: 'Radiant Capital Blog',
+    url: 'https://medium.com/feed/@radiantcapital',
+    category: 'defi',
   },
   instadapp_blog: {
-    name: "Instadapp Blog",
-    url: "https://blog.instadapp.io/rss/",
-    category: "defi",
+    name: 'Instadapp Blog',
+    url: 'https://blog.instadapp.io/rss/',
+    category: 'defi',
   },
   sushi_blog: {
-    name: "SushiSwap Blog",
-    url: "https://medium.com/feed/sushiswap-org",
-    category: "defi",
+    name: 'SushiSwap Blog',
+    url: 'https://medium.com/feed/sushiswap-org',
+    category: 'defi',
   },
 
   // =========================================================================
   // GAMEFI & METAVERSE
   // =========================================================================
   gamingguild_blog: {
-    name: "Yield Guild Games Blog",
-    url: "https://medium.com/feed/yield-guild-games",
-    category: "gaming",
+    name: 'Yield Guild Games Blog',
+    url: 'https://medium.com/feed/yield-guild-games',
+    category: 'gaming',
   },
   ronin_blog: {
-    name: "Ronin Blog",
-    url: "https://roninchain.com/blog/feed",
-    category: "gaming",
+    name: 'Ronin Blog',
+    url: 'https://roninchain.com/blog/feed',
+    category: 'gaming',
   },
   gala_blog: {
-    name: "Gala Games Blog",
-    url: "https://blog.gala.games/feed",
-    category: "gaming",
+    name: 'Gala Games Blog',
+    url: 'https://blog.gala.games/feed',
+    category: 'gaming',
   },
 
   // =========================================================================
   // PRIVACY & ZERO KNOWLEDGE — Extended
   // =========================================================================
   risc_zero_blog: {
-    name: "RISC Zero Blog",
-    url: "https://www.risczero.com/blog/feed",
-    category: "security",
+    name: 'RISC Zero Blog',
+    url: 'https://www.risczero.com/blog/feed',
+    category: 'security',
   },
   espresso_blog: {
-    name: "Espresso Systems Blog",
-    url: "https://medium.com/feed/espresso-systems",
-    category: "layer2",
+    name: 'Espresso Systems Blog',
+    url: 'https://medium.com/feed/espresso-systems',
+    category: 'layer2',
   },
   // =========================================================================
   // SOLANA ECOSYSTEM — Extended
   // =========================================================================
   orca_blog: {
-    name: "Orca Blog",
-    url: "https://medium.com/feed/orca-so",
-    category: "solana",
+    name: 'Orca Blog',
+    url: 'https://medium.com/feed/orca-so',
+    category: 'solana',
   },
   raydium_blog: {
-    name: "Raydium Blog",
-    url: "https://medium.com/feed/@raydium",
-    category: "solana",
+    name: 'Raydium Blog',
+    url: 'https://medium.com/feed/@raydium',
+    category: 'solana',
   },
   solflare_blog: {
-    name: "Solflare Blog",
-    url: "https://medium.com/feed/solflare",
-    category: "solana",
+    name: 'Solflare Blog',
+    url: 'https://medium.com/feed/solflare',
+    category: 'solana',
   },
 
   // =========================================================================
   // BITCOIN ECOSYSTEM — Extended
   // =========================================================================
   bitcoinops: {
-    name: "Bitcoin Optech",
-    url: "https://bitcoinops.org/feed.xml",
-    category: "bitcoin",
+    name: 'Bitcoin Optech',
+    url: 'https://bitcoinops.org/feed.xml',
+    category: 'bitcoin',
   },
   casa_blog: {
-    name: "Casa Blog",
-    url: "https://blog.keys.casa/rss/",
-    category: "bitcoin",
+    name: 'Casa Blog',
+    url: 'https://blog.keys.casa/rss/',
+    category: 'bitcoin',
   },
 
   // =========================================================================
   // REGULATION & COMPLIANCE
   // =========================================================================
   fireblocks_blog: {
-    name: "Fireblocks Blog",
-    url: "https://www.fireblocks.com/blog/feed/",
-    category: "institutional",
+    name: 'Fireblocks Blog',
+    url: 'https://www.fireblocks.com/blog/feed/',
+    category: 'institutional',
   },
 
   // =========================================================================
   // VENTURE & INSTITUTIONAL — Extended
   // =========================================================================
   polychain_blog: {
-    name: "Polychain Capital Blog",
-    url: "https://medium.com/feed/@polychain",
-    category: "institutional",
+    name: 'Polychain Capital Blog',
+    url: 'https://medium.com/feed/@polychain',
+    category: 'institutional',
   },
   electric_capital: {
-    name: "Electric Capital Blog",
-    url: "https://medium.com/feed/electric-capital",
-    category: "institutional",
+    name: 'Electric Capital Blog',
+    url: 'https://medium.com/feed/electric-capital',
+    category: 'institutional',
   },
   framework_blog: {
-    name: "Framework Ventures Blog",
-    url: "https://medium.com/feed/framework-ventures",
-    category: "institutional",
+    name: 'Framework Ventures Blog',
+    url: 'https://medium.com/feed/framework-ventures',
+    category: 'institutional',
   },
 
   // =========================================================================
   // INFRASTRUCTURE & WALLETS
   // =========================================================================
   trezor_blog: {
-    name: "Trezor Blog",
-    url: "https://blog.trezor.io/feed",
-    category: "security",
+    name: 'Trezor Blog',
+    url: 'https://blog.trezor.io/feed',
+    category: 'security',
   },
   safe_blog: {
-    name: "Safe (Gnosis Safe) Blog",
-    url: "https://safe.global/blog/feed",
-    category: "security",
+    name: 'Safe (Gnosis Safe) Blog',
+    url: 'https://safe.global/blog/feed',
+    category: 'security',
   },
   biconomy_blog: {
-    name: "Biconomy Blog",
-    url: "https://medium.com/feed/biconomy",
-    category: "developer",
+    name: 'Biconomy Blog',
+    url: 'https://medium.com/feed/biconomy',
+    category: 'developer',
   },
 
   // =========================================================================
   // RESTAKING & LIQUID STAKING
   // =========================================================================
   rocketpool_blog: {
-    name: "Rocket Pool Blog",
-    url: "https://medium.com/feed/rocket-pool",
-    category: "ethereum",
+    name: 'Rocket Pool Blog',
+    url: 'https://medium.com/feed/rocket-pool',
+    category: 'ethereum',
   },
   ssv_network_blog: {
-    name: "SSV Network Blog",
-    url: "https://medium.com/feed/ssv-network",
-    category: "ethereum",
+    name: 'SSV Network Blog',
+    url: 'https://medium.com/feed/ssv-network',
+    category: 'ethereum',
   },
   etherfi_blog: {
-    name: "ether.fi Blog",
-    url: "https://medium.com/feed/@ether.fi",
-    category: "defi",
+    name: 'ether.fi Blog',
+    url: 'https://medium.com/feed/@ether.fi',
+    category: 'defi',
   },
   kelpdao_blog: {
-    name: "Kelp DAO Blog",
-    url: "https://medium.com/feed/@kelp_dao",
-    category: "defi",
+    name: 'Kelp DAO Blog',
+    url: 'https://medium.com/feed/@kelp_dao',
+    category: 'defi',
   },
 
   // =========================================================================
   // BRIDGES & MEV
   // =========================================================================
   across_blog: {
-    name: "Across Protocol Blog",
-    url: "https://medium.com/feed/across-protocol",
-    category: "defi",
+    name: 'Across Protocol Blog',
+    url: 'https://medium.com/feed/across-protocol',
+    category: 'defi',
   },
   // =========================================================================
   // COSMOS ECOSYSTEM
   // =========================================================================
   osmosis_blog: {
-    name: "Osmosis Blog",
-    url: "https://medium.com/feed/osmosis",
-    category: "altl1",
+    name: 'Osmosis Blog',
+    url: 'https://medium.com/feed/osmosis',
+    category: 'altl1',
   },
   stride_blog: {
-    name: "Stride Blog",
-    url: "https://medium.com/feed/@stride_zone",
-    category: "altl1",
+    name: 'Stride Blog',
+    url: 'https://medium.com/feed/@stride_zone',
+    category: 'altl1',
   },
 
   // =========================================================================
   // DERIVATIVES & PERPS — Expanding Coverage
   // =========================================================================
   hyperliquid_blog: {
-    name: "Hyperliquid Blog",
-    url: "https://medium.com/feed/@hyperliquid",
-    category: "derivatives",
+    name: 'Hyperliquid Blog',
+    url: 'https://medium.com/feed/@hyperliquid',
+    category: 'derivatives',
   },
   vertex_blog: {
-    name: "Vertex Protocol Blog",
-    url: "https://medium.com/feed/vertex-protocol",
-    category: "derivatives",
+    name: 'Vertex Protocol Blog',
+    url: 'https://medium.com/feed/vertex-protocol',
+    category: 'derivatives',
   },
   aevo_blog: {
-    name: "Aevo Blog",
-    url: "https://medium.com/feed/@aevo-exchange",
-    category: "derivatives",
+    name: 'Aevo Blog',
+    url: 'https://medium.com/feed/@aevo-exchange',
+    category: 'derivatives',
   },
   kwenta_blog: {
-    name: "Kwenta Blog",
-    url: "https://mirror.xyz/kwenta.eth/feed/atom",
-    category: "derivatives",
+    name: 'Kwenta Blog',
+    url: 'https://mirror.xyz/kwenta.eth/feed/atom',
+    category: 'derivatives',
   },
   lyra_blog: {
-    name: "Lyra Finance Blog",
-    url: "https://medium.com/feed/lyra-finance",
-    category: "derivatives",
+    name: 'Lyra Finance Blog',
+    url: 'https://medium.com/feed/lyra-finance',
+    category: 'derivatives',
   },
   gains_network_blog: {
-    name: "gTrade Blog",
-    url: "https://medium.com/feed/gains-network",
-    category: "derivatives",
+    name: 'gTrade Blog',
+    url: 'https://medium.com/feed/gains-network',
+    category: 'derivatives',
   },
 
   // =========================================================================
   // STABLECOINS & PAYMENTS — Expanding Coverage
   // =========================================================================
   mountain_protocol: {
-    name: "Mountain Protocol Blog",
-    url: "https://medium.com/feed/@mountainprotocol",
-    category: "stablecoin",
+    name: 'Mountain Protocol Blog',
+    url: 'https://medium.com/feed/@mountainprotocol',
+    category: 'stablecoin',
   },
   paypal_crypto: {
-    name: "PayPal Crypto Newsroom",
-    url: "https://newsroom.paypal-corp.com/feed",
-    category: "stablecoin",
+    name: 'PayPal Crypto Newsroom',
+    url: 'https://newsroom.paypal-corp.com/feed',
+    category: 'stablecoin',
   },
   first_digital: {
-    name: "First Digital Labs Blog",
-    url: "https://medium.com/feed/@firstdigitallabs",
-    category: "stablecoin",
+    name: 'First Digital Labs Blog',
+    url: 'https://medium.com/feed/@firstdigitallabs',
+    category: 'stablecoin',
   },
 
   // =========================================================================
   // ASIA-PACIFIC — Expanding Coverage
   // =========================================================================
   cryptotimes_india: {
-    name: "The Crypto Times India",
-    url: "https://www.cryptotimes.io/feed/",
-    category: "asia",
+    name: 'The Crypto Times India',
+    url: 'https://www.cryptotimes.io/feed/',
+    category: 'asia',
   },
   chaindebrief: {
-    name: "Chain Debrief",
-    url: "https://chaindebrief.com/feed/",
-    category: "asia",
+    name: 'Chain Debrief',
+    url: 'https://chaindebrief.com/feed/',
+    category: 'asia',
   },
   blockhead_tech: {
-    name: "Blockhead",
-    url: "https://blockhead.co/feed/",
-    category: "asia",
+    name: 'Blockhead',
+    url: 'https://blockhead.co/feed/',
+    category: 'asia',
   },
   bitpinas: {
-    name: "BitPinas",
-    url: "https://bitpinas.com/feed/",
-    category: "asia",
+    name: 'BitPinas',
+    url: 'https://bitpinas.com/feed/',
+    category: 'asia',
   },
   coinlive: {
-    name: "Coinlive",
-    url: "https://www.coinlive.com/feed",
-    category: "asia",
+    name: 'Coinlive',
+    url: 'https://www.coinlive.com/feed',
+    category: 'asia',
   },
 
   // =========================================================================
@@ -1511,121 +1443,121 @@ const RSS_SOURCES = {
   // MACRO & CENTRAL BANKS — Expanding Coverage
   // =========================================================================
   federal_reserve_notes: {
-    name: "Federal Reserve FEDS Notes",
-    url: "https://www.federalreserve.gov/feeds/feds_notes.xml",
-    category: "macro",
+    name: 'Federal Reserve FEDS Notes',
+    url: 'https://www.federalreserve.gov/feeds/feds_notes.xml',
+    category: 'macro',
   },
   bis_speeches: {
-    name: "BIS Speeches",
-    url: "https://www.bis.org/doclist/cbspeeches.rss",
-    category: "macro",
+    name: 'BIS Speeches',
+    url: 'https://www.bis.org/doclist/cbspeeches.rss',
+    category: 'macro',
   },
   ecb_press: {
-    name: "ECB Press Releases",
-    url: "https://www.ecb.europa.eu/rss/press.html",
-    category: "macro",
+    name: 'ECB Press Releases',
+    url: 'https://www.ecb.europa.eu/rss/press.html',
+    category: 'macro',
   },
   boe_speeches: {
-    name: "Bank of England Speeches",
-    url: "https://www.bankofengland.co.uk/rss/speeches",
-    category: "macro",
+    name: 'Bank of England Speeches',
+    url: 'https://www.bankofengland.co.uk/rss/speeches',
+    category: 'macro',
   },
 
   // =========================================================================
   // MINING & ENERGY — Expanding Coverage
   // =========================================================================
   theminermag: {
-    name: "The Miner Mag",
-    url: "https://www.theminermag.com/feed/",
-    category: "mining",
+    name: 'The Miner Mag',
+    url: 'https://www.theminermag.com/feed/',
+    category: 'mining',
   },
   // =========================================================================
   // CRYPTO JOURNALISM & NEWSLETTERS — Expanding Coverage
   // =========================================================================
   milkroad: {
-    name: "Milk Road",
-    url: "https://www.milkroad.com/feed/",
-    category: "journalism",
+    name: 'Milk Road',
+    url: 'https://www.milkroad.com/feed/',
+    category: 'journalism',
   },
   defiprime: {
-    name: "DeFi Prime",
-    url: "https://defiprime.com/feed.xml",
-    category: "journalism",
+    name: 'DeFi Prime',
+    url: 'https://defiprime.com/feed.xml',
+    category: 'journalism',
   },
   thedefiedge: {
-    name: "The DeFi Edge",
-    url: "https://thedefiedge.substack.com/feed",
-    category: "journalism",
+    name: 'The DeFi Edge',
+    url: 'https://thedefiedge.substack.com/feed',
+    category: 'journalism',
   },
   tokenomicsdao: {
-    name: "Tokenomics DAO",
-    url: "https://tokenomicsdao.substack.com/feed",
-    category: "journalism",
+    name: 'Tokenomics DAO',
+    url: 'https://tokenomicsdao.substack.com/feed',
+    category: 'journalism',
   },
   cryptoweekly: {
-    name: "Crypto Weekly",
-    url: "https://cryptoweekly.co/feed/",
-    category: "journalism",
+    name: 'Crypto Weekly',
+    url: 'https://cryptoweekly.co/feed/',
+    category: 'journalism',
   },
   metaversal: {
-    name: "Metaversal",
-    url: "https://metaversal.banklesshq.com/feed",
-    category: "journalism",
+    name: 'Metaversal',
+    url: 'https://metaversal.banklesshq.com/feed',
+    category: 'journalism',
   },
 
   // =========================================================================
   // NFT & DIGITAL ART — Expanding Coverage
   // =========================================================================
   superrare_blog: {
-    name: "SuperRare Blog",
-    url: "https://medium.com/feed/superrare",
-    category: "nft",
+    name: 'SuperRare Blog',
+    url: 'https://medium.com/feed/superrare',
+    category: 'nft',
   },
   blur_blog: {
-    name: "Blur Blog",
-    url: "https://mirror.xyz/blurdao.eth/feed/atom",
-    category: "nft",
+    name: 'Blur Blog',
+    url: 'https://mirror.xyz/blurdao.eth/feed/atom',
+    category: 'nft',
   },
   // =========================================================================
   // TRADING & MARKET ANALYSIS — Expanding Coverage
   // =========================================================================
   santiment_blog: {
-    name: "Santiment Blog",
-    url: "https://santiment.net/blog/feed/",
-    category: "trading",
+    name: 'Santiment Blog',
+    url: 'https://santiment.net/blog/feed/',
+    category: 'trading',
   },
   ccdata_research: {
-    name: "CCData Research",
-    url: "https://ccdata.io/blog/feed",
-    category: "trading",
+    name: 'CCData Research',
+    url: 'https://ccdata.io/blog/feed',
+    category: 'trading',
   },
   coinalyze_blog: {
-    name: "Coinalyze Blog",
-    url: "https://coinalyze.net/blog/feed/",
-    category: "trading",
+    name: 'Coinalyze Blog',
+    url: 'https://coinalyze.net/blog/feed/',
+    category: 'trading',
   },
   material_indicators: {
-    name: "Material Indicators Blog",
-    url: "https://materialindicators.substack.com/feed",
-    category: "trading",
+    name: 'Material Indicators Blog',
+    url: 'https://materialindicators.substack.com/feed',
+    category: 'trading',
   },
 
   // =========================================================================
   // PREDICTION MARKETS
   // =========================================================================
   polymarket_blog: {
-    name: "Polymarket Blog",
-    url: "https://mirror.xyz/polymarket.eth/feed/atom",
-    category: "defi",
+    name: 'Polymarket Blog',
+    url: 'https://mirror.xyz/polymarket.eth/feed/atom',
+    category: 'defi',
   },
 
   // =========================================================================
   // SOCIALFI & DECENTRALIZED SOCIAL
   // =========================================================================
   farcaster_blog: {
-    name: "Farcaster Blog",
-    url: "https://www.farcaster.xyz/blog/feed",
-    category: "social",
+    name: 'Farcaster Blog',
+    url: 'https://www.farcaster.xyz/blog/feed',
+    category: 'social',
   },
 
   // =========================================================================
@@ -1635,32 +1567,32 @@ const RSS_SOURCES = {
   // ETHEREUM ECOSYSTEM — Expanding Coverage
   // =========================================================================
   ef_blog: {
-    name: "Ethereum Foundation Blog",
-    url: "https://blog.ethereum.org/feed.xml",
-    category: "ethereum",
+    name: 'Ethereum Foundation Blog',
+    url: 'https://blog.ethereum.org/feed.xml',
+    category: 'ethereum',
   },
   ethereum_cat_herders: {
-    name: "Ethereum Cat Herders",
-    url: "https://medium.com/feed/ethereum-cat-herders",
-    category: "ethereum",
+    name: 'Ethereum Cat Herders',
+    url: 'https://medium.com/feed/ethereum-cat-herders',
+    category: 'ethereum',
   },
   // =========================================================================
   // BITCOIN ECOSYSTEM — Expanding Coverage
   // =========================================================================
   mempool_space: {
-    name: "Mempool.space Blog",
-    url: "https://mempool.space/blog/feed",
-    category: "bitcoin",
+    name: 'Mempool.space Blog',
+    url: 'https://mempool.space/blog/feed',
+    category: 'bitcoin',
   },
   unchained_capital: {
-    name: "Unchained Capital Blog",
-    url: "https://unchained.com/blog/feed/",
-    category: "bitcoin",
+    name: 'Unchained Capital Blog',
+    url: 'https://unchained.com/blog/feed/',
+    category: 'bitcoin',
   },
   blockstream_blog: {
-    name: "Blockstream Blog",
-    url: "https://blog.blockstream.com/feed/",
-    category: "bitcoin",
+    name: 'Blockstream Blog',
+    url: 'https://blog.blockstream.com/feed/',
+    category: 'bitcoin',
   },
 
   // =========================================================================
@@ -1670,336 +1602,336 @@ const RSS_SOURCES = {
   // WAVE 4 — MAINSTREAM MEDIA (rebuilding from 14 disabled)
   // =========================================================================
   guardian_tech: {
-    name: "The Guardian Tech",
-    url: "https://www.theguardian.com/technology/rss",
-    category: "mainstream",
+    name: 'The Guardian Tech',
+    url: 'https://www.theguardian.com/technology/rss',
+    category: 'mainstream',
   },
   bbc_business: {
-    name: "BBC Business",
-    url: "https://feeds.bbci.co.uk/news/business/rss.xml",
-    category: "mainstream",
+    name: 'BBC Business',
+    url: 'https://feeds.bbci.co.uk/news/business/rss.xml',
+    category: 'mainstream',
   },
   barrons: {
-    name: "Barrons",
-    url: "https://www.barrons.com/feed",
-    category: "mainstream",
+    name: 'Barrons',
+    url: 'https://www.barrons.com/feed',
+    category: 'mainstream',
   },
   business_insider_markets: {
-    name: "Business Insider Markets",
-    url: "https://www.businessinsider.com/sai/rss",
-    category: "mainstream",
+    name: 'Business Insider Markets',
+    url: 'https://www.businessinsider.com/sai/rss',
+    category: 'mainstream',
   },
   fortune_crypto: {
-    name: "Fortune Crypto",
-    url: "https://fortune.com/section/crypto/feed/",
-    category: "mainstream",
+    name: 'Fortune Crypto',
+    url: 'https://fortune.com/section/crypto/feed/',
+    category: 'mainstream',
   },
   vice_tech: {
-    name: "Vice Motherboard",
-    url: "https://www.vice.com/en/rss/topic/tech",
-    category: "mainstream",
+    name: 'Vice Motherboard',
+    url: 'https://www.vice.com/en/rss/topic/tech',
+    category: 'mainstream',
   },
   axios_crypto: {
-    name: "Axios Crypto",
-    url: "https://api.axios.com/feed/newsletters/axios-crypto",
-    category: "mainstream",
+    name: 'Axios Crypto',
+    url: 'https://api.axios.com/feed/newsletters/axios-crypto',
+    category: 'mainstream',
   },
   thestreet_crypto: {
-    name: "TheStreet Crypto",
-    url: "https://www.thestreet.com/cryptocurrency/feed",
-    category: "mainstream",
+    name: 'TheStreet Crypto',
+    url: 'https://www.thestreet.com/cryptocurrency/feed',
+    category: 'mainstream',
   },
   benzinga_crypto: {
-    name: "Benzinga Crypto",
-    url: "https://www.benzinga.com/feed/cryptocurrency",
-    category: "mainstream",
+    name: 'Benzinga Crypto',
+    url: 'https://www.benzinga.com/feed/cryptocurrency',
+    category: 'mainstream',
   },
   kitco_crypto: {
-    name: "Kitco Crypto",
-    url: "https://www.kitco.com/feed/crypto-news.rss",
-    category: "mainstream",
+    name: 'Kitco Crypto',
+    url: 'https://www.kitco.com/feed/crypto-news.rss',
+    category: 'mainstream',
   },
 
   // =========================================================================
   // WAVE 4 — GEOPOLITICAL & REGULATION (rebuilding from 9 disabled)
   // =========================================================================
   treasury_press: {
-    name: "US Treasury Press",
-    url: "https://home.treasury.gov/system/files/136/rss-press-releases.xml",
-    category: "geopolitical",
+    name: 'US Treasury Press',
+    url: 'https://home.treasury.gov/system/files/136/rss-press-releases.xml',
+    category: 'geopolitical',
   },
   atlantic_council_crypto: {
-    name: "Atlantic Council Crypto",
-    url: "https://www.atlanticcouncil.org/category/programs/geoeconomics-center/digital-currencies/feed/",
-    category: "geopolitical",
+    name: 'Atlantic Council Crypto',
+    url: 'https://www.atlanticcouncil.org/category/programs/geoeconomics-center/digital-currencies/feed/',
+    category: 'geopolitical',
   },
 
   // =========================================================================
   // WAVE 4 — ON-CHAIN ANALYTICS (5→10+)
   // =========================================================================
   messari_research: {
-    name: "Messari Protocol Services",
-    url: "https://messari.io/research/feed",
-    category: "onchain",
+    name: 'Messari Protocol Services',
+    url: 'https://messari.io/research/feed',
+    category: 'onchain',
   },
   blockchair_news: {
-    name: "Blockchair News",
-    url: "https://blockchair.com/news/feed",
-    category: "onchain",
+    name: 'Blockchair News',
+    url: 'https://blockchair.com/news/feed',
+    category: 'onchain',
   },
   defined_fi_blog: {
-    name: "Defined.fi Blog",
-    url: "https://www.defined.fi/blog/feed",
-    category: "onchain",
+    name: 'Defined.fi Blog',
+    url: 'https://www.defined.fi/blog/feed',
+    category: 'onchain',
   },
   parsec_blog: {
-    name: "Parsec Finance Blog",
-    url: "https://parsec.fi/blog/rss.xml",
-    category: "onchain",
+    name: 'Parsec Finance Blog',
+    url: 'https://parsec.fi/blog/rss.xml',
+    category: 'onchain',
   },
 
   // =========================================================================
   // WAVE 4 — NFT & METAVERSE (rebuilding from 6 disabled)
   // =========================================================================
   nifty_gateway_blog: {
-    name: "Nifty Gateway Blog",
-    url: "https://medium.com/feed/nifty-gateway",
-    category: "nft",
+    name: 'Nifty Gateway Blog',
+    url: 'https://medium.com/feed/nifty-gateway',
+    category: 'nft',
   },
   mirror_xyz_blog: {
-    name: "Mirror Blog",
-    url: "https://dev.mirror.xyz/feed/atom",
-    category: "nft",
+    name: 'Mirror Blog',
+    url: 'https://dev.mirror.xyz/feed/atom',
+    category: 'nft',
   },
 
   // =========================================================================
   // WAVE 4 — GAMING & GAMEFI
   // =========================================================================
   stepn_blog: {
-    name: "STEPN Blog",
-    url: "https://medium.com/feed/@aspect_build",
-    category: "gaming",
+    name: 'STEPN Blog',
+    url: 'https://medium.com/feed/@aspect_build',
+    category: 'gaming',
   },
   mythical_games_blog: {
-    name: "Mythical Games Blog",
-    url: "https://mythicalgames.com/blog/feed",
-    category: "gaming",
+    name: 'Mythical Games Blog',
+    url: 'https://mythicalgames.com/blog/feed',
+    category: 'gaming',
   },
   animoca_blog: {
-    name: "Animoca Brands Blog",
-    url: "https://www.animocabrands.com/blog-feed.xml",
-    category: "gaming",
+    name: 'Animoca Brands Blog',
+    url: 'https://www.animocabrands.com/blog-feed.xml',
+    category: 'gaming',
   },
   beam_gaming_blog: {
-    name: "Beam Blog",
-    url: "https://medium.com/feed/onbeam",
-    category: "gaming",
+    name: 'Beam Blog',
+    url: 'https://medium.com/feed/onbeam',
+    category: 'gaming',
   },
 
   // =========================================================================
   // WAVE 4 — SOCIAL & COMMUNITY PLATFORMS
   // =========================================================================
   steemit_crypto: {
-    name: "Steemit Crypto",
-    url: "https://steemit.com/created/cryptocurrency.rss",
-    category: "social",
+    name: 'Steemit Crypto',
+    url: 'https://steemit.com/created/cryptocurrency.rss',
+    category: 'social',
   },
   paragraph_xyz: {
-    name: "Paragraph Blog",
-    url: "https://paragraph.xyz/blog/feed",
-    category: "social",
+    name: 'Paragraph Blog',
+    url: 'https://paragraph.xyz/blog/feed',
+    category: 'social',
   },
 
   // =========================================================================
   // WAVE 4 — FINTECH EXPANDED
   // =========================================================================
   coinbase_institutional: {
-    name: "Coinbase Institutional",
-    url: "https://www.coinbase.com/institutional/research/feed",
-    category: "fintech",
+    name: 'Coinbase Institutional',
+    url: 'https://www.coinbase.com/institutional/research/feed',
+    category: 'fintech',
   },
   ripple_blog: {
-    name: "Ripple Blog",
-    url: "https://ripple.com/insights/feed/",
-    category: "fintech",
+    name: 'Ripple Blog',
+    url: 'https://ripple.com/insights/feed/',
+    category: 'fintech',
   },
   stellar_blog: {
-    name: "Stellar Blog",
-    url: "https://stellar.org/blog/feed",
-    category: "fintech",
+    name: 'Stellar Blog',
+    url: 'https://stellar.org/blog/feed',
+    category: 'fintech',
   },
 
   // =========================================================================
   // WAVE 4 — PRIVACY & ZK
   // =========================================================================
   mina_blog: {
-    name: "Mina Protocol Blog",
-    url: "https://minaprotocol.com/blog/feed",
-    category: "security",
+    name: 'Mina Protocol Blog',
+    url: 'https://minaprotocol.com/blog/feed',
+    category: 'security',
   },
   // =========================================================================
   // WAVE 4 — RWA / TOKENIZATION
   // =========================================================================
   securitize_blog: {
-    name: "Securitize Blog",
-    url: "https://securitize.io/blog/feed",
-    category: "tradfi",
+    name: 'Securitize Blog',
+    url: 'https://securitize.io/blog/feed',
+    category: 'tradfi',
   },
   polymesh_blog: {
-    name: "Polymesh Blog",
-    url: "https://polymesh.network/blog/feed",
-    category: "tradfi",
+    name: 'Polymesh Blog',
+    url: 'https://polymesh.network/blog/feed',
+    category: 'tradfi',
   },
   blackrock_digital: {
-    name: "BlackRock Digital Assets",
-    url: "https://www.blackrock.com/corporate/insights/digital-assets/rss",
-    category: "tradfi",
+    name: 'BlackRock Digital Assets',
+    url: 'https://www.blackrock.com/corporate/insights/digital-assets/rss',
+    category: 'tradfi',
   },
   franklin_templeton_digital: {
-    name: "Franklin Templeton Digital",
-    url: "https://www.franklintempleton.com/articles/digital-assets/feed",
-    category: "tradfi",
+    name: 'Franklin Templeton Digital',
+    url: 'https://www.franklintempleton.com/articles/digital-assets/feed',
+    category: 'tradfi',
   },
 
   // =========================================================================
   // WAVE 4 — MACRO & ECONOMICS EXPANDED
   // =========================================================================
   fred_blog: {
-    name: "FRED Blog (St. Louis Fed)",
-    url: "https://fredblog.stlouisfed.org/feed/",
-    category: "macro",
+    name: 'FRED Blog (St. Louis Fed)',
+    url: 'https://fredblog.stlouisfed.org/feed/',
+    category: 'macro',
   },
   wolf_street: {
-    name: "Wolf Street",
-    url: "https://wolfstreet.com/feed/",
-    category: "macro",
+    name: 'Wolf Street',
+    url: 'https://wolfstreet.com/feed/',
+    category: 'macro',
   },
   zerohedge: {
-    name: "ZeroHedge",
-    url: "https://cms.zerohedge.com/fullrss2.xml",
-    category: "macro",
+    name: 'ZeroHedge',
+    url: 'https://cms.zerohedge.com/fullrss2.xml',
+    category: 'macro',
   },
 
   // =========================================================================
   // WAVE 4 — ETF / ASSET MGMT EXPANDED
   // =========================================================================
   hashdex_research: {
-    name: "Hashdex Research",
-    url: "https://hashdex.com/en/research/feed",
-    category: "etf",
+    name: 'Hashdex Research',
+    url: 'https://hashdex.com/en/research/feed',
+    category: 'etf',
   },
   osprey_funds_blog: {
-    name: "Osprey Funds Blog",
-    url: "https://ospreyfunds.io/blog/feed/",
-    category: "etf",
+    name: 'Osprey Funds Blog',
+    url: 'https://ospreyfunds.io/blog/feed/',
+    category: 'etf',
   },
 
   // =========================================================================
   // WAVE 4 — ASIA-PACIFIC EXPANDED
   // =========================================================================
   coinpost_en: {
-    name: "CoinPost (EN)",
-    url: "https://coinpost.jp/?feed=rss2",
-    category: "asia",
+    name: 'CoinPost (EN)',
+    url: 'https://coinpost.jp/?feed=rss2',
+    category: 'asia',
   },
   kr_crypto: {
-    name: "Chain Catcher",
-    url: "https://www.chaincatcher.com/rss",
-    category: "asia",
+    name: 'Chain Catcher',
+    url: 'https://www.chaincatcher.com/rss',
+    category: 'asia',
   },
 
   // =========================================================================
   // WAVE 4 — DERIVATIVES & STRUCTURED PRODUCTS
   // =========================================================================
   laevitas_blog: {
-    name: "Laevitas Blog",
-    url: "https://laevitas.ch/blog/feed",
-    category: "derivatives",
+    name: 'Laevitas Blog',
+    url: 'https://laevitas.ch/blog/feed',
+    category: 'derivatives',
   },
   paradigm_trading: {
-    name: "Paradigm (Trading)",
-    url: "https://www.paradigm.co/blog/rss.xml",
-    category: "derivatives",
+    name: 'Paradigm (Trading)',
+    url: 'https://www.paradigm.co/blog/rss.xml',
+    category: 'derivatives',
   },
   amberdata_blog: {
-    name: "Amberdata Blog",
-    url: "https://blog.amberdata.io/rss/",
-    category: "derivatives",
+    name: 'Amberdata Blog',
+    url: 'https://blog.amberdata.io/rss/',
+    category: 'derivatives',
   },
 
   // =========================================================================
   // WAVE 4 — ETHEREUM ECOSYSTEM EXPANDED
   // =========================================================================
   lido_dao_blog: {
-    name: "Lido DAO Governance",
-    url: "https://research.lido.fi/latest.rss",
-    category: "ethereum",
+    name: 'Lido DAO Governance',
+    url: 'https://research.lido.fi/latest.rss',
+    category: 'ethereum',
   },
   ens_blog: {
-    name: "ENS Blog",
-    url: "https://blog.ens.domains/feed",
-    category: "ethereum",
+    name: 'ENS Blog',
+    url: 'https://blog.ens.domains/feed',
+    category: 'ethereum',
   },
 
   // =========================================================================
   // WAVE 4 — SOLANA ECOSYSTEM EXPANDED
   // =========================================================================
   metaplex_blog: {
-    name: "Metaplex Blog",
-    url: "https://www.metaplex.com/blog/feed",
-    category: "solana",
+    name: 'Metaplex Blog',
+    url: 'https://www.metaplex.com/blog/feed',
+    category: 'solana',
   },
   squads_blog: {
-    name: "Squads Blog",
-    url: "https://squads.so/blog/feed",
-    category: "solana",
+    name: 'Squads Blog',
+    url: 'https://squads.so/blog/feed',
+    category: 'solana',
   },
   marginfi_blog: {
-    name: "marginfi Blog",
-    url: "https://medium.com/feed/marginfi",
-    category: "solana",
+    name: 'marginfi Blog',
+    url: 'https://medium.com/feed/marginfi',
+    category: 'solana',
   },
 
   // =========================================================================
   // WAVE 4 — STABLECOINS EXPANDED
   // =========================================================================
   paxos_blog: {
-    name: "Paxos Blog",
-    url: "https://paxos.com/blog/feed/",
-    category: "stablecoin",
+    name: 'Paxos Blog',
+    url: 'https://paxos.com/blog/feed/',
+    category: 'stablecoin',
   },
   makerdao_gov: {
-    name: "MakerDAO Governance",
-    url: "https://forum.makerdao.com/latest.rss",
-    category: "stablecoin",
+    name: 'MakerDAO Governance',
+    url: 'https://forum.makerdao.com/latest.rss',
+    category: 'stablecoin',
   },
 
   // =========================================================================
   // WAVE 4 — MINING EXPANDED
   // =========================================================================
   blockware_research: {
-    name: "Blockware Solutions Research",
-    url: "https://www.blockwaresolutions.com/research-and-publications/feed",
-    category: "mining",
+    name: 'Blockware Solutions Research',
+    url: 'https://www.blockwaresolutions.com/research-and-publications/feed',
+    category: 'mining',
   },
   luxor_tech_blog: {
-    name: "Luxor Technology Blog",
-    url: "https://luxor.tech/blog/feed",
-    category: "mining",
+    name: 'Luxor Technology Blog',
+    url: 'https://luxor.tech/blog/feed',
+    category: 'mining',
   },
 
   // =========================================================================
   // WAVE 4 — JOURNALISM / INVESTIGATIVE
   // =========================================================================
   coffeezilla_pod: {
-    name: "Coffeezilla",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCFQMnBA3CS502aghlcr0_aw",
-    category: "journalism",
+    name: 'Coffeezilla',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFQMnBA3CS502aghlcr0_aw',
+    category: 'journalism',
   },
   molly_white: {
-    name: "Molly White Blog",
-    url: "https://www.citationneeded.news/rss/",
-    category: "journalism",
+    name: 'Molly White Blog',
+    url: 'https://www.citationneeded.news/rss/',
+    category: 'journalism',
   },
 
   // =========================================================================
@@ -2007,73 +1939,73 @@ const RSS_SOURCES = {
   // Hot 2025-2026 narrative. Real-world infrastructure meets crypto.
   // =========================================================================
   helium_blog: {
-    name: "Helium Blog",
-    url: "https://blog.helium.com/feed",
-    category: "depin",
+    name: 'Helium Blog',
+    url: 'https://blog.helium.com/feed',
+    category: 'depin',
   },
   hivemapper_blog: {
-    name: "Hivemapper Blog",
-    url: "https://blog.hivemapper.com/feed",
-    category: "depin",
+    name: 'Hivemapper Blog',
+    url: 'https://blog.hivemapper.com/feed',
+    category: 'depin',
   },
   iotex_blog: {
-    name: "IoTeX Blog",
-    url: "https://iotex.io/blog/feed",
-    category: "depin",
+    name: 'IoTeX Blog',
+    url: 'https://iotex.io/blog/feed',
+    category: 'depin',
   },
   dimo_blog: {
-    name: "DIMO Blog",
-    url: "https://dimo.co/blog/feed",
-    category: "depin",
+    name: 'DIMO Blog',
+    url: 'https://dimo.co/blog/feed',
+    category: 'depin',
   },
   peaq_blog: {
-    name: "peaq Network Blog",
-    url: "https://www.peaq.network/blog/feed",
-    category: "depin",
+    name: 'peaq Network Blog',
+    url: 'https://www.peaq.network/blog/feed',
+    category: 'depin',
   },
   geodnet_blog: {
-    name: "GEODNET Blog",
-    url: "https://medium.com/feed/@geodnet",
-    category: "depin",
+    name: 'GEODNET Blog',
+    url: 'https://medium.com/feed/@geodnet',
+    category: 'depin',
   },
   xnet_blog: {
-    name: "XNET Blog",
-    url: "https://medium.com/feed/@xaboratory",
-    category: "depin",
+    name: 'XNET Blog',
+    url: 'https://medium.com/feed/@xaboratory',
+    category: 'depin',
   },
 
   // =========================================================================
   // WAVE 5 — AI x CRYPTO (Expanded 2025-2026 Narrative)
   // =========================================================================
   virtuals_protocol: {
-    name: "Virtuals Protocol Blog",
-    url: "https://medium.com/feed/@virtuals-protocol",
-    category: "ai_crypto",
+    name: 'Virtuals Protocol Blog',
+    url: 'https://medium.com/feed/@virtuals-protocol',
+    category: 'ai_crypto',
   },
   near_ai_blog: {
-    name: "NEAR AI Blog",
-    url: "https://pages.near.org/blog/feed/",
-    category: "ai_crypto",
+    name: 'NEAR AI Blog',
+    url: 'https://pages.near.org/blog/feed/',
+    category: 'ai_crypto',
   },
   zero_gravity_blog: {
-    name: "0G Labs Blog",
-    url: "https://0g.ai/blog/feed",
-    category: "ai_crypto",
+    name: '0G Labs Blog',
+    url: 'https://0g.ai/blog/feed',
+    category: 'ai_crypto',
   },
   sentient_blog: {
-    name: "Sentient Blog",
-    url: "https://medium.com/feed/@sentientAGI",
-    category: "ai_crypto",
+    name: 'Sentient Blog',
+    url: 'https://medium.com/feed/@sentientAGI',
+    category: 'ai_crypto',
   },
   morpheus_blog: {
-    name: "Morpheus AI Blog",
-    url: "https://medium.com/feed/@morpheusai",
-    category: "ai_crypto",
+    name: 'Morpheus AI Blog',
+    url: 'https://medium.com/feed/@morpheusai',
+    category: 'ai_crypto',
   },
   gensyn_blog: {
-    name: "Gensyn Blog",
-    url: "https://medium.com/feed/@gensyn",
-    category: "ai_crypto",
+    name: 'Gensyn Blog',
+    url: 'https://medium.com/feed/@gensyn',
+    category: 'ai_crypto',
   },
 
   // =========================================================================
@@ -2081,48 +2013,48 @@ const RSS_SOURCES = {
   // Exploding category in 2025: programmable bitcoin layers.
   // =========================================================================
   stacks_blog: {
-    name: "Stacks Blog",
-    url: "https://www.stacks.org/blog/feed",
-    category: "bitcoin",
+    name: 'Stacks Blog',
+    url: 'https://www.stacks.org/blog/feed',
+    category: 'bitcoin',
   },
   bob_bitcoin_blog: {
-    name: "BOB (Build on Bitcoin) Blog",
-    url: "https://blog.gobob.xyz/rss/",
-    category: "bitcoin",
+    name: 'BOB (Build on Bitcoin) Blog',
+    url: 'https://blog.gobob.xyz/rss/',
+    category: 'bitcoin',
   },
   babylonchain_blog: {
-    name: "Babylon Chain Blog",
-    url: "https://medium.com/feed/@babylonchain",
-    category: "bitcoin",
+    name: 'Babylon Chain Blog',
+    url: 'https://medium.com/feed/@babylonchain',
+    category: 'bitcoin',
   },
   alex_lab_blog: {
-    name: "ALEX Lab Blog",
-    url: "https://medium.com/feed/alexgobtc",
-    category: "bitcoin",
+    name: 'ALEX Lab Blog',
+    url: 'https://medium.com/feed/alexgobtc',
+    category: 'bitcoin',
   },
 
   // =========================================================================
   // WAVE 5 — RESTAKING & AVS (Active Validator Services)
   // =========================================================================
   symbiotic_blog: {
-    name: "Symbiotic Blog",
-    url: "https://medium.com/feed/@symbiotic-fi",
-    category: "ethereum",
+    name: 'Symbiotic Blog',
+    url: 'https://medium.com/feed/@symbiotic-fi',
+    category: 'ethereum',
   },
   karak_blog: {
-    name: "Karak Blog",
-    url: "https://blog.karak.network/feed",
-    category: "ethereum",
+    name: 'Karak Blog',
+    url: 'https://blog.karak.network/feed',
+    category: 'ethereum',
   },
   puffer_finance_blog: {
-    name: "Puffer Finance Blog",
-    url: "https://medium.com/feed/@paborman",
-    category: "ethereum",
+    name: 'Puffer Finance Blog',
+    url: 'https://medium.com/feed/@paborman',
+    category: 'ethereum',
   },
   renzo_blog: {
-    name: "Renzo Protocol Blog",
-    url: "https://medium.com/feed/@renzoprotocol",
-    category: "ethereum",
+    name: 'Renzo Protocol Blog',
+    url: 'https://medium.com/feed/@renzoprotocol',
+    category: 'ethereum',
   },
 
   // =========================================================================
@@ -2130,225 +2062,225 @@ const RSS_SOURCES = {
   // "Chain abstraction" is a top 2025-2026 infrastructure narrative.
   // =========================================================================
   particle_network_blog: {
-    name: "Particle Network Blog",
-    url: "https://blog.particle.network/rss/",
-    category: "developer",
+    name: 'Particle Network Blog',
+    url: 'https://blog.particle.network/rss/',
+    category: 'developer',
   },
   socket_blog: {
-    name: "Socket Protocol Blog",
-    url: "https://mirror.xyz/nichanank.eth/feed/atom",
-    category: "developer",
+    name: 'Socket Protocol Blog',
+    url: 'https://mirror.xyz/nichanank.eth/feed/atom',
+    category: 'developer',
   },
   connext_blog: {
-    name: "Connext Blog",
-    url: "https://medium.com/feed/connext",
-    category: "developer",
+    name: 'Connext Blog',
+    url: 'https://medium.com/feed/connext',
+    category: 'developer',
   },
 
   // =========================================================================
   // WAVE 5 — APPCHAINS & MODULAR INFRA
   // =========================================================================
   dymension_blog: {
-    name: "Dymension Blog",
-    url: "https://medium.com/feed/@dymension",
-    category: "altl1",
+    name: 'Dymension Blog',
+    url: 'https://medium.com/feed/@dymension',
+    category: 'altl1',
   },
   saga_blog: {
-    name: "Saga Blog",
-    url: "https://medium.com/feed/@sagaxyz",
-    category: "altl1",
+    name: 'Saga Blog',
+    url: 'https://medium.com/feed/@sagaxyz',
+    category: 'altl1',
   },
   avail_blog: {
-    name: "Avail Blog",
-    url: "https://blog.availproject.org/rss/",
-    category: "altl1",
+    name: 'Avail Blog',
+    url: 'https://blog.availproject.org/rss/',
+    category: 'altl1',
   },
   altlayer_blog: {
-    name: "AltLayer Blog",
-    url: "https://blog.altlayer.io/feed",
-    category: "layer2",
+    name: 'AltLayer Blog',
+    url: 'https://blog.altlayer.io/feed',
+    category: 'layer2',
   },
   caldera_blog: {
-    name: "Caldera Blog",
-    url: "https://caldera.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'Caldera Blog',
+    url: 'https://caldera.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
   conduit_blog: {
-    name: "Conduit Blog",
-    url: "https://conduit.mirror.xyz/feed/atom",
-    category: "layer2",
+    name: 'Conduit Blog',
+    url: 'https://conduit.mirror.xyz/feed/atom',
+    category: 'layer2',
   },
 
   // =========================================================================
   // WAVE 5 — DATA AVAILABILITY & PARALLEL EXECUTION
   // =========================================================================
   megaeth_blog: {
-    name: "MegaETH Blog",
-    url: "https://mirror.xyz/megaeth.eth/feed/atom",
-    category: "layer2",
+    name: 'MegaETH Blog',
+    url: 'https://mirror.xyz/megaeth.eth/feed/atom',
+    category: 'layer2',
   },
   eclipse_blog: {
-    name: "Eclipse Blog",
-    url: "https://mirror.xyz/eclipsemainnet.eth/feed/atom",
-    category: "layer2",
+    name: 'Eclipse Blog',
+    url: 'https://mirror.xyz/eclipsemainnet.eth/feed/atom',
+    category: 'layer2',
   },
   movement_blog: {
-    name: "Movement Labs Blog",
-    url: "https://medium.com/feed/@movementlabsxyz",
-    category: "altl1",
+    name: 'Movement Labs Blog',
+    url: 'https://medium.com/feed/@movementlabsxyz',
+    category: 'altl1',
   },
 
   // =========================================================================
   // WAVE 5 — ACCOUNT ABSTRACTION / SMART WALLETS
   // =========================================================================
   pimlico_blog: {
-    name: "Pimlico Blog",
-    url: "https://www.pimlico.io/blog/feed",
-    category: "developer",
+    name: 'Pimlico Blog',
+    url: 'https://www.pimlico.io/blog/feed',
+    category: 'developer',
   },
   zerodev_blog: {
-    name: "ZeroDev Blog",
-    url: "https://docs.zerodev.app/blog/atom.xml",
-    category: "developer",
+    name: 'ZeroDev Blog',
+    url: 'https://docs.zerodev.app/blog/atom.xml',
+    category: 'developer',
   },
   rhinestone_blog: {
-    name: "Rhinestone Blog",
-    url: "https://blog.rhinestone.wtf/feed",
-    category: "developer",
+    name: 'Rhinestone Blog',
+    url: 'https://blog.rhinestone.wtf/feed',
+    category: 'developer',
   },
 
   // =========================================================================
   // WAVE 5 — GLOBAL REGULATORS & POLICY (beyond US)
   // =========================================================================
   uk_fca_crypto: {
-    name: "UK FCA Crypto",
-    url: "https://www.fca.org.uk/news/rss.xml",
-    category: "geopolitical",
+    name: 'UK FCA Crypto',
+    url: 'https://www.fca.org.uk/news/rss.xml',
+    category: 'geopolitical',
   },
   mas_singapore: {
-    name: "MAS Singapore Fintech",
-    url: "https://www.mas.gov.sg/rss/fintech",
-    category: "geopolitical",
+    name: 'MAS Singapore Fintech',
+    url: 'https://www.mas.gov.sg/rss/fintech',
+    category: 'geopolitical',
   },
   rba_speeches: {
-    name: "RBA Speeches (Australia)",
-    url: "https://www.rba.gov.au/rss/rss-cb-speeches.xml",
-    category: "geopolitical",
+    name: 'RBA Speeches (Australia)',
+    url: 'https://www.rba.gov.au/rss/rss-cb-speeches.xml',
+    category: 'geopolitical',
   },
   eba_news: {
-    name: "EBA News (EU Banking)",
-    url: "https://www.eba.europa.eu/rss.xml",
-    category: "geopolitical",
+    name: 'EBA News (EU Banking)',
+    url: 'https://www.eba.europa.eu/rss.xml',
+    category: 'geopolitical',
   },
 
   // =========================================================================
   // WAVE 5 — TOP CRYPTO NEWSLETTERS (Substack)
   // =========================================================================
   the_rollup_newsletter: {
-    name: "The Rollup",
-    url: "https://therollup.substack.com/feed",
-    category: "journalism",
+    name: 'The Rollup',
+    url: 'https://therollup.substack.com/feed',
+    category: 'journalism',
   },
   token_dispatch: {
-    name: "Token Dispatch",
-    url: "https://tokendispatch.substack.com/feed",
-    category: "journalism",
+    name: 'Token Dispatch',
+    url: 'https://tokendispatch.substack.com/feed',
+    category: 'journalism',
   },
   onchain_times: {
-    name: "Onchain Times",
-    url: "https://onchaintimes.substack.com/feed",
-    category: "journalism",
+    name: 'Onchain Times',
+    url: 'https://onchaintimes.substack.com/feed',
+    category: 'journalism',
   },
   defi_weekly: {
-    name: "DeFi Weekly",
-    url: "https://defiweekly.substack.com/feed",
-    category: "journalism",
+    name: 'DeFi Weekly',
+    url: 'https://defiweekly.substack.com/feed',
+    category: 'journalism',
   },
   blocmates: {
-    name: "Blocmates",
-    url: "https://blocmates.com/feed/",
-    category: "journalism",
+    name: 'Blocmates',
+    url: 'https://blocmates.com/feed/',
+    category: 'journalism',
   },
 
   // =========================================================================
   // WAVE 5 — VIDEO/YOUTUBE RSS (crypto educators)
   // =========================================================================
   coin_bureau_yt: {
-    name: "Coin Bureau",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw",
-    category: "journalism",
+    name: 'Coin Bureau',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw',
+    category: 'journalism',
   },
   benjamin_cowen_yt: {
-    name: "Benjamin Cowen",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCRvqjQPSeaWn-uEx-w0XOIg",
-    category: "journalism",
+    name: 'Benjamin Cowen',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCRvqjQPSeaWn-uEx-w0XOIg',
+    category: 'journalism',
   },
   raoul_pal_yt: {
-    name: "Raoul Pal (Real Vision)",
-    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCBH5VZE_Y4F3CMcPIzPEB5A",
-    category: "journalism",
+    name: 'Raoul Pal (Real Vision)',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCBH5VZE_Y4F3CMcPIzPEB5A',
+    category: 'journalism',
   },
 
   // =========================================================================
   // WAVE 5 — PERPETUAL/DERIVATIVES EXCHANGES (new entrants)
   // =========================================================================
   rabbitx_blog: {
-    name: "RabbitX Blog",
-    url: "https://medium.com/feed/@rabbitx_io",
-    category: "derivatives",
+    name: 'RabbitX Blog',
+    url: 'https://medium.com/feed/@rabbitx_io',
+    category: 'derivatives',
   },
   bluefin_blog: {
-    name: "Bluefin Blog",
-    url: "https://medium.com/feed/@bluefinapp",
-    category: "derivatives",
+    name: 'Bluefin Blog',
+    url: 'https://medium.com/feed/@bluefinapp',
+    category: 'derivatives',
   },
 
   // =========================================================================
   // WAVE 5 — TOKENIZATION / RWA EXPANDED
   // =========================================================================
   tokeny_blog: {
-    name: "Tokeny Blog",
-    url: "https://tokeny.com/blog/feed/",
-    category: "tradfi",
+    name: 'Tokeny Blog',
+    url: 'https://tokeny.com/blog/feed/',
+    category: 'tradfi',
   },
   backed_finance_blog: {
-    name: "Backed Finance Blog",
-    url: "https://medium.com/feed/@backedfi",
-    category: "tradfi",
+    name: 'Backed Finance Blog',
+    url: 'https://medium.com/feed/@backedfi',
+    category: 'tradfi',
   },
   superstate_blog: {
-    name: "Superstate Blog",
-    url: "https://medium.com/feed/@superstatefunds",
-    category: "tradfi",
+    name: 'Superstate Blog',
+    url: 'https://medium.com/feed/@superstatefunds',
+    category: 'tradfi',
   },
   maple_v2_blog: {
-    name: "Maple Finance V2 Blog",
-    url: "https://medium.com/feed/@maplefinance",
-    category: "defi",
+    name: 'Maple Finance V2 Blog',
+    url: 'https://medium.com/feed/@maplefinance',
+    category: 'defi',
   },
 
   // =========================================================================
   // WAVE 5 — ADDITIONAL CRYPTO MEDIA (high quality, recently launched)
   // =========================================================================
   thevrsoldier: {
-    name: "The VR Soldier",
-    url: "https://thevrsoldier.com/feed/",
-    category: "general",
+    name: 'The VR Soldier',
+    url: 'https://thevrsoldier.com/feed/',
+    category: 'general',
   },
   blockhead_news: {
-    name: "Blockhead News",
-    url: "https://blockhead.co/feed/",
-    category: "general",
+    name: 'Blockhead News',
+    url: 'https://blockhead.co/feed/',
+    category: 'general',
   },
   cryptodnes: {
-    name: "CryptoDnes",
-    url: "https://www.cryptodnes.bg/en/feed/",
-    category: "general",
+    name: 'CryptoDnes',
+    url: 'https://www.cryptodnes.bg/en/feed/',
+    category: 'general',
   },
   cypherhunter_blog: {
-    name: "CypherHunter Blog",
-    url: "https://www.cypherhunter.com/blog/feed/",
-    category: "general",
+    name: 'CypherHunter Blog',
+    url: 'https://www.cypherhunter.com/blog/feed/',
+    category: 'general',
   },
 } as const;
 
@@ -2363,57 +2295,57 @@ const HOMEPAGE_SOURCE_KEYS = new Set([
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Major crypto news outlets
   // ═══════════════════════════════════════════════════════════════
-  "coindesk",
-  "theblock",
-  "decrypt",
-  "cointelegraph",
-  "bitcoinmagazine",
-  "blockworks",
-  "defiant",
+  'coindesk',
+  'theblock',
+  'decrypt',
+  'cointelegraph',
+  'bitcoinmagazine',
+  'blockworks',
+  'defiant',
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Mainstream / institutional media
   // ═══════════════════════════════════════════════════════════════
-  "bloomberg_crypto",
-  "reuters_crypto",
-  "wsj_crypto",
-  "ft_crypto",
-  "cnbc_crypto",
-  "forbes_crypto",
-  "yahoo_crypto",
-  "techcrunch_crypto",
-  "wired_crypto",
-  "guardian_tech",
-  "bbc_business",
-  "cnn_business",
-  "barrons",
-  "business_insider_markets",
-  "fortune_crypto",
-  "axios_crypto",
-  "entrepreneur_crypto",
+  'bloomberg_crypto',
+  'reuters_crypto',
+  'wsj_crypto',
+  'ft_crypto',
+  'cnbc_crypto',
+  'forbes_crypto',
+  'yahoo_crypto',
+  'techcrunch_crypto',
+  'wired_crypto',
+  'guardian_tech',
+  'bbc_business',
+  'cnn_business',
+  'barrons',
+  'business_insider_markets',
+  'fortune_crypto',
+  'axios_crypto',
+  'entrepreneur_crypto',
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Institutional / research
   // ═══════════════════════════════════════════════════════════════
-  "fidelity_digital",
-  "blackrock_digital",
-  "coinbase_institutional",
-  "franklin_templeton_digital",
+  'fidelity_digital',
+  'blackrock_digital',
+  'coinbase_institutional',
+  'franklin_templeton_digital',
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Geopolitical / Central Banks
   // ═══════════════════════════════════════════════════════════════
-  "bis_speeches",
-  "imf_blog",
-  "ecb_press",
-  "treasury_press",
-  "boe_speeches",
-  "atlantic_council_crypto",
+  'bis_speeches',
+  'imf_blog',
+  'ecb_press',
+  'treasury_press',
+  'boe_speeches',
+  'atlantic_council_crypto',
 
   // ═══════════════════════════════════════════════════════════════
   // Tier 2 — Established crypto (quality editorial only)
   // ═══════════════════════════════════════════════════════════════
-  "unchained_crypto",
+  'unchained_crypto',
 ]);
 
 export interface NewsArticle {
@@ -2428,6 +2360,10 @@ export interface NewsArticle {
   sourceKey: string;
   category: string;
   timeAgo: string;
+  // Quality metadata
+  tier?: string; // e.g. 'tier1', 'tier2', 'tier3', 'research'
+  credibility?: number; // 0-1, source credibility score
+  reputation?: number; // 0-100, source reputation score
 }
 
 /**
@@ -2435,7 +2371,7 @@ export interface NewsArticle {
  * Prefers a pre-generated translation, then falls back to the original description.
  */
 export function getLocalizedDescription(
-  article: Pick<NewsArticle, "description" | "translations">,
+  article: Pick<NewsArticle, 'description' | 'translations'>,
   locale: string,
 ): string | undefined {
   return article.translations?.[locale] ?? article.description;
@@ -2459,7 +2395,7 @@ export interface SourceInfo {
   name: string;
   url: string;
   category: string;
-  status: "active" | "unavailable" | "unknown";
+  status: 'active' | 'unavailable' | 'unknown';
 }
 
 /**
@@ -2477,41 +2413,30 @@ function stripCDATA(text: string): string {
 function decodeHTMLEntities(text: string): string {
   return text
     .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number(dec)))
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) =>
-      String.fromCharCode(parseInt(hex, 16)),
-    )
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
     .replace(/&quot;/g, '"')
     .replace(/&apos;/g, "'")
     .replace(/&#039;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&"); // &amp; must be last
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&'); // &amp; must be last
 }
 
 /**
  * Extract the best image URL from an RSS item.
  * Checks: media:content, media:thumbnail, enclosure, img in description
  */
-function extractImageUrl(
-  itemXml: string,
-  rawDescription: string,
-): string | null {
+function extractImageUrl(itemXml: string, rawDescription: string): string | null {
   // Priority 1: media:content (most reliable, used by major RSS feeds)
-  const mediaContent = itemXml.match(
-    /<media:content[^>]+url=["']([^"']+)["']/i,
-  );
+  const mediaContent = itemXml.match(/<media:content[^>]+url=["']([^"']+)["']/i);
   if (mediaContent?.[1]) return mediaContent[1];
 
   // Priority 2: media:thumbnail
-  const mediaThumbnail = itemXml.match(
-    /<media:thumbnail[^>]+url=["']([^"']+)["']/i,
-  );
+  const mediaThumbnail = itemXml.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i);
   if (mediaThumbnail?.[1]) return mediaThumbnail[1];
 
   // Priority 3: enclosure with image type
-  const enclosure = itemXml.match(
-    /<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image[^"']*/i,
-  );
+  const enclosure = itemXml.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image[^"']*/i);
   if (enclosure?.[1]) return enclosure[1];
 
   // Priority 4: enclosure without type check (many feeds omit type)
@@ -2525,9 +2450,9 @@ function extractImageUrl(
     const imgMatch = rawDescription.match(/<img[^>]+src=["']([^"']+)["']/i);
     if (
       imgMatch?.[1] &&
-      !imgMatch[1].includes("feeds.feedburner") &&
-      !imgMatch[1].includes("pixel") &&
-      !imgMatch[1].includes("tracker")
+      !imgMatch[1].includes('feeds.feedburner') &&
+      !imgMatch[1].includes('pixel') &&
+      !imgMatch[1].includes('tracker')
     ) {
       return imgMatch[1];
     }
@@ -2557,8 +2482,7 @@ function parseRSSFeed(
 
   const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
   const titleRegex = /<title><!\[CDATA\[(.*?)\]\]>|<title>(.*?)<\/title>/i;
-  const linkRegex =
-    /<link><!\[CDATA\[(.*?)\]\]>(?:<\/link>)?|<link>(.*?)<\/link>/i;
+  const linkRegex = /<link><!\[CDATA\[(.*?)\]\]>(?:<\/link>)?|<link>(.*?)<\/link>/i;
   const descRegex =
     /<description><!\[CDATA\[([\s\S]*?)\]\]>|<description>([\s\S]*?)<\/description>/i;
   const pubDateRegex = /<pubDate>(.*?)<\/pubDate>/i;
@@ -2573,15 +2497,13 @@ function parseRSSFeed(
     const pubDateMatch = itemXml.match(pubDateRegex);
 
     // Extract image from multiple possible locations
-    const rawDesc = descMatch?.[1] || descMatch?.[2] || "";
+    const rawDesc = descMatch?.[1] || descMatch?.[2] || '';
     const imageUrl = extractImageUrl(itemXml, rawDesc);
 
-    const title = decodeHTMLEntities(
-      (titleMatch?.[1] || titleMatch?.[2] || "").trim(),
-    );
-    const link = stripCDATA((linkMatch?.[1] || linkMatch?.[2] || "").trim());
+    const title = decodeHTMLEntities((titleMatch?.[1] || titleMatch?.[2] || '').trim());
+    const link = stripCDATA((linkMatch?.[1] || linkMatch?.[2] || '').trim());
     const description = sanitizeDescription(rawDesc);
-    const pubDateStr = pubDateMatch?.[1] || "";
+    const pubDateStr = pubDateMatch?.[1] || '';
 
     if (title && link) {
       const rawDate = pubDateStr ? new Date(pubDateStr) : new Date();
@@ -2596,6 +2518,9 @@ function parseRSSFeed(
         sourceKey,
         category,
         timeAgo: getTimeAgo(pubDate),
+        tier: getSourceTier(sourceKey) ?? undefined,
+        credibility: getSourceCredibility(sourceKey),
+        reputation: getSourceReputation(sourceKey),
       });
     }
   }
@@ -2605,7 +2530,7 @@ function parseRSSFeed(
 
 function sanitizeDescription(raw: string): string {
   if (!raw) {
-    return "";
+    return '';
   }
 
   const sanitized = sanitizeHtml(raw, {
@@ -2626,15 +2551,15 @@ function getTimeAgo(date: Date): string {
   const diffHours = Math.floor(diffMins / 60);
   const diffDays = Math.floor(diffHours / 24);
 
-  if (diffMins < 1) return "just now";
+  if (diffMins < 1) return 'just now';
   if (diffMins < 60) return `${diffMins}m ago`;
   if (diffHours < 24) return `${diffHours}h ago`;
-  if (diffDays === 1) return "yesterday";
+  if (diffDays === 1) return 'yesterday';
   if (diffDays < 7) return `${diffDays}d ago`;
   return date.toLocaleDateString();
 }
 
-import { newsCache, withCache } from "./cache";
+import { newsCache, withCache } from './cache';
 
 // ═══════════════════════════════════════════════════════════════
 // API SOURCES (more reliable than RSS)
@@ -2651,9 +2576,9 @@ interface ApiSource {
 const API_SOURCES: Record<string, ApiSource> = {
   // CryptoCompare News API (free, no key needed for basic usage)
   cryptocompare: {
-    name: "CryptoCompare",
-    url: "https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=latest",
-    category: "general",
+    name: 'CryptoCompare',
+    url: 'https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=latest',
+    category: 'general',
     parser: (data: unknown) => {
       const response = data as {
         Data?: Array<{
@@ -2673,19 +2598,22 @@ const API_SOURCES: Record<string, ApiSource> = {
         description: item.body?.slice(0, 200),
         imageUrl: item.imageurl || undefined,
         pubDate: safeDate(item.published_on * 1000).toISOString(),
-        source: item.source || "CryptoCompare",
-        sourceKey: "cryptocompare",
-        category: item.categories?.split("|")[0]?.toLowerCase() || "general",
+        source: item.source || 'CryptoCompare',
+        sourceKey: 'cryptocompare',
+        category: item.categories?.split('|')[0]?.toLowerCase() || 'general',
         timeAgo: getTimeAgo(safeDate(item.published_on * 1000)),
+        tier: getSourceTier('cryptocompare') ?? undefined,
+        credibility: getSourceCredibility('cryptocompare'),
+        reputation: getSourceReputation('cryptocompare'),
       }));
     },
   },
 
   // CoinGecko Status Updates (free)
   coingecko_updates: {
-    name: "CoinGecko Updates",
-    url: "https://api.coingecko.com/api/v3/status_updates",
-    category: "general",
+    name: 'CoinGecko Updates',
+    url: 'https://api.coingecko.com/api/v3/status_updates',
+    category: 'general',
     parser: (data: unknown) => {
       const response = data as {
         status_updates?: Array<{
@@ -2697,25 +2625,26 @@ const API_SOURCES: Record<string, ApiSource> = {
       };
       if (!response.status_updates) return [];
       return response.status_updates.slice(0, 10).map((item) => ({
-        title: decodeHTMLEntities(
-          `${item.project?.name}: ${item.user_title || "Update"}`,
-        ),
+        title: decodeHTMLEntities(`${item.project?.name}: ${item.user_title || 'Update'}`),
         link: `https://www.coingecko.com`,
         description: item.description?.slice(0, 200),
         pubDate: safeDate(item.created_at).toISOString(),
-        source: "CoinGecko",
-        sourceKey: "coingecko_updates",
-        category: "general",
+        source: 'CoinGecko',
+        sourceKey: 'coingecko_updates',
+        category: 'general',
         timeAgo: getTimeAgo(safeDate(item.created_at)),
+        tier: getSourceTier('coingecko_updates') ?? undefined,
+        credibility: getSourceCredibility('coingecko_updates'),
+        reputation: getSourceReputation('coingecko_updates'),
       }));
     },
   },
 
   // CoinPaprika News (free)
   coinpaprika: {
-    name: "CoinPaprika",
-    url: "https://api.coinpaprika.com/v1/coins/btc-bitcoin/events",
-    category: "bitcoin",
+    name: 'CoinPaprika',
+    url: 'https://api.coinpaprika.com/v1/coins/btc-bitcoin/events',
+    category: 'bitcoin',
     parser: (data: unknown) => {
       const events = data as Array<{
         name: string;
@@ -2726,22 +2655,25 @@ const API_SOURCES: Record<string, ApiSource> = {
       if (!Array.isArray(events)) return [];
       return events.slice(0, 10).map((item) => ({
         title: decodeHTMLEntities(item.name),
-        link: item.link || "https://coinpaprika.com",
+        link: item.link || 'https://coinpaprika.com',
         description: item.description?.slice(0, 200),
         pubDate: safeDate(item.date).toISOString(),
-        source: "CoinPaprika",
-        sourceKey: "coinpaprika",
-        category: "bitcoin",
+        source: 'CoinPaprika',
+        sourceKey: 'coinpaprika',
+        category: 'bitcoin',
         timeAgo: getTimeAgo(safeDate(item.date)),
+        tier: getSourceTier('coinpaprika') ?? undefined,
+        credibility: getSourceCredibility('coinpaprika'),
+        reputation: getSourceReputation('coinpaprika'),
       }));
     },
   },
 
   // CoinCap News (free)
   coincap: {
-    name: "CoinCap",
-    url: "https://api.coincap.io/v2/assets?limit=10",
-    category: "markets",
+    name: 'CoinCap',
+    url: 'https://api.coincap.io/v2/assets?limit=10',
+    category: 'markets',
     parser: (data: unknown) => {
       // CoinCap doesn't have news, but we can generate market updates
       const response = data as {
@@ -2755,20 +2687,23 @@ const API_SOURCES: Record<string, ApiSource> = {
       if (!response.data) return [];
       // Only return significant movers (>5% change)
       const movers = response.data.filter(
-        (a) => Math.abs(parseFloat(a.changePercent24Hr || "0")) > 5,
+        (a) => Math.abs(parseFloat(a.changePercent24Hr || '0')) > 5,
       );
       return movers.slice(0, 5).map((item) => {
-        const change = parseFloat(item.changePercent24Hr || "0");
-        const direction = change > 0 ? "📈" : "📉";
+        const change = parseFloat(item.changePercent24Hr || '0');
+        const direction = change > 0 ? '📈' : '📉';
         return {
-          title: `${direction} ${item.name} (${item.symbol}) ${change > 0 ? "+" : ""}${change.toFixed(1)}% in 24h`,
+          title: `${direction} ${item.name} (${item.symbol}) ${change > 0 ? '+' : ''}${change.toFixed(1)}% in 24h`,
           link: `https://coincap.io/assets/${item.name.toLowerCase()}`,
           description: `${item.name} is trading at $${parseFloat(item.priceUsd).toLocaleString()}`,
           pubDate: new Date().toISOString(),
-          source: "CoinCap",
-          sourceKey: "coincap",
-          category: "markets",
-          timeAgo: "just now",
+          source: 'CoinCap',
+          sourceKey: 'coincap',
+          category: 'markets',
+          timeAgo: 'just now',
+          tier: getSourceTier('coincap') ?? undefined,
+          credibility: getSourceCredibility('coincap'),
+          reputation: getSourceReputation('coincap'),
         };
       });
     },
@@ -2776,9 +2711,9 @@ const API_SOURCES: Record<string, ApiSource> = {
 
   // LunarCrush Galaxy Score (free tier)
   lunarcrush: {
-    name: "LunarCrush",
-    url: "https://lunarcrush.com/api4/public/coins/list?sort=galaxy_score&limit=5",
-    category: "social",
+    name: 'LunarCrush',
+    url: 'https://lunarcrush.com/api4/public/coins/list?sort=galaxy_score&limit=5',
+    category: 'social',
     parser: (data: unknown) => {
       const response = data as {
         data?: Array<{
@@ -2793,21 +2728,24 @@ const API_SOURCES: Record<string, ApiSource> = {
       return response.data.slice(0, 5).map((item) => ({
         title: `🌙 ${item.name} (${item.symbol}) Galaxy Score: ${item.galaxy_score}`,
         link: `https://lunarcrush.com/coins/${item.symbol.toLowerCase()}`,
-        description: `Social volume: ${item.social_volume?.toLocaleString() || "N/A"}, Alt Rank: #${item.alt_rank}`,
+        description: `Social volume: ${item.social_volume?.toLocaleString() || 'N/A'}, Alt Rank: #${item.alt_rank}`,
         pubDate: new Date().toISOString(),
-        source: "LunarCrush",
-        sourceKey: "lunarcrush",
-        category: "social",
-        timeAgo: "just now",
+        source: 'LunarCrush',
+        sourceKey: 'lunarcrush',
+        category: 'social',
+        timeAgo: 'just now',
+        tier: getSourceTier('lunarcrush') ?? undefined,
+        credibility: getSourceCredibility('lunarcrush'),
+        reputation: getSourceReputation('lunarcrush'),
       }));
     },
   },
 
   // Fear & Greed Index (Alternative.me - free)
   fear_greed: {
-    name: "Fear & Greed",
-    url: "https://api.alternative.me/fng/?limit=1",
-    category: "sentiment",
+    name: 'Fear & Greed',
+    url: 'https://api.alternative.me/fng/?limit=1',
+    category: 'sentiment',
     parser: (data: unknown) => {
       const response = data as {
         data?: Array<{
@@ -2820,22 +2758,25 @@ const API_SOURCES: Record<string, ApiSource> = {
       const item = response.data[0];
       const emoji =
         parseInt(item.value) < 25
-          ? "😨"
+          ? '😨'
           : parseInt(item.value) < 50
-            ? "😟"
+            ? '😟'
             : parseInt(item.value) < 75
-              ? "😊"
-              : "🤑";
+              ? '😊'
+              : '🤑';
       return [
         {
           title: `${emoji} Crypto Fear & Greed Index: ${item.value} (${item.value_classification})`,
-          link: "https://alternative.me/crypto/fear-and-greed-index/",
+          link: 'https://alternative.me/crypto/fear-and-greed-index/',
           description: `The market sentiment is currently "${item.value_classification}" with a score of ${item.value}/100`,
           pubDate: safeDate(parseInt(item.timestamp) * 1000).toISOString(),
-          source: "Alternative.me",
-          sourceKey: "fear_greed",
-          category: "sentiment",
+          source: 'Alternative.me',
+          sourceKey: 'fear_greed',
+          category: 'sentiment',
           timeAgo: getTimeAgo(safeDate(parseInt(item.timestamp) * 1000)),
+          tier: getSourceTier('fear_greed') ?? undefined,
+          credibility: getSourceCredibility('fear_greed'),
+          reputation: getSourceReputation('fear_greed'),
         },
       ];
     },
@@ -2843,9 +2784,9 @@ const API_SOURCES: Record<string, ApiSource> = {
 
   // Blockchain.com Stats (free)
   blockchain_stats: {
-    name: "Blockchain Stats",
-    url: "https://api.blockchain.info/stats",
-    category: "bitcoin",
+    name: 'Blockchain Stats',
+    url: 'https://api.blockchain.info/stats',
+    category: 'bitcoin',
     parser: (data: unknown) => {
       const stats = data as {
         market_price_usd: number;
@@ -2857,13 +2798,16 @@ const API_SOURCES: Record<string, ApiSource> = {
       return [
         {
           title: `₿ Bitcoin Network: ${(stats.hash_rate / 1e18).toFixed(1)} EH/s hashrate, ${stats.n_tx.toLocaleString()} txs today`,
-          link: "https://www.blockchain.com/explorer/charts",
+          link: 'https://www.blockchain.com/explorer/charts',
           description: `BTC price: $${stats.market_price_usd.toLocaleString()}`,
           pubDate: safeDate(stats.timestamp).toISOString(),
-          source: "Blockchain.com",
-          sourceKey: "blockchain_stats",
-          category: "bitcoin",
+          source: 'Blockchain.com',
+          sourceKey: 'blockchain_stats',
+          category: 'bitcoin',
           timeAgo: getTimeAgo(safeDate(stats.timestamp)),
+          tier: getSourceTier('blockchain_stats') ?? undefined,
+          credibility: getSourceCredibility('blockchain_stats'),
+          reputation: getSourceReputation('blockchain_stats'),
         },
       ];
     },
@@ -2871,9 +2815,9 @@ const API_SOURCES: Record<string, ApiSource> = {
 
   // Etherscan Gas Tracker (free)
   etherscan_gas: {
-    name: "Etherscan Gas",
-    url: "https://api.etherscan.io/api?module=gastracker&action=gasoracle",
-    category: "ethereum",
+    name: 'Etherscan Gas',
+    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+    category: 'ethereum',
     parser: (data: unknown) => {
       const response = data as {
         result?: {
@@ -2887,13 +2831,16 @@ const API_SOURCES: Record<string, ApiSource> = {
       return [
         {
           title: `⛽ ETH Gas: 🐢 ${SafeGasPrice} | 🚶 ${ProposeGasPrice} | 🚀 ${FastGasPrice} Gwei`,
-          link: "https://etherscan.io/gastracker",
+          link: 'https://etherscan.io/gastracker',
           description: `Current Ethereum gas prices. Fast: ${FastGasPrice} Gwei, Standard: ${ProposeGasPrice} Gwei, Safe: ${SafeGasPrice} Gwei`,
           pubDate: new Date().toISOString(),
-          source: "Etherscan",
-          sourceKey: "etherscan_gas",
-          category: "ethereum",
-          timeAgo: "just now",
+          source: 'Etherscan',
+          sourceKey: 'etherscan_gas',
+          category: 'ethereum',
+          timeAgo: 'just now',
+          tier: getSourceTier('etherscan_gas') ?? undefined,
+          credibility: getSourceCredibility('etherscan_gas'),
+          reputation: getSourceReputation('etherscan_gas'),
         },
       ];
     },
@@ -2901,9 +2848,9 @@ const API_SOURCES: Record<string, ApiSource> = {
 
   // Mempool.space Bitcoin Fees (free)
   mempool_fees: {
-    name: "Mempool Fees",
-    url: "https://mempool.space/api/v1/fees/recommended",
-    category: "bitcoin",
+    name: 'Mempool Fees',
+    url: 'https://mempool.space/api/v1/fees/recommended',
+    category: 'bitcoin',
     parser: (data: unknown) => {
       const fees = data as {
         fastestFee: number;
@@ -2915,13 +2862,13 @@ const API_SOURCES: Record<string, ApiSource> = {
       return [
         {
           title: `₿ BTC Fees: ⚡ ${fees.fastestFee} | ⏱️ ${fees.halfHourFee} | 🕐 ${fees.hourFee} sat/vB`,
-          link: "https://mempool.space",
+          link: 'https://mempool.space',
           description: `Fastest: ${fees.fastestFee} sat/vB, 30min: ${fees.halfHourFee} sat/vB, 1hr: ${fees.hourFee} sat/vB, Economy: ${fees.economyFee} sat/vB`,
           pubDate: new Date().toISOString(),
-          source: "Mempool.space",
-          sourceKey: "mempool_fees",
-          category: "bitcoin",
-          timeAgo: "just now",
+          source: 'Mempool.space',
+          sourceKey: 'mempool_fees',
+          category: 'bitcoin',
+          timeAgo: 'just now',
         },
       ];
     },
@@ -2931,9 +2878,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   // REDDIT (free, no key needed — public JSON API)
   // ═══════════════════════════════════════════════════════════════
   reddit_crypto: {
-    name: "Reddit r/CryptoCurrency",
-    url: "https://www.reddit.com/r/CryptoCurrency/hot.json?limit=10",
-    category: "social",
+    name: 'Reddit r/CryptoCurrency',
+    url: 'https://www.reddit.com/r/CryptoCurrency/hot.json?limit=10',
+    category: 'social',
     parser: (data: unknown) => {
       const response = data as {
         data?: {
@@ -2959,16 +2906,14 @@ const API_SOURCES: Record<string, ApiSource> = {
           const post = c.data;
           return {
             title: decodeHTMLEntities(post.title),
-            link: post.url.startsWith("http")
-              ? post.url
-              : `https://reddit.com${post.permalink}`,
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description:
               post.selftext?.slice(0, 200) ||
               `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
             pubDate: safeDate(post.created_utc * 1000).toISOString(),
-            source: "Reddit r/CryptoCurrency",
-            sourceKey: "reddit_crypto",
-            category: "social",
+            source: 'Reddit r/CryptoCurrency',
+            sourceKey: 'reddit_crypto',
+            category: 'social',
             timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
           };
         });
@@ -2976,9 +2921,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   },
 
   reddit_bitcoin: {
-    name: "Reddit r/Bitcoin",
-    url: "https://www.reddit.com/r/Bitcoin/hot.json?limit=10",
-    category: "social",
+    name: 'Reddit r/Bitcoin',
+    url: 'https://www.reddit.com/r/Bitcoin/hot.json?limit=10',
+    category: 'social',
     parser: (data: unknown) => {
       const response = data as {
         data?: {
@@ -3004,16 +2949,14 @@ const API_SOURCES: Record<string, ApiSource> = {
           const post = c.data;
           return {
             title: decodeHTMLEntities(post.title),
-            link: post.url.startsWith("http")
-              ? post.url
-              : `https://reddit.com${post.permalink}`,
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description:
               post.selftext?.slice(0, 200) ||
               `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
             pubDate: safeDate(post.created_utc * 1000).toISOString(),
-            source: "Reddit r/Bitcoin",
-            sourceKey: "reddit_bitcoin",
-            category: "bitcoin",
+            source: 'Reddit r/Bitcoin',
+            sourceKey: 'reddit_bitcoin',
+            category: 'bitcoin',
             timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
           };
         });
@@ -3021,9 +2964,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   },
 
   reddit_defi: {
-    name: "Reddit r/defi",
-    url: "https://www.reddit.com/r/defi/hot.json?limit=8",
-    category: "social",
+    name: 'Reddit r/defi',
+    url: 'https://www.reddit.com/r/defi/hot.json?limit=8',
+    category: 'social',
     parser: (data: unknown) => {
       const response = data as {
         data?: {
@@ -3048,16 +2991,14 @@ const API_SOURCES: Record<string, ApiSource> = {
           const post = c.data;
           return {
             title: decodeHTMLEntities(post.title),
-            link: post.url.startsWith("http")
-              ? post.url
-              : `https://reddit.com${post.permalink}`,
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description:
               post.selftext?.slice(0, 200) ||
               `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
             pubDate: safeDate(post.created_utc * 1000).toISOString(),
-            source: "Reddit r/defi",
-            sourceKey: "reddit_defi",
-            category: "defi",
+            source: 'Reddit r/defi',
+            sourceKey: 'reddit_defi',
+            category: 'defi',
             timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
           };
         });
@@ -3065,9 +3006,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   },
 
   reddit_ethereum: {
-    name: "Reddit r/ethereum",
-    url: "https://www.reddit.com/r/ethereum/hot.json?limit=8",
-    category: "social",
+    name: 'Reddit r/ethereum',
+    url: 'https://www.reddit.com/r/ethereum/hot.json?limit=8',
+    category: 'social',
     parser: (data: unknown) => {
       const response = data as {
         data?: {
@@ -3092,16 +3033,14 @@ const API_SOURCES: Record<string, ApiSource> = {
           const post = c.data;
           return {
             title: decodeHTMLEntities(post.title),
-            link: post.url.startsWith("http")
-              ? post.url
-              : `https://reddit.com${post.permalink}`,
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description:
               post.selftext?.slice(0, 200) ||
               `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
             pubDate: safeDate(post.created_utc * 1000).toISOString(),
-            source: "Reddit r/ethereum",
-            sourceKey: "reddit_ethereum",
-            category: "ethereum",
+            source: 'Reddit r/ethereum',
+            sourceKey: 'reddit_ethereum',
+            category: 'ethereum',
             timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
           };
         });
@@ -3113,9 +3052,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   // Crypto fundraising rounds — high-signal institutional news
   // ═══════════════════════════════════════════════════════════════
   defillama_raises: {
-    name: "DeFiLlama Raises",
-    url: "https://api.llama.fi/raises",
-    category: "institutional",
+    name: 'DeFiLlama Raises',
+    url: 'https://api.llama.fi/raises',
+    category: 'institutional',
     noDataCache: true, // 3.78MB response exceeds Next.js 2MB data cache limit
     parser: (data: unknown) => {
       const response = data as {
@@ -3137,19 +3076,19 @@ const API_SOURCES: Record<string, ApiSource> = {
         .filter((r) => r.date > cutoff && r.source)
         .slice(0, 10)
         .map((r) => {
-          const amountStr = r.amount ? `$${r.amount}M` : "undisclosed amount";
+          const amountStr = r.amount ? `$${r.amount}M` : 'undisclosed amount';
           const investors = r.leadInvestors?.length
-            ? ` led by ${r.leadInvestors.slice(0, 2).join(", ")}`
-            : "";
+            ? ` led by ${r.leadInvestors.slice(0, 2).join(', ')}`
+            : '';
           return {
-            title: `💰 ${r.name} raises ${amountStr} in ${r.round || "funding round"}${investors}`,
-            link: r.source || "https://defillama.com/raises",
+            title: `💰 ${r.name} raises ${amountStr} in ${r.round || 'funding round'}${investors}`,
+            link: r.source || 'https://defillama.com/raises',
             description:
-              `${r.category || ""} ${r.sector || ""} · Chains: ${r.chains?.join(", ") || "N/A"}`.trim(),
+              `${r.category || ''} ${r.sector || ''} · Chains: ${r.chains?.join(', ') || 'N/A'}`.trim(),
             pubDate: safeDate(r.date * 1000).toISOString(),
-            source: "DeFiLlama Raises",
-            sourceKey: "defillama_raises",
-            category: "institutional",
+            source: 'DeFiLlama Raises',
+            sourceKey: 'defillama_raises',
+            category: 'institutional',
             timeAgo: getTimeAgo(new Date(r.date * 1000)),
           };
         });
@@ -3160,9 +3099,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   // BINANCE ANNOUNCEMENTS (public endpoint, no key needed)
   // ═══════════════════════════════════════════════════════════════
   binance_announcements: {
-    name: "Binance Announcements",
-    url: "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?type=1&pageNo=1&pageSize=10&catalogId=48",
-    category: "general",
+    name: 'Binance Announcements',
+    url: 'https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?type=1&pageNo=1&pageSize=10&catalogId=48',
+    category: 'general',
     parser: (data: unknown) => {
       const response = data as {
         data?: {
@@ -3183,9 +3122,9 @@ const API_SOURCES: Record<string, ApiSource> = {
         link: `https://www.binance.com/en/support/announcement/${item.code}`,
         description: `Binance official announcement`,
         pubDate: safeDate(item.releaseDate).toISOString(),
-        source: "Binance",
-        sourceKey: "binance_announcements",
-        category: "general",
+        source: 'Binance',
+        sourceKey: 'binance_announcements',
+        category: 'general',
         timeAgo: getTimeAgo(safeDate(item.releaseDate)),
       }));
     },
@@ -3205,9 +3144,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   ...(process.env.ALPHA_VANTAGE_API_KEY
     ? {
         alpha_vantage: {
-          name: "Alpha Vantage News",
+          name: 'Alpha Vantage News',
           url: `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=blockchain&language=en&sort=LATEST&limit=30&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`,
-          category: "general",
+          category: 'general',
           parser: (data: unknown) => {
             const response = data as {
               feed?: Array<{
@@ -3232,13 +3171,11 @@ const API_SOURCES: Record<string, ApiSource> = {
                     `${item.time_published.slice(0, 4)}-${item.time_published.slice(4, 6)}-${item.time_published.slice(6, 8)}T${item.time_published.slice(9, 11)}:${item.time_published.slice(11, 13)}:${item.time_published.slice(13, 15)}Z`,
                   ).toISOString()
                 : new Date().toISOString(),
-              source: item.source || "Alpha Vantage",
-              sourceKey: "alpha_vantage",
-              category: item.overall_sentiment_label
-                ?.toLowerCase()
-                .includes("bull")
-                ? "markets"
-                : "general",
+              source: item.source || 'Alpha Vantage',
+              sourceKey: 'alpha_vantage',
+              category: item.overall_sentiment_label?.toLowerCase().includes('bull')
+                ? 'markets'
+                : 'general',
               timeAgo: getTimeAgo(new Date()),
             }));
           },
@@ -3249,9 +3186,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   ...(process.env.FINNHUB_API_KEY
     ? {
         finnhub: {
-          name: "Finnhub",
+          name: 'Finnhub',
           url: `https://finnhub.io/api/v1/news?category=crypto&token=${process.env.FINNHUB_API_KEY}`,
-          category: "general",
+          category: 'general',
           parser: (data: unknown) => {
             const items = data as Array<{
               headline: string;
@@ -3269,9 +3206,9 @@ const API_SOURCES: Record<string, ApiSource> = {
               description: item.summary?.slice(0, 200),
               imageUrl: item.image || undefined,
               pubDate: safeDate(item.datetime * 1000).toISOString(),
-              source: item.source || "Finnhub",
-              sourceKey: "finnhub",
-              category: "general",
+              source: item.source || 'Finnhub',
+              sourceKey: 'finnhub',
+              category: 'general',
               timeAgo: getTimeAgo(safeDate(item.datetime * 1000)),
             }));
           },
@@ -3282,9 +3219,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   ...(process.env.MARKETAUX_API_KEY
     ? {
         marketaux: {
-          name: "MarketAux",
+          name: 'MarketAux',
           url: `https://api.marketaux.com/v1/news/all?api_token=${process.env.MARKETAUX_API_KEY}&filter_entities=true&language=en&search=crypto+bitcoin+ethereum&limit=25`,
-          category: "general",
+          category: 'general',
           parser: (data: unknown) => {
             const response = data as {
               data?: Array<{
@@ -3305,9 +3242,9 @@ const API_SOURCES: Record<string, ApiSource> = {
               description: item.description?.slice(0, 200),
               imageUrl: item.image_url || undefined,
               pubDate: safeDate(item.published_at).toISOString(),
-              source: item.source || "MarketAux",
-              sourceKey: "marketaux",
-              category: "general",
+              source: item.source || 'MarketAux',
+              sourceKey: 'marketaux',
+              category: 'general',
               timeAgo: getTimeAgo(safeDate(item.published_at)),
             }));
           },
@@ -3318,9 +3255,9 @@ const API_SOURCES: Record<string, ApiSource> = {
   ...(process.env.GNEWS_API_KEY
     ? {
         gnews: {
-          name: "GNews",
+          name: 'GNews',
           url: `https://gnews.io/api/v4/search?q=cryptocurrency+OR+bitcoin+OR+ethereum&token=${process.env.GNEWS_API_KEY}&lang=en&max=10&sortby=publishedAt`,
-          category: "general",
+          category: 'general',
           parser: (data: unknown) => {
             const response = data as {
               articles?: Array<{
@@ -3340,9 +3277,9 @@ const API_SOURCES: Record<string, ApiSource> = {
               description: item.description?.slice(0, 200),
               imageUrl: item.image || undefined,
               pubDate: safeDate(item.publishedAt).toISOString(),
-              source: item.source?.name || "GNews",
-              sourceKey: "gnews",
-              category: "general",
+              source: item.source?.name || 'GNews',
+              sourceKey: 'gnews',
+              category: 'general',
               timeAgo: getTimeAgo(safeDate(item.publishedAt)),
             }));
           },
@@ -3380,13 +3317,11 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       // revalidate: 0 which blocks SSG).
       const response = await fetch(source.url, {
         headers: {
-          Accept: "application/json",
-          "User-Agent": "FreeCryptoNews/1.0",
+          Accept: 'application/json',
+          'User-Agent': 'FreeCryptoNews/1.0',
         },
         signal: controller.signal,
-        ...(source.noDataCache
-          ? { next: { revalidate: 60 } }
-          : { next: { revalidate: 300 } }),
+        ...(source.noDataCache ? { next: { revalidate: 60 } } : { next: { revalidate: 300 } }),
       });
 
       clearTimeout(timeoutId);
@@ -3394,7 +3329,7 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       if (!response.ok) {
         // Handle 429 with domain-level back-off
         if (response.status === 429) {
-          const retryAfter = response.headers.get("retry-after");
+          const retryAfter = response.headers.get('retry-after');
           const backoffMs = retryAfter
             ? Number(retryAfter) > 0
               ? Number(retryAfter) * 1000
@@ -3409,11 +3344,11 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       return source.parser(data);
     } catch (error) {
       // APIs are supplementary — log for observability but don't fail the response
-      if (process.env.DEBUG_RSS || process.env.NODE_ENV === "development") {
-        const isAbort = error instanceof Error && error.name === "AbortError";
+      if (process.env.DEBUG_RSS || process.env.NODE_ENV === 'development') {
+        const isAbort = error instanceof Error && error.name === 'AbortError';
         console.warn(
           `[API] ${source.name} failed:`,
-          isAbort ? "timeout" : error instanceof Error ? error.message : error,
+          isAbort ? 'timeout' : error instanceof Error ? error.message : error,
         );
       }
       return [];
@@ -3432,7 +3367,7 @@ async function fetchAllApiSources(): Promise<NewsArticle[]> {
 
   const articles: NewsArticle[] = [];
   for (const result of results) {
-    if (result.status === "fulfilled") {
+    if (result.status === 'fulfilled') {
       articles.push(...result.value);
     }
   }
@@ -3448,7 +3383,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   const source = RSS_SOURCES[sourceKey];
 
   // Skip disabled sources
-  if ("disabled" in source && source.disabled) {
+  if ('disabled' in source && source.disabled) {
     return [];
   }
 
@@ -3477,19 +3412,18 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       // and rely solely on the in-memory withCache layer (5-min TTL).
       // Use short ISR (60s) instead of no-store to avoid tainting routes as
       // fully dynamic during static generation.
-      const skipDataCache = "noDataCache" in source && source.noDataCache;
+      const skipDataCache = 'noDataCache' in source && source.noDataCache;
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
-          Accept: "application/rss+xml, application/xml, text/xml",
-          "User-Agent":
-            "FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)",
+          Accept: 'application/rss+xml, application/xml, text/xml',
+          'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        redirect: "manual", // Prevent redirect loops hitting own domain
+        redirect: 'manual', // Prevent redirect loops hitting own domain
         ...(skipDataCache
           ? { next: { revalidate: 60 } }
           : {
-              cache: "force-cache" as RequestCache,
+              cache: 'force-cache' as RequestCache,
               next: { revalidate: 300 },
             }),
       };
@@ -3499,11 +3433,9 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
 
       // Detect redirects (3xx) — log warning and bail to prevent self-referential requests
       if (response.status >= 300 && response.status < 400) {
-        const location = response.headers.get("location") || "unknown";
-        if (process.env.NODE_ENV === "development" || process.env.DEBUG_RSS) {
-          console.warn(
-            `Redirect detected for ${source.name}: ${response.status} → ${location}`,
-          );
+        const location = response.headers.get('location') || 'unknown';
+        if (process.env.NODE_ENV === 'development' || process.env.DEBUG_RSS) {
+          console.warn(`Redirect detected for ${source.name}: ${response.status} → ${location}`);
         }
         return [];
       }
@@ -3511,7 +3443,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       if (!response.ok) {
         // Handle 429 Too Many Requests — back off the entire domain
         if (response.status === 429) {
-          const retryAfter = response.headers.get("retry-after");
+          const retryAfter = response.headers.get('retry-after');
           // Default 60s backoff; honour Retry-After header if present
           const backoffMs = retryAfter
             ? Number(retryAfter) > 0
@@ -3519,15 +3451,10 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
               : 60_000
             : 60_000;
           domainSemaphore.markBackoff(domain, backoffMs);
-          if (process.env.DEBUG_RSS || process.env.NODE_ENV === "development") {
-            console.warn(
-              `[429] ${source.name} (${domain}) — backing off ${backoffMs / 1000}s`,
-            );
+          if (process.env.DEBUG_RSS || process.env.NODE_ENV === 'development') {
+            console.warn(`[429] ${source.name} (${domain}) — backing off ${backoffMs / 1000}s`);
           }
-        } else if (
-          process.env.NODE_ENV === "development" &&
-          process.env.DEBUG_RSS
-        ) {
+        } else if (process.env.NODE_ENV === 'development' && process.env.DEBUG_RSS) {
           console.warn(`Failed to fetch ${source.name}: ${response.status}`);
         }
         return [];
@@ -3537,16 +3464,9 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       return parseRSSFeed(xml, sourceKey, source.name, source.category);
     } catch (error) {
       // Only log non-abort errors in production, or all errors with DEBUG_RSS
-      const isAbortError =
-        error instanceof Error && error.name === "AbortError";
-      if (
-        process.env.DEBUG_RSS ||
-        (!isAbortError && process.env.NODE_ENV === "production")
-      ) {
-        console.warn(
-          `Error fetching ${source.name}:`,
-          isAbortError ? "timeout" : error,
-        );
+      const isAbortError = error instanceof Error && error.name === 'AbortError';
+      if (process.env.DEBUG_RSS || (!isAbortError && process.env.NODE_ENV === 'production')) {
+        console.warn(`Error fetching ${source.name}:`, isAbortError ? 'timeout' : error);
       }
       return [];
     } finally {
@@ -3561,35 +3481,35 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
  * Crypto relevance keywords for content scoring
  */
 const CRYPTO_KEYWORDS = [
-  "bitcoin",
-  "btc",
-  "ethereum",
-  "eth",
-  "crypto",
-  "blockchain",
-  "defi",
-  "nft",
-  "altcoin",
-  "token",
-  "mining",
-  "wallet",
-  "exchange",
-  "trading",
-  "stablecoin",
-  "satoshi",
-  "web3",
-  "dao",
-  "dapp",
-  "smart contract",
-  "layer 2",
-  "rollup",
-  "price",
-  "bull",
-  "bear",
-  "halving",
-  "node",
-  "validator",
-  "staking",
+  'bitcoin',
+  'btc',
+  'ethereum',
+  'eth',
+  'crypto',
+  'blockchain',
+  'defi',
+  'nft',
+  'altcoin',
+  'token',
+  'mining',
+  'wallet',
+  'exchange',
+  'trading',
+  'stablecoin',
+  'satoshi',
+  'web3',
+  'dao',
+  'dapp',
+  'smart contract',
+  'layer 2',
+  'rollup',
+  'price',
+  'bull',
+  'bear',
+  'halving',
+  'node',
+  'validator',
+  'staking',
 ];
 
 /**
@@ -3604,35 +3524,21 @@ function calculateTrendingScore(article: NewsArticle): number {
 
   // Recency score: exponential decay (100 at 0 hours, ~50 at 3 hours, ~25 at 6 hours)
   // But cap max benefit at 80 to prevent very new articles from dominating
-  const recencyScore = Math.min(
-    80,
-    Math.max(0, 100 * Math.exp(-ageInHours / 3)),
-  );
+  const recencyScore = Math.min(80, Math.max(0, 100 * Math.exp(-ageInHours / 3)));
 
   // Source reputation score - this is now more important
   const reputationScore =
-    SOURCE_REPUTATION_SCORES[article.source] ||
-    SOURCE_REPUTATION_SCORES["default"];
+    SOURCE_REPUTATION_SCORES[article.source] || SOURCE_REPUTATION_SCORES['default'];
 
   // Crypto relevance score: check title and description for crypto keywords
-  const searchText =
-    `${article.title} ${article.description || ""}`.toLowerCase();
-  const keywordMatches = CRYPTO_KEYWORDS.filter((keyword) =>
-    searchText.includes(keyword),
-  ).length;
+  const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
+  const keywordMatches = CRYPTO_KEYWORDS.filter((keyword) => searchText.includes(keyword)).length;
   const relevanceScore = Math.min(100, keywordMatches * 15); // 15 points per keyword, max 100
-
-  // Strong penalty for fintech/payments-only content that lacks crypto keywords
-  const isFintech = isFintechSource(article.source);
-  // If it's fintech AND has no crypto keywords, apply heavy penalty
-  const hasCryptoRelevance = keywordMatches >= 2;
-  const fintechPenalty = isFintech ? (hasCryptoRelevance ? 0.6 : 0.25) : 1.0;
 
   // Combined score: 55% reputation, 25% recency, 20% relevance
   // Reputation matters most to keep quality sources in top positions
-  const baseScore =
-    reputationScore * 0.55 + recencyScore * 0.25 + relevanceScore * 0.2;
-  return baseScore * fintechPenalty;
+  const baseScore = reputationScore * 0.55 + recencyScore * 0.25 + relevanceScore * 0.2;
+  return baseScore;
 }
 
 /**
@@ -3657,11 +3563,11 @@ class DomainSemaphore {
   static domainOf(url: string): string {
     try {
       const host = new URL(url).hostname; // e.g. "slowmist.medium.com"
-      const parts = host.split(".");
+      const parts = host.split('.');
       // Take last two parts for most TLDs (medium.com, mirror.xyz, grayscale.com)
-      return parts.slice(-2).join(".");
+      return parts.slice(-2).join('.');
     } catch {
-      return "unknown";
+      return 'unknown';
     }
   }
 
@@ -3738,7 +3644,7 @@ async function fetchAllInParallel(
   const results = await Promise.allSettled(sourceKeys.map(fn));
   const articles: NewsArticle[] = [];
   for (const result of results) {
-    if (result.status === "fulfilled") {
+    if (result.status === 'fulfilled') {
       articles.push(...result.value);
     }
     // Silently ignore rejected promises — already logged in fetchFeed
@@ -3761,7 +3667,7 @@ async function fetchMultipleSources(
 ): Promise<NewsArticle[]> {
   // Build a stable aggregate cache key from the source set
   const isAllSources = sourceKeys.length === Object.keys(RSS_SOURCES).length;
-  const aggregateKey = `aggregate:${isAllSources ? "all" : sourceKeys.slice().sort().join(",")}:api=${includeApiSources}`;
+  const aggregateKey = `aggregate:${isAllSources ? 'all' : sourceKeys.slice().sort().join(',')}:api=${includeApiSources}`;
 
   return withCache(newsCache, aggregateKey, 90, async () => {
     // Overall timeout guard: return whatever results are available within 20s
@@ -3788,10 +3694,7 @@ async function fetchMultipleSources(
       }, AGGREGATION_TIMEOUT_MS),
     );
 
-    const allArticles = await Promise.race([
-      aggregationPromise,
-      timeoutPromise,
-    ]);
+    const allArticles = await Promise.race([aggregationPromise, timeoutPromise]);
 
     // Deduplicate by title similarity
     const seen = new Set<string>();
@@ -3799,7 +3702,7 @@ async function fetchMultipleSources(
       // Normalize title for dedup
       const normalized = article.title
         .toLowerCase()
-        .replace(/[^a-z0-9]/g, "")
+        .replace(/[^a-z0-9]/g, '')
         .slice(0, 50);
       if (seen.has(normalized)) return false;
       seen.add(normalized);
@@ -3811,10 +3714,7 @@ async function fetchMultipleSources(
       deduped
         // Exclude future-dated articles (scheduled events, upcoming webinars, etc.)
         .filter((a) => new Date(a.pubDate).getTime() <= now)
-        .sort(
-          (a, b) =>
-            new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-        )
+        .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
     );
   });
 }
@@ -3833,6 +3733,7 @@ export interface NewsQueryOptions {
   perPage?: number;
   /** When true, restrict to HOMEPAGE_SOURCE_KEYS (curated T1/T2 sources) */
   homepageOnly?: boolean;
+  quality?: string;
 }
 
 function filterByDateRange(
@@ -3843,12 +3744,12 @@ function filterByDateRange(
   let filtered = articles.filter((a) => a && a.pubDate);
 
   if (from) {
-    const fromDate = typeof from === "string" ? new Date(from) : from;
+    const fromDate = typeof from === 'string' ? new Date(from) : from;
     filtered = filtered.filter((a) => new Date(a.pubDate) >= fromDate);
   }
 
   if (to) {
-    const toDate = typeof to === "string" ? new Date(to) : to;
+    const toDate = typeof to === 'string' ? new Date(to) : to;
     filtered = filtered.filter((a) => new Date(a.pubDate) <= toDate);
   }
 
@@ -3871,7 +3772,7 @@ export async function getLatestNews(
     includeApiSources = false;
   } else if (source) {
     // Source was provided but not found in RSS_SOURCES — return empty instead
-    // of falling through to fetch ALL 350+ sources (which causes 429 storms
+    // of falling through to fetch ALL 200+ sources (which causes 429 storms
     // on medium.com, mirror.xyz, etc.)
     return {
       articles: [],
@@ -3901,6 +3802,11 @@ export async function getLatestNews(
     );
   } else {
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
+  }
+
+  // Apply quality filter
+  if (options?.quality && options.quality !== 'all') {
+    sourceKeys = sourceKeys.filter((k) => sourcePassesQuality(k, options.quality));
   }
 
   let articles = await fetchMultipleSources(sourceKeys, includeApiSources);
@@ -3936,14 +3842,11 @@ export async function getLatestNews(
   } as NewsResponse;
 }
 
-export async function searchNews(
-  keywords: string,
-  limit: number = 10,
-): Promise<NewsResponse> {
+export async function searchNews(keywords: string, limit: number = 10): Promise<NewsResponse> {
   const normalizedLimit = Math.min(Math.max(1, limit), 30);
-  const searchTerms = (keywords || "")
+  const searchTerms = (keywords || '')
     .toLowerCase()
-    .split(",")
+    .split(',')
     .map((k) => k.trim())
     .filter(Boolean);
 
@@ -3957,14 +3860,11 @@ export async function searchNews(
     };
   }
 
-  const allArticles = await fetchMultipleSources(
-    Object.keys(RSS_SOURCES) as SourceKey[],
-  );
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
 
   const matchingArticles = allArticles.filter((article) => {
     if (!article?.title) return false;
-    const searchText =
-      `${article.title} ${article.description || ""}`.toLowerCase();
+    const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
     return searchTerms.some((term) => searchText.includes(term));
   });
 
@@ -3976,15 +3876,11 @@ export async function searchNews(
   };
 }
 
-export async function getBreakingNews(
-  limit: number = 5,
-): Promise<NewsResponse> {
+export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> {
   const normalizedLimit = Math.min(Math.max(1, limit), 20);
   const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
 
-  const allArticles = await fetchMultipleSources(
-    Object.keys(RSS_SOURCES) as SourceKey[],
-  );
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
 
   const now = new Date();
   const recentArticles = allArticles.filter(
@@ -4007,17 +3903,13 @@ export async function getBreakingNews(
  * Get trending news articles
  * Prioritizes reputable US sources and recent articles
  */
-export async function getTrendingNews(
-  limit: number = 10,
-): Promise<NewsResponse> {
+export async function getTrendingNews(limit: number = 10): Promise<NewsResponse> {
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
 
   // Get recent articles (last 24 hours)
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
 
-  const allArticles = await fetchMultipleSources(
-    Object.keys(RSS_SOURCES) as SourceKey[],
-  );
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
 
   const now = new Date();
   const recentArticles = allArticles.filter(
@@ -4036,26 +3928,18 @@ export async function getTrendingNews(
 
   scoredArticles.sort((a, b) => b.score - a.score);
 
-  // Ensure source diversity: stricter limits on low-quality sources
+  // Ensure source diversity: max 2 articles per source
   const trendingArticles: NewsArticle[] = [];
   const sourceCounts = new Map<string, number>();
-  let fintechCount = 0;
 
   for (const item of scoredArticles) {
     if (trendingArticles.length >= normalizedLimit) break;
 
     const sourceCount = sourceCounts.get(item.article.source) || 0;
-    const isFintech = isFintechSource(item.article.source);
 
-    // Fintech sources: max 1 article total across all fintech sources
-    // Regular sources: max 2 articles per source
-    const maxForThisSource = isFintech ? 1 : 2;
-    const exceedsFintechLimit = isFintech && fintechCount >= 1;
-
-    if (sourceCount < maxForThisSource && !exceedsFintechLimit) {
+    if (sourceCount < 2) {
       trendingArticles.push(item.article);
       sourceCounts.set(item.article.source, sourceCount + 1);
-      if (isFintech) fintechCount++;
     }
   }
 
@@ -4085,217 +3969,190 @@ export async function getNewsByCategory(
 
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
 
-  // Prefer category-scoped sources to avoid fetching 350+ feeds.
+  // Prefer category-scoped sources to avoid fetching 200+ feeds.
   // Fall back to all sources only when no RSS_SOURCES match the category.
   const categorySources = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(
     (key) => RSS_SOURCES[key].category === category.toLowerCase(),
   );
   const sourceKeysToFetch =
-    categorySources.length > 0
-      ? categorySources
-      : (Object.keys(RSS_SOURCES) as SourceKey[]);
+    categorySources.length > 0 ? categorySources : (Object.keys(RSS_SOURCES) as SourceKey[]);
 
-  const allArticles = await fetchMultipleSources(
-    sourceKeysToFetch,
-    categorySources.length === 0,
-  );
+  const allArticles = await fetchMultipleSources(sourceKeysToFetch, categorySources.length === 0);
 
   // Category keyword mappings
   const categoryKeywords: Record<string, string[]> = {
     bitcoin: [
-      "bitcoin",
-      "btc",
-      "satoshi",
-      "lightning",
-      "halving",
-      "miner",
-      "ordinals",
-      "inscription",
-      "sats",
+      'bitcoin',
+      'btc',
+      'satoshi',
+      'lightning',
+      'halving',
+      'miner',
+      'ordinals',
+      'inscription',
+      'sats',
     ],
     ethereum: [
-      "ethereum",
-      "eth",
-      "vitalik",
-      "erc-20",
-      "erc-721",
-      "layer 2",
-      "l2",
-      "rollup",
-      "arbitrum",
-      "optimism",
-      "base",
+      'ethereum',
+      'eth',
+      'vitalik',
+      'erc-20',
+      'erc-721',
+      'layer 2',
+      'l2',
+      'rollup',
+      'arbitrum',
+      'optimism',
+      'base',
     ],
     defi: [
-      "defi",
-      "yield",
-      "lending",
-      "liquidity",
-      "amm",
-      "dex",
-      "aave",
-      "uniswap",
-      "compound",
-      "curve",
-      "maker",
-      "lido",
-      "staking",
-      "vault",
-      "protocol",
-      "tvl",
+      'defi',
+      'yield',
+      'lending',
+      'liquidity',
+      'amm',
+      'dex',
+      'aave',
+      'uniswap',
+      'compound',
+      'curve',
+      'maker',
+      'lido',
+      'staking',
+      'vault',
+      'protocol',
+      'tvl',
     ],
     nft: [
-      "nft",
-      "non-fungible",
-      "opensea",
-      "blur",
-      "ordinals",
-      "inscription",
-      "collection",
-      "pfp",
-      "digital art",
+      'nft',
+      'non-fungible',
+      'opensea',
+      'blur',
+      'ordinals',
+      'inscription',
+      'collection',
+      'pfp',
+      'digital art',
     ],
     regulation: [
-      "regulation",
-      "sec",
-      "cftc",
-      "lawsuit",
-      "legal",
-      "compliance",
-      "tax",
-      "government",
-      "congress",
-      "senate",
-      "bill",
-      "law",
-      "policy",
-      "ban",
-      "restrict",
+      'regulation',
+      'sec',
+      'cftc',
+      'lawsuit',
+      'legal',
+      'compliance',
+      'tax',
+      'government',
+      'congress',
+      'senate',
+      'bill',
+      'law',
+      'policy',
+      'ban',
+      'restrict',
     ],
     markets: [
-      "market",
-      "price",
-      "trading",
-      "bull",
-      "bear",
-      "rally",
-      "crash",
-      "etf",
-      "futures",
-      "options",
-      "liquidation",
-      "volume",
-      "chart",
-      "analysis",
+      'market',
+      'price',
+      'trading',
+      'bull',
+      'bear',
+      'rally',
+      'crash',
+      'etf',
+      'futures',
+      'options',
+      'liquidation',
+      'volume',
+      'chart',
+      'analysis',
     ],
-    mining: [
-      "mining",
-      "miner",
-      "hashrate",
-      "difficulty",
-      "pow",
-      "proof of work",
-      "asic",
-      "pool",
-    ],
-    stablecoin: [
-      "stablecoin",
-      "usdt",
-      "usdc",
-      "dai",
-      "tether",
-      "circle",
-      "peg",
-      "depeg",
-    ],
+    mining: ['mining', 'miner', 'hashrate', 'difficulty', 'pow', 'proof of work', 'asic', 'pool'],
+    stablecoin: ['stablecoin', 'usdt', 'usdc', 'dai', 'tether', 'circle', 'peg', 'depeg'],
     exchange: [
-      "exchange",
-      "binance",
-      "coinbase",
-      "kraken",
-      "okx",
-      "bybit",
-      "trading",
-      "listing",
-      "delist",
+      'exchange',
+      'binance',
+      'coinbase',
+      'kraken',
+      'okx',
+      'bybit',
+      'trading',
+      'listing',
+      'delist',
     ],
     layer2: [
-      "layer 2",
-      "l2",
-      "rollup",
-      "arbitrum",
-      "optimism",
-      "base",
-      "zksync",
-      "polygon",
-      "scaling",
+      'layer 2',
+      'l2',
+      'rollup',
+      'arbitrum',
+      'optimism',
+      'base',
+      'zksync',
+      'polygon',
+      'scaling',
     ],
     geopolitical: [
-      "geopolitical",
-      "sanctions",
-      "central bank",
-      "federal reserve",
-      "fed rate",
-      "interest rate",
-      "sec",
-      "cftc",
-      "policy",
-      "war",
-      "conflict",
-      "tariff",
-      "g7",
-      "g20",
-      "treasury",
-      "congress",
-      "eu regulation",
-      "mica",
+      'geopolitical',
+      'sanctions',
+      'central bank',
+      'federal reserve',
+      'fed rate',
+      'interest rate',
+      'sec',
+      'cftc',
+      'policy',
+      'war',
+      'conflict',
+      'tariff',
+      'g7',
+      'g20',
+      'treasury',
+      'congress',
+      'eu regulation',
+      'mica',
     ],
     security: [
-      "hack",
-      "exploit",
-      "vulnerability",
-      "audit",
-      "rug pull",
-      "scam",
-      "phishing",
-      "flash loan",
-      "smart contract bug",
-      "certik",
-      "immunefi",
-      "bounty",
+      'hack',
+      'exploit',
+      'vulnerability',
+      'audit',
+      'rug pull',
+      'scam',
+      'phishing',
+      'flash loan',
+      'smart contract bug',
+      'certik',
+      'immunefi',
+      'bounty',
     ],
     developer: [
-      "developer",
-      "sdk",
-      "api",
-      "framework",
-      "tooling",
-      "solidity",
-      "rust",
-      "smart contract",
-      "deploy",
-      "hardhat",
-      "foundry",
-      "alchemy",
+      'developer',
+      'sdk',
+      'api',
+      'framework',
+      'tooling',
+      'solidity',
+      'rust',
+      'smart contract',
+      'deploy',
+      'hardhat',
+      'foundry',
+      'alchemy',
     ],
   };
 
-  const keywords = categoryKeywords[category.toLowerCase()] || [
-    category.toLowerCase(),
-  ];
+  const keywords = categoryKeywords[category.toLowerCase()] || [category.toLowerCase()];
 
   const filteredArticles = allArticles.filter((article) => {
     if (!article?.title) return false;
 
     // Check source category first
     if (article.category === category.toLowerCase()) return true;
-    if (category === "bitcoin" && article.sourceKey === "bitcoinmagazine")
-      return true;
-    if (category === "defi" && article.sourceKey === "defiant") return true;
+    if (category === 'bitcoin' && article.sourceKey === 'bitcoinmagazine') return true;
+    if (category === 'defi' && article.sourceKey === 'defiant') return true;
 
     // Then check keywords
-    const searchText =
-      `${article.title} ${article.description || ""}`.toLowerCase();
+    const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
     return keywords.some((term) => searchText.includes(term));
   });
 
@@ -4310,19 +4167,19 @@ export async function getNewsByCategory(
 export async function getSources(): Promise<{ sources: SourceInfo[] }> {
   // During production build, return sources without status checks to prevent
   // 60-second page timeout (200+ HEAD requests overwhelm build workers).
-  if (process.env.NEXT_PHASE === "phase-production-build") {
+  if (process.env.NEXT_PHASE === 'phase-production-build') {
     return {
       sources: (Object.keys(RSS_SOURCES) as SourceKey[]).map((key) => ({
         key,
         name: RSS_SOURCES[key].name,
         url: RSS_SOURCES[key].url,
         category: RSS_SOURCES[key].category,
-        status: "active" as const,
+        status: 'active' as const,
       })),
     };
   }
 
-  return withCache(newsCache, "sources-list", 300, async () => {
+  return withCache(newsCache, 'sources-list', 300, async () => {
     const SOURCES_TIMEOUT_MS = 15_000;
     const PER_REQUEST_TIMEOUT_MS = 3_000;
 
@@ -4331,22 +4188,19 @@ export async function getSources(): Promise<{ sources: SourceInfo[] }> {
         (Object.keys(RSS_SOURCES) as SourceKey[]).map(async (key) => {
           const source = RSS_SOURCES[key];
           const controller = new AbortController();
-          const timer = setTimeout(
-            () => controller.abort(),
-            PER_REQUEST_TIMEOUT_MS,
-          );
+          const timer = setTimeout(() => controller.abort(), PER_REQUEST_TIMEOUT_MS);
           try {
             const response = await fetch(source.url, {
-              method: "HEAD",
+              method: 'HEAD',
               signal: controller.signal,
-              headers: { "User-Agent": "FreeCryptoNews/1.0" },
+              headers: { 'User-Agent': 'FreeCryptoNews/1.0' },
             });
             return {
               key,
               name: source.name,
               url: source.url,
               category: source.category,
-              status: response.ok ? "active" : "unavailable",
+              status: response.ok ? 'active' : 'unavailable',
             } as SourceInfo;
           } catch {
             return {
@@ -4354,7 +4208,7 @@ export async function getSources(): Promise<{ sources: SourceInfo[] }> {
               name: source.name,
               url: source.url,
               category: source.category,
-              status: "unavailable",
+              status: 'unavailable',
             } as SourceInfo;
           } finally {
             clearTimeout(timer);
@@ -4363,10 +4217,7 @@ export async function getSources(): Promise<{ sources: SourceInfo[] }> {
       );
 
       return sourceChecks
-        .filter(
-          (r): r is PromiseFulfilledResult<SourceInfo> =>
-            r.status === "fulfilled",
-        )
+        .filter((r): r is PromiseFulfilledResult<SourceInfo> => r.status === 'fulfilled')
         .map((r) => r.value);
     })();
 
@@ -4384,7 +4235,7 @@ export async function getSources(): Promise<{ sources: SourceInfo[] }> {
                 name: RSS_SOURCES[key].name,
                 url: RSS_SOURCES[key].url,
                 category: RSS_SOURCES[key].category,
-                status: "unknown" as const,
+                status: 'unknown' as const,
               }) as SourceInfo,
           ),
         );
@@ -4407,88 +4258,87 @@ export function getCategories(): {
   }>;
 } {
   const categoryMeta: Record<string, { name: string; description: string }> = {
-    general: { name: "General", description: "Broad crypto industry news" },
+    general: { name: 'General', description: 'Broad crypto industry news' },
     bitcoin: {
-      name: "Bitcoin",
-      description: "Bitcoin-specific news and analysis",
+      name: 'Bitcoin',
+      description: 'Bitcoin-specific news and analysis',
     },
     defi: {
-      name: "DeFi",
-      description: "Decentralized finance protocols and yields",
+      name: 'DeFi',
+      description: 'Decentralized finance protocols and yields',
     },
     nft: {
-      name: "NFTs",
-      description: "Non-fungible tokens and digital collectibles",
+      name: 'NFTs',
+      description: 'Non-fungible tokens and digital collectibles',
     },
     research: {
-      name: "Research",
-      description: "Deep-dive analysis and reports",
+      name: 'Research',
+      description: 'Deep-dive analysis and reports',
     },
     institutional: {
-      name: "Institutional",
-      description: "VC and institutional investor insights",
+      name: 'Institutional',
+      description: 'VC and institutional investor insights',
     },
-    etf: { name: "ETFs", description: "Crypto ETF and asset manager news" },
+    etf: { name: 'ETFs', description: 'Crypto ETF and asset manager news' },
     derivatives: {
-      name: "Derivatives",
-      description: "Options, futures, and structured products",
+      name: 'Derivatives',
+      description: 'Options, futures, and structured products',
     },
-    onchain: { name: "On-Chain", description: "Blockchain data and analytics" },
+    onchain: { name: 'On-Chain', description: 'Blockchain data and analytics' },
     fintech: {
-      name: "Fintech",
-      description: "Financial technology and payments",
+      name: 'Fintech',
+      description: 'Financial technology and payments',
     },
     macro: {
-      name: "Macro",
-      description: "Macroeconomic analysis and commentary",
+      name: 'Macro',
+      description: 'Macroeconomic analysis and commentary',
     },
     quant: {
-      name: "Quant",
-      description: "Quantitative and systematic trading research",
+      name: 'Quant',
+      description: 'Quantitative and systematic trading research',
     },
     journalism: {
-      name: "Investigative",
-      description: "In-depth journalism and exposés",
+      name: 'Investigative',
+      description: 'In-depth journalism and exposés',
     },
-    ethereum: { name: "Ethereum", description: "Ethereum ecosystem news" },
-    asia: { name: "Asia", description: "Asian market coverage" },
-    tradfi: { name: "TradFi", description: "Traditional finance institutions" },
+    ethereum: { name: 'Ethereum', description: 'Ethereum ecosystem news' },
+    asia: { name: 'Asia', description: 'Asian market coverage' },
+    tradfi: { name: 'TradFi', description: 'Traditional finance institutions' },
     mainstream: {
-      name: "Mainstream",
-      description: "Major media crypto coverage",
+      name: 'Mainstream',
+      description: 'Major media crypto coverage',
     },
-    mining: { name: "Mining", description: "Bitcoin mining and hashrate" },
-    gaming: { name: "Gaming", description: "Blockchain gaming and metaverse" },
-    altl1: { name: "Alt L1s", description: "Alternative layer-1 blockchains" },
+    mining: { name: 'Mining', description: 'Bitcoin mining and hashrate' },
+    gaming: { name: 'Gaming', description: 'Blockchain gaming and metaverse' },
+    altl1: { name: 'Alt L1s', description: 'Alternative layer-1 blockchains' },
     stablecoin: {
-      name: "Stablecoins",
-      description: "Stablecoin and CBDC news",
+      name: 'Stablecoins',
+      description: 'Stablecoin and CBDC news',
     },
     geopolitical: {
-      name: "Geopolitical",
+      name: 'Geopolitical',
       description:
-        "Macro-geopolitical events, central bank policy, and regulation that move crypto markets",
+        'Macro-geopolitical events, central bank policy, and regulation that move crypto markets',
     },
     security: {
-      name: "Security",
-      description: "Smart contract audits, exploits, and blockchain security",
+      name: 'Security',
+      description: 'Smart contract audits, exploits, and blockchain security',
     },
     developer: {
-      name: "Developer",
-      description:
-        "Web3 developer tools, infrastructure, and technical updates",
+      name: 'Developer',
+      description: 'Web3 developer tools, infrastructure, and technical updates',
     },
     layer2: {
-      name: "Layer 2",
-      description: "Layer 2 scaling solutions and rollup ecosystems",
+      name: 'Layer 2',
+      description: 'Layer 2 scaling solutions and rollup ecosystems',
     },
     solana: {
-      name: "Solana",
-      description: "Solana ecosystem news and updates",
+      name: 'Solana',
+      description: 'Solana ecosystem news and updates',
     },
     trading: {
-      name: "Trading",
-      description: "Market analysis, trading signals, and technical analysis",
+      name: 'Trading',
+      description: 'Market analysis, trading signals, and technical analysis',
     },
   };
 
@@ -4514,21 +4364,17 @@ export function getCategories(): {
 
 // Convenience function for DeFi-specific news
 export async function getDefiNews(limit: number = 10): Promise<NewsResponse> {
-  return getNewsByCategory("defi", limit);
+  return getNewsByCategory('defi', limit);
 }
 
 // Convenience function for Bitcoin-specific news
-export async function getBitcoinNews(
-  limit: number = 10,
-): Promise<NewsResponse> {
-  return getNewsByCategory("bitcoin", limit);
+export async function getBitcoinNews(limit: number = 10): Promise<NewsResponse> {
+  return getNewsByCategory('bitcoin', limit);
 }
 
 // Convenience function for Ethereum-specific news
-export async function getEthereumNews(
-  limit: number = 10,
-): Promise<NewsResponse> {
-  return getNewsByCategory("ethereum", limit);
+export async function getEthereumNews(limit: number = 10): Promise<NewsResponse> {
+  return getNewsByCategory('ethereum', limit);
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -4549,14 +4395,14 @@ export {
   SPANISH_SOURCES,
   SOURCES_BY_LANGUAGE,
   SOURCES_BY_REGION,
-} from "./international-sources";
+} from './international-sources';
 
 export type {
   InternationalSource,
   InternationalArticle,
   InternationalNewsResponse,
   InternationalNewsOptions,
-} from "./international-sources";
+} from './international-sources';
 
 // Re-export translation functions
 export {
@@ -4565,7 +4411,7 @@ export {
   isTranslationAvailable,
   getInternationalTranslationCacheStats,
   clearInternationalTranslationCache,
-} from "./source-translator";
+} from './source-translator';
 
 /**
  * Get combined news from both English and international sources
@@ -4576,14 +4422,10 @@ export async function getGlobalNews(
   options?: {
     includeInternational?: boolean;
     translateInternational?: boolean;
-    languages?: ("ko" | "zh" | "ja" | "es")[];
+    languages?: ('ko' | 'zh' | 'ja' | 'es')[];
   },
 ): Promise<NewsResponse & { internationalCount: number }> {
-  const {
-    includeInternational = true,
-    translateInternational = false,
-    languages,
-  } = options || {};
+  const { includeInternational = true, translateInternational = false, languages } = options || {};
 
   const normalizedLimit = Math.min(Math.max(1, limit), 100);
 
@@ -4598,16 +4440,15 @@ export async function getGlobalNews(
   }
 
   // Import dynamically to avoid circular dependencies
-  const { getInternationalNews: fetchIntlNews } =
-    await import("./international-sources");
+  const { getInternationalNews: fetchIntlNews } = await import('./international-sources');
   const {
     translateInternationalNewsResponse: translateIntlNews,
     isTranslationAvailable: checkTranslation,
-  } = await import("./source-translator");
+  } = await import('./source-translator');
 
   // Fetch international news
   let intlNews = await fetchIntlNews({
-    language: languages?.length === 1 ? languages[0] : "all",
+    language: languages?.length === 1 ? languages[0] : 'all',
     limit: Math.ceil(normalizedLimit / 2),
   });
 
@@ -4616,7 +4457,7 @@ export async function getGlobalNews(
     try {
       intlNews = await translateIntlNews(intlNews);
     } catch (error) {
-      console.warn("Failed to translate international news:", error);
+      console.warn('Failed to translate international news:', error);
     }
   }
 
@@ -4624,7 +4465,7 @@ export async function getGlobalNews(
   let intlArticles = intlNews.articles;
   if (languages && languages.length > 0) {
     intlArticles = intlArticles.filter((a) =>
-      languages.includes(a.language as "ko" | "zh" | "ja" | "es"),
+      languages.includes(a.language as 'ko' | 'zh' | 'ja' | 'es'),
     );
   }
 
@@ -4638,22 +4479,20 @@ export async function getGlobalNews(
     sourceKey: article.sourceKey,
     category: article.category,
     timeAgo: article.timeAgo,
+    tier: getSourceTier(article.sourceKey) ?? undefined,
+    credibility: getSourceCredibility(article.sourceKey),
+    reputation: getSourceReputation(article.sourceKey),
   }));
 
   // Merge and sort by date
   const allArticles = [...englishNews.articles, ...convertedIntlArticles]
-    .sort(
-      (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-    )
+    .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
     .slice(0, normalizedLimit);
 
   return {
     articles: allArticles,
     totalCount: englishNews.totalCount + intlNews.total,
-    sources: [
-      ...englishNews.sources,
-      ...new Set(intlArticles.map((a) => a.source)),
-    ],
+    sources: [...englishNews.sources, ...new Set(intlArticles.map((a) => a.source))],
     fetchedAt: new Date().toISOString(),
     internationalCount: convertedIntlArticles.length,
   };
@@ -4664,9 +4503,9 @@ export async function getGlobalNews(
  * Removes mempool spam, raw ticker pairs, hashrate data, price alerts, and extremely short titles.
  */
 function isActualNews(a: NewsArticle): boolean {
-  const title = (a.title || "").trim();
+  const title = (a.title || '').trim();
   // Skip mempool/blockchain status items (₿ / ⚡ prefix)
-  if (title.startsWith("₿") || title.startsWith("⚡")) return false;
+  if (title.startsWith('₿') || title.startsWith('⚡')) return false;
   // Skip pure ticker/trading pair items (e.g., "SOL-USDT", "BTCUSD")
   if (/^[A-Z]{2,10}[-/][A-Z]{2,10}$/i.test(title)) return false;
   // Skip items that are just price/fee data (sat/vB)
@@ -4731,18 +4570,13 @@ export async function getHomepageNews(options?: {
 
   const trendingArticles: NewsArticle[] = [];
   const sourceCounts = new Map<string, number>();
-  let fintechCount = 0;
 
   for (const item of scoredArticles) {
     if (trendingArticles.length >= trendingLimit) break;
     const sourceCount = sourceCounts.get(item.article.source) || 0;
-    const isFintech = isFintechSource(item.article.source);
-    const maxForThisSource = isFintech ? 1 : 2;
-    const exceedsFintechLimit = isFintech && fintechCount >= 1;
-    if (sourceCount < maxForThisSource && !exceedsFintechLimit) {
+    if (sourceCount < 2) {
       trendingArticles.push(item.article);
       sourceCounts.set(item.article.source, sourceCount + 1);
-      if (isFintech) fintechCount++;
     }
   }
 

@@ -7,9 +7,8 @@
  * @module middleware/intl
  */
 
-import { NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { routing } from '../i18n/navigation';
 import { buildCspHeader } from './security';
 

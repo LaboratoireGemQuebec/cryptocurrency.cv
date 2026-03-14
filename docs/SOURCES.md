@@ -6,9 +6,9 @@ Free Crypto News aggregates content from **200+ professional crypto and financia
 
 | Metric | Count |
 |--------|-------|
-| **English Sources** | 150+ |
+| **English Sources** | 140+ |
 | **International Sources** | 75 |
-| **Total Sources** | 225+ |
+| **Total Sources** | 215+ |
 | **Categories** | 25 |
 | **Languages** | 18 |
 
@@ -16,7 +16,7 @@ Free Crypto News aggregates content from **200+ professional crypto and financia
 
 ## English Sources by Category
 
-### General News (20 sources)
+### General News (15 sources)
 
 Major crypto news outlets with broad coverage:
 
@@ -29,19 +29,18 @@ Major crypto news outlets with broad coverage:
 | Blockworks | General | Institutional, DeFi, macro |
 | CryptoSlate | General | News, data, research |
 | NewsBTC | General | Trading, analysis |
-| Crypto.news | General | Breaking news |
-| CryptoPotato | General | News, guides |
+
 | The Daily Hodl | General | Breaking news, analysis |
 | CoinJournal | General | News, guides |
 | CryptoGlobe | General | News, markets |
-| ZyCrypto | General | News, analysis |
+
 | Crypto Daily | General | News, markets |
-| Blockonomi | General | News, guides |
+
 | UseTheBitcoin | General | News, guides |
 | NullTX | General | News, tech |
 | Coinspeaker | General | News, markets |
 | CryptoNinjas | General | News, ICOs |
-| CoinGape | General | News, analysis |
+
 
 ### DeFi (12 sources)
 
@@ -178,14 +177,14 @@ Traditional media crypto coverage:
 | Wall Street Journal Crypto | Analysis |
 | Financial Times Crypto | Global markets |
 
-### Trading & Analysis (6 sources)
+### Trading & Analysis (5 sources)
 
 Trading-focused content:
 
 | Source | Focus |
 |--------|-------|
 | BeInCrypto | Trading, analysis |
-| AMBCrypto | Technical analysis |
+
 | U.Today | Market updates |
 | FXStreet Crypto | Technical analysis |
 | TradingView Crypto Ideas | Charts, ideas |

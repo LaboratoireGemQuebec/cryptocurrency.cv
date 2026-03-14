@@ -24,7 +24,6 @@ const RSS_SOURCES = [
   // Tier 2 — Established Crypto
   { name: 'Watcher Guru', url: 'https://watcher.guru/news/feed', htmlUrl: 'https://watcher.guru', category: 'Crypto News' },
   { name: 'Cryptopolitan', url: 'https://www.cryptopolitan.com/feed/', htmlUrl: 'https://cryptopolitan.com', category: 'Crypto News' },
-  { name: 'CoinEdition', url: 'https://coinedition.com/feed/', htmlUrl: 'https://coinedition.com', category: 'Crypto News' },
   { name: 'The Daily Hodl', url: 'https://dailyhodl.com/feed/', htmlUrl: 'https://dailyhodl.com', category: 'Crypto News' },
   { name: 'CryptoSlate', url: 'https://cryptoslate.com/feed/', htmlUrl: 'https://cryptoslate.com', category: 'Crypto News' },
   { name: 'U.Today', url: 'https://u.today/rss', htmlUrl: 'https://u.today', category: 'Crypto News' },

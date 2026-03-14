@@ -9,7 +9,7 @@
 
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 
 export const apiKey: MiddlewareHandler = async (ctx) => {
   if (!ctx.isApiRoute) return ctx;
@@ -19,7 +19,7 @@ export const apiKey: MiddlewareHandler = async (ctx) => {
     ctx.request.headers.get('authorization')?.replace(/^Bearer\s+/i, '') ||
     null;
 
-  if (!apiKeyRaw || !apiKeyRaw.startsWith('cda_')) return ctx;
+  if (!apiKeyRaw?.startsWith('cda_')) return ctx;
 
   // Determine tier from prefix
   if (apiKeyRaw.startsWith('cda_ent_')) ctx.apiKeyTier = 'enterprise';
@@ -46,7 +46,7 @@ export const apiKey: MiddlewareHandler = async (ctx) => {
         expiresAt?: string;
       }>(`apikey:${hashHex}`);
 
-      if (keyData && keyData.active) {
+      if (keyData?.active) {
         // Check key expiration
         if (keyData.expiresAt && new Date(keyData.expiresAt) < new Date()) {
           return NextResponse.json(

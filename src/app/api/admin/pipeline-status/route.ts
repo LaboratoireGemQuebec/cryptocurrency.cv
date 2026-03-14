@@ -43,9 +43,7 @@ export async function GET(request: NextRequest) {
     (name) => status.sources[name].consecutiveErrors === 0,
   ).length;
   const healthScore =
-    sourceNames.length > 0
-      ? Math.round((healthySources / sourceNames.length) * 100)
-      : 0;
+    sourceNames.length > 0 ? Math.round((healthySources / sourceNames.length) * 100) : 0;
 
   return NextResponse.json(
     {

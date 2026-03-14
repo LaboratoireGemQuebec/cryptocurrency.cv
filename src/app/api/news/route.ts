@@ -27,7 +27,7 @@ export const revalidate = 60; // 1 minute for fresher content
 // Valid news categories (kept for backward compatibility)
 const VALID_CATEGORIES = [
   'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional', 
-  'etf', 'derivatives', 'onchain', 'fintech', 'macro', 'quant',
+  'etf', 'derivatives', 'onchain', 'macro', 'quant',
   'journalism', 'ethereum', 'asia', 'tradfi', 'mainstream', 'mining',
   'gaming', 'altl1', 'stablecoin', 'geopolitical', 'security', 'developer',
   'layer2', 'solana', 'trading',
@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
     return validation.error;
   }
   
-  const { limit, source, category, from, to, page, per_page, lang } = validation.data;
+  const { limit, source, category, from, to, page, per_page, lang, quality } = validation.data;
   const sort = request.nextUrl.searchParams.get('sort'); // 'impact' → sort by AI impact score
   const sources = request.nextUrl.searchParams.get('sources'); // 'homepage' → curated T1/T2 only
   
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
   }
   
   try {
-    const data = await getLatestNews(limit, source, { from, to, page, perPage: per_page, category, homepageOnly: sources === 'homepage' });
+    const data = await getLatestNews(limit, source, { from, to, page, perPage: per_page, category, homepageOnly: sources === 'homepage', quality });
     
     // Free-tier: cap at 3 articles, strip full content, add upgrade notice
     let articles = data.articles;
