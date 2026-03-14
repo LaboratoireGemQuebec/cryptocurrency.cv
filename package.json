@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' CI=true next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' CI=true next build",
     "start": "next start",
     "lint": "eslint --config eslint.config.mjs src/",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
