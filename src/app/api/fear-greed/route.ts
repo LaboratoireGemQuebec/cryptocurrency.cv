@@ -57,129 +57,136 @@ function getClassification(value: number): FearGreedData['valueClassification'] 
   return 'Extreme Greed';
 }
 
-export const GET = instrumented(async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const days = parseInt(searchParams.get('days') || '30');
-
-    // Pipeline cache-first: serve pre-fetched data if available
-    if (days <= 30) {
-      try {
-        const pipelineData = await getPipelineFearGreed();
-        if (pipelineData?.current) {
-          return NextResponse.json({
-            ...pipelineData,
-            _cache: 'pipeline',
-          });
-        }
-      } catch { /* pipeline miss — fetch upstream */ }
-    }
-
-    // Provider framework: circuit breakers, caching, fallback between Alternative.me + CoinStats
+export const GET = instrumented(
+  async function GET(request: NextRequest) {
     try {
-      const result = await registry.fetch<FearGreedIndex>('fear-greed', { limit: Math.min(days, 365) });
-      const fgData = result.data;
+      const { searchParams } = new URL(request.url);
+      const days = parseInt(searchParams.get('days') || '30');
 
+      // Pipeline cache-first: serve pre-fetched data if available
+      if (days <= 30) {
+        try {
+          const pipelineData = await getPipelineFearGreed();
+          if (pipelineData?.current) {
+            return NextResponse.json({
+              ...pipelineData,
+              _cache: 'pipeline',
+            });
+          }
+        } catch {
+          /* pipeline miss — fetch upstream */
+        }
+      }
+
+      // Provider framework: circuit breakers, caching, fallback between Alternative.me + CoinStats
+      try {
+        const result = await registry.fetch<FearGreedIndex>('fear-greed', {
+          limit: Math.min(days, 365),
+        });
+        const fgData = result.data;
+
+        const current: FearGreedData = {
+          value: fgData.value,
+          valueClassification: getClassification(fgData.value),
+          timestamp: new Date(fgData.timestamp).getTime(),
+          timeUntilUpdate: 'Unknown',
+        };
+
+        const trend = calculateTrend([current]);
+        const breakdown = await calculateBreakdown();
+
+        return NextResponse.json({
+          current,
+          historical: [current],
+          trend,
+          breakdown,
+          lastUpdated: fgData.lastUpdated,
+          _provider: result.lineage.provider,
+          _confidence: result.lineage.confidence,
+          _cached: result.cached,
+        });
+      } catch {
+        /* provider chain miss — fall through to direct fetch */
+      }
+
+      // Fallback: direct API call (legacy path — kept for resilience)
+      const [currentResponse, historicalResponse] = await Promise.all([
+        fetch('https://api.alternative.me/fng/', { next: { revalidate: 300 } }),
+        fetch(`https://api.alternative.me/fng/?limit=${Math.min(days, 365)}`, {
+          next: { revalidate: 3600 },
+        }),
+      ]);
+
+      if (!currentResponse.ok || !historicalResponse.ok) {
+        throw new Error('Failed to fetch Fear & Greed data');
+      }
+
+      const currentData = await currentResponse.json();
+      const historicalData = await historicalResponse.json();
+
+      if (!currentData.data?.[0] || !historicalData.data) {
+        throw new Error('Invalid response from Fear & Greed API');
+      }
+
+      // Parse current value
       const current: FearGreedData = {
-        value: fgData.value,
-        valueClassification: getClassification(fgData.value),
-        timestamp: new Date(fgData.timestamp).getTime(),
-        timeUntilUpdate: 'Unknown',
+        value: parseInt(currentData.data[0].value),
+        valueClassification: getClassification(parseInt(currentData.data[0].value)),
+        timestamp: parseInt(currentData.data[0].timestamp) * 1000,
+        timeUntilUpdate: currentData.data[0].time_until_update || 'Unknown',
       };
 
-      const trend = calculateTrend([current]);
+      // Parse historical data
+      const historical: FearGreedData[] = historicalData.data.map(
+        (item: { value: string; timestamp: string; time_until_update?: string }) => ({
+          value: parseInt(item.value),
+          valueClassification: getClassification(parseInt(item.value)),
+          timestamp: parseInt(item.timestamp) * 1000,
+          timeUntilUpdate: item.time_until_update || '',
+        }),
+      );
+
+      // Calculate trend analysis
+      const trend = calculateTrend(historical);
+
+      // Calculate breakdown (estimated based on market data)
       const breakdown = await calculateBreakdown();
 
-      return NextResponse.json({
+      const response: FearGreedResponse = {
         current,
-        historical: [current],
+        historical,
         trend,
         breakdown,
-        lastUpdated: fgData.lastUpdated,
-        _provider: result.lineage.provider,
-        _confidence: result.lineage.confidence,
-        _cached: result.cached,
-      });
-    } catch { /* provider chain miss — fall through to direct fetch */ }
+        lastUpdated: new Date().toISOString(),
+      };
 
-    // Fallback: direct API call (legacy path — kept for resilience)
-    const [currentResponse, historicalResponse] = await Promise.all([
-      fetch('https://api.alternative.me/fng/', { next: { revalidate: 300 } }),
-      fetch(`https://api.alternative.me/fng/?limit=${Math.min(days, 365)}`, {
-        next: { revalidate: 3600 },
-      }),
-    ]);
-
-    if (!currentResponse.ok || !historicalResponse.ok) {
-      throw new Error('Failed to fetch Fear & Greed data');
+      return NextResponse.json(response);
+    } catch (error) {
+      console.error('Fear & Greed API error:', error);
+      return NextResponse.json(
+        {
+          error: 'Failed to fetch Fear & Greed index',
+          message: error instanceof Error ? error.message : 'Unknown error',
+        },
+        { status: 500 },
+      );
     }
-
-    const currentData = await currentResponse.json();
-    const historicalData = await historicalResponse.json();
-
-    if (!currentData.data?.[0] || !historicalData.data) {
-      throw new Error('Invalid response from Fear & Greed API');
-    }
-
-    // Parse current value
-    const current: FearGreedData = {
-      value: parseInt(currentData.data[0].value),
-      valueClassification: getClassification(parseInt(currentData.data[0].value)),
-      timestamp: parseInt(currentData.data[0].timestamp) * 1000,
-      timeUntilUpdate: currentData.data[0].time_until_update || 'Unknown',
-    };
-
-    // Parse historical data
-    const historical: FearGreedData[] = historicalData.data.map(
-      (item: { value: string; timestamp: string; time_until_update?: string }) => ({
-        value: parseInt(item.value),
-        valueClassification: getClassification(parseInt(item.value)),
-        timestamp: parseInt(item.timestamp) * 1000,
-        timeUntilUpdate: item.time_until_update || '',
-      })
-    );
-
-    // Calculate trend analysis
-    const trend = calculateTrend(historical);
-
-    // Calculate breakdown (estimated based on market data)
-    const breakdown = await calculateBreakdown();
-
-    const response: FearGreedResponse = {
-      current,
-      historical,
-      trend,
-      breakdown,
-      lastUpdated: new Date().toISOString(),
-    };
-
-    return NextResponse.json(response);
-  } catch (error) {
-    console.error('Fear & Greed API error:', error);
-    return NextResponse.json(
-      {
-        error: 'Failed to fetch Fear & Greed index',
-        message: error instanceof Error ? error.message : 'Unknown error',
-      },
-      { status: 500 }
-    );
-  }
-}, { name: 'fear-greed' });
+  },
+  { name: 'fear-greed' },
+);
 
 function calculateTrend(historical: FearGreedData[]): FearGreedResponse['trend'] {
   const current = historical[0]?.value || 50;
-  
+
   // Get 7-day and 30-day data
   const data7d = historical.slice(0, 7);
   const data30d = historical.slice(0, 30);
 
-  const avg7d = data7d.length > 0
-    ? data7d.reduce((sum, d) => sum + d.value, 0) / data7d.length
-    : current;
+  const avg7d =
+    data7d.length > 0 ? data7d.reduce((sum, d) => sum + d.value, 0) / data7d.length : current;
 
-  const avg30d = data30d.length > 0
-    ? data30d.reduce((sum, d) => sum + d.value, 0) / data30d.length
-    : current;
+  const avg30d =
+    data30d.length > 0 ? data30d.reduce((sum, d) => sum + d.value, 0) / data30d.length : current;
 
   const value7dAgo = historical[6]?.value || current;
   const value30dAgo = historical[29]?.value || current;
@@ -212,12 +219,9 @@ async function calculateBreakdown(): Promise<FearGreedResponse['breakdown']> {
     const [btcData, marketData] = await Promise.all([
       fetch(
         'https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&community_data=false&developer_data=false',
-        { next: { revalidate: 300 } }
+        { next: { revalidate: 300 } },
       ),
-      fetch(
-        'https://api.coingecko.com/api/v3/global',
-        { next: { revalidate: 300 } }
-      ),
+      fetch('https://api.coingecko.com/api/v3/global', { next: { revalidate: 300 } }),
     ]);
 
     const btc = btcData.ok ? await btcData.json() : null;

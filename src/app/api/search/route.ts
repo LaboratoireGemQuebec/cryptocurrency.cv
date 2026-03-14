@@ -103,159 +103,162 @@ async function semanticSearch(query: string): Promise<StoredArticleEmbedding[] |
 // Route handler
 // ---------------------------------------------------------------------------
 
-export const GET = instrumented(async function GET(request: NextRequest) {
-  // Validate query parameters
-  const validation = validateQuery(request, searchQuerySchema);
-  if (!validation.success) {
-    return validation.error;
-  }
-
-  const { q: sanitizedQuery, limit, lang } = validation.data;
-
-  // Read semantic flag directly from URL (not schema-validated to avoid breaking changes)
-  const url = new URL(request.url);
-  const useSemantic = url.searchParams.get('semantic') === 'true';
-
-  // Validate language parameter
-  if (lang !== 'en' && !isLanguageSupported(lang)) {
-    return NextResponse.json(
-      {
-        error: 'Unsupported language',
-        message: `Language '${lang}' is not supported`,
-        supported: Object.keys(SUPPORTED_LANGUAGES),
-      },
-      { status: 400 },
-    );
-  }
-
-  // --- Parallel search: run semantic, Postgres FTS, and keyword search concurrently ---
-  // Whichever returns results first wins. This eliminates the ~3-layer sequential
-  // waterfall that was causing 25s TTFB on /api/search.
-  type SearchResult = { articles: unknown[]; search_type: string; total: number } | null;
-
-  const searchPromises: Array<Promise<SearchResult>> = [];
-
-  // Semantic search (only when explicitly requested)
-  if (useSemantic) {
-    searchPromises.push(
-      semanticSearch(sanitizedQuery)
-        .then(
-          (results): SearchResult =>
-            results && results.length > 0
-              ? {
-                  articles: results.map((r) => ({
-                    title: r.title,
-                    url: r.url,
-                    date: r.date,
-                    tags: r.tags,
-                  })),
-                  search_type: 'semantic',
-                  total: results.length,
-                }
-              : null,
-        )
-        .catch(() => null),
-    );
-  }
-
-  // Postgres full-text search
-  if (isDbAvailable()) {
-    searchPromises.push(
-      pgFullTextSearch(sanitizedQuery, { limit })
-        .then(
-          (pgResult): SearchResult =>
-            pgResult.total > 0
-              ? {
-                  articles: pgResult.results.map((r) => ({
-                    title: r.title,
-                    link: r.link,
-                    description: r.description,
-                    pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
-                    source: r.source,
-                    sourceKey: r.sourceKey,
-                    tickers: r.tickers,
-                    tags: r.tags,
-                    sentiment: r.sentimentLabel,
-                    relevance: r.rank,
-                  })),
-                  search_type: 'fulltext',
-                  total: pgResult.total,
-                }
-              : null,
-        )
-        .catch(() => null),
-    );
-  }
-
-  // If we have higher-priority search backends, race them before falling back
-  if (searchPromises.length > 0) {
-    const results = await Promise.allSettled(searchPromises);
-    // Pick the first non-null result (semantic > fulltext priority)
-    for (const r of results) {
-      if (r.status === 'fulfilled' && r.value) {
-        let articles = r.value.articles;
-        let resultLang = 'en';
-        if (lang !== 'en' && articles.length > 0) {
-          try {
-            articles = await translateArticles(articles as any, lang);
-            resultLang = lang;
-          } catch {
-            // continue with original
-          }
-        }
-        return NextResponse.json(
-          {
-            query: sanitizedQuery,
-            total: r.value.total,
-            search_type: r.value.search_type,
-            articles,
-            lang: resultLang,
-            availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
-          },
-          {
-            headers: {
-              'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
-              'Access-Control-Allow-Origin': '*',
-            },
-          },
-        );
-      }
-    }
-  }
-
-  // --- Keyword search (default / fallback) ---
-  try {
-    const data = await searchNews(sanitizedQuery, limit);
-
-    // Translate articles if language is not English
-    let articles = data.articles;
-    let translatedLang = 'en';
-
-    if (lang !== 'en' && articles.length > 0) {
-      try {
-        articles = await translateArticles(articles, lang);
-        translatedLang = lang;
-      } catch (translateError) {
-        console.error('Translation failed:', translateError);
-      }
+export const GET = instrumented(
+  async function GET(request: NextRequest) {
+    // Validate query parameters
+    const validation = validateQuery(request, searchQuerySchema);
+    if (!validation.success) {
+      return validation.error;
     }
 
-    return NextResponse.json(
-      {
-        ...data,
-        search_type: 'keyword',
-        articles,
-        lang: translatedLang,
-        availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
-      },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
-          'Access-Control-Allow-Origin': '*',
+    const { q: sanitizedQuery, limit, lang } = validation.data;
+
+    // Read semantic flag directly from URL (not schema-validated to avoid breaking changes)
+    const url = new URL(request.url);
+    const useSemantic = url.searchParams.get('semantic') === 'true';
+
+    // Validate language parameter
+    if (lang !== 'en' && !isLanguageSupported(lang)) {
+      return NextResponse.json(
+        {
+          error: 'Unsupported language',
+          message: `Language '${lang}' is not supported`,
+          supported: Object.keys(SUPPORTED_LANGUAGES),
         },
-      },
-    );
-  } catch {
-    return NextResponse.json({ error: 'Failed to search news' }, { status: 500 });
-  }
-}, { name: 'search' });
+        { status: 400 },
+      );
+    }
+
+    // --- Parallel search: run semantic, Postgres FTS, and keyword search concurrently ---
+    // Whichever returns results first wins. This eliminates the ~3-layer sequential
+    // waterfall that was causing 25s TTFB on /api/search.
+    type SearchResult = { articles: unknown[]; search_type: string; total: number } | null;
+
+    const searchPromises: Array<Promise<SearchResult>> = [];
+
+    // Semantic search (only when explicitly requested)
+    if (useSemantic) {
+      searchPromises.push(
+        semanticSearch(sanitizedQuery)
+          .then(
+            (results): SearchResult =>
+              results && results.length > 0
+                ? {
+                    articles: results.map((r) => ({
+                      title: r.title,
+                      url: r.url,
+                      date: r.date,
+                      tags: r.tags,
+                    })),
+                    search_type: 'semantic',
+                    total: results.length,
+                  }
+                : null,
+          )
+          .catch(() => null),
+      );
+    }
+
+    // Postgres full-text search
+    if (isDbAvailable()) {
+      searchPromises.push(
+        pgFullTextSearch(sanitizedQuery, { limit })
+          .then(
+            (pgResult): SearchResult =>
+              pgResult.total > 0
+                ? {
+                    articles: pgResult.results.map((r) => ({
+                      title: r.title,
+                      link: r.link,
+                      description: r.description,
+                      pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
+                      source: r.source,
+                      sourceKey: r.sourceKey,
+                      tickers: r.tickers,
+                      tags: r.tags,
+                      sentiment: r.sentimentLabel,
+                      relevance: r.rank,
+                    })),
+                    search_type: 'fulltext',
+                    total: pgResult.total,
+                  }
+                : null,
+          )
+          .catch(() => null),
+      );
+    }
+
+    // If we have higher-priority search backends, race them before falling back
+    if (searchPromises.length > 0) {
+      const results = await Promise.allSettled(searchPromises);
+      // Pick the first non-null result (semantic > fulltext priority)
+      for (const r of results) {
+        if (r.status === 'fulfilled' && r.value) {
+          let articles = r.value.articles;
+          let resultLang = 'en';
+          if (lang !== 'en' && articles.length > 0) {
+            try {
+              articles = await translateArticles(articles as any, lang);
+              resultLang = lang;
+            } catch {
+              // continue with original
+            }
+          }
+          return NextResponse.json(
+            {
+              query: sanitizedQuery,
+              total: r.value.total,
+              search_type: r.value.search_type,
+              articles,
+              lang: resultLang,
+              availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+            },
+            {
+              headers: {
+                'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+                'Access-Control-Allow-Origin': '*',
+              },
+            },
+          );
+        }
+      }
+    }
+
+    // --- Keyword search (default / fallback) ---
+    try {
+      const data = await searchNews(sanitizedQuery, limit);
+
+      // Translate articles if language is not English
+      let articles = data.articles;
+      let translatedLang = 'en';
+
+      if (lang !== 'en' && articles.length > 0) {
+        try {
+          articles = await translateArticles(articles, lang);
+          translatedLang = lang;
+        } catch (translateError) {
+          console.error('Translation failed:', translateError);
+        }
+      }
+
+      return NextResponse.json(
+        {
+          ...data,
+          search_type: 'keyword',
+          articles,
+          lang: translatedLang,
+          availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+        },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+            'Access-Control-Allow-Origin': '*',
+          },
+        },
+      );
+    } catch {
+      return NextResponse.json({ error: 'Failed to search news' }, { status: 500 });
+    }
+  },
+  { name: 'search' },
+);

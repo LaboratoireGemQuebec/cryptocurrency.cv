@@ -75,65 +75,15 @@ function streamResponse(groqStream: ReadableStream<string>): Response {
   });
 }
 
-export const GET = instrumented(async function GET(request: NextRequest) {
-  const searchParams = request.nextUrl.searchParams;
-  const question = searchParams.get('q');
-  const wantStream = searchParams.get('stream') === 'true';
+export const GET = instrumented(
+  async function GET(request: NextRequest) {
+    const searchParams = request.nextUrl.searchParams;
+    const question = searchParams.get('q');
+    const wantStream = searchParams.get('stream') === 'true';
 
-  if (!question || question.length > 2000) {
-    return ApiError.badRequest(
-      !question ? 'Missing question' : 'Question too long (max 2000 characters)',
-    );
-  }
-
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
-
-  const data = await getLatestNews(CONTEXT_ARTICLES);
-  const newsContext = buildNewsContext(data.articles);
-  const userPrompt = `Based on these recent crypto news articles:\n\n${newsContext}\n\nQuestion: ${question}`;
-  const messages = [
-    { role: 'system' as const, content: SYSTEM_PROMPT },
-    { role: 'user' as const, content: userPrompt },
-  ];
-
-  if (wantStream) {
-    return streamResponse(callGroqStream(messages, { maxTokens: 2048, temperature: 0.4 }));
-  }
-
-  try {
-    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
-      maxTokens: 2048,
-      temperature: 0.4,
-    });
-    return NextResponse.json(
-      {
-        question,
-        answer,
-        sourcesUsed: data.articles.length,
-        answeredAt: new Date().toISOString(),
-      },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
-          'Access-Control-Allow-Origin': '*',
-        },
-      },
-    );
-  } catch (error) {
-    console.error('Ask GET error:', error);
-    return ApiError.internal('Failed to answer question');
-  }
-}, { name: 'ask' });
-
-export const POST = instrumented(async function POST(request: NextRequest) {
-  // Support POST for longer questions, conversation history, or streaming
-  try {
-    const body = await request.json();
-    const { question, context, stream: wantStream = false } = body;
-
-    if (!question || (typeof question === 'string' && question.length > 2000)) {
+    if (!question || question.length > 2000) {
       return ApiError.badRequest(
-        !question ? 'Missing question in request body' : 'Question too long (max 2000 characters)',
+        !question ? 'Missing question' : 'Question too long (max 2000 characters)',
       );
     }
 
@@ -141,11 +91,7 @@ export const POST = instrumented(async function POST(request: NextRequest) {
 
     const data = await getLatestNews(CONTEXT_ARTICLES);
     const newsContext = buildNewsContext(data.articles);
-
-    let userPrompt = `Based on these recent crypto news articles:\n\n${newsContext}\n\n`;
-    if (context) userPrompt += `Previous context: ${context}\n\n`;
-    userPrompt += `Question: ${question}`;
-
+    const userPrompt = `Based on these recent crypto news articles:\n\n${newsContext}\n\nQuestion: ${question}`;
     const messages = [
       { role: 'system' as const, content: SYSTEM_PROMPT },
       { role: 'user' as const, content: userPrompt },
@@ -155,18 +101,80 @@ export const POST = instrumented(async function POST(request: NextRequest) {
       return streamResponse(callGroqStream(messages, { maxTokens: 2048, temperature: 0.4 }));
     }
 
-    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
-      maxTokens: 2048,
-      temperature: 0.4,
-    });
-    return NextResponse.json({
-      question,
-      answer,
-      sourcesUsed: data.articles.length,
-      answeredAt: new Date().toISOString(),
-    });
-  } catch (error) {
-    console.error('Ask POST error:', error);
-    return ApiError.internal('Failed to process request');
-  }
-}, { name: 'ask.post' });
+    try {
+      const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
+        maxTokens: 2048,
+        temperature: 0.4,
+      });
+      return NextResponse.json(
+        {
+          question,
+          answer,
+          sourcesUsed: data.articles.length,
+          answeredAt: new Date().toISOString(),
+        },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+            'Access-Control-Allow-Origin': '*',
+          },
+        },
+      );
+    } catch (error) {
+      console.error('Ask GET error:', error);
+      return ApiError.internal('Failed to answer question');
+    }
+  },
+  { name: 'ask' },
+);
+
+export const POST = instrumented(
+  async function POST(request: NextRequest) {
+    // Support POST for longer questions, conversation history, or streaming
+    try {
+      const body = await request.json();
+      const { question, context, stream: wantStream = false } = body;
+
+      if (!question || (typeof question === 'string' && question.length > 2000)) {
+        return ApiError.badRequest(
+          !question
+            ? 'Missing question in request body'
+            : 'Question too long (max 2000 characters)',
+        );
+      }
+
+      if (!isGroqConfigured()) return groqNotConfiguredResponse();
+
+      const data = await getLatestNews(CONTEXT_ARTICLES);
+      const newsContext = buildNewsContext(data.articles);
+
+      let userPrompt = `Based on these recent crypto news articles:\n\n${newsContext}\n\n`;
+      if (context) userPrompt += `Previous context: ${context}\n\n`;
+      userPrompt += `Question: ${question}`;
+
+      const messages = [
+        { role: 'system' as const, content: SYSTEM_PROMPT },
+        { role: 'user' as const, content: userPrompt },
+      ];
+
+      if (wantStream) {
+        return streamResponse(callGroqStream(messages, { maxTokens: 2048, temperature: 0.4 }));
+      }
+
+      const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
+        maxTokens: 2048,
+        temperature: 0.4,
+      });
+      return NextResponse.json({
+        question,
+        answer,
+        sourcesUsed: data.articles.length,
+        answeredAt: new Date().toISOString(),
+      });
+    } catch (error) {
+      console.error('Ask POST error:', error);
+      return ApiError.internal('Failed to process request');
+    }
+  },
+  { name: 'ask.post' },
+);

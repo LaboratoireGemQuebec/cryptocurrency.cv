@@ -63,102 +63,106 @@ Be objective. Don't overreact to minor news. Consider the source reliability.
 
 Respond with JSON: { "articles": [...], "market": {...} }`;
 
-export const GET = instrumented(async function GET(request: NextRequest) {
-  const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
-  const asset = searchParams.get('asset')?.toUpperCase(); // Filter by asset (BTC, ETH, etc.)
+export const GET = instrumented(
+  async function GET(request: NextRequest) {
+    const searchParams = request.nextUrl.searchParams;
+    const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
+    const asset = searchParams.get('asset')?.toUpperCase(); // Filter by asset (BTC, ETH, etc.)
 
-  if (!isAIConfigured()) return aiNotConfiguredResponse();
+    if (!isAIConfigured()) return aiNotConfiguredResponse();
 
-  try {
-    const data = await getLatestNews(limit);
-    
-    if (data.articles.length === 0) {
-      return NextResponse.json({
-        articles: [],
-        market: {
-          overall: 'neutral',
-          score: 0,
-          confidence: 0,
-          summary: 'No articles to analyze',
-          keyDrivers: [],
-        },
-      });
-    }
+    try {
+      const data = await getLatestNews(limit);
 
-    const articlesForAnalysis = data.articles.map(a => ({
-      title: a.title,
-      link: a.link,
-      source: a.source,
-      description: a.description || '',
-      timeAgo: a.timeAgo,
-    }));
+      if (data.articles.length === 0) {
+        return NextResponse.json({
+          articles: [],
+          market: {
+            overall: 'neutral',
+            score: 0,
+            confidence: 0,
+            summary: 'No articles to analyze',
+            keyDrivers: [],
+          },
+        });
+      }
 
-    let contextNote = '';
-    if (asset) {
-      contextNote = `\nFocus especially on news affecting ${asset}.`;
-    }
+      const articlesForAnalysis = data.articles.map((a) => ({
+        title: a.title,
+        link: a.link,
+        source: a.source,
+        description: a.description || '',
+        timeAgo: a.timeAgo,
+      }));
 
-    const userPrompt = `Analyze sentiment for these ${articlesForAnalysis.length} crypto news articles:${contextNote}
+      let contextNote = '';
+      if (asset) {
+        contextNote = `\nFocus especially on news affecting ${asset}.`;
+      }
+
+      const userPrompt = `Analyze sentiment for these ${articlesForAnalysis.length} crypto news articles:${contextNote}
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptAIJson<SentimentResponse>(
-      SYSTEM_PROMPT,
-      userPrompt,
-      { maxTokens: 4000, temperature: 0.3 }
-    );
+      const result = await promptAIJson<SentimentResponse>(SYSTEM_PROMPT, userPrompt, {
+        maxTokens: 4000,
+        temperature: 0.3,
+      });
 
-    // Filter by asset if specified
-    let articles = result.articles || [];
-    if (asset) {
-      articles = articles.filter(a => 
-        a.affectedAssets.some(ticker => 
-          ticker.toUpperCase() === asset || 
-          ticker.toUpperCase().includes(asset)
-        )
+      // Filter by asset if specified
+      let articles = result.articles || [];
+      if (asset) {
+        articles = articles.filter((a) =>
+          a.affectedAssets.some(
+            (ticker) => ticker.toUpperCase() === asset || ticker.toUpperCase().includes(asset),
+          ),
+        );
+      }
+
+      // Calculate distribution
+      const distribution = {
+        very_bullish: articles.filter((a) => a.sentiment === 'very_bullish').length,
+        bullish: articles.filter((a) => a.sentiment === 'bullish').length,
+        neutral: articles.filter((a) => a.sentiment === 'neutral').length,
+        bearish: articles.filter((a) => a.sentiment === 'bearish').length,
+        very_bearish: articles.filter((a) => a.sentiment === 'very_bearish').length,
+      };
+
+      // High impact news
+      const highImpact = articles.filter((a) => a.impactLevel === 'high');
+
+      return NextResponse.json(
+        {
+          articles,
+          market: result.market,
+          distribution,
+          highImpactNews: highImpact,
+          meta: {
+            articlesAnalyzed: data.articles.length,
+            asset: asset || 'all',
+            analyzedAt: new Date().toISOString(),
+          },
+        },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+            'Access-Control-Allow-Origin': '*',
+          },
+        },
+      );
+    } catch (error) {
+      console.error('Sentiment analysis error:', error);
+      if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+        return aiAuthErrorResponse((error as Error).message);
+      }
+      return NextResponse.json(
+        {
+          error: 'Failed to analyze sentiment',
+          details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error',
+        },
+        { status: 500 },
       );
     }
-
-    // Calculate distribution
-    const distribution = {
-      very_bullish: articles.filter(a => a.sentiment === 'very_bullish').length,
-      bullish: articles.filter(a => a.sentiment === 'bullish').length,
-      neutral: articles.filter(a => a.sentiment === 'neutral').length,
-      bearish: articles.filter(a => a.sentiment === 'bearish').length,
-      very_bearish: articles.filter(a => a.sentiment === 'very_bearish').length,
-    };
-
-    // High impact news
-    const highImpact = articles.filter(a => a.impactLevel === 'high');
-
-    return NextResponse.json(
-      {
-        articles,
-        market: result.market,
-        distribution,
-        highImpactNews: highImpact,
-        meta: {
-          articlesAnalyzed: data.articles.length,
-          asset: asset || 'all',
-          analyzedAt: new Date().toISOString(),
-        },
-      },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-          'Access-Control-Allow-Origin': '*',
-        },
-      }
-    );
-  } catch (error) {
-    console.error('Sentiment analysis error:', error);
-    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
-      return aiAuthErrorResponse((error as Error).message);
-    }
-    return NextResponse.json(
-      { error: 'Failed to analyze sentiment', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}, { name: 'sentiment' });
+  },
+  { name: 'sentiment' },
+);

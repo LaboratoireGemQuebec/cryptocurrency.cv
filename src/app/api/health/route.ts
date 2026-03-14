@@ -10,7 +10,7 @@
 
 /**
  * Health Check Endpoint
- * 
+ *
  * Provides system health status including:
  * - API availability
  * - Cache connectivity (Redis or Vercel KV)
@@ -108,20 +108,20 @@ async function checkCache(): Promise<HealthCheck> {
  */
 async function checkExternalAPIs(): Promise<HealthCheck> {
   const start = Date.now();
-  
+
   try {
     const response = await fetch(`${COINGECKO_BASE}/ping`, {
       method: 'GET',
       signal: AbortSignal.timeout(5000),
     });
-    
+
     if (response.ok) {
       return {
         status: 'healthy',
         responseTime: Date.now() - start,
       };
     }
-    
+
     return {
       status: 'degraded',
       message: 'External API responding slowly or with errors',
@@ -139,74 +139,74 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
 /**
  * GET /api/health
  */
-export const GET = instrumented(async function GET() {
-  const startTime = Date.now();
-  
-  const [cache, external] = await Promise.all([
-    checkCache(),
-    checkExternalAPIs(),
-  ]);
+export const GET = instrumented(
+  async function GET() {
+    const startTime = Date.now();
 
-  const checks: Record<string, HealthCheck> = {
-    api: {
-      status: 'healthy' as const,
-      responseTime: Date.now() - startTime,
-    },
-    cache,
-    externalAPIs: external,
-  };
+    const [cache, external] = await Promise.all([checkCache(), checkExternalAPIs()]);
 
-  // Check x402 only if configured
-  if (process.env.X402_FACILITATOR_URL || process.env.X402_PAYMENT_ADDRESS) {
-    const url = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
-    const start = Date.now();
-    try {
-      const response = await fetch(`${url}/health`, {
-        method: 'GET',
-        signal: AbortSignal.timeout(5000),
-      });
-      checks.x402Facilitator = {
-        status: response.ok ? 'healthy' : 'degraded',
-        message: response.ok ? undefined : `Facilitator returned ${response.status}`,
-        responseTime: Date.now() - start,
-      };
-    } catch (error) {
-      checks.x402Facilitator = {
-        status: 'unhealthy',
-        message: error instanceof Error ? error.message : 'Facilitator unreachable',
-        responseTime: Date.now() - start,
-      };
+    const checks: Record<string, HealthCheck> = {
+      api: {
+        status: 'healthy' as const,
+        responseTime: Date.now() - startTime,
+      },
+      cache,
+      externalAPIs: external,
+    };
+
+    // Check x402 only if configured
+    if (process.env.X402_FACILITATOR_URL || process.env.X402_PAYMENT_ADDRESS) {
+      const url = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
+      const start = Date.now();
+      try {
+        const response = await fetch(`${url}/health`, {
+          method: 'GET',
+          signal: AbortSignal.timeout(5000),
+        });
+        checks.x402Facilitator = {
+          status: response.ok ? 'healthy' : 'degraded',
+          message: response.ok ? undefined : `Facilitator returned ${response.status}`,
+          responseTime: Date.now() - start,
+        };
+      } catch (error) {
+        checks.x402Facilitator = {
+          status: 'unhealthy',
+          message: error instanceof Error ? error.message : 'Facilitator unreachable',
+          responseTime: Date.now() - start,
+        };
+      }
     }
-  }
 
-  // Determine overall status
-  const coreChecks = [checks.api, checks.cache, checks.externalAPIs];
-  const unhealthyCount = coreChecks.filter(c => c.status === 'unhealthy').length;
-  const degradedCount = coreChecks.filter(c => c.status === 'degraded').length;
-  
-  let overallStatus: 'healthy' | 'degraded' | 'unhealthy';
-  if (unhealthyCount > 0) {
-    overallStatus = 'unhealthy';
-  } else if (degradedCount > 0) {
-    overallStatus = 'degraded';
-  } else {
-    overallStatus = 'healthy';
-  }
+    // Determine overall status
+    const coreChecks = [checks.api, checks.cache, checks.externalAPIs];
+    const unhealthyCount = coreChecks.filter((c) => c.status === 'unhealthy').length;
+    const degradedCount = coreChecks.filter((c) => c.status === 'degraded').length;
 
-  const response: HealthResponse = {
-    status: overallStatus,
-    timestamp: new Date().toISOString(),
-    version: APP_VERSION,
-    uptime: Math.floor(process.uptime()),
-    checks,
-  };
+    let overallStatus: 'healthy' | 'degraded' | 'unhealthy';
+    if (unhealthyCount > 0) {
+      overallStatus = 'unhealthy';
+    } else if (degradedCount > 0) {
+      overallStatus = 'degraded';
+    } else {
+      overallStatus = 'healthy';
+    }
 
-  const statusCode = overallStatus === 'unhealthy' ? 503 : 200;
+    const response: HealthResponse = {
+      status: overallStatus,
+      timestamp: new Date().toISOString(),
+      version: APP_VERSION,
+      uptime: Math.floor(process.uptime()),
+      checks,
+    };
 
-  return NextResponse.json(response, {
-    status: statusCode,
-    headers: {
-      'Cache-Control': 'no-store, no-cache, must-revalidate',
-    },
-  });
-}, { name: 'health' });
+    const statusCode = overallStatus === 'unhealthy' ? 503 : 200;
+
+    return NextResponse.json(response, {
+      status: statusCode,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
+      },
+    });
+  },
+  { name: 'health' },
+);
