@@ -1,6 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
-import { PressReleaseSubmission, validatePressRelease, sanitizeInput } from "../../../lib/press-release";
-import { nanoid } from "nanoid";
+import { NextRequest, NextResponse } from 'next/server';
+import {
+  PressReleaseSubmission,
+  validatePressRelease,
+  sanitizeInput,
+} from '../../../lib/press-release';
+import { nanoid } from 'nanoid';
 
 const submissions: PressReleaseSubmission[] = [];
 const RATE_LIMIT = 3;
@@ -10,7 +14,7 @@ export async function POST(req: NextRequest) {
   const data = await req.json();
   // Sanitize inputs
   for (const key in data) {
-    if (typeof data[key] === "string") {
+    if (typeof data[key] === 'string') {
       data[key] = sanitizeInput(data[key]);
     }
   }
@@ -22,16 +26,21 @@ export async function POST(req: NextRequest) {
   // Rate limit
   const now = Date.now();
   const recent = submissions.filter(
-    (s) => s.contactEmail === data.contactEmail && now - new Date(s.createdAt).getTime() < RATE_LIMIT_WINDOW
+    (s) =>
+      s.contactEmail === data.contactEmail &&
+      now - new Date(s.createdAt).getTime() < RATE_LIMIT_WINDOW,
   );
   if (recent.length >= RATE_LIMIT) {
-    return NextResponse.json({ error: "Rate limit exceeded (3 submissions per email per day)." }, { status: 429 });
+    return NextResponse.json(
+      { error: 'Rate limit exceeded (3 submissions per email per day).' },
+      { status: 429 },
+    );
   }
   // Store submission
   const submission: PressReleaseSubmission = {
     ...data,
     id: nanoid(),
-    status: "pending",
+    status: 'pending',
     createdAt: new Date().toISOString(),
   };
   submissions.push(submission);

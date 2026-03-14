@@ -1,16 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this software in your research, please cite it as below."
+message: 'If you use this software in your research, please cite it as below.'
 type: software
-title: "Free Crypto News API"
-abstract: "Open-source crypto news aggregator with 200+ sources, real-time updates, and multi-language support."
+title: 'Free Crypto News API'
+abstract: 'Open-source crypto news aggregator with 200+ sources, real-time updates, and multi-language support.'
 authors:
-  - family-names: "Nirholas"
-    affiliation: "Free Crypto News"
-repository-code: "https://github.com/nirholas/free-crypto-news"
-url: "https://cryptocurrency.cv"
+  - family-names: 'Nirholas'
+    affiliation: 'Free Crypto News'
+repository-code: 'https://github.com/nirholas/free-crypto-news'
+url: 'https://cryptocurrency.cv'
 license: LicenseRef-SEE-LICENSE
-version: "1.0.2"
-date-released: "2026-03-14"
+version: '1.0.2'
+date-released: '2026-03-14'
 keywords:
   - cryptocurrency
   - news
@@ -23,6 +23,5 @@ keywords:
   - nlp
 references:
   - type: software
-    title: "Free Crypto News Documentation"
-    url: "https://cryptocurrency.cv/developers"
-
+    title: 'Free Crypto News Documentation'
+    url: 'https://cryptocurrency.cv/developers'

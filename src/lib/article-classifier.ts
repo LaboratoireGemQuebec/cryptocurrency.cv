@@ -1,4 +1,4 @@
-import { NEWS_VERTICALS } from "./verticals";
+import { NEWS_VERTICALS } from './verticals';
 
 // Example Article type (adjust as needed)
 export interface Article {
@@ -26,11 +26,11 @@ export function classifyArticle(article: Article): string[] {
 
     // Keyword-based classification (title + description)
     const text = `${article.title} ${article.description}`.toLowerCase();
-    const matchCount = vertical.keywords.filter(k => text.includes(k.toLowerCase())).length;
+    const matchCount = vertical.keywords.filter((k) => text.includes(k.toLowerCase())).length;
     if (matchCount >= 2) {
       verticals.push(vertical.slug);
     }
   }
 
-  return verticals.length > 0 ? verticals : ["general"];
+  return verticals.length > 0 ? verticals : ['general'];
 }

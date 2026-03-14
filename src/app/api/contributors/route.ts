@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
 
-const GITHUB_API = "https://api.github.com/repos/nirholas/free-crypto-news/contributors";
+const GITHUB_API = 'https://api.github.com/repos/nirholas/free-crypto-news/contributors';
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
 let cachedContributors: any = null;
@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
 
   const res = await fetch(GITHUB_API);
   if (!res.ok) {
-    return NextResponse.json({ error: "Failed to fetch contributors" }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to fetch contributors' }, { status: 500 });
   }
   const contributors = await res.json();
   const mapped = contributors.map((c: any) => ({
