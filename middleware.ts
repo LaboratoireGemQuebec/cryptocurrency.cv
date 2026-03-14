@@ -24,6 +24,7 @@ import { compose } from './src/middleware/compose';
 import { redirects } from './src/middleware/redirects';
 import { embed } from './src/middleware/embed';
 import { observability } from './src/middleware/observability';
+import { speraxosHmac } from './src/middleware/speraxos-hmac';
 import { trustedOriginHandler } from './src/middleware/trusted-origins';
 import { cors } from './src/middleware/cors';
 import { requestValidation } from './src/middleware/request-validation';
@@ -40,6 +41,7 @@ const pipeline = compose(
   redirects, // /docs redirect, /dashboard/dashboard fix
   embed, // Embed routes (skip intl, allow iframing)
   observability, // Request ID, security headers, client detection
+  speraxosHmac, // SperaxOS HMAC-SHA256 signature verification
   trustedOriginHandler, // SperaxOS + browser origin trust check
   cors, // CORS preflight (OPTIONS → 204)
   requestValidation, // Suspicious payload detection

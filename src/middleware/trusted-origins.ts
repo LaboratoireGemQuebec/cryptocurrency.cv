@@ -89,7 +89,10 @@ export async function isSperaxOSRequest(request: NextRequest): Promise<boolean> 
 export const trustedOriginHandler: MiddlewareHandler = async (ctx) => {
   if (!ctx.isApiRoute) return ctx;
 
-  ctx.isSperaxOS = await isSperaxOSRequest(ctx.request);
+  // Skip token check if already verified by HMAC handler
+  if (!ctx.isSperaxOS) {
+    ctx.isSperaxOS = await isSperaxOSRequest(ctx.request);
+  }
 
   const reqOrigin = ctx.request.headers.get('origin') ?? '';
   ctx.isTrustedOrigin = !ctx.isSperaxOS && !!reqOrigin && isTrustedOrigin(reqOrigin);

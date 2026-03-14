@@ -24,6 +24,7 @@ export { compose } from './compose';
 export { redirects } from './redirects';
 export { embed } from './embed';
 export { observability } from './observability';
+export { speraxosHmac } from './speraxos-hmac';
 export { trustedOriginHandler } from './trusted-origins';
 export { cors } from './cors';
 export { requestValidation } from './request-validation';

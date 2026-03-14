@@ -313,6 +313,227 @@
           "legendFormat": "subscriptions"
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "AI Usage — Inferences/min & Tokens",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "smooth",
+            "fillOpacity": 10,
+            "axisPlacement": "auto"
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "tokens/min" },
+            "properties": [
+              { "id": "custom.axisPlacement", "value": "right" },
+              { "id": "unit", "value": "short" }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["mean", "max", "sum"] },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (model) (rate(ai_inferences_total[5m]) * 60)",
+          "legendFormat": "{{ model }} inferences/min"
+        },
+        {
+          "refId": "B",
+          "expr": "sum(rate(ai_tokens_total[5m]) * 60)",
+          "legendFormat": "tokens/min"
+        },
+        {
+          "refId": "C",
+          "expr": "sum by (provider) (rate(ai_errors_total[5m]) * 60)",
+          "legendFormat": "{{ provider }} errors/min"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "AI Latency by Model",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "smooth",
+            "fillOpacity": 5
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 2000, "color": "yellow" },
+              { "value": 10000, "color": "red" }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["mean", "max"] },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.50, sum by (le, model) (rate(ai_latency_ms_bucket[5m])))",
+          "legendFormat": "{{ model }} p50"
+        },
+        {
+          "refId": "B",
+          "expr": "histogram_quantile(0.95, sum by (le, model) (rate(ai_latency_ms_bucket[5m])))",
+          "legendFormat": "{{ model }} p95"
+        },
+        {
+          "refId": "C",
+          "expr": "histogram_quantile(0.99, sum by (le, model) (rate(ai_latency_ms_bucket[5m])))",
+          "legendFormat": "{{ model }} p99"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Error Budget — 99.9% SLO Burn Rate",
+      "description": "SLO: 99.9% availability (43.2 min/month budget). Shows remaining budget and burn rate.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 32 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1,
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "smooth",
+            "fillOpacity": 10,
+            "lineWidth": 2
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 0.5, "color": "yellow" },
+              { "value": 0.75, "color": "red" }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "1 - (sum(rate(api_requests_total{status=~\"5..\"}[1h])) / sum(rate(api_requests_total[1h])))",
+          "legendFormat": "availability (1h)"
+        },
+        {
+          "refId": "B",
+          "expr": "1 - (sum(rate(api_requests_total{status=~\"5..\"}[6h])) / sum(rate(api_requests_total[6h])))",
+          "legendFormat": "availability (6h)"
+        },
+        {
+          "refId": "C",
+          "expr": "1 - (sum(rate(api_requests_total{status=~\"5..\"}[24h])) / sum(rate(api_requests_total[24h])))",
+          "legendFormat": "availability (24h)"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Error Budget Remaining (30d)",
+      "description": "Percentage of monthly error budget (99.9% SLO = 0.1% budget) remaining",
+      "type": "gauge",
+      "gridPos": { "h": 8, "w": 6, "x": 12, "y": 32 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "red" },
+              { "value": 0.25, "color": "orange" },
+              { "value": 0.5, "color": "yellow" },
+              { "value": 0.75, "color": "green" }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "reduceOptions": { "calcs": ["lastNotNull"] }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "clamp_min(1 - (sum(rate(api_requests_total{status=~\"5..\"}[30d])) / sum(rate(api_requests_total[30d]))) / 0.001, 0)",
+          "legendFormat": "budget remaining"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Provider Success Rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 6, "x": 18, "y": 32 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1,
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "smooth",
+            "fillOpacity": 5
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "red" },
+              { "value": 0.9, "color": "yellow" },
+              { "value": 0.95, "color": "green" }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom" },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (provider) (rate(provider_requests_total{status=\"success\"}[5m])) / sum by (provider) (rate(provider_requests_total[5m]))",
+          "legendFormat": "{{ provider }}"
+        }
+      ]
     }
   ]
 }

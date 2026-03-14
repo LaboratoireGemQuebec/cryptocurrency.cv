@@ -8,6 +8,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { createUser, getUserByEmail } from '@/lib/auth/users';
 import { createMagicLink } from '@/lib/auth/tokens';
+import { sendEmail, magicLinkEmail } from '@/lib/email';
 
 export const runtime = 'nodejs';
 

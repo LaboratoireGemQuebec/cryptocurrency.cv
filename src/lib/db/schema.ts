@@ -556,3 +556,32 @@ export const authTokens = pgTable(
     index('idx_authtokens_expires').on(table.expiresAt),
   ]
 );
+
+// ────────────────────────────────────────────────────────────────────────────
+// notification_preferences — per-user email/push/in-app notification settings
+// ────────────────────────────────────────────────────────────────────────────
+
+export const notificationPreferences = pgTable(
+  'notification_preferences',
+  {
+    id: uuid('id').defaultRandom().primaryKey(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    emailEnabled: boolean('email_enabled').default(false),
+    /** 'realtime' | 'daily' | 'weekly' */
+    emailDigestFrequency: varchar('email_digest_frequency', { length: 16 }).default('daily'),
+    emailVerified: boolean('email_verified').default(false),
+    pushEnabled: boolean('push_enabled').default(true),
+    inAppEnabled: boolean('in_app_enabled').default(true),
+    quietHoursEnabled: boolean('quiet_hours_enabled').default(false),
+    quietHoursStart: varchar('quiet_hours_start', { length: 5 }).default('22:00'),
+    quietHoursEnd: varchar('quiet_hours_end', { length: 5 }).default('08:00'),
+    lastDigestSentAt: timestamp('last_digest_sent_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('idx_notif_prefs_user').on(table.userId),
+  ]
+);

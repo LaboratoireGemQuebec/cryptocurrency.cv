@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PRESS_RELEASE_CATEGORIES } from '../../lib/press-release';
+import { PRESS_RELEASE_CATEGORIES } from '@/lib/press-release';
 
 export default function SubmitPressReleasePage() {
   const [form, setForm] = useState({
@@ -21,7 +21,8 @@ export default function SubmitPressReleasePage() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type } = e.target;
+    const checked = 'checked' in e.target ? e.target.checked : false;
     setForm((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
@@ -138,7 +139,7 @@ export default function SubmitPressReleasePage() {
           onChange={handleChange}
           className="w-full border p-2"
         >
-          {PRESS_RELEASE_CATEGORIES.map((cat) => (
+          {PRESS_RELEASE_CATEGORIES.map((cat: string) => (
             <option key={cat} value={cat}>
               {cat}
             </option>
