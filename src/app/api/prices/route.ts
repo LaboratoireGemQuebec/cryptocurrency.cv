@@ -28,10 +28,11 @@ import { staleCache, cache, generateCacheKey } from '@/lib/cache';
 import { getPricesFallback } from '@/lib/fallback';
 import { getPipelinePrices } from '@/lib/data-pipeline';
 import { ApiError } from '@/lib/api-error';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const revalidate = 120;
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   const isFreeTier = request.headers.get('x-free-tier') === '1';
   const coins = request.nextUrl.searchParams.get('coins');
 

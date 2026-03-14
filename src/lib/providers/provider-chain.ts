@@ -182,9 +182,12 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
       ...this._config.circuitBreaker,
       onStateChange: (from, to, name) => {
         this._healthMonitor.updateCircuitState(name, to);
-        const eventType = to === 'OPEN' ? 'circuit:open'
-          : to === 'HALF_OPEN' ? 'circuit:half_open'
-          : 'circuit:close';
+        const eventType =
+          to === 'OPEN'
+            ? 'circuit:open'
+            : to === 'HALF_OPEN'
+              ? 'circuit:half_open'
+              : 'circuit:close';
         this._emit({
           type: eventType,
           provider: name,
@@ -194,9 +197,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
       },
     });
 
-    const rateLimiter = provider.rateLimit
-      ? new TokenBucketRateLimiter(provider.rateLimit)
-      : null;
+    const rateLimiter = provider.rateLimit ? new TokenBucketRateLimiter(provider.rateLimit) : null;
 
     this._providers.push({ provider, breaker, rateLimiter });
 
@@ -210,7 +211,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
    * Remove a provider from the chain.
    */
   removeProvider(name: string): this {
-    this._providers = this._providers.filter(p => p.provider.name !== name);
+    this._providers = this._providers.filter((p) => p.provider.name !== name);
     return this;
   }
 
@@ -235,7 +236,12 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
     // Check cache first
     const cached = this._getFromCache(cacheKey);
     if (cached && !this._isExpired(cached)) {
-      this._emit({ type: 'cache:hit', key: cacheKey, age: Date.now() - cached.createdAt, timestamp: Date.now() });
+      this._emit({
+        type: 'cache:hit',
+        key: cacheKey,
+        age: Date.now() - cached.createdAt,
+        timestamp: Date.now(),
+      });
       return {
         data: cached.data,
         lineage: cached.lineage,
@@ -311,13 +317,16 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         this._emit({ type: 'fetch:start', provider: provider.name, params, timestamp: Date.now() });
         const start = Date.now();
 
-        const data = await breaker.execute(() =>
-          this._fetchWithTimeout(provider, params),
-        );
+        const data = await breaker.execute(() => this._fetchWithTimeout(provider, params));
 
         const latencyMs = Date.now() - start;
         this._healthMonitor.recordSuccess(provider.name, latencyMs);
-        this._emit({ type: 'fetch:success', provider: provider.name, latencyMs, timestamp: Date.now() });
+        this._emit({
+          type: 'fetch:success',
+          provider: provider.name,
+          latencyMs,
+          timestamp: Date.now(),
+        });
 
         return {
           data,
@@ -334,14 +343,15 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         const isCircuitOpen = error instanceof CircuitOpenError;
 
         if (!isCircuitOpen) {
-          this._healthMonitor.recordFailure(
-            provider.name,
-            errorMsg,
-            Date.now(),
-          );
+          this._healthMonitor.recordFailure(provider.name, errorMsg, Date.now());
         }
 
-        this._emit({ type: 'fetch:failure', provider: provider.name, error: errorMsg, timestamp: Date.now() });
+        this._emit({
+          type: 'fetch:failure',
+          provider: provider.name,
+          error: errorMsg,
+          timestamp: Date.now(),
+        });
         errors.push({ provider: provider.name, error: errorMsg });
       }
     }
@@ -367,7 +377,10 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
     if (available.length === 0) {
       throw new AllProvidersFailedError(this.name, [
-        { provider: '*', error: 'No providers available (all circuit-breakers open or rate-limited)' },
+        {
+          provider: '*',
+          error: 'No providers available (all circuit-breakers open or rate-limited)',
+        },
       ]);
     }
 
@@ -375,13 +388,16 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
       const start = Date.now();
       this._emit({ type: 'fetch:start', provider: provider.name, params, timestamp: Date.now() });
 
-      const data = await breaker.execute(() =>
-        this._fetchWithTimeout(provider, params),
-      );
+      const data = await breaker.execute(() => this._fetchWithTimeout(provider, params));
 
       const latencyMs = Date.now() - start;
       this._healthMonitor.recordSuccess(provider.name, latencyMs);
-      this._emit({ type: 'fetch:success', provider: provider.name, latencyMs, timestamp: Date.now() });
+      this._emit({
+        type: 'fetch:success',
+        provider: provider.name,
+        latencyMs,
+        timestamp: Date.now(),
+      });
 
       return { data, provider: provider.name, latencyMs };
     });
@@ -401,12 +417,10 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
       };
     } catch (aggregateError) {
       // All providers failed
-      const errors = (aggregateError as AggregateError).errors.map(
-        (e: Error, i: number) => ({
-          provider: available[i]?.provider.name ?? 'unknown',
-          error: e.message,
-        }),
-      );
+      const errors = (aggregateError as AggregateError).errors.map((e: Error, i: number) => ({
+        provider: available[i]?.provider.name ?? 'unknown',
+        error: e.message,
+      }));
       throw new AllProvidersFailedError(this.name, errors);
     }
   }
@@ -423,9 +437,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
    * For complex types, override the fusion logic.
    */
   private async _fetchConsensus(params: FetchParams): Promise<ProviderResponse<T>> {
-    const available = this._providers.filter(({ breaker }) =>
-      breaker.state !== 'OPEN',
-    );
+    const available = this._providers.filter(({ breaker }) => breaker.state !== 'OPEN');
 
     if (available.length === 0) {
       throw new AllProvidersFailedError(this.name, [
@@ -443,13 +455,16 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         const start = Date.now();
         this._emit({ type: 'fetch:start', provider: provider.name, params, timestamp: Date.now() });
 
-        const data = await breaker.execute(() =>
-          this._fetchWithTimeout(provider, params),
-        );
+        const data = await breaker.execute(() => this._fetchWithTimeout(provider, params));
 
         const latencyMs = Date.now() - start;
         this._healthMonitor.recordSuccess(provider.name, latencyMs);
-        this._emit({ type: 'fetch:success', provider: provider.name, latencyMs, timestamp: Date.now() });
+        this._emit({
+          type: 'fetch:success',
+          provider: provider.name,
+          latencyMs,
+          timestamp: Date.now(),
+        });
 
         return { data, provider: provider.name, weight: provider.weight };
       }),
@@ -457,10 +472,11 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
     // Collect successful results
     const successes = results
-      .filter((r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
-        r.status === 'fulfilled',
+      .filter(
+        (r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
+          r.status === 'fulfilled',
       )
-      .map(r => r.value);
+      .map((r) => r.value);
 
     // Record failures
     results.forEach((r, i) => {
@@ -494,7 +510,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
     // Attempt numeric fusion if data is a number
     if (typeof successes[0].data === 'number') {
-      const inputs: FusionInput[] = successes.map(s => ({
+      const inputs: FusionInput[] = successes.map((s) => ({
         provider: s.provider,
         value: s.data as number,
         weight: s.weight,
@@ -505,7 +521,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
       this._emit({
         type: fusionResult.confidence > 0.5 ? 'consensus:reached' : 'consensus:failed',
-        providers: successes.map(s => s.provider),
+        providers: successes.map((s) => s.provider),
         ...(fusionResult.confidence > 0.5
           ? { confidence: fusionResult.confidence }
           : { reason: 'Low confidence' }),
@@ -528,7 +544,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         provider: best.provider,
         fetchedAt: Date.now(),
         confidence: successes.length >= 2 ? 0.8 : 0.5,
-        contributors: successes.map(s => ({
+        contributors: successes.map((s) => ({
           provider: s.provider,
           weight: s.weight,
           agreedWithConsensus: true,
@@ -549,9 +565,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
    * All results are available via lineage.contributors.
    */
   private async _fetchBroadcast(params: FetchParams): Promise<ProviderResponse<T>> {
-    const available = this._providers.filter(({ breaker }) =>
-      breaker.state !== 'OPEN',
-    );
+    const available = this._providers.filter(({ breaker }) => breaker.state !== 'OPEN');
 
     const results = await Promise.allSettled(
       available.map(async ({ provider, breaker, rateLimiter }) => {
@@ -560,9 +574,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         }
 
         const start = Date.now();
-        const data = await breaker.execute(() =>
-          this._fetchWithTimeout(provider, params),
-        );
+        const data = await breaker.execute(() => this._fetchWithTimeout(provider, params));
         const latencyMs = Date.now() - start;
         this._healthMonitor.recordSuccess(provider.name, latencyMs);
 
@@ -571,10 +583,11 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
     );
 
     const successes = results
-      .filter((r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
-        r.status === 'fulfilled',
+      .filter(
+        (r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
+          r.status === 'fulfilled',
       )
-      .map(r => r.value);
+      .map((r) => r.value);
 
     if (successes.length === 0) {
       throw new AllProvidersFailedError(this.name, [
@@ -590,7 +603,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
         provider: primary.provider,
         fetchedAt: Date.now(),
         confidence: successes.length / available.length,
-        contributors: successes.map(s => ({
+        contributors: successes.map((s) => ({
           provider: s.provider,
           weight: s.weight,
           agreedWithConsensus: true,
@@ -625,7 +638,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
   on(listener: ProviderEventListener): () => void {
     this._listeners.push(listener);
     return () => {
-      this._listeners = this._listeners.filter(l => l !== listener);
+      this._listeners = this._listeners.filter((l) => l !== listener);
     };
   }
 
@@ -636,59 +649,57 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
   /**
    * Fetch from a single provider with timeout and optional validation.
    */
-  private async _fetchWithTimeout(
-    provider: DataProvider<T>,
-    params: FetchParams,
-  ): Promise<T> {
-    return withSpan(`provider.fetch.${provider.name}`, {
-      'provider.name': provider.name,
-      'provider.priority': provider.priority,
-      'provider.chain': this.name,
-    }, async (span) => {
-    const controller = new AbortController();
-    const timeout = setTimeout(
-      () => controller.abort(),
-      this._config.timeoutMs,
+  private async _fetchWithTimeout(provider: DataProvider<T>, params: FetchParams): Promise<T> {
+    return withSpan(
+      `provider.fetch.${provider.name}`,
+      {
+        'provider.name': provider.name,
+        'provider.priority': provider.priority,
+        'provider.chain': this.name,
+      },
+      async (span) => {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), this._config.timeoutMs);
+
+        const start = Date.now();
+        try {
+          // Perform the actual fetch
+          let data = await Promise.race([
+            provider.fetch(params),
+            new Promise<never>((_, reject) => {
+              controller.signal.addEventListener('abort', () =>
+                reject(new Error(`Timeout after ${this._config.timeoutMs}ms`)),
+              );
+            }),
+          ]);
+
+          // Normalize if the provider has a normalizer
+          if (provider.normalize) {
+            data = provider.normalize(data) as Awaited<T>;
+          }
+
+          // Validate if the provider has a validator
+          if (provider.validate && !provider.validate(data)) {
+            throw new Error(`Validation failed for provider "${provider.name}"`);
+          }
+
+          const latencyMs = Date.now() - start;
+          span.setAttribute('provider.latency_ms', latencyMs);
+          metrics.providerRequests.add(1, { provider: provider.name, status: 'success' });
+          metrics.providerLatency.record(latencyMs, { provider: provider.name });
+
+          return data;
+        } catch (error) {
+          const latencyMs = Date.now() - start;
+          span.setAttribute('provider.latency_ms', latencyMs);
+          metrics.providerRequests.add(1, { provider: provider.name, status: 'error' });
+          metrics.providerErrors.add(1, { provider: provider.name });
+          throw error;
+        } finally {
+          clearTimeout(timeout);
+        }
+      },
     );
-
-    const start = Date.now();
-    try {
-      // Perform the actual fetch
-      let data = await Promise.race([
-        provider.fetch(params),
-        new Promise<never>((_, reject) => {
-          controller.signal.addEventListener('abort', () =>
-            reject(new Error(`Timeout after ${this._config.timeoutMs}ms`)),
-          );
-        }),
-      ]);
-
-      // Normalize if the provider has a normalizer
-      if (provider.normalize) {
-        data = provider.normalize(data) as Awaited<T>;
-      }
-
-      // Validate if the provider has a validator
-      if (provider.validate && !provider.validate(data)) {
-        throw new Error(`Validation failed for provider "${provider.name}"`);
-      }
-
-      const latencyMs = Date.now() - start;
-      span.setAttribute('provider.latency_ms', latencyMs);
-      metrics.providerRequests.add(1, { provider: provider.name, status: 'success' });
-      metrics.providerLatency.record(latencyMs, { provider: provider.name });
-
-      return data;
-    } catch (error) {
-      const latencyMs = Date.now() - start;
-      span.setAttribute('provider.latency_ms', latencyMs);
-      metrics.providerRequests.add(1, { provider: provider.name, status: 'error' });
-      metrics.providerErrors.add(1, { provider: provider.name });
-      throw error;
-    } finally {
-      clearTimeout(timeout);
-    }
-    });
   }
 
   private _buildCacheKey(params: FetchParams): string {
@@ -746,16 +757,9 @@ export class AllProvidersFailedError extends Error {
   public readonly chainName: string;
   public readonly providerErrors: Array<{ provider: string; error: string }>;
 
-  constructor(
-    chainName: string,
-    errors: Array<{ provider: string; error: string }>,
-  ) {
-    const summary = errors
-      .map(e => `  ${e.provider}: ${e.error}`)
-      .join('\n');
-    super(
-      `All providers failed for chain "${chainName}":\n${summary}`,
-    );
+  constructor(chainName: string, errors: Array<{ provider: string; error: string }>) {
+    const summary = errors.map((e) => `  ${e.provider}: ${e.error}`).join('\n');
+    super(`All providers failed for chain "${chainName}":\n${summary}`);
     this.name = 'AllProvidersFailedError';
     this.chainName = chainName;
     this.providerErrors = errors;

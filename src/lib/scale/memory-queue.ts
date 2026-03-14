@@ -99,11 +99,17 @@ export class MemoryQueueAdapter implements QueueAdapter {
     const jobs: Job[] = [];
 
     for (let i = 0; i < count; i++) {
-      // Find the first job whose score <= now (ready to process)
-      const readyIdx = queue.findIndex((entry) => entry.score <= now);
-      if (readyIdx === -1) break;
+      if (queue.length === 0) break;
 
-      const entry = queue.splice(readyIdx, 1)[0];
+      // The first entry has the lowest score (highest priority)
+      const entry = queue[0];
+
+      // Check if the job is ready (respects delay)
+      // The availability timestamp is score % 1e13
+      const availableAt = entry.score % 1e13;
+      if (availableAt > now) break;
+
+      queue.shift();
       const job = this.jobs.get(entry.id);
       if (!job) continue;
 

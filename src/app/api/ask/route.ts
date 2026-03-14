@@ -13,6 +13,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroq, callGroqStream, isGroqConfigured } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
 import { ApiError } from '@/lib/api-error';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 

@@ -103,8 +103,9 @@ describe('cors handler', () => {
 // =============================================================================
 
 describe('requestValidation handler', () => {
-  it('should block XSS probes on API routes', () => {
-    const url = new URL('http://localhost:3000/api/test?q=<script>alert(1)</script>');
+  it('should block suspicious probes on API routes', () => {
+    // Use javascript: protocol which survives URL encoding (unlike <script> tags)
+    const url = new URL('http://localhost:3000/api/test?url=javascript:alert(1)');
     const request = new NextRequest(url);
     const ctx = createContext({ request, isApiRoute: true, pathname: '/api/test' });
     const result = requestValidation(ctx);

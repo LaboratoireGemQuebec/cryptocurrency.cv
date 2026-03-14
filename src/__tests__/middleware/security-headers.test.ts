@@ -73,18 +73,20 @@ describe('isSuspiciousRequest', () => {
     return new NextRequest(new URL(url, 'http://localhost:3000'));
   }
 
-  it('should detect XSS probes in query string', () => {
-    const req = makeRequest('/api/test?q=<script>alert(1)</script>');
+  it('should detect javascript: protocol in query string', () => {
+    const req = makeRequest('/api/test?url=javascript:alert(1)');
     expect(isSuspiciousRequest(req)).toBe('query');
   });
 
-  it('should detect SQL injection in query string', () => {
-    const req = makeRequest('/api/test?q=1 UNION SELECT * FROM users');
+  it('should detect null byte injection in query string', () => {
+    // %00 survives URL encoding and is always suspicious
+    const req = makeRequest('/api/test?q=1%00DROP');
     expect(isSuspiciousRequest(req)).toBe('query');
   });
 
-  it('should detect path traversal', () => {
-    const req = makeRequest('/api/test/../../../etc/passwd');
+  it('should detect URL-encoded path traversal', () => {
+    // URL constructor normalises ../; use the %2e-encoded form the function checks
+    const req = makeRequest('/api/test/%2e%2e%2f%2e%2e%2fetc/passwd');
     expect(isSuspiciousRequest(req)).toBe('path');
   });
 

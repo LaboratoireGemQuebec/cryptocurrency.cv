@@ -13,8 +13,9 @@ describe('RedisQueueAdapter', () => {
   let adapter: QueueAdapter;
   let redis: InstanceType<typeof Redis>;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     redis = new Redis();
+    await redis.flushall();
     adapter = new RedisQueueAdapter(redis as never, 'test:queue:');
   });
 

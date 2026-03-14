@@ -147,62 +147,86 @@ async function generateContent(
   const timeout = options.timeoutMs || 30_000;
   const timer = setTimeout(() => controller.abort(), timeout);
 
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-      signal: options.signal || controller.signal,
-    });
+  return withSpan(
+    'ai.inference.gemini',
+    {
+      'ai.model': model,
+      'ai.provider': 'gemini',
+      'ai.temperature': options.temperature ?? 0.3,
+    },
+    async (span) => {
+      const start = Date.now();
 
-    if (!res.ok) {
-      const err = await res.text().catch(() => `HTTP ${res.status}`);
-      throw new Error(`Gemini API error (${model}): ${res.status} — ${err.slice(0, 300)}`);
-    }
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+          signal: options.signal || controller.signal,
+        });
 
-    const json = await res.json() as {
-      candidates?: Array<{
-        content?: { parts?: Array<{ text?: string }> };
-        finishReason?: string;
-        safetyRatings?: Array<{ category: string; probability: string }>;
-        groundingMetadata?: {
-          searchEntryPoint?: { renderedContent?: string };
-          groundingChunks?: Array<{ web?: { uri?: string; title?: string } }>;
-          webSearchQueries?: string[];
+        if (!res.ok) {
+          const err = await res.text().catch(() => `HTTP ${res.status}`);
+          metrics.aiErrors.add(1, { model, provider: 'gemini' });
+          throw new Error(`Gemini API error (${model}): ${res.status} — ${err.slice(0, 300)}`);
+        }
+
+        const json = (await res.json()) as {
+          candidates?: Array<{
+            content?: { parts?: Array<{ text?: string }> };
+            finishReason?: string;
+            safetyRatings?: Array<{ category: string; probability: string }>;
+            groundingMetadata?: {
+              searchEntryPoint?: { renderedContent?: string };
+              groundingChunks?: Array<{ web?: { uri?: string; title?: string } }>;
+              webSearchQueries?: string[];
+            };
+          }>;
+          usageMetadata?: {
+            promptTokenCount?: number;
+            candidatesTokenCount?: number;
+            totalTokenCount?: number;
+          };
         };
-      }>;
-      usageMetadata?: {
-        promptTokenCount?: number;
-        candidatesTokenCount?: number;
-        totalTokenCount?: number;
-      };
-    };
 
-    const candidate = json.candidates?.[0];
-    const text = candidate?.content?.parts?.map(p => p.text || '').join('') || '';
+        const candidate = json.candidates?.[0];
+        const text = candidate?.content?.parts?.map((p) => p.text || '').join('') || '';
 
-    const grounding = candidate?.groundingMetadata;
-    const groundingMetadata = grounding ? {
-      searchQueries: grounding.webSearchQueries,
-      webSearchResults: grounding.groundingChunks
-        ?.filter(c => c.web)
-        .map(c => ({ uri: c.web!.uri || '', title: c.web!.title || '' })),
-    } : undefined;
+        const grounding = candidate?.groundingMetadata;
+        const groundingMetadata = grounding
+          ? {
+              searchQueries: grounding.webSearchQueries,
+              webSearchResults: grounding.groundingChunks
+                ?.filter((c) => c.web)
+                .map((c) => ({ uri: c.web!.uri || '', title: c.web!.title || '' })),
+            }
+          : undefined;
 
-    return {
-      text,
-      usage: {
-        promptTokens: json.usageMetadata?.promptTokenCount || 0,
-        completionTokens: json.usageMetadata?.candidatesTokenCount || 0,
-        totalTokens: json.usageMetadata?.totalTokenCount || 0,
-      },
-      groundingMetadata,
-      finishReason: candidate?.finishReason || 'UNKNOWN',
-      safetyRatings: candidate?.safetyRatings,
-    };
-  } finally {
-    clearTimeout(timer);
-  }
+        const promptTokens = json.usageMetadata?.promptTokenCount || 0;
+        const completionTokens = json.usageMetadata?.candidatesTokenCount || 0;
+        const totalTokens = json.usageMetadata?.totalTokenCount || 0;
+        const latencyMs = Date.now() - start;
+
+        span.setAttribute('ai.prompt_tokens', promptTokens);
+        span.setAttribute('ai.completion_tokens', completionTokens);
+        span.setAttribute('ai.total_tokens', totalTokens);
+        span.setAttribute('ai.latency_ms', latencyMs);
+        metrics.aiInferences.add(1, { model, provider: 'gemini' });
+        metrics.aiLatency.record(latencyMs, { model });
+        metrics.aiTokens.add(totalTokens, { model });
+
+        return {
+          text,
+          usage: { promptTokens, completionTokens, totalTokens },
+          groundingMetadata,
+          finishReason: candidate?.finishReason || 'UNKNOWN',
+          safetyRatings: candidate?.safetyRatings,
+        };
+      } finally {
+        clearTimeout(timer);
+      }
+    },
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -269,15 +293,21 @@ export async function* streamContent(
         try {
           const chunk = JSON.parse(data) as {
             candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
-            usageMetadata?: { promptTokenCount?: number; candidatesTokenCount?: number; totalTokenCount?: number };
+            usageMetadata?: {
+              promptTokenCount?: number;
+              candidatesTokenCount?: number;
+              totalTokenCount?: number;
+            };
           };
 
           const text = chunk.candidates?.[0]?.content?.parts?.[0]?.text || '';
-          const usage = chunk.usageMetadata ? {
-            promptTokens: chunk.usageMetadata.promptTokenCount || 0,
-            completionTokens: chunk.usageMetadata.candidatesTokenCount || 0,
-            totalTokens: chunk.usageMetadata.totalTokenCount || 0,
-          } : undefined;
+          const usage = chunk.usageMetadata
+            ? {
+                promptTokens: chunk.usageMetadata.promptTokenCount || 0,
+                completionTokens: chunk.usageMetadata.candidatesTokenCount || 0,
+                totalTokens: chunk.usageMetadata.totalTokenCount || 0,
+              }
+            : undefined;
 
           yield { text, done: false, usage };
         } catch {
@@ -307,18 +337,17 @@ export async function flashExtract<T = unknown>(
   schema: Record<string, unknown>,
   systemPrompt?: string,
 ): Promise<T> {
-  const response = await generateContent(
-    [{ role: 'user', parts: [{ text }] }],
-    {
-      model: 'gemini-2.0-flash',
-      systemInstruction: systemPrompt || 'Extract structured data from the input. Return valid JSON matching the schema.',
-      responseMimeType: 'application/json',
-      responseSchema: schema,
-      maxOutputTokens: 2048,
-      temperature: 0.1,
-      timeoutMs: 5_000,
-    },
-  );
+  const response = await generateContent([{ role: 'user', parts: [{ text }] }], {
+    model: 'gemini-2.0-flash',
+    systemInstruction:
+      systemPrompt ||
+      'Extract structured data from the input. Return valid JSON matching the schema.',
+    responseMimeType: 'application/json',
+    responseSchema: schema,
+    maxOutputTokens: 2048,
+    temperature: 0.1,
+    timeoutMs: 5_000,
+  });
 
   return JSON.parse(response.text) as T;
 }
@@ -343,15 +372,19 @@ export async function analyzeChart(
   confidence: number;
 }> {
   const response = await generateContent(
-    [{
-      role: 'user',
-      parts: [
-        { inlineData: { mimeType, data: imageBase64 } },
-        { text: context
-          ? `Analyze this cryptocurrency chart. Context: ${context}\n\nReturn a JSON technical analysis.`
-          : 'Analyze this cryptocurrency chart. Return a JSON technical analysis.' },
-      ],
-    }],
+    [
+      {
+        role: 'user',
+        parts: [
+          { inlineData: { mimeType, data: imageBase64 } },
+          {
+            text: context
+              ? `Analyze this cryptocurrency chart. Context: ${context}\n\nReturn a JSON technical analysis.`
+              : 'Analyze this cryptocurrency chart. Return a JSON technical analysis.',
+          },
+        ],
+      },
+    ],
     {
       model: 'gemini-2.0-flash',
       systemInstruction: `You are an expert cryptocurrency technical analyst. Analyze chart images and return structured JSON analysis.
@@ -381,19 +414,32 @@ Return this exact JSON structure:
  */
 export async function synthesizeReport(
   newsArticles: Array<{ title: string; source: string; summary?: string; publishedAt: string }>,
-  marketData?: { btcPrice: number; ethPrice: number; totalMarketCap: number; dominance: number; fearGreed: number },
+  marketData?: {
+    btcPrice: number;
+    ethPrice: number;
+    totalMarketCap: number;
+    dominance: number;
+    fearGreed: number;
+  },
   reportType: 'daily' | 'weekly' | 'flash' = 'daily',
 ): Promise<{
   title: string;
   executive_summary: string;
-  key_developments: Array<{ headline: string; significance: 'high' | 'medium' | 'low'; impact: string }>;
+  key_developments: Array<{
+    headline: string;
+    significance: 'high' | 'medium' | 'low';
+    impact: string;
+  }>;
   market_analysis: string;
   outlook: string;
   risks: string[];
   opportunities: string[];
 }> {
   const articleContext = newsArticles
-    .map((a, i) => `[${i + 1}] ${a.publishedAt} — ${a.source}\n${a.title}${a.summary ? `\n${a.summary}` : ''}`)
+    .map(
+      (a, i) =>
+        `[${i + 1}] ${a.publishedAt} — ${a.source}\n${a.title}${a.summary ? `\n${a.summary}` : ''}`,
+    )
     .join('\n\n');
 
   const marketContext = marketData
@@ -401,12 +447,16 @@ export async function synthesizeReport(
     : '';
 
   const response = await generateContent(
-    [{
-      role: 'user',
-      parts: [{
-        text: `${articleContext}\n${marketContext}\n\nGenerate a comprehensive ${reportType} crypto market report.`,
-      }],
-    }],
+    [
+      {
+        role: 'user',
+        parts: [
+          {
+            text: `${articleContext}\n${marketContext}\n\nGenerate a comprehensive ${reportType} crypto market report.`,
+          },
+        ],
+      },
+    ],
     {
       // Use Pro for reports (better reasoning)
       model: newsArticles.length > 200 ? 'gemini-2.5-pro-preview-06-05' : 'gemini-2.0-flash',
@@ -438,19 +488,19 @@ Return valid JSON with this structure:
  * Leverages Gemini's built-in Google Search grounding to find
  * supporting/contradicting evidence for any crypto-related claim.
  */
-export async function groundedFactCheck(
-  claim: string,
-): Promise<{
+export async function groundedFactCheck(claim: string): Promise<{
   verdict: 'verified' | 'likely_true' | 'unverified' | 'likely_false' | 'false';
   confidence: number;
   evidence: Array<{ source: string; url: string; supports: boolean; excerpt: string }>;
   reasoning: string;
 }> {
   const response = await generateContent(
-    [{
-      role: 'user',
-      parts: [{ text: `Fact-check the following claim using web search:\n\n"${claim}"` }],
-    }],
+    [
+      {
+        role: 'user',
+        parts: [{ text: `Fact-check the following claim using web search:\n\n"${claim}"` }],
+      },
+    ],
     {
       model: 'gemini-2.0-flash',
       systemInstruction: `You are a crypto fact-checker. Use Google Search to verify claims.
@@ -508,11 +558,9 @@ export async function enrichArticle(
     }
   }
 
-  const response = await generateContent(
-    [{ role: 'user', parts }],
-    {
-      model: 'gemini-2.0-flash',
-      systemInstruction: `You are a crypto news analysis engine. Analyze articles and return structured intelligence.
+  const response = await generateContent([{ role: 'user', parts }], {
+    model: 'gemini-2.0-flash',
+    systemInstruction: `You are a crypto news analysis engine. Analyze articles and return structured intelligence.
 If images are included, analyze them as well (charts, logos, infographics).
 
 Return JSON:
@@ -524,12 +572,11 @@ Return JSON:
   "impactScore": 0-100,
   "imageAnalysis": "description of what images show (if any)"
 }`,
-      responseMimeType: 'application/json',
-      maxOutputTokens: 1024,
-      temperature: 0.2,
-      timeoutMs: 10_000,
-    },
-  );
+    responseMimeType: 'application/json',
+    maxOutputTokens: 1024,
+    temperature: 0.2,
+    timeoutMs: 10_000,
+  });
 
   return JSON.parse(response.text);
 }
@@ -538,7 +585,4 @@ Return JSON:
 // Exports
 // ---------------------------------------------------------------------------
 
-export {
-  generateContent,
-  getConfig as getGeminiConfig,
-};
+export { generateContent, getConfig as getGeminiConfig };

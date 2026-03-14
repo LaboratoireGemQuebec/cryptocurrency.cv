@@ -35,7 +35,7 @@ describe('redirects handler', () => {
     expect(result).toBeInstanceOf(NextResponse);
     const resp = result as NextResponse;
     expect(resp.status).toBe(301);
-    expect(resp.headers.get('location')).toBe('https://docs.cryptocurrency.cv');
+    expect(resp.headers.get('location')).toBe('https://docs.cryptocurrency.cv/');
   });
 
   it('should redirect /docs/api to external docs subpath', () => {

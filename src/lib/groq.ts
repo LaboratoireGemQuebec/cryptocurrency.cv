@@ -10,11 +10,11 @@
 
 /**
  * Groq AI Client
- * 
+ *
  * Shared client for all AI-powered features using Groq's free API.
  * Uses Llama 3.3 70B for high-quality, fast inference.
  * Includes response caching for efficiency.
- * 
+ *
  * Get your free API key at: https://console.groq.com/keys
  */
 
@@ -26,12 +26,12 @@ const DEFAULT_MODEL = 'llama-3.3-70b-versatile';
 
 // Cache TTLs (in seconds) — short TTLs since we have unlimited AI credits
 const CACHE_TTL = {
-  summarize: 60,     // 1 minute
-  sentiment: 60,     // 1 minute
-  entities: 120,     // 2 minutes
-  digest: 120,       // 2 minutes
-  narratives: 120,   // 2 minutes
-  default: 60,       // 1 minute
+  summarize: 60, // 1 minute
+  sentiment: 60, // 1 minute
+  entities: 120, // 2 minutes
+  digest: 120, // 2 minutes
+  narratives: 120, // 2 minutes
+  default: 60, // 1 minute
 };
 
 export interface GroqMessage {
@@ -80,20 +80,15 @@ export function isGroqConfigured(): boolean {
  */
 export async function callGroq(
   messages: GroqMessage[],
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): Promise<GroqResponse> {
   const apiKey = process.env.GROQ_API_KEY;
-  
+
   if (!apiKey) {
     throw new Error('GROQ_API_KEY not configured. Get a free key at https://console.groq.com/keys');
   }
 
-  const {
-    model = DEFAULT_MODEL,
-    temperature = 0.3,
-    maxTokens = 2048,
-    jsonMode = false,
-  } = options;
+  const { model = DEFAULT_MODEL, temperature = 0.3, maxTokens = 2048, jsonMode = false } = options;
 
   const body: Record<string, unknown> = {
     model,
@@ -106,53 +101,57 @@ export async function callGroq(
     body.response_format = { type: 'json_object' };
   }
 
-  return withSpan('ai.inference.groq', {
-    'ai.model': model,
-    'ai.provider': 'groq',
-    'ai.temperature': temperature,
-  }, async (span) => {
-    const start = Date.now();
+  return withSpan(
+    'ai.inference.groq',
+    {
+      'ai.model': model,
+      'ai.provider': 'groq',
+      'ai.temperature': temperature,
+    },
+    async (span) => {
+      const start = Date.now();
 
-    const response = await fetch(GROQ_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify(body),
-    });
+      const response = await fetch(GROQ_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(body),
+      });
 
-    if (!response.ok) {
-      const error = await response.text();
-      metrics.aiErrors.add(1, { model, provider: 'groq' });
-      if (response.status === 401) {
-        throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+      if (!response.ok) {
+        const error = await response.text();
+        metrics.aiErrors.add(1, { model, provider: 'groq' });
+        if (response.status === 401) {
+          throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+        }
+        throw new Error(`Groq API error: ${response.status} - ${error}`);
       }
-      throw new Error(`Groq API error: ${response.status} - ${error}`);
-    }
 
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content || '';
-    const usage = data.usage || {};
-    const latencyMs = Date.now() - start;
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content || '';
+      const usage = data.usage || {};
+      const latencyMs = Date.now() - start;
 
-    const promptTokens = usage.prompt_tokens || 0;
-    const completionTokens = usage.completion_tokens || 0;
-    const totalTokens = usage.total_tokens || 0;
+      const promptTokens = usage.prompt_tokens || 0;
+      const completionTokens = usage.completion_tokens || 0;
+      const totalTokens = usage.total_tokens || 0;
 
-    span.setAttribute('ai.prompt_tokens', promptTokens);
-    span.setAttribute('ai.completion_tokens', completionTokens);
-    span.setAttribute('ai.total_tokens', totalTokens);
-    span.setAttribute('ai.latency_ms', latencyMs);
-    metrics.aiInferences.add(1, { model, provider: 'groq' });
-    metrics.aiLatency.record(latencyMs, { model });
-    metrics.aiTokens.add(totalTokens, { model });
+      span.setAttribute('ai.prompt_tokens', promptTokens);
+      span.setAttribute('ai.completion_tokens', completionTokens);
+      span.setAttribute('ai.total_tokens', totalTokens);
+      span.setAttribute('ai.latency_ms', latencyMs);
+      metrics.aiInferences.add(1, { model, provider: 'groq' });
+      metrics.aiLatency.record(latencyMs, { model });
+      metrics.aiTokens.add(totalTokens, { model });
 
-    return {
-      content,
-      usage: { promptTokens, completionTokens, totalTokens },
-    };
-  });
+      return {
+        content,
+        usage: { promptTokens, completionTokens, totalTokens },
+      };
+    },
+  );
 }
 
 /**
@@ -164,18 +163,14 @@ export async function callGroq(
  */
 export function callGroqStream(
   messages: GroqMessage[],
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): ReadableStream<string> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     throw new Error('GROQ_API_KEY not configured');
   }
 
-  const {
-    model = DEFAULT_MODEL,
-    temperature = 0.3,
-    maxTokens = 2048,
-  } = options;
+  const { model = DEFAULT_MODEL, temperature = 0.3, maxTokens = 2048 } = options;
 
   const body = JSON.stringify({
     model,
@@ -273,14 +268,14 @@ export function parseGroqJson<T>(content: string): T {
 export async function promptGroq(
   systemPrompt: string,
   userPrompt: string,
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): Promise<string> {
   const response = await callGroq(
     [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: userPrompt },
     ],
-    options
+    options,
   );
   return response.content;
 }
@@ -291,14 +286,17 @@ export async function promptGroq(
 export async function promptGroqJson<T>(
   systemPrompt: string,
   userPrompt: string,
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): Promise<T> {
   const response = await callGroq(
     [
-      { role: 'system', content: systemPrompt + '\n\nAlways respond with valid JSON only, no markdown.' },
+      {
+        role: 'system',
+        content: systemPrompt + '\n\nAlways respond with valid JSON only, no markdown.',
+      },
       { role: 'user', content: userPrompt },
     ],
-    { ...options, jsonMode: true }
+    { ...options, jsonMode: true },
   );
   return parseGroqJson<T>(response.content);
 }
@@ -310,13 +308,13 @@ export async function promptGroqJsonCached<T>(
   cachePrefix: string,
   systemPrompt: string,
   userPrompt: string,
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): Promise<T> {
   // Create a hash of the prompts for cache key
   const promptHash = simpleHash(systemPrompt + userPrompt);
   const cacheKey = generateCacheKey(cachePrefix, { hash: promptHash });
   const ttl = CACHE_TTL[cachePrefix as keyof typeof CACHE_TTL] || CACHE_TTL.default;
-  
+
   return withCache(aiCache, cacheKey, ttl, async () => {
     return promptGroqJson<T>(systemPrompt, userPrompt, options);
   });
@@ -329,7 +327,7 @@ function simpleHash(str: string): string {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
   return Math.abs(hash).toString(36);
@@ -341,7 +339,7 @@ function simpleHash(str: string): string {
  */
 export async function* streamGroq(
   messages: GroqMessage[],
-  options: GroqOptions = {}
+  options: GroqOptions = {},
 ): AsyncGenerator<string, void, unknown> {
   const apiKey = process.env.GROQ_API_KEY;
 
@@ -349,11 +347,7 @@ export async function* streamGroq(
     throw new Error('GROQ_API_KEY not configured. Get a free key at https://console.groq.com/keys');
   }
 
-  const {
-    model = DEFAULT_MODEL,
-    temperature = 0.3,
-    maxTokens = 2048,
-  } = options;
+  const { model = DEFAULT_MODEL, temperature = 0.3, maxTokens = 2048 } = options;
 
   const body = {
     model,
@@ -367,7 +361,7 @@ export async function* streamGroq(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify(body),
   });

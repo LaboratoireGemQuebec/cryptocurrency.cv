@@ -16,6 +16,7 @@ import { searchQuerySchema } from '@/lib/schemas';
 import { ApiError } from '@/lib/api-error';
 import { generateEmbedding, cosineSimilarity } from '@/lib/embeddings';
 import { isDbAvailable, pgFullTextSearch } from '@/lib/db/queries';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 

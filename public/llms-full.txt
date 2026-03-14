@@ -788,11 +788,11 @@ curl "https://cryptocurrency.cv/api/rag/ask?q=What+is+DeFi"
 Use these values with the `?source=` query parameter on any news endpoint.
 Example: `GET /api/news?source=coindesk&limit=10`
 
-ambcrypto, beincrypto, binance, bitcoinist, bitfinex, blockworks, bravenewcoin,
+beincrypto, binance, bitcoinist, bitfinex, blockworks, bravenewcoin,
 ccn, chainlink, coinspeaker, coindesk, cointelegraph, cryptobriefing, cryptoglobe,
-cryptopotato, cryptoslate, cryptoninjas, dailyhodl, decrypt, forkast, finbold,
+cryptoslate, cryptoninjas, dailyhodl, decrypt, forkast, finbold,
 forbes, medium, newsbtc, pancakeswap, reddit, theblock, trustnodes, twitter,
-utoday, zycrypto
+utoday
 
 ---
 

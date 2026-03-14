@@ -298,7 +298,9 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
     concurrency: 3,
     rateLimit: { requests: 20, windowMs: 60_000 },
     handler: async (job) => {
-      const payload = job.payload as { articles?: Array<{ url: string; title: string; description?: string; source?: string }> };
+      const payload = job.payload as {
+        articles?: Array<{ url: string; title: string; description?: string; source?: string }>;
+      };
       const articles = payload?.articles || [];
       if (articles.length === 0) {
         return { enriched: 0, skipped: true, reason: 'No articles provided' };
@@ -314,9 +316,12 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
           enriched: enrichedCount,
           total: articles.length,
           sentimentBreakdown: {
-            bullish: Array.from(enrichments.values()).filter(e => e.sentiment === 'bullish').length,
-            bearish: Array.from(enrichments.values()).filter(e => e.sentiment === 'bearish').length,
-            neutral: Array.from(enrichments.values()).filter(e => e.sentiment === 'neutral').length,
+            bullish: Array.from(enrichments.values()).filter((e) => e.sentiment === 'bullish')
+              .length,
+            bearish: Array.from(enrichments.values()).filter((e) => e.sentiment === 'bearish')
+              .length,
+            neutral: Array.from(enrichments.values()).filter((e) => e.sentiment === 'neutral')
+              .length,
           },
         };
       } catch (error) {
@@ -366,19 +371,23 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
         // Fetch recent articles to archive
         const result = await getLatestNews(100, undefined, { category: payload?.category });
         const articlesToArchive = result.articles.filter(
-          (a) => new Date(a.pubDate) >= new Date(since)
+          (a) => new Date(a.pubDate) >= new Date(since),
         );
         // Store archive state in cache
         const archiveKey = `archive:batch:${new Date().toISOString().slice(0, 13)}`;
-        await cache.set(archiveKey, {
-          count: articlesToArchive.length,
-          sources: [...new Set(articlesToArchive.map(a => a.source))],
-          archivedAt: new Date().toISOString(),
-        }, 86400);
+        await cache.set(
+          archiveKey,
+          {
+            count: articlesToArchive.length,
+            sources: [...new Set(articlesToArchive.map((a) => a.source))],
+            archivedAt: new Date().toISOString(),
+          },
+          86400,
+        );
         return {
           archived: true,
           articleCount: articlesToArchive.length,
-          sourceCount: new Set(articlesToArchive.map(a => a.source)).size,
+          sourceCount: new Set(articlesToArchive.map((a) => a.source)).size,
           since,
           archivedAt: new Date().toISOString(),
         };
@@ -429,17 +438,21 @@ export const WORKER_DEFINITIONS: WorkerDefinition[] = [
       try {
         const health = await performHealthCheck(true);
         // Cache health status for dashboard consumers
-        await cache.set('worker:health:latest', {
-          status: health.status,
-          checks: health.checks.map(c => ({
-            name: c.name,
-            status: c.status,
-            responseTime: c.responseTime,
-            error: c.error,
-          })),
-          summary: health.summary,
-          timestamp: Date.now(),
-        }, 600);
+        await cache.set(
+          'worker:health:latest',
+          {
+            status: health.status,
+            checks: health.checks.map((c) => ({
+              name: c.name,
+              status: c.status,
+              responseTime: c.responseTime,
+              error: c.error,
+            })),
+            summary: health.summary,
+            timestamp: Date.now(),
+          },
+          600,
+        );
         return {
           checked: true,
           overallStatus: health.status,
@@ -836,7 +849,18 @@ export const RATE_LIMIT_TIERS: Record<string, RateLimitTier> = {
     requestsPerHour: 3000,
     requestsPerDay: 50000,
     burstLimit: 100,
-    features: ['news', 'market-data', 'fear-greed', 'defi', 'onchain', 'social', 'derivatives', 'ai', 'websocket', 'webhooks'],
+    features: [
+      'news',
+      'market-data',
+      'fear-greed',
+      'defi',
+      'onchain',
+      'social',
+      'derivatives',
+      'ai',
+      'websocket',
+      'webhooks',
+    ],
   },
   enterprise: {
     name: 'Enterprise',

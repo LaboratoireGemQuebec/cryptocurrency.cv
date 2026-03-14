@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
   if (authError) return authError;
 
   try {
-    const body = await request.json() as { action?: string; jobId?: string };
+    const body = (await request.json()) as { action?: string; jobId?: string };
     const { action, jobId } = body;
 
     if (action === 'retry') {

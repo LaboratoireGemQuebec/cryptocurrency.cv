@@ -20,6 +20,7 @@ import { getBulkEnrichment } from '@/lib/article-enrichment';
 import { staleCache, generateCacheKey } from '@/lib/cache';
 import { getNewsFallback } from '@/lib/fallback';
 import { PREMIUM_URL } from '@/lib/constants';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
@@ -54,7 +55,7 @@ const VALID_CATEGORIES = [
   'trading',
 ];
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   const isFreeTier = request.headers.get('x-free-tier') === '1';

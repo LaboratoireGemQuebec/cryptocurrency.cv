@@ -4,46 +4,46 @@
  * @see https://github.com/nirholas/free-crypto-news
  */
 
-import "../globals.css";
-import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
-import { Inter, Source_Serif_4, JetBrains_Mono } from "next/font/google";
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import '../globals.css';
+import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
+import { Inter, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import { ThemeProvider, ThemeScript } from "@/components/ThemeProvider";
-import { ToastProvider } from "@/components/Toast";
-import { BookmarksProvider } from "@/components/BookmarksProvider";
-import { PWAProvider } from "@/components/PWAProvider";
-import { KeyboardShortcutsProvider } from "@/components/KeyboardShortcuts";
-import { WatchlistProvider } from "@/components/watchlist";
-import { AlertsProvider } from "@/components/alerts";
-import { PortfolioProvider } from "@/components/portfolio";
-import { SettingsProvider } from "@/components/SettingsProvider";
-import NavigationProgress from "@/components/NavigationProgress";
+import { ThemeProvider, ThemeScript } from '@/components/ThemeProvider';
+import { ToastProvider } from '@/components/Toast';
+import { BookmarksProvider } from '@/components/BookmarksProvider';
+import { PWAProvider } from '@/components/PWAProvider';
+import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
+import { WatchlistProvider } from '@/components/watchlist';
+import { AlertsProvider } from '@/components/alerts';
+import { PortfolioProvider } from '@/components/portfolio';
+import { SettingsProvider } from '@/components/SettingsProvider';
+import NavigationProgress from '@/components/NavigationProgress';
 
-import { ClientOnly } from "@/components/ClientOnly";
-import { locales, isRtlLocale, type Locale } from "@/i18n/config";
+import { ClientOnly } from '@/components/ClientOnly';
+import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-source-serif",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-source-serif',
+  display: 'swap',
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
 });
 
 // Dynamic rendering is auto-detected via headers() call for CSP nonce.
@@ -51,73 +51,71 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
   ],
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  viewportFit: "cover",
+  viewportFit: 'cover',
 };
 
 export const metadata: Metadata = {
   title: {
-    default: "Crypto Vision News — Free Real-Time Crypto News API",
-    template: "%s | Crypto Vision News",
+    default: 'Crypto Vision News — Free Real-Time Crypto News API',
+    template: '%s | Crypto Vision News',
   },
   description:
-    "Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.",
+    'Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.',
   keywords: [
-    "crypto",
-    "cryptocurrency",
-    "bitcoin",
-    "ethereum",
-    "news",
-    "API",
-    "free",
-    "blockchain",
-    "defi",
-    "trading",
-    "crypto vision",
-    "free crypto news",
+    'crypto',
+    'cryptocurrency',
+    'bitcoin',
+    'ethereum',
+    'news',
+    'API',
+    'free',
+    'blockchain',
+    'defi',
+    'trading',
+    'crypto vision',
+    'free crypto news',
   ],
-  authors: [{ name: "Crypto Vision" }],
-  creator: "Crypto Vision",
-  publisher: "Crypto Vision",
-  metadataBase: new URL("https://cryptocurrency.cv"),
+  authors: [{ name: 'Crypto Vision' }],
+  creator: 'Crypto Vision',
+  publisher: 'Crypto Vision',
+  metadataBase: new URL('https://cryptocurrency.cv'),
   alternates: {
     types: {
-      "application/rss+xml": [
-        { url: "/api/rss", title: "Crypto Vision News RSS Feed" },
-      ],
+      'application/rss+xml': [{ url: '/api/rss', title: 'Crypto Vision News RSS Feed' }],
     },
   },
   openGraph: {
-    title: "Crypto Vision News",
+    title: 'Crypto Vision News',
     description:
-      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
-    url: "https://cryptocurrency.cv",
-    siteName: "Crypto Vision",
-    type: "website",
-    locale: "en_US",
+      'Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.',
+    url: 'https://cryptocurrency.cv',
+    siteName: 'Crypto Vision',
+    type: 'website',
+    locale: 'en_US',
     images: [
       {
-        url: "/og-image.png",
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Crypto Vision News",
+        alt: 'Crypto Vision News',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Crypto Vision News",
+    card: 'summary_large_image',
+    title: 'Crypto Vision News',
     description:
-      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
-    images: ["/og-image.png"],
-    site: "@nichxbt",
-    creator: "@nichxbt",
+      'Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.',
+    images: ['/og-image.png'],
+    site: '@nichxbt',
+    creator: '@nichxbt',
   },
   robots: {
     index: true,
@@ -125,46 +123,35 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
-  manifest: "/manifest.json",
+  manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icons/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icons/icon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: "/favicon.svg",
+    shortcut: '/favicon.svg',
     apple: [
       {
-        url: "/apple-touch-icon.svg",
-        sizes: "180x180",
-        type: "image/svg+xml",
+        url: '/apple-touch-icon.svg',
+        sizes: '180x180',
+        type: 'image/svg+xml',
       },
     ],
   },
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
-    title: "Crypto Vision",
+    statusBarStyle: 'default',
+    title: 'Crypto Vision',
   },
-  category: "news",
+  category: 'news',
 };
 
-const SSG_LOCALES = [
-  "en",
-  "es",
-  "fr",
-  "de",
-  "ja",
-  "ko",
-  "zh-CN",
-  "pt",
-  "ru",
-  "ar",
-] as const;
+const SSG_LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'pt', 'ru', 'ar'] as const;
 
 export function generateStaticParams() {
   if (process.env.VERCEL_ENV || process.env.CI) {
@@ -187,8 +174,8 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
-  const dir = isRtlLocale(locale as Locale) ? "rtl" : "ltr";
+  const nonce = (await headers()).get('x-nonce') ?? undefined;
+  const dir = isRtlLocale(locale as Locale) ? 'rtl' : 'ltr';
 
   return (
     <html
@@ -202,11 +189,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
         <link rel="preconnect" href="https://api.coingecko.com" />
         <link rel="dns-prefetch" href="https://api.coingecko.com" />
-        <link
-          rel="preconnect"
-          href="https://images.unsplash.com"
-          crossOrigin="anonymous"
-        />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen antialiased">
         <ClientOnly>

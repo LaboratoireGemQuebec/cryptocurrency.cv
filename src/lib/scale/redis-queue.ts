@@ -104,18 +104,25 @@ export class RedisQueueAdapter implements QueueAdapter {
 
     for (let i = 0; i < count; i++) {
       // Get the lowest-scored (highest priority, earliest) pending job
-      const results = await this.redis.zrangebyscore(
+      const results = await this.redis.zrange(
         this.key(`pending:${type}`),
-        '-inf',
-        now.toString(),
-        'LIMIT',
         0,
-        1,
+        0,
       );
 
       if (results.length === 0) break;
 
       const jobId = results[0];
+
+      // Check if the job is ready (respects delay)
+      const scoreStr = await this.redis.zscore(this.key(`pending:${type}`), jobId);
+      if (scoreStr) {
+        const score = parseFloat(scoreStr);
+        // The availability timestamp is score % 1e13
+        const availableAt = score % 1e13;
+        if (availableAt > now) break; // Not ready yet
+      }
+
       // Atomically remove from pending and add to active
       const removed = await this.redis.zrem(this.key(`pending:${type}`), jobId);
       if (!removed) continue; // Another worker got it
