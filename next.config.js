@@ -189,7 +189,7 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Headers",
-            value: "Content-Type, Authorization",
+            value: "Content-Type, Authorization, x-speraxos-token, x-api-key",
           },
           {
             key: "Access-Control-Max-Age",

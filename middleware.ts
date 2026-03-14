@@ -130,9 +130,33 @@ export default async function middleware(request: NextRequest) {
   }
 
   // ── API routes ────────────────────────────────────────────────────────────
+
+  // ── CORS preflight — respond immediately, skip rate limiting / x402 ───────
+  if (request.method === "OPTIONS" && pathname.startsWith("/api/")) {
+    const origin = request.headers.get("origin") ?? "";
+    const preflightHeaders: Record<string, string> = {
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "Content-Type, Authorization, x-speraxos-token, x-api-key",
+      "Access-Control-Max-Age": "86400",
+      ...SECURITY_HEADERS,
+    };
+    if (origin && isTrustedOrigin(origin)) {
+      preflightHeaders["Access-Control-Allow-Origin"] = origin;
+      preflightHeaders["Vary"] = "Origin";
+    } else {
+      preflightHeaders["Access-Control-Allow-Origin"] = "*";
+    }
+    return new NextResponse(null, { status: 204, headers: preflightHeaders });
+  }
+
   const start = Date.now();
   const requestId = generateRequestId();
   const speraxos = await isSperaxOSRequest(request);
+
+  // Browser-based trusted origin bypass (Origin is reliable in browser context)
+  const reqOrigin = request.headers.get("origin") ?? "";
+  const trustedOriginRequest = !speraxos && !!reqOrigin && isTrustedOrigin(reqOrigin);
 
   const headers: Record<string, string> = {
     "X-Request-ID": requestId,
@@ -140,10 +164,13 @@ export default async function middleware(request: NextRequest) {
     ...SECURITY_HEADERS,
   };
 
-  if (speraxos) {
+  if (speraxos || trustedOriginRequest) {
     headers["X-Priority"] = "speraxos";
     headers["X-SperaxOS"] = "1";
     headers["Vary"] = "Origin";
+    if (reqOrigin) {
+      headers["Access-Control-Allow-Origin"] = reqOrigin;
+    }
   }
 
   // Suspicious payload detection — reject likely injection attempts early
@@ -307,7 +334,7 @@ export default async function middleware(request: NextRequest) {
 
   // ── AI endpoint gating ─────────────────────────────────────────────────
   // Free keys are no longer issued. Reject any existing free keys.
-  if (resolvedTier === "free" && !speraxos) {
+  if (resolvedTier === "free" && !speraxos && !trustedOriginRequest) {
     return NextResponse.json(
       {
         error: "Free tier discontinued",
@@ -324,7 +351,7 @@ export default async function middleware(request: NextRequest) {
 
   // ── /api/register rate limit — prevent abuse / key enumeration ──────────
   // This route is exempt from regular rate limiting, so we apply a separate limit.
-  if (pathname === "/api/register" && !speraxos) {
+  if (pathname === "/api/register" && !speraxos && !trustedOriginRequest) {
     const regIp = getClientIp(request);
     const regRl = await checkRateLimit(`register:${regIp}`, "public");
     // Override with the register-specific limits
@@ -363,7 +390,7 @@ export default async function middleware(request: NextRequest) {
     }
 
     // ── Tier-aware rate limiting ──────────────────────────────────────────
-    if (speraxos || isAlibabaGateway) {
+    if (speraxos || trustedOriginRequest || isAlibabaGateway) {
       headers["X-RateLimit-Limit"] = "unlimited";
       headers["X-RateLimit-Remaining"] = "unlimited";
     } else if (resolvedTier && resolvedKeyId) {
@@ -490,7 +517,7 @@ export default async function middleware(request: NextRequest) {
     }
 
     // ── Per-route rate limits for expensive endpoints ──────────────────────
-    if (!speraxos && !isAlibabaGateway) {
+    if (!speraxos && !trustedOriginRequest && !isAlibabaGateway) {
       const routeLimit = findRouteRateLimit(pathname);
       if (routeLimit) {
         const routeKey = resolvedKeyId
@@ -522,6 +549,7 @@ export default async function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/api/") &&
     !speraxos &&
+    !trustedOriginRequest &&
     !isAlibabaGateway &&
     !resolvedKeyId &&
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
@@ -540,10 +568,11 @@ export default async function middleware(request: NextRequest) {
 
   // Forward tier metadata to route handlers
   const isFreeTierRequest =
-    !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS) && !resolvedKeyId;
+    !speraxos && !trustedOriginRequest && matchesPattern(pathname, FREE_TIER_PATTERNS) && !resolvedKeyId;
   const requestHeaders = new Headers(request.headers);
   if (isFreeTierRequest) requestHeaders.set("x-free-tier", "1");
   if (apiClient) requestHeaders.set("x-api-client", "1");
+  if (speraxos || trustedOriginRequest) requestHeaders.set("x-speraxos", "1");
 
   if (resolvedTier) {
     requestHeaders.set("x-key-tier", resolvedTier);
