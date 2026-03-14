@@ -109,9 +109,9 @@ export function authorSlug(name: string): string {
     .toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, '') // Remove non-word chars except spaces/hyphens
-    .replace(/\s+/g, '-')     // Spaces → hyphens
-    .replace(/-+/g, '-')      // Collapse multiple hyphens
-    .replace(/^-|-$/g, '');   // Trim leading/trailing hyphens
+    .replace(/\s+/g, '-') // Spaces → hyphens
+    .replace(/-+/g, '-') // Collapse multiple hyphens
+    .replace(/^-|-$/g, ''); // Trim leading/trailing hyphens
 }
 
 /**
