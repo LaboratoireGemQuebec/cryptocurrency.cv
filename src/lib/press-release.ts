@@ -59,8 +59,3 @@ export function sanitizeInput(input: string): string {
 
 // In-memory store (shared across routes)
 export const pressReleaseStore: PressReleaseSubmission[] = [];
-
-export function sanitizeInput(input: string): string {
-  // Basic sanitization to prevent XSS
-  return input.replace(/<script.*?>.*?<\/script>/gi, '').replace(/on\w+=/gi, '');
-}

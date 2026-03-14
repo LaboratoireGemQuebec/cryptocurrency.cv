@@ -4,6 +4,7 @@ import { ResendProvider, ConsoleProvider } from './provider';
 describe('ResendProvider', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
+    vi.unstubAllGlobals();
   });
 
   it('sends email via Resend API', async () => {

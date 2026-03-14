@@ -1,30 +1,29 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
-// Mock the provider module before imports
-vi.mock('./provider', () => ({
-  ResendProvider: vi.fn().mockImplementation(() => ({
-    send: vi.fn().mockResolvedValue({ id: 'mock_123' }),
-  })),
-  ConsoleProvider: vi.fn().mockImplementation(() => ({
-    send: vi.fn().mockResolvedValue({ id: 'console_mock' }),
-  })),
-}));
-
 describe('Email Index', () => {
   beforeEach(() => {
     vi.resetModules();
+    vi.unstubAllGlobals();
     delete process.env.RESEND_API_KEY;
   });
 
-  it('uses ConsoleProvider when no RESEND_API_KEY', async () => {
+  it('returns a provider with send() when no RESEND_API_KEY', async () => {
     const { getEmailProvider } = await import('./index');
     const provider = getEmailProvider();
-    const result = await provider.send({
+    expect(provider).toBeDefined();
+    expect(typeof provider.send).toBe('function');
+  });
+
+  it('sendEmail delegates to provider', async () => {
+    // Spy on console.log to suppress ConsoleProvider output
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    const { sendEmail } = await import('./index');
+    const result = await sendEmail({
       to: 'test@test.com',
       subject: 'Test',
       html: '<p>test</p>',
     });
-    expect(result.id).toBeDefined();
+    expect(result.id).toMatch(/^console_/);
   });
 
   it('re-exports templates', async () => {
