@@ -29,11 +29,7 @@
 
 import { redisGet, redisSet, isRedisAvailable, initRedis } from './redis';
 import { logger } from '@/lib/logger';
-import {
-  CircuitBreaker,
-  CircuitOpenError,
-  CircuitState,
-} from './circuit-breaker';
+import { CircuitBreaker, CircuitOpenError, CircuitState } from './circuit-breaker';
 
 // ─── Pipeline Redis Keys ────────────────────────────────────────────────────
 
@@ -49,21 +45,21 @@ export const pipelineKeys = {
 // ─── Pipeline TTLs (seconds) — 3× the fetch interval as safety margin ─────
 
 export const pipelineTTL = {
-  prices: 60,         // fetched every 10 s → stale after 60 s
-  news: 300,          // fetched every 60 s → stale after 5 min
-  fearGreed: 1800,    // fetched every 5 min → stale after 30 min
-  gas: 90,            // fetched every 15 s → stale after 90 s
-  fundingRates: 300,  // fetched every 60 s → stale after 5 min
+  prices: 60, // fetched every 10 s → stale after 60 s
+  news: 300, // fetched every 60 s → stale after 5 min
+  fearGreed: 1800, // fetched every 5 min → stale after 30 min
+  gas: 90, // fetched every 15 s → stale after 90 s
+  fundingRates: 300, // fetched every 60 s → stale after 5 min
 } as const;
 
 // ─── Fetch Intervals (ms) ──────────────────────────────────────────────────
 
 const INTERVALS = {
-  prices: 10_000,         // 10 s
-  news: 60_000,           // 60 s
-  fearGreed: 300_000,     // 5 min
-  gas: 15_000,            // 15 s
-  fundingRates: 60_000,   // 60 s
+  prices: 10_000, // 10 s
+  news: 60_000, // 60 s
+  fearGreed: 300_000, // 5 min
+  gas: 15_000, // 15 s
+  fundingRates: 60_000, // 60 s
 } as const;
 
 // ─── Dedicated Circuit Breakers ─────────────────────────────────────────────
@@ -151,9 +147,7 @@ function recordSuccess(name: SourceName, latencyMs: number): void {
   h.consecutiveErrors = 0;
   h.totalFetches++;
   // Exponential moving average for latency
-  h.avgLatencyMs = h.avgLatencyMs === 0
-    ? latencyMs
-    : h.avgLatencyMs * 0.8 + latencyMs * 0.2;
+  h.avgLatencyMs = h.avgLatencyMs === 0 ? latencyMs : h.avgLatencyMs * 0.8 + latencyMs * 0.2;
   h.circuitState = pipelineBreakers[name].getState();
 }
 
@@ -212,10 +206,26 @@ const TOP_RSS_FEEDS = [
 // ─── Default Coins for Price Pipeline ──────────────────────────────────────
 
 const PIPELINE_COINS = [
-  'bitcoin', 'ethereum', 'solana', 'binancecoin', 'ripple',
-  'cardano', 'dogecoin', 'avalanche-2', 'polkadot', 'chainlink',
-  'toncoin', 'shiba-inu', 'polygon-ecosystem-token', 'litecoin',
-  'uniswap', 'near', 'stellar', 'aptos', 'arbitrum', 'sui',
+  'bitcoin',
+  'ethereum',
+  'solana',
+  'binancecoin',
+  'ripple',
+  'cardano',
+  'dogecoin',
+  'avalanche-2',
+  'polkadot',
+  'chainlink',
+  'toncoin',
+  'shiba-inu',
+  'polygon-ecosystem-token',
+  'litecoin',
+  'uniswap',
+  'near',
+  'stellar',
+  'aptos',
+  'arbitrum',
+  'sui',
 ];
 
 // ─── Fetch Functions ────────────────────────────────────────────────────────
@@ -226,17 +236,35 @@ const PIPELINE_COINS = [
 async function fetchPrices(): Promise<Record<string, unknown>> {
   // Try Binance first (faster, no rate limit issues)
   try {
-    const binanceSymbols = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT',
-      'ADAUSDT', 'DOGEUSDT', 'AVAXUSDT', 'DOTUSDT', 'LINKUSDT',
-      'TONUSDT', 'SHIBUSDT', 'POLUSDT', 'LTCUSDT', 'UNIUSDT',
-      'NEARUSDT', 'XLMUSDT', 'APTUSDT', 'ARBUSDT', 'SUIUSDT'];
+    const binanceSymbols = [
+      'BTCUSDT',
+      'ETHUSDT',
+      'SOLUSDT',
+      'BNBUSDT',
+      'XRPUSDT',
+      'ADAUSDT',
+      'DOGEUSDT',
+      'AVAXUSDT',
+      'DOTUSDT',
+      'LINKUSDT',
+      'TONUSDT',
+      'SHIBUSDT',
+      'POLUSDT',
+      'LTCUSDT',
+      'UNIUSDT',
+      'NEARUSDT',
+      'XLMUSDT',
+      'APTUSDT',
+      'ARBUSDT',
+      'SUIUSDT',
+    ];
 
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 6000);
 
     const res = await fetch(
       'https://api.binance.com/api/v3/ticker/24hr?symbols=' +
-      encodeURIComponent(JSON.stringify(binanceSymbols)),
+        encodeURIComponent(JSON.stringify(binanceSymbols)),
       { signal: controller.signal },
     );
     clearTimeout(timer);
@@ -246,13 +274,26 @@ async function fetchPrices(): Promise<Record<string, unknown>> {
       const result: Record<string, { usd: number; usd_24h_change: number }> = {};
 
       const symbolToCoinId: Record<string, string> = {
-        BTCUSDT: 'bitcoin', ETHUSDT: 'ethereum', SOLUSDT: 'solana',
-        BNBUSDT: 'binancecoin', XRPUSDT: 'ripple', ADAUSDT: 'cardano',
-        DOGEUSDT: 'dogecoin', AVAXUSDT: 'avalanche-2', DOTUSDT: 'polkadot',
-        LINKUSDT: 'chainlink', TONUSDT: 'toncoin', SHIBUSDT: 'shiba-inu',
-        POLUSDT: 'polygon-ecosystem-token', LTCUSDT: 'litecoin',
-        UNIUSDT: 'uniswap', NEARUSDT: 'near', XLMUSDT: 'stellar',
-        APTUSDT: 'aptos', ARBUSDT: 'arbitrum', SUIUSDT: 'sui',
+        BTCUSDT: 'bitcoin',
+        ETHUSDT: 'ethereum',
+        SOLUSDT: 'solana',
+        BNBUSDT: 'binancecoin',
+        XRPUSDT: 'ripple',
+        ADAUSDT: 'cardano',
+        DOGEUSDT: 'dogecoin',
+        AVAXUSDT: 'avalanche-2',
+        DOTUSDT: 'polkadot',
+        LINKUSDT: 'chainlink',
+        TONUSDT: 'toncoin',
+        SHIBUSDT: 'shiba-inu',
+        POLUSDT: 'polygon-ecosystem-token',
+        LTCUSDT: 'litecoin',
+        UNIUSDT: 'uniswap',
+        NEARUSDT: 'near',
+        XLMUSDT: 'stellar',
+        APTUSDT: 'aptos',
+        ARBUSDT: 'arbitrum',
+        SUIUSDT: 'sui',
       };
 
       for (const ticker of tickers) {
@@ -299,7 +340,9 @@ async function fetchNews(): Promise<Record<string, unknown>> {
     TOP_RSS_FEEDS.map(async (url) => {
       const res = await fetch(url, {
         signal: controller.signal,
-        headers: { 'User-Agent': 'free-crypto-news/1.0 (+https://github.com/nirholas/free-crypto-news)' },
+        headers: {
+          'User-Agent': 'free-crypto-news/1.0 (+https://github.com/nirholas/free-crypto-news)',
+        },
       });
       if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
       const text = await res.text();
@@ -309,8 +352,8 @@ async function fetchNews(): Promise<Record<string, unknown>> {
 
   clearTimeout(timer);
 
-  const succeeded = results.filter(r => r.status === 'fulfilled').length;
-  const failed = results.filter(r => r.status === 'rejected').length;
+  const succeeded = results.filter((r) => r.status === 'fulfilled').length;
+  const failed = results.filter((r) => r.status === 'rejected').length;
 
   // We store a lightweight summary — the actual parsing happens in the
   // existing getLatestNews() function which API routes call. The pipeline
@@ -347,11 +390,16 @@ async function fetchFearGreed(): Promise<Record<string, unknown>> {
   if (!currentData.data?.[0]) throw new Error('Invalid FNG response');
 
   const value = parseInt(currentData.data[0].value);
-  const classification = value <= 20 ? 'Extreme Fear'
-    : value <= 40 ? 'Fear'
-    : value <= 60 ? 'Neutral'
-    : value <= 80 ? 'Greed'
-    : 'Extreme Greed';
+  const classification =
+    value <= 20
+      ? 'Extreme Fear'
+      : value <= 40
+        ? 'Fear'
+        : value <= 60
+          ? 'Neutral'
+          : value <= 80
+            ? 'Greed'
+            : 'Extreme Greed';
 
   return {
     current: {
@@ -360,10 +408,12 @@ async function fetchFearGreed(): Promise<Record<string, unknown>> {
       timestamp: parseInt(currentData.data[0].timestamp) * 1000,
       timeUntilUpdate: currentData.data[0].time_until_update || 'Unknown',
     },
-    historical: (histData.data || []).map((item: { value: string; timestamp: string; time_until_update?: string }) => ({
-      value: parseInt(item.value),
-      timestamp: parseInt(item.timestamp) * 1000,
-    })),
+    historical: (histData.data || []).map(
+      (item: { value: string; timestamp: string; time_until_update?: string }) => ({
+        value: parseInt(item.value),
+        timestamp: parseInt(item.timestamp) * 1000,
+      }),
+    ),
     _timestamp: new Date().toISOString(),
     _source: 'alternative.me',
   };
@@ -441,16 +491,13 @@ async function runFetchLoop(
     await redisSet(key, data, ttl);
     recordSuccess(name, latency);
 
-     
     logger.info(`[Pipeline] ${name} OK (${latency}ms)`);
   } catch (error) {
     recordError(name, error);
 
     if (error instanceof CircuitOpenError) {
-       
       logger.warn(`[Pipeline] ${name} SKIPPED — circuit open`);
     } else {
-       
       logger.error(`[Pipeline] ${name} FAILED`, error instanceof Error ? error : undefined);
     }
     // Pipeline does NOT throw — stale data remains in Redis
@@ -475,7 +522,6 @@ export async function startPipeline(): Promise<void> {
   // Ensure Redis is ready (falls back to memory if unavailable)
   await initRedis().catch(() => {});
 
-   
   logger.info('[Pipeline] Starting real-time data pipeline…');
 
   // Initialize health entries
@@ -489,7 +535,12 @@ export async function startPipeline(): Promise<void> {
     runFetchLoop('news', pipelineKeys.news, pipelineTTL.news, fetchNews),
     runFetchLoop('fearGreed', pipelineKeys.fearGreed, pipelineTTL.fearGreed, fetchFearGreed),
     runFetchLoop('gas', pipelineKeys.gas, pipelineTTL.gas, fetchGas),
-    runFetchLoop('fundingRates', pipelineKeys.fundingRates, pipelineTTL.fundingRates, fetchFundingRates),
+    runFetchLoop(
+      'fundingRates',
+      pipelineKeys.fundingRates,
+      pipelineTTL.fundingRates,
+      fetchFundingRates,
+    ),
   ]);
 
   // ── Schedule recurring loops ──
@@ -509,7 +560,8 @@ export async function startPipeline(): Promise<void> {
 
   _timers.push(
     setInterval(
-      () => runFetchLoop('fearGreed', pipelineKeys.fearGreed, pipelineTTL.fearGreed, fetchFearGreed),
+      () =>
+        runFetchLoop('fearGreed', pipelineKeys.fearGreed, pipelineTTL.fearGreed, fetchFearGreed),
       INTERVALS.fearGreed,
     ),
   );
@@ -523,12 +575,17 @@ export async function startPipeline(): Promise<void> {
 
   _timers.push(
     setInterval(
-      () => runFetchLoop('fundingRates', pipelineKeys.fundingRates, pipelineTTL.fundingRates, fetchFundingRates),
+      () =>
+        runFetchLoop(
+          'fundingRates',
+          pipelineKeys.fundingRates,
+          pipelineTTL.fundingRates,
+          fetchFundingRates,
+        ),
       INTERVALS.fundingRates,
     ),
   );
 
-   
   logger.info('[Pipeline] All fetch loops scheduled');
 }
 
@@ -540,7 +597,7 @@ export function stopPipeline(): void {
   _timers.length = 0;
   _running = false;
   _startedAt = null;
-   
+
   logger.info('[Pipeline] Stopped');
 }
 

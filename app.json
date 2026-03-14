@@ -1,0 +1,15 @@
+{
+  "name": "Free Crypto News",
+  "description": "Real-time crypto news API from 200+ sources. Free, no API key.",
+  "repository": "https://github.com/nirholas/free-crypto-news",
+  "keywords": ["crypto", "news", "api", "ai"],
+  "env": {
+    "GROQ_API_KEY": {
+      "description": "Optional — Groq API key for AI features (free at console.groq.com)",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ]
+}

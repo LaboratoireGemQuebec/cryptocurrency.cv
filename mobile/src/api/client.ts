@@ -54,6 +54,26 @@ export interface FearGreed {
   timestamp: string;
 }
 
+export interface ChartDataPoint {
+  timestamp: number;
+  price: number;
+  volume: number;
+}
+
+export interface ChartResponse {
+  coin: string;
+  range: string;
+  priceData: ChartDataPoint[];
+  stats: {
+    high: number;
+    low: number;
+    open: number;
+    close: number;
+    changePercent: number;
+    avgVolume: number;
+  };
+}
+
 class CryptoNewsClient {
   private baseUrl: string;
 
@@ -141,6 +161,10 @@ class CryptoNewsClient {
 
   async getCoinPrice(symbol: string): Promise<MarketCoin> {
     return this.fetch(`/api/market/coins/${symbol.toLowerCase()}`);
+  }
+
+  async getChartData(coinId: string, range: string = '24h'): Promise<ChartResponse> {
+    return this.fetch('/api/charts', { coin: coinId.toLowerCase(), range });
   }
 
   // Utility

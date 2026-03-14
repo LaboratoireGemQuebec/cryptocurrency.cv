@@ -440,7 +440,7 @@ curl "https://cryptocurrency.cv/api/news?lang=ar"
 ### Translation Requirements
 
 - **API Key**: Requires `GROQ_API_KEY` environment variable (FREE at [console.groq.com](https://console.groq.com/keys))
-- **Feature Flag**: Set `FEATURE_TRANSLATION=true` for real-time translation
+- **Auto-enabled**: Translation activates automatically when `GROQ_API_KEY` is set
 - **Fallback**: Returns English if translation fails
 
 ---
@@ -792,8 +792,7 @@ Create a PR with your translation improvements. Include:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GROQ_API_KEY` | For API translation | Free API key from [console.groq.com](https://console.groq.com/keys) |
-| `FEATURE_TRANSLATION` | No | Set to `true` to enable real-time API translation |
+| `GROQ_API_KEY` | For API translation | Free API key from [console.groq.com](https://console.groq.com/keys). Translation is auto-enabled when set. |
 | `OPENAI_API_KEY` | For doc translation | Required for `npm run i18n:translate` script |
 
 ---
@@ -829,8 +828,7 @@ export const defaultLocale = 'es'; // Change from 'en'
 ### Why isn't translation working on the API?
 
 1. Check `GROQ_API_KEY` is set
-2. Check `FEATURE_TRANSLATION=true` is set
-3. Check the `lang` parameter is a supported locale
+2. Check the `lang` parameter is a supported locale
 
 ### How do I handle missing translations?
 

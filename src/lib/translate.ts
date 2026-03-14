@@ -10,13 +10,13 @@
 
 /**
  * News Translation Service
- * 
+ *
  * Translates news articles to different languages using Groq (free, fast inference).
  * Includes caching to avoid re-translating the same articles.
- * 
+ *
  * Translation is enabled automatically when GROQ_API_KEY is set.
  * When no API key is configured, returns original untranslated content.
- * 
+ *
  * SETUP: Set GROQ_API_KEY environment variable with your free Groq API key.
  * Get one at: https://console.groq.com/keys
  */
@@ -96,15 +96,18 @@ const translationCache = new TranslationCache();
 // Sliding window rate limiter for Groq free tier
 class SlidingWindowRateLimiter {
   private timestamps: number[] = [];
-  constructor(private maxRequests: number, private windowMs: number) {}
+  constructor(
+    private maxRequests: number,
+    private windowMs: number,
+  ) {}
 
   async acquire(): Promise<void> {
     const now = Date.now();
-    this.timestamps = this.timestamps.filter(t => now - t < this.windowMs);
+    this.timestamps = this.timestamps.filter((t) => now - t < this.windowMs);
     if (this.timestamps.length >= this.maxRequests) {
       const oldestInWindow = this.timestamps[0];
       const waitMs = this.windowMs - (now - oldestInWindow);
-      await new Promise(resolve => setTimeout(resolve, waitMs));
+      await new Promise((resolve) => setTimeout(resolve, waitMs));
       return this.acquire();
     }
     this.timestamps.push(now);
@@ -175,10 +178,10 @@ function getCacheKey(articleLink: string, lang: string): string {
  */
 async function translateWithGroq(
   texts: { title: string; description: string }[],
-  targetLang: string
+  targetLang: string,
 ): Promise<{ title: string; description: string }[]> {
   const apiKey = process.env.GROQ_API_KEY;
-  
+
   if (!apiKey) {
     throw new Error('GROQ_API_KEY not configured. Get a free key at https://console.groq.com/keys');
   }
@@ -200,14 +203,15 @@ ${JSON.stringify(texts, null, 2)}`;
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
       model: 'llama-3.3-70b-versatile',
       messages: [
         {
           role: 'system',
-          content: 'You are a professional translator specializing in cryptocurrency and finance news. Always respond with valid JSON only, no markdown code blocks.',
+          content:
+            'You are a professional translator specializing in cryptocurrency and finance news. Always respond with valid JSON only, no markdown code blocks.',
         },
         {
           role: 'user',
@@ -245,7 +249,7 @@ ${JSON.stringify(texts, null, 2)}`;
  */
 async function translateWithFallback(
   texts: { title: string; description: string }[],
-  targetLang: string
+  targetLang: string,
 ): Promise<{ title: string; description: string }[]> {
   try {
     return await translateWithGroq(texts, targetLang);
@@ -257,27 +261,29 @@ async function translateWithFallback(
 
 /**
  * Translate an array of articles to the target language
- * 
+ *
  * Returns original articles if:
  * - GROQ_API_KEY is not set
  * - Target language is English
  */
 export async function translateArticles<T extends TranslatableArticle>(
   articles: T[],
-  targetLang: string
+  targetLang: string,
 ): Promise<T[]> {
   // Return original if no API key configured (graceful no-op)
   if (!process.env.GROQ_API_KEY) {
     return articles;
   }
-  
+
   // English is the source language, no translation needed
   if (targetLang === 'en') {
     return articles;
   }
 
   if (!isLanguageSupported(targetLang)) {
-    throw new Error(`Unsupported language: ${targetLang}. Supported: ${Object.keys(SUPPORTED_LANGUAGES).join(', ')}`);
+    throw new Error(
+      `Unsupported language: ${targetLang}. Supported: ${Object.keys(SUPPORTED_LANGUAGES).join(', ')}`,
+    );
   }
 
   const apiKey = process.env.GROQ_API_KEY;

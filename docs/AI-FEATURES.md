@@ -2124,9 +2124,8 @@ Translate news content to 18 languages.
 
 ### Requirements
 
-- `GROQ_API_KEY` environment variable
-- `FEATURE_TRANSLATION=true` to enable real-time translation
-- Translations cached for 7 days
+- `GROQ_API_KEY` environment variable (enables real-time translation automatically)
+- Translations cached for 24 hours
 
 ---
 

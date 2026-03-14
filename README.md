@@ -571,7 +571,7 @@ curl "https://cryptocurrency.cv/api/bitcoin?lang=zh-CN"
 **Requirements:**
 
 - Set `GROQ_API_KEY` environment variable (FREE at [console.groq.com/keys](https://console.groq.com/keys))
-- Set `FEATURE_TRANSLATION=true` to enable
+- Translation is auto-enabled when `GROQ_API_KEY` is set
 
 **Endpoints with Translation Support:**
 | Endpoint | `?lang=` Support |
@@ -2960,8 +2960,7 @@ Open http://localhost:3000/api/news
 
 | Variable               | Default           | Description                                                                                                                 |
 | ---------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `GROQ_API_KEY`         | -                 | Enables i18n auto-translation (18 languages). **FREE!** Get yours at [console.groq.com/keys](https://console.groq.com/keys) |
-| `FEATURE_TRANSLATION`  | `false`           | Set to `true` to enable real-time translation                                                                               |
+| `GROQ_API_KEY`         | -                 | Enables AI summarization, classification & real-time translation (40+ languages). **FREE!** Get yours at [console.groq.com/keys](https://console.groq.com/keys) |
 | `REDDIT_CLIENT_ID`     | -                 | Enables Reddit social signals                                                                                               |
 | `REDDIT_CLIENT_SECRET` | -                 | Reddit OAuth secret                                                                                                         |
 | `X_AUTH_TOKEN`         | -                 | X/Twitter signals via [XActions](https://github.com/nirholas/XActions)                                                      |
@@ -2984,8 +2983,7 @@ Open http://localhost:3000/api/news
 For full functionality, add these secrets to your repository:
 
 ```
-GROQ_API_KEY        # For i18n translations (FREE! https://console.groq.com/keys)
-FEATURE_TRANSLATION # Set to 'true' to enable translations
+GROQ_API_KEY        # For AI & translations (FREE! https://console.groq.com/keys)
 REDDIT_CLIENT_ID    # For Reddit data (register at reddit.com/prefs/apps)
 REDDIT_CLIENT_SECRET
 X_AUTH_TOKEN        # For X/Twitter (from XActions login)
