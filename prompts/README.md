@@ -59,6 +59,23 @@ Actionable prompts designed to be fed to AI coding agents (Claude, Copilot, Code
 | 34  | [34-php-sdk-composer-package.md](./34-php-sdk-composer-package.md)                 | Publish PHP SDK to Packagist with CI, tests, and version tagging                  | Easy       |
 | 35  | [35-telegram-bot-missing-handlers.md](./35-telegram-bot-missing-handlers.md)       | Implement all "coming soon" callback handlers in Telegram bot                     | Easy       |
 
+### Competitive Parity (match CoinDesk & CoinTelegraph feature set)
+
+| #   | Prompt                                                                         | Goal                                                                                      | Difficulty |
+| --- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ---------- |
+| 47  | [47-videos-hub.md](./47-videos-hub.md)                                         | Aggregate crypto YouTube content into a branded video hub with embeds and filters          | Medium     |
+| 48  | [48-newsletters-hub.md](./48-newsletters-hub.md)                               | Build newsletters landing page with 5 named newsletters and per-newsletter subscribe      | Medium     |
+| 49  | [49-opinion-editorial-section.md](./49-opinion-editorial-section.md)           | Create dedicated opinion section with auto-detection and clear labeling                   | Medium     |
+| 50  | [50-author-pages.md](./50-author-pages.md)                                     | Build author directory and per-author article pages with cross-source aggregation         | Medium     |
+| 51  | [51-tag-pages.md](./51-tag-pages.md)                                           | Create tag system with tag cloud, trending tags, and per-tag article listings             | Medium     |
+| 52  | [52-crypto-glossary.md](./52-crypto-glossary.md)                               | Build 150+ term crypto glossary with search, tooltips, and per-term SEO pages             | Medium     |
+| 53  | [53-educational-guides.md](./53-educational-guides.md)                         | Create 12 beginner guide series with 60+ educational articles and progress tracking       | Hard       |
+| 54  | [54-advertise-sponsorship-page.md](./54-advertise-sponsorship-page.md)         | Build advertising info page with audience stats and sponsorship options                    | Easy       |
+| 55  | [55-ethics-editorial-policy.md](./55-ethics-editorial-policy.md)               | Publish editorial policy covering source selection, AI disclosure, and conflicts           | Easy       |
+| 56  | [56-masthead-team-page.md](./56-masthead-team-page.md)                         | Create team page with bios, GitHub contributors integration, and join-us CTA              | Easy       |
+| 57  | [57-press-release-submission.md](./57-press-release-submission.md)             | Build self-serve PR submission system with form, review workflow, and listing page         | Hard       |
+| 58  | [58-news-verticals.md](./58-news-verticals.md)                                 | Split news into Business, Tech, Web3, DeFi verticals with auto-classification             | Medium     |
+
 ## How to Use
 
 1. Copy the entire contents of a prompt file
@@ -107,3 +124,12 @@ Each prompt is self-contained with:
 - Prompt 28 (Blog) + 33 (Translation) + 34 (PHP SDK) + 35 (Telegram) — quick wins
 - Prompt 26 (Pro tier) + 27 (Email) + 29 (Webhooks) — monetization
 - Prompt 30 (Redis queue) + 32 (On-chain) + 31 (Mobile) — infrastructure
+
+**Phase 7 — Competitive Parity (Week 8-12)**
+
+- Prompt 47 (Videos hub) + 48 (Newsletters hub) — media & engagement
+- Prompt 49 (Opinion section) + 58 (News verticals) — content structure
+- Prompt 50 (Author pages) + 51 (Tag pages) — discovery & SEO
+- Prompt 52 (Glossary) + 53 (Educational guides) — education & SEO magnet
+- Prompt 54 (Advertise) + 57 (Press release submission) — monetization
+- Prompt 55 (Ethics/editorial policy) + 56 (Team page) — trust & credibility
