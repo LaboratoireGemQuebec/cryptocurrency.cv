@@ -44,6 +44,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-mono',
   display: 'swap',
+  preload: false,
 });
 
 // Dynamic rendering is auto-detected via headers() call for CSP nonce.

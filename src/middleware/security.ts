@@ -46,9 +46,10 @@ export const SECURITY_HEADERS: Record<string, string> = {
  * Build a Content-Security-Policy header value with a per-request nonce.
  *
  * Uses nonce-based inline script control combined with explicit domain
- * allowlists for third-party scripts.  `'unsafe-inline'` is kept as a
- * backward-compatible fallback for older browsers that do not support
- * nonces — modern browsers automatically ignore it when a nonce is present.
+ * allowlists for third-party scripts.  `'unsafe-inline'` is intentionally
+ * omitted from `script-src` — when a nonce is present, modern browsers
+ * ignore it anyway, and omitting it avoids confusion about the effective
+ * policy.
  *
  * NOTE: We intentionally do NOT use `'strict-dynamic'` because it disables
  * `'self'` and host-based allowlisting.  Next.js does not reliably inject
@@ -60,7 +61,7 @@ export function buildCspHeader(nonce: string): string {
   return [
     "default-src 'self'",
     [
-      `script-src 'self' 'nonce-${nonce}' 'unsafe-inline'`,
+      `script-src 'self' 'nonce-${nonce}'`,
       // Google Analytics / Tag Manager
       'https://www.googletagmanager.com',
       'https://www.google-analytics.com',

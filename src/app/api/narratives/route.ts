@@ -76,10 +76,10 @@ export async function GET(request: NextRequest) {
       console.error('Failed to fetch latest news for narratives:', fetchErr);
       return NextResponse.json(
         { error: 'News fetch temporarily unavailable', narratives: [] },
-        { status: 503, headers: { 'Retry-After': '60' } }
+        { status: 503, headers: { 'Retry-After': '60' } },
       );
     }
-    
+
     if (data.articles.length === 0) {
       return NextResponse.json({
         narratives: [],
@@ -87,7 +87,7 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    const articlesForAnalysis = data.articles.map(a => ({
+    const articlesForAnalysis = data.articles.map((a) => ({
       title: a.title,
       link: a.link,
       source: a.source,
@@ -98,33 +98,32 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptAIJson<NarrativesResponse>(
-      SYSTEM_PROMPT,
-      userPrompt,
-      { maxTokens: 4000, temperature: 0.4 }
-    );
+    const result = await promptAIJson<NarrativesResponse>(SYSTEM_PROMPT, userPrompt, {
+      maxTokens: 4000,
+      temperature: 0.4,
+    });
 
     // Filter and sort narratives
     let narratives = result.narratives || [];
-    
+
     if (emerging) {
-      narratives = narratives.filter(n => n.emerging);
+      narratives = narratives.filter((n) => n.emerging);
     }
-    
+
     // Sort by strength
     narratives.sort((a, b) => b.strength - a.strength);
 
     // Calculate narrative diversity
-    const bullishCount = narratives.filter(n => n.sentiment === 'bullish').length;
-    const bearishCount = narratives.filter(n => n.sentiment === 'bearish').length;
-    const neutralCount = narratives.filter(n => n.sentiment === 'neutral').length;
+    const bullishCount = narratives.filter((n) => n.sentiment === 'bullish').length;
+    const bearishCount = narratives.filter((n) => n.sentiment === 'bearish').length;
+    const neutralCount = narratives.filter((n) => n.sentiment === 'neutral').length;
 
     return NextResponse.json(
       {
         narratives,
         summary: {
           total: narratives.length,
-          emerging: narratives.filter(n => n.emerging).length,
+          emerging: narratives.filter((n) => n.emerging).length,
           sentimentBalance: {
             bullish: bullishCount,
             bearish: bearishCount,
@@ -140,7 +139,7 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
           'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
           'Access-Control-Allow-Origin': '*',
         },
-      }
+      },
     );
   } catch (error) {
     console.error('Narrative analysis error:', error);
@@ -148,8 +147,12 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       return aiAuthErrorResponse((error as Error).message);
     }
     return NextResponse.json(
-      { error: 'Failed to analyze narratives', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
-      { status: 500 }
+      {
+        error: 'Failed to analyze narratives',
+        narratives: [],
+        details: process.env.NODE_ENV === 'development' ? String(error) : undefined,
+      },
+      { status: 503, headers: { 'Retry-After': '120' } },
     );
   }
 }

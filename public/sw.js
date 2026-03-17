@@ -22,7 +22,6 @@ const IMAGE_CACHE = `images-${CACHE_VERSION}`;
 // Files to cache immediately on install
 const STATIC_ASSETS = [
   '/',
-  '/offline',
   '/manifest.json',
   '/favicon.svg',
   '/icons/icon.svg',
