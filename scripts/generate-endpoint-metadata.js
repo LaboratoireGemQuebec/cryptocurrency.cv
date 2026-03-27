@@ -63,6 +63,7 @@ function extractMethods(content) {
 function extractSearchParams(content) {
   const params = new Map(); // name -> { type, default, required }
 
+  // Pattern 1: searchParams.get('name')
   const getRegex = /searchParams\.get\(\s*["']([^"']+)["']\s*\)/g;
   let match;
   while ((match = getRegex.exec(content)) !== null) {
@@ -73,6 +74,48 @@ function extractSearchParams(content) {
         default: extractDefault(content, name),
         required: isRequired(content, name),
       });
+    }
+  }
+
+  // Pattern 2: Zod schemas used with validateQuery — extract z.object fields
+  const zodSchemaRegex = /(?:const|let)\s+\w+(?:Schema|QuerySchema)\s*=\s*z\.object\(\s*\{([\s\S]*?)\}\s*\)/g;
+  while ((match = zodSchemaRegex.exec(content)) !== null) {
+    const schemaBody = match[1];
+    // Match field definitions like: page: z.coerce.number().optional().default(1)
+    const fieldRegex = /(\w+)\s*:\s*z\.(coerce\.)?(string|number|boolean|enum)\b([^,}]*)/g;
+    let fieldMatch;
+    while ((fieldMatch = fieldRegex.exec(schemaBody)) !== null) {
+      const name = fieldMatch[1];
+      const zodType = fieldMatch[3];
+      const rest = fieldMatch[4] || "";
+      if (!params.has(name)) {
+        const isOptional = rest.includes(".optional()") || rest.includes(".default(");
+        const defaultMatch = rest.match(/\.default\(\s*["']?([^"')]+)["']?\s*\)/);
+        params.set(name, {
+          type: zodType === "number" ? "number" : "string",
+          default: defaultMatch ? defaultMatch[1] : null,
+          required: !isOptional,
+        });
+      }
+    }
+  }
+
+  // Pattern 3: request.json() destructuring for POST body params
+  // e.g., const { query, topK = 10, similarityThreshold = 0.5 } = await request.json()
+  const jsonDestructRegex = /(?:const|let)\s+\{([^}]+)\}\s*=\s*await\s+request\.json\(\)/g;
+  while ((match = jsonDestructRegex.exec(content)) !== null) {
+    const fields = match[1].split(",").map((f) => f.trim()).filter(Boolean);
+    for (const field of fields) {
+      const defaultAssign = field.match(/^(\w+)\s*=\s*(.+)$/);
+      const name = defaultAssign ? defaultAssign[1] : field.replace(/\s.*/, "");
+      if (name && /^\w+$/.test(name) && !params.has(name)) {
+        const defaultVal = defaultAssign ? defaultAssign[2].replace(/["']/g, "").trim() : null;
+        params.set(name, {
+          type: defaultVal && !isNaN(Number(defaultVal)) ? "number" : "string",
+          default: defaultVal,
+          required: !defaultAssign,
+        });
+      }
     }
   }
 

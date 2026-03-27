@@ -8,7 +8,7 @@
  * AUTO-GENERATED — Do not edit manually.
  * Run: node scripts/generate-endpoint-metadata.js
  *
- * Generated: 2026-03-27T06:18:57.399Z
+ * Generated: 2026-03-27T06:30:04.063Z
  * Total endpoints: 353
  *
  * Comprehensive endpoint metadata for OpenAPI spec generation,
@@ -165,6 +165,9 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/ai/relationships": {
     description: "AI-detected relationships between crypto entities and events",
     methods: ["POST"],
+    parameters: {
+      text: { type: "string", description: "Filter by text", required: true },
+    },
   },
 
   "/api/ai/research": {
@@ -1379,6 +1382,9 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/news/extract": {
     description: "Extract structured data from a news URL",
     methods: ["POST"],
+    parameters: {
+      url: { type: "string", description: "Filter by url", required: true },
+    },
   },
 
   "/api/news/international": {
@@ -1664,6 +1670,11 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/portfolio/tax-report": {
     description: "Generate comprehensive portfolio tax reports",
     methods: ["POST"],
+    parameters: {
+      transactions: { type: "string", description: "Filter by transactions", required: true },
+      year: { type: "string", description: "Filter by year", required: true },
+      method: { type: "string", description: "Filter by method", default: "fifo" },
+    },
   },
 
   "/api/predictions": {
