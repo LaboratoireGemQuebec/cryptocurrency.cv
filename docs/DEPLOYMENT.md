@@ -43,7 +43,7 @@ One-click deploy — no configuration required.
 | `GROQ_API_KEY` | Optional | Fast, free AI provider (recommended for getting started) |
 | `GOOGLE_GENERATIVE_AI_API_KEY` | Optional | Google Gemini AI provider |
 | `INNGEST_EVENT_KEY` | Optional | Inngest background job orchestration |
-| `INNGEST_SIGNING_KEY` | Optional | Inngest webhook signing |
+| `INNGEST_SIGNING_KEY` | Optional | Inngest event signing |
 | `VAPID_PUBLIC_KEY` | Optional | Web push notification public key |
 | `VAPID_PRIVATE_KEY` | Optional | Web push notification private key |
 | `SENTRY_DSN` | Optional | Sentry error monitoring |
@@ -249,5 +249,5 @@ Before going to production, verify:
 - [Architecture](ARCHITECTURE.md) — system design and data flow
 - [Scalability](SCALABILITY.md) — caching, edge runtime, load handling
 - [Security](SECURITY.md) — security policy, headers, and rate limiting
-- [Real-Time](REALTIME.md) — SSE, WebSocket, and push notification setup
+- [Real-Time](REALTIME.md) — SSE, WebSocket, and push notifications
 - [Database](DATABASE.md) — storage backends and Drizzle ORM

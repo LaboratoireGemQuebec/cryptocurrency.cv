@@ -587,8 +587,7 @@ Create:
 4. Request validation — input sanitization, size limits
 5. Response compression — auto gzip/brotli
 6. CORS configuration per tier
-7. Webhook delivery for pro/enterprise (new article, price alert)
-8. Gateway metrics available via logging
+7. Gateway metrics available via logging
 
 Currently using Upstash Redis for rate limiting in middleware.ts.
 Enhance this to support API keys and tiers.
@@ -605,7 +604,7 @@ Create an orchestration layer that:
 2. Handles authentication for paid APIs (rotate keys if rate limited)
 3. Normalizes all data into a common schema before storage
 4. Detect data quality issues (stale data, outliers, missing fields)
-5. Fan out to subscribers (WebSocket, webhooks, cache invalidation)
+5. Fan out to subscribers (WebSocket, SSE, cache invalidation)
 6. Maintain a data freshness dashboard
 7. Auto-disable sources that have been failing for >1 hour
 8. Generate a "data coverage" report — what % of the crypto market we cover

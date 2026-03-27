@@ -39,7 +39,6 @@ Documentation for the core library modules in Free Crypto News.
 - [Infrastructure](#infrastructure)
   - [cache.ts](#cachets)
   - [rate-limit.ts](#rate-limitts)
-  - [webhooks.ts](#webhooksts)
   - [x402.ts](#x402ts)
 
 ---
@@ -828,31 +827,6 @@ const result = await checkRateLimitByRequest(request);
 if (!result.allowed) {
   return rateLimitResponse(result);
 }
-```
-
----
-
-### webhooks.ts
-
-Webhook delivery and management.
-
-```typescript
-import { 
-  sendWebhook,
-  validateWebhook,
-  queueWebhook 
-} from '@/lib/webhooks';
-```
-
-#### Functions
-
-```typescript
-await sendWebhook({
-  url: 'https://example.com/webhook',
-  event: 'breaking_news',
-  payload: { article: {...} },
-  secret: 'webhook_secret',
-});
 ```
 
 ---

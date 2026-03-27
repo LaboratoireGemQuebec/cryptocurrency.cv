@@ -68,8 +68,7 @@ Step-by-step guides for common use cases:
 | [AI Features](./tutorials/ai-features.md) | Using AI-powered endpoints |
 | [Market Data](./tutorials/market-data.md) | Prices, charts, and market metrics |
 | [Real-Time Streaming](./tutorials/realtime-sse.md) | SSE and WebSocket feeds |
-| [Webhooks](./tutorials/webhooks-integrations.md) | Setting up webhook notifications |
-| [All Tutorials →](./tutorials/index.md) | Browse all 17+ tutorials |
+| [All Tutorials →](./tutorials/index.md) | Browse all tutorials |
 
 ---
 

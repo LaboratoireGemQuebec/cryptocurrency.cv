@@ -36,7 +36,7 @@ Submit PRs to these high-star curated lists. Each accepted PR generates permanen
 | **awesome-llm** | 20k+ | Search for current top awesome-llm list | 🟠 P1 | ☐ | LLM-ready API with llms.txt, MCP, RAG |
 | **awesome-rss** | 3k+ | [github.com/AboutRSS/ALL-about-RSS](https://github.com/AboutRSS/ALL-about-RSS) | 🟡 P2 | ☐ | RSS/Atom/OPML feeds for crypto news |
 | **awesome-pwa** | 4k+ | [github.com/nicedoc/awesome-pwa](https://github.com/nicedoc/awesome-pwa) | 🟢 P3 | ☐ | Full PWA with offline mode, push notifications |
-| **awesome-webhooks** | 1k+ | Search for current list | 🟢 P3 | ☐ | Webhook + SSE + WebSocket support |
+| **awesome-sse** | 1k+ | Search for current list | 🟢 P3 | ☐ | SSE + WebSocket real-time support |
 | **awesome-free-api** | Various | Search for "free api" lists | 🟠 P1 | ☐ | Zero-auth, unlimited, free forever |
 
 ---
