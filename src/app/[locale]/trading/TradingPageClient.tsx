@@ -64,9 +64,9 @@ function signalColor(s: string): string {
 }
 
 function signalBg(s: string): string {
-  if (s === "strong_buy" || s === "buy") return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400";
-  if (s === "strong_sell" || s === "sell") return "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400";
-  return "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300";
+  if (s === "strong_buy" || s === "buy") return "bg-green-900/30 text-green-400";
+  if (s === "strong_sell" || s === "sell") return "bg-red-900/30 text-red-400";
+  return "bg-gray-800 text-gray-300";
 }
 
 function SignalIcon({ signal }: { signal: string }) {
@@ -76,9 +76,9 @@ function SignalIcon({ signal }: { signal: string }) {
 }
 
 function riskBadgeColor(risk: string): string {
-  if (risk === "high") return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400";
-  if (risk === "medium") return "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400";
-  return "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400";
+  if (risk === "high") return "bg-red-900/30 text-red-400";
+  if (risk === "medium") return "bg-yellow-900/30 text-yellow-400";
+  return "bg-green-900/30 text-green-400";
 }
 
 // ---------- Component --------------------------------------------------------

@@ -706,6 +706,83 @@ h3 {
 }
 
 /* ============================================
+   SWAGGER UI DARK MODE
+   ============================================ */
+
+.swagger-ui {
+  color: var(--color-text-primary) !important;
+}
+
+.swagger-ui .topbar {
+  display: none;
+}
+
+.swagger-ui .info .title,
+.swagger-ui .info .title small,
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-tag a,
+.swagger-ui .opblock-tag small,
+.swagger-ui table thead tr th,
+.swagger-ui .tab li,
+.swagger-ui .model-title,
+.swagger-ui .parameter__name,
+.swagger-ui label,
+.swagger-ui .response-col_status,
+.swagger-ui .response-col_description {
+  color: var(--color-text-primary) !important;
+}
+
+.swagger-ui .info .description p,
+.swagger-ui .info .description li,
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .opblock-external-docs-wrapper p,
+.swagger-ui table tbody tr td,
+.swagger-ui .parameter__type,
+.swagger-ui .response-col_description p {
+  color: var(--color-text-secondary) !important;
+}
+
+.swagger-ui .scheme-container,
+.swagger-ui .opblock .opblock-section-header {
+  background: var(--color-surface-secondary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.swagger-ui .opblock .opblock-summary {
+  border-color: var(--color-border) !important;
+}
+
+.swagger-ui .model-box,
+.swagger-ui section.models,
+.swagger-ui section.models .model-container {
+  background: var(--color-surface-secondary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.swagger-ui input[type=text],
+.swagger-ui textarea,
+.swagger-ui select {
+  background: var(--color-surface-tertiary) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.swagger-ui .btn {
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.swagger-ui .opblock-body pre,
+.swagger-ui .highlight-code {
+  background: var(--color-surface-tertiary) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.swagger-ui .copy-to-clipboard {
+  background: var(--color-surface-tertiary) !important;
+}
+
+/* ============================================
    PRINT STYLES
    ============================================ */
 
