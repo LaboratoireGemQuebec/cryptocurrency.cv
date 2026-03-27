@@ -152,13 +152,33 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       );
     } catch (error) {
       console.error('Sentiment analysis error:', error);
-      if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+
+      // Catch AIAuthError by instance, name, or by detecting upstream 403/401 in the message
+      const errMsg = String(error);
+      const isAuthFailure =
+        error instanceof AIAuthError ||
+        (error as Error).name === 'AIAuthError' ||
+        /AI API error: (401|403)/i.test(errMsg);
+
+      if (isAuthFailure) {
         return aiAuthErrorResponse((error as Error).message);
       }
+
+      // Transient network errors — 503 with Retry-After so clients back off
+      if (/network|timeout|ECONNRESET|ETIMEDOUT|fetch failed/i.test(errMsg)) {
+        return NextResponse.json(
+          {
+            error: 'AI service temporarily unavailable',
+            message: 'Upstream AI provider is unreachable. Please retry shortly.',
+          },
+          { status: 503, headers: { 'Retry-After': '30' } },
+        );
+      }
+
       return NextResponse.json(
         {
           error: 'Failed to analyze sentiment',
-          details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error',
+          details: process.env.NODE_ENV === 'development' ? errMsg : 'Internal server error',
         },
         { status: 500 },
       );

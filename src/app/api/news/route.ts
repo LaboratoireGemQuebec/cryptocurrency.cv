@@ -25,6 +25,14 @@ import { instrumented } from '@/lib/telemetry-middleware';
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
 
+/** Race a promise against a timeout; returns fallback on expiry. */
+function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms)),
+  ]);
+}
+
 // Valid news categories (kept for backward compatibility)
 const VALID_CATEGORIES = [
   'general',
@@ -116,9 +124,15 @@ export const GET = instrumented(
       let translatedLang = 'en';
 
       // Attach AI enrichment (non-blocking — skip silently if KV unavailable)
+      // Capped at 10 s to prevent runaway latency contributing to 504s.
       if (!isFreeTier) {
         try {
-          const enrichmentMap = await getBulkEnrichment(articles.map((a) => a.link));
+          const emptyMap = new Map<string, unknown>();
+          const enrichmentMap = await withTimeout(
+            getBulkEnrichment(articles.map((a) => a.link)),
+            10_000,
+            emptyMap,
+          );
           articles = articles.map((a) => {
             const ai = enrichmentMap.get(a.link);
             return ai ? { ...a, ai } : a;
@@ -137,10 +151,14 @@ export const GET = instrumented(
         }
       }
 
+      // Translation capped at 15 s to prevent 504 timeouts
       if (lang !== 'en' && articles.length > 0) {
         try {
-          articles = await translateArticles(articles, lang);
-          translatedLang = lang;
+          const translated = await withTimeout(translateArticles(articles, lang), 15_000, articles);
+          if (translated !== articles) {
+            articles = translated;
+            translatedLang = lang;
+          }
         } catch (translateError) {
           logger.error('Translation failed', translateError);
           // Continue with original articles on translation failure

@@ -254,6 +254,27 @@ const nextConfig = {
         destination: '/:locale/dashboard/:path*',
         permanent: true,
       },
+      // Common misrouted API paths → correct endpoints (permanent redirects)
+      {
+        source: '/api/ai/sentiment',
+        destination: '/api/sentiment',
+        permanent: true,
+      },
+      {
+        source: '/api/news/latest',
+        destination: '/api/news',
+        permanent: true,
+      },
+      {
+        source: '/api/market/fear-greed',
+        destination: '/api/fear-greed',
+        permanent: true,
+      },
+      {
+        source: '/api/v1/posts',
+        destination: '/api/v1/news',
+        permanent: true,
+      },
     ];
   },
 
@@ -276,6 +297,15 @@ const nextConfig = {
         {
           source: '/.well-known/ai-plugin.json',
           destination: '/api/well-known/ai-plugin',
+        },
+        // Common convenience aliases
+        {
+          source: '/rss',
+          destination: '/api/rss',
+        },
+        {
+          source: '/api/ethereum',
+          destination: '/api/news?category=ethereum',
         },
       ],
       afterFiles: [],
