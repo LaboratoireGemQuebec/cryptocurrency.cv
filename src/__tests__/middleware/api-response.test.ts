@@ -19,7 +19,6 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
     isEmbedRoute: false,
     isSperaxOS: false,
     isTrustedOrigin: false,
-    isAlibabaGateway: false,
     isApiClient: false,
     clientIp: '127.0.0.1',
     apiKeyTier: null,

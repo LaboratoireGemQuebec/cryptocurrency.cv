@@ -88,8 +88,6 @@ export const x402Gate: MiddlewareHandler = async (ctx) => {
   if (
     !ctx.isSperaxOS &&
     !ctx.isTrustedOrigin &&
-    !ctx.isAlibabaGateway &&
-    !ctx.apiKeyId &&
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
     !matchesPattern(pathname, FREE_TIER_PATTERNS)
   ) {

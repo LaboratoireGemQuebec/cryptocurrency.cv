@@ -295,7 +295,7 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
   }
 
   // Tier-aware rate limiting
-  if (ctx.isSperaxOS || ctx.isTrustedOrigin || ctx.isAlibabaGateway) {
+  if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
     ctx.headers['X-RateLimit-Limit'] = 'unlimited';
     ctx.headers['X-RateLimit-Remaining'] = 'unlimited';
   } else if (ctx.apiKeyTier && ctx.apiKeyId) {
@@ -416,7 +416,7 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
   }
 
   // Per-route rate limits for expensive endpoints
-  if (!ctx.isSperaxOS && !ctx.isTrustedOrigin && !ctx.isAlibabaGateway) {
+  if (!ctx.isSperaxOS && !ctx.isTrustedOrigin) {
     const routeLimit = findRouteRateLimit(pathname);
     if (routeLimit) {
       const routeKey = ctx.apiKeyId

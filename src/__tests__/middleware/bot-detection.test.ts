@@ -18,7 +18,6 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
     isEmbedRoute: false,
     isSperaxOS: false,
     isTrustedOrigin: false,
-    isAlibabaGateway: false,
     isApiClient: false,
     clientIp: '127.0.0.1',
     apiKeyTier: null,
@@ -127,23 +126,6 @@ describe('botDetection handler', () => {
     expect(body.code).toBe('BOT_BLOCKED');
   });
 
-  it('should allow bots on marketplace routes', () => {
-    const ctx = createContextWithUA('python-requests/2.28.0', {
-      pathname: '/api/marketplace/callback',
-    });
-    const result = botDetection(ctx);
-
-    expect(result).not.toBeInstanceOf(NextResponse);
-  });
-
-  it('should allow bots with Alibaba gateway header', () => {
-    const ctx = createContextWithUA('python-requests/2.28.0', {
-      isAlibabaGateway: true,
-    });
-    const result = botDetection(ctx);
-
-    expect(result).not.toBeInstanceOf(NextResponse);
-  });
 
   it('should pass through regular browsers', () => {
     const ctx = createContextWithUA('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');

@@ -18,7 +18,6 @@ export interface MiddlewareContext {
   isEmbedRoute: boolean;
   isSperaxOS: boolean;
   isTrustedOrigin: boolean;
-  isAlibabaGateway: boolean;
   isApiClient: boolean;
   clientIp: string;
   apiKeyTier: 'free' | 'pro' | 'enterprise' | null;

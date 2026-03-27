@@ -66,7 +66,6 @@ export default async function middleware(request: NextRequest) {
     isEmbedRoute: pathname.startsWith('/embed/') || pathname === '/embed',
     isSperaxOS: false,
     isTrustedOrigin: false,
-    isAlibabaGateway: false,
     isApiClient: false,
     clientIp: 'unknown',
     apiKeyTier: null,

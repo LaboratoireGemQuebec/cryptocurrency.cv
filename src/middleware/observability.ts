@@ -17,8 +17,6 @@ export const observability: MiddlewareHandler = (ctx) => {
 
   ctx.clientIp = getClientIp(ctx.request);
   ctx.isApiClient = isApiClient(ctx.request);
-  ctx.isAlibabaGateway = !!ctx.request.headers.get('x-ca-key');
-
   ctx.headers['X-Request-ID'] = ctx.requestId;
   ctx.headers['X-RateLimit-Policy'] = 'fair-use';
   Object.assign(ctx.headers, SECURITY_HEADERS);

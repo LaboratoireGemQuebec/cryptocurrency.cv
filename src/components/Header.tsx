@@ -72,7 +72,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'My',
+    label: 'Account',
     href: '/watchlist',
     children: [
       { label: 'Watchlist', href: '/watchlist' },

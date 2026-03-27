@@ -22,7 +22,6 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
     isEmbedRoute: pathname.startsWith('/embed/') || pathname === '/embed',
     isSperaxOS: false,
     isTrustedOrigin: false,
-    isAlibabaGateway: false,
     isApiClient: false,
     clientIp: 'unknown',
     apiKeyTier: null,
@@ -153,14 +152,4 @@ describe('observability handler', () => {
     expect(result.headers['X-Request-ID']).toBeUndefined();
   });
 
-  it('should detect Alibaba gateway', () => {
-    const url = new URL('http://localhost:3000/api/test');
-    const request = new NextRequest(url, {
-      headers: new Headers({ 'x-ca-key': 'some-key' }),
-    });
-    const ctx = createContext({ request, isApiRoute: true });
-    const result = observability(ctx) as MiddlewareContext;
-
-    expect(result.isAlibabaGateway).toBe(true);
-  });
 });

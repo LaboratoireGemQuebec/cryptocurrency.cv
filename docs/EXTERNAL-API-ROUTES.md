@@ -2,8 +2,10 @@
 
 > Complete catalog of every external API and data source consumed by free-crypto-news, including currently used endpoints, unused endpoints worth exploring, and RSS feed sources.
 
-**Last updated:** 2026-03-01  
+**Last updated:** 2026-03-01
 **Total APIs:** 71+ services | **RSS Feeds:** 35 sources | **APIs requiring keys:** ~25
+
+> **Individual API docs** are also available at [`docs/apis/`](apis/README.md) — one file per category for easier navigation.
 
 ---
 

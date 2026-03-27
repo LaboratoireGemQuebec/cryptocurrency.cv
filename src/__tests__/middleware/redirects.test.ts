@@ -18,7 +18,6 @@ function createContext(pathname: string): MiddlewareContext {
     isEmbedRoute: pathname.startsWith('/embed/') || pathname === '/embed',
     isSperaxOS: false,
     isTrustedOrigin: false,
-    isAlibabaGateway: false,
     isApiClient: false,
     clientIp: '127.0.0.1',
     apiKeyTier: null,

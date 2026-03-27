@@ -86,8 +86,8 @@ export const botDetection: MiddlewareHandler = (ctx) => {
     return ctx;
   }
 
-  // API route: check with exceptions for marketplace and Alibaba Gateway
-  if (isBlockedBot(ua) && !ctx.pathname.startsWith('/api/marketplace/') && !ctx.isAlibabaGateway) {
+  // API route: block known bad bots
+  if (isBlockedBot(ua)) {
     return NextResponse.json(
       { error: 'Forbidden', code: 'BOT_BLOCKED', requestId: ctx.requestId },
       { status: 403, headers: ctx.headers },

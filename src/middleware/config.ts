@@ -38,7 +38,6 @@ export const EXEMPT_PATTERNS = [
   /^\/api\/internal/, // internal snapshot writer — same-origin only
   /^\/api\/register$/, // API key registration — must be free
   /^\/api\/keys\//, // Key management (usage, rotate, upgrade) — auth via key itself
-  /^\/api\/marketplace\//, // Alibaba Cloud Marketplace SPI callbacks
 ];
 
 /** Endpoints that require pro or enterprise tier (AI, premium). */
