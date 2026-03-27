@@ -96,6 +96,9 @@ export function getX402Proxy(): (req: NextRequest) => any {
         buildApiRoutes(),
         facilitator,
         [{ network: 'eip155:*' as never, server: scheme as never }],
+        undefined, // paywallConfig
+        undefined, // paywall
+        false,     // syncFacilitatorOnStart — defer to avoid Edge Runtime issues
       );
     } catch (err) {
       console.warn(
