@@ -96,7 +96,7 @@ vi.mock('@/lib/cache', () => ({
 }));
 
 vi.mock('@/lib/fallback', () => ({
-  getNewsFallback: vi.fn(async () => ({
+  getNewsFallback: vi.fn(() => ({
     level: 'emergency',
     data: { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() },
   })),

@@ -32,10 +32,8 @@ export const EXEMPT_PATTERNS = [
   /^\/api\/\.well-known/,
   /^\/api\/admin/,
   /^\/api\/cron/,
-  /^\/api\/webhooks/,
   /^\/api\/sse/,
   /^\/api\/ws/,
-  /^\/api\/internal/, // internal snapshot writer — same-origin only
   /^\/api\/register$/, // API key registration — must be free
   /^\/api\/keys\//, // Key management (usage, rotate, upgrade) — auth via key itself
 ];

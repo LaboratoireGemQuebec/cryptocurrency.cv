@@ -17,8 +17,7 @@
  *   1. Short-lived in-memory cache (60 s)
  *   2. CoinGecko via fetchCoinGecko (which already has CoinCap/CoinPaprika fallbacks)
  *   3. Stale cache (last-known-good, up to 1 hour old)
- *   4. Snapshot fallback via KV / /tmp (persisted by /api/internal/snapshot)
- *   5. Emergency hardcoded data (always available)
+ *   4. Emergency hardcoded data (always available)
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
@@ -107,19 +106,6 @@ export const GET = instrumented(
       cache.set(cacheKey, data as Record<string, unknown>, 60);
       staleCache.set(cacheKey, data as Record<string, unknown>, 3600);
 
-      // Fire-and-forget: persist snapshot to KV / /tmp so fallback survives restarts
-      try {
-        fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-internal-snapshot': '1' },
-          body: JSON.stringify({ type: 'prices', data }),
-        }).catch(() => {
-          /* best-effort */
-        });
-      } catch {
-        /* ignore */
-      }
-
       return NextResponse.json(
         isFreeTier ? { ...(data as object), free_tier: true, upgrade: PREMIUM_URL } : data,
         {
@@ -145,7 +131,7 @@ export const GET = instrumented(
     }
 
     // 4. Snapshot fallback → emergency (never returns an error)
-    const fallback = await getPricesFallback(request.nextUrl.origin);
+    const fallback = getPricesFallback();
     const fallbackData = fallback.data;
     return NextResponse.json(
       isFreeTier ? { ...fallbackData, free_tier: true, upgrade: PREMIUM_URL } : fallbackData,

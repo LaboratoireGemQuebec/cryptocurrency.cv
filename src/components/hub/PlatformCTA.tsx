@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import {
   Code2,
   Puzzle,
@@ -33,15 +33,8 @@ export default function PlatformCTA() {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"curl" | "js" | "python">("curl");
 
-  useEffect(() => {
-    // Try to fetch actual route count
-    fetch("/api/internal/routes")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (data?.count) setStats((s) => ({ ...s, total: data.count }));
-      })
-      .catch(() => {});
-  }, []);
+  // Route stats are hardcoded — no dynamic fetch needed
+  void stats;
 
   const codeExamples = {
     curl: `curl https://cryptocurrency.cv/api/news?limit=5`,

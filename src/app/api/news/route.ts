@@ -188,19 +188,6 @@ export const GET = instrumented(
       });
       staleCache.set(staleCacheKey, responseData, 3600); // 1 hour stale window
 
-      // Fire-and-forget: persist snapshot to KV / /tmp so fallback survives restarts
-      try {
-        fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-internal-snapshot': '1' },
-          body: JSON.stringify({ type: 'news', data: responseData }),
-        }).catch(() => {
-          /* best-effort */
-        });
-      } catch {
-        /* ignore */
-      }
-
       return jsonResponse(responseData, {
         cacheControl: 'realtime', // matches ISR revalidate=60; s-maxage=60
         etag: true,
@@ -231,7 +218,7 @@ export const GET = instrumented(
 
       // Snapshot fallback → emergency hardcoded data (never returns an error)
       logger.info('Stale cache empty — falling back to snapshot/emergency archive');
-      const fallback = await getNewsFallback(request.nextUrl.origin);
+      const fallback = getNewsFallback();
       return jsonResponse(
         withTiming({ ...fallback.data, _fallbackLevel: fallback.level }, startTime),
         { cacheControl: 'realtime', etag: true, request, stale: true },
