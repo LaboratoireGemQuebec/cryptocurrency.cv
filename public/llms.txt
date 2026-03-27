@@ -1,54 +1,100 @@
-# free-crypto-news
+# Crypto Vision News API
 
-> Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required. REST JSON, RSS/Atom feeds, WebSocket streaming, AI analysis, historical archive, MCP server, ChatGPT plugin. Open source (MIT).
+> Real-time cryptocurrency news and market intelligence API with 350+ endpoints.
+> Pay per request with USDC via x402 micropayments. No API key signup needed.
+> https://cryptocurrency.cv
 
-free-crypto-news is an open-source project by [nirholas](https://github.com/nirholas) deployed at https://cryptocurrency.cv. It aggregates crypto news from CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, and 120+ additional sources. All endpoints are free, unauthenticated, and CORS-enabled.
+Crypto Vision News aggregates crypto news from CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, and 300+ additional sources. All endpoints accept x402 micropayments (USDC on Arbitrum).
 
-## API Endpoints
+## Payment (x402)
 
-- [Latest news](https://cryptocurrency.cv/api/news): `GET /api/news` — latest articles from all sources (limit, source, page params)
-- [Search](https://cryptocurrency.cv/api/search): `GET /api/search?q={keywords}` — full-text search across all sources
-- [Bitcoin news](https://cryptocurrency.cv/api/bitcoin): `GET /api/bitcoin` — Bitcoin-specific articles
-- [DeFi news](https://cryptocurrency.cv/api/defi): `GET /api/defi` — DeFi, yield farming, DEX news
-- [Breaking news](https://cryptocurrency.cv/api/breaking): `GET /api/breaking` — articles from last 2 hours
-- [Trending topics](https://cryptocurrency.cv/api/trending): `GET /api/trending` — trending keywords and topics
-- [Sources list](https://cryptocurrency.cv/api/sources): `GET /api/sources` — all 130+ sources with status
-- [Sentiment](https://cryptocurrency.cv/api/sentiment): `GET /api/sentiment` — AI-powered sentiment analysis
-- [Market data](https://cryptocurrency.cv/api/market): `GET /api/market` — prices and market context
-- [Fear & Greed](https://cryptocurrency.cv/api/fear-greed): `GET /api/fear-greed` — crypto fear & greed index
-- [RSS feed](https://cryptocurrency.cv/api/rss): `GET /api/rss` — RSS 2.0 feed of latest news
-- [Atom feed](https://cryptocurrency.cv/api/atom): `GET /api/atom` — Atom feed of latest news
+All API calls require x402 micropayment. Prices: $0.001–$0.20 per request.
 
-## AI & LLM Features
+```javascript
+import { payFetch } from "@x402/fetch";
+const res = await payFetch("https://cryptocurrency.cv/api/v1/news", { wallet });
+```
 
-- [AI analysis](https://cryptocurrency.cv/api/ai): `GET /api/ai` — summarize, sentiment, facts, fact-check, translate articles
-- [Ask](https://cryptocurrency.cv/api/ask): `GET /api/ask?q={question}` — ask natural language questions about crypto news
-- [Narratives](https://cryptocurrency.cv/api/ai/narratives): emerging market narratives detection
-- [Predictions](https://cryptocurrency.cv/api/predictions): AI-generated price and event predictions
-- [Research](https://cryptocurrency.cv/api/ai/research): deep research mode on topics
-- [RAG](https://cryptocurrency.cv/api/rag): retrieval-augmented generation over news archive
-- [MCP server](https://github.com/nirholas/free-crypto-news/tree/main/mcp): Claude MCP server — use crypto news in Claude directly
-- [ChatGPT plugin](https://cryptocurrency.cv/.well-known/ai-plugin.json): OpenAI plugin manifest
+Or install the agentcash MCP server: `npx agentcash install`
 
-## Documentation
+Network: Arbitrum (eip155:42161) | Asset: USDC | Default price: $0.001
 
-- [Full LLM docs](https://cryptocurrency.cv/llms-full.txt): complete inline API reference for LLMs
-- [OpenAPI spec](https://cryptocurrency.cv/api/openapi.json): machine-readable OpenAPI 3.1 specification
-- [API docs](https://cryptocurrency.cv/docs/api): human-readable API documentation
-- [README](https://raw.githubusercontent.com/nirholas/free-crypto-news/main/README.md): full project README with quickstart
-- [Quickstart](https://cryptocurrency.cv/docs/quickstart): 5-minute integration guide
+## Key Endpoints
+
+### News & Content
+- `GET /api/v1/news` — latest articles from 300+ sources ($0.001)
+- `GET /api/v1/breaking` — breaking news ($0.001)
+- `GET /api/search?q={keywords}` — full-text search ($0.001)
+- `GET /api/v1/bitcoin` — Bitcoin-specific news ($0.001)
+- `GET /api/v1/categories` — news categories ($0.001)
+- `GET /api/v1/sources` — all sources with status ($0.001)
+
+### Market Data
+- `GET /api/v1/coins` — top coins with prices and market cap ($0.001)
+- `GET /api/v1/market-data` — global market overview ($0.002)
+- `GET /api/v1/trending` — trending coins ($0.001)
+- `GET /api/v1/fear-greed` — Fear & Greed Index ($0.002)
+- `GET /api/market/gainers` — biggest gainers ($0.001)
+- `GET /api/market/losers` — biggest losers ($0.001)
+- `GET /api/v1/exchanges` — exchange data ($0.002)
+
+### AI Analysis
+- `GET /api/v1/sentiment?asset=BTC` — AI sentiment ($0.005)
+- `GET /api/v1/ask?q={question}` — ask anything about crypto ($0.005)
+- `GET /api/v1/forecast?coinId=bitcoin` — AI price forecast ($0.005)
+- `GET /api/v1/digest` — daily market digest ($0.005)
+- `GET /api/v1/narratives` — emerging narratives ($0.005)
+- `GET /api/ai/research?topic={topic}` — deep research ($0.01)
+
+### DeFi & On-Chain
+- `GET /api/defi` — DeFi protocol overview ($0.001)
+- `GET /api/defi/yields` — yield opportunities ($0.001)
+- `GET /api/v1/dex` — DEX volumes ($0.002)
+- `GET /api/v1/whale-alerts` — large transactions ($0.003)
+- `GET /api/onchain/exchange-flows` — exchange flows ($0.001)
+
+### Derivatives & Trading
+- `GET /api/derivatives` — futures/options overview ($0.001)
+- `GET /api/v1/signals` — AI trading signals ($0.005)
+- `GET /api/v1/liquidations` — liquidation data ($0.003)
+- `GET /api/funding-rates` — perpetual funding rates ($0.001)
+- `GET /api/v1/arbitrage` — arbitrage opportunities ($0.003)
+
+### Multi-Chain
+- `GET /api/solana/*` — Solana tokens, DeFi, NFTs, wallet data
+- `GET /api/bitcoin/*` — blocks, mempool, difficulty, addresses
+- `GET /api/aptos/*` — Aptos transactions, resources, events
+- `GET /api/sui/*` — Sui balances, objects, transactions
+- `GET /api/l2/*` — Layer 2 activity, projects, risk scores
+
+### Social Intelligence
+- `GET /api/social/sentiment` — social media sentiment ($0.001)
+- `GET /api/social/trending-narratives` — trending narratives ($0.001)
+- `GET /api/social/x/sentiment` — X/Twitter crypto sentiment ($0.001)
+- `GET /api/influencers` — crypto influencer data ($0.001)
+
+### Premium ($0.01–$0.20)
+- `GET /api/premium/ai/signals` — AI trading signals ($0.05)
+- `GET /api/premium/ai/analyze` — deep market analysis ($0.05)
+- `GET /api/premium/whales/transactions` — whale tracking ($0.05)
+- `GET /api/premium/smart-money` — institutional flows ($0.05)
+- `GET /api/premium/stream/prices` — real-time price SSE ($0.05)
+- `GET /api/premium/pass/hour` — 1hr unlimited access ($0.25)
+
+## Discovery & Documentation
+
+- [OpenAPI spec](https://cryptocurrency.cv/openapi.json): machine-readable, 350+ endpoints with x-payment-info
+- [x402 discovery](https://cryptocurrency.cv/.well-known/x402): x402scan resource listing
+- [Agent capabilities](https://cryptocurrency.cv/.well-known/agents.json): skills, workflows, payment info
+- [Full LLM docs](https://cryptocurrency.cv/llms-full.txt): comprehensive reference with examples
+- [API docs](https://cryptocurrency.cv/docs/api): human-readable documentation
 
 ## SDKs & Integrations
 
-- [TypeScript SDK](https://github.com/nirholas/free-crypto-news/tree/main/sdk): official TypeScript/JavaScript SDK
-- [Python SDK](https://github.com/nirholas/free-crypto-news/tree/main/sdk): Python client library
-- [React hooks](https://github.com/nirholas/free-crypto-news/tree/main/sdk): `useCryptoNews()` React hook
-- [CLI tool](https://github.com/nirholas/free-crypto-news/tree/main/cli): command-line interface
-- [Embeddable widget](https://github.com/nirholas/free-crypto-news/tree/main/widget): drop-in HTML widget
-- [VS Code Copilot extension](https://github.com/nirholas/free-crypto-news/tree/main/copilot-extension): GitHub Copilot integration
+- **x402**: `@x402/fetch` (npm), `x402-client` (Python/Go)
+- **MCP server**: Claude MCP integration (io.github.nirholas/free-crypto-news)
+- **ChatGPT plugin**: via /.well-known/ai-plugin.json
 
 ## Repository
 
-- [GitHub repository](https://github.com/nirholas/free-crypto-news): source code, issues, contributions
-- [CHANGELOG](https://github.com/nirholas/free-crypto-news/blob/main/CHANGELOG.md): version history
-- [License](https://github.com/nirholas/free-crypto-news/blob/main/LICENSE): MIT license
+- [GitHub](https://github.com/nirholas/free-crypto-news): source code and issues
