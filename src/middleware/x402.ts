@@ -29,13 +29,14 @@ import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
-import { API_PRICING, PREMIUM_PRICING, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
+import { API_PRICING, PREMIUM_PRICING, ENDPOINT_METADATA, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
 import {
   FACILITATOR_URL,
   RECEIVE_ADDRESS,
   CURRENT_NETWORK,
   USDC_ADDRESSES,
 } from '@/lib/x402/config';
+import { ENDPOINT_METADATA_FULL } from '@/lib/openapi/endpoint-metadata.generated';
 
 const NETWORK = CURRENT_NETWORK as never;
 
@@ -191,6 +192,8 @@ export function getX402Proxy(): (req: NextRequest) => any {
 const USDC_ASSET =
   USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
 
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
+
 /** Get the USD price string for a route path */
 function getRoutePrice(path: string): string {
   const v1Price = (API_PRICING as Record<string, string>)[path];
@@ -200,8 +203,111 @@ function getRoutePrice(path: string): string {
   return '$0.001';
 }
 
+/** Get endpoint metadata (parameters, description) for Bazaar schema */
+function getEndpointMeta(path: string): {
+  description: string;
+  methods: string[];
+  parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
+  outputSchema?: object;
+} {
+  const full = (ENDPOINT_METADATA_FULL as Record<string, {
+    description?: string; methods?: string[];
+    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
+    outputSchema?: object;
+  }>)[path];
+  const legacy = (ENDPOINT_METADATA as Record<string, {
+    description?: string;
+    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
+    outputSchema?: object;
+  }>)[path];
+  return {
+    description: full?.description ?? legacy?.description ?? `API endpoint: ${path}`,
+    methods: full?.methods ?? ['GET'],
+    parameters: full?.parameters ?? legacy?.parameters,
+    outputSchema: legacy?.outputSchema ?? full?.outputSchema,
+  };
+}
+
 /**
- * Build a standards-compliant x402 v1 402 response with accepts array.
+ * Build the extensions.bazaar block for a 402 response.
+ * Includes both `info` (for UI) and `schema` (for validation).
+ */
+function buildBazaarExtensions(path: string, method: string) {
+  const meta = getEndpointMeta(path);
+  const params = meta.parameters;
+
+  const inputInfo: Record<string, unknown> = { type: 'http', method };
+  const schemaInput: Record<string, unknown> = {};
+
+  if (params) {
+    const properties: Record<string, { type: string; description: string }> = {};
+    const required: string[] = [];
+    for (const [name, p] of Object.entries(params)) {
+      properties[name] = { type: p.type === 'number' ? 'number' : 'string', description: p.description };
+      if (p.required) required.push(name);
+    }
+    const paramSchema = { type: 'object', properties, ...(required.length > 0 ? { required } : {}) };
+
+    if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
+      inputInfo.bodyType = 'json';
+      inputInfo.body = paramSchema;
+      schemaInput.body = paramSchema;
+    } else {
+      inputInfo.queryParams = paramSchema;
+      schemaInput.queryParams = paramSchema;
+    }
+  } else {
+    // Minimal schema so SCHEMA_INPUT_MISSING is not triggered
+    const defaultSchema = { type: 'object', properties: {} };
+    if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
+      inputInfo.bodyType = 'json';
+      inputInfo.body = defaultSchema;
+      schemaInput.body = defaultSchema;
+    } else {
+      inputInfo.queryParams = defaultSchema;
+      schemaInput.queryParams = defaultSchema;
+    }
+  }
+
+  const outputExample = meta.outputSchema ?? { type: 'object', properties: { success: { type: 'boolean' }, data: { type: 'object' } } };
+
+  return {
+    bazaar: {
+      info: {
+        input: inputInfo,
+        output: outputExample,
+      },
+      schema: {
+        properties: {
+          input: { properties: schemaInput },
+          output: { properties: { example: outputExample } },
+        },
+      },
+    },
+  };
+}
+
+/**
+ * Build a proper MPP WWW-Authenticate challenge header value.
+ * Includes all required parameters: id, method, intent, realm, expires, request.
+ */
+function buildMppChallenge(pathname: string, amountAtomic: string): string {
+  const id = `ch_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+  const expires = new Date(Date.now() + 300_000).toISOString(); // 5 minutes
+  const requestObj = {
+    currency: USDC_ASSET,
+    amount: amountAtomic,
+    recipient: RECEIVE_ADDRESS,
+  };
+  // Base64url-encode the request JSON
+  const requestB64 = Buffer.from(JSON.stringify(requestObj)).toString('base64url');
+  return `Payment id="${id}" method="tempo" intent="charge" realm="${BASE_URL}" expires="${expires}" request='${requestB64}'`;
+}
+
+/**
+ * Build a standards-compliant x402 v2 402 response with accepts array,
+ * extensions.bazaar schema, and MPP WWW-Authenticate challenge.
+ *
  * Used as fallback when the SDK proxy cannot initialise, and as the
  * safety net when the proxy throws at request time.
  *
@@ -210,42 +316,85 @@ function getRoutePrice(path: string): string {
 function buildFallback402(req: NextRequest): NextResponse {
   const pathname = req.nextUrl.pathname;
   const price = getRoutePrice(pathname);
-  const maxAmountRequired = usdToUsdc(price);
+  const amountAtomic = usdToUsdc(price);
 
   return NextResponse.json(
     {
-      x402Version: 1,
+      x402Version: 2,
       error: 'Payment Required',
       accepts: [
         {
           scheme: 'exact',
           network: CURRENT_NETWORK,
-          maxAmountRequired,
+          amount: amountAtomic,
           asset: USDC_ASSET,
           payTo: RECEIVE_ADDRESS,
-          resource: `https://cryptocurrency.cv${pathname}`,
-          description: `Pay ${price.replace('$', '')} USDC to access this endpoint`,
-          mimeType: 'application/json',
           maxTimeoutSeconds: 60,
           extra: {
             name: ARBITRUM_USDC.name,
             version: ARBITRUM_USDC.version,
           },
-          outputSchema: {
-            input: { method: req.method, type: 'http' },
-            output: null,
-          },
         },
       ],
+      resource: {
+        url: `${BASE_URL}${pathname}`,
+        description: getEndpointMeta(pathname).description,
+        mimeType: 'application/json',
+      },
+      extensions: buildBazaarExtensions(pathname, req.method),
     },
     {
       status: 402,
       headers: {
-        'WWW-Authenticate': `Payment realm="${pathname}"`,
+        'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic),
         'X-Payment-Required': 'true',
       },
     },
   );
+}
+
+/**
+ * Augment a 402 response from the SDK proxy with MPP challenge headers
+ * and extensions.bazaar schema that x402scan requires.
+ *
+ * Reads the proxy body, merges in the missing fields, and returns a new response.
+ */
+async function augment402Response(res: NextResponse, req: NextRequest): Promise<NextResponse> {
+  const pathname = req.nextUrl.pathname;
+  const price = getRoutePrice(pathname);
+  const amountAtomic = usdToUsdc(price);
+
+  let body: Record<string, unknown>;
+  try {
+    body = await res.json();
+  } catch {
+    // Can't parse body — return the fallback instead
+    return buildFallback402(req);
+  }
+
+  // Add extensions.bazaar if missing
+  if (!body.extensions) {
+    body.extensions = buildBazaarExtensions(pathname, req.method);
+  }
+
+  // Ensure resource block exists (v2)
+  if (!body.resource) {
+    body.resource = {
+      url: `${BASE_URL}${pathname}`,
+      description: getEndpointMeta(pathname).description,
+      mimeType: 'application/json',
+    };
+  }
+
+  const augmented = NextResponse.json(body, {
+    status: 402,
+    headers: Object.fromEntries(res.headers.entries()),
+  });
+
+  // Set proper MPP challenge header
+  augmented.headers.set('WWW-Authenticate', buildMppChallenge(pathname, amountAtomic));
+
+  return augmented;
 }
 
 // =============================================================================
@@ -288,19 +437,13 @@ export const x402Gate: MiddlewareHandler = async (ctx) => {
 
     const verified = paymentResponse.headers.get('x-middleware-next') === '1';
     if (!verified) {
+      // Augment 402 responses with MPP challenge and Bazaar schema
+      if (paymentResponse.status === 402) {
+        paymentResponse = await augment402Response(paymentResponse, ctx.request);
+      }
+
       Object.entries(ctx.headers).forEach(([k, v]) => paymentResponse.headers.set(k, v));
       paymentResponse.headers.set('X-Response-Time', `${Date.now() - ctx.startTime}ms`);
-
-      // Ensure WWW-Authenticate includes a Payment challenge for x402scan
-      if (paymentResponse.status === 402) {
-        const existing = paymentResponse.headers.get('WWW-Authenticate') ?? '';
-        if (!existing.includes('Payment')) {
-          paymentResponse.headers.set(
-            'WWW-Authenticate',
-            existing ? `${existing}, Payment realm="${pathname}"` : `Payment realm="${pathname}"`,
-          );
-        }
-      }
 
       return paymentResponse;
     }
