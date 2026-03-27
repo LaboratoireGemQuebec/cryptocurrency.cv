@@ -23,10 +23,11 @@ import type { MiddlewareContext, MiddlewareHandler } from './types';
 import { isRepeat429Blocked } from './rate-limit';
 
 // Known bad bot patterns (Googlebot intentionally excluded for SEO)
-// Note: aiohttp removed — it's a legitimate Python HTTP client (like httpx/requests).
-// Abuse from aiohttp callers is handled by rate limiting instead of blanket blocking.
+// Note: aiohttp, python-requests, and go-http removed — they are legitimate HTTP
+// clients widely used by paying API consumers. Abuse from these callers is handled
+// by rate limiting instead of blanket blocking.
 const BLOCKED_BOTS =
-  /bot|crawler|spider|scraper|wget|curl|python-requests|go-http|java\/|alphahunter/i;
+  /bot|crawler|spider|scraper|wget|curl|alphahunter/i;
 
 const BOT_ALLOWLIST = [
   'Googlebot',
@@ -42,7 +43,7 @@ const BOT_ALLOWLIST = [
 
 // SDK / programmatic client User-Agent patterns
 const SDK_UA_PATTERNS =
-  /fcn-sdk|free-crypto-news|axios|node-fetch|undici|python-httpx|aiohttp|guzzle|x402-client/i;
+  /fcn-sdk|free-crypto-news|axios|node-fetch|undici|python-httpx|python-requests|aiohttp|go-http|guzzle|x402-client/i;
 
 /**
  * Returns true if the user-agent should be blocked.
