@@ -229,6 +229,28 @@ export const speraxosHmac: MiddlewareHandler = async (ctx) => {
     // Invalid batch auth — don't grant speraxos, continue as normal request
   }
 
+  // ── Simple token authentication ──────────────────────────────────────
+  // SperaxOS can send a shared secret via x-speraxos-token for lightweight
+  // server-to-server auth (no HMAC ceremony). The token is compared using
+  // constant-time equality to prevent timing attacks.
+  const token = request.headers.get('x-speraxos-token');
+  if (token) {
+    const secret = process.env.SPERAXOS_API_SECRET;
+    if (!secret) {
+      // Feature disabled — SPERAXOS_API_SECRET not configured, ignore header
+    } else if (constantTimeEqual(token, secret)) {
+      ctx.isSperaxOS = true;
+      ctx.speraxosKeyId = 'token';
+      return ctx;
+    } else {
+      // Token present but invalid — reject immediately
+      return NextResponse.json(
+        { error: 'Unauthorized', code: 'INVALID_TOKEN', requestId },
+        { status: 401, headers: ctx.headers },
+      );
+    }
+  }
+
   // ── HMAC signature verification ────────────────────────────────────────
   const signature = request.headers.get('x-speraxos-signature');
   if (!signature) return ctx; // Not a speraxos request — let pass

@@ -90,7 +90,7 @@ function ArticleImage({
   sizes?: string;
   priority?: boolean;
 }) {
-  const fallback = getUnsplashFallback(source || alt);
+  const fallback = getUnsplashFallback(alt || source || 'crypto');
   const [failed, setFailed] = useState(false);
   const imgSrc = !src || failed ? fallback : src;
 

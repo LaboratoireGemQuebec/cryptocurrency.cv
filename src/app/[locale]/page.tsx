@@ -47,6 +47,7 @@ import {
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
 import { generateSEOMetadata } from '@/lib/seo';
+import { getUnsplashFallback } from '@/lib/unsplash-fallback';
 import type { Metadata } from 'next';
 
 export const revalidate = 300;
@@ -93,13 +94,18 @@ export default async function HomePage({ params }: Props) {
   const breaking = data?.breaking?.articles ?? [];
   const featured = articles[0] ?? null;
 
-  // ── Build top-stories grid, skipping articles whose image duplicates the hero ──
-  const heroImage = featured?.imageUrl;
+  // ── Build top-stories grid, skipping articles whose displayed image duplicates another ──
+  const resolveImage = (a: NewsArticle) =>
+    a.imageUrl || getUnsplashFallback(a.title || a.source || 'crypto');
+  const usedImages = new Set<string>();
+  if (featured) usedImages.add(resolveImage(featured));
   const topGrid: typeof articles = [];
   let nextIdx = 1;
   while (topGrid.length < 4 && nextIdx < articles.length) {
     const a = articles[nextIdx++];
-    if (heroImage && a.imageUrl && a.imageUrl === heroImage) continue;
+    const img = resolveImage(a);
+    if (usedImages.has(img)) continue;
+    usedImages.add(img);
     topGrid.push(a);
   }
 
