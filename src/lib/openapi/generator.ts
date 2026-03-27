@@ -9,792 +9,220 @@
  */
 
 /**
- * OpenAPI Specification Generator
- * 
- * Automatically generates OpenAPI 3.0 spec from Zod schemas
+ * OpenAPI 3.1.0 Specification Generator
+ *
+ * Generates the canonical discovery document for x402scan registration.
+ * Every paid endpoint includes x-payment-info with protocol and pricing.
+ *
+ * @see https://github.com/Merit-Systems/x402scan
  */
 
-import { z } from 'zod';
+import {
+  API_PRICING,
+  PREMIUM_PRICING,
+  ENDPOINT_METADATA,
+} from '@/lib/x402/pricing';
 
-interface OpenAPIPath {
-  summary?: string;
-  description?: string;
-  tags?: string[];
-  parameters?: Array<{
-    name: string;
-    in: 'query' | 'path' | 'header';
-    required?: boolean;
-    schema: unknown;
-    description?: string;
-  }>;
-  requestBody?: {
-    required: boolean;
-    content: {
-      'application/json': {
-        schema: unknown;
-      };
-    };
-  };
-  responses: Record<string, {
-    description: string;
-    content?: {
-      'application/json': {
-        schema: unknown;
-        example?: unknown;
-      };
-    };
-  }>;
-  security?: Array<Record<string, string[]>>;
-}
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
-interface OpenAPISpec {
-  openapi: '3.0.0';
-  info: {
-    title: string;
-    version: string;
-    description: string;
-    contact: {
-      name: string;
-      url: string;
-    };
-    license: {
-      name: string;
-      url: string;
-    };
-  };
-  servers: Array<{
-    url: string;
-    description: string;
-  }>;
-  paths: Record<string, Record<string, OpenAPIPath>>;
-  components: {
-    schemas: Record<string, unknown>;
-    securitySchemes: Record<string, unknown>;
-  };
-  tags: Array<{
-    name: string;
-    description: string;
-  }>;
-}
-
-/**
- * Generate OpenAPI spec for the API
- */
-export function generateOpenAPISpec(): OpenAPISpec {
+/** Build an x-payment-info block for a fixed-price endpoint */
+function paymentInfo(usdPrice: string) {
   return {
-    openapi: '3.0.0',
+    protocols: ['x402'],
+    pricingMode: 'fixed' as const,
+    price: usdPrice.replace('$', ''),
+  };
+}
+
+/** Convert an ENDPOINT_METADATA parameters map to OpenAPI parameters array */
+function toOpenAPIParams(
+  params: Record<
+    string,
+    { type: string; description: string; required?: boolean; default?: string }
+  > | undefined,
+) {
+  if (!params) return undefined;
+  return Object.entries(params).map(([name, p]) => ({
+    name,
+    in: 'query' as const,
+    required: p.required ?? false,
+    description: p.description,
+    schema: {
+      type: p.type === 'number' ? 'number' : 'string',
+      ...(p.default !== undefined ? { default: p.default } : {}),
+    },
+  }));
+}
+
+// ---------------------------------------------------------------------------
+// Spec generator
+// ---------------------------------------------------------------------------
+
+export function generateOpenAPISpec() {
+  // -- Build paths from v1 pricing config ----------------------------------
+  const paths: Record<string, Record<string, unknown>> = {};
+
+  for (const [path, price] of Object.entries(API_PRICING)) {
+    const meta = ENDPOINT_METADATA[path];
+    const description = meta?.description ?? `API endpoint: ${path}`;
+    const tag = categoriseV1(path);
+
+    paths[path] = {
+      get: {
+        summary: description,
+        description,
+        tags: [tag],
+        ...(meta?.parameters
+          ? { parameters: toOpenAPIParams(meta.parameters) }
+          : {}),
+        responses: {
+          '200': { description: 'Successful response' },
+          '402': { description: 'Payment Required' },
+          '429': { description: 'Rate limit exceeded' },
+        },
+        'x-payment-info': paymentInfo(price),
+        security: [{ ApiKeyAuth: [] }, { X402Payment: [] }],
+      },
+    };
+  }
+
+  // -- Build paths from premium pricing config -----------------------------
+  const postRoutes = new Set([
+    '/api/premium/portfolio/analytics',
+    '/api/premium/alerts/create',
+  ]);
+
+  for (const [path, config] of Object.entries(PREMIUM_PRICING)) {
+    const method = postRoutes.has(path) ? 'post' : 'get';
+    const priceStr = `${config.price}`;
+
+    const operation: Record<string, unknown> = {
+      summary: config.description,
+      description: config.description,
+      tags: [premiumTag(config.category)],
+      responses: {
+        '200': { description: 'Successful response' },
+        '402': { description: 'Payment Required' },
+      },
+      'x-payment-info': paymentInfo(priceStr),
+      security: [{ X402Payment: [] }],
+    };
+
+    paths[path] = { [method]: operation };
+  }
+
+  // -- Assemble full spec --------------------------------------------------
+  return {
+    openapi: '3.1.0',
     info: {
       title: 'Crypto Vision News API',
       version: '1.0.0',
-      description: 'Comprehensive cryptocurrency news and market data API with x402 micropayments. Access real-time crypto news, market data, AI trading signals, and portfolio analytics.',
+      description:
+        'Comprehensive cryptocurrency news and market data API with x402 micropayments. ' +
+        'Access real-time crypto news, market data, AI trading signals, DeFi analytics, ' +
+        'whale tracking, and portfolio tools. Pay per request with USDC via x402.',
       contact: {
         name: 'Crypto Vision News',
         url: 'https://github.com/nirholas/free-crypto-news',
       },
       license: {
-        name: 'MIT',
-        url: 'https://opensource.org/licenses/MIT',
+        name: 'SEE LICENSE IN LICENSE',
+        url: 'https://github.com/nirholas/free-crypto-news/blob/main/LICENSE',
       },
+      'x-guidance':
+        'This API serves real-time cryptocurrency data. All /api/v1/* and /api/premium/* ' +
+        'endpoints require x402 micropayment (USDC on Base or Arbitrum). ' +
+        'Prices range from $0.001 to $0.20 per request. ' +
+        'Use the x-payment-info on each operation to determine the price. ' +
+        'Endpoints return JSON. Query parameters are used for filtering and pagination. ' +
+        'Start with /api/v1/news for latest crypto news or /api/v1/coins for market data. ' +
+        'Premium endpoints under /api/premium/ offer AI analysis, whale tracking, and streaming.',
     },
     servers: [
-      {
-        url: 'https://cryptocurrency.cv',
-        description: 'Production server',
-      },
-      {
-        url: 'http://localhost:3000',
-        description: 'Development server',
-      },
+      { url: 'https://cryptocurrency.cv', description: 'Production' },
     ],
     tags: [
-      { name: 'News', description: 'Cryptocurrency news endpoints' },
-      { name: 'Market Data', description: 'Real-time market data' },
-      { name: 'Premium', description: 'Premium endpoints (requires payment)' },
-      { name: 'Admin', description: 'Administrative endpoints' },
-      { name: 'System', description: 'System health and status' },
+      { name: 'News', description: 'Cryptocurrency news and content' },
+      { name: 'Market Data', description: 'Real-time prices and market metrics' },
+      { name: 'AI Analysis', description: 'AI-powered sentiment, signals, and insights' },
+      { name: 'Trading', description: 'Derivatives, signals, and arbitrage' },
+      { name: 'DeFi', description: 'DeFi protocols, DEX, yields, and bridges' },
+      { name: 'On-Chain', description: 'On-chain data, whale alerts, and NFTs' },
+      { name: 'Social', description: 'Social intelligence and influencer data' },
+      { name: 'Portfolio', description: 'Portfolio, watchlist, and alerts' },
+      { name: 'Analytics', description: 'Anomalies, correlations, and entities' },
+      { name: 'Export', description: 'Bulk data export and historical data' },
+      { name: 'Feeds', description: 'RSS and SSE feeds' },
+      { name: 'Premium AI', description: 'Premium AI analysis endpoints' },
+      { name: 'Premium Whales', description: 'Whale and smart money tracking' },
+      { name: 'Premium Market', description: 'Extended market data' },
+      { name: 'Premium DeFi', description: 'Extended DeFi protocol data' },
+      { name: 'Premium Alerts', description: 'Advanced alerting with webhooks' },
+      { name: 'Premium Streaming', description: 'Real-time WebSocket and SSE feeds' },
+      { name: 'Premium Passes', description: 'Unlimited access time passes' },
+      { name: 'Premium Analytics', description: 'Advanced screener and portfolio analytics' },
+      { name: 'Premium Data', description: 'Data exports' },
     ],
-    paths: {
-      '/api/news': {
-        get: {
-          summary: 'Get latest cryptocurrency news',
-          description: 'Returns paginated list of latest crypto news articles from multiple sources',
-          tags: ['News'],
-          parameters: [
-            { 
-              name: 'limit', 
-              in: 'query', 
-              description: 'Number of articles to return',
-              schema: { type: 'integer', minimum: 1, maximum: 100, default: 10 } 
-            },
-            { 
-              name: 'source', 
-              in: 'query', 
-              description: 'Filter by news source',
-              schema: { type: 'string' } 
-            },
-            { 
-              name: 'category', 
-              in: 'query', 
-              description: 'Filter by category',
-              schema: { 
-                type: 'string', 
-                enum: ['general', 'bitcoin', 'defi', 'nft', 'research', 'institutional', 'etf']
-              } 
-            },
-            { 
-              name: 'lang', 
-              in: 'query', 
-              description: 'Language code',
-              schema: { type: 'string', default: 'en' } 
-            },
-            { 
-              name: 'page', 
-              in: 'query', 
-              description: 'Page number for pagination',
-              schema: { type: 'integer', minimum: 1, default: 1 } 
-            },
-          ],
-          responses: {
-            '200': {
-              description: 'Successful response',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      articles: { 
-                        type: 'array', 
-                        items: { 
-                          type: 'object',
-                          properties: {
-                            id: { type: 'string' },
-                            title: { type: 'string' },
-                            description: { type: 'string', nullable: true },
-                            url: { type: 'string' },
-                            source: { type: 'string' },
-                            publishedAt: { type: 'string', format: 'date-time' },
-                          }
-                        } 
-                      },
-                      total: { type: 'integer' },
-                      page: { type: 'integer' },
-                    },
-                  },
-                  example: {
-                    articles: [
-                      {
-                        id: '123',
-                        title: 'Bitcoin Reaches New High',
-                        description: 'BTC surpasses previous ATH',
-                        url: 'https://example.com/article',
-                        source: 'CoinDesk',
-                        publishedAt: '2026-02-02T10:00:00Z',
-                      }
-                    ],
-                    total: 100,
-                    page: 1,
-                  }
-                },
-              },
-            },
-            '400': { description: 'Bad request - validation error' },
-            '500': { description: 'Internal server error' },
-          },
-        },
-      },
-      '/api/breaking': {
-        get: {
-          summary: 'Get breaking news',
-          description: 'Returns latest breaking cryptocurrency news',
-          tags: ['News'],
-          parameters: [
-            { 
-              name: 'limit', 
-              in: 'query', 
-              schema: { type: 'integer', minimum: 1, maximum: 50, default: 10 } 
-            },
-            { 
-              name: 'priority', 
-              in: 'query', 
-              schema: { type: 'string', enum: ['high', 'critical'] } 
-            },
-          ],
-          responses: {
-            '200': { description: 'Successful response' },
-          },
-        },
-      },
-      '/api/search': {
-        get: {
-          summary: 'Search crypto news',
-          description: 'Full-text search across all aggregated news articles from 300+ sources. Returns articles matching keyword(s).',
-          tags: ['News'],
-          parameters: [
-            {
-              name: 'q',
-              in: 'query',
-              required: true,
-              description: 'Comma-separated keywords or phrase (e.g. "bitcoin ETF,blackrock")',
-              schema: { type: 'string' },
-            },
-            {
-              name: 'limit',
-              in: 'query',
-              description: 'Maximum results to return',
-              schema: { type: 'integer', minimum: 1, maximum: 50, default: 10 },
-            },
-            {
-              name: 'from',
-              in: 'query',
-              description: 'Earliest publish date (ISO 8601)',
-              schema: { type: 'string', format: 'date-time' },
-            },
-            {
-              name: 'to',
-              in: 'query',
-              description: 'Latest publish date (ISO 8601)',
-              schema: { type: 'string', format: 'date-time' },
-            },
-            {
-              name: 'source',
-              in: 'query',
-              description: 'Filter by source key (e.g. coindesk, decrypt)',
-              schema: { type: 'string' },
-            },
-          ],
-          responses: {
-            '200': {
-              description: 'Search results',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      articles: { type: 'array', items: { $ref: '#/components/schemas/Article' } },
-                      total: { type: 'integer' },
-                      query: { type: 'string' },
-                    },
-                  },
-                },
-              },
-            },
-            '400': { description: 'Missing required parameter q' },
-          },
-        },
-      },
-      '/api/bitcoin': {
-        get: {
-          summary: 'Get Bitcoin news',
-          description: 'Returns news specifically about Bitcoin, Lightning Network, miners, and Bitcoin ETFs.',
-          tags: ['News'],
-          parameters: [
-            { name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
-            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
-          ],
-          responses: { '200': { description: 'Bitcoin news articles' } },
-        },
-      },
-      '/api/defi': {
-        get: {
-          summary: 'Get DeFi news',
-          description: 'Returns news about DeFi protocols, yield farming, DEXs, lending, TVL, and hacks.',
-          tags: ['News'],
-          parameters: [
-            { name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
-            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
-          ],
-          responses: { '200': { description: 'DeFi news articles' } },
-        },
-      },
-      '/api/sources': {
-        get: {
-          summary: 'List all news sources',
-          description: 'Returns all 200+ aggregated news sources with their status, category, and metadata.',
-          tags: ['News'],
-          responses: {
-            '200': {
-              description: 'List of news sources',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      sources: {
-                        type: 'array',
-                        items: {
-                          type: 'object',
-                          properties: {
-                            key: { type: 'string' },
-                            name: { type: 'string' },
-                            url: { type: 'string', format: 'uri' },
-                            category: { type: 'string' },
-                            language: { type: 'string' },
-                            status: { type: 'string', enum: ['active', 'degraded', 'unavailable'] },
-                          },
-                        },
-                      },
-                      totalActive: { type: 'integer' },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      '/api/trending': {
-        get: {
-          summary: 'Get trending topics',
-          description: 'Returns the most-mentioned keywords and topics across all crypto news in the last 24 hours.',
-          tags: ['News'],
-          parameters: [
-            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
-            {
-              name: 'period',
-              in: 'query',
-              description: 'Time window for trend calculation',
-              schema: { type: 'string', enum: ['1h', '6h', '24h', '7d'], default: '24h' },
-            },
-          ],
-          responses: {
-            '200': {
-              description: 'Trending topics with counts and sentiment',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      trending: {
-                        type: 'array',
-                        items: {
-                          type: 'object',
-                          properties: {
-                            keyword: { type: 'string' },
-                            count: { type: 'integer' },
-                            change: { type: 'string' },
-                            sentiment: { type: 'string', enum: ['bullish', 'bearish', 'neutral'] },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      '/api/sentiment': {
-        get: {
-          summary: 'Market sentiment analysis',
-          description: 'AI-powered sentiment analysis aggregated from all news sources. Returns bullish/bearish/neutral breakdown per asset.',
-          tags: ['Market Data'],
-          parameters: [
-            {
-              name: 'asset',
-              in: 'query',
-              description: 'Crypto asset symbol (e.g. BTC, ETH, SOL). Omit for overall market.',
-              schema: { type: 'string' },
-            },
-            {
-              name: 'period',
-              in: 'query',
-              schema: { type: 'string', enum: ['1h', '24h', '7d', '30d'], default: '24h' },
-            },
-          ],
-          responses: {
-            '200': {
-              description: 'Sentiment breakdown',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      overall: { type: 'string', enum: ['bullish', 'bearish', 'neutral'] },
-                      score: { type: 'number', minimum: -1, maximum: 1 },
-                      breakdown: {
-                        type: 'object',
-                        properties: {
-                          bullish: { type: 'integer' },
-                          neutral: { type: 'integer' },
-                          bearish: { type: 'integer' },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      '/api/fear-greed': {
-        get: {
-          summary: 'Crypto Fear & Greed Index',
-          description: 'Returns the current Crypto Fear & Greed Index value (0=Extreme Fear, 100=Extreme Greed).',
-          tags: ['Market Data'],
-          responses: {
-            '200': {
-              description: 'Fear & Greed Index',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      value: { type: 'integer', minimum: 0, maximum: 100 },
-                      classification: { type: 'string', enum: ['Extreme Fear', 'Fear', 'Neutral', 'Greed', 'Extreme Greed'] },
-                      previousValue: { type: 'integer' },
-                      timestamp: { type: 'string', format: 'date-time' },
-                    },
-                  },
-                  example: { value: 72, classification: 'Greed', previousValue: 68, timestamp: '2026-02-21T00:00:00Z' },
-                },
-              },
-            },
-          },
-        },
-      },
-      '/api/rss': {
-        get: {
-          summary: 'RSS 2.0 feed',
-          description: 'Returns latest crypto news as RSS 2.0 XML feed. Compatible with all RSS readers.',
-          tags: ['News'],
-          parameters: [
-            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
-            { name: 'source', in: 'query', schema: { type: 'string' } },
-            { name: 'category', in: 'query', schema: { type: 'string' } },
-          ],
-          responses: {
-            '200': {
-              description: 'RSS XML feed',
-              content: { 'application/rss+xml': { schema: { type: 'string' } } } as any,
-            },
-          },
-        },
-      },
-      '/api/atom': {
-        get: {
-          summary: 'Atom 1.0 feed',
-          description: 'Returns latest crypto news as Atom 1.0 XML feed.',
-          tags: ['News'],
-          parameters: [
-            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
-          ],
-          responses: {
-            '200': {
-              description: 'Atom XML feed',
-              content: { 'application/atom+xml': { schema: { type: 'string' } } } as any,
-            },
-          },
-        },
-      },
-      '/api/ask': {
-        get: {
-          summary: 'Ask about crypto news (NLP)',
-          description: 'Natural language Q&A over the crypto news corpus. Ask any question about current crypto events.',
-          tags: ['News'],
-          parameters: [
-            {
-              name: 'q',
-              in: 'query',
-              required: true,
-              description: 'Natural language question (e.g. "What happened to Bitcoin this week?")',
-              schema: { type: 'string' },
-            },
-          ],
-          responses: {
-            '200': {
-              description: 'AI-generated answer with source articles',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      answer: { type: 'string' },
-                      sources: { type: 'array', items: { $ref: '#/components/schemas/Article' } },
-                      confidence: { type: 'number' },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      '/api/v1/coins': {
-        get: {
-          summary: 'List cryptocurrencies',
-          description: 'Returns paginated list of cryptocurrencies with market data. Requires API key or x402 payment.',
-          tags: ['Market Data'],
-          parameters: [
-            { 
-              name: 'page', 
-              in: 'query', 
-              description: 'Page number',
-              schema: { type: 'integer', minimum: 1, default: 1 } 
-            },
-            { 
-              name: 'per_page', 
-              in: 'query', 
-              description: 'Results per page',
-              schema: { type: 'integer', minimum: 1, maximum: 250, default: 100 } 
-            },
-            { 
-              name: 'order', 
-              in: 'query', 
-              description: 'Sort order',
-              schema: { 
-                type: 'string', 
-                enum: ['market_cap_desc', 'market_cap_asc', 'volume_desc', 'volume_asc'],
-                default: 'market_cap_desc'
-              } 
-            },
-          ],
-          responses: {
-            '200': { 
-              description: 'Successful response',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'array',
-                    items: {
-                      type: 'object',
-                      properties: {
-                        id: { type: 'string' },
-                        symbol: { type: 'string' },
-                        name: { type: 'string' },
-                        current_price: { type: 'number' },
-                        market_cap: { type: 'number' },
-                        price_change_percentage_24h: { type: 'number' },
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            '402': { description: 'Payment required' },
-            '429': { description: 'Rate limit exceeded' },
-          },
-          security: [
-            { ApiKeyAuth: [] },
-            { X402Payment: [] },
-          ],
-        },
-      },
-      '/api/premium/ai/signals': {
-        get: {
-          summary: 'Get AI trading signals',
-          description: 'AI-generated buy/sell signals. Requires x402 payment of $0.05 per request.',
-          tags: ['Premium'],
-          parameters: [
-            { 
-              name: 'coin', 
-              in: 'query', 
-              required: true, 
-              description: 'Coin ID (e.g., bitcoin, ethereum)',
-              schema: { type: 'string' } 
-            },
-            { 
-              name: 'timeframe', 
-              in: 'query', 
-              description: 'Timeframe for analysis',
-              schema: { type: 'string', enum: ['1h', '4h', '1d', '1w'], default: '1d' } 
-            },
-          ],
-          responses: {
-            '200': { 
-              description: 'Successful response',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      coin: { type: 'string' },
-                      signal: { type: 'string', enum: ['strong_buy', 'buy', 'hold', 'sell', 'strong_sell'] },
-                      confidence: { type: 'number', minimum: 0, maximum: 1 },
-                      price: { type: 'number' },
-                      reasoning: { type: 'string' },
-                    }
-                  }
-                }
-              }
-            },
-            '402': { description: 'Payment required ($0.05)' },
-          },
-          security: [
-            { X402Payment: [] },
-          ],
-        },
-      },
-      '/api/premium/portfolio/analytics': {
-        post: {
-          summary: 'Analyze portfolio',
-          description: 'Get AI-powered portfolio analytics and insights',
-          tags: ['Premium'],
-          requestBody: {
-            required: true,
-            content: {
-              'application/json': {
-                schema: {
-                  type: 'object',
-                  required: ['holdings'],
-                  properties: {
-                    holdings: {
-                      type: 'array',
-                      items: {
-                        type: 'object',
-                        properties: {
-                          coinId: { type: 'string' },
-                          amount: { type: 'number' },
-                          purchasePrice: { type: 'number' },
-                        }
-                      }
-                    },
-                    currency: { type: 'string', default: 'usd' },
-                    period: { type: 'string', enum: ['24h', '7d', '30d', '90d', '1y'], default: '30d' },
-                  }
-                }
-              }
-            }
-          },
-          responses: {
-            '200': { description: 'Successful response' },
-            '402': { description: 'Payment required' },
-          },
-          security: [
-            { X402Payment: [] },
-          ],
-        },
-      },
-      '/api/market/compare': {
-        get: {
-          summary: 'Compare cryptocurrencies',
-          description: 'Compare multiple cryptocurrencies side-by-side',
-          tags: ['Market Data'],
-          parameters: [
-            { 
-              name: 'coins', 
-              in: 'query', 
-              required: true,
-              description: 'Comma-separated coin IDs',
-              schema: { type: 'string' } 
-            },
-          ],
-          responses: {
-            '200': { description: 'Successful response' },
-          },
-        },
-      },
-      '/api/health': {
-        get: {
-          summary: 'Health check',
-          description: 'Returns system health status and service availability',
-          tags: ['System'],
-          responses: {
-            '200': {
-              description: 'System healthy',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      status: { type: 'string', enum: ['healthy', 'degraded', 'unhealthy'] },
-                      checks: { 
-                        type: 'object',
-                        properties: {
-                          database: { type: 'boolean' },
-                          cache: { type: 'boolean' },
-                          upstream: { type: 'boolean' },
-                        }
-                      },
-                      uptime: { type: 'number' },
-                      timestamp: { type: 'string', format: 'date-time' },
-                    },
-                  },
-                },
-              },
-            },
-            '503': { description: 'System unhealthy' },
-          },
-        },
-      },
-      '/api/openapi.json': {
-        get: {
-          summary: 'OpenAPI specification',
-          description: 'Returns the OpenAPI 3.0 specification for this API',
-          tags: ['System'],
-          responses: {
-            '200': {
-              description: 'OpenAPI spec',
-              content: {
-                'application/json': {
-                  schema: { type: 'object' }
-                }
-              }
-            },
-          },
-        },
-      },
-    },
+    paths,
     components: {
-      schemas: {
-        Article: {
-          type: 'object',
-          properties: {
-            id: { type: 'string' },
-            title: { type: 'string' },
-            description: { type: 'string', nullable: true },
-            url: { type: 'string', format: 'uri' },
-            source: { type: 'string' },
-            category: { type: 'string' },
-            publishedAt: { type: 'string', format: 'date-time' },
-            sentiment: { type: 'string', enum: ['positive', 'negative', 'neutral'] },
-          }
-        },
-        Coin: {
-          type: 'object',
-          properties: {
-            id: { type: 'string' },
-            symbol: { type: 'string' },
-            name: { type: 'string' },
-            current_price: { type: 'number' },
-            market_cap: { type: 'number' },
-            price_change_percentage_24h: { type: 'number' },
-          }
-        },
-        Error: {
-          type: 'object',
-          properties: {
-            error: { type: 'string' },
-            code: { type: 'string' },
-            timestamp: { type: 'string', format: 'date-time' },
-            validationErrors: {
-              type: 'array',
-              items: {
-                type: 'object',
-                properties: {
-                  field: { type: 'string' },
-                  message: { type: 'string' },
-                }
-              }
-            }
-          }
-        }
-      },
       securitySchemes: {
         ApiKeyAuth: {
           type: 'apiKey',
           in: 'header',
           name: 'X-API-Key',
-          description: 'API key for authenticated access. Get your key at /settings',
+          description: 'API key for authenticated access',
         },
         X402Payment: {
           type: 'apiKey',
           in: 'header',
-          name: 'PAYMENT-SIGNATURE',
-          description: 'x402 micropayment signature. See /docs/x402 for details',
+          name: 'X-PAYMENT',
+          description: 'x402 micropayment header (USDC on Base/Arbitrum)',
         },
       },
     },
   };
+}
+
+// ---------------------------------------------------------------------------
+// Tag helpers
+// ---------------------------------------------------------------------------
+
+function categoriseV1(path: string): string {
+  if (/news|breaking|bitcoin|categories|sources|tags|articles|regulatory|academic/.test(path))
+    return 'News';
+  if (/coins?|market-data|trending|gas|exchanges|search|ohlcv|orderbook|fear-greed|stablecoins/.test(path))
+    return 'Market Data';
+  if (/sentiment|narratives|digest|summarize|ask|forecast|classify|ai\/research|ai\/explain/.test(path))
+    return 'AI Analysis';
+  if (/derivatives|arbitrage|signals|liquidations|funding-rates|options|backtest/.test(path))
+    return 'Trading';
+  if (/defi|dex|bridges|yields|token-unlocks/.test(path)) return 'DeFi';
+  if (/onchain|whale-alerts|solana|l2|nft|fundamentals/.test(path))
+    return 'On-Chain';
+  if (/social|influencers/.test(path)) return 'Social';
+  if (/portfolio|watchlist|webhooks|predictions|alerts/.test(path))
+    return 'Portfolio';
+  if (/anomalies|entities|claims|correlations|analytics/.test(path))
+    return 'Analytics';
+  if (/export|historical/.test(path)) return 'Export';
+  if (/rss|sse/.test(path)) return 'Feeds';
+  return 'Market Data';
+}
+
+function premiumTag(category: string): string {
+  const map: Record<string, string> = {
+    ai: 'Premium AI',
+    whales: 'Premium Whales',
+    screener: 'Premium Analytics',
+    market: 'Premium Market',
+    defi: 'Premium DeFi',
+    data: 'Premium Data',
+    analytics: 'Premium Analytics',
+    alerts: 'Premium Alerts',
+    realtime: 'Premium Streaming',
+    pass: 'Premium Passes',
+  };
+  return map[category] ?? 'Premium Market';
 }

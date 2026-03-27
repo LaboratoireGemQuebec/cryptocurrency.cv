@@ -9,20 +9,51 @@
  */
 
 /**
- * x402 Discovery Route (Standard Location)
- * 
- * Redirects to the API x402 endpoint for payment discovery
- * Standard: https://x402.org
+ * x402 Well-Known Discovery Endpoint
+ *
+ * Returns the x402scan v1 discovery format so x402scan can register
+ * all paid resources. The OpenAPI spec at /openapi.json is canonical;
+ * this endpoint is the compatibility fallback.
+ *
+ * @see https://github.com/Merit-Systems/x402scan
  */
 
 import { NextResponse } from 'next/server';
-import { SITE_URL } from '@/lib/constants';
+import { API_PRICING, PREMIUM_PRICING } from '@/lib/x402/pricing';
 
 export const runtime = 'edge';
+export const revalidate = 300;
 
 export async function GET() {
-  // Redirect to the actual x402 API endpoint
-  return NextResponse.redirect(`${SITE_URL}/api/.well-known/x402`, {
-    status: 307, // Temporary redirect to allow caching
-  });
+  // Build "METHOD /path" resource entries from pricing configs
+  const resources: string[] = [];
+
+  // v1 API endpoints (all GET)
+  for (const path of Object.keys(API_PRICING)) {
+    resources.push(`GET ${path}`);
+  }
+
+  // Premium endpoints (all GET except known POST routes)
+  const postRoutes = new Set([
+    '/api/premium/portfolio/analytics',
+    '/api/premium/alerts/create',
+  ]);
+
+  for (const path of Object.keys(PREMIUM_PRICING)) {
+    const method = postRoutes.has(path) ? 'POST' : 'GET';
+    resources.push(`${method} ${path}`);
+  }
+
+  return NextResponse.json(
+    {
+      version: 1,
+      resources,
+    },
+    {
+      headers: {
+        'Cache-Control': 'public, max-age=300, s-maxage=300',
+        'Access-Control-Allow-Origin': '*',
+      },
+    },
+  );
 }

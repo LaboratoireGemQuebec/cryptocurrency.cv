@@ -287,6 +287,10 @@ const nextConfig = {
       // so the dynamic API route always wins over public/llms-full.txt.
       beforeFiles: [
         {
+          source: '/openapi.json',
+          destination: '/api/openapi.json',
+        },
+        {
           source: '/llms-full.txt',
           destination: '/api/llms-full.txt',
         },
