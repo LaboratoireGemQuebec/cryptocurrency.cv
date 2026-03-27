@@ -35,9 +35,14 @@ const HTML_SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
  * Markdown-safe HTML sanitization (for blog posts, comments)
  */
 const MARKDOWN_SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
-  allowedTags: ['p', 'br', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li', 'code', 'pre'],
+  allowedTags: [
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    'p', 'br', 'strong', 'em', 'u', 'a',
+    'ul', 'ol', 'li', 'code', 'pre',
+    'table', 'thead', 'tbody', 'tr', 'th', 'td',
+  ],
   allowedAttributes: {
-    'a': ['href', 'title'],
+    'a': ['href', 'title', 'target', 'rel'],
   },
   allowedSchemes: ['http', 'https', 'mailto'],
   disallowedTagsMode: 'escape',
