@@ -34,6 +34,7 @@ import {
   matchesPattern,
   findRouteRateLimit,
 } from './config';
+import { getSperaxosKeyRateLimit } from './speraxos-hmac';
 
 // =============================================================================
 // REPEAT-429 ESCALATION
@@ -296,8 +297,31 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
 
   // Tier-aware rate limiting
   if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
-    ctx.headers['X-RateLimit-Limit'] = 'unlimited';
-    ctx.headers['X-RateLimit-Remaining'] = 'unlimited';
+    const speraxosKeyId = ctx.speraxosKeyId ?? 'trusted-origin';
+    const speraxosLimit = getSperaxosKeyRateLimit(speraxosKeyId);
+    const srl = await checkTierRateLimit(`speraxos:${speraxosKeyId}`, speraxosLimit.daily);
+    ctx.headers['X-RateLimit-Limit'] = speraxosLimit.daily.toString();
+    ctx.headers['X-RateLimit-Remaining'] = srl.remaining.toString();
+    ctx.headers['X-RateLimit-Reset'] = new Date(srl.resetAt).toISOString();
+    ctx.headers['X-RateLimit-Tier'] = 'speraxos';
+
+    if (!srl.allowed) {
+      const retry = Math.ceil((srl.resetAt - Date.now()) / 1000);
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'SPERAXOS_RATE_LIMIT',
+          keyId: speraxosKeyId,
+          limit: speraxosLimit.daily,
+          retryAfter: retry,
+          requestId: ctx.requestId,
+        },
+        {
+          status: 429,
+          headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+        },
+      );
+    }
   } else if (ctx.apiKeyTier && ctx.apiKeyId) {
     const tierLimit = TIER_LIMITS[ctx.apiKeyTier] ?? TIER_LIMITS.free;
     const rl = await checkTierRateLimit(ctx.apiKeyId, tierLimit.daily);
@@ -415,31 +439,31 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
     }
   }
 
-  // Per-route rate limits for expensive endpoints
-  if (!ctx.isSperaxOS && !ctx.isTrustedOrigin) {
-    const routeLimit = findRouteRateLimit(pathname);
-    if (routeLimit) {
-      const routeKey = ctx.apiKeyId
+  // Per-route rate limits for expensive endpoints — applies to ALL callers
+  const routeLimit = findRouteRateLimit(pathname);
+  if (routeLimit) {
+    const routeKey = ctx.speraxosKeyId
+      ? `route:${routeLimit.label}:speraxos:${ctx.speraxosKeyId}`
+      : ctx.apiKeyId
         ? `route:${routeLimit.label}:${ctx.apiKeyId}`
         : `route:${routeLimit.label}:${ctx.clientIp}`;
-      const routeRl = await checkRateLimit(routeKey, 'public');
-      if (!routeRl.allowed) {
-        const retry = Math.ceil((routeRl.resetAt - Date.now()) / 1000);
-        return NextResponse.json(
-          {
-            error: 'Rate Limit Exceeded',
-            code: 'ROUTE_RATE_LIMIT',
-            message: `This endpoint is limited to ${routeLimit.requests} requests per minute`,
-            endpoint: routeLimit.label,
-            retryAfter: retry,
-            requestId: ctx.requestId,
-          },
-          {
-            status: 429,
-            headers: { ...ctx.headers, 'Retry-After': retry.toString() },
-          },
-        );
-      }
+    const routeRl = await checkRateLimit(routeKey, 'public');
+    if (!routeRl.allowed) {
+      const retry = Math.ceil((routeRl.resetAt - Date.now()) / 1000);
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'ROUTE_RATE_LIMIT',
+          message: `This endpoint is limited to ${routeLimit.requests} requests per minute`,
+          endpoint: routeLimit.label,
+          retryAfter: retry,
+          requestId: ctx.requestId,
+        },
+        {
+          status: 429,
+          headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+        },
+      );
     }
   }
 

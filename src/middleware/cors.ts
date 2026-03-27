@@ -25,7 +25,7 @@ export const cors: MiddlewareHandler = (ctx) => {
     const origin = ctx.request.headers.get('origin') ?? '';
     const preflightHeaders: Record<string, string> = {
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-speraxos-token, x-api-key',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-api-key, x-speraxos-signature, x-speraxos-timestamp, x-speraxos-nonce, x-speraxos-key-id, x-speraxos-body-hash',
       'Access-Control-Max-Age': '86400',
       ...SECURITY_HEADERS,
     };

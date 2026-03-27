@@ -23,6 +23,7 @@ function createContext(pathname: string): MiddlewareContext {
     isApiRoute: pathname.startsWith('/api/'),
     isEmbedRoute: pathname.startsWith('/embed/') || pathname === '/embed',
     isSperaxOS: false,
+    speraxosKeyId: null,
     isTrustedOrigin: false,
     isApiClient: false,
     clientIp: '127.0.0.1',

@@ -51,6 +51,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { CACHE_CONTROL, generateETag, checkETagMatch } from '@/lib/api-utils';
 import { PREMIUM_URL } from '@/lib/constants';
+import { signBatchAuth } from '@/middleware/speraxos-hmac';
 
 export const runtime = 'edge';
 
@@ -132,11 +133,20 @@ export async function POST(request: NextRequest) {
   const origin = request.nextUrl.origin;
   const forwardHeaders: Record<string, string> = {};
   // Forward authentication and tier headers to sub-requests
-  for (const h of ['authorization', 'x-free-tier', 'x-api-key', 'x-speraxos-token', 'accept-language']) {
+  for (const h of ['authorization', 'x-free-tier', 'x-api-key', 'accept-language']) {
     const v = request.headers.get(h);
     if (v) forwardHeaders[h] = v;
   }
   if (isFreeTier) forwardHeaders['x-free-tier'] = '1';
+
+  // For speraxos-authenticated batch requests, sign an internal auth token
+  // so sub-requests inherit speraxos privileges without exposing keys
+  const isSperaxOS = request.headers.get('x-speraxos') === '1';
+  if (isSperaxOS) {
+    const batchRequestId = request.headers.get('x-request-id') ?? crypto.randomUUID();
+    const batchAuth = await signBatchAuth(batchRequestId);
+    if (batchAuth) forwardHeaders['x-batch-auth'] = batchAuth;
+  }
 
   const results: BatchSubResponse[] = await Promise.all(
     requests.map(async (r): Promise<BatchSubResponse> => {

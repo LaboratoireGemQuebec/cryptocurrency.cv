@@ -8,11 +8,10 @@
  * Tests for trusted-origins middleware handler and utility functions
  */
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { NextResponse, NextRequest } from 'next/server';
 import {
   isTrustedOrigin,
-  isSperaxOSRequest,
   trustedOriginHandler,
 } from '@/middleware/trusted-origins';
 import type { MiddlewareContext } from '@/middleware/types';
@@ -34,6 +33,7 @@ function createContext(
     isApiRoute: pathname.startsWith('/api/'),
     isEmbedRoute: false,
     isSperaxOS: false,
+    speraxosKeyId: null,
     isTrustedOrigin: false,
     isApiClient: false,
     clientIp: '127.0.0.1',
@@ -78,108 +78,56 @@ describe('isTrustedOrigin', () => {
 });
 
 // =============================================================================
-// isSperaxOSRequest utility
-// =============================================================================
-
-describe('isSperaxOSRequest', () => {
-  beforeEach(() => {
-    vi.stubEnv('SPERAXOS_API_SECRET', 'super-secret-token');
-  });
-
-  afterEach(() => {
-    vi.unstubAllEnvs();
-  });
-
-  it('should return true for matching secret token', async () => {
-    const url = new URL('http://localhost:3000/api/test');
-    const request = new NextRequest(url, {
-      headers: new Headers({ 'x-speraxos-token': 'super-secret-token' }),
-    });
-    const result = await isSperaxOSRequest(request);
-    expect(result).toBe(true);
-  });
-
-  it('should return false for wrong token', async () => {
-    const url = new URL('http://localhost:3000/api/test');
-    const request = new NextRequest(url, {
-      headers: new Headers({ 'x-speraxos-token': 'wrong-token' }),
-    });
-    const result = await isSperaxOSRequest(request);
-    expect(result).toBe(false);
-  });
-
-  it('should return false without token header', async () => {
-    const url = new URL('http://localhost:3000/api/test');
-    const request = new NextRequest(url);
-    const result = await isSperaxOSRequest(request);
-    expect(result).toBe(false);
-  });
-
-  it('should return false when SPERAXOS_API_SECRET is not set', async () => {
-    vi.stubEnv('SPERAXOS_API_SECRET', '');
-    const url = new URL('http://localhost:3000/api/test');
-    const request = new NextRequest(url, {
-      headers: new Headers({ 'x-speraxos-token': 'some-token' }),
-    });
-    const result = await isSperaxOSRequest(request);
-    expect(result).toBe(false);
-  });
-});
-
-// =============================================================================
 // trustedOriginHandler composable handler
 // =============================================================================
 
 describe('trustedOriginHandler', () => {
-  beforeEach(() => {
-    vi.stubEnv('SPERAXOS_API_SECRET', 'super-secret-token');
-  });
-
   afterEach(() => {
     vi.unstubAllEnvs();
   });
 
-  it('should skip non-API routes', async () => {
+  it('should skip non-API routes', () => {
     const ctx = createContext({}, { isApiRoute: false, pathname: '/about' });
-    const result = await trustedOriginHandler(ctx);
+    const result = trustedOriginHandler(ctx);
     expect(result).not.toBeInstanceOf(NextResponse);
     expect((result as MiddlewareContext).isSperaxOS).toBe(false);
   });
 
-  it('should set isSperaxOS for valid SperaxOS requests', async () => {
-    const ctx = createContext({ 'x-speraxos-token': 'super-secret-token' });
-    const result = (await trustedOriginHandler(ctx)) as MiddlewareContext;
-
-    expect(result.isSperaxOS).toBe(true);
-    expect(result.headers['X-Priority']).toBe('speraxos');
-    expect(result.headers['X-SperaxOS']).toBe('1');
-  });
-
-  it('should set isTrustedOrigin for trusted browser origins', async () => {
+  it('should set isTrustedOrigin for trusted browser origins', () => {
     const ctx = createContext({ origin: 'https://chat.sperax.io' });
-    const result = (await trustedOriginHandler(ctx)) as MiddlewareContext;
+    const result = trustedOriginHandler(ctx) as MiddlewareContext;
 
     expect(result.isTrustedOrigin).toBe(true);
     expect(result.headers['X-SperaxOS']).toBe('1');
     expect(result.headers['Access-Control-Allow-Origin']).toBe('https://chat.sperax.io');
   });
 
-  it('should not set trust flags for untrusted origins', async () => {
+  it('should not set trust flags for untrusted origins', () => {
     const ctx = createContext({ origin: 'https://evil.com' });
-    const result = (await trustedOriginHandler(ctx)) as MiddlewareContext;
+    const result = trustedOriginHandler(ctx) as MiddlewareContext;
 
     expect(result.isSperaxOS).toBe(false);
     expect(result.isTrustedOrigin).toBe(false);
     expect(result.headers['X-SperaxOS']).toBeUndefined();
   });
 
-  it('should not set isTrustedOrigin when isSperaxOS is true', async () => {
-    // SperaxOS token takes precedence over origin
-    const ctx = createContext({
-      'x-speraxos-token': 'super-secret-token',
-      origin: 'https://chat.sperax.io',
-    });
-    const result = (await trustedOriginHandler(ctx)) as MiddlewareContext;
+  it('should set priority headers when isSperaxOS is already true (set by HMAC handler)', () => {
+    // Simulates the HMAC handler having already authenticated
+    const ctx = createContext({}, { isSperaxOS: true, speraxosKeyId: 'test-key' });
+    const result = trustedOriginHandler(ctx) as MiddlewareContext;
+
+    expect(result.isSperaxOS).toBe(true);
+    expect(result.headers['X-Priority']).toBe('speraxos');
+    expect(result.headers['X-SperaxOS']).toBe('1');
+  });
+
+  it('should not set isTrustedOrigin when isSperaxOS is true', () => {
+    // SperaxOS HMAC auth takes precedence over origin trust
+    const ctx = createContext(
+      { origin: 'https://chat.sperax.io' },
+      { isSperaxOS: true, speraxosKeyId: 'test-key' },
+    );
+    const result = trustedOriginHandler(ctx) as MiddlewareContext;
 
     expect(result.isSperaxOS).toBe(true);
     // isTrustedOrigin is false when isSperaxOS — they're mutually exclusive

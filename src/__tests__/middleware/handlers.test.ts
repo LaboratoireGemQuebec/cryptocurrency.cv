@@ -27,6 +27,7 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
     isApiRoute: pathname.startsWith('/api/'),
     isEmbedRoute: pathname.startsWith('/embed/') || pathname === '/embed',
     isSperaxOS: false,
+    speraxosKeyId: null,
     isTrustedOrigin: false,
     isApiClient: false,
     clientIp: 'unknown',

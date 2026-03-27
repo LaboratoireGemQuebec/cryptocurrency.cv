@@ -33,7 +33,10 @@ export const apiResponse: MiddlewareHandler = (ctx) => {
   const requestHeaders = new Headers(ctx.request.headers);
   if (isFreeTierRequest) requestHeaders.set('x-free-tier', '1');
   if (ctx.isApiClient) requestHeaders.set('x-api-client', '1');
-  if (ctx.isSperaxOS || ctx.isTrustedOrigin) requestHeaders.set('x-speraxos', '1');
+  if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
+    requestHeaders.set('x-speraxos', '1');
+    if (ctx.speraxosKeyId) requestHeaders.set('x-speraxos-authenticated-key', ctx.speraxosKeyId);
+  }
 
   if (ctx.apiKeyTier) {
     requestHeaders.set('x-key-tier', ctx.apiKeyTier);

@@ -23,6 +23,7 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
     isApiRoute: true,
     isEmbedRoute: false,
     isSperaxOS: false,
+    speraxosKeyId: null,
     isTrustedOrigin: false,
     isApiClient: false,
     clientIp: '127.0.0.1',
