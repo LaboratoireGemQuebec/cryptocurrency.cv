@@ -27,7 +27,6 @@ import {
   REPEAT_429_THRESHOLD,
   REPEAT_429_WINDOW_MS,
   REPEAT_429_BLOCK_MS,
-  FREE_TIER_PATTERNS,
   EXEMPT_PATTERNS,
   MAX_BODY_SIZE,
   TIER_LIMITS,
@@ -379,7 +378,6 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
     ctx.headers['X-RateLimit-Remaining'] = rl.remaining.toString();
     ctx.headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
     ctx.headers['X-RateLimit-Tier'] = tier;
-    ctx.headers['X-Free-Tier'] = matchesPattern(pathname, FREE_TIER_PATTERNS) ? '0' : '1';
 
     if (!rl.allowed) {
       const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);

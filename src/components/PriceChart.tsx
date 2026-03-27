@@ -3,12 +3,23 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 
-interface OHLCCandle {
-  0: number; // timestamp
-  1: number; // open
-  2: number; // high
-  3: number; // low
-  4: number; // close
+interface OHLCObject {
+  timestamp: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+}
+
+type OHLCTuple = [number, number, number, number, number];
+type OHLCCandle = OHLCObject | OHLCTuple;
+
+function getCandleClose(c: OHLCCandle): number {
+  return Array.isArray(c) ? c[4] : c.close;
+}
+
+function getCandleTimestamp(c: OHLCCandle): number {
+  return Array.isArray(c) ? c[0] : c.timestamp;
 }
 
 const TIME_RANGES = [
@@ -92,7 +103,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         };
       }
 
-      const closes = data.map((c) => c[4]);
+      const closes = data.map((c) => getCandleClose(c));
       const min = Math.min(...closes);
       const max = Math.max(...closes);
       const range = max - min || 1;
@@ -138,11 +149,11 @@ export default function PriceChart({ coinId }: { coinId: string }) {
       const index = Math.round(((mouseX - padding.left) / usableWidth) * (data.length - 1));
       const clampedIndex = Math.max(0, Math.min(data.length - 1, index));
       const candle = data[clampedIndex];
-      const price = candle[4];
+      const price = getCandleClose(candle);
       const usableHeight = chartHeight - padding.top - padding.bottom;
       const x = padding.left + (clampedIndex / (data.length - 1)) * usableWidth;
       const y = padding.top + usableHeight - ((price - minPrice) / priceRange) * usableHeight;
-      setTooltip({ x, y, price, date: candle[0] });
+      setTooltip({ x, y, price, date: getCandleTimestamp(candle) });
     },
     [data, minPrice, priceRange],
   );
