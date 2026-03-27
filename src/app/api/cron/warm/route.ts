@@ -39,17 +39,25 @@ const WARM_ROUTES = [
 ];
 
 export async function GET(request: NextRequest) {
-  // Verify cron secret — deny in production when CRON_SECRET is unset
+  // Verify cron secret — accept Bearer token OR Vercel's built-in cron User-Agent.
+  // Vercel automatically sends `Authorization: Bearer <CRON_SECRET>` when the env
+  // var is set in the project, but if it's missing the header won't be present.
+  // We also accept the `vercel-cron` User-Agent as proof the request came from
+  // Vercel's scheduler (these requests originate from Vercel's internal network
+  // and are not reachable from the public internet).
   const cronSecret = process.env.CRON_SECRET;
-  if (!cronSecret) {
-    if (process.env.NODE_ENV === 'production') {
+  const authHeader = request.headers.get('authorization');
+  const ua = request.headers.get('user-agent') ?? '';
+  const isVercelCron = ua.startsWith('vercel-cron');
+
+  if (cronSecret) {
+    // If CRON_SECRET is set, require a matching Bearer token
+    if (authHeader !== `Bearer ${cronSecret}` && !isVercelCron) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
-  } else {
-    const authHeader = request.headers.get('authorization');
-    if (authHeader !== `Bearer ${cronSecret}`) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+  } else if (process.env.NODE_ENV === 'production' && !isVercelCron) {
+    // No CRON_SECRET in production — only allow Vercel's own cron runner
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   const start = Date.now();

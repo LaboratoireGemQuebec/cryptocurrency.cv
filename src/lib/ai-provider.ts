@@ -393,8 +393,8 @@ async function aiCompleteWithConfig(
 
   if (!response.ok) {
     const error = await response.text();
-    if (response.status === 401) {
-      throw new AIAuthError(config.provider, 401, `${config.provider} API authentication failed: ${error}`);
+    if (response.status === 401 || response.status === 403) {
+      throw new AIAuthError(config.provider, response.status, `${config.provider} API authentication failed (${response.status}): ${error}`);
     }
     throw new Error(`AI API error: ${response.status} - ${error}`);
   }
