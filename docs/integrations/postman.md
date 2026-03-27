@@ -101,13 +101,10 @@ https://raw.githubusercontent.com/nirholas/free-crypto-news/main/postman/Free_Cr
 | OPML Export | GET | `/api/opml` | OPML for feed readers |
 | SSE Stream | GET | `/api/sse` | Server-Sent Events |
 
-### 🔐 Premium & Webhooks
+### 🔐 Premium
 
 | Request | Method | Endpoint | Description |
 |---------|--------|----------|-------------|
-| Register Webhook | POST | `/api/webhooks` | Create webhook |
-| List Webhooks | GET | `/api/webhooks` | List webhooks |
-| Delete Webhook | DELETE | `/api/webhooks/:id` | Remove webhook |
 | Premium Status | GET | `/api/premium/status` | Check premium status |
 
 ### 🛠️ Utility

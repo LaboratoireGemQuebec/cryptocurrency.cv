@@ -823,6 +823,5 @@ Get WebSocket connection details:
 
 ## Next Steps
 
-- [Webhooks](user-webhooks.md) - Set up webhook notifications
 - [Alerts System](user-alerts.md) - Create custom alerts
 - [Trading Signals](trading-signals.md) - Real-time trading signals

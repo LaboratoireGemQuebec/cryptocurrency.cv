@@ -177,7 +177,7 @@ Configure custom whale alert rules.
       "asset": "BTC",
       "minValue": 10000000,
       "type": "exchange_in",
-      "webhook": "https://your-webhook.com/alerts"
+      "alertChannel": "websocket"
     }
   ]
 }
@@ -418,65 +418,6 @@ Upgrade subscription tier.
 
 ---
 
-## Webhooks
-
-Premium users can configure webhooks for real-time alerts:
-
-### Webhook Events
-
-| Event | Description |
-|-------|-------------|
-| `whale.transfer` | Large blockchain transfer |
-| `signal.new` | New trading signal |
-| `news.breaking` | Breaking news alert |
-| `price.alert` | Price threshold crossed |
-| `sentiment.shift` | Major sentiment change |
-
-### Configure Webhooks
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/webhooks" \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "url": "https://your-server.com/webhook",
-    "events": ["whale.transfer", "signal.new"],
-    "secret": "your_webhook_secret"
-  }'
-```
-
-### Webhook Payload
-
-```json
-{
-  "event": "whale.transfer",
-  "timestamp": "2026-01-22T12:30:00Z",
-  "data": {
-    "txHash": "abc123...",
-    "asset": "BTC",
-    "amount": 500,
-    "valueUsd": 49500000
-  },
-  "signature": "sha256=..."
-}
-```
-
-### Verify Webhook Signature
-
-```typescript
-import crypto from 'crypto';
-
-function verifyWebhook(payload: string, signature: string, secret: string) {
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(payload)
-    .digest('hex');
-  return signature === `sha256=${expected}`;
-}
-```
-
----
-
 ## Rate Limits by Tier
 
 | Tier | Requests/min | Requests/day | Burst |
@@ -568,5 +509,4 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 ## Related Documentation
 
 - [API Reference](API.md) - Complete API docs
-- [Webhooks](API.md#post-apiwebhooks) - Webhook configuration
 - [SDKs](sdks/index.md) - Client libraries

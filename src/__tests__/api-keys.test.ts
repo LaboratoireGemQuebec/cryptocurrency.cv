@@ -24,11 +24,6 @@ vi.mock('@vercel/kv', () => ({
   },
 }));
 
-vi.mock('@/lib/webhooks', () => ({
-  sendWebhook: vi.fn(),
-  webhookPayloads: {},
-}));
-
 vi.mock('@/lib/logger', () => {
   const mockLogger = {
     info: vi.fn(),

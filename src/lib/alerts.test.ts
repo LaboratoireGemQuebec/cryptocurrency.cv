@@ -517,23 +517,21 @@ describe('Enhanced Alert Rules System', () => {
       expect(rule.createdAt).toBeTruthy();
     });
 
-    it('should support webhook channel with URL', () => {
+    it('should support websocket channel', () => {
       const rule = {
         id: 'alert_456',
-        name: 'Webhook Alert',
+        name: 'WebSocket Alert',
         condition: {
           type: 'breaking_news' as const,
           keywords: ['bitcoin'],
         },
-        channels: ['webhook' as const],
-        webhookUrl: 'https://example.com/webhook',
+        channels: ['websocket' as const],
         cooldown: 600,
         enabled: true,
         createdAt: new Date().toISOString(),
       };
 
-      expect(rule.channels).toContain('webhook');
-      expect(rule.webhookUrl).toBe('https://example.com/webhook');
+      expect(rule.channels).toContain('websocket');
     });
   });
 
@@ -766,30 +764,6 @@ describe('Enhanced Alert Rules System', () => {
       });
       expect(invalid.valid).toBe(false);
       expect(invalid.error).toContain('Unknown condition type');
-    });
-  });
-
-  describe('Webhook Delivery', () => {
-    it('should format webhook payload correctly', () => {
-      const event = {
-        id: 'evt_123',
-        ruleId: 'alert_456',
-        ruleName: 'Test Alert',
-        condition: { type: 'price_above' as const, coin: 'bitcoin', threshold: 100000 },
-        triggeredAt: new Date().toISOString(),
-        data: { currentValue: 105000, threshold: 100000 },
-        severity: 'warning' as const,
-      };
-
-      const payload = {
-        type: 'alert',
-        event,
-        timestamp: new Date().toISOString(),
-      };
-
-      expect(payload.type).toBe('alert');
-      expect(payload.event).toEqual(event);
-      expect(payload.timestamp).toBeTruthy();
     });
   });
 
