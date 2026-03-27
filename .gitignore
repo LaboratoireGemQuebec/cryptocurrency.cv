@@ -151,7 +151,8 @@ data/
 e2e/
 infra/
 mcp/
-messages/
+messages/*
+!messages/en.json
 mobile/
 node_modules/
 postman/
