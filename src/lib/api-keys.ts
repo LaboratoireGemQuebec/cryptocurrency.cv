@@ -789,21 +789,6 @@ export async function upgradeKeyTier(
 
     await kv.set(`${KV_PREFIX.key}${hashedKey}`, updatedKeyData);
 
-    // Emit webhook event for key upgrade (non-blocking)
-    sendWebhook(
-      'key.upgraded',
-      webhookPayloads.keyUpgraded({
-        keyId,
-        keyPrefix: keyData.keyPrefix,
-        previousTier: keyData.tier,
-        newTier,
-      }),
-    ).catch((err) => {
-      authLogger.error(
-        { err: err instanceof Error ? err : new Error(String(err)) },
-        'Failed to send key.upgraded webhook',
-      );
-    });
 
     return { success: true, data: updatedKeyData };
   } catch (error) {

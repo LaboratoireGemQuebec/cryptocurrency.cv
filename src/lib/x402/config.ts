@@ -100,6 +100,7 @@ export const CURRENT_NETWORK: NetworkId = (() => {
 export const SUPPORTED_NETWORKS: NetworkId[] = [
   NETWORKS.BASE_MAINNET,
   NETWORKS.BASE_SEPOLIA,
+  NETWORKS.ARBITRUM,
   NETWORKS.SOLANA_MAINNET,
   NETWORKS.SOLANA_DEVNET,
 ];
@@ -317,6 +318,7 @@ export function getNetworkDisplayName(networkId: NetworkId = CURRENT_NETWORK): s
   const names: Record<NetworkId, string> = {
     'eip155:8453': 'Base Mainnet',
     'eip155:84532': 'Base Sepolia (Testnet)',
+    'eip155:42161': 'Arbitrum One',
     'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'Solana Mainnet',
     'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': 'Solana Devnet',
   };
