@@ -28,7 +28,7 @@ export default function ApiDocsPage() {
             API Documentation
           </h1>
           <p className="text-text-secondary">
-            Complete reference for Crypto Vision News API with interactive examples
+            Complete reference for Crypto Vision API with interactive examples
           </p>
         </div>
 

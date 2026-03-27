@@ -12,9 +12,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Sign In — Free Crypto News",
+    title: "Sign In — Crypto Vision",
     description:
-      "Sign in to your Free Crypto News account with a magic link. No password needed.",
+      "Sign in to your Crypto Vision account with a magic link. No password needed.",
     path: "/login",
     locale,
     tags: ["login", "sign in", "account", "magic link"],

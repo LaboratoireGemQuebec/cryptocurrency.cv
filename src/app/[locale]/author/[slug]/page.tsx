@@ -100,7 +100,7 @@ function AuthorStructuredData({ name, slug }: { name: string; slug: string }) {
     jobTitle: 'Crypto Journalist',
     worksFor: {
       '@type': 'Organization',
-      name: 'Free Crypto News',
+      name: 'Crypto Vision',
       url: 'https://cryptocurrency.cv',
     },
   };

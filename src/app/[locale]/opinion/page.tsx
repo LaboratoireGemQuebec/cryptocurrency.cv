@@ -27,7 +27,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: 'Opinion & Commentary | Free Crypto News',
+    title: 'Opinion & Commentary | Crypto Vision',
     description:
       'Analysis, editorials, and expert perspectives from across the crypto ecosystem. Opinion articles from CoinDesk, CoinTelegraph, and more.',
     alternates: {
@@ -86,7 +86,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
             ⚠️
           </span>
           <p className="text-sm text-amber-800 dark:text-amber-300">
-            Articles in this section represent the views of their authors, not Free Crypto News.
+            Articles in this section represent the views of their authors, not Crypto Vision.
             Opinion content is sourced from third-party publications and auto-detected from feed
             categories and URL paths.
           </p>

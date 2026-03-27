@@ -317,7 +317,7 @@ export default function MarketWidget() {
         >
           Powered by{" "}
           <span style={{ color: accentBlue, fontWeight: 600 }}>
-            Crypto Vision News
+            Crypto Vision
           </span>
         </a>
       </div>

@@ -15,9 +15,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: 'Our Team — Free Crypto News',
+    title: 'Our Team — Crypto Vision',
     description:
-      'Meet the people behind Free Crypto News. Our leadership, core contributors, and open source community building the free crypto news infrastructure.',
+      'Meet the people behind Crypto Vision. Our leadership, core contributors, and open source community building the free crypto news infrastructure.',
     path: '/team',
     locale,
     tags: ['team', 'contributors', 'masthead', 'open source', 'crypto news'],
@@ -54,7 +54,7 @@ function TeamStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Free Crypto News',
+    name: 'Crypto Vision',
     url: 'https://cryptocurrency.cv',
     logo: 'https://cryptocurrency.cv/logo.png',
     member: TEAM.filter((m) => m.type === 'leadership').map((m) => ({
@@ -94,7 +94,7 @@ export default async function TeamPage({ params }: Props) {
           <Users className="text-accent mx-auto mb-4 h-10 w-10" />
           <h1 className="text-text-primary font-serif text-4xl font-bold md:text-5xl">Our Team</h1>
           <p className="text-text-secondary mx-auto mt-4 max-w-2xl text-lg">
-            The people behind Free Crypto News — building the free and open crypto news
+            The people behind Crypto Vision — building the free and open crypto news
             infrastructure the industry needs.
           </p>
         </section>

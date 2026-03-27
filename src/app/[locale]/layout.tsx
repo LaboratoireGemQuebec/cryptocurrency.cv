@@ -64,24 +64,26 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Crypto Vision News — Free Real-Time Crypto News API',
-    template: '%s | Crypto Vision News',
+    default: 'Crypto Vision — Cryptocurrency Prices, News & Market Data',
+    template: '%s | Crypto Vision',
   },
   description:
-    'Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.',
+    'Real-time cryptocurrency prices, breaking news, and market intelligence. 350+ free API endpoints, developer SDKs, AI integrations, and embeddable widgets. Bitcoin, Ethereum, DeFi & altcoins.',
   keywords: [
     'crypto',
     'cryptocurrency',
     'bitcoin',
     'ethereum',
+    'crypto prices',
+    'market data',
     'news',
     'API',
-    'free',
     'blockchain',
     'defi',
     'trading',
     'crypto vision',
-    'free crypto news',
+    'crypto platform',
+    'live prices',
   ],
   authors: [{ name: 'Crypto Vision' }],
   creator: 'Crypto Vision',
@@ -89,13 +91,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cryptocurrency.cv'),
   alternates: {
     types: {
-      'application/rss+xml': [{ url: '/api/rss', title: 'Crypto Vision News RSS Feed' }],
+      'application/rss+xml': [{ url: '/api/rss', title: 'Crypto Vision RSS Feed' }],
     },
   },
   openGraph: {
-    title: 'Crypto Vision News',
+    title: 'Crypto Vision — Cryptocurrency Prices, News & Market Data',
     description:
-      'Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.',
+      'Real-time cryptocurrency prices, breaking news, and market intelligence. 350+ free API endpoints, developer SDKs, and AI integrations.',
     url: 'https://cryptocurrency.cv',
     siteName: 'Crypto Vision',
     type: 'website',
@@ -105,15 +107,15 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Crypto Vision News',
+        alt: 'Crypto Vision',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crypto Vision News',
+    title: 'Crypto Vision — Cryptocurrency Prices, News & Market Data',
     description:
-      'Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.',
+      'Real-time cryptocurrency prices, breaking news, and market intelligence. 350+ free API endpoints, developer SDKs, and AI integrations.',
     images: ['/og-image.png'],
     site: '@nichxbt',
     creator: '@nichxbt',
@@ -149,7 +151,7 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Crypto Vision',
   },
-  category: 'news',
+  category: 'finance',
 };
 
 const SSG_LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'pt', 'ru', 'ar'] as const;

@@ -135,7 +135,7 @@ function FooterStructuredData() {
     '@type': 'WPFooter',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Free Crypto News',
+      name: 'Crypto Vision',
       url: 'https://cryptocurrency.cv',
       potentialAction: {
         '@type': 'SearchAction',
@@ -146,7 +146,7 @@ function FooterStructuredData() {
     copyrightYear: new Date().getFullYear(),
     copyrightHolder: {
       '@type': 'Organization',
-      name: 'Free Crypto News',
+      name: 'Crypto Vision',
       url: 'https://cryptocurrency.cv',
       logo: 'https://cryptocurrency.cv/logo.png',
       sameAs: [
@@ -222,11 +222,11 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 mb-4 md:col-span-2 lg:mb-0">
-              <Link href="/" aria-label="Free Crypto News home">
+              <Link href="/" aria-label="Crypto Vision home">
                 <Logo size="md" />
               </Link>
               <p className="text-text-secondary mt-4 max-w-xs text-sm leading-relaxed">
-                Free, real-time crypto news aggregation from 300+ sources. No API keys required.
+                Real-time crypto prices, news, and market data. 350+ free API endpoints. No API keys required.
               </p>
 
               {/* API status */}
@@ -293,7 +293,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="border-border mt-8 flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row">
             <p className="text-text-tertiary text-xs tracking-wide">
-              &copy; {new Date().getFullYear()} Free Crypto News. Open source under MIT license.
+              &copy; {new Date().getFullYear()} Crypto Vision. Open source under MIT license.
             </p>
             <div className="text-text-tertiary flex items-center gap-3 text-xs">
               <span>300+ sources</span>

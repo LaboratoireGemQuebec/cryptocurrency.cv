@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return generateSEOMetadata({
-    title: `${newsletter.name} Newsletter — Free Crypto News`,
+    title: `${newsletter.name} Newsletter — Crypto Vision`,
     description: newsletter.description,
     path: `/newsletters/${newsletter.slug}`,
     locale,
@@ -193,7 +193,7 @@ export default async function NewsletterSlugPage({ params }: Props) {
                 <div className="bg-surface-secondary rounded-lg p-4">
                   <div className="text-text-tertiary mb-3 flex items-center gap-2 text-xs">
                     <Mail className="h-3.5 w-3.5" />
-                    <span>From: Free Crypto News</span>
+                    <span>From: Crypto Vision</span>
                   </div>
                   <div className="text-text-primary mb-1 text-sm font-semibold">
                     Subject: {newsletter.sampleSubject}

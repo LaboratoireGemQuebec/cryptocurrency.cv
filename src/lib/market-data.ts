@@ -9,7 +9,7 @@
  */
 
 /**
- * Market Data Service for Crypto Vision News
+ * Market Data Service for Crypto Vision
  * Adapted from https://github.com/nirholas/crypto-market-data
  *
  * Integrates multiple free APIs for live market data:

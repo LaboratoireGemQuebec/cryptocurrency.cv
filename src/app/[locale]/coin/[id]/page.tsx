@@ -349,7 +349,7 @@ export default async function CoinPage({ params }: Props) {
       </main>
       <PageShareSection
         title={`${coin.name} (${coin.symbol?.toUpperCase()}) Price & News`}
-        description={`Live ${coin.name} price, charts, and latest news on Crypto Vision News.`}
+        description={`Live ${coin.name} price, charts, and latest news on Crypto Vision.`}
         url={`https://cryptocurrency.cv/${locale}/coin/${id}`}
       />
       <Footer />

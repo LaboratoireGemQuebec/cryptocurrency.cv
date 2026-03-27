@@ -117,7 +117,7 @@ export default function ChartWidget() {
             fontWeight: 600,
           }}
         >
-          Crypto Vision News
+          Crypto Vision
         </a>
         <span>×</span>
         <a

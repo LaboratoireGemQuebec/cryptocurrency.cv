@@ -58,18 +58,20 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: 'Free Crypto News — Breaking Crypto News, Analysis & Market Intelligence',
+    title: 'Crypto Vision — Live Crypto Prices, Breaking News & Market Intelligence',
     description:
-      'Breaking cryptocurrency news and in-depth analysis from 300+ sources. Coverage of Bitcoin, Ethereum, DeFi, regulation, and market movements — updated every minute.',
+      'Live cryptocurrency prices, breaking news, and market analysis. 350+ free API endpoints, developer SDKs, embeddable widgets, and AI integrations. Bitcoin, Ethereum, DeFi & more — updated every minute.',
     path: '',
     locale,
     tags: [
-      'crypto news',
+      'crypto prices',
       'cryptocurrency',
-      'bitcoin news',
-      'ethereum news',
+      'bitcoin',
+      'ethereum',
+      'crypto news',
+      'market data',
       'defi',
-      'market analysis',
+      'crypto API',
     ],
   });
 }

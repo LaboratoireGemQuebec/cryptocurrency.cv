@@ -4,8 +4,8 @@ export function WebsiteStructuredData() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Crypto Vision News',
-    alternateName: ['CV News', 'Free Crypto News', 'cryptocurrency.cv'],
+    name: 'Crypto Vision',
+    alternateName: ['CV', 'Crypto Vision News', 'cryptocurrency.cv'],
     url: 'https://cryptocurrency.cv',
     potentialAction: {
       '@type': 'SearchAction',
@@ -198,11 +198,11 @@ export function SoftwareApplicationStructuredData() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Crypto Vision News API',
+    name: 'Crypto Vision API',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
     description:
-      'Free crypto news API — real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. RSS/Atom feeds, JSON REST API, historical archive with market context. No API key required.',
+      'Free cryptocurrency API — real-time prices, news, and market data for Bitcoin, Ethereum, DeFi, Solana & altcoins. 350+ endpoints, RSS/Atom feeds, JSON REST API, SDKs, and AI integrations. No API key required.',
     url: 'https://cryptocurrency.cv/en/developers',
     offers: {
       '@type': 'Offer',

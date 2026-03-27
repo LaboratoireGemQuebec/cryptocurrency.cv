@@ -54,7 +54,7 @@ function AuthorsStructuredData() {
     url: 'https://cryptocurrency.cv/authors',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Free Crypto News',
+      name: 'Crypto Vision',
       url: 'https://cryptocurrency.cv',
     },
   };

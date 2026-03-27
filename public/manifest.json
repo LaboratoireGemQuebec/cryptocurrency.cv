@@ -1,7 +1,7 @@
 {
-  "name": "Crypto Vision News",
+  "name": "Crypto Vision",
   "short_name": "Crypto Vision",
-  "description": "Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources.",
+  "description": "Real-time cryptocurrency prices, breaking news, and market intelligence. 350+ free API endpoints. Bitcoin, Ethereum, DeFi & altcoins.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -10,7 +10,7 @@
   "scope": "/",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["news", "finance", "business"],
+  "categories": ["finance", "news", "business"],
   "iarc_rating_id": "",
   "prefer_related_applications": false,
   "icons": [

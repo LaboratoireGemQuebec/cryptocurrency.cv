@@ -39,7 +39,7 @@ const apiRoutes: Record<string, RouteConfig> = {
         network: NETWORK,
       },
     ],
-    description: 'Crypto Vision News API — pay per request in USDs on Arbitrum',
+    description: 'Crypto Vision API — pay per request in USDs on Arbitrum',
   },
 };
 

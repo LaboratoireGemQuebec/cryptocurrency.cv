@@ -26,7 +26,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: 'Newsletters — Free Crypto News',
+    title: 'Newsletters — Crypto Vision',
     description:
       'Subscribe to free crypto newsletters: daily digest, market analysis, DeFi updates, developer news, and educational content delivered to your inbox.',
     path: '/newsletters',
