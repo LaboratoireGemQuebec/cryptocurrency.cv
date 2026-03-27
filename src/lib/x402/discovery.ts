@@ -31,7 +31,8 @@ const NETWORK = process.env.X402_NETWORK ?? 'eip155:42161';
 const RECEIVE_ADDRESS = (process.env.X402_RECEIVE_ADDRESS ?? PAYMENT_ADDRESS) as string;
 
 /** USDC contract address for the active network */
-const USDC_ASSET = USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
+const USDC_ASSET =
+  USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
 
 /** Returns true if a route is behind the x402 gate */
 function isX402Protected(path: string): boolean {
@@ -70,15 +71,36 @@ function buildInputSchema(
   path: string,
   method: string,
 ): { method: string; type: string; url: string; parameters?: Record<string, unknown> } {
-  const fullMeta = (ENDPOINT_METADATA_FULL as Record<string, {
-    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
-  }>)[path];
-  const legacyMeta = (ENDPOINT_METADATA as Record<string, {
-    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
-  }>)[path];
+  const fullMeta = (
+    ENDPOINT_METADATA_FULL as Record<
+      string,
+      {
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+      }
+    >
+  )[path];
+  const legacyMeta = (
+    ENDPOINT_METADATA as Record<
+      string,
+      {
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+      }
+    >
+  )[path];
 
   const params = fullMeta?.parameters ?? legacyMeta?.parameters;
-  const schema: { method: string; type: string; url: string; parameters?: Record<string, unknown> } = {
+  const schema: {
+    method: string;
+    type: string;
+    url: string;
+    parameters?: Record<string, unknown>;
+  } = {
     method,
     type: 'http',
     url: `${BASE_URL}${path}`,
@@ -88,7 +110,12 @@ function buildInputSchema(
     schema.parameters = Object.fromEntries(
       Object.entries(params).map(([name, p]) => [
         name,
-        { type: p.type, description: p.description, ...(p.required ? { required: true } : {}), ...(p.default != null ? { default: p.default } : {}) },
+        {
+          type: p.type,
+          description: p.description,
+          ...(p.required ? { required: true } : {}),
+          ...(p.default != null ? { default: p.default } : {}),
+        },
       ]),
     );
   }

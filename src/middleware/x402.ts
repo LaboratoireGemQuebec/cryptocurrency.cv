@@ -187,7 +187,8 @@ export function getX402Proxy(): (req: NextRequest) => any {
 // Fallback 402 builder — used when the proxy cannot initialise
 // ---------------------------------------------------------------------------
 
-const USDC_ASSET = USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
+const USDC_ASSET =
+  USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
 
 /** Get the USD price string for a route path */
 function getRoutePrice(path: string): string {
