@@ -22,7 +22,12 @@
 
 import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
 import { ENDPOINT_METADATA_FULL } from '@/lib/openapi/endpoint-metadata.generated';
-import { getOwnershipProofs, RECEIVE_ADDRESS, CURRENT_NETWORK, USDC_ADDRESSES } from '@/lib/x402/config';
+import {
+  getOwnershipProofs,
+  RECEIVE_ADDRESS,
+  CURRENT_NETWORK,
+  USDC_ADDRESSES,
+} from '@/lib/x402/config';
 import { API_PRICING, PREMIUM_PRICING, usdToUsdc, ENDPOINT_METADATA } from '@/lib/x402/pricing';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
 

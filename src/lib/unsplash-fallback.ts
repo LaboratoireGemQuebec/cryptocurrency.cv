@@ -29,7 +29,7 @@ const CRYPTO_PHOTOS = [
   '1451187580459-43490279c0fa', // Globe with data lines
   '1504711434969-e33886168f5c', // City skyline / finance
   '1543699565-003b8adda5fc', // Abstract circuit board
-  '1563013544-824ae1b704d3',     // Data network flow
+  '1563013544-824ae1b704d3', // Data network flow
   '1639322537228-f710d846310a', // Crypto coin stack
   '1605792657660-596af9009e82', // Ethereum concept
   '1642790106117-e829e14a795f', // Crypto trading signals
@@ -37,7 +37,7 @@ const CRYPTO_PHOTOS = [
   '1551288049-bebda4e38f71', // Data dashboard / charts
   '1614028674026-a65e31bfd27c', // Bitcoin close-up
   '1601597111158-2fceff292cdc', // Digital currency concept
-  '1550751827-4bd374c3f58b',     // Digital finance abstract
+  '1550751827-4bd374c3f58b', // Digital finance abstract
   '1634704784915-aacf363b021f', // Bitcoin physical coin
 ];
 

@@ -30,7 +30,12 @@ import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
 import { API_PRICING, PREMIUM_PRICING, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
-import { FACILITATOR_URL, RECEIVE_ADDRESS, CURRENT_NETWORK, USDC_ADDRESSES } from '@/lib/x402/config';
+import {
+  FACILITATOR_URL,
+  RECEIVE_ADDRESS,
+  CURRENT_NETWORK,
+  USDC_ADDRESSES,
+} from '@/lib/x402/config';
 
 const NETWORK = CURRENT_NETWORK as never;
 

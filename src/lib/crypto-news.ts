@@ -3903,10 +3903,11 @@ export async function getLatestNews(
       } as NewsResponse;
     }
   } else if (options?.homepageOnly) {
-    // Restrict to curated homepage sources (T1/T2 only)
+    // Restrict to curated homepage sources (T1/T2 only), no API aggregators
     sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter((k) =>
       HOMEPAGE_SOURCE_KEYS.has(k),
     );
+    includeApiSources = false;
   } else {
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   }
@@ -3920,6 +3921,11 @@ export async function getLatestNews(
 
   // Filter out feed metadata items that aren't real news
   articles = articles.filter(isActualNews);
+
+  // Homepage: additionally filter to crypto-relevant content only
+  if (options?.homepageOnly) {
+    articles = articles.filter(isCryptoRelevant);
+  }
 
   // Apply date filtering
   if (options?.from || options?.to) {
