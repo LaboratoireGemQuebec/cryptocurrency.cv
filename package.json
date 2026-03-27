@@ -218,11 +218,11 @@
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   },
-  "overrides": {
-    "bn.js": "^5.2.3",
-    "elliptic": "^6.6.1"
-  },
   "pnpm": {
+    "overrides": {
+      "bn.js": "^5.2.3",
+      "elliptic": "^6.6.1"
+    },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@swc/core",
