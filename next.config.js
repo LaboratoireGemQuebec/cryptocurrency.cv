@@ -295,6 +295,10 @@ const nextConfig = {
           destination: '/api/llms-full.txt',
         },
         {
+          source: '/.well-known/x402',
+          destination: '/api/.well-known/x402',
+        },
+        {
           source: '/.well-known/agents.json',
           destination: '/api/well-known/agents',
         },
