@@ -88,6 +88,7 @@ secrets/
 service-account*.json
 firebase-adminsdk*.json
 gcloud-*.json
+.gcp-keys.txt
 
 # ═══════════════════════════════════════════════════════════════
 # Large / generated assets (not needed in repo)
