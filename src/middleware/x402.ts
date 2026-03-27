@@ -29,8 +29,8 @@ import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
-import { API_PRICING, PREMIUM_PRICING, toX402Price } from '@/lib/x402/pricing';
-import { FACILITATOR_URL } from '@/lib/x402/config';
+import { API_PRICING, PREMIUM_PRICING, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
+import { FACILITATOR_URL, USDC_ADDRESSES } from '@/lib/x402/config';
 
 const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
@@ -174,18 +174,73 @@ export function getX402Proxy(): (req: NextRequest) => any {
         '[x402] Proxy init deferred — scheme not yet available:',
         (err as Error).message,
       );
-      return (_req: NextRequest) =>
-        NextResponse.json(
-          {
-            error: 'Service Unavailable',
-            code: 'PAYMENT_GATE_UNAVAILABLE',
-            message: 'Payment verification is temporarily unavailable. Please retry shortly.',
-          },
-          { status: 503, headers: { 'Retry-After': '30' } },
-        );
+      // Return a proper 402 handler that builds payment requirements from local pricing.
+      // This ensures x402scan (and clients) always see valid 402 responses with accepts,
+      // even when the facilitator or EVM scheme is temporarily unavailable.
+      return (req: NextRequest) => buildFallback402(req);
     }
   }
   return _x402;
+}
+
+// ---------------------------------------------------------------------------
+// Fallback 402 builder — used when the proxy cannot initialise
+// ---------------------------------------------------------------------------
+
+const USDC_ASSET = USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
+
+/** Get the USD price string for a route path */
+function getRoutePrice(path: string): string {
+  const v1Price = (API_PRICING as Record<string, string>)[path];
+  if (v1Price) return v1Price;
+  const premiumConfig = (PREMIUM_PRICING as Record<string, { price: number }>)[path];
+  if (premiumConfig) return `$${premiumConfig.price}`;
+  return '$0.001';
+}
+
+/**
+ * Build a standards-compliant 402 response with accepts array.
+ * Matches the x402 v2 format expected by x402scan.
+ */
+function buildFallback402(req: NextRequest): NextResponse {
+  const pathname = req.nextUrl.pathname;
+  const price = getRoutePrice(pathname);
+  const maxAmountRequired = usdToUsdc(price);
+
+  return NextResponse.json(
+    {
+      x402Version: 2,
+      error: 'Payment Required',
+      accepts: [
+        {
+          scheme: 'exact',
+          network: NETWORK,
+          maxAmountRequired,
+          asset: USDC_ASSET,
+          payTo: RECEIVE_ADDRESS,
+          resource: `https://cryptocurrency.cv${pathname}`,
+          description: `Pay ${price.replace('$', '')} USDC to access this endpoint`,
+          mimeType: 'application/json',
+          maxTimeoutSeconds: 60,
+          extra: {
+            name: ARBITRUM_USDC.name,
+            version: ARBITRUM_USDC.version,
+          },
+          outputSchema: {
+            input: { method: req.method, type: 'http' },
+            output: null,
+          },
+        },
+      ],
+    },
+    {
+      status: 402,
+      headers: {
+        'WWW-Authenticate': `Payment realm="${pathname}"`,
+        'X-Payment-Required': 'true',
+      },
+    },
+  );
 }
 
 // =============================================================================
