@@ -455,9 +455,7 @@ describe('speraxosHmac handler (v2)', () => {
     vi.stubEnv('SPERAXOS_API_SECRET', '');
     vi.stubEnv(
       'SPERAXOS_KEYS',
-      JSON.stringify([
-        { id: 'limited', secret: SECRET, routes: ['/api/news*'] },
-      ]),
+      JSON.stringify([{ id: 'limited', secret: SECRET, routes: ['/api/news*'] }]),
     );
     _resetForTesting();
 
@@ -479,10 +477,7 @@ describe('speraxosHmac handler (v2)', () => {
 
   it('should allow wildcard route scope', async () => {
     vi.stubEnv('SPERAXOS_API_SECRET', '');
-    vi.stubEnv(
-      'SPERAXOS_KEYS',
-      JSON.stringify([{ id: 'admin', secret: SECRET, routes: ['*'] }]),
-    );
+    vi.stubEnv('SPERAXOS_KEYS', JSON.stringify([{ id: 'admin', secret: SECRET, routes: ['*'] }]));
     _resetForTesting();
 
     const timestamp = String(Date.now());
