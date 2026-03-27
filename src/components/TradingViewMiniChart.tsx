@@ -74,7 +74,7 @@ export default function TradingViewMiniChart({
   return (
     <div
       ref={containerRef}
-      className={cn('overflow-hidden', className)}
+      className={cn('overflow-hidden rounded-xl border border-border bg-(--color-surface)', className)}
       style={{ width: typeof width === 'number' ? width : '100%' }}
     />
   );

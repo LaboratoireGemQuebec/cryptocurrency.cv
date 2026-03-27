@@ -695,6 +695,17 @@ h3 {
 }
 
 /* ============================================
+   TRADINGVIEW WIDGET DARK MODE
+   ============================================ */
+
+.tradingview-widget-container,
+.tradingview-widget-container__widget,
+.tradingview-widget-container iframe {
+  background: var(--color-surface) !important;
+  color-scheme: dark;
+}
+
+/* ============================================
    PRINT STYLES
    ============================================ */
 
