@@ -47,7 +47,7 @@ import {
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
 import { generateSEOMetadata } from '@/lib/seo';
-import { getUnsplashFallback } from '@/lib/unsplash-fallback';
+import { getUnsplashFallback, getUniqueFallbacks } from '@/lib/unsplash-fallback';
 import type { Metadata } from 'next';
 
 export const revalidate = 300;
@@ -94,19 +94,55 @@ export default async function HomePage({ params }: Props) {
   const breaking = data?.breaking?.articles ?? [];
   const featured = articles[0] ?? null;
 
-  // ── Build top-stories grid, skipping articles whose displayed image duplicates another ──
-  const resolveImage = (a: NewsArticle) =>
-    a.imageUrl || getUnsplashFallback(a.title || a.source || 'crypto');
+  // ── Build top-stories grid ──
+  // 1. Prefer articles with real images; dedup by actual image URL
   const usedImages = new Set<string>();
-  if (featured) usedImages.add(resolveImage(featured));
+  if (featured?.imageUrl) usedImages.add(featured.imageUrl);
+
   const topGrid: typeof articles = [];
   let nextIdx = 1;
+  // First pass: pick articles that have their own image and aren't duplicates
   while (topGrid.length < 4 && nextIdx < articles.length) {
     const a = articles[nextIdx++];
-    const img = resolveImage(a);
-    if (usedImages.has(img)) continue;
-    usedImages.add(img);
+    if (!a.imageUrl) continue;
+    if (usedImages.has(a.imageUrl)) continue;
+    usedImages.add(a.imageUrl);
     topGrid.push(a);
+  }
+  // Second pass: fill remaining slots with any articles (will get fallback images)
+  if (topGrid.length < 4) {
+    let fillIdx = 1;
+    const topLinks = new Set(topGrid.map((a) => a.link));
+    while (topGrid.length < 4 && fillIdx < articles.length) {
+      const a = articles[fillIdx++];
+      if (topLinks.has(a.link) || a.link === featured?.link) continue;
+      if (a.imageUrl && usedImages.has(a.imageUrl)) continue;
+      if (a.imageUrl) usedImages.add(a.imageUrl);
+      topGrid.push(a);
+    }
+  }
+
+  // 2. Assign guaranteed-unique fallback images for articles missing imageUrl
+  const needsFallback = topGrid.filter((a) => !a.imageUrl);
+  if (needsFallback.length > 0) {
+    // Exclude hero's effective image from the fallback pool
+    const excludeSet = new Set(usedImages);
+    if (featured && !featured.imageUrl) {
+      excludeSet.add(getUnsplashFallback(featured.title || featured.source || 'crypto'));
+    }
+    const fallbackUrls = getUniqueFallbacks(
+      needsFallback.map((a) => a.title || a.source || 'crypto'),
+      excludeSet,
+    );
+    needsFallback.forEach((a, i) => {
+      (a as { imageUrl?: string }).imageUrl = fallbackUrls[i];
+    });
+  }
+  // Also ensure hero has an image
+  if (featured && !featured.imageUrl) {
+    (featured as { imageUrl?: string }).imageUrl = getUnsplashFallback(
+      featured.title || featured.source || 'crypto',
+    );
   }
 
   // ── Collect used indexes so downstream sections skip them ──

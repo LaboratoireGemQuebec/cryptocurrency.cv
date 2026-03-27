@@ -242,13 +242,10 @@ export const speraxosHmac: MiddlewareHandler = async (ctx) => {
       ctx.isSperaxOS = true;
       ctx.speraxosKeyId = 'token';
       return ctx;
-    } else {
-      // Token present but wrong — reject to surface misconfiguration
-      return NextResponse.json(
-        { error: 'Unauthorized', code: 'INVALID_TOKEN', requestId },
-        { status: 401, headers: ctx.headers },
-      );
     }
+    // Token present but invalid — fall through to anonymous handling
+    // (x402 payment will be required)
+    return ctx;
   }
 
   // ── HMAC signature verification ────────────────────────────────────────

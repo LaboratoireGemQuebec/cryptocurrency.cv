@@ -70,19 +70,58 @@ const NATURE_PHOTOS = [
   '1532274402911-5a369e4c4bb5', // Sunset over field
 ];
 
+/** djb2 hash helper — returns an unsigned 32-bit integer. */
+function djb2(str: string): number {
+  let hash = 5381;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash * 33) ^ str.charCodeAt(i);
+    hash = hash >>> 0;
+  }
+  return hash;
+}
+
 /**
  * Returns a deterministic Unsplash fallback URL for a given seed string
- * (typically article source name or title fragment).
+ * (typically the article title).
  */
 export function getUnsplashFallback(seed: string, width = 800, height = 450): string {
-  // Simple djb2-style hash for a stable but varied pick
-  let hash = 5381;
-  for (let i = 0; i < seed.length; i++) {
-    hash = (hash * 33) ^ seed.charCodeAt(i);
-    hash = hash >>> 0; // keep unsigned 32-bit
-  }
-  const id = CRYPTO_PHOTOS[hash % CRYPTO_PHOTOS.length];
+  const id = CRYPTO_PHOTOS[djb2(seed) % CRYPTO_PHOTOS.length];
   return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
+}
+
+/**
+ * Pick N unique fallback URLs from the pool, avoiding any images already in `exclude`.
+ * Falls back to hash-based if the pool is exhausted.
+ */
+export function getUniqueFallbacks(
+  seeds: string[],
+  exclude: Set<string> = new Set(),
+  width = 800,
+  height = 450,
+): string[] {
+  const usedIndices = new Set<number>();
+  // Pre-mark indices that match excluded URLs
+  for (const url of exclude) {
+    const match = url.match(/photo-([^?]+)/);
+    if (match) {
+      const idx = CRYPTO_PHOTOS.indexOf(match[1]);
+      if (idx !== -1) usedIndices.add(idx);
+    }
+  }
+
+  return seeds.map((seed) => {
+    const base = djb2(seed) % CRYPTO_PHOTOS.length;
+    // Walk forward from the hash-preferred index to find an unused slot
+    for (let offset = 0; offset < CRYPTO_PHOTOS.length; offset++) {
+      const idx = (base + offset) % CRYPTO_PHOTOS.length;
+      if (!usedIndices.has(idx)) {
+        usedIndices.add(idx);
+        return `https://images.unsplash.com/photo-${CRYPTO_PHOTOS[idx]}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
+      }
+    }
+    // Pool exhausted — allow reuse starting from hash index
+    return `https://images.unsplash.com/photo-${CRYPTO_PHOTOS[base]}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
+  });
 }
 
 /**

@@ -171,7 +171,34 @@ export interface X402Discovery {
 }
 
 /**
- * Build the complete x402 discovery document.
+ * Build the v1 well-known discovery document for x402scan compatibility.
+ *
+ * Returns the simple format expected by x402scan:
+ * ```json
+ * { "version": 1, "resources": ["GET /api/v1/coins", "POST /api/v1/ask"] }
+ * ```
+ *
+ * x402scan resolves OpenAPI first (canonical), then falls back to this.
+ */
+export function buildX402WellKnownV1(): { version: 1; resources: string[] } {
+  const resources: string[] = [];
+
+  for (const { path } of ROUTE_MANIFEST) {
+    if (!isX402Protected(path)) continue;
+
+    const meta = (ENDPOINT_METADATA_FULL as Record<string, { methods?: string[] }>)[path];
+    const methods = meta?.methods ?? ['GET'];
+
+    for (const method of methods) {
+      resources.push(`${method} ${path}`);
+    }
+  }
+
+  return { version: 1, resources };
+}
+
+/**
+ * Build the complete x402 discovery document (v2).
  * Returns structured resources with accepts arrays, schemas, and payment details.
  */
 export function buildX402Discovery(): X402Discovery {
