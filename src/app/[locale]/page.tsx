@@ -92,13 +92,25 @@ export default async function HomePage({ params }: Props) {
   const articles = data?.latest?.articles ?? [];
   const breaking = data?.breaking?.articles ?? [];
   const featured = articles[0] ?? null;
-  const topGrid = articles.slice(1, 5);
-  const latestFeed = articles.slice(5, 20);
+
+  // ── Build top-stories grid, skipping articles whose image duplicates the hero ──
+  const heroImage = featured?.imageUrl;
+  const topGrid: typeof articles = [];
+  let nextIdx = 1;
+  while (topGrid.length < 4 && nextIdx < articles.length) {
+    const a = articles[nextIdx++];
+    if (heroImage && a.imageUrl && a.imageUrl === heroImage) continue;
+    topGrid.push(a);
+  }
+
+  // ── Collect used indexes so downstream sections skip them ──
+  const usedForHeroAndGrid = new Set([0, ...Array.from({ length: nextIdx - 1 }, (_, i) => i + 1)]);
+  const latestFeed = articles.filter((_, i) => !usedForHeroAndGrid.has(i)).slice(0, 15);
   const trending = data?.trending?.articles ?? [];
   const sourceCount = getSourceCount();
 
   // ── Partition articles by category for editorial sections ──
-  const usedLinks = new Set(articles.slice(0, 5).map((a) => a.link));
+  const usedLinks = new Set([featured, ...topGrid].filter(Boolean).map((a) => a.link));
   const remainingArticles = articles.filter((a) => !usedLinks.has(a.link));
 
   const marketsArticles = remainingArticles
