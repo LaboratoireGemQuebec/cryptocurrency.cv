@@ -28,7 +28,7 @@
 // Types
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type SourceTier = 'tier1' | 'tier2' | 'tier3' | 'research';
+export type SourceTier = 'tier1' | 'tier2' | 'tier3' | 'tier4' | 'research' | 'fintech';
 
 export interface SourceTierEntry {
   tier: SourceTier;

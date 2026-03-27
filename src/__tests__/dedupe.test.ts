@@ -75,7 +75,7 @@ describe('getPendingCount', () => {
   });
 
   it('should track pending requests', async () => {
-    let resolveFn: (v: string) => void;
+    let resolveFn: ((v: string) => void) | undefined;
     const promise = dedupe(
       'pending',
       () =>

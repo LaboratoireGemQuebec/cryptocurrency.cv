@@ -181,6 +181,48 @@ export const REPEAT_429_WINDOW_MS = 600_000; // 10-minute rolling window
 export const REPEAT_429_BLOCK_MS = 3_600_000; // 1-hour hard block after escalation
 
 // =============================================================================
+// SPERAXOS CONFIGURATION
+// =============================================================================
+
+/** Global rate limit for SperaxOS-authenticated requests. Per-key overrides take precedence. */
+export const SPERAXOS_RATE_LIMIT = { daily: 100_000, perMinute: 1_000 };
+
+/**
+ * Default allowed route prefixes for SperaxOS keys.
+ * Keys without explicit route scopes are restricted to these patterns.
+ * Sensitive endpoints (admin, keys, register, cron) are excluded by default.
+ */
+export const SPERAXOS_DEFAULT_ALLOWED_ROUTES: RegExp[] = [
+  /^\/api\/news/,
+  /^\/api\/prices/,
+  /^\/api\/market/,
+  /^\/api\/trending/,
+  /^\/api\/sources/,
+  /^\/api\/search/,
+  /^\/api\/archive/,
+  /^\/api\/sentiment/,
+  /^\/api\/categories/,
+  /^\/api\/coins/,
+  /^\/api\/feed/,
+  /^\/api\/rss/,
+  /^\/api\/atom/,
+  /^\/api\/batch/,
+  /^\/api\/sample/,
+  /^\/api\/health/,
+  /^\/api\/status/,
+  /^\/api\/article/,
+  /^\/api\/signals/,
+  /^\/api\/v1\//,
+  /^\/api\/summarize/,
+  /^\/api\/translate/,
+  /^\/api\/detect/,
+  /^\/api\/classify/,
+  /^\/api\/ask/,
+  /^\/api\/forecast/,
+  /^\/api\/factcheck/,
+];
+
+// =============================================================================
 // HELPERS
 // =============================================================================
 

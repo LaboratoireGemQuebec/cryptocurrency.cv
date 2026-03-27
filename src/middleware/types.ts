@@ -23,6 +23,7 @@ export interface MiddlewareContext {
   isApiRoute: boolean;
   isEmbedRoute: boolean;
   isSperaxOS: boolean;
+  speraxosKeyId: string | null;
   isTrustedOrigin: boolean;
   isApiClient: boolean;
   clientIp: string;

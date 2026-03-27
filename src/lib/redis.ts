@@ -146,7 +146,7 @@ export async function redisSet<T>(
  * Check if Redis is available
  */
 export function isRedisAvailable(): boolean {
-  return redisAvailable && _redisClient?.isReady;
+  return redisAvailable && (_redisClient?.isReady ?? false);
 }
 
 /**
@@ -337,7 +337,7 @@ export const redisTTL = {
 // Auto-initialize in server environment
 if (typeof window === 'undefined' && process.env.REDIS_URL) {
   initRedis().catch((err) =>
-    logger.error('[Redis] Auto-init failed', err instanceof Error ? err : undefined),
+    cacheLogger.error(err instanceof Error ? err : new Error(String(err)), '[Redis] Auto-init failed'),
   );
 }
 

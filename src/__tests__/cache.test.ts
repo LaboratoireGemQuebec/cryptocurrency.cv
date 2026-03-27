@@ -197,7 +197,7 @@ describe('withCache', () => {
   });
 
   it('should deduplicate concurrent requests for the same key', async () => {
-    let resolvePromise: (v: string) => void;
+    let resolvePromise: ((v: string) => void) | undefined;
     const fetchFn = vi.fn().mockImplementation(
       () =>
         new Promise<string>((resolve) => {
