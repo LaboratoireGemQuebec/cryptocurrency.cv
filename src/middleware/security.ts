@@ -62,6 +62,9 @@ export function buildCspHeader(nonce: string): string {
     "default-src 'self'",
     [
       `script-src 'self' 'nonce-${nonce}'`,
+      // Next.js injects an inline bootstrap script that doesn't receive the
+      // nonce. Allow it by its stable SHA-256 hash so CSP doesn't block it.
+      "'sha256-/msq/oMIBsaOC5dVYzk78jNXUd3M5Odzm/x3R02uXjY='",
       // Google Analytics / Tag Manager
       'https://www.googletagmanager.com',
       'https://www.google-analytics.com',
