@@ -145,11 +145,11 @@ export async function handleProtectedRequest(
 
   // Valid API key with available rate limit - grant access
   if (!IS_PRODUCTION) {
-    logger.debug('[x402] API key authenticated', {
+    logger.debug({
       tier: keyData.tier,
       remaining: rateLimit.remaining,
       keyPrefix: keyData.keyPrefix,
-    });
+    }, '[x402] API key authenticated');
   }
 
   return { grantAccess: true };
@@ -419,7 +419,7 @@ export function create402Response(endpoint: string, price: string): NextResponse
         'X-Payment-Required': 'true',
         'X-Price-USD': price,
         'X-Network': CURRENT_NETWORK,
-        'WWW-Authenticate': `X402 realm="${endpoint}"`,
+        'WWW-Authenticate': `X402 realm="${endpoint}", Payment realm="${endpoint}"`,
         'X-X402-Version': '2',
         'X-Accepts-Networks': 'eip155:8453,eip155:84532',
       },

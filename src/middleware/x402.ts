@@ -22,7 +22,10 @@ import type { MiddlewareContext, MiddlewareHandler } from './types';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from './config';
 import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
+import { HTTPFacilitatorClient } from '@x402/core/server';
+import { ExactEvmScheme } from '@x402/evm/exact/server';
 import { API_PRICING, PREMIUM_PRICING, toX402Price } from '@/lib/x402/pricing';
+import { FACILITATOR_URL } from '@/lib/x402/config';
 
 const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
@@ -64,7 +67,12 @@ let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
 export function getX402Proxy(): (req: NextRequest) => any {
   if (!_x402) {
     try {
-      _x402 = paymentProxyFromConfig(buildApiRoutes(), undefined, undefined, undefined, undefined, false);
+      const facilitator = new HTTPFacilitatorClient({ url: FACILITATOR_URL });
+      _x402 = paymentProxyFromConfig(
+        buildApiRoutes(),
+        facilitator,
+        [{ network: 'eip155:*' as never, server: new ExactEvmScheme() }],
+      );
     } catch (err) {
       console.warn(
         '[x402] Proxy init deferred — scheme not yet available:',
