@@ -95,19 +95,19 @@ gcloud-*.json
 .data/
 .do/
 .storybook/
-archive/
-content/
-contracts/
-data/
-infra/
-mobile/
-postman/
-profile-readme/
-prompts/
-raycast/
-skills/
-telegram/
-terminal/
+/archive/
+/content/
+/contracts/
+/data/
+/infra/
+/mobile/
+/postman/
+/profile-readme/
+/prompts/
+/raycast/
+/skills/
+/telegram/
+/terminal/
 
 # i18n — only English messages are committed; others are generated
 messages/*

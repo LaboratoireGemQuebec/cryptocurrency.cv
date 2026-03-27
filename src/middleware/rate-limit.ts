@@ -370,13 +370,16 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
     } catch {
       // Usage tracking failure is non-fatal
     }
-  } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
+  } else {
+    // No API key — apply public rate limit to ALL API routes (not just free-tier patterns).
+    // This prevents unauthenticated abuse of any endpoint.
     const tier = ctx.isApiClient ? 'api' : 'public';
-    const rl = await checkRateLimit(`${ctx.clientIp}:${pathname}`, tier);
+    const rl = await checkRateLimit(`${ctx.clientIp}`, tier);
     ctx.headers['X-RateLimit-Limit'] = rl.limit.toString();
     ctx.headers['X-RateLimit-Remaining'] = rl.remaining.toString();
     ctx.headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
     ctx.headers['X-RateLimit-Tier'] = tier;
+    ctx.headers['X-Free-Tier'] = matchesPattern(pathname, FREE_TIER_PATTERNS) ? '0' : '1';
 
     if (!rl.allowed) {
       const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);

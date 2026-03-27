@@ -33,7 +33,7 @@
  * curl "https://cryptocurrency.cv/api/cron/archive"
  *
  * // With auth (if CRON_SECRET is set)
- * curl "https://cryptocurrency.cv/api/cron/archive?secret=YOUR_SECRET"
+ * curl -H "Authorization: Bearer YOUR_SECRET" "https://cryptocurrency.cv/api/cron/archive"
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
@@ -78,15 +78,15 @@ function verifyCronAuth(request: NextRequest): boolean {
     return process.env.NODE_ENV !== 'production';
   }
 
-  // Check Authorization header
+  // Check Authorization header (query param intentionally not supported — secrets in URLs leak via logs and referrer headers)
   const authHeader = request.headers.get('Authorization');
   if (authHeader === `Bearer ${cronSecret}`) {
     return true;
   }
 
-  // Check query param (for simple cron services)
-  const querySecret = request.nextUrl.searchParams.get('secret');
-  if (querySecret === cronSecret) {
+  // Check Vercel Cron header
+  const vercelCron = request.headers.get('x-vercel-cron');
+  if (vercelCron === cronSecret) {
     return true;
   }
 
@@ -251,7 +251,7 @@ export async function GET(request: NextRequest) {
   // Verify authorization
   if (!verifyCronAuth(request)) {
     return NextResponse.json(
-      { error: 'Unauthorized. Provide CRON_SECRET via Authorization header or secret query param.' },
+      { error: 'Unauthorized. Provide CRON_SECRET via Authorization: Bearer header.' },
       { status: 401 }
     );
   }

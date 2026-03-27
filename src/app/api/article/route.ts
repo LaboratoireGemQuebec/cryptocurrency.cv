@@ -26,9 +26,57 @@ interface ArticleContent {
 }
 
 /**
+ * Check if a URL targets a private/reserved IP range (SSRF protection).
+ * Blocks requests to internal networks, cloud metadata endpoints, and loopback.
+ */
+function isPrivateOrReservedUrl(urlString: string): boolean {
+  const parsed = new URL(urlString);
+  const hostname = parsed.hostname.toLowerCase();
+
+  // Block well-known metadata endpoints
+  const blockedHostnames = [
+    'localhost',
+    'metadata.google.internal',
+    'metadata.google',
+    'instance-data',
+  ];
+  if (blockedHostnames.includes(hostname)) return true;
+
+  // Block IPv6 loopback
+  if (hostname === '::1' || hostname === '[::1]') return true;
+
+  // Parse IPv4 octets
+  const ipv4Match = hostname.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
+  if (ipv4Match) {
+    const [, a, b] = ipv4Match.map(Number);
+    if (
+      a === 0 ||          // 0.0.0.0/8
+      a === 10 ||         // 10.0.0.0/8
+      a === 127 ||        // 127.0.0.0/8 (loopback)
+      (a === 169 && b === 254) || // 169.254.0.0/16 (link-local / cloud metadata)
+      (a === 172 && b >= 16 && b <= 31) || // 172.16.0.0/12
+      (a === 192 && b === 168) // 192.168.0.0/16
+    ) {
+      return true;
+    }
+  }
+
+  // Block IPv6 private ranges (fc00::/7, fe80::/10)
+  if (/^(fc|fd|fe[89ab])/i.test(hostname) || /^\[?(fc|fd|fe[89ab])/i.test(hostname)) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
  * Extract article content from URL by fetching the page
  */
 async function fetchArticleContent(url: string): Promise<string> {
+  if (isPrivateOrReservedUrl(url)) {
+    throw new Error('URL targets a private or reserved address');
+  }
+
   try {
     const response = await fetch(url, {
       headers: {

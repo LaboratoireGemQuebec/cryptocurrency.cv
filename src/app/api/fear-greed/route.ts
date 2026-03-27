@@ -61,7 +61,8 @@ export const GET = instrumented(
   async function GET(request: NextRequest) {
     try {
       const { searchParams } = new URL(request.url);
-      const days = parseInt(searchParams.get('days') || '30');
+      const daysRaw = parseInt(searchParams.get('days') || '30', 10);
+      const days = Number.isFinite(daysRaw) ? Math.max(1, Math.min(daysRaw, 365)) : 30;
 
       // Pipeline cache-first: serve pre-fetched data if available
       if (days <= 30) {
@@ -73,15 +74,15 @@ export const GET = instrumented(
               _cache: 'pipeline',
             });
           }
-        } catch {
-          /* pipeline miss — fetch upstream */
+        } catch (err) {
+          console.warn('[fear-greed] Pipeline miss, trying provider framework', err);
         }
       }
 
       // Provider framework: circuit breakers, caching, fallback between Alternative.me + CoinStats
       try {
         const result = await registry.fetch<FearGreedIndex>('fear-greed', {
-          limit: Math.min(days, 365),
+          limit: days,
         });
         const fgData = result.data;
 
@@ -92,21 +93,25 @@ export const GET = instrumented(
           timeUntilUpdate: 'Unknown',
         };
 
-        const trend = calculateTrend([current]);
-        const breakdown = await calculateBreakdown();
+        // Provider only returns the current value — fall through to direct
+        // API for historical data so trend calculation is accurate.
+        if (days <= 1) {
+          const trend = calculateTrend([current]);
+          const breakdown = await calculateBreakdown();
 
-        return NextResponse.json({
-          current,
-          historical: [current],
-          trend,
-          breakdown,
-          lastUpdated: fgData.lastUpdated,
-          _provider: result.lineage.provider,
-          _confidence: result.lineage.confidence,
-          _cached: result.cached,
-        });
-      } catch {
-        /* provider chain miss — fall through to direct fetch */
+          return NextResponse.json({
+            current,
+            historical: [current],
+            trend,
+            breakdown,
+            lastUpdated: fgData.lastUpdated,
+            _provider: result.lineage.provider,
+            _confidence: result.lineage.confidence,
+            _cached: result.cached,
+          });
+        }
+      } catch (err) {
+        console.warn('[fear-greed] Provider chain miss, falling back to direct API', err);
       }
 
       // Fallback: direct API call (legacy path — kept for resilience)

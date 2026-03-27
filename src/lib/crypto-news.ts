@@ -3748,17 +3748,25 @@ const domainSemaphore = new DomainSemaphore(3);
  * The domain semaphore ensures we don't fire 45+ requests to medium.com
  * simultaneously, which was causing 429 rate-limit storms.
  */
+/** Max concurrent outbound feed requests across all domains. */
+const GLOBAL_FETCH_CONCURRENCY = 15;
+
 async function fetchAllInParallel(
   sourceKeys: SourceKey[],
   fn: (key: SourceKey) => Promise<NewsArticle[]>,
 ): Promise<NewsArticle[]> {
-  const results = await Promise.allSettled(sourceKeys.map(fn));
   const articles: NewsArticle[] = [];
-  for (const result of results) {
-    if (result.status === 'fulfilled') {
-      articles.push(...result.value);
+  // Process in batches to avoid exhausting connections and triggering
+  // upstream 429s. Each batch runs up to GLOBAL_FETCH_CONCURRENCY feeds.
+  for (let i = 0; i < sourceKeys.length; i += GLOBAL_FETCH_CONCURRENCY) {
+    const batch = sourceKeys.slice(i, i + GLOBAL_FETCH_CONCURRENCY);
+    const results = await Promise.allSettled(batch.map(fn));
+    for (const result of results) {
+      if (result.status === 'fulfilled') {
+        articles.push(...result.value);
+      }
+      // Silently ignore rejected promises — already logged in fetchFeed
     }
-    // Silently ignore rejected promises — already logged in fetchFeed
   }
   return articles;
 }
@@ -3786,7 +3794,7 @@ async function fetchMultipleSources(
     const AGGREGATION_TIMEOUT_MS = 20_000;
 
     const aggregationPromise = (async () => {
-      // Fire ALL RSS feeds + API sources in parallel (no batching)
+      // Fetch RSS feeds in batches (max GLOBAL_FETCH_CONCURRENCY at a time) + API sources
       const [rssArticles, apiArticles] = await Promise.all([
         fetchAllInParallel(sourceKeys, fetchFeed),
         // Only fetch API sources if not filtering by specific RSS source

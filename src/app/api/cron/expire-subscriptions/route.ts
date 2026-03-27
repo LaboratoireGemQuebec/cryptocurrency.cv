@@ -44,15 +44,15 @@ function verifyCronAuth(request: NextRequest): boolean {
     return process.env.NODE_ENV !== 'production';
   }
 
-  // Check Authorization header
+  // Check Authorization header (query param intentionally not supported — secrets in URLs leak via logs and referrer headers)
   const authHeader = request.headers.get('Authorization');
   if (authHeader === `Bearer ${cronSecret}`) {
     return true;
   }
 
-  // Check query param (for simple cron services)
-  const querySecret = request.nextUrl.searchParams.get('secret');
-  if (querySecret === cronSecret) {
+  // Check Vercel Cron header
+  const vercelCron = request.headers.get('x-vercel-cron');
+  if (vercelCron === cronSecret) {
     return true;
   }
 
