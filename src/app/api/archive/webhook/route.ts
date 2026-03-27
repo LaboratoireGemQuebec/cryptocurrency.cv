@@ -263,7 +263,7 @@ ${articleList}`;
 
     logger.info(`[AI Enrichment] Enriched ${result.size}/${batch.length} articles`);
   } catch (err) {
-    logger.warn('[AI Enrichment] Batch enrichment failed (non-fatal)', { error: err instanceof Error ? err.message : String(err) });
+    logger.warn({ error: err instanceof Error ? err.message : String(err) }, '[AI Enrichment] Batch enrichment failed (non-fatal)');
   }
 
   return result;

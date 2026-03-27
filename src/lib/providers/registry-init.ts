@@ -108,7 +108,7 @@ export function initProviders(): void {
       registered.push(label);
     } catch (err) {
        
-      logger.warn(`[providers] Failed to register "${label}"`, { error: err instanceof Error ? (err as Error).message : String(err) });
+      logger.warn({ error: err instanceof Error ? (err as Error).message : String(err) }, `[providers] Failed to register "${label}"`);
     }
   }
 

@@ -57,12 +57,12 @@ export async function POST(req: NextRequest) {
     };
     pressReleaseStore.push(submission);
 
-    logger.info('[Press Release] New submission', {
+    logger.info({
       id: submission.id,
       title: submission.title,
       projectName: submission.projectName,
       tier: submission.tier,
-    });
+    }, '[Press Release] New submission');
 
     // TODO: Send confirmation email, notify admin
     return NextResponse.json({ id: submission.id }, { status: 201 });

@@ -388,12 +388,12 @@ class SentryTransaction {
     if (!this.enabled) return;
 
     const duration = Date.now() - this.startTime;
-    logger.debug('[Sentry] Transaction finished', {
+    logger.debug({
       name: this.name,
       op: this.op,
       duration,
       spanCount: this.spans.length,
-    });
+    }, '[Sentry] Transaction finished');
   }
 
   private _data: Record<string, unknown> = {};

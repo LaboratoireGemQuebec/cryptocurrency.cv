@@ -37,7 +37,7 @@ export async function GET() {
 
     const globalData = await getAggregatedGlobalData();
 
-    logger.info('Global market data fetched successfully', { duration: Date.now() - startTime });
+    logger.info({ duration: Date.now() - startTime }, 'Global market data fetched successfully');
 
     return NextResponse.json(
       {
@@ -63,7 +63,7 @@ export async function GET() {
       }
     );
   } catch (error) {
-    logger.error('Failed to fetch global data', error);
+    logger.error({ err: error instanceof Error ? error : undefined }, 'Failed to fetch global data');
     return ApiError.internal('Failed to fetch global data', error);
   }
 }

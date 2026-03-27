@@ -48,12 +48,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Log the contact submission (in production, send email or create ticket)
-    logger.info('[Contact Form]', {
+    logger.info({
       name,
       email,
       subject: subject || 'general',
       messageLength: message.length,
-    });
+    }, '[Contact Form]');
 
     return NextResponse.json(
       { success: true, message: 'Your message has been received. We will get back to you soon.' },

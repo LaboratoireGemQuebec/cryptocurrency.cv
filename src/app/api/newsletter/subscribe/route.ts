@@ -258,7 +258,7 @@ export async function POST(request: NextRequest) {
           }
         }
       } catch (error) {
-        logger.error('Mailchimp subscription error', error instanceof Error ? error : undefined);
+        logger.error({ err: error instanceof Error ? error : undefined }, 'Mailchimp subscription error');
       }
     }
 
@@ -275,7 +275,7 @@ export async function POST(request: NextRequest) {
       newsletters: selectedNewsletters,
     } as SubscriptionResponse);
   } catch (error) {
-    logger.error('Newsletter subscription error', error instanceof Error ? error : undefined);
+    logger.error({ err: error instanceof Error ? error : undefined }, 'Newsletter subscription error');
     return NextResponse.json(
       {
         success: false,

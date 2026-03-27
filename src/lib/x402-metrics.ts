@@ -122,13 +122,13 @@ export async function recordPayment(metric: PaymentMetric): Promise<void> {
     await kv.expire(walletsKey, 90 * 24 * 60 * 60);
     
     // Log for debugging
-    logger.debug('[x402-metrics] Payment recorded', {
+    logger.debug({
       endpoint: metric.endpoint,
       success: metric.success,
       amount: metric.amount,
-    });
+    }, '[x402-metrics] Payment recorded');
   } catch (error) {
-    logger.error('[x402-metrics] Failed to record payment', error instanceof Error ? error : undefined);
+    logger.error({ err: error instanceof Error ? error : undefined }, '[x402-metrics] Failed to record payment');
     // Don't throw - metrics shouldn't break payment flow
   }
 }

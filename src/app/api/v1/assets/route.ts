@@ -39,12 +39,12 @@ export async function GET(request: NextRequest) {
 
   try {
     if (id) {
-      logger.info('Fetching single asset', { id });
+      logger.info({ id }, 'Fetching single asset');
 
       // Fetch single asset
       const asset = await getCoinCapAsset(id);
 
-      logger.info('Asset fetched successfully', { id, duration: Date.now() - startTime });
+      logger.info({ id, duration: Date.now() - startTime }, 'Asset fetched successfully');
 
       return NextResponse.json(
         {
@@ -74,12 +74,12 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    logger.info('Fetching aggregated assets', { limit });
+    logger.info({ limit }, 'Fetching aggregated assets');
 
     // Fetch aggregated assets
     const assets = await getAggregatedAssets(limit);
 
-    logger.info('Assets fetched successfully', { count: assets.length, duration: Date.now() - startTime });
+    logger.info({ count: assets.length, duration: Date.now() - startTime }, 'Assets fetched successfully');
 
     return NextResponse.json(
       {
@@ -95,7 +95,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    logger.error('Failed to fetch assets', error, { id, limit });
+    logger.error({ err: error instanceof Error ? error : undefined, id, limit }, 'Failed to fetch assets');
     return ApiError.internal('Failed to fetch assets', error);
   }
 }

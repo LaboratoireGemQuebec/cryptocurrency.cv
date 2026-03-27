@@ -59,6 +59,6 @@ export async function notifyIndexNow(urls: string[]): Promise<void> {
       `[IndexNow] Submitted ${urls.length} URL(s) — HTTP ${response.status}`
     );
   } catch (error) {
-    logger.warn('[IndexNow] Notification failed (non-fatal)', { error: error instanceof Error ? error.message : String(error) });
+    logger.warn({ error: error instanceof Error ? error.message : String(error) }, '[IndexNow] Notification failed (non-fatal)');
   }
 }

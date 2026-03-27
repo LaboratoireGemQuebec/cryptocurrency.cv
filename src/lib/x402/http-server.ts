@@ -192,12 +192,12 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.isValid) {
       // Payment verified successfully
       if (!IS_PRODUCTION) {
-        logger.debug('[x402] Payment verified', {
+        logger.debug({
           network: ctx.requirements.network,
           amount: ctx.requirements.amount,
           asset: ctx.requirements.asset,
           resource: ctx.paymentPayload.resource,
-        });
+        }, '[x402] Payment verified');
       }
     }
   });
@@ -206,10 +206,10 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.success) {
       // Payment settled successfully
       if (!IS_PRODUCTION) {
-        logger.debug('[x402] Payment settled', {
+        logger.debug({
           network: ctx.result.network,
           transaction: ctx.result.transaction,
-        });
+        }, '[x402] Payment settled');
       }
     }
   });

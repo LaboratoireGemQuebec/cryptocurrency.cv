@@ -498,7 +498,7 @@ async function runFetchLoop(
     if (error instanceof CircuitOpenError) {
       logger.warn(`[Pipeline] ${name} SKIPPED — circuit open`);
     } else {
-      logger.error(`[Pipeline] ${name} FAILED`, error instanceof Error ? error : undefined);
+      logger.error({ err: error instanceof Error ? error : undefined }, `[Pipeline] ${name} FAILED`);
     }
     // Pipeline does NOT throw — stale data remains in Redis
   }

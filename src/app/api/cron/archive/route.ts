@@ -296,7 +296,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(archiveResponse);
   } catch (error) {
-    logger.error('Archive cron failed', error instanceof Error ? error : undefined);
+    logger.error({ err: error instanceof Error ? error : undefined }, 'Archive cron failed');
 
     return NextResponse.json(
       {

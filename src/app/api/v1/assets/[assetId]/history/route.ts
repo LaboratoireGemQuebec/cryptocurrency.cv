@@ -47,7 +47,7 @@ export async function GET(
     | 'd1';
 
   try {
-    logger.info('Fetching asset history', { assetId, interval });
+    logger.info({ assetId, interval }, 'Fetching asset history');
 
     const history = await getCoinCapHistory(assetId, interval);
 
@@ -58,7 +58,7 @@ export async function GET(
       price: parseFloat(point.priceUsd),
     }));
 
-    logger.info('Asset history fetched successfully', { assetId, dataPoints: data.length, duration: Date.now() - startTime });
+    logger.info({ assetId, dataPoints: data.length, duration: Date.now() - startTime }, 'Asset history fetched successfully');
 
     return NextResponse.json(
       {
@@ -76,7 +76,7 @@ export async function GET(
       }
     );
   } catch (error) {
-    logger.error('Failed to fetch asset history', error, { assetId, interval });
+    logger.error({ err: error instanceof Error ? error : undefined, assetId, interval }, 'Failed to fetch asset history');
     return ApiError.internal('Failed to fetch asset history', error);
   }
 }

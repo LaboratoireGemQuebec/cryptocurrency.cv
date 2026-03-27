@@ -30,11 +30,11 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     submission.reviewNote = reviewNote;
     submission.updatedAt = new Date().toISOString();
 
-    logger.info('[Press Release] Status updated', {
+    logger.info({
       id: submission.id,
       status,
       title: submission.title,
-    });
+    }, '[Press Release] Status updated');
 
     return NextResponse.json({ success: true });
   } catch {

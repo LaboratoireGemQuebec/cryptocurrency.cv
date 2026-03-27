@@ -170,8 +170,8 @@ if (process.env.NODE_ENV === 'development') {
 
   paymentHooks.on('afterSettle', (event) => {
     logger.debug(
+      { transactionHash: event.transactionHash || undefined },
       `[x402] Payment settled: ${event.resource} - ${event.success ? '✓' : '✗'}`,
-      { transactionHash: event.transactionHash || undefined }
     );
   });
 }

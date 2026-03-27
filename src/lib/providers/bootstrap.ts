@@ -76,7 +76,7 @@ export async function bootstrapProviders(
       }
     } catch (err) {
       if (!silent) {
-        logger.warn('[bootstrap] Health check failed', { error: err instanceof Error ? err.message : String(err) });
+        logger.warn({ error: err instanceof Error ? err.message : String(err) }, '[bootstrap] Health check failed');
       }
     }
   }
