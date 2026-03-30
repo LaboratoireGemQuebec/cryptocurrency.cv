@@ -146,7 +146,7 @@ export function generateArticleMetadata({
   return generateSEOMetadata({
     title: `${title} | Crypto Vision`,
     description,
-    path: `/blog/${slug}`,
+    path: `/article/${slug}`,
     locale,
     image: dynamicImage,
     type: 'article',

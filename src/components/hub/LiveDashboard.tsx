@@ -185,7 +185,7 @@ export default function LiveDashboard() {
             {Array.from({ length: 4 }).map((_, i) => (
               <div
                 key={i}
-                className="border-border animate-pulse rounded-xl border bg-gradient-to-br from-white/50 to-white/0 p-5 dark:from-white/5 dark:to-white/0"
+                className="border-border animate-pulse rounded-xl border bg-linear-to-br from-white/50 to-white/0 p-5 dark:from-white/5 dark:to-white/0"
               >
                 <div className="bg-border mb-3 h-4 w-20 rounded" />
                 <div className="bg-border mb-2 h-7 w-28 rounded" />
@@ -256,7 +256,7 @@ export default function LiveDashboard() {
               href="/fear-greed"
               className={cn(
                 "group relative overflow-hidden rounded-xl border p-5 transition-all hover:shadow-md",
-                "border-border bg-gradient-to-br",
+                "border-border bg-linear-to-br",
                 getFearGreedBg(global.fearGreedIndex),
               )}
             >
@@ -294,7 +294,7 @@ export default function LiveDashboard() {
             <Link
               key={coin.symbol}
               href={`/coin/${coin.symbol.toLowerCase()}`}
-              className="border-border group relative overflow-hidden rounded-xl border bg-gradient-to-br from-white/50 to-white/0 p-5 transition-all hover:shadow-md dark:from-white/5 dark:to-white/0"
+              className="border-border group relative overflow-hidden rounded-xl border bg-linear-to-br from-white/50 to-white/0 p-5 transition-all hover:shadow-md dark:from-white/5 dark:to-white/0"
             >
               <div className="mb-1 flex items-center justify-between">
                 <span className="text-text-secondary text-xs font-medium">{coin.name}</span>

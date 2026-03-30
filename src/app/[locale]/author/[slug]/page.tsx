@@ -18,6 +18,7 @@ import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getAuthorBySlug } from '@/lib/authors';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/constants';
 
 export const revalidate = 300;
 
@@ -96,12 +97,12 @@ function AuthorStructuredData({ name, slug }: { name: string; slug: string }) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name,
-    url: `https://cryptocurrency.cv/author/${slug}`,
+    url: `${SITE_URL}/author/${slug}`,
     jobTitle: 'Crypto Journalist',
     worksFor: {
       '@type': 'Organization',
       name: 'Crypto Vision',
-      url: 'https://cryptocurrency.cv',
+      url: SITE_URL,
     },
   };
 

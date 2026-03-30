@@ -12,6 +12,7 @@ import { FeaturedOpinionCard, OpinionCard } from '@/components/OpinionCard';
 import { getOpinionNews, type NewsResponse } from '@/lib/crypto-news';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/constants';
 
 export const revalidate = 300;
 
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       'Analysis, editorials, and expert perspectives from across the crypto ecosystem. Opinion articles from CoinDesk, CoinTelegraph, and more.',
     alternates: {
-      canonical: `https://cryptocurrency.cv/${locale}/opinion`,
+      canonical: `${SITE_URL}/${locale}/opinion`,
     },
   };
 }
@@ -158,7 +159,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
       <PageShareSection
         title="Opinion & Commentary — Crypto News"
         description="Analysis, editorials, and expert perspectives from across the crypto ecosystem."
-        url={`https://cryptocurrency.cv/${locale}/opinion`}
+        url={`${SITE_URL}/${locale}/opinion`}
       />
       <Footer />
     </>

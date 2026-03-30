@@ -27,6 +27,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SITE_URL } from "@/lib/constants";
 
 /* ------------------------------------------------------------------ */
 /*  ISR                                                               */
@@ -113,8 +114,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Data fetching helpers (server)                                    */
 /* ------------------------------------------------------------------ */
 
-const BASE =
-  process.env.NEXT_PUBLIC_APP_URL || "https://cryptocurrency.cv";
+const BASE = SITE_URL;
 
 async function fetchOnChainMetrics(): Promise<OnChainMetric[]> {
   try {

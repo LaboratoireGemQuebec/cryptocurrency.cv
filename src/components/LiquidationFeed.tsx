@@ -152,7 +152,7 @@ export default function LiquidationFeed() {
         )}
 
         {/* Liquidation events */}
-        <div className="max-h-[400px] space-y-1 overflow-y-auto">
+        <div className="max-h-100 space-y-1 overflow-y-auto">
           {loading ? (
             Array.from({ length: 8 }).map((_, i) => (
               <Skeleton key={i} className="h-8 w-full" />

@@ -87,7 +87,7 @@ function fearGreedBg(value: number): string {
 
 function TickerSkeleton() {
   return (
-    <div className="h-[40px] overflow-hidden border-b border-border bg-(--color-surface)">
+    <div className="h-10 overflow-hidden border-b border-border bg-(--color-surface)">
       <div className="flex h-full items-center gap-8 px-4">
         {Array.from({ length: 8 }).map((_, i) => (
           <span key={i} className="inline-flex items-center gap-1.5">
@@ -187,7 +187,7 @@ export default function PriceTickerStrip() {
 
   return (
     <div
-      className="h-[40px] overflow-hidden border-b border-border bg-(--color-surface)"
+      className="h-10 overflow-hidden border-b border-border bg-(--color-surface)"
       role="region"
       aria-label="Live cryptocurrency prices"
       aria-live="polite"

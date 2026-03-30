@@ -13,6 +13,7 @@ import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { Users, ArrowRight, ExternalLink, BookOpen } from 'lucide-react';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/constants';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -61,8 +62,8 @@ function TeamStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Crypto Vision',
-    url: 'https://cryptocurrency.cv',
-    logo: 'https://cryptocurrency.cv/logo.png',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     member: TEAM.filter((m) => m.type === 'leadership').map((m) => ({
       '@type': 'Person',
       name: m.name,

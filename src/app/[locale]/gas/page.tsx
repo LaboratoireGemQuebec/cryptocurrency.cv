@@ -218,9 +218,9 @@ function CongestionMeter({ medianGwei }: { medianGwei: number }) {
         <Badge className={`${status.bg} ${status.color} border-0`}>{status.label}</Badge>
       </div>
 
-      <div className="relative h-4 rounded-full overflow-hidden bg-gradient-to-r from-green-500/20 via-yellow-500/20 via-orange-500/20 to-red-500/20 mb-3">
+      <div className="relative h-4 rounded-full overflow-hidden bg-linear-to-r from-green-500/20 via-yellow-500/20 to-red-500/20 mb-3">
         <div
-          className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-green-500 via-yellow-500 via-orange-500 to-red-500 transition-all duration-700"
+          className="absolute inset-y-0 left-0 rounded-full bg-linear-to-r from-green-500 via-yellow-500 to-red-500 transition-all duration-700"
           style={{ width: `${fillPct}%` }}
         />
         <div
@@ -402,7 +402,7 @@ export default async function GasPage({ params }: Props) {
                       <span>{cat.icon}</span> {cat.label}
                     </h3>
                     <div className="border border-border rounded-lg overflow-x-auto">
-                      <table className="w-full text-sm min-w-[480px]">
+                      <table className="w-full text-sm min-w-120">
                         <thead>
                           <tr className="bg-surface-secondary">
                             <th className="px-4 py-2 text-left font-medium text-text-tertiary">Action</th>

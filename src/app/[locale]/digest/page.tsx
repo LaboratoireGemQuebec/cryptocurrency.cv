@@ -23,6 +23,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/constants";
 
 export const revalidate = 300;
 
@@ -100,9 +101,7 @@ const FEATURES = [
 
 async function getLatestDigest(): Promise<LatestDigest | null> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_APP_URL || "https://cryptocurrency.cv";
-    const res = await fetch(`${baseUrl}/api/digest?limit=1`, {
+    const res = await fetch(`${SITE_URL}/api/digest?limit=1`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return null;

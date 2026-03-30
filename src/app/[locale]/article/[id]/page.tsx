@@ -18,6 +18,7 @@ import ShareBar from "@/components/ShareBar";
 import { ArticleStructuredData } from "@/components/StructuredData";
 import { getUnsplashFallback } from "@/lib/unsplash-fallback";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/constants";
 
 export const revalidate = 300;
 
@@ -143,9 +144,9 @@ export default async function ArticlePage({ params }: Props) {
   const sentiment = sentimentBadge(article.sentiment?.label ?? "neutral");
   const pubDate = article.pub_date ?? article.first_seen;
   const readingTime = estimateReadingTime(article.meta?.word_count, article.description);
-  const articleUrl = `https://cryptocurrency.cv/${locale}/article/${article.slug ?? id}`;
+  const articleUrl = `${SITE_URL}/${locale}/article/${article.slug ?? id}`;
   const heroImage = getUnsplashFallback(article.title || article.source || "crypto", 1200, 630);
-  const ogImage = `https://cryptocurrency.cv/api/og?title=${encodeURIComponent(article.title)}&tags=${encodeURIComponent([...article.tickers, ...article.tags].slice(0, 3).join(","))}&source=${encodeURIComponent(article.source)}`;
+  const ogImage = `${SITE_URL}/api/og?title=${encodeURIComponent(article.title)}&tags=${encodeURIComponent([...article.tickers, ...article.tags].slice(0, 3).join(","))}&source=${encodeURIComponent(article.source)}`;
 
   // Fetch related articles
   let relatedArticles: EnrichedArticle[] = [];
@@ -184,7 +185,7 @@ export default async function ArticlePage({ params }: Props) {
       <main>
         {/* ── Hero Section ── */}
         <div className="relative w-full bg-black">
-          <div className="relative h-[300px] sm:h-[400px] md:h-[480px] w-full">
+          <div className="relative h-75 sm:h-100 md:h-120 w-full">
             <Image
               src={heroImage}
               alt={article.title}
@@ -194,7 +195,7 @@ export default async function ArticlePage({ params }: Props) {
               priority
               className="object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
           </div>
 
           {/* Hero Content Overlay */}
@@ -343,7 +344,7 @@ export default async function ArticlePage({ params }: Props) {
               )}
 
               {/* Read Full Article CTA */}
-              <div className="mb-8 p-6 md:p-8 rounded-xl bg-gradient-to-r from-surface-secondary to-surface-tertiary border border-border text-center">
+              <div className="mb-8 p-6 md:p-8 rounded-xl bg-linear-to-r from-surface-secondary to-surface-tertiary border border-border text-center">
                 <p className="text-text-secondary text-sm mb-4">
                   This article was originally published by <strong className="text-text-primary">{article.source}</strong>. Read the complete story on their website.
                 </p>
@@ -376,7 +377,7 @@ export default async function ArticlePage({ params }: Props) {
                           People
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                          {article.entities.people!.map((person) => (
+                          {article.entities.people?.map((person) => (
                             <span key={person} className="px-3 py-1.5 text-sm rounded-full bg-white dark:bg-surface border border-border text-text-secondary font-medium">
                               {person}
                             </span>
@@ -393,7 +394,7 @@ export default async function ArticlePage({ params }: Props) {
                           Companies
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                          {article.entities.companies!.map((company) => (
+                          {article.entities.companies?.map((company) => (
                             <span key={company} className="px-3 py-1.5 text-sm rounded-full bg-white dark:bg-surface border border-border text-text-secondary font-medium">
                               {company}
                             </span>
@@ -410,7 +411,7 @@ export default async function ArticlePage({ params }: Props) {
                           Protocols
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                          {article.entities.protocols!.map((protocol) => (
+                          {article.entities.protocols?.map((protocol) => (
                             <span key={protocol} className="px-3 py-1.5 text-sm rounded-full bg-white dark:bg-surface border border-border text-text-secondary font-medium">
                               {protocol}
                             </span>
@@ -482,32 +483,32 @@ export default async function ArticlePage({ params }: Props) {
                     Market at Publication
                   </h3>
                   <div className="space-y-4">
-                    {article.market_context!.btc_price != null && (
+                    {article.market_context?.btc_price != null && (
                       <div className="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface border border-border">
                         <div className="flex items-center gap-2">
                           <span className="text-lg font-bold text-orange-500">{"\u20BF"}</span>
                           <span className="text-sm font-medium text-text-primary">Bitcoin</span>
                         </div>
                         <span className="font-bold text-text-primary tabular-nums">
-                          ${article.market_context!.btc_price.toLocaleString()}
+                          ${article.market_context?.btc_price?.toLocaleString()}
                         </span>
                       </div>
                     )}
-                    {article.market_context!.eth_price != null && (
+                    {article.market_context?.eth_price != null && (
                       <div className="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface border border-border">
                         <div className="flex items-center gap-2">
                           <span className="text-lg font-bold text-blue-500">{"\u039E"}</span>
                           <span className="text-sm font-medium text-text-primary">Ethereum</span>
                         </div>
                         <span className="font-bold text-text-primary tabular-nums">
-                          ${article.market_context!.eth_price.toLocaleString()}
+                          ${article.market_context?.eth_price?.toLocaleString()}
                         </span>
                       </div>
                     )}
-                    {article.market_context!.fear_greed_index != null && (
+                    {article.market_context?.fear_greed_index != null && (
                       <div className="p-3 rounded-lg bg-white dark:bg-surface border border-border">
                         <p className="text-xs text-text-tertiary mb-2">Fear & Greed Index</p>
-                        <FearGreedGauge value={article.market_context!.fear_greed_index} />
+                        <FearGreedGauge value={article.market_context?.fear_greed_index} />
                       </div>
                     )}
                   </div>
@@ -538,7 +539,7 @@ export default async function ArticlePage({ params }: Props) {
                       <span>Bearish</span>
                       <span>Bullish</span>
                     </div>
-                    <div className="h-2 rounded-full bg-gradient-to-r from-red-400 via-gray-300 to-green-400 relative">
+                    <div className="h-2 rounded-full bg-linear-to-r from-red-400 via-gray-300 to-green-400 relative">
                       <div
                         className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-white border-2 border-text-primary shadow-md"
                         style={{ left: `${Math.max(5, Math.min(95, ((article.sentiment.score + 1) / 2) * 100))}%` }}
@@ -623,7 +624,7 @@ export default async function ArticlePage({ params }: Props) {
               )}
 
               {/* Newsletter CTA */}
-              <div className="rounded-xl border border-accent/30 bg-gradient-to-br from-accent/5 to-blue-500/5 p-5">
+              <div className="rounded-xl border border-accent/30 bg-linear-to-br from-accent/5 to-blue-500/5 p-5">
                 <h3 className="font-serif text-lg font-bold text-text-primary mb-2">
                   Stay Informed
                 </h3>

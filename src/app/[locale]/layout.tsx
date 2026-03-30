@@ -27,6 +27,7 @@ import NavigationProgress from '@/components/NavigationProgress';
 
 import { ClientOnly } from '@/components/ClientOnly';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
+import { SITE_URL } from '@/lib/constants';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -88,7 +89,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Crypto Vision' }],
   creator: 'Crypto Vision',
   publisher: 'Crypto Vision',
-  metadataBase: new URL('https://cryptocurrency.cv'),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     types: {
       'application/rss+xml': [{ url: '/api/rss', title: 'Crypto Vision RSS Feed' }],
@@ -98,7 +99,7 @@ export const metadata: Metadata = {
     title: 'Crypto Vision — Cryptocurrency Prices, News & Market Data',
     description:
       'Real-time cryptocurrency prices, breaking news, and market intelligence. 350+ free API endpoints, developer SDKs, and AI integrations.',
-    url: 'https://cryptocurrency.cv',
+    url: SITE_URL,
     siteName: 'Crypto Vision',
     type: 'website',
     locale: 'en_US',

@@ -16,6 +16,7 @@ import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getAuthors } from '@/lib/authors';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/constants';
 
 export const revalidate = 300;
 
@@ -51,11 +52,11 @@ function AuthorsStructuredData() {
     '@type': 'CollectionPage',
     name: 'Crypto News Authors',
     description: 'Directory of cryptocurrency journalists and analysts.',
-    url: 'https://cryptocurrency.cv/authors',
+    url: `${SITE_URL}/authors`,
     isPartOf: {
       '@type': 'WebSite',
       name: 'Crypto Vision',
-      url: 'https://cryptocurrency.cv',
+      url: SITE_URL,
     },
   };
 

@@ -432,7 +432,7 @@ export default function NotificationCenter() {
       >
         <Bell className="h-4.5 w-4.5" aria-hidden="true" />
         {unreadCount > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold leading-none animate-[scaleIn_0.2s_ease-out]">
+          <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center min-w-4.5 h-4.5 px-1 rounded-full bg-red-500 text-white text-[10px] font-bold leading-none animate-[scaleIn_0.2s_ease-out]">
             {unreadCount > 99 ? "99+" : unreadCount}
           </span>
         )}
@@ -443,8 +443,8 @@ export default function NotificationCenter() {
         <div
           ref={panelRef}
           className={cn(
-            "absolute right-0 top-full mt-2 z-[60]",
-            "w-[380px] max-h-[520px] overflow-hidden rounded-xl",
+            "absolute right-0 top-full mt-2 z-60",
+            "w-95 max-h-130 overflow-hidden rounded-xl",
             "border border-border bg-(--color-surface) shadow-2xl",
             "flex flex-col",
             "animate-dropdown"
@@ -615,7 +615,7 @@ function NotificationItem({
       )}
     >
       {/* Icon */}
-      <div className="mt-0.5 flex-shrink-0">
+      <div className="mt-0.5 shrink-0">
         {notificationIcon(notification.type)}
       </div>
 
@@ -633,7 +633,7 @@ function NotificationItem({
             {notification.title}
           </p>
           {!notification.read && (
-            <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
+            <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
           )}
         </div>
         <p className="text-xs text-text-tertiary mt-0.5 line-clamp-2">
@@ -645,7 +645,7 @@ function NotificationItem({
       </div>
 
       {/* Hover actions */}
-      <div className="flex-shrink-0 flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="shrink-0 flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
         {!notification.read && (
           <button
             onClick={(e) => {
