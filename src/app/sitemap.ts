@@ -16,7 +16,7 @@
  */
 
 import { type MetadataRoute } from 'next';
-import { getAllSlugs, CATEGORIES } from '@/lib/blog';
+import { getAllPostsMeta, CATEGORIES } from '@/lib/blog';
 import { getAllTags } from '@/lib/tags';
 import { loadTagScoresFromFile } from '@/lib/tagScoring';
 import { SITE_URL } from '@/lib/constants';
@@ -135,23 +135,36 @@ const staticPages = [
   { path: '/developers/examples', changeFrequency: 'weekly' as const, priority: 0.6 },
 ];
 
-// Top coins to include in sitemap
+// Top 100 coins to include in sitemap (CoinGecko IDs)
 const topCoins = [
+  // Top 10
   'bitcoin',
   'ethereum',
+  'tether',
   'binancecoin',
   'solana',
   'ripple',
-  'cardano',
+  'usd-coin',
+  'staked-ether',
   'dogecoin',
-  'polkadot',
+  'cardano',
+  // 11-25
+  'tron',
   'avalanche-2',
+  'shiba-inu',
   'chainlink',
-  'polygon',
+  'polkadot',
+  'bitcoin-cash',
+  'dai',
   'uniswap',
   'litecoin',
-  'cosmos',
   'near',
+  'leo-token',
+  'polygon',
+  'internet-computer',
+  'cosmos',
+  'ethereum-classic',
+  // 26-50
   'arbitrum',
   'optimism',
   'aptos',
@@ -159,6 +172,76 @@ const topCoins = [
   'injective',
   'render-token',
   'immutable-x',
+  'stellar',
+  'monero',
+  'filecoin',
+  'hedera-hashgraph',
+  'vechain',
+  'the-graph',
+  'algorand',
+  'quant-network',
+  'aave',
+  'maker',
+  'elrond-erd-2',
+  'flow',
+  'theta-token',
+  'axie-infinity',
+  'decentraland',
+  'the-sandbox',
+  'gala',
+  'enjincoin',
+  // 51-75
+  'lido-dao',
+  'rocket-pool',
+  'frax-share',
+  'curve-dao-token',
+  'convex-finance',
+  'yearn-finance',
+  'compound-governance-token',
+  'balancer',
+  'synthetix-network-token',
+  'gmx',
+  'dydx',
+  'sushi',
+  '1inch',
+  'pancakeswap-token',
+  'blur',
+  'blur-2',
+  'kaspa',
+  'sei-network',
+  'celestia',
+  'pyth-network',
+  'jito-governance-token',
+  'ondo-finance',
+  'starknet',
+  'worldcoin-wld',
+  'pendle',
+  // 76-100
+  'thorchain',
+  'kava',
+  'oasis-network',
+  'harmony',
+  'band-protocol',
+  'ocean-protocol',
+  'fetch-ai',
+  'singularitynet',
+  'numeraire',
+  'basic-attention-token',
+  'civic',
+  'golem',
+  'loopring',
+  'zilliqa',
+  'iota',
+  'ontology',
+  'icon',
+  'wanchain',
+  'status',
+  'power-ledger',
+  'storj',
+  'request-network',
+  'ankr',
+  'ssv-network',
+  'ethena',
 ];
 
 /** Build a hreflang languages map for a given path suffix (e.g. "/markets") */
@@ -197,23 +280,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Add blog pages — one canonical entry per slug/category with hreflang alternates
-  const blogSlugs = getAllSlugs();
+  const blogPosts = getAllPostsMeta();
 
   entries.push({
     url: `${SITE_URL}/en/blog`,
-    lastModified: now,
+    lastModified: blogPosts[0] ? new Date(blogPosts[0].date) : now,
     changeFrequency: 'daily',
     priority: 0.8,
     alternates: { languages: buildAlternates('/blog') },
   });
 
-  for (const slug of blogSlugs) {
+  for (const post of blogPosts) {
     entries.push({
-      url: `${SITE_URL}/en/blog/${slug}`,
-      lastModified: now,
+      url: `${SITE_URL}/en/blog/${post.slug}`,
+      lastModified: new Date(post.date),
       changeFrequency: 'weekly',
       priority: 0.9,
-      alternates: { languages: buildAlternates(`/blog/${slug}`) },
+      alternates: { languages: buildAlternates(`/blog/${post.slug}`) },
     });
   }
 

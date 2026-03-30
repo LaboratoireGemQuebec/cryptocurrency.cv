@@ -92,7 +92,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: {
     types: {
-      'application/rss+xml': [{ url: '/api/rss', title: 'Crypto Vision RSS Feed' }],
+      'application/rss+xml': [{ url: '/feed.xml', title: 'Crypto Vision RSS Feed' }],
+      'application/feed+json': [{ url: '/feed.json', title: 'Crypto Vision JSON Feed' }],
     },
   },
   openGraph: {

@@ -12,6 +12,8 @@ import { FeaturedCard, NewsCardDefault } from "@/components/NewsCard";
 import { getNewsByCategory, type NewsResponse } from "@/lib/crypto-news";
 import { getCategoryBySlug, categories } from "@/lib/categories";
 import { generateCategoryMetadata } from "@/lib/seo";
+import { CollectionPageStructuredData } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/constants";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LoadMoreButton } from "@/components/LoadMoreButton";
@@ -61,6 +63,17 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <>
+      <CollectionPageStructuredData
+        name={`${name} Crypto News`}
+        description={category?.description ?? `Latest ${name} cryptocurrency news and updates.`}
+        url={`${SITE_URL}/${locale}/category/${slug}`}
+        articles={articles.slice(0, 10).map((a) => ({
+          title: a.title,
+          url: a.link,
+          datePublished: a.pubDate,
+          image: a.imageUrl,
+        }))}
+      />
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}

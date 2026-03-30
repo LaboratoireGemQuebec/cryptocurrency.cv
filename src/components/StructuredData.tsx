@@ -148,6 +148,7 @@ export function ArticleStructuredData({
   publisher,
   section,
   keywords,
+  inLanguage = 'en',
 }: {
   headline: string;
   description: string;
@@ -159,6 +160,7 @@ export function ArticleStructuredData({
   publisher?: string;
   section?: string;
   keywords?: string[];
+  inLanguage?: string;
 }) {
   const data = {
     '@context': 'https://schema.org',
@@ -166,16 +168,23 @@ export function ArticleStructuredData({
     headline,
     description,
     url,
+    inLanguage,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,
+    },
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crypto Vision',
+      url: 'https://cryptocurrency.cv',
     },
     ...(image ? { image: [image] } : {}),
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author || 'Crypto Vision',
+      url: author === 'Crypto Vision' || !author ? 'https://cryptocurrency.cv' : undefined,
     },
     publisher: {
       '@type': 'Organization',
@@ -184,10 +193,61 @@ export function ArticleStructuredData({
       logo: {
         '@type': 'ImageObject',
         url: 'https://cryptocurrency.cv/icons/icon-512x512.png',
+        width: 512,
+        height: 512,
       },
     },
     ...(section ? { articleSection: section } : {}),
     ...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
+  };
+  return (
+    <NonceScript
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * CollectionPage structured data for category/tag listing pages
+ */
+export function CollectionPageStructuredData({
+  name,
+  description,
+  url,
+  articles,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  articles: { title: string; url: string; datePublished?: string; image?: string }[];
+}) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name,
+    description,
+    url,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Crypto Vision',
+      url: 'https://cryptocurrency.cv',
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.slice(0, 10).map((article, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: article.url,
+        item: {
+          '@type': 'NewsArticle',
+          headline: article.title,
+          url: article.url,
+          ...(article.datePublished ? { datePublished: article.datePublished } : {}),
+          ...(article.image ? { image: article.image } : {}),
+        },
+      })),
+    },
   };
   return (
     <NonceScript
