@@ -58,13 +58,27 @@ export function isTrustedOrigin(origin: string): boolean {
  *
  * `ctx.isSperaxOS` is set upstream by the speraxos-hmac handler (HMAC-only).
  * This handler only evaluates browser-origin trust for non-HMAC requests.
+ *
+ * Two signals are used:
+ *  1. `Origin` header — present on cross-origin requests and some POST requests
+ *  2. `Sec-Fetch-Site: same-origin` — present on ALL JS-initiated same-origin
+ *     requests (fetch/XHR). Browsers prevent JS from setting `Sec-*` headers,
+ *     making this a reliable indicator of a browser same-site request. Non-browser
+ *     API clients (curl, SDKs) typically omit this header.
  */
 export const trustedOriginHandler: MiddlewareHandler = (ctx) => {
   if (!ctx.isApiRoute) return ctx;
 
   // isSperaxOS is already set by speraxosHmac earlier in the pipeline
   const reqOrigin = ctx.request.headers.get('origin') ?? '';
-  ctx.isTrustedOrigin = !ctx.isSperaxOS && !!reqOrigin && isTrustedOrigin(reqOrigin);
+  const secFetchSite = ctx.request.headers.get('sec-fetch-site');
+
+  // Same-origin browser fetch (GET/HEAD) — no Origin header, but Sec-Fetch-Site is present
+  const isSameOriginBrowser = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
+  // Cross-origin or POST from a trusted domain — Origin header is present
+  const isOriginTrusted = !!reqOrigin && isTrustedOrigin(reqOrigin);
+
+  ctx.isTrustedOrigin = !ctx.isSperaxOS && (isSameOriginBrowser || isOriginTrusted);
 
   if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
     ctx.headers['X-Priority'] = 'speraxos';
