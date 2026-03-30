@@ -40,6 +40,7 @@ export const FREE_TIER_PATTERNS = [
   /^\/api\/categories/, // news categories
   /^\/api\/signals/, // market signals
   /^\/api\/status$/, // service status
+  /^\/api\/exchanges/, // exchange data — used by UI components
 ];
 
 /** Routes exempt from rate limiting and x402 payment. */

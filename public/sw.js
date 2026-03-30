@@ -129,17 +129,44 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
+  // Fallback response when a strategy throws unexpectedly
+  const fallback = (status, msg) =>
+    new Response(JSON.stringify({ error: msg }), {
+      status,
+      headers: { 'Content-Type': 'application/json' },
+    });
+
   // Route to appropriate strategy
   if (url.pathname.startsWith('/api/')) {
-    event.respondWith(networkFirstStrategy(request, API_CACHE, CACHE_DURATIONS.api));
+    event.respondWith(
+      networkFirstStrategy(request, API_CACHE, CACHE_DURATIONS.api).catch(() =>
+        fallback(503, 'Service unavailable'),
+      ),
+    );
   } else if (isImageRequest(request)) {
-    event.respondWith(cacheFirstStrategy(request, IMAGE_CACHE, CACHE_DURATIONS.images));
+    event.respondWith(
+      cacheFirstStrategy(request, IMAGE_CACHE, CACHE_DURATIONS.images).catch(() =>
+        createPlaceholderImage(),
+      ),
+    );
   } else if (isStaticAsset(url.pathname)) {
-    event.respondWith(cacheFirstStrategy(request, STATIC_CACHE, CACHE_DURATIONS.static));
+    event.respondWith(
+      cacheFirstStrategy(request, STATIC_CACHE, CACHE_DURATIONS.static).catch(() =>
+        fallback(503, 'Asset unavailable'),
+      ),
+    );
   } else if (isNavigationRequest(request)) {
-    event.respondWith(networkFirstWithOfflineFallback(request));
+    event.respondWith(
+      networkFirstWithOfflineFallback(request).catch(() =>
+        fallback(503, 'Offline'),
+      ),
+    );
   } else {
-    event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE));
+    event.respondWith(
+      staleWhileRevalidate(request, DYNAMIC_CACHE).catch(() =>
+        fallback(503, 'Service unavailable'),
+      ),
+    );
   }
 });
 
