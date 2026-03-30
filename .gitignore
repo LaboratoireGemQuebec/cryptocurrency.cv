@@ -100,7 +100,7 @@ gcloud-*.json
 .do/
 .storybook/
 /archive/
-/content/
+# /content/ — tracked (blog posts need to be deployed)
 /contracts/
 /data/
 /infra/
