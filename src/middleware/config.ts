@@ -24,6 +24,22 @@
 /** Routes that are free and publicly accessible without any key or payment. */
 export const FREE_TIER_PATTERNS = [
   /^\/api\/sample$/, // /api/sample — 2 headlines + 2 prices, heavily stripped
+  /^\/api\/news/,    // news feeds — core product, free tier
+  /^\/api\/prices/,  // market prices — free tier (coin count limited in route handler)
+  /^\/api\/fear-greed$/, // fear & greed index
+  /^\/api\/trending$/, // trending topics
+  /^\/api\/unlocks$/, // token unlock schedule
+  /^\/api\/sources/, // news sources
+  /^\/api\/market/,  // market overview
+  /^\/api\/coins/,   // coin list / metadata
+  /^\/api\/feed/,    // RSS/Atom feed redirects
+  /^\/api\/rss/,
+  /^\/api\/atom/,
+  /^\/api\/archive/, // historical news archive
+  /^\/api\/article/, // individual article
+  /^\/api\/categories/, // news categories
+  /^\/api\/signals/, // market signals
+  /^\/api\/status$/, // service status
 ];
 
 /** Routes exempt from rate limiting and x402 payment. */
