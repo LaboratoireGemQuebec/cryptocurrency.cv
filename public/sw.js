@@ -128,6 +128,16 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.startsWith('/api/clickbait') || url.pathname.startsWith('/api/analytics')) {
     return;
   }
+
+  // Skip Next.js internal router requests — RSC payloads are deployment-specific
+  // and must not be served from cache (stale RSC payload → broken soft navigation).
+  if (
+    url.searchParams.has('_rsc') ||
+    url.searchParams.has('_next_router_state_tree') ||
+    url.searchParams.has('_next_router_prefetch')
+  ) {
+    return;
+  }
   
   // Fallback response when a strategy throws unexpectedly
   const fallback = (status, msg) =>
@@ -289,38 +299,57 @@ async function cacheFirstStrategy(request, cacheName, maxAge) {
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
-  
-  // Fetch fresh in background
-  const fetchPromise = fetch(request)
-    .then(async (networkResponse) => {
-      if (networkResponse.ok) {
+
+  if (cachedResponse) {
+    // Serve from cache immediately; revalidate in the background (fire-and-forget).
+    // The floating promise is intentionally detached — suppress its rejection so
+    // Chrome does not report it as an uncaught promise rejection.
+    fetch(request)
+      .then(async (networkResponse) => {
+        if (!networkResponse.ok) return;
         try {
           const headers = new Headers(networkResponse.headers);
           headers.set('sw-cache-timestamp', Date.now().toString());
-
           const modifiedResponse = new Response(networkResponse.clone().body, {
             status: networkResponse.status,
             statusText: networkResponse.statusText,
             headers,
           });
-
           await cache.put(request, modifiedResponse);
           await trimCache(cacheName, MAX_CACHE_ITEMS.dynamic);
         } catch {
           // Ignore caching errors (opaque responses, null bodies, etc.)
         }
-      }
-      return networkResponse;
-    })
-    .catch(() => {
-      if (cachedResponse) return cachedResponse;
-      return new Response(
-        JSON.stringify({ error: 'offline', message: 'You are currently offline.' }),
-        { status: 503, headers: { 'Content-Type': 'application/json' } }
-      );
-    });
+      })
+      .catch(() => {}); // intentional no-op — background revalidation failure is silent
+    return cachedResponse;
+  }
 
-  return cachedResponse || fetchPromise;
+  // Nothing in cache — fetch from network and cache on success.
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      try {
+        const headers = new Headers(networkResponse.headers);
+        headers.set('sw-cache-timestamp', Date.now().toString());
+        const modifiedResponse = new Response(networkResponse.clone().body, {
+          status: networkResponse.status,
+          statusText: networkResponse.statusText,
+          headers,
+        });
+        await cache.put(request, modifiedResponse);
+        await trimCache(cacheName, MAX_CACHE_ITEMS.dynamic);
+      } catch {
+        // Ignore caching errors (opaque responses, null bodies, etc.)
+      }
+    }
+    return networkResponse;
+  } catch {
+    return new Response(
+      JSON.stringify({ error: 'offline', message: 'You are currently offline.' }),
+      { status: 503, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 }
 
 /**
