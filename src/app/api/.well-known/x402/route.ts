@@ -19,12 +19,12 @@
  */
 
 import { NextResponse } from 'next/server';
-import { buildX402WellKnownV1 } from '@/lib/x402/discovery';
+import { buildX402Discovery } from '@/lib/x402/discovery';
 
 export const revalidate = 300;
 
 export async function GET() {
-  const discovery = buildX402WellKnownV1();
+  const discovery = buildX402Discovery();
 
   return NextResponse.json(discovery, {
     headers: {

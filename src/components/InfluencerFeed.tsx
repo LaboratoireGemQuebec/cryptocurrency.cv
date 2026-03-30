@@ -9,8 +9,7 @@
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
-import { User, ExternalLink, RefreshCw } from 'lucide-react';
-import { Twitter, Youtube } from '@/components/icons/BrandIcons';
+import { User, ExternalLink, RefreshCw, MessageSquare, Play } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -42,12 +41,12 @@ function formatFollowers(n: number): string {
 function PlatformBadge({ platform }: { platform: string }) {
   const config: Record<string, { icon: React.ReactNode; bg: string; label: string }> = {
     twitter: {
-      icon: <Twitter className="h-3 w-3" />,
+      icon: <MessageSquare className="h-3 w-3" />,
       bg: 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300',
       label: 'X / Twitter',
     },
     youtube: {
-      icon: <Youtube className="h-3 w-3" />,
+      icon: <Play className="h-3 w-3" />,
       bg: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300',
       label: 'YouTube',
     },

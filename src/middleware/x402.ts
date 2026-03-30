@@ -29,7 +29,13 @@ import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
-import { API_PRICING, PREMIUM_PRICING, ENDPOINT_METADATA, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
+import {
+  API_PRICING,
+  PREMIUM_PRICING,
+  ENDPOINT_METADATA,
+  toX402Price,
+  usdToUsdc,
+} from '@/lib/x402/pricing';
 import {
   FACILITATOR_URL,
   RECEIVE_ADDRESS,
@@ -194,6 +200,63 @@ const USDC_ASSET =
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
+/** Build input schema for the accepts[].outputSchema.input field (x402scan format) */
+function buildInputSchemaForAccepts(
+  path: string,
+  method: string,
+): { method: string; type: string; url: string; parameters?: Record<string, unknown> } {
+  const fullMeta = (
+    ENDPOINT_METADATA_FULL as Record<
+      string,
+      {
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+      }
+    >
+  )[path];
+  const legacyMeta = (
+    ENDPOINT_METADATA as Record<
+      string,
+      {
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+      }
+    >
+  )[path];
+
+  const params = fullMeta?.parameters ?? legacyMeta?.parameters;
+  const schema: {
+    method: string;
+    type: string;
+    url: string;
+    parameters?: Record<string, unknown>;
+  } = {
+    method,
+    type: 'http',
+    url: `${BASE_URL}${path}`,
+  };
+
+  if (params) {
+    schema.parameters = Object.fromEntries(
+      Object.entries(params).map(([name, p]) => [
+        name,
+        {
+          type: p.type,
+          description: p.description,
+          ...(p.required ? { required: true } : {}),
+          ...(p.default != null ? { default: p.default } : {}),
+        },
+      ]),
+    );
+  }
+
+  return schema;
+}
+
 /** Get the USD price string for a route path */
 function getRoutePrice(path: string): string {
   const v1Price = (API_PRICING as Record<string, string>)[path];
@@ -207,19 +270,39 @@ function getRoutePrice(path: string): string {
 function getEndpointMeta(path: string): {
   description: string;
   methods: string[];
-  parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
+  parameters?: Record<
+    string,
+    { type: string; description: string; required?: boolean; default?: string }
+  >;
   outputSchema?: object;
 } {
-  const full = (ENDPOINT_METADATA_FULL as Record<string, {
-    description?: string; methods?: string[];
-    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
-    outputSchema?: object;
-  }>)[path];
-  const legacy = (ENDPOINT_METADATA as Record<string, {
-    description?: string;
-    parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
-    outputSchema?: object;
-  }>)[path];
+  const full = (
+    ENDPOINT_METADATA_FULL as Record<
+      string,
+      {
+        description?: string;
+        methods?: string[];
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+        outputSchema?: object;
+      }
+    >
+  )[path];
+  const legacy = (
+    ENDPOINT_METADATA as Record<
+      string,
+      {
+        description?: string;
+        parameters?: Record<
+          string,
+          { type: string; description: string; required?: boolean; default?: string }
+        >;
+        outputSchema?: object;
+      }
+    >
+  )[path];
   return {
     description: full?.description ?? legacy?.description ?? `API endpoint: ${path}`,
     methods: full?.methods ?? ['GET'],
@@ -243,10 +326,17 @@ function buildBazaarExtensions(path: string, method: string) {
     const properties: Record<string, { type: string; description: string }> = {};
     const required: string[] = [];
     for (const [name, p] of Object.entries(params)) {
-      properties[name] = { type: p.type === 'number' ? 'number' : 'string', description: p.description };
+      properties[name] = {
+        type: p.type === 'number' ? 'number' : 'string',
+        description: p.description,
+      };
       if (p.required) required.push(name);
     }
-    const paramSchema = { type: 'object', properties, ...(required.length > 0 ? { required } : {}) };
+    const paramSchema = {
+      type: 'object',
+      properties,
+      ...(required.length > 0 ? { required } : {}),
+    };
 
     if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
       inputInfo.bodyType = 'json';
@@ -269,7 +359,10 @@ function buildBazaarExtensions(path: string, method: string) {
     }
   }
 
-  const outputExample = meta.outputSchema ?? { type: 'object', properties: { success: { type: 'boolean' }, data: { type: 'object' } } };
+  const outputExample = meta.outputSchema ?? {
+    type: 'object',
+    properties: { success: { type: 'boolean' }, data: { type: 'object' } },
+  };
 
   return {
     bazaar: {
@@ -318,6 +411,13 @@ function buildFallback402(req: NextRequest): NextResponse {
   const price = getRoutePrice(pathname);
   const amountAtomic = usdToUsdc(price);
 
+  const meta = getEndpointMeta(pathname);
+  const inputSchema = buildInputSchemaForAccepts(pathname, req.method);
+  const outputSchema = meta.outputSchema ?? {
+    type: 'object',
+    properties: { success: { type: 'boolean' }, data: { type: 'object' } },
+  };
+
   return NextResponse.json(
     {
       x402Version: 2,
@@ -334,11 +434,15 @@ function buildFallback402(req: NextRequest): NextResponse {
             name: ARBITRUM_USDC.name,
             version: ARBITRUM_USDC.version,
           },
+          outputSchema: {
+            input: inputSchema,
+            output: outputSchema,
+          },
         },
       ],
       resource: {
         url: `${BASE_URL}${pathname}`,
-        description: getEndpointMeta(pathname).description,
+        description: meta.description,
         mimeType: 'application/json',
       },
       extensions: buildBazaarExtensions(pathname, req.method),
@@ -384,6 +488,23 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
       description: getEndpointMeta(pathname).description,
       mimeType: 'application/json',
     };
+  }
+
+  // Ensure outputSchema exists in each accepts entry (required by x402scan)
+  const meta = getEndpointMeta(pathname);
+  const accepts = body.accepts as Array<Record<string, unknown>> | undefined;
+  if (Array.isArray(accepts)) {
+    for (const accept of accepts) {
+      if (!accept.outputSchema) {
+        accept.outputSchema = {
+          input: buildInputSchemaForAccepts(pathname, req.method),
+          output: meta.outputSchema ?? {
+            type: 'object',
+            properties: { success: { type: 'boolean' }, data: { type: 'object' } },
+          },
+        };
+      }
+    }
   }
 
   const augmented = NextResponse.json(body, {
@@ -445,6 +566,16 @@ export const x402Gate: MiddlewareHandler = async (ctx) => {
       Object.entries(ctx.headers).forEach(([k, v]) => paymentResponse.headers.set(k, v));
       paymentResponse.headers.set('X-Response-Time', `${Date.now() - ctx.startTime}ms`);
 
+      return paymentResponse;
+    }
+
+    // Safety net: if the proxy said "next" but no payment header was provided,
+    // the proxy didn't actually match this route — build a fallback 402.
+    const hasPayment = ctx.request.headers.has('x-payment');
+    if (!hasPayment) {
+      paymentResponse = buildFallback402(ctx.request);
+      Object.entries(ctx.headers).forEach(([k, v]) => paymentResponse.headers.set(k, v));
+      paymentResponse.headers.set('X-Response-Time', `${Date.now() - ctx.startTime}ms`);
       return paymentResponse;
     }
   }
