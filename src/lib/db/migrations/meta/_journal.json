@@ -8,6 +8,27 @@
       "when": 1740000000000,
       "tag": "0000_initial",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1740844800000,
+      "tag": "0001_add_derivatives_stablecoins_gas_news",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1750636800000,
+      "tag": "0002_add_users_apikeys_authtokens",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1778112000000,
+      "tag": "0003_add_breaking_news_cache",
+      "breakpoints": true
     }
   ]
 }

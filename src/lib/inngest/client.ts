@@ -79,6 +79,11 @@ export type Events = {
       force?: boolean;
     };
   };
+  /** Fire-and-forget refresh of the breaking-news cache (Inngest writes to Neon).
+   *  Triggered by /api/breaking when the cached row is older than 5 minutes. */
+  'news/breaking-cache-refresh': {
+    data: Record<string, never>;
+  };
 };
 
 // =============================================================================

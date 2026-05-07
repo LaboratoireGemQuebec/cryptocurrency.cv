@@ -47,6 +47,8 @@ export {
   protocolRevenueSnapshot,
 } from './data-collection';
 
+export { breakingNewsCacheRefresh } from './breaking-news-cache';
+
 /**
  * Flat array of all functions for serve().
  * Import this in the route handler.
@@ -72,6 +74,7 @@ import {
   miningSnapshot,
   protocolRevenueSnapshot,
 } from './data-collection';
+import { breakingNewsCacheRefresh } from './breaking-news-cache';
 
 export const allFunctions = [
   archiveArticlesCron,
@@ -96,4 +99,5 @@ export const allFunctions = [
   btcETFSnapshot,
   miningSnapshot,
   protocolRevenueSnapshot,
+  breakingNewsCacheRefresh,
 ];

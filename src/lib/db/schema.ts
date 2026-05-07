@@ -591,3 +591,36 @@ export const notificationPreferences = pgTable(
   },
   (table) => [uniqueIndex('idx_notif_prefs_user').on(table.userId)],
 );
+
+// ────────────────────────────────────────────────────────────────────────────
+// breaking_news_cache — pre-aggregated breaking news payload (Inngest fed)
+// ────────────────────────────────────────────────────────────────────────────
+//
+// Refactor 2026-05-07: /api/breaking was timing out >10s on Hobby tier because
+// fetchMultipleSources() aggregates 200+ RSS sources per request. Inngest cron
+// (*/1 * * * *) writes the aggregated payload here; /api/breaking reads a
+// single row in <500ms instead of triggering the full aggregation.
+//
+// Single-row cache, keyed by id='breaking:default'. Slicing to the requested
+// limit happens at read time.
+
+export const breakingNewsCache = pgTable(
+  'breaking_news_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    /** Full NewsResponse payload: { articles, totalCount, sources, fetchedAt } */
+    payload: jsonb('payload').$type<{
+      articles: unknown[];
+      totalCount: number;
+      sources: string[];
+      fetchedAt: string;
+    }>().notNull(),
+    totalCount: integer('total_count').notNull().default(0),
+    sources: text('sources').array().default(sql`'{}'::text[]`),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [
+    index('idx_breaking_cache_fetched_at').on(table.fetchedAt),
+  ],
+);
