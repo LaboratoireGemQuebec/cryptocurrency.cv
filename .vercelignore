@@ -1,37 +1,18 @@
-# Exclude entire archive directory from deployment (709MB+)
-# Data is served from GitHub raw content at runtime
-archive/
-
-# Development files
-.devcontainer/
-.github/
 alfred/
 chatgpt/
+cli/
 copilot-extension/
-e2e/
-examples/
-mcp/
-mobile/
-postman/
-raycast/
-scripts/
-sdk/
-site/
-stories/
-terminal/
+extension/
+memescope-monday/
 widget/
+x402-facilitator/
 docs/
-
-# Test files
-*.test.ts
-*.test.tsx
-*.spec.ts
-vitest.config.ts
-vitest.setup.ts
-playwright.config.ts
+e2e/
+stories/
+archive/
 playwright-report/
-
-# Build artifacts
-.next/
-node_modules/
-
+.storybook/
+storybook-static/
+*.test.ts
+*.spec.ts
+coverage/

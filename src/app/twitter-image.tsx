@@ -10,7 +10,7 @@
 
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export const alt = 'Crypto Vision — Cryptocurrency Prices, News & Market Data';
 export const size = { width: 1200, height: 630 };

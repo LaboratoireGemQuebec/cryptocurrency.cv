@@ -1,94 +1,120 @@
 /**
  * @copyright 2024-2026 nirholas. All rights reserved.
  * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
- * @see https://github.com/nirholas/free-crypto-news
  *
- * This file is part of free-crypto-news.
- * Unauthorized copying, modification, or distribution is strictly prohibited.
- * For licensing inquiries: nirholas@users.noreply.github.com
+ * /api/analytics/anomalies - cache-backed read.
+ *
+ * Refactor 2026-05-07: reads `analytics_anomalies_cache` populated by the
+ * news-aggregator Worker every minute. Filters by ?severity= and ?hours=
+ * client-side; Worker payload always covers a 1h window (caller may slice).
  */
 
-/**
- * Anomaly Detection API
- * 
- * Detect unusual patterns in news flow.
- * 
- * GET /api/analytics/anomalies
- * Query params:
- *   - hours: Time window (default: 24, max: 168)
- *   - severity: high | medium | low (optional, filter by severity)
- */
-
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
+import { analyticsAnomaliesCache } from '@/lib/db/schema';
+import { readNeonCache, fireAndForgetRefresh } from '@/lib/cache-read';
+import { staleCache, generateCacheKey } from '@/lib/cache';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
-import { 
-  getAnomalyReport, 
-  getAnomalyStats,
-  type AnomalySeverity 
-} from '@/lib/anomaly-detector';
 
 export const runtime = 'edge';
-export const revalidate = 60; // 1 minute
+export const revalidate = 60;
+
+const CACHE_KEY = 'anomalies:default';
+const STALE_AFTER_MS = 5 * 60_000;
+
+type AnomalySeverity = 'high' | 'medium' | 'low';
+
+interface AnomalyEvent {
+  id: string;
+  type: string;
+  severity: AnomalySeverity;
+  description: string;
+  detectedAt: string;
+  metadata?: Record<string, unknown>;
+}
+
+interface AnomaliesPayload {
+  anomalies: AnomalyEvent[];
+  summary: {
+    totalAnomalies: number;
+    bySeverity: Record<AnomalySeverity, number>;
+    byType: Record<string, number>;
+  };
+  generatedAt: string;
+}
 
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
-  const searchParams = request.nextUrl.searchParams;
-  
-  // Parse query parameters
-  const hours = Math.min(Math.max(parseInt(searchParams.get('hours') || '24'), 1), 168);
-  const severityParam = searchParams.get('severity');
-  
-  // Validate severity
+  const sp = request.nextUrl.searchParams;
+  const hours = Math.min(Math.max(parseInt(sp.get('hours') || '24', 10), 1), 168);
+  const severityParam = sp.get('severity');
   let severity: AnomalySeverity | undefined;
   if (severityParam) {
     if (!['high', 'medium', 'low'].includes(severityParam)) {
-      return errorResponse(
-        'Invalid severity parameter',
-        'severity must be one of: high, medium, low',
-        400
-      );
+      return errorResponse('Invalid severity parameter', 'severity must be one of: high, medium, low', 400);
     }
     severity = severityParam as AnomalySeverity;
   }
-  
-  try {
-    // Get anomaly report
-    const report = await getAnomalyReport({ hours, severity });
-    
-    // Add detection stats
-    const stats = getAnomalyStats();
-    
-    // Add summary
+  const staleKey = generateCacheKey('anomalies', { hours, severity: severity ?? 'all' });
+
+  function applyFilter(payload: AnomaliesPayload) {
+    let anomalies = payload.anomalies;
+    if (severity) anomalies = anomalies.filter((a) => a.severity === severity);
     const summary = {
-      totalAnomalies: report.anomalies.length,
+      totalAnomalies: anomalies.length,
       bySeverity: {
-        high: report.anomalies.filter(a => a.severity === 'high').length,
-        medium: report.anomalies.filter(a => a.severity === 'medium').length,
-        low: report.anomalies.filter(a => a.severity === 'low').length,
-      },
-      byType: report.anomalies.reduce((acc, a) => {
-        acc[a.type] = (acc[a.type] || 0) + 1;
+        high: anomalies.filter((a) => a.severity === 'high').length,
+        medium: anomalies.filter((a) => a.severity === 'medium').length,
+        low: anomalies.filter((a) => a.severity === 'low').length,
+      } as Record<AnomalySeverity, number>,
+      byType: anomalies.reduce<Record<string, number>>((acc, a) => {
+        acc[a.type] = (acc[a.type] ?? 0) + 1;
         return acc;
-      }, {} as Record<string, number>),
+      }, {}),
     };
-    
-    const responseData = withTiming({
-      ...report,
-      summary,
-      params: { hours, severity },
-      stats,
-    }, startTime);
-    
-    return jsonResponse(responseData, {
-      cacheControl: 'realtime',
-      etag: true,
-      request,
-    });
+    return { anomalies, summary, params: { hours, severity }, generatedAt: payload.generatedAt };
+  }
+
+  try {
+    const cached = await readNeonCache<AnomaliesPayload>(analyticsAnomaliesCache, CACHE_KEY);
+    if (cached) {
+      const stale = cached.ageMs > STALE_AFTER_MS;
+      if (stale) fireAndForgetRefresh('analytics-anomalies');
+      const data = applyFilter(cached.payload);
+      const responseData = withTiming(
+        { ...data, _cache: { source: 'neon', ageMs: cached.ageMs, stale } },
+        startTime,
+      );
+      staleCache.set(staleKey, responseData, 3600);
+      return jsonResponse(responseData, {
+        cacheControl: 'realtime',
+        etag: true,
+        request,
+      });
+    }
+
+    const inMem = staleCache.get<Record<string, unknown>>(staleKey);
+    if (inMem) {
+      fireAndForgetRefresh('analytics-anomalies');
+      return NextResponse.json(
+        { ...inMem, _stale: true, _cache: { source: 'memory-stale' } },
+        { headers: { 'X-Cache': 'STALE-MEMORY' } },
+      );
+    }
+
+    fireAndForgetRefresh('analytics-anomalies');
+    const empty: AnomaliesPayload = {
+      anomalies: [],
+      summary: { totalAnomalies: 0, bySeverity: { high: 0, medium: 0, low: 0 }, byType: {} },
+      generatedAt: new Date().toISOString(),
+    };
+    return NextResponse.json(
+      { ...applyFilter(empty), _cache: { source: 'empty' } },
+      { headers: { 'X-Cache': 'MISS-DIRECT' } },
+    );
   } catch (error) {
-    console.error('Anomaly detection error:', error);
     return errorResponse(
       'Failed to get anomaly report',
-      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error.message : String(error),
     );
   }
 }

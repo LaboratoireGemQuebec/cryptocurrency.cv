@@ -119,3 +119,4 @@ messages/*
 
 # Misc generated / personal files
 vercel-logs.json
+.env*.local

@@ -20,7 +20,7 @@
 import { type NextRequest } from 'next/server';
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 // ---------------------------------------------------------------------------
 // Preview / sample data

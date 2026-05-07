@@ -10,7 +10,7 @@
 import { ImageResponse } from 'next/og';
 import { getArticleById } from '@/lib/archive-v2';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const alt = 'Crypto Vision News Article';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';

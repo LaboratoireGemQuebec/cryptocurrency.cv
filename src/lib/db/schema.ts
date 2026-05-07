@@ -624,3 +624,151 @@ export const breakingNewsCache = pgTable(
     index('idx_breaking_cache_fetched_at').on(table.fetchedAt),
   ],
 );
+
+// ────────────────────────────────────────────────────────────────────────────
+// Cloudflare Worker endpoint caches (migration 0004_add_endpoint_caches)
+// ────────────────────────────────────────────────────────────────────────────
+//
+// Migration 2026-05-07 (CF Workers cutover):
+// The Cloudflare Worker `news-aggregator` (cron `* * * * *` UTC) populates
+// these tables every minute from upstream APIs. Vercel routes read a single
+// row per cache then slice/filter at request time.
+//
+// Convention is identical to breakingNewsCache:
+//   id          varchar(64) PRIMARY KEY     '<endpoint>:default'
+//   payload     jsonb       NOT NULL        whatever the route returns
+//   fetched_at  timestamptz NOT NULL DEFAULT NOW()
+//   expires_at  timestamptz NOT NULL
+//   index on fetched_at DESC
+
+export const clickbaitCache = pgTable(
+  'clickbait_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_clickbait_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const aiBriefCache = pgTable(
+  'ai_brief_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_ai_brief_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const aiDigestCache = pgTable(
+  'ai_digest_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_ai_digest_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const trendingCache = pgTable(
+  'trending_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_trending_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const whaleAlertsCache = pgTable(
+  'whale_alerts_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_whale_alerts_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const airdropsCache = pgTable(
+  'airdrops_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_airdrops_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const arbitrageCache = pgTable(
+  'arbitrage_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_arbitrage_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const fearGreedCache = pgTable(
+  'fear_greed_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_fear_greed_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const macroIndicatorsCache = pgTable(
+  'macro_indicators_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_macro_indicators_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const influencersCache = pgTable(
+  'influencers_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_influencers_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const analyticsAnomaliesCache = pgTable(
+  'analytics_anomalies_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_analytics_anomalies_cache_fetched_at').on(table.fetchedAt)],
+);
+
+export const analyticsCredibilityCache = pgTable(
+  'analytics_credibility_cache',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    payload: jsonb('payload').notNull(),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+  },
+  (table) => [index('idx_analytics_credibility_cache_fetched_at').on(table.fetchedAt)],
+);

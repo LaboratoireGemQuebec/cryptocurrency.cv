@@ -40,7 +40,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { staleCache, generateCacheKey } from '@/lib/cache';
 import { getDb } from '@/lib/db/client';
 import { breakingNewsCache } from '@/lib/db/schema';
-import { inngest } from '@/lib/inngest/client';
+import { fireAndForgetRefresh as fireAndForgetWorker } from '@/lib/cache-read';
 
 // Edge runtime stays for low cold-start TTFB on the read path.
 export const runtime = 'edge';
@@ -87,26 +87,11 @@ async function readNeonCache(): Promise<CachedRow | null> {
   }
 }
 
-// In-memory dedup window for refresh events. Edge instances are short-lived,
-// but during a single instance lifetime we still avoid spamming Inngest with
-// duplicate refresh events when many requests find the cache stale at once.
-const REFRESH_DEDUP_WINDOW_MS = 30_000;
-let _lastRefreshSentAt = 0;
-
+// Refresh trigger now goes to the Cloudflare Worker /__run-job/breaking-news
+// endpoint via @/lib/cache-read.fireAndForgetRefresh which already enforces
+// a 30s dedup window per (url,job) pair.
 function fireAndForgetRefresh(): void {
-  const now = Date.now();
-  if (now - _lastRefreshSentAt < REFRESH_DEDUP_WINDOW_MS) {
-    // Recent refresh already triggered on this instance; skip duplicate.
-    return;
-  }
-  _lastRefreshSentAt = now;
-  // No await — we never want this to block the response.
-  inngest
-    .send({ name: 'news/breaking-cache-refresh', data: {} })
-    .catch(() => {
-      // On error, reset so a future request can retry the trigger.
-      _lastRefreshSentAt = 0;
-    });
+  fireAndForgetWorker('breaking-news');
 }
 
 export async function GET(request: NextRequest) {

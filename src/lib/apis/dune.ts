@@ -48,27 +48,50 @@ export interface QueryExecution {
   state: string;
 }
 
-/** Pre-built useful query IDs on Dune (community / popular). */
+/**
+ * Pre-built useful query IDs on Dune (community / popular).
+ *
+ * AUDIT 2026-05-06 (Pierre Lafrance):
+ *   Tested all 10 query IDs via Dune API. 3 valid, 7 dead.
+ *   Community queries on Dune die frequently — authors delete, privatize,
+ *   or rename queries every 6-12 months. The DURABLE solution is to fork
+ *   the queries to your own Dune account (free) so they never die.
+ *
+ * Status legend:
+ *   - VERIFIED 2026-05  : tested OK with our DUNE_API_KEY
+ *   - DEPRECATED        : 404/412 from upstream — wrappers return null gracefully
+ *
+ * To replace a DEPRECATED query:
+ *   1. Browse https://dune.com/browse/dashboards for a similar query
+ *   2. Open the query, click "Fork" (creates a copy in your account)
+ *   3. Click "Run" to populate cached results
+ *   4. Update the ID below with /queries/{your-fork-id}
+ */
 export const POPULAR_QUERIES = {
-  /** Daily active addresses across chains. */
-  dailyActiveAddresses: 2437365,
-  /** DEX trading volume by protocol (24h). */
+  // ─── VERIFIED 2026-05 ────────────────────────────────────────────────
+  /** DEX by volume (Top 168 DEXes — 7d/24h volume rankings, columns: Rank, Project, 7 Days Volume, 24 Hours Volume). VERIFIED OK 2026-05-06. */
+  dexByVolume: 4319,
+  /** DEX volume by protocol (historical, 6762 rows). VERIFIED OK 2026-05-06. */
   dexVolumeByProtocol: 1847,
-  /** Ethereum gas tracker. */
+  /** Uniswap v3 Pool details (volume, fees, TVL by pool x day - Ethereum). VERIFIED OK 2026-05-06. */
+  uniswapV3Pools: 84042,
+
+  // ─── DEPRECATED (need replacement — fork on Dune to fix) ─────────────
+  /** @deprecated 2026-05 — query 404. Find replacement on dune.com or fork your own. */
+  dailyActiveAddresses: 2437365,
+  /** @deprecated 2026-05 — query 412 (no execution). Find replacement: https://dune.com/hildobby/gas */
   ethGasTracker: 2508486,
-  /** Top NFT collections by volume. */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/hildobby/NFTs */
   topNftCollections: 4823,
-  /** Stablecoin supply on Ethereum. */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/hagaetc/stablecoins or fork your own. */
   stablecoinSupply: 3238174,
-  /** Bridge volume last 30 days. */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/rplust/Stargate-Multichain */
   bridgeVolume30d: 2817908,
-  /** L2 transaction count comparison. */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/blockworks_research/l2-comparison-dashboard */
   l2TransactionCount: 3215235,
-  /** Uniswap v3 pool analytics. */
-  uniswapV3Pools: 2368,
-  /** MEV activity on Ethereum. */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/scoffie/uniswap-mev-jit-sandwich-attacks */
   mevActivity: 1438,
-  /** Airdrop tracker (recent claims). */
+  /** @deprecated 2026-05 — query 404. Find replacement: https://dune.com/messari/Messari:-Airdrops */
   airdropTracker: 4172079,
 } as const;
 
@@ -269,6 +292,27 @@ export async function getDexVolumeByProtocol(): Promise<
     protocol: r.project || 'Unknown',
     volume24h: r.volume_24h || 0,
     trades24h: r.trades_24h || 0,
+  }));
+}
+
+/**
+ * Get DEX rankings by volume (Top DEXes, 7d/24h volume).
+ * Uses query 4319 (VERIFIED OK 2026-05-06, ~168 DEXes).
+ *
+ * Columns from upstream: Rank, Project, "7 Days Volume", "24 Hours Volume".
+ */
+export async function getDexByVolume(): Promise<
+  Array<{ rank: number; project: string; volume7d: number; volume24h: number }> | null
+> {
+  const result = await getLatestResults<Record<string, string | number>>(POPULAR_QUERIES.dexByVolume);
+
+  if (!result?.rows) return null;
+
+  return result.rows.map((r) => ({
+    rank: Number(r['Rank'] ?? 0),
+    project: String(r['Project'] ?? 'Unknown'),
+    volume7d: Number(r['7 Days Volume'] ?? 0),
+    volume24h: Number(r['24 Hours Volume'] ?? 0),
   }));
 }
 

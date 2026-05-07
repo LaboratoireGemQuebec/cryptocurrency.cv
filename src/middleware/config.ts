@@ -53,6 +53,90 @@ export const EXEMPT_PATTERNS = [
   /^\/api\/ws/,
   /^\/api\/register$/, // API key registration — must be free
   /^\/api\/keys\//, // Key management (usage, rotate, upgrade) — auth via key itself
+  /^\/api\/inngest/, // Inngest webhook — must be free for self-host scraping
+  // ─── Pierre Lafrance self-host bypass 2026-05-06 ────────────────────
+  // Trading V3 needs internal access to AI/data endpoints without paying x402.
+  // Safe because Pierre's deploy is for private/internal use only (no public traffic).
+  /^\/api\/ai\//, // Groq AI endpoints (summarize, brief, oracle, narratives, sentiment, etc.)
+  /^\/api\/coinmarketcap/, // CoinMarketCap proxy
+  /^\/api\/coingecko/, // CoinGecko proxy
+  /^\/api\/coincap/, // CoinCap proxy
+  /^\/api\/coinpaprika/, // CoinPaprika proxy
+  /^\/api\/dune/, // Dune Analytics proxy
+  /^\/api\/etherscan/, // Etherscan proxy
+  /^\/api\/alchemy/, // Alchemy proxy
+  /^\/api\/helius/, // Helius proxy (Solana)
+  /^\/api\/coinglass/, // CoinGlass proxy
+  /^\/api\/bitcoin/, // Bitcoin RPC/mempool
+  /^\/api\/aptos/, // Aptos data
+  /^\/api\/articles/, // Articles (DB-backed, fast)
+  /^\/api\/breaking/, // Breaking news
+  /^\/api\/summarize/, // Summarize
+  /^\/api\/translate/, // Translate
+  /^\/api\/classify/, // Classify
+  /^\/api\/oracle/, // Oracle
+  /^\/api\/relationships/, // Relationships
+  /^\/api\/claims/, // Claims
+  /^\/api\/anomalies/, // Anomalies
+  /^\/api\/analytics/, // Analytics
+  /^\/api\/charts/, // Charts
+  /^\/api\/chart-analysis/, // Chart analysis
+  /^\/api\/clickbait/, // Clickbait detection
+  /^\/api\/citations/, // Citations
+  /^\/api\/airdrops/, // Airdrops
+  /^\/api\/arbitrage/, // Arbitrage
+  /^\/api\/arkham/, // Arkham
+  /^\/api\/bridges/, // Bridges
+  /^\/api\/backtest/, // Backtest
+  /^\/api\/ask/, // Ask
+  /^\/api\/analyze/, // Analyze
+  /^\/api\/academic/, // Academic
+  /^\/api\/blog/, // Blog posts (DB read)
+  // ─── cv_news_skill bridge endpoints 2026-05-06 ──────────────────────
+  /^\/api\/factcheck/, // Factcheck (cv_news_detector pipeline)
+  /^\/api\/forensics/, // Forensics analytics
+  /^\/api\/credibility/, // Credibility scoring
+  /^\/api\/entities/, // Entity extraction
+  /^\/api\/sentiment/, // Sentiment analysis
+  /^\/api\/social/, // Social signals
+  /^\/api\/correlation/, // Correlation
+  /^\/api\/influencers/, // Influencer tracking
+  /^\/api\/anchor/, // AI anchor
+  /^\/api\/brief/, // Brief
+  /^\/api\/digest/, // Digest
+  /^\/api\/explain/, // Explain
+  /^\/api\/narratives/, // Narratives
+  // ─── 2026-05-07 audit cv_client.py 137 wrappers - missing exempts ─────
+  // Routes that exist in /src/app/api/ but were returning HTTP 402.
+  // Cleared for self-host bypass after live testing.
+  /^\/api\/aptos/,           // Aptos data already added above (kept duplicate-safe via dedup)
+  /^\/api\/bitcoin/,         // already above
+  /^\/api\/articles/,        // (already above) DB-backed, fast
+  /^\/api\/breaking/,        // (already above) AI ranking
+  // ─── 2026-05-07 final audit - ALL routes exist, were paywall-blocked ──
+  // Verified live HTTP 402 → routes exist as route.ts files in /src/app/api/
+  // Adding to EXEMPT_PATTERNS for full self-host bypass cv_news_skill V4
+  /^\/api\/whale-alerts/,    // route.ts exists (whale-alerts/ + whale-alerts/context/)
+  /^\/api\/funding/,         // route.ts exists
+  /^\/api\/liquidations/,    // route.ts exists
+  /^\/api\/derivatives/,     // route.ts exists
+  /^\/api\/predictions/,     // route.ts exists
+  /^\/api\/regulatory/,      // route.ts exists
+  /^\/api\/macro/,           // route.ts exists
+  /^\/api\/providers/,       // route.ts exists
+  /^\/api\/data-sources/,    // route.ts exists
+  /^\/api\/search/,          // route.ts exists
+  /^\/api\/trending/,        // route.ts exists, was timeout (not paywall)
+  /^\/api\/airdrops/,        // route.ts exists
+  /^\/api\/arbitrage/,       // route.ts exists
+  /^\/api\/anomalies/,       // route.ts exists
+  /^\/api\/fear-greed/,      // route.ts exists
+  /^\/api\/charts/,          // route.ts exists
+  /^\/api\/chart-analysis/,  // route.ts exists
+  /^\/api\/clickbait/,       // route.ts exists
+  /^\/api\/whales/,          // additional whale endpoints
+  /^\/api\/oracle/,          // oracle data
+  /^\/api\/coinglass/,       // coinglass proxy
 ];
 
 /** Endpoints that require pro or enterprise tier (AI, premium). */
@@ -74,9 +158,9 @@ export const AI_ENDPOINT_PATTERNS = [
 export const MAX_BODY_SIZE = 10 * 1024 * 1024; // 10 MB
 
 /** Site visitors: 10 req/hour */
-export const PUBLIC_RATE_LIMIT = { requests: 10, windowMs: 3_600_000 };
+export const PUBLIC_RATE_LIMIT = { requests: 100000, windowMs: 3_600_000 };
 /** Programmatic API consumers (no key): 20 req/hour */
-export const API_CLIENT_RATE_LIMIT = { requests: 20, windowMs: 3_600_000 };
+export const API_CLIENT_RATE_LIMIT = { requests: 100000, windowMs: 3_600_000 };
 
 /**
  * Tier rate limits applied when a valid API key is present.
@@ -194,7 +278,7 @@ export const KEY_EXPIRY_DAYS: Record<string, number> = {
 // REPEAT-429 ESCALATION
 // =============================================================================
 
-export const REPEAT_429_THRESHOLD = 10; // 429 responses before escalation
+export const REPEAT_429_THRESHOLD = 10000; // 429 responses before escalation (raised for self-host personal use)
 export const REPEAT_429_WINDOW_MS = 600_000; // 10-minute rolling window
 export const REPEAT_429_BLOCK_MS = 3_600_000; // 1-hour hard block after escalation
 

@@ -3777,9 +3777,11 @@ async function fetchMultipleSources(
   const aggregateKey = `aggregate:${isAllSources ? 'all' : sourceKeys.slice().sort().join(',')}:api=${includeApiSources}`;
 
   return withCache(newsCache, aggregateKey, 90, async () => {
-    // Overall timeout guard: return whatever results are available within 20s
-    // to stay under Vercel's function timeout (25s default, 60s Pro)
-    const AGGREGATION_TIMEOUT_MS = 20_000;
+    // Overall timeout guard: return whatever results are available within 55s
+    // to stay under Vercel's function timeout (60s Hobby/Pro). Bumped from 20s
+    // because fetching 300+ RSS sources in parallel was systematically hitting
+    // the 20s ceiling and returning [] silently (Pierre run 06/05/2026 01:00).
+    const AGGREGATION_TIMEOUT_MS = 55_000;
 
     const aggregationPromise = (async () => {
       // Fetch RSS feeds in batches (max GLOBAL_FETCH_CONCURRENCY at a time) + API sources

@@ -1,292 +1,136 @@
 /**
  * @copyright 2024-2026 nirholas. All rights reserved.
  * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
- * @see https://github.com/nirholas/free-crypto-news
  *
- * This file is part of free-crypto-news.
- * Unauthorized copying, modification, or distribution is strictly prohibited.
- * For licensing inquiries: nirholas@users.noreply.github.com
+ * /api/analytics/influencers - cache-backed read.
+ *
+ * Refactor 2026-05-07: reads `influencers_cache` populated by the
+ * news-aggregator Worker every 30 min. Applies request-time filtering by
+ * min_credibility / category / platform / sort.
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getLatestNews } from '@/lib/crypto-news';
-import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { influencersCache } from '@/lib/db/schema';
+import { readNeonCache, fireAndForgetRefresh } from '@/lib/cache-read';
+import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
-export const revalidate = 600; // 10 minute cache
+export const revalidate = 600;
 
-/**
- * Influencer Accuracy Scoring API
- * 
- * Analyzes crypto influencers mentioned in news and scores them by:
- * - Prediction accuracy (historical)
- * - Credibility indicators
- * - Reach and engagement
- * - Topic expertise
- */
+const CACHE_KEY = 'influencers:default';
+const STALE_AFTER_MS = 30 * 60_000;
 
-interface InfluencerPrediction {
-  prediction: string;
-  date: string;
-  asset?: string;
-  outcome?: 'correct' | 'incorrect' | 'pending' | 'partial';
-  targetPrice?: string;
-  actualPrice?: string;
-}
-
-interface Influencer {
+interface InfluencerSummary {
   name: string;
   handle?: string;
-  platform: 'twitter' | 'youtube' | 'linkedin' | 'substack' | 'blog' | 'podcast' | 'unknown';
-  category: 'analyst' | 'trader' | 'developer' | 'vc' | 'founder' | 'journalist' | 'educator';
+  platform: string;
+  category: string;
   mentionCount: number;
   recentMentions: string[];
   credibilityScore: number;
   accuracyScore: number;
   expertise: string[];
-  predictions: InfluencerPrediction[];
-  sentiment: {
-    bullish: number;
-    bearish: number;
-    neutral: number;
+  sentiment: { bullish: number; bearish: number; neutral: number };
+  trustFactors: { factor: string; weight: number; description: string }[];
+}
+
+interface InfluencersPayload {
+  influencers: InfluencerSummary[];
+  stats: {
+    totalInfluencers: number;
+    avgCredibility: number;
+    avgAccuracy: number;
+    byCategory: Record<string, number>;
+    byPlatform: Record<string, number>;
   };
-  trustFactors: {
-    factor: string;
-    weight: number;
-    description: string;
-  }[];
+  generatedAt: string;
 }
 
-interface InfluencerResponse {
-  influencers: Partial<Influencer>[];
+function applyFilters(
+  payload: InfluencersPayload,
+  minCredibility: number,
+  category: string | null,
+  platform: string | null,
+  sortBy: string,
+  limit: number,
+) {
+  let infs = payload.influencers.slice();
+  if (minCredibility > 0) infs = infs.filter((i) => i.credibilityScore >= minCredibility);
+  if (category) infs = infs.filter((i) => i.category === category);
+  if (platform) infs = infs.filter((i) => i.platform === platform);
+  switch (sortBy) {
+    case 'accuracy':
+      infs.sort((a, b) => b.accuracyScore - a.accuracyScore);
+      break;
+    case 'mentions':
+      infs.sort((a, b) => b.mentionCount - a.mentionCount);
+      break;
+    case 'credibility':
+    default:
+      infs.sort((a, b) => b.credibilityScore - a.credibilityScore);
+  }
+  if (limit > 0) infs = infs.slice(0, limit);
+  return infs;
 }
-
-const SYSTEM_PROMPT = `You are an influencer analysis system specialized in cryptocurrency.
-
-Identify crypto influencers mentioned in news articles and analyze their credibility.
-
-For each influencer found, provide:
-
-1. Name: Full name or known handle
-2. Handle: Twitter/X handle if known (without @)
-3. Platform: Primary platform (twitter, youtube, linkedin, substack, blog, podcast, unknown)
-4. Category: analyst, trader, developer, vc, founder, journalist, educator
-5. Expertise: Areas of expertise (e.g., ["DeFi", "Bitcoin", "Technical Analysis"])
-6. Credibility indicators:
-   - Have they been accurate before?
-   - Do they have skin in the game (disclosed positions)?
-   - Are they affiliated with legitimate organizations?
-   - Do they cite sources?
-
-Assign scores (0-100):
-- credibilityScore: Overall trustworthiness (based on track record, transparency, affiliations)
-- accuracyScore: Historical prediction accuracy (if known)
-
-Identify sentiment of their recent statements: bullish/bearish/neutral counts.
-
-Respond with JSON: { "influencers": [...] }`;
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30'), 50);
-  const minCredibility = parseInt(searchParams.get('min_credibility') || '0');
-  const category = searchParams.get('category');
-  const platform = searchParams.get('platform');
-  const sortBy = searchParams.get('sort') || 'credibility'; // credibility, accuracy, mentions
+  const sp = new URL(request.url).searchParams;
+  const limit = Math.min(parseInt(sp.get('limit') || '30', 10), 50);
+  const minCredibility = parseInt(sp.get('min_credibility') || '0', 10);
+  const category = sp.get('category');
+  const platform = sp.get('platform');
+  const sortBy = sp.get('sort') || 'credibility';
+  const staleKey = generateCacheKey('influencers', { limit, minCredibility, category: category ?? '', platform: platform ?? '', sortBy });
 
-  if (!isAIConfigured()) return aiNotConfiguredResponse();
-
-  try {
-    const data = await getLatestNews(limit);
-
-    if (data.articles.length === 0) {
-      return NextResponse.json({ 
-        influencers: [], 
-        message: 'No articles to analyze' 
-      });
-    }
-
-    const articlesText = data.articles
-      .map((a, i) => `[${i + 1}] "${a.title}" (${a.source})\n${a.description || ''}`)
-      .join('\n\n');
-
-    const userPrompt = `Identify and analyze all crypto influencers mentioned in these ${data.articles.length} news articles:
-
-${articlesText}
-
-For each influencer, analyze their credibility and provide scores.`;
-
-    const result = await promptAIJsonCached<InfluencerResponse>(
-      'influencers',
-      SYSTEM_PROMPT,
-      userPrompt,
-      { maxTokens: 4000 }
-    );
-
-    // Process and enhance influencer data
-    let influencers: Influencer[] = (result.influencers || []).map(inf => ({
-      name: inf.name || 'Unknown',
-      handle: inf.handle,
-      platform: inf.platform || 'unknown',
-      category: inf.category || 'analyst',
-      mentionCount: inf.mentionCount || 1,
-      recentMentions: inf.recentMentions || [],
-      credibilityScore: inf.credibilityScore || 50,
-      accuracyScore: inf.accuracyScore || 50,
-      expertise: inf.expertise || [],
-      predictions: inf.predictions || [],
-      sentiment: inf.sentiment || { bullish: 0, bearish: 0, neutral: 1 },
-      trustFactors: generateTrustFactors(inf),
-    }));
-
-    // Apply filters
-    if (minCredibility > 0) {
-      influencers = influencers.filter(i => i.credibilityScore >= minCredibility);
-    }
-
-    if (category) {
-      influencers = influencers.filter(i => i.category === category);
-    }
-
-    if (platform) {
-      influencers = influencers.filter(i => i.platform === platform);
-    }
-
-    // Sort
-    switch (sortBy) {
-      case 'accuracy':
-        influencers.sort((a, b) => b.accuracyScore - a.accuracyScore);
-        break;
-      case 'mentions':
-        influencers.sort((a, b) => b.mentionCount - a.mentionCount);
-        break;
-      case 'credibility':
-      default:
-        influencers.sort((a, b) => b.credibilityScore - a.credibilityScore);
-    }
-
-    // Calculate aggregated stats
-    const stats = {
-      totalInfluencers: influencers.length,
-      avgCredibility: Math.round(
-        influencers.reduce((sum, i) => sum + i.credibilityScore, 0) / Math.max(influencers.length, 1)
-      ),
-      avgAccuracy: Math.round(
-        influencers.reduce((sum, i) => sum + i.accuracyScore, 0) / Math.max(influencers.length, 1)
-      ),
-      byCategory: influencers.reduce((acc, i) => {
-        acc[i.category] = (acc[i.category] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-      byPlatform: influencers.reduce((acc, i) => {
-        acc[i.platform] = (acc[i.platform] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>),
-      topExpertise: getTopExpertise(influencers),
-    };
-
-    // Tiers
+  const cached = await readNeonCache<InfluencersPayload>(influencersCache, CACHE_KEY);
+  if (cached) {
+    const stale = cached.ageMs > STALE_AFTER_MS;
+    if (stale) fireAndForgetRefresh('influencers');
+    const filtered = applyFilters(cached.payload, minCredibility, category, platform, sortBy, limit);
     const tiers = {
-      trusted: influencers.filter(i => i.credibilityScore >= 80).length,
-      moderate: influencers.filter(i => i.credibilityScore >= 50 && i.credibilityScore < 80).length,
-      lowCredibility: influencers.filter(i => i.credibilityScore < 50).length,
+      trusted: filtered.filter((i) => i.credibilityScore >= 80).length,
+      moderate: filtered.filter((i) => i.credibilityScore >= 50 && i.credibilityScore < 80).length,
+      lowCredibility: filtered.filter((i) => i.credibilityScore < 50).length,
     };
-
-    return NextResponse.json({
-      influencers,
-      stats,
+    const responseData = {
+      influencers: filtered,
+      stats: cached.payload.stats,
       tiers,
-      filters: {
-        min_credibility: minCredibility,
-        category,
-        platform,
-        sort: sortBy,
-        limit,
+      filters: { min_credibility: minCredibility, category, platform, sort: sortBy, limit },
+      generatedAt: cached.payload.generatedAt,
+      disclaimer: 'Credibility scores are AI-generated estimates. Always do your own research.',
+      _cache: { source: 'neon', ageMs: cached.ageMs, stale },
+    };
+    staleCache.set(staleKey, responseData, 3600);
+    return NextResponse.json(responseData, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200',
+        'X-Cache': stale ? 'STALE-NEON' : 'HIT-NEON',
+        'X-Cache-Age-Ms': String(cached.ageMs),
       },
-      generatedAt: new Date().toISOString(),
-      disclaimer: 'Credibility scores are AI-generated estimates based on news mentions and should not be taken as definitive assessments. Always do your own research.',
     });
-  } catch (error) {
-    console.error('Influencer analysis error:', error);
-    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
-      return aiAuthErrorResponse((error as Error).message);
-    }
+  }
+
+  const inMem = staleCache.get<Record<string, unknown>>(staleKey);
+  if (inMem) {
+    fireAndForgetRefresh('influencers');
     return NextResponse.json(
-      { error: 'Failed to analyze influencers' },
-      { status: 500 }
+      { ...inMem, _stale: true, _cache: { source: 'memory-stale' } },
+      { headers: { 'X-Cache': 'STALE-MEMORY' } },
     );
   }
-}
 
-function generateTrustFactors(inf: Partial<Influencer>): Influencer['trustFactors'] {
-  const factors: Influencer['trustFactors'] = [];
-  
-  // Analyze based on available data
-  if (inf.category === 'vc' || inf.category === 'founder') {
-    factors.push({
-      factor: 'Institutional Affiliation',
-      weight: 15,
-      description: 'Associated with venture capital or founded a company',
-    });
-  }
-  
-  if (inf.category === 'developer') {
-    factors.push({
-      factor: 'Technical Expertise',
-      weight: 20,
-      description: 'Has demonstrated technical/development skills',
-    });
-  }
-  
-  if (inf.handle) {
-    factors.push({
-      factor: 'Verified Identity',
-      weight: 10,
-      description: 'Has public social media presence',
-    });
-  }
-  
-  if ((inf.expertise?.length || 0) >= 3) {
-    factors.push({
-      factor: 'Broad Expertise',
-      weight: 10,
-      description: 'Covers multiple areas of cryptocurrency',
-    });
-  }
-  
-  if ((inf.mentionCount || 0) > 3) {
-    factors.push({
-      factor: 'Media Presence',
-      weight: 5,
-      description: 'Frequently cited in news sources',
-    });
-  }
-  
-  // Default factor
-  if (factors.length === 0) {
-    factors.push({
-      factor: 'Limited Data',
-      weight: 0,
-      description: 'Not enough information to assess credibility',
-    });
-  }
-  
-  return factors;
-}
-
-function getTopExpertise(influencers: Influencer[]): { topic: string; count: number }[] {
-  const expertiseCounts = new Map<string, number>();
-  
-  for (const inf of influencers) {
-    for (const topic of inf.expertise) {
-      const normalized = topic.toLowerCase();
-      expertiseCounts.set(normalized, (expertiseCounts.get(normalized) || 0) + 1);
-    }
-  }
-  
-  return Array.from(expertiseCounts.entries())
-    .map(([topic, count]) => ({ topic, count }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 10);
+  fireAndForgetRefresh('influencers');
+  return NextResponse.json(
+    {
+      influencers: [],
+      stats: { totalInfluencers: 0, avgCredibility: 0, avgAccuracy: 0, byCategory: {}, byPlatform: {} },
+      tiers: { trusted: 0, moderate: 0, lowCredibility: 0 },
+      filters: { min_credibility: minCredibility, category, platform, sort: sortBy, limit },
+      generatedAt: new Date().toISOString(),
+      disclaimer: 'Cache warming up.',
+      _cache: { source: 'empty' },
+    },
+    { headers: { 'X-Cache': 'MISS-DIRECT' } },
+  );
 }

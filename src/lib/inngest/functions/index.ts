@@ -47,7 +47,9 @@ export {
   protocolRevenueSnapshot,
 } from './data-collection';
 
-export { breakingNewsCacheRefresh } from './breaking-news-cache';
+// Cutover 2026-05-07: replaced by Cloudflare Worker news-aggregator (cron 1min).
+// See https://news-aggregator.mute-unit-bca3.workers.dev (DO NOT re-export until rollback exclu).
+// export { breakingNewsCacheRefresh } from './breaking-news-cache';
 
 /**
  * Flat array of all functions for serve().
@@ -74,7 +76,7 @@ import {
   miningSnapshot,
   protocolRevenueSnapshot,
 } from './data-collection';
-import { breakingNewsCacheRefresh } from './breaking-news-cache';
+// import { breakingNewsCacheRefresh } from './breaking-news-cache';  // Cutover Worker
 
 export const allFunctions = [
   archiveArticlesCron,
@@ -99,5 +101,5 @@ export const allFunctions = [
   btcETFSnapshot,
   miningSnapshot,
   protocolRevenueSnapshot,
-  breakingNewsCacheRefresh,
+  // breakingNewsCacheRefresh,  // Cutover 2026-05-07 vers CF Worker news-aggregator
 ];
